@@ -1,0 +1,2 @@
+Starting with Profit 4, in some cases, it is mandatory to include a reference at the `FbGoodsReceivedLines` level to the line in the financial transaction.
+If the `Confront on journal entry number` feature is activated, the fields `Related journal entry number` (`EnNo`) and `Related journal entry line` (`SeNo`) are required. You will need to adjust the UpdateConnector for these required fields. We advise all integration partners to **always** provide these fields. These fields have been available for some time now.

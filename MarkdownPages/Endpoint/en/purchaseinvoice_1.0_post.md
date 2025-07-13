@@ -1,0 +1,1 @@
+Is vervangen door endpoint purchasejournalentry en vervalt in de nabije toekomst.

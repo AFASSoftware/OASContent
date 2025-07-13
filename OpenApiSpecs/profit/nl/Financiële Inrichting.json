@@ -1,0 +1,3670 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "6.6.9",
+    "title": "AFAS Financi\u00EBle Inrichting API",
+    "description": "Deze API beschrijft de endpoints gerelateerd aan Financi\u00EBle Inrichting. Gebruik deze API met de functionele beschrijving van de API."
+  },
+  "servers": [
+    {
+      "url": "https://{id}.rest.afas.online/ProfitRestServices",
+      "description": "Production environment",
+      "variables": {
+        "id": {
+          "description": "5 digit environment number",
+          "default": "12345"
+        }
+      }
+    },
+    {
+      "url": "https://{id}.resttest.afas.online/ProfitRestServices",
+      "description": "Test environment",
+      "variables": {
+        "id": {
+          "description": "5 digit environment number",
+          "default": "12345"
+        }
+      }
+    },
+    {
+      "url": "https://{id}.restaccept.afas.online/ProfitRestServices",
+      "description": "Accept environment",
+      "variables": {
+        "id": {
+          "description": "5 digit environment number",
+          "default": "12345"
+        }
+      }
+    },
+    {
+      "url": "https://{id}.restcursus.afas.online/ProfitRestServices",
+      "description": "Cursus environment",
+      "variables": {
+        "id": {
+          "description": "5 digit environment number",
+          "default": "12345"
+        }
+      }
+    }
+  ],
+  "paths": {
+    "/connectors/FiIVY": {
+      "post": {
+        "summary": "Iv3-indeling per jaar",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/130524.htm",
+        "operationId": "POST_FiIVY",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FiIVY_POST"
+              },
+              "examples": {
+                "FiIVY insert Grootboekrekening balans": {
+                  "value": {
+                    "FiIVY": {
+                      "Element": {
+                        "Fields": {
+                          "UnId": 1,
+                          "AcNr": "0100",
+                          "Year": 2024,
+                          "BalcCode": "A112"
+                        }
+                      }
+                    }
+                  }
+                },
+                "FiIVY insert Verbijzondering categorie": {
+                  "value": {
+                    "FiIVY": {
+                      "Element": {
+                        "Fields": {
+                          "UnId": 1,
+                          "AxId": "1",
+                          "VbCo": "01",
+                          "Year": 2024,
+                          "CatCode": "1.1",
+                          "TyCa": "L"
+                        }
+                      }
+                    }
+                  }
+                },
+                "FiIVY insert Verbijzondering taakveld": {
+                  "value": {
+                    "FiIVY": {
+                      "Element": {
+                        "Fields": {
+                          "UnId": 1,
+                          "AxId": "2",
+                          "VbCo": "201",
+                          "Year": 2024,
+                          "TaskCode": "0.1"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                },
+                "examples": {
+                  "Response example": {
+                    "value": {
+                      "results": {
+                        "FiIVY": {
+                          "Id": "1"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Cache-Control": {
+                "description": "no-store, no-cache",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Transfer-Encoding": {
+                "description": "chunked",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Type": {
+                "description": "application/json; charset=utf-8",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Encoding": {
+                "description": "gzip",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Strict-Transport-Security": {
+                "description": "max-age=31536000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Version": {
+                "description": "4.3.0.0",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "nosniff",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Frame-Options": {
+                "description": "deny",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Stats": {
+                "description": "init(0ms), before response(10ms), after response(609ms), after compressing(610ms), complete(610ms)",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "description": "*",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Headers": {
+                "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Methods": {
+                "description": "GET, POST, PUT, DELETE, OPTIONS",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Max-Age": {
+                "description": "1728000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Date": {
+                "description": "Wed, 07 Feb 2024 10:39:26 GMT",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Iv3-indeling per jaar"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Iv3-indeling per jaar",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/130524.htm",
+        "operationId": "PUT_FiIVY",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FiIVY_PUT"
+              },
+              "examples": {
+                "FiIVY update Grootboekrekening balans": {
+                  "value": {
+                    "FiIVY": {
+                      "Element": {
+                        "@Id": 1,
+                        "Fields": {
+                          "UnId": 1,
+                          "AcNr": "0100",
+                          "Year": 2024,
+                          "BalcCode": "A111"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                },
+                "examples": {
+                  "Response example": {
+                    "value": {
+                      "results": {
+                        "FiIVY": {
+                          "Id": "1"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Cache-Control": {
+                "description": "no-store, no-cache",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Transfer-Encoding": {
+                "description": "chunked",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Type": {
+                "description": "application/json; charset=utf-8",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Encoding": {
+                "description": "gzip",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Strict-Transport-Security": {
+                "description": "max-age=31536000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Version": {
+                "description": "4.3.0.0",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "nosniff",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Frame-Options": {
+                "description": "deny",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Stats": {
+                "description": "init(0ms), before response(10ms), after response(609ms), after compressing(610ms), complete(610ms)",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "description": "*",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Headers": {
+                "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Methods": {
+                "description": "GET, POST, PUT, DELETE, OPTIONS",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Max-Age": {
+                "description": "1728000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Date": {
+                "description": "Wed, 07 Feb 2024 10:39:26 GMT",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Iv3-indeling per jaar"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/FiIVY/FiIVY/@Id/{Id}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "Id",
+          "in": "path",
+          "required": true,
+          "description": "Identity"
+        }
+      ],
+      "delete": {
+        "summary": "Iv3-indeling per jaar",
+        "operationId": "DELETE_FiIVY",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/130524.htm",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Iv3-indeling per jaar"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/KnAccount": {
+      "post": {
+        "summary": "Grootboekrekening",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_KnAcc.htm",
+        "operationId": "POST_KnAccount",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnAccount_POST"
+              },
+              "examples": {
+                "basis": {
+                  "value": {
+                    "KnAccount": {
+                      "Element": {
+                        "Fields": {
+                          "AcNr": "1605",
+                          "Ds": "Crediteuren buitenland",
+                          "SeNm": "CreB",
+                          "SaYn": false,
+                          "FaYn": false,
+                          "VaAt": "2",
+                          "VaPc": "GD",
+                          "VaDc": "C",
+                          "VaYn": true,
+                          "VaCo": "4",
+                          "CaYn": false
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Grootboekrekening"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Grootboekrekening",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_KnAcc.htm",
+        "operationId": "PUT_KnAccount",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnAccount_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Grootboekrekening"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnAccount/KnAccount/@AcNr/{AcNr}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "AcNr",
+          "in": "path",
+          "required": true,
+          "description": "Rekeningnummer"
+        }
+      ],
+      "delete": {
+        "summary": "Grootboekrekening",
+        "operationId": "DELETE_KnAccount",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_KnAcc.htm",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Grootboekrekening"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/KnBankTransaction": {
+      "post": {
+        "summary": "Transactie-instelling",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_KnBnkT.htm",
+        "operationId": "POST_KnBankTransaction",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnBankTransaction_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Transactie-instelling"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Transactie-instelling",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_KnBnkT.htm",
+        "operationId": "PUT_KnBankTransaction",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnBankTransaction_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Transactie-instelling"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnBankTransaction/KnTransactionDimension": {
+      "post": {
+        "summary": "Transactie-instelling",
+        "description": "Update main record in KnBankTransaction and insert subrecord into KnTransactionDimension. \n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_KnBnkT.htm",
+        "operationId": "POSTSubRecordKnBankTransactionKnTransactionDimension",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnBankTransaction_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Transactie-instelling"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnBankTransaction/KnBankTransaction/@TrCd/{TrCd}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "TrCd",
+          "in": "path",
+          "required": true,
+          "description": "Transactiecode"
+        }
+      ],
+      "delete": {
+        "summary": "Transactie-instelling",
+        "operationId": "DELETE_KnBankTransaction",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_KnBnkT.htm",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Transactie-instelling"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/KnDimCode": {
+      "post": {
+        "summary": "Code verbijzondering",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_060.htm",
+        "operationId": "POST_KnDimCode",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnDimCode_POST"
+              },
+              "examples": {
+                "enkel": {
+                  "value": {
+                    "KnDimCode": {
+                      "Element": {
+                        "@AxId": "1",
+                        "@VbCo": "AMSTERDAM",
+                        "Fields": {
+                          "Ds": "Vestiging Amsterdam",
+                          "QuYN": "1",
+                          "Bl": "0",
+                          "PeDi": "1"
+                        }
+                      }
+                    }
+                  }
+                },
+                "meerdere As1": {
+                  "value": {
+                    "KnDimCode": {
+                      "Element": [
+                        {
+                          "@AxId": "1",
+                          "@VbCo": "ROTTERDAM",
+                          "Fields": {
+                            "Ds": "Vestiging Rotterdam",
+                            "QuYN": "1",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "@AxId": "1",
+                          "@VbCo": "DENHAAG",
+                          "Fields": {
+                            "Ds": "Vestiging Den Haag",
+                            "Re": "Selectiewaarde",
+                            "QuYN": "0",
+                            "Bl": "0"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "Meerdere As1 en As2": {
+                  "value": {
+                    "KnDimCode": {
+                      "Element": [
+                        {
+                          "@AxId": "1",
+                          "@VbCo": "GRONINGEN",
+                          "Fields": {
+                            "Ds": "Vestiging Groningen",
+                            "QuYN": "1",
+                            "Bl": "0",
+                            "PeDi": "1"
+                          }
+                        },
+                        {
+                          "@AxId": "2",
+                          "@VbCo": "ONL",
+                          "Fields": {
+                            "Ds": "Online",
+                            "QuYN": "1",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "@AxId": "2",
+                          "@VbCo": "GAR",
+                          "Fields": {
+                            "Ds": "Garage",
+                            "QuYN": "1",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "@AxId": "1",
+                          "@VbCo": "APELDOORN",
+                          "Fields": {
+                            "Ds": "Vestiging Apeldoorn",
+                            "QuYN": "1",
+                            "Bl": "0",
+                            "PeDi": "1"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "meerdere As2": {
+                  "value": {
+                    "KnDimCode": {
+                      "Element": [
+                        {
+                          "@AxId": "2",
+                          "@VbCo": "SUP",
+                          "Fields": {
+                            "Ds": "Support",
+                            "QuYN": "1",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "@AxId": "2",
+                          "@VbCo": "SAL",
+                          "Fields": {
+                            "Ds": "Sales",
+                            "Re": "Selectiewaarde",
+                            "QuYN": "1",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "@AxId": "2",
+                          "@VbCo": "MAR",
+                          "Fields": {
+                            "Ds": "Marketing",
+                            "QuYN": "1",
+                            "Bl": "0"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Code verbijzondering"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Code verbijzondering",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_060.htm",
+        "operationId": "PUT_KnDimCode",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnDimCode_PUT"
+              },
+              "examples": {
+                "As1": {
+                  "value": {
+                    "KnDimCode": {
+                      "Element": {
+                        "@AxId": "1",
+                        "@VbCo": "HOOFD",
+                        "Fields": {
+                          "Ds": "Hoofdvestiging"
+                        }
+                      }
+                    }
+                  }
+                },
+                "As1 blokkeren": {
+                  "value": {
+                    "KnDimCode": {
+                      "Element": {
+                        "@AxId": "1",
+                        "@VbCo": "NOORD",
+                        "Fields": {
+                          "Bl": "1"
+                        }
+                      }
+                    }
+                  }
+                },
+                "As2": {
+                  "value": {
+                    "KnDimCode": {
+                      "Element": {
+                        "@AxId": "2",
+                        "@VbCo": "CO",
+                        "Fields": {
+                          "Ds": "Consultancy",
+                          "QuYN": "1"
+                        }
+                      }
+                    }
+                  }
+                },
+                "As2 blokkeren": {
+                  "value": {
+                    "KnDimCode": {
+                      "Element": {
+                        "@AxId": "2",
+                        "@VbCo": "PZ",
+                        "Fields": {
+                          "Bl": "1"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Code verbijzondering"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnDimCode/KnDimCode/@AxId,@VbCo/{AxId},{VbCo}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "AxId",
+          "in": "path",
+          "required": true,
+          "description": "Verbijzonderingsas"
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "VbCo",
+          "in": "path",
+          "required": true,
+          "description": "Code verbijzondering"
+        }
+      ],
+      "delete": {
+        "summary": "Code verbijzondering",
+        "operationId": "DELETE_KnDimCode",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_060.htm",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Code verbijzondering"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/MetaInfo": {
+      "get": {
+        "summary": "Retrieve the meta info of the Profit environment and the available connectors",
+        "tags": [
+          "API Info"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "updateConnectors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "getConnectors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "info": {
+                      "type": "object",
+                      "properties": {
+                        "envid": {
+                          "type": "string"
+                        },
+                        "appName": {
+                          "type": "string"
+                        },
+                        "group": {
+                          "type": "string"
+                        },
+                        "tokenExpiry": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "updateConnectors": [
+                        {
+                          "id": "HrCreateApplicant",
+                          "description": "Aanmaken sollicitatie"
+                        },
+                        {
+                          "id": "FbSubscription",
+                          "description": "Abonnement"
+                        },
+                        {
+                          "id": "KnAddress",
+                          "description": "Adres"
+                        }
+                      ],
+                      "getConnectors": [
+                        {
+                          "id": "Profit_Fin_ChangedEntrydate",
+                          "description": "Profit_Fin_ChangedEntrydate"
+                        },
+                        {
+                          "id": "Profit_Functions",
+                          "description": "Profit_Functions"
+                        }
+                      ],
+                      "info": {
+                        "envid": "A123456AC",
+                        "appName": "OpenAPI Spec Example",
+                        "group": "AuthorizationGroup 101 (12345.USER)",
+                        "tokenExpiry": "0"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_MetaInfo"
+      }
+    },
+    "/Metainfo/{Type}/{Endpoint}": {
+      "get": {
+        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
+        "tags": [
+          "API Info"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "fields": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "fieldId": {
+                            "type": "string"
+                          },
+                          "dataType": {
+                            "type": "string"
+                          },
+                          "label": {
+                            "type": "string"
+                          },
+                          "length": {
+                            "type": "integer"
+                          },
+                          "controlType": {
+                            "type": "integer"
+                          },
+                          "decimals": {
+                            "type": "integer"
+                          },
+                          "decimalsFieldId": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "name": "Profit_Administrations",
+                      "description": "Administraties (Profit)",
+                      "fields": [
+                        {
+                          "id": "AdminId",
+                          "fieldId": "U002",
+                          "dataType": "int",
+                          "label": "Administratie",
+                          "length": 3,
+                          "controlType": 5,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        },
+                        {
+                          "id": "AdminNm",
+                          "fieldId": "U001",
+                          "dataType": "string",
+                          "label": "Naam administratie",
+                          "length": 80,
+                          "controlType": 1,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        },
+                        {
+                          "id": "AdminCd",
+                          "fieldId": "UnCo",
+                          "dataType": "string",
+                          "label": "Administratie",
+                          "length": 10,
+                          "controlType": 1,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_MetaInfoPerConnector",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "get",
+                "update"
+              ],
+              "example": "update"
+            },
+            "in": "path",
+            "name": "Type",
+            "description": "Add the type of connector you want to get the meta info from",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "string",
+              "example": "KnEmployee"
+            },
+            "in": "path",
+            "name": "Endpoint",
+            "description": "Add the endpoint id of the connector you want to get the meta info from",
+            "required": true
+          },
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/{Endpoint}": {
+      "get": {
+        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id\u0027s can be found in the metainfo request result.",
+        "tags": [
+          "GET"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "skip": {
+                      "type": "integer"
+                    },
+                    "take": {
+                      "type": "integer"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "EmployeeId": {
+                            "type": "string"
+                          },
+                          "EmploymentEndDate": {
+                            "type": "string"
+                          },
+                          "EmailForDigitalDocuments": {
+                            "type": "string",
+                            "nullable": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example response": {
+                    "value": {
+                      "skip": 0,
+                      "take": 100,
+                      "rows": [
+                        {
+                          "EmployeeId": "000001005",
+                          "EmploymentEndDate": "2020-11-22T00:00:00Z",
+                          "EmailForDigitalDocuments": null
+                        },
+                        {
+                          "EmployeeId": "000001006",
+                          "EmploymentEndDate": "2020-11-22T00:00:00Z",
+                          "EmailForDigitalDocuments": null
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_MetaInfoPerCustomConnector",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "example": "your_custom_endpoint_id"
+            },
+            "in": "path",
+            "name": "Endpoint",
+            "description": "Add the id of connector you want to get the meta info from",
+            "required": true
+          },
+          {
+            "name": "skip",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results skipped. Starts at 0",
+            "schema": {
+              "type": "number",
+              "example": 0
+            }
+          },
+          {
+            "name": "take",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results returned",
+            "schema": {
+              "type": "number",
+              "example": 100
+            }
+          },
+          {
+            "name": "orderbyfieldids",
+            "in": "query",
+            "required": false,
+            "description": "Must be used to prevent reordered results.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterfieldids",
+            "in": "query",
+            "required": false,
+            "description": "The fieldIds of the values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filtervalues",
+            "in": "query",
+            "required": false,
+            "description": "The values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "operatortypes",
+            "in": "query",
+            "required": false,
+            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "schema": {
+              "type": "number",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "/ProfitVersion": {
+      "get": {
+        "summary": "Get the current Profit version",
+        "tags": [
+          "API Info"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "version": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "version": "22.22.5"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_ProfitVersion"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "GET",
+      "description": "GET"
+    },
+    {
+      "name": "API Info",
+      "description": "API Info"
+    },
+    {
+      "name": "Iv3-indeling per jaar",
+      "description": "Iv3-indeling per jaar"
+    },
+    {
+      "name": "Grootboekrekening",
+      "description": "Grootboekrekening"
+    },
+    {
+      "name": "Transactie-instelling",
+      "description": "Transactie-instelling"
+    },
+    {
+      "name": "Code verbijzondering",
+      "description": "Code verbijzondering"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "FiIVY_POST": {
+        "type": "object",
+        "properties": {
+          "FiIVY": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "integer",
+                        "description": "Identity",
+                        "format": ""
+                      },
+                      "UnId": {
+                        "type": "integer",
+                        "description": "Administratie",
+                        "format": ""
+                      },
+                      "AcNr": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Grootboekrekening",
+                        "format": ""
+                      },
+                      "AxId": {
+                        "type": "string",
+                        "maxLength": 1,
+                        "description": "Verbijzonderingsas",
+                        "format": ""
+                      },
+                      "VbCo": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Code verbijzondering",
+                        "format": ""
+                      },
+                      "Year": {
+                        "type": "integer",
+                        "description": "Jaar",
+                        "format": ""
+                      },
+                      "TaskCode": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Taakveld code",
+                        "format": ""
+                      },
+                      "BalcCode": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Balans code",
+                        "format": ""
+                      },
+                      "CatCode": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Categorie code",
+                        "format": ""
+                      },
+                      "TyCa": {
+                        "type": "string",
+                        "enum": [
+                          "B",
+                          "L"
+                        ],
+                        "maxLength": 1,
+                        "description": "Type categorie\nB = Baten;\nL = Lasten;",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "UnId",
+                      "Year"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "FiIVY_PUT": {
+        "type": "object",
+        "properties": {
+          "FiIVY": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "integer",
+                        "description": "Identity",
+                        "format": ""
+                      },
+                      "UnId": {
+                        "type": "integer",
+                        "description": "Administratie",
+                        "format": ""
+                      },
+                      "AcNr": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Grootboekrekening",
+                        "format": ""
+                      },
+                      "AxId": {
+                        "type": "string",
+                        "maxLength": 1,
+                        "description": "Verbijzonderingsas",
+                        "format": ""
+                      },
+                      "VbCo": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Code verbijzondering",
+                        "format": ""
+                      },
+                      "Year": {
+                        "type": "integer",
+                        "description": "Jaar",
+                        "format": ""
+                      },
+                      "TaskCode": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Taakveld code",
+                        "format": ""
+                      },
+                      "BalcCode": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Balans code",
+                        "format": ""
+                      },
+                      "CatCode": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Categorie code",
+                        "format": ""
+                      },
+                      "TyCa": {
+                        "type": "string",
+                        "enum": [
+                          "B",
+                          "L"
+                        ],
+                        "maxLength": 1,
+                        "description": "Type categorie\nB = Baten;\nL = Lasten;",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "Id"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnAccount_POST": {
+        "type": "object",
+        "properties": {
+          "KnAccount": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "AcNr": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Rekeningnummer",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving",
+                        "format": ""
+                      },
+                      "Ds_1031": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving (Duits)",
+                        "format": ""
+                      },
+                      "Ds_1036": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving (Frans)",
+                        "format": ""
+                      },
+                      "Ds_1043": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving (Nederlands)",
+                        "format": ""
+                      },
+                      "Ds_2057": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving (Engels)",
+                        "format": ""
+                      },
+                      "Ds_2067": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving (Vlaams)",
+                        "format": ""
+                      },
+                      "SeNm": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Zoeknaam",
+                        "format": ""
+                      },
+                      "SaYn": {
+                        "type": "boolean",
+                        "description": "Verzamelrekening",
+                        "format": ""
+                      },
+                      "FaYn": {
+                        "type": "boolean",
+                        "description": "Afletterbaar",
+                        "format": ""
+                      },
+                      "Bl": {
+                        "type": "boolean",
+                        "description": "Geblokkeerd",
+                        "format": ""
+                      },
+                      "VaAt": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "2",
+                          "3",
+                          "4"
+                        ],
+                        "maxLength": 20,
+                        "description": "Type rekening\n1 = Activa;\n2 = Passiva;\n3 = Opbrengsten;\n4 = Kosten;",
+                        "format": ""
+                      },
+                      "VaPc": {
+                        "type": "string",
+                        "enum": [
+                          "G",
+                          "D",
+                          "I",
+                          "B",
+                          "O",
+                          "GD"
+                        ],
+                        "maxLength": 20,
+                        "description": "Soort rekening\nG = Goederen;\nD = Diensten;\nI = Investeringen;\nB = Btw;\nO = Overige;\nGD = Goederen en diensten;",
+                        "format": ""
+                      },
+                      "VaDc": {
+                        "type": "string",
+                        "enum": [
+                          "N",
+                          "D",
+                          "C"
+                        ],
+                        "maxLength": 20,
+                        "description": "Voorkeur (debet/credit)\nN = Geen voorkeur;\nD = Debet;\nC = Credit;",
+                        "format": ""
+                      },
+                      "VaYn": {
+                        "type": "boolean",
+                        "description": "Btw toestaan",
+                        "format": ""
+                      },
+                      "VaCo": {
+                        "type": "string",
+                        "maxLength": 3,
+                        "description": "Voorkeur btw-code",
+                        "format": ""
+                      },
+                      "CaYn": {
+                        "type": "boolean",
+                        "description": "In valuta",
+                        "format": ""
+                      },
+                      "CuCo": {
+                        "type": "string",
+                        "maxLength": 3,
+                        "description": "Valuta",
+                        "format": ""
+                      },
+                      "VaA1": {
+                        "type": "string",
+                        "enum": [
+                          "N",
+                          "B",
+                          "P"
+                        ],
+                        "maxLength": 20,
+                        "description": "Verbijzonderingsas 1\nN = Niet verbijzonderen;\nB = Handmatig bij boeking (op bedrag);\nP = Automatisch (percentueel);",
+                        "format": ""
+                      },
+                      "VaA2": {
+                        "type": "string",
+                        "enum": [
+                          "N",
+                          "B",
+                          "P"
+                        ],
+                        "maxLength": 20,
+                        "description": "Verbijzonderingsas 2\nN = Niet verbijzonderen;\nB = Handmatig bij boeking (op bedrag);\nP = Automatisch (percentueel);",
+                        "format": ""
+                      },
+                      "VaA3": {
+                        "type": "string",
+                        "enum": [
+                          "N",
+                          "B",
+                          "P"
+                        ],
+                        "maxLength": 20,
+                        "description": "Verbijzonderingsas 3\nN = Niet verbijzonderen;\nB = Handmatig bij boeking (op bedrag);\nP = Automatisch (percentueel);",
+                        "format": ""
+                      },
+                      "VaA4": {
+                        "type": "string",
+                        "enum": [
+                          "N",
+                          "B",
+                          "P"
+                        ],
+                        "maxLength": 20,
+                        "description": "Verbijzonderingsas 4\nN = Niet verbijzonderen;\nB = Handmatig bij boeking (op bedrag);\nP = Automatisch (percentueel);",
+                        "format": ""
+                      },
+                      "VaA5": {
+                        "type": "string",
+                        "enum": [
+                          "N",
+                          "B",
+                          "P"
+                        ],
+                        "maxLength": 20,
+                        "description": "Verbijzonderingsas 5\nN = Niet verbijzonderen;\nB = Handmatig bij boeking (op bedrag);\nP = Automatisch (percentueel);",
+                        "format": ""
+                      },
+                      "VaPp": {
+                        "type": "string",
+                        "enum": [
+                          "N",
+                          "T",
+                          "V",
+                          "I"
+                        ],
+                        "maxLength": 20,
+                        "description": "Doorboeken projecten\nN = Geen projectboeking;\nT = Projectboeking toegestaan;\nV = Projectboeking verplicht;\nI = Investeringsproject verplicht;",
+                        "format": ""
+                      },
+                      "AcMm": {
+                        "type": "string",
+                        "description": "Memo",
+                        "format": "byte"
+                      },
+                      "CoAc": {
+                        "type": "string",
+                        "enum": [
+                          "N",
+                          "D",
+                          "C",
+                          "G"
+                        ],
+                        "maxLength": 20,
+                        "description": "Type verzamelrekening\nN = Geen verzamelrekening;\nD = Debiteur;\nC = Crediteur;\nG = Grootboek;",
+                        "format": ""
+                      },
+                      "ColA": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Verzamelen op",
+                        "format": ""
+                      },
+                      "PeDi": {
+                        "type": "integer",
+                        "description": "Periodeverdeeltabel",
+                        "format": ""
+                      },
+                      "VaBu": {
+                        "type": "string",
+                        "enum": [
+                          "N",
+                          "B",
+                          "BA",
+                          "A"
+                        ],
+                        "maxLength": 20,
+                        "description": "Budgetteren\nN = Niet van toepassing;\nB = Bedrag;\nBA = Bedrag \u002B aantal;\nA = Aantal;",
+                        "format": ""
+                      },
+                      "LiAc": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Afletteren met",
+                        "format": ""
+                      },
+                      "BaAc": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Afwijkende balansrekening",
+                        "format": ""
+                      },
+                      "VaEx": {
+                        "type": "string",
+                        "enum": [
+                          "R",
+                          "B"
+                        ],
+                        "maxLength": 20,
+                        "description": "Te tonen in exploitatie\nR = Realisatie;\nB = Budget;",
+                        "format": ""
+                      },
+                      "CmYN": {
+                        "type": "boolean",
+                        "description": "Verdichten",
+                        "format": ""
+                      },
+                      "FaAl": {
+                        "type": "boolean",
+                        "description": "Activa toevoegen bij boeken inkoop/bank",
+                        "format": ""
+                      },
+                      "CmMa": {
+                        "type": "boolean",
+                        "description": "Verplichting bij inkoopboeking verplicht",
+                        "format": ""
+                      },
+                      "MaBl": {
+                        "type": "boolean",
+                        "description": "Handmatig boeken blokkeren",
+                        "format": ""
+                      },
+                      "FeId": {
+                        "type": "string",
+                        "maxLength": 12,
+                        "description": "Rapportagecockpit",
+                        "format": ""
+                      },
+                      "Ref": {
+                        "type": "string",
+                        "maxLength": 32,
+                        "description": "RGS-referentiecode",
+                        "format": ""
+                      },
+                      "RfEx": {
+                        "type": "string",
+                        "maxLength": 32,
+                        "description": "RGS-extensie",
+                        "format": ""
+                      },
+                      "DsId": {
+                        "type": "integer",
+                        "description": "Aanmaningsset",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "AcNr"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnAccount_PUT": {
+        "type": "object",
+        "properties": {
+          "KnAccount": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "AcNr": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Rekeningnummer",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving",
+                        "format": ""
+                      },
+                      "Ds_1031": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving (Duits)",
+                        "format": ""
+                      },
+                      "Ds_1036": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving (Frans)",
+                        "format": ""
+                      },
+                      "Ds_1043": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving (Nederlands)",
+                        "format": ""
+                      },
+                      "Ds_2057": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving (Engels)",
+                        "format": ""
+                      },
+                      "Ds_2067": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving (Vlaams)",
+                        "format": ""
+                      },
+                      "SeNm": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Zoeknaam",
+                        "format": ""
+                      },
+                      "SaYn": {
+                        "type": "boolean",
+                        "description": "Verzamelrekening",
+                        "format": ""
+                      },
+                      "FaYn": {
+                        "type": "boolean",
+                        "description": "Afletterbaar",
+                        "format": ""
+                      },
+                      "Bl": {
+                        "type": "boolean",
+                        "description": "Geblokkeerd",
+                        "format": ""
+                      },
+                      "VaAt": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "2",
+                          "3",
+                          "4"
+                        ],
+                        "maxLength": 20,
+                        "description": "Type rekening\n1 = Activa;\n2 = Passiva;\n3 = Opbrengsten;\n4 = Kosten;",
+                        "format": ""
+                      },
+                      "VaPc": {
+                        "type": "string",
+                        "enum": [
+                          "G",
+                          "D",
+                          "I",
+                          "B",
+                          "O",
+                          "GD"
+                        ],
+                        "maxLength": 20,
+                        "description": "Soort rekening\nG = Goederen;\nD = Diensten;\nI = Investeringen;\nB = Btw;\nO = Overige;\nGD = Goederen en diensten;",
+                        "format": ""
+                      },
+                      "VaDc": {
+                        "type": "string",
+                        "enum": [
+                          "N",
+                          "D",
+                          "C"
+                        ],
+                        "maxLength": 20,
+                        "description": "Voorkeur (debet/credit)\nN = Geen voorkeur;\nD = Debet;\nC = Credit;",
+                        "format": ""
+                      },
+                      "VaYn": {
+                        "type": "boolean",
+                        "description": "Btw toestaan",
+                        "format": ""
+                      },
+                      "VaCo": {
+                        "type": "string",
+                        "maxLength": 3,
+                        "description": "Voorkeur btw-code",
+                        "format": ""
+                      },
+                      "CaYn": {
+                        "type": "boolean",
+                        "description": "In valuta",
+                        "format": ""
+                      },
+                      "CuCo": {
+                        "type": "string",
+                        "maxLength": 3,
+                        "description": "Valuta",
+                        "format": ""
+                      },
+                      "VaA1": {
+                        "type": "string",
+                        "enum": [
+                          "N",
+                          "B",
+                          "P"
+                        ],
+                        "maxLength": 20,
+                        "description": "Verbijzonderingsas 1\nN = Niet verbijzonderen;\nB = Handmatig bij boeking (op bedrag);\nP = Automatisch (percentueel);",
+                        "format": ""
+                      },
+                      "VaA2": {
+                        "type": "string",
+                        "enum": [
+                          "N",
+                          "B",
+                          "P"
+                        ],
+                        "maxLength": 20,
+                        "description": "Verbijzonderingsas 2\nN = Niet verbijzonderen;\nB = Handmatig bij boeking (op bedrag);\nP = Automatisch (percentueel);",
+                        "format": ""
+                      },
+                      "VaA3": {
+                        "type": "string",
+                        "enum": [
+                          "N",
+                          "B",
+                          "P"
+                        ],
+                        "maxLength": 20,
+                        "description": "Verbijzonderingsas 3\nN = Niet verbijzonderen;\nB = Handmatig bij boeking (op bedrag);\nP = Automatisch (percentueel);",
+                        "format": ""
+                      },
+                      "VaA4": {
+                        "type": "string",
+                        "enum": [
+                          "N",
+                          "B",
+                          "P"
+                        ],
+                        "maxLength": 20,
+                        "description": "Verbijzonderingsas 4\nN = Niet verbijzonderen;\nB = Handmatig bij boeking (op bedrag);\nP = Automatisch (percentueel);",
+                        "format": ""
+                      },
+                      "VaA5": {
+                        "type": "string",
+                        "enum": [
+                          "N",
+                          "B",
+                          "P"
+                        ],
+                        "maxLength": 20,
+                        "description": "Verbijzonderingsas 5\nN = Niet verbijzonderen;\nB = Handmatig bij boeking (op bedrag);\nP = Automatisch (percentueel);",
+                        "format": ""
+                      },
+                      "VaPp": {
+                        "type": "string",
+                        "enum": [
+                          "N",
+                          "T",
+                          "V",
+                          "I"
+                        ],
+                        "maxLength": 20,
+                        "description": "Doorboeken projecten\nN = Geen projectboeking;\nT = Projectboeking toegestaan;\nV = Projectboeking verplicht;\nI = Investeringsproject verplicht;",
+                        "format": ""
+                      },
+                      "AcMm": {
+                        "type": "string",
+                        "description": "Memo",
+                        "format": "byte"
+                      },
+                      "CoAc": {
+                        "type": "string",
+                        "enum": [
+                          "N",
+                          "D",
+                          "C",
+                          "G"
+                        ],
+                        "maxLength": 20,
+                        "description": "Type verzamelrekening\nN = Geen verzamelrekening;\nD = Debiteur;\nC = Crediteur;\nG = Grootboek;",
+                        "format": ""
+                      },
+                      "ColA": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Verzamelen op",
+                        "format": ""
+                      },
+                      "PeDi": {
+                        "type": "integer",
+                        "description": "Periodeverdeeltabel",
+                        "format": ""
+                      },
+                      "VaBu": {
+                        "type": "string",
+                        "enum": [
+                          "N",
+                          "B",
+                          "BA",
+                          "A"
+                        ],
+                        "maxLength": 20,
+                        "description": "Budgetteren\nN = Niet van toepassing;\nB = Bedrag;\nBA = Bedrag \u002B aantal;\nA = Aantal;",
+                        "format": ""
+                      },
+                      "LiAc": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Afletteren met",
+                        "format": ""
+                      },
+                      "BaAc": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Afwijkende balansrekening",
+                        "format": ""
+                      },
+                      "VaEx": {
+                        "type": "string",
+                        "enum": [
+                          "R",
+                          "B"
+                        ],
+                        "maxLength": 20,
+                        "description": "Te tonen in exploitatie\nR = Realisatie;\nB = Budget;",
+                        "format": ""
+                      },
+                      "CmYN": {
+                        "type": "boolean",
+                        "description": "Verdichten",
+                        "format": ""
+                      },
+                      "FaAl": {
+                        "type": "boolean",
+                        "description": "Activa toevoegen bij boeken inkoop/bank",
+                        "format": ""
+                      },
+                      "CmMa": {
+                        "type": "boolean",
+                        "description": "Verplichting bij inkoopboeking verplicht",
+                        "format": ""
+                      },
+                      "MaBl": {
+                        "type": "boolean",
+                        "description": "Handmatig boeken blokkeren",
+                        "format": ""
+                      },
+                      "FeId": {
+                        "type": "string",
+                        "maxLength": 12,
+                        "description": "Rapportagecockpit",
+                        "format": ""
+                      },
+                      "Ref": {
+                        "type": "string",
+                        "maxLength": 32,
+                        "description": "RGS-referentiecode",
+                        "format": ""
+                      },
+                      "RfEx": {
+                        "type": "string",
+                        "maxLength": 32,
+                        "description": "RGS-extensie",
+                        "format": ""
+                      },
+                      "DsId": {
+                        "type": "integer",
+                        "description": "Aanmaningsset",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "AcNr"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnBankTransaction_POST": {
+        "type": "object",
+        "properties": {
+          "KnBankTransaction": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "integer",
+                        "description": "Regelnummer",
+                        "format": ""
+                      },
+                      "BcCo": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Bank",
+                        "format": ""
+                      },
+                      "TrCd": {
+                        "type": "string",
+                        "maxLength": 8,
+                        "description": "Transactiecode",
+                        "format": ""
+                      },
+                      "SeVa": {
+                        "type": "string",
+                        "maxLength": 32,
+                        "description": "Zoekwaarde",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 80,
+                        "description": "Omschrijving",
+                        "format": ""
+                      },
+                      "AcId": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Rekening",
+                        "format": ""
+                      },
+                      "VaId": {
+                        "type": "string",
+                        "maxLength": 3,
+                        "description": "Btw-code",
+                        "format": ""
+                      },
+                      "CmYN": {
+                        "type": "boolean",
+                        "description": "Commissie automatisch boeken op kostenrekening",
+                        "format": ""
+                      },
+                      "AcCm": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Rekening (commissie)",
+                        "format": ""
+                      },
+                      "VaCm": {
+                        "type": "string",
+                        "maxLength": 3,
+                        "description": "Btw-code (commissie)",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "BcCo",
+                      "TrCd"
+                    ]
+                  },
+                  "Objects": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "KnTransactionDimension": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "Srch": {
+                                        "type": "string",
+                                        "maxLength": 32,
+                                        "description": "Zoekwaarde",
+                                        "format": ""
+                                      },
+                                      "DiC1": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "Code verbijzonderingsas 1",
+                                        "format": ""
+                                      },
+                                      "DiC2": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "Code verbijzonderingsas 2",
+                                        "format": ""
+                                      },
+                                      "DiC3": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "Code verbijzonderingsas 3",
+                                        "format": ""
+                                      },
+                                      "DiC4": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "Code verbijzonderingsas 4",
+                                        "format": ""
+                                      },
+                                      "DiC5": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "Code verbijzonderingsas 5",
+                                        "format": ""
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnBankTransaction_PUT": {
+        "type": "object",
+        "properties": {
+          "KnBankTransaction": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "integer",
+                        "description": "Regelnummer",
+                        "format": ""
+                      },
+                      "BcCo": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Bank",
+                        "format": ""
+                      },
+                      "TrCd": {
+                        "type": "string",
+                        "maxLength": 8,
+                        "description": "Transactiecode",
+                        "format": ""
+                      },
+                      "SeVa": {
+                        "type": "string",
+                        "maxLength": 32,
+                        "description": "Zoekwaarde",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 80,
+                        "description": "Omschrijving",
+                        "format": ""
+                      },
+                      "AcId": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Rekening",
+                        "format": ""
+                      },
+                      "VaId": {
+                        "type": "string",
+                        "maxLength": 3,
+                        "description": "Btw-code",
+                        "format": ""
+                      },
+                      "CmYN": {
+                        "type": "boolean",
+                        "description": "Commissie automatisch boeken op kostenrekening",
+                        "format": ""
+                      },
+                      "AcCm": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Rekening (commissie)",
+                        "format": ""
+                      },
+                      "VaCm": {
+                        "type": "string",
+                        "maxLength": 3,
+                        "description": "Btw-code (commissie)",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "TrCd"
+                    ]
+                  },
+                  "Objects": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "KnTransactionDimension": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "Srch": {
+                                        "type": "string",
+                                        "maxLength": 32,
+                                        "description": "Zoekwaarde",
+                                        "format": ""
+                                      },
+                                      "DiC1": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "Code verbijzonderingsas 1",
+                                        "format": ""
+                                      },
+                                      "DiC2": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "Code verbijzonderingsas 2",
+                                        "format": ""
+                                      },
+                                      "DiC3": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "Code verbijzonderingsas 3",
+                                        "format": ""
+                                      },
+                                      "DiC4": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "Code verbijzonderingsas 4",
+                                        "format": ""
+                                      },
+                                      "DiC5": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "Code verbijzonderingsas 5",
+                                        "format": ""
+                                      }
+                                    },
+                                    "required": [
+                                      "Srch"
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnDimCode_POST": {
+        "type": "object",
+        "properties": {
+          "KnDimCode": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "AxId": {
+                        "type": "string",
+                        "maxLength": 1,
+                        "description": "Verbijzonderingsas",
+                        "format": ""
+                      },
+                      "VbCo": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Code verbijzondering",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving",
+                        "format": ""
+                      },
+                      "Re": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Selectiewaarde",
+                        "format": ""
+                      },
+                      "QuYN": {
+                        "type": "boolean",
+                        "description": "Aantallen bijhouden",
+                        "format": ""
+                      },
+                      "Bl": {
+                        "type": "boolean",
+                        "description": "Geblokkeerd",
+                        "format": ""
+                      },
+                      "PeDi": {
+                        "type": "integer",
+                        "description": "Periodeverdeeltabel",
+                        "format": ""
+                      },
+                      "CoVC": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Btw-terugvordering",
+                        "format": ""
+                      },
+                      "DiG1": {
+                        "type": "string",
+                        "maxLength": 25,
+                        "description": "Verbijzonderingsgroep 1",
+                        "format": ""
+                      },
+                      "DiG2": {
+                        "type": "string",
+                        "maxLength": 25,
+                        "description": "Verbijzonderingsgroep 2",
+                        "format": ""
+                      },
+                      "DiG3": {
+                        "type": "string",
+                        "maxLength": 25,
+                        "description": "Verbijzonderingsgroep 3",
+                        "format": ""
+                      },
+                      "DiG4": {
+                        "type": "string",
+                        "maxLength": 25,
+                        "description": "Verbijzonderingsgroep 4",
+                        "format": ""
+                      },
+                      "DiG5": {
+                        "type": "string",
+                        "maxLength": 25,
+                        "description": "Verbijzonderingsgroep 5",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "AxId",
+                      "VbCo",
+                      "Ds"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnDimCode_PUT": {
+        "type": "object",
+        "properties": {
+          "KnDimCode": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "AxId": {
+                        "type": "string",
+                        "maxLength": 1,
+                        "description": "Verbijzonderingsas",
+                        "format": ""
+                      },
+                      "VbCo": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Code verbijzondering",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving",
+                        "format": ""
+                      },
+                      "Re": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Selectiewaarde",
+                        "format": ""
+                      },
+                      "QuYN": {
+                        "type": "boolean",
+                        "description": "Aantallen bijhouden",
+                        "format": ""
+                      },
+                      "Bl": {
+                        "type": "boolean",
+                        "description": "Geblokkeerd",
+                        "format": ""
+                      },
+                      "PeDi": {
+                        "type": "integer",
+                        "description": "Periodeverdeeltabel",
+                        "format": ""
+                      },
+                      "CoVC": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Btw-terugvordering",
+                        "format": ""
+                      },
+                      "DiG1": {
+                        "type": "string",
+                        "maxLength": 25,
+                        "description": "Verbijzonderingsgroep 1",
+                        "format": ""
+                      },
+                      "DiG2": {
+                        "type": "string",
+                        "maxLength": 25,
+                        "description": "Verbijzonderingsgroep 2",
+                        "format": ""
+                      },
+                      "DiG3": {
+                        "type": "string",
+                        "maxLength": 25,
+                        "description": "Verbijzonderingsgroep 3",
+                        "format": ""
+                      },
+                      "DiG4": {
+                        "type": "string",
+                        "maxLength": 25,
+                        "description": "Verbijzonderingsgroep 4",
+                        "format": ""
+                      },
+                      "DiG5": {
+                        "type": "string",
+                        "maxLength": 25,
+                        "description": "Verbijzonderingsgroep 5",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "AxId",
+                      "VbCo"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "AfasToken": {
+        "name": "Authorization",
+        "type": "apiKey",
+        "in": "header",
+        "description": "Convert the XML token to Base64 and add \u0027AfasToken \u0027 in front of it."
+      }
+    },
+    "parameters": {
+      "Accept-Language": {
+        "name": "Accept-Language",
+        "in": "header",
+        "required": false,
+        "description": "Indicates the client\u0027s preferred language for the response. If not provided, the API defaults to the base environment language.",
+        "schema": {
+          "type": "string",
+          "enum": [
+            "en-us",
+            "nl-nl",
+            "nl-be",
+            "fr-fr",
+            "de-de"
+          ],
+          "example": "nl-nl"
+        }
+      },
+      "Content-Type": {
+        "name": "Content-Type",
+        "in": "header",
+        "required": false,
+        "description": "Specifies the media type and character encoding for the request body. Ensures proper decoding and interpretation of the transmitted data.",
+        "schema": {
+          "type": "string",
+          "example": "application/json;charset=utf-8"
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "OK; request is successfully executed.",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(0ms), complete(418ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Thu, 23 Nov 2023 12:11:06 GMT",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "0",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request; invalid request"
+      },
+      "401": {
+        "description": "Unauthorized; valid token but no access to this endpoint.",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(0ms), complete(418ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Thu, 23 Nov 2023 12:11:06 GMT",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "0",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "403": {
+        "description": "Forbidden; Due to IP restrictions in AFAS environment.",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(0ms), complete(418ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Thu, 23 Nov 2023 12:11:06 GMT",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "0",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "404": {
+        "description": "Not Found; requested resource is not available on the server.",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(0ms), complete(101ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Thu, 23 Nov 2023 12:11:06 GMT",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "0",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "413": {
+        "description": "Payload Too Large.",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(0ms), complete(418ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Thu, 23 Nov 2023 12:11:06 GMT",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "0",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "500": {
+        "description": "Internal Server Error",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(1ms), complete(2192ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Tue, 30 Jan 2024 20:30:07 GMT",
+            "schema": {
+              "type": "string"
+            }
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "errorNumber": {
+                  "type": "integer",
+                  "example": {
+                    "example": 0
+                  }
+                },
+                "externalMessage": {
+                  "type": "string",
+                  "example": {
+                    "example": "string"
+                  }
+                },
+                "profitLogReference": {
+                  "type": "string",
+                  "example": {
+                    "example": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "503": {
+        "description": "Service unavailable; retry at a later time. Contains the number of seconds to wait before retrying the request",
+        "headers": {
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "61",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Retry-After": {
+            "description": "7200",
+            "schema": {
+              "type": "string"
+            }
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "string",
+                      "example": {
+                        "example": "503"
+                      }
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": {
+                        "example": "Service temporarily unavailable due to scheduled maintenance. Please check afasstatus.nl for details."
+                      }
+                    }
+                  }
+                },
+                "retry_after": {
+                  "type": "integer",
+                  "example": 7200
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "AfasToken": []
+    }
+  ]
+}

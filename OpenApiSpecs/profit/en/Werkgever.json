@@ -1,0 +1,5407 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "6.6.9",
+    "title": "AFAS Werkgever API",
+    "description": "This API describes the endpoints related to Werkgever. Use this API with the functional description of the API."
+  },
+  "servers": [
+    {
+      "url": "https://{id}.rest.afas.online/ProfitRestServices",
+      "description": "Production environment",
+      "variables": {
+        "id": {
+          "description": "5 digit environment number",
+          "default": "12345"
+        }
+      }
+    },
+    {
+      "url": "https://{id}.resttest.afas.online/ProfitRestServices",
+      "description": "Test environment",
+      "variables": {
+        "id": {
+          "description": "5 digit environment number",
+          "default": "12345"
+        }
+      }
+    },
+    {
+      "url": "https://{id}.restaccept.afas.online/ProfitRestServices",
+      "description": "Accept environment",
+      "variables": {
+        "id": {
+          "description": "5 digit environment number",
+          "default": "12345"
+        }
+      }
+    },
+    {
+      "url": "https://{id}.restcursus.afas.online/ProfitRestServices",
+      "description": "Cursus environment",
+      "variables": {
+        "id": {
+          "description": "5 digit environment number",
+          "default": "12345"
+        }
+      }
+    }
+  ],
+  "paths": {
+    "/connectors/HrCostCarrier": {
+      "post": {
+        "summary": "Kostendrager",
+        "description": "\n\rAlleen beschikbaar onder conditie: HRM\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_147.htm",
+        "operationId": "POST_HrCostCarrier",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HrCostCarrier_POST"
+              },
+              "examples": {
+                "create costcarrier": {
+                  "value": {
+                    "HrCostCarrier": {
+                      "Element": {
+                        "Fields": {
+                          "CmId": "01",
+                          "CcId": "SEDV",
+                          "CcDs": "Starship Engineering Division"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                },
+                "examples": {
+                  "Response example": {
+                    "value": {
+                      "results": {
+                        "HrCostCarrier": {
+                          "CmId": "PrimaryKeyValue",
+                          "CcId": "PrimaryKeyValue"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Cache-Control": {
+                "description": "no-store, no-cache",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Transfer-Encoding": {
+                "description": "chunked",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Type": {
+                "description": "application/json; charset=utf-8",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Encoding": {
+                "description": "gzip",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Strict-Transport-Security": {
+                "description": "max-age=31536000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Version": {
+                "description": "4.3.0.0",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "nosniff",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Frame-Options": {
+                "description": "deny",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Stats": {
+                "description": "init(0ms), before response(10ms), after response(609ms), after compressing(610ms), complete(610ms)",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "description": "*",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Headers": {
+                "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Methods": {
+                "description": "GET, POST, PUT, DELETE, OPTIONS",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Max-Age": {
+                "description": "1728000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Date": {
+                "description": "Wed, 07 Feb 2024 10:39:26 GMT",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Kostendrager"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Kostendrager",
+        "description": "\n\rAlleen beschikbaar onder conditie: HRM\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_147.htm",
+        "operationId": "PUT_HrCostCarrier",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HrCostCarrier_PUT"
+              },
+              "examples": {
+                "block costcarrier": {
+                  "value": {
+                    "HrCostCarrier": {
+                      "Element": {
+                        "Fields": {
+                          "CmId": "01",
+                          "CcId": "SEDV",
+                          "Bl": true
+                        }
+                      }
+                    }
+                  }
+                },
+                "change description": {
+                  "value": {
+                    "HrCostCarrier": {
+                      "Element": {
+                        "Fields": {
+                          "CmId": "01",
+                          "CcId": "SEDV",
+                          "CcDs": "Interstellar Engineering Division"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                },
+                "examples": {
+                  "Response example": {
+                    "value": {
+                      "results": {
+                        "HrCostCarrier": {
+                          "CmId": "PrimaryKeyValue",
+                          "CcId": "PrimaryKeyValue"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Cache-Control": {
+                "description": "no-store, no-cache",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Transfer-Encoding": {
+                "description": "chunked",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Type": {
+                "description": "application/json; charset=utf-8",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Encoding": {
+                "description": "gzip",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Strict-Transport-Security": {
+                "description": "max-age=31536000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Version": {
+                "description": "4.3.0.0",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "nosniff",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Frame-Options": {
+                "description": "deny",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Stats": {
+                "description": "init(0ms), before response(10ms), after response(609ms), after compressing(610ms), complete(610ms)",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "description": "*",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Headers": {
+                "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Methods": {
+                "description": "GET, POST, PUT, DELETE, OPTIONS",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Max-Age": {
+                "description": "1728000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Date": {
+                "description": "Wed, 07 Feb 2024 10:39:26 GMT",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Kostendrager"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/HrCostCarrier/HrCostCarrier/@CmId,@CcId/{CmId},{CcId}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "CmId",
+          "in": "path",
+          "required": true,
+          "description": "Employer"
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "CcId",
+          "in": "path",
+          "required": true,
+          "description": "Cost unit"
+        }
+      ],
+      "delete": {
+        "summary": "Kostendrager",
+        "operationId": "DELETE_HrCostCarrier",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_147.htm",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Kostendrager"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/HrCostCentre": {
+      "post": {
+        "summary": "Kostenplaats",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_146.htm",
+        "operationId": "POST_HrCostCentre",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HrCostCentre_POST"
+              },
+              "examples": {
+                "new Costcenter": {
+                  "value": {
+                    "HrCostCarrier": {
+                      "Element": {
+                        "Fields": {
+                          "CmId": "01",
+                          "CcId": "Administratie",
+                          "CcDs": "Administratieve ondersteuning en facturatie",
+                          "Bl": false
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                },
+                "examples": {
+                  "Response example": {
+                    "value": {
+                      "results": {
+                        "HrCostCentre": {
+                          "CmId": "PrimaryKeyValue",
+                          "CrId": "PrimaryKeyValue"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Cache-Control": {
+                "description": "no-store, no-cache",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Transfer-Encoding": {
+                "description": "chunked",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Type": {
+                "description": "application/json; charset=utf-8",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Encoding": {
+                "description": "gzip",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Strict-Transport-Security": {
+                "description": "max-age=31536000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Version": {
+                "description": "4.3.0.0",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "nosniff",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Frame-Options": {
+                "description": "deny",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Stats": {
+                "description": "init(0ms), before response(10ms), after response(609ms), after compressing(610ms), complete(610ms)",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "description": "*",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Headers": {
+                "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Methods": {
+                "description": "GET, POST, PUT, DELETE, OPTIONS",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Max-Age": {
+                "description": "1728000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Date": {
+                "description": "Wed, 07 Feb 2024 10:39:26 GMT",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Kostenplaats"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Kostenplaats",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_146.htm",
+        "operationId": "PUT_HrCostCentre",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HrCostCentre_PUT"
+              },
+              "examples": {
+                "Block Costcenter": {
+                  "value": {
+                    "AstroCostCarrier": {
+                      "Element": {
+                        "Fields": {
+                          "CmId": "01",
+                          "CcId": "ADM",
+                          "Bl": true
+                        }
+                      }
+                    }
+                  }
+                },
+                "Costcenter": {
+                  "value": {
+                    "AstroCostCarrier": {
+                      "Element": {
+                        "Fields": {
+                          "CmId": "01",
+                          "CcId": "ADM",
+                          "CcDs": "Administrative support and invoicing"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                },
+                "examples": {
+                  "Response example": {
+                    "value": {
+                      "results": {
+                        "HrCostCentre": {
+                          "CmId": "PrimaryKeyValue",
+                          "CrId": "PrimaryKeyValue"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Cache-Control": {
+                "description": "no-store, no-cache",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Transfer-Encoding": {
+                "description": "chunked",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Type": {
+                "description": "application/json; charset=utf-8",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Encoding": {
+                "description": "gzip",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Strict-Transport-Security": {
+                "description": "max-age=31536000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Version": {
+                "description": "4.3.0.0",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "nosniff",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Frame-Options": {
+                "description": "deny",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Stats": {
+                "description": "init(0ms), before response(10ms), after response(609ms), after compressing(610ms), complete(610ms)",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "description": "*",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Headers": {
+                "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Methods": {
+                "description": "GET, POST, PUT, DELETE, OPTIONS",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Max-Age": {
+                "description": "1728000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Date": {
+                "description": "Wed, 07 Feb 2024 10:39:26 GMT",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Kostenplaats"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/HrCostCentre/HrCostCentre/@CmId,@CrId/{CmId},{CrId}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "CmId",
+          "in": "path",
+          "required": true,
+          "description": "Employer"
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "CrId",
+          "in": "path",
+          "required": true,
+          "description": "Cost centre"
+        }
+      ],
+      "delete": {
+        "summary": "Kostenplaats",
+        "operationId": "DELETE_HrCostCentre",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_146.htm",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Kostenplaats"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/HrSalTable": {
+      "post": {
+        "summary": "Loonschaal",
+        "description": "\n\rAlleen beschikbaar onder conditie: HRM\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_HrSalTable.htm",
+        "operationId": "POST_HrSalTable",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HrSalTable_POST"
+              },
+              "examples": {
+                "1 regel": {
+                  "value": {
+                    "HrSalTable": {
+                      "Element": {
+                        "Fields": {
+                          "Ds": "AFAS enkele regel",
+                          "DecR": "2",
+                          "ViRt": "1",
+                          "Visp": "7",
+                          "MnMx": "0",
+                          "DbId": "80682"
+                        },
+                        "Objects": {
+                          "HrSalTableSet": {
+                            "Element": {
+                              "Fields": {
+                                "DaBe": "2018-01-01",
+                                "Ds": "AFAS"
+                              },
+                              "Objects": {
+                                "HrSalTableRow": {
+                                  "Element": {
+                                    "Fields": {
+                                      "Va1": "DM",
+                                      "Be2": "0.0",
+                                      "Be3": "0.0",
+                                      "En3": "20.0",
+                                      "Val": "40.50"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "fout": {
+                  "value": {
+                    "HrSalTable": {
+                      "Element": {
+                        "Fields": {
+                          "Ds": "Foutieve regel",
+                          "DecR": "2",
+                          "ViRt": "1",
+                          "Visp": "7",
+                          "DbId": "80682"
+                        },
+                        "Objects": {
+                          "HrSalTableSet": {
+                            "Element": {
+                              "Fields": {
+                                "DaBe": "2018-01-01",
+                                "Ds": "AFAS"
+                              },
+                              "Objects": {
+                                "HrSalTableRow": {
+                                  "Element": {
+                                    "Fields": {
+                                      "Va1": "FOUT",
+                                      "Be2": "0.0",
+                                      "Be3": "0.0",
+                                      "En3": "18.0",
+                                      "Val": "40"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "massa": {
+                  "value": {
+                    "HrSalTable": {
+                      "Element": {
+                        "Fields": {
+                          "Ds": "AFAS",
+                          "DecR": "2",
+                          "ViRt": "1",
+                          "Visp": "7",
+                          "MnMx": "0",
+                          "DbId": "1134"
+                        },
+                        "Objects": {
+                          "HrSalTableSet": {
+                            "Element": {
+                              "Fields": {
+                                "DaBe": "2018-01-01",
+                                "Ds": "AFAS"
+                              },
+                              "Objects": {
+                                "HrSalTableRow": {
+                                  "Element": [
+                                    {
+                                      "Fields": {
+                                        "Va1": "DM",
+                                        "Be2": "0.0",
+                                        "Be3": "0.0",
+                                        "En3": "18.0",
+                                        "Val": "40"
+                                      }
+                                    },
+                                    {
+                                      "Fields": {
+                                        "Va1": "DM",
+                                        "Be2": "0.0",
+                                        "Be3": "18.0",
+                                        "En3": "30.0",
+                                        "Val": "50"
+                                      }
+                                    },
+                                    {
+                                      "Fields": {
+                                        "Va1": "DM",
+                                        "Be2": "0.0",
+                                        "Be3": "30.0",
+                                        "En3": "65.0",
+                                        "Val": "60"
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Loonschaal"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnOrgEmrFun": {
+      "post": {
+        "summary": "Medewerker functie",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_167.htm",
+        "operationId": "POST_KnOrgEmrFun",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnOrgEmrFun_POST"
+              },
+              "examples": {
+                "Massa": {
+                  "value": {
+                    "KnOrgEmrFun": {
+                      "Element": [
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC001",
+                            "Fu": "Functie 001",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC002",
+                            "Fu": "Functie 002",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC003",
+                            "Fu": "Functie 003",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC004",
+                            "Fu": "Functie 004",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC005",
+                            "Fu": "Functie 005",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC006",
+                            "Fu": "Functie 006",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC007",
+                            "Fu": "Functie 007",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC008",
+                            "Fu": "Functie 008",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC009",
+                            "Fu": "Functie 009",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC010",
+                            "Fu": "Functie 010",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC011",
+                            "Fu": "Functie 011",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC012",
+                            "Fu": "Functie 012",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC013",
+                            "Fu": "Functie 013",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC014",
+                            "Fu": "Functie 014",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC015",
+                            "Fu": "Functie 015",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC016",
+                            "Fu": "Functie 016",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC017",
+                            "Fu": "Functie 017",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC018",
+                            "Fu": "Functie 018",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC019",
+                            "Fu": "Functie 019",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC020",
+                            "Fu": "Functie 020",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC021",
+                            "Fu": "Functie 021",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC022",
+                            "Fu": "Functie 022",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC023",
+                            "Fu": "Functie 023",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC024",
+                            "Fu": "Functie 024",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC025",
+                            "Fu": "Functie 025",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC026",
+                            "Fu": "Functie 026",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC027",
+                            "Fu": "Functie 027",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC028",
+                            "Fu": "Functie 028",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC029",
+                            "Fu": "Functie 029",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC030",
+                            "Fu": "Functie 030",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC031",
+                            "Fu": "Functie 031",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC032",
+                            "Fu": "Functie 032",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC033",
+                            "Fu": "Functie 033",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC034",
+                            "Fu": "Functie 034",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC035",
+                            "Fu": "Functie 035",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC036",
+                            "Fu": "Functie 036",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC037",
+                            "Fu": "Functie 037",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC038",
+                            "Fu": "Functie 038",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC039",
+                            "Fu": "Functie 039",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC040",
+                            "Fu": "Functie 040",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC041",
+                            "Fu": "Functie 041",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC042",
+                            "Fu": "Functie 042",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC043",
+                            "Fu": "Functie 043",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC044",
+                            "Fu": "Functie 044",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC045",
+                            "Fu": "Functie 045",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC046",
+                            "Fu": "Functie 046",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC047",
+                            "Fu": "Functie 047",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC048",
+                            "Fu": "Functie 048",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC049",
+                            "Fu": "Functie 049",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC050",
+                            "Fu": "Functie 050",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC051",
+                            "Fu": "Functie 051",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC052",
+                            "Fu": "Functie 052",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC053",
+                            "Fu": "Functie 053",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC054",
+                            "Fu": "Functie 054",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC055",
+                            "Fu": "Functie 055",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC056",
+                            "Fu": "Functie 056",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC057",
+                            "Fu": "Functie 057",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC058",
+                            "Fu": "Functie 058",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC059",
+                            "Fu": "Functie 059",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC060",
+                            "Fu": "Functie 060",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC061",
+                            "Fu": "Functie 061",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC062",
+                            "Fu": "Functie 062",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC063",
+                            "Fu": "Functie 063",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC064",
+                            "Fu": "Functie 064",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC065",
+                            "Fu": "Functie 065",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC066",
+                            "Fu": "Functie 066",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC067",
+                            "Fu": "Functie 067",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC068",
+                            "Fu": "Functie 068",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC069",
+                            "Fu": "Functie 069",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC070",
+                            "Fu": "Functie 070",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC071",
+                            "Fu": "Functie 071",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC072",
+                            "Fu": "Functie 072",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC073",
+                            "Fu": "Functie 073",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC074",
+                            "Fu": "Functie 074",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC075",
+                            "Fu": "Functie 075",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC076",
+                            "Fu": "Functie 076",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC077",
+                            "Fu": "Functie 077",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC078",
+                            "Fu": "Functie 078",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC079",
+                            "Fu": "Functie 079",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC080",
+                            "Fu": "Functie 080",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC081",
+                            "Fu": "Functie 081",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC082",
+                            "Fu": "Functie 082",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC083",
+                            "Fu": "Functie 083",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC084",
+                            "Fu": "Functie 084",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC085",
+                            "Fu": "Functie 085",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC086",
+                            "Fu": "Functie 086",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC087",
+                            "Fu": "Functie 087",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC088",
+                            "Fu": "Functie 088",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC089",
+                            "Fu": "Functie 089",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC090",
+                            "Fu": "Functie 090",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC091",
+                            "Fu": "Functie 091",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC092",
+                            "Fu": "Functie 092",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC093",
+                            "Fu": "Functie 093",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC094",
+                            "Fu": "Functie 094",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC095",
+                            "Fu": "Functie 095",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC096",
+                            "Fu": "Functie 096",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC097",
+                            "Fu": "Functie 097",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC098",
+                            "Fu": "Functie 098",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC099",
+                            "Fu": "Functie 099",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "FUNC100",
+                            "Fu": "Functie 100",
+                            "FTId": "ALG",
+                            "Bl": "0"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "Maximaal": {
+                  "value": {
+                    "KnOrgEmrFun": {
+                      "Element": {
+                        "Fields": {
+                          "CmId": "RIS",
+                          "FuId": "TST2",
+                          "Fu": "Tester Technisch",
+                          "FTId": "ALG",
+                          "Bl": "0",
+                          "BFun": "0",
+                          "InGl": "0",
+                          "Z69": "0",
+                          "Z89": "1"
+                        }
+                      }
+                    }
+                  }
+                },
+                "Minimaal": {
+                  "value": {
+                    "KnOrgEmrFun": {
+                      "Element": {
+                        "Fields": {
+                          "CmId": "RIS",
+                          "FuId": "TST1",
+                          "Fu": "Tester Functioneel",
+                          "FTId": "ALG"
+                        }
+                      }
+                    }
+                  }
+                },
+                "thuiswerken": {
+                  "value": {
+                    "KnOrgEmrFun": {
+                      "Element": {
+                        "Fields": {
+                          "CmId": "RIS",
+                          "FuId": "TSTT",
+                          "Fu": "Tester Thuiswerken",
+                          "FTId": "ALG",
+                          "WhAl": "1"
+                        }
+                      }
+                    }
+                  }
+                },
+                "Vertaalde Velden": {
+                  "value": {
+                    "KnOrgEmrFun": {
+                      "Element": {
+                        "Fields": {
+                          "CmId": "RIS",
+                          "FuId": "TST3",
+                          "Fu": "Tester Functioneel",
+                          "FTId": "ALG",
+                          "Fu_1031": "Deutsch",
+                          "Fu_1036": "La France",
+                          "Fu_1043": "Nederlands",
+                          "Fu_2057": "English",
+                          "Fu_2067": "Vlaams"
+                        }
+                      }
+                    }
+                  }
+                },
+                "voor update Vertaalde Velden": {
+                  "value": {
+                    "KnOrgEmrFun": {
+                      "Element": {
+                        "Fields": {
+                          "CmId": "RIS",
+                          "FuId": "TST4",
+                          "Fu": "Tester Functioneel",
+                          "FTId": "ALG",
+                          "Fu_1031": "Deutsch",
+                          "Fu_1036": "La France",
+                          "Fu_1043": "Nederlands",
+                          "Fu_2057": "English",
+                          "Fu_2067": "Vlaams"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                },
+                "examples": {
+                  "Response example": {
+                    "value": {
+                      "results": {
+                        "KnOrgEmrFun": {
+                          "CmId": "PrimaryKeyValue",
+                          "FuId": "PrimaryKeyValue"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Cache-Control": {
+                "description": "no-store, no-cache",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Transfer-Encoding": {
+                "description": "chunked",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Type": {
+                "description": "application/json; charset=utf-8",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Encoding": {
+                "description": "gzip",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Strict-Transport-Security": {
+                "description": "max-age=31536000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Version": {
+                "description": "4.3.0.0",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "nosniff",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Frame-Options": {
+                "description": "deny",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Stats": {
+                "description": "init(0ms), before response(10ms), after response(609ms), after compressing(610ms), complete(610ms)",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "description": "*",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Headers": {
+                "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Methods": {
+                "description": "GET, POST, PUT, DELETE, OPTIONS",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Max-Age": {
+                "description": "1728000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Date": {
+                "description": "Wed, 07 Feb 2024 10:39:26 GMT",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Medewerker functie"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Medewerker functie",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_167.htm",
+        "operationId": "PUT_KnOrgEmrFun",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnOrgEmrFun_PUT"
+              },
+              "examples": {
+                "blokkeren": {
+                  "value": {
+                    "KnOrgEmrFun": {
+                      "Element": [
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "Ficred",
+                            "Bl": "1"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CmId": "RIS",
+                            "FuId": "Fideb",
+                            "Bl": "1"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "Naam Wijzigen": {
+                  "value": {
+                    "KnOrgEmrFun": {
+                      "Element": {
+                        "Fields": {
+                          "CmId": "RIS",
+                          "FuId": "LogMan",
+                          "Fu": "Logistiek Manager -gewijzigd"
+                        }
+                      }
+                    }
+                  }
+                },
+                "Vertaalde Velden": {
+                  "value": {
+                    "KnOrgEmrFun": {
+                      "Element": {
+                        "Fields": {
+                          "CmId": "RIS",
+                          "FuId": "TST4",
+                          "Fu": "Tester Functioneel",
+                          "FTId": "ALG",
+                          "Fu_1031": "Deutsch update",
+                          "Fu_1036": "La France update",
+                          "Fu_1043": "Nederlands update",
+                          "Fu_2057": "English update",
+                          "Fu_2067": "Vlaams update"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                },
+                "examples": {
+                  "Response example": {
+                    "value": {
+                      "results": {
+                        "KnOrgEmrFun": {
+                          "CmId": "PrimaryKeyValue",
+                          "FuId": "PrimaryKeyValue"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Cache-Control": {
+                "description": "no-store, no-cache",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Transfer-Encoding": {
+                "description": "chunked",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Type": {
+                "description": "application/json; charset=utf-8",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Encoding": {
+                "description": "gzip",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Strict-Transport-Security": {
+                "description": "max-age=31536000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Version": {
+                "description": "4.3.0.0",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "nosniff",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Frame-Options": {
+                "description": "deny",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Stats": {
+                "description": "init(0ms), before response(10ms), after response(609ms), after compressing(610ms), complete(610ms)",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "description": "*",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Headers": {
+                "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Methods": {
+                "description": "GET, POST, PUT, DELETE, OPTIONS",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Max-Age": {
+                "description": "1728000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Date": {
+                "description": "Wed, 07 Feb 2024 10:39:26 GMT",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Medewerker functie"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnOrgEmrFun/KnOrgEmrFun/@CmId,@FuId/{CmId},{FuId}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "CmId",
+          "in": "path",
+          "required": true,
+          "description": "Employer"
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "FuId",
+          "in": "path",
+          "required": true,
+          "description": "Job"
+        }
+      ],
+      "delete": {
+        "summary": "Medewerker functie",
+        "operationId": "DELETE_KnOrgEmrFun",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_167.htm",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Medewerker functie"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/KnOrgUnit": {
+      "post": {
+        "summary": "Organisatorische eenheid",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_KnOrgUnit.htm",
+        "operationId": "POST_KnOrgUnit",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnOrgUnit_POST"
+              },
+              "examples": {
+                "meerdere": {
+                  "value": {
+                    "KnOrgunit": {
+                      "Element": [
+                        {
+                          "@OuId": "ENYONT",
+                          "Fields": {
+                            "Ds": "Enyoi Ontwikkelbedrijf",
+                            "OTId": "BDR",
+                            "StUn": "0",
+                            "Empl": "1",
+                            "RpOu": "1",
+                            "ReOu": "HLD"
+                          }
+                        },
+                        {
+                          "@OuId": "SOFT",
+                          "Fields": {
+                            "Ds": "Enyoi Softwareontwikkeling",
+                            "OTId": "DIV",
+                            "StUn": "0",
+                            "Empl": "1",
+                            "RpOu": "1",
+                            "ReOu": "HLD"
+                          }
+                        },
+                        {
+                          "@OuId": "SWIN",
+                          "Fields": {
+                            "Ds": "Windows",
+                            "OTId": "AFD",
+                            "StUn": "0",
+                            "Empl": "1",
+                            "RpOu": "1",
+                            "ReOu": "HLD"
+                          }
+                        },
+                        {
+                          "@OuId": "SLYN",
+                          "Fields": {
+                            "Ds": "Lynux",
+                            "OTId": "AFD",
+                            "StUn": "0",
+                            "Empl": "1",
+                            "RpOu": "1",
+                            "ReOu": "HLD"
+                          }
+                        },
+                        {
+                          "@OuId": "SAPP",
+                          "Fields": {
+                            "Ds": "Apple",
+                            "OTId": "AFD",
+                            "StUn": "0",
+                            "Empl": "1",
+                            "RpOu": "1",
+                            "ReOu": "HLD"
+                          }
+                        },
+                        {
+                          "@OuId": "SWEB",
+                          "Fields": {
+                            "Ds": "Web",
+                            "OTId": "AFD",
+                            "StUn": "0",
+                            "Empl": "1",
+                            "RpOu": "1",
+                            "ReOu": "HLD"
+                          }
+                        },
+                        {
+                          "@OuId": "SINT",
+                          "Fields": {
+                            "Ds": "Integratie",
+                            "OTId": "AFD",
+                            "StUn": "0",
+                            "Empl": "1",
+                            "RpOu": "1",
+                            "ReOu": "HLD"
+                          }
+                        },
+                        {
+                          "@OuId": "SSTA",
+                          "Fields": {
+                            "Ds": "STAF",
+                            "OTId": "AFD",
+                            "StUn": "1",
+                            "Empl": "1",
+                            "RpOu": "1",
+                            "ReOu": "HLD"
+                          }
+                        },
+                        {
+                          "@OuId": "HARD",
+                          "Fields": {
+                            "Ds": "Enyoi Hardwareontwikkeling",
+                            "OTId": "DIV",
+                            "StUn": "1",
+                            "Empl": "1",
+                            "RpOu": "1",
+                            "ReOu": "HLD"
+                          }
+                        },
+                        {
+                          "@OuId": "HCOM",
+                          "Fields": {
+                            "Ds": "Componenten",
+                            "OTId": "AFD",
+                            "StUn": "1",
+                            "Empl": "1",
+                            "RpOu": "1",
+                            "ReOu": "HLD"
+                          }
+                        },
+                        {
+                          "@OuId": "HSER",
+                          "Fields": {
+                            "Ds": "Servers",
+                            "OTId": "AFD",
+                            "StUn": "1",
+                            "Empl": "1",
+                            "RpOu": "1",
+                            "ReOu": "HLD"
+                          }
+                        },
+                        {
+                          "@OuId": "HNET",
+                          "Fields": {
+                            "Ds": "Netwerk",
+                            "OTId": "AFD",
+                            "StUn": "1",
+                            "Empl": "1",
+                            "RpOu": "1",
+                            "ReOu": "HLD"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                },
+                "examples": {
+                  "Response example": {
+                    "value": {
+                      "results": {
+                        "KnOrgUnit": {
+                          "OuId": "PrimaryKeyValue"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Cache-Control": {
+                "description": "no-store, no-cache",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Transfer-Encoding": {
+                "description": "chunked",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Type": {
+                "description": "application/json; charset=utf-8",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Encoding": {
+                "description": "gzip",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Strict-Transport-Security": {
+                "description": "max-age=31536000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Version": {
+                "description": "4.3.0.0",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "nosniff",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Frame-Options": {
+                "description": "deny",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Stats": {
+                "description": "init(0ms), before response(10ms), after response(609ms), after compressing(610ms), complete(610ms)",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "description": "*",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Headers": {
+                "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Methods": {
+                "description": "GET, POST, PUT, DELETE, OPTIONS",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Max-Age": {
+                "description": "1728000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Date": {
+                "description": "Wed, 07 Feb 2024 10:39:26 GMT",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Organisatorische eenheid"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Organisatorische eenheid",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_KnOrgUnit.htm",
+        "operationId": "PUT_KnOrgUnit",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnOrgUnit_PUT"
+              },
+              "examples": {
+                "Update": {
+                  "value": {
+                    "KnOrgunit": {
+                      "Element": {
+                        "@OuId": "HLD",
+                        "Fields": {
+                          "Ds": "Enyoi Holding NV",
+                          "Cpt1": "http://enyoi.nl/cockpits/HLD1.htm",
+                          "Cpt2": "http://enyoi.nl/cockpits/HLD2.htm",
+                          "Cpt3": "http://enyoi.nl/cockpits/HLD3.htm",
+                          "Cpt4": "http://enyoi.nl/cockpits/HLD4.htm",
+                          "Cpt5": "http://enyoi.nl/cockpits/HLD5.htm"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                },
+                "examples": {
+                  "Response example": {
+                    "value": {
+                      "results": {
+                        "KnOrgUnit": {
+                          "OuId": "PrimaryKeyValue"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Cache-Control": {
+                "description": "no-store, no-cache",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Transfer-Encoding": {
+                "description": "chunked",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Type": {
+                "description": "application/json; charset=utf-8",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Encoding": {
+                "description": "gzip",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Strict-Transport-Security": {
+                "description": "max-age=31536000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Version": {
+                "description": "4.3.0.0",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "nosniff",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Frame-Options": {
+                "description": "deny",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Stats": {
+                "description": "init(0ms), before response(10ms), after response(609ms), after compressing(610ms), complete(610ms)",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "description": "*",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Headers": {
+                "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Methods": {
+                "description": "GET, POST, PUT, DELETE, OPTIONS",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Max-Age": {
+                "description": "1728000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Date": {
+                "description": "Wed, 07 Feb 2024 10:39:26 GMT",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Organisatorische eenheid"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnOrgUnit/KnOrgunit/@OuId/{OuId}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "OuId",
+          "in": "path",
+          "required": true,
+          "description": "Organisational unit"
+        }
+      ],
+      "delete": {
+        "summary": "Organisatorische eenheid",
+        "operationId": "DELETE_KnOrgUnit",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_KnOrgUnit.htm",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Organisatorische eenheid"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/MetaInfo": {
+      "get": {
+        "summary": "Retrieve the meta info of the Profit environment and the available connectors",
+        "tags": [
+          "API Info"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "updateConnectors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "getConnectors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "info": {
+                      "type": "object",
+                      "properties": {
+                        "envid": {
+                          "type": "string"
+                        },
+                        "appName": {
+                          "type": "string"
+                        },
+                        "group": {
+                          "type": "string"
+                        },
+                        "tokenExpiry": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "updateConnectors": [
+                        {
+                          "id": "HrCreateApplicant",
+                          "description": "Aanmaken sollicitatie"
+                        },
+                        {
+                          "id": "FbSubscription",
+                          "description": "Abonnement"
+                        },
+                        {
+                          "id": "KnAddress",
+                          "description": "Adres"
+                        }
+                      ],
+                      "getConnectors": [
+                        {
+                          "id": "Profit_Fin_ChangedEntrydate",
+                          "description": "Profit_Fin_ChangedEntrydate"
+                        },
+                        {
+                          "id": "Profit_Functions",
+                          "description": "Profit_Functions"
+                        }
+                      ],
+                      "info": {
+                        "envid": "A123456AC",
+                        "appName": "OpenAPI Spec Example",
+                        "group": "AuthorizationGroup 101 (12345.USER)",
+                        "tokenExpiry": "0"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_MetaInfo"
+      }
+    },
+    "/Metainfo/{Type}/{Endpoint}": {
+      "get": {
+        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
+        "tags": [
+          "API Info"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "fields": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "fieldId": {
+                            "type": "string"
+                          },
+                          "dataType": {
+                            "type": "string"
+                          },
+                          "label": {
+                            "type": "string"
+                          },
+                          "length": {
+                            "type": "integer"
+                          },
+                          "controlType": {
+                            "type": "integer"
+                          },
+                          "decimals": {
+                            "type": "integer"
+                          },
+                          "decimalsFieldId": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "name": "Profit_Administrations",
+                      "description": "Administraties (Profit)",
+                      "fields": [
+                        {
+                          "id": "AdminId",
+                          "fieldId": "U002",
+                          "dataType": "int",
+                          "label": "Administratie",
+                          "length": 3,
+                          "controlType": 5,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        },
+                        {
+                          "id": "AdminNm",
+                          "fieldId": "U001",
+                          "dataType": "string",
+                          "label": "Naam administratie",
+                          "length": 80,
+                          "controlType": 1,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        },
+                        {
+                          "id": "AdminCd",
+                          "fieldId": "UnCo",
+                          "dataType": "string",
+                          "label": "Administratie",
+                          "length": 10,
+                          "controlType": 1,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_MetaInfoPerConnector",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "get",
+                "update"
+              ],
+              "example": "update"
+            },
+            "in": "path",
+            "name": "Type",
+            "description": "Add the type of connector you want to get the meta info from",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "string",
+              "example": "KnEmployee"
+            },
+            "in": "path",
+            "name": "Endpoint",
+            "description": "Add the endpoint id of the connector you want to get the meta info from",
+            "required": true
+          },
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/{Endpoint}": {
+      "get": {
+        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id\u0027s can be found in the metainfo request result.",
+        "tags": [
+          "GET"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "skip": {
+                      "type": "integer"
+                    },
+                    "take": {
+                      "type": "integer"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "EmployeeId": {
+                            "type": "string"
+                          },
+                          "EmploymentEndDate": {
+                            "type": "string"
+                          },
+                          "EmailForDigitalDocuments": {
+                            "type": "string",
+                            "nullable": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example response": {
+                    "value": {
+                      "skip": 0,
+                      "take": 100,
+                      "rows": [
+                        {
+                          "EmployeeId": "000001005",
+                          "EmploymentEndDate": "2020-11-22T00:00:00Z",
+                          "EmailForDigitalDocuments": null
+                        },
+                        {
+                          "EmployeeId": "000001006",
+                          "EmploymentEndDate": "2020-11-22T00:00:00Z",
+                          "EmailForDigitalDocuments": null
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_MetaInfoPerCustomConnector",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "example": "your_custom_endpoint_id"
+            },
+            "in": "path",
+            "name": "Endpoint",
+            "description": "Add the id of connector you want to get the meta info from",
+            "required": true
+          },
+          {
+            "name": "skip",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results skipped. Starts at 0",
+            "schema": {
+              "type": "number",
+              "example": 0
+            }
+          },
+          {
+            "name": "take",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results returned",
+            "schema": {
+              "type": "number",
+              "example": 100
+            }
+          },
+          {
+            "name": "orderbyfieldids",
+            "in": "query",
+            "required": false,
+            "description": "Must be used to prevent reordered results.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterfieldids",
+            "in": "query",
+            "required": false,
+            "description": "The fieldIds of the values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filtervalues",
+            "in": "query",
+            "required": false,
+            "description": "The values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "operatortypes",
+            "in": "query",
+            "required": false,
+            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "schema": {
+              "type": "number",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "/connectors/Profit_CostCarrier": {
+      "get": {
+        "summary": "Employer / cost carriers",
+        "operationId": "Get_Profit_CostCarrier",
+        "description": " ",
+        "parameters": [
+          {
+            "name": "skip",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results skipped. Starts at 0",
+            "schema": {
+              "type": "number",
+              "example": 0
+            }
+          },
+          {
+            "name": "take",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results returned",
+            "schema": {
+              "type": "number",
+              "example": 100
+            }
+          },
+          {
+            "name": "orderbyfieldids",
+            "in": "query",
+            "required": false,
+            "description": "Must be used to prevent reordered results",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterfieldids",
+            "in": "query",
+            "required": false,
+            "description": "The fieldIds of the values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filtervalues",
+            "in": "query",
+            "required": false,
+            "description": "The values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "operatortypes",
+            "in": "query",
+            "required": false,
+            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "schema": {
+              "type": "number",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            }
+          },
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "skip": {
+                      "type": "integer"
+                    },
+                    "take": {
+                      "type": "integer"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "EmployerId": {
+                            "type": "string",
+                            "description": "Employer"
+                          },
+                          "CostCarrier": {
+                            "type": "string",
+                            "description": "Cost unit"
+                          },
+                          "Description": {
+                            "type": "string",
+                            "description": "Description"
+                          },
+                          "Blocked": {
+                            "type": "boolean",
+                            "description": "Blocked"
+                          },
+                          "ModifiedDate": {
+                            "type": "string",
+                            "description": "Changed on"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "GET"
+        ]
+      }
+    },
+    "/connectors/Profit_CostCentre": {
+      "get": {
+        "summary": "Employer / cost centres",
+        "operationId": "Get_Profit_CostCentre",
+        "description": " ",
+        "parameters": [
+          {
+            "name": "skip",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results skipped. Starts at 0",
+            "schema": {
+              "type": "number",
+              "example": 0
+            }
+          },
+          {
+            "name": "take",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results returned",
+            "schema": {
+              "type": "number",
+              "example": 100
+            }
+          },
+          {
+            "name": "orderbyfieldids",
+            "in": "query",
+            "required": false,
+            "description": "Must be used to prevent reordered results",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterfieldids",
+            "in": "query",
+            "required": false,
+            "description": "The fieldIds of the values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filtervalues",
+            "in": "query",
+            "required": false,
+            "description": "The values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "operatortypes",
+            "in": "query",
+            "required": false,
+            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "schema": {
+              "type": "number",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            }
+          },
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "skip": {
+                      "type": "integer"
+                    },
+                    "take": {
+                      "type": "integer"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "EmployerId": {
+                            "type": "string",
+                            "description": "Employer"
+                          },
+                          "CostCentre": {
+                            "type": "string",
+                            "description": "Cost centre"
+                          },
+                          "Description": {
+                            "type": "string",
+                            "description": "Description"
+                          },
+                          "Blocked": {
+                            "type": "boolean",
+                            "description": "Blocked"
+                          },
+                          "ModifiedDate": {
+                            "type": "string",
+                            "description": "Changed on"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "GET"
+        ]
+      }
+    },
+    "/ProfitVersion": {
+      "get": {
+        "summary": "Get the current Profit version",
+        "tags": [
+          "API Info"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "version": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "version": "22.22.5"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_ProfitVersion"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "GET",
+      "description": "GET"
+    },
+    {
+      "name": "API Info",
+      "description": "API Info"
+    },
+    {
+      "name": "Kostendrager",
+      "description": "Kostendrager"
+    },
+    {
+      "name": "Kostenplaats",
+      "description": "Kostenplaats"
+    },
+    {
+      "name": "Loonschaal",
+      "description": "Loonschaal"
+    },
+    {
+      "name": "Medewerker functie",
+      "description": "Medewerker functie"
+    },
+    {
+      "name": "Organisatorische eenheid",
+      "description": "Organisatorische eenheid"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "HrCostCarrier_POST": {
+        "type": "object",
+        "properties": {
+          "HrCostCarrier": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "CmId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Employer",
+                        "format": ""
+                      },
+                      "CcId": {
+                        "type": "string",
+                        "maxLength": 30,
+                        "description": "Cost unit",
+                        "format": ""
+                      },
+                      "CcDs": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Description",
+                        "format": ""
+                      },
+                      "Bl": {
+                        "type": "boolean",
+                        "description": "Blocked",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "CmId",
+                      "CcId",
+                      "CcDs",
+                      "Bl"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "HrCostCarrier_PUT": {
+        "type": "object",
+        "properties": {
+          "HrCostCarrier": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "CmId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Employer",
+                        "format": ""
+                      },
+                      "CcId": {
+                        "type": "string",
+                        "maxLength": 30,
+                        "description": "Cost unit",
+                        "format": ""
+                      },
+                      "CcDs": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Description",
+                        "format": ""
+                      },
+                      "Bl": {
+                        "type": "boolean",
+                        "description": "Blocked",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "CmId",
+                      "CcId"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "HrCostCentre_POST": {
+        "type": "object",
+        "properties": {
+          "HrCostCentre": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "CmId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Employer",
+                        "format": ""
+                      },
+                      "CrId": {
+                        "type": "string",
+                        "maxLength": 30,
+                        "description": "Cost centre",
+                        "format": ""
+                      },
+                      "CrDs": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Description",
+                        "format": ""
+                      },
+                      "Bl": {
+                        "type": "boolean",
+                        "description": "Blocked",
+                        "format": ""
+                      },
+                      "CrTy": {
+                        "type": "string",
+                        "enum": [
+                          "01",
+                          "02",
+                          "03"
+                        ],
+                        "maxLength": 20,
+                        "description": "Cost centre type\n01 = Standaard;\n02 = Lening;\n03 = Keuzemodel;",
+                        "format": ""
+                      },
+                      "SmId": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Choice model target",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "CmId",
+                      "CrId",
+                      "CrDs",
+                      "Bl"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "HrCostCentre_PUT": {
+        "type": "object",
+        "properties": {
+          "HrCostCentre": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "CmId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Employer",
+                        "format": ""
+                      },
+                      "CrId": {
+                        "type": "string",
+                        "maxLength": 30,
+                        "description": "Cost centre",
+                        "format": ""
+                      },
+                      "CrDs": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Description",
+                        "format": ""
+                      },
+                      "Bl": {
+                        "type": "boolean",
+                        "description": "Blocked",
+                        "format": ""
+                      },
+                      "CrTy": {
+                        "type": "string",
+                        "enum": [
+                          "01",
+                          "02",
+                          "03"
+                        ],
+                        "maxLength": 20,
+                        "description": "Cost centre type\n01 = Standaard;\n02 = Lening;\n03 = Keuzemodel;",
+                        "format": ""
+                      },
+                      "SmId": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Choice model target",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "CmId",
+                      "CrId"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "HrSalTable_POST": {
+        "type": "object",
+        "properties": {
+          "HrSalTable": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Description",
+                        "format": ""
+                      },
+                      "DecR": {
+                        "type": "integer",
+                        "description": "Decimals result",
+                        "format": ""
+                      },
+                      "ViRt": {
+                        "type": "string",
+                        "enum": [
+                          "Eigen",
+                          "Bouw",
+                          "Landbouw",
+                          "Ovrg"
+                        ],
+                        "maxLength": 20,
+                        "description": "CLA type\nEigen = Eigen cao;\nBouw = Bouw;\nLandbouw = Landbouw;\nOvrg = Overig;",
+                        "format": ""
+                      },
+                      "Visp": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "2",
+                          "3",
+                          "4",
+                          "5",
+                          "6",
+                          "7"
+                        ],
+                        "maxLength": 20,
+                        "description": "Time frame\n1 = Jaar;\n2 = Halfjaar;\n3 = Kwartaal;\n4 = Maand;\n5 = 4 weken;\n6 = Week;\n7 = Uur;",
+                        "format": ""
+                      },
+                      "MnMx": {
+                        "type": "boolean",
+                        "description": "Min./max. scale",
+                        "format": ""
+                      },
+                      "Mrnd": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "2"
+                        ],
+                        "maxLength": 20,
+                        "description": "Periodic increase rounding\n1 = Niet afronden;\n2 = Afronden naar boven;",
+                        "format": ""
+                      },
+                      "MmTp": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "2",
+                          "3"
+                        ],
+                        "maxLength": 20,
+                        "description": "Increase method\n1 = Verhoging met bedrag;\n2 = Verhoging met percentage t.o.v. max;\n3 = Verhoging met percentage t.o.v. midden;",
+                        "format": ""
+                      },
+                      "DbId": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Sales contact",
+                        "format": ""
+                      }
+                    }
+                  },
+                  "Objects": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "HrSalTableSet": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "DaBe": {
+                                        "type": "string",
+                                        "description": "Start date",
+                                        "format": "date"
+                                      },
+                                      "Ds": {
+                                        "type": "string",
+                                        "maxLength": 50,
+                                        "description": "Description",
+                                        "format": ""
+                                      }
+                                    }
+                                  },
+                                  "Objects": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "HrSalTableRow": {
+                                          "type": "object",
+                                          "properties": {
+                                            "Element": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "Fields": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "Va1": {
+                                                        "type": "string",
+                                                        "maxLength": 20,
+                                                        "description": "Scale",
+                                                        "format": ""
+                                                      },
+                                                      "Be2": {
+                                                        "type": "number",
+                                                        "description": "Step from",
+                                                        "format": "number"
+                                                      },
+                                                      "Be3": {
+                                                        "type": "number",
+                                                        "description": "Age from",
+                                                        "format": "number"
+                                                      },
+                                                      "En3": {
+                                                        "type": "number",
+                                                        "description": "Age to",
+                                                        "format": "number"
+                                                      },
+                                                      "Val": {
+                                                        "type": "number",
+                                                        "description": "Result",
+                                                        "format": "number"
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnOrgEmrFun_POST": {
+        "type": "object",
+        "properties": {
+          "KnOrgEmrFun": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "CmId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Employer",
+                        "format": ""
+                      },
+                      "FuId": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Job",
+                        "format": ""
+                      },
+                      "Fu": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Description",
+                        "format": ""
+                      },
+                      "FTId": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Position type",
+                        "format": ""
+                      },
+                      "Bl": {
+                        "type": "boolean",
+                        "description": "Blocked",
+                        "format": ""
+                      },
+                      "BFun": {
+                        "type": "boolean",
+                        "description": "Multi-school function",
+                        "format": ""
+                      },
+                      "InGl": {
+                        "type": "boolean",
+                        "description": "Include in \u0027GGL\u0027 (Prim. ed.)",
+                        "format": ""
+                      },
+                      "Z69": {
+                        "type": "string",
+                        "enum": [
+                          "0",
+                          "1",
+                          "2",
+                          "3"
+                        ],
+                        "maxLength": 20,
+                        "description": "Management staff\n0 = Uitvoerend personeel;\n1 = Leidinggevende niveau 1;\n2 = Leidinggevende niveau 2;\n3 = Kaderlid;",
+                        "format": ""
+                      },
+                      "KWA": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Professional qualification",
+                        "format": ""
+                      },
+                      "Z89": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "2",
+                          "3",
+                          "4",
+                          "401",
+                          "402",
+                          "403",
+                          "404",
+                          "405",
+                          "406",
+                          "407",
+                          "408",
+                          "409",
+                          "410",
+                          "411",
+                          "412",
+                          "5",
+                          "6"
+                        ],
+                        "maxLength": 20,
+                        "description": "Risk class\n1 = Zittende arbeider en / of in werkplaats;\n2 = Arbeider op de werf;\n3 = Huisbewaarder;\n4 = Werkvrouw, schoonmaker, onderhoudspersoneel;\n401 = Zittende bediende;\n402 = Bediende met sporadische externe opdrachten;\n403 = Bediende met veelvuldige externe opdrachten;\n404 = Vertegenwoordiger, rondtrekkend personeel, loopjongen;\n405 = Bediende die manueel werk verricht;\n406 = Thuiswerkende bedienden;\n407 = Verzorgend personeel;\n408 = Verkoper;\n409 = Voetbalspeler onderworpen aan bezoldigd sportief statuut;\n410 = Voetbalspeler \u003E= 1239,47 EUR of meer;\n411 = Voetbalspeler \u003C 1239,47 EUR;\n412 = Sportbeoefenaar, andere dan voetbalspeler (niet categ. 070);\n5 = Keuken personeel (niet gebruiken voor HORECA);\n6 = Chauffeur;",
+                        "format": ""
+                      },
+                      "WhAl": {
+                        "type": "boolean",
+                        "description": "Working from home allowed",
+                        "format": ""
+                      },
+                      "Fu_1031": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Description (German)",
+                        "format": ""
+                      },
+                      "Fu_1036": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Description (French)",
+                        "format": ""
+                      },
+                      "Fu_1043": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Description (Dutch)",
+                        "format": ""
+                      },
+                      "Fu_2057": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Description (English)",
+                        "format": ""
+                      },
+                      "Fu_2067": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Description (Flemish)",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "CmId",
+                      "FuId",
+                      "Fu",
+                      "FTId",
+                      "Bl",
+                      "BFun",
+                      "InGl",
+                      "Z69"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnOrgEmrFun_PUT": {
+        "type": "object",
+        "properties": {
+          "KnOrgEmrFun": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "CmId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Employer",
+                        "format": ""
+                      },
+                      "FuId": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Job",
+                        "format": ""
+                      },
+                      "Fu": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Description",
+                        "format": ""
+                      },
+                      "FTId": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Position type",
+                        "format": ""
+                      },
+                      "Bl": {
+                        "type": "boolean",
+                        "description": "Blocked",
+                        "format": ""
+                      },
+                      "BFun": {
+                        "type": "boolean",
+                        "description": "Multi-school function",
+                        "format": ""
+                      },
+                      "InGl": {
+                        "type": "boolean",
+                        "description": "Include in \u0027GGL\u0027 (Prim. ed.)",
+                        "format": ""
+                      },
+                      "Z69": {
+                        "type": "string",
+                        "enum": [
+                          "0",
+                          "1",
+                          "2",
+                          "3"
+                        ],
+                        "maxLength": 20,
+                        "description": "Management staff\n0 = Uitvoerend personeel;\n1 = Leidinggevende niveau 1;\n2 = Leidinggevende niveau 2;\n3 = Kaderlid;",
+                        "format": ""
+                      },
+                      "KWA": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Professional qualification",
+                        "format": ""
+                      },
+                      "Z89": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "2",
+                          "3",
+                          "4",
+                          "401",
+                          "402",
+                          "403",
+                          "404",
+                          "405",
+                          "406",
+                          "407",
+                          "408",
+                          "409",
+                          "410",
+                          "411",
+                          "412",
+                          "5",
+                          "6"
+                        ],
+                        "maxLength": 20,
+                        "description": "Risk class\n1 = Zittende arbeider en / of in werkplaats;\n2 = Arbeider op de werf;\n3 = Huisbewaarder;\n4 = Werkvrouw, schoonmaker, onderhoudspersoneel;\n401 = Zittende bediende;\n402 = Bediende met sporadische externe opdrachten;\n403 = Bediende met veelvuldige externe opdrachten;\n404 = Vertegenwoordiger, rondtrekkend personeel, loopjongen;\n405 = Bediende die manueel werk verricht;\n406 = Thuiswerkende bedienden;\n407 = Verzorgend personeel;\n408 = Verkoper;\n409 = Voetbalspeler onderworpen aan bezoldigd sportief statuut;\n410 = Voetbalspeler \u003E= 1239,47 EUR of meer;\n411 = Voetbalspeler \u003C 1239,47 EUR;\n412 = Sportbeoefenaar, andere dan voetbalspeler (niet categ. 070);\n5 = Keuken personeel (niet gebruiken voor HORECA);\n6 = Chauffeur;",
+                        "format": ""
+                      },
+                      "WhAl": {
+                        "type": "boolean",
+                        "description": "Working from home allowed",
+                        "format": ""
+                      },
+                      "Fu_1031": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Description (German)",
+                        "format": ""
+                      },
+                      "Fu_1036": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Description (French)",
+                        "format": ""
+                      },
+                      "Fu_1043": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Description (Dutch)",
+                        "format": ""
+                      },
+                      "Fu_2057": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Description (English)",
+                        "format": ""
+                      },
+                      "Fu_2067": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Description (Flemish)",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "CmId",
+                      "FuId"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnOrgUnit_POST": {
+        "type": "object",
+        "properties": {
+          "KnOrgunit": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "OuId": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Organisational unit",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Description",
+                        "format": ""
+                      },
+                      "OTId": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Org. unit type",
+                        "format": ""
+                      },
+                      "StUn": {
+                        "type": "boolean",
+                        "description": "Staff",
+                        "format": ""
+                      },
+                      "Empl": {
+                        "type": "boolean",
+                        "description": "Contains employees",
+                        "format": ""
+                      },
+                      "RpOu": {
+                        "type": "boolean",
+                        "description": "Report to parent OU",
+                        "format": ""
+                      },
+                      "ReOu": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Org. unit reporting",
+                        "format": ""
+                      },
+                      "MaId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Manager",
+                        "format": ""
+                      },
+                      "Cpt1": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Cockpit 1",
+                        "format": "uri"
+                      },
+                      "Cpt2": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Cockpit 2",
+                        "format": "uri"
+                      },
+                      "Cpt3": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Cockpit 3",
+                        "format": "uri"
+                      },
+                      "Cpt4": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Cockpit 4",
+                        "format": "uri"
+                      },
+                      "Cpt5": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Cockpit 5",
+                        "format": "uri"
+                      }
+                    },
+                    "required": [
+                      "OuId",
+                      "Ds",
+                      "OTId",
+                      "StUn",
+                      "Empl",
+                      "ReOu"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnOrgUnit_PUT": {
+        "type": "object",
+        "properties": {
+          "KnOrgunit": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "OuId": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Organisational unit",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Description",
+                        "format": ""
+                      },
+                      "OTId": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Org. unit type",
+                        "format": ""
+                      },
+                      "StUn": {
+                        "type": "boolean",
+                        "description": "Staff",
+                        "format": ""
+                      },
+                      "Empl": {
+                        "type": "boolean",
+                        "description": "Contains employees",
+                        "format": ""
+                      },
+                      "RpOu": {
+                        "type": "boolean",
+                        "description": "Report to parent OU",
+                        "format": ""
+                      },
+                      "ReOu": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Org. unit reporting",
+                        "format": ""
+                      },
+                      "MaId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Manager",
+                        "format": ""
+                      },
+                      "Cpt1": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Cockpit 1",
+                        "format": "uri"
+                      },
+                      "Cpt2": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Cockpit 2",
+                        "format": "uri"
+                      },
+                      "Cpt3": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Cockpit 3",
+                        "format": "uri"
+                      },
+                      "Cpt4": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Cockpit 4",
+                        "format": "uri"
+                      },
+                      "Cpt5": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Cockpit 5",
+                        "format": "uri"
+                      }
+                    },
+                    "required": [
+                      "OuId"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "AfasToken": {
+        "name": "Authorization",
+        "type": "apiKey",
+        "in": "header",
+        "description": "Convert the XML token to Base64 and add \u0027AfasToken \u0027 in front of it."
+      }
+    },
+    "parameters": {
+      "Accept-Language": {
+        "name": "Accept-Language",
+        "in": "header",
+        "required": false,
+        "description": "Indicates the client\u0027s preferred language for the response. If not provided, the API defaults to the base environment language.",
+        "schema": {
+          "type": "string",
+          "enum": [
+            "en-us",
+            "nl-nl",
+            "nl-be",
+            "fr-fr",
+            "de-de"
+          ],
+          "example": "en-us"
+        }
+      },
+      "Content-Type": {
+        "name": "Content-Type",
+        "in": "header",
+        "required": false,
+        "description": "Specifies the media type and character encoding for the request body. Ensures proper decoding and interpretation of the transmitted data.",
+        "schema": {
+          "type": "string",
+          "example": "application/json;charset=utf-8"
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "OK; request is successfully executed.",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(0ms), complete(418ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Thu, 23 Nov 2023 12:11:06 GMT",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "0",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request; invalid request"
+      },
+      "401": {
+        "description": "Unauthorized; valid token but no access to this endpoint.",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(0ms), complete(418ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Thu, 23 Nov 2023 12:11:06 GMT",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "0",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "403": {
+        "description": "Forbidden; Due to IP restrictions in AFAS environment.",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(0ms), complete(418ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Thu, 23 Nov 2023 12:11:06 GMT",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "0",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "404": {
+        "description": "Not Found; requested resource is not available on the server.",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(0ms), complete(101ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Thu, 23 Nov 2023 12:11:06 GMT",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "0",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "413": {
+        "description": "Payload Too Large.",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(0ms), complete(418ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Thu, 23 Nov 2023 12:11:06 GMT",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "0",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "500": {
+        "description": "Internal Server Error",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(1ms), complete(2192ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Tue, 30 Jan 2024 20:30:07 GMT",
+            "schema": {
+              "type": "string"
+            }
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "errorNumber": {
+                  "type": "integer",
+                  "example": {
+                    "example": 0
+                  }
+                },
+                "externalMessage": {
+                  "type": "string",
+                  "example": {
+                    "example": "string"
+                  }
+                },
+                "profitLogReference": {
+                  "type": "string",
+                  "example": {
+                    "example": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "503": {
+        "description": "Service unavailable; retry at a later time. Contains the number of seconds to wait before retrying the request",
+        "headers": {
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "61",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Retry-After": {
+            "description": "7200",
+            "schema": {
+              "type": "string"
+            }
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "string",
+                      "example": {
+                        "example": "503"
+                      }
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": {
+                        "example": "Service temporarily unavailable due to scheduled maintenance. Please check afasstatus.nl for details."
+                      }
+                    }
+                  }
+                },
+                "retry_after": {
+                  "type": "integer",
+                  "example": 7200
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "AfasToken": []
+    }
+  ]
+}

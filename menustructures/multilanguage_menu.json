@@ -1,0 +1,335 @@
+{
+  "profit": {
+      "overview": {
+          "en": [
+              {
+                  "name": "Start",
+                  "path": "en/Start.md"
+              }
+          ],
+          "nl": [
+              {
+                  "name": "Start",
+                  "path": "nl/Start.md"
+              }
+          ]
+      },
+      "documentation": {
+          "en": [
+              {
+                  "name": "Concepts",
+                  "path": "en/Concepts.md"
+              },
+              {
+                  "name": "Authentication",
+                  "path": "en/Authentication.md"
+              },
+              {
+                  "name": "GetConnector",
+                  "path": "en/GetConnector.md"
+              },
+              {
+                  "name": "UpdateConnector",
+                  "path": "en/UpdateConnector.md"
+              },
+              {
+                  "name": "Troubleshooting",
+                  "path": "en/Troubleshooting.md"
+              },
+              {
+                  "name": "Custom Fields",
+                  "path": "en/CustomFields.md"
+              }
+          ],
+          "nl": [
+              {
+                  "name": "Concepten",
+                  "path": "nl/Concepts.md"
+              },
+              {
+                  "name": "Authenticatie",
+                  "path": "nl/Authentication.md"
+              },
+              {
+                  "name": "GetConnector",
+                  "path": "nl/GetConnector.md"
+              },
+              {
+                  "name": "UpdateConnector",
+                  "path": "nl/UpdateConnector.md"
+              },
+              {
+                  "name": "Fouten verhelpen",
+                  "path": "nl/Troubleshooting.md"
+              },
+              {
+                  "name": "Vrije velden",
+                  "path": "nl/CustomFields.md"
+              }
+          ]
+      },
+      "howtos": {
+          "en": [
+              {
+                  "name": "Quick start",
+                  "path": "en/howto quickstart.md"
+              },
+              {
+                  "name": "Get dossier and attachment",
+                  "path": "en/howto bijlagedossier.md"
+              },
+              {
+                  "name": "Journal entry sales",
+                  "path": "en/howto financemutation.md"
+              },
+              {
+                  "name": "Journal entry purchase",
+                  "path": "en/howto financemutationpurch.md"
+              },
+              {
+                  "name": "HRM Employee AD",
+                  "path": "en/howto medewerkerad.md"
+              },
+              {
+                  "name": "Flex Customer agreement",
+                  "path": "en/howto flex.md"
+              },
+              {
+                  "name": "Mobility",
+                  "path": "en/howto mobility.md"
+              },
+              {
+                "name": "Connecting payroll to salary admin.",
+                "path": "en/howto la_sa.md"
+              }
+          ],
+          "nl": [
+              {
+                  "name": "Quick start",
+                  "path": "nl/howto quickstart.md"
+              },
+              {
+                  "name": "Dossier en bijlage ophalen",
+                  "path": "nl/howto bijlagedossier.md"
+              },
+              {
+                  "name": "HRM Medewerker AD",
+                  "path": "nl/howto medewerkerad.md"
+              },
+              {
+                  "name": "Mobiliteit",
+                  "path": "nl/howto mobility.md"
+              },
+                          {
+                  "name": "Integreren met BI",
+                  "path": "nl/howto BI.md"
+              },
+              {
+                  "name": "Financiële mutatie verkoop",
+                  "path": "nl/howto financemutation.md"
+              },
+              {
+                  "name": "Financiële mutatie inkoop",
+                  "path": "nl/howto financemutationpurch.md"
+              },
+              {
+                  "name": "Flex Klantovereenkomst",
+                  "path": "nl/howto flex.md"
+              },
+              {
+                "name": "Loonadmin. aansluiten op salarisadmin.",
+                "path": "nl/howto la_sa.md"
+              },
+              {
+                "name": "Btw-terugvordering via de API",
+                "path": "nl/howto vat reclaim.md"
+              }
+          ]
+      },
+      "news": {
+          "en": [
+            {
+                "name": "Profit 6 Releasenotes",
+                "path": "en/news profit6.md"
+                },
+            {
+                "name": "Profit 5 Releasenotes",
+                "path": "en/news profit5.md"
+                },
+            {
+                    "name": "Profit 4 Releasenotes",
+                    "path": "en/news profit4.md"
+                },
+            {
+                    "name": "Profit 3 Releasenotes",
+                    "path": "en/news profit3.md"
+                }
+              
+          ],
+          "nl": [
+            {
+                    "name": "Profit 6 Releasenotes",
+                    "path": "nl/news profit6.md"
+                },
+            {
+                    "name": "Profit 5 Releasenotes",
+                    "path": "nl/news profit5.md"
+                },
+            {
+                    "name": "Profit 4 Releasenotes",
+                    "path": "nl/news profit4.md"
+                },
+            {
+                    "name": "Profit 3 Releasenotes",
+                    "path": "nl/news profit3.md"
+                }
+          ]
+      }
+  },
+  "sb": {
+      "overview": {
+          "en": [
+              {
+                  "name": "Overview",
+                  "path": "https://help.afas.nl/help/NL/SB/133280.htm"
+              }
+          ],
+          "nl": [
+              {
+                  "name": "Overview",
+                  "path": "https://help.afas.nl/help/NL/SB/133280.htm"
+              }
+          ]
+      },
+      "documentation": {
+          "en": [
+              {
+                  "name": "Concepts",
+                  "path": "en/Concepts.md"
+              },
+              {
+                  "name": "Authentication",
+                  "path": "en/Authentication.md"
+              },
+              {
+                  "name": "Filtering",
+                  "path": "en/filtering.md"
+              },
+              {
+                  "name": "Pagination",
+                  "path": "en/pagination.md"
+              },
+              {
+                  "name": "Change tracking",
+                  "path": "en/Change tracking.md"
+              },
+              {
+                "name": "Blobs",
+                "path": "en/Blobs.md"
+              },
+              {
+                  "name": "Troubleshooting",
+                  "path": "en/Troubleshooting.md"
+              }
+          ],
+          "nl": [
+              {
+                  "name": "Concepten",
+                  "path": "nl/Concepts.md"
+              },
+              {
+                  "name": "Authenticatie",
+                  "path": "nl/Authentication.md"
+              },
+              {
+                  "name": "Filtering",
+                  "path": "nl/filtering.md"
+              },
+              {
+                  "name": "Change tracking",
+                  "path": "nl/change tracking.md"
+              },
+              {
+                  "name": "Pagination",
+                  "path": "nl/pagination.md"
+              },
+              {
+                "name": "Blobs",
+                "path": "nl/Blobs.md"
+              },
+              {
+                  "name": "Fouten verhelpen",
+                  "path": "nl/Troubleshooting.md"
+              }
+          ]
+      },
+      "howtos": {
+          "en": [
+              {
+                  "name": "Payroll Journal entries",
+                  "path": "en/howto payroll.md"
+              },
+              {
+                  "name": "POS integration",
+                  "path": "en/howto pos.md"
+              },
+              {
+                  "name": "Create and maintain relations",
+                  "path": "en/howto relations.md"
+              },
+              {
+                  "name": "Create sales invoices",
+                  "path": "en/howto salesinvoice.md"
+              },
+              {
+                  "name": "Create invoice journal entries",
+                  "path": "en/howto salesjournal.md"
+              },
+              {
+                  "name": "Create purchase journal entries",
+                  "path": "en/howto purchasejournal.md"
+              }
+          ],
+          "nl": [
+              {
+                  "name": "Loonjournaalposten aanmaken",
+                  "path": "nl/howto payroll.md"
+              },
+              {
+                  "name": "Kassa integratie",
+                  "path": "nl/howto pos.md"
+              },
+              {
+                  "name": "Relaties aanmaken en onderhouden",
+                  "path": "nl/howto relations.md"
+              },
+              {
+                  "name": "Verkoopfacturen aanmaken",
+                  "path": "nl/howto salesinvoice.md"
+              },
+              {
+                  "name": "Verkoopjournaalpost aanmaken",
+                  "path": "nl/howto salesjournal.md"
+              },
+              {
+                  "name": "Inkoopjournaalpost aanmaken",
+                  "path": "nl/howto purchasejournal.md"
+              }
+          ]
+      },
+      "news": {
+          "en": [
+              {
+                  "name": "How-To's",
+                  "path": "en/news howtos.md"
+              }
+          ],
+          "nl": [
+              {
+                  "name": "How-To's",
+                  "path": "nl/news howtos.md"
+              }
+          ]
+      }
+  }
+}

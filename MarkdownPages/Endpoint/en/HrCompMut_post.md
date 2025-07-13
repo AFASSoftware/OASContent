@@ -1,0 +1,1 @@
+To submit payroll changes, the connector user must have rights to the employee in question.

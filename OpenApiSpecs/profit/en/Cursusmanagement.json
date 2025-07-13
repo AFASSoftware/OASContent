@@ -1,0 +1,3378 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "6.6.9",
+    "title": "AFAS Cursusmanagement API",
+    "description": "This API describes the endpoints related to Cursusmanagement. Use this API with the functional description of the API."
+  },
+  "servers": [
+    {
+      "url": "https://{id}.rest.afas.online/ProfitRestServices",
+      "description": "Production environment",
+      "variables": {
+        "id": {
+          "description": "5 digit environment number",
+          "default": "12345"
+        }
+      }
+    },
+    {
+      "url": "https://{id}.resttest.afas.online/ProfitRestServices",
+      "description": "Test environment",
+      "variables": {
+        "id": {
+          "description": "5 digit environment number",
+          "default": "12345"
+        }
+      }
+    },
+    {
+      "url": "https://{id}.restaccept.afas.online/ProfitRestServices",
+      "description": "Accept environment",
+      "variables": {
+        "id": {
+          "description": "5 digit environment number",
+          "default": "12345"
+        }
+      }
+    },
+    {
+      "url": "https://{id}.restcursus.afas.online/ProfitRestServices",
+      "description": "Cursus environment",
+      "variables": {
+        "id": {
+          "description": "5 digit environment number",
+          "default": "12345"
+        }
+      }
+    }
+  ],
+  "paths": {
+    "/connectors/KnCourseEvent": {
+      "post": {
+        "summary": "Evenement",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_155.htm",
+        "operationId": "POST_KnCourseEvent",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnCourseEvent_POST"
+              },
+              "examples": {
+                "event met introduce toestaan Valuta USD": {
+                  "value": {
+                    "KnCourseEvent": {
+                      "Element": {
+                        "Fields": {
+                          "Id": "5116",
+                          "ItCd": "104",
+                          "AuId": "0",
+                          "CrSn": "004",
+                          "CrDs": "Microsoft Excel 2016 expert hvs",
+                          "BcId": "1000372",
+                          "CdId": "1197",
+                          "LoId": "000001",
+                          "AlGu": "1",
+                          "MiPt": "1",
+                          "MaPt": "12",
+                          "UnFi": "1",
+                          "PrId": "910004",
+                          "CrRm": "Opmerking voor AlGu Introduc\uFFFD toestaan",
+                          "CuId": "USD"
+                        },
+                        "Objects": {
+                          "KnSession": {
+                            "Element": {
+                              "Fields": {
+                                "SeId": "1",
+                                "SeDa": "2018-11-28",
+                                "DaPa": "O",
+                                "StTi": "09:30:00",
+                                "EnTi": "16:00:00",
+                                "BcId": "1000372",
+                                "CdId": "1197",
+                                "LoId": "000003"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "meerdere sessies": {
+                  "value": {
+                    "KnCourseEvent": {
+                      "Element": {
+                        "Fields": {
+                          "ItCd": "104",
+                          "AuId": "1",
+                          "CrDs": "Cursusevenement nieuw",
+                          "BcId": "1000483",
+                          "CdId": "681",
+                          "LoId": "000002",
+                          "MiPt": "5",
+                          "MaPt": "10",
+                          "UnFi": "1",
+                          "CrRm": "Deze cursus is met JSON ingestuurt, YES!!!"
+                        },
+                        "Objects": {
+                          "KnSession": {
+                            "Element": [
+                              {
+                                "Fields": {
+                                  "SeId": "1",
+                                  "SeDa": "2013-12-01",
+                                  "VaDp": "M",
+                                  "StTi": "13:00:00",
+                                  "EnTi": "18:00:00",
+                                  "BcId": "1000483",
+                                  "CdId": "681",
+                                  "LoId": "000002",
+                                  "SeDs": "Cursusdag 1"
+                                }
+                              },
+                              {
+                                "Fields": {
+                                  "SeId": "2",
+                                  "SeDa": "2013-12-02",
+                                  "VaDp": "M",
+                                  "StTi": "13:00:00",
+                                  "EnTi": "18:00:00",
+                                  "BcId": "1000483",
+                                  "CdId": "681",
+                                  "LoId": "000002",
+                                  "SeDs": "Cursusdag 2"
+                                }
+                              },
+                              {
+                                "Fields": {
+                                  "SeId": "3",
+                                  "SeDa": "2013-12-03",
+                                  "VaDp": "M",
+                                  "StTi": "13:00:00",
+                                  "EnTi": "18:00:00",
+                                  "BcId": "1000483",
+                                  "CdId": "681",
+                                  "LoId": "000002",
+                                  "SeDs": "Cursusdag 3"
+                                }
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                },
+                "examples": {
+                  "Response example": {
+                    "value": {
+                      "results": {
+                        "KnCourseEvent": {
+                          "Id": "PrimaryKeyValue"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Cache-Control": {
+                "description": "no-store, no-cache",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Transfer-Encoding": {
+                "description": "chunked",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Type": {
+                "description": "application/json; charset=utf-8",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Encoding": {
+                "description": "gzip",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Strict-Transport-Security": {
+                "description": "max-age=31536000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Version": {
+                "description": "4.3.0.0",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "nosniff",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Frame-Options": {
+                "description": "deny",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Stats": {
+                "description": "init(0ms), before response(10ms), after response(609ms), after compressing(610ms), complete(610ms)",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "description": "*",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Headers": {
+                "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Methods": {
+                "description": "GET, POST, PUT, DELETE, OPTIONS",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Max-Age": {
+                "description": "1728000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Date": {
+                "description": "Wed, 07 Feb 2024 10:39:26 GMT",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Evenement"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Evenement",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_155.htm",
+        "operationId": "PUT_KnCourseEvent",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnCourseEvent_PUT"
+              },
+              "examples": {
+                "sessie": {
+                  "value": {
+                    "KnCourseEvent": {
+                      "Element": {
+                        "Fields": {
+                          "Id": "19"
+                        },
+                        "Objects": {
+                          "KnSession": {
+                            "Element": {
+                              "Fields": {
+                                "SeId": "1",
+                                "VaDp": "M",
+                                "StTi": "13:00:00",
+                                "EnTi": "18:00:00",
+                                "SeRm": "Dit is een gewijzigde sessie"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "update": {
+                  "value": {
+                    "KnCourseEvent": {
+                      "Element": {
+                        "Fields": {
+                          "Id": "18",
+                          "ItCd": "104",
+                          "AuId": "1",
+                          "CrDs": "Cursusevenement nieuw",
+                          "BcId": "1000606",
+                          "CdId": "804",
+                          "LoId": "000001",
+                          "CrRm": "Dit evenement is gewijzigd met de Connector, YES!!"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                },
+                "examples": {
+                  "Response example": {
+                    "value": {
+                      "results": {
+                        "KnCourseEvent": {
+                          "Id": "PrimaryKeyValue"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Cache-Control": {
+                "description": "no-store, no-cache",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Transfer-Encoding": {
+                "description": "chunked",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Type": {
+                "description": "application/json; charset=utf-8",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Encoding": {
+                "description": "gzip",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Strict-Transport-Security": {
+                "description": "max-age=31536000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Version": {
+                "description": "4.3.0.0",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "nosniff",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Frame-Options": {
+                "description": "deny",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Stats": {
+                "description": "init(0ms), before response(10ms), after response(609ms), after compressing(610ms), complete(610ms)",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "description": "*",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Headers": {
+                "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Methods": {
+                "description": "GET, POST, PUT, DELETE, OPTIONS",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Max-Age": {
+                "description": "1728000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Date": {
+                "description": "Wed, 07 Feb 2024 10:39:26 GMT",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Evenement"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnCourseEvent/KnSession": {
+      "post": {
+        "summary": "Evenement",
+        "description": "Update main record in KnCourseEvent and insert subrecord into KnSession. \n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_155.htm",
+        "operationId": "POSTSubRecordKnCourseEventKnSession",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnCourseEvent_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                },
+                "examples": {
+                  "Response example": {
+                    "value": {
+                      "results": {
+                        "KnCourseEvent": {
+                          "Id": "PrimaryKeyValue"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Cache-Control": {
+                "description": "no-store, no-cache",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Transfer-Encoding": {
+                "description": "chunked",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Type": {
+                "description": "application/json; charset=utf-8",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Encoding": {
+                "description": "gzip",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Strict-Transport-Security": {
+                "description": "max-age=31536000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Version": {
+                "description": "4.3.0.0",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "nosniff",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Frame-Options": {
+                "description": "deny",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Stats": {
+                "description": "init(0ms), before response(10ms), after response(609ms), after compressing(610ms), complete(610ms)",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "description": "*",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Headers": {
+                "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Methods": {
+                "description": "GET, POST, PUT, DELETE, OPTIONS",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Max-Age": {
+                "description": "1728000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Date": {
+                "description": "Wed, 07 Feb 2024 10:39:26 GMT",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Evenement"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnCourseEvent/KnCourseEvent/@Id/{Id}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "Id",
+          "in": "path",
+          "required": true,
+          "description": "Event ID"
+        }
+      ],
+      "delete": {
+        "summary": "Evenement",
+        "operationId": "DELETE_KnCourseEvent",
+        "description": " \n\r Let op: Bij dit endpoint zijn de parameters om een item te verwijderen nog niet gedocumenteerd. De path parameters kunnen hierdoor afwijken\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_155.htm",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Evenement"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/KnCourseGroupLines": {
+      "post": {
+        "summary": "Cursusplanning",
+        "description": "\n\rAlleen beschikbaar onder conditie: Cursustraject (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_kncoursegrouplines.htm",
+        "operationId": "POST_KnCourseGroupLines",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnCourseGroupLines_POST"
+              },
+              "examples": {
+                "cursus": {
+                  "value": {
+                    "KnCourseGroupLines": {
+                      "Element": {
+                        "Fields": {
+                          "CdId": "246",
+                          "StDa": "2017-06-10",
+                          "ItCd": "100",
+                          "MaYN": "1"
+                        }
+                      }
+                    }
+                  }
+                },
+                "cursustraject": {
+                  "value": {
+                    "KnCourseGroupLines": {
+                      "Element": {
+                        "Fields": {
+                          "CdId": "528",
+                          "StDa": "2014-04-10",
+                          "CgId": "test"
+                        }
+                      }
+                    }
+                  }
+                },
+                "meerdere cursus": {
+                  "value": {
+                    "KnCourseGroupLines": {
+                      "Element": [
+                        {
+                          "Fields": {
+                            "CdId": "246",
+                            "StDa": "2017-05-10",
+                            "ItCd": "108"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CdId": "1005",
+                            "StDa": "2017-05-10",
+                            "ItCd": "107"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "meerdere cursustrajecten": {
+                  "value": {
+                    "KnCourseGroupLines": {
+                      "Element": [
+                        {
+                          "Fields": {
+                            "CdId": "246",
+                            "StDa": "2017-04-10",
+                            "CgId": "test"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CdId": "1005",
+                            "StDa": "2017-04-10",
+                            "CgId": "test"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "meerdere cursus cursustraject": {
+                  "value": {
+                    "KnCourseGroupLines": {
+                      "Element": [
+                        {
+                          "Fields": {
+                            "CdId": "16",
+                            "StDa": "2017-04-10",
+                            "ItCd": "108"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "CdId": "741",
+                            "StDa": "2017-04-10",
+                            "CgId": "test"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Cursusplanning"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnCourseGroupLines/KnCourseGroupLines/@Id/{Id}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "Id",
+          "in": "path",
+          "required": true,
+          "description": "Sequence number"
+        }
+      ],
+      "delete": {
+        "summary": "Cursusplanning",
+        "operationId": "DELETE_KnCourseGroupLines",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_kncoursegrouplines.htm",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Cursusplanning"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/KnCourseMember": {
+      "post": {
+        "summary": "Deelnemer evenement",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_150.htm",
+        "operationId": "POST_KnCourseMember",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnCourseMember_POST"
+              },
+              "examples": {
+                "insert": {
+                  "value": {
+                    "KnCourseMember": {
+                      "Element": {
+                        "@CrId": "333",
+                        "@CdId": "80",
+                        "Fields": {
+                          "BcCo": "1000073",
+                          "DeId": "10730",
+                          "SuDa": "2017-05-01",
+                          "DfPr": "10",
+                          "DiPc": "2",
+                          "Invo": "1",
+                          "Rm": "Aangemaakt via JSON"
+                        }
+                      }
+                    }
+                  }
+                },
+                "maximaal": {
+                  "value": {
+                    "KnCourseMember": {
+                      "Element": {
+                        "@CrId": "340",
+                        "@CdId": "80",
+                        "Fields": {
+                          "BcCo": "1000073",
+                          "DeId": "10730",
+                          "SuDa": "2017-05-01",
+                          "DfPr": "10",
+                          "DiPc": "2",
+                          "Invo": "1",
+                          "Rm": "Aangemaakt via JSON"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Deelnemer evenement"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Deelnemer evenement",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_150.htm",
+        "operationId": "PUT_KnCourseMember",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnCourseMember_PUT"
+              },
+              "examples": {
+                "maximaal met vrij veld": {
+                  "value": {
+                    "KnCourseMember": {
+                      "Element": {
+                        "@CrId": "340",
+                        "@CdId": "80",
+                        "Fields": {
+                          "BcCo": "1000073",
+                          "SuDa": "2017-01-01",
+                          "DfPr": "12",
+                          "DiPc": "3",
+                          "Invo": "1",
+                          "Rm": "geupdated via JSON maximaal",
+                          "UC3B61455480EEFAFE78EBC831C6E1B30": "8"
+                        }
+                      }
+                    }
+                  }
+                },
+                "minimaal": {
+                  "value": {
+                    "KnCourseMember": {
+                      "Element": {
+                        "@CrId": "340",
+                        "@CdId": "80",
+                        "Fields": {
+                          "BcCo": "1000073",
+                          "Rm": "geupdated via JSON minimaal"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Deelnemer evenement"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnCourseMember/KnCourseMember/@CrId,@CdId/{CrId},{CdId}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "CrId",
+          "in": "path",
+          "required": true,
+          "description": "Course event"
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "CdId",
+          "in": "path",
+          "required": true,
+          "description": "Participant"
+        }
+      ],
+      "delete": {
+        "summary": "Deelnemer evenement",
+        "operationId": "DELETE_KnCourseMember",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_150.htm",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Deelnemer evenement"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/KnCourseSessionMember": {
+      "put": {
+        "summary": "Presentie",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_157.htm",
+        "operationId": "PUT_KnCourseSessionMember",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnCourseSessionMember_PUT"
+              },
+              "examples": {
+                "insert for employee": {
+                  "value": {
+                    "KnCourseSessionMember": {
+                      "Element": {
+                        "@CrId": "1",
+                        "@SeId": "2",
+                        "@MeId": "1000029",
+                        "Fields": {
+                          "Pres": "1"
+                        }
+                      }
+                    }
+                  }
+                },
+                "update": {
+                  "value": {
+                    "KnCourseSessionMember": {
+                      "Element": {
+                        "@CrId": "1",
+                        "@SeId": "2",
+                        "@MeId": "1000029",
+                        "@CdId": "1322",
+                        "Fields": {
+                          "Pres": "1"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Presentie"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/MetaInfo": {
+      "get": {
+        "summary": "Retrieve the meta info of the Profit environment and the available connectors",
+        "tags": [
+          "API Info"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "updateConnectors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "getConnectors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "info": {
+                      "type": "object",
+                      "properties": {
+                        "envid": {
+                          "type": "string"
+                        },
+                        "appName": {
+                          "type": "string"
+                        },
+                        "group": {
+                          "type": "string"
+                        },
+                        "tokenExpiry": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "updateConnectors": [
+                        {
+                          "id": "HrCreateApplicant",
+                          "description": "Aanmaken sollicitatie"
+                        },
+                        {
+                          "id": "FbSubscription",
+                          "description": "Abonnement"
+                        },
+                        {
+                          "id": "KnAddress",
+                          "description": "Adres"
+                        }
+                      ],
+                      "getConnectors": [
+                        {
+                          "id": "Profit_Fin_ChangedEntrydate",
+                          "description": "Profit_Fin_ChangedEntrydate"
+                        },
+                        {
+                          "id": "Profit_Functions",
+                          "description": "Profit_Functions"
+                        }
+                      ],
+                      "info": {
+                        "envid": "A123456AC",
+                        "appName": "OpenAPI Spec Example",
+                        "group": "AuthorizationGroup 101 (12345.USER)",
+                        "tokenExpiry": "0"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_MetaInfo"
+      }
+    },
+    "/Metainfo/{Type}/{Endpoint}": {
+      "get": {
+        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
+        "tags": [
+          "API Info"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "fields": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "fieldId": {
+                            "type": "string"
+                          },
+                          "dataType": {
+                            "type": "string"
+                          },
+                          "label": {
+                            "type": "string"
+                          },
+                          "length": {
+                            "type": "integer"
+                          },
+                          "controlType": {
+                            "type": "integer"
+                          },
+                          "decimals": {
+                            "type": "integer"
+                          },
+                          "decimalsFieldId": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "name": "Profit_Administrations",
+                      "description": "Administraties (Profit)",
+                      "fields": [
+                        {
+                          "id": "AdminId",
+                          "fieldId": "U002",
+                          "dataType": "int",
+                          "label": "Administratie",
+                          "length": 3,
+                          "controlType": 5,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        },
+                        {
+                          "id": "AdminNm",
+                          "fieldId": "U001",
+                          "dataType": "string",
+                          "label": "Naam administratie",
+                          "length": 80,
+                          "controlType": 1,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        },
+                        {
+                          "id": "AdminCd",
+                          "fieldId": "UnCo",
+                          "dataType": "string",
+                          "label": "Administratie",
+                          "length": 10,
+                          "controlType": 1,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_MetaInfoPerConnector",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "get",
+                "update"
+              ],
+              "example": "update"
+            },
+            "in": "path",
+            "name": "Type",
+            "description": "Add the type of connector you want to get the meta info from",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "string",
+              "example": "KnEmployee"
+            },
+            "in": "path",
+            "name": "Endpoint",
+            "description": "Add the endpoint id of the connector you want to get the meta info from",
+            "required": true
+          },
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/{Endpoint}": {
+      "get": {
+        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id\u0027s can be found in the metainfo request result.",
+        "tags": [
+          "GET"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "skip": {
+                      "type": "integer"
+                    },
+                    "take": {
+                      "type": "integer"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "EmployeeId": {
+                            "type": "string"
+                          },
+                          "EmploymentEndDate": {
+                            "type": "string"
+                          },
+                          "EmailForDigitalDocuments": {
+                            "type": "string",
+                            "nullable": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example response": {
+                    "value": {
+                      "skip": 0,
+                      "take": 100,
+                      "rows": [
+                        {
+                          "EmployeeId": "000001005",
+                          "EmploymentEndDate": "2020-11-22T00:00:00Z",
+                          "EmailForDigitalDocuments": null
+                        },
+                        {
+                          "EmployeeId": "000001006",
+                          "EmploymentEndDate": "2020-11-22T00:00:00Z",
+                          "EmailForDigitalDocuments": null
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_MetaInfoPerCustomConnector",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "example": "your_custom_endpoint_id"
+            },
+            "in": "path",
+            "name": "Endpoint",
+            "description": "Add the id of connector you want to get the meta info from",
+            "required": true
+          },
+          {
+            "name": "skip",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results skipped. Starts at 0",
+            "schema": {
+              "type": "number",
+              "example": 0
+            }
+          },
+          {
+            "name": "take",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results returned",
+            "schema": {
+              "type": "number",
+              "example": 100
+            }
+          },
+          {
+            "name": "orderbyfieldids",
+            "in": "query",
+            "required": false,
+            "description": "Must be used to prevent reordered results.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterfieldids",
+            "in": "query",
+            "required": false,
+            "description": "The fieldIds of the values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filtervalues",
+            "in": "query",
+            "required": false,
+            "description": "The values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "operatortypes",
+            "in": "query",
+            "required": false,
+            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "schema": {
+              "type": "number",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "/ProfitVersion": {
+      "get": {
+        "summary": "Get the current Profit version",
+        "tags": [
+          "API Info"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "version": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "version": "22.22.5"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_ProfitVersion"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "GET",
+      "description": "GET"
+    },
+    {
+      "name": "API Info",
+      "description": "API Info"
+    },
+    {
+      "name": "Evenement",
+      "description": "Evenement"
+    },
+    {
+      "name": "Cursusplanning",
+      "description": "Cursusplanning"
+    },
+    {
+      "name": "Deelnemer evenement",
+      "description": "Deelnemer evenement"
+    },
+    {
+      "name": "Presentie",
+      "description": "Presentie"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "KnCourseEvent_POST": {
+        "type": "object",
+        "properties": {
+          "KnCourseEvent": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "integer",
+                        "description": "Event ID",
+                        "format": ""
+                      },
+                      "ItCd": {
+                        "type": "string",
+                        "maxLength": 40,
+                        "description": "Cursus",
+                        "format": ""
+                      },
+                      "AuId": {
+                        "type": "boolean",
+                        "description": "Autonummeren",
+                        "format": ""
+                      },
+                      "CrSn": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Code",
+                        "format": ""
+                      },
+                      "CrDs": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Description",
+                        "format": ""
+                      },
+                      "CrDs_1031": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Description (German)",
+                        "format": ""
+                      },
+                      "CrDs_1036": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Description (French)",
+                        "format": ""
+                      },
+                      "CrDs_1043": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Description (Dutch)",
+                        "format": ""
+                      },
+                      "CrDs_2057": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Description (English)",
+                        "format": ""
+                      },
+                      "CrDs_2067": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Description (Flemish)",
+                        "format": ""
+                      },
+                      "BcId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Organisatie/Persoon",
+                        "format": ""
+                      },
+                      "CdId": {
+                        "type": "integer",
+                        "description": "Principal teacher",
+                        "format": ""
+                      },
+                      "LoId": {
+                        "type": "string",
+                        "maxLength": 25,
+                        "description": "Location",
+                        "format": ""
+                      },
+                      "AlGu": {
+                        "type": "boolean",
+                        "description": "Allow invitee",
+                        "format": ""
+                      },
+                      "MiPt": {
+                        "type": "integer",
+                        "description": "Minimum number of participants",
+                        "format": ""
+                      },
+                      "MaPt": {
+                        "type": "integer",
+                        "description": "Maximum number of participants",
+                        "format": ""
+                      },
+                      "UnFi": {
+                        "type": "integer",
+                        "description": "Administration",
+                        "format": ""
+                      },
+                      "PrId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Project",
+                        "format": ""
+                      },
+                      "PrSt": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Project phase",
+                        "format": ""
+                      },
+                      "CrRm": {
+                        "type": "string",
+                        "description": "Remark",
+                        "format": "byte"
+                      },
+                      "CrRm_1031": {
+                        "type": "string",
+                        "description": "Comment (German)",
+                        "format": "byte"
+                      },
+                      "CrRm_1036": {
+                        "type": "string",
+                        "description": "Comment (French)",
+                        "format": "byte"
+                      },
+                      "CrRm_1043": {
+                        "type": "string",
+                        "description": "Comment (Dutch)",
+                        "format": "byte"
+                      },
+                      "CrRm_2057": {
+                        "type": "string",
+                        "description": "Comment (English)",
+                        "format": "byte"
+                      },
+                      "CrRm_2067": {
+                        "type": "string",
+                        "description": "Comment (Flemish)",
+                        "format": "byte"
+                      },
+                      "CuId": {
+                        "type": "string",
+                        "maxLength": 3,
+                        "description": "Currency",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "CuId"
+                    ]
+                  },
+                  "Objects": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "KnSession": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "SeId": {
+                                        "type": "integer",
+                                        "description": "$147680=SessieId",
+                                        "format": ""
+                                      },
+                                      "SeDa": {
+                                        "type": "string",
+                                        "description": "Session date",
+                                        "format": "date"
+                                      },
+                                      "DaPa": {
+                                        "type": "string",
+                                        "maxLength": 10,
+                                        "description": "Day part",
+                                        "format": ""
+                                      },
+                                      "StTi": {
+                                        "type": "string",
+                                        "description": "Start time",
+                                        "format": "date-time"
+                                      },
+                                      "EnTi": {
+                                        "type": "string",
+                                        "description": "End time",
+                                        "format": "date-time"
+                                      },
+                                      "BcId": {
+                                        "type": "string",
+                                        "maxLength": 15,
+                                        "description": "Organisatie/Persoon",
+                                        "format": ""
+                                      },
+                                      "CdId": {
+                                        "type": "integer",
+                                        "description": "Principal teacher",
+                                        "format": ""
+                                      },
+                                      "LoId": {
+                                        "type": "string",
+                                        "maxLength": 25,
+                                        "description": "Location",
+                                        "format": ""
+                                      },
+                                      "SeDs": {
+                                        "type": "string",
+                                        "maxLength": 100,
+                                        "description": "Subject presentation",
+                                        "format": ""
+                                      },
+                                      "SeDs_1031": {
+                                        "type": "string",
+                                        "maxLength": 100,
+                                        "description": "Presentation topic (German)",
+                                        "format": ""
+                                      },
+                                      "SeDs_1036": {
+                                        "type": "string",
+                                        "maxLength": 100,
+                                        "description": "Presentation topic (French)",
+                                        "format": ""
+                                      },
+                                      "SeDs_1043": {
+                                        "type": "string",
+                                        "maxLength": 100,
+                                        "description": "Presentation topic (Dutch)",
+                                        "format": ""
+                                      },
+                                      "SeDs_2057": {
+                                        "type": "string",
+                                        "maxLength": 100,
+                                        "description": "Presentation topic (English)",
+                                        "format": ""
+                                      },
+                                      "SeDs_2067": {
+                                        "type": "string",
+                                        "maxLength": 100,
+                                        "description": "Presentation topic (Flemish)",
+                                        "format": ""
+                                      },
+                                      "SeRm": {
+                                        "type": "string",
+                                        "description": "Remark",
+                                        "format": "byte"
+                                      },
+                                      "SeRm_1031": {
+                                        "type": "string",
+                                        "description": "Comment (German)",
+                                        "format": "byte"
+                                      },
+                                      "SeRm_1036": {
+                                        "type": "string",
+                                        "description": "Comment (French)",
+                                        "format": "byte"
+                                      },
+                                      "SeRm_1043": {
+                                        "type": "string",
+                                        "description": "Comment (Dutch)",
+                                        "format": "byte"
+                                      },
+                                      "SeRm_2057": {
+                                        "type": "string",
+                                        "description": "Comment (English)",
+                                        "format": "byte"
+                                      },
+                                      "SeRm_2067": {
+                                        "type": "string",
+                                        "description": "Comment (Flemish)",
+                                        "format": "byte"
+                                      },
+                                      "PrRm": {
+                                        "type": "string",
+                                        "description": "Comment presentation",
+                                        "format": "byte"
+                                      },
+                                      "PrRm_1031": {
+                                        "type": "string",
+                                        "description": "Presentation comment (German)",
+                                        "format": "byte"
+                                      },
+                                      "PrRm_1036": {
+                                        "type": "string",
+                                        "description": "Presentation comment (French)",
+                                        "format": "byte"
+                                      },
+                                      "PrRm_1043": {
+                                        "type": "string",
+                                        "description": "Presentation comment (Dutch)",
+                                        "format": "byte"
+                                      },
+                                      "PrRm_2057": {
+                                        "type": "string",
+                                        "description": "Presentation comment (English)",
+                                        "format": "byte"
+                                      },
+                                      "PrRm_2067": {
+                                        "type": "string",
+                                        "description": "Presentation comment (Flemish)",
+                                        "format": "byte"
+                                      },
+                                      "SeCa": {
+                                        "type": "boolean",
+                                        "description": "Session is cancelled",
+                                        "format": ""
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnCourseEvent_PUT": {
+        "type": "object",
+        "properties": {
+          "KnCourseEvent": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "integer",
+                        "description": "Event ID",
+                        "format": ""
+                      },
+                      "ItCd": {
+                        "type": "string",
+                        "maxLength": 40,
+                        "description": "Cursus",
+                        "format": ""
+                      },
+                      "AuId": {
+                        "type": "boolean",
+                        "description": "Autonummeren",
+                        "format": ""
+                      },
+                      "CrSn": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Code",
+                        "format": ""
+                      },
+                      "CrDs": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Description",
+                        "format": ""
+                      },
+                      "CrDs_1031": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Description (German)",
+                        "format": ""
+                      },
+                      "CrDs_1036": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Description (French)",
+                        "format": ""
+                      },
+                      "CrDs_1043": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Description (Dutch)",
+                        "format": ""
+                      },
+                      "CrDs_2057": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Description (English)",
+                        "format": ""
+                      },
+                      "CrDs_2067": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Description (Flemish)",
+                        "format": ""
+                      },
+                      "BcId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Organisatie/Persoon",
+                        "format": ""
+                      },
+                      "CdId": {
+                        "type": "integer",
+                        "description": "Principal teacher",
+                        "format": ""
+                      },
+                      "LoId": {
+                        "type": "string",
+                        "maxLength": 25,
+                        "description": "Location",
+                        "format": ""
+                      },
+                      "AlGu": {
+                        "type": "boolean",
+                        "description": "Allow invitee",
+                        "format": ""
+                      },
+                      "MiPt": {
+                        "type": "integer",
+                        "description": "Minimum number of participants",
+                        "format": ""
+                      },
+                      "MaPt": {
+                        "type": "integer",
+                        "description": "Maximum number of participants",
+                        "format": ""
+                      },
+                      "UnFi": {
+                        "type": "integer",
+                        "description": "Administration",
+                        "format": ""
+                      },
+                      "PrId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Project",
+                        "format": ""
+                      },
+                      "PrSt": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Project phase",
+                        "format": ""
+                      },
+                      "CrRm": {
+                        "type": "string",
+                        "description": "Remark",
+                        "format": "byte"
+                      },
+                      "CrRm_1031": {
+                        "type": "string",
+                        "description": "Comment (German)",
+                        "format": "byte"
+                      },
+                      "CrRm_1036": {
+                        "type": "string",
+                        "description": "Comment (French)",
+                        "format": "byte"
+                      },
+                      "CrRm_1043": {
+                        "type": "string",
+                        "description": "Comment (Dutch)",
+                        "format": "byte"
+                      },
+                      "CrRm_2057": {
+                        "type": "string",
+                        "description": "Comment (English)",
+                        "format": "byte"
+                      },
+                      "CrRm_2067": {
+                        "type": "string",
+                        "description": "Comment (Flemish)",
+                        "format": "byte"
+                      },
+                      "CuId": {
+                        "type": "string",
+                        "maxLength": 3,
+                        "description": "Currency",
+                        "format": ""
+                      }
+                    }
+                  },
+                  "Objects": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "KnSession": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "SeId": {
+                                        "type": "integer",
+                                        "description": "$147680=SessieId",
+                                        "format": ""
+                                      },
+                                      "SeDa": {
+                                        "type": "string",
+                                        "description": "Session date",
+                                        "format": "date"
+                                      },
+                                      "DaPa": {
+                                        "type": "string",
+                                        "maxLength": 10,
+                                        "description": "Day part",
+                                        "format": ""
+                                      },
+                                      "StTi": {
+                                        "type": "string",
+                                        "description": "Start time",
+                                        "format": "date-time"
+                                      },
+                                      "EnTi": {
+                                        "type": "string",
+                                        "description": "End time",
+                                        "format": "date-time"
+                                      },
+                                      "BcId": {
+                                        "type": "string",
+                                        "maxLength": 15,
+                                        "description": "Organisatie/Persoon",
+                                        "format": ""
+                                      },
+                                      "CdId": {
+                                        "type": "integer",
+                                        "description": "Principal teacher",
+                                        "format": ""
+                                      },
+                                      "LoId": {
+                                        "type": "string",
+                                        "maxLength": 25,
+                                        "description": "Location",
+                                        "format": ""
+                                      },
+                                      "SeDs": {
+                                        "type": "string",
+                                        "maxLength": 100,
+                                        "description": "Subject presentation",
+                                        "format": ""
+                                      },
+                                      "SeDs_1031": {
+                                        "type": "string",
+                                        "maxLength": 100,
+                                        "description": "Presentation topic (German)",
+                                        "format": ""
+                                      },
+                                      "SeDs_1036": {
+                                        "type": "string",
+                                        "maxLength": 100,
+                                        "description": "Presentation topic (French)",
+                                        "format": ""
+                                      },
+                                      "SeDs_1043": {
+                                        "type": "string",
+                                        "maxLength": 100,
+                                        "description": "Presentation topic (Dutch)",
+                                        "format": ""
+                                      },
+                                      "SeDs_2057": {
+                                        "type": "string",
+                                        "maxLength": 100,
+                                        "description": "Presentation topic (English)",
+                                        "format": ""
+                                      },
+                                      "SeDs_2067": {
+                                        "type": "string",
+                                        "maxLength": 100,
+                                        "description": "Presentation topic (Flemish)",
+                                        "format": ""
+                                      },
+                                      "SeRm": {
+                                        "type": "string",
+                                        "description": "Remark",
+                                        "format": "byte"
+                                      },
+                                      "SeRm_1031": {
+                                        "type": "string",
+                                        "description": "Comment (German)",
+                                        "format": "byte"
+                                      },
+                                      "SeRm_1036": {
+                                        "type": "string",
+                                        "description": "Comment (French)",
+                                        "format": "byte"
+                                      },
+                                      "SeRm_1043": {
+                                        "type": "string",
+                                        "description": "Comment (Dutch)",
+                                        "format": "byte"
+                                      },
+                                      "SeRm_2057": {
+                                        "type": "string",
+                                        "description": "Comment (English)",
+                                        "format": "byte"
+                                      },
+                                      "SeRm_2067": {
+                                        "type": "string",
+                                        "description": "Comment (Flemish)",
+                                        "format": "byte"
+                                      },
+                                      "PrRm": {
+                                        "type": "string",
+                                        "description": "Comment presentation",
+                                        "format": "byte"
+                                      },
+                                      "PrRm_1031": {
+                                        "type": "string",
+                                        "description": "Presentation comment (German)",
+                                        "format": "byte"
+                                      },
+                                      "PrRm_1036": {
+                                        "type": "string",
+                                        "description": "Presentation comment (French)",
+                                        "format": "byte"
+                                      },
+                                      "PrRm_1043": {
+                                        "type": "string",
+                                        "description": "Presentation comment (Dutch)",
+                                        "format": "byte"
+                                      },
+                                      "PrRm_2057": {
+                                        "type": "string",
+                                        "description": "Presentation comment (English)",
+                                        "format": "byte"
+                                      },
+                                      "PrRm_2067": {
+                                        "type": "string",
+                                        "description": "Presentation comment (Flemish)",
+                                        "format": "byte"
+                                      },
+                                      "SeCa": {
+                                        "type": "boolean",
+                                        "description": "Session is cancelled",
+                                        "format": ""
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnCourseGroupLines_POST": {
+        "type": "object",
+        "properties": {
+          "KnCourseGroupLines": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "integer",
+                        "description": "Sequence number",
+                        "format": ""
+                      },
+                      "CdId": {
+                        "type": "integer",
+                        "description": "Contact",
+                        "format": ""
+                      },
+                      "StDa": {
+                        "type": "string",
+                        "description": "Required start date",
+                        "format": "date"
+                      },
+                      "CgId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Course programme",
+                        "format": ""
+                      },
+                      "ItCd": {
+                        "type": "string",
+                        "maxLength": 40,
+                        "description": "Cursus",
+                        "format": ""
+                      },
+                      "MaYN": {
+                        "type": "boolean",
+                        "description": "Mandatory",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "CdId"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnCourseMember_POST": {
+        "type": "object",
+        "properties": {
+          "KnCourseMember": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "BcCo": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "BasicContactCode (verwijzing naar: Organisatie/Persoon =\u003E AfasKnBasicContact)",
+                        "format": ""
+                      },
+                      "CrId": {
+                        "type": "integer",
+                        "description": "Course event",
+                        "format": ""
+                      },
+                      "CdId": {
+                        "type": "integer",
+                        "description": "Participant",
+                        "format": ""
+                      },
+                      "DeId": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Debtor",
+                        "format": ""
+                      },
+                      "SuDa": {
+                        "type": "string",
+                        "description": "Registration date",
+                        "format": "date"
+                      },
+                      "DfPr": {
+                        "type": "number",
+                        "description": "Deviating price in basic currency",
+                        "format": "number"
+                      },
+                      "DiPc": {
+                        "type": "number",
+                        "description": "Discount percentage",
+                        "format": "number"
+                      },
+                      "Invo": {
+                        "type": "boolean",
+                        "description": "Invoice",
+                        "format": ""
+                      },
+                      "Rm": {
+                        "type": "string",
+                        "description": "Remark",
+                        "format": "byte"
+                      },
+                      "CuId": {
+                        "type": "string",
+                        "maxLength": 3,
+                        "description": "Currency",
+                        "format": ""
+                      },
+                      "NFPr": {
+                        "type": "number",
+                        "description": "Deviating price",
+                        "format": "number"
+                      },
+                      "RfCs": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Order number/reference",
+                        "format": ""
+                      },
+                      "Bl": {
+                        "type": "boolean",
+                        "description": "Blocked",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "BcCo",
+                      "CrId",
+                      "CdId",
+                      "SuDa",
+                      "Invo",
+                      "CuId"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnCourseMember_PUT": {
+        "type": "object",
+        "properties": {
+          "KnCourseMember": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "BcCo": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "BasicContactCode (verwijzing naar: Organisatie/Persoon =\u003E AfasKnBasicContact)",
+                        "format": ""
+                      },
+                      "CrId": {
+                        "type": "integer",
+                        "description": "Course event",
+                        "format": ""
+                      },
+                      "CdId": {
+                        "type": "integer",
+                        "description": "Participant",
+                        "format": ""
+                      },
+                      "DeId": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Debtor",
+                        "format": ""
+                      },
+                      "SuDa": {
+                        "type": "string",
+                        "description": "Registration date",
+                        "format": "date"
+                      },
+                      "DfPr": {
+                        "type": "number",
+                        "multipleOf": 1E-10,
+                        "description": "Deviating price in basic currency",
+                        "format": "float"
+                      },
+                      "DiPc": {
+                        "type": "number",
+                        "multipleOf": 0.01,
+                        "description": "Discount percentage",
+                        "format": "float"
+                      },
+                      "Invo": {
+                        "type": "boolean",
+                        "description": "Invoice",
+                        "format": ""
+                      },
+                      "Rm": {
+                        "type": "string",
+                        "description": "Remark",
+                        "format": "byte"
+                      },
+                      "CuId": {
+                        "type": "string",
+                        "maxLength": 3,
+                        "description": "Currency",
+                        "format": ""
+                      },
+                      "NFPr": {
+                        "type": "number",
+                        "multipleOf": 1E-10,
+                        "description": "Deviating price",
+                        "format": "float"
+                      },
+                      "RfCs": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Order number/reference",
+                        "format": ""
+                      },
+                      "Bl": {
+                        "type": "boolean",
+                        "description": "Blocked",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "CrId",
+                      "CdId"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnCourseSessionMember_PUT": {
+        "type": "object",
+        "properties": {
+          "KnCourseSessionMember": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "CrId": {
+                        "type": "integer",
+                        "description": "Event ID",
+                        "format": ""
+                      },
+                      "SeId": {
+                        "type": "integer",
+                        "description": "Session code",
+                        "format": ""
+                      },
+                      "MeId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Organisatie/persoon",
+                        "format": ""
+                      },
+                      "CdId": {
+                        "type": "integer",
+                        "description": "Participant",
+                        "format": ""
+                      },
+                      "Pres": {
+                        "type": "boolean",
+                        "description": "Present",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "CrId",
+                      "SeId",
+                      "MeId",
+                      "CdId"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "AfasToken": {
+        "name": "Authorization",
+        "type": "apiKey",
+        "in": "header",
+        "description": "Convert the XML token to Base64 and add \u0027AfasToken \u0027 in front of it."
+      }
+    },
+    "parameters": {
+      "Accept-Language": {
+        "name": "Accept-Language",
+        "in": "header",
+        "required": false,
+        "description": "Indicates the client\u0027s preferred language for the response. If not provided, the API defaults to the base environment language.",
+        "schema": {
+          "type": "string",
+          "enum": [
+            "en-us",
+            "nl-nl",
+            "nl-be",
+            "fr-fr",
+            "de-de"
+          ],
+          "example": "en-us"
+        }
+      },
+      "Content-Type": {
+        "name": "Content-Type",
+        "in": "header",
+        "required": false,
+        "description": "Specifies the media type and character encoding for the request body. Ensures proper decoding and interpretation of the transmitted data.",
+        "schema": {
+          "type": "string",
+          "example": "application/json;charset=utf-8"
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "OK; request is successfully executed.",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(0ms), complete(418ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Thu, 23 Nov 2023 12:11:06 GMT",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "0",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request; invalid request"
+      },
+      "401": {
+        "description": "Unauthorized; valid token but no access to this endpoint.",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(0ms), complete(418ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Thu, 23 Nov 2023 12:11:06 GMT",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "0",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "403": {
+        "description": "Forbidden; Due to IP restrictions in AFAS environment.",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(0ms), complete(418ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Thu, 23 Nov 2023 12:11:06 GMT",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "0",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "404": {
+        "description": "Not Found; requested resource is not available on the server.",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(0ms), complete(101ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Thu, 23 Nov 2023 12:11:06 GMT",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "0",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "413": {
+        "description": "Payload Too Large.",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(0ms), complete(418ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Thu, 23 Nov 2023 12:11:06 GMT",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "0",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "500": {
+        "description": "Internal Server Error",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(1ms), complete(2192ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Tue, 30 Jan 2024 20:30:07 GMT",
+            "schema": {
+              "type": "string"
+            }
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "errorNumber": {
+                  "type": "integer",
+                  "example": {
+                    "example": 0
+                  }
+                },
+                "externalMessage": {
+                  "type": "string",
+                  "example": {
+                    "example": "string"
+                  }
+                },
+                "profitLogReference": {
+                  "type": "string",
+                  "example": {
+                    "example": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "503": {
+        "description": "Service unavailable; retry at a later time. Contains the number of seconds to wait before retrying the request",
+        "headers": {
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "61",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Retry-After": {
+            "description": "7200",
+            "schema": {
+              "type": "string"
+            }
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "string",
+                      "example": {
+                        "example": "503"
+                      }
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": {
+                        "example": "Service temporarily unavailable due to scheduled maintenance. Please check afasstatus.nl for details."
+                      }
+                    }
+                  }
+                },
+                "retry_after": {
+                  "type": "integer",
+                  "example": 7200
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "AfasToken": []
+    }
+  ]
+}

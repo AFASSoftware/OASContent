@@ -1,0 +1,1 @@
+> Let op: hoe de verlofmelding moet worden aangemaakt is afhankelijk van het type rooster van de medewerker.

@@ -1,0 +1,1 @@
+Geeft een overzicht van de openstaande facturen per debiteur. Als een factuur is afgeletterd verdwijnt deze uit het resultaat.

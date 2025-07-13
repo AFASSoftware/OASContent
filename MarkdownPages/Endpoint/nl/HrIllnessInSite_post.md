@@ -1,0 +1,1 @@
+Met HrIllnessInSite maak je een taak aan in InSite waarmee een verzuimmelding kan worden aangemaakt, aangepast of afgesloten. Hiermee wordt dossieritem "Ziekmelding (Profit) / -17" aangemaakt op de medewerker met standaard een taak voor de leidinggevende om de verzuimmelding te beoordelen.

@@ -1,0 +1,1 @@
+> **Please note:** The VAT rates in a purchase invoice depend on the address of the supplier/creditor. As a result, it is not possible to apply different VAT country rates within a single purchase invoice.

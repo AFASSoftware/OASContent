@@ -1,0 +1,2 @@
+Vanaf Profit 4 is het in sommige gevallen verplicht om op `FbGoodsReceivedLines` niveau een verwijzing op te nemen naar de regel in de financiële mutatie. 
+Als de functionaliteit `Confronteren op journaalpostnummer` is geactiveerd dan zijn de velden `Bijbehorende journaalpostnummer` (`EnNo`) en `Bijbehorende journaalpostregel` (`SeNo`) verplicht. Je moet de UpdateConnector aanpassen voor deze verplichte velden. Wij adviseren aan alle koppelpartners om deze velden **altijd** mee te gaan geven. Deze velden zijn al langer beschikbaar. 

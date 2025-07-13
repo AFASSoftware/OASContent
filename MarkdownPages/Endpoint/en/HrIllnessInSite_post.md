@@ -1,0 +1,1 @@
+With HrIllnessInSite, you create a task in InSite that allows you to create, modify, or close an absence entry. This creates a "Absence entry  (Profit) / -17" dossier item for the employee, with a standard task for the manager to assess the absence entry.

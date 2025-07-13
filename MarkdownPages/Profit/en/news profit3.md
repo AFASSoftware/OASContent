@@ -1,0 +1,799 @@
+---
+title: Nieuw in Profit 3
+author: CLN
+date: 2024-06-17
+tags: Profit3
+---
+
+From Profit 3 onwards, there are a number of changes in the AFAS Profit API. Below are all the changes that have been made. Curious about our roadmap? [Click here](https://www.afas.nl/roadmap)
+
+> How-To read this? Profit has an extensive API with many different components. The API specifications are divided into components that belong together. For each component, the changes are indicated.
+
+## VAT percentage to be reclaimed
+
+### Breaking Change!
+
+Unfortunately, it has just become known that the determination of VAT reclaim has been changed in such a way that GetConnectors based on the table 'VAT percentage to be reclaimed' no longer work. An error message occurs when you try to call them up.
+
+> 17-6-2023: We are awaiting updates from the developers. We will keep you informed on this page.
+
+## Confrontation
+
+### Breaking Change!
+
+In UpdateConnector [FbConfrontation](https://docs.afas.help/apidoc/en/Mutaties#post-/connectors/FbConfrontation) it is mandatory to include a reference to the line in the financial mutation at the `FbGoodsReceivedLines` level. More details will be shared as soon as possible.
+
+## Medewerker Periodieken
+
+### Changelog
+
+At `KnEmployee`, the object `AfasPeriodiek` has been added. This object will replace the periodic fields on `AfasContract` per Profit 4.
+
+> Note: In Profit 4, this will be a *breaking change*.
+
+## Metainfo update
+
+### Changelog
+
+In Profit 3, fields that were previously required according to the metadata are no longer mandatory. Boolean (yes/no) fields were always required unless specifically overridden by the AFAS developers. This resulted in many fields being marked as required when they weren't actually necessary. This has been modified: all fields that have a default value are no longer mandatory. For example, a yes/no field that was previously required is no longer marked as mandatory. This change in the metadata *does not affect* the usage of the API but does result in a significant change in the available information about the fields.
+
+## Administration parameters Financial
+
+A new data collection has been added for the GetConnector: Administration settings Financial incl. authorization
+
+## Artikelen Specification
+
+### Changelog
+
+| Description | Path | Operation |
+| --- | --- | --- |
+| endpoint added | /connectors/FbUnitBasicItem/FbUnitBasicItem/@VaIt,@BiUn/{VaIt},{BiUn} | [DELETE](https://docs.afas.help/apidoc/nl/Artikelen#delete-/connectors/FbUnitBasicItem/FbUnitBasicItem/@VaIt,@BiUn/-VaIt-,-BiUn-) |
+
+## Bouw Specification
+
+### Changelog
+
+No changes for this version.
+
+## Budgetten en activa Specification
+
+### Changelog
+
+| Description | Path | Operation |
+| --- | --- | --- |
+| added the new optional request property 'FiContract/Element/Objects/items/FiContractline/Element/items/Fields/APBF' | /connectors/FiContract | [POST](https://docs.afas.help/apidoc/nl/Budgetten%20en%20activa#post-/connectors/FiContract) |
+| added the new optional request property 'FiContract/Element/Objects/items/FiContractline/Element/items/Fields/APEF' | /connectors/FiContract | [POST](https://docs.afas.help/apidoc/nl/Budgetten%20en%20activa#post-/connectors/FiContract) |
+| added the new optional request property 'FiContract/Element/Objects/items/FiContractline/Element/items/Fields/APFC' | /connectors/FiContract | [POST](https://docs.afas.help/apidoc/nl/Budgetten%20en%20activa#post-/connectors/FiContract) |
+| added the new optional request property 'FiContract/Element/Objects/items/FiContractline/Element/items/Fields/VaRV' | /connectors/FiContract | [POST](https://docs.afas.help/apidoc/nl/Budgetten%20en%20activa#post-/connectors/FiContract) |
+| added the new optional request property 'FiContract/Element/Objects/items/FiContractline/Element/items/Fields/APBF' | /connectors/FiContract | [PUT](https://docs.afas.help/apidoc/nl/Budgetten%20en%20activa#put-/connectors/FiContract) |
+| added the new optional request property 'FiContract/Element/Objects/items/FiContractline/Element/items/Fields/APEF' | /connectors/FiContract | [PUT](https://docs.afas.help/apidoc/nl/Budgetten%20en%20activa#put-/connectors/FiContract) |
+| added the new optional request property 'FiContract/Element/Objects/items/FiContractline/Element/items/Fields/APFC' | /connectors/FiContract | [PUT](https://docs.afas.help/apidoc/nl/Budgetten%20en%20activa#put-/connectors/FiContract) |
+| added the new optional request property 'FiContract/Element/Objects/items/FiContractline/Element/items/Fields/VaRV' | /connectors/FiContract | [PUT](https://docs.afas.help/apidoc/nl/Budgetten%20en%20activa#put-/connectors/FiContract) |
+| added the new optional request property 'FiContract/Element/Objects/items/FiContractline/Element/items/Fields/APBF' | /connectors/FiContract/FiContractline | [POST](https://docs.afas.help/apidoc/nl/Budgetten%20en%20activa#post-/connectors/FiContract/FiContractline) |
+| added the new optional request property 'FiContract/Element/Objects/items/FiContractline/Element/items/Fields/APEF' | /connectors/FiContract/FiContractline | [POST](https://docs.afas.help/apidoc/nl/Budgetten%20en%20activa#post-/connectors/FiContract/FiContractline) |
+| added the new optional request property 'FiContract/Element/Objects/items/FiContractline/Element/items/Fields/APFC' | /connectors/FiContract/FiContractline | [POST](https://docs.afas.help/apidoc/nl/Budgetten%20en%20activa#post-/connectors/FiContract/FiContractline) |
+| added the new optional request property 'FiContract/Element/Objects/items/FiContractline/Element/items/Fields/VaRV' | /connectors/FiContract/FiContractline | [POST](https://docs.afas.help/apidoc/nl/Budgetten%20en%20activa#post-/connectors/FiContract/FiContractline) |
+| added the new optional request property 'FiFixedAssets/Element/Fields/DiPt' | /connectors/FiFixedAssets | [POST](https://docs.afas.help/apidoc/nl/Budgetten%20en%20activa#post-/connectors/FiFixedAssets) |
+| added the new 'A' enum value to the request property 'FiFixedAssets/Element/Fields/ViDc' | /connectors/FiFixedAssets | [POST](https://docs.afas.help/apidoc/nl/Budgetten%20en%20activa#post-/connectors/FiFixedAssets) |
+| added the new 'A' enum value to the request property 'FiFixedAssets/Element/Fields/ViDf' | /connectors/FiFixedAssets | [POST](https://docs.afas.help/apidoc/nl/Budgetten%20en%20activa#post-/connectors/FiFixedAssets) |
+| added the new 'R' enum value to the request property 'FiFixedAssets/Element/Fields/ViDc' | /connectors/FiFixedAssets | [POST](https://docs.afas.help/apidoc/nl/Budgetten%20en%20activa#post-/connectors/FiFixedAssets) |
+| added the new 'R' enum value to the request property 'FiFixedAssets/Element/Fields/ViDf' | /connectors/FiFixedAssets | [POST](https://docs.afas.help/apidoc/nl/Budgetten%20en%20activa#post-/connectors/FiFixedAssets) |
+| the 'FiFixedAssets/Element/Fields/Ds' request property's maxLength was increased from '80' to '120' | /connectors/FiFixedAssets | [POST](https://docs.afas.help/apidoc/nl/Budgetten%20en%20activa#post-/connectors/FiFixedAssets) |
+| endpoint added | /connectors/FiFixedAssetsSale/FiFixedAssetsSale/@FaSn,@SeNo/{FaSn},{SeNo} | [DELETE](https://docs.afas.help/apidoc/nl/Budgetten%20en%20activa#delete-/connectors/FiFixedAssetsSale/FiFixedAssetsSale/@FaSn,@SeNo/-FaSn-,-SeNo-) |
+
+## Cursusmanagement Specification
+
+### Changelog
+
+No changes for this version.
+
+## Dossiers, bijlagen en workflows Specification
+
+### Changelog
+
+| Description | Path | Operation |
+| --- | --- | --- |
+| added the new optional request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/CfId' | /connectors/KnSubject | [POST](https://docs.afas.help/apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject) |
+| added the new optional request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/CfMI' | /connectors/KnSubject | [POST](https://docs.afas.help/apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject) |
+| added the new optional request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/CfRI' | /connectors/KnSubject | [POST](https://docs.afas.help/apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject) |
+| added the new optional request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/CfId' | /connectors/KnSubject | [PUT](https://docs.afas.help/apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#put-/connectors/KnSubject) |
+| added the new optional request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/CfMI' | /connectors/KnSubject | [PUT](https://docs.afas.help/apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#put-/connectors/KnSubject) |
+| added the new optional request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/CfRI' | /connectors/KnSubject | [PUT](https://docs.afas.help/apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#put-/connectors/KnSubject) |
+| added the new optional request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/CfId' | /connectors/KnSubject/KnSubjectAttachment | [POST](https://docs.afas.help/apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject/KnSubjectAttachment) |
+| added the new optional request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/CfMI' | /connectors/KnSubject/KnSubjectAttachment | [POST](https://docs.afas.help/apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject/KnSubjectAttachment) |
+| added the new optional request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/CfRI' | /connectors/KnSubject/KnSubjectAttachment | [POST](https://docs.afas.help/apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject/KnSubjectAttachment) |
+
+## Financiële Inrichting Specification
+
+### Changelog
+
+| Description | Path | Operation |
+| --- | --- | --- |
+| removed the request property 'KnDimCode/Element/Fields/VaCl' | /connectors/KnDimCode | [POST](https://docs.afas.help/apidoc/nl/Financi%C3%ABle%20Inrichting#post-/connectors/KnDimCode) |
+| removed the request property 'KnDimCode/Element/Fields/VaCl' | /connectors/KnDimCode | [PUT](https://docs.afas.help/apidoc/nl/Financi%C3%ABle%20Inrichting#put-/connectors/KnDimCode) |
+| endpoint added | /connectors/FiIVY | [POST](https://docs.afas.help/apidoc/nl/Financi%C3%ABle%20Inrichting#post-/connectors/FiIVY) |
+| endpoint added | /connectors/FiIVY | [PUT](https://docs.afas.help/apidoc/nl/Financi%C3%ABle%20Inrichting#put-/connectors/FiIVY) |
+| endpoint added | /connectors/FiIVY/FiIVY/@Id/{Id} | [DELETE](https://docs.afas.help/apidoc/nl/Financi%C3%ABle%20Inrichting#delete-/connectors/FiIVY/FiIVY/@Id/-Id-) |
+| endpoint added | /connectors/KnBankTransaction/KnBankTransaction/@TrCd/{TrCd} | [DELETE](https://docs.afas.help/apidoc/nl/Financi%C3%ABle%20Inrichting#delete-/connectors/KnBankTransaction/KnBankTransaction/@TrCd/-TrCd-) |
+| added the new optional request property 'KnDimCode/Element/Fields/CoVC' | /connectors/KnDimCode | [POST](https://docs.afas.help/apidoc/nl/Financi%C3%ABle%20Inrichting#post-/connectors/KnDimCode) |
+| added the new optional request property 'KnDimCode/Element/Fields/CoVC' | /connectors/KnDimCode | [PUT](https://docs.afas.help/apidoc/nl/Financi%C3%ABle%20Inrichting#put-/connectors/KnDimCode) |
+
+## Flex Specification
+
+### Changelog
+
+| Description | Path | Operation |
+| --- | --- | --- |
+| added the new '0' enum value to the request property 'KnDayContract/Element/Objects/items/AfasContract/Element/items/Fields/InMe' | /connectors/KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/KnDayContract) |
+| added the new '108' enum value to the request property 'KnDayContract/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/KnDayContract) |
+| added the new '655' enum value to the request property 'KnDayContract/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/KnDayContract) |
+| added the new '0' enum value to the request property 'KnDayContract/Element/Objects/items/AfasContract/Element/items/Fields/InMe' | /connectors/KnDayContract | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/KnDayContract) |
+| added the new '108' enum value to the request property 'KnDayContract/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnDayContract | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/KnDayContract) |
+| added the new '655' enum value to the request property 'KnDayContract/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnDayContract | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/KnDayContract) |
+| added the new optional request property 'PtConceptPlacementContract/Element/Fields/PRe' | /connectors/PtConceptPlacementContract | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtConceptPlacementContract) |
+| added the new optional request property 'PtConceptPlacementContract/Element/Fields/Type' | /connectors/PtConceptPlacementContract | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtConceptPlacementContract) |
+| added the new optional request property 'PtConceptPlacementContract/Element/Objects/items/AfasPtConceptPlacementContractLine/Element/items/Fields/RfPu' | /connectors/PtConceptPlacementContract | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtConceptPlacementContract) |
+| added the new optional request property 'PtCostPriceModel/Element/Objects/items/PtCostPriceModelVersion/Element/items/Objects/items/PtCostPriceModelLine/Element/items/Fields/Purc' | /connectors/PtCostPriceModel | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtCostPriceModel) |
+| added the new optional request property 'PtCostPriceModel/Element/Objects/items/PtCostPriceModelVersion/Element/items/Objects/items/PtCostPriceModelLine/Element/items/Fields/Purc' | /connectors/PtCostPriceModel | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtCostPriceModel) |
+| added the new optional request property 'PtCostPriceModel/Element/Objects/items/PtCostPriceModelVersion/Element/items/Objects/items/PtCostPriceModelLine/Element/items/Fields/Purc' | /connectors/PtCostPriceModel/PtCostPriceModelVersion | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtCostPriceModel/PtCostPriceModelVersion) |
+| added the new optional request property 'PtDeclaration/Element/Fields/RfPu' | /connectors/PtDeclaration | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtDeclaration) |
+| added the new optional request property 'PtDeclaration/Element/Fields/RfPu' | /connectors/PtDeclaration | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtDeclaration) |
+| added the new optional request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/PuPr' | /connectors/PtDeclarationCorrection | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection) |
+| added the new optional request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/Purc' | /connectors/PtDeclarationCorrection | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection) |
+| added the new optional request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/RfPu' | /connectors/PtDeclarationCorrection | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection) |
+| added the new optional request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/PuPr' | /connectors/PtDeclarationCorrection | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| added the new optional request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/Purc' | /connectors/PtDeclarationCorrection | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| added the new optional request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/RfPu' | /connectors/PtDeclarationCorrection | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| added the new optional request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/PuPr' | /connectors/PtDeclarationCorrection/PtRealization | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection/PtRealization) |
+| added the new optional request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/Purc' | /connectors/PtDeclarationCorrection/PtRealization | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection/PtRealization) |
+| added the new optional request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/RfPu' | /connectors/PtDeclarationCorrection/PtRealization | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection/PtRealization) |
+| endpoint added | /connectors/PtFunction/PtFunction/@PrId,@FuId/{PrId},{FuId} | [DELETE](https://docs.afas.help/apidoc/nl/Flex#delete-/connectors/PtFunction/PtFunction/@PrId,@FuId/-PrId-,-FuId-) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpAcHi' | /connectors/PtItemSet | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpAmPe' | /connectors/PtItemSet | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpDmon' | /connectors/PtItemSet | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpMeMo' | /connectors/PtItemSet | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpMoCo' | /connectors/PtItemSet | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpMon' | /connectors/PtItemSet | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpMonP' | /connectors/PtItemSet | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpP4Wk' | /connectors/PtItemSet | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpPFrA' | /connectors/PtItemSet | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpPMon' | /connectors/PtItemSet | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpPerW' | /connectors/PtItemSet | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpRMon' | /connectors/PtItemSet | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpReDa' | /connectors/PtItemSet | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpVaCo' | /connectors/PtItemSet | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpVaIe' | /connectors/PtItemSet | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpVaIp' | /connectors/PtItemSet | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpVaUn' | /connectors/PtItemSet | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpVaWe' | /connectors/PtItemSet | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpViEx' | /connectors/PtItemSet | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpViTp' | /connectors/PtItemSet | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpWeAg' | /connectors/PtItemSet | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Objects/items/PtItemSetLine/Element/items/Fields/PAvP' | /connectors/PtItemSet | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Objects/items/PtItemSetLine/Element/items/Fields/PCpP' | /connectors/PtItemSet | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Objects/items/PtItemSetLine/Element/items/Fields/PMnP' | /connectors/PtItemSet | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Objects/items/PtItemSetLine/Element/items/Fields/PPYN' | /connectors/PtItemSet | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Objects/items/PtItemSetLine/Element/items/Fields/PuDf' | /connectors/PtItemSet | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Objects/items/PtItemSetLine/Element/items/Fields/PuPc' | /connectors/PtItemSet | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Objects/items/PtItemSetLine/Element/items/Fields/Purc' | /connectors/PtItemSet | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpAcHi' | /connectors/PtItemSet | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpAmPe' | /connectors/PtItemSet | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpDmon' | /connectors/PtItemSet | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpMeMo' | /connectors/PtItemSet | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpMoCo' | /connectors/PtItemSet | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpMon' | /connectors/PtItemSet | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpMonP' | /connectors/PtItemSet | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpP4Wk' | /connectors/PtItemSet | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpPFrA' | /connectors/PtItemSet | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpPMon' | /connectors/PtItemSet | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpPerW' | /connectors/PtItemSet | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpRMon' | /connectors/PtItemSet | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpReDa' | /connectors/PtItemSet | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpVaCo' | /connectors/PtItemSet | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpVaIe' | /connectors/PtItemSet | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpVaIp' | /connectors/PtItemSet | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpVaUn' | /connectors/PtItemSet | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpVaWe' | /connectors/PtItemSet | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpViEx' | /connectors/PtItemSet | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpViTp' | /connectors/PtItemSet | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpWeAg' | /connectors/PtItemSet | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Objects/items/PtItemSetLine/Element/items/Fields/PAvP' | /connectors/PtItemSet | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Objects/items/PtItemSetLine/Element/items/Fields/PCpP' | /connectors/PtItemSet | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Objects/items/PtItemSetLine/Element/items/Fields/PMnP' | /connectors/PtItemSet | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Objects/items/PtItemSetLine/Element/items/Fields/PPYN' | /connectors/PtItemSet | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Objects/items/PtItemSetLine/Element/items/Fields/PuDf' | /connectors/PtItemSet | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Objects/items/PtItemSetLine/Element/items/Fields/PuPc' | /connectors/PtItemSet | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Objects/items/PtItemSetLine/Element/items/Fields/Purc' | /connectors/PtItemSet | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtItemSet) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpAcHi' | /connectors/PtItemSet/PtItemSetLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemSetLine) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpAmPe' | /connectors/PtItemSet/PtItemSetLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemSetLine) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpDmon' | /connectors/PtItemSet/PtItemSetLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemSetLine) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpMeMo' | /connectors/PtItemSet/PtItemSetLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemSetLine) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpMoCo' | /connectors/PtItemSet/PtItemSetLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemSetLine) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpMon' | /connectors/PtItemSet/PtItemSetLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemSetLine) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpMonP' | /connectors/PtItemSet/PtItemSetLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemSetLine) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpP4Wk' | /connectors/PtItemSet/PtItemSetLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemSetLine) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpPFrA' | /connectors/PtItemSet/PtItemSetLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemSetLine) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpPMon' | /connectors/PtItemSet/PtItemSetLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemSetLine) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpPerW' | /connectors/PtItemSet/PtItemSetLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemSetLine) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpRMon' | /connectors/PtItemSet/PtItemSetLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemSetLine) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpReDa' | /connectors/PtItemSet/PtItemSetLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemSetLine) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpVaCo' | /connectors/PtItemSet/PtItemSetLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemSetLine) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpVaIe' | /connectors/PtItemSet/PtItemSetLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemSetLine) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpVaIp' | /connectors/PtItemSet/PtItemSetLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemSetLine) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpVaUn' | /connectors/PtItemSet/PtItemSetLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemSetLine) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpVaWe' | /connectors/PtItemSet/PtItemSetLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemSetLine) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpViEx' | /connectors/PtItemSet/PtItemSetLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemSetLine) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpViTp' | /connectors/PtItemSet/PtItemSetLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemSetLine) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpWeAg' | /connectors/PtItemSet/PtItemSetLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemSetLine) |
+| added the new optional request property 'PtItemset/Element/Objects/items/PtItemSetLine/Element/items/Fields/PAvP' | /connectors/PtItemSet/PtItemSetLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemSetLine) |
+| added the new optional request property 'PtItemset/Element/Objects/items/PtItemSetLine/Element/items/Fields/PCpP' | /connectors/PtItemSet/PtItemSetLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemSetLine) |
+| added the new optional request property 'PtItemset/Element/Objects/items/PtItemSetLine/Element/items/Fields/PMnP' | /connectors/PtItemSet/PtItemSetLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemSetLine) |
+| added the new optional request property 'PtItemset/Element/Objects/items/PtItemSetLine/Element/items/Fields/PPYN' | /connectors/PtItemSet/PtItemSetLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemSetLine) |
+| added the new optional request property 'PtItemset/Element/Objects/items/PtItemSetLine/Element/items/Fields/PuDf' | /connectors/PtItemSet/PtItemSetLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemSetLine) |
+| added the new optional request property 'PtItemset/Element/Objects/items/PtItemSetLine/Element/items/Fields/PuPc' | /connectors/PtItemSet/PtItemSetLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemSetLine) |
+| added the new optional request property 'PtItemset/Element/Objects/items/PtItemSetLine/Element/items/Fields/Purc' | /connectors/PtItemSet/PtItemSetLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemSetLine) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpAcHi' | /connectors/PtItemSet/PtItemsetScaleWage | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemsetScaleWage) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpAmPe' | /connectors/PtItemSet/PtItemsetScaleWage | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemsetScaleWage) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpDmon' | /connectors/PtItemSet/PtItemsetScaleWage | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemsetScaleWage) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpMeMo' | /connectors/PtItemSet/PtItemsetScaleWage | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemsetScaleWage) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpMoCo' | /connectors/PtItemSet/PtItemsetScaleWage | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemsetScaleWage) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpMon' | /connectors/PtItemSet/PtItemsetScaleWage | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemsetScaleWage) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpMonP' | /connectors/PtItemSet/PtItemsetScaleWage | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemsetScaleWage) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpP4Wk' | /connectors/PtItemSet/PtItemsetScaleWage | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemsetScaleWage) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpPFrA' | /connectors/PtItemSet/PtItemsetScaleWage | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemsetScaleWage) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpPMon' | /connectors/PtItemSet/PtItemsetScaleWage | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemsetScaleWage) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpPerW' | /connectors/PtItemSet/PtItemsetScaleWage | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemsetScaleWage) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpRMon' | /connectors/PtItemSet/PtItemsetScaleWage | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemsetScaleWage) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpReDa' | /connectors/PtItemSet/PtItemsetScaleWage | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemsetScaleWage) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpVaCo' | /connectors/PtItemSet/PtItemsetScaleWage | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemsetScaleWage) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpVaIe' | /connectors/PtItemSet/PtItemsetScaleWage | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemsetScaleWage) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpVaIp' | /connectors/PtItemSet/PtItemsetScaleWage | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemsetScaleWage) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpVaUn' | /connectors/PtItemSet/PtItemsetScaleWage | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemsetScaleWage) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpVaWe' | /connectors/PtItemSet/PtItemsetScaleWage | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemsetScaleWage) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpViEx' | /connectors/PtItemSet/PtItemsetScaleWage | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemsetScaleWage) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpViTp' | /connectors/PtItemSet/PtItemsetScaleWage | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemsetScaleWage) |
+| added the new optional request property 'PtItemset/Element/Fields/PtItpWeAg' | /connectors/PtItemSet/PtItemsetScaleWage | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemsetScaleWage) |
+| added the new optional request property 'PtItemset/Element/Objects/items/PtItemSetLine/Element/items/Fields/PAvP' | /connectors/PtItemSet/PtItemsetScaleWage | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemsetScaleWage) |
+| added the new optional request property 'PtItemset/Element/Objects/items/PtItemSetLine/Element/items/Fields/PCpP' | /connectors/PtItemSet/PtItemsetScaleWage | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemsetScaleWage) |
+| added the new optional request property 'PtItemset/Element/Objects/items/PtItemSetLine/Element/items/Fields/PMnP' | /connectors/PtItemSet/PtItemsetScaleWage | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemsetScaleWage) |
+| added the new optional request property 'PtItemset/Element/Objects/items/PtItemSetLine/Element/items/Fields/PPYN' | /connectors/PtItemSet/PtItemsetScaleWage | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemsetScaleWage) |
+| added the new optional request property 'PtItemset/Element/Objects/items/PtItemSetLine/Element/items/Fields/PuDf' | /connectors/PtItemSet/PtItemsetScaleWage | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemsetScaleWage) |
+| added the new optional request property 'PtItemset/Element/Objects/items/PtItemSetLine/Element/items/Fields/PuPc' | /connectors/PtItemSet/PtItemsetScaleWage | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemsetScaleWage) |
+| added the new optional request property 'PtItemset/Element/Objects/items/PtItemSetLine/Element/items/Fields/Purc' | /connectors/PtItemSet/PtItemsetScaleWage | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtItemSet/PtItemsetScaleWage) |
+| endpoint added | /connectors/PtItemSetFunction/PtItemSetFunction/@IsId,@FuId/{IsId},{FuId} | [DELETE](https://docs.afas.help/apidoc/nl/Flex#delete-/connectors/PtItemSetFunction/PtItemSetFunction/@IsId,@FuId/-IsId-,-FuId-) |
+| added the new optional request property 'PtPlacementContract/Element/Fields/DlPe' | /connectors/PtPlacementContract | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPlacementContract) |
+| added the new optional request property 'PtPlacementContract/Element/Fields/PRe' | /connectors/PtPlacementContract | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPlacementContract) |
+| added the new optional request property 'PtPlacementContract/Element/Fields/Rfun' | /connectors/PtPlacementContract | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPlacementContract) |
+| added the new optional request property 'PtPlacementContract/Element/Fields/Type' | /connectors/PtPlacementContract | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPlacementContract) |
+| added the new optional request property 'PtPlacementContract/Element/Objects/items/AfasPtPlacementContractLine/Element/items/Fields/AsCn' | /connectors/PtPlacementContract | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPlacementContract) |
+| added the new optional request property 'PtPlacementContract/Element/Objects/items/AfasPtPlacementContractLine/Element/items/Fields/CcRe' | /connectors/PtPlacementContract | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPlacementContract) |
+| added the new optional request property 'PtPlacementContract/Element/Objects/items/AfasPtPlacementContractLine/Element/items/Fields/PlCn' | /connectors/PtPlacementContract | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPlacementContract) |
+| added the new optional request property 'PtPlacementContract/Element/Objects/items/AfasPtPlacementContractLine/Element/items/Fields/ReCn' | /connectors/PtPlacementContract | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPlacementContract) |
+| added the new optional request property 'PtPlacementContract/Element/Objects/items/AfasPtPlacementContractLine/Element/items/Fields/RfPu' | /connectors/PtPlacementContract | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPlacementContract) |
+| added the new optional request property 'PtPlacementContract/Element/Fields/DlPe' | /connectors/PtPlacementContract | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtPlacementContract) |
+| added the new optional request property 'PtPlacementContract/Element/Fields/PRe' | /connectors/PtPlacementContract | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtPlacementContract) |
+| added the new optional request property 'PtPlacementContract/Element/Fields/Rfun' | /connectors/PtPlacementContract | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtPlacementContract) |
+| added the new optional request property 'PtPlacementContract/Element/Fields/Type' | /connectors/PtPlacementContract | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtPlacementContract) |
+| added the new optional request property 'PtPlacementContract/Element/Objects/items/AfasPtPlacementContractLine/Element/items/Fields/AsCn' | /connectors/PtPlacementContract | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtPlacementContract) |
+| added the new optional request property 'PtPlacementContract/Element/Objects/items/AfasPtPlacementContractLine/Element/items/Fields/CcRe' | /connectors/PtPlacementContract | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtPlacementContract) |
+| added the new optional request property 'PtPlacementContract/Element/Objects/items/AfasPtPlacementContractLine/Element/items/Fields/PlCn' | /connectors/PtPlacementContract | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtPlacementContract) |
+| added the new optional request property 'PtPlacementContract/Element/Objects/items/AfasPtPlacementContractLine/Element/items/Fields/ReCn' | /connectors/PtPlacementContract | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtPlacementContract) |
+| added the new optional request property 'PtPlacementContract/Element/Objects/items/AfasPtPlacementContractLine/Element/items/Fields/RfPu' | /connectors/PtPlacementContract | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtPlacementContract) |
+| added the new optional request property 'PtPlacementContract/Element/Fields/DlPe' | /connectors/PtPlacementContract/AfasPtPlacementContractLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPlacementContract/AfasPtPlacementContractLine) |
+| added the new optional request property 'PtPlacementContract/Element/Fields/PRe' | /connectors/PtPlacementContract/AfasPtPlacementContractLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPlacementContract/AfasPtPlacementContractLine) |
+| added the new optional request property 'PtPlacementContract/Element/Fields/Rfun' | /connectors/PtPlacementContract/AfasPtPlacementContractLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPlacementContract/AfasPtPlacementContractLine) |
+| added the new optional request property 'PtPlacementContract/Element/Fields/Type' | /connectors/PtPlacementContract/AfasPtPlacementContractLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPlacementContract/AfasPtPlacementContractLine) |
+| added the new optional request property 'PtPlacementContract/Element/Objects/items/AfasPtPlacementContractLine/Element/items/Fields/AsCn' | /connectors/PtPlacementContract/AfasPtPlacementContractLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPlacementContract/AfasPtPlacementContractLine) |
+| added the new optional request property 'PtPlacementContract/Element/Objects/items/AfasPtPlacementContractLine/Element/items/Fields/CcRe' | /connectors/PtPlacementContract/AfasPtPlacementContractLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPlacementContract/AfasPtPlacementContractLine) |
+| added the new optional request property 'PtPlacementContract/Element/Objects/items/AfasPtPlacementContractLine/Element/items/Fields/PlCn' | /connectors/PtPlacementContract/AfasPtPlacementContractLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPlacementContract/AfasPtPlacementContractLine) |
+| added the new optional request property 'PtPlacementContract/Element/Objects/items/AfasPtPlacementContractLine/Element/items/Fields/ReCn' | /connectors/PtPlacementContract/AfasPtPlacementContractLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPlacementContract/AfasPtPlacementContractLine) |
+| added the new optional request property 'PtPlacementContract/Element/Objects/items/AfasPtPlacementContractLine/Element/items/Fields/RfPu' | /connectors/PtPlacementContract/AfasPtPlacementContractLine | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPlacementContract/AfasPtPlacementContractLine) |
+| added the new optional request property 'PtPriceAgreement/Element/Fields/PRe' | /connectors/PtPriceAgreement | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPriceAgreement) |
+| added the new optional request property 'PtPriceAgreement/Element/Fields/Type' | /connectors/PtPriceAgreement | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPriceAgreement) |
+| added the new optional request property 'PtPriceAgreement/Element/Objects/items/PtPriceAgreementVersion/Element/items/Fields/PuBa' | /connectors/PtPriceAgreement | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPriceAgreement) |
+| added the new optional request property 'PtPriceAgreement/Element/Objects/items/PtPriceAgreementVersion/Element/items/Fields/TaBa' | /connectors/PtPriceAgreement | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPriceAgreement) |
+| added the new optional request property 'PtPriceAgreement/Element/Objects/items/PtPriceAgreementVersion/Element/items/Objects/items/PtPriceAgreementLine/Element/items/Fields/PPYN' | /connectors/PtPriceAgreement | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPriceAgreement) |
+| added the new optional request property 'PtPriceAgreement/Element/Objects/items/PtPriceAgreementVersion/Element/items/Objects/items/PtPriceAgreementLine/Element/items/Fields/PuPc' | /connectors/PtPriceAgreement | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPriceAgreement) |
+| added the new optional request property 'PtPriceAgreement/Element/Objects/items/PtPriceAgreementVersion/Element/items/Objects/items/PtPriceAgreementLine/Element/items/Fields/PuPr' | /connectors/PtPriceAgreement | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPriceAgreement) |
+| added the new optional request property 'PtPriceAgreement/Element/Objects/items/PtPriceAgreementVersion/Element/items/Objects/items/PtPriceAgreementLine/Element/items/Fields/Purc' | /connectors/PtPriceAgreement | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPriceAgreement) |
+| added the new optional request property 'PtPriceAgreement/Element/Fields/PRe' | /connectors/PtPriceAgreement | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtPriceAgreement) |
+| added the new optional request property 'PtPriceAgreement/Element/Fields/Type' | /connectors/PtPriceAgreement | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtPriceAgreement) |
+| added the new optional request property 'PtPriceAgreement/Element/Objects/items/PtPriceAgreementVersion/Element/items/Fields/PuBa' | /connectors/PtPriceAgreement | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtPriceAgreement) |
+| added the new optional request property 'PtPriceAgreement/Element/Objects/items/PtPriceAgreementVersion/Element/items/Fields/TaBa' | /connectors/PtPriceAgreement | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtPriceAgreement) |
+| added the new optional request property 'PtPriceAgreement/Element/Objects/items/PtPriceAgreementVersion/Element/items/Objects/items/PtPriceAgreementLine/Element/items/Fields/PPYN' | /connectors/PtPriceAgreement | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtPriceAgreement) |
+| added the new optional request property 'PtPriceAgreement/Element/Objects/items/PtPriceAgreementVersion/Element/items/Objects/items/PtPriceAgreementLine/Element/items/Fields/PuPc' | /connectors/PtPriceAgreement | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtPriceAgreement) |
+| added the new optional request property 'PtPriceAgreement/Element/Objects/items/PtPriceAgreementVersion/Element/items/Objects/items/PtPriceAgreementLine/Element/items/Fields/PuPr' | /connectors/PtPriceAgreement | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtPriceAgreement) |
+| added the new optional request property 'PtPriceAgreement/Element/Objects/items/PtPriceAgreementVersion/Element/items/Objects/items/PtPriceAgreementLine/Element/items/Fields/Purc' | /connectors/PtPriceAgreement | [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtPriceAgreement) |
+| added the new optional request property 'PtPriceAgreement/Element/Fields/PRe' | /connectors/PtPriceAgreement/PtPriceAgreementVersion | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPriceAgreement/PtPriceAgreementVersion) |
+| added the new optional request property 'PtPriceAgreement/Element/Fields/Type' | /connectors/PtPriceAgreement/PtPriceAgreementVersion | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPriceAgreement/PtPriceAgreementVersion) |
+| added the new optional request property 'PtPriceAgreement/Element/Objects/items/PtPriceAgreementVersion/Element/items/Fields/PuBa' | /connectors/PtPriceAgreement/PtPriceAgreementVersion | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPriceAgreement/PtPriceAgreementVersion) |
+| added the new optional request property 'PtPriceAgreement/Element/Objects/items/PtPriceAgreementVersion/Element/items/Fields/TaBa' | /connectors/PtPriceAgreement/PtPriceAgreementVersion | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPriceAgreement/PtPriceAgreementVersion) |
+| added the new optional request property 'PtPriceAgreement/Element/Objects/items/PtPriceAgreementVersion/Element/items/Objects/items/PtPriceAgreementLine/Element/items/Fields/PPYN' | /connectors/PtPriceAgreement/PtPriceAgreementVersion | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPriceAgreement/PtPriceAgreementVersion) |
+| added the new optional request property 'PtPriceAgreement/Element/Objects/items/PtPriceAgreementVersion/Element/items/Objects/items/PtPriceAgreementLine/Element/items/Fields/PuPc' | /connectors/PtPriceAgreement/PtPriceAgreementVersion | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPriceAgreement/PtPriceAgreementVersion) |
+| added the new optional request property 'PtPriceAgreement/Element/Objects/items/PtPriceAgreementVersion/Element/items/Objects/items/PtPriceAgreementLine/Element/items/Fields/PuPr' | /connectors/PtPriceAgreement/PtPriceAgreementVersion | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPriceAgreement/PtPriceAgreementVersion) |
+| added the new optional request property 'PtPriceAgreement/Element/Objects/items/PtPriceAgreementVersion/Element/items/Objects/items/PtPriceAgreementLine/Element/items/Fields/Purc' | /connectors/PtPriceAgreement/PtPriceAgreementVersion | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtPriceAgreement/PtPriceAgreementVersion) |
+
+## Inkoop Specification
+
+### Changelog
+
+| Description | Path | Operation |
+| --- | --- | --- |
+| endpoint added | /connectors/FbBitVatTarifGroup/FbBitVatTarifGroup/@VaIt,@CoLa/{VaIt},{CoLa} | [DELETE](https://docs.afas.help/apidoc/nl/Inkoop#delete-/connectors/FbBitVatTarifGroup/FbBitVatTarifGroup/@VaIt,@CoLa/-VaIt-,-CoLa-) |
+| added the new optional request property 'FbPurRequisition/Element/Objects/items/FbPurRequisitionLines/Element/items/Fields/HiBc' | /connectors/FbPurRequisition | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/FbPurRequisition) |
+| added the new optional request property 'FbPurRequisition/Element/Objects/items/FbPurRequisitionLines/Element/items/Fields/HiBg' | /connectors/FbPurRequisition | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/FbPurRequisition) |
+| added the new optional request property 'FbPurRequisition/Element/Objects/items/FbPurRequisitionLines/Element/items/Fields/HiEn' | /connectors/FbPurRequisition | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/FbPurRequisition) |
+| added the new optional request property 'FbPurch/Element/Objects/items/FbPurchLines/Element/items/Fields/HiBc' | /connectors/FbPurch | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/FbPurch) |
+| added the new optional request property 'FbPurch/Element/Objects/items/FbPurchLines/Element/items/Fields/HiBg' | /connectors/FbPurch | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/FbPurch) |
+| added the new optional request property 'FbPurch/Element/Objects/items/FbPurchLines/Element/items/Fields/HiEn' | /connectors/FbPurch | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/FbPurch) |
+| added the new optional request property 'FbPurch/Element/Objects/items/FbPurchLines/Element/items/Fields/HiBc' | /connectors/FbPurch | [PUT](https://docs.afas.help/apidoc/nl/Inkoop#put-/connectors/FbPurch) |
+| added the new optional request property 'FbPurch/Element/Objects/items/FbPurchLines/Element/items/Fields/HiBg' | /connectors/FbPurch | [PUT](https://docs.afas.help/apidoc/nl/Inkoop#put-/connectors/FbPurch) |
+| added the new optional request property 'FbPurch/Element/Objects/items/FbPurchLines/Element/items/Fields/HiEn' | /connectors/FbPurch | [PUT](https://docs.afas.help/apidoc/nl/Inkoop#put-/connectors/FbPurch) |
+| added the new optional request property 'FbPurch/Element/Objects/items/FbPurchLines/Element/items/Fields/HiBc' | /connectors/FbPurch/FbPurchLines | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/FbPurch/FbPurchLines) |
+| added the new optional request property 'FbPurch/Element/Objects/items/FbPurchLines/Element/items/Fields/HiBg' | /connectors/FbPurch/FbPurchLines | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/FbPurch/FbPurchLines) |
+| added the new optional request property 'FbPurch/Element/Objects/items/FbPurchLines/Element/items/Fields/HiEn' | /connectors/FbPurch/FbPurchLines | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/FbPurch/FbPurchLines) |
+| added the new optional request property 'FbPurchQuotation/Element/Objects/items/FbPurchQuotationLines/Element/items/Fields/HiBc' | /connectors/FbPurchQuotation | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/FbPurchQuotation) |
+| added the new optional request property 'FbPurchQuotation/Element/Objects/items/FbPurchQuotationLines/Element/items/Fields/HiBg' | /connectors/FbPurchQuotation | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/FbPurchQuotation) |
+| added the new optional request property 'FbPurchQuotation/Element/Objects/items/FbPurchQuotationLines/Element/items/Fields/HiEn' | /connectors/FbPurchQuotation | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/FbPurchQuotation) |
+| added the new optional request property 'FbPurchQuotation/Element/Objects/items/FbPurchQuotationLines/Element/items/Fields/HiBc' | /connectors/FbPurchQuotation | [PUT](https://docs.afas.help/apidoc/nl/Inkoop#put-/connectors/FbPurchQuotation) |
+| added the new optional request property 'FbPurchQuotation/Element/Objects/items/FbPurchQuotationLines/Element/items/Fields/HiBg' | /connectors/FbPurchQuotation | [PUT](https://docs.afas.help/apidoc/nl/Inkoop#put-/connectors/FbPurchQuotation) |
+| added the new optional request property 'FbPurchQuotation/Element/Objects/items/FbPurchQuotationLines/Element/items/Fields/HiEn' | /connectors/FbPurchQuotation | [PUT](https://docs.afas.help/apidoc/nl/Inkoop#put-/connectors/FbPurchQuotation) |
+| added the new optional request property 'FbPurchQuotation/Element/Objects/items/FbPurchQuotationLines/Element/items/Fields/HiBc' | /connectors/FbPurchQuotation/FbPurchQuotationLines | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/FbPurchQuotation/FbPurchQuotationLines) |
+| added the new optional request property 'FbPurchQuotation/Element/Objects/items/FbPurchQuotationLines/Element/items/Fields/HiBg' | /connectors/FbPurchQuotation/FbPurchQuotationLines | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/FbPurchQuotation/FbPurchQuotationLines) |
+| added the new optional request property 'FbPurchQuotation/Element/Objects/items/FbPurchQuotationLines/Element/items/Fields/HiEn' | /connectors/FbPurchQuotation/FbPurchQuotationLines | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/FbPurchQuotation/FbPurchQuotationLines) |
+| added the new optional request property 'KnPurchaseRelationOrg/Element/Fields/OrId' | /connectors/KnPurchaseRelationOrg | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/KnPurchaseRelationOrg) |
+| added the new 'Q' enum value to the request property 'KnPurchaseRelationOrg/Element/Fields/InPv' | /connectors/KnPurchaseRelationOrg | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/KnPurchaseRelationOrg) |
+| added the new 'R' enum value to the request property 'KnPurchaseRelationOrg/Element/Fields/InPv' | /connectors/KnPurchaseRelationOrg | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/KnPurchaseRelationOrg) |
+| added the new optional request property 'KnPurchaseRelationOrg/Element/Fields/OrId' | /connectors/KnPurchaseRelationOrg | [PUT](https://docs.afas.help/apidoc/nl/Inkoop#put-/connectors/KnPurchaseRelationOrg) |
+| added the new 'Q' enum value to the request property 'KnPurchaseRelationOrg/Element/Fields/InPv' | /connectors/KnPurchaseRelationOrg | [PUT](https://docs.afas.help/apidoc/nl/Inkoop#put-/connectors/KnPurchaseRelationOrg) |
+| added the new 'R' enum value to the request property 'KnPurchaseRelationOrg/Element/Fields/InPv' | /connectors/KnPurchaseRelationOrg | [PUT](https://docs.afas.help/apidoc/nl/Inkoop#put-/connectors/KnPurchaseRelationOrg) |
+| added the new optional request property 'KnPurchaseRelationPer/Element/Fields/OrId' | /connectors/KnPurchaseRelationPer | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/KnPurchaseRelationPer) |
+| added the new 'Q' enum value to the request property 'KnPurchaseRelationPer/Element/Fields/InPv' | /connectors/KnPurchaseRelationPer | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/KnPurchaseRelationPer) |
+| added the new 'R' enum value to the request property 'KnPurchaseRelationPer/Element/Fields/InPv' | /connectors/KnPurchaseRelationPer | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/KnPurchaseRelationPer) |
+| added the new optional request property 'KnPurchaseRelationPer/Element/Fields/OrId' | /connectors/KnPurchaseRelationPer | [PUT](https://docs.afas.help/apidoc/nl/Inkoop#put-/connectors/KnPurchaseRelationPer) |
+| added the new 'Q' enum value to the request property 'KnPurchaseRelationPer/Element/Fields/InPv' | /connectors/KnPurchaseRelationPer | [PUT](https://docs.afas.help/apidoc/nl/Inkoop#put-/connectors/KnPurchaseRelationPer) |
+| added the new 'R' enum value to the request property 'KnPurchaseRelationPer/Element/Fields/InPv' | /connectors/KnPurchaseRelationPer | [PUT](https://docs.afas.help/apidoc/nl/Inkoop#put-/connectors/KnPurchaseRelationPer) |
+
+## Inrichting Specification
+
+### Changelog
+
+| Description | Path | Operation |
+| --- | --- | --- |
+| endpoint added | /connectors/KnCustomK01/KnCustomK01/@SqNo/{SqNo} | [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK01/KnCustomK01/@SqNo/-SqNo-) |
+| endpoint added | /connectors/KnCustomK02/KnCustomK02/@SqNo/{SqNo} | [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK02/KnCustomK02/@SqNo/-SqNo-) |
+| endpoint added | /connectors/KnCustomK03/KnCustomK03/@SqNo/{SqNo} | [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK03/KnCustomK03/@SqNo/-SqNo-) |
+| endpoint added | /connectors/KnCustomK04/KnCustomK04/@SqNo/{SqNo} | [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK04/KnCustomK04/@SqNo/-SqNo-) |
+| endpoint added | /connectors/KnCustomK05/KnCustomK05/@SqNo/{SqNo} | [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK05/KnCustomK05/@SqNo/-SqNo-) |
+| endpoint added | /connectors/KnCustomK06/KnCustomK06/@SqNo/{SqNo} | [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK06/KnCustomK06/@SqNo/-SqNo-) |
+| endpoint added | /connectors/KnCustomK07/KnCustomK07/@SqNo/{SqNo} | [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK07/KnCustomK07/@SqNo/-SqNo-) |
+| endpoint added | /connectors/KnCustomK08/KnCustomK08/@SqNo/{SqNo} | [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK08/KnCustomK08/@SqNo/-SqNo-) |
+| endpoint added | /connectors/KnCustomK09/KnCustomK09/@SqNo/{SqNo} | [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK09/KnCustomK09/@SqNo/-SqNo-) |
+| endpoint added | /connectors/KnCustomK10/KnCustomK10/@SqNo/{SqNo} | [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK10/KnCustomK10/@SqNo/-SqNo-) |
+
+## Loonadministratie Specification
+
+### Changelog
+
+No changes for this version.
+
+## Magazijn Specification
+
+### Changelog
+
+| Description | Path | Operation |
+| --- | --- | --- |
+| added the new '09' enum value to the request property 'FbStockMutation/Element/Fields/VaOt' | /connectors/FbStockMutation | [POST](https://docs.afas.help/apidoc/nl/Magazijn#post-/connectors/FbStockMutation) |
+
+## Medewerker en contract Specification
+
+### Changelog
+
+| Description | Path | Operation |
+| --- | --- | --- |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViAc' | /connectors/KnEmployee | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViPp' | /connectors/KnEmployee | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasPeriodiek' | /connectors/KnEmployee | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee) |
+| added the new '0' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/InMe' | /connectors/KnEmployee | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee) |
+| added the new '108' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployee | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee) |
+| added the new '655' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployee | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViAc' | /connectors/KnEmployee | [PUT](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViPp' | /connectors/KnEmployee | [PUT](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasPeriodiek' | /connectors/KnEmployee | [PUT](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| added the new '0' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/InMe' | /connectors/KnEmployee | [PUT](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| added the new '108' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployee | [PUT](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| added the new '655' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployee | [PUT](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViAc' | /connectors/KnEmployee/AfasAgencyFiscus | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasAgencyFiscus) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViPp' | /connectors/KnEmployee/AfasAgencyFiscus | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasAgencyFiscus) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasPeriodiek' | /connectors/KnEmployee/AfasAgencyFiscus | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasAgencyFiscus) |
+| added the new '0' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/InMe' | /connectors/KnEmployee/AfasAgencyFiscus | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasAgencyFiscus) |
+| added the new '108' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployee/AfasAgencyFiscus | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasAgencyFiscus) |
+| added the new '655' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployee/AfasAgencyFiscus | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasAgencyFiscus) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViAc' | /connectors/KnEmployee/AfasAgencyPensioenaangifte | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasAgencyPensioenaangifte) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViPp' | /connectors/KnEmployee/AfasAgencyPensioenaangifte | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasAgencyPensioenaangifte) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasPeriodiek' | /connectors/KnEmployee/AfasAgencyPensioenaangifte | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasAgencyPensioenaangifte) |
+| added the new '0' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/InMe' | /connectors/KnEmployee/AfasAgencyPensioenaangifte | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasAgencyPensioenaangifte) |
+| added the new '108' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployee/AfasAgencyPensioenaangifte | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasAgencyPensioenaangifte) |
+| added the new '655' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployee/AfasAgencyPensioenaangifte | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasAgencyPensioenaangifte) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViAc' | /connectors/KnEmployee/AfasBankInfo | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasBankInfo) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViPp' | /connectors/KnEmployee/AfasBankInfo | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasBankInfo) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasPeriodiek' | /connectors/KnEmployee/AfasBankInfo | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasBankInfo) |
+| added the new '0' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/InMe' | /connectors/KnEmployee/AfasBankInfo | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasBankInfo) |
+| added the new '108' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployee/AfasBankInfo | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasBankInfo) |
+| added the new '655' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployee/AfasBankInfo | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasBankInfo) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViAc' | /connectors/KnEmployee/AfasContract | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasContract) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViPp' | /connectors/KnEmployee/AfasContract | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasContract) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasPeriodiek' | /connectors/KnEmployee/AfasContract | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasContract) |
+| added the new '0' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/InMe' | /connectors/KnEmployee/AfasContract | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasContract) |
+| added the new '108' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployee/AfasContract | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasContract) |
+| added the new '655' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployee/AfasContract | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasContract) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViAc' | /connectors/KnEmployee/AfasDailyHours | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasDailyHours) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViPp' | /connectors/KnEmployee/AfasDailyHours | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasDailyHours) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasPeriodiek' | /connectors/KnEmployee/AfasDailyHours | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasDailyHours) |
+| added the new '0' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/InMe' | /connectors/KnEmployee/AfasDailyHours | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasDailyHours) |
+| added the new '108' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployee/AfasDailyHours | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasDailyHours) |
+| added the new '655' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployee/AfasDailyHours | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasDailyHours) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViAc' | /connectors/KnEmployee/AfasOrgunitFunction | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasOrgunitFunction) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViPp' | /connectors/KnEmployee/AfasOrgunitFunction | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasOrgunitFunction) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasPeriodiek' | /connectors/KnEmployee/AfasOrgunitFunction | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasOrgunitFunction) |
+| added the new '0' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/InMe' | /connectors/KnEmployee/AfasOrgunitFunction | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasOrgunitFunction) |
+| added the new '108' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployee/AfasOrgunitFunction | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasOrgunitFunction) |
+| added the new '655' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployee/AfasOrgunitFunction | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasOrgunitFunction) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViAc' | /connectors/KnEmployee/AfasSalary | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasSalary) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViPp' | /connectors/KnEmployee/AfasSalary | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasSalary) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasPeriodiek' | /connectors/KnEmployee/AfasSalary | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasSalary) |
+| added the new '0' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/InMe' | /connectors/KnEmployee/AfasSalary | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasSalary) |
+| added the new '108' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployee/AfasSalary | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasSalary) |
+| added the new '655' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployee/AfasSalary | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasSalary) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViAc' | /connectors/KnEmployee/AfasTimeTable | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasTimeTable) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViPp' | /connectors/KnEmployee/AfasTimeTable | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasTimeTable) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasPeriodiek' | /connectors/KnEmployee/AfasTimeTable | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasTimeTable) |
+| added the new '0' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/InMe' | /connectors/KnEmployee/AfasTimeTable | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasTimeTable) |
+| added the new '108' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployee/AfasTimeTable | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasTimeTable) |
+| added the new '655' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployee/AfasTimeTable | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee/AfasTimeTable) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViPp' | /connectors/KnEmployeeGUID | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID) |
+| added the new '0' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/InMe' | /connectors/KnEmployeeGUID | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID) |
+| added the new '108' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployeeGUID | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID) |
+| added the new '655' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployeeGUID | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViPp' | /connectors/KnEmployeeGUID | [PUT](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployeeGUID) |
+| added the new '0' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/InMe' | /connectors/KnEmployeeGUID | [PUT](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployeeGUID) |
+| added the new '108' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployeeGUID | [PUT](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployeeGUID) |
+| added the new '655' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployeeGUID | [PUT](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployeeGUID) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViPp' | /connectors/KnEmployeeGUID/AfasAgencyFiscus | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasAgencyFiscus) |
+| added the new '0' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/InMe' | /connectors/KnEmployeeGUID/AfasAgencyFiscus | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasAgencyFiscus) |
+| added the new '108' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployeeGUID/AfasAgencyFiscus | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasAgencyFiscus) |
+| added the new '655' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployeeGUID/AfasAgencyFiscus | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasAgencyFiscus) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViPp' | /connectors/KnEmployeeGUID/AfasAgencyPensioenaangifte | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasAgencyPensioenaangifte) |
+| added the new '0' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/InMe' | /connectors/KnEmployeeGUID/AfasAgencyPensioenaangifte | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasAgencyPensioenaangifte) |
+| added the new '108' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployeeGUID/AfasAgencyPensioenaangifte | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasAgencyPensioenaangifte) |
+| added the new '655' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployeeGUID/AfasAgencyPensioenaangifte | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasAgencyPensioenaangifte) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViPp' | /connectors/KnEmployeeGUID/AfasBankInfo | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasBankInfo) |
+| added the new '0' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/InMe' | /connectors/KnEmployeeGUID/AfasBankInfo | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasBankInfo) |
+| added the new '108' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployeeGUID/AfasBankInfo | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasBankInfo) |
+| added the new '655' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployeeGUID/AfasBankInfo | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasBankInfo) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViPp' | /connectors/KnEmployeeGUID/AfasContract | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasContract) |
+| added the new '0' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/InMe' | /connectors/KnEmployeeGUID/AfasContract | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasContract) |
+| added the new '108' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployeeGUID/AfasContract | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasContract) |
+| added the new '655' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployeeGUID/AfasContract | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasContract) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViPp' | /connectors/KnEmployeeGUID/AfasDailyHours | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasDailyHours) |
+| added the new '0' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/InMe' | /connectors/KnEmployeeGUID/AfasDailyHours | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasDailyHours) |
+| added the new '108' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployeeGUID/AfasDailyHours | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasDailyHours) |
+| added the new '655' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployeeGUID/AfasDailyHours | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasDailyHours) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViPp' | /connectors/KnEmployeeGUID/AfasOrgunitFunction | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasOrgunitFunction) |
+| added the new '0' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/InMe' | /connectors/KnEmployeeGUID/AfasOrgunitFunction | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasOrgunitFunction) |
+| added the new '108' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployeeGUID/AfasOrgunitFunction | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasOrgunitFunction) |
+| added the new '655' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployeeGUID/AfasOrgunitFunction | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasOrgunitFunction) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViPp' | /connectors/KnEmployeeGUID/AfasSalary | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasSalary) |
+| added the new '0' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/InMe' | /connectors/KnEmployeeGUID/AfasSalary | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasSalary) |
+| added the new '108' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployeeGUID/AfasSalary | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasSalary) |
+| added the new '655' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployeeGUID/AfasSalary | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasSalary) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ViPp' | /connectors/KnEmployeeGUID/AfasTimeTable | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasTimeTable) |
+| added the new '0' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/InMe' | /connectors/KnEmployeeGUID/AfasTimeTable | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasTimeTable) |
+| added the new '108' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployeeGUID/AfasTimeTable | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasTimeTable) |
+| added the new '655' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/ReTy' | /connectors/KnEmployeeGUID/AfasTimeTable | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID/AfasTimeTable) |
+| endpoint added | /connectors/KnEmployeeGUID/KnEmployeeGUID/@GUID,@EmId/{GUID},{EmId} | [DELETE](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#delete-/connectors/KnEmployeeGUID/KnEmployeeGUID/@GUID,@EmId/-GUID-,-EmId-) |
+| endpoint added | /connectors/KnOrgEmrFun/KnOrgEmrFun/@CmId,@FuId/{CmId},{FuId} | [DELETE](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#delete-/connectors/KnOrgEmrFun/KnOrgEmrFun/@CmId,@FuId/-CmId-,-FuId-) |
+| endpoint added | /connectors/Profit_Rooster_Ouderverlof | [GET](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#get-/connectors/Profit_Rooster_Ouderverlof) |
+
+## Mutaties Specification
+
+### Changelog
+
+No changes for this version.
+
+## Organisaties en personen Specification
+
+### Changelog
+
+| Description | Path | Operation |
+| --- | --- | --- |
+| added the new required request property 'KnSalesRelationOrg/Element/Fields/CdDa' Note: this is marked as required but you can use the endpoint without this. Next version this will no longer be marked as required. | /connectors/KnSalesRelationOrg | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnSalesRelationOrg) |
+| added the new required request property 'KnSalesRelationPer/Element/Fields/CdDa' Note: this is marked as required but you can use the endpoint without this. Next version this will no longer be marked as required. | /connectors/KnSalesRelationPer | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnSalesRelationPer) |
+| removed the request property 'KnUser/Element/Fields/Abac' | /connectors/KnUser | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnUser) |
+| removed the request property 'KnUser/Element/Fields/Acom' | /connectors/KnUser | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnUser) |
+| removed the request property 'KnUser/Element/Fields/Acon' | /connectors/KnUser | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnUser) |
+| removed the request property 'KnUser/Element/Fields/Pw' | /connectors/KnUser | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnUser) |
+| removed the request property 'KnUser/Element/Fields/Abac' | /connectors/KnUser | [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnUser) |
+| removed the request property 'KnUser/Element/Fields/Acom' | /connectors/KnUser | [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnUser) |
+| removed the request property 'KnUser/Element/Fields/Acon' | /connectors/KnUser | [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnUser) |
+| removed the request property 'KnUser/Element/Fields/Pw' | /connectors/KnUser | [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnUser) |
+| endpoint added | /connectors/KnCurrencyRates/KnCurrencyRates/@Cu,@Sn/{Cu},{Sn} | [DELETE](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#delete-/connectors/KnCurrencyRates/KnCurrencyRates/@Cu,@Sn/-Cu-,-Sn-) |
+| added the new 'Q' enum value to the request property 'KnProvApplication/Element/Fields/VaPt' | /connectors/KnProvApplication | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnProvApplication) |
+| added the new 'R' enum value to the request property 'KnProvApplication/Element/Fields/VaPt' | /connectors/KnProvApplication | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnProvApplication) |
+| added the new 'Q' enum value to the request property 'KnProvApplication/Element/Fields/VaPt' | /connectors/KnProvApplication | [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnProvApplication) |
+| added the new 'R' enum value to the request property 'KnProvApplication/Element/Fields/VaPt' | /connectors/KnProvApplication | [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnProvApplication) |
+| added the new 'Q' enum value to the request property 'KnProvApplication/Element/Fields/VaPt' | /connectors/KnProvApplication/AfasKnProvApplCC | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnProvApplication/AfasKnProvApplCC) |
+| added the new 'R' enum value to the request property 'KnProvApplication/Element/Fields/VaPt' | /connectors/KnProvApplication/AfasKnProvApplCC | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnProvApplication/AfasKnProvApplCC) |
+| added the new optional request property 'KnPurchaseRelationOrg/Element/Fields/OrId' | /connectors/KnPurchaseRelationOrg | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnPurchaseRelationOrg) |
+| added the new 'Q' enum value to the request property 'KnPurchaseRelationOrg/Element/Fields/InPv' | /connectors/KnPurchaseRelationOrg | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnPurchaseRelationOrg) |
+| added the new 'R' enum value to the request property 'KnPurchaseRelationOrg/Element/Fields/InPv' | /connectors/KnPurchaseRelationOrg | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnPurchaseRelationOrg) |
+| added the new optional request property 'KnPurchaseRelationOrg/Element/Fields/OrId' | /connectors/KnPurchaseRelationOrg | [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnPurchaseRelationOrg) |
+| added the new 'Q' enum value to the request property 'KnPurchaseRelationOrg/Element/Fields/InPv' | /connectors/KnPurchaseRelationOrg | [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnPurchaseRelationOrg) |
+| added the new 'R' enum value to the request property 'KnPurchaseRelationOrg/Element/Fields/InPv' | /connectors/KnPurchaseRelationOrg | [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnPurchaseRelationOrg) |
+| added the new optional request property 'KnPurchaseRelationPer/Element/Fields/OrId' | /connectors/KnPurchaseRelationPer | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnPurchaseRelationPer) |
+| added the new 'Q' enum value to the request property 'KnPurchaseRelationPer/Element/Fields/InPv' | /connectors/KnPurchaseRelationPer | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnPurchaseRelationPer) |
+| added the new 'R' enum value to the request property 'KnPurchaseRelationPer/Element/Fields/InPv' | /connectors/KnPurchaseRelationPer | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnPurchaseRelationPer) |
+| added the new optional request property 'KnPurchaseRelationPer/Element/Fields/OrId' | /connectors/KnPurchaseRelationPer | [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnPurchaseRelationPer) |
+| added the new 'Q' enum value to the request property 'KnPurchaseRelationPer/Element/Fields/InPv' | /connectors/KnPurchaseRelationPer | [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnPurchaseRelationPer) |
+| added the new 'R' enum value to the request property 'KnPurchaseRelationPer/Element/Fields/InPv' | /connectors/KnPurchaseRelationPer | [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnPurchaseRelationPer) |
+| endpoint added | /connectors/KnRelationship/KnRelationship/@CnId/{CnId} | [DELETE](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#delete-/connectors/KnRelationship/KnRelationship/@CnId/-CnId-) |
+| added the new optional request property 'KnSalesRelationOrg/Element/Fields/CoDs' | /connectors/KnSalesRelationOrg | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnSalesRelationOrg) |
+| added the new optional request property 'KnSalesRelationOrg/Element/Fields/EORI' | /connectors/KnSalesRelationOrg | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnSalesRelationOrg) |
+| added the new optional request property 'KnSalesRelationOrg/Element/Fields/MnOr' | /connectors/KnSalesRelationOrg | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnSalesRelationOrg) |
+| added the new optional request property 'KnSalesRelationOrg/Element/Objects/items/KnOrganisation/Element/items/Fields/LgId' | /connectors/KnSalesRelationOrg | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnSalesRelationOrg) |
+| added the new optional request property 'KnSalesRelationOrg/Element/Objects/items/KnOrganisation/Element/items/Objects/items/KnContact/Element/items/Objects/items/KnPerson/Element/items/Fields/LgId' | /connectors/KnSalesRelationOrg | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnSalesRelationOrg) |
+| added the new 'Q' enum value to the request property 'KnSalesRelationOrg/Element/Fields/InPv' | /connectors/KnSalesRelationOrg | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnSalesRelationOrg) |
+| added the new 'R' enum value to the request property 'KnSalesRelationOrg/Element/Fields/InPv' | /connectors/KnSalesRelationOrg | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnSalesRelationOrg) |
+| added the new optional request property 'KnSalesRelationOrg/Element/Fields/CdDa' | /connectors/KnSalesRelationOrg | [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnSalesRelationOrg) |
+| added the new optional request property 'KnSalesRelationOrg/Element/Fields/CoDs' | /connectors/KnSalesRelationOrg | [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnSalesRelationOrg) |
+| added the new optional request property 'KnSalesRelationOrg/Element/Fields/EORI' | /connectors/KnSalesRelationOrg | [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnSalesRelationOrg) |
+| added the new optional request property 'KnSalesRelationOrg/Element/Fields/MnOr' | /connectors/KnSalesRelationOrg | [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnSalesRelationOrg) |
+| added the new optional request property 'KnSalesRelationOrg/Element/Objects/items/KnOrganisation/Element/items/Fields/LgId' | /connectors/KnSalesRelationOrg | [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnSalesRelationOrg) |
+| added the new optional request property 'KnSalesRelationOrg/Element/Objects/items/KnOrganisation/Element/items/Objects/items/KnContact/Element/items/Objects/items/KnPerson/Element/items/Fields/LgId' | /connectors/KnSalesRelationOrg | [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnSalesRelationOrg) |
+| added the new 'Q' enum value to the request property 'KnSalesRelationOrg/Element/Fields/InPv' | /connectors/KnSalesRelationOrg | [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnSalesRelationOrg) |
+| added the new 'R' enum value to the request property 'KnSalesRelationOrg/Element/Fields/InPv' | /connectors/KnSalesRelationOrg | [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnSalesRelationOrg) |
+| added the new optional request property 'KnSalesRelationPer/Element/Fields/CoDs' | /connectors/KnSalesRelationPer | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnSalesRelationPer) |
+| added the new optional request property 'KnSalesRelationPer/Element/Fields/EORI' | /connectors/KnSalesRelationPer | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnSalesRelationPer) |
+| added the new optional request property 'KnSalesRelationPer/Element/Fields/MnOr' | /connectors/KnSalesRelationPer | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnSalesRelationPer) |
+| added the new optional request property 'KnSalesRelationPer/Element/Objects/items/KnPerson/Element/items/Fields/LgId' | /connectors/KnSalesRelationPer | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnSalesRelationPer) |
+| added the new 'Q' enum value to the request property 'KnSalesRelationPer/Element/Fields/InPv' | /connectors/KnSalesRelationPer | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnSalesRelationPer) |
+| added the new 'R' enum value to the request property 'KnSalesRelationPer/Element/Fields/InPv' | /connectors/KnSalesRelationPer | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnSalesRelationPer) |
+| added the new optional request property 'KnSalesRelationPer/Element/Fields/CdDa' | /connectors/KnSalesRelationPer | [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnSalesRelationPer) |
+| added the new optional request property 'KnSalesRelationPer/Element/Fields/CoDs' | /connectors/KnSalesRelationPer | [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnSalesRelationPer) |
+| added the new optional request property 'KnSalesRelationPer/Element/Fields/EORI' | /connectors/KnSalesRelationPer | [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnSalesRelationPer) |
+| added the new optional request property 'KnSalesRelationPer/Element/Fields/MnOr' | /connectors/KnSalesRelationPer | [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnSalesRelationPer) |
+| added the new optional request property 'KnSalesRelationPer/Element/Objects/items/KnPerson/Element/items/Fields/LgId' | /connectors/KnSalesRelationPer | [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnSalesRelationPer) |
+| added the new 'Q' enum value to the request property 'KnSalesRelationPer/Element/Fields/InPv' | /connectors/KnSalesRelationPer | [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnSalesRelationPer) |
+| added the new 'R' enum value to the request property 'KnSalesRelationPer/Element/Fields/InPv' | /connectors/KnSalesRelationPer | [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnSalesRelationPer) |
+
+## Overige Specification
+
+### Changelog
+
+| Description | Path | Operation |
+| --- | --- | --- |
+| added the new optional request property 'HrDeclarationInSite/Element/Fields/NrPa' | /connectors/HrDeclarationInSite | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/HrDeclarationInSite) |
+| endpoint added | /connectors/HrEmpCourse/HrEmpCourse/@EmId,@CoSn/{EmId},{CoSn} | [DELETE](https://docs.afas.help/apidoc/nl/Overige#delete-/connectors/HrEmpCourse/HrEmpCourse/@EmId,@CoSn/-EmId-,-CoSn-) |
+| endpoint added | /connectors/HrFavTravelDeclarations/HrFavTravelDeclarations/@EmId,@SeNo/{EmId},{SeNo} | [DELETE](https://docs.afas.help/apidoc/nl/Overige#delete-/connectors/HrFavTravelDeclarations/HrFavTravelDeclarations/@EmId,@SeNo/-EmId-,-SeNo-) |
+| endpoint added | /connectors/HrJudgement/HrJudgement/@EmId,@JuSn/{EmId},{JuSn} | [DELETE](https://docs.afas.help/apidoc/nl/Overige#delete-/connectors/HrJudgement/HrJudgement/@EmId,@JuSn/-EmId-,-JuSn-) |
+| added the new optional request property 'HrMobility/Element/Objects/items/HrEmployeeMobility/Element/items/Fields/EmCo' | /connectors/HrMobility | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/HrMobility) |
+| added the new optional request property 'HrMobility/Element/Objects/items/HrEmployeeMobility/Element/items/Fields/EmCo' | /connectors/HrMobility | [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/HrMobility) |
+| added the new optional request property 'HrMobility/Element/Objects/items/HrEmployeeMobility/Element/items/Fields/EmCo' | /connectors/HrMobility/HrEmployeeMobility | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/HrMobility/HrEmployeeMobility) |
+| added the new optional request property 'HrMobility/Element/Objects/items/HrEmployeeMobility/Element/items/Fields/EmCo' | /connectors/HrMobility/HrEmployeeMobilityRegistration | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/HrMobility/HrEmployeeMobilityRegistration) |
+
+## Projecten en nacalculatie Specification
+
+### Changelog
+
+| Description | Path | Operation |
+| --- | --- | --- |
+| added the new optional request property 'PtProject/Element/Fields/AsCn' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/IEsp' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/NPDP' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PlCn' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpAcHi' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpAfPe' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpAmPe' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpDmon' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpMeMo' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpMoCo' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpMon' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpMonP' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpP4Wk' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpPFrA' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpPMon' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpPerW' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpRMon' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpReDa' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpVaCo' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpVaIe' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpVaIp' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpVaUn' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpVaWe' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpViEx' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpViTp' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpWeAg' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSABK' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSAK' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSAKO' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSCAR' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSR' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSRi' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSV' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSV01' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSV02' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSW' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Objects/items/PtTailSpend' | /connectors/PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/AsCn' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/IEsp' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/NPDP' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PlCn' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpAcHi' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpAfPe' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpAmPe' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpDmon' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpMeMo' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpMoCo' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpMon' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpMonP' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpP4Wk' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpPFrA' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpPMon' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpPerW' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpRMon' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpReDa' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpVaCo' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpVaIe' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpVaIp' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpVaUn' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpVaWe' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpViEx' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpViTp' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpWeAg' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSABK' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSAK' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSAKO' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSCAR' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSR' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSRi' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSV' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSV01' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSV02' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSW' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Objects/items/PtTailSpend' | /connectors/PtProject | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'PtProject/Element/Fields/AsCn' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/IEsp' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/NPDP' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PlCn' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpAcHi' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpAfPe' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpAmPe' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpDmon' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpMeMo' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpMoCo' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpMon' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpMonP' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpP4Wk' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpPFrA' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpPMon' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpPerW' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpRMon' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpReDa' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpVaCo' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpVaIe' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpVaIp' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpVaUn' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpVaWe' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpViEx' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpViTp' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpWeAg' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSABK' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSAK' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSAKO' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSCAR' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSR' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSRi' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSV' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSV01' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSV02' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSW' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Objects/items/PtTailSpend' | /connectors/PtProject/KnBasicAddressAdr | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/KnBasicAddressAdr) |
+| added the new optional request property 'PtProject/Element/Fields/AsCn' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/IEsp' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/NPDP' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PlCn' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpAcHi' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpAfPe' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpAmPe' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpDmon' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpMeMo' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpMoCo' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpMon' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpMonP' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpP4Wk' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpPFrA' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpPMon' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpPerW' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpRMon' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpReDa' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpVaCo' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpVaIe' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpVaIp' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpVaUn' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpVaWe' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpViEx' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpViTp' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtPrpWeAg' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSABK' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSAK' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSAKO' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSCAR' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSR' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSRi' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSV' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSV01' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSV02' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Fields/PtTaSW' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| added the new optional request property 'PtProject/Element/Objects/items/PtTailSpend' | /connectors/PtProject/PtProjectStage | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtProjectStage) |
+| endpoint added | /connectors/PtProject/PtTailSpend | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject/PtTailSpend) |
+| added the new optional request property 'PtRealization/Element/Fields/PuPr' | /connectors/PtRealization | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtRealization) |
+| added the new optional request property 'PtRealization/Element/Fields/Purc' | /connectors/PtRealization | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtRealization) |
+| added the new optional request property 'PtRealization/Element/Fields/RfPu' | /connectors/PtRealization | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtRealization) |
+| added the new optional request property 'PtRealization/Element/Fields/PuPr' | /connectors/PtRealization | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtRealization) |
+| added the new optional request property 'PtRealization/Element/Fields/Purc' | /connectors/PtRealization | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtRealization) |
+| added the new optional request property 'PtRealization/Element/Fields/RfPu' | /connectors/PtRealization | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtRealization) |
+| endpoint added | /connectors/PtTariff | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtTariff) |
+| endpoint added | /connectors/PtTariff | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtTariff) |
+| endpoint added | /connectors/PtTariff/PtTariff/@Id/{Id} | [DELETE](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#delete-/connectors/PtTariff/PtTariff/@Id/-Id-) |
+| endpoint added | /connectors/PtValComb | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtValComb) |
+| endpoint added | /connectors/PtValComb | [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtValComb) |
+| endpoint added | /connectors/PtValComb/PtValComb/@Id/{Id} | [DELETE](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#delete-/connectors/PtValComb/PtValComb/@Id/-Id-) |
+
+## Verkoop en Orders Specification
+
+### Changelog
+
+| Description | Path | Operation |
+| --- | --- | --- |
+| endpoint added | /connectors/CmForecast/CmForecast/@PrId,@SqNo/{PrId},{SqNo} | [DELETE](https://docs.afas.help/apidoc/nl/Verkoop%20en%20Orders#delete-/connectors/CmForecast/CmForecast/@PrId,@SqNo/-PrId-,-SqNo-) |
+| added the new '09' enum value to the request property 'FbFreeOrder/Element/Fields/VaOt' | /connectors/FbFreeOrder | [POST](https://docs.afas.help/apidoc/nl/Verkoop%20en%20Orders#post-/connectors/FbFreeOrder) |
+| endpoint added | /connectors/FbItemCodeCustomer/FbItemCodeCustomer/@VaIt,@DbId/{VaIt},{DbId} | [DELETE](https://docs.afas.help/apidoc/nl/Verkoop%20en%20Orders#delete-/connectors/FbItemCodeCustomer/FbItemCodeCustomer/@VaIt,@DbId/-VaIt-,-DbId-) |
+| endpoint added | /connectors/FbItemCodeSupplier/FbItemCodeSupplier/@VaIt,@CrId/{VaIt},{CrId} | [DELETE](https://docs.afas.help/apidoc/nl/Verkoop%20en%20Orders#delete-/connectors/FbItemCodeSupplier/FbItemCodeSupplier/@VaIt,@CrId/-VaIt-,-CrId-) |
+
+## Verlof en Ziekte Specification
+
+### Changelog
+
+| Description | Path | Operation |
+| --- | --- | --- |
+| endpoint added | /connectors/HrAbsBalance/HrAbsBalance/@EmId,@ErId,@EnSe,@ViAt,@PtId,@Year,@SeNo/{EmId},{ErId},{EnSe},{ViAt},{PtId},{Year},{SeNo} | [DELETE](https://docs.afas.help/apidoc/nl/Verlof%20en%20Ziekte#delete-/connectors/HrAbsBalance/HrAbsBalance/@EmId,@ErId,@EnSe,@ViAt,@PtId,@Year,@SeNo/-EmId-,-ErId-,-EnSe-,-ViAt-,-PtId-,-Year-,-SeNo-) |
+| added the new optional request property 'HrAbsence/Element/Fields/FaSn' | /connectors/HrAbsence | [POST](https://docs.afas.help/apidoc/nl/Verlof%20en%20Ziekte#post-/connectors/HrAbsence) |
+| added the new optional request property 'HrAbsence/Element/Fields/MuCh' | /connectors/HrAbsence | [POST](https://docs.afas.help/apidoc/nl/Verlof%20en%20Ziekte#post-/connectors/HrAbsence) |
+| added the new optional request property 'HrAbsence/Element/Fields/FaSn' | /connectors/HrAbsence | [PUT](https://docs.afas.help/apidoc/nl/Verlof%20en%20Ziekte#put-/connectors/HrAbsence) |
+| added the new optional request property 'HrAbsence/Element/Fields/MuCh' | /connectors/HrAbsence | [PUT](https://docs.afas.help/apidoc/nl/Verlof%20en%20Ziekte#put-/connectors/HrAbsence) |
+| added the new optional request property 'HrAbsenceID/Element/Fields/FaSn' | /connectors/HrAbsenceID | [POST](https://docs.afas.help/apidoc/nl/Verlof%20en%20Ziekte#post-/connectors/HrAbsenceID) |
+| added the new optional request property 'HrAbsenceID/Element/Fields/MuCh' | /connectors/HrAbsenceID | [POST](https://docs.afas.help/apidoc/nl/Verlof%20en%20Ziekte#post-/connectors/HrAbsenceID) |
+| added the new optional request property 'HrAbsenceID/Element/Fields/FaSn' | /connectors/HrAbsenceID | [PUT](https://docs.afas.help/apidoc/nl/Verlof%20en%20Ziekte#put-/connectors/HrAbsenceID) |
+| added the new optional request property 'HrAbsenceID/Element/Fields/MuCh' | /connectors/HrAbsenceID | [PUT](https://docs.afas.help/apidoc/nl/Verlof%20en%20Ziekte#put-/connectors/HrAbsenceID) |
+| endpoint added | /connectors/HrAbsenceID/HrAbsenceID/@Id,@EmId/{Id},{EmId} | [DELETE](https://docs.afas.help/apidoc/nl/Verlof%20en%20Ziekte#delete-/connectors/HrAbsenceID/HrAbsenceID/@Id,@EmId/-Id-,-EmId-) |
+| added the new optional request property 'HrAbsenceInSite/Element/Fields/FaSn' | /connectors/HrAbsenceInSite | [POST](https://docs.afas.help/apidoc/nl/Verlof%20en%20Ziekte#post-/connectors/HrAbsenceInSite) |
+| added the new optional request property 'HrAbsenceInSite/Element/Fields/MuCh' | /connectors/HrAbsenceInSite | [POST](https://docs.afas.help/apidoc/nl/Verlof%20en%20Ziekte#post-/connectors/HrAbsenceInSite) |
+
+## Werkgever Specification
+
+### Changelog
+
+| Description | Path | Operation |
+| --- | --- | --- |
+| endpoint added | /connectors/HrCostCarrier/HrCostCarrier/@CmId,@CcId/{CmId},{CcId} | [DELETE](https://docs.afas.help/apidoc/nl/Werkgever#delete-/connectors/HrCostCarrier/HrCostCarrier/@CmId,@CcId/-CmId-,-CcId-) |
+| endpoint added | /connectors/HrCostCentre/HrCostCentre/@CmId,@CrId/{CmId},{CrId} | [DELETE](https://docs.afas.help/apidoc/nl/Werkgever#delete-/connectors/HrCostCentre/HrCostCentre/@CmId,@CrId/-CmId-,-CrId-) |
+| endpoint added | /connectors/KnOrgEmrFun/KnOrgEmrFun/@CmId,@FuId/{CmId},{FuId} | [DELETE](https://docs.afas.help/apidoc/nl/Werkgever#delete-/connectors/KnOrgEmrFun/KnOrgEmrFun/@CmId,@FuId/-CmId-,-FuId-) |
+
+## Werving en selectie Specification
+
+### Changelog
+
+| Description | Path | Operation |
+| --- | --- | --- |
+| added the new optional request property 'HrApplicant/Element/Fields/DpId' | /connectors/HrApplicant | [POST](https://docs.afas.help/apidoc/nl/Werving%20en%20selectie#post-/connectors/HrApplicant) |
+| added the new optional request property 'HrApplicant/Element/Fields/DpId' | /connectors/HrApplicant | [PUT](https://docs.afas.help/apidoc/nl/Werving%20en%20selectie#put-/connectors/HrApplicant) |

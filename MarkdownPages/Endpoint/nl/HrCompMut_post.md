@@ -1,0 +1,1 @@
+Voor het insturen van loonmutaties moet de connector gebruiker rechten hebben op de betreffende medewerker.

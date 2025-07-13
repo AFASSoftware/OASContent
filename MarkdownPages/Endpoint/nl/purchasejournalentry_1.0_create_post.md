@@ -1,0 +1,1 @@
+> **Let op:** De BTW-tarieven in een inkoopfactuur zijn afhankelijk van het adres van de leverancier/crediteur. Hierdoor is het niet mogelijk om verschillende BTW-landtarieven toe te passen binnen één en dezelfde inkoopfactuur.
