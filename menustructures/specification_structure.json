@@ -1,0 +1,220 @@
+{
+	"crm": {
+		"title": {
+			"en": "CRM",
+			"nl": "CRM"
+		},
+		"items": [
+			{
+				"file": "Organisaties en personen.json",
+				"name": {
+					"en": "Organisations and persons",
+					"nl": "Organisaties en personen"
+				}
+			},
+			{
+				"file": "Dossiers, bijlagen en workflows.json",
+				"name": {
+					"en": "Files, attachments and workflows",
+					"nl": "Dossiers, bijlagen en workflows"
+				}
+			}
+		]
+	},
+	"hr": {
+		"title": {
+			"en": "Human Resources",
+			"nl": "Medewerker en werkgever"
+		},
+		"items": [
+			{
+				"file": "Medewerker en contract.json",
+				"name": {
+					"en": "Employee and contract",
+					"nl": "Medewerker en contract"
+				}
+			},
+			{
+				"file": "Verlof en Ziekte.json",
+				"name": {
+					"en": "Leave and illness",
+					"nl": "Verlof en ziekte"
+				}
+			},
+			{
+				"file": "Loonadministratie.json",
+				"name": {
+					"en": "Payroll administration",
+					"nl": "Loonadministratie"
+				}
+			},
+			{
+				"file": "Werving en selectie.json",
+				"name": {
+					"en": "Recruitment and selection",
+					"nl": "Werving en selectie"
+				}
+			},
+			{
+				"file": "Werkgever.json",
+				"name": {
+					"en": "Employer settings",
+					"nl": "Werkgever instellingen"
+				}
+			},
+			{
+				"file": "Overige.json",
+				"name": {
+					"en": "Other",
+					"nl": "Overige"
+				}
+			}
+		]
+	},
+	"finance": {
+		"title": {
+			"en": "Finance",
+			"nl": "Financiën"
+		},
+		"items": [
+			{
+				"file": "Mutaties.json",
+				"name": {
+					"en": "Financal mutations",
+					"nl": "Financiële mutaties"
+				}
+			},
+			{
+				"file": "Budgetten en activa.json",
+				"name": {
+					"en": "Budgets and assets",
+					"nl": "Budgetten en activa"
+				}
+			},
+			{
+				"file": "Financiële Inrichting.json",
+				"name": {
+					"en": "Financial setup",
+					"nl": "Financiële inrichting"
+				}
+			}
+		]
+	},
+	"projects": {
+		"title": {
+			"en": "Projects, Construction and Flex",
+			"nl": "Projecten, Bouw en Flex"
+		},
+		"items": [
+			{
+				"file": "Projecten en nacalculatie.json",
+				"name": {
+					"en": "Projects and post-calculation",
+					"nl": "Projecten en nacalculatie"
+				}
+			},
+			{
+				"file": "Flex.json",
+				"name": {
+					"en": "Flex",
+					"nl": "Flex"
+				}
+			},
+			{
+				"file": "Bouw.json",
+				"name": {
+					"en": "Construction",
+					"nl": "Bouw"
+				}
+			}
+		]
+	},
+	"sales": {
+		"title": {
+			"en": "Sales, Purchasing and Warehouse",
+			"nl": "Verkoop, Inkoop en Magazijn"
+		},
+		"items": [
+			{
+				"file": "Verkoop en Orders.json",
+				"name": {
+					"en": "Sales and orders",
+					"nl": "Verkoop en orders"
+				}
+			},
+			{
+				"file": "Inkoop.json",
+				"name": {
+					"en": "Purchasing",
+					"nl": "Inkoop"
+				}
+			},
+			{
+				"file": "Artikelen.json",
+				"name": {
+					"en": "Articles",
+					"nl": "Artikelen"
+				}
+			},
+			{
+				"file": "Magazijn.json",
+				"name": {
+					"en": "Warehouse",
+					"nl": "Magazijn"
+				}
+			},
+			{
+				"file": "Cursusmanagement.json",
+				"name": {
+					"en": "Course management",
+					"nl": "Cursusmanagement"
+				}
+			}
+		]
+	},
+	"taxes": {
+		"title": {
+			"en": "Fiscal",
+			"nl": "Fiscaal"
+		},
+		"items": [
+			{
+				"file": "Fiscaal.json",
+				"name": {
+					"en": "Fiscal",
+					"nl": "Fiscaal"
+				}
+			}
+		]
+	},
+	"sb": {
+		"title": {
+			"en": "SB",
+			"nl": "SB"
+		},
+		"items": [
+			{
+				"file": "sb.json",
+				"name": {
+					"en": "SB",
+					"nl": "SB"
+				}
+			}
+		]
+	},
+    "inrichting": {
+		"title": {
+			"en": "Setup",
+			"nl": "Inrichting"
+		},
+		"items": [
+			{
+				"file": "inrichting.json",
+				"name": {
+					"en": "Setup",
+					"nl": "Inrichting"
+				}
+			}
+		]
+	}
+}
