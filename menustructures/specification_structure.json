@@ -209,7 +209,7 @@
 		},
 		"items": [
 			{
-				"file": "inrichting.json",
+				"file": "Inrichting.json",
 				"name": {
 					"en": "Setup",
 					"nl": "Inrichting"
