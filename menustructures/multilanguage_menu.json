@@ -72,77 +72,194 @@
           "en": [
               {
                   "name": "Quick start",
-                  "path": "en/howto quickstart.md"
+                  "path": "en/Howto quickstart.md",
+                  "subtitle": "",
+                  "tags": ["quickstart", "basics"],
+                  "featured": true,
+                  "difficulty": "beginner",
+                  "estimated_time": 5
               },
               {
                   "name": "Get dossier and attachment",
-                  "path": "en/howto bijlagedossier.md"
+                  "path": "en/Howto bijlagedossier.md",
+                  "subtitle": "Retrieve documents and attachments from the system",
+                  "tags": ["documents", "attachments", "retrieval"],
+                  "featured": false,
+                  "difficulty": "intermediate",
+                  "estimated_time": 15
               },
               {
                   "name": "Journal entry sales",
-                  "path": "en/howto financemutation.md"
+                  "path": "en/Howto financemutation.md",
+                  "subtitle": "Create financial mutations for sales transactions",
+                  "tags": ["finance", "sales", "journal"],
+                  "featured": false,
+                  "difficulty": "intermediate",
+                  "estimated_time": 20
               },
               {
                   "name": "Journal entry purchase",
-                  "path": "en/howto financemutationpurch.md"
+                  "path": "en/Howto financemutationpurch.md",
+                  "subtitle": "Create financial mutations for purchase transactions",
+                  "tags": ["finance", "purchase", "journal"],
+                  "featured": false,
+                  "difficulty": "intermediate",
+                  "estimated_time": 20
               },
               {
                   "name": "HRM Employee AD",
-                  "path": "en/howto medewerkerad.md"
+                  "path": "en/Howto medewerkerad.md",
+                  "subtitle": "Integrate employee data with Active Directory",
+                  "tags": ["hrm", "employee", "active-directory"],
+                  "featured": false,
+                  "difficulty": "advanced",
+                  "estimated_time": 30
               },
               {
                   "name": "Flex Customer agreement",
-                  "path": "en/howto flex.md"
+                  "path": "en/Howto flex.md",
+                  "subtitle": "Set up flexible customer agreements",
+                  "tags": ["flex", "customer", "agreement"],
+                  "featured": false,
+                  "difficulty": "intermediate",
+                  "estimated_time": 25
               },
               {
                   "name": "Mobility",
-                  "path": "en/howto mobility.md"
+                  "path": "en/Howto mobility.md",
+                  "subtitle": "Configure mobility solutions and integrations",
+                  "tags": ["mobility", "integration"],
+                  "featured": false,
+                  "difficulty": "advanced",
+                  "estimated_time": 35
               },
               {
                 "name": "Connecting payroll to salary admin.",
-                "path": "en/howto la_sa.md"
+                "path": "en/Howto la_sa.md",
+                "subtitle": "Link payroll administration with salary administration",
+                "tags": ["payroll", "salary", "administration"],
+                "featured": false,
+                "difficulty": "advanced",
+                "estimated_time": 40
               }
           ],
           "nl": [
               {
                   "name": "Quick start",
-                  "path": "nl/howto quickstart.md"
+                  "path": "nl/Howto quickstart.md",
+                  "subtitle": "Snel aan de slag met de API",
+                  "tags": ["quickstart", "basics"],
+                  "featured": true,
+                  "difficulty": "beginner",
+                  "estimated_time": 5
               },
               {
                   "name": "Dossier en bijlage ophalen",
-                  "path": "nl/howto bijlagedossier.md"
+                  "path": "nl/Howto bijlagedossier.md",
+                  "subtitle": "Documenten en bijlagen uit Profit ophalen",
+                  "tags": ["documenten", "bijlagen", "ophalen"],
+                  "featured": false,
+                  "difficulty": "intermediate",
+                  "estimated_time": 15
               },
               {
                   "name": "HRM Medewerker AD",
-                  "path": "nl/howto medewerkerad.md"
+                  "path": "nl/Howto medewerkerad.md",
+                  "subtitle": "Medewerkergegevens integreren met Active Directory",
+                  "tags": ["hrm", "medewerker", "active-directory"],
+                  "featured": false,
+                  "difficulty": "advanced",
+                  "estimated_time": 30
+              },
+              {
+                  "name": "ATS integratie",
+                  "path": "nl/Howto ats.md",
+                  "subtitle": "Applicant Tracking System integreren",
+                  "tags": ["ats", "recruitment", "integratie"],
+                  "featured": false,
+                  "difficulty": "advanced",
+                  "estimated_time": 30
+              },
+              {
+                  "name": "Plaatsing",
+                  "path": "nl/Howto plaatsing.md",
+                  "subtitle": "Plaatsingen en uitzendingen beheren",
+                  "tags": ["plaatsing", "uitzending", "hrm"],
+                  "featured": false,
+                  "difficulty": "intermediate",
+                  "estimated_time": 25
+              },
+              {
+                  "name": "Workflow acties",
+                  "path": "nl/Howto workflowacties.md",
+                  "subtitle": "Workflow acties configureren en uitvoeren",
+                  "tags": ["workflow", "acties", "automatisering"],
+                  "featured": false,
+                  "difficulty": "advanced",
+                  "estimated_time": 35
               },
               {
                   "name": "Mobiliteit",
-                  "path": "nl/howto mobility.md"
+                  "path": "nl/Howto mobility.md",
+                  "subtitle": "Mobiliteitsoplossingen en integraties configureren",
+                  "tags": ["mobiliteit", "integratie"],
+                  "featured": false,
+                  "difficulty": "advanced",
+                  "estimated_time": 35
               },
                           {
                   "name": "Integreren met BI",
-                  "path": "nl/howto BI.md"
+                  "path": "nl/Howto BI.md",
+                  "subtitle": "Business Intelligence integratie opzetten",
+                  "tags": ["bi", "business-intelligence", "integratie"],
+                  "featured": false,
+                  "difficulty": "advanced",
+                  "estimated_time": 45
               },
               {
                   "name": "Financiële mutatie verkoop",
-                  "path": "nl/howto financemutation.md"
+                  "path": "nl/Howto financemutation.md",
+                  "subtitle": "Financiële mutaties voor verkooptransacties aanmaken",
+                  "tags": ["financien", "verkoop", "journaal"],
+                  "featured": false,
+                  "difficulty": "intermediate",
+                  "estimated_time": 20
               },
               {
                   "name": "Financiële mutatie inkoop",
-                  "path": "nl/howto financemutationpurch.md"
+                  "path": "nl/Howto financemutationpurch.md",
+                  "subtitle": "Financiële mutaties voor inkooptransacties aanmaken",
+                  "tags": ["financien", "inkoop", "journaal"],
+                  "featured": false,
+                  "difficulty": "intermediate",
+                  "estimated_time": 20
               },
               {
                   "name": "Flex Klantovereenkomst",
-                  "path": "nl/howto flex.md"
+                  "path": "nl/Howto flex.md",
+                  "subtitle": "Flexibele klantovereenkomsten opzetten",
+                  "tags": ["flex", "klant", "overeenkomst"],
+                  "featured": false,
+                  "difficulty": "intermediate",
+                  "estimated_time": 25
               },
               {
                 "name": "Loonadmin. aansluiten op salarisadmin.",
-                "path": "nl/howto la_sa.md"
+                "path": "nl/Howto la_sa.md",
+                "subtitle": "Loonadministratie koppelen aan salarisadministratie",
+                "tags": ["loon", "salaris", "administratie"],
+                "featured": false,
+                "difficulty": "advanced",
+                "estimated_time": 40
               },
               {
                 "name": "Btw-terugvordering via de API",
-                "path": "nl/howto vat reclaim.md"
+                "path": "nl/Howto vat reclaim.md",
+                "subtitle": "BTW terugvordering via API afhandelen",
+                "tags": ["btw", "terugvordering", "api"],
+                "featured": false,
+                "difficulty": "intermediate",
+                "estimated_time": 25
               }
           ]
       },
@@ -267,53 +384,113 @@
           "en": [
               {
                   "name": "Payroll Journal entries",
-                  "path": "en/howto payroll.md"
+                  "path": "en/howto payroll.md",
+                  "subtitle": "Create and manage payroll journal entries",
+                  "tags": ["payroll", "journal", "entries"],
+                  "featured": true,
+                  "difficulty": "intermediate",
+                  "estimated_time": 25
               },
               {
                   "name": "POS integration",
-                  "path": "en/howto pos.md"
+                  "path": "en/howto pos.md",
+                  "subtitle": "Integrate point-of-sale systems",
+                  "tags": ["pos", "integration", "sales"],
+                  "featured": false,
+                  "difficulty": "advanced",
+                  "estimated_time": 35
               },
               {
                   "name": "Create and maintain relations",
-                  "path": "en/howto relations.md"
+                  "path": "en/howto relations.md",
+                  "subtitle": "Manage customer and supplier relationships",
+                  "tags": ["relations", "customers", "suppliers"],
+                  "featured": false,
+                  "difficulty": "beginner",
+                  "estimated_time": 15
               },
               {
                   "name": "Create sales invoices",
-                  "path": "en/howto salesinvoice.md"
+                  "path": "en/howto salesinvoice.md",
+                  "subtitle": "Generate and process sales invoices",
+                  "tags": ["sales", "invoices", "billing"],
+                  "featured": false,
+                  "difficulty": "intermediate",
+                  "estimated_time": 20
               },
               {
                   "name": "Create invoice journal entries",
-                  "path": "en/howto salesjournal.md"
+                  "path": "en/howto salesjournal.md",
+                  "subtitle": "Process invoice journal entries for sales",
+                  "tags": ["invoices", "journal", "sales"],
+                  "featured": false,
+                  "difficulty": "intermediate",
+                  "estimated_time": 20
               },
               {
                   "name": "Create purchase journal entries",
-                  "path": "en/howto purchasejournal.md"
+                  "path": "en/howto purchasejournal.md",
+                  "subtitle": "Process journal entries for purchases",
+                  "tags": ["purchase", "journal", "entries"],
+                  "featured": false,
+                  "difficulty": "intermediate",
+                  "estimated_time": 20
               }
           ],
           "nl": [
               {
                   "name": "Loonjournaalposten aanmaken",
-                  "path": "nl/howto payroll.md"
+                  "path": "nl/howto payroll.md",
+                  "subtitle": "Loonjournaalposten aanmaken en beheren",
+                  "tags": ["loon", "journaal", "posten"],
+                  "featured": true,
+                  "difficulty": "intermediate",
+                  "estimated_time": 25
               },
               {
                   "name": "Kassa integratie",
-                  "path": "nl/howto pos.md"
+                  "path": "nl/howto pos.md",
+                  "subtitle": "Kassasystemen integreren",
+                  "tags": ["kassa", "integratie", "verkoop"],
+                  "featured": false,
+                  "difficulty": "advanced",
+                  "estimated_time": 35
               },
               {
                   "name": "Relaties aanmaken en onderhouden",
-                  "path": "nl/howto relations.md"
+                  "path": "nl/howto relations.md",
+                  "subtitle": "Klant- en leveranciersrelaties beheren",
+                  "tags": ["relaties", "klanten", "leveranciers"],
+                  "featured": false,
+                  "difficulty": "beginner",
+                  "estimated_time": 15
               },
               {
                   "name": "Verkoopfacturen aanmaken",
-                  "path": "nl/howto salesinvoice.md"
+                  "path": "nl/howto salesinvoice.md",
+                  "subtitle": "Verkoopfacturen genereren en verwerken",
+                  "tags": ["verkoop", "facturen", "facturering"],
+                  "featured": false,
+                  "difficulty": "intermediate",
+                  "estimated_time": 20
               },
               {
                   "name": "Verkoopjournaalpost aanmaken",
-                  "path": "nl/howto salesjournal.md"
+                  "path": "nl/howto salesjournal.md",
+                  "subtitle": "Factuurjournaalposten voor verkoop verwerken",
+                  "tags": ["facturen", "journaal", "verkoop"],
+                  "featured": false,
+                  "difficulty": "intermediate",
+                  "estimated_time": 20
               },
               {
                   "name": "Inkoopjournaalpost aanmaken",
-                  "path": "nl/howto purchasejournal.md"
+                  "path": "nl/howto purchasejournal.md",
+                  "subtitle": "Journaalposten voor inkoop verwerken",
+                  "tags": ["inkoop", "journaal", "posten"],
+                  "featured": false,
+                  "difficulty": "intermediate",
+                  "estimated_time": 20
               }
           ]
       },
