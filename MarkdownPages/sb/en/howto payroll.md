@@ -1,7 +1,7 @@
 ---
 title: Payroll journal entries
 author: CLN
-date: 2024-10-14
+date: 2025-7-14
 tags: Payroll journal, entries, Payroll journal entries
 ---
 

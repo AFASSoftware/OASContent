@@ -1,7 +1,7 @@
 ---
 title: Relaties beheren
 author: EDA
-date: 2024-05-29
+date: 2025-7-14
 tags: Organisation, person, bankaccount, address
 ---
 ## Introduction

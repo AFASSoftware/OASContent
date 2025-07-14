@@ -1,7 +1,7 @@
 ---
 title: Verkoopfactuur aanmaken
 author: CLN
-date: 2024-05-21
+date: 2025-7-14
 tags: Verkoop, factuur, Verkoopfactuur
 ---
 

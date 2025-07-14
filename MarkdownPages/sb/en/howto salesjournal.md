@@ -1,7 +1,7 @@
 ---
 title: Creating a Sales Journal Entry
 author: CLN
-date: 2024-10-14
+date: 2025-7-14
 tags: Sales, journal entry, Sales Journal
 ---
 

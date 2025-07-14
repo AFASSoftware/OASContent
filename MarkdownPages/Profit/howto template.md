@@ -2,7 +2,7 @@
 title: <Enter the title of the documentation>
 author: <Enter the author's name>
 date: <Enter the date in YYYY-MM-DD format>
-tags: <Enter relevant tags separated by commas>
+tags: <Enter relevant tags separated by commas , >
 ---
 
 <Provide a brief introduction or overview of the topic being documented>

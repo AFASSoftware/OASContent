@@ -1,7 +1,7 @@
 ---
 title: AFAS SB 2.0
 author: CLN
-date: 2024-05-01
+date: 2025-7-14
 tags: update
 ---
 
