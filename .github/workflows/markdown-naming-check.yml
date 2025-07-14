@@ -70,10 +70,15 @@ jobs:
         id: report
         run: |
           echo "Generating detailed validation report..."
-          python scripts/markdown-naming-check.py --root-path MarkdownPages --json > validation-report.json
           
-          # Check if there are violations
-          if [ $? -eq 0 ]; then
+          # Run the validation and capture both exit code and output
+          set +e  # Temporarily disable exit on error
+          python scripts/markdown-naming-check.py --root-path MarkdownPages --json > validation-report.json
+          validation_exit_code=$?
+          set -e  # Re-enable exit on error
+          
+          # Check if there are violations based on exit code
+          if [ $validation_exit_code -eq 0 ]; then
             echo "validation_status=success" >> $GITHUB_OUTPUT
             echo "All markdown files follow naming conventions! ✅" >> $GITHUB_STEP_SUMMARY
           else
