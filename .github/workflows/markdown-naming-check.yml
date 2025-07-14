@@ -95,6 +95,7 @@ jobs:
           name: markdown-naming-validation-report
           path: validation-report.json
           retention-days: 30
+          if-no-files-found: warn
       
       # Fail the job if validation failed
       - name: Check validation result
@@ -122,7 +123,7 @@ jobs:
     
     steps:
       - name: Download validation report
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: markdown-naming-validation-report
       
