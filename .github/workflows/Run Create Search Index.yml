@@ -15,7 +15,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: ${{ github.workspace }}/IndexTools
+        working-directory: ${{ github.workspace }}/Scripts/IndexTools
 
     steps:
     
@@ -28,7 +28,7 @@ jobs:
         python-version: '3.12'
 
     - name: Install dependencies
-      run: pip install -r ${{ github.workspace }}/IndexTools/requirements.txt
+      run: pip install -r ${{ github.workspace }}/Scripts/IndexTools/requirements.txt
 
     - name: Drop Collection
       env:
