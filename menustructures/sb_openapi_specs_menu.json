@@ -30,26 +30,6 @@
                 "name": "Versie 4.0.0",
                 "path": "OpenApiSpecs/sb/nl/4-0-0.json",
                 "description": "Oudere versie"
-            },
-            {
-                "name": "Versie 3.2.0",
-                "path": "OpenApiSpecs/sb/nl/3-2-0.json",
-                "description": "Oudere versie"
-            },
-            {
-                "name": "Versie 3.1.0",
-                "path": "OpenApiSpecs/sb/nl/3-1-0.json",
-                "description": "Oudere versie"
-            },
-            {
-                "name": "Versie 2.2.0",
-                "path": "OpenApiSpecs/sb/nl/2-2-0.json",
-                "description": "Oudere versie"
-            },
-            {
-                "name": "Versie 2.1.0",
-                "path": "OpenApiSpecs/sb/nl/2-1-0.json",
-                "description": "Oudere versie"
             }
         ],
         "en": [
@@ -81,26 +61,6 @@
             {
                 "name": "Version 4.0.0",
                 "path": "OpenApiSpecs/sb/en/4-0-0.json",
-                "description": "Older version"
-            },
-            {
-                "name": "Version 3.2.0",
-                "path": "OpenApiSpecs/sb/en/3-2-0.json",
-                "description": "Older version"
-            },
-            {
-                "name": "Version 3.1.0",
-                "path": "OpenApiSpecs/sb/en/3-1-0.json",
-                "description": "Older version"
-            },
-            {
-                "name": "Version 2.2.0",
-                "path": "OpenApiSpecs/sb/en/2-2-0.json",
-                "description": "Older version"
-            },
-            {
-                "name": "Version 2.1.0",
-                "path": "OpenApiSpecs/sb/en/2-1-0.json",
                 "description": "Older version"
             }
         ]
