@@ -1,0 +1,17 @@
+{
+FbConfrontation_post.md,
+FbDeliveryNote_post.md,
+FiEntries_delete.md,
+FiEntries_post.md,
+HrAbsence_post.md,
+HrAbsenceID_put.md,
+HrCompMut_post.md,
+HrIllnessInSite_post.md,
+HrRelative_post.md,
+KnAddress_post.md,
+KnEmployee_post.md,
+KnSubject_post.md,
+Profit_Debtor_Invoices_get.md,
+PtPriceAgreement_post.md,
+SubjectConnector_get.md
+}
