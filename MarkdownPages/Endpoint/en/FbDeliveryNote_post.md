@@ -16,6 +16,12 @@ When adding delivery notes based on existing sales orders, the following applies
 
 - You may only modify the fields that you can modify when manually adding a delivery note in the UI.
 
+#### Modifying delivery notes
+
+When modifying an existing delivery note line, you must specify the following field:
+
+- `GuLi` (GUID of the line)
+
 #### Returns
 
 You can book returns via the `FbDeliveryNote` / `FbGoodsReceived` UpdateConnectors. Use the FieldId `QuUn` for this. For example, if you want to make one return entry, this will be `"QuUn" :-1`.
