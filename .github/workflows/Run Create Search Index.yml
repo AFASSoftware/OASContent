@@ -36,27 +36,27 @@ jobs:
     - name: Drop Collection
       env:
         TYPESENSE_HOST: ${{ vars.TYPESENSE_HOST }}
-        TYPESENSE_SEARCH_API_KEY: ${{ secrets.TYPESENSE_SEARCH_API_KEY }}
+        TYPESENSE_SEARCH_API_KEY: ${{ secrets.TYPESENSE_ADMIN_API_KEY }}
         TYPESENSE_COLLECTION: ${{ vars.TYPESENSE_COLLECTION }}
       run: python DropCollection.py
 
     - name: Create Collection
       env:
         TYPESENSE_HOST: ${{ vars.TYPESENSE_HOST }}
-        TYPESENSE_SEARCH_API_KEY: ${{ secrets.TYPESENSE_SEARCH_API_KEY }}
+        TYPESENSE_SEARCH_API_KEY: ${{ secrets.TYPESENSE_ADMIN_API_KEY }}
         TYPESENSE_COLLECTION: ${{ vars.TYPESENSE_COLLECTION }}
       run: python CreateCollection.py
 
     - name: Import APISpec Data
       env:
         TYPESENSE_HOST: ${{ vars.TYPESENSE_HOST }}
-        TYPESENSE_SEARCH_API_KEY: ${{ secrets.TYPESENSE_SEARCH_API_KEY }}
+        TYPESENSE_SEARCH_API_KEY: ${{ secrets.TYPESENSE_ADMIN_API_KEY }}
         TYPESENSE_COLLECTION: ${{ vars.TYPESENSE_COLLECTION }}
       run: python ImportApiSpecData.py
 
     - name: Import Markdown Data
       env:
         TYPESENSE_HOST: ${{ vars.TYPESENSE_HOST }}
-        TYPESENSE_SEARCH_API_KEY: ${{ secrets.TYPESENSE_SEARCH_API_KEY }}
+        TYPESENSE_SEARCH_API_KEY: ${{ secrets.TYPESENSE_ADMIN_API_KEY }}
         TYPESENSE_COLLECTION: ${{ vars.TYPESENSE_COLLECTION }}
       run: python ImportMarkdownData.py
