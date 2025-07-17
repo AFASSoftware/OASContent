@@ -1,4 +1,3 @@
 typesense
 python-dotenv
-markdown
-python-frontmatter
+python-frontmatter7
