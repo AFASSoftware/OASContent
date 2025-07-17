@@ -95,7 +95,7 @@ De waarde van `DbId` heb je nodig in de volgende request.
 
 Endpoint: [POST PtProject](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject)
 
-Een klantovereenkomst bevat alle afspraken tussen jou en de klant. Het aanmaken van de klantovereenkomst gaat via de projecten functie in AFAS Profit. Hiervoor is een specifiek profiel `-147` aangemaakt voor klantovereenkomsten.
+Een klantovereenkomst bevat alle afspraken tussen jou en de klant. Een klantovereenkomst is in feite een project met specifiek gedrag, daarom gebruik je PtProject. Er is een specifiek profiel `-147` aangemaakt voor klantovereenkomsten. De voorkeurwaardes voor velden worden niet overgenomen vanuit het profiel. Belangrijk is dat je `"PrTy": "1"` meegeeft zodat het project zich goed gedraagt.
 
 Hiervoor heb je aanvullend nodig:
 
