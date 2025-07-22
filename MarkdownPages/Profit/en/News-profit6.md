@@ -13,9 +13,9 @@ Starting with Profit 6, a number of changes have been made to the AFAS Profit AP
 
 ### Always send AFAS token in base64-encoded format
 
-Starting with Profit 6, it is mandatory to send the AFAS token in Base64 format via the Authorization HTTP header when calling the AFAS API (REST and SOAP). More information can be found in the [Help Center](https://help.afas.nl/help/EN/SE/App_Cnr_Rest_Call.htm).
+Starting with Profit 6, it is mandatory to send the AFAS token in Base64 format via the Authorization HTTP header when calling the AFAS API (REST and SOAP). More information can be found in the [Help Center](https://help.afas.nl/help/EN/SE/App_Cnr_Rest_Call.htm). 
 
-This method has been recommended by AFAS for a long time, but it has become mandatory starting with Profit 6. If you send the token in an incorrect format (usually plain text) after transitioning to Profit 6, it will result in a 500 error message.
+This method has been recommended by AFAS for a long time, but with the introduction of Profit 6 we will start enforcing it. If you provide the token in the header as plain text, we will ask you to adjust the calls through targeted emails. Starting from the end of 2025, an incorrect call will result in an HTTP 500 status.
 
 For now, it is still possible to send the token in the Body of a SOAP message. This method is strongly discouraged and will be phased out over time.
 

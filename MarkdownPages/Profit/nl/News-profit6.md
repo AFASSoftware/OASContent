@@ -15,9 +15,10 @@ Vanaf Profit 6 is er een aantal wijzigingen in de AFAS Profit API doorgevoerd. H
 
 Vanaf Profit 6 is het bij een aanroep van de AFAS Api (REST en SOAP) verplicht om de AFAS-token mee te geven in Base64-formaat via de Authorization HTTP-header. Je vindt hierover meer informatie in het [Help Center](https://help.afas.nl/help/NL/SE/App_Cnr_Rest_Call.htm). 
 
-Deze methode wordt al lange tijd aanbevolen door AFAS, maar is met ingang van Profit 6 verplicht geworden. Als je de token na de overgang op Profit 6 aanbiedt in een onjuist formaat (meestal is dit plain text) dan zal dit resulteren in een 500-foutmelding.
+Deze methode wordt al lange tijd aanbevolen door AFAS, maar met ingang van Profit 6 zullen we erop gaan controleren. Als je de token in de header aanbiedt als platte tekst, zullen we je via gerichte e-mailings vragen om de aanroepen aan te passen. Vanaf eind 2025 zal een foutieve aanroep resulteren in een HTTP 500 status.
 
 Vooralsnog blijft het in een SOAP bericht ook mogelijk om de token mee te geven in de Body. Deze methode wordt sterk ontraden en zal op termijn worden afgeschaft.
+
 
 ### obsolete: X-PROFIT-ERROR
 
