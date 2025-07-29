@@ -17,4 +17,4 @@ Profit is an ERP solution for all your business processes. The integration of pr
 
 AFAS SB is designed for entrepreneurs, startups, and grow-ups. In SB, the entrepreneur and the accountant work together, and maintaining your company accounts is a matter of minutes. SB provides insight and convenience.
 
-[I want to get started with connectors for SB!](../sb/en/Start)
+[I want to get started with connectors for SB!](../sb/en/start)
