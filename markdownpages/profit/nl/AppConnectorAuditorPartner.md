@@ -108,7 +108,7 @@ Kort gezegd: AFAS Profit kent 2 verschillende nummers die het dienstverband aand
 
 #### Er worden Financiële mutaties opgehaald, maar **Gewijzigde boekingsdagen** wordt niet gebruikt.
 
-Haal je veel Financiële mutatie op? Gebruik dan ook de GetConnector `Gewijzigde boekingsdagen`. [Lees dit artikel goed door]([./howto-bi#financiële-mutaties](https://help.afas.nl/help/NL/SE/App_Cnnct_View_Audit.htm#o79118)).
+Haal je veel Financiële mutatie op? Gebruik dan ook de GetConnector `Gewijzigde boekingsdagen`. [Lees dit artikel goed door](https://help.afas.nl/help/NL/SE/App_Cnnct_View_Audit.htm#o79118).
 
 Mogelijk ben je ook geïnteresseerd in het ophalen van verwijderde mutaties. [Lees daarvoor dit artikel](https://help.afas.nl/help/NL/SE/App_Cnnct_Deleted_Data.htm#o124753).
 
