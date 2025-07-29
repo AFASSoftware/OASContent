@@ -259,7 +259,7 @@ Je kunt bij elk veld in de gegevensverzameling een bepaald formaat instellen. Hi
 ### 5. Afbeeldingen importeren of ophalen (Profit-beheerder)
 
 Afbeeldingen importeren via een connector vergt extra performance. Haal overbodige afbeeldingen weg zodat de performance verbeterd kan worden.
-Voor het optimaal ophalen van afbeeldingen gebruik je de  [ImageConnector](../../api-specs/nl/Artikelen#get-/ImageConnector/-id-).
+Voor het optimaal ophalen van afbeeldingen gebruik je de  [ImageConnector](../../apidoc/nl/Artikelen#get-/ImageConnector/-id-).
 
 ### 6. Functievelden (Profit-beheerder)
 

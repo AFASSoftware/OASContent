@@ -258,7 +258,7 @@ For each field in the data collection, you can set a specific format. This allow
 
 ### 5. Importing or fetching images (Profit administrator)
 
-Importing images via a connector requires extra performance. Remove unnecessary images so that performance can be improved. For optimal retrieval of images, use the [ImageConnector](../../api-specs/en/Artikelen#get-/ImageConnector/-id-).
+Importing images via a connector requires extra performance. Remove unnecessary images so that performance can be improved. For optimal retrieval of images, use the [ImageConnector](../../apidoc/en/Artikelen#get-/ImageConnector/-id-).
 
 ### 6. Function fields (Profit administrator)
 

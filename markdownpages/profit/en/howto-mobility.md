@@ -21,7 +21,7 @@ Learn How-To set up an integration in which you register transport vehicles for 
 
 ### Retrieving Employee Data
 
-Endpoint: [Get Employees](../../api-specs/en/Medewerker%20en%20contract#get-/connectors/Profit_Employees)
+Endpoint: [Get Employees](../../apidoc/en/Medewerker%20en%20contract#get-/connectors/Profit_Employees)
 
 This endpoint provides a basis of the employee data as a result. Make a copy of this endpoint and remove the data that is not necessary for your integration.
 
@@ -54,7 +54,7 @@ The end result must at least contain the following:
 
 ## Creating the Transport Vehicle
 
-Endpoint: [Post HrMobility](../../api-specs/en/Overige#post-/connectors/HrMobility)
+Endpoint: [Post HrMobility](../../apidoc/en/Overige#post-/connectors/HrMobility)
 
 Now create the transport vehicle with the link to the employee.
 
@@ -115,7 +115,7 @@ You need the value of the field `CcSn` when updating the transport vehicle and c
 
 ## Adding New Mileage
 
-Endpoint: [Post HrMobility/HrEmployeeMobilityRegistration](../../api-specs/en/Overige#post-/connectors/HrMobility/HrEmployeeMobilityRegistration)
+Endpoint: [Post HrMobility/HrEmployeeMobilityRegistration](../../apidoc/en/Overige#post-/connectors/HrMobility/HrEmployeeMobilityRegistration)
 
 Via a Post on the subobject HrMobility/HrEmployeeMobilityRegistration you create a new mileage entry.
 
@@ -145,7 +145,7 @@ Use the value of the field `CcSn` from the previous response for this.
 
 ## Recording on Employee File
 
-Endpoint: [Post KnSubject](../../api-specs/en/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
+Endpoint: [Post KnSubject](../../apidoc/en/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
 
 Finally, optionally create a file item with, for example, the lease agreement in the employee file. In it, add the id of the transport vehicle and the employee to the `KnSubjectLink` object:
 

@@ -50,7 +50,7 @@ You will receive a forbidden message when an IP restriction applies to the App C
 
 ## Generate token for user via OTP
 
-AFAS offers the option to use a [One Time Password (OTP)](../../api-specs/en/Inrichting#post-/OtpRequest) instead of a token. This is useful in situations where users need to register themselves in an application.
+AFAS offers the option to use a [One Time Password (OTP)](../../apidoc/en/Inrichting#post-/OtpRequest) instead of a token. This is useful in situations where users need to register themselves in an application.
 
 The OTP option offers a way to retrieve a token without sharing this via an external tool or email for example.
 

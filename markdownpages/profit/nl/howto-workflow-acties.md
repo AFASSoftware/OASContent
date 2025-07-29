@@ -21,9 +21,9 @@ Doordat deze functionaliteit flexibel is kun je hier eigen processen in vormgeve
 
 ## Basis dossieritems
 
-Endpoint: [POST KnSubject](../../api-specs/nl/Dossiers,%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
+Endpoint: [POST KnSubject](../../apidoc/nl/Dossiers,%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
 
-De basis van het aanmaken van een dossieritem is het vullen van het correcte type dossieritem `StId`. Hiervoor kan je via GET [Profit_SubjectTypes](../../api-specs/nl/Dossiers,%20bijlagen%20en%20workflows#get-/connectors/Profit_SubjectTypes) de typen ophalen.
+De basis van het aanmaken van een dossieritem is het vullen van het correcte type dossieritem `StId`. Hiervoor kan je via GET [Profit_SubjectTypes](../../apidoc/nl/Dossiers,%20bijlagen%20en%20workflows#get-/connectors/Profit_SubjectTypes) de typen ophalen.
 
 ```json Simple Request body
 {
@@ -139,7 +139,7 @@ Wanneer de bestemming niet correct is, krijg je deze foutmelding:
 
 ## Instellingen type dossieritem
 
-Endpoint: [GET Profit_SubjectTypes](../../api-specs/nl/Dossiers%2C%20bijlagen%20en%20workflows#get-/connectors/Profit_SubjectTypes)
+Endpoint: [GET Profit_SubjectTypes](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#get-/connectors/Profit_SubjectTypes)
 
 Via dit endpoint kun je de instellingen van een type dossieritem ophalen. Hierdoor weet je welke velden verplicht zijn. Dit is een voorbeeld van een response:
 
@@ -186,7 +186,7 @@ Via de kenmerkvelden kun je bij een dossieritem aangeven van welk subtype het do
 
 ### Instellingen Kenmerkcombinatie
 
-Endpoint: [GET Profit_FeatureCombination](../../api-specs/nl/Dossiers%2C%20bijlagen%20en%20workflows#get-/connectors/Profit_FeatureCombination)
+Endpoint: [GET Profit_FeatureCombination](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#get-/connectors/Profit_FeatureCombination)
 
 In deze response zie je welke waarden beschikbaar zijn om de kenmerken mee te vullen en wat ze betekenen. In het veld `WorkflowId` zie je welke workflow hieraan gekoppeld is.
 
@@ -338,7 +338,7 @@ Een voorbeeld van een workflow is het aanvragen van verlof. Schematisch ziet dit
 
 ## Taakacties en reacties
 
-Endpoint: [POST KnSubjectWorkflowReaction](../../api-specs/nl/Dossiers,%20bijlagen%20en%20workflows#post-/connectors/KnSubjectWorkflowReaction)
+Endpoint: [POST KnSubjectWorkflowReaction](../../apidoc/nl/Dossiers,%20bijlagen%20en%20workflows#post-/connectors/KnSubjectWorkflowReaction)
 
 Via dit endpoint kun je een reactie toevoegen en een stap in een workflow uitvoeren.
 
@@ -360,7 +360,7 @@ Via dit endpoint kun je een reactie toevoegen en een stap in een workflow uitvoe
 
 ### Ophalen beschikbare taken
 
-Endpoint: [GET Profit_Subject_Tasks](../../api-specs/nl/Dossiers,%20bijlagen%20en%20workflows#get-/connectors/Profit_Subject_Tasks)
+Endpoint: [GET Profit_Subject_Tasks](../../apidoc/nl/Dossiers,%20bijlagen%20en%20workflows#get-/connectors/Profit_Subject_Tasks)
 
 De eerste stap is om na te gaan in welke taak een dossieritem zich bevindt, en bij welke gebruikers. Dit endpoint geeft 0 tot meerdere regels als response. 
 
@@ -401,7 +401,7 @@ Dit dossieritem staat nu open voor twee medewerkers die deze taak in hun takenli
 
 ### Beschikbare acties opvragen
 
-Endpoint: [GET Profit_Workflowactions](../../api-specs/en/Dossiers,%20bijlagen%20en%20workflows#get-/connectors/Profit_Workflowactions)
+Endpoint: [GET Profit_Workflowactions](../../apidoc/en/Dossiers,%20bijlagen%20en%20workflows#get-/connectors/Profit_Workflowactions)
 
 Om een actie uit te voeren via UpdateConnector `KnSubjectWorkflowReaction` moet je weten wat de GUIDs zijn van de workflow, taak en actie die je wilt uitvoeren. Dit haal je op via `Profit_Workflowactions`.
 

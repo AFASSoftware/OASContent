@@ -27,7 +27,7 @@ Via de dossier functionaliteit is het mogelijk om bestanden als bijlage op een d
 
 ## Get van dossieritems
 
-Endpoint: [ProfitSubjects](../../api-specs/nl/Dossiers%2C%20bijlagen%20en%20workflows#get-/connectors/ProfitSubjects)
+Endpoint: [ProfitSubjects](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#get-/connectors/ProfitSubjects)
 
 Start met het ophalen van de dossieritems van het type waarvan je de bijlage wilt ophalen. Dit doe je met
 
@@ -82,7 +82,7 @@ Het `SbId` heb je nodig in de volgende stap. De rest van de gegevens kun je gebr
 
 ## Ophalen van bijlagen van dossieritem
 
-Endpoint: [Profit_Subject_Attachments](../../api-specs/nl/Dossiers%2C%20bijlagen%20en%20workflows#get-/connectors/Profit_Subject_Attachments)
+Endpoint: [Profit_Subject_Attachments](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#get-/connectors/Profit_Subject_Attachments)
 
 De volgende stap is om de gegevens van de bijlagen van het dossieritem op te halen.
 
@@ -116,7 +116,7 @@ Uit deze request hebben we nodig:
 
 ## Ophalen van bijlagen van reacties op een dossieritem
 
-Endpoint: [Profit_Subject_Reaction_Attachments](../../api-specs/nl/Dossiers%2C%20bijlagen%20en%20workflows#get-/connectors/Profit_Subject_Reaction_Attachments)
+Endpoint: [Profit_Subject_Reaction_Attachments](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#get-/connectors/Profit_Subject_Reaction_Attachments)
 
 `GET https://12345.rest.afas.online/ProfitRestServices/connectors/Profit_Subject_Reaction_Attachments?skip=0&take=100&filterfieldids=subject_id&filtervalues=53955&operatortypes=1`
 
@@ -158,7 +158,7 @@ Uit deze request hebben we nodig:
 
 ## Bestand ophalen
 
-Endpoint: [SubjectConnector](../../api-specs/nl/Dossiers%2C%20bijlagen%20en%20workflows#get-/SubjectConnector). Dit is een speciale connector, in de AppConnector vind je die als AppConnectorSubject op het tabblad Connectoren.
+Endpoint: [SubjectConnector](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#get-/SubjectConnector). Dit is een speciale connector, in de AppConnector vind je die als AppConnectorSubject op het tabblad Connectoren.
 
 Tenslotte doe je een `foreach` loop over de resulaten van `Profit_Subject_Attachments` en `Profit_Subject_Reaction_Attachments`. Met dit request haal je de bijlage zelf op.
 
