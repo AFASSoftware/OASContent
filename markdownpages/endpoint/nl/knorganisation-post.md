@@ -19,4 +19,4 @@ Enkel POST (Insert) is toegestaan op dit subobject
 
 ## KnPerson 
 
-Zie de beschrijving bij [KnPerson](KnPerson_post.md).
+Zie de beschrijving bij [KnPerson](./knperson_post).
