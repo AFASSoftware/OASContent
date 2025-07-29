@@ -1,4 +1,4 @@
----
+﻿---
 title: Relaties beheren
 author: EDA
 date: 2025-7-14
@@ -15,11 +15,11 @@ The relations API collection makes it possible to record contact details of orga
 
 ## Get organisation
 
-Endpoint: [Get organisation](../../api-specs/sb/en/latest#get-/api/organisations)
+Endpoint: [Get organisation](../../apidoc/sb/en/latest#get-/api/organisations)
 
 With this request you retrieve the organisations. If a desired organisation already exists, the `Id` can be used.
 
-If the desired organisation does not exist, it must be created. This can be done with the [Post organisation](./howto%20relations#Post%20organisation).
+If the desired organisation does not exist, it must be created. This can be done with the [Post organisation](#post-organisation).
 
 ```json Result
 {
@@ -55,7 +55,7 @@ Use:
 
 ## Put organisation
 
-Endpoint: [Put organisation](../../api-specs/sb/en/latest#put-/api/organisation)
+Endpoint: [Put organisation](../../apidoc/sb/en/latest#put-/api/organisation)
 
 Now modify the organisation.
 
@@ -77,7 +77,7 @@ Now modify the organisation.
 
 ## Post organisation
 
-Endpoint: [Post organisation](../../api-specs/sb/en/latest#post-/api/organisation) 
+Endpoint: [Post organisation](../../apidoc/sb/en/latest#post-/api/organisation) 
 
 Now create the organisation. When creating an address, a number of preferences must be specified. For a single address, these can be set to true by default.
 
@@ -153,7 +153,7 @@ When creating bank accounts, a number of preferences must be specified. For a si
 
 ## Get person
 
-Endpoint: [Get persons](../../api-specs/sb/en/latest#get-/api/persons)
+Endpoint: [Get persons](../../apidoc/sb/en/latest#get-/api/persons)
 
 With this request you retrieve persons.
 
@@ -191,7 +191,7 @@ Use:
 
 ## Post person
 
-Endpoint: [Post person](../../api-specs/sb/en/latest#post-/api/person)
+Endpoint: [Post person](../../apidoc/sb/en/latest#post-/api/person)
 
 Now create the person. When creating an address, a number of preferences must be specified. For a single address, these can be set to true by default.
 
@@ -243,8 +243,8 @@ When creating a bank account, a number of preferences must be specified. For a s
 
 ## Workflow for additional information
 
-1. [Get organisation](./howto%20relations#Get%20organisation)
-2. [Get person](./howto%20relations#Get%20person)
+1. [Get organisation](#get-organisation)
+2. [Get person](#get-person)
 3. Post bankaccount
 4. Post address  
 5. Post emailaddress

@@ -19,9 +19,9 @@ There is also [one overview](https://help.afas.nl/profit/spec/en/allendpoints) m
 
 From UpdateConnectors in AFAS Connect, you now get a direct link to the documentation in the AFAS API Docs.
 
-## Profit 3 changes
+## Profit 36 changes
 
-All API changes that become active per Profit 3 are described in the [changelog](./news%20profit3). Here you can see all changes in the API schemas.
+All API changes that become active per Profit 6 are described in the [changelog](./news-profit6). Here you can see all changes in the API schemas.
 
 ## XML-Token naar Authorization header converter
 

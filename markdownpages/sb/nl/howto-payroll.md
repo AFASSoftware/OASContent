@@ -1,4 +1,4 @@
----
+﻿---
 title: Loonjournaalposten
 author: CLN
 date: 2025-7-14
@@ -21,7 +21,7 @@ De Loonjournaalposten API collectie maakt het mogelijk om op 2 niveau`s Loonjour
 
 ## Get omgevingstoken
 
-Doorloop de [OAuth2.0 flow](./Authentication) zoals beschreven. Gebruik hiervoor bij voorkeur de `admincenter` route.
+Doorloop de [OAuth2.0 flow](./authentication) zoals beschreven. Gebruik hiervoor bij voorkeur de `admincenter` route.
 
 ### Admin Center niveau
 
@@ -35,7 +35,7 @@ Door de integratie te maken op Klant niveau maak je het mogelijk voor iedere AFA
 
 ## Get scopes (Admin Center)
 
-Endpoint: [Get Scopes](../../api-specs/sb/nl/latest#post-/authentication/getscopes)
+Endpoint: [Get Scopes](../../apidoc/sb/nl/latest#post-/authentication/getscopes)
 
 Met deze request haal je de omgevingen op van de klanten van de accountants. Voor deze omgevingen kan je een `access_token` aanvragen.
 
@@ -79,7 +79,7 @@ In alle requests die nu volgen gebruik je de klant-URL + `scope` om de URL op te
 
 ## Get administration
 
-Endpoint: [Get Administraties](../../api-specs/sb/nl/latest#get-/api/administrations)
+Endpoint: [Get Administraties](../../apidoc/sb/nl/latest#get-/api/administrations)
 
 Een klant omgeving van 1 of meerdere administraties bevatten. De loonjournaalpost moet worden aangemaakt op een specifiek administratie. Haal hier de administraties op bij de specifieke klant omgeving. Leg in jouw klant configuratie vast welk administratie bij deze klant hoort.
 
@@ -99,7 +99,7 @@ Gebruik:
 
 ## Get Ledgeraccount
 
-Endpoint: [Get Ledgeraccount](../../api-specs/sb/nl/latest#get-/api/ledgeraccounts)
+Endpoint: [Get Ledgeraccount](../../apidoc/sb/nl/latest#get-/api/ledgeraccounts)
 
 Hiernaast is de grootboekrekening ook een verplicht veld bij het aanleveren van de loonjournaalpost. Hiervoor haal je de grootboekrekeningen op. Map de grootboekrekeningen met de loonjournaalpost gevens. Leg in de klant configuratie vast welk grootboekrekeningen bij de loongegevens van deze klant hoort.
 
@@ -132,7 +132,7 @@ Gebruik:
 
 ## Post PayrollJournalEntry
 
-Endpoint: [Post payrolljournalentry](../../api-specs/sb/nl/latest#post-/api/payrolljournalentry)
+Endpoint: [Post payrolljournalentry](../../apidoc/sb/nl/latest#post-/api/payrolljournalentry)
 
 Maak nu de loonjournaalposten aan.
 

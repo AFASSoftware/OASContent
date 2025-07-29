@@ -1,4 +1,4 @@
----
+﻿---
 title: Authenticatie
 author: CLN
 date: 2024-04-12
@@ -12,7 +12,7 @@ De AFAS SB API gebruikt API-sleutels om verzoeken te authenticeren. AFAS verstre
 
 Bij het aanmaken van een app kan gekozen worden voor 2 verschillende autorisatie typen. Dit gaat om de OAuth2.0 mogelijkheid en autorisatie via een statisch token. Het heeft onze sterke voorkeur om te autoriseren via de OAuth mogelijkheid. Mocht dit niet mogelijk zijn wordt de statisch token mogelijkheid verder toegelicht onder [Statisch token](#authenticeer-met-een-static-token). Tijdens de activatie moet er onderscheidt gemaakt worden tussen activatie binnen een klantomgeving of op het niveau van het admin center.
 
-Om op de hoogte te zijn van de verschillende url's is het goed om eerst de pagina [concepten](./Concepts) door te nemen. Hierin staat ook beschreven welke url wordt meegegeven als wordt geactiveerd via de app in AFAS SB.
+Om op de hoogte te zijn van de verschillende url's is het goed om eerst de pagina [concepten](./concepts) door te nemen. Hierin staat ook beschreven welke url wordt meegegeven als wordt geactiveerd via de app in AFAS SB.
 
 # Authenticeer via OAuth2.0
 Schematische weergave van de OAuth2.0 flow.
@@ -29,7 +29,7 @@ Wanneer je een integratie met AFAS SB gaat maken waarbij de autorisatie via OAut
 - Klant omgeving authenticatie endpoint: `<APIserverUrl>/<klantomgeving>/app/auth`
 - Token endpoint: `<APIserverUrl>/<klantomgeving>/app/token`
 
-De `klantomgeving` is het deel na de domein url. Zie voor meer uitleg de [concepten pagina](./Concepts).
+De `klantomgeving` is het deel na de domein url. Zie voor meer uitleg de [concepten pagina](./concepts).
 
 ### Start de consent flow
 
@@ -127,7 +127,7 @@ request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", AccessTo
 
 ## Initieer de OAuth2.0 flow / Admin Center
 
-Wanneer een app verbinding maakt op Admin Center niveau vraag zit er 1 extra stap in de OAuth flow om een [`access_token`](../../api-specs/sb/nl/latest#post-/authentication/getaccesstoken) op te vragen van de klantomgeving. Hiervoor moet je eerst de standaard consent flow doorlopen. Hierna volgt een aanvullende request om het `access_token` van een klantomgeving op te halen.
+Wanneer een app verbinding maakt op Admin Center niveau vraag zit er 1 extra stap in de OAuth flow om een [`access_token`](../../apidoc/sb/nl/latest#post-/authentication/getaccesstoken) op te vragen van de klantomgeving. Hiervoor moet je eerst de standaard consent flow doorlopen. Hierna volgt een aanvullende request om het `access_token` van een klantomgeving op te halen.
 
 
 ### Start de consent flow
@@ -406,7 +406,7 @@ Deze activering maakt een token aan in dit formaat: `Zz2vnlNd_kyOoQ-UNyPPvtWwHPS
 
 De volgende stap is om dit token in te wisselen voor een `access_token`.
 
-Endpoint: [GetAccessToken](../../api-specs/sb/nl/latest#post-/authentication/getaccesstoken)
+Endpoint: [GetAccessToken](../../apidoc/sb/nl/latest#post-/authentication/getaccesstoken)
 
 Voor zowel apps die in een klantomgeving leven als apps die in een Admin Center leven kan de een `access_token` opgehaald worden via het volgende request:
 
@@ -418,7 +418,7 @@ een request naar `<APIserverUrl>/<klantomgeving>/authentication/getaccesstoken` 
 }
 ```
 
-Bij een app op Admin Center niveau kunnen de beschikbare klantomgevingen opgevraagd worden via het het [GetScopes](../../api-specs/sb/nl/latest#post-/authentication/getscopes) endpoint. Voor elke scope moet een apart `access_token` opgehaald worden om data te muteren of op te halen. Bij een app die is gemaakt in een klant omgeving kan de klantomgeving url-deel zelf gebruikt worden (zie [concepten](./Concepts) voor meer informatie hierover).
+Bij een app op Admin Center niveau kunnen de beschikbare klantomgevingen opgevraagd worden via het het [GetScopes](../../apidoc/sb/nl/latest#post-/authentication/getscopes) endpoint. Voor elke scope moet een apart `access_token` opgehaald worden om data te muteren of op te halen. Bij een app die is gemaakt in een klant omgeving kan de klantomgeving url-deel zelf gebruikt worden (zie [concepten](./concepts) voor meer informatie hierover).
 
 ### Response
 
@@ -434,4 +434,4 @@ De response van de GetAccesstoken bevat het `access_token`. Dit token gebruik je
 
 ### Lees verder
 
-Nu je alles weet over authenticatie en je een `access_token` hebt wil je deze natuurlijk direct gebruiken. Dit doe je bijvoorbeeld met een [`get` request](./Filtering).
+Nu je alles weet over authenticatie en je een `access_token` hebt wil je deze natuurlijk direct gebruiken. Dit doe je bijvoorbeeld met een [`get` request](./filtering).

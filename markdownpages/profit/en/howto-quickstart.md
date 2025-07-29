@@ -261,4 +261,4 @@ func main() {
 
 Now that you can successfully authenticate and retrieve data, you are ready to integrate a complete process. Start, for example, with one of these How-To's:
 
-- [Employee AD Sync](./howto%20medewerkerad)
+- [Employee AD Sync](./howto-medewerker-ad)

@@ -1,4 +1,4 @@
----
+﻿---
 title: Payroll journal entries
 author: CLN
 date: 2025-7-14
@@ -21,7 +21,7 @@ The Payroll Journal Entries API collection makes it possible to integrate Payrol
 
 ## Get environment token
 
-Follow the [OAuth2.0 flow](./Authentication) as described. Preferably use the `admincenter` route for this.
+Follow the [OAuth2.0 flow](./authentication) as described. Preferably use the `admincenter` route for this.
 
 ### Admin Center level
 
@@ -35,7 +35,7 @@ By creating the integration at the Client level, you make it possible for every 
 
 ## Get scopes (Admin Center)
 
-Endpoint: [Get Scopes](../../api-specs/sb/en/latest#post-/authentication/getscopes)
+Endpoint: [Get Scopes](../../apidoc/sb/en/latest#post-/authentication/getscopes)
 
 With this request, you retrieve the environments of the accountant's clients. You can request an `access_token` for these environments.
 
@@ -79,7 +79,7 @@ In all subsequent requests, you use the client URL + `scope` to build the URL fo
 
 ## Get administration
 
-Endpoint: [Get Administrations](../../api-specs/sb/en/latest#get-/api/administration)
+Endpoint: [Get Administrations](../../apidoc/sb/en/latest#get-/api/administration)
 
 A client environment can contain one or more administrations. The payroll journal entry must be created in a specific administration. Retrieve the administrations at the specific client environment here. Record in your customer configuration which administration belongs to this customer.
 
@@ -99,7 +99,7 @@ Usage:
 
 ## Get Ledgeraccount
 
-Endpoint: [Get Ledgeraccounts](../../api-specs/sb/en/latest#get-/api/ledgeraccounts)
+Endpoint: [Get Ledgeraccounts](../../apidoc/sb/en/latest#get-/api/ledgeraccounts)
 
 In addition, the ledger account is also a required field when submitting the payroll journal entry. To do this, retrieve the ledger accounts. Map the ledger accounts with the payroll journal entry data. Record in the customer configuration which ledger accounts belong to the payroll data for this customer.
 
@@ -132,7 +132,7 @@ Usage:
 
 ## Post PayrollJournalEntry
 
-Endpoint: [Post payrolljournalentry](../../api-specs/sb/en/latest#post-/api/payrolljournalentry)
+Endpoint: [Post payrolljournalentry](../../apidoc/sb/en/latest#post-/api/payrolljournalentry)
 
 Now create the payroll journal entries.
 

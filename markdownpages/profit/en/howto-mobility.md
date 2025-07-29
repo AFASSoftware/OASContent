@@ -12,10 +12,10 @@ Learn How-To set up an integration in which you register transport vehicles for 
 ## What You Need
 
 - AFAS Environment
-- [Token](./Authenticatie)
+- [Token](./authentication)
 - Client application with transport vehicles
 
-> If you don't have a token yet, follow the steps in the  [Quickstart](./howto%20quickstart)
+> If you don't have a token yet, follow the steps in the  [Quickstart](./howto-quickstart)
 
 ## Collecting Basic Data
 

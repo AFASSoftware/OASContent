@@ -1,4 +1,4 @@
----
+﻿---
 title: Verkoopjournaalpost aanmaken
 author: CLN
 date: 2025-7-14
@@ -20,11 +20,11 @@ Met deze How-To weet je precies hoe je een integratie maakt met AFAS SB om Verko
 
 ## Get omgevingstoken
 
-Doorloop de [OAuth2.0 flow](./Authentication) zoals beschreven. Gebruik hier de `klantomgeving` route.
+Doorloop de [OAuth2.0 flow](./authentication) zoals beschreven. Gebruik hier de `klantomgeving` route.
 
 ## Get administration
 
-Endpoint: [Get Administraties](../../api-specs/sb/nl/latest#get-/api/administrations)
+Endpoint: [Get Administraties](../../apidoc/sb/nl/latest#get-/api/administrations)
 
 Een klant omgeving van 1 of meerdere administraties bevatten. De verkoopfactuur moet worden aangemaakt op een specifiek administratie. Haal hier de administraties op bij de specifieke klant omgeving. Leg in jouw klant configuratie vast welk administratie bij deze klant hoort.
 
@@ -44,9 +44,9 @@ Gebruik:
 
 ## Get Relations
 
-Endpoint Personen: [Get Persons](../../api-specs/sb/nl/latest#get-/api/persons)
-Endpoint Organisaties: [Get Organisations](../../api-specs/sb/nl/latest#get-/api/persons)
-Endpoint Onbekende relaties: [Get Unknownrelation](../../api-specs/sb/nl/latest#get-/api/unknownrelation)
+Endpoint Personen: [Get Persons](../../apidoc/sb/nl/latest#get-/api/persons)
+Endpoint Organisaties: [Get Organisations](../../apidoc/sb/nl/latest#get-/api/persons)
+Endpoint Onbekende relaties: [Get Unknownrelation](../../apidoc/sb/nl/latest#get-/api/unknownrelation)
 
 De relatie is een verplicht gegeven om vast te leggen op de een verkoopjournaalpost. Het kan voorkomen dat de relatie onbekend is. Hiervoor is een eigen entiteit aangemaakt in AFAS SB. Haal het ID van de onbekende relatie op om deze te gebruiken.
 
@@ -134,7 +134,7 @@ Gebruik:
 
 ## Get Ledgeraccount
 
-Endpoint: [Get Ledgeraccount](../../api-specs/sb/nl/latest#get-/api/ledgeraccounts)
+Endpoint: [Get Ledgeraccount](../../apidoc/sb/nl/latest#get-/api/ledgeraccounts)
 
 Hiernaast is de grootboekrekening ook een verplicht veld bij het aanleveren van de verkoopjournaalpost. Hiervoor haal je de grootboekrekeningen op.
 
@@ -174,7 +174,7 @@ Gebruik:
 
 ## Get PaymentConditions
 
-Endpoint: [Get PaymentConditions 1.0](../../api-specs/sb/nl/latest#get-/api/paymentconditions)
+Endpoint: [Get PaymentConditions 1.0](../../apidoc/sb/nl/latest#get-/api/paymentconditions)
 
 > Dit onderdeel is **optioneel**
 
@@ -208,7 +208,7 @@ Gebruik:
 
 ## Put Attachment
 
-Endpoint: [Post Attachments](../../api-specs/sb/nl/latest#put-/api/blob/-uuid-)
+Endpoint: [Post Attachments](../../apidoc/sb/nl/latest#put-/api/blob/-uuid-)
 
 > Dit onderdeel is **optioneel**
 
@@ -304,7 +304,7 @@ Als de blob succesvol is geaccepteerd krijg je een http 200 response zonder resp
 
 ## Post Salesjournalentry
 
-Endpoint: [Post Salesjournalentry](../../api-specs/sb/nl/latest#post-/api/salesjournalentry)
+Endpoint: [Post Salesjournalentry](../../apidoc/sb/nl/latest#post-/api/salesjournalentry)
 
 Nu je de data hebt verzameld kun je een Verkoopjournaalpost aanmaken in AFAS SB.
 
@@ -340,7 +340,7 @@ Nu je de data hebt verzameld kun je een Verkoopjournaalpost aanmaken in AFAS SB.
 }
 ```
 
-> Bij het aanbieden van deze request raden wij je aan om de [Tracking Tracking Identifier](./change%20Tracking-Identifier) te gebruiken om dubbele entries te voorkomen.
+> Bij het aanbieden van deze request raden wij je aan om de [Tracking Tracking Identifier](./change-tracking) te gebruiken om dubbele entries te voorkomen.
 
 ### Tot slot
 
