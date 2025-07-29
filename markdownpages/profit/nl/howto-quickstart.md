@@ -9,7 +9,7 @@ Deze How-To geeft je alles wat je nodig hebt om te beginnen met het gebruik van 
 
 ## Krijg credentials
 
-De eenvoudigste manier om een API request te kunnen maken is als je van een AFAS beheerder een [omgevingsnummer, omgevingstype](./Concepts#opbouw-request-url) en [token](./Authentication) krijgt. De AFAS beheerder moet weten welke endpoints je wilt gebruiken en je daarop rechten geven volgens [deze stappen](https://help.afas.nl/help/NL/SE/120718.htm).
+De eenvoudigste manier om een API request te kunnen maken is als je van een AFAS beheerder een [omgevingsnummer, omgevingstype](./concepts#opbouw-request-url) en [token](./authentication) krijgt. De AFAS beheerder moet weten welke endpoints je wilt gebruiken en je daarop rechten geven volgens [deze stappen](https://help.afas.nl/help/NL/SE/120718.htm).
 
 > *Tip*: Vraag de AFAS beheerder om GetConnector [ProfitCountries](../../apidoc/nl/Organisaties%20en%20personen#get-/connectors/ProfitCountries) beschikbaar te maken om mee te testen. Die bevat altijd gegevens en is lekker licht.
 
@@ -61,7 +61,7 @@ Als het goed is gegaan wordt nu de data opgehaald en zie je een JSON in dit form
 
 ### Eigen applicatie
 
-Nu je weet dat het token geldig is en de URL goed wordt opgebouwd kan je deze request overnemen naar jouw eigen applicatie. Hiervoor moet je het token [encoden naar Base64](./Authentication#formaat-en-conversie). Voer een test request uit en valideer of je dezelfde data als response krijgt als in AFAS Connect.
+Nu je weet dat het token geldig is en de URL goed wordt opgebouwd kan je deze request overnemen naar jouw eigen applicatie. Hiervoor moet je het token [encoden naar Base64](./authentication#formaat-en-conversie). Voer een test request uit en valideer of je dezelfde data als response krijgt als in AFAS Connect.
 
 Gebruik de [XMLtoken naar Base64 converter](../../../tools#base64-encoder) om je header te maken.
 

@@ -86,14 +86,14 @@ Deletes in AFAS zijn hard deletes. Dat zorgt ervoor dat je geen modified date he
 
 ## GetConnectoren
 
-Data ophalen uit AFAS doe je via de [GetConnectoren](./GetConnector). Er zijn een aantal standaard GetConnectoren beschikbaar in Profit. De meeste BI integraties van [eigen GetConnectoren](https://help.afas.nl/help/NL/SE/App_Con_GS_AOL_Get_Add.htm). Hierin heb je veel mogelijkheden om een GetConnector samen te stellen. Je moet wel rekeninghouden met het volgende:
+Data ophalen uit AFAS doe je via de [GetConnectoren](./get-connector). Er zijn een aantal standaard GetConnectoren beschikbaar in Profit. De meeste BI integraties van [eigen GetConnectoren](https://help.afas.nl/help/NL/SE/App_Con_GS_AOL_Get_Add.htm). Hierin heb je veel mogelijkheden om een GetConnector samen te stellen. Je moet wel rekeninghouden met het volgende:
 
 1. Gebruik altijd een `id` veld om unieke regels in het resultaat te krijgen
 2. Beslis of je omschrijvingen los ophaalt alles of id's en omschrijvingen in 1 GetConnector zet.
 
 ## Skip Take
 
-Zie ook: [Skip/Take](./GetConnector#skip-en-take)
+Zie ook: [Skip/Take](./get-connector#skip-en-take)
 
 > Let op: Skip/Take wordt trager naarmate de skip hoger wordt.
 

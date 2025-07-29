@@ -60,7 +60,7 @@ Maak een [custom endpoint](../../apidoc/nl/Inkoop#get-/connectors/-Endpoint-) aa
 - ItemType / `VaIt`
 - ItemSoort / `BiUn`
 
-> Weet je niet hoe je een GetConnector hiervoor aanmaakt? Lees dan dit [artikel](./GetConnector)
+> Weet je niet hoe je een GetConnector hiervoor aanmaakt? Lees dan dit [artikel](./get-connector)
 
 ### Magazijnen
 

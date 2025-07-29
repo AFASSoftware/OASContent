@@ -12,7 +12,7 @@ Leer hoe je een integratie opzet waarin je vervoermiddelen vastlegt op medewerke
 ## Wat heb je nodig
 
 - AFAS Omgeving
-- [Token](./Authentication)
+- [Token](./authentication)
 - Client applicatie met vervoermiddelen
 
 > Heb je nog geen token? Volg dan de stappen in de [Quickstart](./howto-quickstart)

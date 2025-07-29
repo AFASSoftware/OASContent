@@ -18,7 +18,7 @@ In dit onderdeel ligt de focus op algemene foutafhandeling en oplossingstips.
   a. Controleer de tabel van HTTP codes om de oplossing bij de code te zoeken.
   b. Komt de HTTP error niet voor?
 3. Om welke type endpoint gaat het?
-  a. GetConnector: Gebruik de beschikbare tooling op [connect.afas.nl](https://connect.afas.nl/rest-json/get-connector) om je request uit te voeren. Als dit succesvol gaat, bouw deze request dan na. Zie ook het onderdeel "GetConnectoren" hieronder. Krijg je geen response via AFAS Connect, dan kan de request te lang duren. Bekijk de [performance optimalisaties](./Troubleshooting#performance-van-getconnectoren-optimaliseren) om een oplossing te vinden.
+  a. GetConnector: Gebruik de beschikbare tooling op [connect.afas.nl](https://connect.afas.nl/rest-json/get-connector) om je request uit te voeren. Als dit succesvol gaat, bouw deze request dan na. Zie ook het onderdeel "GetConnectoren" hieronder. Krijg je geen response via AFAS Connect, dan kan de request te lang duren. Bekijk de [performance optimalisaties](./troubleshooting#performance-van-getconnectoren-optimaliseren) om een oplossing te vinden.
   b. UpdateConnector: doordat er veel validaties op de data in UpdateConnectoren wordt gedaan zijn er zeer veel mogelijkheden wat de oorzaak van jouw foutmelding kan zijn. Stap 1 is om de responsebody te analyseren. Deze bevat een korte melding en een logboek referentiecode. Als de korte melding onduidelijk is dan kan de Profit-beheerder aan de hand van de referentie uit het omgevingslogboek de volledige fout ophalen. Zie ook het onderdeel "UpdateConnectoren" hieronder.
 
 ## Logging
@@ -58,7 +58,7 @@ AFAS Profit maakt gebruik van conventionele HTTP-responscodes om het succes of f
 | 403         | Forbidden                              | De request is geldig, maar de server weigert het te autoriseren door IP-restricties. Opnieuw proberen zal opnieuw mislukken.          |
 | 404         | Not Found                              | De opgevraagde resource kon niet worden gevonden. Dit betekent meestal dat de opgegeven URL niet correct is of dat de resource is verwijderd of verplaatst. |
 | 500         | Internal Server Error                  | De server heeft de request niet succesvol kunnen valideren. Dit zijn inhoudelijke (functionele) meldingen waarbij je in de response een beknopte uitleg ziet en een verwijzing naar het Profit-logboek. De beheerder kan de volledige melding opzoeken in het [Profit-logboek](https://help.afas.nl/help/NL/SE/App_Cnnctr_Update_035.htm).   |
-| 503         | [Service Unavailable](./Troubleshooting#Retry%20after) | De server kan de request niet verwerken. Opnieuw proberen kan slagen wanneer de server weer capaciteit heeft. Check ook [afasstatus.nl](https://afasstatus.nl/).    |
+| 503         | [Service Unavailable](./troubleshooting#retry-after) | De server kan de request niet verwerken. Opnieuw proberen kan slagen wanneer de server weer capaciteit heeft. Check ook [afasstatus.nl](https://afasstatus.nl/).    |
 
 Alleen bij http 500 meldingen is het soms handig om een retry te doen. Bijvoorbeeld wanneer je via `FiEntries` (grootboekmutaties) een POST uitvoert en je krijgt een melding terug dat de boekingslay-out op dat moment geblokkeerd is door een andere gebruiker. Dit komt omdat via Profit een mutatie op de boeking plaatsvindt, terwijl je dit met de UpdateConnector ook probeert te doen. In dergelijke situaties kun je meerdere retry's uitvoeren totdat de boekingslay-out gedeblokkeerd is en de POST wel verwerkt kan worden.
 De AFAS-beheerder kan hierover meer informatie vinden in het [omgevingslogboek](https://help.afas.nl/help/NL/SE/App_Cnnctr_Update_035.htm "Meldingen Connectoren raadplegen") van Profit.
@@ -96,7 +96,7 @@ De foutmelding `connection reset by peer` kan meerdere oorzaken hebben. Een moge
 
 ## Authenticatiefouten
 
-Authenticatiefouten krijg je wanneer je geen authenticatie meestuurt of je authenticatie niet correct is. Zie deze documentatie om dit op te lossen: [Authenticatie](./Authentication)
+Authenticatiefouten krijg je wanneer je geen authenticatie meestuurt of je authenticatie niet correct is. Zie deze documentatie om dit op te lossen: [Authenticatie](./authentication)
 
 ## GetConnector-fouten
 
@@ -132,7 +132,7 @@ De combinatie van skip/take-waarden is niet geldig. Hierdoor komt er een http 50
 
 Oplossing: pas de parameters aan:
 ```GET /ProfitRestServices/connectors/Profit_Functions?skip=2&take=1```
-Zie ook: [GetConnector documentatie](./GetConnector#skip-en-take)
+Zie ook: [GetConnector documentatie](./get-connector#skip-en-take)
 
 ## UpdateConnector-fouten
 

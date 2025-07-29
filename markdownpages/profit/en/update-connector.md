@@ -14,7 +14,7 @@ Using the HTTP POST method, you create records in Profit with an UpdateConnector
 - Address: The address must contain a country code.
 - Financial entry: A financial entry must be balanced. This means that debit and credit totals are equal.
 
-> HTTP 500 response means that the content of the request cannot be successfully validated. See also [Troubleshooting](./Troubleshooting).
+> HTTP 500 response means that the content of the request cannot be successfully validated. See also [Troubleshooting](./troubleshooting).
 
 ### Example POST request
 
@@ -72,7 +72,7 @@ Example:
 
 See also:
 
-- [All response codes](./Troubleshooting#http-codes)
+- [All response codes](./troubleshooting#http-codes)
 
 ## POST on SubObject
 

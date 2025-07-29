@@ -17,7 +17,7 @@ This section focuses on general error handling and troubleshooting tips.
   a. Consult the table of HTTP codes to find the solution corresponding to the code.
   b. Is the HTTP error not listed?
 3. What type of endpoint is involved?
-  a. GetConnector: Use the available tooling at [connect.afas.nl](https://connect.afas.nl/rest-json/get-connector) to execute your request. If this is successful, recreate this request. Also see the "GetConnectors" section below. If you don't receive a response via AFAS Connect, the request may be taking too long. Refer to the [performance optimizations](./Troubleshooting#optimize-the-performance-of-getconnectors) to find a solution.
+  a. GetConnector: Use the available tooling at [connect.afas.nl](https://connect.afas.nl/rest-json/get-connector) to execute your request. If this is successful, recreate this request. Also see the "GetConnectors" section below. If you don't receive a response via AFAS Connect, the request may be taking too long. Refer to the [performance optimizations](./troubleshooting#optimize-the-performance-of-getconnectors) to find a solution.
   b. UpdateConnector: because many validations are performed on data in UpdateConnectors, there are numerous potential causes for your error message. Step 1 is to analyze the response body. It contains a brief message and a logbook reference code. If the brief message is unclear, the AFAS administrator can retrieve the complete error using the reference from the environment logbook. Also see the "UpdateConnectors" section below.
 
 ## Logging
@@ -57,7 +57,7 @@ AFAS Profit uses conventional HTTP response codes to indicate the success or fai
 | 403         | Forbidden                              | The request is valid, but the server refuses to authorize it due to IP restrictions. Trying again will fail again.          |
 | 404         | Not Found                              | The requested resource could not be found. This usually means that the provided URL is incorrect, or the resource has been deleted or moved. |
 | 500         | Internal Server Error                  | The server cannot successfully validate the request. These are content-related (functional) messages with a brief explanation in the response and a reference to the Profit logbook. The administrator can find the complete message in the [Profit logbook](https://help.afas.nl/help/NL/SE/App_Cnnctr_Update_035.htm).   |
-| 503         | [Service Unavailable](./Troubleshooting#Retry%20after) | The server cannot process the request. Trying again may succeed when the server has capacity again. Also check [afasstatus.nl](https://afasstatus.nl/).    |
+| 503         | [Service Unavailable](./troubleshooting#retry-after) | The server cannot process the request. Trying again may succeed when the server has capacity again. Also check [afasstatus.nl](https://afasstatus.nl/).    |
 
 
 Only with HTTP 500 errors is it sometimes helpful to do a retry. For example, when you perform a POST via `FiEntries` (general ledger entries) and you receive a message that the booking layout is blocked by another user at that time. This happens because an entry is being made in Profit, while you are also trying to do this with the UpdateConnector. In such situations, you can perform multiple retries until the booking layout is unblocked and the POST can be processed.
@@ -96,7 +96,7 @@ The error message `connection reset by peer` occurs due to setting the header: `
 
 ## Authentication errors
 
-Authentication errors occur when you do not provide authentication or your authentication is incorrect. See this documentation to resolve this: [Authentication](./Authentication)
+Authentication errors occur when you do not provide authentication or your authentication is incorrect. See this documentation to resolve this: [Authentication](./authentication)
 
 ## GetConnector errors
 
@@ -132,7 +132,7 @@ The combination of skip/take values is not valid. This results in an http 500 er
 
 Solution: adjust the parameters:
 ```GET /ProfitRestServices/connectors/Profit_Functions?skip=2&take=1```
-See also: [GetConnector documentation](./GetConnector#skip-en-take)
+See also: [GetConnector documentation](./get-connector#skip-en-take)
 
 ## UpdateConnector errors
 

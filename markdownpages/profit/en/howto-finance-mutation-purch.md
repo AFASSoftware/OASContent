@@ -60,7 +60,7 @@ Create a [custom endpoint](../../apidoc/en/Inkoop#get-/connectors/-Endpoint-) fo
 - ItemType / `VaIt`
 - ItemType / `BiUn`
 
-> Don't know How-To create a GetConnector for this? Then read this [article](./GetConnector)
+> Don't know How-To create a GetConnector for this? Then read this [article](./get-connector)
 
 ### Warehouses
 
