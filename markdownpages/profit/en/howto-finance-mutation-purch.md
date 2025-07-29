@@ -189,7 +189,7 @@ The financial mutation has now been created. You must save the `InId` for the co
 
 Optionally, you now want to do the following:
 
-1. Create an invoice attachment via [KnSubject](../../apidoc/en/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
+1. Create an invoice attachment via [KnSubject](../../apidoc/en/Dossiers%20en%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
 2. Modify the financial invoice that was created via [FiInvoice](../../apidoc/en/Mutaties#put-/connectors/FiInvoice)
 
 ## Creating confrontation

@@ -145,7 +145,7 @@ Use the value of the field `CcSn` from the previous response for this.
 
 ## Recording on Employee File
 
-Endpoint: [Post KnSubject](../../apidoc/en/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
+Endpoint: [Post KnSubject](../../apidoc/en/Dossiers%20en%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
 
 Finally, optionally create a file item with, for example, the lease agreement in the employee file. In it, add the id of the transport vehicle and the employee to the `KnSubjectLink` object:
 

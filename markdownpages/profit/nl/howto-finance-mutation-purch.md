@@ -189,12 +189,12 @@ Nu is de financiële mutatie aangemaakt. Het `InId` moet je bewaren voor de late
 
 Optioneel wil je nu het volgende doen:
 
-1. Aanmaken van een factuur bijlage via [KnSubject](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
+1. Aanmaken van een factuur bijlage via [KnSubject](../../apidoc/nl/Dossiers%20en%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
 2. Aanpassen van de financiële factuur die is aangemaakt via [FiInvoice](../../apidoc/nl/Mutaties#put-/connectors/FiInvoice)
 
 ## Aanmaken bijlage financiële mutatie
 
-Endpoint: [Post KnSubject](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
+Endpoint: [Post KnSubject](../../apidoc/nl/Dossiers%20en%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
 
 Als je een verkoopfactuur aanmaakt in AFAS heb je meestal ook een bijlage. Bijvoorbeeld een pdf bestand met de verkoopfactuur die naar de klant is gestuurd. Deze kan je toevoegen aan de financiële mutatie.
 

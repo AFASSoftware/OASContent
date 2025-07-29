@@ -13,10 +13,10 @@
 				}
 			},
 			{
-				"file": "Dossiers, bijlagen en workflows.json",
+				"file": "Dossiers en bijlagen en workflows.json",
 				"name": {
-					"en": "Files, attachments and workflows",
-					"nl": "Dossiers, bijlagen en workflows"
+					"en": "Files and attachments and workflows",
+					"nl": "Dossiers en bijlagen en workflows"
 				}
 			}
 		]

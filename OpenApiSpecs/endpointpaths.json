@@ -341,141 +341,141 @@
   "Profit_FeatureCombination": {
     "get": {
       "descriptionNl": "Kenmerkcombinaties",
-      "url": "Dossiers, bijlagen en workflows#get-/connectors/Profit_FeatureCombination",
+      "url": "Dossiers en bijlagen en workflows#get-/connectors/Profit_FeatureCombination",
       "descriptionEn": "Feature combinations"
     }
   },
   "Profit_Features": {
     "get": {
       "descriptionNl": "Kenmerken",
-      "url": "Dossiers, bijlagen en workflows#get-/connectors/Profit_Features",
+      "url": "Dossiers en bijlagen en workflows#get-/connectors/Profit_Features",
       "descriptionEn": "Features"
     }
   },
   "Profit_FeatureValue": {
     "get": {
       "descriptionNl": "Waarde kenmerk",
-      "url": "Dossiers, bijlagen en workflows#get-/connectors/Profit_FeatureValue",
+      "url": "Dossiers en bijlagen en workflows#get-/connectors/Profit_FeatureValue",
       "descriptionEn": "Feature value"
     }
   },
   "FileConnector": {
     "get": {
       "descriptionNl": "",
-      "url": "Dossiers, bijlagen en workflows#get-/connectors/FileConnector",
+      "url": "Dossiers en bijlagen en workflows#get-/connectors/FileConnector",
       "descriptionEn": ""
     }
   },
   "KnSubject": {
     "post": {
       "descriptionNl": "Dossier",
-      "url": "Dossiers, bijlagen en workflows#post-/connectors/KnSubject",
+      "url": "Dossiers en bijlagen en workflows#post-/connectors/KnSubject",
       "descriptionEn": "Dossier"
     },
     "put": {
       "descriptionNl": "Dossier",
-      "url": "Dossiers, bijlagen en workflows#put-/connectors/KnSubject",
+      "url": "Dossiers en bijlagen en workflows#put-/connectors/KnSubject",
       "descriptionEn": "Dossier"
     },
     "delete": {
       "descriptionNl": "Dossier",
-      "url": "Dossiers, bijlagen en workflows#delete-/connectors/KnSubject/KnSubject/@SbId/-SbId-",
+      "url": "Dossiers en bijlagen en workflows#delete-/connectors/KnSubject/KnSubject/@SbId/-SbId-",
       "descriptionEn": "Dossier"
     }
   },
   "KnSubjectReaction": {
     "post": {
       "descriptionNl": "Reactie bij dossieritem",
-      "url": "Dossiers, bijlagen en workflows#post-/connectors/KnSubjectReaction",
+      "url": "Dossiers en bijlagen en workflows#post-/connectors/KnSubjectReaction",
       "descriptionEn": "Reactie bij dossieritem"
     },
     "delete": {
       "descriptionNl": "Reactie bij dossieritem",
-      "url": "Dossiers, bijlagen en workflows#delete-/connectors/KnSubjectReaction/KnReaction/@Id/-Id-",
+      "url": "Dossiers en bijlagen en workflows#delete-/connectors/KnSubjectReaction/KnReaction/@Id/-Id-",
       "descriptionEn": "Reactie bij dossieritem"
     }
   },
   "KnSubjectWorkflowReaction": {
     "post": {
       "descriptionNl": "Workflow reactie",
-      "url": "Dossiers, bijlagen en workflows#post-/connectors/KnSubjectWorkflowReaction",
+      "url": "Dossiers en bijlagen en workflows#post-/connectors/KnSubjectWorkflowReaction",
       "descriptionEn": "Workflow reactie"
     }
   },
   "Profit_Subject_Attachments": {
     "get": {
       "descriptionNl": "Bestanden bij dossier",
-      "url": "Dossiers, bijlagen en workflows#get-/connectors/Profit_Subject_Attachments",
+      "url": "Dossiers en bijlagen en workflows#get-/connectors/Profit_Subject_Attachments",
       "descriptionEn": "Files for dossier"
     }
   },
   "Profit_Subject_Reaction_Attachments": {
     "get": {
       "descriptionNl": "Bestanden bij reactie",
-      "url": "Dossiers, bijlagen en workflows#get-/connectors/Profit_Subject_Reaction_Attachments",
+      "url": "Dossiers en bijlagen en workflows#get-/connectors/Profit_Subject_Reaction_Attachments",
       "descriptionEn": "Files for response"
     }
   },
   "Profit_Subject_Tasks": {
     "get": {
       "descriptionNl": "WordConnect_Workflow",
-      "url": "Dossiers, bijlagen en workflows#get-/connectors/Profit_Subject_Tasks",
+      "url": "Dossiers en bijlagen en workflows#get-/connectors/Profit_Subject_Tasks",
       "descriptionEn": "WordConnect_Workflow"
     }
   },
   "Profit_SubjectFile": {
     "get": {
       "descriptionNl": "Dossieritems (excl. autorisatie)",
-      "url": "Dossiers, bijlagen en workflows#get-/connectors/Profit_SubjectFile",
+      "url": "Dossiers en bijlagen en workflows#get-/connectors/Profit_SubjectFile",
       "descriptionEn": "File items (without authorisation)"
     }
   },
   "Profit_Subjects": {
     "get": {
       "descriptionNl": "WordConnect_Dossieritems",
-      "url": "Dossiers, bijlagen en workflows#get-/connectors/Profit_Subjects",
+      "url": "Dossiers en bijlagen en workflows#get-/connectors/Profit_Subjects",
       "descriptionEn": "WordConnect_Dossieritems"
     }
   },
   "Profit_SubjectsDest": {
     "get": {
       "descriptionNl": "Dossieritems (incl. autorisatie)",
-      "url": "Dossiers, bijlagen en workflows#get-/connectors/Profit_SubjectsDest",
+      "url": "Dossiers en bijlagen en workflows#get-/connectors/Profit_SubjectsDest",
       "descriptionEn": "File items (with authorisation)"
     }
   },
   "Profit_SubjectTypes": {
     "get": {
       "descriptionNl": "Typen dossieritem",
-      "url": "Dossiers, bijlagen en workflows#get-/connectors/Profit_SubjectTypes",
+      "url": "Dossiers en bijlagen en workflows#get-/connectors/Profit_SubjectTypes",
       "descriptionEn": "File item types"
     }
   },
   "Profit_Workflowactions": {
     "get": {
       "descriptionNl": "WordConnect_WorkflowActions",
-      "url": "Dossiers, bijlagen en workflows#get-/connectors/Profit_Workflowactions",
+      "url": "Dossiers en bijlagen en workflows#get-/connectors/Profit_Workflowactions",
       "descriptionEn": "WordConnect_WorkflowActions"
     }
   },
   "ProfitSubjects": {
     "get": {
       "descriptionNl": "Dossieritems (excl. autorisatie)",
-      "url": "Dossiers, bijlagen en workflows#get-/connectors/ProfitSubjects",
+      "url": "Dossiers en bijlagen en workflows#get-/connectors/ProfitSubjects",
       "descriptionEn": "File items (without authorisation)"
     }
   },
   "ProfitSubjectsAuthorized": {
     "get": {
       "descriptionNl": "Dossieritems (incl. autorisatie)",
-      "url": "Dossiers, bijlagen en workflows#get-/connectors/ProfitSubjectsAuthorized",
+      "url": "Dossiers en bijlagen en workflows#get-/connectors/ProfitSubjectsAuthorized",
       "descriptionEn": "File items (with authorisation)"
     }
   },
   "SubjectConnector": {
     "get": {
       "descriptionNl": "",
-      "url": "Dossiers, bijlagen en workflows#get-/connectors/SubjectConnector",
+      "url": "Dossiers en bijlagen en workflows#get-/connectors/SubjectConnector",
       "descriptionEn": ""
     }
   },

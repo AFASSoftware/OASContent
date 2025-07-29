@@ -311,7 +311,7 @@ It is possible to provide a Project booking to the financial mutation. Depending
 
 ## Add attachment to financial mutation
 
-Endpoint: [Post KnSubject](../../apidoc/en/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
+Endpoint: [Post KnSubject](../../apidoc/en/Dossiers%20en%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
 
 When you create a sales invoice in AFAS, you usually also have an attachment. For example, a PDF file with the sales invoice that was sent to the customer. You can add this to the financial mutation.
 

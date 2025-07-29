@@ -145,7 +145,7 @@ Gebruik hiervoor de waarde van het veld `CcSn` uit de vorige response.
 
 ## Vastleggen op medewerker dossier
 
-Endpoint: [Post KnSubject](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
+Endpoint: [Post KnSubject](../../apidoc/nl/Dossiers%20en%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
 
 Tenslotte maak je optioneel een dossieritem met bijvoorbeeld de lease overeenkomst aan in het medewerker dossier. Hierin voeg je het id van het vervoermiddel en de medewewerker toe op het object `KnSubjectLink`:
 
