@@ -25,7 +25,7 @@ Alle API wijzingen die per Profit 6 actief worden zijn beschreven op in de [chan
 
 ## XML-Token naar Authorization header converter
 
-Bij nieuwe gebruikers zien we regelmatig dat het omzetten van een XML token naar een REST Authorization header voor fouten zorgt. Hiervoor is een simpel tooltje toegevoegd: [XML token naar Base64](../../../tools#base64-encoder)
+Bij nieuwe gebruikers zien we regelmatig dat het omzetten van een XML token naar een REST Authorization header voor fouten zorgt. Hiervoor is een simpel tooltje toegevoegd: [XML token naar Base64](../base64-encoder)
 
 ## Mobile ready
 
