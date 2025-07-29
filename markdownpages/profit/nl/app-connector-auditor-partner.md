@@ -170,7 +170,7 @@ Actuele gegevens per arbeidsverhouding toont enkel gegevens uit het hoofddienstv
 
 #### Deze GetConnector haalt velden uit een tabel met gegevens per dienstverband, maar nergens in de integratie wordt Dienstverbandnummer opgehaald.
 
-Als een medewerker meerdere dienstverbanden heeft, kan dit dubbele regels tot gevolg hebben. [Lees dit artikel goed door](./howto-bi.md#medewerkers-en-dienstverband) voor meer informatie over meerdere dienstverbanden. Plan ook gerust een overleg in met een SystemIntegrator.
+Als een medewerker meerdere dienstverbanden heeft, kan dit dubbele regels tot gevolg hebben. [Lees dit artikel goed door](./howto-bi#medewerkers-en-dienstverband) voor meer informatie over meerdere dienstverbanden. Plan ook gerust een overleg in met een SystemIntegrator.
 
 #### Veld **naam** of **omschrijving** wordt opgehaald uit een hoger niveau.
 

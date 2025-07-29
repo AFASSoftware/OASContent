@@ -103,7 +103,7 @@ Many GetConnectors only show data that has been allowed by the end user in the a
 
 #### Both EnSe and DvSn are used.
 
-In short: AFAS Profit knows 2 different numbers that indicate the employment. If you use them mixed up, you risk hard-to-trace errors. [Therefore read this article carefully](./Howto-bi.md#employees-and-employment). Don't hesitate to discuss this during an appointment with a SystemIntegrator.
+In short: AFAS Profit knows 2 different numbers that indicate the employment. If you use them mixed up, you risk hard-to-trace errors. [Therefore read this article carefully](./howto-bi#employees-and-employment). Don't hesitate to discuss this during an appointment with a SystemIntegrator.
 
 #### Financial mutations are retrieved, but **Changed booking days** is not used.
 
@@ -165,11 +165,11 @@ You can display a field differently in a GetConnector; for example a date/time a
 
 #### The integration uses data per employment, but this GetConnector retrieves fields from Current data per employment relationship.
 
-Current data per employment relationship only shows data from the main employment. Since your integration retrieves data per employment elsewhere, this GetConnector might show incorrect data. This can cause hard-to-trace errors. [Therefore read this article carefully](./Howto-bi.md#employees-and-employment). Don't hesitate to consult with a SystemIntegrator.
+Current data per employment relationship only shows data from the main employment. Since your integration retrieves data per employment elsewhere, this GetConnector might show incorrect data. This can cause hard-to-trace errors. [Therefore read this article carefully](./howto-bi#employees-and-employment). Don't hesitate to consult with a SystemIntegrator.
 
 #### This GetConnector retrieves fields from a table with data per employment, but nowhere in the integration is Employment number retrieved.
 
-If an employee has multiple employments, this can result in duplicate rows. [Read this article carefully](./Howto-bi.md#employees-and-employment) for more information about multiple employments. Feel free to schedule a consultation with a SystemIntegrator.
+If an employee has multiple employments, this can result in duplicate rows. [Read this article carefully](./howto-bi#employees-and-employment) for more information about multiple employments. Feel free to schedule a consultation with a SystemIntegrator.
 
 #### Field **name** or **description** is retrieved from a higher level.
 

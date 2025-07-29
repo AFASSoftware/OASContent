@@ -48,6 +48,7 @@ class MarkdownNamingValidator:
             True if the file should be excluded, False otherwise
         """
         relative_path = str(file_path.relative_to(self.root_path)).replace('\\', '/')
+        filename = file_path.name
         
         for pattern in self.exclusions:
             # Convert glob pattern to regex
@@ -55,15 +56,17 @@ class MarkdownNamingValidator:
             if regex_pattern.endswith('/'):
                 regex_pattern = regex_pattern[:-1] + '/.*'
             
-            # Match the pattern
-            if re.match(regex_pattern, relative_path) or relative_path.startswith(pattern.rstrip('*')):
+            # Match the pattern against both relative path and filename
+            if (re.match(regex_pattern, relative_path) or 
+                re.match(regex_pattern, filename) or
+                relative_path.startswith(pattern.rstrip('*')) or
+                filename.startswith(pattern.rstrip('*'))):
                 return True
         return False
     
     def validate_filename(self, file_path: Path) -> Tuple[bool, str]:
         """
         Validate that a markdown filename follows kebab-case convention.
-        Exception: AppConnectorAuditor* files are allowed to be named differently.
         
         Args:
             file_path: Path to the markdown file
@@ -222,7 +225,6 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 This script validates that markdown files follow kebab-case naming convention.
-Exception: AppConnectorAuditor* files are allowed to be named differently.
 
 Examples:
   python markdown-naming-check.py
