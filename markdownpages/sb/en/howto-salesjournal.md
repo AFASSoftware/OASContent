@@ -20,11 +20,11 @@ With this how-to, you will know exactly How-To create an integration with AFAS S
 
 ## Get environment token
 
-Follow the [OAuth2.0 flow](https://docs.afas.help/sb/en/Authentication) as described. Use the `customer environment` route here.
+Follow the [OAuth2.0 flow](./Authentication) as described. Use the `customer environment` route here.
 
 ## Get administration
 
-Endpoint: [Get Administrations](https://docs.afas.help/apidoc/sb/en/latest#get-/api/administrations)
+Endpoint: [Get Administrations](../../api-specs/sb/en/latest#get-/api/administrations)
 
 A customer environment can contain 1 or more administrations. The sales invoice must be created on a specific administration. Retrieve the administrations for the specific customer environment here. In your customer configuration, specify which administration belongs to this customer.
 
@@ -44,9 +44,9 @@ Use:
 
 ## Get Relations
 
-Endpoint Persons: [Get Persons](https://docs.afas.help/apidoc/sb/en/latest#get-/api/persons)
-Endpoint Organizations: [Get Organizations](https://docs.afas.help/apidoc/sb/en/latest#get-/api/persons)
-Endpoint Unknown relations: [Get Unknownrelation](https://docs.afas.help/apidoc/sb/en/latest#get-/api/unknownrelation)
+Endpoint Persons: [Get Persons](../../api-specs/sb/en/latest#get-/api/persons)
+Endpoint Organizations: [Get Organizations](../../api-specs/sb/en/latest#get-/api/persons)
+Endpoint Unknown relations: [Get Unknownrelation](../../api-specs/sb/en/latest#get-/api/unknownrelation)
 
 The relation is a required field to record on a sales journal entry. It may happen that the relation is unknown. For this, a separate entity has been created in AFAS SB. Retrieve the ID of the unknown relation to use it.
 
@@ -184,7 +184,7 @@ The response will be in JSON format and contain an array of revenue ledger accou
 ]
 ```
 
-For more details on the available parameters and response properties, refer to the [Get Ledgeraccount](https://docs.afas.help/apidoc/sb/en/latest#get-/api/ledgeraccounts) endpoint in the OpenAPI specification.
+For more details on the available parameters and response properties, refer to the [Get Ledgeraccount](../../api-specs/sb/en/latest#get-/api/ledgeraccounts) endpoint in the OpenAPI specification.
 
 ### Usage
 
@@ -248,11 +248,11 @@ The response will be in JSON format and contain an array of payment condition ob
 
 The `Id` field retrieved from this endpoint can be used in the `salesjournalentry` endpoint to specify custom payment conditions for a sales journal entry. If not provided, the default payment conditions set in the administration preferences will be used.
 
-For more details on the available parameters and response properties, refer to the [Get PaymentConditions](https://docs.afas.help/apidoc/sb/en/latest#get-/api/paymentconditions) endpoint in the OpenAPI specification.
+For more details on the available parameters and response properties, refer to the [Get PaymentConditions](../../api-specs/sb/en/latest#get-/api/paymentconditions) endpoint in the OpenAPI specification.
 
 ## Put Attachment
 
-Endpoint: [Post Attachments](https://docs.afas.help/apidoc/sb/en/latest#put-/api/blob/-uuid-)
+Endpoint: [Post Attachments](../../api-specs/sb/en/latest#put-/api/blob/-uuid-)
 
 > This part is **optional**
 
@@ -348,7 +348,7 @@ If the blob is successfully accepted, you will receive an HTTP 200 response with
 
 ## Post Salesjournalentry
 
-Endpoint: [Post Salesjournalentry](https://docs.afas.help/apidoc/sb/en/latest#post-/api/salesjournalentry)
+Endpoint: [Post Salesjournalentry](../../api-specs/sb/en/latest#post-/api/salesjournalentry)
 
 Now that you have collected the data, you can create a Sales Journal Entry in AFAS SB.
 
@@ -384,7 +384,7 @@ Now that you have collected the data, you can create a Sales Journal Entry in AF
 }
 ```
 
-> When submitting this request, we recommend using the [Tracking Identifier](https://docs.afas.help/sb/en/change%20Tracking-Identifier) to prevent duplicate entries.
+> When submitting this request, we recommend using the [Tracking Identifier](./change%20Tracking-Identifier) to prevent duplicate entries.
 
 ### Finally
 

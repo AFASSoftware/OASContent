@@ -18,7 +18,7 @@ Hier lees je de standaard opzet voor het werken met een ATS in combinatie met de
 
 ## Ophalen bestaande personen
 
-Endpoint: [Profit_OrgPer](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#get-/connectors/Profit_OrgPer)
+Endpoint: [Profit_OrgPer](../../api-specs/nl/Organisaties%20en%20personen#get-/connectors/Profit_OrgPer)
 
 `GET https://12345.rest.afas.online/ProfitRestServices/connectors/Profit_OrgPer?filterfieldids=Type%2CMailWork&filtervalues=Persoon%2Co.vandermolen%40enyoi.afas&operatortypes=1%2C1`
 
@@ -83,7 +83,7 @@ Door:
 
 ## Aanmaken nieuwe persoon
 
-Endpoint [KnPerson](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnPerson)
+Endpoint [KnPerson](../../api-specs/nl/Organisaties%20en%20personen#post-/connectors/KnPerson)
 
 Als de persoon nog niet bestaat in Profit, dan moet die eerst worden aangemaakt. Geef hierbij zoveel mogelijk informatie mee vanuit de frontoffice applicatie.
 
@@ -170,7 +170,7 @@ De response bevat `BcCo`. Dit is de unieke identifier van de persoon.
 
 ## Aanmaken kandidaat
 
-[OpenAPI Spec Aanmaken medewerker](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee)
+[OpenAPI Spec Aanmaken medewerker](../../api-specs/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee)
 
 Nu de persoon is aangemaakt kunnen we deze persoon koppelen aan de entiteit medewerker. Hierbij maken we de kandidaat nieuw aan en geven `EmId` dezelfde waarde als `BcCo`. De waarde `BcCo` neem je over uit de response van de vorige request. Het `MatchPer` veld doet een lookup om de persoon te vinden en te koppelen.
 
@@ -216,7 +216,7 @@ Nu de persoon is aangemaakt kunnen we deze persoon koppelen aan de entiteit mede
 
 ## Aanmaken conceptplaatsing
 
-[OpenAPI Spec Aanmaken conceptplaatsing](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtConceptPlacementContract)
+[OpenAPI Spec Aanmaken conceptplaatsing](../../api-specs/nl/Flex#post-/connectors/PtConceptPlacementContract)
 
 Nu de kandidaat bestaat kunnen we een conceptplaatsing aanmaken. Hiermee maken we de basis voor het plaatsingscontract en kan de backoffice deze verder oppakken zodra alle gegevens van de kandidaat bekend zijn.
 
@@ -263,7 +263,7 @@ Nu de kandidaat bestaat kunnen we een conceptplaatsing aanmaken. Hiermee maken w
 
 ## Starten kandidaat onboarding
 
-[OpenAPI Spec Aanmaken medewerker onboarding](https://docs.afas.help/apidoc/nl/Werving%20en%20selectie#post-/connectors/HrCreateApplicant)
+[OpenAPI Spec Aanmaken medewerker onboarding](../../api-specs/nl/Werving%20en%20selectie#post-/connectors/HrCreateApplicant)
 
 Tenslotte starten we de onboarding van de kandidaat met een workflow. Deze workflow kan automatisch de aanvullende gegevens van de kandidaat opvragen. Zodra dit is aangevuld controleert de backoffice-medewerker of de gegevens compleet en correct zijn en daarna kan de onboarding worden afgerond.
 

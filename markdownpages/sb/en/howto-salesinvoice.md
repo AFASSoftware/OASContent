@@ -7,7 +7,7 @@ tags: Sales, invoice, Sales invoice
 
 ## Introduction
 
-With this How-To, you will know exactly how to create an integration with AFAS SB to send sales invoices to AFAS SB. A sales invoice here refers to an invoice that has not yet been invoiced. Has your invoice already been paid or you want full control of the vat amount and vat section? Then use [How-To Sales Journal.](https://docs.afas.help/sb/en/howto%20salesjournal)
+With this How-To, you will know exactly how to create an integration with AFAS SB to send sales invoices to AFAS SB. A sales invoice here refers to an invoice that has not yet been invoiced. Has your invoice already been paid or you want full control of the vat amount and vat section? Then use [How-To Sales Journal.](./howto%20salesjournal)
 
 The invoice you create is therefore not yet paid. The user sends the invoice from AFAS SB to their customer. Functions such as the following are supported:
 
@@ -22,11 +22,11 @@ The invoice you create is therefore not yet paid. The user sends the invoice fro
 
 ## Get environment token
 
-Follow the [OAuth2.0 flow](https://docs.afas.help/sb/en/Authentication) as described. Use the `customer environment` route here.
+Follow the [OAuth2.0 flow](./Authentication) as described. Use the `customer environment` route here.
 
 ## Get administration
 
-Endpoint: [Get Administrations](https://docs.afas.help/apidoc/sb/en/latest#get-/api/administrations)
+Endpoint: [Get Administrations](../../api-specs/sb/en/latest#get-/api/administrations)
 
 A customer environment can contain 1 or more administrations. The sales invoice must be created on a specific administration. Retrieve the administrations for the specific customer environment here. In your customer configuration, specify which administration belongs to this customer.
 
@@ -46,9 +46,9 @@ Use:
 
 ## Get Relations
 
-Endpoint Persons: [Get Persons](https://docs.afas.help/apidoc/sb/en/latest#get-/api/persons)
-Endpoint Organizations: [Get Organisations](https://docs.afas.help/apidoc/sb/en/latest#get-/api/persons) 
-Endpoint Unknown relations: [Get Unknownrelation](https://docs.afas.help/apidoc/sb/en/latest#get-/api/unknownrelation)
+Endpoint Persons: [Get Persons](../../api-specs/sb/en/latest#get-/api/persons)
+Endpoint Organizations: [Get Organisations](../../api-specs/sb/en/latest#get-/api/persons) 
+Endpoint Unknown relations: [Get Unknownrelation](../../api-specs/sb/en/latest#get-/api/unknownrelation)
 
 The relation is a mandatory field to record on a sales invoice. It may happen that the relation is unknown. A separate entity has been created in AFAS SB for this purpose. Retrieve the ID of the unknown relation to use it.
 
@@ -136,7 +136,7 @@ Use:
 
 ## Get products
 
-Endpoint: [Get Products 2.0](https://docs.afas.help/apidoc/sb/en/latest#get-/api/products)
+Endpoint: [Get Products 2.0](../../api-specs/sb/en/latest#get-/api/products)
 
 On a sales invoice it is mandatory to record the product that was purchased. This product will be shown on the invoice sent to the buyer. You can take over the price or influence it by filling in a different amount.
 
@@ -169,7 +169,7 @@ Use:
 
 ## Get Addresses 
 
-Endpoint: [Get Addresses 1.0](https://docs.afas.help/apidoc/sb/en/latest#get-/api/addresses)
+Endpoint: [Get Addresses 1.0](../../api-specs/sb/en/latest#get-/api/addresses)
 
 > This part is **optional**
 
@@ -212,7 +212,7 @@ Use:
 
 ## Put Attachment
 
-Endpoint: [Post Attachments](https://docs.afas.help/apidoc/sb/en/latest#put-/api/blob/-uuid-)
+Endpoint: [Post Attachments](../../api-specs/sb/en/latest#put-/api/blob/-uuid-)
 
 > This part is **optional**
 
@@ -308,7 +308,7 @@ If the blob has been successfully accepted, you will receive an HTTP 200 respons
 
 ## Post Salesinvoice
 
-Endpoint: [Post Salesinvoice](https://docs.afas.help/apidoc/sb/en/latest#post-/api/salesinvoice)
+Endpoint: [Post Salesinvoice](../../api-specs/sb/en/latest#post-/api/salesinvoice)
 
 Now that you have collected the data, you can create a sales invoice in AFAS SB.
 
@@ -341,7 +341,7 @@ Now that you have collected the data, you can create a sales invoice in AFAS SB.
 }
 ```
 
-> When offering this request, we recommend using the [Tracking Identifier](https://docs.afas.help/sb/en/change%20Tracking-Identifier) to avoid duplicate entries.
+> When offering this request, we recommend using the [Tracking Identifier](./change%20Tracking-Identifier) to avoid duplicate entries.
 
 ### Finally
 

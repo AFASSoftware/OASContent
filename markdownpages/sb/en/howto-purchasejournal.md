@@ -19,11 +19,11 @@ With the Purchase Journal Entry API, you can record the financial details of a p
 
 ## Get Environment Token
 
-Follow the [OAuth2.0 flow](https://docs.afas.help/sb/en/Authentication) as described. Use the `customer environment` route here.
+Follow the [OAuth2.0 flow](./Authentication) as described. Use the `customer environment` route here.
 
 ## Get Administration
 
-Endpoint: [Get Administrations](https://docs.afas.help/apidoc/sb/en/latest#get-/api/administration)
+Endpoint: [Get Administrations](../../api-specs/sb/en/latest#get-/api/administration)
 
 A customer environment can contain one or more administrations. The purchase invoice must be created for a specific administration. Retrieve the administrations for the specific customer environment here. In your customer configuration, specify which administration belongs to this customer.
 
@@ -43,9 +43,9 @@ Use:
 
 ## Get Relations
 
-Endpoint Persons: [Get Persons](https://docs.afas.help/apidoc/sb/en/latest#get-/api/persons)
-Endpoint Organizations: [Get Organizations](https://docs.afas.help/apidoc/sb/en/latest#get-/api/persons)  
-Endpoint Unknown Relations: [Get Unknownrelation](https://docs.afas.help/apidoc/sb/en/latest#get-/api/unknownrelation)
+Endpoint Persons: [Get Persons](../../api-specs/sb/en/latest#get-/api/persons)
+Endpoint Organizations: [Get Organizations](../../api-specs/sb/en/latest#get-/api/persons)  
+Endpoint Unknown Relations: [Get Unknownrelation](../../api-specs/sb/en/latest#get-/api/unknownrelation)
 
 The relation is a mandatory field to record on a sales journal entry. It can happen that the relation is unknown. For this, a separate entity is created in AFAS SB. Retrieve the ID of the unknown relation to use it.
 
@@ -133,7 +133,7 @@ Use:
 
 ## Get Ledgeraccount
 
-Endpoint: [Get Ledgeraccount](https://docs.afas.help/apidoc/sb/en/latest#get-/api/ledgeraccounts)
+Endpoint: [Get Ledgeraccount](../../api-specs/sb/en/latest#get-/api/ledgeraccounts)
 
 In addition, the ledger account is also a mandatory field when submitting the purchase journal entry. For this, you retrieve the ledger accounts.
 
@@ -173,7 +173,7 @@ Use:
 
 ## Put Attachment
 
-Endpoint: [Post Attachments](https://docs.afas.help/apidoc/sb/en/latest#put-/api/blob/-uuid-)
+Endpoint: [Post Attachments](../../api-specs/sb/en/latest#put-/api/blob/-uuid-)
 
 > This part is **optional**
 
@@ -269,7 +269,7 @@ If the blob is successfully accepted, you will receive an HTTP 200 response with
 
 ## Post PurchaseJournalentry
 
-Endpoint: [Post PurchaseJournalentry](https://docs.afas.help/apidoc/sb/en/latest#post-/api/purchasejournalentry)
+Endpoint: [Post PurchaseJournalentry](../../api-specs/sb/en/latest#post-/api/purchasejournalentry)
 
 Now that you have collected the data, you can create a purchase journal entry in AFAS SB. These details must be determined from the source application:
 
@@ -311,7 +311,7 @@ Now that you have collected the data, you can create a purchase journal entry in
 }
 ```
 
-> When submitting this request, we recommend using the [Tracking Identifier](https://docs.afas.help/sb/en/change%20Tracking-Identifier) to prevent duplicate entries.
+> When submitting this request, we recommend using the [Tracking Identifier](./change%20Tracking-Identifier) to prevent duplicate entries.
 
 ### Finally
 

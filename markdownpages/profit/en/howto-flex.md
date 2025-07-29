@@ -13,12 +13,12 @@ Here you can read about the standard setup for creating new sales relations and 
 
 Validate if the organization and/or sales relation already exists. If it already exists, you can use it to create the customer agreement and prevent duplicate data in AFAS.
 
-- [Retrieving existing organizations and persons](https://docs.afas.help/apidoc/en/Organisaties%20en%20personen#get-/connectors/Profit_OrgPer)
-- [Retrieving sales relation](https://docs.afas.help/apidoc/en/Mutaties#get-/connectors/Profit_Debtor)
+- [Retrieving existing organizations and persons](../../api-specs/en/Organisaties%20en%20personen#get-/connectors/Profit_OrgPer)
+- [Retrieving sales relation](../../api-specs/en/Mutaties#get-/connectors/Profit_Debtor)
 
 ## Creating a sales relation
 
-[OpenAPI Spec Creating sales relation](https://docs.afas.help/apidoc/en/Organisaties%20en%20personen#post-/connectors/KnSalesRelationOrg)
+[OpenAPI Spec Creating sales relation](../../api-specs/en/Organisaties%20en%20personen#post-/connectors/KnSalesRelationOrg)
 
 Start by creating a sales relation. You do this via the endpoint `KnSalesRelationOrg`.
 
@@ -87,7 +87,7 @@ You need the `DbId` in the next request.
 
 ## Creating a placement agreement
 
-[OpenAPI Spec Creating Project/Customer Agreement](https://docs.afas.help/apidoc/en/Projecten%20en%20nacalculatie#post-/connectors/PtProject)
+[OpenAPI Spec Creating Project/Customer Agreement](../../api-specs/en/Projecten%20en%20nacalculatie#post-/connectors/PtProject)
 
 Creating the customer agreement is done via the projects function in AFAS Profit. A specific profile `-147` has been created for customer agreements.
 

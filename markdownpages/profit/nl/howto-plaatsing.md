@@ -56,12 +56,12 @@ Deze moet het veld `PlCo` / Plaatsing bevatten. Hiermee wordt de prijsafspraak e
 
 Valideer of de organisatie en/of organisatie al bestaat. Als deze al bestaat kan je deze gebruiken om de klantovereenkomt op aan te maken en voorkom je dubbele data in AFAS.
 
-- [Opvragen bestaande organisaties en personen](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#get-/connectors/Profit_OrgPer)
-- [Opvragen verkooprelatie](https://docs.afas.help/apidoc/nl/Mutaties#get-/connectors/Profit_Debtor)
+- [Opvragen bestaande organisaties en personen](../../api-specs/nl/Organisaties%20en%20personen#get-/connectors/Profit_OrgPer)
+- [Opvragen verkooprelatie](../../api-specs/nl/Mutaties#get-/connectors/Profit_Debtor)
 
 ## Aanmaken van verkooprelatie
 
-Endpoint: [POST KnSalesRelationOrg](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnSalesRelationOrg)
+Endpoint: [POST KnSalesRelationOrg](../../api-specs/nl/Organisaties%20en%20personen#post-/connectors/KnSalesRelationOrg)
 
 Begin met het aanmaken van een verkooprelatie. In het voorbeeld hieronder is `"MatchOga": "6"` waardoor er altijd een nieuwe organisatie wordt gemaakt.
 
@@ -130,7 +130,7 @@ De waarde van `DbId` heb je nodig in de volgende request.
 
 ## Aanmaken klantovereenkomst
 
-Endpoint: [POST PtProject](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject)
+Endpoint: [POST PtProject](../../api-specs/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject)
 
 Een klantovereenkomst bevat alle afspraken tussen jou en de klant. Het aanmaken van de klantovereenkomst gaat via de projecten functie in AFAS Profit. Hiervoor is een specifiek profiel `-147` aangemaakt voor klantovereenkomsten.
 

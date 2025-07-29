@@ -9,9 +9,9 @@ Deze How-To geeft je alles wat je nodig hebt om te beginnen met het gebruik van 
 
 ## Krijg credentials
 
-De eenvoudigste manier om een API request te kunnen maken is als je van een AFAS beheerder een [omgevingsnummer, omgevingstype](https://docs.afas.help/profit/nl/Concepts#opbouw-request-url) en [token](https://docs.afas.help/profit/nl/Authentication) krijgt. De AFAS beheerder moet weten welke endpoints je wilt gebruiken en je daarop rechten geven volgens [deze stappen](https://help.afas.nl/help/NL/SE/120718.htm).
+De eenvoudigste manier om een API request te kunnen maken is als je van een AFAS beheerder een [omgevingsnummer, omgevingstype](./Concepts#opbouw-request-url) en [token](./Authentication) krijgt. De AFAS beheerder moet weten welke endpoints je wilt gebruiken en je daarop rechten geven volgens [deze stappen](https://help.afas.nl/help/NL/SE/120718.htm).
 
-> *Tip*: Vraag de AFAS beheerder om GetConnector [ProfitCountries](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#get-/connectors/ProfitCountries) beschikbaar te maken om mee te testen. Die bevat altijd gegevens en is lekker licht.
+> *Tip*: Vraag de AFAS beheerder om GetConnector [ProfitCountries](../../api-specs/nl/Organisaties%20en%20personen#get-/connectors/ProfitCountries) beschikbaar te maken om mee te testen. Die bevat altijd gegevens en is lekker licht.
 
 ### Developer omgeving
 
@@ -34,7 +34,7 @@ Je hebt nu deze gegevens:
 2. Vul de gegevens
 3. Klik *Login with token*
 
-Nu wordt de volledige request URL opgebouwd. Tegelijk wordt er een [metainfo](https://docs.afas.help/apidoc/nl/Artikelen#get-/MetaInfo) request uitgevoerd. Deze haalt de GetConnectoren die geautoriseerd zijn op. Selecteer 1 van deze GetConnectoren en klik *Execute*.
+Nu wordt de volledige request URL opgebouwd. Tegelijk wordt er een [metainfo](../../api-specs/nl/Artikelen#get-/MetaInfo) request uitgevoerd. Deze haalt de GetConnectoren die geautoriseerd zijn op. Selecteer 1 van deze GetConnectoren en klik *Execute*.
 
 Als het goed is gegaan wordt nu de data opgehaald en zie je een JSON in dit formaat:
 
@@ -61,9 +61,9 @@ Als het goed is gegaan wordt nu de data opgehaald en zie je een JSON in dit form
 
 ### Eigen applicatie
 
-Nu je weet dat het token geldig is en de URL goed wordt opgebouwd kan je deze request overnemen naar jouw eigen applicatie. Hiervoor moet je het token [encoden naar Base64](https://docs.afas.help/profit/nl/Authentication#formaat-en-conversie). Voer een test request uit en valideer of je dezelfde data als response krijgt als in AFAS Connect.
+Nu je weet dat het token geldig is en de URL goed wordt opgebouwd kan je deze request overnemen naar jouw eigen applicatie. Hiervoor moet je het token [encoden naar Base64](./Authentication#formaat-en-conversie). Voer een test request uit en valideer of je dezelfde data als response krijgt als in AFAS Connect.
 
-Gebruik de [XMLtoken naar Base64 converter](https://docs.afas.help/profit/base64-encoder) om je header te maken.
+Gebruik de [XMLtoken naar Base64 converter](../../../tools#base64-encoder) om je header te maken.
 
 ## C# Voorbeeld
 
@@ -257,4 +257,4 @@ func main() {
 
 Nu je succesvol kan authenticeren en data kan ophalen ben je klaar om je volledige proces te integreren. Begin bijvoorbeeld met één van deze How-To's:
 
-- [Medewerker AD Sync](https://docs.afas.help/profit/nl/howto%20medewerkerad)
+- [Medewerker AD Sync](./howto%20medewerkerad)

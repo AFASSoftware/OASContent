@@ -17,11 +17,11 @@ Deze integratie maakt een kasmutatie aan in de AFAS SB omgeving voor een klant. 
 
 ## Get omgevingstoken
 
-Doorloop de [OAuth2.0 flow](https://docs.afas.help/sb/nl/Authentication) zoals beschreven. Gebruik hier de `klantomgeving` route.
+Doorloop de [OAuth2.0 flow](./Authentication) zoals beschreven. Gebruik hier de `klantomgeving` route.
 
 ## Get administration
 
-Endpoint: [Get Administraties](https://docs.afas.help/apidoc/sb/nl/latest#get-/api/administrations)
+Endpoint: [Get Administraties](../../api-specs/sb/nl/latest#get-/api/administrations)
 
 Een klant omgeving van 1 of meerdere administraties bevatten. De kasmutatie moet worden aangemaakt op een specifiek administratie. Haal hier de administraties op bij de specifieke klant omgeving. Leg in jouw klant configuratie vast welk administratie bij deze klant hoort.
 
@@ -41,7 +41,7 @@ Gebruik:
 
 ## Get Ledgeraccount
 
-Endpoint: [Get Ledgeraccount](https://docs.afas.help/apidoc/sb/nl/latest#get-/api/ledgeraccounts)
+Endpoint: [Get Ledgeraccount](../../api-specs/sb/nl/latest#get-/api/ledgeraccounts)
 
 Hiernaast is de grootboekrekening ook een verplicht veld bij het aanleveren van de kasmutatie. Hiervoor haal je de grootboekrekeningen op. Map de grootboekrekeningen met de kasmutatie. De manier waar de meeste integraties dit oplossen is door configruatie te maken waarin de verschillende grootboeken worden vastgelegd voor inkoop, verkoop en btw tarieven.
 
@@ -74,7 +74,7 @@ Gebruik:
 
 ## Post Cashmutation
 
-Endpoint: [Post cashmutation](https://docs.afas.help/apidoc/sb/nl/latest#post-/api/cashmutation)
+Endpoint: [Post cashmutation](../../api-specs/sb/nl/latest#post-/api/cashmutation)
 
 Maak nu de kasmutatie aan.
 

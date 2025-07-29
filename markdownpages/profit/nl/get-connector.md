@@ -22,7 +22,7 @@ Met Profit worden standaard-GetConnectoren meegeleverd, maar een beheerder kan z
 - GetConnector aanroepen en testen.
 - Op te halen records verder valideren, bewerken, etc.
 
-Met de GetConnector [`MetaInfo`](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#get-/MetaInfo) vraag je een lijst op van alle GetConnectoren in een omgeving. Je kunt deze GetConnector via een externe applicatie aanroepen.
+Met de GetConnector [`MetaInfo`](../../api-specs/nl/Organisaties%20en%20personen#get-/MetaInfo) vraag je een lijst op van alle GetConnectoren in een omgeving. Je kunt deze GetConnector via een externe applicatie aanroepen.
 Voordelen:
 
 - Je ziet welke GetConnectoren beschikbaar zijn en welke geblokkeerd zijn.

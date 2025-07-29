@@ -15,8 +15,8 @@ Onze organisatie heet AFAS, onze bedrijfsadministratieve oplossing heet Profit. 
 
 Een AFAS-klant werkt doorgaans in één omgeving (meerdere omgevingen is ook mogelijk). In deze omgeving voert de klant administratieve processen uit en worden gegevens vastgelegd. Via een integratie kun je gegevens uitwisselen tussen Profit en een andere applicatie. De mogelijkheden zijn:
 
-- Gegevens uit een omgeving ophalen met een [`GetConnector`](https://docs.afas.help/Profit/nl/GetConnector).
-- Gegevens in een omgeving toevoegen, wijzigen of verwijderen met een [`UpdateConnector`](https://docs.afas.help/Profit/nl/UpdateConnector). De mogelijkheden verschillen per `UpdateConnector`.
+- Gegevens uit een omgeving ophalen met een [`GetConnector`](./GetConnector).
+- Gegevens in een omgeving toevoegen, wijzigen of verwijderen met een [`UpdateConnector`](./UpdateConnector). De mogelijkheden verschillen per `UpdateConnector`.
 - Aanvullende connectoren gebruiken, bijvoorbeeld de `SubjectConnector` voor het ophalen van bestanden.
 
 De API van AFAS Software is benaderbaar via zowel REST (JSON) als SOAP (XML). Deze tooling richt zich op de REST API. [Klik hier voor de beschrijving van de SOAP API](https://help.afas.nl/help/NL/SE/App_Cnnctr_SOAP.htm)
@@ -82,4 +82,4 @@ Zie ook:
 
 ### Lees verder
 
-- [Profit API Concepten](https://docs.afas.help/profit/nl/concepts)
+- [Profit API Concepten](./concepts)

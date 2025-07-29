@@ -19,11 +19,11 @@ Via de Inkoopjournaalpost API leg je de financiële details van een uitgevoerde 
 
 ## Get omgevingstoken
 
-Doorloop de [OAuth2.0 flow](https://docs.afas.help/sb/nl/Authentication) zoals beschreven. Gebruik hier de `klantomgeving` route.
+Doorloop de [OAuth2.0 flow](./Authentication) zoals beschreven. Gebruik hier de `klantomgeving` route.
 
 ## Get administration
 
-Endpoint: [Get Administraties](https://docs.afas.help/apidoc/sb/nl/latest#get-/api/administrations)
+Endpoint: [Get Administraties](../../api-specs/sb/nl/latest#get-/api/administrations)
 
 Een klant omgeving van 1 of meerdere administraties bevatten. De inkoopfactuur moet worden aangemaakt op een specifiek administratie. Haal hier de administraties op bij de specifieke klant omgeving. Leg in jouw klant configuratie vast welk administratie bij deze klant hoort.
 
@@ -43,9 +43,9 @@ Gebruik:
 
 ## Get Relations
 
-Endpoint Personen: [Get Persons](https://docs.afas.help/apidoc/sb/nl/latest#get-/api/persons)
-Endpoint Organisaties: [Get Organisations](https://docs.afas.help/apidoc/sb/nl/latest#get-/api/persons)
-Endpoint Onbekende relaties: [Get Unknownrelation](https://docs.afas.help/apidoc/sb/nl/latest#get-/api/unknownrelation)
+Endpoint Personen: [Get Persons](../../api-specs/sb/nl/latest#get-/api/persons)
+Endpoint Organisaties: [Get Organisations](../../api-specs/sb/nl/latest#get-/api/persons)
+Endpoint Onbekende relaties: [Get Unknownrelation](../../api-specs/sb/nl/latest#get-/api/unknownrelation)
 
 De relatie is een verplicht gegeven om vast te leggen op de een verkoopjournaalpost. Het kan voorkomen dat de relatie onbekend is. Hiervoor is een eigen entiteit aangemaakt in AFAS SB. Haal het ID van de onbekende relatie op om deze te gebruiken.
 
@@ -133,7 +133,7 @@ Gebruik:
 
 ## Get Ledgeraccount
 
-Endpoint: [Get Ledgeraccount](https://docs.afas.help/apidoc/sb/nl/latest#get-/api/ledgeraccounts)
+Endpoint: [Get Ledgeraccount](../../api-specs/sb/nl/latest#get-/api/ledgeraccounts)
 
 Hiernaast is de grootboekrekening ook een verplicht veld bij het aanleveren van de inkoopjournaalpost. Hiervoor haal je de grootboekrekeningen op.
 
@@ -173,7 +173,7 @@ Gebruik:
 
 ## Put Attachment
 
-Endpoint: [Post Attachments](https://docs.afas.help/apidoc/sb/nl/latest#put-/api/blob/-uuid-)
+Endpoint: [Post Attachments](../../api-specs/sb/nl/latest#put-/api/blob/-uuid-)
 
 > Dit onderdeel is **optioneel**
 
@@ -269,7 +269,7 @@ Als de blob succesvol is geaccepteerd krijg je een http 200 response zonder resp
 
 ## Post PurchaseJournalentry
 
-Endpoint: [Post PurchaseJournalentry](https://docs.afas.help/apidoc/sb/nl/latest#post-/api/purchasejournalentry)
+Endpoint: [Post PurchaseJournalentry](../../api-specs/sb/nl/latest#post-/api/purchasejournalentry)
 
 Nu je de data hebt verzameld kun je een inkoopjournaalpost aanmaken in AFAS SB. Vanuit de bron applicatie moeten deze gegeven worden bepaald:
 
@@ -311,7 +311,7 @@ Nu je de data hebt verzameld kun je een inkoopjournaalpost aanmaken in AFAS SB. 
 }
 ```
 
-> Bij het aanbieden van deze request raden wij je aan om de [Tracking Tracking Identifier](https://docs.afas.help/sb/nl/change%20Tracking-Identifier) te gebruiken om dubbele entries te voorkomen.
+> Bij het aanbieden van deze request raden wij je aan om de [Tracking Tracking Identifier](./change%20Tracking-Identifier) te gebruiken om dubbele entries te voorkomen.
 
 ### Tot slot
 

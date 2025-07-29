@@ -20,7 +20,7 @@ Het endpoint roep je aan via de http GET methode. Om nieuwe data te ontvangen do
 
 ## UpdateConnector
 
-Een externe applicatie kan records in de Profit-database toevoegen, wijzigen of verwijderen via een UpdateConnector (de mogelijkheden verschillen per endpoint). Voor elke UpdateConnector is een `[metainfo](https://docs.afas.help/apidoc/nl/Inrichting#get-/Metainfo/-Type-/-Endpoint-)` request beschikbaar. Deze geeft alle beschikbare velden inclusief [custom fields / vrije velden](https://docs.afas.help/Profit/nl/CustomFields) request beschikbaar. Vrije velden zijn beschikbaar in deze meta informatie.
+Een externe applicatie kan records in de Profit-database toevoegen, wijzigen of verwijderen via een UpdateConnector (de mogelijkheden verschillen per endpoint). Voor elke UpdateConnector is een `[metainfo](../../api-specs/nl/Inrichting#get-/Metainfo/-Type-/-Endpoint-)` request beschikbaar. Deze geeft alle beschikbare velden inclusief [custom fields / vrije velden](./CustomFields) request beschikbaar. Vrije velden zijn beschikbaar in deze meta informatie.
 
 [Uitgebreide documentatie over UpdateConnectoren](https://help.afas.nl/help/NL/SE/App_Cnr_Rest_Update.htm)
 
@@ -61,4 +61,4 @@ Deze omgeving is de eerste omgeving die een update voor een nieuwe AFAS Profit-v
 
 ### Lees verder
 
-- [Profit API Authenticatie](https://docs.afas.help/Profit/nl/Authentication)
+- [Profit API Authenticatie](./Authentication)
