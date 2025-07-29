@@ -1,7 +1,7 @@
 ---
 title: <Enter the title of the documentation>
 author: <Enter the author's name>
-date: <Enter the date in YYYY-MM-DD format>
+date: <Enter the date in YYYY-MM-DD format> 
 tags: <Enter relevant tags separated by commas , >
 ---
 

@@ -4,13 +4,13 @@
           "en": [
               {
                   "name": "Start",
-                  "path": "en/Start.md"
+                  "path": "en/start.md"
               }
           ],
           "nl": [
               {
                   "name": "Start",
-                  "path": "nl/Start.md"
+                  "path": "nl/start.md"
               }
           ]
       },
@@ -18,53 +18,53 @@
           "en": [
               {
                   "name": "Concepts",
-                  "path": "en/Concepts.md"
+                  "path": "en/concepts.md"
               },
               {
                   "name": "Authentication",
-                  "path": "en/Authentication.md"
+                  "path": "en/authentication.md"
               },
               {
                   "name": "GetConnector",
-                  "path": "en/Get-connector.md"
+                  "path": "en/get-connector.md"
               },
               {
                   "name": "UpdateConnector",
-                  "path": "en/Update-connector.md"
+                  "path": "en/update-connector.md"
               },
               {
                   "name": "Troubleshooting",
-                  "path": "en/Troubleshooting.md"
+                  "path": "en/troubleshooting.md"
               },
               {
                   "name": "Custom Fields",
-                  "path": "en/Custom-fields.md"
+                  "path": "en/custom-fields.md"
               }
           ],
           "nl": [
               {
                   "name": "Concepten",
-                  "path": "nl/Concepts.md"
+                  "path": "nl/concepts.md"
               },
               {
                   "name": "Authenticatie",
-                  "path": "nl/Authentication.md"
+                  "path": "nl/authentication.md"
               },
               {
                   "name": "GetConnector",
-                  "path": "nl/Get-connector.md"
+                  "path": "nl/get-connector.md"
               },
               {
                   "name": "UpdateConnector",
-                  "path": "nl/Update-connector.md"
+                  "path": "nl/update-connector.md"
               },
               {
                   "name": "Fouten verhelpen",
-                  "path": "nl/Troubleshooting.md"
+                  "path": "nl/troubleshooting.md"
               },
               {
                   "name": "Vrije velden",
-                  "path": "nl/Custom-fields.md"
+                  "path": "nl/custom-fields.md"
               }
           ]
       },
@@ -322,11 +322,11 @@
           "en": [
               {
                   "name": "Concepts",
-                  "path": "en/Concepts.md"
+                  "path": "en/concepts.md"
               },
               {
                   "name": "Authentication",
-                  "path": "en/Authentication.md"
+                  "path": "en/authentication.md"
               },
               {
                   "name": "Filtering",
@@ -338,25 +338,25 @@
               },
               {
                   "name": "Change tracking",
-                  "path": "en/Change tracking.md"
+                  "path": "en/change-tracking.md"
               },
               {
                 "name": "Blobs",
-                "path": "en/Blobs.md"
+                "path": "en/blobs.md"
               },
               {
                   "name": "Troubleshooting",
-                  "path": "en/Troubleshooting.md"
+                  "path": "en/troubleshooting.md"
               }
           ],
           "nl": [
               {
                   "name": "Concepten",
-                  "path": "nl/Concepts.md"
+                  "path": "nl/concepts.md"
               },
               {
                   "name": "Authenticatie",
-                  "path": "nl/Authentication.md"
+                  "path": "nl/authentication.md"
               },
               {
                   "name": "Filtering",
@@ -364,7 +364,7 @@
               },
               {
                   "name": "Change tracking",
-                  "path": "nl/change tracking.md"
+                  "path": "nl/change-tracking.md"
               },
               {
                   "name": "Pagination",
@@ -372,11 +372,11 @@
               },
               {
                 "name": "Blobs",
-                "path": "nl/Blobs.md"
+                "path": "nl/blobs.md"
               },
               {
                   "name": "Fouten verhelpen",
-                  "path": "nl/Troubleshooting.md"
+                  "path": "nl/troubleshooting.md"
               }
           ]
       },
@@ -384,7 +384,7 @@
           "en": [
               {
                   "name": "Payroll Journal entries",
-                  "path": "en/howto payroll.md",
+                  "path": "en/howto-payroll.md",
                   "subtitle": "Create and manage payroll journal entries",
                   "tags": ["payroll", "journal", "entries"],
                   "featured": true,
@@ -393,7 +393,7 @@
               },
               {
                   "name": "POS integration",
-                  "path": "en/howto pos.md",
+                  "path": "en/howto-pos.md",
                   "subtitle": "Integrate point-of-sale systems",
                   "tags": ["pos", "integration", "sales"],
                   "featured": false,
@@ -402,7 +402,7 @@
               },
               {
                   "name": "Create and maintain relations",
-                  "path": "en/howto relations.md",
+                  "path": "en/howto-relations.md",
                   "subtitle": "Manage customer and supplier relationships",
                   "tags": ["relations", "customers", "suppliers"],
                   "featured": false,
@@ -411,7 +411,7 @@
               },
               {
                   "name": "Create sales invoices",
-                  "path": "en/howto salesinvoice.md",
+                  "path": "en/howto-salesinvoice.md",
                   "subtitle": "Generate and process sales invoices",
                   "tags": ["sales", "invoices", "billing"],
                   "featured": false,
@@ -420,7 +420,7 @@
               },
               {
                   "name": "Create invoice journal entries",
-                  "path": "en/howto salesjournal.md",
+                  "path": "en/howto-salesjournal.md",
                   "subtitle": "Process invoice journal entries for sales",
                   "tags": ["invoices", "journal", "sales"],
                   "featured": false,
@@ -429,7 +429,7 @@
               },
               {
                   "name": "Create purchase journal entries",
-                  "path": "en/howto purchasejournal.md",
+                  "path": "en/howto-purchasejournal.md",
                   "subtitle": "Process journal entries for purchases",
                   "tags": ["purchase", "journal", "entries"],
                   "featured": false,
@@ -440,7 +440,7 @@
           "nl": [
               {
                   "name": "Loonjournaalposten aanmaken",
-                  "path": "nl/howto payroll.md",
+                  "path": "nl/howto-payroll.md",
                   "subtitle": "Loonjournaalposten aanmaken en beheren",
                   "tags": ["loon", "journaal", "posten"],
                   "featured": true,
@@ -449,7 +449,7 @@
               },
               {
                   "name": "Kassa integratie",
-                  "path": "nl/howto pos.md",
+                  "path": "nl/howto-pos.md",
                   "subtitle": "Kassasystemen integreren",
                   "tags": ["kassa", "integratie", "verkoop"],
                   "featured": false,
@@ -458,7 +458,7 @@
               },
               {
                   "name": "Relaties aanmaken en onderhouden",
-                  "path": "nl/howto relations.md",
+                  "path": "nl/howto-relations.md",
                   "subtitle": "Klant- en leveranciersrelaties beheren",
                   "tags": ["relaties", "klanten", "leveranciers"],
                   "featured": false,
@@ -467,7 +467,7 @@
               },
               {
                   "name": "Verkoopfacturen aanmaken",
-                  "path": "nl/howto salesinvoice.md",
+                  "path": "nl/howto-salesinvoice.md",
                   "subtitle": "Verkoopfacturen genereren en verwerken",
                   "tags": ["verkoop", "facturen", "facturering"],
                   "featured": false,
@@ -476,7 +476,7 @@
               },
               {
                   "name": "Verkoopjournaalpost aanmaken",
-                  "path": "nl/howto salesjournal.md",
+                  "path": "nl/howto-salesjournal.md",
                   "subtitle": "Factuurjournaalposten voor verkoop verwerken",
                   "tags": ["facturen", "journaal", "verkoop"],
                   "featured": false,
@@ -485,7 +485,7 @@
               },
               {
                   "name": "Inkoopjournaalpost aanmaken",
-                  "path": "nl/howto purchasejournal.md",
+                  "path": "nl/howto-purchasejournal.md",
                   "subtitle": "Journaalposten voor inkoop verwerken",
                   "tags": ["inkoop", "journaal", "posten"],
                   "featured": false,
@@ -498,13 +498,13 @@
           "en": [
               {
                   "name": "How-To's",
-                  "path": "en/news howtos.md"
+                  "path": "en/news-howtos.md"
               }
           ],
           "nl": [
               {
                   "name": "How-To's",
-                  "path": "nl/news howtos.md"
+                  "path": "nl/news-howtos.md"
               }
           ]
       }
