@@ -1,4 +1,4 @@
----
+﻿---
 title: Recording cash transactions
 author: CLN
 date: 2025-7-14
@@ -17,11 +17,11 @@ This integration creates a cash transaction in the AFAS SB environment for a cus
 
 ## Get environment token
 
-Follow the [OAuth2.0 flow](./Authentication) as described. Use the `customer environment` route here.
+Follow the [OAuth2.0 flow](./authentication) as described. Use the `customer environment` route here.
 
 ## Get administration
 
-Endpoint: [Get Administrations](../../api-specs/sb/en/latest#get-/api/administration)
+Endpoint: [Get Administrations](../../apidoc/sb/en/latest#get-/api/administration)
 
 A customer environment can contain one or more administrations. The cash transaction must be created on a specific administration. Retrieve the administrations for the specific customer environment here. In your customer configuration, specify which administration belongs to this customer.
 
@@ -41,7 +41,7 @@ Use:
 
 ## Get Ledger account
 
-Endpoint: [Get Ledger account](../../api-specs/sb/en/latest#get-/api/ledgeraccounts)
+Endpoint: [Get Ledger account](../../apidoc/sb/en/latest#get-/api/ledgeraccounts)
 
 In addition, the general ledger account is also a required field when supplying the cash transaction. For this, you retrieve the general ledger accounts. Map the general ledger accounts with the cash transaction. The way most integrations solve this is by creating a configuration in which the different ledgers are defined for purchases, sales, and VAT rates.
 
@@ -74,7 +74,7 @@ Use:
 
 ## Post Cash mutation
 
-Endpoint: [Post cash mutation](../../api-specs/sb/en/latest#post-/api/cashmutation)
+Endpoint: [Post cash mutation](../../apidoc/sb/en/latest#post-/api/cashmutation)
 
 Now create the cash transaction.
 

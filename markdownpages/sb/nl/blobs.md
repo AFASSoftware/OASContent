@@ -1,4 +1,4 @@
----
+﻿---
 title: Blobs
 author: EDA
 date: 2024-09-09
@@ -18,7 +18,7 @@ Bijlagen en afbeeldingen worden opgehaald met een blob. Het ophalen of uploaden 
 
 ## Get products
 
-Endpoint: [Get Products](../../api-specs/sb/en/latest#get-/api/products)
+Endpoint: [Get Products](../../apidoc/sb/en/latest#get-/api/products)
 
 Bij bijvoorbeeld de get-connector products wordt indien aanwezig een blob meegestuurd.
 
@@ -49,7 +49,7 @@ Het `Blob/Id` en de `Blob/ReadKey` zijn nodig in de vervolgstap.
 
 ### Get blob
 
-Endpoint: [Get blob](../../api-specs/sb/en/latest#get-/api/blob/-uuid-)
+Endpoint: [Get blob](../../apidoc/sb/en/latest#get-/api/blob/-uuid-)
 
 Je kunt de `Id` en de `ReadKey` gebruiken bij het ophalen van een blob. Dit moet toegepast worden op de volgende manier:
 
@@ -57,7 +57,7 @@ Je kunt de `Id` en de `ReadKey` gebruiken bij het ophalen van een blob. Dit moet
 
 ## Post blob
 
-Endpoint: [Post blob](../../api-specs/sb/nl/latest#put-/api/blob/-uuid-)
+Endpoint: [Post blob](../../apidoc/sb/nl/latest#put-/api/blob/-uuid-)
 
 Wil je 1 of meerdere bijlagen toevoegen? Geen probleem! Via het `blob` endpoint kan je de bijlagen als blob uploaden. Dit doe je in 2 stappen:
 

@@ -42,7 +42,7 @@ Each request is sent to a specific SB server. Read here how the URL of this serv
 
 To make onboarding as easy as possible, we have support for a landing page. If you want to activate an application in the App Center that supports this, we will redirect the user to the configured landing page. The URL to SB is then passed in the following way. Example: `https://app.applicatie.nl/Appcenter/afassb/?afasBaseUrl={API Server url}`. By activating a connection in this way, a user cannot make mistakes when entering a URL!
 
-Alternatively, you can ask the user to enter their application URL. For this, the user must enter their [API Server url](./Concepts#complete-url).
+Alternatively, you can ask the user to enter their application URL. For this, the user must enter their [API Server url](./concepts#complete-url).
 
 For example: `https://demo-accountant.afasfocus.nl/enyoi/`
 

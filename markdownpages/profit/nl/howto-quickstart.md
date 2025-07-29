@@ -257,4 +257,4 @@ func main() {
 
 Nu je succesvol kan authenticeren en data kan ophalen ben je klaar om je volledige proces te integreren. Begin bijvoorbeeld met één van deze How-To's:
 
-- [Medewerker AD Sync](./howto%20medewerkerad)
+- [Medewerker AD Sync](./howto-medewerker-ad)

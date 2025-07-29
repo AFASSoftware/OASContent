@@ -37,7 +37,7 @@ Je kunt de `skip`, `take` en `sort` parameters combineren om paginering en sorte
 
 ## Syntax
 
-- [`completeURL`](./Concepten#complete-url)
+- [`completeURL`](./concepts#complete-url)
 - `sort`
 - `fieldName` FieldId van het endpoint
 - `+` karakter

@@ -1,4 +1,4 @@
----
+﻿---
 title: Blobs
 author: EDA
 date: 2024-09-09
@@ -18,7 +18,7 @@ Attachments and images are retrieved with a blob. Retrieving or uploading them i
 
 ## Get products
 
-Endpoint: [Get Products](../../api-specs/sb/en/latest#get-/api/products)
+Endpoint: [Get Products](../../apidoc/sb/en/latest#get-/api/products)
 
 For example, with the get-connector products, a blob is sent along if it is present
 
@@ -49,7 +49,7 @@ The `Blob/Id`  and the `Blob/ReadKey` are needed for the next step.
 
 ### Get blob
 
-Endpoint: [Get blob](../../api-specs/sb/en/latest#get-/api/blob/-uuid-)
+Endpoint: [Get blob](../../apidoc/sb/en/latest#get-/api/blob/-uuid-)
 
 You can use the `Id` and the `ReadKey` to retrieve a blob. This should be applied in the following way:
 
@@ -57,7 +57,7 @@ You can use the `Id` and the `ReadKey` to retrieve a blob. This should be applie
 
 ## Post blob
 
-Endpoint: [Post blob](../../api-specs/sb/nl/latest#put-/api/blob/-uuid-)
+Endpoint: [Post blob](../../apidoc/sb/nl/latest#put-/api/blob/-uuid-)
 
 Do you want to add 1 or multiple attachments? No problem! You can upload the attachments as a blob via the `blob` endpoint. This is done in 2 steps:
 

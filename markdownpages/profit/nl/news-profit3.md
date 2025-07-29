@@ -19,7 +19,7 @@ De validatie op Einddatum Contract (`KnEmployee`.`AfasContract`.`DaEn`) is gewij
 
 ### Breaking Change!
 
-Vanaf Profit 3 is de bepaling van btw terugvordering gewijzigd. Hierdoor moeten koppelingen die inkoopfacturen verwerken en als financiële mutatie insturen in AFAS herzien worden. We hebben een pagina gemaakt met zoveel mogelijk informatie voor partijen die hiermee te maken hebben: [howto vat reclaim](./howto%20vat%20reclaim).
+Vanaf Profit 3 is de bepaling van btw terugvordering gewijzigd. Hierdoor moeten koppelingen die inkoopfacturen verwerken en als financiële mutatie insturen in AFAS herzien worden. We hebben een pagina gemaakt met zoveel mogelijk informatie voor partijen die hiermee te maken hebben: [howto vat reclaim](./howto-vat-reclaim).
 
 ## Confrontatie
 

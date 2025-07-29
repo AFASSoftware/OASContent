@@ -15,7 +15,7 @@ Leer hoe je een integratie opzet waarin je vervoermiddelen vastlegt op medewerke
 - [Token](./Authentication)
 - Client applicatie met vervoermiddelen
 
-> Heb je nog geen token? Volg dan de stappen in de [Quickstart](./howto%20quickstart)
+> Heb je nog geen token? Volg dan de stappen in de [Quickstart](./howto-quickstart)
 
 ## Verzamelen van de basisgegevens
 
