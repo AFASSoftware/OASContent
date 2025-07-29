@@ -1,8 +1,8 @@
 name: Run Create Collection
 
 on:
-  # schedule:
-  #   - cron: '0 0 * * *'  # This cron expression runs the workflow every day at midnight UTC
+  schedule:
+    - cron: '0 0 * * *'  # This cron expression runs the workflow every day at midnight UTC
   workflow_dispatch:
 
 permissions:

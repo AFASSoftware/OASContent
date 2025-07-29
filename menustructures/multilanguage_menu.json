@@ -266,10 +266,6 @@
       "news": {
           "en": [
             {
-                "name": "Profit 7 Releasenotes",
-                "path": "en/news-profit7.md"
-                },
-            {
                 "name": "Profit 6 Releasenotes",
                 "path": "en/news-profit6.md"
                 },
@@ -284,18 +280,10 @@
             {
                     "name": "Profit 3 Releasenotes",
                     "path": "en/news-profit3.md"
-                },
-            {
-                    "name": "API Documentation News",
-                    "path": "en/News-api-docs.md"
                 }
               
           ],
           "nl": [
-            {
-                    "name": "Profit 7 Releasenotes",
-                    "path": "nl/news-profit7.md"
-                },
             {
                     "name": "Profit 6 Releasenotes",
                     "path": "nl/news-profit6.md"
@@ -311,10 +299,6 @@
             {
                     "name": "Profit 3 Releasenotes",
                     "path": "nl/news-profit3.md"
-                },
-            {
-                    "name": "API Documentatie Nieuws",
-                    "path": "nl/News-api-docs.md"
                 }
           ]
       }
