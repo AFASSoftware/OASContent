@@ -62,7 +62,7 @@ If all went well, the data is now retrieved and you see JSON in this format:
 
 Now that you know the token is valid and the URL is constructed correctly, you can take over this request to your own application. For this, the token must be [encoded to Base64](./authentication#format-and-conversion). Execute a test request and validate that you get the same data as response as in AFAS-Connect.
 
-Use the [XMLtoken to Base64 converter](../../../tools#base64-encoder) to create the auth header.
+Use the [XMLtoken to Base64 converter](../base64-encoder) to create the auth header.
 
 ## C# Request Code Sample
 

@@ -63,7 +63,7 @@ Als het goed is gegaan wordt nu de data opgehaald en zie je een JSON in dit form
 
 Nu je weet dat het token geldig is en de URL goed wordt opgebouwd kan je deze request overnemen naar jouw eigen applicatie. Hiervoor moet je het token [encoden naar Base64](./authentication#formaat-en-conversie). Voer een test request uit en valideer of je dezelfde data als response krijgt als in AFAS Connect.
 
-Gebruik de [XMLtoken naar Base64 converter](../../../tools#base64-encoder) om je header te maken.
+Gebruik de [XMLtoken naar Base64 converter](../base64-encoder) om je header te maken.
 
 ## C# Voorbeeld
 

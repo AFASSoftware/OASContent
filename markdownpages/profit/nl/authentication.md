@@ -23,7 +23,7 @@ Dit is het voorbeeld formaat van een token zoals dit in AFAS Profit wordt gegene
 Om dit token te gebruiken moet je deze converteren naar **Base64**. Na conversie ziet het token er bijvoorbeeld zo uit:
 `PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg==`
 
-<a className="copyButton" href="../../../tools#base64-encoder">Gebruik de AFAS Token converter hier</a>
+<a className="copyButton" href="../base64-encoder">Gebruik de AFAS Token converter hier</a>
 
 Voorbeeld token conversie:
 

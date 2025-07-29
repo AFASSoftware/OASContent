@@ -25,7 +25,7 @@ All API changes that become active per Profit 6 are described in the [changelog]
 
 ## XML-Token naar Authorization header converter
 
-New users sometimes struggle with creating the correct header for REST request. Therefore we have created a simple XML to Base64 converter that generates the header value for you: [XML token to Base64](../../../tools#base64-encoder)
+New users sometimes struggle with creating the correct header for REST request. Therefore we have created a simple XML to Base64 converter that generates the header value for you: [XML token to Base64](../base64-encoder)
 
 ## Mobile ready
 
