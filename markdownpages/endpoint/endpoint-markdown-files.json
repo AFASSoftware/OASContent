@@ -1,5 +1,5 @@
 [
-    "debtorbalance-1.0-get.md",
+    "debtorbalance_2.0-get.md",
     "fbconfrontation-post.md",
     "fbdeliverynote-post.md",
     "fientries-delete.md",
@@ -16,7 +16,7 @@
     "knsubject-post.md",
     "profit-debtor-invoices-get.md",
     "ptpriceagreement-post.md",
-    "purchaseinvoice-1.0-post.md",
-    "purchasejournalentry-1.0-create-post.md",
+    "purchaseinvoice_1.0_create-post.md",
+    "purchasejournalentry_1.1_create-post.md",
     "subjectconnector-get.md"
 ]
