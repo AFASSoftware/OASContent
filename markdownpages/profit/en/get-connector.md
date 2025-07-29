@@ -21,7 +21,7 @@ Standard GetConnectors are included with Profit, but an administrator can create
 - Invoke and test the GetConnector.
 - Further validate, edit, etc., the records to be retrieved.
 
-With the GetConnector [`MetaInfo`](../../api-specs/en/Organisaties%20en%20personen#get-/MetaInfo), you can request a list of all GetConnectors in an environment. You can invoke this GetConnector via an external application.
+With the GetConnector [`MetaInfo`](../../apidoc/en/Organisaties%20en%20personen#get-/MetaInfo), you can request a list of all GetConnectors in an environment. You can invoke this GetConnector via an external application.
 Advantages:
 
 - You can see which GetConnectors are available and which ones are blocked.
