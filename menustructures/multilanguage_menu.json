@@ -72,7 +72,7 @@
           "en": [
               {
                   "name": "Quick start",
-                  "path": "en/Howto-quickstart.md",
+                  "path": "en/howto-quickstart.md",
                   "subtitle": "",
                   "tags": ["quickstart", "basics"],
                   "featured": true,
@@ -81,7 +81,7 @@
               },
               {
                   "name": "Get dossier and attachment",
-                  "path": "en/Howto-bijlage-dossier.md",
+                  "path": "en/howto-bijlage-dossier.md",
                   "subtitle": "Retrieve documents and attachments from the system",
                   "tags": ["documents", "attachments", "retrieval"],
                   "featured": false,
@@ -90,7 +90,7 @@
               },
               {
                   "name": "Journal entry sales",
-                  "path": "en/Howto-finance-mutation.md",
+                  "path": "en/howto-finance-mutation.md",
                   "subtitle": "Create financial mutations for sales transactions",
                   "tags": ["finance", "sales", "journal"],
                   "featured": false,
@@ -99,7 +99,7 @@
               },
               {
                   "name": "Journal entry purchase",
-                  "path": "en/Howto-finance-mutation-purch.md",
+                  "path": "en/howto-finance-mutation-purch.md",
                   "subtitle": "Create financial mutations for purchase transactions",
                   "tags": ["finance", "purchase", "journal"],
                   "featured": false,
@@ -108,7 +108,7 @@
               },
               {
                   "name": "HRM Employee AD",
-                  "path": "en/Howto-medewerker-ad.md",
+                  "path": "en/howto-medewerker-ad.md",
                   "subtitle": "Integrate employee data with Active Directory",
                   "tags": ["hrm", "employee", "active-directory"],
                   "featured": false,
@@ -117,7 +117,7 @@
               },
               {
                   "name": "Flex Customer agreement",
-                  "path": "en/Howto-flex.md",
+                  "path": "en/howto-flex.md",
                   "subtitle": "Set up flexible customer agreements",
                   "tags": ["flex", "customer", "agreement"],
                   "featured": false,
@@ -126,7 +126,7 @@
               },
               {
                   "name": "Mobility",
-                  "path": "en/Howto-mobility.md",
+                  "path": "en/howto-mobility.md",
                   "subtitle": "Configure mobility solutions and integrations",
                   "tags": ["mobility", "integration"],
                   "featured": false,
@@ -135,7 +135,7 @@
               },
               {
                 "name": "Connecting payroll to salary admin.",
-                "path": "en/Howto-la-sa.md",
+                "path": "en/howto-la-sa.md",
                 "subtitle": "Link payroll administration with salary administration",
                 "tags": ["payroll", "salary", "administration"],
                 "featured": false,
@@ -146,7 +146,7 @@
           "nl": [
               {
                   "name": "Quick start",
-                  "path": "nl/Howto-quickstart.md",
+                  "path": "nl/howto-quickstart.md",
                   "subtitle": "Snel aan de slag met de API",
                   "tags": ["quickstart", "basics"],
                   "featured": true,
@@ -155,7 +155,7 @@
               },
               {
                   "name": "Dossier en bijlage ophalen",
-                  "path": "nl/Howto-bijlage-dossier.md",
+                  "path": "nl/howto-bijlage-dossier.md",
                   "subtitle": "Documenten en bijlagen uit Profit ophalen",
                   "tags": ["documenten", "bijlagen", "ophalen"],
                   "featured": false,
@@ -164,7 +164,7 @@
               },
               {
                   "name": "HRM Medewerker AD",
-                  "path": "nl/Howto-medewerker-ad.md",
+                  "path": "nl/howto-medewerker-ad.md",
                   "subtitle": "Medewerkergegevens integreren met Active Directory",
                   "tags": ["hrm", "medewerker", "active-directory"],
                   "featured": false,
@@ -173,7 +173,7 @@
               },
               {
                   "name": "ATS integratie",
-                  "path": "nl/Howto-ats.md",
+                  "path": "nl/howto-ats.md",
                   "subtitle": "Applicant Tracking System integreren",
                   "tags": ["ats", "recruitment", "integratie"],
                   "featured": false,
@@ -182,7 +182,7 @@
               },
               {
                   "name": "Plaatsing",
-                  "path": "nl/Howto-plaatsing.md",
+                  "path": "nl/howto-plaatsing.md",
                   "subtitle": "Plaatsingen en uitzendingen beheren",
                   "tags": ["plaatsing", "uitzending", "hrm"],
                   "featured": false,
@@ -191,7 +191,7 @@
               },
               {
                   "name": "Workflow acties",
-                  "path": "nl/Howto-workflow-acties.md",
+                  "path": "nl/howto-workflow-acties.md",
                   "subtitle": "Workflow acties configureren en uitvoeren",
                   "tags": ["workflow", "acties", "automatisering"],
                   "featured": false,
@@ -200,7 +200,7 @@
               },
               {
                   "name": "Mobiliteit",
-                  "path": "nl/Howto-mobility.md",
+                  "path": "nl/howto-mobility.md",
                   "subtitle": "Mobiliteitsoplossingen en integraties configureren",
                   "tags": ["mobiliteit", "integratie"],
                   "featured": false,
@@ -209,7 +209,7 @@
               },
                           {
                   "name": "Integreren met BI",
-                  "path": "nl/Howto-bi.md",
+                  "path": "nl/howto-bi.md",
                   "subtitle": "Business Intelligence integratie opzetten",
                   "tags": ["bi", "business-intelligence", "integratie"],
                   "featured": false,
@@ -218,7 +218,7 @@
               },
               {
                   "name": "Financiële mutatie verkoop",
-                  "path": "nl/Howto-finance-mutation.md",
+                  "path": "nl/howto-finance-mutation.md",
                   "subtitle": "Financiële mutaties voor verkooptransacties aanmaken",
                   "tags": ["financien", "verkoop", "journaal"],
                   "featured": false,
@@ -227,7 +227,7 @@
               },
               {
                   "name": "Financiële mutatie inkoop",
-                  "path": "nl/Howto-finance-mutation-purch.md",
+                  "path": "nl/howto-finance-mutation-purch.md",
                   "subtitle": "Financiële mutaties voor inkooptransacties aanmaken",
                   "tags": ["financien", "inkoop", "journaal"],
                   "featured": false,
@@ -236,7 +236,7 @@
               },
               {
                   "name": "Flex Klantovereenkomst",
-                  "path": "nl/Howto-flex.md",
+                  "path": "nl/howto-flex.md",
                   "subtitle": "Flexibele klantovereenkomsten opzetten",
                   "tags": ["flex", "klant", "overeenkomst"],
                   "featured": false,
@@ -245,7 +245,7 @@
               },
               {
                 "name": "Loonadmin. aansluiten op salarisadmin.",
-                "path": "nl/Howto-la-sa.md",
+                "path": "nl/howto-la-sa.md",
                 "subtitle": "Loonadministratie koppelen aan salarisadministratie",
                 "tags": ["loon", "salaris", "administratie"],
                 "featured": false,
@@ -254,7 +254,7 @@
               },
               {
                 "name": "Btw-terugvordering via de API",
-                "path": "nl/Howto-vat-reclaim.md",
+                "path": "nl/howto-vat-reclaim.md",
                 "subtitle": "BTW terugvordering via API afhandelen",
                 "tags": ["btw", "terugvordering", "api"],
                 "featured": false,
@@ -267,38 +267,38 @@
           "en": [
             {
                 "name": "Profit 6 Releasenotes",
-                "path": "en/News-profit6.md"
+                "path": "en/news-profit6.md"
                 },
             {
                 "name": "Profit 5 Releasenotes",
-                "path": "en/News-profit5.md"
+                "path": "en/news-profit5.md"
                 },
             {
                     "name": "Profit 4 Releasenotes",
-                    "path": "en/News-profit4.md"
+                    "path": "en/news-profit4.md"
                 },
             {
                     "name": "Profit 3 Releasenotes",
-                    "path": "en/News-profit3.md"
+                    "path": "en/news-profit3.md"
                 }
               
           ],
           "nl": [
             {
                     "name": "Profit 6 Releasenotes",
-                    "path": "nl/News-profit6.md"
+                    "path": "nl/news-profit6.md"
                 },
             {
                     "name": "Profit 5 Releasenotes",
-                    "path": "nl/News-profit5.md"
+                    "path": "nl/news-profit5.md"
                 },
             {
                     "name": "Profit 4 Releasenotes",
-                    "path": "nl/News-profit4.md"
+                    "path": "nl/news-profit4.md"
                 },
             {
                     "name": "Profit 3 Releasenotes",
-                    "path": "nl/News-profit3.md"
+                    "path": "nl/news-profit3.md"
                 }
           ]
       }

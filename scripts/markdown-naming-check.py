@@ -2,11 +2,12 @@
 """
 Markdown File Naming Validator
 
-This script validates that all markdown files in the repository start with a capital letter.
+This script validates that all markdown files in the repository follow kebab-case naming convention,
+except for AppConnectorAuditor* files which are allowed to be named differently.
 It recursively scans for *.md files and reports any violations.
 
 Author: GitHub Copilot
-Date: 2025-07-14
+Date: 2025-07-29
 """
 
 import os
@@ -61,7 +62,8 @@ class MarkdownNamingValidator:
     
     def validate_filename(self, file_path: Path) -> Tuple[bool, str]:
         """
-        Validate that a markdown filename starts with a capital letter.
+        Validate that a markdown filename follows kebab-case convention.
+        Exception: AppConnectorAuditor* files are allowed to be named differently.
         
         Args:
             file_path: Path to the markdown file
@@ -70,17 +72,50 @@ class MarkdownNamingValidator:
             Tuple of (is_valid, suggested_name)
         """
         filename = file_path.name
+        basename = file_path.stem  # filename without .md extension
         
-        # Check if filename starts with a capital letter (A-Z)
-        if filename and filename[0].isupper() and filename[0].isalpha():
+        # Check if filename follows kebab-case convention:
+        # - All lowercase letters, numbers, hyphens, underscores, and dots
+        # - No spaces
+        # - No consecutive hyphens
+        # - Doesn't start or end with hyphen
+        kebab_pattern = r'^[a-z0-9]+([a-z0-9._-]*[a-z0-9])?$'
+        
+        if re.match(kebab_pattern, basename) and '--' not in basename and not basename.startswith('-') and not basename.endswith('-'):
             return True, filename
         
-        # Generate suggested correction
-        if filename:
-            suggested = filename[0].upper() + filename[1:] if filename else filename
-            return False, suggested
+        # Generate suggested correction (convert to kebab-case)
+        suggested_basename = self.to_kebab_case(basename)
+        suggested_filename = suggested_basename + '.md'
         
-        return False, filename
+        return False, suggested_filename
+    
+    def to_kebab_case(self, text: str) -> str:
+        """
+        Convert text to kebab-case.
+        
+        Args:
+            text: Input text to convert
+            
+        Returns:
+            kebab-case version of the text
+        """
+        # Replace spaces with hyphens
+        text = re.sub(r'\s+', '-', text)
+        
+        # Insert hyphens before capital letters (for PascalCase/camelCase)
+        text = re.sub(r'([a-z])([A-Z])', r'\1-\2', text)
+        
+        # Convert to lowercase
+        text = text.lower()
+        
+        # Clean up multiple hyphens
+        text = re.sub(r'-+', '-', text)
+        
+        # Remove leading/trailing hyphens
+        text = text.strip('-')
+        
+        return text
     
     def scan_directory(self) -> None:
         """Recursively scan directory for markdown files and validate naming."""
@@ -148,9 +183,9 @@ class MarkdownNamingValidator:
                     print()
                 
                 print("SUMMARY:")
-                print("❌ Validation FAILED - Please rename the files above to start with a capital letter.")
+                print("❌ Validation FAILED - Please rename the files above to follow kebab-case convention.")
             else:
-                print("✅ All markdown files follow the naming convention!")
+                print("✅ All markdown files follow the kebab-case naming convention!")
                 print("✅ Validation PASSED")
     
     def validate(self) -> bool:
@@ -183,9 +218,12 @@ def main():
     """Main entry point for the script."""
     
     parser = argparse.ArgumentParser(
-        description="Validate markdown file naming conventions",
+        description="Validate markdown file naming conventions (kebab-case)",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
+This script validates that markdown files follow kebab-case naming convention.
+Exception: AppConnectorAuditor* files are allowed to be named differently.
+
 Examples:
   python markdown-naming-check.py
   python markdown-naming-check.py --root-path ./docs
@@ -203,7 +241,7 @@ Examples:
     parser.add_argument(
         "--exclude",
         nargs="*",
-        default=[],
+        default=["AppConnectorAuditor*.md"],
         help="Patterns to exclude from validation (glob-style)"
     )
     

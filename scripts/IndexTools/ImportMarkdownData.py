@@ -28,7 +28,7 @@ client = Client({
     'connection_timeout_seconds': 300  # Increase the timeout for imports
 })
 
-directory_path = Path(__file__).resolve().parents[2] / 'MarkdownPages'
+directory_path = Path(__file__).resolve().parents[1] / 'markdownpages'
 
 def date_converter(o):
     if isinstance(o, date):
@@ -85,7 +85,7 @@ def read_markdown_files(directory):
                 print(f"  Product: {product}, Language: {language}, Parts: {parts}")
 
                 # Updated product filtering to include all valid products
-                valid_products = ['Profit', 'sb', 'Endpoint', 'Home', 'Main', 'Spec']
+                valid_products = ['profit', 'sb', 'endpoint', 'home', 'main', 'spec']
                 if product not in valid_products:
                     print(f"  Skipping file - product '{product}' not in allowed list: {valid_products}")
                     skipped_files += 1
