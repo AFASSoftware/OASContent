@@ -28,7 +28,7 @@ client = Client({
     'connection_timeout_seconds': 300  # Increase the timeout for imports
 })
 
-directory_path = Path(__file__).resolve().parents[1] / 'markdownpages'
+directory_path = Path(__file__).resolve().parents[2] / 'markdownpages'
 
 def date_converter(o):
     if isinstance(o, date):
