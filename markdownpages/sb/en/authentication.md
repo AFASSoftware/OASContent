@@ -12,7 +12,7 @@ The AFAS SB API uses API keys to authenticate requests. AFAS provides these keys
 
 When creating an app, you can choose between two different authorization types: OAuth2.0 and authorization via a static token. We strongly prefer authorization via the OAuth option. If this is not possible, the static token option is further explained under [Static token](#authenticate-with-a-static-token). During activation, a distinction must be made between activation within a customer environment or at the admin center level.
 
-To be aware of the different URLs, it is good to first review the [concepts](https://docs.afas.help/sb/en/Concepts) page. This also describes which URL is provided when activated via the app in AFAS SB.
+To be aware of the different URLs, it is good to first review the [concepts](./Concepts) page. This also describes which URL is provided when activated via the app in AFAS SB.
 
 # Authenticate via OAuth2.0
 Schematic representation of the OAuth2.0 flow.
@@ -29,7 +29,7 @@ When integrating with AFAS SB using OAuth authorization, you will receive a `cli
 - Customer environment authentication endpoint: `<APIserverUrl>/<customerEnvironment>/app/auth`
 - Token endpoint: `<APIserverUrl>/<customerEnvironment>/app/token`
 
-The `customerEnvironment` is the part after the domain URL. For more explanation, see the [concepts page](https://docs.afas.help/sb/en/Concepts).
+The `customerEnvironment` is the part after the domain URL. For more explanation, see the [concepts page](./Concepts).
 
 ### Start the consent flow
 
@@ -126,7 +126,7 @@ request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", AccessTo
 
 ## Initiate the OAuth2.0 flow / Admin Center
 
-When an app connects at the Admin Center level, there is one extra step in the OAuth flow to request an [`access_token`](https://docs.afas.help/apidoc/sb/en/latest#post-/authentication/getaccesstoken) from the customer environment. First, you must complete the standard consent flow. After that, an additional request follows to obtain the `access_token` for a customer environment.
+When an app connects at the Admin Center level, there is one extra step in the OAuth flow to request an [`access_token`](../../api-specs/sb/en/latest#post-/authentication/getaccesstoken) from the customer environment. First, you must complete the standard consent flow. After that, an additional request follows to obtain the `access_token` for a customer environment.
 
 ### Start the consent flow
 
@@ -401,7 +401,7 @@ This activation creates a token in this format: `Zz2vnlNd_kyOoQ-UNyPPvtWwHPSJyoM
 
 The next step is to exchange this token for an `access_token`.
 
-Endpoint: [GetAccessToken](https://docs.afas.help/apidoc/sb/en/latest#post-/authentication/getaccesstoken)
+Endpoint: [GetAccessToken](../../api-specs/sb/en/latest#post-/authentication/getaccesstoken)
 
 For both apps that live in a customer environment and apps that live in an Admin Center, an `access_token` can be retrieved via the following request:
 
@@ -413,7 +413,7 @@ Make a request to `<APIserverUrl>/<customerEnvironment>/authentication/getaccess
 }
 ```
 
-For an app at the Admin Center level, the available customer environments can be retrieved via the [GetScopes](https://docs.afas.help/apidoc/sb/en/latest#post-/authentication/getscopes) endpoint. For each scope, a separate `access_token` must be obtained to mutate or retrieve data. For an app created in a customer environment, the customer environment URL part can be used (see [concepts](https://docs.afas.help/sb/en/Concepts) for more information).
+For an app at the Admin Center level, the available customer environments can be retrieved via the [GetScopes](../../api-specs/sb/en/latest#post-/authentication/getscopes) endpoint. For each scope, a separate `access_token` must be obtained to mutate or retrieve data. For an app created in a customer environment, the customer environment URL part can be used (see [concepts](./Concepts) for more information).
 
 ### Response
 
@@ -429,4 +429,4 @@ The response from the GetAccessToken contains the `access_token`. Use this token
 
 ### Read more
 
-Now that you know everything about authentication and have an `access_token`, you will want to use it immediately. You can do this, for example, with a [`get` request](https://docs.afas.help/sb/en/Filtering).
+Now that you know everything about authentication and have an `access_token`, you will want to use it immediately. You can do this, for example, with a [`get` request](./Filtering).

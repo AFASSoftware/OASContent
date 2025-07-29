@@ -54,14 +54,14 @@ Aanvragen
 
 Nadat je aanvraag is goedgekeurd kan je aan de slag om de koppeling te realiseren. Wij zetten een ontwikkelomgeving klaar waarin je in samenspraak met de koppeling realiseert en test. Wij stemmen onderling bijvoorbeeld af welke gegevens je wilt lezen en/of schrijven en welke authenticatiemethode je wilt gebruiken.
 
-Bij het realiseren van een koppeling maak je gebruik van de AFAS SB REST API. Met deze API kan je door ons bepaalde gegevens uitlezen en toevoegen. Raadpleeg hiervoor de [technische documentatie](https://docs.afas.help/sb).
+Bij het realiseren van een koppeling maak je gebruik van de AFAS SB REST API. Met deze API kan je door ons bepaalde gegevens uitlezen en toevoegen. Raadpleeg hiervoor de [technische documentatie](./authentication).
 
 Ontwikkelen
 -----------
 
 Wij hebben uitgebreide technische documentatie beschikbaar om je te ondersteunen bij het ontwikkelen van jouw koppeling.
 
-*   [Technische documentatie over de SB API](https://docs.afas.help/sb).
+*   [Technische documentatie over de SB API](./authentication).
 
 Hier vindt je de volgende informatie.
 
@@ -83,7 +83,7 @@ Hier vindt je de volgende informatie.
     
 Het kan zijn dat op een gegeven moment een nieuwere API-versie beschikbaar komt met meer mogelijkheden. In die situatie is het verstandig om ook jouw koppeling aan te passen.
 
-[Klik hier voor de nieuwste API-specificaties](https://docs.afas.help/apidoc/sb/nl/latest).
+[Klik hier voor de nieuwste API-specificaties](../../api-specs/sb/nl/latest).
     
 
 Publiceren op het App Center

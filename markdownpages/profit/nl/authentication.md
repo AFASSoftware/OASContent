@@ -4,7 +4,7 @@ author: CLN
 date: 2024-06-28
 tags: tokens, jwt, bearer, oauth, access
 ---
-De AFAS Profit REST API maakt gebruik van statische tokens die je meegeeft in de http authenticatie header van je request. Deze statische tokens worden aangemaakt in het onderdeel [`App Connector`](https://docs.afas.help/Profit/nl/Concepts#app-connector) in Profit. Een AFAS-beheerder met toegang tot de Profit-omgeving kan een token aanmaken.
+De AFAS Profit REST API maakt gebruik van statische tokens die je meegeeft in de http authenticatie header van je request. Deze statische tokens worden aangemaakt in het onderdeel [`App Connector`](./Concepts#app-connector) in Profit. Een AFAS-beheerder met toegang tot de Profit-omgeving kan een token aanmaken.
 
 > Een token is uniek voor 1 omgeving en gekoppeld aan een gebruiker. De rechten van deze gebruiker hebben effect op de rechten van het token.
 
@@ -23,7 +23,7 @@ Dit is het voorbeeld formaat van een token zoals dit in AFAS Profit wordt gegene
 Om dit token te gebruiken moet je deze converteren naar **Base64**. Na conversie ziet het token er bijvoorbeeld zo uit:
 `PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg==`
 
-<a className="copyButton" href="https://docs.afas.help/profit/base64-encoder">Gebruik de AFAS Token converter hier</a>
+<a className="copyButton" href="../../../tools#base64-encoder">Gebruik de AFAS Token converter hier</a>
 
 Voorbeeld token conversie:
 
@@ -56,5 +56,5 @@ AFAS biedt de mogelijkheid om een [One Time Password (OTP)](https://help.afas.nl
 
 ### Lees verder
 
-- [Profit API GetConnectoren](https://docs.afas.help/Profit/nl/GetConnector)
-- [Error handling](https://docs.afas.help/profit/nl/Troubleshooting)
+- [Profit API GetConnectoren](./GetConnector)
+- [Error handling](./Troubleshooting)

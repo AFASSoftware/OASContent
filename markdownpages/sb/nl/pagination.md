@@ -37,7 +37,7 @@ Je kunt de `skip`, `take` en `sort` parameters combineren om paginering en sorte
 
 ## Syntax
 
-- [`completeURL`](https://docs.afas.help/sb/nl/Concepten#complete-url)
+- [`completeURL`](./Concepten#complete-url)
 - `sort`
 - `fieldName` FieldId van het endpoint
 - `+` karakter

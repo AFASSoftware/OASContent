@@ -21,19 +21,19 @@ De volgende endpoints moeten worden aangeroepen om de gegevens te verzamelen voo
 
 ### Administraties
 
-Endpoint: [Get Administration](https://docs.afas.help/apidoc/nl/Mutaties#get-/connectors/Profit_Administrations)
+Endpoint: [Get Administration](../../api-specs/nl/Mutaties#get-/connectors/Profit_Administrations)
 
 Gebruik het administratieId / `UnId` bij het aanmaken van de financiële mutatie en de confrontatie.
 
 ### Dagboeken
 
-Endpoint: [Get Journals](https://docs.afas.help/apidoc/nl/Mutaties#get-/connectors/Profit_Journals)
+Endpoint: [Get Journals](../../api-specs/nl/Mutaties#get-/connectors/Profit_Journals)
 
 Gebruik het dagboekId / `JoCo` bij het aanmaken van de financiële mutatie.
 
 ### Grootboeken
 
-Endpoint: [Get Accounts](https://docs.afas.help/apidoc/nl/Mutaties#get-/connectors/Profit_Accounts)
+Endpoint: [Get Accounts](../../api-specs/nl/Mutaties#get-/connectors/Profit_Accounts)
 
 Gebruik het grootboekrekeningnummer / `AcNr` bij het aanmaken van de financiële mutatie in combinatie met `"VaAs": "1"`.
 
@@ -44,37 +44,37 @@ Let op deze velden:
 
 #### Verbijzonderingen
 
-Endpoint: [Get Allocations](https://docs.afas.help/apidoc/nl/Mutaties#get-/connectors/Profit_Allocation_Assigments)
+Endpoint: [Get Allocations](../../api-specs/nl/Mutaties#get-/connectors/Profit_Allocation_Assigments)
 
 Haal via dit endpoint alle verbijzonderingsinstellingen op voor object `FiEntries/FiDimEntries`.
 
 #### Projecten
 
-Endpoint: [Get Projects](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#get-/connectors/Profit_Projects)
+Endpoint: [Get Projects](../../api-specs/nl/Projecten%20en%20nacalculatie#get-/connectors/Profit_Projects)
 
 Haal via dit endpoint alle projecten op voor object `FiEntries/FiPrjEntries`.
 
 ### Crediteuren
 
-Endpoint: [Get Creditors](https://docs.afas.help/apidoc/nl/Mutaties#get-/connectors/Profit_Creditor)
+Endpoint: [Get Creditors](../../api-specs/nl/Mutaties#get-/connectors/Profit_Creditor)
 
 Gebruik het crediteurId / `CrId` bij het aanmaken van de financiële mutatie en de ontvangst. Bij de financiële mutatie vul je `CrId` op veld `AcNr` in combinatie met `"VaAs": "3"`.
 
 ### Debiteuren
 
-Endpoint: [Get Debtors](https://docs.afas.help/apidoc/nl/Mutaties#get-/connectors/Profit_Debtor)
+Endpoint: [Get Debtors](../../api-specs/nl/Mutaties#get-/connectors/Profit_Debtor)
 
 Gebruik het debiteurId / `DbId` bij het aanmaken van de financiële mutatie. Bij de financiële mutatie vul je `DbId` op veld `AcNr` in combinatie met `"VaAs": "2"`.
 
 ### Btw codes
 
-Endpoint: [Get VAT Code](https://docs.afas.help/apidoc/nl/Mutaties#get-/connectors/Profit_VAT_code)
+Endpoint: [Get VAT Code](../../api-specs/nl/Mutaties#get-/connectors/Profit_VAT_code)
 
 Gebruik de btw code bij het aanmaken van de financiële mutatie.
 
 ## Aanmaken financiële mutatie
 
-Endpoint: [POST FiEntries](https://docs.afas.help/apidoc/nl/Mutaties#post-/connectors/FiEntries)
+Endpoint: [POST FiEntries](../../api-specs/nl/Mutaties#post-/connectors/FiEntries)
 
 De volgende stap is om de financiële mutatie aan te maken. Hiervoor heb je de gegevens van de eerdere GET requests nodig. Het voorbeeld hieronder is een eenvoudige verkoopfactuur met in de eerste regel de debiteur, in de tweede regel de opbrengstrekening en in de derde regel de btw. Omdat autonummering aanstaat via `"AuNu": "1"` hoeft er geen factuurnummer meegegeven te worden.
 
@@ -308,7 +308,7 @@ Het is mogelijk om een Projectboeking mee te geven aan de financiële mutatie. A
 
 ## Aanmaken bijlage financiële mutatie
 
-Endpoint: [Post KnSubject](https://docs.afas.help/apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
+Endpoint: [Post KnSubject](../../api-specs/nl/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
 
 Als je een verkoopfactuur aanmaakt in AFAS heb je meestal ook een bijlage. Bijvoorbeeld een pdf bestand met de verkoopfactuur die naar de klant is gestuurd. Deze kan je toevoegen aan de financiële mutatie.
 
@@ -362,7 +362,7 @@ In het voorbeeld hieronder wordt er een bijlage gekoppeld aan de verkoopfactuur 
 
 ## Aanpassen van de financiële factuur
 
-Endpoint: [Put FiInvoice](https://docs.afas.help/apidoc/nl/Mutaties#put-/connectors/FiInvoice)
+Endpoint: [Put FiInvoice](../../api-specs/nl/Mutaties#put-/connectors/FiInvoice)
 
 In sommige sitaties wil je de financiële factuur, die automatisch wordt aangemaakt bij het insturen van `FiEntries` daarna nog bewerken. Zoals in dit voorbeeld, waarbij je de factuurt deblokkeert voor betaling.
 

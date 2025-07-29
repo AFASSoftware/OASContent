@@ -21,19 +21,19 @@ The following endpoints must be called to collect the data before you can create
 
 ### Administrations
 
-Endpoint: [Get Administration](https://docs.afas.help/apidoc/en/Mutaties#get-/connectors/Profit_Administrations)
+Endpoint: [Get Administration](../../api-specs/en/Mutaties#get-/connectors/Profit_Administrations)
 
 Use the administrationId / `UnId` when creating the financial mutation and confrontation.
 
 ### Journals
 
-Endpoint: [Get Journals](https://docs.afas.help/apidoc/en/Mutaties#get-/connectors/Profit_Journals)
+Endpoint: [Get Journals](../../api-specs/en/Mutaties#get-/connectors/Profit_Journals)
 
 Use the journalId / `JoCo` when creating the financial mutation.
 
 ### Accounts
 
-Endpoint: [Get Accounts](https://docs.afas.help/apidoc/en/Mutaties#get-/connectors/Profit_Accounts)
+Endpoint: [Get Accounts](../../api-specs/en/Mutaties#get-/connectors/Profit_Accounts)
 
 Use the AccountId / `AcNr` when creating the financial mutation in combination with `"VaAs": "1"`.
 
@@ -44,37 +44,37 @@ Pay attention to these fields:
 
 #### Allocations
 
-Endpoint: [Get Allocations](https://docs.afas.help/apidoc/en/Mutaties#get-/connectors/Profit_Allocation_Assigments)
+Endpoint: [Get Allocations](../../api-specs/en/Mutaties#get-/connectors/Profit_Allocation_Assigments)
 
 Retrieve all allocation settings directly for object `FiEntries/FiDimEntries` via this endpoint.
 
 #### Projects
 
-Endpoint: [Get Projects](https://docs.afas.help/apidoc/en/Projecten%20en%20nacalculatie#get-/connectors/Profit_Projects)
+Endpoint: [Get Projects](../../api-specs/en/Projecten%20en%20nacalculatie#get-/connectors/Profit_Projects)
 
 Retrieve all projects for object `FiEntries/FiPrjEntries` via this endpoint.
 
 ### Creditors
 
-Endpoint: [Get Creditors](https://docs.afas.help/apidoc/en/Mutaties#get-/connectors/Profit_Creditor)
+Endpoint: [Get Creditors](../../api-specs/en/Mutaties#get-/connectors/Profit_Creditor)
 
 Use the CreditorId / `CrId` when creating the financial mutation and receipt. For the financial mutation, fill `CrId` on field `AcNr` in combination with `"VaAs": "3"`.
 
 ### Debtors
 
-Endpoint: [Get Debtors](https://docs.afas.help/apidoc/en/Mutaties#get-/connectors/Profit_Debtor)
+Endpoint: [Get Debtors](../../api-specs/en/Mutaties#get-/connectors/Profit_Debtor)
 
 Use the DebtorId / `DbId` when creating the financial mutation. For the financial mutation, fill `DbId` on field `AcNr` in combination with `"VaAs": "2"`.
 
 ### VAT Codes
 
-Endpoint: [Get VAT Code](https://docs.afas.help/apidoc/en/Mutaties#get-/connectors/Profit_VAT_code)
+Endpoint: [Get VAT Code](../../api-specs/en/Mutaties#get-/connectors/Profit_VAT_code)
 
 Use the VATCode when creating the financial mutation.
 
 ## Create financial mutation 
 
-Endpoint: [POST FiEntries](https://docs.afas.help/apidoc/en/Mutaties#post-/connectors/FiEntries)
+Endpoint: [POST FiEntries](../../api-specs/en/Mutaties#post-/connectors/FiEntries)
 
 The next step is to create the financial mutation. For this you need the data from the previous GET requests.
 
@@ -311,7 +311,7 @@ It is possible to provide a Project booking to the financial mutation. Depending
 
 ## Add attachment to financial mutation
 
-Endpoint: [Post KnSubject](https://docs.afas.help/apidoc/en/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
+Endpoint: [Post KnSubject](../../api-specs/en/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
 
 When you create a sales invoice in AFAS, you usually also have an attachment. For example, a PDF file with the sales invoice that was sent to the customer. You can add this to the financial mutation.
 
@@ -364,7 +364,7 @@ These fields are important:
 
 ## Adjust the Financial Invoice
 
-Endpoint: [Put FiInvoice](https://docs.afas.help/apidoc/en/Mutaties#put-/connectors/FiInvoice)
+Endpoint: [Put FiInvoice](../../api-specs/en/Mutaties#put-/connectors/FiInvoice)
 
 In some situations, you may want to edit the financial invoice, which is automatically created when submitting `FiEntries`, afterwards.
 

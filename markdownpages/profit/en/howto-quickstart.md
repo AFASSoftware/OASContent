@@ -9,9 +9,9 @@ This How-To provides you with everything you need to get started with using the 
 
 ## Get credentials
 
-The easiest way to make an API request is if you receive an [environment number, type](https://docs.afas.help/profit/en/Concepts#request-url-structure) and [token](https://docs.afas.help/profit/en/Authentication) from an AFAS administrator. The AFAS Administrator needs to know which endpoints you want to use and then grant you rights, and they can follow [these steps](https://help.afas.nl/help/NL/SE/120718.htm).
+The easiest way to make an API request is if you receive an [environment number, type](./Concepts#request-url-structure) and [token](./Authentication) from an AFAS administrator. The AFAS Administrator needs to know which endpoints you want to use and then grant you rights, and they can follow [these steps](https://help.afas.nl/help/NL/SE/120718.htm).
 
-> *Tip*: Ask the AFAS Administrator to make the GetConnector [ProfitCountries](https://docs.afas.help/apidoc/en/OOrganisaties%20en%20personen#get-/connectors/ProfitCountries) available for testing.
+> *Tip*: Ask the AFAS Administrator to make the GetConnector [ProfitCountries](../../api-specs/en/OOrganisaties%20en%20personen#get-/connectors/ProfitCountries) available for testing.
 
 ### Developer environment
 
@@ -33,7 +33,7 @@ You now have this data:
 2. Fill in the data
 3. Click *Login with token*
 
-Now the complete request URL is constructed. At the same time, a [metainfo](https://docs.afas.help/apidoc/en/Articles#get-/MetaInfo) request is executed. This retrieves the authorized GetConnectors. Select one of these GetConnectors and click *Execute*.
+Now the complete request URL is constructed. At the same time, a [metainfo](../../api-specs/en/Articles#get-/MetaInfo) request is executed. This retrieves the authorized GetConnectors. Select one of these GetConnectors and click *Execute*.
 
 If all went well, the data is now retrieved and you see JSON in this format:
 
@@ -60,9 +60,9 @@ If all went well, the data is now retrieved and you see JSON in this format:
 
 ### Own application
 
-Now that you know the token is valid and the URL is constructed correctly, you can take over this request to your own application. For this, the token must be [encoded to Base64](https://docs.afas.help/profit/en/Authentication#format-and-conversion). Execute a test request and validate that you get the same data as response as in AFAS-Connect.
+Now that you know the token is valid and the URL is constructed correctly, you can take over this request to your own application. For this, the token must be [encoded to Base64](./Authentication#format-and-conversion). Execute a test request and validate that you get the same data as response as in AFAS-Connect.
 
-Use the [XMLtoken to Base64 converter](https://docs.afas.help/profit/base64-encoder) to create the auth header.
+Use the [XMLtoken to Base64 converter](../../../tools#base64-encoder) to create the auth header.
 
 ## C# Request Code Sample
 
@@ -261,4 +261,4 @@ func main() {
 
 Now that you can successfully authenticate and retrieve data, you are ready to integrate a complete process. Start, for example, with one of these How-To's:
 
-- [Employee AD Sync](https://docs.afas.help/profit/en/howto%20medewerkerad)
+- [Employee AD Sync](./howto%20medewerkerad)

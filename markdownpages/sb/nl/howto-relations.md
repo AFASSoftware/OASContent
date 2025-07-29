@@ -16,15 +16,15 @@ De relaties API collectie maakt het mogelijk om contactgegevens vast te leggen v
 
 ## Get omgevingstoken
 
-Doorloop de [OAuth2.0 flow](https://docs.afas.help/sb/nl/Authentication) zoals beschreven. Gebruik hier de `klantomgeving` route.
+Doorloop de [OAuth2.0 flow](./Authentication) zoals beschreven. Gebruik hier de `klantomgeving` route.
 
 ## Get organisation
 
-Endpoint: [Get organisation](https://docs.afas.help/apidoc/sb/nl/latest#get-/api/organisations)
+Endpoint: [Get organisation](../../api-specs/sb/nl/latest#get-/api/organisations)
 
 Met deze request haal je de organisaties op. Als een gewenste organisatie al bestaat kan het `Id` gebruikt worden.
 
-Als de gewenste organisatie niet bestaat moet deze worden aangemaakt. Dit kan met de [Post organisation](https://docs.afas.help/sb/nl/howto%20relations#Post%20organisation).
+Als de gewenste organisatie niet bestaat moet deze worden aangemaakt. Dit kan met de [Post organisation](./howto%20relations#Post%20organisation).
 
 ```json Result
 {
@@ -60,7 +60,7 @@ Gebruik:
 
 ## Put organisation
 
-Endpoint: [Put organisation](https://docs.afas.help/apidoc/sb/nl/latest#put-/api/organisation)
+Endpoint: [Put organisation](../../api-specs/sb/nl/latest#put-/api/organisation)
 
 Pas nu de organisatie aan.
 
@@ -80,7 +80,7 @@ Pas nu de organisatie aan.
 
 ## Post organisation
 
-Endpoint: [Post organisation](https://docs.afas.help/apidoc/sb/nl/latest#post-/api/organisation)
+Endpoint: [Post organisation](../../api-specs/sb/nl/latest#post-/api/organisation)
 
 Maak nu de organisatie aan. Bij het aanmaken van een adres moet een aantal voorkeuren worden opgegeven. Bij een enkel adres kan deze default op true worden gezet.
 
@@ -156,7 +156,7 @@ Bij het aanmaken van een bankrekeningen moet een aantal voorkeuren worden opgege
 
 ## Post person
 
-Endpoint: [Post person](https://docs.afas.help/apidoc/sb/nl/latest#post-/api/person)
+Endpoint: [Post person](../../api-specs/sb/nl/latest#post-/api/person)
 
 Maak nu de persoon aan. Bij het aanmaken van een adres moet een aantal voorkeuren worden opgegeven. Bij een enkel adres kan deze default op true worden gezet.
 
@@ -206,7 +206,7 @@ Bij het aanmaken van een bankrekening moet een aantal voorkeuren worden opgegeve
 
 ## Werkwijze aanvullende informatie
 
-1. [Get organisation](https://docs.afas.help/sb/nl/howto%20relations#Get%20organisation)
+1. [Get organisation](./howto%20relations#Get%20organisation)
 2. Get person
 3. Post bankaccount
 4. Post adress
@@ -216,7 +216,7 @@ Bij het aanmaken van een bankrekening moet een aantal voorkeuren worden opgegeve
 
 ## Get person
 
-Endpoint: [Get persons](https://docs.afas.help/apidoc/sb/nl/latest#get-/api/persons)
+Endpoint: [Get persons](../../api-specs/sb/nl/latest#get-/api/persons)
 
 Met deze request haal je de personen op.
 

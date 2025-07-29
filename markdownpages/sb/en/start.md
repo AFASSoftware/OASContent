@@ -54,14 +54,14 @@ Request
 
 After your request is approved, you can start realizing the integration. We set up a development environment where you can realize and test the integration in consultation. For example, we coordinate which data you want to read and/or write and which authentication method you want to use.
 
-When realizing an integration, you use the AFAS SB REST API. With this API, you can read and add certain data specified by us. Refer to the [technical documentation](https://docs.afas.help/sb).
+When realizing an integration, you use the AFAS SB REST API. With this API, you can read and add certain data specified by us. Refer to the [technical documentation](./authentication).
 
 Development
 -----------
 
 We have extensive technical documentation available to support you in developing your integration.
 
-*   [Technical documentation on the SB API](https://docs.afas.help/sb).
+*   [Technical documentation on the SB API](./authentication).
 
 Here you will find the following information:
 
@@ -83,7 +83,7 @@ Here you will find the following information:
     
 It may happen that a newer API version becomes available at some point with more possibilities. In that situation, it is advisable to also adjust your integration.
 
-[Click here for the latest API specifications](https://docs.afas.help/apidoc/sb/en/latest).
+[Click here for the latest API specifications](../../api-specs/sb/en/latest).
     
 
 Publishing on the App Center

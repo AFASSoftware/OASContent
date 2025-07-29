@@ -36,7 +36,7 @@ You can combine the `skip`, `take`, and `sort` parameters to apply pagination an
 
 ## Syntax
 
-- [`completeURL`](https://docs.afas.help/en/sb/concepts#complete-url)
+- [`completeURL`](./concepts#complete-url)
 - `sort`
 - `fieldName` FieldId of the endpoint
 - `+` character

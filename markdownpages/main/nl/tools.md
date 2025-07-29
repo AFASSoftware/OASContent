@@ -13,7 +13,7 @@ Om gebruik te maken van deze tooling heb je een omgeving en API token nodig. Hie
 
 ## Postman
 
-Gebruik de AFAS API OpenAPI Specificaties direct met Postman. Deze specificatie kan je [inlezen in Postman](https://learning.postman.com/docs/integrations/available-integrations/working-with-openAPI/). De OpenAPI Specificaties kan je downloaden bovenin elke API Specificatie. Bijvoorbeeld bij [Dossier](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen). Deze content kopieer je zoals beschreven in de Postman documentatie.
+Gebruik de AFAS API OpenAPI Specificaties direct met Postman. Deze specificatie kan je [inlezen in Postman](https://learning.postman.com/docs/integrations/available-integrations/working-with-openAPI/). De OpenAPI Specificaties kan je downloaden bovenin elke API Specificatie. Bijvoorbeeld bij [Dossier](../../api-specs/nl/Organisaties%20en%20personen). Deze content kopieer je zoals beschreven in de Postman documentatie.
 
 ## RSS feed AFAS Status
 

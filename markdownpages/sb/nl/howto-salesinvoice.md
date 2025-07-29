@@ -7,7 +7,7 @@ tags: Verkoop, factuur, Verkoopfactuur
 
 ## Inleiding
 
-Met deze How-To weet je precies hoe je een integratie maakt met AFAS SB om verkoopfacturen naar AFAS SB te sturen. Gebruik de verkoopfactuur als je meer informatie wilt vastleggen over de verkochte artikelen of de factuur wil verzenden naar de klant. Als alleen het financiele gevolg van een factuur moet worden vastgelegd of je wilt zelf bepalen wat voor btw bedrag of tarief moet worden gebruikt, gebruik dan [How-To Verkoopjournaalpost.](https://docs.afas.help/sb/nl/howto%20salesjournal)
+Met deze How-To weet je precies hoe je een integratie maakt met AFAS SB om verkoopfacturen naar AFAS SB te sturen. Gebruik de verkoopfactuur als je meer informatie wilt vastleggen over de verkochte artikelen of de factuur wil verzenden naar de klant. Als alleen het financiele gevolg van een factuur moet worden vastgelegd of je wilt zelf bepalen wat voor btw bedrag of tarief moet worden gebruikt, gebruik dan [How-To Verkoopjournaalpost.](./howto%20salesjournal)
 
 De factuur die je aanmaakt is dus nog niet betaald. De factuur verstuurt de gebruiker vanuit AFAS SB naar zijn klant.
 
@@ -25,11 +25,11 @@ Deelbetalingen worden hierin wel ondersteund. Is er al een bedrag contant betaal
 
 ## Get omgevingstoken
 
-Doorloop de [OAuth2.0 flow](https://docs.afas.help/sb/nl/Authentication) zoals beschreven. Gebruik hier de `klantomgeving` route.
+Doorloop de [OAuth2.0 flow](./Authentication) zoals beschreven. Gebruik hier de `klantomgeving` route.
 
 ## Get administration
 
-Endpoint: [Get Administrations](https://docs.afas.help/apidoc/sb/nl/latest#get-/api/administrations)
+Endpoint: [Get Administrations](../../api-specs/sb/nl/latest#get-/api/administrations)
 
 Een klant omgeving kan 1 of meerdere administraties bevatten. De verkoopfactuur moet worden aangemaakt op een specifiek administratie. Haal hier de administraties op bij de specifieke klant omgeving. Leg in jouw klant configuratie vast welk administratie bij deze klant hoort.
 
@@ -55,11 +55,11 @@ De relatie is een verplicht gegeven om vast te leggen op de een verkoopfactuur. 
 
 ### Endpoint
 
-[`Get /api/persons`](https://docs.afas.help/apidoc/sb/nl/latest#get-/api/persons)
+[`Get /api/persons`](../../api-specs/sb/nl/latest#get-/api/persons)
 
-[`Get /api/organisations`](https://docs.afas.help/apidoc/sb/nl/latest#get-/api/persons)
+[`Get /api/organisations`](../../api-specs/sb/nl/latest#get-/api/persons)
 
-[`Get api/unknownrelation`](https://docs.afas.help/apidoc/sb/nl/latest#get-/api/unknownrelation)
+[`Get api/unknownrelation`](../../api-specs/sb/nl/latest#get-/api/unknownrelation)
 
 ### Response
 
@@ -145,7 +145,7 @@ Het `Id` in de response gebruik je als `RelationId` in `SalesInvoice`. Geef hier
 
 ## Get products
 
-Endpoint: [Get Products 2.0](https://docs.afas.help/apidoc/sb/nl/latest#get-/api/products)
+Endpoint: [Get Products 2.0](../../api-specs/sb/nl/latest#get-/api/products)
 
 Op een verkoopfactuur is het verplicht om het product vast te leggen dat is verkocht. Dit product wordt op de factuur die naar de koper wordt gestuurd getoond. De prijs kan je overnemen of beïnvloeden door een ander bedrag te vullen.
 
@@ -183,7 +183,7 @@ AFAS SB gebruikt het factuuradres om btw te berekenen. Standaard wordt het voork
 
 ### Endpoint
 
-[`Get Addresses`](https://docs.afas.help/apidoc/sb/nl/latest#get-/api/addresses)
+[`Get Addresses`](../../api-specs/sb/nl/latest#get-/api/addresses)
 
 ### Parameters
 
@@ -226,7 +226,7 @@ De `Id` waarde vul je in `AddressId` in `salesinvoice` en zal gebruikt worden vo
 
 ## Put Attachment
 
-Endpoint: [Post Attachments](https://docs.afas.help/apidoc/sb/nl/latest#put-/api/blob/-uuid-)
+Endpoint: [Post Attachments](../../api-specs/sb/nl/latest#put-/api/blob/-uuid-)
 
 > Dit onderdeel is **optioneel**
 
@@ -326,7 +326,7 @@ Nu je de data hebt verzameld kun je een verkoopfactuur aanmaken in AFAS SB.
 
 ### Endpoint
 
-[`POST /api/salesinvoice`](https://docs.afas.help/apidoc/sb/nl/latest#post-/api/salesinvoice)
+[`POST /api/salesinvoice`](../../api-specs/sb/nl/latest#post-/api/salesinvoice)
 
 ### Example Request Body
 
@@ -359,7 +359,7 @@ Nu je de data hebt verzameld kun je een verkoopfactuur aanmaken in AFAS SB.
 }
 ```
 
-> Bij het aanbieden van deze request raden wij je aan om de [Tracking Tracking Identifier](https://docs.afas.help/sb/nl/change%20Tracking-Identifier) te gebruiken om dubbele entries te voorkomen.
+> Bij het aanbieden van deze request raden wij je aan om de [Tracking Tracking Identifier](./change%20Tracking-Identifier) te gebruiken om dubbele entries te voorkomen.
 
 ### Response
 

@@ -47,7 +47,7 @@ Je start met het ophalen van de medewerkers die aan de volgende eisen voldoen:
 
 ## Emailadres op medewerker vastleggen
 
-Endpoint: [PUT KnPerson](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnPerson)
+Endpoint: [PUT KnPerson](../../api-specs/nl/Organisaties%20en%20personen#put-/connectors/KnPerson)
 
 
 ```json PUT KnPerson body
@@ -66,7 +66,7 @@ Endpoint: [PUT KnPerson](https://docs.afas.help/apidoc/nl/Organisaties%20en%20pe
 
 ## UPN vastleggen op gebruiker
 
-Endpoint: [PUT KnUser](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnUser)
+Endpoint: [PUT KnUser](../../api-specs/nl/Organisaties%20en%20personen#put-/connectors/KnUser)
 
 
 ```json PUT KnUser body
@@ -127,7 +127,7 @@ Het resultaat bevat de medewerkers die aangepast moeten worden. Gebruik een fore
 
 ### Aanpassen verstrekkingswijze loonstrook en jaaropgave
 
-Endpoint: [PUT KnEmployee](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee)
+Endpoint: [PUT KnEmployee](../../api-specs/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee)
 
 
 ```json PUT body

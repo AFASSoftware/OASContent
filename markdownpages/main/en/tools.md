@@ -13,7 +13,7 @@ To use this tooling, you need an environment and API token. Once you have them, 
 
 ## Postman
 
-Use the AFAS API OpenAPI Specifications directly with Postman. You can [import these specifications into Postman](https://learning.postman.com/docs/integrations/available-integrations/working-with-openAPI/). The OpenAPI Specifications can be downloaded at the top of each API Specification. For example, at [Dossier](https://docs.afas.help/apidoc/en/Organisaties%20en%20personen). Copy this content as described in the Postman documentation.
+Use the AFAS API OpenAPI Specifications directly with Postman. You can [import these specifications into Postman](https://learning.postman.com/docs/integrations/available-integrations/working-with-openAPI/). The OpenAPI Specifications can be downloaded at the top of each API Specification. For example, at [Dossier](../../api-specs/en/Organisaties%20en%20personen). Copy this content as described in the Postman documentation.
 
 ## RSS feed AFAS Status
 

@@ -23,54 +23,54 @@ De volgende endpoints moeten worden aangeroepen om de gegevens te verzamelen voo
 
 ### Administraties
 
-Endpoint: [Get Administration](https://docs.afas.help/apidoc/nl/Mutaties#get-/connectors/Profit_Administrations)
+Endpoint: [Get Administration](../../api-specs/nl/Mutaties#get-/connectors/Profit_Administrations)
 
 Gebruik het administratieId / `UnId` bij het aanmaken van de financiële mutatie en de confrontatie.
 
 ### Dagboeken
 
-Endpoint: [Get Journals](https://docs.afas.help/apidoc/nl/Mutaties#get-/connectors/Profit_Journals)
+Endpoint: [Get Journals](../../api-specs/nl/Mutaties#get-/connectors/Profit_Journals)
 
 Gebruik het dagboekId / `JoCo` bij het aanmaken van de financiële mutatie.
 
 ### Grootboeken
 
-Endpoint: [Get Accounts](https://docs.afas.help/apidoc/nl/Mutaties#get-/connectors/Profit_Accounts)
+Endpoint: [Get Accounts](../../api-specs/nl/Mutaties#get-/connectors/Profit_Accounts)
 
 Gebruik het grootboekrekeningnummer / `AcNr` bij het aanmaken van de financiële mutatie in combinatie met `"VaAs": "1"`.
 
 ### Btw codes
 
-Endpoint: [Get VAT Code](https://docs.afas.help/apidoc/nl/Mutaties#get-/connectors/Profit_VAT_code)
+Endpoint: [Get VAT Code](../../api-specs/nl/Mutaties#get-/connectors/Profit_VAT_code)
 
 Gebruik de btw code bij het aanmaken van de financiële mutatie.
 
 ### Crediteuren
 
-Endpoint: [Get Creditors](https://docs.afas.help/apidoc/nl/Mutaties#get-/connectors/Profit_Creditor)
+Endpoint: [Get Creditors](../../api-specs/nl/Mutaties#get-/connectors/Profit_Creditor)
 
 Gebruik het CrediteurId / `CrId` bij het aanmaken van de financiële mutatie en de ontvangst. Bij de financiële mutatie vul je `CrId` op veld `AcNr` in combinatie met `"VaAs": "3"`.
 
 ### Inkooporders
 
-Maak een [custom endpoint](https://docs.afas.help/apidoc/nl/Inkoop#get-/connectors/-Endpoint-) aan voor de inkooporders. Zorg dat je hierin tenminste de volgende velden toevoegt:
+Maak een [custom endpoint](../../api-specs/nl/Inkoop#get-/connectors/-Endpoint-) aan voor de inkooporders. Zorg dat je hierin tenminste de volgende velden toevoegt:
 
 - OrderId / `SoOr`
 - ItemId / `ItCd`
 - ItemType / `VaIt`
 - ItemSoort / `BiUn`
 
-> Weet je niet hoe je een GetConnector hiervoor aanmaakt? Lees dan dit [artikel](https://docs.afas.help/profit/nl/GetConnector)
+> Weet je niet hoe je een GetConnector hiervoor aanmaakt? Lees dan dit [artikel](./GetConnector)
 
 ### Magazijnen
 
-Endpoint: [Get Warehouses](https://docs.afas.help/apidoc/nl/Magazijn#get-/connectors/Profit_Warehouses)
+Endpoint: [Get Warehouses](../../api-specs/nl/Magazijn#get-/connectors/Profit_Warehouses)
 
 Gebruik het MagazijnId / `War` bij het aanmaken van de ontvangst.
 
 ## Aanmaken goederenontvangst
 
-Endpoint: [POST /FbGoodsReceived](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/FbGoodsReceived)
+Endpoint: [POST /FbGoodsReceived](../../api-specs/nl/Inkoop#post-/connectors/FbGoodsReceived)
 
 Nu je alle data hebt die nodig is kan je de goederenontvangst aanmaken. Deze kan je aanmaken op basis van een inkooporder / `SoOr`. Hiernaast heb je het inkooprelatieId / `CrId` nodig.
 
@@ -114,7 +114,7 @@ Nu is de ontvangst van de goederen aangemaakt. Het `OrNu` moet je bewaren voor d
 
 ## Aanmaken financiële mutatie
 
-Endpoint: [POST FiEntries](https://docs.afas.help/apidoc/nl/Mutaties#post-/connectors/FiEntries)
+Endpoint: [POST FiEntries](../../api-specs/nl/Mutaties#post-/connectors/FiEntries)
 
 De volgende stap is om de financiële mutatie aan te maken. Hiervoor heb je de gegevens van de eerdere GET requests nodig. In onderstaand voorbeeld wordt een inkoopfactuur gemaakt. Op de eerste regel de inkooprelatie, op de tweede regel de voorraadrekening en tenslotte de btw.
 
@@ -189,12 +189,12 @@ Nu is de financiële mutatie aangemaakt. Het `InId` moet je bewaren voor de late
 
 Optioneel wil je nu het volgende doen:
 
-1. Aanmaken van een factuur bijlage via [KnSubject](https://docs.afas.help/apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
-2. Aanpassen van de financiële factuur die is aangemaakt via [FiInvoice](https://docs.afas.help/apidoc/nl/Mutaties#put-/connectors/FiInvoice)
+1. Aanmaken van een factuur bijlage via [KnSubject](../../api-specs/nl/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
+2. Aanpassen van de financiële factuur die is aangemaakt via [FiInvoice](../../api-specs/nl/Mutaties#put-/connectors/FiInvoice)
 
 ## Aanmaken bijlage financiële mutatie
 
-Endpoint: [Post KnSubject](https://docs.afas.help/apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
+Endpoint: [Post KnSubject](../../api-specs/nl/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
 
 Als je een verkoopfactuur aanmaakt in AFAS heb je meestal ook een bijlage. Bijvoorbeeld een pdf bestand met de verkoopfactuur die naar de klant is gestuurd. Deze kan je toevoegen aan de financiële mutatie.
 
@@ -249,7 +249,7 @@ In het voorbeeld hieronder wordt er een bijlage gekoppeld aan de verkoopfactuur 
 
 ## Aanpassen van de financiële factuur
 
-Endpoint: [Put FiInvoice](https://docs.afas.help/apidoc/nl/Mutaties#put-/connectors/FiInvoice)
+Endpoint: [Put FiInvoice](../../api-specs/nl/Mutaties#put-/connectors/FiInvoice)
 
 In sommige sitaties wil je de financiële factuur, die automatisch wordt aangemaakt bij het insturen van `FiEntries` daarna nog bewerken. Zoals in dit voorbeeld, waarbij je de factuurt deblokkeert voor betaling.
 
@@ -271,7 +271,7 @@ In sommige sitaties wil je de financiële factuur, die automatisch wordt aangema
 
 ## Aanmaken confrontatie
 
-Endpoint: [POST FbConfrontation](https://docs.afas.help/apidoc/nl/Mutaties#post-/connectors/FbConfrontation)
+Endpoint: [POST FbConfrontation](../../api-specs/nl/Mutaties#post-/connectors/FbConfrontation)
 
 De laatste stap is het aanmaken van de confrontatie zelf. Hiervoor heb je het `InId` van de financiële mutatie nodig en het `OrNu` van de ontvangst.
 

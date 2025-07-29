@@ -4,7 +4,7 @@ author: CLN
 date: 2024-06-28
 tags: tokens, jwt, bearer, oauth, access
 ---
-The AFAS Profit REST API uses static tokens that you include in the http authentication header of your request. These static tokens are created in the [`App Connector`](https://docs.afas.help/Profit/en/Concepts#app-connector) in Profit. An AFAS administrator with access to the Profit environment can create a token.
+The AFAS Profit REST API uses static tokens that you include in the http authentication header of your request. These static tokens are created in the [`App Connector`](./Concepts#app-connector) in Profit. An AFAS administrator with access to the Profit environment can create a token.
 
 > A token is unique to one environment and linked to a user. The permissions of this user will affect the permissions of the token.
 
@@ -50,11 +50,11 @@ You will receive a forbidden message when an IP restriction applies to the App C
 
 ## Generate token for user via OTP
 
-AFAS offers the option to use a [One Time Password (OTP)](https://docs.afas.help/apidoc/en/Inrichting#post-/OtpRequest) instead of a token. This is useful in situations where users need to register themselves in an application.
+AFAS offers the option to use a [One Time Password (OTP)](../../api-specs/en/Inrichting#post-/OtpRequest) instead of a token. This is useful in situations where users need to register themselves in an application.
 
 The OTP option offers a way to retrieve a token without sharing this via an external tool or email for example.
 
 ### Read more
 
-- [Profit API GetConnectors](https://docs.afas.help/Profit/en/GetConnector)
-- [Error handling](https://docs.afas.help/profit/en/Troubleshooting)
+- [Profit API GetConnectors](./GetConnector)
+- [Error handling](./Troubleshooting)

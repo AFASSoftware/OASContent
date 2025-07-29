@@ -5,7 +5,7 @@ date: 2024-10-18
 tags: API Docs
 ---
 
-Welkom op de nieuwste versie van de AFAS API Docs. We zijn blij je dat hier gebruik van maakt! Met de AFAS API Docs willen we het zo makkelijk mogelijk maken om geweldige integraties met de AFAS producten te maken. Hiervoor hebben we een uitgebreide API specifcatie gemaakt met meer dan 1000 voorbeeld requests. Waar bij jij het meest blij mee? Wij zelf tevreden met alle voorbeelden bij [KnEmployee](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee).
+Welkom op de nieuwste versie van de AFAS API Docs. We zijn blij je dat hier gebruik van maakt! Met de AFAS API Docs willen we het zo makkelijk mogelijk maken om geweldige integraties met de AFAS producten te maken. Hiervoor hebben we een uitgebreide API specifcatie gemaakt met meer dan 1000 voorbeeld requests. Waar bij jij het meest blij mee? Wij zelf tevreden met alle voorbeelden bij [KnEmployee](../../api-specs/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee).
 
 ## How-To's
 
@@ -21,11 +21,11 @@ Vanuit UpdateConnectoren in AFAS Connect krijg je nu een directe link naar de do
 
 ## Profit 4 wijzigingen
 
-Alle API wijzingen die per Profit 3 actief worden zijn beschreven op in de [changelog](https://docs.afas.help/profit/nl/news%20profit4). Hierin zie je alle wijzigingen in de API schema's.
+Alle API wijzingen die per Profit 3 actief worden zijn beschreven op in de [changelog](./news%20profit4). Hierin zie je alle wijzigingen in de API schema's.
 
 ## XML-Token naar Authorization header converter
 
-Bij nieuwe gebruikers zien we regelmatig dat het omzetten van een XML token naar een REST Authorization header voor fouten zorgt. Hiervoor is een simpel tooltje toegevoegd: [XML token naar Base64](https://docs.afas.help/profit/base64-encoder)
+Bij nieuwe gebruikers zien we regelmatig dat het omzetten van een XML token naar een REST Authorization header voor fouten zorgt. Hiervoor is een simpel tooltje toegevoegd: [XML token naar Base64](../../../tools#base64-encoder)
 
 ## Mobile ready
 
