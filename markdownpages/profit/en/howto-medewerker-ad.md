@@ -53,7 +53,7 @@ Start by retrieving the employees who meet the following requirements:
 
 ## Storing email address for an employee
 
-Endpoint: [KnPerson](../../api-specs/en/Organisaties%20en%20personen#put-/connectors/KnPerson)
+Endpoint: [KnPerson](../../apidoc/en/Organisaties%20en%20personen#put-/connectors/KnPerson)
 
 `PUT https://12345.rest.afas.online/ProfitRestServices/connectors/KnPerson`
 
@@ -73,7 +73,7 @@ Endpoint: [KnPerson](../../api-specs/en/Organisaties%20en%20personen#put-/connec
 
 ## Setting UPN for a user
 
-Endpoint: [KnUser](../../api-specs/en/Organisaties%20en%20personen#put-/connectors/KnUser)
+Endpoint: [KnUser](../../apidoc/en/Organisaties%20en%20personen#put-/connectors/KnUser)
 
 `POST https://12345.rest.afas.online/ProfitRestServices/connectors/KnUser`
 
@@ -134,7 +134,7 @@ The result contains the employees that need to be updated. Use a foreach loop to
 
 ## Modifying the distribution method of payslips and annual statements
 
-Endpoint: [KnEmployee](../../api-specs/en/Medewerker%20en%20contract#put-/connectors/KnEmployee)
+Endpoint: [KnEmployee](../../apidoc/en/Medewerker%20en%20contract#put-/connectors/KnEmployee)
 
 `PUT https://12345.rest.afas.online/ProfitRestServices/connectors/KnEmployee`
 

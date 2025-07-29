@@ -23,37 +23,37 @@ The following endpoints must be called to collect the data before you can create
 
 ### Administrations
 
-Endpoint: [Get Administration](../../api-specs/en/Mutaties#get-/connectors/Profit_Administrations)
+Endpoint: [Get Administration](../../apidoc/en/Mutaties#get-/connectors/Profit_Administrations)
 
 Use the administrationId / `UnId` when creating the financial mutation and the confrontation.
 
 ### Journals
 
-Endpoint: [Get Journals](../../api-specs/en/Mutaties#get-/connectors/Profit_Journals)
+Endpoint: [Get Journals](../../apidoc/en/Mutaties#get-/connectors/Profit_Journals)
 
 Use the journalId / `JoCo` when creating the financial mutation.
 
 ### Ledger accounts
 
-Endpoint: [Get Accounts](../../api-specs/en/Mutaties#get-/connectors/Profit_Accounts)
+Endpoint: [Get Accounts](../../apidoc/en/Mutaties#get-/connectors/Profit_Accounts)
 
 Use the LedgerAccountId / `AcNr` when creating the financial mutation in combination with `"VaAs": "1"`.
 
 ### VAT Codes
 
-Endpoint: [Get VAT Code](../../api-specs/en/Mutaties#get-/connectors/Profit_VAT_code)
+Endpoint: [Get VAT Code](../../apidoc/en/Mutaties#get-/connectors/Profit_VAT_code)
 
 Use the VATCode when creating the financial mutation.
 
 ### Creditors
 
-Endpoint: [Get Creditors](../../api-specs/en/Mutaties#get-/connectors/Profit_Creditor)
+Endpoint: [Get Creditors](../../apidoc/en/Mutaties#get-/connectors/Profit_Creditor)
 
 Use the CreditorId / `CrId` when creating the financial mutation and the receipt. For the financial mutation, fill in `CrId` on field `AcNr` in combination with `"VaAs": "3"`.
 
 ### Purchase orders
 
-Create a [custom endpoint](../../api-specs/en/Inkoop#get-/connectors/-Endpoint-) for the purchase orders. Make sure to include at least the following fields:
+Create a [custom endpoint](../../apidoc/en/Inkoop#get-/connectors/-Endpoint-) for the purchase orders. Make sure to include at least the following fields:
 
 - OrderId / `SoOr`
 - ItemId / `ItCd`
@@ -64,13 +64,13 @@ Create a [custom endpoint](../../api-specs/en/Inkoop#get-/connectors/-Endpoint-)
 
 ### Warehouses
 
-Endpoint: [Get Warehouses](../../api-specs/en/Magazijn#get-/connectors/Profit_Warehouses)
+Endpoint: [Get Warehouses](../../apidoc/en/Magazijn#get-/connectors/Profit_Warehouses)
 
 Use the WarehouseId / `War` when creating the receipt.
 
 ## Creating goods receipt
 
-Endpoint: [POST /FbGoodsReceived](../../api-specs/en/Inkoop#post-/connectors/FbGoodsReceived)
+Endpoint: [POST /FbGoodsReceived](../../apidoc/en/Inkoop#post-/connectors/FbGoodsReceived)
 
 Now that you have all the necessary data, you can create the goods receipt. This can be created based on a purchase order / `SoOr`. In addition, you need the purchaseRelationId / `CrId`.
 
@@ -114,7 +114,7 @@ The goods receipt has now been created. You must save the `OrNu` for the confron
 
 ## Creating financial mutation
 
-Endpoint: [POST FiEntries](../../api-specs/en/Mutaties#post-/connectors/FiEntries)
+Endpoint: [POST FiEntries](../../apidoc/en/Mutaties#post-/connectors/FiEntries)
 
 The next step is to create the financial mutation. For this you need the data from the previous GET requests.
 
@@ -189,12 +189,12 @@ The financial mutation has now been created. You must save the `InId` for the co
 
 Optionally, you now want to do the following:
 
-1. Create an invoice attachment via [KnSubject](../../api-specs/en/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
-2. Modify the financial invoice that was created via [FiInvoice](../../api-specs/en/Mutaties#put-/connectors/FiInvoice)
+1. Create an invoice attachment via [KnSubject](../../apidoc/en/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
+2. Modify the financial invoice that was created via [FiInvoice](../../apidoc/en/Mutaties#put-/connectors/FiInvoice)
 
 ## Creating confrontation
 
-Endpoint: [POST FbConfrontation](../../api-specs/en/Mutaties#post-/connectors/FbConfrontation)
+Endpoint: [POST FbConfrontation](../../apidoc/en/Mutaties#post-/connectors/FbConfrontation)
 
 The last step is to create the confrontation itself. For this you need the `InId` of the financial mutation and the `OrNu` of the receipt.
 

@@ -21,7 +21,7 @@ Leer hoe je een integratie opzet waarin je vervoermiddelen vastlegt op medewerke
 
 ### Ophalen van medewerkergegevens
 
-Endpoint: [Get Employees](../../api-specs/nl/Medewerker%20en%20contract#get-/connectors/Profit_Employees)
+Endpoint: [Get Employees](../../apidoc/nl/Medewerker%20en%20contract#get-/connectors/Profit_Employees)
 
 Dit endpoint geeft een basis van de medewerkergegevens als resultaat. Maak een kopie van dit endpoint en verwijder de gegevens die niet nodig zijn voor jouw integratie.
 
@@ -54,7 +54,7 @@ Het eindresultaat moet tenminste het volgende bevatten:
 
 ## Aanmaken van het vervoermiddel
 
-Endpoint: [Post HrMobility](../../api-specs/nl/Overige#post-/connectors/HrMobility)
+Endpoint: [Post HrMobility](../../apidoc/nl/Overige#post-/connectors/HrMobility)
 
 Maak nu het vervoermiddel aan met daarin de koppeling naar de medewerker.
 
@@ -115,7 +115,7 @@ De waarde van het veld `CcSn` heb je nodig bij het updaten van het vervoermiddel
 
 ## Toevoegen nieuwe kilometerstand
 
-Endpoint: [Post HrMobility/HrEmployeeMobilityRegistration](../../api-specs/nl/Overige#post-/connectors/HrMobility/HrEmployeeMobilityRegistration)
+Endpoint: [Post HrMobility/HrEmployeeMobilityRegistration](../../apidoc/nl/Overige#post-/connectors/HrMobility/HrEmployeeMobilityRegistration)
 
 Via een Post op het subobject HrMobility/HrEmployeeMobilityRegistration maak je een nieuwe kilometerstand regel aan.
 
@@ -145,7 +145,7 @@ Gebruik hiervoor de waarde van het veld `CcSn` uit de vorige response.
 
 ## Vastleggen op medewerker dossier
 
-Endpoint: [Post KnSubject](../../api-specs/nl/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
+Endpoint: [Post KnSubject](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
 
 Tenslotte maak je optioneel een dossieritem met bijvoorbeeld de lease overeenkomst aan in het medewerker dossier. Hierin voeg je het id van het vervoermiddel en de medewewerker toe op het object `KnSubjectLink`:
 

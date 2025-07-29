@@ -53,13 +53,13 @@ No changes for this release.
 
 | Description | Connector | Operation |
 | --- | --- | --- |
-| the request property 'FiContract/Element/Objects/items/FiContractline/Element/items/Fields/VaRV' became required | FiContract | [POST](../../api-specs/nl/Budgetten%20en%20activa#post-/connectors/FiContract) |
+| the request property 'FiContract/Element/Objects/items/FiContractline/Element/items/Fields/VaRV' became required | FiContract | [POST](../../apidoc/nl/Budgetten%20en%20activa#post-/connectors/FiContract) |
 
 ### Changelog
 
 | Description | Connector | Operation |
 | --- | --- | --- |
-| the request property 'FiContract/Element/Objects/items/FiContractline/Element/items/Fields/VaRV' became required | FiContract | [POST](../../api-specs/nl/Budgetten%20en%20activa#post-/connectors/FiContract) |
+| the request property 'FiContract/Element/Objects/items/FiContractline/Element/items/Fields/VaRV' became required | FiContract | [POST](../../apidoc/nl/Budgetten%20en%20activa#post-/connectors/FiContract) |
 
 ## Cursusmanagement Specification
 
@@ -72,8 +72,8 @@ No changes for this release.
 This is a change in documentation only, api hasn't changed.
 | Description | Connector | Operation |
 | --- | --- | --- |
-| endpoint added | KnSubjectReaction/KnReaction/@Id/{Id} | [DELETE](../../api-specs/nl/Dossiers%2C%20bijlagen%20en%20workflows#delete-/connectors/KnSubjectReaction/KnReaction/@Id/{Id}) |
-| api path removed without deprecation | KnSubjectReaction/KnSubjectReaction/@Id/{Id} | [DELETE](../../api-specs/nl/Dossiers%2C%20bijlagen%20en%20workflows#delete-/connectors/KnSubjectReaction/KnSubjectReaction/@Id/{Id}) |
+| endpoint added | KnSubjectReaction/KnReaction/@Id/{Id} | [DELETE](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#delete-/connectors/KnSubjectReaction/KnReaction/@Id/{Id}) |
+| api path removed without deprecation | KnSubjectReaction/KnSubjectReaction/@Id/{Id} | [DELETE](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#delete-/connectors/KnSubjectReaction/KnSubjectReaction/@Id/{Id}) |
 
 ## Financiële Inrichting Specification
 
@@ -81,8 +81,8 @@ This is a change in documentation only, api hasn't changed.
 
 | Description | Connector | Operation |
 | --- | --- | --- |
-| api tag 'Iv3-indeling per jaar' added | FiIVY | [POST](../../api-specs/nl/Financi%C3%ABle%20Inrichting#post-/connectors/FiIVY), [PUT](../../api-specs/nl/Financi%C3%ABle%20Inrichting#put-/connectors/FiIVY), [DELETE](../../api-specs/nl/Financi%C3%ABle%20Inrichting#delete-/connectors/FiIVY/FiIVY/@Id/{Id}) |
-| api tag 'IV3-indeling per jaar' removed | FiIVY | [POST](../../api-specs/nl/Financi%C3%ABle%20Inrichting#post-/connectors/FiIVY), [PUT](../../api-specs/nl/Financi%C3%ABle%20Inrichting#put-/connectors/FiIVY), [DELETE](../../api-specs/nl/Financi%C3%ABle%20Inrichting#delete-/connectors/FiIVY/FiIVY/@Id/{Id}) |
+| api tag 'Iv3-indeling per jaar' added | FiIVY | [POST](../../apidoc/nl/Financi%C3%ABle%20Inrichting#post-/connectors/FiIVY), [PUT](../../apidoc/nl/Financi%C3%ABle%20Inrichting#put-/connectors/FiIVY), [DELETE](../../apidoc/nl/Financi%C3%ABle%20Inrichting#delete-/connectors/FiIVY/FiIVY/@Id/{Id}) |
+| api tag 'IV3-indeling per jaar' removed | FiIVY | [POST](../../apidoc/nl/Financi%C3%ABle%20Inrichting#post-/connectors/FiIVY), [PUT](../../apidoc/nl/Financi%C3%ABle%20Inrichting#put-/connectors/FiIVY), [DELETE](../../apidoc/nl/Financi%C3%ABle%20Inrichting#delete-/connectors/FiIVY/FiIVY/@Id/{Id}) |
 
 ## Flex Specification
 
@@ -90,48 +90,48 @@ This is a change in documentation only, api hasn't changed.
 
 | Description | Connector | Operation |
 | --- | --- | --- |
-| removed the enum value 'Art' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| removed the enum value 'Crs' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| removed the enum value 'Deg' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| removed the enum value 'Dim' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| removed the enum value 'Kst' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| removed the enum value 'Pid' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| removed the enum value 'Sam' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| removed the enum value 'Sub' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| removed the enum value 'Tsl' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| removed the enum value 'Txt' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| removed the enum value 'Wst' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| removed the enum value 'Art' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| removed the enum value 'Crs' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| removed the enum value 'Deg' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| removed the enum value 'Dim' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| removed the enum value 'Kst' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| removed the enum value 'Pid' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| removed the enum value 'Sam' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| removed the enum value 'Sub' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| removed the enum value 'Tsl' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| removed the enum value 'Txt' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| removed the enum value 'Wst' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
 
 ### Changelog
 
 Changes in VaIt are documentation only. Old docs were wrong.
 | Description | Connector | Operation |
 | --- | --- | --- |
-| added the new optional request property 'PtConceptPlacementContract/Element/Fields/DaOr' | PtConceptPlacementContract | [POST](../../api-specs/nl/Flex#post-/connectors/PtConceptPlacementContract) |
-| added the new '1' enum value to the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| added the new '2' enum value to the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| added the new '3' enum value to the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| added the new '4' enum value to the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| added the new '5' enum value to the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| added the new '6' enum value to the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| added the new '7' enum value to the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| added the new '8' enum value to the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| added the new '10' enum value to the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| added the new '11' enum value to the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| added the new '14' enum value to the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| removed the enum value 'Art' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| removed the enum value 'Crs' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| removed the enum value 'Deg' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| removed the enum value 'Dim' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| removed the enum value 'Kst' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| removed the enum value 'Pid' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| removed the enum value 'Sam' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| removed the enum value 'Sub' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| removed the enum value 'Tsl' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| removed the enum value 'Txt' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| removed the enum value 'Wst' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../api-specs/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../api-specs/nl/Flex#put-/connectors/PtDeclarationCorrection) |
-| endpoint added | PtItemSet/PtItemset/@PtItpDaBe/{PtItpDaBe} | [DELETE](../../api-specs/nl/Flex#delete-/connectors/PtItemSet/PtItemset/@PtItpDaBe/{PtItpDaBe}) |
-| added the new optional request property 'PtPlacementContract/Element/Fields/DaOr' | PtPlacementContract | [POST](../../api-specs/nl/Flex#post-/connectors/PtPlacementContract), [PUT](../../api-specs/nl/Flex#put-/connectors/PtPlacementContract) |
+| added the new optional request property 'PtConceptPlacementContract/Element/Fields/DaOr' | PtConceptPlacementContract | [POST](../../apidoc/nl/Flex#post-/connectors/PtConceptPlacementContract) |
+| added the new '1' enum value to the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| added the new '2' enum value to the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| added the new '3' enum value to the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| added the new '4' enum value to the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| added the new '5' enum value to the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| added the new '6' enum value to the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| added the new '7' enum value to the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| added the new '8' enum value to the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| added the new '10' enum value to the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| added the new '11' enum value to the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| added the new '14' enum value to the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| removed the enum value 'Art' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| removed the enum value 'Crs' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| removed the enum value 'Deg' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| removed the enum value 'Dim' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| removed the enum value 'Kst' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| removed the enum value 'Pid' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| removed the enum value 'Sam' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| removed the enum value 'Sub' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| removed the enum value 'Tsl' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| removed the enum value 'Txt' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| removed the enum value 'Wst' of the request property 'PtDeclarationCorrection/Element/Objects/items/PtRealization/Element/items/Fields/VaIt' | PtDeclarationCorrection | [POST](../../apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](../../apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+| endpoint added | PtItemSet/PtItemset/@PtItpDaBe/{PtItpDaBe} | [DELETE](../../apidoc/nl/Flex#delete-/connectors/PtItemSet/PtItemset/@PtItpDaBe/{PtItpDaBe}) |
+| added the new optional request property 'PtPlacementContract/Element/Fields/DaOr' | PtPlacementContract | [POST](../../apidoc/nl/Flex#post-/connectors/PtPlacementContract), [PUT](../../apidoc/nl/Flex#put-/connectors/PtPlacementContract) |
 
 ## Inkoop Specification
 
@@ -157,7 +157,7 @@ No changes for this release.
 
 | Description | Connector | Operation |
 | --- | --- | --- |
-| endpoint added | FbPurchaseSales | [POST](../../api-specs/nl/Magazijn#post-/connectors/FbPurchaseSales), [PUT](../../api-specs/nl/Magazijn#put-/connectors/FbPurchaseSales), [DELETE](../../api-specs/nl/Magazijn#delete-/connectors/FbPurchaseSales/FbPurchaseSales/@GuLP,@GuLS/{GuLP},{GuLS}) |
+| endpoint added | FbPurchaseSales | [POST](../../apidoc/nl/Magazijn#post-/connectors/FbPurchaseSales), [PUT](../../apidoc/nl/Magazijn#put-/connectors/FbPurchaseSales), [DELETE](../../apidoc/nl/Magazijn#delete-/connectors/FbPurchaseSales/FbPurchaseSales/@GuLP,@GuLS/{GuLP},{GuLS}) |
 
 ## Medewerker en contract Specification
 
@@ -165,41 +165,41 @@ No changes for this release.
 
 | Description | Connector | Operation |
 | --- | --- | --- |
-| added the new required request property 'AfasEmployee/Element/Objects/items/AfasIdentityDocument/Element/items/Fields/ViTy' | KnEmployee | [POST](../../api-specs/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee) |
-| removed the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/NoDl' | KnEmployee | [POST](../../api-specs/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../api-specs/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
-| removed the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/DvbSDGr' | KnEmployee | [POST](../../api-specs/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../api-specs/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
-| added the new '04' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/APIV' | KnEmployee | [POST](../../api-specs/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../api-specs/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
-| added the new '06' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/APIV' | KnEmployee | [POST](../../api-specs/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../api-specs/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
-| added the new '07' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/APIV' | KnEmployee | [POST](../../api-specs/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../api-specs/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
-| added the new '08' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/APIV' | KnEmployee | [POST](../../api-specs/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../api-specs/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
-| added the new '09' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/APIV' | KnEmployee | [POST](../../api-specs/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../api-specs/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
-| added the new '10' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/APIV' | KnEmployee | [POST](../../api-specs/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../api-specs/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
-| added the new '12' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/APIV' | KnEmployee | [POST](../../api-specs/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../api-specs/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
-| added the new '14' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/APIV' | KnEmployee | [POST](../../api-specs/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../api-specs/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
-| added the new '36' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/APIV' | KnEmployee | [POST](../../api-specs/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../api-specs/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
-| added the new '04' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/Vi6' | KnEmployee | [POST](../../api-specs/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../api-specs/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
-| added the new '06' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/Vi6' | KnEmployee | [POST](../../api-specs/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../api-specs/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
-| added the new '07' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/Vi6' | KnEmployee | [POST](../../api-specs/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../api-specs/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
-| added the new '08' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/Vi6' | KnEmployee | [POST](../../api-specs/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../api-specs/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
-| added the new '09' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/Vi6' | KnEmployee | [POST](../../api-specs/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../api-specs/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
-| added the new '10' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/Vi6' | KnEmployee | [POST](../../api-specs/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../api-specs/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
-| added the new '12' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/Vi6' | KnEmployee | [POST](../../api-specs/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../api-specs/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
-| added the new '14' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/Vi6' | KnEmployee | [POST](../../api-specs/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../api-specs/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
-| added the new '36' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/Vi6' | KnEmployee | [POST](../../api-specs/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../api-specs/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
-| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/SDGr' | KnEmployee | [POST](../../api-specs/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../api-specs/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
-| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasIdentityDocument/Element/items/Fields/ViTy' | KnEmployee | [PUT](../../api-specs/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
-| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasSalary/Element/items/Fields/AcLs' | KnEmployee | [POST](../../api-specs/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../api-specs/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
-| added the new required request property 'AfasEmployee/Element/Objects/items/AfasIdentityDocument/Element/items/Fields/ViTy' | KnEmployee | [POST](../../api-specs/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee) |
-| removed the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/NoDl' | KnEmployee | [POST](../../api-specs/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../api-specs/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
-| removed the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/DvbSDGr' | KnEmployee | [POST](../../api-specs/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../api-specs/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| added the new required request property 'AfasEmployee/Element/Objects/items/AfasIdentityDocument/Element/items/Fields/ViTy' | KnEmployee | [POST](../../apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee) |
+| removed the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/NoDl' | KnEmployee | [POST](../../apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| removed the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/DvbSDGr' | KnEmployee | [POST](../../apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| added the new '04' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/APIV' | KnEmployee | [POST](../../apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| added the new '06' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/APIV' | KnEmployee | [POST](../../apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| added the new '07' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/APIV' | KnEmployee | [POST](../../apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| added the new '08' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/APIV' | KnEmployee | [POST](../../apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| added the new '09' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/APIV' | KnEmployee | [POST](../../apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| added the new '10' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/APIV' | KnEmployee | [POST](../../apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| added the new '12' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/APIV' | KnEmployee | [POST](../../apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| added the new '14' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/APIV' | KnEmployee | [POST](../../apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| added the new '36' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/APIV' | KnEmployee | [POST](../../apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| added the new '04' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/Vi6' | KnEmployee | [POST](../../apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| added the new '06' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/Vi6' | KnEmployee | [POST](../../apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| added the new '07' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/Vi6' | KnEmployee | [POST](../../apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| added the new '08' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/Vi6' | KnEmployee | [POST](../../apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| added the new '09' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/Vi6' | KnEmployee | [POST](../../apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| added the new '10' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/Vi6' | KnEmployee | [POST](../../apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| added the new '12' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/Vi6' | KnEmployee | [POST](../../apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| added the new '14' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/Vi6' | KnEmployee | [POST](../../apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| added the new '36' enum value to the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/Vi6' | KnEmployee | [POST](../../apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/SDGr' | KnEmployee | [POST](../../apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasIdentityDocument/Element/items/Fields/ViTy' | KnEmployee | [PUT](../../apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| added the new optional request property 'AfasEmployee/Element/Objects/items/AfasSalary/Element/items/Fields/AcLs' | KnEmployee | [POST](../../apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| added the new required request property 'AfasEmployee/Element/Objects/items/AfasIdentityDocument/Element/items/Fields/ViTy' | KnEmployee | [POST](../../apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee) |
+| removed the request property 'AfasEmployee/Element/Objects/items/AfasAgencyABP/Element/items/Fields/NoDl' | KnEmployee | [POST](../../apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
+| removed the request property 'AfasEmployee/Element/Objects/items/AfasContract/Element/items/Fields/DvbSDGr' | KnEmployee | [POST](../../apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee), [PUT](../../apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployee) |
 
 ### Changelog
 
 Change in documentation only
 | Description | Connector | Operation |
 | --- | --- | --- |
-| endpoint added | KnEmployee/AfasEmployee/@EmId/{EmId} | [DELETE](../../api-specs/nl/Medewerker%20en%20contract#delete-/connectors/KnEmployee/AfasEmployee/@EmId/{EmId}) |
-| api path removed without deprecation | KnEmployee/KnEmployee/@EmId/{EmId} | [DELETE](../../api-specs/nl/Medewerker%20en%20contract#delete-/connectors/KnEmployee/KnEmployee/@EmId/{EmId}) |
+| endpoint added | KnEmployee/AfasEmployee/@EmId/{EmId} | [DELETE](../../apidoc/nl/Medewerker%20en%20contract#delete-/connectors/KnEmployee/AfasEmployee/@EmId/{EmId}) |
+| api path removed without deprecation | KnEmployee/KnEmployee/@EmId/{EmId} | [DELETE](../../apidoc/nl/Medewerker%20en%20contract#delete-/connectors/KnEmployee/KnEmployee/@EmId/{EmId}) |
 
 ## Mutaties Specification
 
@@ -219,25 +219,25 @@ No changes for this release.
 
 | Description | Connector | Operation |
 | --- | --- | --- |
-| the request property 'HrPopFormAppointment/Element/Fields/DaBe' became required | HrPopFormAppointment | [POST](../../api-specs/nl/Overige#post-/connectors/HrPopFormAppointment) |
+| the request property 'HrPopFormAppointment/Element/Fields/DaBe' became required | HrPopFormAppointment | [POST](../../apidoc/nl/Overige#post-/connectors/HrPopFormAppointment) |
 
 ### Changelog
 
 | Description | Connector | Operation |
 | --- | --- | --- |
 | removed the schema 'HrEmpAdrMutInsite_POST' |  |  |
-| added the new optional request property 'HrEmpCourse/Element/Fields/CoIn' | HrEmpCourse | [POST](../../api-specs/nl/Overige#post-/connectors/HrEmpCourse), [PUT](../../api-specs/nl/Overige#put-/connectors/HrEmpCourse) |
-| added the new optional request property 'HrEmpCourse/Element/Fields/Ds' | HrEmpCourse | [POST](../../api-specs/nl/Overige#post-/connectors/HrEmpCourse), [PUT](../../api-specs/nl/Overige#put-/connectors/HrEmpCourse) |
-| added the new optional request property 'HrEmpCourse/Element/Fields/DtVf' | HrEmpCourse | [POST](../../api-specs/nl/Overige#post-/connectors/HrEmpCourse), [PUT](../../api-specs/nl/Overige#put-/connectors/HrEmpCourse) |
-| added the new optional request property 'HrEmpCourse/Element/Fields/DtVt' | HrEmpCourse | [POST](../../api-specs/nl/Overige#post-/connectors/HrEmpCourse), [PUT](../../api-specs/nl/Overige#put-/connectors/HrEmpCourse) |
-| added the new optional request property 'HrEmpCourse/Element/Fields/Dura' | HrEmpCourse | [POST](../../api-specs/nl/Overige#post-/connectors/HrEmpCourse), [PUT](../../api-specs/nl/Overige#put-/connectors/HrEmpCourse) |
-| added the new optional request property 'HrEmpCourse/Element/Fields/FLA' | HrEmpCourse | [POST](../../api-specs/nl/Overige#post-/connectors/HrEmpCourse), [PUT](../../api-specs/nl/Overige#put-/connectors/HrEmpCourse) |
-| added the new optional request property 'HrEmpCourse/Element/Fields/FLAL' | HrEmpCourse | [POST](../../api-specs/nl/Overige#post-/connectors/HrEmpCourse), [PUT](../../api-specs/nl/Overige#put-/connectors/HrEmpCourse) |
-| added the new optional request property 'HrEmpCourse/Element/Fields/FLAP' | HrEmpCourse | [POST](../../api-specs/nl/Overige#post-/connectors/HrEmpCourse), [PUT](../../api-specs/nl/Overige#put-/connectors/HrEmpCourse) |
-| added the new optional request property 'HrEmpCourse/Element/Fields/FLAR' | HrEmpCourse | [POST](../../api-specs/nl/Overige#post-/connectors/HrEmpCourse), [PUT](../../api-specs/nl/Overige#put-/connectors/HrEmpCourse) |
-| added the new optional request property 'HrEmpCourse/Element/Fields/FLAT' | HrEmpCourse | [POST](../../api-specs/nl/Overige#post-/connectors/HrEmpCourse), [PUT](../../api-specs/nl/Overige#put-/connectors/HrEmpCourse) |
-| added the new optional request property 'HrEmpCourse/Element/Fields/Grat' | HrEmpCourse | [POST](../../api-specs/nl/Overige#post-/connectors/HrEmpCourse), [PUT](../../api-specs/nl/Overige#put-/connectors/HrEmpCourse) |
-| the request property 'HrPopFormAppointment/Element/Fields/DaBe' became required | HrPopFormAppointment | [POST](../../api-specs/nl/Overige#post-/connectors/HrPopFormAppointment) |
+| added the new optional request property 'HrEmpCourse/Element/Fields/CoIn' | HrEmpCourse | [POST](../../apidoc/nl/Overige#post-/connectors/HrEmpCourse), [PUT](../../apidoc/nl/Overige#put-/connectors/HrEmpCourse) |
+| added the new optional request property 'HrEmpCourse/Element/Fields/Ds' | HrEmpCourse | [POST](../../apidoc/nl/Overige#post-/connectors/HrEmpCourse), [PUT](../../apidoc/nl/Overige#put-/connectors/HrEmpCourse) |
+| added the new optional request property 'HrEmpCourse/Element/Fields/DtVf' | HrEmpCourse | [POST](../../apidoc/nl/Overige#post-/connectors/HrEmpCourse), [PUT](../../apidoc/nl/Overige#put-/connectors/HrEmpCourse) |
+| added the new optional request property 'HrEmpCourse/Element/Fields/DtVt' | HrEmpCourse | [POST](../../apidoc/nl/Overige#post-/connectors/HrEmpCourse), [PUT](../../apidoc/nl/Overige#put-/connectors/HrEmpCourse) |
+| added the new optional request property 'HrEmpCourse/Element/Fields/Dura' | HrEmpCourse | [POST](../../apidoc/nl/Overige#post-/connectors/HrEmpCourse), [PUT](../../apidoc/nl/Overige#put-/connectors/HrEmpCourse) |
+| added the new optional request property 'HrEmpCourse/Element/Fields/FLA' | HrEmpCourse | [POST](../../apidoc/nl/Overige#post-/connectors/HrEmpCourse), [PUT](../../apidoc/nl/Overige#put-/connectors/HrEmpCourse) |
+| added the new optional request property 'HrEmpCourse/Element/Fields/FLAL' | HrEmpCourse | [POST](../../apidoc/nl/Overige#post-/connectors/HrEmpCourse), [PUT](../../apidoc/nl/Overige#put-/connectors/HrEmpCourse) |
+| added the new optional request property 'HrEmpCourse/Element/Fields/FLAP' | HrEmpCourse | [POST](../../apidoc/nl/Overige#post-/connectors/HrEmpCourse), [PUT](../../apidoc/nl/Overige#put-/connectors/HrEmpCourse) |
+| added the new optional request property 'HrEmpCourse/Element/Fields/FLAR' | HrEmpCourse | [POST](../../apidoc/nl/Overige#post-/connectors/HrEmpCourse), [PUT](../../apidoc/nl/Overige#put-/connectors/HrEmpCourse) |
+| added the new optional request property 'HrEmpCourse/Element/Fields/FLAT' | HrEmpCourse | [POST](../../apidoc/nl/Overige#post-/connectors/HrEmpCourse), [PUT](../../apidoc/nl/Overige#put-/connectors/HrEmpCourse) |
+| added the new optional request property 'HrEmpCourse/Element/Fields/Grat' | HrEmpCourse | [POST](../../apidoc/nl/Overige#post-/connectors/HrEmpCourse), [PUT](../../apidoc/nl/Overige#put-/connectors/HrEmpCourse) |
+| the request property 'HrPopFormAppointment/Element/Fields/DaBe' became required | HrPopFormAppointment | [POST](../../apidoc/nl/Overige#post-/connectors/HrPopFormAppointment) |
 
 ## Projecten en nacalculatie Specification
 
@@ -245,36 +245,36 @@ No changes for this release.
 
 | Description | Connector | Operation |
 | --- | --- | --- |
-| removed the request property 'PtProject/Element/Fields/PtTaSABK' | PtProject | [POST](../../api-specs/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../api-specs/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
-| removed the request property 'PtProject/Element/Fields/PtTaSAK' | PtProject | [POST](../../api-specs/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../api-specs/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
-| removed the request property 'PtProject/Element/Fields/PtTaSAKO' | PtProject | [POST](../../api-specs/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../api-specs/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
-| removed the request property 'PtProject/Element/Fields/PtTaSCAR' | PtProject | [POST](../../api-specs/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../api-specs/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
-| removed the request property 'PtProject/Element/Fields/PtTaSR' | PtProject | [POST](../../api-specs/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../api-specs/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
-| removed the request property 'PtProject/Element/Fields/PtTaSRi' | PtProject | [POST](../../api-specs/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../api-specs/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
-| removed the request property 'PtProject/Element/Fields/PtTaSV' | PtProject | [POST](../../api-specs/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../api-specs/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
-| removed the request property 'PtProject/Element/Fields/PtTaSV01' | PtProject | [POST](../../api-specs/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../api-specs/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
-| removed the request property 'PtProject/Element/Fields/PtTaSV02' | PtProject | [POST](../../api-specs/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../api-specs/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
-| removed the request property 'PtProject/Element/Fields/PtTaSW' | PtProject | [POST](../../api-specs/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../api-specs/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| removed the request property 'PtProject/Element/Fields/PtTaSABK' | PtProject | [POST](../../apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| removed the request property 'PtProject/Element/Fields/PtTaSAK' | PtProject | [POST](../../apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| removed the request property 'PtProject/Element/Fields/PtTaSAKO' | PtProject | [POST](../../apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| removed the request property 'PtProject/Element/Fields/PtTaSCAR' | PtProject | [POST](../../apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| removed the request property 'PtProject/Element/Fields/PtTaSR' | PtProject | [POST](../../apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| removed the request property 'PtProject/Element/Fields/PtTaSRi' | PtProject | [POST](../../apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| removed the request property 'PtProject/Element/Fields/PtTaSV' | PtProject | [POST](../../apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| removed the request property 'PtProject/Element/Fields/PtTaSV01' | PtProject | [POST](../../apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| removed the request property 'PtProject/Element/Fields/PtTaSV02' | PtProject | [POST](../../apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| removed the request property 'PtProject/Element/Fields/PtTaSW' | PtProject | [POST](../../apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
 
 ### Changelog
 
 | Description | Connector | Operation |
 | --- | --- | --- |
-| added the new optional request property 'KnQuotation/Element/Objects/items/KnQuotationLine/Element/items/Fields/QuAd' | KnQuotation | [POST](../../api-specs/nl/Projecten%20en%20nacalculatie#post-/connectors/KnQuotation), [PUT](../../api-specs/nl/Projecten%20en%20nacalculatie#put-/connectors/KnQuotation) |
-| added the new optional request property 'KnQuotation/Element/Objects/items/KnQuotationLine/Element/items/Fields/QuBo' | KnQuotation | [POST](../../api-specs/nl/Projecten%20en%20nacalculatie#post-/connectors/KnQuotation), [PUT](../../api-specs/nl/Projecten%20en%20nacalculatie#put-/connectors/KnQuotation) |
-| added the new optional request property 'KnQuotation/Element/Objects/items/KnQuotationLine/Element/items/Objects/items/FbOrderCompLines/Element/items/Fields/QuAd' | KnQuotation | [POST](../../api-specs/nl/Projecten%20en%20nacalculatie#post-/connectors/KnQuotation), [PUT](../../api-specs/nl/Projecten%20en%20nacalculatie#put-/connectors/KnQuotation) |
-| added the new optional request property 'KnQuotation/Element/Objects/items/KnQuotationLine/Element/items/Objects/items/FbOrderCompLines/Element/items/Fields/QuBo' | KnQuotation | [POST](../../api-specs/nl/Projecten%20en%20nacalculatie#post-/connectors/KnQuotation), [PUT](../../api-specs/nl/Projecten%20en%20nacalculatie#put-/connectors/KnQuotation) |
-| added the new optional request property 'PtProject/Element/Fields/SaFA' | PtProject | [POST](../../api-specs/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../api-specs/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
-| removed the request property 'PtProject/Element/Fields/PtTaSABK' | PtProject | [POST](../../api-specs/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../api-specs/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
-| removed the request property 'PtProject/Element/Fields/PtTaSAK' | PtProject | [POST](../../api-specs/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../api-specs/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
-| removed the request property 'PtProject/Element/Fields/PtTaSAKO' | PtProject | [POST](../../api-specs/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../api-specs/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
-| removed the request property 'PtProject/Element/Fields/PtTaSCAR' | PtProject | [POST](../../api-specs/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../api-specs/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
-| removed the request property 'PtProject/Element/Fields/PtTaSR' | PtProject | [POST](../../api-specs/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../api-specs/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
-| removed the request property 'PtProject/Element/Fields/PtTaSRi' | PtProject | [POST](../../api-specs/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../api-specs/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
-| removed the request property 'PtProject/Element/Fields/PtTaSV' | PtProject | [POST](../../api-specs/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../api-specs/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
-| removed the request property 'PtProject/Element/Fields/PtTaSV01' | PtProject | [POST](../../api-specs/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../api-specs/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
-| removed the request property 'PtProject/Element/Fields/PtTaSV02' | PtProject | [POST](../../api-specs/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../api-specs/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
-| removed the request property 'PtProject/Element/Fields/PtTaSW' | PtProject | [POST](../../api-specs/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../api-specs/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| added the new optional request property 'KnQuotation/Element/Objects/items/KnQuotationLine/Element/items/Fields/QuAd' | KnQuotation | [POST](../../apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/KnQuotation), [PUT](../../apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/KnQuotation) |
+| added the new optional request property 'KnQuotation/Element/Objects/items/KnQuotationLine/Element/items/Fields/QuBo' | KnQuotation | [POST](../../apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/KnQuotation), [PUT](../../apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/KnQuotation) |
+| added the new optional request property 'KnQuotation/Element/Objects/items/KnQuotationLine/Element/items/Objects/items/FbOrderCompLines/Element/items/Fields/QuAd' | KnQuotation | [POST](../../apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/KnQuotation), [PUT](../../apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/KnQuotation) |
+| added the new optional request property 'KnQuotation/Element/Objects/items/KnQuotationLine/Element/items/Objects/items/FbOrderCompLines/Element/items/Fields/QuBo' | KnQuotation | [POST](../../apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/KnQuotation), [PUT](../../apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/KnQuotation) |
+| added the new optional request property 'PtProject/Element/Fields/SaFA' | PtProject | [POST](../../apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| removed the request property 'PtProject/Element/Fields/PtTaSABK' | PtProject | [POST](../../apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| removed the request property 'PtProject/Element/Fields/PtTaSAK' | PtProject | [POST](../../apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| removed the request property 'PtProject/Element/Fields/PtTaSAKO' | PtProject | [POST](../../apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| removed the request property 'PtProject/Element/Fields/PtTaSCAR' | PtProject | [POST](../../apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| removed the request property 'PtProject/Element/Fields/PtTaSR' | PtProject | [POST](../../apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| removed the request property 'PtProject/Element/Fields/PtTaSRi' | PtProject | [POST](../../apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| removed the request property 'PtProject/Element/Fields/PtTaSV' | PtProject | [POST](../../apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| removed the request property 'PtProject/Element/Fields/PtTaSV01' | PtProject | [POST](../../apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| removed the request property 'PtProject/Element/Fields/PtTaSV02' | PtProject | [POST](../../apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+| removed the request property 'PtProject/Element/Fields/PtTaSW' | PtProject | [POST](../../apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](../../apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
 
 ## Verkoop en Orders Specification
 
@@ -282,11 +282,11 @@ No changes for this release.
 
 | Description | Connector | Operation |
 | --- | --- | --- |
-| added the new optional request property 'FbAssemblyPrep/Element/Objects/items/FbAssemblyLines/Element/items/Objects/items/AfasFbOrderCompLines/Element/items/Fields/QuAd' | FbAssemblyPrep | [POST](../../api-specs/nl/Verkoop%20en%20Orders#post-/connectors/FbAssemblyPrep), [PUT](../../api-specs/nl/Verkoop%20en%20Orders#put-/connectors/FbAssemblyPrep) |
-| added the new optional request property 'FbAssemblyPrep/Element/Objects/items/FbAssemblyLines/Element/items/Objects/items/AfasFbOrderCompLines/Element/items/Fields/QuBo' | FbAssemblyPrep | [POST](../../api-specs/nl/Verkoop%20en%20Orders#post-/connectors/FbAssemblyPrep), [PUT](../../api-specs/nl/Verkoop%20en%20Orders#put-/connectors/FbAssemblyPrep) |
-| added the new optional request property 'FbSales/Element/Objects/items/FbSalesLines/Element/items/Fields/QuAd' | FbSales | [POST](../../api-specs/nl/Verkoop%20en%20Orders#post-/connectors/FbSales), [PUT](../../api-specs/nl/Verkoop%20en%20Orders#put-/connectors/FbSales) |
-| added the new optional request property 'FbSales/Element/Objects/items/FbSalesLines/Element/items/Objects/items/AfasFbOrderCompLines/Element/items/Fields/QuAd' | FbSales | [POST](../../api-specs/nl/Verkoop%20en%20Orders#post-/connectors/FbSales), [PUT](../../api-specs/nl/Verkoop%20en%20Orders#put-/connectors/FbSales) |
-| added the new optional request property 'FbSales/Element/Objects/items/FbSalesLines/Element/items/Objects/items/AfasFbOrderCompLines/Element/items/Fields/QuBo' | FbSales | [POST](../../api-specs/nl/Verkoop%20en%20Orders#post-/connectors/FbSales), [PUT](../../api-specs/nl/Verkoop%20en%20Orders#put-/connectors/FbSales) |
+| added the new optional request property 'FbAssemblyPrep/Element/Objects/items/FbAssemblyLines/Element/items/Objects/items/AfasFbOrderCompLines/Element/items/Fields/QuAd' | FbAssemblyPrep | [POST](../../apidoc/nl/Verkoop%20en%20Orders#post-/connectors/FbAssemblyPrep), [PUT](../../apidoc/nl/Verkoop%20en%20Orders#put-/connectors/FbAssemblyPrep) |
+| added the new optional request property 'FbAssemblyPrep/Element/Objects/items/FbAssemblyLines/Element/items/Objects/items/AfasFbOrderCompLines/Element/items/Fields/QuBo' | FbAssemblyPrep | [POST](../../apidoc/nl/Verkoop%20en%20Orders#post-/connectors/FbAssemblyPrep), [PUT](../../apidoc/nl/Verkoop%20en%20Orders#put-/connectors/FbAssemblyPrep) |
+| added the new optional request property 'FbSales/Element/Objects/items/FbSalesLines/Element/items/Fields/QuAd' | FbSales | [POST](../../apidoc/nl/Verkoop%20en%20Orders#post-/connectors/FbSales), [PUT](../../apidoc/nl/Verkoop%20en%20Orders#put-/connectors/FbSales) |
+| added the new optional request property 'FbSales/Element/Objects/items/FbSalesLines/Element/items/Objects/items/AfasFbOrderCompLines/Element/items/Fields/QuAd' | FbSales | [POST](../../apidoc/nl/Verkoop%20en%20Orders#post-/connectors/FbSales), [PUT](../../apidoc/nl/Verkoop%20en%20Orders#put-/connectors/FbSales) |
+| added the new optional request property 'FbSales/Element/Objects/items/FbSalesLines/Element/items/Objects/items/AfasFbOrderCompLines/Element/items/Fields/QuBo' | FbSales | [POST](../../apidoc/nl/Verkoop%20en%20Orders#post-/connectors/FbSales), [PUT](../../apidoc/nl/Verkoop%20en%20Orders#put-/connectors/FbSales) |
 
 ## Verlof en Ziekte Specification
 
@@ -300,14 +300,14 @@ No changes for this release.
 
 | Description | Connector | Operation |
 | --- | --- | --- |
-| endpoint added | KnOrgUnit/KnOrgunit/@OuId/{OuId} | [DELETE](../../api-specs/nl/Werkgever#delete-/connectors/KnOrgUnit/KnOrgunit/@OuId/{OuId}) |
+| endpoint added | KnOrgUnit/KnOrgunit/@OuId/{OuId} | [DELETE](../../apidoc/nl/Werkgever#delete-/connectors/KnOrgUnit/KnOrgunit/@OuId/{OuId}) |
 
 ### Changelog
 
 Change in documentation only; endpoint was never available.
 | Description | Connector | Operation |
 | --- | --- | --- |
-| api path removed without deprecation | HrSalTable/HrSalTable/@Ds/{Ds} | [DELETE](../../api-specs/nl/Werkgever#delete-/connectors/HrSalTable/HrSalTable/@Ds/{Ds}) |
+| api path removed without deprecation | HrSalTable/HrSalTable/@Ds/{Ds} | [DELETE](../../apidoc/nl/Werkgever#delete-/connectors/HrSalTable/HrSalTable/@Ds/{Ds}) |
 
 ## Werving en selectie Specification
 
@@ -315,5 +315,5 @@ Change in documentation only; endpoint was never available.
 
 | Description | Connector | Operation |
 | --- | --- | --- |
-| endpoint added | HrOnboarding | [POST](../../api-specs/nl/Werving%20en%20selectie#post-/connectors/HrOnboarding) |
+| endpoint added | HrOnboarding | [POST](../../apidoc/nl/Werving%20en%20selectie#post-/connectors/HrOnboarding) |
 

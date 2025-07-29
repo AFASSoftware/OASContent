@@ -19,12 +19,12 @@ Hier lees je de standaard opzet voor het aanmaken van nieuwe verkooprelaties en 
 
 Valideer of de organisatie en/of organisatie al bestaat. Als deze al bestaat kan je deze gebruiken om de klantovereenkomt op aan te maken en voorkom je dubbele data in AFAS.
 
-- [Opvragen bestaande organisaties en personen](../../api-specs/nl/Organisaties%20en%20personen#get-/connectors/Profit_OrgPer)
-- [Opvragen verkooprelatie](../../api-specs/nl/Mutaties#get-/connectors/Profit_Debtor)
+- [Opvragen bestaande organisaties en personen](../../apidoc/nl/Organisaties%20en%20personen#get-/connectors/Profit_OrgPer)
+- [Opvragen verkooprelatie](../../apidoc/nl/Mutaties#get-/connectors/Profit_Debtor)
 
 ## Aanmaken van verkooprelatie
 
-Endpoint: [POST KnSalesRelationOrg](../../api-specs/nl/Organisaties%20en%20personen#post-/connectors/KnSalesRelationOrg)
+Endpoint: [POST KnSalesRelationOrg](../../apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnSalesRelationOrg)
 
 Begin met het aanmaken van een verkooprelatie. In het voorbeeld hieronder is `"MatchOga": "6"` waardoor er altijd een nieuwe organisatie wordt gemaakt.
 
@@ -93,7 +93,7 @@ De waarde van `DbId` heb je nodig in de volgende request.
 
 ## Aanmaken klantovereenkomst
 
-Endpoint: [POST PtProject](../../api-specs/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject)
+Endpoint: [POST PtProject](../../apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject)
 
 Een klantovereenkomst bevat alle afspraken tussen jou en de klant. Een klantovereenkomst is in feite een project met specifiek gedrag, daarom gebruik je PtProject. Er is een specifiek profiel `-147` aangemaakt voor klantovereenkomsten. De voorkeurwaardes voor velden worden niet overgenomen vanuit het profiel. Belangrijk is dat je `"PrTy": "1"` meegeeft zodat het project zich goed gedraagt.
 

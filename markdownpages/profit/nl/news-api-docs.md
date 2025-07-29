@@ -5,7 +5,7 @@ date: 2024-10-18
 tags: API Docs
 ---
 
-Welkom op de nieuwste versie van de AFAS API Docs. We zijn blij je dat hier gebruik van maakt! Met de AFAS API Docs willen we het zo makkelijk mogelijk maken om geweldige integraties met de AFAS producten te maken. Hiervoor hebben we een uitgebreide API specifcatie gemaakt met meer dan 1000 voorbeeld requests. Waar bij jij het meest blij mee? Wij zelf tevreden met alle voorbeelden bij [KnEmployee](../../api-specs/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee).
+Welkom op de nieuwste versie van de AFAS API Docs. We zijn blij je dat hier gebruik van maakt! Met de AFAS API Docs willen we het zo makkelijk mogelijk maken om geweldige integraties met de AFAS producten te maken. Hiervoor hebben we een uitgebreide API specifcatie gemaakt met meer dan 1000 voorbeeld requests. Waar bij jij het meest blij mee? Wij zelf tevreden met alle voorbeelden bij [KnEmployee](../../apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee).
 
 ## How-To's
 

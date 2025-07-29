@@ -27,7 +27,7 @@ Through the dossier functionality, it is possible to save files as attachments t
 
 ## Get dossier items
 
-Endpoint: [ProfitSubjects](../../api-specs/en/Dossiers%2C%20bijlagen%20en%20workflows#get-/connectors/ProfitSubjects)
+Endpoint: [ProfitSubjects](../../apidoc/en/Dossiers%2C%20bijlagen%20en%20workflows#get-/connectors/ProfitSubjects)
 
 Start by retrieving the dossier items of the type from which you want to retrieve the attachment. You do this with
 
@@ -82,7 +82,7 @@ You need the `SbId` in the next step. You can use the rest of the data as metada
 
 ## Retrieving attachments from a dossier item
 
-Endpoint: [Profit_Subject_Attachments](../../api-specs/en/Dossiers%2C%20bijlagen%20en%20workflows#get-/connectors/Profit_Subject_Attachments)
+Endpoint: [Profit_Subject_Attachments](../../apidoc/en/Dossiers%2C%20bijlagen%20en%20workflows#get-/connectors/Profit_Subject_Attachments)
 
 The next step is to retrieve the data of the attachments of the dossier item.
 
@@ -116,7 +116,7 @@ From this request, we need:
 
 ## Retrieving attachments from reactions to a dossier item
 
-Endpoint: [Profit_Subject_Reaction_Attachments](../../api-specs/en/Dossiers%2C%20bijlagen%20en%20workflows#get-/connectors/Profit_Subject_Reaction_Attachments)
+Endpoint: [Profit_Subject_Reaction_Attachments](../../apidoc/en/Dossiers%2C%20bijlagen%20en%20workflows#get-/connectors/Profit_Subject_Reaction_Attachments)
 
 `GET https://12345.rest.afas.online/ProfitRestServices/connectors/Profit_Subject_Reaction_Attachments?skip=0&take=100&filterfieldids=subject_id&filtervalues=53955&operatortypes=1`
 
@@ -158,7 +158,7 @@ From this request, we need:
 
 ## Retrieving a file
 
-Endpoint: [SubjectConnector](../../api-specs/en/Dossiers%2C%20bijlagen%20en%20workflows#get-/SubjectConnector). This is a special connector; in the AppConnector you'll find it on the tab Connectors as AppConnectorSubject.
+Endpoint: [SubjectConnector](../../apidoc/en/Dossiers%2C%20bijlagen%20en%20workflows#get-/SubjectConnector). This is a special connector; in the AppConnector you'll find it on the tab Connectors as AppConnectorSubject.
 
 Finally, you perform a `foreach` loop over the results of `Profit_Subject_Attachments` and `Profit_Subject_Reaction_Attachments`. With this request, you retrieve the attachment itself.
 
