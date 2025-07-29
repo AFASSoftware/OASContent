@@ -188,4 +188,4 @@ Ik toon een beperkt resultaat. Je ziet dat er geen reiskosten zijn (ze werkte im
 
 ## Gerelateerde artikelen
 
-Haal je veel gegevens op? [Gebruik dan skip en take.](GetConnector.md)
+Haal je veel gegevens op? [Gebruik dan skip en take.](./get-connector)

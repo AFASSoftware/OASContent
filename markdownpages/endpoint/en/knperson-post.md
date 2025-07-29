@@ -1,6 +1,6 @@
 # KnPerson
 
-Create or modify a person. Available as a standalone UpdateConnector, but also as a sub-object in, among others, [KnOrganisation](KnOrganisation_post.md) and KnEmployee. The functionality is nearly identical in all situations.
+Create or modify a person. Available as a standalone UpdateConnector, but also as a sub-object in, among others, [KnOrganisation](./knorganisation_post) and KnEmployee. The functionality is nearly identical in all situations.
 
 None of the sub-objects of this UpdateConnector support supplying multiple lines. So, for example, to add multiple bank accounts, multiple calls will need to be made.
 
