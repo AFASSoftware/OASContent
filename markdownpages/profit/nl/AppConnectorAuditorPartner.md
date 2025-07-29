@@ -104,11 +104,11 @@ Veel GetConnectoren tonen alleen gegevens die door de eindgebruiker in de autori
 
 #### EnSe en DvSn worden beide gebruikt.
 
-Kort gezegd: AFAS Profit kent 2 verschillende nummers die het dienstverband aanduiden. Als je die door elkaar heen gebruikt, heb je kans op lastig te traceren fouten. [Lees daarom dit artikel goed door](./howto%20BI.md#medewerkers-en-dienstverband). Schroom niet om dit te overleggen tijdens een afspraak met een SystemIntegrator.
+Kort gezegd: AFAS Profit kent 2 verschillende nummers die het dienstverband aanduiden. Als je die door elkaar heen gebruikt, heb je kans op lastig te traceren fouten. [Lees daarom dit artikel goed door](./howto-bi#medewerkers-en-dienstverband). Schroom niet om dit te overleggen tijdens een afspraak met een SystemIntegrator.
 
 #### Er worden Financiële mutaties opgehaald, maar **Gewijzigde boekingsdagen** wordt niet gebruikt.
 
-Haal je veel Financiële mutatie op? Gebruik dan ook de GetConnector `Gewijzigde boekingsdagen`. [Lees dit artikel goed door]([./howto%20BI.md#financiële-mutaties](https://help.afas.nl/help/NL/SE/App_Cnnct_View_Audit.htm#o79118)).
+Haal je veel Financiële mutatie op? Gebruik dan ook de GetConnector `Gewijzigde boekingsdagen`. [Lees dit artikel goed door](https://help.afas.nl/help/NL/SE/App_Cnnct_View_Audit.htm#o79118).
 
 Mogelijk ben je ook geïnteresseerd in het ophalen van verwijderde mutaties. [Lees daarvoor dit artikel](https://help.afas.nl/help/NL/SE/App_Cnnct_Deleted_Data.htm#o124753).
 
@@ -166,11 +166,11 @@ Je kan in een GetConnector een veld op een andere manier weergeven; bijvoorbeeld
 
 #### De integratie gebruikt gegevens per dienstverband, maar deze GetConnector haalt velden uit Actuele gegevens per arbeidsverhouding.
 
-Actuele gegevens per arbeidsverhouding toont enkel gegevens uit het hoofddienstverband. Aangezien jouw integratie op andere plekken gegevens per dienstverband ophaalt, kan het zijn dat deze GetConnector de verkeerde gegevens toont. Dit kan lastig te traceren fouten veroorzaken. [Lees daarom dit artikel goed door](./howto%20BI.md#medewerkers-en-dienstverband). Schroom niet om te overleggen met een SystemIntegrator.
+Actuele gegevens per arbeidsverhouding toont enkel gegevens uit het hoofddienstverband. Aangezien jouw integratie op andere plekken gegevens per dienstverband ophaalt, kan het zijn dat deze GetConnector de verkeerde gegevens toont. Dit kan lastig te traceren fouten veroorzaken. [Lees daarom dit artikel goed door](./howto-bi#medewerkers-en-dienstverband). Schroom niet om te overleggen met een SystemIntegrator.
 
 #### Deze GetConnector haalt velden uit een tabel met gegevens per dienstverband, maar nergens in de integratie wordt Dienstverbandnummer opgehaald.
 
-Als een medewerker meerdere dienstverbanden heeft, kan dit dubbele regels tot gevolg hebben. [Lees dit artikel goed door](./howto%20BI.md#medewerkers-en-dienstverband) voor meer informatie over meerdere dienstverbanden. Plan ook gerust een overleg in met een SystemIntegrator.
+Als een medewerker meerdere dienstverbanden heeft, kan dit dubbele regels tot gevolg hebben. [Lees dit artikel goed door](./howto-bi#medewerkers-en-dienstverband) voor meer informatie over meerdere dienstverbanden. Plan ook gerust een overleg in met een SystemIntegrator.
 
 #### Veld **naam** of **omschrijving** wordt opgehaald uit een hoger niveau.
 
