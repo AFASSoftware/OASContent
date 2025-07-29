@@ -65,15 +65,15 @@ No changes for this release.
 
 No changes for this release.
 
-## Dossiers, bijlagen en workflows Specification
+## Dossiers en bijlagen en workflows Specification
 
 ### Changelog
 
 This is a change in documentation only, api hasn't changed.
 | Description | Connector | Operation |
 | --- | --- | --- |
-| endpoint added | KnSubjectReaction/KnReaction/@Id/{Id} | [DELETE](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#delete-/connectors/KnSubjectReaction/KnReaction/@Id/{Id}) |
-| api path removed without deprecation | KnSubjectReaction/KnSubjectReaction/@Id/{Id} | [DELETE](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#delete-/connectors/KnSubjectReaction/KnSubjectReaction/@Id/{Id}) |
+| endpoint added | KnSubjectReaction/KnReaction/@Id/{Id} | [DELETE](../../apidoc/nl/Dossiers%20en%20bijlagen%20en%20workflows#delete-/connectors/KnSubjectReaction/KnReaction/@Id/{Id}) |
+| api path removed without deprecation | KnSubjectReaction/KnSubjectReaction/@Id/{Id} | [DELETE](../../apidoc/nl/Dossiers%20en%20bijlagen%20en%20workflows#delete-/connectors/KnSubjectReaction/KnSubjectReaction/@Id/{Id}) |
 
 ## Financiële Inrichting Specification
 

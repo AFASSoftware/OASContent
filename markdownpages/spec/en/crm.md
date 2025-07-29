@@ -11,7 +11,7 @@ These collections contain all components available for Profit CRM. In general, t
 - Sales relationships
 - Purchase relationships
 
-### Dossiers, attachments, and workflows
+### Dossiers en attachments, and workflows
 
 - Subject items
 - Workflow actions

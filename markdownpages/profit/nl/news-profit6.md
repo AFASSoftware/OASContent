@@ -87,14 +87,14 @@ No changes for this release.
 
 No changes for this release.
 
-## Dossiers, bijlagen en workflows Specification
+## Dossiers en bijlagen en workflows Specification
 
 ### Changelog
 
 | Description | Connector | Operation |
 | --- | --- | --- |
-| added the new optional request property 'KnSubject/Element/Objects/KnSubjectLink/Element/Fields/RlId' | KnSubject | [POST](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject), [PUT](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#put-/connectors/KnSubject) |
-| added the new optional request property 'KnSubject/Element/Objects/KnSubjectLink/Element/Fields/Year' | KnSubject | [POST](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject), [PUT](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#put-/connectors/KnSubject) |
+| added the new optional request property 'KnSubject/Element/Objects/KnSubjectLink/Element/Fields/RlId' | KnSubject | [POST](../../apidoc/nl/Dossiers%20en%20bijlagen%20en%20workflows#post-/connectors/KnSubject), [PUT](../../apidoc/nl/Dossiers%20en%20bijlagen%20en%20workflows#put-/connectors/KnSubject) |
+| added the new optional request property 'KnSubject/Element/Objects/KnSubjectLink/Element/Fields/Year' | KnSubject | [POST](../../apidoc/nl/Dossiers%20en%20bijlagen%20en%20workflows#post-/connectors/KnSubject), [PUT](../../apidoc/nl/Dossiers%20en%20bijlagen%20en%20workflows#put-/connectors/KnSubject) |
 
 ## Financiële Inrichting Specification
 

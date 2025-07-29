@@ -41,14 +41,14 @@ No changes for this release.
 
 No changes for this release.
 
-## Dossiers, bijlagen en workflows Specification
+## Dossiers en bijlagen en workflows Specification
 
 ### Changelog
 
 | Description | Connector | Operation |
 | --- | --- | --- |
-| added the new optional request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/ToOb' | KnSubject | [POST](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject), [PUT](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#put-/connectors/KnSubject) |
-| added the new '66' enum value to the request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/SfTp' | KnSubject | [POST](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject), [PUT](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#put-/connectors/KnSubject) |
+| added the new optional request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/ToOb' | KnSubject | [POST](../../apidoc/nl/Dossiers%20en%20bijlagen%20en%20workflows#post-/connectors/KnSubject), [PUT](../../apidoc/nl/Dossiers%20en%20bijlagen%20en%20workflows#put-/connectors/KnSubject) |
+| added the new '66' enum value to the request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/SfTp' | KnSubject | [POST](../../apidoc/nl/Dossiers%20en%20bijlagen%20en%20workflows#post-/connectors/KnSubject), [PUT](../../apidoc/nl/Dossiers%20en%20bijlagen%20en%20workflows#put-/connectors/KnSubject) |
 
 ## Financiële Inrichting Specification
 

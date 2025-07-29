@@ -2,8 +2,8 @@
   "openapi": "3.0.0",
   "info": {
     "version": "6.6.9",
-    "title": "AFAS Dossiers, bijlagen en workflows API",
-    "description": "Deze API beschrijft de endpoints gerelateerd aan Dossiers, bijlagen en workflows. Gebruik deze API met de functionele beschrijving van de API."
+    "title": "AFAS Dossiers en bijlagen en workflows API",
+    "description": "Deze API beschrijft de endpoints gerelateerd aan Dossiers en bijlagen en workflows. Gebruik deze API met de functionele beschrijving van de API."
   },
   "servers": [
     {

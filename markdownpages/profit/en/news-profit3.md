@@ -87,21 +87,21 @@ No changes for this version.
 
 No changes for this version.
 
-## Dossiers, bijlagen en workflows Specification
+## Dossiers en bijlagen en workflows Specification
 
 ### Changelog
 
 | Description | Path | Operation |
 | --- | --- | --- |
-| added the new optional request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/CfId' | /connectors/KnSubject | [POST](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject) |
-| added the new optional request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/CfMI' | /connectors/KnSubject | [POST](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject) |
-| added the new optional request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/CfRI' | /connectors/KnSubject | [POST](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject) |
-| added the new optional request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/CfId' | /connectors/KnSubject | [PUT](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#put-/connectors/KnSubject) |
-| added the new optional request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/CfMI' | /connectors/KnSubject | [PUT](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#put-/connectors/KnSubject) |
-| added the new optional request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/CfRI' | /connectors/KnSubject | [PUT](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#put-/connectors/KnSubject) |
-| added the new optional request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/CfId' | /connectors/KnSubject/KnSubjectAttachment | [POST](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject/KnSubjectAttachment) |
-| added the new optional request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/CfMI' | /connectors/KnSubject/KnSubjectAttachment | [POST](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject/KnSubjectAttachment) |
-| added the new optional request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/CfRI' | /connectors/KnSubject/KnSubjectAttachment | [POST](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject/KnSubjectAttachment) |
+| added the new optional request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/CfId' | /connectors/KnSubject | [POST](../../apidoc/nl/Dossiers%20en%20bijlagen%20en%20workflows#post-/connectors/KnSubject) |
+| added the new optional request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/CfMI' | /connectors/KnSubject | [POST](../../apidoc/nl/Dossiers%20en%20bijlagen%20en%20workflows#post-/connectors/KnSubject) |
+| added the new optional request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/CfRI' | /connectors/KnSubject | [POST](../../apidoc/nl/Dossiers%20en%20bijlagen%20en%20workflows#post-/connectors/KnSubject) |
+| added the new optional request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/CfId' | /connectors/KnSubject | [PUT](../../apidoc/nl/Dossiers%20en%20bijlagen%20en%20workflows#put-/connectors/KnSubject) |
+| added the new optional request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/CfMI' | /connectors/KnSubject | [PUT](../../apidoc/nl/Dossiers%20en%20bijlagen%20en%20workflows#put-/connectors/KnSubject) |
+| added the new optional request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/CfRI' | /connectors/KnSubject | [PUT](../../apidoc/nl/Dossiers%20en%20bijlagen%20en%20workflows#put-/connectors/KnSubject) |
+| added the new optional request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/CfId' | /connectors/KnSubject/KnSubjectAttachment | [POST](../../apidoc/nl/Dossiers%20en%20bijlagen%20en%20workflows#post-/connectors/KnSubject/KnSubjectAttachment) |
+| added the new optional request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/CfMI' | /connectors/KnSubject/KnSubjectAttachment | [POST](../../apidoc/nl/Dossiers%20en%20bijlagen%20en%20workflows#post-/connectors/KnSubject/KnSubjectAttachment) |
+| added the new optional request property 'KnSubject/Element/Objects/items/KnSubjectLink/Element/items/Fields/CfRI' | /connectors/KnSubject/KnSubjectAttachment | [POST](../../apidoc/nl/Dossiers%20en%20bijlagen%20en%20workflows#post-/connectors/KnSubject/KnSubjectAttachment) |
 
 ## Financiële Inrichting Specification
 

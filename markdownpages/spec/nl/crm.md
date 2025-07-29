@@ -11,7 +11,7 @@ Deze collecties bevatten alle onderdelen die beschikbaar zijn voor Profit CRM. I
 - Verkooprelaties
 - Inkooprelaties
 
-### Dossiers, bijlagen en workflows
+### Dossiers en bijlagen en workflows
 
 - Dossieritems
 - Workflowacties

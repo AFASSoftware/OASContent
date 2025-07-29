@@ -308,7 +308,7 @@ Het is mogelijk om een Projectboeking mee te geven aan de financiële mutatie. A
 
 ## Aanmaken bijlage financiële mutatie
 
-Endpoint: [Post KnSubject](../../apidoc/nl/Dossiers%2C%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
+Endpoint: [Post KnSubject](../../apidoc/nl/Dossiers%20en%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
 
 Als je een verkoopfactuur aanmaakt in AFAS heb je meestal ook een bijlage. Bijvoorbeeld een pdf bestand met de verkoopfactuur die naar de klant is gestuurd. Deze kan je toevoegen aan de financiële mutatie.
 
