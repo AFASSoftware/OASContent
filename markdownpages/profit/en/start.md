@@ -16,8 +16,8 @@ Our organization is called AFAS, our business administration solution is called 
 
 An AFAS customer usually works in one environment (multiple environments are also possible). In this environment, the customer performs administrative processes and records data. Through an integration, you can exchange data between Profit and another application. The possibilities are:
 
-- Retrieve data from an environment with a [`GetConnector`](./GetConnector).
-- Add, modify, or delete data in an environment with an [`UpdateConnector`](./UpdateConnector). The possibilities vary per `UpdateConnector`.
+- Retrieve data from an environment with a [`GetConnector`](./get-connector).
+- Add, modify, or delete data in an environment with an [`UpdateConnector`](./update-connector). The possibilities vary per `UpdateConnector`.
 - Use additional connectors, for example, the `SubjectConnector` for retrieving files.
 
 AFAS Software offers both REST (JSON) and SOAP (XML) APIs. This documentation focuses on the REST API. [Click here for the SOAP API description](https://help.afas.nl/help/NL/SE/App_Cnnctr_SOAP.htm)
@@ -83,4 +83,4 @@ Also see:
 
 ### Read further
 
-- [Profit API Concepts](./Concepts)
+- [Profit API Concepts](./concepts)

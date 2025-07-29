@@ -22,7 +22,7 @@ You invoke the endpoint using the http GET method. To receive new data, you make
 
 ## UpdateConnector
 
-An external application can add, modify or delete records in the Profit database via an UpdateConnector (the possibilities vary per endpoint). For each UpdateConnector, a `[metainfo](../../apidoc/en/Inrichting#get-/Metainfo/-Type-/-Endpoint-)` request is available. This provides all available fields, including [custom fields / free fields](./Custom%20fields) request. Custom fields are available in this meta information.
+An external application can add, modify or delete records in the Profit database via an UpdateConnector (the possibilities vary per endpoint). For each UpdateConnector, a `[metainfo](../../apidoc/en/Inrichting#get-/Metainfo/-Type-/-Endpoint-)` request is available. This provides all available fields, including [custom fields / free fields](./custom-fields) request. Custom fields are available in this meta information.
 
 [Detailed documentation about UpdateConnectors](https://help.afas.nl/help/NL/SE/App_Cnr_Rest_Update.htm)
 
@@ -63,4 +63,4 @@ This environment is the first environment to receive an update for a new AFAS Pr
 
 ### Read more
 
-- [Profit API Authentication](./Authentication)
+- [Profit API Authentication](./authentication)

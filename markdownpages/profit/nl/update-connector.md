@@ -14,7 +14,7 @@ Via HTTP method POST maak je met een  UpdateConnector records aan in Profit. Voo
 - Adres: het adres moet een landcode bevatten.
 - Financiële mutatie: een financiële mutatie moet in balans zijn. Dit betekent dat de debet- en credittotalen gelijk zijn.
 
-> HTTP 500 response betekent dat de inhoud van de request niet succesvol gevalideerd kan worden. Zie ook [Fouten verhelpen](./Troubleshooting).
+> HTTP 500 response betekent dat de inhoud van de request niet succesvol gevalideerd kan worden. Zie ook [Fouten verhelpen](./troubleshooting).
 
 ### Voorbeeld POST-request
 
@@ -72,7 +72,7 @@ Voorbeeld:
 
 Zie ook:
 
-- [Alle response-codes](./Troubleshooting#http-codes)
+- [Alle response-codes](./troubleshooting#http-codes)
 
 ## POST op SubObject
 
