@@ -11,7 +11,7 @@ Het IntegrationId is een unieke identificatie van jouw gecertificeerde integrati
 
 ## Hoe voeg ik het IntegrationId toe
 
-Voeg het IntegrationId altijd toe als **HTTP** header aan de request. Omdat het IntegrationId uniek is voor jouw integratie implementeer je voor alle gemeenschappelijke klanten hetzelfde IntegrationId.
+Voeg het IntegrationId altijd toe als **HTTP** header aan de request. Omdat het IntegrationId uniek is voor jouw integratie implementeer je voor **alle** gemeenschappelijke klanten **hetzelfde** IntegrationId.
 
 ### REST
 
@@ -22,10 +22,10 @@ fetch(url, {
   method: "POST",
   headers: {
     "IntegrationId": "12345_123456",
-    "accept": "application/json",
-    "accept-language": "nl-nl",
-    "authorization": "AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg==",
-    "content-type": "application/json;charset=utf-8, application/json"
+    "Accept": "application/json",
+    "Accept-Language": "nl-nl",
+    "Authorization": "AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg==",
+    "Content-Type": "application/json;charset=utf-8, application/json"
   }
 });
 ```
@@ -56,10 +56,10 @@ fetch(url, {
   method: "POST",
   headers: {
     "IntegrationId": "12345_123456",
-    "accept": "application/xml",
-    "accept-language": "nl-nl",
-    "authorization": "AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg==",
-    "content-type": "application/xml;charset=utf-8"
+    "Accept": "application/xml",
+    "Accept-Language": "nl-nl",
+    "Authorization": "AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg==",
+    "Content-Type": "application/xml;charset=utf-8"
   },
   body: xmlPayload,
 })
@@ -84,3 +84,6 @@ Ja, voor alle partner integraties is het IntegrationId verplicht.
 ### Hoe kan ik controleren of het IntegrationId werkt?
 
 Stuur een aanvraag in via het [AFAS Partnerportaal](https://partner.afas.nl/aanmaken-aanvraag-systemintegrator-2/systemintegrator-aanvraag), dan controleren wij de logs en laten het weten.
+
+### Hoe is het IntegrationId opgebouwd?
+

@@ -22,10 +22,10 @@ fetch(url, {
   method: "POST",
   headers: {
     "IntegrationId": "12345_123456",
-    "accept": "application/json",
-    "accept-language": "nl-nl",
-    "authorization": "AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg==",
-    "content-type": "application/json;charset=utf-8, application/json"
+    "Accept": "application/json",
+    "Accept-Language": "nl-nl",
+    "Authorization": "AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg==",
+    "Content-Type": "application/json;charset=utf-8, application/json"
   }
 });
 ```
@@ -56,10 +56,10 @@ fetch(url, {
   method: "POST",
   headers: {
     "IntegrationId": "12345_123456",
-    "accept": "application/xml",
-    "accept-language": "nl-nl",
-    "authorization": "AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb04+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg==",
-    "content-type": "application/xml;charset=utf-8"
+    "Accept": "application/xml",
+    "Accept-Language": "nl-nl",
+    "Authorization": "AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb04+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg==",
+    "Content-Type": "application/xml;charset=utf-8"
   },
   body: xmlPayload,
 })

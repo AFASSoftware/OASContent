@@ -47,9 +47,9 @@ When you initially call an endpoint, you don't know the `TrackingToken`. At this
 
 ``` bash
 curl -X POST "https://demo.afasfocus.nl/api/countries" \
- -H "accept: application/json"\
- -H "accept-version: 1"\
- -H "content-type: application/json" \
+ -H "Accept: application/json" \
+ -H "Accept-Version: 1" \
+ -H "Content-Type: application/json"
 ```
 
 This returns all results and a `TrackingToken`. See the above example. You save this `TrackingToken` for the next time you want to check for changes in this data.
@@ -60,9 +60,9 @@ Once you have a `TrackingToken`, you use it in every request you send to the SB 
 
 ``` bash
 curl -X POST "https://demo.afasfocus.nl/api/countries?TrackingToken=202312040745010" \
- -H "accept: application/json"\
- -H "accept-version: 1"\
- -H "content-type: application/json" \
+ -H "Accept: application/json" \
+ -H "Accept-Version: 1" \
+ -H "Content-Type: application/json"
 ```
 > **Note:** The `TrackingToken` result is cached. Therefore, if you use the `TrackingToken` again within a few minutes, you may get the same item again.
 
