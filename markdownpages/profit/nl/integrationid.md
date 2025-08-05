@@ -7,11 +7,11 @@ tags:
 
 ## Wat is een IntegrationId
 
-Het IntegrationId is een unieke identificatie van jouw gecertificeerde integratie. Dit is een verplicht onderdeel van het AFAS Partnerprogramma.
+Een IntegrationId is een uniek nummer voor jouw integratie. Dit nummer toont wie de integratie heeft gemaakt. Als je partner bent van AFAS, dan moet je dit nummer altijd gebruiken.
 
 ## Hoe voeg ik het IntegrationId toe
 
-Voeg het IntegrationId altijd toe als **HTTP** header aan de request. Omdat het IntegrationId uniek is voor jouw integratie implementeer je voor **alle** gemeenschappelijke klanten **hetzelfde** IntegrationId.
+Voeg het IntegrationId toe als HTTP header in elke request. Gebruik voor alle klanten hetzelfde IntegrationId. Dit nummer is uniek voor jouw integratie.
 
 ### REST
 
@@ -69,11 +69,17 @@ fetch(url, {
 
 ## Wat doet AFAS met het IntegrationId
 
-Het doel van het IntegrationId is om samen tevreden klanten te behouden. AFAS heeft hiermee de mogelijkheid om zicht te krijgen op welke endpoints gebruikt worden en wat de impact van een wijziging kan zijn. Bij relevante wijzigingen kunnen wij contact opnemen met de partners die hiervan op de hoogte moeten zijn.
+AFAS gebruikt het IntegrationId om klanten tevreden te houden. Met dit nummer kan AFAS zien:
 
-Ook zien we wanneer er fouten spelen die een probleem kunnen vormen voor de gemeenschappelijke klant. Hierop kunnen wij dan samen actie ondernemen en daarna de klant informeren.
+- Welke onderdelen van de API je gebruikt
+- Wat er gebeurt als AFAS iets verandert
+- Of er problemen zijn met jouw integratie
 
-Tenslotte is dit belangrijke data voor AFAS Sales bij verkooptrajecten. Het geeft ons inzicht in welke branches jouw integratie wordt gebruikt. Dit bepaalt ook de positionering van jouw app op https://partner.afas.nl/koppelingen.
+Als er belangrijke veranderingen komen, dan neemt AFAS contact met je op.
+
+Als er fouten zijn, dan helpt AFAS je om het op te lossen. Zo blijven de klanten tevreden.
+
+AFAS gebruikt deze informatie ook voor verkoop. Het laat zien in welke branches jouw integratie werkt. Dit helpt bij het promoten van jouw app op https://partner.afas.nl/koppelingen.
 
 ## FAQ
 
@@ -81,9 +87,34 @@ Tenslotte is dit belangrijke data voor AFAS Sales bij verkooptrajecten. Het geef
 
 Ja, voor alle partner integraties is het IntegrationId verplicht.
 
+### Wat als ik het niet meestuur?
+
+Als je geen IntegrationId gebruikt, dan gebeuren er 2 dingen:
+
+1. **Jouw integratie verliest de status "gecertificeerd"**  
+   AFAS ziet aan het IntegrationId hoeveel klanten je hebt. Zonder IntegrationId denkt AFAS dat je geen klanten hebt. Een integratie zonder klanten voldoet niet aan de eisen.
+
+2. **De klant betaalt voor problemen**  
+   Als er problemen zijn zonder IntegrationId, dan belt AFAS de klant. De klant moet dan betalen voor de hulp van AFAS.  
+   Met een IntegrationId belt AFAS jou. Samen zoeken jullie een oplossing. De klant hoeft dan niets te betalen, en jij ook niet omdat je partner bent.
+
 ### Hoe kan ik controleren of het IntegrationId werkt?
 
-Stuur een aanvraag in via het [AFAS Partnerportaal](https://partner.afas.nl/aanmaken-aanvraag-systemintegrator-2/systemintegrator-aanvraag), dan controleren wij de logs en laten het weten.
+Stuur een vraag via het [AFAS Partnerportaal](https://partner.afas.nl/aanmaken-aanvraag-systemintegrator-2/systemintegrator-aanvraag). AFAS kijkt dan in de logs en laat je weten of het werkt.
 
 ### Hoe is het IntegrationId opgebouwd?
 
+Het IntegrationId heeft twee delen met een underscore `_` ertussen:
+
+**Eerste deel:** Jouw abonnementsnummer  
+Hiermee ziet AFAS dat de aanroep van jou komt.
+
+**Tweede deel:** Het projectnummer van jouw integratie  
+(Bij oude IntegrationId's is dit het abonnementsregelnummer.)  
+Hiermee ziet AFAS om welke integratie het gaat. Je kunt namelijk meerdere integraties hebben.
+
+**Voorbeeld:** `12345_678900`
+- `12345` = jouw abonnementsnummer
+- `678900` = projectnummer van deze integratie
+
+Zo kan AFAS klanten en partners aan elkaar koppelen. In de URL staat het abonnementsnummer van de klant. In het IntegrationId staat jouw abonnementsnummer.
