@@ -38,8 +38,8 @@ De token gebruik je in de http request header met een `AfasToken` prefix. Hiervo
 
 ``` bash
 curl -X GET "https://12345.rest.afas.online/ProfitRestServices/ProfitVersion" \
- -H "accept: application/json"\
- -H "authorization: AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg==" \
+ -H "Accept: application/json" \
+ -H "Authorization: AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg=="
 ```
 
 > **Let op:** Behandel het token met zorg, aangezien het toegang biedt tot gevoelige gegevens. Zorg ervoor dat je best practices volgt bij het opslaan en beheren van het token en overweeg je integratie te laten beoordelen door een externe beveiligingsexpert om mogelijke kwetsbaarheden aan te pakken.  

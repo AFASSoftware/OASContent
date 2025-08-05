@@ -55,9 +55,9 @@ Bij de initiële aanroep van een endpoint weet je geen `TrackingToken`. Op dit m
 
 ``` bash
 curl -X POST "https://demo.afasfocus.nl/api/countries" \
- -H "accept: application/json"\
- -H "accept-version: 1"\
- -H "content-type: application/json" \
+ -H "Accept: application/json" \
+ -H "Accept-Version: 1" \
+ -H "Content-Type: application/json"
 ```
 
 Dit levert alle resultaten op en een `TrackingToken`. Zie het bovenstaande voorbeeld. Dit `TrackingToken` sla je op voor de volgende keer dat je op wijzigingen in deze data wilt controleren
@@ -68,9 +68,9 @@ Wanneer je eenmaal een `TrackingToken` hebt gebruik je deze in elke request die 
 
 ``` bash
 curl -X POST "https://demo.afasfocus.nl/api/countries?TrackingToken=202312040745010" \
- -H "accept: application/json"\
- -H "accept-version: 1"\
- -H "content-type: application/json" \
+ -H "Accept: application/json" \
+ -H "Accept-Version: 1" \
+ -H "Content-Type: application/json"
 ```
 
 > **Let op:** Het `TrackingToken` resultaat wordt gecached. Hierdoor kan je, wanneer je het `TrackingToken` binnen enkele minuten opnieuw gebruikt, hetzelfde item nog een keer terug krijgt.

@@ -22,10 +22,10 @@ Using the HTTP POST method, you create records in Profit with an UpdateConnector
 const url = "https://12345.rest.afas.online/ProfitRestServices/connectors/KnUser";
 
 const headers = new Headers();
-headers.append("accept", "application/json");
-headers.append("accept-language", "nl-nl");
-headers.append("authorization", "AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb04+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg==");
-headers.append("content-type", "application/json");
+headers.append("Accept", "application/json");
+headers.append("Accept-Language", "nl-nl");
+headers.append("Authorization", "AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb04+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg==");
+headers.append("Content-Type", "application/json");
 
 const data = JSON.stringify({
   "KnUser": {

@@ -36,8 +36,8 @@ Use the token in the http request header with an `AfasToken` prefix. Use the `Au
 
 ``` bash
 curl -X GET "https://12345.rest.afas.online/ProfitRestServices/ProfitVersion" \
- -H "accept: application/json"\
- -H "authorization: AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb04+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg==" \
+ -H "Accept: application/json" \
+ -H "Authorization: AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb04+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg=="
 ```
 
 > **Note:** Handle the token with care, as it provides access to sensitive data. Ensure that you follow best practices for storing and managing the token and consider having your integration reviewed by an external security expert to address potential vulnerabilities.

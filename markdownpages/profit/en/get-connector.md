@@ -31,9 +31,9 @@ Advantages:
 
 ``` bash Get Request
 curl -X GET "https://12345.rest.afas.online/ProfitRestServices/connectors/Profit_Address?skip=0&take=100" \
- -H "accept: application/json"\
- -H "accept-language: nl-nl"\
- -H "authorization: AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg==" \
+ -H "Accept: application/json" \
+ -H "Accept-Language: nl-nl" \
+ -H "Authorization: AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg=="
 ```
 
 Response:
@@ -183,9 +183,9 @@ Example, with `skip`=0 and `take`=750:
 const url = "https://12345.rest.afas.online/ProfitRestServices/connectors/Profit_Administrations?skip=0&take=750";
 
 const headers = new Headers();
-headers.append("accept", "application/json");
-headers.append("accept-language", "nl-nl");
-headers.append("authorization", "AfasToken token_value_here");
+headers.append("Accept", "application/json");
+headers.append("Accept-Language", "nl-nl");
+headers.append("Authorization", "AfasToken token_value_here");
 ```
 
 > A good request will be handled within 1000ms
