@@ -82,7 +82,7 @@ AFAS Profit biedt de mogelijkheid op UpdateConnectoren met een geneste structuur
  2. Het subobject specificeren in de request URL.
 
 **Methode @action tag**
-`@Action` geef je in het JSON-object mee voor de fields-tag. Het is een additionele property van het object "Element". Het gebruik van de `@Action` tag geeft flexibiliteit in het werken met complexe JSON-structuren waarin meerdere subjecten genest zijn en verschillende acties nodig zijn. Ook wordt de volledige body gevalideerd en wordt daarna als één transactie verwerkt. In een aantal situaties zien we deze toepassing vaak terugkomen:
+`@Action` geef je in het JSON-object mee binnen de Fields-tag. Het is een additionele property van het object "Fields". Het gebruik van de `@Action` tag geeft flexibiliteit in het werken met complexe JSON-structuren waarin meerdere subjecten genest zijn en verschillende acties nodig zijn. Ook wordt de volledige body gevalideerd en wordt daarna als één transactie verwerkt. In een aantal situaties zien we deze toepassing vaak terugkomen:
 
 - Medewerker gerelateerde endpoints zoals `KnEmployee` en `KnEmployeeGuid`.
 - Order en productie gerelateerde endpoints zoals `FbDeliveryNote`, `FbAssembly` en `FbSales`.
@@ -100,27 +100,29 @@ Voorbeeld deactiveren van salarisrekening en aanmaken nieuwe salarisrekening op 
 {
   "AfasEmployee": {
     "Element": {
-      "@Action": "update",
       "@EmId": "1234568774",
+      "Fields": {
+        "@Action": "update"
+      },
       "Objects": [
         {
           "AfasBankInfo": {
             "Element": [
               {
-                "@Action": "update",
                 "@AcId": "NL57RABO0312000111",
                 "@NoBk": false,
                 "Fields": {
+                  "@Action": "update",
                   "SeNo": 3,
                   "SaAc": false,
                   "Iban": "NL57RABO0312000111"
                 }
               },
               {
-                "@Action": "insert",
                 "@AcId": "NL40BOTK0755026802",
                 "@NoBk": false,
                 "Fields": {
+                  "@Action": "insert",
                   "SaAc": true,
                   "IbCk": true,
                   "Iban": "NL40BOTK0755026802"
