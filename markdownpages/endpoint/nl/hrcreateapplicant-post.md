@@ -1,0 +1,1 @@
+Gebruik bij voorkeur de connector HrOnboarding. Deze is krachtiger, completer en sluit beter aan op de interne processen van de klant.
