@@ -76,7 +76,7 @@
                   "subtitle": "",
                   "tags": ["quickstart", "basics"],
                   "featured": true,
-                  "difficulty": "beginner",
+                  "difficulty": "Beginner",
                   "estimated_time": 5
               },
               {
@@ -85,7 +85,7 @@
                   "subtitle": "Retrieve documents and attachments from the system",
                   "tags": ["documents", "attachments", "retrieval"],
                   "featured": false,
-                  "difficulty": "intermediate",
+                  "difficulty": "Intermediate",
                   "estimated_time": 15
               },
               {
@@ -94,7 +94,7 @@
                   "subtitle": "Create financial mutations for sales transactions",
                   "tags": ["finance", "sales", "journal"],
                   "featured": false,
-                  "difficulty": "intermediate",
+                  "difficulty": "Intermediate",
                   "estimated_time": 20
               },
               {
@@ -103,7 +103,7 @@
                   "subtitle": "Create financial mutations for purchase transactions",
                   "tags": ["finance", "purchase", "journal"],
                   "featured": false,
-                  "difficulty": "intermediate",
+                  "difficulty": "Intermediate",
                   "estimated_time": 20
               },
               {
@@ -112,7 +112,7 @@
                   "subtitle": "Integrate employee data with Active Directory",
                   "tags": ["hrm", "employee", "active-directory"],
                   "featured": false,
-                  "difficulty": "advanced",
+                  "difficulty": "Advanced",
                   "estimated_time": 30
               },
               {
@@ -121,7 +121,7 @@
                   "subtitle": "Set up flexible customer agreements",
                   "tags": ["flex", "customer", "agreement"],
                   "featured": false,
-                  "difficulty": "intermediate",
+                  "difficulty": "Intermediate",
                   "estimated_time": 25
               },
               {
@@ -130,7 +130,7 @@
                   "subtitle": "Configure mobility solutions and integrations",
                   "tags": ["mobility", "integration"],
                   "featured": false,
-                  "difficulty": "advanced",
+                  "difficulty": "Advanced",
                   "estimated_time": 35
               },
               {
@@ -139,7 +139,7 @@
                 "subtitle": "Link payroll administration with salary administration",
                 "tags": ["payroll", "salary", "administration"],
                 "featured": false,
-                "difficulty": "advanced",
+                "difficulty": "Advanced",
                 "estimated_time": 40
               }
           ],
@@ -150,7 +150,7 @@
                   "subtitle": "Snel aan de slag met de API",
                   "tags": ["quickstart", "basics"],
                   "featured": true,
-                  "difficulty": "beginner",
+                  "difficulty": "Beginner",
                   "estimated_time": 5
               },
               {
@@ -159,7 +159,7 @@
                   "subtitle": "Documenten en bijlagen uit Profit ophalen",
                   "tags": ["documenten", "bijlagen", "ophalen"],
                   "featured": false,
-                  "difficulty": "intermediate",
+                  "difficulty": "Intermediate",
                   "estimated_time": 15
               },
               {
@@ -168,7 +168,7 @@
                   "subtitle": "Medewerkergegevens integreren met Active Directory",
                   "tags": ["hrm", "medewerker", "active-directory"],
                   "featured": false,
-                  "difficulty": "advanced",
+                  "difficulty": "Advanced",
                   "estimated_time": 30
               },
               {
@@ -177,7 +177,7 @@
                   "subtitle": "Applicant Tracking System integreren",
                   "tags": ["ats", "recruitment", "integratie"],
                   "featured": false,
-                  "difficulty": "advanced",
+                  "difficulty": "Advanced",
                   "estimated_time": 30
               },
               {
@@ -186,7 +186,7 @@
                   "subtitle": "Plaatsingen en uitzendingen beheren",
                   "tags": ["plaatsing", "uitzending", "hrm"],
                   "featured": false,
-                  "difficulty": "intermediate",
+                  "difficulty": "Intermediate",
                   "estimated_time": 25
               },
               {
@@ -195,7 +195,7 @@
                   "subtitle": "Workflow acties configureren en uitvoeren",
                   "tags": ["workflow", "acties", "automatisering"],
                   "featured": false,
-                  "difficulty": "advanced",
+                  "difficulty": "Advanced",
                   "estimated_time": 35
               },
               {
@@ -204,7 +204,7 @@
                   "subtitle": "Mobiliteitsoplossingen en integraties configureren",
                   "tags": ["mobiliteit", "integratie"],
                   "featured": false,
-                  "difficulty": "advanced",
+                  "difficulty": "Advanced",
                   "estimated_time": 35
               },
                           {
@@ -213,7 +213,7 @@
                   "subtitle": "Business Intelligence integratie opzetten",
                   "tags": ["bi", "business-intelligence", "integratie"],
                   "featured": false,
-                  "difficulty": "advanced",
+                  "difficulty": "Advanced",
                   "estimated_time": 45
               },
               {
@@ -222,7 +222,7 @@
                   "subtitle": "Financiële mutaties voor verkooptransacties aanmaken",
                   "tags": ["financien", "verkoop", "journaal"],
                   "featured": false,
-                  "difficulty": "intermediate",
+                  "difficulty": "Intermediate",
                   "estimated_time": 20
               },
               {
@@ -231,7 +231,7 @@
                   "subtitle": "Financiële mutaties voor inkooptransacties aanmaken",
                   "tags": ["financien", "inkoop", "journaal"],
                   "featured": false,
-                  "difficulty": "intermediate",
+                  "difficulty": "Intermediate",
                   "estimated_time": 20
               },
               {
@@ -240,7 +240,7 @@
                   "subtitle": "Flexibele klantovereenkomsten opzetten",
                   "tags": ["flex", "klant", "overeenkomst"],
                   "featured": false,
-                  "difficulty": "intermediate",
+                  "difficulty": "Intermediate",
                   "estimated_time": 25
               },
               {
@@ -249,7 +249,7 @@
                 "subtitle": "Loonadministratie koppelen aan salarisadministratie",
                 "tags": ["loon", "salaris", "administratie"],
                 "featured": false,
-                "difficulty": "advanced",
+                "difficulty": "Advanced",
                 "estimated_time": 40
               },
               {
@@ -258,7 +258,7 @@
                 "subtitle": "BTW terugvordering via API afhandelen",
                 "tags": ["btw", "terugvordering", "api"],
                 "featured": false,
-                "difficulty": "intermediate",
+                "difficulty": "Intermediate",
                 "estimated_time": 25
               }
           ]
@@ -388,7 +388,7 @@
                   "subtitle": "Create and manage payroll journal entries",
                   "tags": ["payroll", "journal", "entries"],
                   "featured": true,
-                  "difficulty": "intermediate",
+                  "difficulty": "Intermediate",
                   "estimated_time": 25
               },
               {
@@ -397,7 +397,7 @@
                   "subtitle": "Integrate point-of-sale systems",
                   "tags": ["pos", "integration", "sales"],
                   "featured": false,
-                  "difficulty": "advanced",
+                  "difficulty": "Advanced",
                   "estimated_time": 35
               },
               {
@@ -406,7 +406,7 @@
                   "subtitle": "Manage customer and supplier relationships",
                   "tags": ["relations", "customers", "suppliers"],
                   "featured": false,
-                  "difficulty": "beginner",
+                  "difficulty": "Beginner",
                   "estimated_time": 15
               },
               {
@@ -415,7 +415,7 @@
                   "subtitle": "Generate and process sales invoices",
                   "tags": ["sales", "invoices", "billing"],
                   "featured": false,
-                  "difficulty": "intermediate",
+                  "difficulty": "Intermediate",
                   "estimated_time": 20
               },
               {
@@ -424,7 +424,7 @@
                   "subtitle": "Process invoice journal entries for sales",
                   "tags": ["invoices", "journal", "sales"],
                   "featured": false,
-                  "difficulty": "intermediate",
+                  "difficulty": "Intermediate",
                   "estimated_time": 20
               },
               {
@@ -433,7 +433,7 @@
                   "subtitle": "Process journal entries for purchases",
                   "tags": ["purchase", "journal", "entries"],
                   "featured": false,
-                  "difficulty": "intermediate",
+                  "difficulty": "Intermediate",
                   "estimated_time": 20
               }
           ],
@@ -444,7 +444,7 @@
                   "subtitle": "Loonjournaalposten aanmaken en beheren",
                   "tags": ["loon", "journaal", "posten"],
                   "featured": true,
-                  "difficulty": "intermediate",
+                  "difficulty": "Intermediate",
                   "estimated_time": 25
               },
               {
@@ -453,7 +453,7 @@
                   "subtitle": "Kassasystemen integreren",
                   "tags": ["kassa", "integratie", "verkoop"],
                   "featured": false,
-                  "difficulty": "advanced",
+                  "difficulty": "Advanced",
                   "estimated_time": 35
               },
               {
@@ -462,7 +462,7 @@
                   "subtitle": "Klant- en leveranciersrelaties beheren",
                   "tags": ["relaties", "klanten", "leveranciers"],
                   "featured": false,
-                  "difficulty": "beginner",
+                  "difficulty": "Beginner",
                   "estimated_time": 15
               },
               {
@@ -471,7 +471,7 @@
                   "subtitle": "Verkoopfacturen genereren en verwerken",
                   "tags": ["verkoop", "facturen", "facturering"],
                   "featured": false,
-                  "difficulty": "intermediate",
+                  "difficulty": "Intermediate",
                   "estimated_time": 20
               },
               {
@@ -480,7 +480,7 @@
                   "subtitle": "Factuurjournaalposten voor verkoop verwerken",
                   "tags": ["facturen", "journaal", "verkoop"],
                   "featured": false,
-                  "difficulty": "intermediate",
+                  "difficulty": "Intermediate",
                   "estimated_time": 20
               },
               {
@@ -489,7 +489,7 @@
                   "subtitle": "Journaalposten voor inkoop verwerken",
                   "tags": ["inkoop", "journaal", "posten"],
                   "featured": false,
-                  "difficulty": "intermediate",
+                  "difficulty": "Intermediate",
                   "estimated_time": 20
               }
           ]
