@@ -1,4 +1,7 @@
 {
+  "profit/en/AppConnectorAuditor": "profit/en/app-connector-auditor",
+  "profit/en/AppConnectorAuditorAFAS": "profit/en/app-connector-auditor-afas",
+  "profit/en/AppConnectorAuditorPartner": "profit/en/app-connector-auditor-partner",
   "profit/en/Authentication": "profit/en/authentication",
   "profit/en/Concepts": "profit/en/concepts",
   "profit/en/CustomFields": "profit/en/custom-fields",
@@ -18,6 +21,9 @@
   "profit/en/news profit4": "profit/en/news-profit4",
   "profit/en/news profit5": "profit/en/news-profit5",
   "profit/en/news profit6": "profit/en/news-profit6",
+  "profit/nl/AppConnectorAuditor": "profit/nl/app-connector-auditor",
+  "profit/nl/AppConnectorAuditorAFAS": "profit/nl/app-connector-auditor-afas",
+  "profit/nl/AppConnectorAuditorPartner": "profit/nl/app-connector-auditor-partner",
   "profit/nl/Authentication": "profit/nl/authentication",
   "profit/nl/Concepts": "profit/nl/concepts",
   "profit/nl/CustomFields": "profit/nl/custom-fields",
