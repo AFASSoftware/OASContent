@@ -1,0 +1,28 @@
+{
+  "FiReservation": {
+    "Element": {
+      "@UnId": "1",
+      "@SeNo": "",
+      "Fields": {
+        "AcNr": "4250",
+        "VaAs": "1",
+        "Yr": "2015",
+        "PeNr": "1",
+        "Ds": "Reservering maximaal",
+        "CrId": "50013",
+        "Ref": "REF394875",
+        "Set": "0",
+        "PtId": "1",
+        "BiId": "K01",
+        "DiC1": "WEST",
+        "DiC2": "PZ",
+        "DiC3": "PRO",
+        "DiC4": "NOORD",
+        "DiC5": "INT",
+        "Amt": "1000",
+        "Qua": "10",
+        "Di01": "1"
+      }
+    }
+  }
+}

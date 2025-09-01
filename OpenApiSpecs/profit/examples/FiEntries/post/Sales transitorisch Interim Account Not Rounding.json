@@ -1,0 +1,69 @@
+{
+  "FiEntryPar": {
+    "Element": {
+      "Fields": {
+        "Year": "2020",
+        "Peri": "1",
+        "UnId": "1",
+        "JoCo": "82",
+        "AuNu": "1"
+      },
+      "Objects": {
+        "FiEntries": {
+          "Element": [
+            {
+              "Fields": {
+                "VaAs": "2",
+                "AcNr": "50001",
+                "EnDa": "2020-01-01",
+                "BpDa": "2020-01-01",
+                "BpNr": "TR00000040",
+                "AmDe": "12100",
+                "AmCr": "0",
+                "DaEx": "2020-02-01"
+              }
+            },
+            {
+              "Fields": {
+                "VaAs": "1",
+                "AcNr": "8010",
+                "EnDa": "2020-01-01",
+                "BpDa": "2020-01-01",
+                "BpNr": "TR00000040",
+                "AmDe": "0",
+                "AmCr": "10000",
+                "VaId": "1"
+              },
+              "Objects": {
+                "FiTransEntries": {
+                  "Element": {
+                    "Fields": {
+                      "YeSt": "2020",
+                      "PeSt": "1",
+                      "YeEn": "2020",
+                      "PeEn": "12",
+                      "SuAc": "1901",
+                      "VaRo": "N"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "Fields": {
+                "VaAs": "1",
+                "AcNr": "1510",
+                "EnDa": "2020-01-01",
+                "BpDa": "2020-01-01",
+                "BpNr": "TR00000040",
+                "AmDe": "0",
+                "AmCr": "2100",
+                "VaId": "1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

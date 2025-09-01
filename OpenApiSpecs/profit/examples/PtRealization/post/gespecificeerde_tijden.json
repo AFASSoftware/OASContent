@@ -1,0 +1,66 @@
+{
+  "PtRealization": {
+    "Element": [
+      {
+        "Fields": {
+          "DaTi": "2023-01-02",
+          "VaIt": "1",
+          "ItCd": "300",
+          "EmId": "ALLARDJ",
+          "PrId": "600000",
+          "StId": "1",
+          "Ch": false,
+          "Ds": "09:00 - 11:00",
+          "UnId": "UUR",
+          "StTi": "09:00:00",
+          "EnTi": "11:00:00"
+        }
+      },
+      {
+        "Fields": {
+          "DaTi": "2023-01-02",
+          "VaIt": "1",
+          "ItCd": "301",
+          "EmId": "ALLARDJ",
+          "PrId": "600000",
+          "StId": "1",
+          "Ch": false,
+          "Ds": "11:00 - 13:00",
+          "UnId": "UUR",
+          "StTi": "11:00:00",
+          "EnTi": "13:00:00"
+        }
+      },
+      {
+        "Fields": {
+          "DaTi": "2023-01-02",
+          "VaIt": "1",
+          "ItCd": "302",
+          "EmId": "ALLARDJ",
+          "PrId": "600000",
+          "StId": "1",
+          "Ch": false,
+          "Ds": "14:00 - 16:00",
+          "UnId": "UUR",
+          "StTi": "14:00:00",
+          "EnTi": "16:00:00"
+        }
+      },
+      {
+        "Fields": {
+          "DaTi": "2023-01-02",
+          "VaIt": "1",
+          "ItCd": "303",
+          "EmId": "ALLARDJ",
+          "PrId": "600000",
+          "StId": "1",
+          "Ch": false,
+          "Ds": "16:00 - 18:00",
+          "UnId": "UUR",
+          "StTi": "16:00:00",
+          "EnTi": "18:00:00"
+        }
+      }
+    ]
+  }
+}

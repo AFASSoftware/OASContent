@@ -1,0 +1,33 @@
+{
+  "AfasEmployee": {
+    "Element": {
+      "@EmId": "FLOORA"
+    },
+    "Objects": {
+      "AfasDailyHours": {
+        "Element": {
+          "@DaBg": "2025-01-01",
+          "Fields": {
+            "AhWk": "0",
+            "DvSn": "1",
+            "StPa": "0"
+          },
+          "Objects": {
+            "AfasDailyHoursWeek": {
+              "Element": {
+                "@WkNo": "1",
+                "Fields": {
+                  "NHFr": "8",
+                  "NHMo": "8",
+                  "NHTh": "8",
+                  "NHTu": "8",
+                  "NHWe": "8"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

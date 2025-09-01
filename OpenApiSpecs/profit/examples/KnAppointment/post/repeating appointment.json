@@ -1,0 +1,34 @@
+{
+  "KnAppointment": {
+    "Element": {
+      "Fields": {
+        "Sbj": "Invitation to attend the 2nd Galactic Convention on Interstellar Travel",
+        "Body": "We are pleased to invite you to the 2nd Galactic Convention on Interstellar Travel, an incredible opportunity to explore the latest breakthroughs and advancements in the field of interstellar travel. The event will be held on October 20th, 2525 at the majestic Aurora Expo-Center, Mars.",
+        "DaFr": "2525-10-20T09:00:00",
+        "DaTi": "2525-10-20T10:00:00",
+        "ApTy": "1",
+        "LoId": "000001",
+        "LoTx": "Aurora Expo-Center",
+        "ApIt": "0",
+        "IsRe": "1",
+        "ReTi": "2525-12-27",
+        "ReIn": "1",
+        "Tue": "1"
+      },
+      "Objects": [
+        {
+          "KnAppointmentLines": {
+            "Element": {
+              "Fields": {
+                "PaId": "1",
+                "UsId": "DavidB",
+                "IsOw": true,
+                "Pres": "V"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

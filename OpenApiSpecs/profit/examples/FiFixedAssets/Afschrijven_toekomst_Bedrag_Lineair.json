@@ -1,0 +1,21 @@
+{
+  "FiFixedAssets": {
+    "Element": {
+      "Fields": {
+        "Ds": "FiFixedAssets_Afschrijven_toekomst_Bedrag_Lineair",
+        "FgSn": "4",
+        "DaPu": "2015-07-01",
+        "DaSe": "2015-08-15",
+        "NpBu": "10",
+        "BuVa": "55000.32",
+        "AdVa": "2500",
+        "FiYn": "true",
+        "ViAk": "3",
+        "ViDf": "L",
+        "FiAm": "5000",
+        "LiYe": "11",
+        "DaSd": "2020-01-01"
+      }
+    }
+  }
+}

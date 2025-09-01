@@ -1,0 +1,36 @@
+{
+  "AfasEmployee": {
+    "Element": {
+      "@EmId": "UPD004",
+      "Objects": {
+        "AfasAgencyFiscus": {
+          "Element": {
+            "@DaBe": "2019-01-01",
+            "@AyId": "F",
+            "Fields": {
+              "ViIn": "15",
+              "ViEm": "1",
+              "ViTs": "W",
+              "ViCd": "0",
+              "ViLk": "1",
+              "ViZv": "K",
+              "YnZW": "true",
+              "YnWW": "false",
+              "YWAO": "true"
+            }
+          }
+        },
+        "AfasAgencyO_O": {
+          "Element": {
+            "@DaBe": "2019-01-01",
+            "@AyId": "F",
+            "Fields": {
+              "DoPs": "true",
+              "DoWo": "true"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "FbAssemblyPrep": {
+    "Element": {
+      "Fields": {
+        "OrNu": "10002",
+        "OrDa": "2013-03-01",
+        "Unit": "1",
+        "War": "01",
+        "LgId": "NL"
+      },
+      "Objects": {
+        "FbAssemblyLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "7",
+              "ItCd": "3900",
+              "BiUn": "stk",
+              "QuUn": "2",
+              "Qu": "2",
+              "War": "01"
+            },
+            "Objects": {
+              "FbOrderSerialLines": {
+                "Element": [
+                  {
+                    "Fields": {
+                      "SeNu": "3900-1",
+                      "BiUn": "stk",
+                      "QuUn": "1",
+                      "Qu": "1",
+                      "QuIn": "1",
+                      "QuDl": "1",
+                      "Re": "opmerking op de serie"
+                    }
+                  },
+                  {
+                    "Fields": {
+                      "SeNu": "3900-2",
+                      "BiUn": "stk",
+                      "QuUn": "1",
+                      "Qu": "1",
+                      "QuIn": "1",
+                      "QuDl": "1",
+                      "Re": "opmerking op de serie"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

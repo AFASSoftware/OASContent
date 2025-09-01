@@ -1,0 +1,26 @@
+{
+  "FiBudget": {
+    "Element": {
+      "Fields": {
+        "unitId": "2",
+        "year": "2014",
+        "accountNr": "8070",
+        "budgetType": "index",
+        "yearBudget": "0",
+        "autoDivide": "1",
+        "divTable": "2",
+        "PeriodFrom": "1",
+        "PeriodTo": "12"
+      },
+      "Objects": {
+        "BudgetLines": {
+          "Element": {
+            "Fields": {
+              "amount": "24000"
+            }
+          }
+        }
+      }
+    }
+  }
+}

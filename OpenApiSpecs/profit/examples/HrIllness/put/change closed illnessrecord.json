@@ -1,0 +1,24 @@
+{
+  "HrIllness": {
+    "Element": {
+      "Fields": {
+        "EmId": "4125620",
+        "DaBe": "2024-03-18T00:00:00",
+        "PcWd": "0.00",
+        "ExFr": "0"
+      },
+      "Objects": {
+        "HrAbsIllnessProgress": {
+          "Element": {
+            "Fields": {
+              "DaTi": "2026-04-22T00:00:00",
+              "PsPc": "50.00",
+              "ViWr": "1",
+              "Re": "Opmerking"
+            }
+          }
+        }
+      }
+    }
+  }
+}

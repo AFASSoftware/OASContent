@@ -1,0 +1,60 @@
+{
+  "FbComposition": {
+    "Element": {
+      "Fields": {
+        "ItCd": "3406",
+        "Ds": "Omschrijving",
+        "Ds_1031": "Omschrijving Deutsch",
+        "Ds_1036": "Omschrijving La France",
+        "Ds_1043": "Omschrijving Nederlands",
+        "Ds_2057": "Omschrijving English",
+        "Ds_2067": "Omschrijving Vlaams",
+        "DsEx": "Omschriving extra",
+        "DsEx_1031": "Omschriving extra Deutsch",
+        "DsEx_1036": "Omschriving extra La France",
+        "DsEx_1043": "Omschriving extra Nederlands",
+        "DsEx_2057": "Omschriving extra English",
+        "DsEx_2067": "Omschriving extra Vlaams",
+        "Grp": "300",
+        "BiUn": "stk",
+        "VaCt": "1",
+        "VaRc": "1",
+        "CrId": "50003"
+      },
+      "Objects": {
+        "FbCompositionPart": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "art",
+                "ItCd": "1000",
+                "QuUn": "1"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "art",
+                "ItCd": "1700",
+                "QuUn": "2"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "art",
+                "ItCd": "1800",
+                "QuUn": "2"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "art",
+                "ItCd": "4104",
+                "QuUn": "2"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

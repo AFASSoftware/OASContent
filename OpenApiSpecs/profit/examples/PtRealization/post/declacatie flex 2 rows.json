@@ -1,0 +1,29 @@
+{
+  "PtRealization": {
+    "Element": [
+      {
+        "Fields": {
+          "GetPcIdAndPrId": true,
+          "DaTi": "2023-11-22",
+          "VaIt": "1",
+          "ItCd": "F023-01",
+          "Qu": "2",
+          "EmId": "800310PRO",
+          "DbId": "10010"
+        }
+      },
+      {
+        "Fields": {
+          "GetPcIdAndPrId": true,
+          "DaTi": "2023-11-22",
+          "VaIt": "1",
+          "ItCd": "F023-01",
+          "Qu": "2",
+          "EmId": "800310PRO",
+          "DbId": "10010",
+          "StId": "0"
+        }
+      }
+    ]
+  }
+}

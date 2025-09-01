@@ -1,0 +1,19 @@
+{
+  "FbUpdateActemiumDeliveryNote": {
+    "Element": {
+      "Fields": {
+        "EnPi": "2013-11-04",
+        "FbBitItCd": "1000",
+        "FbBitVaIt": "2",
+        "FbBliGuLi": "",
+        "FbDelGuLi": "{2770F004-D188-4268-A331-CE14002B2B74}",
+        "FbDelOrNu": "00000993",
+        "FbSeNSeNu": "1",
+        "Loc": "*****",
+        "Qu": "1.0000000000",
+        "QuUn": "1.00000",
+        "StPi": "2013-11-04"
+      }
+    }
+  }
+}

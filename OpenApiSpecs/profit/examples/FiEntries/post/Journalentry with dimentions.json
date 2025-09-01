@@ -1,0 +1,53 @@
+{
+    "FiEntryPar": {
+      "Element": {
+        "Fields": {
+          "Year": "2023",
+          "Peri": "6",
+          "UnId": "1",
+          "JoCo": "80"
+        },
+        "Objects": [
+          {
+            "FiEntries": {
+              "Element": [
+                {
+                  "Fields": {
+                    "VaAs": "1",
+                    "AcNr": "0100",
+                    "EnDa": "2023-01-01",
+                    "BpDa": "2023-01-01",
+                    "BpNr": "MEMO0001",
+                    "AmDe": "0",
+                    "AmCr": "100"
+                  },
+                  "Objects": [
+                    {
+                      "FiDimEntries": {
+                        "Element": {
+                          "Fields": {
+                            "DiC1": "11"
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "Fields": {
+                    "VaAs": "1",
+                    "AcNr": "0200",
+                    "EnDa": "2023-01-01",
+                    "BpDa": "2023-01-01",
+                    "BpNr": "MEMO0001",
+                    "AmDe": "100",
+                    "AmCr": "0"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }

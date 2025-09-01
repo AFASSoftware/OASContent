@@ -1,0 +1,12 @@
+{
+  "Filters": {
+    "Filter": {
+      "@FilterId": "Filter 1",
+      "Field": {
+        "@FieldId": "Medewerker",
+        "@OperatorType": "1",
+        "#text": "ALLARDJ"
+      }
+    }
+  }
+}

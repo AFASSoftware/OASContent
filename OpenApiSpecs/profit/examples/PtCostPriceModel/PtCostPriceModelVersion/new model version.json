@@ -1,0 +1,24 @@
+{
+    "PtCostPriceModel": {
+      "Element": {
+        "Fields": {
+          "CmId": "2"
+        },
+        "Objects": {
+          "PtCostPriceModelLine": {
+            "Element": {
+              "Fields": {
+                "DaBe": "2018-12-17",
+                "VaIt": "6",
+                "ItCd": "D002",
+                "VaCt": "B",
+                "VaFz": "AU",
+                "Fact": "1"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  

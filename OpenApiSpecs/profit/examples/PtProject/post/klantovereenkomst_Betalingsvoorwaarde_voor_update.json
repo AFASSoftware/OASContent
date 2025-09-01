@@ -1,0 +1,30 @@
+{
+  "PtProject": {
+    "Element": {
+      "Fields": {
+        "PrGp": "ALG",
+        "Prof": "-147",
+        "Ds": "betalingsvoorwaarde voor Update",
+        "DbId": "80418",
+        "VbCo": "ALG",
+        "PrTy": "1",
+        "CmId": "16",
+        "VaCc": "0",
+        "RpDe": "CB285CD24020D26A3077FBAC1A0F86B2",
+        "PsId": "5",
+        "HrWe": "36",
+        "ViTo": "1M",
+        "ToTe": "1",
+        "ToTp": "W",
+        "ExTe": "1",
+        "ExTp": "W",
+        "ClId": "Basis",
+        "NPDe": "0",
+        "CrMe": "2",
+        "IsId": "1",
+        "MeOw": "0",
+        "PaCd": "14"
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "KnPerson": {
+    "Element": {
+      "Fields": {
+        "PadAdr": "1",
+        "AutoNum": "1",
+        "MatchPer": "6",
+        "SeNm": "ZOEKNAAM",
+        "CaNm": "Jan",
+        "FiNm": "Jan",
+        "In": "J.A.",
+        "Is": "van",
+        "LaNm": "Jansen",
+        "SpNm": "0",
+        "ViGe": "M",
+        "PsNa": "NL",
+        "DaBi": "1967-04-07",
+        "CoBi": "NL",
+        "RsBi": "Utrecht",
+        "ViCs": "GH",
+        "DaMa": "2002-02-02"
+      },
+      "Objects": {
+        "KnBasicAddressAdr": {
+          "Element": {
+            "Fields": {
+              "PbAd": "0",
+              "Ad": "Raadhuislaan",
+              "HmNr": "105",
+              "ZpCd": "3833LC",
+              "CoId": "NL",
+              "Rs": "Leusden",
+              "AdAd": "A-1",
+              "ResZip": "0"
+            }
+          }
+        }
+      }
+    }
+  }
+}

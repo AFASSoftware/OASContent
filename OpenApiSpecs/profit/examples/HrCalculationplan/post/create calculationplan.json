@@ -1,0 +1,11 @@
+{
+  "HrCalculationplan": {
+    "Element": {
+      "@PlId": 312542,
+      "Fields": {
+        "StOn": true,
+        "ClCo": true
+      }
+    }
+  }
+}

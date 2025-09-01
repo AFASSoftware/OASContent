@@ -1,0 +1,42 @@
+{
+  "HrAbsCorrection": {
+    "Element": [
+      {
+        "Fields": {
+          "EmId": "ANDREO",
+          "EnSe": "1",
+          "RgDa": "2023-01-01",
+          "ViAt": "V",
+          "HhMm": "20",
+          "ViCr": "J1",
+          "Re": "Import via JSON",
+          "CcPy": true
+        }
+      },
+      {
+        "Fields": {
+          "EmId": "ANJAD",
+          "EnSe": "1",
+          "RgDa": "2023-01-01",
+          "ViAt": "V",
+          "HhMm": "11",
+          "ViCr": "J2",
+          "Re": "Import via JSON",
+          "CcPy": true
+        }
+      },
+      {
+        "Fields": {
+          "EmId": "ANNETK",
+          "EnSe": "1",
+          "RgDa": "2023-01-01",
+          "ViAt": "V",
+          "HhMm": "7",
+          "ViCr": "J5",
+          "Re": "Import via JSON",
+          "CcPy": true
+        }
+      }
+    ]
+  }
+}

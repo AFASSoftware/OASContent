@@ -1,0 +1,22 @@
+{
+  "KnOrganisation": {
+    "Element": {
+      "Fields": {
+        "MatchOga": "0",
+        "BcCo": "1000002"
+      },
+      "Objects": [
+        {
+          "KnBankAccount": {
+            "Element": {
+              "Fields": {
+                "CoId": "NL",
+                "Iban": "NL37COBA0864723156"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

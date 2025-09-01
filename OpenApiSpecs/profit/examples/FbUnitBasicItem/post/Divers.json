@@ -1,0 +1,149 @@
+{
+  "FbUnitBasicItem": {
+    "Element": [
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "3000",
+          "BiUn": "doz",
+          "Qu": "12",
+          "ShSt": "0",
+          "MiQu": "1",
+          "MiPu": "1",
+          "QuSa": "1",
+          "QuPu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "3001",
+          "BiUn": "krt",
+          "Qu": "100",
+          "ShSt": "0",
+          "MiQu": "4",
+          "MiPu": "4",
+          "QuSa": "2",
+          "QuPu": "2"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "3002",
+          "BiUn": "doz",
+          "Qu": "12",
+          "ShSt": "0",
+          "MiQu": "9",
+          "MiPu": "9",
+          "QuSa": "3",
+          "QuPu": "3"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "3003",
+          "BiUn": "krt",
+          "Qu": "100",
+          "ShSt": "0",
+          "MiQu": "20",
+          "MiPu": "20",
+          "QuSa": "5",
+          "QuPu": "5"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "3004",
+          "BiUn": "doz",
+          "Qu": "12",
+          "ShSt": "0",
+          "MiQu": "32",
+          "MiPu": "32",
+          "QuSa": "8",
+          "QuPu": "8"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "3005",
+          "BiUn": "krt",
+          "Qu": "100",
+          "ShSt": "1",
+          "MiQu": "1",
+          "MiPu": "1",
+          "QuSa": "1",
+          "QuPu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "3006",
+          "BiUn": "doz",
+          "Qu": "12",
+          "ShSt": "1",
+          "MiQu": "4",
+          "MiPu": "4",
+          "QuSa": "2",
+          "QuPu": "2"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "3100",
+          "BiUn": "krt",
+          "Qu": "100",
+          "ShSt": "1",
+          "MiQu": "9",
+          "MiPu": "9",
+          "QuSa": "3",
+          "QuPu": "3"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "3101",
+          "BiUn": "krt",
+          "Qu": "100",
+          "ShSt": "1",
+          "MiQu": "20",
+          "MiPu": "20",
+          "QuSa": "5",
+          "QuPu": "5"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "3102",
+          "BiUn": "doz",
+          "Qu": "12",
+          "ShSt": "1",
+          "MiQu": "32",
+          "MiPu": "32",
+          "QuSa": "8",
+          "QuPu": "8"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "3103",
+          "BiUn": "krt",
+          "Qu": "100",
+          "ShSt": "1",
+          "MiQu": "40",
+          "MiPu": "40",
+          "QuSa": "10",
+          "QuPu": "10"
+        }
+      }
+    ]
+  }
+}

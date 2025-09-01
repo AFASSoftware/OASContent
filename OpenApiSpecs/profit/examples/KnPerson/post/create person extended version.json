@@ -1,0 +1,61 @@
+{
+  "KnPerson": {
+    "Element": {
+      "Fields": {
+        "PadAdr": "1",
+        "AutoNum": "1",
+        "MatchPer": "7",
+        "SeNm": "ZOEKNAAM",
+        "CaNm": "Jan",
+        "FiNm": "Jan",
+        "In": "J.A.",
+        "LaNm": "Jansen",
+        "SpNm": "0",
+        "ViGe": "M",
+        "TtId": "ALG",
+        "Corr": "0"
+      },
+      "Objects": {
+        "KnBankAccount": {
+          "Element": {
+            "Fields": {
+              "CoId": "NL",
+              "IbCk": "false",
+              "BaAc": "849835607",
+              "BkTp": "532003",
+              "BkIc": "100007589",
+              "AcGa": "false",
+              "AcCk": "false"
+            }
+          }
+        },
+        "KnBasicAddressAdr": {
+          "Element": {
+            "Fields": {
+              "PbAd": "0",
+              "Ad": "Philipsstraat",
+              "HmNr": "105",
+              "ZpCd": "3833LC",
+              "CoId": "NL",
+              "Rs": "Leusden",
+              "ResZip": "0"
+            }
+          }
+        },
+        "KnBasicAddressPad": {
+          "Element": {
+            "Fields": {
+              "PbAd": "0",
+              "Ad": "Philipsstraat",
+              "HmNr": "105",
+              "ZpCd": "3833LC",
+              "CoId": "NL",
+              "Rs": "Leusden",
+              "ResZip": "0"
+            }
+          }
+        }
+      }
+    }
+  }
+}

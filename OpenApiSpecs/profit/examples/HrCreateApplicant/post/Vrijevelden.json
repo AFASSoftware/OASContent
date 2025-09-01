@@ -1,0 +1,19 @@
+{
+  "HrCreateApplicant": {
+    "Element": {
+      "Fields": {
+        "VcSn": "2",
+        "In": "J.A.",
+        "FiNm": "Jan",
+        "LaNm": "Jansen",
+        "ViGe": "M",
+        "EmAd": "john.doe@example.com",
+        "CoId": "NL",
+        "UB64566104E39DF60FE453DAE2C5449FC": [
+          "Extra Veld",
+          "1"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "FbItemArticle": {
+    "Element": [
+      {
+        "Fields": {
+          "ItCd": "SHIRT",
+          "Ds": "SHIRT",
+          "Grp": "100",
+          "BiSt": "1",
+          "BiDc": "0",
+          "BiUn": "STK",
+          "VaRc": "2",
+          "VaTp": "4",
+          "ArSu": "0",
+          "StPrice": "100",
+          "CrId": "60005",
+          "CsGc": "00000000",
+          "StD1": "MATEN",
+          "StD2": "KLEUR"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "BROEK",
+          "Ds": "BROEK",
+          "Grp": "100",
+          "BiSt": "1",
+          "BiDc": "0",
+          "BiUn": "STK",
+          "VaRc": "2",
+          "VaTp": "3",
+          "ArSu": "0",
+          "StPrice": "100",
+          "CrId": "60005",
+          "CsGc": "00000000",
+          "StD1": "MATEN"
+        }
+      }
+    ]
+  }
+}

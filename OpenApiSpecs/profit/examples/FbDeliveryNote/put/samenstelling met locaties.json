@@ -1,0 +1,270 @@
+{
+    "FbDeliveryNote": {
+        "Element": {
+            "@Action": "update",
+            "Fields": {
+                "OrNu": "PB23007535"
+            },
+            "Objects": {
+                "FbDeliveryNoteLines": {
+                    "Element": {
+                        "@Action": "update",
+                        "Fields": {
+                            "VaIt": "7",
+                            "ItCd": "SF11451"
+                        },
+                        "Objects": {
+                            "AfasFbOrderCompLines": {
+                                "Element": [
+                                    {
+                                        "@Action": "update",
+                                        "Fields": {
+                                            "VaIt": "2",
+                                            "ItCd": "F23771"
+                                        },
+                                        "Objects": {
+                                            "FbOrderLocationLines": {
+                                                "Element": {
+                                                    "@Action": "insert",
+                                                    "Fields": {
+                                                        "Loc": "P",
+                                                        "Qu": "1.00"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "@Action": "update",
+                                        "Fields": {
+                                            "VaIt": "2",
+                                            "ItCd": "F24124"
+                                        },
+                                        "Objects": {
+                                            "FbOrderLocationLines": {
+                                                "Element": {
+                                                    "@Action": "insert",
+                                                    "Fields": {
+                                                        "Loc": "P",
+                                                        "Qu": "1.00"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "@Action": "update",
+                                        "Fields": {
+                                            "VaIt": "2",
+                                            "ItCd": "F10265"
+                                        },
+                                        "Objects": {
+                                            "FbOrderLocationLines": {
+                                                "Element": {
+                                                    "@Action": "insert",
+                                                    "Fields": {
+                                                        "Loc": "P",
+                                                        "Qu": "1.00"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "@Action": "update",
+                                        "Fields": {
+                                            "VaIt": "2",
+                                            "ItCd": "F14400"
+                                        },
+                                        "Objects": {
+                                            "FbOrderLocationLines": {
+                                                "Element": {
+                                                    "@Action": "insert",
+                                                    "Fields": {
+                                                        "Loc": "P",
+                                                        "Qu": "1.00"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "@Action": "update",
+                                        "Fields": {
+                                            "VaIt": "2",
+                                            "ItCd": "F10360"
+                                        },
+                                        "Objects": {
+                                            "FbOrderLocationLines": {
+                                                "Element": {
+                                                    "@Action": "insert",
+                                                    "Fields": {
+                                                        "Loc": "P",
+                                                        "Qu": "1.00"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "@Action": "update",
+                                        "Fields": {
+                                            "VaIt": "2",
+                                            "ItCd": "F23195"
+                                        },
+                                        "Objects": {
+                                            "FbOrderLocationLines": {
+                                                "Element": {
+                                                    "@Action": "insert",
+                                                    "Fields": {
+                                                        "Loc": "P",
+                                                        "Qu": "1.00"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "@Action": "update",
+                                        "Fields": {
+                                            "VaIt": "2",
+                                            "ItCd": "F24306"
+                                        },
+                                        "Objects": {
+                                            "FbOrderLocationLines": {
+                                                "Element": {
+                                                    "@Action": "insert",
+                                                    "Fields": {
+                                                        "Loc": "P",
+                                                        "Qu": "1.00"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "@Action": "update",
+                                        "Fields": {
+                                            "VaIt": "2",
+                                            "ItCd": "F24604"
+                                        },
+                                        "Objects": {
+                                            "FbOrderLocationLines": {
+                                                "Element": {
+                                                    "@Action": "insert",
+                                                    "Fields": {
+                                                        "Loc": "P",
+                                                        "Qu": "1.00"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "@Action": "update",
+                                        "Fields": {
+                                            "VaIt": "2",
+                                            "ItCd": "A12077"
+                                        },
+                                        "Objects": {
+                                            "FbOrderLocationLines": {
+                                                "Element": {
+                                                    "@Action": "insert",
+                                                    "Fields": {
+                                                        "Loc": "P",
+                                                        "Qu": "1.00"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "@Action": "update",
+                                        "Fields": {
+                                            "VaIt": "2",
+                                            "ItCd": "F10306"
+                                        },
+                                        "Objects": {
+                                            "FbOrderLocationLines": {
+                                                "Element": {
+                                                    "@Action": "insert",
+                                                    "Fields": {
+                                                        "Loc": "P",
+                                                        "Qu": "1.00"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "@Action": "update",
+                                        "Fields": {
+                                            "VaIt": "2",
+                                            "ItCd": "A24323"
+                                        },
+                                        "Objects": {
+                                            "FbOrderLocationLines": {
+                                                "Element": {
+                                                    "@Action": "insert",
+                                                    "Fields": {
+                                                        "Loc": "P",
+                                                        "Qu": "1.00"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "@Action": "update",
+                                        "Fields": {
+                                            "VaIt": "2",
+                                            "ItCd": "F10259"
+                                        },
+                                        "Objects": {
+                                            "FbOrderLocationLines": {
+                                                "Element": {
+                                                    "@Action": "insert",
+                                                    "Fields": {
+                                                        "Loc": "P",
+                                                        "Qu": "1.00"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "@Action": "update",
+                                        "Fields": {
+                                            "VaIt": "2",
+                                            "ItCd": "F25455"
+                                        },
+                                        "Objects": {
+                                            "FbOrderLocationLines": {
+                                                "Element": {
+                                                    "@Action": "insert",
+                                                    "Fields": {
+                                                        "Loc": "P",
+                                                        "Qu": "1.00"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "@Action": "delete",
+                                        "Fields": {
+                                            "VaIt": "1",
+                                            "ItCd": "74",
+                                            "ds": "test",
+                                            "GuLi": "{EC5323EA-249C-48BB-A40F-531C84E9838D}"
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

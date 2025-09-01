@@ -1,0 +1,38 @@
+
+{
+    "AfasEmployee": {
+        "Element": {
+            "@EmId": "TEDB",
+            "Fields": {
+                "ViSe": "I"
+            },
+            "Objects": [
+                {
+                    "AfasAgencyFiscus": {
+                        "Element": {
+                            "@Action": "insert",
+                            "@DaBe": "2022-03-01",
+                            "@AyId": "F",
+                            "Fields": {
+                                "ViIn": "15",
+                                "ViEm": "1",
+                                "ViTs": "W",
+                                "ViCd": "0",
+                                "ViLk": "1",
+                                "ViZv": "K",
+                                "YnZW": "1",
+                                "YnWW": "1",
+                                "YWAO": "1",
+                                "ViVb": "0",
+                                "ViCx": "0",
+                                "TxGy": "1",
+                                "TxGn": "1" 
+                            }
+                        }
+                    }
+                    
+                }
+            ]
+        }
+    }
+}

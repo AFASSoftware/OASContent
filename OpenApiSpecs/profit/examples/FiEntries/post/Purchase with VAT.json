@@ -1,0 +1,54 @@
+{
+  "FiEntryPar": {
+    "Element": {
+      "Fields": {
+        "Year": "2014",
+        "Peri": "1",
+        "UnId": "1",
+        "JoCo": "10"
+      },
+      "Objects": {
+        "FiEntries": {
+          "Element": [
+            {
+              "Fields": {
+                "VaAs": "3",
+                "AcNr": "50013",
+                "EnDa": "2014-01-01",
+                "BpDa": "2014-01-01",
+                "InId": "Connector",
+                "AmDe": "0",
+                "AmCr": "12100",
+                "DaEx": "2014-02-01"
+              }
+            },
+            {
+              "Fields": {
+                "VaAs": "1",
+                "AcNr": "4510",
+                "EnDa": "2014-01-01",
+                "BpDa": "2014-01-01",
+                "InId": "Connector",
+                "AmDe": "10000",
+                "AmCr": "0",
+                "VaId": "5"
+              }
+            },
+            {
+              "Fields": {
+                "VaAs": "1",
+                "AcNr": "1500",
+                "EnDa": "2014-01-01",
+                "BpDa": "2014-01-01",
+                "InId": "Connector",
+                "AmDe": "2100",
+                "AmCr": "0",
+                "VaId": "5"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

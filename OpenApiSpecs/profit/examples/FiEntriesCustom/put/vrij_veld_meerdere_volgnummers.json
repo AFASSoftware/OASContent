@@ -1,0 +1,33 @@
+{
+  "FiEntriesCustom": {
+    "Element": [
+      {
+        "@UnId": "1",
+        "@EnNo": "2",
+        "@SeNo": "1",
+        "Fields": {
+          "U76779D5140F7CC8D7F1537BD5CC4FC50": "Tekst gewijzigd",
+          "UF1A77D494646B34E15581FBFA4FA57AA": "12345"
+        }
+      },
+      {
+        "@UnId": "1",
+        "@EnNo": "2",
+        "@SeNo": "2",
+        "Fields": {
+          "U76779D5140F7CC8D7F1537BD5CC4FC50": "Tekst gewijzigd",
+          "UF1A77D494646B34E15581FBFA4FA57AA": "12345"
+        }
+      },
+      {
+        "@UnId": "1",
+        "@EnNo": "2",
+        "@SeNo": "3",
+        "Fields": {
+          "U76779D5140F7CC8D7F1537BD5CC4FC50": "Tekst gewijzigd",
+          "UF1A77D494646B34E15581FBFA4FA57AA": "12345"
+        }
+      }
+    ]
+  }
+}

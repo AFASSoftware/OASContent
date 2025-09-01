@@ -1,0 +1,174 @@
+{
+  "AfasEmployee": {
+    "Element": {
+      "@EmId": "",
+      "Fields": {
+        "ViSe": "I",
+        "Bl": "0",
+        "LwOb": "0",
+        "LwTg": "0"
+      },
+      "Objects": {
+        "KnPerson": {
+          "Element": {
+            "Fields": {
+              "PadAdr": "1",
+              "AutoNum": "1",
+              "MatchPer": "7",
+              "SeNm": "ZOEKNAAM",
+              "FiNm": "Jan",
+              "In": "J.A.",
+              "Is": "van",
+              "LaNm": "Jansen",
+              "SpNm": "1",
+              "IsBi": "v. Jansen",
+              "NmBi": "Jansen",
+              "IsPa": "van",
+              "NmPa": "Marie Jansen",
+              "ViUs": "0",
+              "ViGe": "M",
+              "PsNa": "NL",
+              "DaBi": "1984-09-10",
+              "SoSe": "123456789",
+              "ViCs": "GH",
+              "TtId": "ALG",
+              "TeNr": "334341800",
+              "MbNr": "334341800",
+              "EmAd": "john.doe@example.com"
+            },
+            "Objects": {
+              "KnBasicAddressAdr": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": "0",
+                    "Ad": "Philipsstraat",
+                    "HmNr": "105",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden"
+                  }
+                }
+              },
+              "KnBasicAddressPad": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": "0",
+                    "Ad": "Philipsstraat",
+                    "HmNr": "105",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "AfasContract": {
+          "Element": {
+            "@DaBe": "2015-03-01",
+            "Fields": {
+              "ClId": "Basis",
+              "WcId": "Basis",
+              "ApCo": "B",
+              "DaEn": "2016-03-31",
+              "CmId": "RIS",
+              "EmMt": "1",
+              "ViEt": "F",
+              "ViTo": "1M",
+              "DaEt": "2015-04-30",
+              "RtDa": "0"
+            }
+          }
+        },
+        "AfasOrgunitFunction": {
+          "Element": {
+            "@DaBe": "2015-03-01",
+            "Fields": {
+              "DpId": "RIS",
+              "FuId": "RvB"
+            }
+          }
+        },
+        "AfasTimeTable": {
+          "Element": {
+            "@DaBg": "2015-03-01",
+            "Fields": {
+              "SeNo": "51647801",
+              "Spec": "0",
+              "FtSv": "0"
+            }
+          }
+        },
+        "AfasSalary": {
+          "Element": {
+            "@DaBe": "2015-03-01",
+            "Fields": {
+              "SaSt": "0",
+              "SaPe": "S",
+              "EmSa": "1723.11",
+              "NtSa": "0",
+              "PtId": "5",
+              "SaYe": "0",
+              "EmSc": "2.75",
+              "TaId": "69",
+              "VaSc": "D"
+            }
+          }
+        },
+        "AfasBankInfo": {
+          "Element": {
+            "@AcId": "377830283",
+            "@NoBk": "0",
+            "Fields": {
+              "SaAc": "1",
+              "Ds": "Salaris",
+              "Nm": "Jansen",
+              "Rs": "Leusden",
+              "BkTp": "528000"
+            }
+          }
+        },
+        "AfasAgencyGAK": {
+          "Element": {
+            "@DaBe": "2015-03-01",
+            "@AyId": "UWV",
+            "Fields": {
+              "ViGw": "01",
+              "DsEm": "Raad van Bes"
+            }
+          }
+        },
+        "AfasAgencyFiscus": {
+          "Element": {
+            "@DaBe": "2015-03-01",
+            "@AyId": "F",
+            "Fields": {
+              "ViIn": "15",
+              "ViEm": "1",
+              "ViTs": "W",
+              "ViCd": "0",
+              "ViLk": "1",
+              "ViZv": "M",
+              "YnZW": "1",
+              "YnWW": "1",
+              "YWAO": "1",
+              "ViOk": "0",
+              "ViVb": "0",
+              "ViCx": "0",
+              "TxF4": "1",
+              "TxF5": "1"
+            }
+          }
+        },
+        "AfasAgencyArbo": {
+          "Element": {
+            "@DaBe": "2015-03-01",
+            "@AyId": "MAETIS",
+            "Fields": null
+          }
+        }
+      }
+    }
+  }
+}

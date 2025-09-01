@@ -1,0 +1,107 @@
+{
+  "KnTeamMember": {
+    "Element": [
+      {
+        "Fields": {
+          "Team": "Team 1",
+          "Desc": "Het primaire team",
+          "Type": "1",
+          "EmId": "KeesZ",
+          "TmRl": "IPL",
+          "ItCd": "301"
+        }
+      },
+      {
+        "Fields": {
+          "Team": "Team 1",
+          "Type": "1",
+          "EmId": "ArendB",
+          "TmRl": "TL",
+          "ItCd": "300"
+        }
+      },
+      {
+        "Fields": {
+          "Team": "Team 1",
+          "Type": "2",
+          "CdId": "1027",
+          "TmRl": "TL"
+        }
+      },
+      {
+        "Fields": {
+          "Team": "Team 1",
+          "Type": "2",
+          "CdId": "1005",
+          "TmRl": "EPL",
+          "ItCd": "302"
+        }
+      },
+      {
+        "Fields": {
+          "Team": "Team 1",
+          "Type": "2",
+          "CdId": "536",
+          "TmRl": "TL",
+          "ItCd": "302"
+        }
+      },
+      {
+        "Fields": {
+          "Team": "Team 2",
+          "Desc": "Het secundaire team",
+          "Type": "1",
+          "EmId": "KeesZ",
+          "TmRl": "IPL",
+          "ItCd": "302"
+        }
+      },
+      {
+        "Fields": {
+          "Team": "Team 2",
+          "Type": "1",
+          "EmId": "ArendB",
+          "TmRl": "TL",
+          "ItCd": "302"
+        }
+      },
+      {
+        "Fields": {
+          "Team": "Team 2",
+          "Type": "2",
+          "CdId": "1005",
+          "TmRl": "TL",
+          "ItCd": "300"
+        }
+      },
+      {
+        "Fields": {
+          "Team": "Team 3",
+          "Desc": "Het occasionele team",
+          "Type": "1",
+          "EmId": "HermaS",
+          "TmRl": "TL",
+          "ItCd": "ADVDIR"
+        }
+      },
+      {
+        "Fields": {
+          "Team": "Team 3",
+          "Type": "2",
+          "CdId": "471",
+          "TmRl": "TL",
+          "ItCd": "ADVDIR"
+        }
+      },
+      {
+        "Fields": {
+          "Team": "Team 3",
+          "Type": "2",
+          "CdId": "23",
+          "TmRl": "TL",
+          "ItCd": "ADVDIR"
+        }
+      }
+    ]
+  }
+}

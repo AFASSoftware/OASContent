@@ -1,0 +1,41 @@
+{
+    "FbSales": {
+      "Element": {
+        "Fields": {
+          "OrDa": "2024-02-16",
+          "DbId": "10001",
+          "Unit": 1,
+          "War": "01",
+          "ExAd": "Example delivery address note"
+        },
+        "Objects": [
+          {
+            "FbSalesLines": {
+              "Element": [
+                {
+                  "Fields": {
+                    "VaIt": "2",
+                    "ItCd": "1006",
+                    "Ds": "Server behuizing 3 units Antec",
+                    "BiUn": "STK",
+                    "QuUn": "1",
+                    "Upri": "261.72"
+                  }
+                },
+                {
+                  "Fields": {
+                    "VaIt": "6",
+                    "ItCd": "D012",
+                    "Ds": "Transportkosten",
+                    "BiUn": "*****",
+                    "QuUn": "1",
+                    "Upri": "30"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }

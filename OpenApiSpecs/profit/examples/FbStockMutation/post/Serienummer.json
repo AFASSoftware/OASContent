@@ -1,0 +1,21 @@
+{
+  "FbStockMutation": {
+    "Element": {
+      "Fields": {
+        "UsCr": "ALLARDJ",
+        "VaOt": "41",
+        "ReId": "6",
+        "Da": "2013-01-01",
+        "Ds": "Mutatie via de UpdateConnector!!",
+        "VaIt": "2",
+        "ItCd": "4000",
+        "SeNu": "4000AAA0001",
+        "War": "01",
+        "Loc": "A1",
+        "BiUn": "STK",
+        "QuUn": "1",
+        "Qu": "1"
+      }
+    }
+  }
+}

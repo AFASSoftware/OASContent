@@ -1,0 +1,76 @@
+{
+  "KnPurchaseRelationPer": {
+    "Element": {
+      "@CrId": "70000",
+      "Fields": {
+        "IsCr": true,
+        "VaId": "NL123456789B02",
+        "PaCd": "14",
+        "CuId": "EUR",
+        "VaDu": true,
+        "PrFc": "5",
+        "Krli": false,
+        "PrLs": "*****",
+        "VkMa": "*****",
+        "AuPa": true,
+        "WaOr": true,
+        "WaTx": "korting 10%",
+        "ColA": "1600"
+      },
+      "Objects": {
+        "KnPerson": {
+          "Element": {
+            "Fields": {
+              "PadAdr": true,
+              "AutoNum": true,
+              "MatchPer": "7",
+              "SeNm": "ZOEKNAAM",
+              "CaNm": "Jan",
+              "FiNm": "Jan",
+              "In": "J.A.",
+              "Is": "van",
+              "LaNm": "Jansen",
+              "ViGe": "M",
+              "PsNa": "NL",
+              "DaBi": "1978-05-11",
+              "CoBi": "NL",
+              "RsBi": "Groningen",
+              "ViCs": "GH",
+              "DaMa": "2001-01-01",
+              "TtId": "Alg",
+              "TeNr": "334341800",
+              "MbNr": "334341800",
+              "EmAd": "john.doe@example.com",
+              "HoPa": "https://www.example.com",
+              "Corr": true,
+              "ViMd": "EMA"
+            },
+            "Objects": {
+              "KnBankAccount": {
+                "Element": {
+                  "Fields": {
+                    "CoId": "NL",
+                    "IbCk": false,
+                    "BaAc": "849835607"
+                  }
+                }
+              },
+              "KnBasicAddressAdr": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": false,
+                    "Ad": "Orionstraat",
+                    "HmNr": "105",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

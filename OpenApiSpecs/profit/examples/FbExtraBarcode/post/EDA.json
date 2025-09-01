@@ -1,0 +1,14 @@
+{
+  "FbExtraBarcode": {
+    "Element": {
+      "Fields": {
+        "VaIt": "Art",
+        "ItCd": "1000",
+        "VaBc": "6",
+        "BaCo": "00000296465",
+        "VaBu": "01",
+        "Re": "Opmerking Test"
+      }
+    }
+  }
+}

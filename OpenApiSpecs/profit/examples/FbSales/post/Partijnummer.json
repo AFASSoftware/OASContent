@@ -1,0 +1,76 @@
+{
+  "FbSales": {
+    "Element": {
+      "Fields": {
+        "DbId": "10001",
+        "RfCs": "partijnummer"
+      },
+      "Objects": {
+        "FbSalesLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "8003",
+                "BiUn": "stk",
+                "QuUn": "10"
+              },
+              "Objects": {
+                "FbOrderBatchLines": {
+                  "Element": [
+                    {
+                      "Fields": {
+                        "BaNu": "CDRC.8010.IMAT001",
+                        "BiUn": "stk",
+                        "QuUn": "5",
+                        "Re": "Partijnummer artikel"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "BaNu": "CDRC.8010.IMAT002",
+                        "BiUn": "stk",
+                        "QuUn": "5",
+                        "Re": "Partijnummer artikel"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "8004",
+                "BiUn": "stk",
+                "QuUn": "10"
+              },
+              "Objects": {
+                "FbOrderBatchLines": {
+                  "Element": [
+                    {
+                      "Fields": {
+                        "BaNu": "CDRC.8025.IMAT001",
+                        "BiUn": "stk",
+                        "QuUn": "5",
+                        "Re": "Partijnummer artikel"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "BaNu": "CDRC.8025.IMAT002",
+                        "BiUn": "stk",
+                        "QuUn": "5",
+                        "Re": "Partijnummer artikel"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

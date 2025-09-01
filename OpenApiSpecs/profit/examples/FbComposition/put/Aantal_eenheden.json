@@ -1,0 +1,24 @@
+{
+    "FbComposition": {
+      "Element": {
+        "Fields": {
+          "ItCd": "3206",
+          "Grp": "300",
+          "BiUn": "stk",
+          "VaCt": "1",
+          "VaRc": "1",
+          "CrId": "50003"
+        },
+        "Objects": {
+          "FbCompositionPart": {
+            "Element": {
+              "Fields": {
+                "ItCd": "1000",
+                "QuUn": "3"
+              }
+            }
+          }
+        }
+      }
+    }
+  }

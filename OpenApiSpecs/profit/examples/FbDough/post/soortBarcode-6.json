@@ -1,0 +1,27 @@
+{
+  "FbDough": {
+    "Element": {
+      "Fields": {
+        "ItCd": "DG54036",
+        "Ds": "Deeg met Barcode - Code 128",
+        "DsEx": "Extra omschrijving",
+        "ChDs": "false",
+        "VaBc": "6",
+        "BaCo": "BARCODE128-sdfg",
+        "InPr": "true",
+        "ViCa": "2",
+        "PcBl": "9.53",
+        "FlCh": "150",
+        "RoWe": "2",
+        "ToWe": "143",
+        "AjTm": "50",
+        "AjLs": "4",
+        "PrTm": "660",
+        "WrTm": "1",
+        "Tp": "27.6",
+        "BaLi": "true",
+        "Rm": "Insert met Type Barcode Code 128"
+      }
+    }
+  }
+}

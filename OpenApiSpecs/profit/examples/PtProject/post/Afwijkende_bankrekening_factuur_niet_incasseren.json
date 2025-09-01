@@ -1,0 +1,15 @@
+{
+  "PtProject": {
+    "Element": {
+      "Fields": {
+        "PrId": "911013",
+        "PrGp": "CON",
+        "Ds": "Implementatie van Profit",
+        "DtAn": "2013-02-05",
+        "DbId": "10213",
+        "VaCo": "2",
+        "Bankaccount": "123456789"
+      }
+    }
+  }
+}

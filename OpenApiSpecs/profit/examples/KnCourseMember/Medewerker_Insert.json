@@ -1,0 +1,39 @@
+{
+  "KnCourseMember": {
+    "Element": [
+      {
+        "@CrId": "1",
+        "@CdId": "975",
+        "Fields": {
+          "BcCo": "1000002",
+          "SuDa": "2011-01-01",
+          "Invo": "0",
+          "Rm": "Deelnemer toevoegen via werkgever die ook Medewerker is",
+          "RfCs": "VoorbeeldReferentiecode NN!!!@@#001a"
+        }
+      },
+      {
+        "@CrId": "1",
+        "@CdId": "974",
+        "Fields": {
+          "BcCo": "1000002",
+          "SuDa": "2011-01-01",
+          "Invo": "0",
+          "Rm": "Deelnemer toevoegen die ook Medewerker is",
+          "RfCs": "VoorbeeldReferentiecode NN!!!@@#001a"
+        }
+      },
+      {
+        "@CrId": "1",
+        "@CdId": "967",
+        "Fields": {
+          "BcCo": "1000002",
+          "SuDa": "2011-01-01",
+          "Invo": "0",
+          "Rm": "2e Deelnemer toevoegen die ook Medewerker is",
+          "RfCs": "VoorbeeldReferentiecode NN!!!@@#001a"
+        }
+      }
+    ]
+  }
+}

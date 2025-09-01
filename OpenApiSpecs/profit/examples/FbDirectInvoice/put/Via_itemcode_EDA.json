@@ -1,0 +1,32 @@
+{
+  "FbDirectInvoice": {
+    "Element": {
+      "Fields": {
+        "OrNu": "JSON_B_00002",
+        "RfCs": "Baliedirect wijzigen via JSON"
+      },
+      "Objects": {
+        "FbDirectInvoiceLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "1000",
+                "Ds": "Regel 1 wijziging",
+                "QuUn": "42"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "1001",
+                "Ds": "Regel 2 wijziging",
+                "QuUn": "43"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

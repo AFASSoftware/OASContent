@@ -1,0 +1,39 @@
+{
+  "FbRawMaterialIngredient": {
+    "Element": [
+      {
+        "Fields": {
+          "ItCd": "GR000005",
+          "IgId": "10",
+          "LeTh": "1",
+          "Pc": "10",
+          "IsBi": "v. Jansen",
+          "CoOr": "Nederland",
+          "Dc": "1"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "GR000005",
+          "IgId": "15",
+          "LeTh": "1",
+          "Pc": "10",
+          "IsBi": "v. Jansen",
+          "CoOr": "Nederland",
+          "Dc": "1"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "GR000005",
+          "IgId": "20",
+          "LeTh": "1",
+          "Pc": "10",
+          "IsBi": "v. Jansen",
+          "CoOr": "Nederland",
+          "Dc": "1"
+        }
+      }
+    ]
+  }
+}

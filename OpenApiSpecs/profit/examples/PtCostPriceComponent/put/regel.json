@@ -1,0 +1,29 @@
+{
+  "PtCostPriceComponent": {
+    "Element": {
+      "Fields": {
+        "CpId": "5"
+      },
+      "Objects": {
+        "PtCostPriceComponentLine": {
+          "Element": [
+            {
+              "Fields": {
+                "DaBe": "2020-03-01",
+                "VaFz": "AZU",
+                "PcFa": "100",
+                "Fact": "0"
+              }
+            },
+            {
+              "Fields": {
+                "ClId": "5",
+                "DaEn": "2020-02-02"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

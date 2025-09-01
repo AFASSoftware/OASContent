@@ -1,0 +1,16 @@
+{
+  "PtRealizationWeek": {
+    "Element": {
+      "Fields": {
+        "EmId": "KEESZ",
+        "DaTi": "2013-05-13",
+        "Ds": "Omschrijving",
+        "PrId": "300001",
+        "ItCd": "300",
+        "StId": "1",
+        "QuD1": "7",
+        "QuD2": "8"
+      }
+    }
+  }
+}

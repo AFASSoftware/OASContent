@@ -1,0 +1,12 @@
+{
+  "PtPrognosisProject": {
+    "Element": {
+      "Fields": {
+        "PrId": "1",
+        "DaTi": "2020-02-02",
+        "PeRe": "70",
+        "Adju": "10"
+      }
+    }
+  }
+}

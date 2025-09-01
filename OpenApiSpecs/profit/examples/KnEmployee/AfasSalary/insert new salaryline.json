@@ -1,0 +1,25 @@
+{
+  "AfasEmployee": {
+      "Element": {
+          "@Action": "update",
+          "@EmId": "000002009",
+          "Objects": [
+              {
+                  "AfasSalary": {
+                      "Element": {
+                          "@Action": "update",
+                          "@DaBe": "2022-03-01",
+                          "Fields": {
+                              "SaPe": "U",
+                              "EmSa": "55",
+                              "PtId": 5,
+                              "SaYe": "80500",
+                              "TtPy": false
+                          }
+                      }
+                  }
+              }
+          ]
+      }
+  }
+}

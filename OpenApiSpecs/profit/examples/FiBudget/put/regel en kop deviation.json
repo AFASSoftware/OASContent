@@ -1,0 +1,26 @@
+{
+  "FiBudget": {
+    "Element": {
+      "Fields": {
+        "unitId": "1",
+        "year": "2013",
+        "accountNr": "4000",
+        "budgetType": "adjusted",
+        "readAdjustment": "deviation",
+        "yearBudget": "0",
+        "divTable": "1"
+      },
+      "Objects": {
+        "BudgetLines": {
+          "Element": {
+            "Fields": {
+              "seqNo": "1",
+              "periodId": "1",
+              "amount": "2000"
+            }
+          }
+        }
+      }
+    }
+  }
+}

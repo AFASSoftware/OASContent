@@ -1,0 +1,8 @@
+{
+  "Objects": {
+    "Object": {
+      "@Type": "System.String",
+      "#text": "<AfasDataConnector><schema xmlns:xs=\"http://www.w3.org/2001/JSONSchema\"><element name=\"AfasDataConnector\"><complexType><choice maxOccurs=\"unbounded\"><element name=\"ConnectorData\"><complexType><sequence><element name=\"Duration\" type=\"xs:long\" minOccurs=\"0\" /><element name=\"FbStrOrNu\" type=\"xs:string\" minOccurs=\"0\" /><element name=\"FbStrDs\" type=\"xs:string\" minOccurs=\"0\" /><element name=\"FbStrMemo\" type=\"xs:string\" minOccurs=\"0\" /><element name=\"FbStrWar\" type=\"xs:string\" minOccurs=\"0\" /><element name=\"FbStrLocF\" type=\"xs:string\" minOccurs=\"0\" /><element name=\"FbStrLocT\" type=\"xs:string\" minOccurs=\"0\" /><element name=\"FbStrGrpF\" type=\"xs:string\" minOccurs=\"0\" /><element name=\"FbStrGrpT\" type=\"xs:string\" minOccurs=\"0\" /><element name=\"FbStrItFr\" type=\"xs:string\" minOccurs=\"0\" /><element name=\"FbStrItTo\" type=\"xs:string\" minOccurs=\"0\" /><element name=\"FbStrIcFr\" type=\"xs:string\" minOccurs=\"0\" /><element name=\"FbStrIcTo\" type=\"xs:string\" minOccurs=\"0\" /></sequence></complexType></element></choice></complexType></element></schema><ConnectorData><FbStrOrNu>14</FbStrOrNu><FbStrWar>01</FbStrWar></ConnectorData></AfasDataConnector>"
+    }
+  }
+}

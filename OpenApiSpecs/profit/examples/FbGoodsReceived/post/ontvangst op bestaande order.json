@@ -1,0 +1,23 @@
+{
+    "FbGoodsReceived": {
+        "Element": {
+            "Fields": {
+                "CrId": "1234564",
+                "SoOr": "ORNU0123454"
+            },
+            "Objects": {
+                "FbGoodsReceivedLines": {
+                    "Element": {
+                        "Fields": {
+                            "VaIt": "2",
+                            "ItCd": "A1200",
+                            "QuUn": "10",
+                            "SoOr": "ORNU0123454",
+                            "SoGu": "f1102a16-c09d-43b0-8427-9f26765401cb"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

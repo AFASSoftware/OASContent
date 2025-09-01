@@ -1,0 +1,22 @@
+{
+  "FiCommitment": {
+    "Element": {
+      "@UnId": "1",
+      "@SeNo": "",
+      "Fields": {
+        "AcNr": "4250",
+        "Yr": "2015",
+        "PeNr": "3",
+        "Ds": "Verplichting verbijzondering",
+        "CrId": "50013",
+        "Ref": "REF346197",
+        "DiC1": "NOORD",
+        "DiC2": "ICT",
+        "DiC3": "HAN",
+        "DiC4": "MID",
+        "DiC5": "MAAT",
+        "Amt": "98900"
+      }
+    }
+  }
+}

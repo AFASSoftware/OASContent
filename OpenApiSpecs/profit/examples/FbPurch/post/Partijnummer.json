@@ -1,0 +1,73 @@
+{
+  "FbPurch": {
+    "Element": {
+      "Fields": {
+        "CrId": "50014",
+        "War": "01",
+        "RfCs": "Partijnummer"
+      },
+      "Objects": {
+        "FbPurchLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "8006",
+                "BiUn": "stk",
+                "QuUn": "100"
+              },
+              "Objects": {
+                "FbOrderBatchLines": {
+                  "Element": [
+                    {
+                      "Fields": {
+                        "BaNu": "8006-50014-01",
+                        "BiUn": "stk",
+                        "QuUn": "50"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "BaNu": "8006-50014-02",
+                        "BiUn": "stk",
+                        "QuUn": "50"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "8007",
+                "BiUn": "stk",
+                "QuUn": "100"
+              },
+              "Objects": {
+                "FbOrderBatchLines": {
+                  "Element": [
+                    {
+                      "Fields": {
+                        "BaNu": "8007-50014-01",
+                        "BiUn": "stk",
+                        "QuUn": "50"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "BaNu": "8007-50014-02",
+                        "BiUn": "stk",
+                        "QuUn": "50"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

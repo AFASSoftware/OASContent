@@ -1,0 +1,37 @@
+{
+    "KnPerson": {
+        "Element": {
+            "@action": "update",
+            "Fields": {
+                "PadAdr": "1",
+                "MatchPer": "0",
+                "BcCo": "1234568774",
+                "CaNm": "John",
+                "FiNm": "John William",
+                "In": "J.W.",
+                "Is": "van",
+                "LaNm": "Doe",
+                "SpNm": "1",
+                "IsBi": "van",
+                "NmBi": "Smith",
+                "IsPa": "de",
+                "NmPa": "Johnson",
+                "ViUs": "1",
+                "ViGe": "M",
+                "PsNa": "NL",
+                "DaBi": "1985-07-15",
+                "CoBi": "NL",
+                "RsBi": "Amsterdam",
+                "ViCs": "GH",
+                "DaMa": "2010-05-20",
+                "TtId": "P01",
+                "SeNm": "DOEJOHN",
+                "LgId": "NL",
+                "CoLw": "NL",
+                "FileName": "profile.jpg",
+                "AddToPortal": true,
+                "EmailPortal": "john.doe@example.com"
+            }
+        }
+    }
+}

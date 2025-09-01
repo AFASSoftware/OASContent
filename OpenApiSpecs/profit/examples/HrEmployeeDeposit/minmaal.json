@@ -1,0 +1,16 @@
+{
+  "HrEmployeeDeposit": {
+    "Element": {
+      "Fields": {
+        "EmId": "C101145",
+        "Desc": "Voorschot op salaris miminaal",
+        "Amnt": "100.50",
+        "DeRe": "01",
+        "DePa": "01",
+        "Cmnt": "Volledig inhouden in huidige periode",
+        "Clim": "1",
+        "Date": "2018-07-26"
+      }
+    }
+  }
+}

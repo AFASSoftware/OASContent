@@ -1,0 +1,30 @@
+{
+  "FbDirectInvoice": {
+    "Element": {
+      "Fields": {
+        "OrNu": "70000146"
+      },
+      "Objects": {
+        "FbDirectInvoiceLines": {
+          "Element": [
+            {
+              "Fields": {
+                "Ds": "gewijzigde omschrijving",
+                "QuUn": "5",
+                "GuLi": "{9FD7F62C-F4AB-44BA-953D-A968D498A56F}"
+              }
+            },
+            {
+              "Fields": {
+                "Ds": "gewijzigde omschrijving",
+                "BiUn": "stk",
+                "UnPri": "50",
+                "GuLi": "{53390B43-97A7-4D4C-B6E4-98FD18D19282}"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

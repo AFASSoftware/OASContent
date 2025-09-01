@@ -1,0 +1,18 @@
+{
+  "KnUser": {
+    "Element": {
+      "Fields": {
+        "MtCd": "3",
+        "GrId": "Sales",
+        "GrDs": "Sales Department",
+        "UsId": "mikejohnson",
+        "Nm": "Mike Johnson",
+        "EmAd": "mikejohnson@example.com",
+        "InSi": true,
+        "Upn": "mikejohnson@company.com",
+        "InLn": "2057",
+        "OcUs": true
+      }
+    }
+  }
+}

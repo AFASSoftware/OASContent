@@ -1,0 +1,12 @@
+{
+    "KnCourseSessionMember": {
+      "Element": {
+        "@CrId": "1",
+        "@SeId": "2",
+        "@MeId": "1000029",
+        "Fields": {
+          "Pres": "1" 
+        }
+      }
+    }
+  }

@@ -1,0 +1,25 @@
+{
+  "PtCostPriceModel": {
+    "Element": {
+      "Fields": {
+        "CmId": "kost",
+        "Ds": "Kostprijsmodel via Connector kosten"
+      },
+      "Objects": {
+        "PtCostPriceModelLine": {
+          "Element": {
+            "Fields": {
+              "DaBe": "2018-02-17",
+              "DaEn": "2018-03-18",
+              "VaIt": "6",
+              "ItCd": "D004",
+              "VaCt": "B",
+              "VaFz": "AU",
+              "Fact": "1"
+            }
+          }
+        }
+      }
+    }
+  }
+}

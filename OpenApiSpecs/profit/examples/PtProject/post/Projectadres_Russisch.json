@@ -1,0 +1,31 @@
+{
+  "PtProject": {
+    "Element": {
+      "Fields": {
+        "PrId": "9RUS",
+        "PrGp": "CON",
+        "Ds": "GazProm Olieboring",
+        "EmId": "ALLARDJ",
+        "DtAn": "2013-01-01",
+        "DaSt": "2013-01-01",
+        "DtGp": "2013-12-31"
+      },
+      "Objects": {
+        "KnBasicAddressAdr": {
+          "Element": {
+            "Fields": {
+              "PbAd": "0",
+              "StAd": "Office 4",
+              "Ad": "Kurilskaya St",
+              "HmNr": "105",
+              "ZpCd": "3833LC",
+              "CoId": "NL",
+              "Rs": "Leusden",
+              "AdAd": "A-1"
+            }
+          }
+        }
+      }
+    }
+  }
+}

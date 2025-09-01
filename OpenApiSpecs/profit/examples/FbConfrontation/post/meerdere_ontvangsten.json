@@ -1,0 +1,69 @@
+{
+  "FbConfrontation": {
+    "Element": {
+      "Fields": {
+        "UnId": "1",
+        "InId": "INK00205",
+        "CfBc": "1"
+      },
+      "Objects": {
+        "FbGoodsReceived": {
+          "Element": [
+            {
+              "Fields": {
+                "OrNu": "00006"
+              },
+              "Objects": {
+                "FbGoodsReceivedLines": {
+                  "Element": [
+                    {
+                      "Fields": {
+                        "GuLi": "{652CD424-23B1-423C-B0BC-283F573B7F96}"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "GuLi": "{3213BA5C-F5F1-4924-AA1D-DE952108F7B3}",
+                        "QuCU": "1",
+                        "QuCf": "1",
+                        "Uinv": "1",
+                        "PRCf": "1",
+                        "FuCo": "true"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "Fields": {
+                "OrNu": "00042"
+              },
+              "Objects": {
+                "FbGoodsReceivedLines": {
+                  "Element": [
+                    {
+                      "Fields": {
+                        "GuLi": "{46A9DB83-B1BD-4A9E-89DB-E8BBBE6D4D85}",
+                        "QuCU": "1",
+                        "QuCf": "1",
+                        "Uinv": "1",
+                        "PRCf": "9",
+                        "FuCo": "true"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "GuLi": "{0DB15922-A24C-4C07-9CB0-74A14CD99BE9}"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

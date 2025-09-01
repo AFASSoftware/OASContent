@@ -1,0 +1,40 @@
+{
+  "PtProject": {
+    "Element": {
+      "Fields": {
+        "PrId": "600000"
+      },
+      "Objects": {
+        "PtProjectStage": {
+          "Element": [
+            {
+              "Fields": {
+                "PrId": "600000",
+                "PrSt": "07",
+                "Ds": "Fase 7",
+                "DaSt": "2013-01-01"
+              }
+            },
+            {
+              "Fields": {
+                "PrId": "600000",
+                "PrSt": "08",
+                "Ds": "Fase 8",
+                "DaSt": "2013-01-01"
+              }
+            },
+            {
+              "Fields": {
+                "PrId": "600000",
+                "PrSt": "09",
+                "Ds": "Fase 9",
+                "DaSt": "2013-01-01",
+                "PsMn": "07"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

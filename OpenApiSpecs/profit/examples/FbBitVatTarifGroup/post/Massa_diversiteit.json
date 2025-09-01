@@ -1,0 +1,94 @@
+{
+  "FbBitVatTarifGroup": {
+    "Element": [
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "1701",
+          "CoLa": "BE",
+          "VaRc": "1"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "1701",
+          "CoLa": "DE",
+          "VaRc": "1"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "1701",
+          "CoLa": "GB",
+          "VaRc": "1"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "1701",
+          "CoLa": "LU",
+          "VaRc": "1"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "1702",
+          "CoLa": "BE",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "1702",
+          "CoLa": "DE",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "1702",
+          "CoLa": "GB",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "1702",
+          "CoLa": "LU",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "1703",
+          "CoLa": "BE",
+          "VaRc": "3"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "1703",
+          "CoLa": "LU",
+          "VaRc": "3"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "1703",
+          "CoLa": "AN",
+          "VaRc": "1"
+        }
+      }
+    ]
+  }
+}

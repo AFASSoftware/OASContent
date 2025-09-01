@@ -1,0 +1,23 @@
+{
+  "FbSalesPrice": {
+    "Element": {
+      "Fields": {
+        "VaIt": "2",
+        "ItCd": "1001",
+        "BiUn": "STK",
+        "PrLi": "ALG",
+        "CuId": "EUR",
+        "DaBg": "2013-03-01",
+        "SpPr": "0",
+        "VaAD": "0",
+        "DsLi": "0",
+        "CaPr": "1",
+        "PcCa": "40",
+        "ViBc": "HIP",
+        "ViRo": "03",
+        "CrPr": "0",
+        "Memo": "JSON!"
+      }
+    }
+  }
+}

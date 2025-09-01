@@ -1,0 +1,42 @@
+{
+  "FiContract": {
+    "Element": {
+      "Fields": {
+        "CoNu": "C001-2023000007",
+        "PoKi": "Contract update met verplichting en project en kostencode",
+        "PoNo": "REF:348964",
+        "CmId": "50008",
+        "CuId": "EUR",
+        "Rate": "1",
+        "UnId": "1",
+        "VaCt": "02"
+      },
+      "Objects": {
+        "FiContractline": {
+          "Element": {
+            "Fields": {
+              "Id": "6",
+              "DaBe": "2021-01-01",
+              "DaEn": "2022-12-31",
+              "AmPF": "320.56",
+              "Prol": "0",
+              "CuId": "EUR",
+              "Rate": "1",
+              "VaCm": "2",
+              "AcNr": "4250",
+              "PrId": "300000",
+              "BiId": "T1",
+              "DiC1": "ZUID",
+              "DiC2": "SAMA",
+              "DiC3": "DIE",
+              "DiC4": "ZUID",
+              "DiC5": "MAAT",
+              "JuYN": "1",
+              "ReYN": "0"
+            }
+          }
+        }
+      }
+    }
+  }
+}

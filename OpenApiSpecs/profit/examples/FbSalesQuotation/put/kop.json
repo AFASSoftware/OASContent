@@ -1,0 +1,13 @@
+{
+  "FbSalesQuotation": {
+    "Element": {
+      "Fields": {
+        "OrNu": "50000004",
+        "DaDe": "2015-02-01",
+        "DaPr": "2015-02-01",
+        "RfCs": "Kop geupdated Connector!",
+        "Re": "gewijzigde RE"
+      }
+    }
+  }
+}

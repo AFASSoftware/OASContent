@@ -1,0 +1,29 @@
+{
+    "AfasEmployee": {
+        "Element": {
+            "@Action": "update",
+            "@GUID": "{E804AFC6-C1DB-4E0A-90D4-935217DBBFF2}",
+            "Fields": {
+                "EmId": "FLOORA"
+            },
+            "Objects": {
+                "AfasContract": {
+                    "Element": {
+                        "@Action": "insert",
+                        "@GUID": "{9282562F-4D3A-49A2-B4EB-32CA8C3DBD86}",
+                        "Fields": {
+                            "ApCo": "O",
+                            "ClId": "Basis",
+                            "CmId": "01",
+                            "DaBe": "2023-12-01",
+                            "EmMt": "N",
+                            "ViEt": "F",
+                            "ViPp": "G",
+                            "WcId": "Basis"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,2438 @@
+{
+  "FbStockMutation": {
+    "Element": [
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1000",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1000",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1000",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1000",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1001",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1001",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1001",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1001",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1002",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1002",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1002",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1002",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1003",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1003",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1003",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1003",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1004",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1004",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1004",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1004",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1005",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1005",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1005",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1005",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1006",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1006",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1006",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1006",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1007",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1007",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1007",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1007",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1008",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1008",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1008",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1008",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1100",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1101",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1200",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1201",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1202",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1203",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1204",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1300",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1301",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1302",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1400",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1401",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1500",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1501",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1502",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1600",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1601",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1602",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1700",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1701",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1702",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1703",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1704",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1800",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1801",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1802",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1803",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1804",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "31",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "31:Magazijnopboeking",
+          "VaIt": "2",
+          "ItCd": "1805",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1100",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1101",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1200",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1201",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1202",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1203",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1204",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1300",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1301",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1302",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1400",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1401",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1500",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1501",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1502",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1600",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1601",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1602",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1700",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1701",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1702",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1703",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1704",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1800",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1801",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1802",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1803",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1804",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "32",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "32:Magazijnafboeking",
+          "VaIt": "2",
+          "ItCd": "1805",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1100",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1101",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1200",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1201",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1202",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1203",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1204",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1300",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1301",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1302",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1400",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1401",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1500",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1501",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1502",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1600",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1601",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1602",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1700",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1701",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1702",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1703",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1704",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1800",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1801",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1802",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1803",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1804",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "41",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "41:Opboeking",
+          "VaIt": "2",
+          "ItCd": "1805",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1100",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1101",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1200",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1201",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1202",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1203",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1204",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1300",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1301",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1302",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1400",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1401",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1500",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1501",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1502",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1600",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1601",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1602",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1700",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1701",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1702",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1703",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1704",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1800",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1801",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1802",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1803",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1804",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      },
+      {
+        "Fields": {
+          "UsCr": "BenH",
+          "VaOt": "42",
+          "ReId": "6",
+          "Da": "2013-01-01",
+          "Ds": "42:Afboeking",
+          "VaIt": "2",
+          "ItCd": "1805",
+          "War": "01",
+          "Loc": "A1",
+          "BiUn": "STK",
+          "QuUn": "1",
+          "Qu": "1"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "FbDeliveryNote": {
+    "Element": {
+      "Fields": {
+        "OrNu": "70000136",
+        "RfCs": "REF: regels gewijzigd guid"
+      },
+      "Objects": {
+        "FbDeliveryNoteLines": {
+          "Element": {
+            "Fields": {
+              "Ds": "JSON import",
+              "GuLi": "{F09F8B2C-17AB-492D-86D6-C8140F63B214}"
+            }
+          }
+        }
+      }
+    }
+  }
+}

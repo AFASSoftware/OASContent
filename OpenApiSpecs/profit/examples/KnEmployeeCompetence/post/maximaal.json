@@ -1,0 +1,16 @@
+{
+  "KnEmployeeCompetence": {
+    "Element": {
+      "Fields": {
+        "EmId": "KOOSB",
+        "CpCd": "AANPA",
+        "DaBe": "2023-11-25",
+        "DvBy": "7",
+        "CsRl": 3,
+        "CsId": "4",
+        "VaSc": "4",
+        "Comp": true
+      }
+    }
+  }
+}

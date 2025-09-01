@@ -1,0 +1,27 @@
+{
+  "HrIllness": {
+    "Element": {
+      "Fields": {
+        "EmId": "floora",
+        "DaBe": "2024-03-05T00:00:00",
+        "DMeB": "2024-03-18T00:00:00",
+        "DaEs": "2024-05-16",
+        "TPBe": "0",
+        "ViIt": "Z",
+        "ViIr": "00"
+      },
+      "Objects": [
+        {
+          "HrAbsIllnessProgress": {
+            "Element": {
+              "Fields": {
+                "DaTi": "2024-03-05T00:00:00",
+                "PsPc": "0"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

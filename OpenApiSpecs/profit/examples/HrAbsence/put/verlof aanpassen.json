@@ -1,0 +1,16 @@
+{
+  "HrAbsence": {
+    "Element": {
+      "Fields": {
+        "EmId": "EduardD",
+        "ViAt": "V",
+        "DaBe": "2013-04-17T08:30:00",
+        "DaEn": "2013-04-17T12:30:00",
+        "ViLr": "V",
+        "EnSe": "1",
+        "Re": "Gewijzigde boeking",
+        "LeDt": "1"
+      }
+    }
+  }
+}

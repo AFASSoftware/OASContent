@@ -1,0 +1,39 @@
+{
+  "FbDeliveryNote": {
+    "Element": {
+      "Fields": {
+        "OrNu": "70000114",
+        "RfCs": "REF: regels partijnummer gewijzigd via guid"
+      },
+      "Objects": {
+        "FbDeliveryNoteLines": {
+          "Element": {
+            "Fields": {
+              "Ds": "JSON import",
+              "GuLi": "{332CCB80-7E43-4804-9267-E326D0FB59FD}"
+            },
+            "Objects": {
+              "FbOrderBatchLines": {
+                "Element": {
+                  "Fields": {
+                    "GuLi": "{FC5559B8-1E32-4482-93C7-DAB96644A8EE}"
+                  },
+                  "Objects": {
+                    "FbOrderLocationLines": {
+                      "Element": {
+                        "Fields": {
+                          "Loc": "A2",
+                          "Qu": "5"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

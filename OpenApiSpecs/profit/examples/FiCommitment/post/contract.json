@@ -1,0 +1,19 @@
+{
+  "FiCommitment": {
+    "Element": {
+      "@UnId": "1",
+      "@SeNo": "",
+      "Fields": {
+        "AcNr": "4360",
+        "Yr": "2015",
+        "PeNr": "1",
+        "Ds": "Verplichting op contract",
+        "CrId": "50035",
+        "Ref": "C001-2015000001",
+        "Amt": "500",
+        "Cont": "C001-2015000001",
+        "CoLn": "2"
+      }
+    }
+  }
+}

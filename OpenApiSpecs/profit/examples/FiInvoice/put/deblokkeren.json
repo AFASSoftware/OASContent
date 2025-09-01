@@ -1,0 +1,13 @@
+{
+  "FiInvoice": {
+    "Element": {
+      "Fields": {
+        "UnId": "1",
+        "VaAd": "3",
+        "DcNr": "50022",
+        "InId": "INK00200",
+        "BlPa": "0"
+      }
+    }
+  }
+}

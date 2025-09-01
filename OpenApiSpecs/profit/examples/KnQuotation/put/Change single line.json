@@ -1,0 +1,22 @@
+{
+  "KnQuotation": {
+    "Element": {
+      "Fields": {
+        "QuId": "600000",
+        "PrId": "600000"
+      },
+      "Objects": {
+        "KnQuotationLine": {
+          "Element": [
+            {
+              "Fields": {
+                "GuLi": "{1D9545B2-D5D0-4C67-8177-5C018EF7B780}",
+                "Ds": "Gewijzigde omschrijving ipv 600"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

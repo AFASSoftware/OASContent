@@ -1,0 +1,12 @@
+{
+  "FbItemArticle": {
+    "Element": {
+      "Fields": {
+        "ItCd": "1009",
+        "Ds": "Artikel via JSON (naar voorraad)!!",
+        "BiSt": "true",
+        "CsGc": "00000000"
+      }
+    }
+  }
+}

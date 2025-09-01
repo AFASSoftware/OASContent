@@ -1,0 +1,32 @@
+{
+  "FbDeliveryNote": {
+    "Element": {
+      "Fields": {
+        "DbId": "10002",
+        "PrId": "300049"
+      },
+      "Objects": {
+        "FbDeliveryNoteLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "9000",
+                "BiUn": "stk",
+                "QuUn": "10"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "1000",
+                "BiUn": "stk",
+                "QuUn": "10"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

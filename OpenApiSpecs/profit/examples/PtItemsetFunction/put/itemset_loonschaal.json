@@ -1,0 +1,16 @@
+{
+  "PtItemSetFunction": {
+    "Element": {
+      "Fields": {
+        "IsId": "7",
+        "FuId": "0002",
+        "Rfun": "6",
+        "Ds": "update Connector met loonschaal",
+        "TaId": "510",
+        "VaSc": "B",
+        "SaSt": "2.0",
+        "ViTy": "a"
+      }
+    }
+  }
+}

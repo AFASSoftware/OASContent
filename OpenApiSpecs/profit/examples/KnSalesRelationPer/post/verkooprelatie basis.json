@@ -1,0 +1,63 @@
+{
+  "KnSalesRelationPer": {
+    "Element": {
+      "@DbId": "40409",
+      "Fields": {
+        "Iban": "NL97CHAS0849835607",
+        "BaAc": "849835607",
+        "IsDb": true,
+        "PaCd": "30",
+        "CuId": "EUR",
+        "VaDu": "1",
+        "AuPa": true,
+        "ColA": "1400"
+      },
+      "Objects": {
+        "KnPerson": {
+          "Element": {
+            "Fields": {
+              "PadAdr": true,
+              "AutoNum": true,
+              "MatchPer": "7",
+              "SeNm": "ZOEKNAAM",
+              "LaNm": "Jansen",
+              "SpNm": true,
+              "NmBi": "Jansen",
+              "IsBi": "v. Jansen",
+              "ViUs": "0",
+              "ViGe": "O",
+              "TtId": "ALG",
+              "AddToPortal": false
+            },
+            "Objects": {
+              "KnBankAccount": {
+                "Element": {
+                  "Fields": {
+                    "CoId": "NL",
+                    "IbCk": true,
+                    "Iban": "NL97CHAS0849835607",
+                    "BaAc": "849835607",
+                    "Bic": "INGBNL2A"
+                  }
+                }
+              },
+              "KnBasicAddressAdr": {
+                "Element": {
+                  "Fields": {
+                    "CoId": "NL",
+                    "PbAd": false,
+                    "Ad": "Kruisstraat",
+                    "HmNr": "105",
+                    "ZpCd": "3833LC",
+                    "Rs": "Leusden",
+                    "ResZip": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

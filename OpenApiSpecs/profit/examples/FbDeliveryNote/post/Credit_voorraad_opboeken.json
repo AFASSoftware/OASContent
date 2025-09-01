@@ -1,0 +1,40 @@
+{
+  "FbDeliveryNote": {
+    "Element": {
+      "Fields": {
+        "DbId": "10034",
+        "War": "02"
+      },
+      "Objects": {
+        "FbDeliveryNoteLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "2",
+              "ItCd": "1000",
+              "BiUn": "stk",
+              "QuUn": "-15"
+            },
+            "Objects": {
+              "FbOrderLocationLines": {
+                "Element": [
+                  {
+                    "Fields": {
+                      "Loc": "A1",
+                      "Qu": "-5"
+                    }
+                  },
+                  {
+                    "Fields": {
+                      "Loc": "EXP",
+                      "Qu": "-10"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

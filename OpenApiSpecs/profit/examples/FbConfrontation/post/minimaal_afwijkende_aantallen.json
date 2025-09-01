@@ -1,0 +1,34 @@
+{
+  "FbConfrontation": {
+    "Element": {
+      "Fields": {
+        "UnId": "1",
+        "InId": "INK00204",
+        "CfBc": "1"
+      },
+      "Objects": {
+        "FbGoodsReceived": {
+          "Element": {
+            "Fields": {
+              "OrNu": "00021"
+            },
+            "Objects": {
+              "FbGoodsReceivedLines": {
+                "Element": {
+                  "Fields": {
+                    "GuLi": "{42934570-075E-455B-B69F-D87CA2CA722D}",
+                    "QuCU": "1",
+                    "QuCf": "1",
+                    "Uinv": "10",
+                    "PRCf": "0",
+                    "FuCo": "false"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

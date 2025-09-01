@@ -1,0 +1,39 @@
+{
+  "KnCourseEvent": {
+    "Element": {
+      "Fields": {
+        "Id": "5116",
+        "ItCd": "104",
+        "AuId": "0",
+        "CrSn": "004",
+        "CrDs": "Microsoft Excel 2016 expert hvs",
+        "BcId": "1000372",
+        "CdId": "1197",
+        "LoId": "000001",
+        "AlGu": "1",
+        "MiPt": "1",
+        "MaPt": "12",
+        "UnFi": "1",
+        "PrId": "910004",
+        "CrRm": "Opmerking voor AlGu Introduc� toestaan",
+        "CuId": "USD"
+      },
+      "Objects": {
+        "KnSession": {
+          "Element": {
+            "Fields": {
+              "SeId": "1",
+              "SeDa": "2018-11-28",
+              "DaPa": "O",
+              "StTi": "09:30:00",
+              "EnTi": "16:00:00",
+              "BcId": "1000372",
+              "CdId": "1197",
+              "LoId": "000003"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "FiFixedAssetsSale": {
+    "Element": {
+      "Fields": {
+        "FaSn": "1",
+        "ViSa": "D",
+        "SaDs": "Banden verkcoht",
+        "ViRa": "01",
+        "DaSa": "2017-12-15",
+        "DaOs": "2017-10-01",
+        "NpSe": "01",
+        "SaAm": "200",
+        "ViDr": "1"
+      }
+    }
+  }
+}

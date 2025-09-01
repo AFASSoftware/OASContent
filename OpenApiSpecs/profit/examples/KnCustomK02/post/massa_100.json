@@ -1,0 +1,36 @@
+{
+  "KnCustomK02": {
+    "Element": [
+      {
+        "Fields": {
+          "AuNu": true,
+          "Da": "2023-01-15",
+          "Ds": "Omschrijving 100",
+          "U977E29AD43062ADCD6C1F9999DEEF079": "Poging 5",
+          "UA76EA82042ADD8F52A8861B9510C5214": "Veld 2",
+          "U7DB2B6D349C3B6B1374D6691CB33B72E": "FLOORA"
+        }
+      },
+      {
+        "Fields": {
+          "AuNu": true,
+          "Da": "2023-01-15",
+          "Ds": "Omschrijving 101",
+          "U977E29AD43062ADCD6C1F9999DEEF079": "Poging 5",
+          "UA76EA82042ADD8F52A8861B9510C5214": "Veld 2",
+          "U7DB2B6D349C3B6B1374D6691CB33B72E": "FLOORA"
+        }
+      },
+      {
+        "Fields": {
+          "AuNu": true,
+          "Da": "2023-01-15",
+          "Ds": "Omschrijving 102",
+          "U977E29AD43062ADCD6C1F9999DEEF079": "Poging 5",
+          "UA76EA82042ADD8F52A8861B9510C5214": "Veld 2",
+          "U7DB2B6D349C3B6B1374D6691CB33B72E": "FLOORA"
+        }
+      }
+    ]
+  }
+}

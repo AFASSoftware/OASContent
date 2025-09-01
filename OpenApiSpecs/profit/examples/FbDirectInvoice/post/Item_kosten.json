@@ -1,0 +1,36 @@
+{
+  "FbDirectInvoice": {
+    "Element": {
+      "Fields": {
+        "OrDa": "2013-06-01",
+        "DbId": "10178",
+        "RfCs": "Item_kosten",
+        "War": "01"
+      },
+      "Objects": {
+        "FbDirectInvoiceLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "6",
+                "ItCd": "K01",
+                "BiUn": "*****",
+                "QuUn": "1",
+                "Upri": "100"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "6",
+                "ItCd": "K02",
+                "BiUn": "stk",
+                "QuUn": "1",
+                "Upri": "50"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

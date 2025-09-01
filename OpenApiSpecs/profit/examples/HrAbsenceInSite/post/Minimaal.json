@@ -1,0 +1,16 @@
+{
+  "HrAbsenceInSite": {
+    "Element": {
+      "Fields": {
+        "EmId": "FLOORA",
+        "ViAt": "V",
+        "DaBe": "2013-01-02T00:00:00",
+        "DaEn": "2013-01-04T17:00:00",
+        "ViLr": "V",
+        "EnSe": "1",
+        "DuRa": "24",
+        "LeDt": "1"
+      }
+    }
+  }
+}

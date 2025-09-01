@@ -1,0 +1,28 @@
+{
+  "PtCostPriceComponent": {
+    "Element": {
+      "Fields": {
+        "VaCo": "21",
+        "Ds": "Uren",
+        "VaIt": "kst",
+        "ItCd": "FLEX36-1",
+        "CtId": "01",
+        "SuQu": "1",
+        "SuRe": "1",
+        "SuDf": "1"
+      },
+      "Objects": {
+        "PtCostPriceComponentLine": {
+          "Element": {
+            "Fields": {
+              "DaBe": "2020-02-01",
+              "VaFz": "AZU",
+              "PcFa": "100",
+              "Fact": "0"
+            }
+          }
+        }
+      }
+    }
+  }
+}

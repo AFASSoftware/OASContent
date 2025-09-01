@@ -1,0 +1,26 @@
+{
+  "PtProject": {
+    "Element": {
+      "Fields": {
+        "PrId": "1002",
+        "CmId": "2",
+        "VaCc": "1",
+        "RpDe": "EA930E554F88BF36AA4A77ACD997EF96",
+        "PsId": "6",
+        "HrWe": "30",
+        "ViTo": "2M",
+        "ToTe": "60",
+        "ToTp": "U",
+        "ExTe": "30",
+        "ExTp": "U",
+        "CPeP": "3",
+        "CMeP": "1",
+        "PrRe": "1",
+        "ClId": "01",
+        "NPDe": "1",
+        "CrMe": "3",
+        "MeOw": "0"
+      }
+    }
+  }
+}

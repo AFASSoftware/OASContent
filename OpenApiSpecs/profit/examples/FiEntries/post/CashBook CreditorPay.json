@@ -1,0 +1,41 @@
+{
+  "FiEntryPar": {
+    "Element": {
+      "Fields": {
+        "Year": "2013",
+        "Peri": "1",
+        "UnId": "1",
+        "JoCo": "50"
+      },
+      "Objects": {
+        "FiEntries": {
+          "Element": [
+            {
+              "Fields": {
+                "VaAs": "1",
+                "AcNr": "1100",
+                "EnDa": "2013-01-02",
+                "BpDa": "2013-01-02",
+                "BpNr": "BANK0002",
+                "AmDe": "0",
+                "AmCr": "1806.22"
+              }
+            },
+            {
+              "Fields": {
+                "VaAs": "3",
+                "AcNr": "60005",
+                "EnDa": "2013-01-02",
+                "BpDa": "2013-01-02",
+                "BpNr": "BANK0002",
+                "InId": "INK00188",
+                "AmDe": "1806.22",
+                "AmCr": "0"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

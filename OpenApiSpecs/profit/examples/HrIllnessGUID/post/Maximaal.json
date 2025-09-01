@@ -1,0 +1,98 @@
+{
+  "HrIllnessGUID": {
+    "Element": {
+      "@GUID": "{9810D946-CA38-49DB-9ADA-000000000002}",
+      "Fields": {
+        "EmId": "RianneA",
+        "DaBe": "2013-04-01T00:00:00",
+        "DMeB": "2013-04-01T00:00:00",
+        "DaEs": "2013-04-02",
+        "TPBe": "0",
+        "ViIt": "Z",
+        "ViIr": "4",
+        "EnSe": "1",
+        "RuAb": "0",
+        "SfNt": "0",
+        "AdId": "00",
+        "AaId": "7",
+        "PcWd": "0",
+        "RtDa": "0",
+        "ViAt": "V",
+        "ExFr": "0"
+      },
+      "Objects": {
+        "HrAbsIllnessProgress": {
+          "Element": {
+            "@GUID": "{9810D946-CA38-49DB-9ADA-000000000002}",
+            "Fields": {
+              "DaTi": "2013-04-01T00:00:00",
+              "SbId": "FLOORA",
+              "SoTi": "Z",
+              "PsHr": "20",
+              "PsSp": "1",
+              "HrMo": "4",
+              "TbMo": "08:00:00",
+              "TeMo": "12:00:00",
+              "HrTu": "4",
+              "TbTu": "08:00:00",
+              "TeTu": "12:00:00",
+              "HrWe": "4",
+              "TbWe": "08:00:00",
+              "TeWe": "12:00:00",
+              "HrTh": "4",
+              "TbTh": "08:00:00",
+              "TeTh": "12:00:00",
+              "HrFr": "4",
+              "TbFr": "08:00:00",
+              "TeFr": "12:00:00",
+              "HrSa": "0",
+              "HrSu": "0",
+              "PsHa": "10",
+              "AhMo": "2",
+              "AbMo": "12:00:00",
+              "AeMo": "14:00:00",
+              "AhTu": "2",
+              "AbTu": "12:00:00",
+              "AeTu": "14:00:00",
+              "AhWe": "2",
+              "AbWe": "12:00:00",
+              "AeWe": "14:00:00",
+              "AhTh": "2",
+              "AbTh": "12:00:00",
+              "AeTh": "14:00:00",
+              "AhFr": "2",
+              "AbFr": "12:00:00",
+              "AeFr": "14:00:00",
+              "AhSa": "0",
+              "AhSu": "0",
+              "StAt": "Z",
+              "DepN": [
+                "Verpleegtehuis de zandloper",
+                "Verpleegtehuis de zandloper"
+              ],
+              "DepA": "Afdeling Psycho",
+              "RmNr": "2.31",
+              "Te": "334341800",
+              "Re": "Ingeschoten via JSON!!!"
+            },
+            "Objects": {
+              "KnBasicAddress": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": "0",
+                    "Ad": "Philipsstraat",
+                    "HmNr": "105",
+                    "HmAd": "3b",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

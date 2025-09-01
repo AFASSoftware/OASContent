@@ -1,0 +1,27 @@
+{
+    "AfasEmployee": {
+      "Element": {
+        "@GUID": "{7F54392A-099A-4486-A161-6F344076C0C1}",
+        "Fields": {
+          "EmId": "floora"
+        },
+        "Objects": {
+          "AfasSalary": {
+            "Element": {
+              "@GUID": "{ca1d2d83-c873-418a-bdc1-6bef753bd589}",
+              "Fields": {
+                "DaBe": "2023-10-01",
+                "DaEn": null,
+                "SaPe": "V",
+                "EmSa": "60",
+                "PtId": "5",
+                "SaYe": "1",
+                "TtPy": "true",
+                "UBEE0889643C1B17A88F00FBA5E50F91D": "ExternalId"
+              }
+            }
+          }
+        }
+      }
+    }
+  }

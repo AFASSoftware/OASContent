@@ -1,0 +1,51 @@
+{
+    "FbAssembly": {
+        "Element": {
+            "@action": "update",
+            "Fields": {
+                "OrNu": "P2300546"
+            },
+            "Objects": {
+                "FbAssemblyLines": {
+                    "Element": {
+                        "@action": "update",
+                        "Fields": {
+                            "SoGu": "{AC2483B0-2249-4ECA-8252-0358C72A9ED4}",
+                            "SoOr": "PO230467",
+                            "QuUn": 1
+                        },
+                        "Objects": {
+                            "AfasFbOrderCompLines": {
+                                "Element": {
+                                    "@action": "update",
+                                    "Fields": {
+                                        "VaIt": "2",
+                                        "ItCd": "A12796"
+                                    },
+                                    "Objects": {
+                                        "FbOrderBatchLines": {
+                                            "Element": {
+                                                "@action": "update",
+                                                "Objects": {
+                                                    "FbOrderLocationLines": {
+                                                        "Element": {
+                                                            "@action": "update",
+                                                            "Fields": {
+                                                                "Loc": "01-01-01",
+                                                                "Qu": 1
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "FbDeliveryNote": {
+    "Element": {
+      "Fields": {
+        "OrNu": "70000137",
+        "RfCs": "REF: regels"
+      },
+      "Objects": {
+        "FbDeliveryNoteLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "2",
+              "ItCd": "9002",
+              "Ds": "JSON import",
+              "Upri": "10"
+            }
+          }
+        }
+      }
+    }
+  }
+}

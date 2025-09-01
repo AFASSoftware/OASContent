@@ -1,0 +1,21 @@
+{
+  "AfasEmployee": {
+    "Element": {
+      "@EmId": "00116",
+      "Fields": null,
+      "Objects": {
+        "AfasOrgunitFunction": {
+          "Element": {
+            "@DaBe": "2011-01-01",
+            "Fields": {
+              "DpId": "25CROBTB",
+              "FuId": "003",
+              "CcId": "60",
+              "CrId": "000"
+            }
+          }
+        }
+      }
+    }
+  }
+}

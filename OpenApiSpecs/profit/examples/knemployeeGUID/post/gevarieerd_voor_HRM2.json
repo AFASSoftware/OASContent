@@ -1,0 +1,169 @@
+{
+  "AfasEmployee": {
+    "Element": {
+      "@GUID": "{42c69ea0-23fc-44bb-80d4-cd473d45a2ab}",
+      "Fields": {
+        "EmId": "UPDGUID007",
+        "ViSe": "I",
+        "Bl": "0",
+        "LwOb": "0",
+        "LwTg": "0"
+      },
+      "Objects": {
+        "KnPerson": {
+          "Element": {
+            "Fields": {
+              "PadAdr": "1",
+              "AutoNum": "1",
+              "MatchPer": "7",
+              "SeNm": "ZOEKNAAM",
+              "FiNm": "Jan",
+              "In": "J.A.",
+              "Is": "van",
+              "LaNm": "Jansen",
+              "SpNm": "1",
+              "IsBi": "v. Jansen",
+              "NmBi": "Jansen",
+              "ViUs": "0",
+              "ViGe": "M",
+              "PsNa": "NL",
+              "DaBi": "1978-12-12",
+              "SoSe": "123456789",
+              "ViCs": "OG",
+              "TtId": "ALG",
+              "TeNr": "334341800",
+              "TeN2": "334341800",
+              "FaNr": "033-4343277",
+              "MbNr": "334341800",
+              "MbN2": "334341800",
+              "EmAd": "john.doe@example.com",
+              "EmA2": "john.doe@example.com"
+            },
+            "Objects": {
+              "KnBasicAddressAdr": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": "0",
+                    "Ad": "Hotdogroad",
+                    "HmNr": "105",
+                    "HmAd": "3b",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "AdAd": "A-1",
+                    "BeginDate": "2008-03-01"
+                  }
+                }
+              },
+              "KnBasicAddressPad": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": "0",
+                    "Ad": "Hotdogroad",
+                    "HmNr": "105",
+                    "HmAd": "3b",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "AdAd": "A-1",
+                    "BeginDate": "2008-03-01"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "AfasContract": {
+          "Element": {
+            "@GUID": "{42c69ea0-23fc-44bb-80d4-cd473d45a2ab}",
+            "Fields": {
+              "DaBe": "2008-03-01",
+              "ClId": "Basis",
+              "WcId": "Basis",
+              "ApCo": "J",
+              "DaEn": "2009-02-28",
+              "CmId": "RIS",
+              "EmMt": "1",
+              "ViEt": "P",
+              "ViTo": "2M",
+              "DaEt": "2008-04-30",
+              "PeNo": "1",
+              "PeRp": "12",
+              "RtDa": "0"
+            }
+          }
+        },
+        "AfasOrgunitFunction": {
+          "Element": {
+            "@GUID": "{42c69ea0-23fc-44bb-80d4-cd473d45a2ab}",
+            "Fields": {
+              "DaBe": "2008-03-01",
+              "DpId": "RIS",
+              "FuId": "FinMed"
+            }
+          }
+        },
+        "AfasTimeTable": {
+          "Element": {
+            "@GUID": "{42c69ea0-23fc-44bb-80d4-cd473d45a2ab}",
+            "Fields": {
+              "DaBg": "2008-03-01",
+              "SeNo": "51647801",
+              "Spec": "0",
+              "FtSv": "0"
+            }
+          }
+        },
+        "AfasSalary": {
+          "Element": {
+            "@GUID": "{42c69ea0-23fc-44bb-80d4-cd473d45a2ab}",
+            "Fields": {
+              "DaBe": "2008-03-01",
+              "SaPe": "V",
+              "EmSa": "2535.78",
+              "NtSa": "0",
+              "PtId": "5",
+              "SaYe": "0"
+            }
+          }
+        },
+        "AfasBankInfo": {
+          "Element": {
+            "@GUID": "{42c69ea0-23fc-44bb-80d4-cd473d45a2ab}",
+            "Fields": {
+              "AcId": "NL90BKCH0529692619",
+              "NoBk": "0",
+              "SaAc": "1",
+              "Ds": "Salaris",
+              "Nm": "Jansen",
+              "Rs": "Leusden",
+              "BkTp": "528001"
+            }
+          }
+        },
+        "AfasAgencyFiscus": {
+          "Element": {
+            "@DaBe": "2008-03-01",
+            "@AyId": "F",
+            "Fields": {
+              "ViIn": "15",
+              "ViEm": "1",
+              "ViTs": "W",
+              "ViCd": "0",
+              "ViLk": "1",
+              "ViZv": "CEF",
+              "YnZW": "1",
+              "YnWW": "1",
+              "YWAO": "1",
+              "ViOk": "0",
+              "ViVb": "0",
+              "ViCx": "1",
+              "TxF4": "0",
+              "TxF5": "0"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "AfasEmployee": {
+    "Element": {
+      "@EmId": "UPD003",
+      "Fields": null,
+      "Objects": {
+        "AfasAgencyGAK": {
+          "Element": {
+            "@DaBe": "2009-03-01",
+            "@AyId": "UWV",
+            "Fields": {
+              "ViGw": "06"
+            }
+          }
+        }
+      }
+    }
+  }
+}

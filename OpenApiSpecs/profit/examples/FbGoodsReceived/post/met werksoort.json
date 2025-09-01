@@ -1,0 +1,35 @@
+{
+  "FbGoodsReceived": {
+    "Element": {
+      "Fields": {
+        "CrId": "50028",
+        "RfCs": "Werksoort",
+        "War": "02"
+      },
+      "Objects": {
+        "FbGoodsReceivedLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "1",
+                "ItCd": "300",
+                "BiUn": "uur",
+                "QuUn": "10",
+                "Upri": "40"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "1",
+                "ItCd": "301",
+                "BiUn": "uur",
+                "QuUn": "8",
+                "Upri": "50"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+    "FbWarTransferOut": {
+      "Element": {
+      "@Action": "insert",
+        "Fields": {
+          "OrDa": "2024-03-22",
+          "War": "Industriepark",
+          "Wa2": "3",
+          "SoOr": "00004"
+        },
+        "Objects": [
+          {
+            "FbWarTransferLines": {
+              "Element": {
+              "@Action": "insert",
+                "Fields": {
+                  "VaIt": "2",
+                  "ItCd": "E4017",
+                  "QuUn": "1",
+                  "SoOr": "00004",
+                  "SoGu": "{C0B176E2-2F61-4644-80ED-6A962788B0C5}"
+                },
+                "Objects": [
+                  {
+                    "FbOrderSerialLines": {
+                      "Element": {
+                      "@Action": "update",
+                        "Fields": {
+                          "SeNu": "444",
+                          "BiUn": "STK",
+                          "QuUn": "1"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  }

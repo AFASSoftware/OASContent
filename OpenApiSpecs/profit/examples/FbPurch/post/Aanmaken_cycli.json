@@ -1,0 +1,28 @@
+{
+  "FbPurch": {
+    "Element": {
+      "Fields": {
+        "CrId": "50014",
+        "RfCs": "Test verplichting aanmaken",
+        "War": "01",
+        "CoYn": "1",
+        "Cycl": "M1",
+        "Time": "10",
+        "DaBg": "2021-06-01",
+        "Fina": "1"
+      },
+      "Objects": {
+        "FbPurchLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "2",
+              "ItCd": "1000",
+              "BiUn": "stk",
+              "QuUn": "10"
+            }
+          }
+        }
+      }
+    }
+  }
+}

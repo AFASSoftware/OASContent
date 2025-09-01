@@ -1,0 +1,20 @@
+{
+    "FbComposition": {
+      "Element": {
+        "Fields": {
+          "ItCd": "3202"
+        },
+        "Objects": {
+          "FbCompositionPart": {
+            "Element": {
+              "Fields": {
+                "VaIt": "art",
+                "ItCd": "1805",
+                "QuUn": "1"
+              }
+            }
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,15 @@
+{
+  "PtItemSetFunction": {
+    "Element": {
+      "Fields": {
+        "IsId": "7",
+        "Rfun": "6",
+        "Ds": "Insert voor update loonschaal",
+        "TaId": "506",
+        "VaSc": "IDB",
+        "SaSt": "1,0",
+        "ViTy": "t"
+      }
+    }
+  }
+}

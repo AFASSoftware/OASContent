@@ -1,0 +1,22 @@
+{
+  "KnSubject": {
+    "Element": {
+      "Fields": {
+        "StId": "4",
+        "Ds": "Subject attached to organisation and contact.",
+        "SbTx": "Example of a longer description that is optional for a subject."
+      },
+      "Objects": {
+        "KnSubjectLink": {
+          "Element": {
+            "Fields": {
+              "ToBC": "1",
+              "BcId": "1000372",
+              "CdId": "1005"
+            }
+          }
+        }
+      }
+    }
+  }
+}

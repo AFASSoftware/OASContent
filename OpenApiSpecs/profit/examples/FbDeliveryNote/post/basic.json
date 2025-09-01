@@ -1,0 +1,28 @@
+{
+  "FbDeliveryNote": {
+    "Element": {
+      "Fields": {
+        "OrDa": "2017-04-25",
+        "DbId": "10157",
+        "Unit": "1",
+        "War": "01",
+        "FaTo": "10181",
+        "RdDe": "true"
+      },
+      "Objects": {
+        "FbDeliveryNoteLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "2",
+              "ItCd": "1000",
+              "Ds": "PC behuizing Microtower Antec",
+              "BiUn": "STK",
+              "QuUn": "1.00",
+              "War": "01"
+            }
+          }
+        }
+      }
+    }
+  }
+}

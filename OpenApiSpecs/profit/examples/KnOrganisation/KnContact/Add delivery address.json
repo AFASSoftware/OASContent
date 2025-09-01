@@ -1,0 +1,37 @@
+{
+  "KnOrganisation": {
+    "Element": {
+      "Fields": {
+        "MatchOga": "0",
+        "BcCo": "1000372"
+      },
+      "Objects": {
+        "KnContact": {
+          "Element": {
+            "Fields": {
+              "PadAdr": "1",
+              "ViKc": "AFL",
+              "ExAd": "Extern magazijn"
+            },
+            "Objects": {
+              "KnBasicAddressAdr": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": "0",
+                    "Ad": "Amsterdamseweg",
+                    "HmNr": "105",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "BeginDate": "2012-01-01",
+                    "ResZip": "0"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

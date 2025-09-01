@@ -1,0 +1,25 @@
+{
+  "FbGoodsReceived": {
+    "Element": {
+      "Fields": {
+        "CrId": "60008",
+        "SoOr": "00120",
+        "RfCs": "Bestaande order - Deellevering"
+      },
+      "Objects": {
+        "FbGoodsReceivedLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "2",
+              "ItCd": "5000",
+              "BiUn": "stk",
+              "QuUn": "7",
+              "SoOr": "00120",
+              "SoGu": "{A5A1F36C-BCB2-4052-A9A7-5C30AFD30A04}"
+            }
+          }
+        }
+      }
+    }
+  }
+}

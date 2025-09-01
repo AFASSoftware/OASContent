@@ -1,0 +1,37 @@
+{
+  "HrSalTable": {
+    "Element": {
+      "Fields": {
+        "Ds": "AFAS enkele regel",
+        "DecR": "2",
+        "ViRt": "1",
+        "Visp": "7",
+        "MnMx": "0",
+        "DbId": "80682"
+      },
+      "Objects": {
+        "HrSalTableSet": {
+          "Element": {
+            "Fields": {
+              "DaBe": "2018-01-01",
+              "Ds": "AFAS"
+            },
+            "Objects": {
+              "HrSalTableRow": {
+                "Element": {
+                  "Fields": {
+                    "Va1": "DM",
+                    "Be2": "0.0",
+                    "Be3": "0.0",
+                    "En3": "20.0",
+                    "Val": "40.50"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

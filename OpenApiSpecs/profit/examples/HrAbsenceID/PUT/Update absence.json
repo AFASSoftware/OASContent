@@ -1,0 +1,13 @@
+{
+    "HrAbsenceID": {
+      "Element": {
+        "Fields": {
+          "Id": "1724",
+          "DuBe": 240,
+          "ViAt": "V",
+          "Re": "change the duration to 240 minutes",
+          "LeDt": true
+        }
+      }
+    }
+  }

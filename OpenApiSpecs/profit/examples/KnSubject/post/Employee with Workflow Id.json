@@ -1,0 +1,25 @@
+{
+  "KnSubject":{
+     "Element":{
+        "Fields":{
+           "StId":4,
+           "Ds":"salary changed",
+           "SbTx": "Add a workflow id to the id field to trigger a specific workflow. Also the properties can be used for this( FvF1 - FvF3)",
+           "id": "worklfow id"
+        },
+        "Objects":[
+           {
+              "KnSubjectLink":{
+                 "Element":{
+                    "Fields":{
+                       "DoCRM":true,
+                       "SfTp":2,
+                       "SfId":"floora"
+                    }
+                 }
+              }
+           }
+        ]
+     }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "HrIllness": {
+    "Element": {
+      "Fields": {
+        "EmId": "4125620",
+        "DaBe": "2008-03-18T00:00:00",
+        "PcWd": "0.00",
+        "ExFr": "0"
+      },
+      "Objects": {
+        "HrAbsIllnessProgress": {
+          "Element": {
+            "Fields": {
+              "DaTi": "2008-07-01T00:00:00",
+              "PsPc": "100.00",
+              "ViWr": "3",
+              "Re": "Medewerker is weer compleet hersteld en klaar om aan het werk te gaan."
+            }
+          }
+        }
+      }
+    }
+  }
+}

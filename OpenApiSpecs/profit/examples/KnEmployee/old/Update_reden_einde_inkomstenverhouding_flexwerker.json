@@ -1,0 +1,27 @@
+{
+  "AfasEmployee": {
+    "Element": {
+      "@EmId": "JanB",
+      "Fields": {
+        "ViSe": "I"
+      },
+      "Objects": {
+        "AfasContract": {
+          "Element": {
+            "@DaBe": "2005-12-01",
+            "Fields": {
+              "ClId": "Basis",
+              "WcId": "Basis",
+              "ApCo": "O",
+              "CmId": "000001",
+              "EmMt": "1",
+              "ViEt": "V",
+              "ViTo": "2M",
+              "ViRf": "5"
+            }
+          }
+        }
+      }
+    }
+  }
+}

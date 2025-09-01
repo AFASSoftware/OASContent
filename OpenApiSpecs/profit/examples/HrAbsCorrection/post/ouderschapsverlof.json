@@ -1,0 +1,13 @@
+{
+  "HrAbsCorrection": {
+    "Element": {
+      "Fields": {
+        "EmId": "FLOORA",
+        "RgDa": "2024-08-01",
+        "ViAt": "O",
+        "HhMm": 60,
+        "CoWk": "2"
+      }
+    }
+  }
+}

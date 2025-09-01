@@ -1,0 +1,12 @@
+{
+  "PtItemSetFunction": {
+    "Element": {
+      "Fields": {
+        "IsId": "1",
+        "Rfun": "3",
+        "Ds": "insert voor update functie itemset",
+        "ViTy": "t"
+      }
+    }
+  }
+}

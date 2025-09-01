@@ -1,0 +1,9 @@
+{
+  "results": {
+    "PtDeclaration": {
+      "ApprovWorkflow": "PrimaryKeyValue",
+      "DcCo": "PrimaryKeyValue",
+      "SbId": "PrimaryKeyValue"
+    }
+  }
+}

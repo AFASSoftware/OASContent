@@ -1,0 +1,21 @@
+{
+  "FbSubscription": {
+    "Element": {
+      "Fields": {
+        "SuNr": "2"
+      },
+      "Objects": {
+        "FbSubscriptionLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "2",
+              "ItCd": "7002",
+              "DaSt": "2013-01-01",
+              "InFr": "2013-01-01"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "PtCostPriceComponent": {
+    "Element": {
+      "Fields": {
+        "CpId": "5",
+        "VaCo": "01",
+        "Ds": "Update kop",
+        "VaIt": "Kst",
+        "ItCd": "FLEX36-1",
+        "StId": "",
+        "CtId": "02",
+        "SuQu": "4",
+        "SuRe": "4",
+        "SuDf": "4"
+      }
+    }
+  }
+}

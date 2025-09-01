@@ -1,0 +1,21 @@
+{
+  "FbDirectInvoice": {
+    "Element": {
+      "Fields": {
+        "DbId": "10178"
+      },
+      "Objects": {
+        "FbDirectInvoiceLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "2",
+              "ItCd": "1000",
+              "BiUn": "stk",
+              "QuUn": "1"
+            }
+          }
+        }
+      }
+    }
+  }
+}

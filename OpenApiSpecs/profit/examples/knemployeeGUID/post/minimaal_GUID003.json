@@ -1,0 +1,63 @@
+{
+  "AfasEmployee": {
+    "Element": {
+      "@GUID": "{c73c0198-9502-48ca-b281-69cc839bf414}",
+      "Fields": {
+        "EmId": "UPDGUID003",
+        "ViSe": "I",
+        "Bl": "0",
+        "LwOb": "0",
+        "LwTg": "0"
+      },
+      "Objects": {
+        "KnPerson": {
+          "Element": {
+            "Fields": {
+              "PadAdr": "1",
+              "AutoNum": "1",
+              "MatchPer": "7",
+              "SeNm": "ZOEKNAAM",
+              "FiNm": "Jan",
+              "In": "J.A.",
+              "LaNm": "Jansen",
+              "SpNm": "1",
+              "NmBi": "Jansen",
+              "ViUs": "0",
+              "ViGe": "M",
+              "DaBi": "1979-06-10",
+              "TtId": "ALG"
+            },
+            "Objects": {
+              "KnBasicAddressAdr": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": "0",
+                    "Ad": "Sonyhof",
+                    "HmNr": "105",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "BeginDate": "2008-03-01"
+                  }
+                }
+              },
+              "KnBasicAddressPad": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": "0",
+                    "Ad": "Sonyhof",
+                    "HmNr": "105",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "BeginDate": "2008-03-01"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

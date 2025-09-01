@@ -1,0 +1,32 @@
+{
+  "KnPurchaseRelationOrg": {
+    "Element": {
+      "@CrId": "50011",
+      "Objects": {
+        "KnOrganisation": {
+          "Element": {
+            "Fields": {
+              "MatchOga": "0",
+              "BcCo": "1000029"
+            },
+            "Objects": {
+              "KnBasicAddressAdr": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": true,
+                    "Ad": "Emmastraat",
+                    "HmNr": "105",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "ResZip": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

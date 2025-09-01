@@ -1,0 +1,28 @@
+{
+  "FbSubscription": {
+    "Element": {
+      "Fields": {
+        "BcId": "1000325",
+        "SuSt": "2013-01-01",
+        "VaIn": "J1",
+        "DaSt": "2013-01-01",
+        "VaSu": "03"
+      },
+      "Objects": {
+        "FbSubscriptionLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "2",
+              "ItCd": "7002",
+              "Qu": "1",
+              "DaSt": "2013-01-01",
+              "SuCr": "0",
+              "InFr": "2013-01-01",
+              "CrSi": "0"
+            }
+          }
+        }
+      }
+    }
+  }
+}

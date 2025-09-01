@@ -1,0 +1,49 @@
+{
+  "KnSalesRelationPer": {
+    "Element": {
+      "@DbId": "20021",
+      "Fields": {
+        "CuId": "EUR",
+        "InPv": "E"
+      },
+      "Objects": [
+        {
+          "KnPerson": {
+            "Element": {
+              "Fields": {
+                "PadAdr": true,
+                "AutoNum": true,
+                "MatchPer": "6",
+                "SeNm": "ZOEKNAAM",
+                "CaNm": "Jan",
+                "LaNm": "Jansen",
+                "SpNm": true,
+                "ViGe": "M",
+                "TtId": "ALG",
+                "Corr": true,
+                "AddToPortal": false
+              },
+              "Objects": [
+                {
+                  "KnBasicAddressAdr": {
+                    "Element": {
+                      "Fields": {
+                        "CoId": "NL",
+                        "PbAd": true,
+                        "Ad": "Retiefstraat",
+                        "HmNr": "105",
+                        "ZpCd": "3833LC",
+                        "Rs": "Leusden",
+                        "ResZip": true
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

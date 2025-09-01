@@ -1,0 +1,19 @@
+{
+  "FbIncomingGoods": {
+    "Element": {
+      "Fields": {
+        "War": "*****",
+        "VaIt": "2",
+        "ItCd": "1003",
+        "Qu": "5",
+        "BiUn": "Stk",
+        "BiDc": "0",
+        "QuUn": "5",
+        "QuDc": "0",
+        "At": "0",
+        "DaSc": "2014-06-11",
+        "TiSc": "2014-06-11T08:13:00"
+      }
+    }
+  }
+}

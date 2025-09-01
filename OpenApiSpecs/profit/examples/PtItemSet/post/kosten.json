@@ -1,0 +1,39 @@
+{
+  "PtItemset": {
+    "Element": {
+      "Fields": {
+        "PtItpDaBe": "2023-01-01",
+        "PtItpTyEj": "G",
+        "PtItpViTa": "3460",
+        "Ds": "Itemset kosten",
+        "Bl": "0",
+        "ClId": "01"
+      },
+      "Objects": {
+        "PtItemSetLine": {
+          "Element": [
+            {
+              "@VaIt": "Wst",
+              "Fields": {
+                "ItCd": "01NB",
+                "Invo": "1",
+                "Payr": "1",
+                "GWPc": "100",
+                "GWMi": "100",
+                "GWMa": "100"
+              }
+            },
+            {
+              "@VaIt": "Kst",
+              "Fields": {
+                "ItCd": "11-C90990",
+                "Invo": "1",
+                "Payr": "1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

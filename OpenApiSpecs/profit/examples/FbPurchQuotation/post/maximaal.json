@@ -1,0 +1,70 @@
+{
+  "FbPurchQuotation": {
+    "Element": {
+      "Fields": {
+        "OrDa": "2014-12-30",
+        "CrId": "50014",
+        "Ds": "inkoopofferte",
+        "DaDe": "2015-01-02",
+        "DaPr": "2015-01-02",
+        "CuId": "EUR",
+        "Rate": "1",
+        "RfCs": "Connector: INKOOP8754876",
+        "VaDu": "1",
+        "PaCd": "14",
+        "PaTp": "00",
+        "Re": "Opmerking van de inkooprelatie op de order",
+        "Unit": "1",
+        "Coll": "0",
+        "CrOr": "0",
+        "War": "01",
+        "LgId": "NL",
+        "CsTy": "1",
+        "VaTr": "3",
+        "VaSt": "00",
+        "VaGs": "7",
+        "VaTa": "1",
+        "CoId": "NL",
+        "VaCl": "0",
+        "ClPc": "0",
+        "PaPc": "0",
+        "VaPa": "0",
+        "DaDu": "2015-10-02",
+        "VaYN": "0",
+        "VaBc": "0",
+        "BaCo": "barco5dfg",
+        "JoCo": "10",
+        "PrId": "600000",
+        "PrSt": "01"
+      },
+      "Objects": {
+        "FbPurchQuotationLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "art",
+              "ItCd": "9901",
+              "Ds": "Afwijkende omschrijving artikel 2116",
+              "VaRc": "2",
+              "BiUn": "stk",
+              "QuUn": "1",
+              "Qu": "1",
+              "PrLi": "*****",
+              "War": "01",
+              "VaWt": "4",
+              "NeWe": "1",
+              "GrWe": "2",
+              "Upri": "200",
+              "CoPr": "60",
+              "VaAD": "0",
+              "PRDc": "5",
+              "ARDc": "10",
+              "Re": "Opmerking van de offerteregel",
+              "StL1": "L",
+              "StL2": "BLAUW"
+            }
+          }
+        }
+      }
+    }
+  }
+}

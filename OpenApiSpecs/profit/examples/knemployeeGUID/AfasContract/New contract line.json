@@ -1,0 +1,31 @@
+{
+    "AfasEmployee": {
+      "Element": {
+        "@GUID": "{5E430060-A91D-44EF-8DF3-7E6F22D075AB}",
+        "Fields": {
+          "EmId": "1001391"
+        },
+        "Objects": {
+          "AfasContract": {
+            "Element": {
+              "@GUID": "{6324c715-0083-41bf-9fc1-864244a6cf9b}",
+              "Fields": {
+                "DaBe": "2024-02-01",
+                "ClId": "basis",
+                "WcId": "basis",
+                "ApCo": "U",
+                "DvSn": "1",
+                "CmId": "01",
+                "EmMt": "1",
+                "ViEt": "V",
+                "ViKe": "0",
+                "WrCt": "true",
+                "EnS2": "1",
+                "UC201E55C4729C1BB3FE170936F26444F": "ExternalId"
+              }
+            }
+          }
+        }
+      }
+    }
+  }

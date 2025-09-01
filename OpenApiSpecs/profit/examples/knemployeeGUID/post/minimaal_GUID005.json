@@ -1,0 +1,63 @@
+{
+  "AfasEmployee": {
+    "Element": {
+      "@GUID": "{6231ba04-be13-4f62-aa1e-549e46930373}",
+      "Fields": {
+        "EmId": "UPDGUID005",
+        "ViSe": "I",
+        "Bl": "0",
+        "LwOb": "0",
+        "LwTg": "0"
+      },
+      "Objects": {
+        "KnPerson": {
+          "Element": {
+            "Fields": {
+              "PadAdr": "1",
+              "AutoNum": "1",
+              "MatchPer": "7",
+              "SeNm": "ZOEKNAAM",
+              "FiNm": "Jan",
+              "In": "J.A.",
+              "LaNm": "Jansen",
+              "SpNm": "1",
+              "NmBi": "Jansen",
+              "ViUs": "0",
+              "ViGe": "M",
+              "DaBi": "1980-05-10",
+              "TtId": "ALG"
+            },
+            "Objects": {
+              "KnBasicAddressAdr": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": "0",
+                    "Ad": "Toktokweg",
+                    "HmNr": "105",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "BeginDate": "2009-03-01"
+                  }
+                }
+              },
+              "KnBasicAddressPad": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": "0",
+                    "Ad": "Toktokweg",
+                    "HmNr": "105",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "BeginDate": "2009-03-01"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

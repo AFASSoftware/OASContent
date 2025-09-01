@@ -1,0 +1,119 @@
+{
+  "PtItemset": {
+    "Element": {
+      "Fields": {
+        "PtItpDaBe": "2023-01-01",
+        "PtItpTyEj": "G",
+        "PtItpViTa": "3460",
+        "Ds": "Itemset massa",
+        "Bl": "0",
+        "ClId": "D"
+      },
+      "Objects": {
+        "PtItemSetLine": {
+          "Element": [
+            {
+              "@VaIt": "Wst",
+              "Fields": {
+                "ItCd": "01NB",
+                "Invo": "1",
+                "Payr": "1",
+                "GWPc": "100",
+                "GWMi": "100",
+                "GWMa": "100"
+              }
+            },
+            {
+              "@VaIt": "Kst",
+              "Fields": {
+                "ItCd": "FLEX58-2",
+                "Invo": "1",
+                "Payr": "1"
+              }
+            },
+            {
+              "@VaIt": "Kst",
+              "Fields": {
+                "ItCd": "FLEX84-1",
+                "Invo": "1",
+                "Payr": "1"
+              }
+            },
+            {
+              "@VaIt": "Kst",
+              "Fields": {
+                "ItCd": "FLEX72-1",
+                "Invo": "1",
+                "Payr": "1"
+              }
+            },
+            {
+              "@VaIt": "Kst",
+              "Fields": {
+                "ItCd": "FLEX73-1",
+                "Invo": "1",
+                "Payr": "1"
+              }
+            },
+            {
+              "@VaIt": "Kst",
+              "Fields": {
+                "ItCd": "FLEX56-1",
+                "Invo": "1",
+                "Payr": "1"
+              }
+            },
+            {
+              "@VaIt": "Kst",
+              "Fields": {
+                "ItCd": "FLEX55-2",
+                "Invo": "1",
+                "Payr": "1"
+              }
+            },
+            {
+              "@VaIt": "Kst",
+              "Fields": {
+                "ItCd": "FLEX52-1",
+                "Invo": "1",
+                "Payr": "1"
+              }
+            },
+            {
+              "@VaIt": "Kst",
+              "Fields": {
+                "ItCd": "FLEX29-1",
+                "Invo": "1",
+                "Payr": "1"
+              }
+            },
+            {
+              "@VaIt": "Kst",
+              "Fields": {
+                "ItCd": "FLEX31-1",
+                "Invo": "1",
+                "Payr": "1"
+              }
+            },
+            {
+              "@VaIt": "Kst",
+              "Fields": {
+                "ItCd": "FLEX37-1",
+                "Invo": "1",
+                "Payr": "1"
+              }
+            },
+            {
+              "@VaIt": "Kst",
+              "Fields": {
+                "ItCd": "FLEX44-1",
+                "Invo": "1",
+                "Payr": "1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

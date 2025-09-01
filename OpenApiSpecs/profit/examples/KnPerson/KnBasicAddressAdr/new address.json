@@ -1,0 +1,28 @@
+{
+    "KnPerson": {
+        "Element": {
+            "Fields": {
+                "MatchPer": "0",
+                "BcCo": "000021212"
+            },
+            "Objects": [
+                {
+                    "KnBasicAddressAdr": {
+                        "Element": {
+                            "@action": "insert",
+                            "Fields": {
+                                "Ad": "Main Street",
+                                "HmNr": "123",
+                                "HmAd": "B",
+                                "ZpCd": "12345",
+                                "CoId": "US",
+                                "Rs": "Anytown",
+                                "BeginDate": "2022-01-01"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

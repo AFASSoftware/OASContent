@@ -1,0 +1,108 @@
+{
+  "FbComposition": {
+    "Element": {
+      "Fields": {
+        "ItCd": "3203",
+        "Ds": "Actiesysteem>",
+        "DsEx": "Speciale aanbieding",
+        "ChDs": "0",
+        "Grp": "300",
+        "Loc": "A1",
+        "BiSt": "1",
+        "BiDc": "0",
+        "BiUn": "stk",
+        "PrFc": "1",
+        "VaCt": "1",
+        "Head": "1",
+        "CoVa": "0",
+        "VaCp": "1",
+        "Uniq": "1",
+        "CrOl": "1",
+        "CaSp": "1",
+        "SpCo": "0",
+        "StAM": "3",
+        "StPrice": "1000",
+        "CoPrice": "950",
+        "VaRc": "2",
+        "VaAr": "0",
+        "EUSe": "0",
+        "ChSa": "0",
+        "ChPu": "0",
+        "VaTp": "0",
+        "ArSu": "0",
+        "PrGr": "01",
+        "CrId": "50001",
+        "VaWt": "4",
+        "NeWe": "2",
+        "GrWe": "3",
+        "CsWe": "2",
+        "CsGc": "00000000",
+        "VaBc": "0",
+        "BaCo": "3203999",
+        "VaCr": "N",
+        "StAd": "1",
+        "StMi": "2",
+        "StMa": "10",
+        "StCh": "3",
+        "VaDo": "0",
+        "PgId": "01",
+        "Bl": "0",
+        "Rm": "Dit is een actiesamenstelling"
+      },
+      "Objects": {
+        "FbCompositionPart": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "art",
+                "ItCd": "1000",
+                "AlAc": "1",
+                "PrAc": "1",
+                "Ds": "Dit is artikel 1000",
+                "CaFa": "1",
+                "InCo": "1",
+                "BiUn": "stk",
+                "QuUn": "1",
+                "Qu": "1",
+                "Prin": "1",
+                "FxQu": "1"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "txt",
+                "ItCd": "t",
+                "AlAc": "1",
+                "PrAc": "1",
+                "Ds": "Dit is een tekstsoort",
+                "QuUn": "0"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "wst",
+                "ItCd": "300",
+                "AlAc": "1",
+                "PrAc": "1",
+                "Ds": "Dit is een werksoort",
+                "BiUn": "uur",
+                "QuUn": "8"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "kst",
+                "ItCd": "K01",
+                "AlAc": "1",
+                "PrAc": "1",
+                "Ds": "Dit is een kostensoort",
+                "BiUn": "*****",
+                "QuUn": "2"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "KnOrgEmrFun": {
+    "Element": {
+      "Fields": {
+        "CmId": "RIS",
+        "FuId": "TST4",
+        "Fu": "Tester Functioneel",
+        "FTId": "ALG",
+        "Fu_1031": "Deutsch update",
+        "Fu_1036": "La France update",
+        "Fu_1043": "Nederlands update",
+        "Fu_2057": "English update",
+        "Fu_2067": "Vlaams update"
+      }
+    }
+  }
+}

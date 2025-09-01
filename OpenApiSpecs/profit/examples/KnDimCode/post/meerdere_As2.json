@@ -1,0 +1,34 @@
+{
+  "KnDimCode": {
+    "Element": [
+      {
+        "@AxId": "2",
+        "@VbCo": "SUP",
+        "Fields": {
+          "Ds": "Support",
+          "QuYN": "1",
+          "Bl": "0"
+        }
+      },
+      {
+        "@AxId": "2",
+        "@VbCo": "SAL",
+        "Fields": {
+          "Ds": "Sales",
+          "Re": "Selectiewaarde",
+          "QuYN": "1",
+          "Bl": "0"
+        }
+      },
+      {
+        "@AxId": "2",
+        "@VbCo": "MAR",
+        "Fields": {
+          "Ds": "Marketing",
+          "QuYN": "1",
+          "Bl": "0"
+        }
+      }
+    ]
+  }
+}

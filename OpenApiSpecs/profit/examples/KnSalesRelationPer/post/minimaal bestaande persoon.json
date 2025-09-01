@@ -1,0 +1,23 @@
+{
+    "KnSalesRelationPer": {
+      "Element": {
+        "@DbId": "49978",
+        "Fields": {
+          "CuId": "EUR",
+          "InPv": "E"
+        },
+        "Objects": [
+          {
+            "KnPerson": {
+              "Element": {
+                "Fields": {
+                  "MatchPer": "0",
+                  "BcCo": "1000348"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }

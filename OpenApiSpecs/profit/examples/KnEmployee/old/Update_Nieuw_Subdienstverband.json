@@ -1,0 +1,62 @@
+{
+  "AfasEmployee": {
+    "Element": {
+      "@EmId": "00350",
+      "Objects": {
+        "AfasContract": {
+          "Element": {
+            "@DaBe": "2014-05-01",
+            "Fields": {
+              "ClId": "CVO",
+              "WcId": "CVO",
+              "ApCo": "O",
+              "PEmTy": "S",
+              "DvSn": "1",
+              "CmId": "40075",
+              "EmMt": "1",
+              "ViEt": "OP",
+              "RtDa": "0"
+            }
+          }
+        },
+        "AfasOrgunitFunction": {
+          "Element": {
+            "@DaBe": "2014-05-01",
+            "Fields": {
+              "DpId": "25GBVMGT",
+              "FuId": "003"
+            }
+          }
+        },
+        "AfasSalary": {
+          "Element": {
+            "@DaBe": "2014-05-01",
+            "Fields": {
+              "DvSn": "2",
+              "SaSt": "10",
+              "SaS2": "14",
+              "SaPe": "S",
+              "PtId": "5",
+              "SaYe": "52487.11",
+              "EmSc": "0",
+              "TaId": "169",
+              "VaSc": "LE"
+            }
+          }
+        },
+        "AfasTimeTable": {
+          "Element": {
+            "@DaBg": "2014-05-01",
+            "Fields": {
+              "SeNo": "51647801",
+              "FtSv": "0",
+              "Immc": "true",
+              "HrMn": "40",
+              "HrMx": "40"
+            }
+          }
+        }
+      }
+    }
+  }
+}

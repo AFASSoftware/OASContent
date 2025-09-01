@@ -1,0 +1,65 @@
+{
+  "FbDeliveryNote": {
+    "Element": {
+      "Fields": {
+        "OrNu": "80001111",
+        "OrDa": "2013-03-01",
+        "DbId": "10140",
+        "DaDe": "2013-04-01",
+        "DaPr": "2013-03-01",
+        "CuId": "EUR",
+        "RfCs": "REF klant: 264",
+        "SaCh": "1",
+        "VaDu": "1",
+        "InVa": "0",
+        "PaCd": "14",
+        "PaTp": "00",
+        "Re": "Afwijkend afleveradres",
+        "Unit": "1",
+        "Coll": "0",
+        "CrOr": "0",
+        "Rout": "1",
+        "War": "01",
+        "CoDn": "0",
+        "CoIn": "0",
+        "DlPr": "5",
+        "LgId": "NL",
+        "DeCo": "0",
+        "CsTy": "0",
+        "CoId": "NL",
+        "InPc": "1",
+        "VaCl": "0",
+        "ClPc": "0",
+        "PaPc": "0",
+        "VaPa": "0",
+        "RdDe": "0",
+        "VaYN": "0",
+        "VaBc": "0",
+        "BaCo": "80000001",
+        "JoCo": "70",
+        "FaTo": "10034",
+        "PrId": "300000",
+        "SeSt": "0",
+        "SeWe": "1500",
+        "QuCl": "4",
+        "DlAd": "1002",
+        "ExAd": "afwijkend afleveradres gekozen"
+      },
+      "Objects": {
+        "FbDeliveryNoteLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "2",
+              "ItCd": "1000",
+              "Ds": "artikel gewijzigde omschrijving",
+              "VaRc": "2",
+              "BiUn": "stk",
+              "QuUn": "10",
+              "Re": "Opmerking bij artikel"
+            }
+          }
+        }
+      }
+    }
+  }
+}

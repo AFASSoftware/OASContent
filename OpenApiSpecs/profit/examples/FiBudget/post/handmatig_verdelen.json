@@ -1,0 +1,38 @@
+{
+  "FiBudget": {
+    "Element": {
+      "Fields": {
+        "unitId": "3",
+        "year": "2014",
+        "accountNr": "4200",
+        "budgetScenario": "001",
+        "dimCode1": "ZUID",
+        "yearBudget": "1",
+        "autoDivide": "1",
+        "divTable": "1",
+        "periodFrom": "1",
+        "periodTo": "12"
+      },
+      "Objects": {
+        "BudgetLines": {
+          "Element": [
+            {
+              "Fields": {
+                "seqNo": "1",
+                "periodId": "1",
+                "amount": "12000"
+              }
+            },
+            {
+              "Fields": {
+                "seqNo": "1",
+                "periodId": "12",
+                "amount": "12000"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

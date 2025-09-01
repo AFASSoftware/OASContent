@@ -1,0 +1,16 @@
+{
+  "KnCSRLine": {
+    "Element": {
+      "Fields": {
+        "CaCo": "1000",
+        "TyCo": "1001",
+        "UnId": 2,
+        "Year": 2024,
+        "SeNo": 1,
+        "ViCS": "V",
+        "Valu": "1500",
+        "ReDa": "2024-01-31"
+      }
+    }
+  }
+}

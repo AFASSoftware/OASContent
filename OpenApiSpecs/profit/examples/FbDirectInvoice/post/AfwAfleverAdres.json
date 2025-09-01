@@ -1,0 +1,24 @@
+{
+  "FbDirectInvoice": {
+    "Element": {
+      "Fields": {
+        "DbId": "10140",
+        "Unit": "1",
+        "DlAd": "1002",
+        "ExAd": "afwijkend afleveradres gekozen"
+      },
+      "Objects": {
+        "FbDirectInvoiceLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "2",
+              "ItCd": "1000",
+              "BiUn": "stk",
+              "QuUn": "1"
+            }
+          }
+        }
+      }
+    }
+  }
+}

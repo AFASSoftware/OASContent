@@ -1,0 +1,24 @@
+{
+  "PtOptionList": {
+    "Element": {
+      "Fields": {
+        "OlNu": "000022",
+        "PrId": "P00047",
+        "CoFa": "1",
+        "Ds": "Change the description of the optionlist."
+      },
+      "Objects": [
+        {
+          "PtOptionListLines": {
+            "Element": {
+              "Fields": {
+                "Code": "1000",
+                "Ds": "Change this all so while we are making a change."
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

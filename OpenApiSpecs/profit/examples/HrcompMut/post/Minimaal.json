@@ -1,0 +1,16 @@
+{
+  "HrCompMut": {
+    "Element": {
+      "@PtId": "5",
+      "@Year": "2023",
+      "@PeId": "3",
+      "@DaTi": "2023-01-01",
+      "@EmId": "FLOORA",
+      "@ErId": "000001",
+      "@Sc02": "21",
+      "Fields": {
+        "VaD1": "10"
+      }
+    }
+  }
+}

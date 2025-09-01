@@ -1,0 +1,82 @@
+{
+  "FbDirectInvoice": {
+    "Element": {
+      "Fields": {
+        "OrDa": "2013-06-01",
+        "DbId": "10178",
+        "RfCs": "Serienummers",
+        "War": "01"
+      },
+      "Objects": {
+        "FbDirectInvoiceLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "4003",
+                "BiUn": "stk",
+                "QuUn": "2",
+                "War": "*****",
+                "Upri": "25"
+              },
+              "Objects": {
+                "FbOrderSerialLines": {
+                  "Element": [
+                    {
+                      "Fields": {
+                        "SeNu": "200901",
+                        "BiUn": "stk",
+                        "QuUn": "1",
+                        "Re": "Opmerking bij boeking"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "SeNu": "200902",
+                        "BiUn": "stk",
+                        "QuUn": "1",
+                        "Re": "Opmerking bij boeking"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "4001",
+                "BiUn": "stk",
+                "QuUn": "2",
+                "War": "01",
+                "Upri": "25"
+              },
+              "Objects": {
+                "FbOrderSerialLines": {
+                  "Element": [
+                    {
+                      "Fields": {
+                        "SeNu": "TFTUL17003",
+                        "BiUn": "stk",
+                        "QuUn": "1",
+                        "Re": "Opmerking bij boeking"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "SeNu": "TFTUL17001",
+                        "BiUn": "stk",
+                        "QuUn": "1",
+                        "Re": "Opmerking bij boeking"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

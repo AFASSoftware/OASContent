@@ -1,0 +1,66 @@
+{
+  "FbPurchPrice": {
+    "Element": [
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "3003",
+          "BiUn": "stk",
+          "PrLi": "*****",
+          "Pric": "536.44",
+          "CuId": "eur",
+          "DaBg": "2013-01-01",
+          "VaAD": "0",
+          "DsLi": "0",
+          "CrPr": "1",
+          "Am": "0"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "3003",
+          "BiUn": "stk",
+          "PrLi": "*****",
+          "Pric": "529.12",
+          "CuId": "eur",
+          "DaBg": "2013-01-01",
+          "VaAD": "0",
+          "DsLi": "0",
+          "CrPr": "1",
+          "Am": "5"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "3003",
+          "BiUn": "stk",
+          "PrLi": "*****",
+          "Pric": "519.01",
+          "CuId": "eur",
+          "DaBg": "2013-01-01",
+          "VaAD": "0",
+          "DsLi": "0",
+          "CrPr": "1",
+          "Am": "10"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "3003",
+          "BiUn": "stk",
+          "PrLi": "*****",
+          "Pric": "499.99",
+          "CuId": "eur",
+          "DaBg": "2013-01-01",
+          "VaAD": "0",
+          "DsLi": "0",
+          "CrPr": "1",
+          "Am": "20"
+        }
+      }
+    ]
+  }
+}

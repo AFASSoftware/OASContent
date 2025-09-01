@@ -1,0 +1,53 @@
+{
+  "KnOrganisation": {
+    "Element": {
+      "Fields": {
+        "PadAdr": "1",
+        "AutoNum": "0",
+        "MatchOga": "0",
+        "BcCo": "1000812",
+        "SeNm": "ZOEKNAAM",
+        "Nm": "Jansen"
+      },
+      "Objects": {
+        "KnBankAccount": {
+          "Element": {
+            "Fields": {
+              "CoId": "NL",
+              "IbCk": "false",
+              "BaAc": "849835607",
+              "AcGa": "false",
+              "AcCk": "false"
+            }
+          }
+        },
+        "KnBasicAddressAdr": {
+          "Element": {
+            "Fields": {
+              "PbAd": "0",
+              "Ad": "Teststraat",
+              "HmNr": "105",
+              "ZpCd": "3833LC",
+              "CoId": "NL",
+              "Rs": "Leusden",
+              "ResZip": "0"
+            }
+          }
+        },
+        "KnBasicAddressPad": {
+          "Element": {
+            "Fields": {
+              "PbAd": "0",
+              "Ad": "Teststraat",
+              "HmNr": "105",
+              "ZpCd": "3833LC",
+              "CoId": "NL",
+              "Rs": "Leusden",
+              "ResZip": "0"
+            }
+          }
+        }
+      }
+    }
+  }
+}

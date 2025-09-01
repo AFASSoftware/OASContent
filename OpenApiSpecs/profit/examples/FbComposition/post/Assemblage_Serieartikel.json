@@ -1,0 +1,38 @@
+{
+  "FbComposition": {
+    "Element": {
+      "Fields": {
+        "ItCd": "3205",
+        "Ds": "Serienummer",
+        "Grp": "300",
+        "BiUn": "stk",
+        "VaCt": "0",
+        "StPrice": "2000",
+        "VaRc": "1",
+        "VaTp": "1",
+        "CrId": "50003",
+        "CsGc": "00000000"
+      },
+      "Objects": {
+        "FbCompositionPart": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "art",
+                "ItCd": "4000",
+                "QuUn": "1"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "art",
+                "ItCd": "8000",
+                "QuUn": "2"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

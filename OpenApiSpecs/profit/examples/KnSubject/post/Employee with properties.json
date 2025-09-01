@@ -1,0 +1,24 @@
+{
+  "KnSubject": {
+    "Element": {
+      "Fields": {
+        "StId": "19",
+        "Ds": "Test Dossier medewerker met kenmerken",
+        "Da": "2023-01-01T10:00:00",
+        "UsId": "ALLARDJ",
+        "FvF1": "104"
+      },
+      "Objects": {
+        "KnSubjectLink": {
+          "Element": {
+            "Fields":{
+              "DoCRM":true,
+              "SfTp":2,
+              "SfId":"floora"
+           }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+    "AfasEmployee": {
+        "Element": {
+            "@Action": "update",
+            "@EmId": "000002009",
+            "Objects": [
+                {
+                    "AfasContract": {
+                        "Element": {
+                            "@Action": "insert",
+                            "@DaBe": "2022-03-01",
+                            "Fields": {
+                                "ClId": "basis",
+                                "WcId": "basis",
+                                "ApCo": "O",
+                                "DvSn": 1,
+                                "CmId": "01",
+                                "EmMt": "1",
+                                "ViEt": "V",
+                                "ViKe": "0",
+                                "WrCt": true,
+                                "EnS2": 1
+                            }
+                        }
+                    },
+                    "AfasOrgunitFunction": {
+                        "Element": {
+                            "@Action": "insert",
+                            "@DaBe": "2022-03-01",
+                            "Fields": {
+                                "DpId": "OPLTEAM",
+                                "FuId": "MEDLERA",
+                                "CcId": "203",
+                                "CrId": "01"
+                            }
+                        }
+                    },
+                    "AfasTimeTable": {
+                        "Element": {
+                            "@Action": "insert",
+                            "@DaBg": "2022-03-01",
+                            "Fields": {
+                                "EtTy": "5",
+                                "DyWk": "5",
+                                "HrWk": "40"
+                            }
+                        }
+                    },
+                    "AfasSalary": {
+                        "Element": {
+                            "@Action": "insert",
+                            "@DaBe": "2022-03-01",
+                            "Fields": {
+                                "SaPe": "U",
+                                "EmSa": "55",
+                                "PtId": 5,
+                                "SaYe": "80500",
+                                "TtPy": false
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

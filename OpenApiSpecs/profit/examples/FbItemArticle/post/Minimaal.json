@@ -1,0 +1,12 @@
+{
+  "FbItemArticle": {
+    "Element": {
+      "Fields": {
+        "ItCd": "2000",
+        "Grp": "300",
+        "BiUn": "STK",
+        "VaRc": "2"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "FbSales": {
+    "Element": {
+      "Fields": {
+        "DbId": "10001",
+        "RfCs": "Samensteling"
+      },
+      "Objects": {
+        "FbSalesLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "7",
+              "ItCd": "3200",
+              "BiUn": "stk",
+              "QuUn": "1",
+              "Upri": "1500"
+            }
+          }
+        }
+      }
+    }
+  }
+}

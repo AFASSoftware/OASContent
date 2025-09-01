@@ -1,0 +1,21 @@
+{
+  "PtItemset": {
+    "Element": {
+      "Fields": {
+        "IsId": "3"
+      },
+      "Objects": {
+        "PtItemSetLine": {
+          "Element": {
+            "@VaIt": "Kst",
+            "Fields": {
+              "ItCd": "11-C11094",
+              "Invo": "1",
+              "Payr": "1"
+            }
+          }
+        }
+      }
+    }
+  }
+}

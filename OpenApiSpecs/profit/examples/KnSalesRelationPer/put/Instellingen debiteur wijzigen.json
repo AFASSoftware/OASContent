@@ -1,0 +1,21 @@
+{
+  "KnSalesRelationPer": {
+      "Element": {
+          "@DbId": "49978",
+          "Fields": {
+              "InPv": "a"
+          },
+          "Objects": [
+              {
+                  "KnPerson": {
+                      "Element": {
+                          "Fields": {
+                              "MatchPer": "9"
+                          }
+                      }
+                  }
+              }
+          ]
+      }
+  }
+}

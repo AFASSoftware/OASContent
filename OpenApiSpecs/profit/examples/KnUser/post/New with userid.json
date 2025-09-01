@@ -1,0 +1,13 @@
+{
+  "KnUser": {
+    "Element": {
+      "@UsId": "12345.UserId",
+      "Fields": {
+        "MtCd": "1",
+        "BcCo": "10002134",
+        "Nm": "John Doe",
+        "Awin": true
+      }
+    }
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "FbDeliveryNote": {
+    "Element": {
+      "Fields": {
+        "OrNu": "80000003",
+        "OrDa": "2013-03-01",
+        "DbId": "10034",
+        "DaDe": "2013-04-01",
+        "DaPr": "2013-03-01",
+        "CuId": "EUR",
+        "RfCs": "REF klant: 264",
+        "SaCh": "1",
+        "VaDu": "1",
+        "InVa": "0",
+        "PaCd": "14",
+        "PaTp": "00",
+        "Re": "Opmerking bij de pakbon",
+        "Unit": "1",
+        "Coll": "0",
+        "CrOr": "0",
+        "Rout": "1",
+        "War": "01",
+        "CoDn": "0",
+        "CoIn": "0",
+        "DlPr": "5",
+        "LgId": "NL",
+        "DeCo": "0",
+        "CsTy": "0",
+        "CoId": "NL",
+        "InPc": "1",
+        "VaCl": "0",
+        "ClPc": "0",
+        "PaPc": "0",
+        "VaPa": "0",
+        "RdDe": "0",
+        "VaYN": "0",
+        "VaBc": "0",
+        "BaCo": "80000001",
+        "JoCo": "70",
+        "FaTo": "10034",
+        "PrId": "300000",
+        "SeSt": "0",
+        "SeWe": "1500",
+        "QuCl": "4",
+        "TrPt": "TNT",
+        "SsId": "Ex",
+        "VeId": "CASK"
+      },
+      "Objects": {
+        "FbDeliveryNoteLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "1",
+                "ItCd": "300",
+                "Ds": "werksoort 300",
+                "VaRc": "2",
+                "BiUn": "uur",
+                "QuUn": "8",
+                "PrLi": "*****",
+                "Upri": "100",
+                "VaAD": "1",
+                "PRDc": "0",
+                "ARDc": "0",
+                "MaAD": "1",
+                "Re": "Opmerking bij werksoort"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "9000",
+                "Ds": "artikel gewijzigde omschrijving",
+                "VaRc": "2",
+                "BiUn": "stk",
+                "QuUn": "10",
+                "PrLi": "*****",
+                "War": "*****",
+                "EUSe": "0",
+                "VaWt": "4",
+                "NeWe": "4500",
+                "GrWe": "5000",
+                "Upri": "100",
+                "VaAD": "1",
+                "PRDc": "0",
+                "ARDc": "0",
+                "MaAD": "1",
+                "Re": "Opmerking bij artikel"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "7",
+                "ItCd": "3299",
+                "Ds": "samenstelling gewijzigde omschrijving",
+                "VaRc": "2",
+                "BiUn": "stk",
+                "QuUn": "1",
+                "PrLi": "*****",
+                "War": "01",
+                "EUSe": "0",
+                "VaWt": "4",
+                "NeWe": "4500",
+                "GrWe": "5000",
+                "Upri": "100",
+                "VaAD": "1",
+                "PRDc": "0",
+                "ARDc": "0",
+                "MaAD": "1",
+                "Re": "Opmerking bij samenstelling"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "1",
+                "ItCd": "300",
+                "Ds": "werksoort 300",
+                "VaRc": "2",
+                "BiUn": "uur",
+                "QuUn": "8",
+                "PrLi": "*****",
+                "Upri": "100",
+                "VaAD": "1",
+                "PRDc": "0",
+                "ARDc": "0",
+                "MaAD": "1",
+                "Re": "Opmerking bij werksoort"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "3",
+                "ItCd": "T",
+                "Ds": "Tekstsoort",
+                "VaRc": "2",
+                "BiUn": "*****",
+                "QuUn": "1",
+                "PrLi": "*****",
+                "Re": "Opmerking bij werksoort"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "6",
+                "ItCd": "K01",
+                "Ds": "kostensoort K01",
+                "VaRc": "2",
+                "BiUn": "*****",
+                "QuUn": "8",
+                "PrLi": "*****",
+                "Upri": "100",
+                "VaAD": "1",
+                "PRDc": "0",
+                "ARDc": "0",
+                "MaAD": "1",
+                "Re": "Opmerking bij kostensoort"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

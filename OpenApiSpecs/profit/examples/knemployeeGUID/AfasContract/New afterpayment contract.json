@@ -1,0 +1,22 @@
+{
+    "AfasEmployee": {
+      "Element": {
+        "@GUID": "{2be1df02-40b0-4f42-8c33-859d99d2658b}",
+        "Fields": {
+          "EmId": "floora"
+        },
+        "Objects": {
+          "AfasContract": {
+            "Element": {
+              "Fields": {
+                "DaBe": "2023-12-01",
+                "CmId": "NL03",
+                "EmMt": "N",
+                "UC201E55C4729C1BB3FE170936F26444F": "ExternalId"
+              }
+            }
+          }
+        }
+      }
+    }
+  }

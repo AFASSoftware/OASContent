@@ -1,0 +1,17 @@
+{
+  "HrCareerBreak": {
+    "Element": {
+      "Fields": {
+        "EmId": "1001",
+        "DvSn": "1",
+        "DaBe": "2021-01-01",
+        "DaEn": "2021-06-02",
+        "CoIn": "1",
+        "CoIc": "001",
+        "CoIt": "",
+        "CoTc": "1",
+        "CoRt": "01"
+      }
+    }
+  }
+}

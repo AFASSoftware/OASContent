@@ -1,0 +1,83 @@
+{
+  "FbDough": {
+    "Element": [
+      {
+        "Fields": {
+          "ItCd": "DG54020",
+          "Ds": "Deeg (droge stof) Insert",
+          "DsEx": "Regels te inserten via UpdateConnector",
+          "BaCo": "1000000254020",
+          "ViCa": "0",
+          "PcBl": "13",
+          "FlCh": "100",
+          "RoWe": "3"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "DG54021",
+          "Ds": "Deeg (Eindgewicht) Insert",
+          "DsEx": "Regels te inserten via UpdateConnector",
+          "BaCo": "1000000554021",
+          "ViCa": "1",
+          "PcBl": "13",
+          "FlCh": "120",
+          "RoWe": "4"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "DG54022",
+          "Ds": "Deeg (Eindgewicht met spijs/vulling) Insert",
+          "DsEx": "Regels te inserten via UpdateConnector",
+          "BaCo": "1000000854022",
+          "ViCa": "2",
+          "PcBl": "13",
+          "FlCh": "125",
+          "RoWe": "10",
+          "ToWe": "120"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "DG54023",
+          "Ds": "Deeg (Obv. halffabrikaat) Insert",
+          "DsEx": "Regels te inserten via UpdateConnector",
+          "BaCo": "1000000154023",
+          "ViCa": "3",
+          "PcBl": "10.50"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "DG54024",
+          "Ds": "Deeg (recept met eindproducten) Insert",
+          "DsEx": "Regels te inserten via UpdateConnector",
+          "BaCo": "1000000454024",
+          "ViCa": "4"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "DG54025",
+          "Ds": "Deeg (Banket) Insert",
+          "DsEx": "Regels te inserten via UpdateConnector",
+          "BaCo": "1000000754025",
+          "ViCa": "5",
+          "PcBl": "13",
+          "QuCh": "750"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "DG54026",
+          "Ds": "Deeg (geen deegberekening) Insert",
+          "DsEx": "Regels te inserten via UpdateConnector",
+          "BaCo": "1000000054026",
+          "ViCa": "9",
+          "Rm": "Opmerking bij het deeg"
+        }
+      }
+    ]
+  }
+}

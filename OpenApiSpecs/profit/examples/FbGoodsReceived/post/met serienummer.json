@@ -1,0 +1,207 @@
+{
+  "FbGoodsReceived": {
+    "Element": {
+      "Fields": {
+        "CrId": "50028",
+        "RfCs": "Serienummer",
+        "War": "02"
+      },
+      "Objects": {
+        "FbGoodsReceivedLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "4203",
+                "BiUn": "stk",
+                "QuUn": "10",
+                "Upri": "200"
+              },
+              "Objects": {
+                "FbOrderSerialLines": {
+                  "Element": [
+                    {
+                      "Fields": {
+                        "SeNu": "4203-0001",
+                        "BiUn": "stk",
+                        "QuUn": "1",
+                        "Re": "Opmerking op het serienummer"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "SeNu": "4203-0002",
+                        "BiUn": "stk",
+                        "QuUn": "1",
+                        "Re": "Opmerking op het serienummer"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "SeNu": "4203-0003",
+                        "BiUn": "stk",
+                        "QuUn": "1",
+                        "Re": "Opmerking op het serienummer"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "SeNu": "4203-0004",
+                        "BiUn": "stk",
+                        "QuUn": "1",
+                        "Re": "Opmerking op het serienummer"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "SeNu": "4203-0005",
+                        "BiUn": "stk",
+                        "QuUn": "1",
+                        "Re": "Opmerking op het serienummer"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "SeNu": "4203-0006",
+                        "BiUn": "stk",
+                        "QuUn": "1",
+                        "Re": "Opmerking op het serienummer"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "SeNu": "4203-0007",
+                        "BiUn": "stk",
+                        "QuUn": "1",
+                        "Re": "Opmerking op het serienummer"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "SeNu": "4203-0008",
+                        "BiUn": "stk",
+                        "QuUn": "1",
+                        "Re": "Opmerking op het serienummer"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "SeNu": "4203-0009",
+                        "BiUn": "stk",
+                        "QuUn": "1",
+                        "Re": "Opmerking op het serienummer"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "SeNu": "4203-0010",
+                        "BiUn": "stk",
+                        "QuUn": "1",
+                        "Re": "Opmerking op het serienummer"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "4202",
+                "BiUn": "stk",
+                "QuUn": "10",
+                "Upri": "250"
+              },
+              "Objects": {
+                "FbOrderSerialLines": {
+                  "Element": [
+                    {
+                      "Fields": {
+                        "SeNu": "4202-0001",
+                        "BiUn": "stk",
+                        "QuUn": "1",
+                        "Re": "Opmerking op het serienummer"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "SeNu": "4202-0002",
+                        "BiUn": "stk",
+                        "QuUn": "1",
+                        "Re": "Opmerking op het serienummer"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "SeNu": "4202-0003",
+                        "BiUn": "stk",
+                        "QuUn": "1",
+                        "Re": "Opmerking op het serienummer"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "SeNu": "4202-0004",
+                        "BiUn": "stk",
+                        "QuUn": "1",
+                        "Re": "Opmerking op het serienummer"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "SeNu": "4202-0005",
+                        "BiUn": "stk",
+                        "QuUn": "1",
+                        "Re": "Opmerking op het serienummer"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "SeNu": "4202-0006",
+                        "BiUn": "stk",
+                        "QuUn": "1",
+                        "Re": "Opmerking op het serienummer"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "SeNu": "4202-0007",
+                        "BiUn": "stk",
+                        "QuUn": "1",
+                        "Re": "Opmerking op het serienummer"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "SeNu": "4202-0008",
+                        "BiUn": "stk",
+                        "QuUn": "1",
+                        "Re": "Opmerking op het serienummer"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "SeNu": "4202-0009",
+                        "BiUn": "stk",
+                        "QuUn": "1",
+                        "Re": "Opmerking op het serienummer"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "SeNu": "4202-0010",
+                        "BiUn": "stk",
+                        "QuUn": "1",
+                        "Re": "Opmerking op het serienummer"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

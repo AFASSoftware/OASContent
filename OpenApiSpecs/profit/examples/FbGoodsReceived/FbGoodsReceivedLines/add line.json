@@ -1,0 +1,24 @@
+{
+  "FbGoodsReceived": {
+    "Element": {
+      "Fields": {
+        "OrNu": "00082"
+      },
+      "Objects": {
+        "FbGoodsReceivedLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "1000",
+                "Ds": "Afwijkende omschrijving",
+                "BiUn": "stk",
+                "QuUn": "15"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

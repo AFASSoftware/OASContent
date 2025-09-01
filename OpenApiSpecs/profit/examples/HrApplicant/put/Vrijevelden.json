@@ -1,0 +1,25 @@
+{
+  "HrApplicant": {
+    "Element": {
+      "Fields": {
+        "EmId": "000255",
+        "WrLv": "2",
+        "Bl": "0",
+        "U3F8A0AB1474833D4A5565AA973F0D1B0": "ANDERE WAARDE !!!!!",
+        "U69D26DDD4762C4011E48829B978412CE": "1"
+      },
+      "Objects": {
+        "HrApplication": {
+          "Element": {
+            "@CmId": "000001",
+            "@VcSn": "2",
+            "Fields": {
+              "U4966C394442611E3AE9C54A7BAC7FF2B": "ANDERE WAARDE!!!",
+              "U8E65F8DC46D88DA4E5882DA2A115FC5B": "1"
+            }
+          }
+        }
+      }
+    }
+  }
+}

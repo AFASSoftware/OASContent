@@ -1,0 +1,17 @@
+{
+  "FbPurchPrice": {
+    "Element": [
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "00002",
+          "BiUn": "stk",
+          "CrId": "50013",
+          "Pric": "401",
+          "CuId": "eur",
+          "DaBg": "2024-01-01"
+        }
+      }
+    ]
+  }
+}

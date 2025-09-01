@@ -1,0 +1,13 @@
+{
+  "PtDeclaration": {
+    "Element": {
+      "Fields": {
+        "Year": "2018",
+        "PeId": "123456",
+        "PlCo": "11",
+        "ReBi": "0",
+        "ApprovWorkflow": "1"
+      }
+    }
+  }
+}

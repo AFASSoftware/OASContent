@@ -1,0 +1,40 @@
+{
+  "KnPurchaseRelationPer": {
+    "Element": {
+      "Fields": {
+        "CuId": "EUR",
+        "InPv": "E"
+      },
+      "Objects": {
+        "KnPerson": {
+          "Element": {
+            "Fields": {
+              "PadAdr": true,
+              "AutoNum": true,
+              "MatchPer": "6",
+              "LaNm": "Jansen",
+              "SpNm": false,
+              "ViGe": "M",
+              "TtId": "ALG",
+              "Corr": false
+            },
+            "Objects": {
+              "KnBasicAddressAdr": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": true,
+                    "HmNr": "105",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "ResZip": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

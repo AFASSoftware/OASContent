@@ -1,0 +1,36 @@
+{
+  "PtRealization": {
+    "Element": [
+      {
+        "Fields": {
+          "ApprovWorkflow": true,
+          "GetPcIdAndPrId": true,
+          "DaTi": "2018-10-08",
+          "VaIt": "1",
+          "ItCd": "FLEX10-1",
+          "Qu": "8",
+          "QuSa": "8",
+          "DbId": "1134",
+          "EmId": "U000347",
+          "PrId": "154542",
+          "StId": "F10-1"
+        }
+      },
+      {
+        "Fields": {
+          "ApprovWorkflow": true,
+          "GetPcIdAndPrId": true,
+          "DaTi": "2018-10-09",
+          "VaIt": "1",
+          "ItCd": "FLEX10-1",
+          "Qu": "8",
+          "QuSa": "8",
+          "DbId": "1134",
+          "EmId": "U000347",
+          "PrId": "154542",
+          "StId": "F10-1"
+        }
+      }
+    ]
+  }
+}

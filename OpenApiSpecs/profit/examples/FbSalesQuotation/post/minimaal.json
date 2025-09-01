@@ -1,0 +1,33 @@
+{
+  "FbSalesQuotation": {
+    "Element": {
+      "Fields": {
+        "DbId": "10093",
+        "Re": "Insert met connector"
+      },
+      "Objects": {
+        "FbSalesQuotationLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "art",
+                "ItCd": "1000",
+                "BiUn": "stk",
+                "QuUn": "11"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "wst",
+                "ItCd": "300",
+                "BiUn": "uur",
+                "QuUn": "5",
+                "Upri": "65"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

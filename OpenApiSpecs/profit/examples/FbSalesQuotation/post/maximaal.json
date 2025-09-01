@@ -1,0 +1,145 @@
+{
+  "FbSalesQuotation": {
+    "Element": {
+      "Fields": {
+        "OrDa": "2014-12-30",
+        "DbId": "10109",
+        "DaDe": "2015-01-02",
+        "DaPr": "2015-01-02",
+        "CuId": "EUR",
+        "Rate": "1",
+        "RfCs": "Connector: INKOOP8754876",
+        "SaCh": "1",
+        "VaDu": "1",
+        "InVa": "0",
+        "PaCd": "14",
+        "PaTp": "00",
+        "Re": "Opmerking van de klant op de order",
+        "Unit": "1",
+        "Coll": "0",
+        "CrOr": "0",
+        "Rout": "",
+        "War": "01",
+        "CoDn": "0",
+        "CoIn": "0",
+        "DlPr": "99",
+        "LgId": "NL",
+        "DeCo": "3",
+        "CsTy": "1",
+        "VaTr": "3",
+        "VaSt": "00",
+        "VaGs": "7",
+        "VaTa": "1",
+        "CoId": "NL",
+        "InPc": "0",
+        "VaCl": "0",
+        "ClPc": "0",
+        "PaPc": "0",
+        "VaPa": "0",
+        "VaYN": "0",
+        "VaBc": "0",
+        "BaCo": "barco5dfg",
+        "JoCo": "70",
+        "FaTo": "10079",
+        "FuOr": "0",
+        "DtId": "",
+        "PrId": "600000",
+        "PrSt": "01",
+        "TrPt": "TNT",
+        "OrPr": "7",
+        "AmDp": "100",
+        "DlAd": "1002",
+        "ExAd": "Extern afleveradres",
+        "Pros": "10009",
+        "FcNo": "1"
+      },
+      "Objects": {
+        "FbSalesQuotationLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "art",
+                "ItCd": "9901",
+                "Ds": "Afwijkende omschrijving artikel 2116",
+                "VaRc": "2",
+                "BiUn": "stk",
+                "QuUn": "1",
+                "Qu": "1",
+                "PrLi": "*****",
+                "War": "01",
+                "EUSe": "0",
+                "VaWt": "4",
+                "NeWe": "1",
+                "GrWe": "2",
+                "Upri": "200",
+                "CoPr": "60",
+                "VaAD": "0",
+                "PRDc": "5",
+                "ARDc": "10",
+                "MaAD": "10",
+                "Re": "Opmerking van de offerteregel",
+                "StL1": "L",
+                "StL2": "BLAUW",
+                "DiDe": "0"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "wst",
+                "ItCd": "300",
+                "Ds": "En nog wat aanvullende consultancy",
+                "VaRc": "2",
+                "BiUn": "uur",
+                "QuUn": "5",
+                "Qu": "5",
+                "PrLi": "*****",
+                "EUSe": "0",
+                "VaWt": "4",
+                "NeWe": "1",
+                "GrWe": "2",
+                "Upri": "200",
+                "CoPr": "60",
+                "VaAD": "0",
+                "PRDc": "5",
+                "ARDc": "10",
+                "MaAD": "10",
+                "Re": "Activiteit: verstrekken van de jassen"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "kst",
+                "ItCd": "K01",
+                "Ds": "En wat aanvullende kosten",
+                "VaRc": "2",
+                "BiUn": "*****",
+                "QuUn": "5",
+                "Qu": "5",
+                "PrLi": "*****",
+                "EUSe": "0",
+                "VaWt": "4",
+                "NeWe": "1",
+                "GrWe": "2",
+                "Upri": "200",
+                "CoPr": "60",
+                "VaAD": "0",
+                "PRDc": "5",
+                "ARDc": "10",
+                "MaAD": "10",
+                "Re": "Geen idee waarvoor maar het staat wel leuk"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "txt",
+                "ItCd": "T",
+                "Ds": "En een tesk regel",
+                "Re": "Geen idee waarvoor maar het staat wel leuk"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

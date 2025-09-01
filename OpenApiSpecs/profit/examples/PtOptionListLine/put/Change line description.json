@@ -1,0 +1,12 @@
+{
+  "PtOptionListLine": {
+    "Element": {
+      "Fields": {
+        "OlNu": "000025",
+        "Code": "1000",
+        "PrId": "P00042-01",
+        "Ds": "Update this description"
+      }
+    }
+  }
+}

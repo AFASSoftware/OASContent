@@ -1,0 +1,25 @@
+{
+  "KnDimCode": {
+    "Element": [
+      {
+        "@AxId": "1",
+        "@VbCo": "ROTTERDAM",
+        "Fields": {
+          "Ds": "Vestiging Rotterdam",
+          "QuYN": "1",
+          "Bl": "0"
+        }
+      },
+      {
+        "@AxId": "1",
+        "@VbCo": "DENHAAG",
+        "Fields": {
+          "Ds": "Vestiging Den Haag",
+          "Re": "Selectiewaarde",
+          "QuYN": "0",
+          "Bl": "0"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "HrEmployeeDeposit": {
+    "Element": {
+      "Fields": {
+        "EmId": "C84604",
+        "Desc": "Voorschot op salaris maximaal",
+        "Amnt": "200.50",
+        "DeRe": "01",
+        "DePa": "01",
+        "Cmnt": "Volledig inhouden in huidige periode",
+        "Clim": "1",
+        "Date": "2017-12-26",
+        "Year": "2017",
+        "PeId": "123456"
+      }
+    }
+  }
+}

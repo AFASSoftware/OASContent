@@ -1,0 +1,159 @@
+{
+  "FbDough": {
+    "Element": [
+      {
+        "Fields": {
+          "ItCd": "DG53019",
+          "Ds": "Droge stof xml",
+          "DsEx": "Extra omschrijving droge stof xml",
+          "ChDs": "1",
+          "Bl": "1",
+          "BaCo": "1000000530193",
+          "InPr": "1",
+          "ViCa": "0",
+          "PcBl": "50",
+          "FlCh": "4",
+          "RoWe": "0.500",
+          "AjTm": "60",
+          "AjLs": "1",
+          "PrTm": "120",
+          "WrTm": "10",
+          "Tp": "100",
+          "BaLi": "1",
+          "Rm": "Opmerking droge stof xml",
+          "U4DF35B7E4335FDCEDC582387D7353799": "1"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "DG53020",
+          "Ds": "Eindgewicht xml",
+          "DsEx": "Extra omschrijving eindgewicht xml",
+          "ChDs": "1",
+          "Bl": "1",
+          "BaCo": "1000000530209",
+          "InPr": "1",
+          "ViCa": "1",
+          "PcBl": "50",
+          "FlCh": "4",
+          "RoWe": "3",
+          "AjTm": "60",
+          "AjLs": "1",
+          "PrTm": "120",
+          "WrTm": "10",
+          "Tp": "100",
+          "BaLi": "1",
+          "Rm": "Opmerking eindgewicht xml",
+          "U4DF35B7E4335FDCEDC582387D7353799": "1"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "DG53021",
+          "Ds": "Eindgewicht met spijs vulling xml",
+          "DsEx": "Extra omschrijving eindgewicht met spijs vulling xml",
+          "ChDs": "1",
+          "Bl": "1",
+          "BaCo": "1000000530216",
+          "InPr": "1",
+          "ViCa": "2",
+          "PcBl": "0",
+          "FlCh": "10",
+          "RoWe": "8",
+          "ToWe": "8000",
+          "AjTm": "60",
+          "AjLs": "1",
+          "PrTm": "120",
+          "WrTm": "10",
+          "Tp": "100",
+          "BaLi": "1",
+          "Rm": "Opmerking eindgewicht met spijs vulling xml",
+          "U4DF35B7E4335FDCEDC582387D7353799": "1"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "DG53022",
+          "Ds": "Obv. halffabrikaat xml",
+          "DsEx": "Extra omschrijving obv. halffabrikaat xml",
+          "ChDs": "1",
+          "Bl": "1",
+          "BaCo": "1000000530223",
+          "InPr": "1",
+          "ViCa": "3",
+          "PcBl": "0",
+          "AjTm": "60",
+          "AjLs": "1",
+          "PrTm": "120",
+          "WrTm": "10",
+          "Tp": "100",
+          "BaLi": "1",
+          "Rm": "Opmerking obv. halffabrikaat xml",
+          "U4DF35B7E4335FDCEDC582387D7353799": "1"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "DG53023",
+          "Ds": "Recept met eindproducten xml",
+          "DsEx": "Extra omschrijving Recept met eindproducten xml",
+          "ChDs": "1",
+          "Bl": "1",
+          "BaCo": "1000000530230",
+          "InPr": "1",
+          "ViCa": "4",
+          "AjTm": "60",
+          "AjLs": "1",
+          "PrTm": "120",
+          "WrTm": "10",
+          "Tp": "100",
+          "BaLi": "1",
+          "Rm": "Opmerking recept met eindproducten xml",
+          "U4DF35B7E4335FDCEDC582387D7353799": "1"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "DG53024",
+          "Ds": "Banket xml",
+          "DsEx": "Extra omschrijving Banket xml",
+          "ChDs": "1",
+          "Bl": "1",
+          "BaCo": "1000000530247",
+          "InPr": "1",
+          "ViCa": "5",
+          "PcBl": "1",
+          "QuCh": "24",
+          "AjTm": "60",
+          "AjLs": "1",
+          "PrTm": "120",
+          "WrTm": "10",
+          "Tp": "100",
+          "BaLi": "1",
+          "Rm": "Opmerking banket xml",
+          "U4DF35B7E4335FDCEDC582387D7353799": "1"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "DG53025",
+          "Ds": "Geen deegberekening xml",
+          "DsEx": "Extra omschrijving Geen deegberekening xml",
+          "ChDs": "1",
+          "Bl": "1",
+          "BaCo": "1000000530254",
+          "InPr": "1",
+          "ViCa": "9",
+          "AjTm": "60",
+          "AjLs": "1",
+          "PrTm": "120",
+          "WrTm": "10",
+          "Tp": "100",
+          "BaLi": "1",
+          "Rm": "Opmerking geen deegberekening xml",
+          "U4DF35B7E4335FDCEDC582387D7353799": "1"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "HrMobility": {
+    "Element": {
+      "Fields": {
+        "TrTy": "1",
+        "CmId": "000001",
+        "CoNu": "1",
+        "LsAm": "509",
+        "DaBl": "2024-01-01",
+        "DaEl": "2034-12-31",
+        "SeNu": "978020137962",
+        "ViMr": "19",
+        "ViMd": "4",
+        "Ad": "Volkswagen AG",
+        "Re": "Audi - A3\r\nSerienummer: 978020137962\r\nDealer: leaseservice Nederland\r\nGekozen servicepakket: standaard",
+        "InKm": "0",
+        "DaPr": "2024-02-01",
+        "CtVl": "38586",
+        "OnVl": "true",
+        "AgId": "L",
+        "PeAd": "7",
+        "LeTy": "2"
+      },
+      "Objects": {
+        "HrEmployeeMobility": {
+          "Element": {
+            "@EmId": "ElaK",
+            "Fields": {
+              "DaBe": "2024-02-01",
+              "DaEn": "2034-12-31",
+              "PeAd": "7",
+              "PaVr": "true",
+              "ApAd": "true"
+            }
+          }
+        }
+      }
+    }
+  }
+}

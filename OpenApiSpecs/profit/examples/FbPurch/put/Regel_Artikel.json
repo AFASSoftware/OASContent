@@ -1,0 +1,25 @@
+{
+  "FbPurch": {
+    "Element": {
+      "Fields": {
+        "OrNu": "00116"
+      },
+      "Objects": {
+        "FbPurchLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "2",
+              "ItCd": "5000",
+              "Ds": "Afwijkende omschrijving",
+              "BiUn": "stk",
+              "QuUn": "15",
+              "Upri": "10.00",
+              "VaAd": "1",
+              "ARDc": "10.99"
+            }
+          }
+        }
+      }
+    }
+  }
+}

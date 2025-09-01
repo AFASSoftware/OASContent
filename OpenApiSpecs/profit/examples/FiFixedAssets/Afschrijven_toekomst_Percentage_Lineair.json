@@ -1,0 +1,27 @@
+{
+  "FiFixedAssets": {
+    "Element": {
+      "Fields": {
+        "Ds": "FiFixedAssets_Afschrijven_toekomst_Percentage Lineair",
+        "FgSn": "3",
+        "DaPu": "2021-01-01",
+        "DaSe": "2021-01-01",
+        "NpBu": "1",
+        "BuVa": "80000",
+        "AdVa": "2500",
+        "ANO1": "HOOFD",
+        "ANO2": "ICT",
+        "ANO3": "DIE",
+        "ANO4": "MID",
+        "ANO5": "INT",
+        "FiYn": "true",
+        "ViAk": "3",
+        "ViDf": "L",
+        "FiAm": "7500",
+        "LiYe": "10",
+        "SaVa": "5000",
+        "DaSd": "2021-01-01"
+      }
+    }
+  }
+}

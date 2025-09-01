@@ -1,0 +1,20 @@
+{
+  "KnSalesRelationOrg": {
+    "Element": {
+      "@DbId": "10150",
+      "Objects": {
+        "KnOrganisation": {
+          "Element": {
+            "Fields": {
+              "MatchOga": "0",
+              "BcCo": "1000325",
+              "Nm": "Jansen",
+              "EmAd": "john.doe@example.com",
+              "HoPa": "https://www.example.com"
+            }
+          }
+        }
+      }
+    }
+  }
+}

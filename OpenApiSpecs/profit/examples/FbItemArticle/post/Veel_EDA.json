@@ -1,0 +1,362 @@
+{
+  "FbItemArticle": {
+    "Element": [
+      {
+        "Fields": {
+          "ItCd": "1027",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiSt": "true",
+          "BiUn": "STK",
+          "VaRc": "2",
+          "StPrice": "100",
+          "CrId": "60005",
+          "CsGc": "00000000",
+          "WaSe": "1"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1028",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1029",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1030",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1031",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "1"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1032",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "1"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1033",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "1"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1034",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1035",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "0"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1036",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "0"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1037",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "0"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1038",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "0"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1039",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1040",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1041",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1042",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1043",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1044",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1045",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1046",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1047",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1048",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1049",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1050",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1051",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1052",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1053",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1054",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1055",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1056",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1057",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1058",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1059",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1060",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1061",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1062",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1063",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1064",
+          "Ds": "Artikel via JSON!",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1026",
+          "Ds": "Artikel7",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      }
+    ]
+  }
+}

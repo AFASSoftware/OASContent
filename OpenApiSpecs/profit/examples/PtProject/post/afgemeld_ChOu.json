@@ -1,0 +1,87 @@
+{
+  "PtProject": {
+    "Element": {
+      "Fields": {
+        "PrId": "920011",
+        "PrGp": "CON",
+        "Ds": "Implementatie van Profit",
+        "BcCo": "1000372",
+        "CpId": "1003",
+        "CtIn": "1003",
+        "EmId": "ALLARDJ",
+        "DtAn": "2013-01-01",
+        "DaSt": "2013-01-01",
+        "DtGp": "2013-12-31",
+        "DbId": "10178",
+        "Char": "Profit",
+        "ClRe": "Implementatie Profit",
+        "ChOu": "1",
+        "InTx": "T1",
+        "UnFi": "1",
+        "Ch": "1",
+        "OvPc": "10",
+        "CuId": "EUR",
+        "SaFc": "10000",
+        "Inst": "0",
+        "BcPl": "1000372",
+        "CdPl": "1003",
+        "SeIn": "0",
+        "ToSc": "0",
+        "Deli": "5",
+        "DeDi": "0",
+        "DeRe": "0"
+      },
+      "Objects": {
+        "KnBasicAddressAdr": {
+          "Element": {
+            "Fields": {
+              "PbAd": "0",
+              "Ad": "Projectlocatie",
+              "HmNr": "105",
+              "ZpCd": "3833LC",
+              "CoId": "NL",
+              "Rs": "Leusden"
+            }
+          }
+        },
+        "PtProjectStage": {
+          "Element": [
+            {
+              "Fields": {
+                "PrId": "920011",
+                "PrSt": "01",
+                "Ds": "Intake",
+                "DaSt": "2013-01-01",
+                "DtGp": "2013-02-01",
+                "InTx": "T1",
+                "ChOu": "0"
+              }
+            },
+            {
+              "Fields": {
+                "PrId": "920011",
+                "PrSt": "02",
+                "Ds": "Implementatie",
+                "DaSt": "2013-02-01",
+                "DtGp": "2013-04-01",
+                "InTx": "T1",
+                "ChOu": "0"
+              }
+            },
+            {
+              "Fields": {
+                "PrId": "920011",
+                "PrSt": "03",
+                "Ds": "Meerwerk",
+                "DaSt": "2013-04-01",
+                "DtGp": "2013-12-31",
+                "InTx": "T",
+                "ChOu": "1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

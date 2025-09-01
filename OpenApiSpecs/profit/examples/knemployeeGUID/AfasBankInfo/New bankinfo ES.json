@@ -1,0 +1,27 @@
+{
+    "AfasEmployee": {
+      "Element": {
+        "@GUID": "{41f8ddf6-b655-46f0-9432-6b77977b8361}",
+        "@EmId": "floora",
+        "Fields": {
+          "EmId": "floora",
+          "Bl": "false"
+        },
+        "Objects": {
+          "AfasBankInfo": {
+            "Element": {
+              "@GUID": "{64D74CFB-667E-4D0D-BD17-0D505BDE4BDB}",
+              "@IbCk": "false",
+              "Fields": {
+                "NoBk": "false",
+                "SaAc": "false",
+                "IbCk": "true",
+                "Iban": "ES9801828474733426295768",
+                "AcId": "01828474733426295768"
+              }
+            }
+          }
+        }
+      }
+    }
+  }

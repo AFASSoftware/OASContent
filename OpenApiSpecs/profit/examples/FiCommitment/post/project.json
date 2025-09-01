@@ -1,0 +1,20 @@
+{
+  "FiCommitment": {
+    "Element": {
+      "@UnId": "1",
+      "@SeNo": "",
+      "Fields": {
+        "AcNr": "4320",
+        "Yr": "2015",
+        "PeNr": "3",
+        "Ds": "Verplichting Project en afgehandeld",
+        "CrId": "50013",
+        "Ref": "REF348975",
+        "Set": "1",
+        "PrId": "600000",
+        "PrSt": "02",
+        "Amt": "5500"
+      }
+    }
+  }
+}

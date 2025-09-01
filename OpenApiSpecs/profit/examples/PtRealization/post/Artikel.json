@@ -1,0 +1,20 @@
+{
+  "PtRealization": {
+    "Element": {
+      "Fields": {
+        "DaTi": "2023-01-01",
+        "VaIt": "2",
+        "ItCd": "9000",
+        "Qu": "10",
+        "QuSa": "10",
+        "EmId": "ALLARDJ",
+        "PrId": "300000",
+        "DbId": "10140",
+        "StId": "1",
+        "AmSe": "1000",
+        "Ch": true,
+        "War": "*****"
+      }
+    }
+  }
+}

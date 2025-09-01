@@ -1,0 +1,57 @@
+{
+  "HrSalTable": {
+    "Element": {
+      "Fields": {
+        "Ds": "AFAS",
+        "DecR": "2",
+        "ViRt": "1",
+        "Visp": "7",
+        "MnMx": "0",
+        "DbId": "1134"
+      },
+      "Objects": {
+        "HrSalTableSet": {
+          "Element": {
+            "Fields": {
+              "DaBe": "2018-01-01",
+              "Ds": "AFAS"
+            },
+            "Objects": {
+              "HrSalTableRow": {
+                "Element": [
+                  {
+                    "Fields": {
+                      "Va1": "DM",
+                      "Be2": "0.0",
+                      "Be3": "0.0",
+                      "En3": "18.0",
+                      "Val": "40"
+                    }
+                  },
+                  {
+                    "Fields": {
+                      "Va1": "DM",
+                      "Be2": "0.0",
+                      "Be3": "18.0",
+                      "En3": "30.0",
+                      "Val": "50"
+                    }
+                  },
+                  {
+                    "Fields": {
+                      "Va1": "DM",
+                      "Be2": "0.0",
+                      "Be3": "30.0",
+                      "En3": "65.0",
+                      "Val": "60"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "FbDough": {
+    "Element": {
+      "Fields": {
+        "ItCd": "DG54032",
+        "Ds": "Deeg met Barcode - Barcode UPC",
+        "DsEx": "Extra omschrijving",
+        "ChDs": "false",
+        "VaBc": "2",
+        "BaCo": "641674982140",
+        "InPr": "true",
+        "ViCa": "2",
+        "PcBl": "9.53",
+        "FlCh": "150",
+        "RoWe": "2",
+        "ToWe": "143",
+        "AjTm": "50",
+        "AjLs": "4",
+        "PrTm": "660",
+        "WrTm": "1",
+        "Tp": "27.6",
+        "BaLi": "true",
+        "Rm": "Insert met Type Barcode Barcode UPC"
+      }
+    }
+  }
+}

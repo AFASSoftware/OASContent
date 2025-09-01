@@ -1,0 +1,43 @@
+{
+  "PtRealizationWeek": {
+    "Element": {
+      "Fields": {
+        "EmId": "DreesV",
+        "DaTi": "2014-05-05",
+        "Id": "1054",
+        "Ds": "Afwijkende omschrijving",
+        "PrId": "600000",
+        "PrSt": "01",
+        "ItCd": "300",
+        "StId": "1",
+        "QuD1": "2",
+        "QuD2": "2",
+        "QuD3": "2",
+        "QuD4": "2",
+        "QuD5": "2",
+        "QuD6": "2",
+        "QuD7": "2",
+        "StE1": "10",
+        "QuE1": "2",
+        "StE2": "10",
+        "QuE2": "2",
+        "StE3": "10",
+        "QuE3": "2",
+        "StE4": "10",
+        "QuE4": "2",
+        "StE5": "10",
+        "QuE5": "2",
+        "StE6": "10",
+        "QuE6": "2",
+        "StE7": "10",
+        "QuE7": "2",
+        "ItW1": "K01",
+        "ItW2": "K02",
+        "QuW1": "1",
+        "QuW2": "2",
+        "AmC1": "100",
+        "AmC2": "50"
+      }
+    }
+  }
+}

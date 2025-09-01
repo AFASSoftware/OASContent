@@ -1,0 +1,44 @@
+{
+  "PtItemset": {
+    "Element": {
+      "Fields": {
+        "PtItpDaBe": "2023-01-01",
+        "PtItpTyEj": "G",
+        "PtItpViTa": "633",
+        "Ds": "Itemset met loonschaal",
+        "ClId": "01"
+      },
+      "Objects": {
+        "PtItemSetLine": {
+          "Element": [
+            {
+              "@VaIt": "Wst",
+              "Fields": {
+                "ItCd": "01NB",
+                "Invo": "1",
+                "Payr": "1",
+                "GWPc": "100",
+                "GWMi": "100",
+                "GWMa": "100"
+              }
+            },
+            {
+              "@VaIt": "Kst",
+              "#text": "s\r\n\t\t\t\t\t",
+              "Fields": {
+                "ItCd": "11-C90990"
+              }
+            }
+          ]
+        },
+        "PtItemsetScaleWage": {
+          "Element": {
+            "Fields": {
+              "TaId": "505"
+            }
+          }
+        }
+      }
+    }
+  }
+}

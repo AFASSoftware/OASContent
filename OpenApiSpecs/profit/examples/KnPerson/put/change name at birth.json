@@ -1,0 +1,20 @@
+{
+  "KnPerson": {
+    "Element": {
+      "Fields": {
+        "PadAdr": "1",
+        "AutoNum": "1",
+        "MatchPer": "0",
+        "BcCo": "1000781",
+        "SeNm": "ZOEKNAAM",
+        "LaNm": "Jansen",
+        "SpNm": "1",
+        "IsBi": "v. Jansen",
+        "NmBi": "Jansen",
+        "IsPa": "van",
+        "NmPa": "Marie Jansen",
+        "ViUs": "1"
+      }
+    }
+  }
+}

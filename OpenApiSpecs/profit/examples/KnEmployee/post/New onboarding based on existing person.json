@@ -1,0 +1,107 @@
+{
+	"AfasEmployee": {
+		"Element": {
+			"@Action": "insert",
+			"Fields": {
+				"ViSe": "I",
+				"Bl": "0"
+			},
+			"Objects": {
+				"KnPerson": {
+					"Element": {
+						"Fields": {
+							"MatchPer": "0",
+							"BcCoi": "8976786"
+						}
+					}
+				},
+				"AfasContract": {
+					"Element": {
+						"@Action": "insert",
+						"@DaBe": "2022-03-01",
+						"Fields": {
+							"ClId": "basis",
+							"WcId": "basis",
+							"ApCo": "O",
+							"DvSn": 1,
+							"CmId": "01",
+							"EmMt": "1",
+							"ViEt": "V",
+							"ViKe": "0",
+							"WrCt": true,
+							"EnS2": 1
+						}
+					}
+				},
+				"AfasOrgunitFunction": {
+					"Element": {
+						"@Action": "insert",
+						"@DaBe": "2022-03-01",
+						"Fields": {
+							"DpId": "OPLTEAM",
+							"FuId": "MEDLERA",
+							"CcId": "203",
+							"CrId": "01"
+						}
+					}
+				},
+				"AfasTimeTable": {
+					"Element": {
+						"@Action": "insert",
+						"@DaBg": "2022-03-01",
+						"Fields": {
+							"SeNo": 40
+						}
+					}
+				},
+				"AfasSalary": {
+					"Element": {
+						"@Action": "insert",
+						"@DaBe": "2022-03-01",
+						"Fields": {
+							"SaPe": "U",
+							"EmSa": "55",
+							"PtId": 5,
+							"SaYe": "80500",
+							"TtPy": false
+						}
+					}
+				},
+				"AfasBankInfo": {
+					"Element": {
+						"@Action": "insert",
+						"@AcId": "NL09DEUT0751418196",
+						"@NoBk": false,
+						"Fields": {
+							"SaAc": true,
+							"IbCk": true,
+							"Iban": "NL09DEUT0751418196"
+						}
+					}
+				},
+				"AfasAgencyFiscus": {
+					"Element": {
+						"@Action": "insert",
+						"@DaBe": "2022-03-01",
+						"@AyId": "F",
+						"Fields": {
+							"ViIn": "15",
+							"ViEm": "1",
+							"ViTs": "W",
+							"ViCd": "0",
+							"ViLk": "1",
+							"ViZv": "K",
+							"YnZW": "1",
+							"YnWW": "1",
+							"YWAO": "1",
+							"ViVb": "0",
+							"ViCx": "0",
+							"TxGy": "1",
+							"TxGn": "1"
+						}
+					}
+				}
+			}
+		}
+	}
+}

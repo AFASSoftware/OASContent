@@ -1,0 +1,18 @@
+{
+  "KnCourseMember": {
+    "Element": {
+      "@CrId": "63",
+      "@CdId": "1184",
+      "Fields": {
+        "BcCo": "1000182",
+        "DeId": "10068",
+        "SuDa": "2011-01-01",
+        "DiPc": "2",
+        "Invo": "1",
+        "Rm": "Aangemaakt via JSON",
+        "CuId": "USD",
+        "NFPr": "100"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "FbSales": {
+    "Element": {
+      "Fields": {
+        "DbId": "10001",
+        "War": "01"
+      },
+      "Objects": {
+        "FbSalesLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "3",
+              "ItCd": "t3",
+              "Ds": "Weleda vitame EK",
+              "BiUn": "*****",
+              "QuUn": "1"
+            }
+          }
+        }
+      }
+    }
+  }
+}

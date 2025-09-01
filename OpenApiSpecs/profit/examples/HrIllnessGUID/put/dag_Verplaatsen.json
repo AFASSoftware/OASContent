@@ -1,0 +1,15 @@
+{
+  "HrIllnessGUID": {
+    "Element": {
+      "@GUID": "{BE48EC15-ECE3-47F2-9E06-895476098B92}",
+      "Fields": {
+        "EmId": "MARIEKES",
+        "DaBe": "2014-08-05T08:30:00",
+        "DaEs": "2014-08-07",
+        "TPBe": "0",
+        "PcWd": "0.00",
+        "ExFr": "0"
+      }
+    }
+  }
+}

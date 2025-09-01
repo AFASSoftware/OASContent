@@ -1,0 +1,20 @@
+{
+  "HrAbsenceInSite": {
+    "Element": {
+      "Fields": {
+        "EmId": "FLOORA",
+        "ViAt": "V",
+        "DaBe": "2013-02-04T08:00:00",
+        "DaEn": "2013-02-04T12:00:00",
+        "ViLr": "V",
+        "EnSe": "1",
+        "DuRa": "4",
+        "EmRp": "WILMAH",
+        "Re": "Opmerking bij verlofboeking",
+        "LeDt": "1",
+        "PaTs": "0",
+        "PaTe": "0"
+      }
+    }
+  }
+}

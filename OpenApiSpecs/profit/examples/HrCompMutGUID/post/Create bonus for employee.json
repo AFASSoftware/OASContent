@@ -1,0 +1,18 @@
+{
+    "HrCompMutGUID": {
+      "Element": {
+        "@GuLi": "{1c6bbae5-98a7-4140-9630-ff08025db692}",
+        "Fields": {
+          "PtId": 5,
+          "Year": 2024,
+          "PeId": 1,
+          "DaTi": "2024-01-08",
+          "EmId": "floora",
+          "ErId": "01",
+          "Sc02": 11,
+          "Ds": "Galactic Achievement Bonus",
+          "VaD1": "19934857"
+        }
+      }
+    }
+  }

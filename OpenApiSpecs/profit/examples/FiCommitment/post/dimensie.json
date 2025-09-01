@@ -1,0 +1,18 @@
+{
+  "FiCommitment": {
+    "Element": {
+      "@UnId": "1",
+      "@SeNo": "",
+      "Fields": {
+        "AcNr": "4055",
+        "Yr": "2015",
+        "PeNr": "3",
+        "Ds": "Verplichting dimensie",
+        "CrId": "50013",
+        "Ref": "REF3489354",
+        "Amt": "1500",
+        "Di01": "1"
+      }
+    }
+  }
+}

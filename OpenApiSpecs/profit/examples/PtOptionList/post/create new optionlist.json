@@ -1,0 +1,23 @@
+{
+    "PtOptionList": {
+      "Element": {
+        "Fields": {
+          "PrId": "P00047",
+          "CoFa": "1",
+          "Ds": "This is a main construction project"
+        },
+        "Objects": [
+          {
+            "PtOptionListLines": {
+              "Element": {
+                "Fields": {
+                  "Code": "1000",
+                  "Ds": "This is a line in a optionlist."
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }

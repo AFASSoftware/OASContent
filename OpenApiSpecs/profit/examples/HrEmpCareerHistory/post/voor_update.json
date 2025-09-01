@@ -1,0 +1,26 @@
+{
+  "HrEmpCareerHistory": {
+    "Element": {
+      "Fields": {
+        "EmId": "00567",
+        "BcCo": "1000387",
+        "HaJp": "1",
+        "DaBe": "1992-01-01",
+        "DaEn": "1992-12-31",
+        "NuYe": "1",
+        "NuMo": "0",
+        "NuDa": "0",
+        "HaCa": "1",
+        "EmPr": "1",
+        "TCh1": "1",
+        "TCh2": "1",
+        "TCh3": "1",
+        "TCh4": "1",
+        "TCh5": "1",
+        "TCh6": "1",
+        "TCh7": "1",
+        "EIId": "Friese vlag"
+      }
+    }
+  }
+}

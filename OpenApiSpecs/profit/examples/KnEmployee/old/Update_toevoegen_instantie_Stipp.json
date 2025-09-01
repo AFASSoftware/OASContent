@@ -1,0 +1,19 @@
+{
+  "AfasEmployee": {
+    "Element": {
+      "@EmId": "UPD005",
+      "Fields": "",
+      "Objects": {
+        "AfasAgencyStippaangifte": {
+          "Element": {
+            "@DaBe": "",
+            "@AyId": "",
+            "Fields": {
+              "NoSt": "0"
+            }
+          }
+        }
+      }
+    }
+  }
+}

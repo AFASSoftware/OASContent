@@ -1,0 +1,64 @@
+{
+  "KnTeamMember": {
+    "Element": [
+      {
+        "Fields": {
+          "Team": "Team 1",
+          "Type": "2",
+          "CdId": "1004",
+          "TmRl": "TL",
+          "ItCd": "302"
+        }
+      },
+      {
+        "Fields": {
+          "Team": "Team 1",
+          "Type": "2",
+          "CdId": "1027"
+        }
+      },
+      {
+        "Fields": {
+          "Team": "Team 1",
+          "Type": "2",
+          "CdId": "1005",
+          "TmRl": "EPL",
+          "ItCd": "302"
+        }
+      },
+      {
+        "Fields": {
+          "Team": "Team 2",
+          "Type": "1",
+          "EmId": "KeesZ",
+          "ItCd": "300"
+        }
+      },
+      {
+        "Fields": {
+          "Team": "Team 2",
+          "Type": "1",
+          "EmId": "ArendB"
+        }
+      },
+      {
+        "Fields": {
+          "Team": "Team 3",
+          "Type": "1",
+          "EmId": "MichelleV",
+          "TmRl": "TL",
+          "ItCd": "M005"
+        }
+      },
+      {
+        "Fields": {
+          "Team": "Team 3",
+          "Type": "1",
+          "EmId": "HermaS",
+          "TmRl": "IPL",
+          "ItCd": "ADVDIR"
+        }
+      }
+    ]
+  }
+}

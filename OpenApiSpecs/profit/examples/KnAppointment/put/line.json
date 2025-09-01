@@ -1,0 +1,22 @@
+{
+  "KnAppointment": {
+    "Element": {
+      "Fields": {
+        "ApId": "7",
+        "IsRe": "0"
+      },
+      "Objects": {
+        "KnAppointmentLines": {
+          "Element": {
+            "Fields": {
+              "PaId": "1",
+              "UsId": "DavidB",
+              "IsOw": true,
+              "Pres": "V"
+            }
+          }
+        }
+      }
+    }
+  }
+}

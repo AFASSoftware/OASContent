@@ -1,0 +1,14 @@
+{
+    "KnRelationship": {
+      "Element": {
+        "Fields": {
+          "CtId": 32,
+          "Re": "Aanmaken verband",
+          "DaBe": "2024-02-01",
+          "DaEn": "2024-02-29",
+          "Source": 10001,
+          "Target": 10002
+        }
+      }
+    }
+  }

@@ -1,0 +1,34 @@
+{
+  "FbStockMutation": {
+    "Element": [
+      {
+        "Fields": {
+          "VaOt": "32",
+          "ReId": "BO",
+          "Da": "2015-04-16",
+          "Ds": "Boxwise transfer done by Vincent Ramp",
+          "VaIt": "2",
+          "ItCd": "1401",
+          "War": "02",
+          "Loc": "*****",
+          "BiUn": "Stk",
+          "QuUn": "94"
+        }
+      },
+      {
+        "Fields": {
+          "VaOt": "31",
+          "ReId": "BO",
+          "Da": "2015-04-16",
+          "Ds": "Boxwise transfer done by Vincent Ramp",
+          "VaIt": "2",
+          "ItCd": "1401",
+          "War": "01",
+          "Loc": "01-A-005",
+          "BiUn": "Stk",
+          "QuUn": "94"
+        }
+      }
+    ]
+  }
+}

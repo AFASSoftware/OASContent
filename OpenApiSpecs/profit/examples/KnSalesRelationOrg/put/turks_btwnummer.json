@@ -1,0 +1,37 @@
+{
+  "KnSalesRelationOrg": {
+    "Element": {
+      "@DbId": "10060",
+      "Fields": {
+        "VaId": "NL123456789B02",
+        "VaDu": "4",
+        "CuId": "EUR"
+      },
+      "Objects": {
+        "KnOrganisation": {
+          "Element": {
+            "Fields": {
+              "MatchOga": "9",
+              "Nm": "Jansen"
+            },
+            "Objects": {
+              "KnBasicAddressAdr": {
+                "Element": {
+                  "Fields": {
+                    "CoId": "NL",
+                    "PbAd": false,
+                    "Ad": "Ehlibeyt Mahallesi 1259 Sk 7/2 Balgat Cankaya",
+                    "HmNr": "105",
+                    "ZpCd": "3833LC",
+                    "Rs": "Leusden",
+                    "ResZip": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

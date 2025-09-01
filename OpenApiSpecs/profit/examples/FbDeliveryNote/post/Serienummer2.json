@@ -1,0 +1,63 @@
+{
+  "FbDeliveryNote": {
+    "Element": {
+      "Fields": {
+        "DbId": "10191",
+        "RfCs": "REF: Serienummers 2/2",
+        "War": "01"
+      },
+      "Objects": {
+        "FbDeliveryNoteLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "2",
+              "ItCd": "4103",
+              "BiUn": "stk",
+              "QuUn": "2"
+            },
+            "Objects": {
+              "FbOrderSerialLines": {
+                "Element": [
+                  {
+                    "Fields": {
+                      "SeNu": "4103A1",
+                      "BiUn": "stk",
+                      "QuUn": "1"
+                    },
+                    "Objects": {
+                      "FbOrderLocationLines": {
+                        "Element": {
+                          "Fields": {
+                            "Loc": "B1",
+                            "Qu": "1"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "Fields": {
+                      "SeNu": "4103A2",
+                      "BiUn": "stk",
+                      "QuUn": "1"
+                    },
+                    "Objects": {
+                      "FbOrderLocationLines": {
+                        "Element": {
+                          "Fields": {
+                            "Loc": "B1",
+                            "Qu": "1"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

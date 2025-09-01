@@ -1,0 +1,18 @@
+{
+  "FbItemCodeCustomer": {
+    "Element": {
+      "Fields": {
+        "VaIc": "1",
+        "VaIt": "1",
+        "ItCd": "O150",
+        "DbId": "10108",
+        "ItCu": "O150_EXT",
+        "Ds": "UpdateConnector werksoort",
+        "ExDs": "UpdateConnector extra omschrijving",
+        "Re": "UpdateConnector opmerking",
+        "VaBc": "1",
+        "BaCo": "1234567"
+      }
+    }
+  }
+}

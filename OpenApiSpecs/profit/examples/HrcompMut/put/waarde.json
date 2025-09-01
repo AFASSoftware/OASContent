@@ -1,0 +1,18 @@
+{
+    "HrCompMut": {
+        "Element": {
+            "@Id": 143902,
+            "@PtId": 5,
+            "@Year": 2023,
+            "@PeId": 3,
+            "@DaTi": "2023-03-22",
+            "@EmId": "JANB",
+            "@ErId": "01",
+            "@Sc02": 305,
+            "Fields": {
+                "Ds": "Bonus through API request Type: value",
+                "VaD1": "180"
+            }
+        }
+    }
+}

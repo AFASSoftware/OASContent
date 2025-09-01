@@ -1,0 +1,27 @@
+{
+  "KnAppointment": {
+    "Element": {
+      "Fields": {
+        "ApTy": "1",
+        "Body": "Join us for the inaugural Galactic Innovators Council to discuss cutting-edge space technologies and collaboration opportunities on interstellar projects.",
+        "DaFr": "2018-11-12T09:00:00",
+        "DaTi": "2018-11-12T10:00:00",
+        "LoId": "000001",
+        "LoTx": "DRE's Interstellar Lab",
+        "Sbj": "Galactic Innovators Council"
+      },
+      "Objects": {
+        "KnAppointmentLines": {
+          "Element": {
+            "Fields": {
+              "IsOw": true,
+              "PaId": "1",
+              "Pres": "V",
+              "UsId": "DavidB"
+            }
+          }
+        }
+      }
+    }
+  }
+}

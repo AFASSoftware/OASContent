@@ -1,0 +1,83 @@
+{
+  "FiEntryPar": {
+    "Element": {
+      "Fields": {
+        "Year": "2018",
+        "Peri": "11",
+        "UnId": "1",
+        "JoCo": "50"
+      },
+      "Objects": {
+        "FiEntries": {
+          "Element": [
+            {
+              "Fields": {
+                "VaAs": "1",
+                "AcNr": "8150",
+                "EnDa": "2018-11-28",
+                "BpDa": "2018-11-28",
+                "BpNr": "1481732",
+                "InId": null,
+                "Ds": "/PREF/2976RCUR",
+                "AmDe": "1323.41",
+                "AmCr": "0"
+              }
+            },
+            {
+              "Fields": {
+                "VaAs": "1",
+                "AcNr": "8150",
+                "EnDa": "2018-11-28",
+                "BpDa": "2018-11-28",
+                "BpNr": "1481732",
+                "InId": "1847674",
+                "Ds": "Bankrekening: 145138690",
+                "AmDe": "0",
+                "AmCr": "183.64"
+              }
+            },
+            {
+              "Fields": {
+                "VaAs": "1",
+                "AcNr": "8150",
+                "EnDa": "2018-11-28",
+                "BpDa": "2018-11-28",
+                "BpNr": "1481732",
+                "InId": "1847752",
+                "Ds": "Bankrekening: 145138690",
+                "AmDe": "0",
+                "AmCr": "1089.52"
+              }
+            },
+            {
+              "Fields": {
+                "VaAs": "1",
+                "AcNr": "8150",
+                "EnDa": "2018-11-28",
+                "BpDa": "2018-11-28",
+                "BpNr": "1481732",
+                "InId": "1847144",
+                "Ds": "Bankrekening: 145138690",
+                "AmDe": "0",
+                "AmCr": "27.75"
+              }
+            },
+            {
+              "Fields": {
+                "VaAs": "1",
+                "AcNr": "8150",
+                "EnDa": "2018-11-28",
+                "BpDa": "2018-11-28",
+                "BpNr": "1481732",
+                "InId": "1847145",
+                "Ds": "Bankrekening: 145138690",
+                "AmDe": "0",
+                "AmCr": "22.50"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

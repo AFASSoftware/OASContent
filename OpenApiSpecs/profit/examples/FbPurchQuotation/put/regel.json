@@ -1,0 +1,37 @@
+{
+  "FbPurchQuotation": {
+    "Element": {
+      "Fields": {
+        "OrNu": "00001"
+      },
+      "Objects": {
+        "FbPurchQuotationLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "art",
+              "ItCd": "9901",
+              "Ds": "Afwijkende omschrijving artikel 2116",
+              "VaRc": "2",
+              "BiUn": "stk",
+              "QuUn": "1",
+              "Qu": "1",
+              "PrLi": "*****",
+              "War": "01",
+              "VaWt": "4",
+              "NeWe": "1",
+              "GrWe": "2",
+              "Upri": "200",
+              "CoPr": "60",
+              "VaAD": "0",
+              "PRDc": "5",
+              "ARDc": "10",
+              "Re": "Opmerking van de offerteregel",
+              "StL1": "L",
+              "StL2": "BLAUW"
+            }
+          }
+        }
+      }
+    }
+  }
+}

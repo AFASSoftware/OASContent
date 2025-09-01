@@ -1,0 +1,20 @@
+{
+  "FiCommitment": {
+    "Element": {
+      "@UnId": "1",
+      "@SeNo": "",
+      "Fields": {
+        "AcNr": "4330",
+        "Yr": "2015",
+        "PeNr": "3",
+        "Ds": "Verplichting minimale velden",
+        "CrId": "50013",
+        "PrId": "600000",
+        "VaIt": "2",
+        "ItCd": "1000",
+        "Ref": "REF348975",
+        "Amt": "500"
+      }
+    }
+  }
+}

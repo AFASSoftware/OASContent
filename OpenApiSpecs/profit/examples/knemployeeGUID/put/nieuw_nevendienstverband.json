@@ -1,0 +1,173 @@
+{
+  "AfasEmployee": {
+    "Element": {
+      "@GUID": "{ACAAFD45-F6D7-4ECF-8103-137217398456}",
+      "Fields": {
+        "EmId": "00343",
+        "ViSe": "I",
+        "Bl": "0",
+        "LwOb": "0",
+        "LwTg": "0"
+      },
+      "Objects": [
+        {
+          "KnPerson": {
+            "Element": {
+              "Fields": {
+                "PadAdr": "1",
+                "AutoNum": "1",
+                "MatchPer": "2",
+                "SeNm": "ZOEKNAAM",
+                "FiNm": "Jan",
+                "In": "J.A.",
+                "LaNm": "Jansen",
+                "SpNm": "1",
+                "NmBi": "Jansen",
+                "ViUs": "0",
+                "ViGe": "V",
+                "PsNa": "NL",
+                "DaBi": "1988-06-05",
+                "SoSe": "123456789",
+                "ViCs": "OG",
+                "TtId": "ALG"
+              },
+              "Objects": [
+                {
+                  "KnBasicAddressAdr": {
+                    "Element": {
+                      "Fields": {
+                        "CoId": "NL",
+                        "PbAd": "0",
+                        "Ad": "Diepenbrockstraat",
+                        "HmNr": "105",
+                        "ZpCd": "3833LC",
+                        "Rs": "Leusden",
+                        "BeginDate": "2010-06-07"
+                      }
+                    }
+                  }
+                },
+                {
+                  "KnBasicAddressPad": {
+                    "Element": {
+                      "Fields": {
+                        "CoId": "NL",
+                        "PbAd": "0",
+                        "Ad": "Diepenbrockstraat",
+                        "HmNr": "105",
+                        "ZpCd": "3833LC",
+                        "Rs": "Leusden",
+                        "BeginDate": "2010-06-07"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "AfasContract": {
+            "Element": {
+              "@GUID": "{ACAAFD45-F6D7-4ECF-8103-137217398457}",
+              "Fields": {
+                "DaBe": "2010-06-07",
+                "ClId": "CVO",
+                "WcId": "CVO",
+                "ApCo": "B",
+                "DaEn": "2010-06-14",
+                "PEmTy": "N",
+                "DvSn": "3",
+                "CmId": "40075",
+                "EmMt": "1",
+                "ViEt": "OOP",
+                "ViTo": "1M",
+                "DaEt": "2010-06-14",
+                "PeNo": "8",
+                "PeRp": "12",
+                "PeFt": "201608",
+                "RtDa": "0",
+                "InTp": "03",
+                "DvbAbId": "428",
+                "DvbSuDv": "1",
+                "DvbDecl": "0",
+                "DvbPool": "0",
+                "DvbSubs": "00533"
+              }
+            }
+          }
+        },
+        {
+          "AfasOrgunitFunction": {
+            "Element": {
+              "@GUID": "{ACAAFD45-F6D7-4ECF-8103-137217398457}",
+              "Fields": {
+                "DaBe": "2010-06-07",
+                "DpId": "AF58FUFU",
+                "FuId": "060",
+                "CcId": "10",
+                "CrId": "470"
+              }
+            }
+          }
+        },
+        {
+          "AfasTimeTable": {
+            "Element": {
+              "@GUID": "{ACAAFD45-F6D7-4ECF-8103-137217398457}",
+              "Fields": {
+                "DaBg": "2010-06-07",
+                "Spec": "1",
+                "DyWk": "3",
+                "HrWk": "18",
+                "FtSv": "0",
+                "ClAg": "true"
+              }
+            }
+          }
+        },
+        {
+          "AfasSalary": {
+            "Element": {
+              "@GUID": "{ACAAFD45-F6D7-4ECF-8103-137217398457}",
+              "Fields": {
+                "DaBe": "2010-06-07",
+                "SaPe": "V",
+                "EmSa": "2500.00",
+                "NtSa": "0",
+                "PtId": "5",
+                "SaYe": "0",
+                "FuTa": "171",
+                "FuSc": "LIO"
+              }
+            }
+          }
+        },
+        {
+          "AfasAgencyFiscus": {
+            "Element": {
+              "@DaBe": "2010-06-07",
+              "@AyId": "F",
+              "Fields": {
+                "ViIn": "15",
+                "ViEm": "1",
+                "ViTs": "W",
+                "ViCd": "0",
+                "ViLk": "1",
+                "ViZv": "CEF",
+                "YnZW": "1",
+                "YnWW": "1",
+                "YWAO": "1",
+                "ViOk": "0",
+                "ViVb": "0",
+                "ViCx": "1",
+                "TxF4": "0",
+                "TxF5": "0"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "FbDirectInvoice": {
+    "Element": {
+      "Fields": {
+        "OrDa": "2013-06-01",
+        "DbId": "10178",
+        "RfCs": "Partijnummers",
+        "War": "01"
+      },
+      "Objects": {
+        "FbDirectInvoiceLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "8000",
+                "BiUn": "stk",
+                "QuUn": "10",
+                "Upri": "6.95"
+              },
+              "Objects": {
+                "FbOrderBatchLines": {
+                  "Element": [
+                    {
+                      "Fields": {
+                        "BaNu": "CDRW.8010.PHIL001",
+                        "BiUn": "stk",
+                        "QuUn": "5",
+                        "Re": "JSON!"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "BaNu": "CDRW.8010.PHIL002",
+                        "BiUn": "stk",
+                        "QuUn": "5",
+                        "Re": "JSON!"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "8001",
+                "BiUn": "stk",
+                "QuUn": "10",
+                "Upri": "7.50"
+              },
+              "Objects": {
+                "FbOrderBatchLines": {
+                  "Element": [
+                    {
+                      "Fields": {
+                        "BaNu": "CDRW.8010.IMAT001",
+                        "BiUn": "stk",
+                        "QuUn": "5",
+                        "Re": "JSON!"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "BaNu": "CDRW.8010.IMAT002",
+                        "BiUn": "stk",
+                        "QuUn": "5",
+                        "Re": "JSON!"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "HrSelectionModel": {
+    "Element": {
+      "@EmId": "ARENDB",
+      "Fields": {
+        "DaBe": "2018-01-01",
+        "DaEn": "2018-12-31",
+        "SmId": "01",
+        "Ds": "werkfiets",
+        "Amnt": "0",
+        "PoTa": "1"
+      },
+      "Objects": {
+        "HrSelectionModelSource": {
+          "Element": {
+            "Fields": {
+              "DaBe": "2018-01-01",
+              "EmsViHt": "V",
+              "EmsViLs": "VB2018",
+              "EmsInAl": "0",
+              "EmsYnLh": "1",
+              "EmsViCr": "H",
+              "EmsRe": "huwelijk"
+            }
+          }
+        }
+      }
+    }
+  }
+}

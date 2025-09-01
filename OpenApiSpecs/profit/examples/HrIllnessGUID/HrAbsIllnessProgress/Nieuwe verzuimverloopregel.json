@@ -1,0 +1,75 @@
+{
+  "HrIllnessGUID": {
+      "Element": {
+          "@GUID": "{E29B5696-B302-49BE-B27C-4F10CFA92998}",
+          "Objects": [
+              {
+                  "HrAbsIllnessProgress": {
+                      "Element": [
+                          {
+                              "@GUID": "{E29B5696-B302-49BE-B27C-4F10CFA92998}",
+                              "Fields": {
+                                  "DaTi": "2024-03-01T00:00:00",
+                                  "PsPc": "0",
+                                  "PsHr": "0",
+                                  "PsSp": true,
+                                  "PsPa": "10",
+                                  "DepN": "GALAXOS Health Hub",
+                                  "DepA": "Epsilon Colony",
+                                  "RmNr": "A900.10",
+                                  "Te": "974261300",
+                                  "Re": "Admitted for 6 hours per day, specialized treatment"
+                              },
+                              "Objects": [
+                                  {
+                                      "KnBasicAddress": {
+                                          "Element": {
+                                              "Fields": {
+                                                  "PbAd": true,
+                                                  "Ad": "Nunspeterweg",
+                                                  "HmNr": "105",
+                                                  "ZpCd": "3833LC",
+                                                  "CoId": "NL",
+                                                  "Rs": "Leusden"
+                                              }
+                                          }
+                                      }
+                                  }
+                              ]
+                          },
+                          {
+                              "@GUID": "{E29B5696-B302-49BE-B27C-4F10CFA92999}",
+                              "Fields": {
+                                  "DaTi": "2024-03-15T00:00:00",
+                                  "PsPc": "20",
+                                  "PsHr": "0",
+                                  "PsSp": true,
+                                  "PsPa": "20",
+                                  "DepN": "GALAXOS Andromeda Daycare",
+                                  "DepA": "The Beacon",
+                                  "RmNr": "X112",
+                                  "Te": "974261311",
+                                  "Re": "Progressing well, increasing workload now."
+                              },
+                              "Objects": {
+                                  "KnBasicAddress": {
+                                      "Element": {
+                                          "Fields": {
+                                              "PbAd": true,
+                                              "Ad": "Langestraat",
+                                              "HmNr": "105",
+                                              "ZpCd": "3833LC",
+                                              "CoId": "NL",
+                                              "Rs": "Leusden"
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                      ]
+                  }
+              }
+          ]
+      }
+  }
+}

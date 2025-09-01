@@ -1,0 +1,38 @@
+{
+  "FbDeliveryNote": {
+    "Element": {
+      "Fields": {
+        "OrDa": "2014-03-01",
+        "DbId": "10150",
+        "CuId": "EUR",
+        "War": "01"
+      },
+      "Objects": {
+        "FbDeliveryNoteLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "1000",
+                "BiUn": "stk",
+                "QuUn": "1",
+                "CoPr": "65",
+                "NoIn": "false"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "1001",
+                "BiUn": "stk",
+                "QuUn": "1",
+                "CoPr": "50",
+                "NoIn": "true"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

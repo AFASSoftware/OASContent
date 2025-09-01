@@ -1,0 +1,12 @@
+{
+  "PtDeclaration": {
+    "Element": {
+      "Fields": {
+        "DcCo": "000000000001.01",
+        "CcSr": "TACA",
+        "RfCs": "Referentie via xml",
+        "ApprovWorkflow": "0"
+      }
+    }
+  }
+}

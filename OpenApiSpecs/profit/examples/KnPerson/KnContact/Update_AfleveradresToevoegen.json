@@ -1,0 +1,36 @@
+{
+  "KnPerson": {
+    "Element": {
+      "Fields": {
+        "MatchPer": "0",
+        "BcCo": "1000008"
+      },
+      "Objects": {
+        "KnContact": {
+          "Element": {
+            "Fields": {
+              "PadAdr": "1",
+              "ViKc": "AFL",
+              "ExAd": "Mijn schoonouders lol"
+            },
+            "Objects": {
+              "KnBasicAddressAdr": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": "0",
+                    "Ad": "Straatlaanweg",
+                    "HmNr": "105",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "ResZip": "0"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

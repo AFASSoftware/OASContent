@@ -1,0 +1,15 @@
+{
+  "FbPurchPrice": {
+    "Element": {
+      "Fields": {
+        "VaIt": "2",
+        "SuCo": "NSK4000-EU",
+        "BiUn": "Stk",
+        "CrId": "50031",
+        "Pric": "199",
+        "CuId": "EUR",
+        "DaBg": "2013-01-01"
+      }
+    }
+  }
+}

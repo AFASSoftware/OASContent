@@ -1,0 +1,27 @@
+{
+  "PtMeasurement": {
+    "Element": {
+      "Fields": {
+        "MsId": "00000001"
+      },
+      "Objects": {
+        "PtMeasurementLines": {
+          "Element": [
+            {
+              "Fields": {
+                "GuLi": "{DB22196F-E28D-4E8B-977D-961E3BF4E909}",
+                "QuPr": "3"
+              }
+            },
+            {
+              "Fields": {
+                "GuLi": "{CCB08F2A-0DB6-4860-ACCB-DB8F5DEC68BC}",
+                "QuPr": "3"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

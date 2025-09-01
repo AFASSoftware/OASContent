@@ -1,0 +1,22 @@
+{
+  "AfasEmployee": {
+    "Element": {
+      "@EmId": "UPD007",
+      "Fields": {
+        "ViSe": "U"
+      },
+      "Objects": {
+        "AfasContract": {
+          "Element": {
+            "@DaBe": "2008-03-01",
+            "Fields": {
+              "DaEn": "2009-03-31",
+              "DaEe": "2009-03-31",
+              "DvbViAo": "01"
+            }
+          }
+        }
+      }
+    }
+  }
+}

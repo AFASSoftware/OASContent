@@ -1,0 +1,66 @@
+{
+    "FbAssembly": {
+        "Element": {
+            "@action": "insert",
+            "Fields": {
+                "OrDa": "2023-05-15T13:31:20",
+                "DaAc": "2023-05-15T13:31:20",
+                "SoOr": "PO230648",
+                "War": "mag 5"
+            },
+            "Objects": {
+                "FbAssemblyLines": {
+                    "Element": {
+                        "@action": "insert",
+                        "Fields": {
+                            "SoGu": "{BAD31088-5F26-4DA4-A6C8-910C0AEE2B5A}",
+                            "SoOr": "PO230648",
+                            "QuUn": 1
+                        },
+                        "Objects": [
+                            {
+                                "AfasFbOrderCompLines": {
+                                    "Element": {
+                                        "@action": "update",
+                                        "Fields": {
+                                            "VaIt": "2",
+                                            "ItCd": "A12796"
+                                        },
+                                        "Objects": {
+                                            "FbOrderBatchLines": {
+                                                "Element": {
+                                                    "@action": "update",
+                                                    "Objects": {
+                                                        "FbOrderLocationLines": {
+                                                            "Element": {
+                                                                "@action": "insert",
+                                                                "Fields": {
+                                                                    "Loc": "BULK 5",
+                                                                    "Qu": 1
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            {
+                                "FbOrderLocationLines": {
+                                    "Element": {
+                                        "Fields": {
+                                            "Loc": "BULK 5",
+                                            "Qu": 1
+                                        }
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

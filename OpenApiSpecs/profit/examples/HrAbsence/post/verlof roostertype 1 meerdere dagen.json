@@ -1,0 +1,15 @@
+{
+  "HrAbsence": {
+    "Element": {
+      "Fields": {
+        "EmId": "CHARLOTTEB",
+        "ViAt": "V",
+        "DaBe": "2024-04-08T00:00:00",
+        "DaEn": "2024-04-12T00:00:00",
+        "EnSe": 1,
+        "Re": "the starting day is the duration of the working day in minutes",
+        "LeDt": true
+      }
+    }
+  }
+}

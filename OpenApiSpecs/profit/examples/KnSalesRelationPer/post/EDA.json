@@ -1,0 +1,72 @@
+{
+  "KnSalesRelationPer": {
+    "Element": {
+      "@DbId": "125809",
+      "Fields": {
+        "IsDb": "1",
+        "PaCd": "14",
+        "CuId": "EUR",
+        "Bl": false,
+        "AuPa": "0",
+        "ColA": "1300"
+      },
+      "Objects": {
+        "KnPerson": {
+          "Element": {
+            "Fields": {
+              "PadAdr": true,
+              "AutoNum": true,
+              "MatchPer": "7",
+              "SeNm": "ZOEKNAAM",
+              "In": "J.A.",
+              "Is": "van",
+              "LaNm": "Jansen",
+              "SpNm": false,
+              "ViGe": "V",
+              "TtId": "ALG",
+              "MbN2": "334341800",
+              "Corr": false
+            },
+            "Objects": {
+              "KnBankAccount": {
+                "Element": {
+                  "Fields": {
+                    "CoId": "NL",
+                    "IbCk": false,
+                    "BaAc": "849835607",
+                    "AcGa": false,
+                    "AcCk": false
+                  }
+                }
+              },
+              "KnBasicAddressAdr": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": false,
+                    "Ad": "Speelkamp",
+                    "HmNr": "105",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "BeginDate": "2010-03-04",
+                    "ResZip": false
+                  }
+                }
+              },
+              "KnBasicAddressPad": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": false,
+                    "CoId": "NL",
+                    "BeginDate": "2010-03-04",
+                    "ResZip": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

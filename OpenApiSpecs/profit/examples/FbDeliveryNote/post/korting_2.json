@@ -1,0 +1,27 @@
+{
+  "FbDeliveryNote": {
+    "Element": {
+      "Fields": {
+        "SoOr": "60000227",
+        "War": "01",
+        "CoDn": "false",
+        "RdDe": "false"
+      },
+      "Objects": {
+        "FbDeliveryNoteLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "2",
+              "ItCd": "1600",
+              "BiUn": "Stk",
+              "QuUn": "12",
+              "War": "01",
+              "SoOr": "60000227",
+              "SoGu": "{8DF7B255-41FF-427A-9A2E-7CCE64E7125E}"
+            }
+          }
+        }
+      }
+    }
+  }
+}

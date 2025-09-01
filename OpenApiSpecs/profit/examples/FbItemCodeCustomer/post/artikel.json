@@ -1,0 +1,18 @@
+{
+  "FbItemCodeCustomer": {
+    "Element": {
+      "Fields": {
+        "VaIc": "1",
+        "ItCd": "A10009",
+        "VaIt": "2",
+        "DbId": "80460",
+        "ItCu": "A10008_LTv",
+        "Ds": "UpdateConnector artikel",
+        "ExDs": "UpdateConnector extra omschrijving",
+        "Re": "UpdateConnector opmerking",
+        "VaBc": "1",
+        "BaCo": "1234567"
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "AfasEmployee": {
+      "Element": {
+          "@action": "update",
+          "@EmId": "200069",
+          "Objects": [
+              {
+                  "AfasBankInfo": {
+                      "Element": [
+                          {
+                              "@action": "insert",
+                              "@AcId": "BE90001782698332",
+                              "@NoBk": false,
+                              "Fields": {
+                                  "SaAc": true,
+                                  "IbCk": true,
+                                  "Iban": "BE90001782698332",
+                                  "CoId": "B"
+                              }
+                          }
+                      ]
+                  }
+              }
+          ]
+      }
+  }
+}

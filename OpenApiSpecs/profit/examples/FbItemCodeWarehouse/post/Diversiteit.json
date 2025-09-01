@@ -1,0 +1,84 @@
+{
+  "FbItemCodeWarehouse": {
+    "Element": [
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "5000",
+          "War": "02",
+          "DiSe": "0",
+          "BiDc": "0"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "5001",
+          "War": "02",
+          "DiSe": "1",
+          "VaCr": "N",
+          "BiDc": "0"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "5002",
+          "War": "02",
+          "DiSe": "1",
+          "VaCr": "A",
+          "BiDc": "0"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "5003",
+          "War": "02",
+          "DiSe": "1",
+          "VaCr": "S",
+          "BiDc": "0"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "5004",
+          "War": "02",
+          "DiSe": "1",
+          "VaCr": "R",
+          "BiDc": "0"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "5005",
+          "War": "02",
+          "DiSe": "1",
+          "VaCr": "N",
+          "BiDc": "0"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "5020",
+          "War": "02",
+          "DiSe": "1",
+          "VaCr": "V",
+          "BiDc": "0"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "5021",
+          "War": "02",
+          "DiSe": "0",
+          "BiDc": "0"
+        }
+      }
+    ]
+  }
+}

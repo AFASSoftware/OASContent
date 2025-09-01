@@ -1,0 +1,22 @@
+{
+  "FbInstalment": {
+    "Element": {
+      "Fields": {
+        "PrId": "300034"
+      },
+      "Objects": {
+        "FbInstalmentLines": {
+          "Element": {
+            "Fields": {
+              "Inst": "1",
+              "SaFc": "6000",
+              "VaRc": "1",
+              "Pr": "0",
+              "Ds": "UPDATE"
+            }
+          }
+        }
+      }
+    }
+  }
+}

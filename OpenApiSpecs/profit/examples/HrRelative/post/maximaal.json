@@ -1,0 +1,19 @@
+{
+  "HrRelative": {
+    "Element": {
+      "Fields": {
+        "EmId": "FLOORA",
+        "ViFt": 1,
+        "Nm": "Arends",
+        "In": "J",
+        "FiNm": "Jan",
+        "ViGe": "V",
+        "DaBi": "2018-12-12",
+        "PaHi": true,
+        "Mchi": false,
+        "PaLe": true,
+        "Hdcp": false
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "FbSales": {
+    "Element": {
+      "Fields": {
+        "DbId": "10001",
+        "RfCs": "werksoort"
+      },
+      "Objects": {
+        "FbSalesLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "1",
+                "ItCd": "300",
+                "BiUn": "uur",
+                "QuUn": "10",
+                "Upri": "50"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "1",
+                "ItCd": "301",
+                "BiUn": "uur",
+                "QuUn": "2",
+                "Upri": "75.26"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

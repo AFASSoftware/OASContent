@@ -1,0 +1,67 @@
+{
+  "FbPurch": {
+    "Element": {
+      "Fields": {
+        "OrNu": "11000",
+        "OrDa": "2017-11-10",
+        "CrId": "50013",
+        "DaDe": "2017-11-10",
+        "DaPr": "2017-11-13",
+        "CuId": "EUR",
+        "RfCs": "Order maximaal",
+        "VaDu": "1",
+        "PaCd": "14",
+        "PaTp": "00",
+        "Re": "Opmerking bij de inkooporder",
+        "Unit": "1",
+        "Coll": "0",
+        "CrOr": "0",
+        "War": "01",
+        "LgId": "NL",
+        "CsTy": "0",
+        "VaTr": "3",
+        "VaSt": "00",
+        "VaGs": "7",
+        "VaTa": "1",
+        "CoId": "NL",
+        "VaCl": "0",
+        "ClPc": "10",
+        "PaPc": "10",
+        "VaPa": "0",
+        "VaYN": "0",
+        "VaBc": "0",
+        "BaCo": "OR01000-60013",
+        "JoCo": "10",
+        "BcDa": "1000372",
+        "DlAd": "1178"
+      },
+      "Objects": {
+        "FbPurchLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "2",
+              "ItCd": "1000",
+              "Ds": "afwijkende omschrijving",
+              "VaRc": "2",
+              "BiUn": "STK",
+              "QuUn": "10",
+              "Qu": "10",
+              "PrLi": "*****",
+              "War": "01",
+              "VaWt": "4",
+              "NeWe": "26.65",
+              "GrWe": "30.32",
+              "Upri": "50.65",
+              "VaAD": "1",
+              "ARDc": "5",
+              "MaAD": "1",
+              "Re": "Opmerking op de regel",
+              "PrId": "600000",
+              "PrSt": "01"
+            }
+          }
+        }
+      }
+    }
+  }
+}

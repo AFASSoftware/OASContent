@@ -1,0 +1,41 @@
+{
+  "PtMonitor": {
+    "Element": [
+      {
+        "Fields": {
+          "MoCd": "60.ma",
+          "Ds": "Bewakingscode import Materiaal",
+          "CoTy": "ma"
+        }
+      },
+      {
+        "Fields": {
+          "MoCd": "60.me",
+          "Ds": "Bewakingscode import Materieel",
+          "CoTy": "me"
+        }
+      },
+      {
+        "Fields": {
+          "MoCd": "60.a",
+          "Ds": "Bewakingscode import Arbeid",
+          "CoTy": "a"
+        }
+      },
+      {
+        "Fields": {
+          "MoCd": "60.oa",
+          "Ds": "Bewakingscode import Onderaanneming",
+          "CoTy": "oa"
+        }
+      },
+      {
+        "Fields": {
+          "MoCd": "60.o",
+          "Ds": "Bewakingscode import Overige kosten",
+          "CoTy": "o"
+        }
+      }
+    ]
+  }
+}

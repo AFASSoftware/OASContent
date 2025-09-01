@@ -1,0 +1,108 @@
+{
+  "AfasEmployee": {
+    "Element": {
+      "@GUID": "{EF4A0D4A-FDDE-4F9B-A4CE-8C336F3C675B}",
+      "Fields": {
+        "EmId": "00160",
+        "ViSe": "I",
+        "Bl": "0",
+        "LwOb": "0",
+        "LwTg": "0"
+      },
+      "Objects": [
+        {
+          "AfasContract": {
+            "Element": {
+              "@GUID": "{ACAAFD45-F6D7-4ECF-8103-137217398456}",
+              "Fields": {
+                "DaBe": "2010-10-01",
+                "ClId": "CVO",
+                "WcId": "CVO",
+                "ApCo": "O",
+                "PEmTy": "S",
+                "DvSn": "2",
+                "CmId": "40075",
+                "EmMt": "1",
+                "ViEt": "OOP",
+                "ViTo": "1M",
+                "DaEt": "2010-10-01",
+                "PeNo": "8",
+                "PeRp": "12",
+                "PeFt": "201608",
+                "RtDa": "0"
+              }
+            }
+          }
+        },
+        {
+          "AfasOrgunitFunction": {
+            "Element": {
+              "@GUID": "{ACAAFD45-F6D7-4ECF-8103-137217398456}",
+              "Fields": {
+                "DaBe": "2010-10-01",
+                "DpId": "AF58FUFU",
+                "FuId": "060",
+                "CcId": "10",
+                "CrId": "470"
+              }
+            }
+          }
+        },
+        {
+          "AfasTimeTable": {
+            "Element": {
+              "@GUID": "{ACAAFD45-F6D7-4ECF-8103-137217398456}",
+              "Fields": {
+                "DaBg": "2010-10-01",
+                "Spec": "1",
+                "DyWk": "3",
+                "HrWk": "18",
+                "FtSv": "0",
+                "ClAg": "true"
+              }
+            }
+          }
+        },
+        {
+          "AfasSalary": {
+            "Element": {
+              "@GUID": "{ACAAFD45-F6D7-4ECF-8103-137217398456}",
+              "Fields": {
+                "DaBe": "2010-10-01",
+                "SaPe": "V",
+                "EmSa": "2500.00",
+                "NtSa": "0",
+                "PtId": "5",
+                "SaYe": "0"
+              }
+            }
+          }
+        },
+        {
+          "AfasAgencyFiscus": {
+            "Element": {
+              "@DaBe": "2010-10-01",
+              "@AyId": "F",
+              "Fields": {
+                "ViIn": "15",
+                "ViEm": "1",
+                "ViTs": "W",
+                "ViCd": "0",
+                "ViLk": "1",
+                "ViZv": "CEF",
+                "YnZW": "1",
+                "YnWW": "1",
+                "YWAO": "1",
+                "ViOk": "0",
+                "ViVb": "0",
+                "ViCx": "1",
+                "TxF4": "0",
+                "TxF5": "0"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

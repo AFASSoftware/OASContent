@@ -1,0 +1,23 @@
+{
+  "KnQuotation": {
+    "Element": {
+      "Fields": {
+        "QuId": "1",
+        "QuDa": "2017-04-12",
+        "PrId": "910006",
+        "ETOr": "O"
+      },
+      "Objects": {
+        "KnQuotationLine": {
+          "Element": {
+            "Fields": {
+              "VaIt": "1",
+              "ItCd": "300",
+              "StId": "1"
+            }
+          }
+        }
+      }
+    }
+  }
+}

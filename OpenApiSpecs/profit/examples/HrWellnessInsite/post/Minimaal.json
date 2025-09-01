@@ -1,0 +1,19 @@
+{
+  "HrWellnessInSite": {
+    "Element": {
+      "Fields": {
+        "AbId": "480",
+        "DaEn": "2013-05-01T00:00:00"
+      },
+      "Objects": {
+        "HrAbsIllnessProgress": {
+          "Element": {
+            "Fields": {
+              "ViWr": "1"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "FbSubscription": {
+    "Element": {
+      "Fields": {
+        "BcId": "1000190",
+        "DbId": "10072",
+        "SuSt": "2014-01-01",
+        "VaIn": "M1",
+        "DaSt": "2014-01-01",
+        "DaAm": "1",
+        "SuEn": "2014-12-31",
+        "VaRe": "J1",
+        "DaRe": "2014-01-01",
+        "VaSu": "01",
+        "PaCd": "14",
+        "AuIn": "1",
+        "VaRs": "02",
+        "NoIn": "0",
+        "InDi": "1",
+        "NoSi": "0",
+        "AtIn": "1",
+        "InAd": "0",
+        "InVa": "0",
+        "Bankaccount": "123456789"
+      },
+      "Objects": {
+        "FbSubscriptionLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "2",
+              "ItCd": "7001",
+              "DaSt": "2014-01-01",
+              "Qu": "10",
+              "Pric": "500",
+              "DaEn": "2014-12-31",
+              "DaPu": "2014-01-01",
+              "VaRs": "02",
+              "SuCr": "0",
+              "InFr": "2014-01-01",
+              "CrSi": "0"
+            }
+          }
+        }
+      }
+    }
+  }
+}

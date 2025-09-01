@@ -1,0 +1,25 @@
+{
+    "AfasEmployee": {
+      "Element": {
+        "@GUID": "{5E430060-A91D-44EF-8DF3-7E6F22D075AB}",
+        "Fields": {
+          "EmId": "floora"
+        },
+        "Objects": {
+          "AfasOrgunitFunction": {
+            "Element": {
+              "@GUID": "{16d79bcc-7895-4eeb-a773-75012f0e0114}",
+              "Fields": {
+                "DaBe": "2023-06-01",
+                "DpId": "KWATEAM",
+                "FuId": "MEDTES",
+                "CcId": "205",
+                "CrId": "01",
+                "U2E3DBD4F4F007CB46EA3C9B1EFE45602": "ExternalId"
+              }
+            }
+          }
+        }
+      }
+    }
+  }

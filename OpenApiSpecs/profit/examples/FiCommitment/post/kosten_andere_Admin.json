@@ -1,0 +1,34 @@
+{
+  "FiCommitment": {
+    "Element": {
+      "@UnId": "2",
+      "@SeNo": "",
+      "Fields": {
+        "AcNr": "4330",
+        "Yr": "2015",
+        "PeNr": "12",
+        "Ds": "Verplichting kosten andere Administratie",
+        "CrId": "50034",
+        "Ref": "C002-2023000002",
+        "Set": "0",
+        "PtId": "1",
+        "PrId": "600000",
+        "PrSt": "01",
+        "VaIt": "6",
+        "ItCd": "T1",
+        "DiC1": "NOORD",
+        "DiC2": "ICT",
+        "DiC3": "ZO",
+        "DiC4": "RAND",
+        "DiC5": "SER",
+        "Amt": "99",
+        "Qua": "5",
+        "Di01": "1",
+        "Judg": "KEESZ",
+        "JuYN": "1",
+        "Cont": "C002-2023000002",
+        "CoLn": "7"
+      }
+    }
+  }
+}

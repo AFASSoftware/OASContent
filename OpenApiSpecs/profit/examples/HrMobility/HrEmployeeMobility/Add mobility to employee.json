@@ -1,0 +1,20 @@
+{
+    "HrMobility": {
+        "Element": {
+            "@CcSn": 86,
+            "Objects": [
+                {
+                    "HrEmployeeMobility": {
+                        "Element": {
+                            "@EmId": "floora",
+                            "@SeNo": 1,
+                            "Fields": {
+                                "DaBe": "2024-01-03"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

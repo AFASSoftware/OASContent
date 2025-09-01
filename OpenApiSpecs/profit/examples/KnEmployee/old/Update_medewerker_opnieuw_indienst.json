@@ -1,0 +1,138 @@
+{
+  "AfasEmployee": {
+    "Element": {
+      "@EmId": "4125015",
+      "Fields": {
+        "ViSe": "I",
+        "Bl": "0",
+        "LwOb": "0",
+        "LwTg": "0"
+      },
+      "Objects": {
+        "KnPerson": {
+          "Element": {
+            "Fields": {
+              "PadAdr": "1",
+              "AutoNum": "1",
+              "MatchPer": "2",
+              "SeNm": "ZOEKNAAM",
+              "FiNm": "Jan",
+              "In": "J.A.",
+              "LaNm": "Jansen",
+              "SpNm": "1",
+              "NmBi": "Jansen",
+              "ViUs": "0",
+              "ViGe": "M",
+              "PsNa": "NL",
+              "DaBi": "1951-02-21",
+              "SoSe": "123456789",
+              "ViCs": "OG",
+              "TtId": "ALG"
+            },
+            "Objects": {
+              "KnBasicAddressAdr": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": "0",
+                    "Ad": "Mekkelenbergweg",
+                    "HmNr": "105",
+                    "HmAd": "3b",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "BeginDate": "2010-01-01"
+                  }
+                }
+              },
+              "KnBasicAddressPad": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": "0",
+                    "Ad": "Mekkelenbergweg",
+                    "HmNr": "105",
+                    "HmAd": "3b",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "BeginDate": "2010-01-01"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "AfasContract": {
+          "Element": {
+            "@DaBe": "2010-01-01",
+            "Fields": {
+              "ClId": "Basis",
+              "WcId": "Basis",
+              "ApCo": "O",
+              "CmId": "RIS",
+              "EmMt": "1",
+              "ViEt": "F",
+              "ViTo": "1M",
+              "DaEt": "2010-02-01",
+              "PeNo": "1",
+              "PeRp": "12",
+              "RtDa": "0"
+            }
+          }
+        },
+        "AfasOrgunitFunction": {
+          "Element": {
+            "@DaBe": "2010-01-01",
+            "Fields": {
+              "DpId": "RIS",
+              "FuId": "FinMed"
+            }
+          }
+        },
+        "AfasTimeTable": {
+          "Element": {
+            "@DaBg": "2010-01-01",
+            "Fields": {
+              "SeNo": "51647801",
+              "Spec": "0",
+              "FtSv": "0"
+            }
+          }
+        },
+        "AfasSalary": {
+          "Element": {
+            "@DaBe": "2010-01-01",
+            "Fields": {
+              "SaPe": "V",
+              "EmSa": "2500.00",
+              "NtSa": "0",
+              "PtId": "5",
+              "SaYe": "0"
+            }
+          }
+        },
+        "AfasAgencyFiscus": {
+          "Element": {
+            "@DaBe": "2010-01-01",
+            "@AyId": "F",
+            "Fields": {
+              "ViIn": "15",
+              "ViEm": "1",
+              "ViTs": "W",
+              "ViCd": "0",
+              "ViLk": "1",
+              "ViZv": "CEF",
+              "YnZW": "1",
+              "YnWW": "1",
+              "YWAO": "1",
+              "ViOk": "0",
+              "ViVb": "0",
+              "ViCx": "1",
+              "TxF4": "0",
+              "TxF5": "0"
+            }
+          }
+        }
+      }
+    }
+  }
+}

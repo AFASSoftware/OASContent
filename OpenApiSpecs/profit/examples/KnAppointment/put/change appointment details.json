@@ -1,0 +1,12 @@
+{
+  "KnAppointment": {
+    "Element": {
+      "Fields": {
+        "ApId": "7",
+        "Body": "Updated agenda and details for the upcoming interstellar summit featuring renowned speakers and exciting demonstrations on futuristic space technologies.",
+        "IsRe": "0",
+        "Sbj": "Interstellar Summit Update"
+      }
+    }
+  }
+}

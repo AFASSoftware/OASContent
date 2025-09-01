@@ -1,0 +1,13 @@
+{
+    "FiIVY": {
+      "Element": {
+        "@Id": 1,
+        "Fields": {
+          "UnId": 1,
+          "AcNr": "0100",
+          "Year": 2024,
+          "BalcCode": "A111"
+        }
+      }
+    }
+  }

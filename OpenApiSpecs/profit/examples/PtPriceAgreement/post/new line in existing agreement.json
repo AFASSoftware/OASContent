@@ -1,0 +1,42 @@
+{
+    "PtPriceAgreement": {
+        "Element": {
+            "Fields": {
+                "@Action": "update",
+                "PAid": "000059",
+                "Ds": "Loonafspraakregel tarief wijzigen voor een specifieke plaatsing",
+                "Type": "0",
+                "PrId": "000041",
+                "FuId": "0001"
+            },
+            "Objects": [
+                {
+                    "PtPriceAgreementVersion": {
+                        "Element": {
+                            "@Action": "update",
+                            "Objects": [
+                                {
+                                    "PtPriceAgreementLine": {
+                                        "Element": [
+                                                {
+                                                "Fields": {
+                                                    "@Action": "insert",
+                                                    "@PlCo": "108",
+                                                    "PlSe": "1",
+                                                    "VaIt": "1",
+                                                    "PlCo": "108",
+                                                    "ItCd": "F004-01",
+                                                    "Ds": "Vakantie uren"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

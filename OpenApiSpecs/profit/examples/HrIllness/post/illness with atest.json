@@ -1,0 +1,30 @@
+{
+    "HrIllness": {
+      "Element": {
+        "Fields": {
+          "EmId": "annetk",
+          "DaBe": "2023-06-15T09:23:44",
+          "DMeB": "2023-06-15T11:23:48",
+          "DaEs": "2023-06-19",
+          "TPBe": 0,
+          "ViIt": "Z"
+        },
+        "Objects": [
+          {
+            "HrAbsIllnessProgress": {
+              "Element": {
+                "Fields": {
+                  "DaTi": "2023-06-15T09:23:18",
+                  "PsPc": "0",
+                  "BeAt": "2023-06-15",
+                  "EnAt": "2023-06-19",
+                  "FileName": "ExampleFileName.pdf",
+                  "FileStream": "base64string_of_attachment"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }

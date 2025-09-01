@@ -1,0 +1,36 @@
+{
+  "FbPurRequisition": {
+    "Element": {
+      "Fields": {
+        "OrDa": "2017-08-23",
+        "DaDe": "2017-09-15",
+        "War": "01",
+        "PrId": "910004",
+        "Appl": "ALLARDJ",
+        "Judg": "KEESZ",
+        "Ds": "Aanvraag productgroep via connector",
+        "VaRt": "P",
+        "Prof": "-83",
+        "WfId": "90",
+        "CoYn": "1",
+        "JuYN": "1",
+        "Unit": "2"
+      },
+      "Objects": {
+        "FbPurRequisitionLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "Art",
+              "ItCd": "1000",
+              "CrId": "50031",
+              "BiUn": "Stk",
+              "QuUn": "5",
+              "CuId": "EUR",
+              "Upri": "99"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "PtConceptPlacementContract": {
+    "Element": {
+      "Fields": {
+        "DaBe": "2018-06-19",
+        "DaEn": "2019-01-18",
+        "EmId": "C104780",
+        "PrId": "999",
+        "FuId": "2255001",
+        "ErId": "YCR",
+        "ViTo": "1M",
+        "U1F7B18D84B223EEE2461C58F4EFB7858": "Vrij veld op de kop"
+      },
+      "Objects": {
+        "AfasPtConceptPlacementContractLine": {
+          "Element": {
+            "Fields": {
+              "EmId": "C10062",
+              "ViSe": "U",
+              "ApCo": "O",
+              "HoGo": "1",
+              "VaCc": "0",
+              "UCCE5870A4A36B416ABE4C596F1B8E095": "Vrij veld op de regel"
+            }
+          }
+        }
+      }
+    }
+  }
+}

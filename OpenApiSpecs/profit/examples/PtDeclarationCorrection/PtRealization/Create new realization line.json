@@ -1,0 +1,24 @@
+{
+  "PtDeclarationCorrection": {
+    "Element": {
+      "Fields": {
+        "DcCo": "000000002181.02"
+      },
+      "Objects": [
+        {
+          "PtRealization": {
+            "Element": {
+              "Fields": {
+                "DaTi": "2023-02-27",
+                "VaIt": "wst",
+                "ItCd": "F001-01",
+                "QuUn": "7",
+                "Ds": "This creates a new line on an exsisting version"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

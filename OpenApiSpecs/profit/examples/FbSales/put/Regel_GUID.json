@@ -1,0 +1,28 @@
+{
+  "FbSales": {
+    "Element": {
+      "Fields": {
+        "OrNu": "60000176"
+      },
+      "Objects": {
+        "FbSalesLines": {
+          "Element": [
+            {
+              "Fields": {
+                "Ds": "Aangepaste omschrijving",
+                "Upri": "200",
+                "GuLi": "{07A33EB3-2216-404C-B7E0-54E330FA9BF7}"
+              }
+            },
+            {
+              "Fields": {
+                "QuUn": "10",
+                "GuLi": "{E4D388F6-8000-45AB-96F1-BE24E708D430}"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

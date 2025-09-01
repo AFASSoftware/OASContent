@@ -1,0 +1,16 @@
+{
+  "HrCreateApplicant": {
+    "Element": {
+      "Fields": {
+        "VcSn": "2",
+        "FiNm": "Jan",
+        "LaNm": "Jansen",
+        "ViGe": "O",
+        "EmAd": "john.doe@example.com",
+        "EmA2": "john.doe@example.com",
+        "MbN2": "334341800",
+        "Mo": "Voorbeeld van een motivatie"
+      }
+    }
+  }
+}

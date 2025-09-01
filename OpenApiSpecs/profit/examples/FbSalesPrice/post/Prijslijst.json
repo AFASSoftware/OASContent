@@ -1,0 +1,20 @@
+{
+  "FbSalesPrice": {
+    "Element": {
+      "Fields": {
+        "VaIt": "2",
+        "ItCd": "1000",
+        "BiUn": "STK",
+        "PrLi": "ALG",
+        "Pric": "150",
+        "CuId": "EUR",
+        "DaBg": "2013-03-01",
+        "DaEn": "2014-31-12",
+        "SpPr": "0",
+        "VaAD": "0",
+        "DsLi": "0",
+        "Memo": "Ingeschoten via JSON!"
+      }
+    }
+  }
+}

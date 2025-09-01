@@ -1,0 +1,56 @@
+{
+  "FbDeliveryNote": {
+    "Element": {
+      "Fields": {
+        "DbId": "10072",
+        "RfCs": "REF: Artikeldimensie"
+      },
+      "Objects": {
+        "FbDeliveryNoteLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "9900",
+                "BiUn": "stk",
+                "QuUn": "1",
+                "Upri": "15",
+                "StL1": "L"
+              },
+              "Objects": {
+                "FbOrderLocationLines": {
+                  "Element": {
+                    "Fields": {
+                      "Loc": "A1",
+                      "Qu": "1"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "9900",
+                "BiUn": "stk",
+                "QuUn": "1",
+                "Upri": "15",
+                "StL1": "M"
+              },
+              "Objects": {
+                "FbOrderLocationLines": {
+                  "Element": {
+                    "Fields": {
+                      "Loc": "A1",
+                      "Qu": "1"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

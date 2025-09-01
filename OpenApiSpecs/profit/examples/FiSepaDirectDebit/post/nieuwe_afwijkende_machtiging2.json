@@ -1,0 +1,17 @@
+{
+  "FiSepaDirectDebit": {
+    "Element": {
+      "Fields": {
+        "ViSe": "6",
+        "Ds": "10011",
+        "VaDt": "S",
+        "PaId": "afwijkend kermerk2",
+        "AuDa": "2015-12-01",
+        "UnId": "1",
+        "VaDc": "AUTO",
+        "Iban": "NL97CHAS0849835607",
+        "Conv": "0"
+      }
+    }
+  }
+}

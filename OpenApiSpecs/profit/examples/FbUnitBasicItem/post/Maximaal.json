@@ -1,0 +1,20 @@
+{
+  "FbUnitBasicItem": {
+    "Element": {
+      "Fields": {
+        "VaIt": "2",
+        "ItCd": "1000",
+        "BiUn": "doz",
+        "Qu": "12",
+        "ShSt": "0",
+        "MiQu": "1",
+        "ViRo": "00",
+        "VaBc": "0",
+        "BaCo": "bar-doz-1000",
+        "MiPu": "1",
+        "QuSa": "1",
+        "QuPu": "1"
+      }
+    }
+  }
+}

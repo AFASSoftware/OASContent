@@ -1,0 +1,57 @@
+{
+  "FbGoodsReceived": {
+    "Element": {
+      "Fields": {
+        "CrId": "60009",
+        "RfCs": "Bestaande order",
+        "War": "01"
+      },
+      "Objects": {
+        "FbGoodsReceivedLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "4101",
+                "BiUn": "stk",
+                "QuUn": 7,
+                "SoOr": "00118",
+                "SoGu": "{8FB54A0A-8D26-4A93-8F4E-981AD360BB9C}"
+              },
+              "Objects": {
+                "FbOrderSerialLines": {
+                  "Element": [
+                    {
+                      "Fields": {
+                        "SeNu": "4101-00118-01",
+                        "BiUn": "STK",
+                        "QuUn": 1
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "SeNu": "4101-00118-02",
+                        "BiUn": "STK",
+                        "QuUn": 1
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "1200",
+                "BiUn": "stk",
+                "QuUn": 7,
+                "SoOr": "00118",
+                "SoGu": "{FC5B9FC5-B37B-4E19-A25A-F16E4AC433D7}"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

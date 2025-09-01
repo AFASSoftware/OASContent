@@ -1,0 +1,21 @@
+{
+  "HrDvb": {
+    "Element": {
+      "Fields": {
+        "EmId": "00252",
+        "DvSn": "1",
+        "AgEx": "1",
+        "ViIn": "15",
+        "ViEm": "1",
+        "ViTs": "W",
+        "ViCd": "0",
+        "ViZv": "A",
+        "YnZW": "1",
+        "YWAO": "1",
+        "TxGy": "1",
+        "TrI": "1",
+        "WWHe": "1"
+      }
+    }
+  }
+}
