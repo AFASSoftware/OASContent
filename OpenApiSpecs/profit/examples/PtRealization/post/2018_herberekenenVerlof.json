@@ -1,0 +1,19 @@
+{
+  "PtRealization": {
+    "Element": {
+      "Fields": {
+        "DaTi": "2023-06-04",
+        "VaIt": "1",
+        "ItCd": "VV",
+        "Qu": "1",
+        "QuSa": "1",
+        "EmId": "AnnetK",
+        "PrId": "900001",
+        "StId": "V",
+        "AmSe": "150",
+        "Ch": true,
+        "Ds": "Leave"
+      }
+    }
+  }
+}

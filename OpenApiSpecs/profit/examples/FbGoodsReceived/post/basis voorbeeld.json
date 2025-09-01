@@ -1,0 +1,34 @@
+{
+  "FbGoodsReceived": {
+    "Element": {
+      "Fields": {
+        "OrDa": "2023-05-06",
+        "CrId": "60005",
+        "DaDe": "2023-05-20",
+        "DaPr": "2023-05-20",
+        "CuId": "EUR",
+        "RfCs": "goederen ontvangst",
+        "VaDu": "1",
+        "PaCd": "30",
+        "PaTp": "00",
+        "Unit": "1",
+        "Coll": "1",
+        "War": "01"
+      },
+      "Objects": {
+        "FbGoodsReceivedLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "2",
+              "ItCd": "1300",
+              "Ds": "Geluidskaar Asus Xonar",
+              "BiUn": "Stk",
+              "QuUn": "10",
+              "Qu": "10"
+            }
+          }
+        }
+      }
+    }
+  }
+}

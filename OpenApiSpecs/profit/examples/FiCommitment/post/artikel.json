@@ -1,0 +1,35 @@
+{
+  "FiCommitment": {
+    "Element": {
+      "@UnId": "1",
+      "@SeNo": "",
+      "Fields": {
+        "AcNr": "8070",
+        "VaAs": "1",
+        "Yr": "2015",
+        "PeNr": "3",
+        "Ds": "Verplichting op artikel",
+        "CrId": "50003",
+        "Ref": "C001-2010000001",
+        "Set": "0",
+        "PtId": "1",
+        "PrId": "600000",
+        "PrSt": "01",
+        "VaIt": "2",
+        "ItCd": "1000",
+        "DiC1": "NOORD",
+        "DiC2": "ICT",
+        "DiC3": "ZO",
+        "DiC4": "RAND",
+        "DiC5": "SER",
+        "Amt": "500",
+        "Qua": "5",
+        "Di01": "1",
+        "Judg": "KEESZ",
+        "JuYN": "1",
+        "Cont": "C001-2010000001",
+        "CoLn": "1"
+      }
+    }
+  }
+}

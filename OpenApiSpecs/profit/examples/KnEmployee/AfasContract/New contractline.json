@@ -1,0 +1,30 @@
+{
+    "AfasEmployee": {
+        "Element": {
+            "@Action": "update",
+            "@EmId": "000002009",
+            "Objects": [
+                {
+                    "AfasContract": {
+                        "Element": {
+                            "@Action": "insert",
+                            "@DaBe": "2022-04-01",
+                            "Fields": {
+                                "ClId": "basis",
+                                "WcId": "basis",
+                                "ApCo": "O",
+                                "DvSn": 1,
+                                "CmId": "01",
+                                "EmMt": "1",
+                                "ViEt": "V",
+                                "ViKe": "0",
+                                "WrCt": true,
+                                "EnS2": 1
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

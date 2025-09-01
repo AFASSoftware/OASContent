@@ -1,0 +1,15 @@
+{
+    "KnUser": {
+      "Element": {
+        "@UsId": "12345.654321",
+        "Fields": {
+          "MtCd": "1",
+          "BcCo": "654321",
+          "Nm": "John Doe",
+          "Awin": false,
+          "InSi": true,
+          "Upn": "John@Doe.exampleupn.com"
+        }
+      }
+    }
+  }

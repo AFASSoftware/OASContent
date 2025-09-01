@@ -1,0 +1,13 @@
+{
+  "KnEmployeeCompetence": {
+    "Element": {
+      "@EcId": 131,
+      "Fields": {
+        "EmId": "floora",
+        "CpCd": "AANPA",
+        "DaBe": "2023-11-01",
+        "DaEn": "2023-11-02"
+      }
+    }
+  }
+}

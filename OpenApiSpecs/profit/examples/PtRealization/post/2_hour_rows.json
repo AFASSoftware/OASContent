@@ -1,0 +1,34 @@
+{
+  "PtRealization": {
+    "Element": [
+      {
+        "Fields": {
+          "DaTi": "2023-06-29",
+          "VaIt": "1",
+          "ItCd": "300",
+          "Qu": "4.00",
+          "EmId": "FloorA",
+          "PrId": "910004",
+          "StId": "1",
+          "Ds": "Werken",
+          "StTi": "10:00:00",
+          "EnTi": "14:00:00"
+        }
+      },
+      {
+        "Fields": {
+          "DaTi": "2023-06-29",
+          "VaIt": "1",
+          "ItCd": "300",
+          "Qu": "1.00",
+          "EmId": "FloorA",
+          "PrId": "910004",
+          "StId": "1",
+          "Ds": "Reizen",
+          "StTi": "09:00:00",
+          "EnTi": "10:00:00"
+        }
+      }
+    ]
+  }
+}

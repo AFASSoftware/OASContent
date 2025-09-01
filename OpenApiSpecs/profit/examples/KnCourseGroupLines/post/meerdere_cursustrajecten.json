@@ -1,0 +1,20 @@
+{
+  "KnCourseGroupLines": {
+    "Element": [
+      {
+        "Fields": {
+          "CdId": "246",
+          "StDa": "2017-04-10",
+          "CgId": "test"
+        }
+      },
+      {
+        "Fields": {
+          "CdId": "1005",
+          "StDa": "2017-04-10",
+          "CgId": "test"
+        }
+      }
+    ]
+  }
+}

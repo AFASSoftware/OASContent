@@ -1,0 +1,21 @@
+{
+    "KnContact": {
+        "Element": {
+            "Fields": {
+                "BcCoOga": "1545170",
+                "BcCoPer": "1000169"
+            },
+            "Objects": [
+                {
+                    "KnContactAutRole": {
+                        "Element": {
+                            "Fields": {
+                                "AutRoleDs": "Beheerder klantportal"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

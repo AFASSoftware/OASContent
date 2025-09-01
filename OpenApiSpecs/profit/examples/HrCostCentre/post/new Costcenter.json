@@ -1,0 +1,12 @@
+{
+  "HrCostCarrier": {
+    "Element": {
+      "Fields": {
+        "CmId": "01",
+        "CcId": "Administratie",
+        "CcDs": "Administratieve ondersteuning en facturatie",
+        "Bl": false 
+      }
+    }
+  }
+}

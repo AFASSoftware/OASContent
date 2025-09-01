@@ -1,0 +1,16 @@
+{
+  "FiReservation": {
+    "Element": {
+      "@UnId": "1",
+      "@SeNo": "99",
+      "Fields": {
+        "AcNr": "4095",
+        "Yr": "2015",
+        "PeNr": "1",
+        "Ds": "Reservering SeNo meegeven",
+        "Ref": "REF394875",
+        "Amt": "999999999"
+      }
+    }
+  }
+}

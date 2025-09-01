@@ -1,0 +1,32 @@
+{
+  "KnOrganisation": {
+    "Element": {
+      "Fields": {
+        "MatchOga": "0",
+        "BcCo": "1000372"
+      },
+      "Objects": {
+        "KnContact": {
+          "Element": {
+            "Fields": {
+              "PadAdr": "1",
+              "ViKc": "PRS",
+              "FuDs": "Directeur",
+              "MbNr": "334341800"
+            },
+            "Objects": {
+              "KnPerson": {
+                "Element": {
+                  "Fields": {
+                    "MatchPer": "0",
+                    "BcCo": "1000368"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

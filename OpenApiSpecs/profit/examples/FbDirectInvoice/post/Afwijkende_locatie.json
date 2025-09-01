@@ -1,0 +1,61 @@
+{
+  "FbDirectInvoice": {
+    "Element": {
+      "Fields": {
+        "OrDa": "2013-06-01",
+        "DbId": "10178",
+        "RfCs": "afwijkende locatie",
+        "War": "01"
+      },
+      "Objects": {
+        "FbDirectInvoiceLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "2",
+              "ItCd": "1000",
+              "BiUn": "stk",
+              "QuUn": "25",
+              "Upri": "25"
+            },
+            "Objects": {
+              "FbOrderLocationLines": {
+                "Element": [
+                  {
+                    "Fields": {
+                      "Loc": "A1",
+                      "Qu": "5"
+                    }
+                  },
+                  {
+                    "Fields": {
+                      "Loc": "A2",
+                      "Qu": "5"
+                    }
+                  },
+                  {
+                    "Fields": {
+                      "Loc": "B1",
+                      "Qu": "5"
+                    }
+                  },
+                  {
+                    "Fields": {
+                      "Loc": "B2",
+                      "Qu": "5"
+                    }
+                  },
+                  {
+                    "Fields": {
+                      "Loc": "EXP",
+                      "Qu": "5"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

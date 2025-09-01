@@ -1,0 +1,19 @@
+{
+  "AfasEmployee": {
+    "Element": {
+      "@EmId": "4125232",
+      "Objects": {
+        "AfasTimeTable": {
+          "Element": {
+            "@DaBg": "2025-03-01",
+            "Fields": {
+              "SeNo": "51647801",
+              "Spec": "0",
+              "FtSv": "0"
+            }
+          }
+        }
+      }
+    }
+  }
+}

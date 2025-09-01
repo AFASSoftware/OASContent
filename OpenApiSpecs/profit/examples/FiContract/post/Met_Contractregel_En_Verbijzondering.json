@@ -1,0 +1,37 @@
+{
+  "FiContract": {
+    "Element": {
+      "Fields": {
+        "PoKi": "Contract Insert Met Contractregel En Verbijzondering",
+        "PoNo": "REF:348961",
+        "CmId": "50008",
+        "CuId": "EUR",
+        "Rate": "1",
+        "UnId": "1",
+        "VaCt": "02"
+      },
+      "Objects": {
+        "FiContractline": {
+          "Element": {
+            "Fields": {
+              "DaBe": "2020-01-01",
+              "DaEn": "2020-12-31",
+              "AmPF": "12000.55",
+              "VaCm": "0",
+              "AcNr": "4250",
+              "DiC1": "ZUID",
+              "DiC2": "SAMA",
+              "DiC3": "DIE",
+              "DiC4": "ZUID",
+              "DiC5": "MAAT",
+              "JuYN": [
+                "1",
+                "1"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

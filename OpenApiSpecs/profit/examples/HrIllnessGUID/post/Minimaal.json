@@ -1,0 +1,29 @@
+{
+  "HrIllnessGUID": {
+    "Element": {
+      "@GUID": "{9810D946-CA38-49DB-9ADA-000000000001}",
+      "Fields": {
+        "EmId": "SimoneA",
+        "DaBe": "2013-04-01T00:00:00",
+        "DMeB": "2013-04-01T00:00:00",
+        "DaEs": "2013-04-02",
+        "TPBe": "0",
+        "ViIt": "Z",
+        "EnSe": "1"
+      },
+      "Objects": {
+        "HrAbsIllnessProgress": {
+          "Element": {
+            "@GUID": "{9810D946-CA38-49DB-9ADA-000000000001}",
+            "Fields": {
+              "DaTi": "2013-04-01T00:00:",
+              "PsPc": "0",
+              "PsHr": "0",
+              "PsSp": "0"
+            }
+          }
+        }
+      }
+    }
+  }
+}

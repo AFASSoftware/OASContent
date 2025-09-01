@@ -1,0 +1,19 @@
+{
+  "PtItemset": {
+    "Element": {
+      "Fields": {
+        "IsId": "7",
+        "Bl": "0"
+      },
+      "Objects": {
+        "PtItemsetScaleWage": {
+          "Element": {
+            "Fields": {
+              "TaId": "510"
+            }
+          }
+        }
+      }
+    }
+  }
+}

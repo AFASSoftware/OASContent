@@ -1,0 +1,26 @@
+{
+  "FbDirectInvoice": {
+    "Element": {
+      "Fields": {
+        "OrDa": "2010-07-01",
+        "DbId": "10150",
+        "RfCs": "Referentienummer",
+        "War": "01"
+      },
+      "Objects": {
+        "FbDirectInvoiceLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "2",
+              "ItCd": "1000",
+              "Ds": "Kleine xml",
+              "BiUn": "STK",
+              "QuUn": "3",
+              "Upri": "9.95"
+            }
+          }
+        }
+      }
+    }
+  }
+}

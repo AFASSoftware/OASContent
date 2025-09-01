@@ -1,0 +1,153 @@
+{
+  "AfasEmployee": {
+      "Element": {
+          "@Action": "insert",
+          "@EmId": "ExampleeeId_01",
+          "Fields": {
+              "ViSe": "I",
+              "Bl": "0"
+          },
+          "Objects": {
+              "KnPerson": {
+                  "Element": {
+                      "Fields": {
+                          "PadAdr": "1",
+                          "AutoNum": "1",
+                          "MatchPer": "0",
+                          "BcCo": "012345667",
+                          "SeNm": "VAN DER BERG",
+                          "FiNm": "Jan",
+                          "In": "J.",
+                          "LaNm": "van der Berg",
+                          "SpNm": "1",
+                          "NmBi": "van der Berg",
+                          "ViUs": "0",
+                          "ViGe": "M",
+                          "DaBi": "1985-07-15",
+                          "TtId": "ALG"
+                      },
+                      "Objects": {
+                          "KnBasicAddressAdr": {
+                              "Element": {
+                                  "Fields": {
+                                      "PbAd": "0",
+                                      "Ad": "Kerkstraat",
+                                      "HmNr": "10",
+                                      "ZpCd": "1234 AB",
+                                      "CoId": "NL",
+                                      "Rs": "Amsterdam",
+                                      "BeginDate": "2010-01-01"
+                                  }
+                              }
+                          },
+                          "KnBasicAddressPad": {
+                              "Element": {
+                                  "Fields": {
+                                      "PbAd": "0",
+                                      "Ad": "Kerkstraat",
+                                      "HmNr": "10",
+                                      "ZpCd": "1234 AB",
+                                      "CoId": "NL",
+                                      "Rs": "Amsterdam",
+                                      "BeginDate": "2022-03-01"
+                                  }
+                              }
+                          }
+                      }
+                  }
+              },
+              "AfasContract": {
+                  "Element": {
+                      "@Action": "insert",
+                      "@DaBe": "2022-03-01",
+                      "Fields": {
+                          "DvSn": 2,
+                          "ClId": "basis",
+                          "WcId": "basis",
+                          "ApCo": "O",
+                          "CmId": "01",
+                          "EmMt": "1",
+                          "ViEt": "V",
+                          "ViKe": "0",
+                          "WrCt": true,
+                          "EnS2": 1
+                      }
+                  }
+              },
+              "AfasOrgunitFunction": {
+                  "Element": {
+                      "@Action": "insert",
+                      "@DaBe": "2022-03-01",
+                      "Fields": {
+                          "DvSn": 2,
+                          "DpId": "SALES",
+                          "FuId": "SLSMGR",
+                          "CcId": "101",
+                          "CrId": "01"
+                      }
+                  }
+              },
+              "AfasTimeTable": {
+                  "Element": {
+                      "@Action": "insert",
+                      "@DaBg": "2022-03-01",
+                      "Fields": {
+                          "DvSn": 2,
+                          "EtTy": "5",
+                          "DyWk": "5",
+                          "HrWk": "40"
+                      }
+                  }
+              },
+              "AfasSalary": {
+                  "Element": {
+                      "@Action": "insert",
+                      "@DaBe": "2022-03-01",
+                      "Fields": {
+                          "DvSn": 2,
+                          "SaPe": "M",
+                          "EmSa": "55",
+                          "PtId": 5,
+                          "SaYe": "60000",
+                          "TtPy": false
+                      }
+                  }
+              },
+              "AfasBankInfo": {
+                  "Element": {
+                      "@Action": "insert",
+                      "@AcId": "NL40INGB0755026802",
+                      "@NoBk": false,
+                      "Fields": {
+                          "SaAc": true,
+                          "IbCk": true,
+                          "Iban": "NL09INGB0751418196"
+                      }
+                  }
+              },
+              "AfasAgencyFiscus": {
+                  "Element": {
+                      "@Action": "insert",
+                      "@DaBe": "2022-03-01",
+                      "@AyId": "F",
+                      "Fields": {
+                          "ViIn": "15",
+                          "ViEm": "1",
+                          "ViTs": "W",
+                          "ViCd": "0",
+                          "ViLk": "1",
+                          "ViZv": "K",
+                          "YnZW": "1",
+                          "YnWW": "1",
+                          "YWAO": "1",
+                          "ViVb": "0",
+                          "ViCx": "0",
+                          "TxGy": "1",
+                          "TxGn": "1"
+                      }
+                  }
+              }
+          }
+      }
+  }
+}

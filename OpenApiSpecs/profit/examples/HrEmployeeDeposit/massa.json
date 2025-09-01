@@ -1,0 +1,146 @@
+{
+  "HrEmployeeDeposit": {
+    "Element": [
+      {
+        "Fields": {
+          "EmId": "C82836",
+          "Desc": "Voorschot op salaris massa",
+          "Amnt": "200.50",
+          "DeRe": "01",
+          "DePa": "01",
+          "Cmnt": "Volledig inhouden in huidige periode",
+          "Clim": "1",
+          "Date": "2018-01-26",
+          "Year": "2018",
+          "PeId": "123456"
+        }
+      },
+      {
+        "Fields": {
+          "EmId": "C83329",
+          "Desc": "Voorschot op salaris massa",
+          "Amnt": "300.50",
+          "DeRe": "01",
+          "DePa": "01",
+          "Cmnt": "Volledig inhouden in huidige periode",
+          "Clim": "1",
+          "Date": "2018-01-26",
+          "Year": "2018",
+          "PeId": "123456"
+        }
+      },
+      {
+        "Fields": {
+          "EmId": "C82836",
+          "Desc": "Voorschot op salaris massa",
+          "Amnt": "400.50",
+          "DeRe": "01",
+          "DePa": "01",
+          "Cmnt": "Volledig inhouden in huidige periode",
+          "Clim": "1",
+          "Date": "2018-01-26",
+          "Year": "2018",
+          "PeId": "123456"
+        }
+      },
+      {
+        "Fields": {
+          "EmId": "C83329",
+          "Desc": "Voorschot op salaris massa",
+          "Amnt": "400.50",
+          "DeRe": "01",
+          "DePa": "01",
+          "Cmnt": "Volledig inhouden in huidige periode",
+          "Clim": "1",
+          "Date": "2018-01-26",
+          "Year": "2018",
+          "PeId": "123456"
+        }
+      },
+      {
+        "Fields": {
+          "EmId": "C82836",
+          "Desc": "Voorschot op salaris massa",
+          "Amnt": "500.50",
+          "DeRe": "01",
+          "DePa": "01",
+          "Cmnt": "Volledig inhouden in huidige periode",
+          "Clim": "1",
+          "Date": "2018-01-26",
+          "Year": "2018",
+          "PeId": "123456"
+        }
+      },
+      {
+        "Fields": {
+          "EmId": "C83329",
+          "Desc": "Voorschot op salaris massa",
+          "Amnt": "500.50",
+          "DeRe": "01",
+          "DePa": "01",
+          "Cmnt": "Volledig inhouden in huidige periode",
+          "Clim": "1",
+          "Date": "2018-01-26",
+          "Year": "2018",
+          "PeId": "123456"
+        }
+      },
+      {
+        "Fields": {
+          "EmId": "C82836",
+          "Desc": "Voorschot op salaris massa",
+          "Amnt": "600.50",
+          "DeRe": "01",
+          "DePa": "01",
+          "Cmnt": "Volledig inhouden in huidige periode",
+          "Clim": "1",
+          "Date": "2018-01-26",
+          "Year": "2018",
+          "PeId": "123456"
+        }
+      },
+      {
+        "Fields": {
+          "EmId": "C83329",
+          "Desc": "Voorschot op salaris massa",
+          "Amnt": "600.50",
+          "DeRe": "01",
+          "DePa": "01",
+          "Cmnt": "Volledig inhouden in huidige periode",
+          "Clim": "1",
+          "Date": "2018-01-26",
+          "Year": "2018",
+          "PeId": "123456"
+        }
+      },
+      {
+        "Fields": {
+          "EmId": "C82836",
+          "Desc": "Voorschot op salaris massa",
+          "Amnt": "700.50",
+          "DeRe": "01",
+          "DePa": "01",
+          "Cmnt": "Volledig inhouden in huidige periode",
+          "Clim": "1",
+          "Date": "2018-01-26",
+          "Year": "2018",
+          "PeId": "123456"
+        }
+      },
+      {
+        "Fields": {
+          "EmId": "C83329",
+          "Desc": "Voorschot op salaris massa",
+          "Amnt": "700.50",
+          "DeRe": "01",
+          "DePa": "01",
+          "Cmnt": "Volledig inhouden in huidige periode",
+          "Clim": "1",
+          "Date": "2018-01-26",
+          "Year": "2018",
+          "PeId": "123456"
+        }
+      }
+    ]
+  }
+}

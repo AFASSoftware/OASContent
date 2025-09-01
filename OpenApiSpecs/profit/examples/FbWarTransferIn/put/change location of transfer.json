@@ -1,0 +1,30 @@
+{
+  "FbWarTransferIn": {
+    "Element": {
+      "Fields": {
+        "OrNu": "00001"
+      },
+      "Objects": {
+        "FbWarTransferLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "2",
+              "ItCd": "1000",
+              "GuLi": "{02CC7B5F-A1A6-4DD1-96EE-9859112B149D}"
+            },
+            "Objects": {
+              "FbOrderLocationLines": {
+                "Element": {
+                  "Fields": {
+                    "Loc": "A1",
+                    "Qu": "1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

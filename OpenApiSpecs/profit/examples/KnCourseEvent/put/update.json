@@ -1,0 +1,16 @@
+{
+  "KnCourseEvent": {
+    "Element": {
+      "Fields": {
+        "Id": "18",
+        "ItCd": "104",
+        "AuId": "1",
+        "CrDs": "Cursusevenement nieuw",
+        "BcId": "1000606",
+        "CdId": "804",
+        "LoId": "000001",
+        "CrRm": "Dit evenement is gewijzigd met de Connector, YES!!"
+      }
+    }
+  }
+}

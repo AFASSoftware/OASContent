@@ -1,0 +1,13 @@
+{
+  "PtProjectRaiseRules": {
+    "Element": {
+      "Fields": {
+        "PrId": "300892",
+        "BiId": "T4",
+        "DaBe": "2021-10-12",
+        "DaEn": "2021-12-31",
+        "Pc": "100"
+      }
+    }
+  }
+}

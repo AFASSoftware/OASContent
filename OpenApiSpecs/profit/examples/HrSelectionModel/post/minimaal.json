@@ -1,0 +1,26 @@
+{
+  "HrSelectionModel": {
+    "Element": {
+      "@EmId": "4125562",
+      "Fields": {
+        "DaBe": "2021-01-01",
+        "DaEn": "2023-12-31",
+        "SmId": "01",
+        "Amnt": "1000",
+        "PoTa": "1"
+      },
+      "Objects": {
+        "HrSelectionModelSource": {
+          "Element": {
+            "Fields": {
+              "DaBe": "2021-01-01",
+              "EmsFsSa": "1",
+              "EmsInSa": "1000",
+              "EmsPeSa": "100"
+            }
+          }
+        }
+      }
+    }
+  }
+}

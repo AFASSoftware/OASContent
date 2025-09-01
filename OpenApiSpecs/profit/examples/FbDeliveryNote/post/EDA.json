@@ -1,0 +1,50 @@
+{
+  "FbDeliveryNote": {
+    "Element": {
+      "Fields": {
+        "OrNu": "13651",
+        "OrDa": "2010-05-06",
+        "DbId": "10140",
+        "DaDe": "2010-05-20",
+        "DaPr": "2010-05-20",
+        "CuId": "EUR",
+        "RfCs": "pakbon voor aflevering",
+        "VaDu": "1",
+        "PaCd": "14",
+        "PaTp": "00",
+        "Unit": "1",
+        "Coll": "1",
+        "War": "01",
+        "InPc": "3",
+        "RdDe": "1"
+      },
+      "Objects": {
+        "FbDeliveryNoteLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "2",
+              "ItCd": "1000",
+              "Ds": "Connector test",
+              "BiUn": "STK",
+              "QuUn": "2",
+              "Qu": "2",
+              "Upri": "20"
+            },
+            "Objects": {
+              "FbOrderBatchLines": {
+                "Element": {
+                  "Fields": ""
+                }
+              },
+              "FbOrderSerialLines": {
+                "Element": {
+                  "Fields": ""
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

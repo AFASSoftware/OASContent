@@ -1,0 +1,47 @@
+{
+  "KnContact": {
+    "Element": {
+      "Fields": {
+        "BcCoOga": "1000010",
+        "BcCoPer": "1000130",
+        "PadAdr": "1",
+        "FuDs": "Directeur",
+        "Corr": "0",
+        "TeNr": "334341800",
+        "MbNr": "334341800",
+        "EmAd": "john.doe@example.com",
+        "HoPa": "https://www.example.com"
+      },
+      "Objects": {
+        "KnBasicAddressAdr": {
+          "Element": {
+            "Fields": {
+              "PbAd": "0",
+              "Ad": "Nismostraat",
+              "HmNr": "105",
+              "ZpCd": "3833LC",
+              "CoId": "NL",
+              "Rs": "Leusden",
+              "BeginDate": "2009-02-02",
+              "ResZip": "0"
+            }
+          }
+        },
+        "KnBasicAddressPad": {
+          "Element": {
+            "Fields": {
+              "PbAd": "0",
+              "Ad": "Nismostraat",
+              "HmNr": "105",
+              "ZpCd": "3833LC",
+              "CoId": "NL",
+              "Rs": "Leusden",
+              "BeginDate": "2009-02-02",
+              "ResZip": "0"
+            }
+          }
+        }
+      }
+    }
+  }
+}

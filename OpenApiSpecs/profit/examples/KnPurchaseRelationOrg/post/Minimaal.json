@@ -1,0 +1,37 @@
+{
+  "KnPurchaseRelationOrg": {
+    "Element": {
+      "Fields": {
+        "CuId": "EUR",
+        "InPv": "A"
+      },
+      "Objects": {
+        "KnOrganisation": {
+          "Element": {
+            "Fields": {
+              "PadAdr": true,
+              "AutoNum": true,
+              "MatchOga": "6",
+              "Nm": "Jansen"
+            },
+            "Objects": {
+              "KnBasicAddressAdr": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": false,
+                    "Ad": "Storkstraat",
+                    "HmNr": "105",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "ResZip": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

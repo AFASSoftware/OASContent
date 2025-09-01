@@ -1,0 +1,24 @@
+{
+  "KnPurchaseRelationOrg": {
+    "Element": {
+      "@CrId": "50028",
+      "Fields": {
+        "ToAc": "0100",
+        "PfId": "*****",
+        "WaOr": true,
+        "WaTx": "!!! WAARSCHUWING !!!",
+        "Rm": "gewijzigde opmerking"
+      },
+      "Objects": {
+        "KnOrganisation": {
+          "Element": {
+            "Fields": {
+              "MatchOga": "0",
+              "BcCo": "1000726"
+            }
+          }
+        }
+      }
+    }
+  }
+}

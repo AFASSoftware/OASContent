@@ -1,0 +1,19 @@
+{
+    "AfasEmployee": {
+        "Element": {
+            "@Action": "update",
+            "@EmId": "000334",
+            "Objects": [
+                {
+                    "AfasAgencyPensioenaangifte": {
+                        "Element": {
+                            "@Action": "insert",
+                            "@DaBe": "2023-06-01",
+                            "@AyId": "BPFL"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

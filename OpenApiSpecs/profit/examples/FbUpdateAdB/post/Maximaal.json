@@ -1,0 +1,22 @@
+{
+  "FbUpdateAdB": {
+    "Element": {
+      "Fields": {
+        "VaIt": "2",
+        "ItCd": "9901",
+        "StL1": "S",
+        "StL2": "BLAUW",
+        "BlSa": "0",
+        "BlPu": "0",
+        "VaBc": "0",
+        "BaCo": "9901-s-blauw",
+        "DiSe": "1",
+        "VaCr": "N",
+        "StAd": "1",
+        "StMi": "5",
+        "StMa": "10",
+        "Loc": "A3"
+      }
+    }
+  }
+}

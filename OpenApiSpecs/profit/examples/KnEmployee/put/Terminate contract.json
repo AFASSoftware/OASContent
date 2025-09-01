@@ -1,0 +1,26 @@
+{
+  "AfasEmployee": {
+      "Element": {
+          "@EmId": "200010",
+          "Fields": {
+              "ViSe": "U",
+              "Bl": false
+          },
+          "Objects": [
+              {
+                  "AfasContract": {
+                      "Element": {
+                          "@action": "update",
+                          "@DaBe": "2021-09-01",
+                          "Fields": {
+                              "DaEn": "2023-09-16",
+                              "DaEe": "2023-09-16",
+                              "DvbViAo": "99"
+                          }
+                      }
+                  }
+              }
+          ]
+      }
+  }
+}

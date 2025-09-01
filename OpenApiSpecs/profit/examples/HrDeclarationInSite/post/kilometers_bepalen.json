@@ -1,0 +1,18 @@
+{
+  "HrDeclarationInSite": {
+    "Element": {
+      "Fields": {
+        "EmId": "MuhammedA",
+        "DaTi": "2015-03-03",
+        "BiId": "K02",
+        "Year": "2015",
+        "PeId": "123456",
+        "KmFr": "Inspiratielaan 1, 3833 AV Leusden",
+        "KmTo": "Stadionweg 1, 1812 AZ Alkmaar",
+        "KmCa": "86",
+        "KmRt": "true",
+        "Qu": "172"
+      }
+    }
+  }
+}

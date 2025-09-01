@@ -1,0 +1,53 @@
+{
+  "FbPurch": {
+    "Element": {
+      "Fields": {
+        "CrId": "50014",
+        "War": "01",
+        "RfCs": "1 artikeldimensie"
+      },
+      "Objects": {
+        "FbPurchLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "9900",
+                "BiUn": "stk",
+                "QuUn": "10",
+                "Upri": "15.65",
+                "VaAd": "1",
+                "ARDc": "6.50",
+                "StL1": "S"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "9900",
+                "BiUn": "stk",
+                "QuUn": "10",
+                "Upri": "16.65",
+                "VaAd": "1",
+                "ARDc": "16.50",
+                "StL1": "M"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "9900",
+                "BiUn": "stk",
+                "QuUn": "10",
+                "Upri": "17.65",
+                "VaAd": "1",
+                "ARDc": "26.50",
+                "StL1": "L"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

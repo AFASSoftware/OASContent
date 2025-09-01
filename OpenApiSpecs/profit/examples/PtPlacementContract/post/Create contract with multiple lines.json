@@ -1,0 +1,42 @@
+{
+  "PtPlacementContract": {
+    "Element": {
+      "@PcCo": "",
+      "Fields": {
+        "PcCo": "21",
+        "DaBe": "2018-10-11",
+        "DaEn": "2019-03-30",
+        "EmId": "C103371",
+        "PrId": "998",
+        "FuId": "1569001",
+        "ErId": "YCR",
+        "ViTo": "1M",
+        "ViFz": "AZU"
+      },
+      "Objects": {
+        "AfasPtPlacementContractLine": {
+          "Element": [
+            {
+              "Fields": {
+                "DaBe": "2018-10-12",
+                "ApCo": "O",
+                "EmId": "C10062",
+                "HoGo": "1",
+                "VaCc": "0"
+              }
+            },
+            {
+              "Fields": {
+                "DaBe": "2018-10-13",
+                "ApCo": "O",
+                "EmId": "C10062",
+                "HoGo": "1",
+                "VaCc": "0"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

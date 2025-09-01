@@ -1,0 +1,11 @@
+{
+    "KnProfile": {
+      "Element": {
+        "@PrId": 123456,
+        "Fields": {
+          "PrEm": "john.Doe@afasexample.com",
+          "PrPw": "VerySecret!@#123"
+        }
+      }
+    }
+  }

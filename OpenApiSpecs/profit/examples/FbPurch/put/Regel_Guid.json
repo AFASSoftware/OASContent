@@ -1,0 +1,30 @@
+{
+  "FbPurch": {
+    "Element": {
+      "Fields": {
+        "OrNu": "00115"
+      },
+      "Objects": {
+        "FbPurchLines": {
+          "Element": [
+            {
+              "Fields": {
+                "Ds": "Afwijkende omschrijving",
+                "QuUn": "2",
+                "Upri": "10",
+                "GuLi": "{7CBA3D93-B90F-4240-A1CB-ABAAD1D7E91D}"
+              }
+            },
+            {
+              "Fields": {
+                "Ds": "Afwijkende omschrijving",
+                "Upri": "25",
+                "GuLi": "{621C9513-0963-4EBE-8A76-1602E556AE44}"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

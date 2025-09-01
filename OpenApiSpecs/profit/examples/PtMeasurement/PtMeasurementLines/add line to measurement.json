@@ -1,0 +1,30 @@
+{
+    "PtMeasurement": {
+      "Element": {
+        "Fields": {
+          "MsId": "00000009"
+        },
+        "Objects": [
+          {
+            "PtMeasurementLines": {
+              "Element": {
+                "Fields": {
+                  "VaMt": "1",
+                  "VaMk": "O",
+                  "VaPr": "N",
+                  "VaIt": "6",
+                  "ItCd": "80333",
+                  "Ds": "Koppelstuk",
+                  "BiUn": "STK",
+                  "Qu": "2",
+                  "CoPr": "10",
+                  "Pric": "15",
+                  "QuPr": "1"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }

@@ -1,0 +1,19 @@
+{
+  "PtPriceAgreement": {
+    "Element": {
+      "Fields": {
+        "PAId": "000005"
+      },
+      "Objects": {
+        "PtPriceAgreementVersion": {
+          "Element": {
+            "Fields": {
+              "PAVe": "1",
+              "Stat": "0"
+            }
+          }
+        }
+      }
+    }
+  }
+}

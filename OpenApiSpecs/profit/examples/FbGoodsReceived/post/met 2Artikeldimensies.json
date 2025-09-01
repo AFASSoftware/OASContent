@@ -1,0 +1,50 @@
+{
+  "FbGoodsReceived": {
+    "Element": {
+      "Fields": {
+        "CrId": "50028",
+        "RfCs": "2 artikeldimensies",
+        "War": "02"
+      },
+      "Objects": {
+        "FbGoodsReceivedLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "9901",
+                "BiUn": "stk",
+                "QuUn": "10",
+                "Upri": "15",
+                "StL1": "S",
+                "StL2": "ROOD"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "9901",
+                "BiUn": "stk",
+                "QuUn": "10",
+                "Upri": "15",
+                "StL1": "M",
+                "StL2": "WIT"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "9901",
+                "BiUn": "stk",
+                "QuUn": "10",
+                "Upri": "15",
+                "StL1": "L",
+                "StL2": "BLAUW"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

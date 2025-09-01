@@ -1,0 +1,21 @@
+{
+    "HrMobility": {
+      "Element": {
+        "Fields": {
+          "TrTy": "1",
+          "CmId": "01",
+          "DaBl": "2023-12-01",
+          "RgNr": "34-RGS-8",
+          "GrRg": false,
+          "ViMr": "10",
+          "ViMd": "6501",
+          "CmUs": false,
+          "InKm": 17,
+          "DaPr": "2023-12-01",
+          "CtVl": "150000",
+          "AgId": "L",
+          "PeAd": 14
+        }
+      }
+    }
+  }

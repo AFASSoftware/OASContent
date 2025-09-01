@@ -1,0 +1,30 @@
+{
+  "FbDoughLines": {
+    "Element": [
+      {
+        "Fields": {
+          "ItCd": "DG54000",
+          "SqNo": "1",
+          "RwId": "GR405230",
+          "PcFw": "90"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "DG54000",
+          "SqNo": "2",
+          "DeDe": "Aangepaste omschrijving"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "DG54000",
+          "SqNo": "3",
+          "PcFw": "1.25",
+          "SeDe": "true",
+          "DeDe": "Omschrijving Declaratie"
+        }
+      }
+    ]
+  }
+}

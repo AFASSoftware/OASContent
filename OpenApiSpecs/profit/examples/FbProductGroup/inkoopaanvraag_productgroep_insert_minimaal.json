@@ -1,0 +1,16 @@
+{
+  "FbProductGroup": {
+    "Element": {
+      "Fields": {
+        "PrGr": "PR004",
+        "Ds": "test inkoopaanvraag",
+        "DaBg": "2016-01-01",
+        "ViIn": "1",
+        "AvPr": "1",
+        "AlDs": "test inkoopaanvraag",
+        "AlTi": "test inkoopaanvraag",
+        "FileName": "example.png"
+      }
+    }
+  }
+}

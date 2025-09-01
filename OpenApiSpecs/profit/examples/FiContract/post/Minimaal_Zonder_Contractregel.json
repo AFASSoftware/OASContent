@@ -1,0 +1,15 @@
+{
+  "FiContract": {
+    "Element": {
+      "Fields": {
+        "PoKi": "Contract insert minimaal zonder contractregel",
+        "PoNo": "REF:348959",
+        "CmId": "50008",
+        "CuId": "EUR",
+        "Rate": "1",
+        "UnId": "1",
+        "VaCt": "02"
+      }
+    }
+  }
+}

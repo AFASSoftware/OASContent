@@ -1,0 +1,32 @@
+{
+  "FbSales": {
+    "Element": {
+      "Fields": {
+        "DbId": "10001",
+        "RfCs": "tekstregels"
+      },
+      "Objects": {
+        "FbSalesLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "3",
+                "ItCd": "T",
+                "Ds": "tekstregel met afwijkende omschrijving nummer 1",
+                "QuUn": "1"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "3",
+                "ItCd": "T",
+                "Ds": "tekstregel met afwijkende omschrijving nummer 2",
+                "QuUn": "1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

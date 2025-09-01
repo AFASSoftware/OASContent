@@ -1,0 +1,49 @@
+{
+  "FbComposition": {
+    "Element": {
+      "Fields": {
+        "ItCd": "3204",
+        "Ds": "Product samenstelling",
+        "Grp": "300",
+        "BiUn": "stk",
+        "VaCt": "2",
+        "VaRc": "1",
+        "CrId": "50003"
+      },
+      "Objects": {
+        "FbCompositionPart": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "art",
+                "ItCd": "1000",
+                "QuUn": "1"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "art",
+                "ItCd": "1700",
+                "QuUn": "2"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "art",
+                "ItCd": "1800",
+                "QuUn": "2"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "art",
+                "ItCd": "4104",
+                "QuUn": "2"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

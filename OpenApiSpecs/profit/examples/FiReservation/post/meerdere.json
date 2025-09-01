@@ -1,0 +1,42 @@
+{
+  "FiReservation": {
+    "Element": [
+      {
+        "@UnId": "1",
+        "@SeNo": "",
+        "Fields": {
+          "AcNr": "4095",
+          "Yr": "2015",
+          "PeNr": "1",
+          "Ds": "Reservering meerdere 1/3",
+          "Ref": "REF394875-1",
+          "Amt": "1100"
+        }
+      },
+      {
+        "@UnId": "1",
+        "@SeNo": "",
+        "Fields": {
+          "AcNr": "4095",
+          "Yr": "2015",
+          "PeNr": "1",
+          "Ds": "Reservering meerdere 2/3",
+          "Ref": "REF394875-2",
+          "Amt": "1200"
+        }
+      },
+      {
+        "@UnId": "1",
+        "@SeNo": "",
+        "Fields": {
+          "AcNr": "4095",
+          "Yr": "2015",
+          "PeNr": "1",
+          "Ds": "Reservering meerdere 3/3",
+          "Ref": "REF394875-3",
+          "Amt": "1300"
+        }
+      }
+    ]
+  }
+}

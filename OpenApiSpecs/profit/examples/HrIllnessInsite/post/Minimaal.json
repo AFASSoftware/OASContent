@@ -1,0 +1,29 @@
+{
+  "HrIllnessInSite": {
+    "Element": {
+      "Fields": {
+        "EmId": "DavidB",
+        "DaBe": "2023-04-01T00:00:00",
+        "DMeB": "2023-04-01T00:00:00",
+        "DaEs": "2023-04-02",
+        "TPBe": "0",
+        "ViIt": "Z",
+        "EnSe": "1"
+      },
+      "Objects": [
+        {
+          "HrAbsIllnessProgress": {
+            "Element": {
+              "Fields": {
+                "DaTi": "2023-04-01T00:00:",
+                "PsPc": "0",
+                "PsHr": "0",
+                "PsSp": "0"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

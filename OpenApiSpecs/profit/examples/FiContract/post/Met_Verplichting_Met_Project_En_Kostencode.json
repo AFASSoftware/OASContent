@@ -1,0 +1,31 @@
+{
+  "FiContract": {
+    "Element": {
+      "Fields": {
+        "PoKi": "Contract insert met verplichting en project en kostencode",
+        "PoNo": "REF:348963",
+        "CmId": "50008",
+        "CuId": "EUR",
+        "Rate": "1",
+        "UnId": "1",
+        "VaCt": "02"
+      },
+      "Objects": {
+        "FiContractline": {
+          "Element": {
+            "Fields": {
+              "DaBe": "2021-01-01",
+              "DaEn": "2021-12-31",
+              "AmPF": "320.55",
+              "VaCm": "2",
+              "AcNr": "8080",
+              "PrId": "300000",
+              "BiId": "T1",
+              "JuYN": "1"
+            }
+          }
+        }
+      }
+    }
+  }
+}

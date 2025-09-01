@@ -1,0 +1,47 @@
+{
+  "KnSalesRelationOrg": {
+    "Element": {
+      "Fields": {
+        "VaId": "111234567B01",
+        "CuId": "EUR",
+        "InPv": "E"
+      },
+      "Objects": [
+        {
+          "KnOrganisation": {
+            "Element": {
+              "Fields": {
+                "PadAdr": true,
+                "AutoNum": true,
+                "MatchOga": "6",
+                "SeNm": "ZOEKNAAM",
+                "Nm": "Jansen",
+                "CcNr": "93056589",
+                "CcDa": "2024-03-01",
+                "NmRg": "Jansen Personeel B.V.",
+                "HoPa": "www.jansen.test"
+              },
+              "Objects": [
+                {
+                  "KnBasicAddressAdr": {
+                    "Element": {
+                      "Fields": {
+                        "CoId": "NL",
+                        "PbAd": false,
+                        "Ad": "Haarlemseweg",
+                        "HmNr": "105",
+                        "ZpCd": "3833LC",
+                        "Rs": "Leusden",
+                        "ResZip": false
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

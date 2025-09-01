@@ -1,0 +1,20 @@
+{
+  "KnPurchaseRelationOrg": {
+    "Element": {
+      "@CrId": "50005",
+      "Fields": {
+        "Bl": true
+      },
+      "Objects": {
+        "KnOrganisation": {
+          "Element": {
+            "Fields": {
+              "MatchOga": "0",
+              "BcCo": "1000021"
+            }
+          }
+        }
+      }
+    }
+  }
+}

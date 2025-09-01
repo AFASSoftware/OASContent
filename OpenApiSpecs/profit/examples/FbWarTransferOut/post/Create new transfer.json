@@ -1,0 +1,30 @@
+{
+  "FbWarTransferOut": {
+    "Element": {
+      "Fields": {
+        "OrDa": "2024-12-22",
+        "RfCs": "This is the reference of the customer",
+        "Re": "With the response of this request the endpoint  FbWarTransferIn could be called to receive the goods",
+        "War": "01",
+        "Wa2": "*****",
+        "RdDe": true
+      },
+      "Objects": [
+        {
+          "FbWarTransferLines": {
+            "Element": {
+              "Fields": {
+                "VaIt": "art",
+                "ItCd": "9900",
+                "Ds": "Onderhoudspakket Acer Computers",
+                "BiUn": "Stk",
+                "QuUn": "1",
+                "Qu": "1"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

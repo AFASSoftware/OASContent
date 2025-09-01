@@ -1,0 +1,20 @@
+{
+  "PtRealization": {
+    "Element": {
+      "Fields": {
+        "DaTi": "2023-01-01",
+        "VaIt": "6",
+        "ItCd": "K04",
+        "Qu": "1",
+        "QuSa": "1",
+        "EmId": "ALLARDJ",
+        "PrId": "300000",
+        "DbId": "10140",
+        "StId": "1",
+        "AmSe": "150",
+        "Ch": false,
+        "Ds": "We hebben een lekkere lunch gehad"
+      }
+    }
+  }
+}

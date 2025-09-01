@@ -1,0 +1,66 @@
+{
+  "FbDirectInvoice": {
+    "Element": {
+      "Fields": {
+        "OrNu": "V0003000",
+        "OrDa": "2013-06-01",
+        "DbId": "10001",
+        "DaDe": "2013-06-01",
+        "DaPr": "2013-06-01",
+        "CuId": "EUR",
+        "RfCs": "REF:STRAAT35431",
+        "SaCh": "1",
+        "VaDu": "1",
+        "InVa": "0",
+        "PaCd": "14",
+        "PaTp": "00",
+        "Re": "Opmerking bij de bali-direct factuur",
+        "Unit": "1",
+        "Coll": "0",
+        "CrOr": "0",
+        "Rout": "",
+        "War": "*****",
+        "CoDn": "0",
+        "CoIn": "0",
+        "DlPr": "99",
+        "DeCo": "0",
+        "CoId": "NL",
+        "InPc": "5",
+        "VaCl": "0",
+        "ClPc": "1",
+        "PaPc": "1",
+        "VaPa": "0",
+        "VaYN": "0",
+        "VaBc": "0",
+        "BaCo": "BARV000300-balie"
+      },
+      "Objects": {
+        "FbDirectInvoiceLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "2",
+              "ItCd": "1010",
+              "Ds": "afwijkende omschrijving",
+              "VaRc": "2",
+              "BiUn": "stk",
+              "QuUn": "5",
+              "Qu": "5",
+              "PrLi": "*****",
+              "War": "*****",
+              "EUSe": "0",
+              "VaWt": "4",
+              "NeWe": "1",
+              "GrWe": "1.34",
+              "Upri": "60",
+              "VaAD": "1",
+              "PRDc": "10",
+              "ARDc": "6",
+              "MaAD": "0",
+              "Re": "En een opmerking"
+            }
+          }
+        }
+      }
+    }
+  }
+}

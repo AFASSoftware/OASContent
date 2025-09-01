@@ -1,0 +1,14 @@
+{
+  "FbExtraBarcode": {
+    "Element": {
+      "Fields": {
+        "VaIt": "art",
+        "ItCd": "1000",
+        "VaBc": "0",
+        "BaCo": "100012345",
+        "VaBu": "03",
+        "Re": "Barcode Interne Logistiek"
+      }
+    }
+  }
+}

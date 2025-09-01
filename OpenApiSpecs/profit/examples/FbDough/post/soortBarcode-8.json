@@ -1,0 +1,27 @@
+{
+  "FbDough": {
+    "Element": {
+      "Fields": {
+        "ItCd": "DG54038",
+        "Ds": "Deeg met Barcode - Interleaved 2/5 (controlegetal)",
+        "DsEx": "Extra omschrijving",
+        "ChDs": "false",
+        "VaBc": "8",
+        "BaCo": "1645216487154103",
+        "InPr": "true",
+        "ViCa": "2",
+        "PcBl": "9.53",
+        "FlCh": "150",
+        "RoWe": "2",
+        "ToWe": "143",
+        "AjTm": "50",
+        "AjLs": "4",
+        "PrTm": "660",
+        "WrTm": "1",
+        "Tp": "27.6",
+        "BaLi": "true",
+        "Rm": "Insert met Type Barcode Interleaved 2/5 (controlegetal)"
+      }
+    }
+  }
+}

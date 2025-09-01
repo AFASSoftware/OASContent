@@ -1,0 +1,96 @@
+{
+  "AfasEmployee": {
+    "Element": {
+      "@GUID": "{1E10B955-BA89-4E7B-9D5C-D74ED4612D83}",
+      "Fields": {
+        "EmId": "100199",
+        "ViSe": "I",
+        "Bl": "0",
+        "LwOb": "0",
+        "LwTg": "0"
+      },
+      "Objects": {
+        "AfasContract": {
+          "Element": {
+            "@GUID": "{A3CBB05E-F193-4493-9DC6-3F792497D7BB}",
+            "Fields": {
+              "DaBe": "2010-10-01",
+              "ClId": "1",
+              "WcId": "1",
+              "ApCo": "O",
+              "PEmTy": "N",
+              "DvSn": "3",
+              "CmId": "01",
+              "EmMt": "1",
+              "ViEt": "F",
+              "ViTo": "1M",
+              "DaEt": "2010-02-01",
+              "PeNo": "1",
+              "PeRp": "12",
+              "RtDa": "0"
+            }
+          }
+        },
+        "AfasOrgunitFunction": {
+          "Element": {
+            "@GUID": "{A3CBB05E-F193-4493-9DC6-3F792497D7BB}",
+            "Fields": {
+              "DaBe": "2010-10-01",
+              "DpId": "AB0",
+              "FuId": "5311001",
+              "CrId": "6916"
+            }
+          }
+        },
+        "AfasTimeTable": {
+          "Element": {
+            "@GUID": "{A3CBB05E-F193-4493-9DC6-3F792497D7BB}",
+            "Fields": {
+              "DaBg": "2010-10-01",
+              "Spec": "1",
+              "DyWk": "3",
+              "HrWk": "18",
+              "FtSv": "0",
+              "DfHo": "0"
+            }
+          }
+        },
+        "AfasSalary": {
+          "Element": {
+            "@GUID": "{A3CBB05E-F193-4493-9DC6-3F792497D7BB}",
+            "Fields": {
+              "DaBe": "2010-10-01",
+              "SaPe": "V",
+              "EmSa": "2500.00",
+              "NtSa": "0",
+              "PtId": "5",
+              "SaYe": "0"
+            }
+          }
+        },
+        "AfasAgencyFiscus": {
+          "Element": {
+            "@DaBe": "2010-10-01",
+            "@AyId": "F",
+            "Fields": {
+              "ViIn": "15",
+              "ViEm": "1",
+              "ViTs": "W",
+              "ViCd": "0",
+              "ViLk": "1",
+              "ViZv": "CEF",
+              "YnZW": "1",
+              "YnWW": "1",
+              "YWAO": "1",
+              "ViOk": "0",
+              "ViVb": "0",
+              "ViCx": "1",
+              "TxF4": "0",
+              "TxF5": "0"
+            }
+          }
+        }
+      }
+    }
+  }
+}

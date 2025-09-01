@@ -1,0 +1,27 @@
+{
+  "HrIllnessGUID": {
+    "Element": {
+      "@GUID": "{E29B5696-B302-49BE-B27C-4F10CFA92998}",
+      "Fields": {
+        "DaEn": "2024-01-01T00:00:00",
+        "DMeE": "2024-01-01T00:00:00",
+        "ViRs": "1",
+        "TPEn": "0"
+      },
+      "Objects": {
+        "HrAbsIllnessProgress": {
+          "Element": {
+            "@GUID": "{E29B5696-B302-49BE-B27C-4F10CFA93000}",
+            "Fields": {
+              "DaTi": "2024-01-01T00:00:00",
+              "PsPc": "0",
+              "ViWr": "1",
+              "ViRc": "1",
+              "Re": "Hersteld"
+            }
+          }
+        }
+      }
+    }
+  }
+}

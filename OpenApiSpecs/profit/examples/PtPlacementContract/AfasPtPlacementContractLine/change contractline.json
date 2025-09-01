@@ -1,0 +1,21 @@
+{
+  "PtPlacementContract": {
+    "Element": {
+      "@PcCo": "21",
+      "Objects": {
+        "AfasPtPlacementContractLine": {
+          "Element": {
+            "Fields": {
+              "DaBe": "2018-10-12",
+              "DaEn": "2018-10-13",
+              "ApCo": "O",
+              "EmId": "C10062",
+              "HoGo": "1",
+              "VaCc": "0"
+            }
+          }
+        }
+      }
+    }
+  }
+}

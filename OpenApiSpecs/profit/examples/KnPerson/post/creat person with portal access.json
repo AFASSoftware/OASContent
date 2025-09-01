@@ -1,0 +1,32 @@
+{
+    "KnPerson": {
+        "Element": {
+            "Fields": {
+                "AutoNum": true,
+                "MatchPer": "7",
+                "CaNm": "Florencio",
+                "FiNm": "Ashton.Gutkowski",
+                "In": "J",
+                "LaNm": "Zieme",
+                "SpNm": true,
+                "NmBi": "Wilkinson",
+                "ViGe": "V",
+                "ViUs": "0",
+                "DaBi": "1990-12-12",
+                "AddToPortal": true,
+                "EmailPortal": "Marta.Swaniawski12@example.net"
+            },
+            "Objects": [
+                {
+                    "KnContactAutRole": {
+                        "Element": {
+                            "Fields": {
+                                "AutRoleDs": "Sollicitant"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

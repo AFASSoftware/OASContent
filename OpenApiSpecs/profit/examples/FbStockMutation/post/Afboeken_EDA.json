@@ -1,0 +1,18 @@
+{
+  "FbStockMutation": {
+    "Element": {
+      "Fields": {
+        "UsCr": "xml",
+        "VaOt": "41",
+        "ReId": "6",
+        "VaIt": "2",
+        "ItCd": "1500",
+        "War": "02",
+        "Loc": "*****",
+        "BiUn": "STK",
+        "QuUn": "1",
+        "Qu": "2"
+      }
+    }
+  }
+}

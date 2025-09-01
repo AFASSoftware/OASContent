@@ -1,0 +1,111 @@
+{
+  "HrApplicant": {
+    "Element": {
+      "Fields": {
+        "EmId": "Tester",
+        "WrLv": "2",
+        "Bl": "0"
+      },
+      "Objects": {
+        "KnPerson": {
+          "Element": {
+            "Fields": {
+              "PadAdr": "0",
+              "AutoNum": "0",
+              "MatchPer": "7",
+              "BcId": "1001999",
+              "BcCo": "1001999",
+              "SeNm": "ZOEKNAAM",
+              "CaNm": "Jan",
+              "FiNm": "Jan",
+              "In": "J.A.",
+              "Is": "van",
+              "LaNm": "Jansen",
+              "SpNm": "0",
+              "IsBi": "v. Jansen",
+              "NmBi": "Jansen",
+              "IsPa": "van",
+              "NmPa": "Marie Jansen",
+              "ViUs": "0",
+              "ViGe": "m",
+              "PsNa": "NL",
+              "DaBi": "1979-05-04",
+              "CoBi": "NL",
+              "RsBi": "Zwolle",
+              "SoSe": "123456789",
+              "ViCs": "gh",
+              "DaMa": "2007-12-12",
+              "TtId": "Alg",
+              "TeN2": "334341800",
+              "MbN2": "334341800",
+              "EmAd": "john.doe@example.com",
+              "EmA2": "john.doe@example.com",
+              "HoPa": "https://www.example.com",
+              "Corr": "1",
+              "ViMd": "Ema",
+              "Re": "Sollicitant voor de vacature van HRM medewerker.",
+              "CoLw": "NL",
+              "AddToPortal": "0"
+            },
+            "Objects": {
+              "KnBankAccount": {
+                "Element": {
+                  "Fields": {
+                    "CoId": "NL",
+                    "IbCk": "0",
+                    "BaAc": "849835607",
+                    "AcGa": "0",
+                    "AcCk": "0"
+                  }
+                }
+              },
+              "KnBasicAddressAdr": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": "0",
+                    "Ad": "Boundry straat",
+                    "HmNr": "105",
+                    "HmAd": "3b",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "BeginDate": "2010-01-01",
+                    "ResZip": "0"
+                  }
+                }
+              },
+              "KnBasicAddressPad": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": "0",
+                    "Ad": "Boundry straat",
+                    "HmNr": "105",
+                    "HmAd": "3b",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "BeginDate": "2010-01-01",
+                    "ResZip": "0"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "HrApplication": {
+          "Element": {
+            "@CmId": "RIS",
+            "@VcSn": "4",
+            "Fields": {
+              "DaAp": "2011-05-01",
+              "Re": "Lijkt erop dat dit een match is. Loon is besproken. Past goed bij het bedrijf en filisofie.",
+              "ViMa": "5",
+              "ViSo": "8",
+              "StSo": "1"
+            }
+          }
+        }
+      }
+    }
+  }
+}

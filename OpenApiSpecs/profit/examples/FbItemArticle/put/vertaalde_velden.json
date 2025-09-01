@@ -1,0 +1,26 @@
+{
+  "FbItemArticle": {
+    "Element": {
+      "Fields": {
+        "ItCd": "98765",
+        "Ds": "Omschrijving",
+        "Ds_1031": "Omschrijving Deutsch update",
+        "Ds_1036": "Omschrijving La France update",
+        "Ds_1043": "Omschrijving Nederlands update",
+        "Ds_2057": "Omschrijving English update",
+        "Ds_2067": "Omschrijving Vlaams update",
+        "DsEx": "Omschriving extra",
+        "DsEx_1031": "Omschriving extra Deutsch update",
+        "DsEx_1036": "Omschriving extra La France update",
+        "DsEx_1043": "Omschriving extra Nederlands update",
+        "DsEx_2057": "Omschriving extra English update",
+        "DsEx_2067": "Omschriving extra Vlaams update",
+        "Rm_1031": "Opmerking Deutsch update",
+        "Rm_1036": "Opmerking La France update",
+        "Rm_1043": "Opmerking Nederlands update",
+        "Rm_2057": "Opmerking English update",
+        "Rm_2067": "Opmerking Vlaams update"
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "HrIllnessGUID": {
+    "Element": {
+      "@GUID": "{FFFFAB88-153F-4710-A398-706343C33EB3}",
+      "Fields": {
+        "EmId": "1182",
+        "DaBe": "2015-03-09T00:00:00",
+        "DMeB": "2015-03-20T00:00:00",
+        "DaEs": "2015-03-10"
+      },
+      "Objects": {
+        "HrAbsIllnessProgress": {
+          "Element": {
+            "@GUID": "{FFFFAB88-153F-4710-A398-706343C33EB3}",
+            "Fields": {
+              "DaTi": "2015-03-10T00:00:00",
+              "PsPc": "0",
+              "PsHr": "0",
+              "PsSp": "0",
+              "BeAt": "2015-03-10",
+              "EnAt": "2015-03-10",
+              "LePe": "1"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "FbDeliveryNote": {
+    "Element": {
+      "Fields": {
+        "DbId": "10034",
+        "TrPt": "tnt",
+        "SsId": "EX",
+        "Re": "Insert vervoerder velden"
+      },
+      "Objects": {
+        "FbDeliveryNoteLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "9000",
+                "BiUn": "stk",
+                "QuUn": "110"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "wst",
+                "ItCd": "300",
+                "BiUn": "uur",
+                "QuUn": "5",
+                "Upri": "65"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

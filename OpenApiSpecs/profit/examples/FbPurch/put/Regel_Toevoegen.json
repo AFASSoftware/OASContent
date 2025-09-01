@@ -1,0 +1,45 @@
+{
+  "FbPurch": {
+    "Element": {
+      "Fields": {
+        "OrNu": "00114"
+      },
+      "Objects": {
+        "FbPurchLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "1000",
+                "BiUn": "stk",
+                "QuUn": "10",
+                "Upri": "15.65",
+                "VaAd": "1",
+                "ARDc": "6.50"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "8003",
+                "BiUn": "stk",
+                "QuUn": "10"
+              },
+              "Objects": {
+                "FbOrderBatchLines": {
+                  "Element": {
+                    "Fields": {
+                      "BaNu": "8003-00114-01",
+                      "BiUn": "stk",
+                      "QuUn": "10"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

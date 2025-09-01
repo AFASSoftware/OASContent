@@ -1,0 +1,29 @@
+{
+  "FiContract": {
+    "Element": {
+      "Fields": {
+        "SeNo": "51647801",
+        "PoKi": "Contract insert maximaal",
+        "PoNo": "REF:348957",
+        "CmId": "50013",
+        "DaBe": "2015-01-01",
+        "DaEn": "2016-01-02",
+        "TeEn": "1",
+        "AmPr": "2400.24",
+        "AmIn": "1200.12",
+        "DaVa": "2015-02-02",
+        "Re": "Opmerking bij contract. Geen idee hoe lang dit veld mag zijn maar dit is genoeg? \r\n En een nieuwe regel. \r\n Nog ��n.",
+        "Prol": "0",
+        "EmId": "FLOORA",
+        "EmOw": "AllardJ",
+        "EmAd": "john.doe@example.com",
+        "UnId": "1",
+        "CaDa": "2015-11-05",
+        "CaUs": "KEESZ",
+        "VaCt": "01",
+        "SiCo": "0",
+        "FuYN": "1"
+      }
+    }
+  }
+}

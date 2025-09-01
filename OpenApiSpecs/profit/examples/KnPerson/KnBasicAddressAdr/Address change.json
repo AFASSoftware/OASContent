@@ -1,0 +1,25 @@
+{
+  "KnPerson": {
+    "Element": {
+      "Fields": {
+        "MatchPer": "0",
+        "BcCo": "1000780"
+      },
+      "Objects": {
+        "KnBasicAddressAdr": {
+          "Element": {
+            "Fields": {
+              "PbAd": "0",
+              "Ad": "Stationsstraat",
+              "HmNr": "105",
+              "ZpCd": "3833LC",
+              "CoId": "NL",
+              "Rs": "Leusden",
+              "ResZip": "0"
+            }
+          }
+        }
+      }
+    }
+  }
+}

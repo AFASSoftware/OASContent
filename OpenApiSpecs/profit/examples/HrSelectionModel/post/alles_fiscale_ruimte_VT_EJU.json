@@ -1,0 +1,32 @@
+{
+  "HrSelectionModel": {
+    "Element": {
+      "@EmId": "4125034",
+      "Fields": {
+        "DaBe": "2021-01-01",
+        "DaEn": "2023-12-31",
+        "SmId": "10",
+        "Ds": "werkfiets",
+        "Amnt": "1000",
+        "PoTa": "1",
+        "ViRs": "1",
+        "ViPa": "1"
+      },
+      "Objects": {
+        "HrSelectionModelSource": {
+          "Element": {
+            "Fields": {
+              "DaBe": "2021-01-01",
+              "EmsFsVt": "1",
+              "EmsInVt": "400",
+              "EmsYrVt": "150",
+              "EmsFsYt": "1",
+              "EmsInYt": "600",
+              "EmsYrYt": "200"
+            }
+          }
+        }
+      }
+    }
+  }
+}

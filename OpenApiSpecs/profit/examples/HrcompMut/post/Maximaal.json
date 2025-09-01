@@ -1,0 +1,23 @@
+{
+  "HrCompMut": {
+    "Element": {
+      "@PtId": "5",
+      "@Year": "2023",
+      "@PeId": "1",
+      "@DaTi": "2023-01-01",
+      "@EmId": "FLOORA",
+      "@ErId": "000001",
+      "@Sc02": "21",
+      "Fields": {
+        "Ds": "Meeruren - Connector",
+        "EmDp": "PZ",
+        "VaD1": "50",
+        "CrId": "Profit",
+        "CcId": "Profit",
+        "EnSe": "1",
+        "FuId": "MEDPLAC",
+        "Rem": "Afwijkende omschrijving"
+      }
+    }
+  }
+}

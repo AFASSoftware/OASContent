@@ -1,0 +1,21 @@
+{
+  "KnPurchaseRelationPer": {
+    "Element": {
+      "@CrId": "60024",
+      "Fields": {
+        "CuId": "EUR",
+        "InPv": "E",
+        "EnId": "EVE4568323"
+      },
+      "Objects": {
+        "KnPerson": {
+          "Element": {
+            "Fields": {
+              "MatchPer": "9"
+            }
+          }
+        }
+      }
+    }
+  }
+}

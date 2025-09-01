@@ -1,0 +1,125 @@
+{
+  "KnPurchaseRelationPer": {
+    "Element": {
+      "Fields": {
+        "IsCr": true,
+        "ToAc": "4210",
+        "VaId": "NL123456789B02",
+        "PaCd": "30",
+        "LgId": "NL",
+        "CuId": "EUR",
+        "VaDu": true,
+        "PfId": "*****",
+        "PrLi": false,
+        "PrFc": false,
+        "ClPc": false,
+        "PrPt": false,
+        "Krli": "10000",
+        "PrLs": "*****",
+        "VkMa": "01",
+        "Bl": false,
+        "VaYN": false,
+        "PaSp": false,
+        "AuPa": false,
+        "PaCo": false,
+        "WaOr": false,
+        "WaTx": "toch maar een waarschuwing",
+        "CsTy": false,
+        "Rm": "Opmerking bij deze inkooprelatie",
+        "ColA": "1600",
+        "CsDa": "1941-01-05",
+        "BcBy": "1000032",
+        "InPv": "A"
+      },
+      "Objects": {
+        "KnPerson": {
+          "Element": {
+            "Fields": {
+              "PadAdr": false,
+              "AutoNum": true,
+              "MatchPer": "6",
+              "SeNm": "ZOEKNAAM",
+              "CaNm": "Jan",
+              "FiNm": "Jan",
+              "In": "J.A.",
+              "Is": "van",
+              "LaNm": "Jansen",
+              "SpNm": true,
+              "IsBi": "v. Jansen",
+              "NmBi": "Jansen",
+              "IsPa": "van",
+              "NmPa": "Marie Jansen",
+              "ViUs": true,
+              "ViGe": "V",
+              "PsNa": "NL",
+              "DaBi": "1976-08-30",
+              "CoBi": "NL",
+              "RsBi": "Oldenzaal",
+              "ViCs": "GH",
+              "DaMa": "2002-02-02",
+              "TtId": "ALG",
+              "TtEx": "A2",
+              "LeHe": "Geachte heer J. van A.",
+              "TeNr": "334341800",
+              "TeN2": "334341800",
+              "FaNr": "088-6416881",
+              "MbNr": "334341800",
+              "MbN2": "334341800",
+              "EmAd": "john.doe@example.com",
+              "EmA2": "john.doe@example.com",
+              "HoPa": "https://www.example.com",
+              "Corr": true,
+              "ViMd": "EMA",
+              "Re": "Opmerking over deze persoon",
+              "CoLw": "NL"
+            },
+            "Objects": {
+              "KnBankAccount": {
+                "Element": {
+                  "Fields": {
+                    "CoId": "NL",
+                    "IbCk": false,
+                    "BaAc": "849835607",
+                    "BkTp": "528001",
+                    "DiNm": "Postbank",
+                    "DiPl": "Oldenbroek",
+                    "CalM": "3"
+                  }
+                }
+              },
+              "KnBasicAddressAdr": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": false,
+                    "Ad": "Binnenveldweg",
+                    "HmNr": "105",
+                    "HmAd": "3b",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "AdAd": "A-1",
+                    "BeginDate": "2013-01-01",
+                    "ResZip": false
+                  }
+                }
+              },
+              "KnBasicAddressPad": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": true,
+                    "HmNr": "105",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "BeginDate": "2013-01-01",
+                    "ResZip": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

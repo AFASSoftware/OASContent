@@ -1,0 +1,36 @@
+{
+  "HrIllness": {
+    "Element": {
+      "Fields": {
+        "EmId": "4125621",
+        "DaBe": "2024-03-01T00:00:00",
+        "DMeB": "2024-06-23T00:00:00",
+        "DaEs": "2024-04-15",
+        "TPBe": "0",
+        "ViIt": "Z",
+        "ViIr": "0",
+        "EnSe": "1",
+        "RuAb": "0",
+        "SfNt": "0",
+        "PcWd": "0.00",
+        "RtDa": "0",
+        "RtDl": "0",
+        "ExFr": "False"
+      },
+      "Objects": {
+        "HrAbsIllnessProgress": {
+          "Element": {
+            "Fields": {
+              "DaTi": "2024-03-01T00:00:00",
+              "PsPc": "50.00",
+              "PsSp": "0",
+              "PsPa": "0",
+              "PsHa": "0",
+              "ViWr": "2"
+            }
+          }
+        }
+      }
+    }
+  }
+}

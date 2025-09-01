@@ -1,0 +1,10 @@
+{
+  "FbSubscription": {
+    "Element": {
+      "Fields": {
+        "SuNr": "11",
+        "Bankaccount": "123456789"
+      }
+    }
+  }
+}

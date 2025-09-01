@@ -1,0 +1,56 @@
+{
+  "FiEntryPar": {
+    "Element": {
+      "Fields": {
+        "Year": "2013",
+        "Peri": "1",
+        "UnId": "1",
+        "JoCo": "10"
+      },
+      "Objects": {
+        "FiEntries": {
+          "Element": [
+            {
+              "Fields": {
+                "VaAs": "3",
+                "AcNr": "60014",
+                "EnDa": "2013-01-01",
+                "BpDa": "2013-01-01",
+                "InId": "FACTUUR99",
+                "AmDe": "0",
+                "AmCr": "12100",
+                "DaEx": "2013-02-01",
+                "Judg": "ALLARDJ",
+                "BlPa": "1"
+              }
+            },
+            {
+              "Fields": {
+                "VaAs": "1",
+                "AcNr": "4210",
+                "EnDa": "2013-01-01",
+                "BpDa": "2013-01-01",
+                "InId": "FACTUUR99",
+                "AmDe": "10000",
+                "AmCr": "0",
+                "VaId": "5"
+              }
+            },
+            {
+              "Fields": {
+                "VaAs": "1",
+                "AcNr": "1500",
+                "EnDa": "2013-01-01",
+                "BpDa": "2013-01-01",
+                "InId": "FACTUUR99",
+                "AmDe": "2100",
+                "AmCr": "0",
+                "VaId": "5"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

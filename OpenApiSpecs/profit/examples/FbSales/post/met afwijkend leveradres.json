@@ -1,0 +1,85 @@
+{
+  "FbSales": {
+    "Element": {
+      "Fields": {
+        "OrNu": "60001111",
+        "OrDa": "2025-06-01",
+        "DbId": "10001",
+        "DaDe": "2025-06-01",
+        "DaPr": "2025-06-01",
+        "CuId": "EUR",
+        "BkOr": "0",
+        "RfCs": "Ingeschoten maximaal",
+        "SaCh": "1",
+        "VaDu": "1",
+        "InVa": "0",
+        "PaCd": "14",
+        "PaTp": "00",
+        "Re": "Verkooprelatie met afwijkend adres",
+        "Unit": "1",
+        "Coll": "0",
+        "CrOr": "0",
+        "War": "01",
+        "CoDn": "0",
+        "CoIn": "0",
+        "DlPr": "99",
+        "LgId": "NL",
+        "CsTy": "1",
+        "VaTr": "3",
+        "VaSt": "00",
+        "VaGs": "7",
+        "VaTa": "1",
+        "CoId": "NL",
+        "InPc": "0",
+        "VaCl": "0",
+        "ClPc": "0",
+        "PaPc": "0",
+        "VaPa": "0",
+        "VaYN": "0",
+        "VaBc": "0",
+        "BaCo": "BAR60001000SAL",
+        "JoCo": "20",
+        "FaTo": "10205",
+        "FuOr": "0",
+        "PrId": "600000",
+        "PrSt": "01",
+        "SeSt": "0",
+        "SeWe": "1000",
+        "QuCl": "4",
+        "OrPr": "1",
+        "AmDp": "0",
+        "DlAd": "1001",
+        "ExAd": "afwijkend afleveradres gekozen",
+        "FxBl": "0"
+      },
+      "Objects": {
+        "FbSalesLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "2",
+              "ItCd": "1000",
+              "Ds": "gewijzigde omschrijving",
+              "VaRc": "2",
+              "BiUn": "stk",
+              "QuUn": "10",
+              "Qu": "10",
+              "QuDl": "10",
+              "PrLi": "*****",
+              "War": "01",
+              "EUSe": "0",
+              "VaWt": "4",
+              "NeWe": "25.1",
+              "GrWe": "4.26",
+              "Upri": "25.96",
+              "VaAD": "1",
+              "PRDc": "5",
+              "MaAD": "0",
+              "Re": "Opmerking bij de ingeschoten regel",
+              "DiDe": "0"
+            }
+          }
+        }
+      }
+    }
+  }
+}

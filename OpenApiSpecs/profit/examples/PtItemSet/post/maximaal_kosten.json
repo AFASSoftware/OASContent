@@ -1,0 +1,73 @@
+{
+  "PtItemset": {
+    "Element": {
+      "Fields": {
+        "PtItpDaBe": "2023-01-01",
+        "PtItpTyEj": "G",
+        "PtItpViTa": "633",
+        "Ds": "Itemset maximaal kosten",
+        "Bl": "0",
+        "ClId": "D"
+      },
+      "Objects": {
+        "PtItemSetLine": {
+          "Element": [
+            {
+              "@VaIt": "Wst",
+              "Fields": {
+                "ItCd": "01NB",
+                "Invo": "1",
+                "Payr": "1",
+                "GWPc": "100",
+                "GWMi": "100",
+                "GWMa": "100"
+              }
+            },
+            {
+              "@VaIt": "Wst",
+              "Fields": {
+                "ItCd": "FLEX10-2",
+                "GWPc": "80.98",
+                "GWMi": "70.97",
+                "GWMa": "85.96",
+                "TaTy": "0",
+                "TaMi": "22.25",
+                "TaDf": "30.35",
+                "TaMa": "35.45"
+              }
+            },
+            {
+              "@VaIt": "Kst",
+              "Fields": {
+                "ItCd": "11-C90990",
+                "#text": [
+                  ">",
+                  ">",
+                  ">",
+                  ">",
+                  ">",
+                  ">",
+                  ">"
+                ],
+                "AmMi": "10.10",
+                "AmMa": "20.20",
+                "AmDf": "15.30",
+                "TaTy": "0",
+                "TaMi": "22.25",
+                "TaDf": "30.35",
+                "TaMa": "35.45"
+              }
+            }
+          ]
+        },
+        "PtItemsetScaleWage": {
+          "Element": {
+            "Fields": {
+              "TaId": "505"
+            }
+          }
+        }
+      }
+    }
+  }
+}

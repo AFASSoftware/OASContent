@@ -1,0 +1,33 @@
+{
+  "FbPurch": {
+    "Element": {
+      "Fields": {
+        "CrId": "50014",
+        "War": "01",
+        "RfCs": "Tekst"
+      },
+      "Objects": {
+        "FbPurchLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "3",
+                "ItCd": "T",
+                "Ds": "Tekstsoort voor op de inkooporder",
+                "QuUn": "1"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "3",
+                "ItCd": "T",
+                "Ds": "Tweede tekstregel op inkooporder",
+                "QuUn": "1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

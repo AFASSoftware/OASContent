@@ -1,0 +1,20 @@
+{
+    "AfasEmployee": {
+        "Element": {
+            "@EmId": "TEDB",
+            "Fields": {
+                "ViSe": "I"
+            },
+            "Objects": [
+                {
+                    "AfasAgencyPensioenaangifte": {
+                        "Element": {
+                            "@AyId": "1",
+                            "@DaBe": "2024-05-01"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

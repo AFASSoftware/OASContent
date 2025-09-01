@@ -1,0 +1,66 @@
+{
+  "FbSales": {
+    "Element": {
+      "Fields": {
+        "DbId": "10001",
+        "RfCs": "serienummer"
+      },
+      "Objects": {
+        "FbSalesLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "4103",
+                "BiUn": "stk",
+                "QuUn": "2"
+              },
+              "Objects": {
+                "FbOrderSerialLines": {
+                  "Element": [
+                    {
+                      "Fields": {
+                        "SeNu": "4103B1",
+                        "BiUn": "stk",
+                        "QuUn": "1",
+                        "Re": "Serienummer"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "SeNu": "4103B2",
+                        "BiUn": "stk",
+                        "QuUn": "1",
+                        "Re": "Serienummer"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "4100",
+                "BiUn": "stk",
+                "QuUn": "1"
+              },
+              "Objects": {
+                "FbOrderSerialLines": {
+                  "Element": {
+                    "Fields": {
+                      "SeNu": "4100B01",
+                      "BiUn": "stk",
+                      "QuUn": "1",
+                      "Re": "Serienummer"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

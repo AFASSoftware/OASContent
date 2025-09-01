@@ -1,0 +1,86 @@
+{
+  "PtRealization": {
+    "Element": [
+      {
+        "Fields": {
+          "DaTi": "2023-02-09",
+          "VaIt": "6",
+          "ItCd": "K01",
+          "Qu": "1",
+          "EmId": "ALLARDJ",
+          "PrId": "600000",
+          "StId": "1",
+          "AmCo": "20.00000000",
+          "DcPr": "4.44",
+          "Ch": true,
+          "UnRe": "1",
+          "Upri": "40.00000000"
+        }
+      },
+      {
+        "Fields": {
+          "DaTi": "2023-02-09",
+          "VaIt": "6",
+          "ItCd": "K02",
+          "Qu": "1",
+          "EmId": "ALLARDJ",
+          "PrId": "600000",
+          "StId": "1",
+          "AmCo": "20.00000000",
+          "DcPr": "4.44",
+          "Ch": true,
+          "UnRe": "1",
+          "Upri": "40.00000000"
+        }
+      },
+      {
+        "Fields": {
+          "DaTi": "2023-02-09",
+          "VaIt": "6",
+          "ItCd": "K03",
+          "Qu": "1",
+          "EmId": "ALLARDJ",
+          "PrId": "600000",
+          "StId": "1",
+          "AmCo": "20.00000000",
+          "DcPr": "4.44",
+          "Ch": true,
+          "UnRe": "1",
+          "Upri": "40.00000000"
+        }
+      },
+      {
+        "Fields": {
+          "DaTi": "2023-02-09",
+          "VaIt": "6",
+          "ItCd": "K04",
+          "Qu": "1",
+          "EmId": "ALLARDJ",
+          "PrId": "600000",
+          "StId": "1",
+          "AmCo": "20.00000000",
+          "DcPr": "4.44",
+          "Ch": true,
+          "UnRe": "1",
+          "Upri": "40.00000000"
+        }
+      },
+      {
+        "Fields": {
+          "DaTi": "2023-02-09",
+          "VaIt": "6",
+          "ItCd": "K05",
+          "Qu": "1",
+          "EmId": "ALLARDJ",
+          "PrId": "600000",
+          "StId": "1",
+          "AmCo": "20.00000000",
+          "DcPr": "4.44",
+          "Ch": true,
+          "UnRe": "1",
+          "Upri": "40.00000000"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "PtLinesToBeInvoiced": {
+    "Element": {
+      "Fields": {
+        "DaTi": "2013-01-01",
+        "VaIt": "1",
+        "ItCd": "301",
+        "DbId": "10009",
+        "StId": "1"
+      }
+    }
+  }
+}

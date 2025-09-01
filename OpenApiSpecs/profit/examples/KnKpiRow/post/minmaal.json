@@ -1,0 +1,16 @@
+{
+  "KnKpiRow": {
+    "Element": {
+      "Fields": {
+        "KpId": "1",
+        "KpTy": "1",
+        "KpYe": "2020",
+        "EmId": "ANDREO",
+        "WgId": "001",
+        "KpCt": "1",
+        "KpAm": "1",
+        "ViKM": "1"
+      }
+    }
+  }
+}

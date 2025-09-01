@@ -1,0 +1,51 @@
+{
+  "FbPurch": {
+    "Element": {
+      "Fields": {
+        "OrDa": "2010-04-30",
+        "CrId": "60005",
+        "CuId": "EUR",
+        "VaDu": "1",
+        "PaCd": "14",
+        "PaTp": "00",
+        "War": "01"
+      },
+      "Objects": {
+        "FbPurchLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "6",
+                "ItCd": "K01",
+                "Ds": "Inhuurkosten",
+                "BiUn": "*****",
+                "QuUn": "8",
+                "Upri": "75"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "1000",
+                "Ds": "Artikel",
+                "BiUn": "Stk",
+                "QuUn": "15",
+                "Upri": "50"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "7",
+                "ItCd": "3500",
+                "Ds": "Samenstelling assemblage",
+                "BiUn": "Stk",
+                "QuUn": "10",
+                "Upri": "231"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "FbStockMutation": {
+    "Element": {
+      "Fields": {
+        "VaOt": "41",
+        "ReId": "1",
+        "VaIt": "2",
+        "ItCd": "1000",
+        "War": "01",
+        "Loc": "*****",
+        "BiUn": "STK",
+        "QuUn": "10",
+        "Qu": ""
+      }
+    }
+  }
+}

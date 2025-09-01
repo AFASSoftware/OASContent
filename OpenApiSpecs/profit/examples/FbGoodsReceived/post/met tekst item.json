@@ -1,0 +1,24 @@
+{
+  "FbGoodsReceived": {
+    "Element": {
+      "Fields": {
+        "CrId": "50028",
+        "RfCs": "Tekst",
+        "War": "02"
+      },
+      "Objects": {
+        "FbGoodsReceivedLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "3",
+              "ItCd": "T",
+              "Ds": "Afwijkende tekstomschrijving voor op de regel",
+              "Re": "Extra regelomschrijving",
+              "QuUn": "1"
+            }
+          }
+        }
+      }
+    }
+  }
+}

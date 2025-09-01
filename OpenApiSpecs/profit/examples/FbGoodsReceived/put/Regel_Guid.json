@@ -1,0 +1,21 @@
+{
+  "FbGoodsReceived": {
+    "Element": {
+      "Fields": {
+        "OrNu": "00083"
+      },
+      "Objects": {
+        "FbGoodsReceivedLines": {
+          "Element": {
+            "Fields": {
+              "Ds": "Afwijkende omschrijving",
+              "BiUn": "stk",
+              "QuUn": "20",
+              "GuLi": "{75536E06-861D-42C3-8AC7-3059FCB137B6}"
+            }
+          }
+        }
+      }
+    }
+  }
+}

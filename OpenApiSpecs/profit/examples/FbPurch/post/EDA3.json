@@ -1,0 +1,37 @@
+{
+  "FbPurch": {
+    "Element": {
+      "Fields": {
+        "OrNu": "JSON00002",
+        "OrDa": "2010-07-01",
+        "CrId": "60005",
+        "RfCs": "Via JSON Connector",
+        "War": "01"
+      },
+      "Objects": {
+        "FbPurchLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "1000",
+                "BiUn": "STK",
+                "QuUn": "10"
+              },
+              "Objects": ""
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "1001",
+                "BiUn": "STK",
+                "QuUn": "5"
+              },
+              "Objects": ""
+            }
+          ]
+        }
+      }
+    }
+  }
+}

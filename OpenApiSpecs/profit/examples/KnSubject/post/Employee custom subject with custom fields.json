@@ -1,0 +1,36 @@
+{
+  "KnSubject": {
+      "Element": {
+          "Fields": {
+              "StId": 96,
+              "Ds": "Toevoeging virtuele boete",
+              "Da": "2024-03-19T11:54:07"
+          },
+          "Objects": [
+              {
+                  "KnSubjectLink": {
+                      "Element": {
+                          "Fields": {
+                              "DoCRM": true,
+                              "SfTp": 2,
+                              "SfId": "5000430"
+                          }
+                      }
+                  }
+              },
+              {
+                  "KnS51": {
+                      "Element": {
+                          "Fields": {
+                              "U112E249248E7AF8B68A64BA5DF850577": "2024-03-01",
+                              "U307682E043316A0DCFF663B12C496196": "7",
+                              "U39EA313D6A864408AA7B7D9DFA323D42": "11:00",
+                              "U2D84F4FE662C47F8BE0FBBF4DD353845": "10:50"
+                          }
+                      }
+                  }
+              }
+          ]
+      }
+  }
+}

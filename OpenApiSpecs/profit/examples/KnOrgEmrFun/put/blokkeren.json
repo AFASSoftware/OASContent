@@ -1,0 +1,20 @@
+{
+  "KnOrgEmrFun": {
+    "Element": [
+      {
+        "Fields": {
+          "CmId": "RIS",
+          "FuId": "Ficred",
+          "Bl": "1"
+        }
+      },
+      {
+        "Fields": {
+          "CmId": "RIS",
+          "FuId": "Fideb",
+          "Bl": "1"
+        }
+      }
+    ]
+  }
+}

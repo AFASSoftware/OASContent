@@ -1,0 +1,22 @@
+{
+  "FbAssemblyPrep": {
+    "Element": {
+      "Fields": {
+        "Unit": "1",
+        "War": "01"
+      },
+      "Objects": {
+        "FbAssemblyLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "7",
+              "ItCd": "3500",
+              "BiUn": "stk",
+              "QuUn": "1"
+            }
+          }
+        }
+      }
+    }
+  }
+}

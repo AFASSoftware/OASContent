@@ -1,0 +1,77 @@
+{
+  "KnPurchaseRelationOrg": {
+    "Element": {
+      "@CrId": "32303",
+      "Fields": {
+        "BaAc": "849835607",
+        "IsCr": true,
+        "VaId": "NL123456789B02",
+        "PaCd": "30",
+        "CuId": "EUR",
+        "VaDu": true,
+        "Krli": false,
+        "Bl": false,
+        "AuPa": true,
+        "ColA": "1600"
+      },
+      "Objects": {
+        "KnOrganisation": {
+          "Element": {
+            "Fields": {
+              "PadAdr": false,
+              "AutoNum": false,
+              "MatchOga": "6",
+              "BcCo": "32300",
+              "SeNm": "ZOEKNAAM",
+              "Nm": "Jansen",
+              "TeNr": "334341800",
+              "FaNr": "0412-635277",
+              "EmAd": "john.doe@example.com",
+              "HoPa": "https://www.example.com",
+              "Corr": false
+            },
+            "Objects": {
+              "KnBankAccount": {
+                "Element": {
+                  "Fields": {
+                    "CoId": "NL",
+                    "IbCk": false,
+                    "BaAc": "849835607"
+                  }
+                }
+              },
+              "KnBasicAddressAdr": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": false,
+                    "Ad": "De Horzak",
+                    "HmNr": "105",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "BeginDate": "2010-05-01",
+                    "ResZip": false
+                  }
+                }
+              },
+              "KnBasicAddressPad": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": false,
+                    "Ad": "De Horzak",
+                    "HmNr": "105",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "BeginDate": "2010-05-01",
+                    "ResZip": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

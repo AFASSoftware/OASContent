@@ -1,0 +1,12 @@
+{
+  "FbBitVatTarifGroup": {
+    "Element": {
+      "Fields": {
+        "VaIt": "2",
+        "ItCd": "1000",
+        "CoLa": "GB",
+        "VaRc": "2"
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "FbDeliveryNote": {
+    "Element": {
+      "Fields": {
+        "DbId": "10034",
+        "RfCs": "Afwijkend magazijn op regels",
+        "War": "*****"
+      },
+      "Objects": {
+        "FbDeliveryNoteLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "9000",
+                "BiUn": "stk",
+                "QuUn": "10"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "1000",
+                "BiUn": "stk",
+                "QuUn": "2",
+                "War": "01"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "1001",
+                "BiUn": "stk",
+                "QuUn": "2",
+                "War": "02"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

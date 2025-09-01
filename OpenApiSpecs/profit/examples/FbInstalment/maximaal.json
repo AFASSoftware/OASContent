@@ -1,0 +1,28 @@
+{
+  "FbInstalment": {
+    "Element": {
+      "Fields": {
+        "PrId": "910004"
+      },
+      "Objects": {
+        "FbInstalmentLines": {
+          "Element": {
+            "Fields": {
+              "Ds": "Test",
+              "DuDa": "2016-01-20",
+              "SaFc": "8000",
+              "ItCd": "T1",
+              "VaRc": "1",
+              "Pr": "0",
+              "TxId": "T1",
+              "TxDs": "Bestel voortaan via onze webshop",
+              "Prio": "1",
+              "Text": "pipo",
+              "VaDu": "1"
+            }
+          }
+        }
+      }
+    }
+  }
+}

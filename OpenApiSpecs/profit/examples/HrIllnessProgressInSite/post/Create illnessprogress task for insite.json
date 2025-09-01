@@ -1,0 +1,15 @@
+{
+  "HrAbsIllnessProgress": {
+    "Element": {
+      "@ApSn": null,
+      "Fields": {
+        "ProfileId": -26,
+        "EmId": "GAMZEY",
+        "AbId": 85,
+        "DaTi": "2024-06-06T14:41:45",
+        "PsPc": "0",
+        "PsHr": 0
+      }
+    }
+  }
+}

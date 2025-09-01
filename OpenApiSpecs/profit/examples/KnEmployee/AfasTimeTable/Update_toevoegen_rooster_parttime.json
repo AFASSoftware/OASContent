@@ -1,0 +1,25 @@
+{
+  "AfasEmployee": {
+    "Element": {
+      "@EmId": "UPD006",
+      "Fields": null,
+      "Objects": {
+        "AfasTimeTable": {
+          "Element": {
+            "@DaBg": "2008-06-01",
+            "Fields": {
+              "StPa": "1",
+              "Spec": "0",
+              "DyWk": "4",
+              "HrWk": "20",
+              "FtSv": "0",
+              "ClAg": "1",
+              "HrMn": "20",
+              "HrMx": "20"
+            }
+          }
+        }
+      }
+    }
+  }
+}

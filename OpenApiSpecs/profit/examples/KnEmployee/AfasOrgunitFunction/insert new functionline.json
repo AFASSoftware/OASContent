@@ -1,0 +1,24 @@
+{
+  "AfasEmployee": {
+      "Element": {
+          "@Action": "update",
+          "@EmId": "000002009",
+          "Objects": [
+              {
+                  "AfasOrgunitFunction": {
+                      "Element": {
+                          "@Action": "insert",
+                          "@DaBe": "2022-03-01",
+                          "Fields": {
+                              "DpId": "OPLTEAM",
+                              "FuId": "MEDLERA",
+                              "CcId": "203",
+                              "CrId": "01"
+                          }
+                      }
+                  }
+              }
+          ]
+      }
+  }
+}

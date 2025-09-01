@@ -1,0 +1,34 @@
+{
+  "HrMobility": {
+    "Element": {
+      "Fields": {
+        "TrTy": "4",
+        "CmId": "01",
+        "CoNu": "",
+        "LsAm": "1200",
+        "DaBl": "2023-01-01",
+        "DaEl": "2025-03-12",
+        "ViMr": "20",
+        "Re": "Fiets",
+        "InKm": 0,
+        "DaPr": "2023-01-01",
+        "CtVl": "1200",
+        "OnVl": false,
+        "AgId": "L"
+      },
+      "Objects": [
+        {
+          "HrEmployeeMobility": {
+            "Element": {
+              "@EmId": "KOOSB",
+              "Fields": {
+                "DaBe": "2023-01-01",
+                "OwCo": "25"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

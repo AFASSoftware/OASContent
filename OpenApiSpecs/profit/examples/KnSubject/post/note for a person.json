@@ -1,0 +1,22 @@
+{
+  "KnSubject": {
+    "Element": {
+      "Fields": {
+        "StId": "4",
+        "Ds": "Subject connected to a person created by user ALLARDJ",
+        "Da": "2023-01-01T10:00:00",
+        "UsId": "ALLARDJ"
+      },
+      "Objects": {
+        "KnSubjectLink": {
+          "Element": {
+            "Fields": {
+              "ToBC": "1",
+              "BcId": "1000744"
+            }
+          }
+        }
+      }
+    }
+  }
+}

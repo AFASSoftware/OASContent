@@ -1,0 +1,37 @@
+{
+  "FbGoodsReceived": {
+    "Element": {
+      "Fields": {
+        "CrId": "50028",
+        "RfCs": "Kostensoort",
+        "War": "02"
+      },
+      "Objects": {
+        "FbGoodsReceivedLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "6",
+                "ItCd": "K01",
+                "Ds": "Gemaakte en doorbelaste kosten",
+                "BiUn": "*****",
+                "QuUn": "1",
+                "Upri": "150"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "6",
+                "ItCd": "K02",
+                "Ds": "Gemaakte en doorbelaste kosten",
+                "BiUn": "stk",
+                "QuUn": "1",
+                "Upri": "200"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

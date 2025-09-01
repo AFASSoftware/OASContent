@@ -1,0 +1,24 @@
+{
+  "KnSubject": {
+    "Element": {
+      "Fields": {
+        "StId": "4",
+        "Ds": " Dossier inkooprelatie en contact",
+        "SbTx": "Dit is de toelichting",
+        "Da": "2023-01-01T10:00:00",
+        "UsId": "ALLARDJ"
+      },
+      "Objects": {
+        "KnSubjectLink": {
+          "Element": {
+            "Fields": {
+              "ToPR": "1",
+              "BcId": "1000032",
+              "CdId": "970"
+            }
+          }
+        }
+      }
+    }
+  }
+}

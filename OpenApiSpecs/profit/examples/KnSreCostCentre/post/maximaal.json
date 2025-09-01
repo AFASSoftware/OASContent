@@ -1,0 +1,21 @@
+{
+  "KnSreCostCentre": {
+    "Element": {
+      "Fields": {
+        "DbId": "1410",
+        "CoId": "NL",
+        "Ds": "Via de Connector aangemaakt",
+        "Bl": "0"
+      },
+      "Objects": {
+        "KnSreCostCentreContact": {
+          "Element": {
+            "Fields": {
+              "CdId": "22275"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "KnSalesRelationOrg": {
+    "Element": {
+      "Fields": {
+        "IsDb": true,
+        "PaCd": "14",
+        "CuId": "EUR",
+        "VaDu": true,
+        "ColA": "1300"
+      },
+      "Objects": {
+        "KnOrganisation": {
+          "Element": {
+            "Fields": {
+              "PadAdr": true,
+              "AutoNum": true,
+              "MatchOga": "6",
+              "SeNm": "ZOEKNAAM",
+              "Nm": "Jansen",
+              "TeNr": "334341800",
+              "FaNr": "040-2141759",
+              "EmAd": "john.doe@example.com"
+            },
+            "Objects": {
+              "KnBankAccount": {
+                "Element": {
+                  "Fields": {
+                    "CoId": "NL",
+                    "IbCk": false,
+                    "Iban": "NL97CHAS0849835607"
+                  }
+                }
+              },
+              "KnBasicAddressAdr": {
+                "Element": {
+                  "Fields": {
+                    "CoId": "NL",
+                    "PbAd": false,
+                    "Ad": "Postbus",
+                    "HmNr": "105",
+                    "ZpCd": "3833LC",
+                    "Rs": "Leusden",
+                    "ResZip": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

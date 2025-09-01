@@ -1,0 +1,35 @@
+{
+  "FbDirectInvoice": {
+    "Element": {
+      "Fields": {
+        "DbId": "10178",
+        "TrPt": "tnt",
+        "SsId": "EX",
+        "Re": "Insert met vervoerder"
+      },
+      "Objects": {
+        "FbDirectInvoiceLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "1000",
+                "BiUn": "stk",
+                "QuUn": "11"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "wst",
+                "ItCd": "300",
+                "BiUn": "uur",
+                "QuUn": "5",
+                "Upri": "65"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

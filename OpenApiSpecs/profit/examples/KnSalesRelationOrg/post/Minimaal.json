@@ -1,0 +1,39 @@
+{
+  "KnSalesRelationOrg": {
+    "Element": {
+      "@DbId": "20010",
+      "Fields": {
+        "CuId": "EUR",
+        "InPv": "E"
+      },
+      "Objects": {
+        "KnOrganisation": {
+          "Element": {
+            "Fields": {
+              "PadAdr": true,
+              "AutoNum": true,
+              "MatchOga": "6",
+              "SeNm": "ZOEKNAAM",
+              "Nm": "Jansen"
+            },
+            "Objects": {
+              "KnBasicAddressAdr": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": false,
+                    "Ad": "Haarlemseweg",
+                    "HmNr": "105",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "ResZip": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

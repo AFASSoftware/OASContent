@@ -1,0 +1,127 @@
+{
+  "KnQuotation": {
+    "Element": {
+      "Fields": {
+        "QuId": "offerte001",
+        "QuDa": "2017-01-01",
+        "DbId": "100999",
+        "BcId": "1000142",
+        "TaLn": "tav de Baas",
+        "AdLn": "Adres 99",
+        "ReLn": "Leusden",
+        "CoLn": "NL",
+        "PrId": "100",
+        "VaDa": "2016-12-01",
+        "PlDa": "2017-01-01",
+        "DaTi": "2013-01-01",
+        "CuId": "EUR",
+        "InPc": "5",
+        "PaPc": "1",
+        "PaCd": "14",
+        "PaTp": "00",
+        "VaDu": "1",
+        "PrIt": true
+      },
+      "Objects": [
+        {
+          "KnQuotationLine": {
+            "Element": [
+              {
+                "Fields": {
+                  "VaIt": "1",
+                  "ItCd": "223110a10",
+                  "EmId": "M00002",
+                  "Ds": "Mooie verkoopofferte",
+                  "UnId": "UUR",
+                  "QuUn": "10",
+                  "PrFc": "1",
+                  "Qu": "10",
+                  "QuSa": "10",
+                  "Upri": "10",
+                  "AmCo": "5",
+                  "VaRc": "2",
+                  "DaSy": "2016-11-28",
+                  "PlDa": "2016-12-01",
+                  "TiCl": "0",
+                  "StId": "1",
+                  "Ch": "1",
+                  "DeDi": "0",
+                  "MoId": "022210",
+                  "CoTy": "A",
+                  "NoHo": "0.3522",
+                  "UnCo": "dzn",
+                  "MuTy": "01",
+                  "MuRe": "werksoort met bouwevelden via KnQuotation"
+                }
+              },
+              {
+                "Fields": {
+                  "VaIt": "1",
+                  "ItCd": "301",
+                  "EmId": "M00002",
+                  "Ds": "Mooie verkoopofferte sr.",
+                  "UnId": "UUR",
+                  "QuUn": "5",
+                  "PrFc": "1",
+                  "Qu": "5",
+                  "QuSa": "5",
+                  "Upri": "15",
+                  "AmCo": "5",
+                  "VaRc": "2",
+                  "DaSy": "2016-11-28",
+                  "PlDa": "2016-12-01",
+                  "TiCl": "0",
+                  "StId": "1",
+                  "Ch": "1",
+                  "DeDi": "0",
+                  "MoId": "022210",
+                  "CoTy": "A",
+                  "NoHo": "0.3522",
+                  "UnCo": "dzn",
+                  "MuTy": "01",
+                  "MuRe": "werksoort met bouwevelden via KnQuotation"
+                }
+              },
+              {
+                "Fields": {
+                  "VaIt": "2",
+                  "ItCd": "VC400",
+                  "Ds": "Vlonderplank Composiet 'Antraciet - 400x15x2.5cm",
+                  "UnId": "STK",
+                  "QuUn": "100",
+                  "PrFc": "1",
+                  "Qu": "100",
+                  "QuSa": "100",
+                  "Upri": "100",
+                  "AmCo": "5",
+                  "VaRc": "2",
+                  "DaSy": "2016-11-28",
+                  "PlDa": "2016-12-01",
+                  "TiCl": "0",
+                  "StId": "1",
+                  "Ch": "1",
+                  "DeDi": "0",
+                  "StL1": "KunstH",
+                  "StL2": "RAL2009",
+                  "MoId": "012320",
+                  "CoTy": "MA",
+                  "NoHo": "1.255",
+                  "UnCo": "pst",
+                  "MuTy": "01",
+                  "MuRe": "Artikelregel met bouwevelden via KnQuotation"
+                }
+              },
+              {
+                "Fields": {
+                  "VaIt": "3",
+                  "ItCd": "F1",
+                  "Ds": "Hartelijk dank voor uw bestelling."
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

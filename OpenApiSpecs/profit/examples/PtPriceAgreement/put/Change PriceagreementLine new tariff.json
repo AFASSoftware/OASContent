@@ -1,0 +1,43 @@
+{
+  "PtPriceAgreement": {
+      "Element": {
+          "Fields": {
+              "@Action": "update",
+              "PAId": "000037",
+              "Ds": "Loonafspraakregel tarief wijzigen voor een specifieke plaatsing"
+          },
+          "Objects": [
+              {
+                  "PtPriceAgreementVersion": {
+                      "Element": {
+                          "Fields": {
+                              "@Action": "update",
+                              "PAVe": 1,
+                              "DaBe": "2023-01-01"
+                          },
+                          "Objects": [
+                              {
+                                  "PtPriceAgreementLine": {
+                                      "Element": [
+                                          {
+                                              "Fields": {
+                                                  "@Action": "update",
+                                                  "PlSe": "1",
+                                                  "VaIt": "1",
+                                                  "PlCo": "101",
+                                                  "ItCd": "F001-01",
+                                                  "Ds": "Normale uren",
+                                                  "TaFa": "1.2"
+                                              }
+                                          }
+                                      ]
+                                  }
+                              }
+                          ]
+                      }
+                  }
+              }
+          ]
+      }
+  }
+}

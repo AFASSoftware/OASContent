@@ -1,0 +1,28 @@
+{
+  "KnSalesRelationOrg": {
+    "Element": {
+      "@DbId": "10114",
+      "Fields": "",
+      "Objects": {
+        "KnOrganisation": {
+          "Element": {
+            "Fields": {
+              "MatchOga": "9"
+            },
+            "Objects": {
+              "KnBankAccount": {
+                "Element": {
+                  "Fields": {
+                    "CoId": "NL",
+                    "BaAc": "849835607",
+                    "Bic": "INGBNL2A"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

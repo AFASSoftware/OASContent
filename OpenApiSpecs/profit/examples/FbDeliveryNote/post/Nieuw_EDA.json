@@ -1,0 +1,36 @@
+{
+  "FbDeliveryNote": {
+    "Element": {
+      "Fields": {
+        "OrNu": "JSON_P_00001",
+        "OrDa": "2010-07-01",
+        "DbId": "10001",
+        "War": "01"
+      },
+      "Objects": {
+        "FbDeliveryNoteLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "1000",
+                "Ds": "JSON",
+                "BiUn": "STK",
+                "QuUn": "10"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "1001",
+                "Ds": "JSON2",
+                "BiUn": "STK",
+                "QuUn": "1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

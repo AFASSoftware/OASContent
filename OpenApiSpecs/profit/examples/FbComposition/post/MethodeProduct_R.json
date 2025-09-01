@@ -1,0 +1,52 @@
+{
+  "FbComposition": {
+    "Element": {
+      "Fields": {
+        "ItCd": "3293",
+        "Ds": "Product Samenstelling methode R",
+        "Grp": "300",
+        "BiUn": "stk",
+        "VaCt": "2",
+        "AssM": "R",
+        "StPrice": "1500",
+        "VaRc": "1",
+        "CrId": "50003",
+        "CsGc": "00000000"
+      },
+      "Objects": {
+        "FbCompositionPart": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "art",
+                "ItCd": "1000",
+                "QuUn": "1"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "art",
+                "ItCd": "1700",
+                "QuUn": "2"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "art",
+                "ItCd": "1800",
+                "QuUn": "2"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "art",
+                "ItCd": "4104",
+                "QuUn": "2"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

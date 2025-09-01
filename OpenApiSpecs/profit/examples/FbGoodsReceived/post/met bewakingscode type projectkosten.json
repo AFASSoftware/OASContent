@@ -1,0 +1,42 @@
+{
+  "FbGoodsReceived": {
+    "Element": {
+      "Fields": {
+        "OrNu": "GO0013",
+        "OrDa": "2017-02-02",
+        "CrId": "50002",
+        "SoOr": "00003",
+        "CuId": "EUR",
+        "VaDu": "1",
+        "Unit": "1",
+        "War": "*****"
+      },
+      "Objects": {
+        "FbGoodsReceivedLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "6",
+                "ItCd": "220010a01",
+                "BiUn": "m3",
+                "QuUn": "3.66",
+                "SoOr": "00003",
+                "SoGu": "{0ADEF060-9470-4C1F-9647-5AC8F606F2BE}"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "VC400",
+                "BiUn": "STK",
+                "QuUn": "1",
+                "SoOr": "00003",
+                "SoGu": "{34EEE41A-8517-41E6-8F63-39A0FC5528D2}"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "KnCourseEvent": {
+    "Element": {
+      "Fields": {
+        "ItCd": "104",
+        "AuId": "1",
+        "CrDs": "Cursusevenement nieuw",
+        "BcId": "1000483",
+        "CdId": "681",
+        "LoId": "000002",
+        "MiPt": "5",
+        "MaPt": "10",
+        "UnFi": "1",
+        "CrRm": "Deze cursus is met JSON ingestuurt, YES!!!"
+      },
+      "Objects": {
+        "KnSession": {
+          "Element": [
+            {
+              "Fields": {
+                "SeId": "1",
+                "SeDa": "2013-12-01",
+                "VaDp": "M",
+                "StTi": "13:00:00",
+                "EnTi": "18:00:00",
+                "BcId": "1000483",
+                "CdId": "681",
+                "LoId": "000002",
+                "SeDs": "Cursusdag 1"
+              }
+            },
+            {
+              "Fields": {
+                "SeId": "2",
+                "SeDa": "2013-12-02",
+                "VaDp": "M",
+                "StTi": "13:00:00",
+                "EnTi": "18:00:00",
+                "BcId": "1000483",
+                "CdId": "681",
+                "LoId": "000002",
+                "SeDs": "Cursusdag 2"
+              }
+            },
+            {
+              "Fields": {
+                "SeId": "3",
+                "SeDa": "2013-12-03",
+                "VaDp": "M",
+                "StTi": "13:00:00",
+                "EnTi": "18:00:00",
+                "BcId": "1000483",
+                "CdId": "681",
+                "LoId": "000002",
+                "SeDs": "Cursusdag 3"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

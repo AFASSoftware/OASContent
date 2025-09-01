@@ -1,0 +1,30 @@
+{
+  "HrIllnessGUID": {
+    "Element": {
+      "@GUID": "{283761AB-524D-4DFF-9894-8E551C467DF6}",
+      "Fields": {
+        "EmId": "4125630",
+        "DaBe": "2008-03-01T00:00:00",
+        "DMeB": "2008-03-01T00:00:00",
+        "DaEs": "2008-03-25",
+        "TPBe": "0",
+        "PcWd": "0.00",
+        "ExFr": "0"
+      },
+      "Objects": {
+        "HrAbsIllnessProgress": {
+          "Element": {
+            "@GUID": "{283761AB-524D-4DFF-9894-8E551C467DF5}",
+            "Fields": {
+              "DaTi": "2008-03-18T00:00:00",
+              "SoTi": "Z",
+              "StAt": "Z",
+              "PsPc": "50.00",
+              "ViWr": "1"
+            }
+          }
+        }
+      }
+    }
+  }
+}

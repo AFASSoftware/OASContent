@@ -1,0 +1,27 @@
+{
+    "KnUser": {
+      "Element": {
+        "Fields": {
+          "MtCd": "1",
+          "GrId": "Administrators",
+          "GrDs": "System Administrators",
+          "BcCo": "1234567890",
+          "UsIdNew": "johndoe",
+          "UsId": "johndoe",
+          "Nm": "John Doe",
+          "Awin": true,
+          "Site": true,
+          "EmAd": "johndoe@example.com",
+          "XOEA": "johndoe@alternative.com",
+          "InSi": true,
+          "Upn": "johndoe@company.com",
+          "InLn": "1043",
+          "CAId": "oauth_id_123",
+          "CANm": "johndoe_oauth",
+          "OcUs": true,
+          "PoMa": false,
+          "AcUs": true
+        }
+      }
+    }
+  }

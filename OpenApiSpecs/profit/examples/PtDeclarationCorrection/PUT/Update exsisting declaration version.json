@@ -1,0 +1,25 @@
+{
+    "PtDeclarationCorrection": {
+      "Element": {
+        "Fields": {
+          "DcCo": "000000002181.02"
+        },
+        "Objects": [
+          {
+            "PtRealization": {
+              "Element": {
+                "Fields": {
+                  "Id": 37378,
+                  "DaTi": "2023-02-27",
+                  "VaIt": "Wst",
+                  "ItCd": "F001-01",
+                  "QuUn": "7",
+                  "Ds": "This body updates a line of the declaration."
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }

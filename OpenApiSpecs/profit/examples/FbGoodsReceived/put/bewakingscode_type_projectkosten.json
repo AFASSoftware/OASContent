@@ -1,0 +1,46 @@
+{
+  "FbGoodsReceived": {
+    "Element": {
+      "Fields": {
+        "OrNu": "GO0012",
+        "OrDa": "2017-02-02"
+      },
+      "Objects": {
+        "FbGoodsReceivedLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "1",
+                "ItCd": "300",
+                "Ds": "regel toegevoegd via update connector",
+                "VaRc": "2",
+                "BiUn": "UUR",
+                "QuUn": "8",
+                "Upri": "4",
+                "CoPr": "4.1",
+                "MoId": "022010",
+                "CoTy": "A"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "VC400",
+                "Ds": "regel toegevoegd via update connector",
+                "VaRc": "2",
+                "BiUn": "STK",
+                "QuUn": "3",
+                "Upri": "7.75",
+                "CoPr": "7.75",
+                "StL1": "HoutZ",
+                "StL2": "RAL9001",
+                "MoId": "042155",
+                "CoTy": "OA"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "PtProject": {
+    "Element": {
+      "Fields": {
+        "PrId": "911012",
+        "PrGp": "CON",
+        "Ds": "factuur incasseren",
+        "DtAn": "2013-02-05",
+        "DbId": "10205",
+        "VaCo": "3",
+        "Bankaccount": "123456789"
+      }
+    }
+  }
+}

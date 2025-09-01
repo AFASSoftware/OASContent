@@ -1,0 +1,295 @@
+{
+	"FbAssembly": {
+		"Element": {
+			"@action": "insert",
+			"Fields": {
+				"OrDa": "2023-12-15T13:50:20",
+				"DaAc": "2023-12-15T13:50:20",
+				"SoOr": "PO230670",
+				"War": "*****"
+			},
+			"Objects": {
+				"FbAssemblyLines": {
+					"Element": {
+						"@action": "update",
+						"Fields": {
+							"SoGu": "{D798A6AB-46E7-4078-8E88-14088D782A50}",
+							"SoOr": "PO230670",
+							"QuUn": 9,
+							"BiUn": "STK"
+						},
+						"Objects": {
+							"AfasFbOrderCompLines": {
+								"Element": [
+									{
+										"@action": "update",
+										"Fields": {
+											"VaIt": "2",
+											"ItCd": "A20142"
+										},
+										"Objects": {
+											"FbOrderLocationLines": {
+												"Element": {
+													"@action": "insert",
+													"Fields": {
+														"Loc": "P",
+														"Qu": 9
+													}
+												}
+											}
+										}
+									},
+									{
+										"@action": "update",
+										"Fields": {
+											"VaIt": "2",
+											"ItCd": "A12684"
+										},
+										"Objects": {
+											"FbOrderLocationLines": {
+												"Element": {
+													"@action": "insert",
+													"Fields": {
+														"Loc": "P",
+														"Qu": 9
+													}
+												}
+											}
+										}
+									},
+									{
+										"@action": "update",
+										"Fields": {
+											"VaIt": "2",
+											"ItCd": "A13397"
+										},
+										"Objects": {
+											"FbOrderLocationLines": {
+												"Element": {
+													"@action": "insert",
+													"Fields": {
+														"Loc": "P",
+														"Qu": 9
+													}
+												}
+											}
+										}
+									},
+									{
+										"@action": "update",
+										"Fields": {
+											"VaIt": "2",
+											"ItCd": "A13398"
+										},
+										"Objects": {
+											"FbOrderLocationLines": {
+												"Element": {
+													"@action": "insert",
+													"Fields": {
+														"Loc": "P",
+														"Qu": 9
+													}
+												}
+											}
+										}
+									},
+									{
+										"@action": "update",
+										"Fields": {
+											"VaIt": "2",
+											"ItCd": "A12668"
+										},
+										"Objects": {
+											"FbOrderSerialLines": [
+												{
+													"Element": {
+														"@action": "insert",
+														"Fields": {
+															"SeNu": "2118059",
+															"QuUn": 1
+														},
+														"Objects": {
+															"FbOrderLocationLines": {
+																"Element": {
+																	"@action": "insert",
+																	"Fields": {
+																		"Loc": "P",
+																		"Qu": 1
+																	}
+																}
+															}
+														}
+													}
+												},
+												{
+													"Element": {
+														"@action": "insert",
+														"Fields": {
+															"SeNu": "2118058",
+															"QuUn": 1
+														},
+														"Objects": {
+															"FbOrderLocationLines": {
+																"Element": {
+																	"@action": "insert",
+																	"Fields": {
+																		"Loc": "P",
+																		"Qu": 1
+																	}
+																}
+															}
+														}
+													}
+												},
+												{
+													"Element": {
+														"@action": "insert",
+														"Fields": {
+															"SeNu": "2118057",
+															"QuUn": 1
+														},
+														"Objects": {
+															"FbOrderLocationLines": {
+																"Element": {
+																	"@action": "insert",
+																	"Fields": {
+																		"Loc": "P",
+																		"Qu": 1
+																	}
+																}
+															}
+														}
+													}
+												},
+												{
+													"Element": {
+														"@action": "insert",
+														"Fields": {
+															"SeNu": "2118056",
+															"QuUn": 1
+														},
+														"Objects": {
+															"FbOrderLocationLines": {
+																"Element": {
+																	"@action": "insert",
+																	"Fields": {
+																		"Loc": "P",
+																		"Qu": 1
+																	}
+																}
+															}
+														}
+													}
+												},
+												{
+													"Element": {
+														"@action": "insert",
+														"Fields": {
+															"SeNu": "2106659",
+															"QuUn": 1
+														},
+														"Objects": {
+															"FbOrderLocationLines": {
+																"Element": {
+																	"@action": "insert",
+																	"Fields": {
+																		"Loc": "P",
+																		"Qu": 1
+																	}
+																}
+															}
+														}
+													}
+												},
+												{
+													"Element": {
+														"@action": "insert",
+														"Fields": {
+															"SeNu": "2106658",
+															"QuUn": 1
+														},
+														"Objects": {
+															"FbOrderLocationLines": {
+																"Element": {
+																	"@action": "insert",
+																	"Fields": {
+																		"Loc": "P",
+																		"Qu": 1
+																	}
+																}
+															}
+														}
+													}
+												},
+												{
+													"Element": {
+														"@action": "insert",
+														"Fields": {
+															"SeNu": "Test14122023_01",
+															"QuUn": 1
+														},
+														"Objects": {
+															"FbOrderLocationLines": {
+																"Element": {
+																	"@action": "insert",
+																	"Fields": {
+																		"Loc": "P",
+																		"Qu": 1
+																	}
+																}
+															}
+														}
+													}
+												},
+												{
+													"Element": {
+														"@action": "insert",
+														"Fields": {
+															"SeNu": "Test14122023_02",
+															"QuUn": 1
+														},
+														"Objects": {
+															"FbOrderLocationLines": {
+																"Element": {
+																	"@action": "insert",
+																	"Fields": {
+																		"Loc": "P",
+																		"Qu": 1
+																	}
+																}
+															}
+														}
+													}
+												},
+												{
+													"Element": {
+														"@action": "insert",
+														"Fields": {
+															"SeNu": "Test14122023_03",
+															"QuUn": 1
+														},
+														"Objects": {
+															"FbOrderLocationLines": {
+																"Element": {
+																	"@action": "insert",
+																	"Fields": {
+																		"Loc": "P",
+																		"Qu": 1
+																	}
+																}
+															}
+														}
+													}
+												}
+											]
+										}
+									}
+								]
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

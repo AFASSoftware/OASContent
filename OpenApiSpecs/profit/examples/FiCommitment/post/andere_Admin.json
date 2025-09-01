@@ -1,0 +1,17 @@
+{
+  "FiCommitment": {
+    "Element": {
+      "@UnId": "2",
+      "@SeNo": "",
+      "Fields": {
+        "AcNr": "8100",
+        "Yr": "2015",
+        "PeNr": "12",
+        "Ds": "Verplichting andere Administratie",
+        "CrId": "50013",
+        "Ref": "3456ADM2",
+        "Amt": "999999999999"
+      }
+    }
+  }
+}

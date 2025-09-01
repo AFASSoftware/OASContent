@@ -1,0 +1,23 @@
+{
+  "AfasEmployee": {
+      "Element": {
+          "@Action": "update",
+          "@EmId": "000002009",
+          "Objects": [
+              {
+                  "AfasTimeTable": {
+                      "Element": {
+                          "@Action": "update",
+                          "@DaBg": "2022-03-01",
+                          "Fields": {
+                              "EtTy": "5",
+                              "DyWk": "4",
+                              "HrWk": "32"
+                          }
+                      }
+                  }
+              }
+          ]
+      }
+  }
+}

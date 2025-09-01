@@ -1,0 +1,18 @@
+{
+  "HrIllnessGUID": {
+    "Element": {
+      "@GUID": "{8A54F49F-46DF-4A34-A2FF-ECE767DDAAFF}",
+      "Fields": {
+        "DaEs": "2013-05-01"
+      },
+      "Objects": {
+        "HrAbsIllnessProgress": {
+          "Element": {
+            "@GUID": "{8A54F49F-46DF-4A34-A2FF-ECE767DDAAFF}",
+            "Fields": ""
+          }
+        }
+      }
+    }
+  }
+}

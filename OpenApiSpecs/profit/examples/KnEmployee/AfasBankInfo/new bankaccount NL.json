@@ -1,0 +1,20 @@
+{
+  "AfasEmployee": {
+    "Element": {
+      "@EmId": "floora",
+      "Objects": {
+        "AfasBankInfo": {
+          "Element": {
+            "@AcId": "0684710692",
+            "@NoBk": "false",
+            "Fields": {
+              "SaAc": "true",
+              "IbCk": "true",
+              "Iban": "NL18LOYD0684710692"
+            }
+          }
+        }
+      }
+    }
+  }
+}

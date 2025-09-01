@@ -1,0 +1,63 @@
+{
+  "FbDeliveryNote": {
+    "Element": {
+      "Fields": {
+        "DbId": "10191",
+        "RfCs": "REF: partijnumemrs 1/2",
+        "War": "01"
+      },
+      "Objects": {
+        "FbDeliveryNoteLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "2",
+              "ItCd": "8000",
+              "BiUn": "stk",
+              "QuUn": "10"
+            },
+            "Objects": {
+              "FbOrderBatchLines": {
+                "Element": [
+                  {
+                    "Fields": {
+                      "BaNu": "8000A1",
+                      "BiUn": "STK",
+                      "QuUn": "5"
+                    },
+                    "Objects": {
+                      "FbOrderLocationLines": {
+                        "Element": {
+                          "Fields": {
+                            "Loc": "A1",
+                            "Qu": "5"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "Fields": {
+                      "BaNu": "8000A2",
+                      "BiUn": "STK",
+                      "QuUn": "5"
+                    },
+                    "Objects": {
+                      "FbOrderLocationLines": {
+                        "Element": {
+                          "Fields": {
+                            "Loc": "A2",
+                            "Qu": "5"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

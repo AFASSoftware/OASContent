@@ -1,0 +1,49 @@
+{
+  "PtMeasurement": {
+    "Element": {
+      "Fields": {
+        "MsId": "00000003",
+        "QuId": "000002",
+        "PrId": "1",
+        "DbId": "10000"
+      },
+      "Objects": {
+        "PtMeasurementLines": {
+          "Element": [
+            {
+              "Fields": {
+                "SeNo": "51647801",
+                "VaMt": "1",
+                "VaMk": "O",
+                "VaPr": "V",
+                "VaIt": "6",
+                "ItCd": "K03",
+                "Ds": "Termijncode via PtMeasurement",
+                "BiUn": "*****",
+                "Qu": "5",
+                "CoPr": "10",
+                "Pric": "20",
+                "QuPr": "2"
+              }
+            },
+            {
+              "Fields": {
+                "SeNo": "51647801",
+                "VaMt": "2",
+                "VaMk": "O",
+                "VaPr": "V",
+                "VaIt": "6",
+                "ItCd": "D002",
+                "BiUn": "*****",
+                "AmCo": "15",
+                "Pric": "30",
+                "AmTo": "30",
+                "AmPr": "6"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

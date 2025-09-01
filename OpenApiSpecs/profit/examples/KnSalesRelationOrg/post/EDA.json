@@ -1,0 +1,71 @@
+{
+  "KnSalesRelationOrg": {
+    "Element": {
+      "@DbId": "125810",
+      "Fields": {
+        "IsDb": true,
+        "PaCd": "14",
+        "CuId": "EUR",
+        "ColA": "1300"
+      },
+      "Objects": {
+        "KnOrganisation": {
+          "Element": {
+            "Fields": {
+              "PadAdr": true,
+              "AutoNum": false,
+              "MatchOga": "6",
+              "BcCo": "10001",
+              "SeNm": "ZOEKNAAM",
+              "Nm": "Jansen",
+              "ViLe": "30",
+              "CcNr": "456465452",
+              "TeNr": "334341800",
+              "FaNr": "0204568550",
+              "MbNr": "334341800",
+              "HoPa": "https://www.example.com",
+              "FiNr": "NL123456789B01"
+            },
+            "Objects": {
+              "KnBankAccount": {
+                "Element": {
+                  "Fields": {
+                    "CoId": "NL",
+                    "IbCk": false,
+                    "BaAc": "849835607"
+                  }
+                }
+              },
+              "KnBasicAddressAdr": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": false,
+                    "Ad": "Americalaan",
+                    "HmNr": "105",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "ResZip": false
+                  }
+                }
+              },
+              "KnBasicAddressPad": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": false,
+                    "Ad": "Postbus",
+                    "HmNr": "105",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "ResZip": false
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

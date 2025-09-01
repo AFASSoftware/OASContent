@@ -1,0 +1,35 @@
+{
+  "KnPurchaseRelationOrg": {
+    "Element": {
+      "@CrId": "50017",
+      "Objects": {
+        "KnOrganisation": {
+          "Element": {
+            "Fields": {
+              "MatchOga": "0",
+              "BcCo": "1000040"
+            },
+            "Objects": {
+              "KnBankAccount": {
+                "Element": {
+                  "Fields": {
+                    "CoId": "NL",
+                    "IbCk": true,
+                    "BaAc": "849835607",
+                    "BkTp": "528001",
+                    "AcGa": true,
+                    "BaNm": "ING",
+                    "BaFi": "Amsterdam Centraal Station",
+                    "BaAd": "Bankstraat 21",
+                    "BaPl": "Amsterdam",
+                    "CalM": "3"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

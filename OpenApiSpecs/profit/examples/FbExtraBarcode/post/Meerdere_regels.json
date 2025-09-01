@@ -1,0 +1,86 @@
+{
+  "FbExtraBarcode": {
+    "Element": [
+      {
+        "Fields": {
+          "VaIt": "art",
+          "ItCd": "1001",
+          "VaBc": "0",
+          "BaCo": "100112345",
+          "VaBu": "03",
+          "Re": "Barcode Interne Logistiek"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "art",
+          "ItCd": "1002",
+          "VaBc": "0",
+          "BaCo": "100212345",
+          "VaBu": "03",
+          "Re": "Barcode Interne Logistiek"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "art",
+          "ItCd": "1003",
+          "VaBc": "0",
+          "BaCo": "100312345",
+          "VaBu": "03",
+          "Re": "Barcode Interne Logistiek"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "art",
+          "ItCd": "1004",
+          "VaBc": "0",
+          "BaCo": "100412345",
+          "VaBu": "03",
+          "Re": "Barcode Interne Logistiek"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "art",
+          "ItCd": "1005",
+          "VaBc": "0",
+          "BaCo": "100512345",
+          "VaBu": "03",
+          "Re": "Barcode Interne Logistiek"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "art",
+          "ItCd": "1006",
+          "VaBc": "0",
+          "BaCo": "100612345",
+          "VaBu": "03",
+          "Re": "Barcode Interne Logistiek"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "art",
+          "ItCd": "1007",
+          "VaBc": "0",
+          "BaCo": "100712345",
+          "VaBu": "03",
+          "Re": "Barcode Interne Logistiek"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "art",
+          "ItCd": "1008",
+          "VaBc": "0",
+          "BaCo": "100812345",
+          "VaBu": "03",
+          "Re": "Barcode Interne Logistiek"
+        }
+      }
+    ]
+  }
+}

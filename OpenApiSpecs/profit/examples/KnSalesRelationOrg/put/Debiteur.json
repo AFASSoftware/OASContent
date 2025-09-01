@@ -1,0 +1,23 @@
+{
+  "KnSalesRelationOrg": {
+    "Element": {
+      "@DbId": "10178",
+      "Fields": {
+        "EmId": "ALLARDJ",
+        "PfId": "*****",
+        "CtI1": "1005",
+        "InPv": "E"
+      },
+      "Objects": {
+        "KnOrganisation": {
+          "Element": {
+            "Fields": {
+              "MatchOga": "0",
+              "BcCo": "1000372"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "KnCustomLinkC01": {
+    "Element": [
+      {
+        "Fields": {
+          "SqNo": 1,
+          "ShId": "KnEmp",
+          "Id": "4125040",
+          "UE3BB26DF4FD35A2A664A7C86C331C910": "01",
+          "UEF5D33B74B89996F6EE52AB79E0CF4F0": "250000",
+          "U887946AB4631DFEDCF2DDB8F53719588": "afas",
+          "U55CA0AC44343DBBF45224C9DBE95EE7E": "2019-10-01",
+          "UFBB3FB254C589B76638CA0B686FDF9AC": "2022-12-31"
+        }
+      }
+    ]
+  }
+}

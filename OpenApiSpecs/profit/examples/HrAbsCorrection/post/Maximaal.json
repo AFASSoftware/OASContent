@@ -1,0 +1,16 @@
+{
+  "HrAbsCorrection": {
+    "Element": {
+      "Fields": {
+        "EmId": "MUHAMMEDA",
+        "EnSe": "1",
+        "RgDa": "2023-01-01",
+        "ViAt": "V",
+        "HhMm": "120",
+        "ViCr": "H",
+        "Re": "Import via JSON",
+        "CcPy": false
+      }
+    }
+  }
+}

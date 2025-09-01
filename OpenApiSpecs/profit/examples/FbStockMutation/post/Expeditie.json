@@ -1,0 +1,236 @@
+{
+  "FbStockMutation": {
+    "Element": [
+      {
+        "Fields": {
+          "VaOt": "32",
+          "ReId": "BO",
+          "Da": "2015-04-17",
+          "Ds": "Firma T.H. Arends B.V. (60000172)",
+          "VaIt": "2",
+          "ItCd": "1101",
+          "War": "01",
+          "Loc": "*****",
+          "BiUn": "Stk",
+          "QuUn": "6"
+        }
+      },
+      {
+        "Fields": {
+          "VaOt": "31",
+          "ReId": "BO",
+          "Da": "2015-04-17",
+          "Ds": "Firma T.H. Arends B.V. (60000172)",
+          "VaIt": "2",
+          "ItCd": "1101",
+          "War": "01",
+          "Loc": "EXPEDITIE",
+          "BiUn": "Stk",
+          "QuUn": "6"
+        }
+      },
+      {
+        "Fields": {
+          "VaOt": "32",
+          "ReId": "BO",
+          "Da": "2015-04-17",
+          "Ds": "Firma T.H. Arends B.V. (60000172)",
+          "VaIt": "2",
+          "ItCd": "8007",
+          "BaNu": "CDRC.8010.SONY001",
+          "War": "01",
+          "Loc": "*****",
+          "BiUn": "Stk",
+          "QuUn": "6"
+        }
+      },
+      {
+        "Fields": {
+          "VaOt": "32",
+          "ReId": "BO",
+          "Da": "2015-04-17",
+          "Ds": "Firma T.H. Arends B.V. (60000172)",
+          "VaIt": "2",
+          "ItCd": "8007",
+          "BaNu": "CDRC.8010.SONY003",
+          "War": "01",
+          "Loc": "*****",
+          "BiUn": "Stk",
+          "QuUn": "3"
+        }
+      },
+      {
+        "Fields": {
+          "VaOt": "31",
+          "ReId": "BO",
+          "Da": "2015-04-17",
+          "Ds": "Firma T.H. Arends B.V. (60000172)",
+          "VaIt": "2",
+          "ItCd": "8007",
+          "BaNu": "CDRC.8010.SONY001",
+          "War": "01",
+          "Loc": "EXPEDITIE",
+          "BiUn": "Stk",
+          "QuUn": "6"
+        }
+      },
+      {
+        "Fields": {
+          "VaOt": "31",
+          "ReId": "BO",
+          "Da": "2015-04-17",
+          "Ds": "Firma T.H. Arends B.V. (60000172)",
+          "VaIt": "2",
+          "ItCd": "8007",
+          "BaNu": "CDRC.8010.SONY003",
+          "War": "01",
+          "Loc": "EXPEDITIE",
+          "BiUn": "Stk",
+          "QuUn": "3"
+        }
+      },
+      {
+        "Fields": {
+          "VaOt": "32",
+          "ReId": "BO",
+          "Da": "2015-04-17",
+          "Ds": "Firma T.H. Arends B.V. (60000172)",
+          "VaIt": "2",
+          "ItCd": "1401",
+          "War": "01",
+          "Loc": "01-A-001",
+          "BiUn": "Stk",
+          "QuUn": "8"
+        }
+      },
+      {
+        "Fields": {
+          "VaOt": "31",
+          "ReId": "BO",
+          "Da": "2015-04-17",
+          "Ds": "Firma T.H. Arends B.V. (60000172)",
+          "VaIt": "2",
+          "ItCd": "1401",
+          "War": "01",
+          "Loc": "EXPEDITIE",
+          "BiUn": "Stk",
+          "QuUn": "8"
+        }
+      },
+      {
+        "Fields": {
+          "VaOt": "32",
+          "ReId": "BO",
+          "Da": "2015-04-17",
+          "Ds": "Firma T.H. Arends B.V. (60000172)",
+          "VaIt": "2",
+          "ItCd": "1401",
+          "War": "01",
+          "Loc": "01-A-005",
+          "BiUn": "Stk",
+          "QuUn": "2"
+        }
+      },
+      {
+        "Fields": {
+          "VaOt": "31",
+          "ReId": "BO",
+          "Da": "2015-04-17",
+          "Ds": "Firma T.H. Arends B.V. (60000172)",
+          "VaIt": "2",
+          "ItCd": "1401",
+          "War": "01",
+          "Loc": "EXPEDITIE",
+          "BiUn": "Stk",
+          "QuUn": "2"
+        }
+      },
+      {
+        "Fields": {
+          "VaOt": "32",
+          "ReId": "BO",
+          "Da": "2015-04-17",
+          "Ds": "Firma T.H. Arends B.V. (60000172)",
+          "VaIt": "2",
+          "ItCd": "3001",
+          "War": "01",
+          "Loc": "*****",
+          "BiUn": "Stk",
+          "QuUn": "5"
+        }
+      },
+      {
+        "Fields": {
+          "VaOt": "31",
+          "ReId": "BO",
+          "Da": "2015-04-17",
+          "Ds": "Firma T.H. Arends B.V. (60000172)",
+          "VaIt": "2",
+          "ItCd": "3001",
+          "War": "01",
+          "Loc": "EXPEDITIE",
+          "BiUn": "Stk",
+          "QuUn": "5"
+        }
+      },
+      {
+        "Fields": {
+          "VaOt": "32",
+          "ReId": "BO",
+          "Da": "2015-04-17",
+          "Ds": "Firma T.H. Arends B.V. (60000172)",
+          "VaIt": "2",
+          "ItCd": "1202",
+          "War": "01",
+          "Loc": "01-A-001",
+          "BiUn": "Stk",
+          "QuUn": "2"
+        }
+      },
+      {
+        "Fields": {
+          "VaOt": "31",
+          "ReId": "BO",
+          "Da": "2015-04-17",
+          "Ds": "Firma T.H. Arends B.V. (60000172)",
+          "VaIt": "2",
+          "ItCd": "1202",
+          "War": "01",
+          "Loc": "EXPEDITIE",
+          "BiUn": "Stk",
+          "QuUn": "2"
+        }
+      },
+      {
+        "Fields": {
+          "VaOt": "32",
+          "ReId": "BO",
+          "Da": "2015-04-17",
+          "Ds": "Firma T.H. Arends B.V. (60000172)",
+          "VaIt": "2",
+          "ItCd": "KRAT02",
+          "SeNu": "003",
+          "War": "01",
+          "Loc": "01-A-003",
+          "BiUn": "KRT",
+          "QuUn": "1"
+        }
+      },
+      {
+        "Fields": {
+          "VaOt": "31",
+          "ReId": "BO",
+          "Da": "2015-04-17",
+          "Ds": "Firma T.H. Arends B.V. (60000172)",
+          "VaIt": "2",
+          "ItCd": "KRAT02",
+          "SeNu": "003",
+          "War": "01",
+          "Loc": "EXPEDITIE",
+          "BiUn": "KRT",
+          "QuUn": "1"
+        }
+      }
+    ]
+  }
+}

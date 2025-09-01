@@ -1,0 +1,15 @@
+{
+    "HrAbsenceID": {
+      "Element": {
+        "Fields": {
+          "EmId": "Fritsc",
+          "ViAt": "V",
+          "DaBe": "2023-12-12T00:00:00",
+          "DaEn": "2023-12-12T00:00:00",
+          "EnSe": "1",
+          "Re": "Leave created with api request",
+          "LeDt": false
+        }
+      }
+    }
+  }

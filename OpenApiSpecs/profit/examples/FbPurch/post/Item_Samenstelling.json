@@ -1,0 +1,23 @@
+{
+  "FbPurch": {
+    "Element": {
+      "Fields": {
+        "CrId": "50014",
+        "War": "01",
+        "RfCs": "Samenstelling"
+      },
+      "Objects": {
+        "FbPurchLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "7",
+              "ItCd": "3500",
+              "BiUn": "stk",
+              "QuUn": "10"
+            }
+          }
+        }
+      }
+    }
+  }
+}

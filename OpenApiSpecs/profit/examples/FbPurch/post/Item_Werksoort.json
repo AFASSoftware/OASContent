@@ -1,0 +1,38 @@
+{
+  "FbPurch": {
+    "Element": {
+      "Fields": {
+        "CrId": "50014",
+        "War": "01",
+        "RfCs": "Werksoort"
+      },
+      "Objects": {
+        "FbPurchLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "1",
+                "ItCd": "300",
+                "BiUn": "uur",
+                "QuUn": "10",
+                "Upri": "60",
+                "VaAd": "1",
+                "ARDc": "100"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "1",
+                "ItCd": "301",
+                "Ds": "Afwijkende omschrijving",
+                "BiUn": "uur",
+                "QuUn": "1",
+                "Upri": "250"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

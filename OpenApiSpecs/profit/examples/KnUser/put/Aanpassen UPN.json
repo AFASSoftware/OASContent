@@ -1,0 +1,12 @@
+{
+  "KnUser": {
+    "Element": {
+      "@UsId": "999903.YAVUZA",
+      "Fields": {
+        "MtCd": "1",
+        "Nm": "Jansen",
+        "Upn": "john.doe@example.com"
+      }
+    }
+  }
+}

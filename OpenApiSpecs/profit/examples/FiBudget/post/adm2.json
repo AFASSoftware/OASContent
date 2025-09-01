@@ -1,0 +1,501 @@
+{
+  "FiBudget": {
+    "Element": [
+      {
+        "Fields": {
+          "unitId": "2",
+          "year": "2013",
+          "accountNr": "4000",
+          "yearBudget": "0",
+          "divTable": "1"
+        },
+        "Objects": {
+          "BudgetLines": {
+            "Element": [
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "1",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "2",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "3",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "4",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "5",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "6",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "7",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "8",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "9",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "10",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "11",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "12",
+                  "amount": "1000"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Fields": {
+          "unitId": "2",
+          "year": "2013",
+          "accountNr": "4005",
+          "yearBudget": "0",
+          "divTable": "1"
+        },
+        "Objects": {
+          "BudgetLines": {
+            "Element": [
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "1",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "2",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "3",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "4",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "5",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "6",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "7",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "8",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "9",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "10",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "11",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "12",
+                  "amount": "1000"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Fields": {
+          "unitId": "2",
+          "year": "2013",
+          "accountNr": "4015",
+          "yearBudget": "0",
+          "divTable": "1"
+        },
+        "Objects": {
+          "BudgetLines": {
+            "Element": [
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "1",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "2",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "3",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "4",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "5",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "6",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "7",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "8",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "9",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "10",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "11",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "12",
+                  "amount": "1000"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Fields": {
+          "unitId": "2",
+          "year": "2013",
+          "accountNr": "4010",
+          "yearBudget": "0",
+          "divTable": "1"
+        },
+        "Objects": {
+          "BudgetLines": {
+            "Element": [
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "1",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "2",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "3",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "4",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "5",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "6",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "7",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "8",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "9",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "10",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "11",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "12",
+                  "amount": "1000"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "Fields": {
+          "unitId": "2",
+          "year": "2013",
+          "accountNr": "4020",
+          "yearBudget": "0",
+          "divTable": "1"
+        },
+        "Objects": {
+          "BudgetLines": {
+            "Element": [
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "1",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "2",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "3",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "4",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "5",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "6",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "7",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "8",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "9",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "10",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "11",
+                  "amount": "1000"
+                }
+              },
+              {
+                "Fields": {
+                  "seqNo": "1",
+                  "periodId": "12",
+                  "amount": "1000"
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

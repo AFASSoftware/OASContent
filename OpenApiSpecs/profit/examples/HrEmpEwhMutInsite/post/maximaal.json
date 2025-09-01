@@ -1,0 +1,17 @@
+{
+  "HrEmpEwhMutInsite": {
+    "Element": {
+      "Fields": {
+        "EmId": "WimB",
+        "DaBe": "2021-06-01",
+        "WhMo": "true",
+        "WhTu": "true",
+        "WhWe": "true",
+        "WhTh": "true",
+        "WhFr": "true",
+        "WhSa": "true",
+        "WhSu": "true"
+      }
+    }
+  }
+}

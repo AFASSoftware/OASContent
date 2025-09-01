@@ -1,0 +1,138 @@
+{
+  "KnOrgunit": {
+    "Element": [
+      {
+        "@OuId": "ENYONT",
+        "Fields": {
+          "Ds": "Enyoi Ontwikkelbedrijf",
+          "OTId": "BDR",
+          "StUn": "0",
+          "Empl": "1",
+          "RpOu": "1",
+          "ReOu": "HLD"
+        }
+      },
+      {
+        "@OuId": "SOFT",
+        "Fields": {
+          "Ds": "Enyoi Softwareontwikkeling",
+          "OTId": "DIV",
+          "StUn": "0",
+          "Empl": "1",
+          "RpOu": "1",
+          "ReOu": "HLD"
+        }
+      },
+      {
+        "@OuId": "SWIN",
+        "Fields": {
+          "Ds": "Windows",
+          "OTId": "AFD",
+          "StUn": "0",
+          "Empl": "1",
+          "RpOu": "1",
+          "ReOu": "HLD"
+        }
+      },
+      {
+        "@OuId": "SLYN",
+        "Fields": {
+          "Ds": "Lynux",
+          "OTId": "AFD",
+          "StUn": "0",
+          "Empl": "1",
+          "RpOu": "1",
+          "ReOu": "HLD"
+        }
+      },
+      {
+        "@OuId": "SAPP",
+        "Fields": {
+          "Ds": "Apple",
+          "OTId": "AFD",
+          "StUn": "0",
+          "Empl": "1",
+          "RpOu": "1",
+          "ReOu": "HLD"
+        }
+      },
+      {
+        "@OuId": "SWEB",
+        "Fields": {
+          "Ds": "Web",
+          "OTId": "AFD",
+          "StUn": "0",
+          "Empl": "1",
+          "RpOu": "1",
+          "ReOu": "HLD"
+        }
+      },
+      {
+        "@OuId": "SINT",
+        "Fields": {
+          "Ds": "Integratie",
+          "OTId": "AFD",
+          "StUn": "0",
+          "Empl": "1",
+          "RpOu": "1",
+          "ReOu": "HLD"
+        }
+      },
+      {
+        "@OuId": "SSTA",
+        "Fields": {
+          "Ds": "STAF",
+          "OTId": "AFD",
+          "StUn": "1",
+          "Empl": "1",
+          "RpOu": "1",
+          "ReOu": "HLD"
+        }
+      },
+      {
+        "@OuId": "HARD",
+        "Fields": {
+          "Ds": "Enyoi Hardwareontwikkeling",
+          "OTId": "DIV",
+          "StUn": "1",
+          "Empl": "1",
+          "RpOu": "1",
+          "ReOu": "HLD"
+        }
+      },
+      {
+        "@OuId": "HCOM",
+        "Fields": {
+          "Ds": "Componenten",
+          "OTId": "AFD",
+          "StUn": "1",
+          "Empl": "1",
+          "RpOu": "1",
+          "ReOu": "HLD"
+        }
+      },
+      {
+        "@OuId": "HSER",
+        "Fields": {
+          "Ds": "Servers",
+          "OTId": "AFD",
+          "StUn": "1",
+          "Empl": "1",
+          "RpOu": "1",
+          "ReOu": "HLD"
+        }
+      },
+      {
+        "@OuId": "HNET",
+        "Fields": {
+          "Ds": "Netwerk",
+          "OTId": "AFD",
+          "StUn": "1",
+          "Empl": "1",
+          "RpOu": "1",
+          "ReOu": "HLD"
+        }
+      }
+    ]
+  }
+}

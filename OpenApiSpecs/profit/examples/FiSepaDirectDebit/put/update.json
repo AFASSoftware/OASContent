@@ -1,0 +1,18 @@
+{
+  "FiSepaDirectDebit": {
+    "Element": {
+      "Fields": {
+        "ViSe": "7",
+        "Ds": "Jansen",
+        "VaDt": "S",
+        "PaId": "400409",
+        "AuDa": "2009-11-01",
+        "UnId": "1",
+        "VaDc": "RCUR",
+        "Iban": "NL97CHAS0849835607",
+        "Conv": "True",
+        "VaDs": "3"
+      }
+    }
+  }
+}

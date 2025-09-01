@@ -1,0 +1,55 @@
+{
+    "AfasEmployee": {
+        "Element": {
+            "@EmId": "TEDB",
+            "Fields": {
+                "ViSe": "I"
+            },
+            "Objects": [
+                {
+                    "AfasDailyHours": {
+                        "Element": {
+                            "@DaBg": "2023-09-01",
+                            "Fields": {
+                                "DvSn": 1,
+                                "StPa": true,
+                                "NrWk": 2,
+                                "StWk": 1,
+                                "DfHo": "36"
+                            },
+                            "Objects": [
+                                {
+                                    "AfasDailyHoursWeek": {
+                                        "Element": [
+                                            {
+                                                "@WkNo": 1,
+                                                "Fields": {
+                                                    "NHMo": "8",
+                                                    "NHTu": "8",
+                                                    "NHWe": "8",
+                                                    "NHTh": "8",
+                                                    "NHFr": "8",
+                                                    "NHSa": ""
+                                                }
+                                            },
+                                            {
+                                                "@Action": "insert",
+                                                "@WkNo": 2,
+                                                "Fields": {
+                                                    "NHMo": "8",
+                                                    "NHTu": "8",
+                                                    "NHWe": "8",
+                                                    "NHTh": "8"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

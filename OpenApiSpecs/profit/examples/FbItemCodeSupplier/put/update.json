@@ -1,0 +1,18 @@
+{
+    "FbItemCodeCustomer": {
+      "Element": {
+        "Fields": {
+          "VaIc": "1",
+          "VaIt": "2",
+          "ItCd": "A10021",
+          "DbId": "300303",
+          "ItCu": "Itemcode verkooprelatie",
+          "Ds": "Omschrijving update",
+          "ExDs": "Extra omschrijving update",
+          "Re": "Opmerking update",
+          "VaBc": "0",
+          "QuMi": "5"
+        }
+      }
+    }
+  }

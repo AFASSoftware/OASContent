@@ -1,0 +1,34 @@
+{
+  "KnAppointment": {
+    "Element": {
+      "Fields": {
+        "Sbj": "Spacelab meeting with DavidB and demo",
+        "DaFr": "2019-12-19T09:00:00",
+        "DaTi": "2019-12-19T10:00:00",
+        "ApTy": "1"
+      },
+      "Objects": {
+        "KnAppointmentLines": {
+          "Element": [
+            {
+              "Fields": {
+                "PaId": "1",
+                "UsId": "demo",
+                "IsOw": true,
+                "Pres": "V"
+              }
+            },
+            {
+              "Fields": {
+                "PaId": "1",
+                "UsId": "DavidB",
+                "IsOw": true,
+                "Pres": "V"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

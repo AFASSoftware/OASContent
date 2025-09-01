@@ -1,0 +1,22 @@
+{
+  "FiReservation": {
+    "Element": [
+      {
+        "@UnId": "1",
+        "@SeNo": "2",
+        "Fields": {
+          "Ds": "Reservering gewijzigd 1/2",
+          "Ref": "REF394875 gew"
+        }
+      },
+      {
+        "@UnId": "1",
+        "@SeNo": "4",
+        "Fields": {
+          "Ds": "Reservering gewijzigd 2/2",
+          "Ref": "REF394875 gew"
+        }
+      }
+    ]
+  }
+}

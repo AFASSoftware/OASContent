@@ -1,0 +1,30 @@
+{
+  "HrAbsence": {
+    "Element": [
+      {
+        "Fields": {
+          "EmId": "4125040",
+          "ViAt": "v",
+          "DaBe": "2013-08-01T08:30:00",
+          "DaEn": "2013-08-02T17:00:00",
+          "ViLr": "H",
+          "EnSe": "1",
+          "Re": "betreft een 12,5 jarig huwelijk",
+          "LeDt": "0"
+        }
+      },
+      {
+        "Fields": {
+          "EmId": "4125606",
+          "ViAt": "V",
+          "DaBe": "2013-08-19T11:00:00",
+          "DaEn": "2013-08-19T17:00:00",
+          "ViLr": "HF",
+          "EnSe": "1",
+          "Re": "gaat dichter bij wonen",
+          "LeDt": "1"
+        }
+      }
+    ]
+  }
+}

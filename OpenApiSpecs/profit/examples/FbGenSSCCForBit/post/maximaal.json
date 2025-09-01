@@ -1,0 +1,14 @@
+{
+  "FbGenSSCCForBit": {
+    "Element": {
+      "Fields": {
+        "Dat": "2021-01-01",
+        "VaIt": "2",
+        "ItCd": "8010",
+        "BiUn": "Stk",
+        "QuCl": "1",
+        "ThDa": "2021-12-01"
+      }
+    }
+  }
+}

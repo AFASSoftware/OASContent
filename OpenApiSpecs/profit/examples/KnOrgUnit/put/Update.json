@@ -1,0 +1,15 @@
+{
+  "KnOrgunit": {
+    "Element": {
+      "@OuId": "HLD",
+      "Fields": {
+        "Ds": "Enyoi Holding NV",
+        "Cpt1": "http://enyoi.nl/cockpits/HLD1.htm",
+        "Cpt2": "http://enyoi.nl/cockpits/HLD2.htm",
+        "Cpt3": "http://enyoi.nl/cockpits/HLD3.htm",
+        "Cpt4": "http://enyoi.nl/cockpits/HLD4.htm",
+        "Cpt5": "http://enyoi.nl/cockpits/HLD5.htm"
+      }
+    }
+  }
+}

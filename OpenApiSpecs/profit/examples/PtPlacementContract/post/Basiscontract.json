@@ -1,0 +1,32 @@
+{
+  "PtPlacementContract": {
+      "Element": {
+          "Fields": {
+              "DaBe": "2024-03-18",
+              "DaEn": "2024-06-20",
+              "EmId": "OLGAV",
+              "PrId": "000040",
+              "FuId": "0002",
+              "ErId": "01",
+              "ViTo": "1M",
+              "ViFz": "O"
+          },
+          "Objects": [
+              {
+                  "AfasPtPlacementContractLine": {
+                      "Element": {
+                          "Fields": {
+                              "DaBe": "2024-03-18",
+                              "DaEn": "2024-06-20",
+                              "EmId": "FLOORA",
+                              "ApCo": "O",
+                              "HoGo": "1",
+                              "VaCc": "0"
+                          }
+                      }
+                  }
+              }
+          ]
+      }
+  }
+}

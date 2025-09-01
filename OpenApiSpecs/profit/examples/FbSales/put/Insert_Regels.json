@@ -1,0 +1,31 @@
+{
+  "FbSales": {
+    "Element": {
+      "Fields": {
+        "OrNu": "60000175"
+      },
+      "Objects": {
+        "FbSalesLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "1000",
+                "BiUn": "stk",
+                "QuUn": "10"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "1001",
+                "BiUn": "stk",
+                "QuUn": "10"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

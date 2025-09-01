@@ -1,0 +1,45 @@
+{
+  "FiEntryPar": {
+    "Element": {
+      "Fields": {
+        "Year": "2013",
+        "Peri": "1",
+        "UnId": "1",
+        "JoCo": "20",
+        "AuNu": "1"
+      },
+      "Objects": {
+        "FiEntries": {
+          "Element": [
+            {
+              "Fields": {
+                "VaAs": "2",
+                "AcNr": "20000",
+                "EnDa": "2013-01-01",
+                "BpDa": "2013-01-01",
+                "AmDe": "12100",
+                "AmCr": "0",
+                "CuId": "GBP",
+                "Rate": "0.87",
+                "AmDc": "8700",
+                "AmCc": "0",
+                "DaEx": "2013-02-01"
+              }
+            },
+            {
+              "Fields": {
+                "VaAs": "1",
+                "AcNr": "8010",
+                "EnDa": "2013-01-01",
+                "BpDa": "2013-01-01",
+                "AmDe": "0",
+                "AmCr": "12100",
+                "VaId": "1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

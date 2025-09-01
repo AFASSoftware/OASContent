@@ -1,0 +1,32 @@
+{
+  "AfasEmployee": {
+    "Element": {
+      "@EmId": "UPD005",
+      "Fields": "",
+      "Objects": {
+        "AfasAgencyFiscus": {
+          "Element": {
+            "@DaBe": "2008-07-01",
+            "@AyId": "F",
+            "Fields": {
+              "ViIn": "15",
+              "ViEm": "1",
+              "ViTs": "W",
+              "ViCd": "0",
+              "ViLk": "1",
+              "ViZv": "CEF",
+              "YnZW": "1",
+              "YnWW": "1",
+              "YWAO": "1",
+              "ViOk": "0",
+              "ViVb": "0",
+              "ViCx": "0",
+              "TxF4": "0",
+              "TxF5": "0"
+            }
+          }
+        }
+      }
+    }
+  }
+}

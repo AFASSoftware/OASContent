@@ -1,0 +1,22 @@
+{
+  "FiFixedAssets": {
+    "Element": {
+      "Fields": {
+        "Ds": "FiFixedAssets_Afschrijven_Verleden_volledig_afgeschreven_Degressief",
+        "FgSn": "4",
+        "DaPu": "2009-07-01",
+        "DaSe": "2009-08-15",
+        "EmId": "KEESZ",
+        "SpId": "60005",
+        "NpBu": "10",
+        "BuVa": "40000",
+        "AdVa": "2500",
+        "FiYn": "true",
+        "ViAk": "3",
+        "ViDf": "M",
+        "LiYe": "5",
+        "DaSd": "2009-01-01"
+      }
+    }
+  }
+}

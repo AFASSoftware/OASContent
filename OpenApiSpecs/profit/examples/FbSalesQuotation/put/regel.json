@@ -1,0 +1,30 @@
+{
+  "FbSalesQuotation": {
+    "Element": {
+      "Fields": {
+        "OrNu": "50000005"
+      },
+      "Objects": {
+        "FbSalesQuotationLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "1",
+                "ItCd": "300",
+                "Ds": "Gewijzigde omschrijving",
+                "QuUn": "10"
+              }
+            },
+            {
+              "Fields": {
+                "GuLi": "{7983FA21-BF93-4FDB-AEC4-C59810746E20}",
+                "Ds": "Gewijzigde omschrijving",
+                "QuUn": "99"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

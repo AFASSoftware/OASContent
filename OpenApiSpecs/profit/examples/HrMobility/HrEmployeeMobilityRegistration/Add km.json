@@ -1,0 +1,19 @@
+{
+    "HrMobility": {
+      "Element": {
+        "@CcSn": 89,
+        "Objects": [
+          {
+            "HrEmployeeMobilityRegistration": {
+              "Element": {
+                "Fields": {
+                  "DaEn": "2024-04-04",
+                  "KmEn": 20000
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }

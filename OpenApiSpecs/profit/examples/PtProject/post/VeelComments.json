@@ -1,0 +1,44 @@
+{
+  "PtProject": {
+    "Element": {
+      "Fields": {
+        "PrId": "301401",
+        "PrGp": "con",
+        "Ds": "HSS verhuizing",
+        "BcCo": "1000639",
+        "CpId": "850",
+        "DaSt": "2014-09-01"
+      },
+      "Objects": {
+        "PtProjectStage": {
+          "Element": [
+            {
+              "Fields": {
+                "PrId": "301401",
+                "PrSt": "01",
+                "Ds": "Fase 1",
+                "DaSt": "2013-01-01"
+              }
+            },
+            {
+              "Fields": {
+                "PrId": "301401",
+                "PrSt": "02",
+                "Ds": "Fase 2",
+                "DaSt": "2013-01-01"
+              }
+            },
+            {
+              "Fields": {
+                "PrId": "301401",
+                "PrSt": "03",
+                "Ds": "Fase 3",
+                "DaSt": "2013-01-01"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

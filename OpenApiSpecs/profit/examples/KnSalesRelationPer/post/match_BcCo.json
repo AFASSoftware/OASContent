@@ -1,0 +1,36 @@
+{
+  "KnSalesRelationPer": {
+    "Element": {
+      "Fields": {
+        "CuId": "EUR",
+        "InPv": "E"
+      },
+      "Objects": {
+        "KnPerson": {
+          "Element": {
+            "Fields": {
+              "PadAdr": "1",
+              "AutoNum": "1",
+              "MatchPer": "0",
+              "BcCo": "1000169"
+            },
+            "Objects": {
+              "KnBasicAddressAdr": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": "1",
+                    "HmNr": "105",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "ResZip": "0"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

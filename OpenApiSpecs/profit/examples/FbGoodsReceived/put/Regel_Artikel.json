@@ -1,0 +1,42 @@
+{
+  "FbGoodsReceived": {
+    "Element": {
+      "Fields": {
+        "OrNu": "00084"
+      },
+      "Objects": {
+        "FbGoodsReceivedLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "5104",
+                "Ds": "Afwijkende omschrijving",
+                "BiUn": "stk",
+                "QuUn": "15"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "1801",
+                "Ds": "Afwijkende omschrijving",
+                "BiUn": "stk",
+                "QuUn": "15"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "1001",
+                "Ds": "Afwijkende omschrijving",
+                "BiUn": "stk",
+                "QuUn": "15"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

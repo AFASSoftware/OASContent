@@ -1,0 +1,34 @@
+{
+  "FbSales": {
+    "Element": {
+      "Fields": {
+        "DbId": "10001",
+        "TrPt": "tnt",
+        "SsId": "EX"
+      },
+      "Objects": {
+        "FbSalesLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "1000",
+                "BiUn": "stk",
+                "QuUn": "2"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "wst",
+                "ItCd": "300",
+                "BiUn": "uur",
+                "QuUn": "5",
+                "Upri": "65"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

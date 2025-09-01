@@ -1,0 +1,250 @@
+{
+  "AfasEmployee": {
+    "Element": {
+      "@EmId": "UPD145",
+      "Fields": {
+        "ViSe": "I",
+        "Bl": "0",
+        "LwOb": "0",
+        "LwTg": "0"
+      },
+      "Objects": {
+        "KnPerson": {
+          "Element": {
+            "Fields": {
+              "PadAdr": "1",
+              "AutoNum": "1",
+              "MatchPer": "7",
+              "SeNm": "ZOEKNAAM",
+              "FiNm": "Jan",
+              "In": "J.A.",
+              "Is": "van",
+              "LaNm": "Jansen",
+              "SpNm": "1",
+              "IsBi": "v. Jansen",
+              "NmBi": "Jansen",
+              "IsPa": "van",
+              "NmPa": "Marie Jansen",
+              "ViUs": "0",
+              "ViGe": "M",
+              "PsNa": "NL",
+              "DaBi": "1974-09-10",
+              "SoSe": "123456789",
+              "ViCs": "GH",
+              "TtId": "ALG",
+              "TeNr": "334341800",
+              "TeN2": "334341800",
+              "FaNr": "033-4343801",
+              "MbNr": "334341800",
+              "MbN2": "334341800",
+              "EmAd": "john.doe@example.com",
+              "EmA2": "john.doe@example.com"
+            },
+            "Objects": {
+              "KnBasicAddressAdr": {
+                "Element": {
+                  "Fields": {
+                    "CoId": "NL",
+                    "PbAd": "0",
+                    "Ad": "De heerd",
+                    "HmNr": "105",
+                    "HmAd": "3b",
+                    "ZpCd": "3833LC",
+                    "Rs": "Leusden",
+                    "AdAd": "A-1",
+                    "BeginDate": "2021-01-01"
+                  }
+                }
+              },
+              "KnBasicAddressPad": {
+                "Element": {
+                  "Fields": {
+                    "CoId": "NL",
+                    "PbAd": "0",
+                    "Ad": "De heerd",
+                    "HmNr": "105",
+                    "HmAd": "3b",
+                    "ZpCd": "3833LC",
+                    "Rs": "Leusden",
+                    "AdAd": "A-1",
+                    "BeginDate": "2021-01-01"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "AfasContract": {
+          "Element": {
+            "@DaBe": "2021-01-01",
+            "Fields": {
+              "ClId": "Basis",
+              "WcId": "Basis",
+              "ApCo": "O",
+              "CmId": "RIS",
+              "EmMt": "1",
+              "ViEt": "F",
+              "ViTo": "1M",
+              "DaEt": "2008-03-31",
+              "PeNo": "2",
+              "PeRp": "12",
+              "RtDa": "0"
+            }
+          }
+        },
+        "AfasOrgunitFunction": {
+          "Element": {
+            "@DaBe": "2021-01-01",
+            "Fields": {
+              "DpId": "RIS",
+              "FuId": "RvB"
+            }
+          }
+        },
+        "AfasDailyHours": {
+          "Element": {
+            "@DaBg": "2021-01-01",
+            "Fields": {
+              "DvSn": "1",
+              "AhWk": "0",
+              "StPa": "1",
+              "NrWk": "6",
+              "StWk": "1",
+              "ClAg": "1",
+              "YrHr": "0",
+              "Immc": "0"
+            },
+            "Objects": {
+              "AfasDailyHoursWeek": {
+                "Element": [
+                  {
+                    "@WkNo": "1",
+                    "Fields": {
+                      "NHMo": "6",
+                      "NHTu": "6",
+                      "NHWe": "6",
+                      "NHSa": "6",
+                      "NHSu": "6"
+                    }
+                  },
+                  {
+                    "@WkNo": "2",
+                    "Fields": {
+                      "NHMo": "8",
+                      "NHTu": "4",
+                      "NHWe": "6",
+                      "NHSa": "8",
+                      "NHSu": "4"
+                    }
+                  },
+                  {
+                    "@WkNo": "3",
+                    "Fields": {
+                      "NHMo": "4",
+                      "NHTu": "5",
+                      "NHWe": "6",
+                      "NHSa": "4",
+                      "NHSu": "8"
+                    }
+                  },
+                  {
+                    "@WkNo": "4",
+                    "Fields": {
+                      "NHMo": "8",
+                      "NHTu": "6",
+                      "NHWe": "4",
+                      "NHSa": "6",
+                      "NHSu": "6"
+                    }
+                  },
+                  {
+                    "@WkNo": "5",
+                    "Fields": {
+                      "NHMo": "6",
+                      "NHTu": "4",
+                      "NHWe": "6",
+                      "NHSa": "6",
+                      "NHSu": "8"
+                    }
+                  },
+                  {
+                    "@WkNo": "6",
+                    "Fields": {
+                      "NHMo": "6",
+                      "NHTu": "6",
+                      "NHWe": "6",
+                      "NHSa": "8",
+                      "NHSu": "4"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "AfasSalary": {
+          "Element": {
+            "@DaBe": "2021-01-01",
+            "Fields": {
+              "SaSt": "0",
+              "SaPe": "S",
+              "EmSa": "1723.11",
+              "NtSa": "0",
+              "PtId": "5",
+              "SaYe": "0",
+              "EmSc": "2.75",
+              "TaId": "69",
+              "VaSc": "D"
+            }
+          }
+        },
+        "AfasBankInfo": {
+          "Element": {
+            "@AcId": "377830283",
+            "@NoBk": "0",
+            "Fields": {
+              "SaAc": "1",
+              "Ds": "Salaris",
+              "Nm": "Jansen",
+              "Rs": "Leusden",
+              "BkTp": "528000"
+            }
+          }
+        },
+        "AfasAgencyGAK": {
+          "Element": {
+            "@DaBe": "2021-01-01",
+            "@AyId": "UWV",
+            "Fields": {
+              "ViGw": "01",
+              "DsEm": "Raad van Bes"
+            }
+          }
+        },
+        "AfasAgencyFiscus": {
+          "Element": {
+            "@DaBe": "2021-01-01",
+            "@AyId": "F",
+            "Fields": {
+              "ViIn": "15",
+              "ViEm": "1",
+              "ViTs": "W",
+              "ViCd": "0",
+              "ViLk": "1",
+              "ViZv": "K",
+              "YnZW": "1",
+              "YnWW": "1",
+              "YWAO": "1",
+              "ViOk": "0",
+              "ViVb": "0",
+              "ViCx": "0",
+              "TxF4": "1",
+              "TxF5": "1",
+              "CoDi": "A"
+            }
+          }
+        }
+      }
+    }
+  }
+}

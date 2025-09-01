@@ -1,0 +1,11 @@
+{
+    "FbWarTransferIn": {
+      "Element": {
+        "Fields": {
+          "OrDa": "2024-04-17",
+          "Re": "After creating a record with FbWarTransferOut this request can be used to register the incoming goods into the warehouse.",
+          "SoWo": "00014"
+        }
+      }
+    }
+  }

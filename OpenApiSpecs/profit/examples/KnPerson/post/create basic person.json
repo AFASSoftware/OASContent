@@ -1,0 +1,20 @@
+{
+  "KnPerson": {
+    "Element": {
+      "Fields": {
+        "PadAdr": "1",
+        "AutoNum": "1",
+        "MatchPer": "7",
+        "SeNm": "ZOEKNAAM",
+        "CaNm": "Jan",
+        "FiNm": "Jan",
+        "In": "J.A.",
+        "LaNm": "Jansen",
+        "SpNm": "0",
+        "ViGe": "M",
+        "TtId": "ALG",
+        "Corr": "0"
+      }
+    }
+  }
+}

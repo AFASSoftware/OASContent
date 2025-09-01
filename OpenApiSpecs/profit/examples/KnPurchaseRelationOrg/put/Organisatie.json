@@ -1,0 +1,19 @@
+{
+  "KnPurchaseRelationOrg": {
+    "Element": {
+      "@CrId": "50003",
+      "Objects": {
+        "KnOrganisation": {
+          "Element": {
+            "Fields": {
+              "MatchOga": "0",
+              "BcCo": "1000017",
+              "SeNm": "ZOEKNAAM",
+              "CcDa": "1961-01-02"
+            }
+          }
+        }
+      }
+    }
+  }
+}

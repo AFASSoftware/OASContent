@@ -1,0 +1,22 @@
+{
+  "FbUnitBasicItem": {
+    "Element": [
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "1003",
+          "BiUn": "krt",
+          "Qu": "55"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "1004",
+          "BiUn": "doz",
+          "Qu": "24"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "PtProject": {
+    "Element": {
+      "Fields": {
+        "PrId": "910005"
+      },
+      "Objects": {
+        "KnBasicAddressAdr": {
+          "Element": {
+            "Fields": {
+              "PbAd": "0",
+              "Ad": "Ottersestraat",
+              "HmNr": "105",
+              "ZpCd": "3833LC",
+              "CoId": "NL",
+              "Rs": "Leusden"
+            }
+          }
+        }
+      }
+    }
+  }
+}

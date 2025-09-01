@@ -1,0 +1,119 @@
+{
+  "AfasPerson": {
+    "Element": {
+      "Fields": {
+        "PadAdr": "false",
+        "AutoNum": "false",
+        "MatchPer": "7",
+        "PrId": "157",
+        "CaNm": "Joost",
+        "FiNm": "Joost",
+        "In": "J.",
+        "LaNm": "Koomen",
+        "SpNm": "true",
+        "NmBi": "Koomen",
+        "ViUs": "0",
+        "ViGe": "M",
+        "PsNa": "NL",
+        "DaBi": "2001-07-25",
+        "SoSe": "242691092",
+        "TeN2": "",
+        "MbN2": "0630212980",
+        "EmA2": "joostkom@gmail.com"
+      },
+      "Objects": {
+        "AfasEmployee": {
+          "Element": {
+            "@EmId": "1001226",
+            "Fields": {
+              "ViSe": "I",
+              "Bl": "false",
+              "LwOb": "false",
+              "LwTg": "false",
+              "ViPa": "P",
+              "BlPa": "false",
+              "PsPv": "A",
+              "YsPv": "A",
+              "SeAt": "false",
+              "BeVo": "false",
+              "Flex": "true"
+            }
+          }
+        },
+        "KnBasicAddressAdr": {
+          "Element": {
+            "Fields": {
+              "CoId": "NL",
+              "PbAd": "True",
+              "StAd": "",
+              "Ad": "Inspiratielaan",
+              "HmNr": "1",
+              "HmAd": null,
+              "ZpCd": "3833LC",
+              "Rs": "Leusden"
+            }
+          }
+        },
+        "AfasContract": {
+          "Element": {
+            "@DaBe": "2024-02-15",
+            "Fields": {
+              "ClId": "Basis",
+              "WcId": "Basis",
+              "ApCo": "O",
+              "CmId": "01",
+              "EmMt": "1",
+              "ViEt": "U",
+              "ViFz": "O",
+              "WrCt": "true"
+            }
+          }
+        },
+        "AfasOrgunitFunction": {
+          "Element": {
+            "@DaBe": "2024-02-15",
+            "Fields": {
+              "DpId": "KWA",
+              "FuId": "MEDPER"
+            }
+          }
+        },
+        "AfasTimeTable": {
+          "Element": {
+            "@DaBg": "2024-02-15",
+            "Fields": {
+              "ClAg": "1"
+            }
+          }
+        },
+        "AfasSalary": {
+          "Element": {
+            "@DaBe": "2024-02-15",
+            "Fields": {
+              "SaPe": "U",
+              "EmSa": "0.00",
+              "PtId": "5",
+              "SaYe": "21000.00",
+              "TtPy": "false"
+            }
+          }
+        },
+        "AfasAgencyFiscus": {
+          "Element": {
+            "@DaBe": "2024-02-15",
+            "@AyId": "F",
+            "Fields": {
+              "ViIn": "15",
+              "ViEm": "11",
+              "ViTs": "W",
+              "ViCd": "0",
+              "ViLk": "1",
+              "ViZv": "K",
+              "TxGn": "true"
+            }
+          }
+        }
+      }
+    }
+  }
+}

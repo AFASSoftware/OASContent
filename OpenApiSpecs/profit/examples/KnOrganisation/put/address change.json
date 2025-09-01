@@ -1,0 +1,39 @@
+{
+  "KnOrganisation": {
+    "Element": {
+      "Fields": {
+        "MatchOga": "0",
+        "BcCo": "1000614"
+      },
+      "Objects": {
+        "KnBasicAddressAdr": {
+          "Element": {
+            "Fields": {
+              "PbAd": "0",
+              "Ad": "Nijverheidsstraat",
+              "HmNr": "105",
+              "ZpCd": "3833LC",
+              "CoId": "NL",
+              "Rs": "Leusden",
+              "BeginDate": "2013-01-01",
+              "ResZip": "0"
+            }
+          }
+        },
+        "KnBasicAddressPad": {
+          "Element": {
+            "Fields": {
+              "PbAd": "1",
+              "HmNr": "105",
+              "ZpCd": "3833LC",
+              "CoId": "NL",
+              "Rs": "Leusden",
+              "BeginDate": "2013-01-01",
+              "ResZip": "0"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "FbSales": {
+    "Element": {
+      "Fields": {
+        "DbId": "10001",
+        "RfCs": "Creditregel"
+      },
+      "Objects": {
+        "FbSalesLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "2",
+              "ItCd": "1000",
+              "BiUn": "stk",
+              "QuUn": "-10"
+            }
+          }
+        }
+      }
+    }
+  }
+}

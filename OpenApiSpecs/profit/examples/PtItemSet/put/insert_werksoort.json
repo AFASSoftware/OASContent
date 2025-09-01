@@ -1,0 +1,22 @@
+{
+  "PtItemset": {
+    "Element": {
+      "Fields": {
+        "IsId": "4"
+      },
+      "Objects": {
+        "PtItemSetLine": {
+          "Element": {
+            "@VaIt": "Wst",
+            "Fields": {
+              "ItCd": "O100",
+              "Invo": "1",
+              "Payr": "1",
+              "GWPc": "80"
+            }
+          }
+        }
+      }
+    }
+  }
+}

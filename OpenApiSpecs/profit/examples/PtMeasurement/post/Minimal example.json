@@ -1,0 +1,31 @@
+{
+  "PtMeasurement": {
+    "Element": {
+      "Fields": {
+        "PrId": "P00047",
+        "DbId": "10110"
+      },
+      "Objects": [
+        {
+          "PtMeasurementLines": {
+            "Element": {
+              "Fields": {
+                "VaMt": "1",
+                "VaMk": "O",
+                "VaPr": "N",
+                "VaIt": "6",
+                "ItCd": "80335",
+                "Ds": "Aandrijvingen",
+                "BiUn": "STK",
+                "Qu": "2",
+                "CoPr": "10",
+                "Pric": "15",
+                "QuPr": "1"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

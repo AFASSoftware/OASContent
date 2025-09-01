@@ -1,0 +1,15 @@
+{
+  "FbSalesPrice": {
+    "Element": {
+      "Fields": {
+        "VaIt": "2",
+        "ItCd": "9900",
+        "PrLi": "alg",
+        "BiUn": "STK",
+        "Pric": "50",
+        "CuId": "EUR",
+        "DaBg": "2013-01-01"
+      }
+    }
+  }
+}

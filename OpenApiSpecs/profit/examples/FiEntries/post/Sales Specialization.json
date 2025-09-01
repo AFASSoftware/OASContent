@@ -1,0 +1,69 @@
+{
+  "FiEntryPar": {
+    "Element": {
+      "Fields": {
+        "Year": "2013",
+        "Peri": "1",
+        "UnId": "1",
+        "JoCo": "20"
+      },
+      "Objects": {
+        "FiEntries": {
+          "Element": [
+            {
+              "Fields": {
+                "VaAs": "2",
+                "AcNr": "50001",
+                "EnDa": "2013-01-01",
+                "BpDa": "2013-01-01",
+                "InId": "FACTUUR V999",
+                "AmDe": "12100",
+                "AmCr": "0",
+                "DaEx": "2013-02-01"
+              }
+            },
+            {
+              "Fields": {
+                "VaAs": "1",
+                "AcNr": "8000",
+                "EnDa": "2013-01-01",
+                "BpDa": "2013-01-01",
+                "InId": "FACTUUR V999",
+                "AmDe": "0",
+                "AmCr": "10000",
+                "VaId": "1"
+              },
+              "Objects": {
+                "FiDimEntries": {
+                  "Element": {
+                    "Fields": {
+                      "DiC1": "WEST",
+                      "DiC2": "ICT",
+                      "DiC3": "LOG",
+                      "DiC4": "NOORD",
+                      "DiC5": "MAAT",
+                      "AmDe": "0",
+                      "AmCr": "10000"
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "Fields": {
+                "VaAs": "1",
+                "AcNr": "1510",
+                "EnDa": "2013-01-01",
+                "BpDa": "2013-01-01",
+                "InId": "FACTUUR V999",
+                "AmDe": "0",
+                "AmCr": "2100",
+                "VaId": "1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

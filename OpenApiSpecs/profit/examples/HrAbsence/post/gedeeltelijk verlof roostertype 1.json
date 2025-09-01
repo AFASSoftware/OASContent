@@ -1,0 +1,14 @@
+{
+  "HrAbsence": {
+    "Element": {
+      "Fields": {
+        "EmId": "CasperK",
+        "ViAt": "V",
+        "DaBe": "2024-01-26T00:00:00",
+        "DaEn": "2024-01-26T12:00:00",
+        "LeDt": true,
+        "DuBe": 240
+      }
+    }
+  }
+}

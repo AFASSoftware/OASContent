@@ -1,0 +1,91 @@
+{
+  "HrApplicant": {
+    "Element": {
+      "Fields": {
+        "EmId": "RDT2",
+        "WrLv": "2",
+        "Bl": "0"
+      },
+      "Objects": {
+        "EmpCustomFields": {
+          "Element": ""
+        },
+        "KnPerson": {
+          "Element": {
+            "Fields": {
+              "PadAdr": "0",
+              "AutoNum": "1",
+              "MatchPer": "0",
+              "BcId": "12345",
+              "BcCo": "12345",
+              "SpNm": "0",
+              "NmBi": "Jansen",
+              "ViUs": "0",
+              "ViGe": "m",
+              "TtId": "Alg",
+              "Corr": "1",
+              "AddToPortal": "0",
+              "U007": "1"
+            },
+            "Objects": {
+              "KnBankAccount": {
+                "Element": {
+                  "Fields": {
+                    "CoId": "NL",
+                    "IbCk": "0",
+                    "BaAc": "849835607",
+                    "AcGa": "0",
+                    "AcCk": "0"
+                  }
+                }
+              },
+              "KnBasicAddressAdr": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": "0",
+                    "Ad": "Boundry straat",
+                    "HmNr": "105",
+                    "HmAd": "3b",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "BeginDate": "2010-01-01",
+                    "ResZip": "0"
+                  }
+                }
+              },
+              "KnBasicAddressPad": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": "0",
+                    "Ad": "Boundry straat",
+                    "HmNr": "105",
+                    "HmAd": "3b",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "BeginDate": "2010-01-01",
+                    "ResZip": "0"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "HrApplication": {
+          "Element": {
+            "@CmId": "RIS",
+            "@VcSn": "5",
+            "Fields": {
+              "DaAp": "2011-05-01",
+              "Re": "Lijkt erop dat dit een match is. Loon is besproken. Past goed bij het bedrijf en filisofie.",
+              "ViMa": "5",
+              "ViSo": "8",
+              "StSo": "1"
+            }
+          }
+        }
+      }
+    }
+  }
+}

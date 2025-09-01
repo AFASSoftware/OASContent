@@ -1,0 +1,23 @@
+{
+	"AfasEmployee": {
+	  "Element": {
+		"@EmId": "FLOORA",
+		"Objects": [
+		  {
+			"AfasTimeTable": {
+			  "Element": {
+				"@DaBg": "2024-03-01",
+				"Fields": {
+				  "StPa": "1",
+				  "Spec": "0",
+				  "DyWk": "3",
+				  "HrWk": "20",
+				  "FtSv": "0"
+				}
+			  }
+			}
+		  }
+		]
+	  }
+	}
+  }

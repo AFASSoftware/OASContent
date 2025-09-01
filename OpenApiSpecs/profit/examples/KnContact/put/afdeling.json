@@ -1,0 +1,42 @@
+{
+  "KnContact": {
+    "Element": {
+      "Fields": {
+        "BcCoOga": "1000782",
+        "PadAdr": "1",
+        "ExAd": "Afdeling Support",
+        "EmAd": "john.doe@example.com"
+      },
+      "Objects": {
+        "KnBasicAddressAdr": {
+          "Element": {
+            "Fields": {
+              "PbAd": "0",
+              "Ad": "Nismostraat",
+              "HmNr": "105",
+              "ZpCd": "3833LC",
+              "CoId": "NL",
+              "Rs": "Leusden",
+              "BeginDate": "2014-01-01",
+              "ResZip": "0"
+            }
+          }
+        },
+        "KnBasicAddressPad": {
+          "Element": {
+            "Fields": {
+              "PbAd": "0",
+              "Ad": "Nismostraat",
+              "HmNr": "105",
+              "ZpCd": "3833LC",
+              "CoId": "NL",
+              "Rs": "Leusden",
+              "BeginDate": "2014-01-01",
+              "ResZip": "0"
+            }
+          }
+        }
+      }
+    }
+  }
+}

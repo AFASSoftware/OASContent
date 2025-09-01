@@ -1,0 +1,19 @@
+{
+  "HrPopFormAppointment": {
+    "Element": {
+      "Fields": {
+        "EmId": "KOOSB",
+        "ApBy": "2",
+        "Da": "2023-12-31",
+        "DaEn": "2023-12-31",
+        "App1": "Afspraak Omschrijving",
+        "App2": "HRM vervolgafspraak",
+        "DaBe": "2023-11-25",
+        "ViTa": "3",
+        "ViSa": "B",
+        "Desc": "Omschrijving",
+        "Sour": "G"
+      }
+    }
+  }
+}

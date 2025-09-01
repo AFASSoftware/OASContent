@@ -1,0 +1,29 @@
+{
+  "PtConceptPlacementContract": {
+    "Element": {
+      "@PcCo": "",
+      "Fields": {
+        "DaBe": "2018-06-19",
+        "DaEn": "2019-01-18",
+        "EmId": "C104780",
+        "PrId": "999",
+        "FuId": "2255001",
+        "ErId": "YCR",
+        "ViTo": "1M"
+      },
+      "Objects": {
+        "AfasPtConceptPlacementContractLine": {
+          "Element": {
+            "Fields": {
+              "EmId": "C10062",
+              "ViSe": "U",
+              "ApCo": "O",
+              "HoGo": "1",
+              "VaCc": "0"
+            }
+          }
+        }
+      }
+    }
+  }
+}

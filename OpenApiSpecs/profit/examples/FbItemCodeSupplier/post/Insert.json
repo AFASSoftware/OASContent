@@ -1,0 +1,23 @@
+{
+  "FbItemCodeSupplier": {
+    "Element": {
+      "Fields": {
+        "VaIc": "1",
+        "VaIt": "2",
+        "ItCd": "1200",
+        "CrId": "50013",
+        "DeCr": "1",
+        "ItSp": "50013-1200",
+        "Ds": "omschrijving 50013",
+        "ExDs": "50013 extra omschrijving",
+        "Re": "Opmerking",
+        "Deli": "10",
+        "VaBc": "0",
+        "BaCo": "0",
+        "BiUn": "STK",
+        "QuUn": "1",
+        "QuMi": "7"
+      }
+    }
+  }
+}

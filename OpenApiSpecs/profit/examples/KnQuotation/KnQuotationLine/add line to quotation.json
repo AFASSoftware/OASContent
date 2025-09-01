@@ -1,0 +1,31 @@
+{
+    "KnQuotation": {
+      "Element": {
+        "Fields": {
+          "QuId": "600000",
+          "PrId": "600000"
+        },
+        "Objects": {
+          "KnQuotationLine": {
+            "Element": [
+              {
+                "Fields": {
+                    "ItCd": "D002",
+                    "Ds": "Jansen",
+                    "VaIt": 6,
+                    "QuUn": 60.00,
+                    "StId": "1",
+                    "CoTy": "MA",
+                    "AmCo": 3.50,
+                    "CuId": "EUR",
+                    "UnId": "*****",
+                    "MoId": "10.01.01.00"
+                  }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+  

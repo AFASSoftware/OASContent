@@ -1,0 +1,28 @@
+{
+  "PtLinesToBeInvoiced": {
+    "Element": [
+      {
+        "Fields": {
+          "DaTi": "2013-01-01",
+          "VaIt": "1",
+          "ItCd": "301",
+          "Qu": "1",
+          "DbId": "10009",
+          "StId": "1",
+          "AmSe": "-500"
+        }
+      },
+      {
+        "Fields": {
+          "DaTi": "2013-01-01",
+          "VaIt": "1",
+          "ItCd": "302",
+          "Qu": "1",
+          "DbId": "10009",
+          "StId": "1",
+          "AmSe": "-100"
+        }
+      }
+    ]
+  }
+}

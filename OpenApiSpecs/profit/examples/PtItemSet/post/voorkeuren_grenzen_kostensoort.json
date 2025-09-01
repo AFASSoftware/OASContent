@@ -1,0 +1,109 @@
+{
+  "PtItemset": {
+    "Element": {
+      "Fields": {
+        "PtItpDaBe": "2023-01-01",
+        "PtItpTyEj": "G",
+        "PtItpViTa": "3460",
+        "Ds": "Itemset voorkeuren en grenzen kostensoort",
+        "ClId": "01"
+      },
+      "Objects": {
+        "PtItemSetLine": {
+          "Element": [
+            {
+              "@VaIt": "Wst",
+              "Fields": {
+                "ItCd": "01NB",
+                "Invo": "1",
+                "Payr": "1",
+                "GWPc": "100",
+                "GWMi": "100",
+                "GWMa": "100"
+              }
+            },
+            {
+              "@VaIt": "Kst",
+              "Fields": {
+                "ItCd": "11-C90990",
+                "#text": [
+                  ">",
+                  ">",
+                  ">",
+                  ">",
+                  ">",
+                  ">",
+                  ">"
+                ],
+                "AmMi": "10.10",
+                "AmMa": "20.20",
+                "AmDf": "15.30",
+                "TaTy": "0",
+                "TaMi": "22.25",
+                "TaDf": "30.35",
+                "TaMa": "35.45"
+              }
+            },
+            {
+              "@VaIt": "Kst",
+              "#text": "s\r\n\t\t\t\t\t",
+              "Fields": {
+                "ItCd": "11-C15753",
+                "#text": [
+                  ">",
+                  ">",
+                  ">",
+                  ">",
+                  ">"
+                ],
+                "AmMi": "10.15",
+                "AmMa": "20.25",
+                "AmDf": "15.35",
+                "TaTy": "1",
+                "FcDf": "2.5555"
+              }
+            },
+            {
+              "@VaIt": "Kst",
+              "#text": "s\r\n\t\t\t\t\t",
+              "Fields": {
+                "ItCd": "11-C11094",
+                "#text": [
+                  ">",
+                  ">",
+                  ">",
+                  ">",
+                  ">"
+                ],
+                "AmMi": "10.10",
+                "AmMa": "20.20",
+                "AmDf": "15.30",
+                "TaTy": "2",
+                "NmDf": "5.25"
+              }
+            },
+            {
+              "@VaIt": "Kst",
+              "#text": "s\r\n\t\t\t\t\t",
+              "Fields": {
+                "ItCd": "11-C43372",
+                "#text": [
+                  ">",
+                  ">",
+                  ">",
+                  ">",
+                  ">"
+                ],
+                "AmMi": "10.15",
+                "AmMa": "20.25",
+                "AmDf": "15.35",
+                "TaTy": "3",
+                "PmDf": "5.25"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "FbDough": {
+    "Element": [
+      {
+        "Fields": {
+          "ItCd": "DG53012",
+          "Ds": "Droge stof xml",
+          "BaCo": "8711000008010",
+          "ViCa": "0",
+          "PcBl": "50",
+          "FlCh": "4",
+          "RoWe": "3"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "DG53013",
+          "Ds": "Eindgewicht xml",
+          "BaCo": "8710408010144",
+          "ViCa": "1",
+          "PcBl": "50",
+          "FlCh": "4",
+          "RoWe": "3"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "DG53014",
+          "Ds": "Eindgewicht met spijs vulling xml",
+          "BaCo": "5000357100151",
+          "ViCa": "2",
+          "PcBl": "0",
+          "FlCh": "10",
+          "RoWe": "8",
+          "ToWe": "8000"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "DG53015",
+          "Ds": "Obv. halffabrikaat xml",
+          "BaCo": "8711200011407",
+          "ViCa": "3",
+          "PcBl": "0"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "DG53016",
+          "Ds": "Recept met eindproducten xml",
+          "BaCo": "8713300069623",
+          "ViCa": "4"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "DG53017",
+          "Ds": "Banket",
+          "BaCo": "3086123008915",
+          "ViCa": "5",
+          "PcBl": "1",
+          "QuCh": "24"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "DG53018",
+          "Ds": "Geen deegberekening",
+          "BaCo": "8710404202253",
+          "ViCa": "9"
+        }
+      }
+    ]
+  }
+}

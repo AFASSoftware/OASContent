@@ -1,0 +1,36 @@
+{
+  "AfasEmployee": {
+    "Element": {
+      "@action": "update",
+      "@EmId": "ALLARDJ",
+      "Objects": [
+        {
+          "AfasBankInfo": {
+            "Element": [
+              {
+                "@AcId": "NL57RABO0312000111",
+                "@NoBk": false,
+                "Action": "update",
+                "Fields": {
+                  "Iban": "NL57RABO0312000111",
+                  "SaAc": false,
+                  "SeNo": 3
+                }
+              },
+              {
+                "@AcId": "NL40BOTK0755026802",
+                "@NoBk": false,
+                "Action": "insert",
+                "Fields": {
+                  "Iban": "NL40BOTK0755026802",
+                  "IbCk": true,
+                  "SaAc": true
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

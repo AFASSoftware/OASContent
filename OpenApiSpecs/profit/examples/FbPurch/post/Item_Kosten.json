@@ -1,0 +1,41 @@
+{
+  "FbPurch": {
+    "Element": {
+      "Fields": {
+        "CrId": "50014",
+        "War": "01",
+        "RfCs": "Kosten"
+      },
+      "Objects": {
+        "FbPurchLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "6",
+                "ItCd": "K01",
+                "Ds": "Gemaakte kosten, voor de inkoop 1/2",
+                "BiUn": "*****",
+                "QuUn": "10",
+                "Upri": "19.65",
+                "VaAd": "1",
+                "ARDc": "6.50"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "6",
+                "ItCd": "K02",
+                "Ds": "Gemaakte kosten, voor de inkoop 2/2",
+                "BiUn": "stk",
+                "QuUn": "1",
+                "Upri": "250",
+                "VaAd": "1",
+                "ARDc": "10"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

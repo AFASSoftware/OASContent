@@ -1,0 +1,21 @@
+{
+  "PtProject": {
+    "Element": {
+      "Fields": {
+        "PrId": "600000"
+      },
+      "Objects": {
+        "PtProjectStage": {
+          "Element": {
+            "Fields": {
+              "PrId": "600000",
+              "PrSt": "09",
+              "Ds": "gewijzigde omschrijving",
+              "PsMn": "08"
+            }
+          }
+        }
+      }
+    }
+  }
+}

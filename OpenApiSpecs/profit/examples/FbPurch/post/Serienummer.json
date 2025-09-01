@@ -1,0 +1,101 @@
+{
+  "FbPurch": {
+    "Element": {
+      "Fields": {
+        "CrId": "50014",
+        "War": "01",
+        "RfCs": "Serienummer"
+      },
+      "Objects": {
+        "FbPurchLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "4103",
+                "BiUn": "stk",
+                "QuUn": "4"
+              },
+              "Objects": {
+                "FbOrderSerialLines": {
+                  "Element": [
+                    {
+                      "Fields": {
+                        "SeNu": "4103-50014-01",
+                        "BiUn": "stk",
+                        "QuUn": "1"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "SeNu": "4103-50014-02",
+                        "BiUn": "stk",
+                        "QuUn": "1"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "SeNu": "4103-50014-03",
+                        "BiUn": "stk",
+                        "QuUn": "1"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "SeNu": "4103-50014-04",
+                        "BiUn": "stk",
+                        "QuUn": "1"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "4104",
+                "BiUn": "stk",
+                "QuUn": "4"
+              },
+              "Objects": {
+                "FbOrderSerialLines": {
+                  "Element": [
+                    {
+                      "Fields": {
+                        "SeNu": "4104-50014-01",
+                        "BiUn": "stk",
+                        "QuUn": "1"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "SeNu": "4104-50014-02",
+                        "BiUn": "stk",
+                        "QuUn": "1"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "SeNu": "4104-50014-03",
+                        "BiUn": "stk",
+                        "QuUn": "1"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "SeNu": "4104-50014-04",
+                        "BiUn": "stk",
+                        "QuUn": "1"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

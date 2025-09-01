@@ -1,0 +1,19 @@
+{
+  "FbPurchQuotation": {
+    "Element": {
+      "Fields": {
+        "OrNu": "00001"
+      },
+      "Objects": {
+        "FbPurchQuotationLines": {
+          "Element": {
+            "Fields": {
+              "GuLi": "{7CBA3D93-B90F-4240-A1CB-ABAAD1D7E91D}",
+              "DlDa": "2020-10-14"
+            }
+          }
+        }
+      }
+    }
+  }
+}

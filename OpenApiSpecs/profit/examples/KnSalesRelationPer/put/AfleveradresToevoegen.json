@@ -1,0 +1,46 @@
+{
+  "KnSalesRelationPer": {
+    "Element": {
+      "@DbId": "50009",
+      "Fields": {
+        "TeN2": "334341800"
+      },
+      "Objects": {
+        "KnPerson": {
+          "Element": {
+            "Fields": {
+              "MatchPer": "0",
+              "BcCo": "1000798"
+            },
+            "Objects": {
+              "KnContact": {
+                "Element": {
+                  "Fields": {
+                    "PadAdr": "1",
+                    "ViKc": "AFL",
+                    "ExAd": "ALO"
+                  },
+                  "Objects": {
+                    "KnBasicAddressAdr": {
+                      "Element": {
+                        "Fields": {
+                          "PbAd": false,
+                          "Ad": "stuwmeer",
+                          "HmNr": "105",
+                          "ZpCd": "3833LC",
+                          "CoId": "NL",
+                          "Rs": "Leusden",
+                          "ResZip": false
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

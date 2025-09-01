@@ -1,0 +1,27 @@
+{
+  "FbDough": {
+    "Element": {
+      "Fields": {
+        "ItCd": "DG54030",
+        "Ds": "Deeg met Barcode - Geen controle",
+        "DsEx": "Extra omschrijving",
+        "ChDs": "false",
+        "VaBc": "0",
+        "BaCo": "",
+        "InPr": "true",
+        "ViCa": "2",
+        "PcBl": "9.53",
+        "FlCh": "150",
+        "RoWe": "2",
+        "ToWe": "143",
+        "AjTm": "50",
+        "AjLs": "4",
+        "PrTm": "660",
+        "WrTm": "1",
+        "Tp": "27.6",
+        "BaLi": "true",
+        "Rm": "Insert met Type Barcode Geen controle"
+      }
+    }
+  }
+}

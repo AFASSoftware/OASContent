@@ -1,0 +1,22 @@
+{
+  "FbDirectInvoice": {
+    "Element": {
+      "Fields": {
+        "OrNu": "70000143"
+      },
+      "Objects": {
+        "FbDirectInvoiceLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "2",
+              "ItCd": "1000",
+              "Ds": "gewijzigde omschrijving",
+              "BiUn": "stk",
+              "QuUn": "5"
+            }
+          }
+        }
+      }
+    }
+  }
+}

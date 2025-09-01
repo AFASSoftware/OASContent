@@ -1,0 +1,18 @@
+{
+  "FbStockMutation": {
+    "Element": {
+      "Fields": {
+        "UsCr": "CMD",
+        "VaOt": "41",
+        "ReId": "5",
+        "VaIt": "2",
+        "ItCd": "1000",
+        "War": "01",
+        "Loc": "*****",
+        "BiUn": "STK",
+        "QuUn": "50",
+        "Qu": "50"
+      }
+    }
+  }
+}

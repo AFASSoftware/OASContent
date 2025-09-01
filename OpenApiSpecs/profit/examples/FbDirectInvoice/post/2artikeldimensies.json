@@ -1,0 +1,40 @@
+{
+  "FbDirectInvoice": {
+    "Element": {
+      "Fields": {
+        "OrDa": "2013-06-01",
+        "DbId": "10178",
+        "RfCs": "2 artikeldimensies",
+        "War": "01"
+      },
+      "Objects": {
+        "FbDirectInvoiceLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "9901",
+                "BiUn": "stk",
+                "QuUn": "1",
+                "Upri": "25",
+                "StL1": "L",
+                "StL2": "BLAUW"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "9901",
+                "BiUn": "stk",
+                "QuUn": "1",
+                "Upri": "25",
+                "StL1": "M",
+                "StL2": "ROOD"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

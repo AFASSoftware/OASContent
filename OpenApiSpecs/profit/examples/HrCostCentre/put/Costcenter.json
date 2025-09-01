@@ -1,0 +1,11 @@
+{
+  "AstroCostCarrier": {
+    "Element": {
+      "Fields": {
+        "CmId": "01",
+        "CcId": "ADM",
+        "CcDs": "Administrative support and invoicing"
+      }
+    }
+  }
+}

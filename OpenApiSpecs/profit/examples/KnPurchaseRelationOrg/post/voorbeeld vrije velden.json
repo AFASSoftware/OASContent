@@ -1,0 +1,60 @@
+{
+  "KnPurchaseRelationOrg": {
+    "Element": {
+      "Fields": {
+        "IsCr": true,
+        "VaId": "NL123456789B02",
+        "PaCd": "30",
+        "CuId": "EUR",
+        "ColA": "1600",
+        "UF973806F4DD799F162C5499BD264DED0": "10",
+        "UCBAA1F4844FFC20395FAF787FAF6425A": "235",
+        "U8D40AC8B4361A1B01C5326BED8316B5D": false
+      },
+      "Objects": {
+        "KnOrganisation": {
+          "Element": {
+            "Fields": {
+              "PadAdr": false,
+              "AutoNum": true,
+              "MatchOga": "6",
+              "Nm": "Jansen",
+              "TeNr": "334341800",
+              "FaNr": "013 5447054",
+              "U1C203BF047C5482D4BF04DAFCF11955A": "1357574639559"
+            },
+            "Objects": {
+              "KnBasicAddressAdr": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": false,
+                    "Ad": "Aresstraat",
+                    "HmNr": "105",
+                    "HmAd": "3b",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "ResZip": true
+                  }
+                }
+              },
+              "KnBasicAddressPad": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": true,
+                    "Ad": "Postbus",
+                    "HmNr": "105",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "ResZip": true
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

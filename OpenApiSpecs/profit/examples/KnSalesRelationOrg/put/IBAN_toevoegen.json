@@ -1,0 +1,28 @@
+{
+  "KnSalesRelationOrg": {
+    "Element": {
+      "@DbId": "10079",
+      "Objects": {
+        "KnOrganisation": {
+          "Element": {
+            "Fields": {
+              "MatchOga": "0",
+              "BcCo": "1000203"
+            },
+            "Objects": {
+              "KnBankAccount": {
+                "Element": {
+                  "Fields": {
+                    "CoId": "NL",
+                    "IbCk": true,
+                    "Iban": "NL97CHAS0849835607"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

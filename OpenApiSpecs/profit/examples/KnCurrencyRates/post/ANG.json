@@ -1,0 +1,11 @@
+{
+  "KnCurrencyRates": {
+    "Element": {
+      "@Cu": "ANG",
+      "Fields": {
+        "DaSt": "2016-01-06",
+        "DaRa": "12345.12345"
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "FiContract": {
+    "Element": {
+      "Fields": {
+        "PoKi": "Contract insert met verplichting",
+        "PoNo": "REF:348960",
+        "CmId": "50008",
+        "CuId": "EUR",
+        "Rate": "1",
+        "UnId": "1",
+        "VaCt": "02"
+      },
+      "Objects": {
+        "FiContractline": {
+          "Element": {
+            "Fields": {
+              "DaBe": "2020-07-15",
+              "DaEn": "2021-07-14",
+              "AmPF": "12000.55",
+              "VaCm": "2",
+              "AcNr": "4250",
+              "DiC1": "ZUID",
+              "DiC2": "SAMA",
+              "DiC3": "DIE",
+              "DiC4": "ZUID",
+              "DiC5": "MAAT",
+              "JuYN": "1"
+            }
+          }
+        }
+      }
+    }
+  }
+}

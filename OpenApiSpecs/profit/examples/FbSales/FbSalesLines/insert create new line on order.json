@@ -1,0 +1,24 @@
+{
+    "FbSales": {
+      "Element": {
+        "Fields": {
+          "OrNu": "60005490"
+        },
+        "Objects": [
+          {
+            "FbSalesLines": {
+              "Element": {
+                "Fields": {
+                  "VaIt": "2",
+                  "ItCd": "1006",
+                  "Ds": "Starlink Satelite",
+                  "BiUn": "stk",
+                  "QuUn": "1"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }

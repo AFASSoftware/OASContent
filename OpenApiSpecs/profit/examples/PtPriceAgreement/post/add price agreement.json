@@ -1,0 +1,242 @@
+{
+	"PtPriceAgreement": {
+		"Element": {
+			"Fields": {
+				"@Action": "update",
+				"Ds": "New price agreement for placement",
+				"PrId": "003008",
+				"FuId": "0002"
+			},
+			"Objects": [
+				{
+					"PtPriceAgreementVersion": {
+						"Element": {
+							"Fields": {
+								"@Action": "insert",
+								"DaBe": "2024-05-19",
+								"DaEn": "2024-05-20",
+								"GHWg": "32"
+							},
+							"Objects": [
+								{
+									"PtPriceAgreementLine": {
+										"Element": [
+											{
+												"Fields": {
+													"VaIt": "1",
+													"ItCd": "23",
+													"Ds": "Regular working hours",
+													"GWPc": "100",
+													"Invo": false
+												}
+											},
+											{
+												"Fields": {
+													"VaIt": "1",
+													"ItCd": "24",
+													"Ds": "Holiday working hours",
+													"GWPc": "100",
+													"Invo": false
+												}
+											},
+											{
+												"Fields": {
+													"VaIt": "1",
+													"ItCd": "25",
+													"Ds": "Special leave/short absence",
+													"GWPc": "100",
+													"Invo": false
+												}
+											},
+											{
+												"Fields": {
+													"VaIt": "1",
+													"ItCd": "01",
+													"Ds": "Short-term care leave",
+													"TaTy": "0",
+													"SaTa": "40",
+													"GWPc": "100",
+													"Invo": true
+												}
+											},
+											{
+												"Fields": {
+													"VaIt": "1",
+													"ItCd": "15",
+													"Ds": "Sickness hours 1st year",
+													"GWPc": "100",
+													"Invo": false
+												}
+											},
+											{
+												"Fields": {
+													"VaIt": "1",
+													"ItCd": "16",
+													"Ds": "Vacation hours taken",
+													"GWPc": "100",
+													"Invo": false
+												}
+											},
+											{
+												"Fields": {
+													"VaIt": "1",
+													"ItCd": "22",
+													"Ds": "ORT 22%",
+													"GWPc": "100",
+													"Invo": false
+												}
+											},
+											{
+												"Fields": {
+													"VaIt": "6",
+													"ItCd": "D001E",
+													"Ds": "ORT 44%",
+													"GHWg": "0.22",
+													"Invo": "True",
+													"TaTy": "0",
+													"SaTa": "90.90"
+												}
+											},
+											{
+												"Fields": {
+													"VaIt": "6",
+													"ItCd": "D010E",
+													"Ds": "Sickness hours 2nd year",
+													"GHWg": "1",
+													"Invo": "true",
+													"TaTy": "0",
+													"SaTa": "90.90"
+												}
+											},
+											{
+												"Fields": {
+													"VaIt": "6",
+													"ItCd": "D002E",
+													"Ds": "Vacation hours balance taken",
+													"GHWg": "1",
+													"Invo": false
+												}
+											},
+											{
+												"Fields": {
+													"VaIt": "6",
+													"ItCd": "D008E",
+													"Ds": "Remote work allowance",
+													"GHWg": "0.3",
+													"Invo": true,
+													"TaTy": "0",
+													"SaTa": "40"
+												}
+											},
+											{
+												"Fields": {
+													"VaIt": "6",
+													"ItCd": "D0017E",
+													"Ds": "Year-end bonus",
+													"GHWg": "1",
+													"Invo": "False"
+												}
+											},
+											{
+												"Fields": {
+													"VaIt": "6",
+													"ItCd": "D011E",
+													"Ds": "Commuting allowance per kilometer",
+													"GHWg": "0.3",
+													"Invo": false
+												}
+											},
+											{
+												"Fields": {
+													"VaIt": "6",
+													"ItCd": "D020E",
+													"Ds": "Meal allowance",
+													"GHWg": "0.3",
+													"Invo": "True",
+													"TaTy": "0",
+													"SaTa": "40"
+												}
+											},
+											{
+												"Fields": {
+													"VaIt": "1",
+													"ItCd": "12",
+													"Ds": "Public transport reimbursement",
+													"GWPc": "100",
+													"Invo": false
+												}
+											},
+											{
+												"Fields": {
+													"VaIt": "1",
+													"ItCd": "13",
+													"Ds": "Parking fee reimbursement",
+													"GWPc": "100",
+													"Invo": false
+												}
+											},
+											{
+												"Fields": {
+													"VaIt": "1",
+													"ItCd": "17",
+													"Ds": "Phone allowance",
+													"GWPc": "100",
+													"Invo": false
+												}
+											},
+											{
+												"Fields": {
+													"VaIt": "1",
+													"ItCd": "18",
+													"Ds": "Additional allowance A",
+													"GWPc": "100",
+													"Invo": false
+												}
+											},
+											{
+												"Fields": {
+													"VaIt": "1",
+													"ItCd": "19",
+													"Ds": "Additional allowance B",
+													"GWPc": "100",
+													"Invo": false
+												}
+											},
+											{
+												"Fields": {
+													"VaIt": "1",
+													"ItCd": "20",
+													"Ds": "Additional allowance C",
+													"GWPc": "100",
+													"Invo": false
+												}
+											},
+											{
+												"Fields": {
+													"VaIt": "1",
+													"ItCd": "21",
+													"Ds": "Additional allowance D",
+													"GWPc": "100",
+													"Invo": false
+												}
+											},
+											{
+												"Fields": {
+													"VaIt": "1",
+													"ItCd": "14",
+													"Ds": "Additional allowance E",
+													"GWPc": "100",
+													"Invo": false
+												}
+											}
+										]
+									}
+								}
+							]
+						}
+					}
+				}
+			]
+		}
+	}
+}

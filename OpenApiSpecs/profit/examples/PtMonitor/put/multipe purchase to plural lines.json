@@ -1,0 +1,12 @@
+{
+  "PtMonitor": {
+    "Element": {
+      "Fields": {
+        "MoCd": "013010",
+        "Ds": "update bewakingscode",
+        "CoTy": "MA",
+        "MPul": "1"
+      }
+    }
+  }
+}

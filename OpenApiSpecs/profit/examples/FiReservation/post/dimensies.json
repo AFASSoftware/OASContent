@@ -1,0 +1,21 @@
+{
+  "FiReservation": {
+    "Element": {
+      "@UnId": "1",
+      "@SeNo": "",
+      "Fields": {
+        "AcNr": "4320",
+        "VaAs": "1",
+        "Yr": "2015",
+        "PeNr": "6",
+        "Ds": "dimensies",
+        "Ref": "REF456456",
+        "PrId": "600000",
+        "PrSt": "01",
+        "Amt": "1100",
+        "Qua": "9",
+        "Di01": "1"
+      }
+    }
+  }
+}

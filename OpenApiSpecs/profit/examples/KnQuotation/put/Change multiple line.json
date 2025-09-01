@@ -1,0 +1,51 @@
+{
+  "KnQuotation": {
+    "Element": {
+      "Fields": {
+        "QuId": "300040",
+        "PrId": "300040"
+      },
+      "Objects": {
+        "KnQuotationLine": {
+          "Element": [
+            {
+              "Fields": {
+                "GuLi": "{57E41029-1B11-4548-A9AB-2483D824395B}",
+                "Ds": "Gewijzigde datum planning + benodigd",
+                "PlDa": "2015-06-01"
+              }
+            },
+            {
+              "Fields": {
+                "GuLi": "{213E6520-3AC6-4E97-9B9A-EEFF067572C6}",
+                "Ds": "Gewijzigde datum planning + benodigd",
+                "PlDa": "2015-06-01"
+              }
+            },
+            {
+              "Fields": {
+                "GuLi": "{7E4C792E-C111-4F31-8545-0B861BC7B210}",
+                "Ds": "Gewijzigde datum planning + benodigd",
+                "PlDa": "2015-06-01"
+              }
+            },
+            {
+              "Fields": {
+                "GuLi": "{195F1674-3112-4E0E-BE6B-3268E08E2734}",
+                "Ds": "Gewijzigde datum planning + benodigd",
+                "PlDa": "2015-06-01"
+              }
+            },
+            {
+              "Fields": {
+                "GuLi": "{D73DE628-2125-463C-8A99-D153C3CD8ECF}",
+                "Ds": "Gewijzigde datum planning + benodigd",
+                "PlDa": "2015-06-01"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

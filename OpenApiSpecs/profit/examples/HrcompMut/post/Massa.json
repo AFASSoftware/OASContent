@@ -1,0 +1,48 @@
+{
+  "HrCompMut": {
+    "Element": [
+      {
+        "@PtId": "5",
+        "@Year": "2023",
+        "@PeId": "2",
+        "@DaTi": "2023-02-01",
+        "@EmId": "4125056",
+        "@ErId": "RIS",
+        "@Sc02": "302",
+        "Fields": {
+          "Ds": "Winstuitkering",
+          "VaD1": "5000",
+          "Rem": "Import via JSON"
+        }
+      },
+      {
+        "@PtId": "5",
+        "@Year": "2023",
+        "@PeId": "2",
+        "@DaTi": "2023-02-02",
+        "@EmId": "4125562",
+        "@ErId": "RIS",
+        "@Sc02": "302",
+        "Fields": {
+          "Ds": "Winstuitkering",
+          "VaD1": "5000",
+          "Rem": "Import via JSON"
+        }
+      },
+      {
+        "@PtId": "5",
+        "@Year": "2023",
+        "@PeId": "2",
+        "@DaTi": "2023-02-03",
+        "@EmId": "4125611",
+        "@ErId": "RIS",
+        "@Sc02": "302",
+        "Fields": {
+          "Ds": "Winstuitkering",
+          "VaD1": "5000",
+          "Rem": "Import via JSON"
+        }
+      }
+    ]
+  }
+}

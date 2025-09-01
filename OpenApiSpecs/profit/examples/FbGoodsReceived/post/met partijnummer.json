@@ -1,0 +1,95 @@
+{
+  "FbGoodsReceived": {
+    "Element": {
+      "Fields": {
+        "CrId": "50028",
+        "RfCs": "Partijnummer",
+        "War": "02"
+      },
+      "Objects": {
+        "FbGoodsReceivedLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "8005",
+                "BiUn": "stk",
+                "QuUn": "100",
+                "Upri": "6.98"
+              },
+              "Objects": {
+                "FbOrderBatchLines": {
+                  "Element": [
+                    {
+                      "Fields": {
+                        "BaNu": "8005-0001",
+                        "BiUn": "stk",
+                        "QuUn": "25",
+                        "Re": "Opmerking op het partijnummer"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "BaNu": "8005-0002",
+                        "BiUn": "stk",
+                        "QuUn": "25",
+                        "Re": "Opmerking op het partijnummer"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "BaNu": "8005-0003",
+                        "BiUn": "stk",
+                        "QuUn": "25",
+                        "Re": "Opmerking op het partijnummer"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "BaNu": "8005-0004",
+                        "BiUn": "stk",
+                        "QuUn": "25",
+                        "Re": "Opmerking op het partijnummer"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "8006",
+                "BiUn": "stk",
+                "QuUn": "50",
+                "Upri": "9.01"
+              },
+              "Objects": {
+                "FbOrderBatchLines": {
+                  "Element": [
+                    {
+                      "Fields": {
+                        "BaNu": "8006-0001",
+                        "BiUn": "stk",
+                        "QuUn": "25",
+                        "Re": "Opmerking op het partijnummer"
+                      }
+                    },
+                    {
+                      "Fields": {
+                        "BaNu": "8006-0002",
+                        "BiUn": "stk",
+                        "QuUn": "25",
+                        "Re": "Opmerking op het partijnummer"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+    "KnUser": {
+      "Element": {
+        "Fields": {
+          "MtCd": "1",
+          "UsId": "johndoe",
+          "Nm": "John Doe"
+        }
+      }
+    }
+  }

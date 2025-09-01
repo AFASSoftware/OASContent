@@ -1,0 +1,40 @@
+{
+  "KnContact": {
+    "Element": {
+      "Fields": {
+        "BcCoOga": "1000032",
+        "BcCoPer": "1000008"
+      },
+      "Objects": {
+        "KnBasicAddressAdr": {
+          "Element": {
+            "Fields": {
+              "PbAd": "0",
+              "Ad": "Amsterdamseweg",
+              "HmNr": "105",
+              "ZpCd": "3833LC",
+              "CoId": "NL",
+              "Rs": "Leusden",
+              "BeginDate": "2013-01-01",
+              "ResZip": "0"
+            }
+          }
+        },
+        "KnBasicAddressPad": {
+          "Element": {
+            "Fields": {
+              "PbAd": "1",
+              "Ad": "Postbus",
+              "HmNr": "105",
+              "ZpCd": "3833LC",
+              "CoId": "NL",
+              "Rs": "Leusden",
+              "BeginDate": "2013-01-01",
+              "ResZip": "0"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "FbStockMutation": {
+    "Element": [
+      {
+        "Fields": {
+          "VaOt": "32",
+          "ReId": "BO",
+          "Da": "2015-04-16",
+          "Ds": "stock replacement",
+          "VaIt": "2",
+          "ItCd": "1401",
+          "War": "01",
+          "Loc": "*****",
+          "BiUn": "Stk",
+          "QuUn": "34"
+        }
+      },
+      {
+        "Fields": {
+          "VaOt": "31",
+          "ReId": "BO",
+          "Da": "2015-04-16",
+          "Ds": "stock replacement",
+          "VaIt": "2",
+          "ItCd": "1401",
+          "War": "01",
+          "Loc": "01-A-005",
+          "BiUn": "Stk",
+          "QuUn": "34"
+        }
+      }
+    ]
+  }
+}

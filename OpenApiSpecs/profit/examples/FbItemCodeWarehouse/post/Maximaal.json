@@ -1,0 +1,17 @@
+{
+  "FbItemCodeWarehouse": {
+    "Element": {
+      "Fields": {
+        "VaIt": "2",
+        "ItCd": "1000",
+        "War": "*****",
+        "DiSe": "1",
+        "VaCr": "N",
+        "StAd": "1",
+        "StMi": "20",
+        "StMa": "50",
+        "BiDc": "0"
+      }
+    }
+  }
+}

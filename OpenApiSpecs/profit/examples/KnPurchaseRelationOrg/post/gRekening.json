@@ -1,0 +1,78 @@
+{
+  "KnPurchaseRelationOrg": {
+    "Element": {
+      "Fields": {
+        "IsCr": true,
+        "PaCd": "30",
+        "CuId": "EUR",
+        "ColA": "1600",
+        "PayM": true
+      },
+      "Objects": {
+        "KnOrganisation": {
+          "Element": {
+            "Fields": {
+              "PadAdr": false,
+              "AutoNum": true,
+              "MatchOga": "6",
+              "Nm": "Jansen",
+              "TeNr": "334341800"
+            },
+            "Objects": {
+              "KnBasicAddressAdr": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": false,
+                    "Ad": "Stationsstraat",
+                    "HmNr": "105",
+                    "HmAd": "3b",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "ResZip": true
+                  }
+                }
+              },
+              "KnBasicAddressPad": {
+                "Element": {
+                  "Fields": {
+                    "PbAd": true,
+                    "Ad": "Postbus",
+                    "HmNr": "105",
+                    "ZpCd": "3833LC",
+                    "CoId": "NL",
+                    "Rs": "Leusden",
+                    "ResZip": true
+                  }
+                }
+              },
+              "KnBankAccount": {
+                "Element": [
+                  {
+                    "Fields": {
+                      "CoId": "NL",
+                      "IbCk": true,
+                      "Iban": "NL97CHAS0849835607",
+                      "AcGa": true,
+                      "DiNm": "G-Rekening"
+                    }
+                  },
+                  {
+                    "Fields": {
+                      "CoId": "NL",
+                      "IbCk": true,
+                      "Iban": "NL97CHAS0849835607",
+                      "AcGa": false,
+                      "DiNm": "Reguliere rekening",
+                      "Bic": "INGBNL2A"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

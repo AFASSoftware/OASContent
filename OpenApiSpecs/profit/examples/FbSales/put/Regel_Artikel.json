@@ -1,0 +1,41 @@
+{
+  "FbSales": {
+    "Element": {
+      "Fields": {
+        "OrNu": "60000177"
+      },
+      "Objects": {
+        "FbSalesLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "4000",
+                "Ds": "Aangepaste omschrijving",
+                "Upri": "200"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "3002",
+                "Ds": "Aangepaste omschrijving",
+                "QuUn": "10",
+                "Upri": "800"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "1001",
+                "Ds": "Aangepaste omschrijving",
+                "QuUn": "10",
+                "Upri": "50"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

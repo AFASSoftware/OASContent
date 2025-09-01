@@ -1,0 +1,11 @@
+{
+  "HrCostCarrier": {
+    "Element": {
+      "Fields": {
+        "CmId": "01",
+        "CcId": "SEDV",
+        "Bl": true
+      }
+    }
+  }
+}

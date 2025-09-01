@@ -1,0 +1,160 @@
+{
+  "AfasEmployee": {
+    "Element": {
+      "@EmId": "00343",
+      "Fields": {
+        "ViSe": "I",
+        "Bl": "0",
+        "LwOb": "0",
+        "LwTg": "0"
+      },
+      "Objects": [
+        {
+          "KnPerson": {
+            "Element": {
+              "Fields": {
+                "PadAdr": "1",
+                "AutoNum": "1",
+                "MatchPer": "2",
+                "SeNm": "ZOEKNAAM",
+                "FiNm": "Jan",
+                "In": "J.A.",
+                "LaNm": "Jansen",
+                "SpNm": "1",
+                "NmBi": "Jansen",
+                "ViUs": "0",
+                "ViGe": "V",
+                "PsNa": "NL",
+                "DaBi": "1988-06-05",
+                "SoSe": "123456789",
+                "ViCs": "OG",
+                "TtId": "ALG"
+              },
+              "Objects": [
+                {
+                  "KnBasicAddressAdr": {
+                    "Element": {
+                      "Fields": {
+                        "CoId": "NL",
+                        "PbAd": "0",
+                        "Ad": "Diepenbrockstraat",
+                        "HmNr": "105",
+                        "ZpCd": "3833LC",
+                        "Rs": "Leusden",
+                        "BeginDate": "2014-09-01"
+                      }
+                    }
+                  }
+                },
+                {
+                  "KnBasicAddressPad": {
+                    "Element": {
+                      "Fields": {
+                        "CoId": "NL",
+                        "PbAd": "0",
+                        "Ad": "Diepenbrockstraat",
+                        "HmNr": "105",
+                        "ZpCd": "3833LC",
+                        "Rs": "Leusden",
+                        "BeginDate": "2014-09-01"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "AfasContract": {
+            "Element": {
+              "@DaBe": "2014-09-01",
+              "Fields": {
+                "ClId": "CVO",
+                "WcId": "CVO",
+                "ApCo": "O",
+                "PEmTy": "S",
+                "DvSn": "4",
+                "CmId": "40075",
+                "EmMt": "1",
+                "ViEt": "OOP",
+                "ViTo": "1M",
+                "DaEt": "2010-29-30",
+                "PeNo": "8",
+                "PeRp": "12",
+                "PeFt": "201014",
+                "RtDa": "0",
+                "ViKe": "0"
+              }
+            }
+          }
+        },
+        {
+          "AfasOrgunitFunction": {
+            "Element": {
+              "@DaBe": "2014-09-01",
+              "Fields": {
+                "DpId": "AF58FUFU",
+                "FuId": "060",
+                "CcId": "10",
+                "CrId": "470"
+              }
+            }
+          }
+        },
+        {
+          "AfasTimeTable": {
+            "Element": {
+              "@DaBg": "2014-09-01",
+              "Fields": {
+                "Spec": "1",
+                "DyWk": "3",
+                "HrWk": "18",
+                "FtSv": "0",
+                "ClAg": "true"
+              }
+            }
+          }
+        },
+        {
+          "AfasSalary": {
+            "Element": {
+              "@DaBe": "2014-09-01",
+              "Fields": {
+                "SaPe": "V",
+                "EmSa": "2500.00",
+                "NtSa": "0",
+                "PtId": "5",
+                "SaYe": "0"
+              }
+            }
+          }
+        },
+        {
+          "AfasAgencyFiscus": {
+            "Element": {
+              "@DaBe": "2014-09-01",
+              "@AyId": "F",
+              "Fields": {
+                "ViIn": "15",
+                "ViEm": "1",
+                "ViTs": "W",
+                "ViCd": "0",
+                "ViLk": "1",
+                "ViZv": "K",
+                "YnZW": "1",
+                "YnWW": "1",
+                "YWAO": "1",
+                "ViOk": "0",
+                "ViVb": "0",
+                "ViCx": "1",
+                "TxF4": "0",
+                "TxF5": "0"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

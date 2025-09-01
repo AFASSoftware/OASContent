@@ -1,0 +1,27 @@
+{
+    "AfasEmployee": {
+        "Element": {
+            "@Action": "update",
+            "@EmId": "545454",
+            "@GUID": "{27302593-3DFF-418A-A1CC-527B76C9BE85}",
+            "Fields": {
+                "Bl": "false",
+                "EmId": "545454"
+            },
+            "Objects": {
+                "AfasBankInfo": {
+                    "Element": {
+                        "@Action": "update",
+                        "@GUID": "{E8058FC7-601B-403F-BABF-201D109D710A}",
+                        "Fields": {
+                            "Iban": "NL91BKCH0870388223",
+                            "IbCk": "true",
+                            "NoBk": "false",
+                            "SaAc": "false"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

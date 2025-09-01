@@ -1,0 +1,22 @@
+{
+  "KnCourseEvent": {
+    "Element": {
+      "Fields": {
+        "Id": "19"
+      },
+      "Objects": {
+        "KnSession": {
+          "Element": {
+            "Fields": {
+              "SeId": "1",
+              "VaDp": "M",
+              "StTi": "13:00:00",
+              "EnTi": "18:00:00",
+              "SeRm": "Dit is een gewijzigde sessie"
+            }
+          }
+        }
+      }
+    }
+  }
+}

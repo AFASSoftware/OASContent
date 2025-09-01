@@ -1,0 +1,46 @@
+{
+    "AfasEmployee": {
+        "Element": {
+            "@Action": "update",
+            "@EmId": "000334",
+            "Objects": [
+                {
+                    "AfasAgencyFiscus": {
+                        "Element": {
+                            "@Action": "insert",
+                            "@DaBe": "2023-06-01",
+                            "@AyId": "F",
+                            "Fields": {
+                                "ViIn": "15",
+                                "ViEm": "1",
+                                "ViTs": "W",
+                                "ViCd": "0",
+                                "ViLk": "1",
+                                "ViZv": "K",
+                                "YnZW": "1",
+                                "YnWW": "1",
+                                "YWAO": "1",
+                                "DoPs": "0",
+                                "Cons": "0",
+                                "ViVb": "0",
+                                "ViCx": "0",
+                                "TxF4": "0",
+                                "TxIs": "0",
+                                "TrI": "0",
+                                "TxHc": "0",
+                                "Dblr": "0",
+                                "TxGf": "0",
+                                "TxGo": "0",
+                                "TxCs": "0",
+                                "TxGy": "0",
+                                "TxGn": "0",
+                                "TxF5": "0",
+                                "TyDt": "1"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

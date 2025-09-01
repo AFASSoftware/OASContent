@@ -1,0 +1,16 @@
+{
+  "CmForecast": {
+    "Element": {
+      "Fields": {
+        "PrId": "10178",
+        "EmId": "KEESZ",
+        "DaSt": "2022-09-09",
+        "DaEn": "2023-09-09",
+        "Pc": "75",
+        "AmF": "1000.00",
+        "CuId": "USD",
+        "Rate": "2.0"
+      }
+    }
+  }
+}

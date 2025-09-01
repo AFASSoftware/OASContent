@@ -1,0 +1,45 @@
+{
+  "FiCommitment": {
+    "Element": [
+      {
+        "@UnId": "1",
+        "@SeNo": "",
+        "Fields": {
+          "AcNr": "4810",
+          "Yr": "2015",
+          "PeNr": "4",
+          "Ds": "Verplichting meerdere 1/3",
+          "CrId": "50013",
+          "Ref": "REF348100",
+          "Amt": "1100"
+        }
+      },
+      {
+        "@UnId": "1",
+        "@SeNo": "",
+        "Fields": {
+          "AcNr": "4680",
+          "Yr": "2015",
+          "PeNr": "5",
+          "Ds": "Verplichting meerdere 2/3",
+          "CrId": "50013",
+          "Ref": "REF348200",
+          "Amt": "2200"
+        }
+      },
+      {
+        "@UnId": "1",
+        "@SeNo": "",
+        "Fields": {
+          "AcNr": "4610",
+          "Yr": "2015",
+          "PeNr": "6",
+          "Ds": "Verplichting meerdere 3/3",
+          "CrId": "50013",
+          "Ref": "REF348300",
+          "Amt": "3300"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "FbAssembly": {
+    "Element": {
+      "Fields": {
+        "OrDa": "2024-02-19T16:56:23",
+        "DaAc": "2024-02-19T16:56:23",
+        "SoOr": "PO230760",
+        "War": "*****"
+      },
+      "Objects": {
+        "FbAssemblyLines": {
+          "Element": {
+            "Fields": {
+              "SoGu": "{9CB63724-5507-408D-8F63-2CA45B713BB7}",
+              "SoOr": "PO230760",
+              "QuUn": "3",
+              "BiUn": "STK"
+            },
+            "Objects": {
+              "FbOrderSerialLines": {
+                "Element": [
+                  {
+                    "Fields": {
+                      "SeNu": "20240219_Jo11",
+                      "BiUn": "STK",
+                      "QuUn": "1"
+                    }
+                  },
+                  {
+                    "Fields": {
+                      "SeNu": "20240219_Jo12",
+                      "BiUn": "STK",
+                      "QuUn": "1"
+                    }
+                  },
+                  {
+                    "Fields": {
+                      "SeNu": "20240219_Jo13",
+                      "BiUn": "STK",
+                      "QuUn": "1"
+                    }
+                  }
+                ]
+              },
+              "AfasFbOrderCompLines": {
+                "Element": [
+                  {
+                    "Fields": {
+                      "VaIt": "2",
+                      "ItCd": "A12680"
+                    },
+                    "Objects": {
+                      "FbOrderSerialLines": {
+                        "Element": [
+                          {
+                            "Fields": {
+                              "SeNu": "1PS702308CC335T",
+                              "QuUn": "1"
+                            },
+                            "Objects": {
+                              "FbOrderLocationLines": {
+                                "Element": {
+                                  "Fields": {
+                                    "Loc": "P",
+                                    "Qu": "1"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "Fields": {
+                              "SeNu": "1PS702308CC3361",
+                              "QuUn": "1"
+                            },
+                            "Objects": {
+                              "FbOrderLocationLines": {
+                                "Element": {
+                                  "Fields": {
+                                    "Loc": "P",
+                                    "Qu": "1"
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "Fields": {
+                              "SeNu": "1PS702308CC335Z",
+                              "QuUn": "1"
+                            },
+                            "Objects": {
+                              "FbOrderLocationLines": {
+                                "Element": {
+                                  "Fields": {
+                                    "Loc": "P",
+                                    "Qu": "1"
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      "FbOrderLocationLines": null
+                    }
+                  },
+                  {
+                    "Fields": {
+                      "VaIt": "2",
+                      "ItCd": "A11872"
+                    },
+                    "Objects": {
+                      "FbOrderSerialLines": null,
+                      "FbOrderLocationLines": {
+                        "Element": {
+                          "Fields": {
+                            "Loc": "P",
+                            "Qu": "3.00"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

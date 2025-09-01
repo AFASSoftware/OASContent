@@ -1,0 +1,13 @@
+{
+  "KnWorkflow": {
+    "Element": {
+      "Fields": {
+        "SbId": "9912",
+        "WfNm": "5D4631C043B41028221E1A939CFE1A21",
+        "TkNm": "7775521C40C7CC7A5B9505836CAE16D8",
+        "AcNm": "C2818A436B6947C58BF940C7109DB90B",
+        "Tx": "Put the task to the next step in the workflow."
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "FbAssemblyPrep": {
+    "Element": {
+      "Fields": {
+        "OrNu": "10001",
+        "OrDa": "2013-03-01",
+        "DaDe": "2013-04-01",
+        "DaPr": "2013-04-01",
+        "CuId": "EUR",
+        "RfCs": "Ingestuurd middels JSON",
+        "Re": "Opmerking bij deze assemblage",
+        "Unit": "1",
+        "War": "01",
+        "LgId": "NL",
+        "VaBc": "0",
+        "BaCo": "10001-bar-assem",
+        "BcI1": "1000002",
+        "CdI1": "953",
+        "BcI2": "1000002",
+        "BcDa": "1000372"
+      },
+      "Objects": {
+        "FbAssemblyLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "7",
+              "ItCd": "3900",
+              "Ds": "afwijkende omschrijving",
+              "BiUn": "stk",
+              "QuUn": "1",
+              "Qu": "1",
+              "War": "01",
+              "DlDa": "2013-03-06",
+              "VaWt": "4",
+              "NeWe": "22.6",
+              "GrWe": "30.7",
+              "Re": "En nog een toelichting",
+              "PrId": "600000",
+              "PrSt": "01"
+            },
+            "Objects": {
+              "FbOrderBatchLines": {
+                "Element": {
+                  "Fields": {
+                    "BaNu": "3900-1",
+                    "BiUn": "stk",
+                    "QuUn": "1",
+                    "Qu": "1",
+                    "QuIn": "1",
+                    "QuDl": "1",
+                    "DaEx": "2013-12-31",
+                    "Re": "opmerking op de partij"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

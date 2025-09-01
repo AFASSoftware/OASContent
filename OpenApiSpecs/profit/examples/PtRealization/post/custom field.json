@@ -1,0 +1,14 @@
+{
+  "PtRealization": {
+    "Element": {
+      "Fields": {
+        "DaTi": "2023-01-01",
+        "VaIt": "1",
+        "ItCd": "300",
+        "StId": "1",
+        "Ds": "New row with a custom field",
+        "U8BB552544967345CF73661AB9E5CB1F2": "10:00:00"
+      }
+    }
+  }
+}

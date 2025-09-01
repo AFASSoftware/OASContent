@@ -1,0 +1,73 @@
+{
+  "FbSubscription": {
+    "Element": {
+      "Fields": {
+        "BcId": "1000736",
+        "CtPe": "1223",
+        "AltSRe": "1",
+        "DbId": "20000",
+        "SuSt": "2017-01-01",
+        "VaIn": "M1",
+        "DaSt": "2017-01-01",
+        "DaAm": "1",
+        "SuEn": "2017-12-31",
+        "CuId": "GBP",
+        "Rate": "0.8335000000",
+        "VaRe": "J1",
+        "DaRe": "2017-01-01",
+        "VaSu": "01",
+        "PaCd": "14",
+        "AuIn": "1",
+        "VaRs": "02",
+        "NoIn": "0",
+        "InDi": "1",
+        "PrId": "910007",
+        "PrSt": "01",
+        "NoSi": "0",
+        "AtIn": "1",
+        "InAd": "0",
+        "InVa": "0"
+      },
+      "Objects": {
+        "FbSubscriptionLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "7002",
+                "IsPc": "0",
+                "IsPS": "1",
+                "DaSt": "2017-01-01",
+                "Qu": "10",
+                "NFDi": "10",
+                "DaEn": "2017-12-31",
+                "DaPu": "2017-02-01",
+                "VaRs": "02",
+                "SuCr": "0",
+                "InFr": "2017-02-01",
+                "CrSi": "0"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "7001",
+                "IsPc": "0",
+                "IsPS": "1",
+                "DaSt": "2017-01-01",
+                "Qu": "10",
+                "NFDi": "1",
+                "DaEn": "2017-12-31",
+                "DaPu": "2017-02-01",
+                "VaRs": "02",
+                "SuCr": "0",
+                "InFr": "2017-02-01",
+                "CrSi": "0"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

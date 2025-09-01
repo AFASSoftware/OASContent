@@ -1,0 +1,31 @@
+{
+  "KnSubject": {
+    "Element": {
+      "Fields": {
+        "StId": "26",
+        "Ds": "Subject attached to a project with custom fields with projectdata",
+        "Da": "2023-01-02T10:00:00",
+        "UsId": "ALLARDJ"
+      },
+      "Objects": {
+        "KnSubjectLink": {
+          "Element": {
+            "Fields": {
+              "PjId": "910004"
+            }
+          }
+        },
+        "KnS04": {
+          "Element": {
+            "Fields": {
+              "U7A47A63043AE7777AE7B0EA09BA6FCA4": "ALLARDJ",
+              "UEEF20AEC4A771CDE69FF3B40BA8C1FA1": "01",
+              "UF0F911494546A1E78A295F97D3421789": "01",
+              "UB65BF2BD4FE2FA363ACF74896D7EA6F0": "Klant is tevreden"
+            }
+          }
+        }
+      }
+    }
+  }
+}

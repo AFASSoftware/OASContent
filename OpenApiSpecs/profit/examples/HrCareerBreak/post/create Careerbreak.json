@@ -1,0 +1,15 @@
+{
+  "HrCareerBreak": {
+    "Element": {
+      "Fields": {
+        "EmId": "floora",
+        "DaBe": "2021-01-01",
+        "DaEn": "2021-06-02",
+        "CoIn": "1",
+        "CoIc": "001",
+        "CoTc": "1",
+        "CoRt": "01"
+      }
+    }
+  }
+}

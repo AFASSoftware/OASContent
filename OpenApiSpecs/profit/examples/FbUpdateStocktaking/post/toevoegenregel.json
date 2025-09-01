@@ -1,0 +1,28 @@
+{
+  "FbUpdateStocktaking": {
+    "Element": {
+      "Fields": {
+        "StrOrNu": "13",
+        "StlType": "1",
+        "StlLine": "1",
+        "StlVaIt": "2",
+        "BitItCd": "1001",
+        "StlLoc": "*****",
+        "StlBiUn": "Stk",
+        "StlNmSt": "89",
+        "StlGuLi": "",
+        "SeNSeNu": "",
+        "BaNBaNu": "",
+        "SeNBaCo": "",
+        "BaNBaCo": "",
+        "StlDa": "2017-07-01",
+        "StlTime": "2017-07-01:10:00",
+        "StlStD1": "",
+        "StlStL1": "",
+        "StlStD2": "",
+        "StlStL2": "",
+        "InCp": "1"
+      }
+    }
+  }
+}

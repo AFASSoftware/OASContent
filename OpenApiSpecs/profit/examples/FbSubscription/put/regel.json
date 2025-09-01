@@ -1,0 +1,20 @@
+{
+  "FbSubscription": {
+    "Element": {
+      "Fields": {
+        "SuNr": "3"
+      },
+      "Objects": {
+        "FbSubscriptionLines": {
+          "Element": {
+            "Fields": {
+              "Id": "7",
+              "Qu": "2",
+              "Pric": "55"
+            }
+          }
+        }
+      }
+    }
+  }
+}

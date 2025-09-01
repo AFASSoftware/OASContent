@@ -1,0 +1,24 @@
+{
+  "FbDoughLines": {
+    "Element": {
+      "Fields": {
+        "ItCd": "DG54014",
+        "SqNo": "1",
+        "VaIt": "sam",
+        "RwId": "5027",
+        "PcFw": "50",
+        "QyPr": "100",
+        "BaLi": "true",
+        "WeSp": "0",
+        "PcBl": "10",
+        "ViRt": "4",
+        "PcKw": "9.56",
+        "FlPr": "true",
+        "SeDe": "true",
+        "DeDe": "Eindproduct",
+        "BaFi": "false",
+        "WeLi": "150"
+      }
+    }
+  }
+}

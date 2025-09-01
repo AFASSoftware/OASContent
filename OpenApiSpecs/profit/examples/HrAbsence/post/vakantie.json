@@ -1,0 +1,15 @@
+{
+  "HrAbsence": {
+    "Element": {
+      "Fields": {
+        "EmId": "andreo",
+        "ViAt": "v",
+        "DaBe": "2024-07-11T08:00:00",
+        "DaEn": "2024-07-30T17:00:00",
+        "EnSe": "1",
+        "Re": "voorbeeld volledige dag vakantie",
+        "LeDt": "0"
+      }
+    }
+  }
+}

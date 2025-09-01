@@ -1,0 +1,96 @@
+{
+  "FbDeliveryNote": {
+    "Element": {
+      "Fields": {
+        "OrDa": "2010-11-26",
+        "SoOr": "60000172",
+        "RdDe": "true",
+        "SeSt": "0",
+        "PkTp": "DIVERSEN"
+      },
+      "Objects": {
+        "FbDeliveryNoteLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "1101",
+                "BiUn": "Stk",
+                "QuUn": "6",
+                "War": "01",
+                "SoOr": "60000172",
+                "SoGu": "{61B045A8-C48B-4D76-B790-5F569621AD81}"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "8007",
+                "BiUn": "Stk",
+                "QuUn": "9",
+                "War": "01",
+                "SoOr": "60000172",
+                "SoGu": "{C4508381-4461-4ED1-B129-36E64B630018}"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "1401",
+                "BiUn": "Stk",
+                "QuUn": "10",
+                "War": "01",
+                "SoOr": "60000172",
+                "SoGu": "{3B8EFA28-9FA9-4DE2-BC1B-48B568254445}"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "3001",
+                "BiUn": "Stk",
+                "QuUn": "5",
+                "War": "01",
+                "SoOr": "60000172",
+                "SoGu": "{4D9525E0-5401-4B1B-A301-907FBF7D7129}"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "1202",
+                "BiUn": "Stk",
+                "QuUn": "2",
+                "War": "01",
+                "SoOr": "60000172",
+                "SoGu": "{2AAA1481-C7E4-43A7-BF9E-57241C330D26}"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "4000",
+                "BiUn": "Stk",
+                "QuUn": "1",
+                "War": "01",
+                "SoOr": "60000172",
+                "SoGu": "{D9F55FBF-C6DD-469D-9C01-FE8B0F256E9E}"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "3006",
+                "BiUn": "Stk",
+                "QuUn": "0",
+                "War": "01",
+                "SoOr": "60000172",
+                "SoGu": "{CE5F3983-4963-4BDB-BF3E-F27E5C949669}"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

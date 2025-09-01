@@ -1,0 +1,21 @@
+{
+    "AfasEmployee": {
+        "Element": {
+            "@EmId": "500328",
+            "Objects": [
+                {
+                    "AfasTimeTable": {
+                        "Element": {
+                            "@Action": "insert",
+                            "@DaBg": "2023-10-01",
+                            "Fields": {
+                                "SeNo": 12,
+                                "EtTy": "3"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

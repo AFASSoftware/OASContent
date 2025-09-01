@@ -1,0 +1,44 @@
+{
+  "KnDimCode": {
+    "Element": [
+      {
+        "@AxId": "1",
+        "@VbCo": "GRONINGEN",
+        "Fields": {
+          "Ds": "Vestiging Groningen",
+          "QuYN": "1",
+          "Bl": "0",
+          "PeDi": "1"
+        }
+      },
+      {
+        "@AxId": "2",
+        "@VbCo": "ONL",
+        "Fields": {
+          "Ds": "Online",
+          "QuYN": "1",
+          "Bl": "0"
+        }
+      },
+      {
+        "@AxId": "2",
+        "@VbCo": "GAR",
+        "Fields": {
+          "Ds": "Garage",
+          "QuYN": "1",
+          "Bl": "0"
+        }
+      },
+      {
+        "@AxId": "1",
+        "@VbCo": "APELDOORN",
+        "Fields": {
+          "Ds": "Vestiging Apeldoorn",
+          "QuYN": "1",
+          "Bl": "0",
+          "PeDi": "1"
+        }
+      }
+    ]
+  }
+}

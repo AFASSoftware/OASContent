@@ -1,0 +1,118 @@
+{
+  "KnTeamMember": {
+    "Element": [
+      {
+        "Fields": {
+          "Team": "Team 5",
+          "Desc": "Het primaire team",
+          "Type": "1",
+          "PrId": "910002",
+          "EmId": "KeesZ",
+          "TmRl": "IPL",
+          "ItCd": "301"
+        }
+      },
+      {
+        "Fields": {
+          "Team": "Team 5",
+          "PrId": "910002",
+          "Type": "1",
+          "EmId": "ArendB",
+          "TmRl": "TL",
+          "ItCd": "300"
+        }
+      },
+      {
+        "Fields": {
+          "Team": "Team 5",
+          "PrId": "910002",
+          "Type": "2",
+          "CdId": "1027",
+          "TmRl": "TL"
+        }
+      },
+      {
+        "Fields": {
+          "Team": "Team 5",
+          "PrId": "910002",
+          "Type": "2",
+          "CdId": "1005",
+          "TmRl": "EPL",
+          "ItCd": "302"
+        }
+      },
+      {
+        "Fields": {
+          "Team": "Team 5",
+          "PrId": "910002",
+          "Type": "2",
+          "CdId": "536",
+          "TmRl": "TL",
+          "ItCd": "302"
+        }
+      },
+      {
+        "Fields": {
+          "Team": "Team 6",
+          "Desc": "Het secundaire team",
+          "PrId": "910004",
+          "Type": "1",
+          "EmId": "KeesZ",
+          "TmRl": "IPL",
+          "ItCd": "302"
+        }
+      },
+      {
+        "Fields": {
+          "Team": "Team 6",
+          "PrId": "910004",
+          "Type": "1",
+          "EmId": "ArendB",
+          "TmRl": "TL",
+          "ItCd": "302"
+        }
+      },
+      {
+        "Fields": {
+          "Team": "Team 6",
+          "PrId": "910004",
+          "Type": "2",
+          "CdId": "1005",
+          "TmRl": "TL",
+          "ItCd": "300"
+        }
+      },
+      {
+        "Fields": {
+          "Team": "Team 7",
+          "PrId": "910005",
+          "Desc": "Het occasionele team",
+          "Type": "1",
+          "EmId": "HermaS",
+          "TmRl": "TL",
+          "ItCd": "ADVDIR"
+        }
+      },
+      {
+        "Fields": {
+          "Team": "Team 7",
+          "PrId": "910005",
+          "Type": "2",
+          "CdId": "471",
+          "TmRl": "TL",
+          "ItCd": "ADVDIR"
+        }
+      },
+      {
+        "Fields": {
+          "Team": "Team 7",
+          "PrId": "910005",
+          "Type": "2",
+          "CdId": "23",
+          "TmRl": "TL",
+          "ItCd": "ADVDIR"
+        }
+      }
+    ]
+  }
+}

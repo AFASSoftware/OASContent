@@ -1,0 +1,33 @@
+{
+  "KnOrganisation": {
+    "Element": {
+      "Fields": {
+        "MatchOga": "0",
+        "BcCo": "1000614"
+      },
+      "Objects": {
+        "KnBankAccount": {
+          "Element": {
+            "Fields": {
+              "CoId": "NL",
+              "IbCk": "1",
+              "Iban": "NL97CHAS0849835607",
+              "BaAc": "849835607",
+              "BkTp": "528001",
+              "AcGa": "0",
+              "AcCk": "0",
+              "DiNm": "Afwijkende naam",
+              "DiPl": "Afwijkende Woonplaats",
+              "Bic": "INGBNL2A",
+              "BaNm": "ING BANK N.V",
+              "BaFi": "Gouda",
+              "BaAd": "Adres 12",
+              "BaPl": "Gouda",
+              "CalM": "3"
+            }
+          }
+        }
+      }
+    }
+  }
+}

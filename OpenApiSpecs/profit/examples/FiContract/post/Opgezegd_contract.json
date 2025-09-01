@@ -1,0 +1,25 @@
+{
+  "FiContract": {
+    "Element": {
+      "Fields": {
+        "SeNo": "51647801",
+        "PoKi": "Contract insert opgezegd",
+        "PoNo": "REF:348965",
+        "CmId": "60009",
+        "DaBe": "2014-01-01",
+        "DaEn": "2014-12-31",
+        "AmPr": "24000.24",
+        "AmIn": "1000000",
+        "DaVa": "2013-12-02",
+        "Re": "Opmerking bij contract. Geen idee hoe lang dit veld mag zijn maar dit is genoeg? \r\n En een nieuwe regel. \r\n Nog ��n.",
+        "Prol": "1",
+        "EmId": "FLOORA",
+        "UnId": "1",
+        "CaDa": "2014-12-20",
+        "CaUs": "KEESZ",
+        "VaCt": "01",
+        "SiCo": "0"
+      }
+    }
+  }
+}

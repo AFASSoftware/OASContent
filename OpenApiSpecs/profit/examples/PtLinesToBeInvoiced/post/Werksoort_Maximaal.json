@@ -1,0 +1,29 @@
+{
+  "PtLinesToBeInvoiced": {
+    "Element": {
+      "Fields": {
+        "DaTi": "2013-01-01",
+        "VaIt": "1",
+        "ItCd": "300",
+        "Qu": "8",
+        "QuSa": "8",
+        "EmId": "ALLARDJ",
+        "PrId": "600000",
+        "PrSt": "01",
+        "BcId": "1000002",
+        "DbId": "10150",
+        "StId": "1",
+        "AmCo": "100",
+        "AmSe": "200",
+        "DcPr": "1",
+        "Ds": "Uitgevoerde werkzaamheden",
+        "AcNr": "8000",
+        "Inf1": "Factuurinfo 1",
+        "Inf2": "Factuurinfo 2",
+        "UnId": "UUR",
+        "QuUn": "8",
+        "Upri": "100"
+      }
+    }
+  }
+}

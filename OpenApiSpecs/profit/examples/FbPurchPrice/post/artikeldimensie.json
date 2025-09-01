@@ -1,0 +1,56 @@
+{
+  "FbPurchPrice": {
+    "Element": [
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "9900",
+          "BiUn": "stk",
+          "PrLi": "*****",
+          "StL1": "L",
+          "Pric": "60",
+          "CuId": "eur",
+          "DaBg": "2013-03-01"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "9900",
+          "BiUn": "stk",
+          "PrLi": "*****",
+          "StL1": "M",
+          "Pric": "50",
+          "CuId": "eur",
+          "DaBg": "2013-03-01"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "9901",
+          "BiUn": "stk",
+          "PrLi": "*****",
+          "StL1": "L",
+          "StL2": "Blauw",
+          "Pric": "70",
+          "CuId": "eur",
+          "DaBg": "2013-03-01"
+        }
+      },
+      {
+        "Fields": {
+          "VaIt": "2",
+          "ItCd": "9901",
+          "BiUn": "stk",
+          "PrLi": "*****",
+          "StL1": "M",
+          "StL2": "WIT",
+          "Pric": "50",
+          "CuId": "eur",
+          "DaBg": "2013-03-01"
+        }
+      }
+    ]
+  }
+}

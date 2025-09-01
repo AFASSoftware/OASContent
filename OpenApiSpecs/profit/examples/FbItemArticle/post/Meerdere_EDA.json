@@ -1,0 +1,69 @@
+{
+  "FbItemArticle": {
+    "Element": [
+      {
+        "Fields": {
+          "ItCd": "1017",
+          "Ds": "Artikel1",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1018",
+          "Ds": "Artikel2",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1019",
+          "Ds": "Artikel3",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1013",
+          "Ds": "Artikel4",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1014",
+          "Ds": "Artikel5",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1015",
+          "Ds": "Artikel6",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "1016",
+          "Ds": "Artikel7",
+          "Grp": "100",
+          "BiUn": "STK",
+          "VaRc": "2"
+        }
+      }
+    ]
+  }
+}

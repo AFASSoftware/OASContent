@@ -1,0 +1,25 @@
+{
+    "AfasEmployee": {
+      "Element": {
+        "@GUID": "{5E430060-A91D-44EF-8DF3-7E6F22D075AB}",
+        "Fields": {
+          "EmId": "floora"
+        },
+        "Objects": {
+          "AfasTimeTable": {
+            "Element": {
+              "@GUID": "{6324c715-0083-41bf-9fc1-864244a6cf9b}",
+              "Fields": {
+                "DaBg": "2024-03-01",
+                "EtTy": "5",
+                "DyWk": "5",
+                "HrWk": "40",
+                "ClAg": "false",
+                "UA3575F8643714B943BC87881A18780CE": "ExternalId"
+              }
+            }
+          }
+        }
+      }
+    }
+  }

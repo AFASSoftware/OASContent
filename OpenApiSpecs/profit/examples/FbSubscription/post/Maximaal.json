@@ -1,0 +1,67 @@
+{
+  "FbSubscription": {
+    "Element": {
+      "Fields": {
+        "BcId": "1000032",
+        "CtPe": "970",
+        "AltSRe": "1",
+        "DbId": "10185",
+        "SuSt": "2013-01-01",
+        "VaIn": "M1",
+        "DaSt": "2013-01-01",
+        "DaAm": "1",
+        "SuEn": "2013-12-31",
+        "VaRe": "J1",
+        "DaRe": "2014-01-01",
+        "VaSu": "01",
+        "PaCd": "14",
+        "AuIn": "1",
+        "VaRs": "02",
+        "NoIn": "0",
+        "InDi": "1",
+        "PrId": "600000",
+        "PrSt": "01",
+        "NoSi": "0",
+        "AtIn": "1",
+        "InAd": "0",
+        "InVa": "0"
+      },
+      "Objects": {
+        "FbSubscriptionLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "7002",
+                "DaSt": "2013-01-01",
+                "Qu": "10",
+                "Pric": "500",
+                "DaEn": "2013-12-31",
+                "DaPu": "2013-02-01",
+                "VaRs": "02",
+                "SuCr": "0",
+                "InFr": "2013-02-01",
+                "CrSi": "0"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "7001",
+                "DaSt": "2013-01-01",
+                "Qu": "10",
+                "Pric": "500",
+                "DaEn": "2013-12-31",
+                "DaPu": "2013-02-01",
+                "VaRs": "02",
+                "SuCr": "0",
+                "InFr": "2013-02-01",
+                "CrSi": "0"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "PtCostPriceModel": {
+    "Element": {
+      "Fields": {
+        "CmId": "1100",
+        "Ds": "Kostprijsmodel via Connector urensoorten"
+      },
+      "Objects": {
+        "PtCostPriceModelVersion": {
+          "Element": {
+            "Fields": {
+              "CmVe": "1",
+              "DaBe": "2020-02-01",
+              "ApTy": "0",
+              "ApSt": "1"
+            },
+            "Objects": {
+              "PtCostPriceModelLine": {
+                "Element": {
+                  "Fields": {
+                    "VaIt": "1",
+                    "StId": "01",
+                    "VaFz": "AZU",
+                    "Fact": "1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "FbSales": {
+    "Element": {
+      "Fields": {
+        "DbId": "10001",
+        "RfCs": "1 artikeldimensie"
+      },
+      "Objects": {
+        "FbSalesLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "9900",
+                "BiUn": "stk",
+                "QuUn": "3",
+                "Upri": "15",
+                "StL1": "S"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "9900",
+                "BiUn": "stk",
+                "QuUn": "3",
+                "Upri": "15",
+                "StL1": "M"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "9900",
+                "BiUn": "stk",
+                "QuUn": "3",
+                "Upri": "15",
+                "StL1": "L"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

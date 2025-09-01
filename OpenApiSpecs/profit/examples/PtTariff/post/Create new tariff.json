@@ -1,0 +1,22 @@
+{
+    "PtTariff": {
+      "Element": {
+        "Fields": {
+          "BaV1": "MissionRole",
+          "BaV2": "Astronaut",
+          "BaV3": "ResearchGroup",
+          "BaV4": "MissionTeam",
+          "BaS1": "SpacecraftFunction",
+          "BaS2": "SpacePartnership",
+          "BaI1": "InterstellarCrewMember",
+          "BaI2": "InterstellarMission",
+          "StId": "NormalHours",
+          "DaBe": "2024-01-01",
+          "CuId": "EUR",
+          "AmCo": "45,00",
+          "AmSe": "90,00",
+          "AmIC": "50,00"
+        }
+      }
+    }
+  }

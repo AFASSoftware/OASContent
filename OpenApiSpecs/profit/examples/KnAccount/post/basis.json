@@ -1,0 +1,19 @@
+{
+  "KnAccount": {
+    "Element": {
+      "Fields": {
+        "AcNr": "1605",
+        "Ds": "Crediteuren buitenland",
+        "SeNm": "CreB",
+        "SaYn": false,
+        "FaYn": false,
+        "VaAt": "2",
+        "VaPc": "GD",
+        "VaDc": "C",
+        "VaYn": true,
+        "VaCo": "4",
+        "CaYn": false
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "FiFixedAssets": {
+    "Element": {
+      "Fields": {
+        "Ds": "FiFixedAssets_Afschrijven_Verleden_Loopt_door_Degressief",
+        "FgSn": "4",
+        "DaPu": "2014-01-01",
+        "DaSe": "2014-01-01",
+        "EmId": "BENH",
+        "NpBu": "1",
+        "BuVa": "1000000",
+        "FiYn": "true",
+        "ViAk": "1",
+        "ViDf": "M",
+        "LiYe": "40",
+        "Botm": "500000",
+        "DaSd": "2015-01-01"
+      }
+    }
+  }
+}

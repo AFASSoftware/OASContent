@@ -1,0 +1,33 @@
+{
+  "FbPurRequisition": {
+    "Element": {
+      "Fields": {
+        "OrDa": "2021-06-01",
+        "War": "01",
+        "Appl": "KEESZ",
+        "Judg": "KEESZ",
+        "VaRt": "V",
+        "Prof": "-83",
+        "WfId": "90",
+        "Cycl": "M1",
+        "Time": "10",
+        "DaBg": "2021-06-01",
+        "Fina": "1"
+      },
+      "Objects": {
+        "FbPurRequisitionLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "Art",
+              "ItCd": "1000",
+              "CrId": "50031",
+              "BiUn": "Stk",
+              "QuUn": "10",
+              "Upri": "55"
+            }
+          }
+        }
+      }
+    }
+  }
+}

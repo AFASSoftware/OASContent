@@ -1,0 +1,19 @@
+{
+  "FbItemArticle": {
+    "Element": {
+      "Fields": {
+        "ItCd": "1011",
+        "Ds": "Artikel via JSON!",
+        "Grp": "100",
+        "BiUn": "STK",
+        "VaRc": "2",
+        "StPrice": "3",
+        "CoPrice": "3",
+        "SaPrice": "3",
+        "PuPrice": "3",
+        "CrId": "60005",
+        "CsGc": "00000000"
+      }
+    }
+  }
+}

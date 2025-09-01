@@ -1,0 +1,23 @@
+{
+  "FiFixedAssets": {
+    "Element": {
+      "Fields": {
+        "AutoNum": false,
+        "SeNo": "51647801",
+        "Ds": "Insert fixed asset with depreciation",
+        "FgSn": "3",
+        "DaPu": "2020-01-01",
+        "DaSe": "2020-01-01",
+        "NpBu": "10",
+        "RefN": "",
+        "BuVa": "45000",
+        "AdVa": "750",
+        "FiYn": "true",
+        "ViAk": "3",
+        "ViDf": "D",
+        "SaVa": "9000",
+        "DaSd": "2020-01-01"
+      }
+    }
+  }
+}

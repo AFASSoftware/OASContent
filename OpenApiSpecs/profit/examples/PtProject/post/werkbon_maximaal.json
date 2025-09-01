@@ -1,0 +1,23 @@
+{
+  "PtProject": {
+    "Element": {
+      "Fields": {
+        "PrId": "Connector1",
+        "Prof": "-197",
+        "PrGp": "ALG",
+        "Ds": "Werkbon via Connector",
+        "BcCo": "1000144",
+        "CpId": "152",
+        "DaSt": "2020-05-01",
+        "DbId": "10101",
+        "Char": "Dit is een gaaf kenmerk",
+        "PrTy": "2",
+        "StTm": "00:08:00",
+        "EnTm": "00:14:00",
+        "ViAg": "ANS",
+        "ViWo": "REP",
+        "ViOr": "GAR"
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "FbPurch": {
+    "Element": {
+      "Fields": {
+        "CrId": "50014",
+        "War": "01"
+      },
+      "Objects": {
+        "FbPurchLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "2",
+              "ItCd": "1000",
+              "BiUn": "stk",
+              "QuUn": "10"
+            }
+          }
+        }
+      }
+    }
+  }
+}

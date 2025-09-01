@@ -1,0 +1,46 @@
+{
+  "FbDoughLines": {
+    "Element": [
+      {
+        "Fields": {
+          "ItCd": "DG54015",
+          "SqNo": "1",
+          "VaIt": "art",
+          "RwId": "GR405209",
+          "PcFw": "50",
+          "QyPr": "100",
+          "BaLi": "true",
+          "WeSp": "0",
+          "PcBl": "10",
+          "ViRt": "0",
+          "PcKw": "9.56",
+          "FlPr": "true",
+          "SeDe": "true",
+          "DeDe": "Meel",
+          "BaFi": "false",
+          "WeLi": "150"
+        }
+      },
+      {
+        "Fields": {
+          "ItCd": "DG54015",
+          "SqNo": "2",
+          "VaIt": "art",
+          "RwId": "GR000001",
+          "PcFw": "50",
+          "QyPr": "100",
+          "BaLi": "true",
+          "WeSp": "0",
+          "PcBl": "10",
+          "ViRt": "1",
+          "PcKw": "9.56",
+          "FlPr": "false",
+          "SeDe": "false",
+          "DeDe": "choco druppels",
+          "BaFi": "false",
+          "WeLi": "150"
+        }
+      }
+    ]
+  }
+}

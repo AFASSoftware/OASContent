@@ -1,0 +1,28 @@
+{
+  "FbWarTransferPrep": {
+    "Element": {
+      "Fields": {
+        "OrDa": "2016-12-08",
+        "Re": "Deze opmerking komt in de kop van de voorbereiding",
+        "War": "01",
+        "Wa2": "*****"
+      },
+      "Objects": {
+        "FbWarTransferLines": {
+          "Element": {
+            "Fields": {
+              "VaIt": "2",
+              "ItCd": "1000",
+              "Ds": "PC behuizing Microtower Antec",
+              "BiUn": "Stk",
+              "QuUn": "1",
+              "Qu": "1",
+              "CoPr": "8.99",
+              "Re": "Toegevoegd via FbWarTransferPrep"
+            }
+          }
+        }
+      }
+    }
+  }
+}

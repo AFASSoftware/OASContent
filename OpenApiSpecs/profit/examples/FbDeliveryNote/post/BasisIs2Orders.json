@@ -1,0 +1,43 @@
+{
+  "FbDeliveryNote": {
+    "Element": {
+      "Fields": {
+        "DbId": "10009"
+      },
+      "Objects": {
+        "FbDeliveryNoteLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "1302",
+                "BiUn": "stk",
+                "QuUn": "1",
+                "SoOr": "60000194",
+                "SoGu": "{BB388449-7517-4FC0-ABFC-A3A4675C4737}"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "1001",
+                "BiUn": "stk",
+                "QuUn": "1",
+                "SoOr": "60000193",
+                "SoGu": "{D11E33D6-EB17-4723-BD82-53EE79B99916}"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "9000",
+                "BiUn": "stk",
+                "QuUn": "1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}

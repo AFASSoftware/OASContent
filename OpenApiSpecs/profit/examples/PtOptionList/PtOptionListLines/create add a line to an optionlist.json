@@ -1,0 +1,21 @@
+{
+    "PtOptionList": {
+      "Element": {
+        "Fields": {
+          "OlNu": "000022"
+        },
+        "Objects": [
+          {
+            "PtOptionListLines": {
+              "Element": {
+                "Fields": {
+                  "Code": "1001",
+                  "Ds": "This is an extra line"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }

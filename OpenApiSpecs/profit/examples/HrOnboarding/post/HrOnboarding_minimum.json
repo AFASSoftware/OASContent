@@ -1,0 +1,16 @@
+{
+  "AfasPerson": {
+    "Element": {
+      "Fields": {
+        "PrId": "-357",
+        "CaNm": "Bart",
+        "FiNm": "Bart",
+        "In": "B",
+        "LaNm": "Koomen",
+        "SpNm": "true",
+        "NmBi": " Koomen",
+        "EmA2": "bartkoomenmb.prive@gmail.com"
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "KnContact": {
+    "Element": {
+      "Fields": {
+        "BcCoOga": "1000372",
+        "PadAdr": "1",
+        "ExAd": "Afleveradres"
+      },
+      "Objects": {
+        "KnBasicAddressAdr": {
+          "Element": {
+            "Fields": {
+              "CoId": "NL",
+              "PbAd": "0",
+              "Ad": "Nismostraat",
+              "HmNr": "105",
+              "ZpCd": "3833LC",
+              "Rs": "Leusden",
+              "BeginDate": "2009-02-02",
+              "ResZip": "0"
+            }
+          }
+        },
+        "KnBasicAddressPad": {
+          "Element": {
+            "Fields": {
+              "CoId": "NL",
+              "PbAd": "0",
+              "Ad": "Nismostraat",
+              "HmNr": "105",
+              "ZpCd": "3833LC",
+              "Rs": "Leusden",
+              "BeginDate": "2009-02-02",
+              "ResZip": "0"
+            }
+          }
+        }
+      }
+    }
+  }
+}

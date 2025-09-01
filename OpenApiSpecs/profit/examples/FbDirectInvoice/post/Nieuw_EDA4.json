@@ -1,0 +1,37 @@
+{
+  "FbDirectInvoice": {
+    "Element": {
+      "Fields": {
+        "OrNu": "JSON_B_00002",
+        "OrDa": "2010-07-01",
+        "DbId": "10001",
+        "RfCs": "Baliedirect via JSON",
+        "War": "01"
+      },
+      "Objects": {
+        "FbDirectInvoiceLines": {
+          "Element": [
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "1000",
+                "Ds": "Regel 1",
+                "BiUn": "STK",
+                "QuUn": "6"
+              }
+            },
+            {
+              "Fields": {
+                "VaIt": "2",
+                "ItCd": "1001",
+                "Ds": "Regel 2",
+                "BiUn": "STK",
+                "QuUn": "6"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
