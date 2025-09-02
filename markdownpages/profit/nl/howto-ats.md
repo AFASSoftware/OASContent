@@ -263,7 +263,7 @@ Nu de kandidaat bestaat kunnen we een conceptplaatsing aanmaken. Hiermee maken w
 
 ## Starten kandidaat onboarding
 
-> **LET OP**: Gebruik `HrOnboarding` waar mogelijk. Die connector is veelzijdiger en sluit beter aan bij het interne proces van de klant. De connector `HrOnboaring` is beschikbaar sinds Profit 4
+> **LET OP**: Gebruik `HrOnboarding` waar mogelijk. Die connector is veelzijdiger en sluit beter aan bij het interne proces van de klant. De connector `HrOnboarding` is beschikbaar sinds Profit 4
 
 [OpenAPI Spec Aanmaken medewerker onboarding](../../apidoc/nl/Werving%20en%20selectie#post-/connectors/HrCreateApplicant)
 
