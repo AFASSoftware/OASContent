@@ -1,35 +1,35 @@
 ---
-title: Onboarden van een nieuwe kandidaat
-author: CLN
-date: 2024-04-08
-tags: kandidaat, flex, front, back, office
+title: Onboarding a new candidate
+author: EZW
+date: 2025-09-02
+tags: candidate, flex, front, back, office
 ---
 
-## Inleiding
+## Introduction
 
-Hier lees je de standaard opzet voor het werken met een ATS in combinatie met de Flex module van AFAS Profit voor de Backoffice. Deze beschrijving richt zich op het onboarden van een nieuwe kandidaat die door de selectieprocedure is gekomen in de frontoffice en nu als medewerker aangemaakt moet worden. Hierin kan er weining informatie van de kandidaat beschikbaar zijn. AFAS vraagt nadat de kandidaat is aangemaakt deze gegevens automatisch via een workflow op.
+Here you can read the standard setup for working with an ATS in combination with the Flex module of AFAS Profit for the Back Office. This description focuses on onboarding a new candidate who has passed the selection procedure in the front office and now needs to be created as an employee. In this process, there may be limited information available about the candidate. After the candidate is created, AFAS automatically requests this data through a workflow.
 
-- Ophalen bestaande personen
-- Aanmaken nieuwe persoon
-- Aanmaken kandidaat (medewerker)
-- Instellen UPN op medewerker
-- Ophalen medewerkers die uitdienst zijn
-- Updaten van loonstrook verstrekkingsinstellingen op medewerker
+- Retrieving existing persons
+- Creating a new person
+- Creating a candidate (employee)
+- Setting UPN on employee
+- Retrieving employees who are no longer employed
+- Updating payslip delivery settings on employee
 
-## Ophalen bestaande personen
+## Retrieving existing persons
 
-Endpoint: [Profit_OrgPer](../../apidoc/nl/Organisaties%20en%20personen#get-/connectors/Profit_OrgPer)
+Endpoint: [Profit_OrgPer](../../apidoc/en/Organizations%20and%20persons#get-/connectors/Profit_OrgPer)
 
 `GET https://12345.rest.afas.online/ProfitRestServices/connectors/Profit_OrgPer?filterfieldids=Type%2CMailWork&filtervalues=Persoon%2Co.vandermolen%40enyoi.afas&operatortypes=1%2C1`
 
-In dit filter:
+In this filter:
 
-- Type is `persoon`
-- MailWork is email van de persoon
+- Type is `Persoon`
+- MailWork is email of the person
 
-Hieruit komt 1 van deze twee resultaten:
+This results in one of these two outcomes:
 
-```json HTTP 201 Response leeg
+```json HTTP 201 Response empty
 {
   "skip": 0,
   "take": 100,
@@ -37,7 +37,7 @@ Hieruit komt 1 van deze twee resultaten:
 }
 ```
 
-```json HTTP 201 Response met resultaat
+```json HTTP 201 Response with result
 {
   "skip": 0,
   "take": 100,
@@ -62,9 +62,9 @@ Hieruit komt 1 van deze twee resultaten:
 }
 ```
 
-Als er een result is dan voeg je deze in de volgende stap toe als relatie via het veld `BcCo`.
+If there is a result, then add this in the next step as a relation via the field `BcCo`.
 
-Vervang:
+Replace:
 
 ```json
 {
@@ -72,7 +72,7 @@ Vervang:
 }
 ```
 
-Door:
+With:
 
 ```json
 {
@@ -81,11 +81,11 @@ Door:
 }
 ```
 
-## Aanmaken nieuwe persoon
+## Creating a new person
 
-Endpoint [KnPerson](../../apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnPerson)
+Endpoint [KnPerson](../../apidoc/en/Organizations%20and%20persons#post-/connectors/KnPerson)
 
-Als de persoon nog niet bestaat in Profit, dan moet die eerst worden aangemaakt. Geef hierbij zoveel mogelijk informatie mee vanuit de frontoffice applicatie.
+If the person does not yet exist in Profit, then they must first be created. Provide as much information as possible from the front office application.
 
 
 ```json
@@ -153,7 +153,7 @@ Als de persoon nog niet bestaat in Profit, dan moet die eerst worden aangemaakt.
 }
 ```
 
-Deze request maakt een persoon aan met toegang tot AFAS OutSite/Externe medewerkerportal. Via deze weg kan de kandidaat zijn gegevens aanvullen.
+This request creates a person with access to AFAS OutSite/External employee portal. This way, the candidate can supplement their information.
 
 ```json HTTP 201 Response
 {
@@ -166,15 +166,15 @@ Deze request maakt een persoon aan met toegang tot AFAS OutSite/Externe medewerk
 }
 ```
 
-De response bevat `BcCo`. Dit is de unieke identifier van de persoon.
+The response contains `BcCo`. This is the unique identifier of the person.
 
-## Aanmaken kandidaat
+## Creating a candidate
 
-[OpenAPI Spec Aanmaken medewerker](../../apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployee)
+[OpenAPI Spec Creating an employee](../../apidoc/en/Employee%20and%20contract#post-/connectors/KnEmployee)
 
-Nu de persoon is aangemaakt kunnen we deze persoon koppelen aan de entiteit medewerker. Hierbij maken we de kandidaat nieuw aan en geven `EmId` dezelfde waarde als `BcCo`. De waarde `BcCo` neem je over uit de response van de vorige request. Het `MatchPer` veld doet een lookup om de persoon te vinden en te koppelen.
+Now that the person has been created, we can link this person to the employee entity. Here we create the candidate and give `EmId` the same value as `BcCo`. The value `BcCo` is taken from the response of the previous request. The `MatchPer` field does a lookup to find and link the person.
 
- Dit doen we met de volgende request:
+ We do this with the following request:
 
 ```json AfasEmployee
 {
@@ -214,11 +214,11 @@ Nu de persoon is aangemaakt kunnen we deze persoon koppelen aan de entiteit mede
 }
 ```
 
-## Aanmaken conceptplaatsing
+## Creating a concept placement
 
-[OpenAPI Spec Aanmaken conceptplaatsing](../../apidoc/nl/Flex#post-/connectors/PtConceptPlacementContract)
+[OpenAPI Spec Creating a concept placement](../../apidoc/en/Flex#post-/connectors/PtConceptPlacementContract)
 
-Nu de kandidaat bestaat kunnen we een conceptplaatsing aanmaken. Hiermee maken we de basis voor het plaatsingscontract en kan de backoffice deze verder oppakken zodra alle gegevens van de kandidaat bekend zijn.
+Now that the candidate exists, we can create a concept placement. This creates the basis for the placement contract and allows the back office to take this further once all the candidate's details are known.
 
 ```json PtConceptPlacementContract
 {
@@ -261,15 +261,15 @@ Nu de kandidaat bestaat kunnen we een conceptplaatsing aanmaken. Hiermee maken w
 }
 ```
 
-## Starten kandidaat onboarding
+## Starting candidate onboarding
 
-> **LET OP**: Gebruik `HrOnboarding` waar mogelijk. Die connector is veelzijdiger en sluit beter aan bij het interne proces van de klant. De connector `HrOnboaring` is beschikbaar sinds Profit 4
+> **NOTE**: Use `HrOnboarding` when possible. This connector is more versatile and aligns better with the customer's internal process. The `HrOnboarding` connector has been available since Profit 4
 
-[OpenAPI Spec Aanmaken medewerker onboarding](../../apidoc/nl/Werving%20en%20selectie#post-/connectors/HrCreateApplicant)
+[OpenAPI Spec Creating employee onboarding](../../apidoc/en/Recruitment%20and%20selection#post-/connectors/HrCreateApplicant)
 
-Tenslotte starten we de onboarding van de kandidaat met een workflow. Deze workflow kan automatisch de aanvullende gegevens van de kandidaat opvragen. Zodra dit is aangevuld controleert de backoffice-medewerker of de gegevens compleet en correct zijn en daarna kan de onboarding worden afgerond.
+Finally, we start the onboarding of the candidate with a workflow. This workflow can automatically request additional information from the candidate. Once this has been completed, the back office employee checks whether the information is complete and correct, and then the onboarding can be finalized.
 
-Het veld `VcSn` / Volgnummer vacature moet overeenkomen met de vacature waarop wordt gesolliciteerd. Deze kan via een eigen GetConnector worden opgevraagd.
+The field `VcSn` / Vacancy sequence number must match the vacancy being applied for. This can be requested via a custom GetConnector.
 
 ```json HrCreateApplicant
 {
@@ -294,4 +294,4 @@ Het veld `VcSn` / Volgnummer vacature moet overeenkomen met de vacature waarop w
 }
 ```
 
-De aanroep naar `HrCreateApplicant` maakt een dossieritem van het type "Sollicitatie" (code -44). Bij dit dossieritem wordt de `CaId`-waarde uit de vorige response gebruikt voor de bestemming `Aanmaken sollicitatie`. Gebruik die informatie om via een eigen GetConnector het nummer van het dossieritem op te halen als je dat nodig hebt.
+The call to `HrCreateApplicant` creates a dossier item of the type "Application" (code -44). For this dossier item, the `CaId` value from the previous response is used for the destination `Create application`. Use that information to retrieve the number of the dossier item via a custom GetConnector if you need it.
