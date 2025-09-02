@@ -29,3 +29,9 @@ Deze wijziging levert de volgende voordelen op:
 - De SQL Server heeft minder werk te doen
 - De applicatieservers nemen dit werk over, deze zijn makkelijker uit te breiden
 - Het geeft meer kansen voor verbeteringen in de toekomst
+
+## Overige wijzigingen
+
+### Nieuwe gegevensverzameling: Verstrekkingswijze CC
+
+In Profit kun je vastleggen hoe een bepaald rapport verstrekt moet worden. [Zie deze video](https://help.afas.nl/video/video_yI5g50mniQk%20). De verstrekkingswijze kon je al ophalen via een GetConnector; nu is er ook een gegevensverzameling beschikbaar gemaakt om de CC ontvangers op te halen. 

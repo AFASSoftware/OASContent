@@ -29,3 +29,9 @@ This change provides the following benefits:
 - The SQL Server has less work to do
 - The application servers take over this work, which are easier to scale
 - It creates more opportunities for future improvements
+
+## Other changes
+
+### New data collection: Distribution method CC
+
+In Profit, you can specify how a certain report should be distributed. [See this video (in Dutch)](https://help.afas.nl/video/video_yI5g50mniQk%20). The distribution method could already be retrieved via a GetConnector; now a data collection has also been made available to retrieve the CC recipients.
