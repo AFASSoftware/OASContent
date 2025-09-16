@@ -6,7 +6,7 @@ tags: Appconnector, setup, GetConnector, authorization
 index: true
 ---
 
-*this document is an AI-translated version of the [Dutch documentation](../nl/app-connector-auditor.md) and may contain errors.*
+*this document is an AI-translated version of the [Dutch documentation](../nl/app-connector-auditor) and may contain errors.*
 
 ## Introduction
 
