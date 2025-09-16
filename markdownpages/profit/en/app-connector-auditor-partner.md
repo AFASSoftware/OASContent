@@ -71,17 +71,24 @@ Table with data about your integration
 - **IntegrationId**: A technical identifier for this integration. [Read more](https://docs.afas.help/profit/nl/integrationid).
 - **Project code**: For each integration, we have created a project. If you became a partner after March 2023, this project also contains your project tasks.
 - **Article code**: Number of the article with which you are visible on the partner site.
-- **AFAS project manager**: Your contact person at AFAS for this integration. This will usually be a SystemIntegrator. This field is empty for integrations that have existed for a long time.
-- **Team members**: The first 5 contacts who have access to the project tasks. Sorted alphabetically.
+- **AFAS project manager**: Your contact person at AFAS for this integration. This will usually be a SystemIntegrator.  
+This field is empty for integrations that have existed for a longer time.
+- **Team members**: The first 5 contacts who have access to the project tasks.  
+Sorted alphabetically.
 - **Certification complete**: "Yes" if there are no outstanding project tasks. Otherwise "No".
-- **Number of outstanding project tasks**: Team members (see above) can view these tasks at [https://partner.afas.nl/product-partner-portal](https://partner.afas.nl/product-partner-portal). Only visible if certification is not yet complete.
-- **Certification deadline**: The latest date by which all project tasks must be completed, calculated as "Certification start date + 12 months". If there are still tasks open after this date, AFAS will contact you for a final conversation. If you do not manage to complete all tasks, the partner contract will be terminated. Only visible if certification is not yet complete. If you are not going to make it? Please [contact us](#contact) in time.
+- **Number of outstanding project tasks**: Team members (see above) can view these tasks at [https://partner.afas.nl/product-partner-portal](https://partner.afas.nl/product-partner-portal).  
+Only visible if certification is not yet complete.  
+[Explanation about the tasks is now also available in English on our Docs!](./partner-onboarding-taken)
+- **Certification deadline**: The latest date by which all project tasks must be completed, calculated as "Certification start date + 12 months". If there are still tasks open after this date, AFAS will contact you for a final conversation. If you do not manage to complete all tasks, the partner contract will be terminated.  
+Only visible if certification is not yet complete.  
+If you are not going to make it? Please [contact us](#contact) in time.
 - **Partner portal page**: The page where your integration is visible. You can adjust the text and logo yourself at [https://partner.afas.nl/mijn-paginas](https://partner.afas.nl/mijn-paginas). The next 4 lines show the details of that page:
 - **Introduction**: The introduction. Pipeline characters (|) are replaced by a dash (-).
 - **Description**: The description, truncated at 100 characters or the first pipeline character (|).
 - **Website**: The website
 - **Visible in**: The industries in which your integration is shown. The sorting of integrations within an industry is determined by the number of customers in that industry.
-- **Integration visible on the partner portal**: "No" if your integration is not shown. This is usually because the **Website** field is not filled in. Only visible if your integration is not yet visible.
+- **Integration visible on the partner portal**: "No" if your integration is not shown. This is usually because the **Website** field is not filled in.  
+Only visible if your integration is not yet visible.
 
 ### App Connector "Name"
 
