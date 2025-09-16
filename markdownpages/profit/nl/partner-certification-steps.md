@@ -1,19 +1,19 @@
 ---
-title: Onboardingstaken voor partners
+title: Certificeringsstappen voor partners
 author: Eric Zwaal
 date: 2025-09-16
 tags: Partner, Certificering, GetConnector
 index: false
 ---
 
-*[For English click here](../en/partner-onboarding-taken)*
+*[For English click here](../en/partner-certification-steps)*
 
 ## Inleiding
-Hier worden alle taken beschreven, in de aanbevolen volgorde van afhandelen.
+
+Welkom bij het certificeringstraject voor partners! In dit document nemen we je stap voor stap mee op weg naar een succesvolle, gecertificeerde koppeling met AFAS. Volg de stappen in de aanbevolen volgorde en ontdek hoe eenvoudig, leerzaam en waardevol het proces kan zijn. Zet vandaag nog de eerste stap richting certificering en maak van jouw integratie een succesverhaal!
 
 
-
-## Beschrijving van de taken
+## Beschrijving van de stappen
 
 ### Security check
 
@@ -26,7 +26,7 @@ In plaats van een PENtest kun je ook een Security Quickscan laten uitvoeren door
 
 Log in op de [klantportal](https://klant.afas.nl/contactpersonen-prs/overzicht) en zorg ervoor dat elke collega die betrokken is bij dit traject, als contactpersoon is toegevoegd. Daardoor kunnen ze zelf vragen stellen en acties uitvoeren op de AFAS portals.  
 
-Moet de nieuw toegevoegde contactpersoon de taken kunnen inzien en afhandelen? Dat moet jouw contactpersoon bij AFAS regelen.
+Moet de nieuw toegevoegde contactpersoon de stappen kunnen inzien en afhandelen? Dat moet jouw contactpersoon bij AFAS regelen.
 
 
 ### Support+ activeren

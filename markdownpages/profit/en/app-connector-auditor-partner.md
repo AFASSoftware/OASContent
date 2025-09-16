@@ -78,7 +78,7 @@ Sorted alphabetically.
 - **Certification complete**: "Yes" if there are no outstanding project tasks. Otherwise "No".
 - **Number of outstanding project tasks**: Team members (see above) can view these tasks at [https://partner.afas.nl/product-partner-portal](https://partner.afas.nl/product-partner-portal).  
 Only visible if certification is not yet complete.  
-[Explanation about the tasks is now also available in English on our Docs!](./partner-onboarding-taken)
+[Explanation about the steps is now also available in English on our Docs!](./partner-certification-steps)
 - **Certification deadline**: The latest date by which all project tasks must be completed, calculated as "Certification start date + 12 months". If there are still tasks open after this date, AFAS will contact you for a final conversation. If you do not manage to complete all tasks, the partner contract will be terminated.  
 Only visible if certification is not yet complete.  
 If you are not going to make it? Please [contact us](#contact) in time.

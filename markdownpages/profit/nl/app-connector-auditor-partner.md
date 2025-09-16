@@ -74,7 +74,7 @@ Tabel met gegevens over jouw koppeling
 - **Certificering afgerond**: "Ja" als er geen openstaande projecttaken meer zijn. Anders "Nee".
 - **Aantal openstaande projecttaken**: Teamleden (zie hierboven) kunnen deze taken inzien op [https://partner.afas.nl/product-partner-portal](https://partner.afas.nl/product-partner-portal).  
 Alleen zichtbaar als de certificering nog niet is afgerond.  
-[Uitleg over de taken is nu ook beschikbaar in onze Docs!](./partner-onboarding-taken)  
+[Uitleg over de taken is nu ook beschikbaar in onze Docs!](./partner-certification-steps)  
 - **Deadline voor certificering**: De uiterste datum waarop alle projecttaken afgehandeld moeten zijn, berekend als "Startdatum van de certificering + 12 maanden". Als er na deze datum nog taken openstaan, zal AFAS je benaderen voor een laatste gesprek. Lukt het niet om alle taken af te handelen, dan zal het partnercontract beëindigd worden.  
 Alleen zichtbaar als de certificering nog niet is afgerond.  
 Ga je het niet halen? Neem dan op tijd [contact](#kom-in-gesprek) op met ons.
