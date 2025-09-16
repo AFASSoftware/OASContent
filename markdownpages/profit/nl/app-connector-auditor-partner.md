@@ -42,6 +42,8 @@ Deze sectie toont een aantal gegevens die wij bij AFAS van jou hebben. Een korte
 - [ ] **Je hebt 2 of meer contacten voor partner-/expertcommunicatie**: Deze contactpersonen benaderen wij als er vragen, issues of nieuws over jouw koppeling is. 
 - [ ] **Je PENtest is geldig**: Dit vinkje staat aan zolang jouw PENtest geldig is.  
 
+Tabel met jouw gegevens
+
 - **Naam**: De naam van jouw bedrijf. Omdat hier ook de factuur naar verstuurd wordt, is het van belang dat dit jouw officiële bedrijfsnaam is.
 - **Abonnementsnummer**: Het nummer van het abonnement bij AFAS waar jouw partner-licentie onder valt. Dit is ook het eerste deel van het IntegrationId dat je meestuurt.
 - **Debiteurnummer**: Jouw klantnummer bij AFAS.
@@ -62,6 +64,7 @@ De "Naam van de koppeling" is zoals die zichtbaar is op de [partnerportal](https
 - [ ] **Je certificering is afgerond**
 - [ ] **Je integratie wordt getoond op [https://partner.afas.nl/koppelingen](https://partner.afas.nl/koppelingen)**  
 
+Tabel met gegevens over jouw koppeling
 
 - **IntegrationId**: Een technische identificatie van deze koppeling. [Lees meer](https://docs.afas.help/profit/nl/integrationid).
 - **Projectcode**: Voor elke integratie hebben we een project gemaakt. Als je partner bent geworden na maart 2023, bevat dit project ook jouw projecttaken.
@@ -97,7 +100,7 @@ In de basis heb je een **goede integratie** als alle punten een vinkje hebben, m
 
 > Als een klant in zijn eigen omgeving de auditor draait, ziet hij deze checklist ook.  
 
-Ben je van mening dat een vinkje onterecht uit staat? Neem dan [contact](#kom-in-gesprek) op met de SystemIntegrators. We werken aan mogelijkheden om afwijkingen vast te leggen bij een specifieke integratie. En misschien is er een goede reden waarom het vinkje uit staat.
+*Ben je van mening dat een vinkje onterecht uit staat? Neem dan [contact](#kom-in-gesprek) op met de SystemIntegrators. We werken aan mogelijkheden om afwijkingen vast te leggen bij een specifieke integratie. En misschien is er een goede reden waarom het vinkje uit staat.*
 
 
 - [ ] **Een eigen set van GetConnectoren is in gebruik**: Gebruik geen meegeleverde GetConnectoren.
@@ -238,7 +241,7 @@ Dat kan een probleem geven als je in de URL op deze velden wilt filteren of sort
 
 *Checklist*: [Verplicht](#verplicht-essentieel), Alleen bekende velden zijn aanwezig
 
-Zie [hierboven](#er-worden-onbekende-velden-gebruikt).
+Zie [hierboven](#er-worden-onbekende-velden-gebruikt-in-de-getconnector-geven-die-een-vaste-waarde-vervangen).
 
 #### De integratie gebruikt gegevens per dienstverband, maar deze GetConnector haalt velden uit Actuele gegevens per arbeidsverhouding.
 

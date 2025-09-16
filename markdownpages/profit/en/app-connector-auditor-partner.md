@@ -44,6 +44,8 @@ This section shows some data that we at AFAS have about you. A short checklist s
 - [ ] **You have 2 or more contacts for partner/expert communication**: These contacts are approached if there are questions, issues, or news about your integration.
 - [ ] **Your PEN test is valid**: This checkmark is on as long as your PEN test is valid.
 
+Table with your data
+
 - **Name**: The name of your company. Since invoices are also sent here, it is important that this is your official company name.
 - **Subscription number**: The number of the subscription at AFAS under which your partner license falls. This is also the first part of the IntegrationId you provide.
 - **Customer number**: Your customer number at AFAS.
@@ -63,6 +65,8 @@ The "Name of the integration" is as visible on the [partner portal](https://part
 
 - [ ] **Your certification is complete**
 - [ ] **Your integration is shown at [https://partner.afas.nl/koppelingen](https://partner.afas.nl/koppelingen)**
+
+Table with data about your integration
 
 - **IntegrationId**: A technical identifier for this integration. [Read more](https://docs.afas.help/profit/nl/integrationid).
 - **Project code**: For each integration, we have created a project. If you became a partner after March 2023, this project also contains your project tasks.
@@ -91,7 +95,7 @@ All points in this section must be checked. In principle, you have a **good inte
 
 > If a customer runs the auditor in their own environment, they will also see this checklist.
 
-Do you believe a checkmark is incorrectly unchecked? Then [contact](#contact) the SystemIntegrators. We are working on options to record deviations for a specific integration. And maybe there is a good reason why the checkmark is off.
+*Do you believe a checkmark is incorrectly unchecked? Then [contact](#contact) the SystemIntegrators. We are working on options to record deviations for a specific integration. And maybe there is a good reason why the checkmark is off.*
 
 - [ ] A custom set of GetConnectors is used: Do not use supplied GetConnectors.
 - [ ] All GetConnectors have a valid name: Use a clearly recognizable, unique name for a GetConnector.
