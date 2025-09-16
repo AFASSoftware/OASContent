@@ -1,17 +1,19 @@
 ---
-title: Onboarding Tasks for Partners
+title: Certification steps for Partners
 author: Eric Zwaal
 date: 2025-09-16
 tags: Partner, Certification, GetConnector
 index: false
 ---
 
-*[Voor Nederlands klik hier](../nl/partner-onboarding-taken)*
+*[Voor Nederlands klik hier](../nl/partner-certification-steps)*
 
 ## Introduction
-This document describes all tasks, in the recommended order of completion. Most of our documentation is only available in Dutch.
 
-## Task Descriptions
+Welcome to the partner certification journey! In this document, we guide you step by step towards a successful, certified integration with AFAS. Follow the steps in the recommended order and discover how straightforward, educational, and rewarding the process can be. Take your first step towards certification today and turn your integration into a success story!
+
+
+## Step Descriptions
 
 ### Security check
 
@@ -23,7 +25,7 @@ Instead of a PEN test, you can also have a Security Quickscan performed by Compu
 
 Log in to the [customer portal](https://klant.afas.nl/contactpersonen-prs/overview) and make sure every colleague involved in this process is added as a contact. This allows them to ask questions and perform actions on the AFAS portals themselves.
 
-Should the newly added contact be able to view and handle tasks? Your AFAS contact person must arrange this.
+Should the newly added contact be able to view and handle steps? Your AFAS contact person must arrange this.
 
 ### Activate Support+
 
