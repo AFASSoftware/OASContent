@@ -2,23 +2,40 @@
   "openapi": "3.0.2",
   "info": {
     "version": null,
-    "title": "API",
-    "description": "The API allows you to connect to the app. The API is generated from the connector designers. The API is secured using OAuth2.0.<br/><h2>Links</h2><ul><li><a href=\"https://help.afas.nl/sbplus/API\">Help</a></li><li><a href=\"https://nl02-thga.afasgroep.nl:11112/est1/api/spec\">AFAS SB API Spec</a></li></ul>"
+    "title": "AFAS SB API",
+    "description": "AFAS SB API for integrating with the accounting software for accountants and entrepreneurs."
   },
   "servers": [
     {
-      "url": "https://nl02-thga.afasgroep.nl:11112",
-      "description": "The root-server url."
+      "url": "https://{domain}.afasfocus.nl/{customerenvironment}",
+      "description": "Customer environment URL",
+      "variables": {
+        "domain": {
+          "description": "Identifier for the accountancy environment",
+          "default": "app-center-demo"
+        },
+        "customerenvironment": {
+          "description": "Identifier for the customer environment",
+          "default": "scope"
+        }
+      }
     },
     {
-      "url": "https://nl02-thga.afasgroep.nl:11112/est1",
-      "description": "The scoped server url."
+      "url": "https://{subdomein}.afasfocus.nl/admin",
+      "description": "Accounting center URL",
+      "variables": {
+        "subdomein": {
+          "description": "URL unique for the accounting office.",
+          "default": "app-center-demo"
+        }
+      }
     }
   ],
   "paths": {
     "/api/blob/{uuid}": {
       "get": {
-        "summary": "Retrieve a specific blob by UUI.",
+        "description": "Retrieve a specific blob by UUI.",
+        "summary": "/api/blob/{uuid}",
         "operationId": "getBlob",
         "parameters": [
           {
@@ -53,113 +70,30 @@
             "description": "OK"
           },
           "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "Instances": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "Code": {
-                            "type": "string"
-                          },
-                          "Id": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    },
-                    "errors": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {}
-                      }
-                    }
-                  }
-                }
-              }
-            }
+            "$ref": "#/components/responses/401"
           },
           "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
+            "$ref": "#/components/responses/401"
           },
           "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
+            "$ref": "#/components/responses/403"
           },
           "5XX": {
             "description": "Internal Server Error"
           }
         },
         "tags": [
-          "Attachments"
+          "Bijlagen",
+          "Inkoopjournaalpost",
+          "Verkoopfactuur",
+          "Verkoopjournaalpost",
+          "Publiek: Externe facturatie"
         ],
         "deprecated": false
       },
       "put": {
-        "summary": "This operation consists of two requests. First call this endpoint with the Blob-* headers, without body to prepare the blob. Then call this endpoint without the Blob-* headers with a body to upload the file. The blob UUID must be generated client side.",
+        "description": "This operation consists of two requests. First call this endpoint with the Blob-* headers, without body to prepare the blob. Then call this endpoint without the Blob-* headers with a body to upload the file. The blob UUID must be generated client side.",
+        "summary": "/api/blob/{uuid}",
         "operationId": "reserveBlobSpace",
         "parameters": [
           {
@@ -240,108 +174,20 @@
             "description": "OK"
           },
           "400": {
-            "description": "Bad Request",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "result": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "Instances": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "Code": {
-                            "type": "string"
-                          },
-                          "Id": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    },
-                    "errors": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {}
-                      }
-                    }
-                  }
-                }
-              }
-            }
+            "$ref": "#/components/responses/401"
           },
           "401": {
-            "description": "Unauthorized",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
+            "$ref": "#/components/responses/401"
           },
           "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
+            "$ref": "#/components/responses/403"
           },
           "5XX": {
             "description": "Internal Server Error"
           }
         },
         "tags": [
-          "Attachments",
+          "Bijlagen",
           "Inkoopjournaalpost",
           "Verkoopfactuur",
           "Verkoopjournaalpost",
@@ -352,7 +198,8 @@
     },
     "/authentication/getaccesstoken": {
       "post": {
-        "summary": "Get AccessToken: Provide an application token created in the current application. An access token is returned which can be used for the \"AccessToken\" header to execute connector requests. The 'scope' property is required in accountancy environments. When scope is not provided in accountancy environments, an identity token is returned which can be used in the 'ScopeSelection' api.",
+        "description": "Get AccessToken: Provide an application token created in the current application. An access token is returned which can be used for the \"AccessToken\" header to execute connector requests. The 'scope' property is required in accountancy environments. When scope is not provided in accountancy environments, an identity token is returned which can be used in the 'ScopeSelection' api.",
+        "summary": "/authentication/getaccesstoken",
         "operationId": "updateconnector-getaccesstoken",
         "parameters": [
           {
@@ -380,7 +227,10 @@
                     "type": "string",
                     "example": "demo"
                   }
-                }
+                },
+                "required": [
+                  "apptoken"
+                ]
               }
             }
           }
@@ -401,7 +251,8 @@
     },
     "/authentication/getscopes": {
       "post": {
-        "summary": "Get scopes: Provide an identity token returned by the 'AccessToken' api.",
+        "description": "Get scopes: Provide an identity token returned by the 'AccessToken' api.",
+        "summary": "/authentication/getscopes",
         "operationId": "updateconnector-getscopes",
         "parameters": [
           {
@@ -461,7 +312,8 @@
     },
     "/app/token": {
       "post": {
-        "summary": "Get an access token for a scope.",
+        "description": "Get an access token for a scope.",
+        "summary": "app/token",
         "operationId": "updateconnector-token",
         "requestBody": {
           "required": true,
@@ -525,6 +377,7 @@
     },
     "/api/accountingperiod": {
       "get": {
+        "description": "accountingperiod 2.0",
         "operationId": "getconnector-accountingperiod.get-2.0",
         "parameters": [
           {
@@ -594,40 +447,44 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "example": "{\r\n  \"OrganisationId\": \"8afb1a9a-1613-5e2b-ab19-20c0f4f3e216\",\r\n  \"Firstname\": \"Rosella\",\r\n  \"Initials\": \"III\",\r\n  \"Prefix\": \"Mr.\",\r\n  \"Lastname\": \"Predovic\",\r\n  \"EmailAddress\": \"Karli61@example.com\",\r\n  \"PhoneNumber\": \"223-385-8892\"\r\n}"
-                }
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "AccountingYear": {
+                        "type": "string"
+                      },
+                      "Description": {
+                        "type": "string"
+                      },
+                      "StartDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "EndDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "AdministrationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "PeriodNumber": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                },
+                "examples": "{\r\n  \"OrganisationId\": \"8afb1a9a-1613-5e2b-ab19-20c0f4f3e216\",\r\n  \"Firstname\": \"Rosella\",\r\n  \"Initials\": \"III\",\r\n  \"Prefix\": \"Mr.\",\r\n  \"Lastname\": \"Predovic\",\r\n  \"EmailAddress\": \"Karli61@example.com\",\r\n  \"PhoneNumber\": \"223-385-8892\"\r\n}"
               }
             }
           },
           "404": {
-            "description": "Item Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -644,6 +501,7 @@
     },
     "/api/accountingyear": {
       "get": {
+        "summary": "**⚠️ This request is in BETA** \r\n ",
         "operationId": "getconnector-accountingyear.get-2.0",
         "parameters": [
           {
@@ -709,33 +567,45 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "Description": {
+                        "type": "string"
+                      },
+                      "StartDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "EndDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "AdministrationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      }
+                    }
+                  }
+                }
+              }
+            }
           },
           "404": {
             "description": "Item Not Found",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
-                      }
-                    }
-                  }
+                  "$ref": "#/components/reponses/404"
                 }
               }
             }
@@ -755,6 +625,7 @@
     },
     "/api/addresses": {
       "get": {
+        "description": "addresses 1.0",
         "operationId": "getconnector-addresses.get-1.0",
         "parameters": [
           {
@@ -820,36 +691,58 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Item Not Found",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "StreetName": {
+                        "type": "string"
+                      },
+                      "HouseNumber": {
+                        "type": "string"
+                      },
+                      "HouseNumberAddition": {
+                        "type": "string"
+                      },
+                      "PostalZone": {
+                        "type": "string"
+                      },
+                      "CityName": {
+                        "type": "string"
+                      },
+                      "CountryName": {
+                        "type": "string"
+                      },
+                      "RelationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "IsPreferedInvoiceAddress": {
+                        "type": "boolean"
+                      },
+                      "IsPreferedSupplierAddress": {
+                        "type": "boolean"
+                      },
+                      "RelationTypeId": {
+                        "type": "string",
+                        "format": "uuid"
                       }
                     }
                   }
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -868,6 +761,7 @@
     },
     "/api/administration": {
       "get": {
+        "description": "administration 1.0",
         "summary": "ListAdministration",
         "operationId": "getconnector-administration.get-1.0",
         "parameters": [
@@ -934,36 +828,33 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Item Not Found",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Description": {
+                        "type": "string"
+                      },
+                      "InstanceId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "Id": {
+                        "type": "string",
+                        "format": "uuid"
                       }
                     }
                   }
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -982,6 +873,7 @@
     },
     "/api/administrations": {
       "get": {
+        "description": "administrations 1.0",
         "summary": "ListAdministrations",
         "operationId": "getconnector-administrations.get-1.0",
         "parameters": [
@@ -1048,36 +940,33 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Item Not Found",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Description": {
+                        "type": "string"
+                      },
+                      "InstanceId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "Id": {
+                        "type": "string",
+                        "format": "uuid"
                       }
                     }
                   }
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -1107,6 +996,7 @@
     },
     "/api/bankaccounts": {
       "get": {
+        "description": "bankaccounts 1.0",
         "summary": "Get bankaccount for organisation or person.",
         "operationId": "getconnector-bankaccounts.get-1.0",
         "parameters": [
@@ -1173,36 +1063,36 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Item Not Found",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "AccountNumber": {
+                        "type": "string"
+                      },
+                      "RelationIsOrganisationOrAdministration": {
+                        "type": "boolean"
+                      },
+                      "RelationId": {
+                        "type": "string",
+                        "format": "uuid"
                       }
                     }
                   }
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -1223,6 +1113,7 @@
     },
     "/api/cashregisters": {
       "get": {
+        "description": "cashregisters 1.0",
         "operationId": "getconnector-cashregisters.get-1.0",
         "parameters": [
           {
@@ -1288,36 +1179,33 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Item Not Found",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "InstanceId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "Description": {
+                        "type": "string"
+                      },
+                      "AdministrationId": {
+                        "type": "string",
+                        "format": "uuid"
                       }
                     }
                   }
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -1333,6 +1221,7 @@
     },
     "/api/contacts": {
       "get": {
+        "description": "contacts 1.0",
         "operationId": "getconnector-contacts.get-1.0",
         "parameters": [
           {
@@ -1398,36 +1287,67 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Item Not Found",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "OrganisationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "PersonId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "Name": {
+                        "type": "string"
+                      },
+                      "Firstname": {
+                        "type": "string"
+                      },
+                      "Initials": {
+                        "type": "string"
+                      },
+                      "Prefix": {
+                        "type": "string"
+                      },
+                      "Lastname": {
+                        "type": "string"
+                      },
+                      "PhoneNumber": {
+                        "type": "string"
+                      },
+                      "Emailaddress": {
+                        "type": "string"
+                      },
+                      "ExternalId": {
+                        "type": "string"
+                      },
+                      "IsArchived": {
+                        "type": "boolean"
+                      },
+                      "PersonIsArchived": {
+                        "type": "boolean"
+                      },
+                      "OrganisationIsArchived": {
+                        "type": "boolean"
                       }
                     }
                   }
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -1443,6 +1363,7 @@
     },
     "/api/countries": {
       "get": {
+        "description": "countries 1.0",
         "summary": "ListCountries",
         "operationId": "getconnector-countries.get-1.0",
         "parameters": [
@@ -1509,36 +1430,32 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Item Not Found",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "Description": {
+                        "type": "string"
+                      },
+                      "CodeISOAlpha2": {
+                        "type": "string"
                       }
                     }
                   }
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -1555,6 +1472,7 @@
     },
     "/api/creditorbalance": {
       "get": {
+        "description": "creditorbalance 1.0",
         "operationId": "getconnector-creditorbalance.get-1.0",
         "parameters": [
           {
@@ -1620,36 +1538,44 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Item Not Found",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "AdministrationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationTypeId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationName": {
+                        "type": "string"
+                      },
+                      "LastCompleted": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "OutstandingAmount": {
+                        "type": "number"
                       }
                     }
                   }
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -1664,6 +1590,7 @@
     },
     "/api/creditorinvoicebalance": {
       "get": {
+        "description": "creditorinvoicebalance 1.0",
         "operationId": "getconnector-creditorinvoicebalance.get-1.0",
         "parameters": [
           {
@@ -1729,36 +1656,74 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Item Not Found",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "InvoiceNumber": {
+                        "type": "string"
+                      },
+                      "InvoiceDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "CustomerReference": {
+                        "type": "string"
+                      },
+                      "DueDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "InternalInvoiceNumber": {
+                        "type": "string"
+                      },
+                      "InvoiceId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "AdministrationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationTypeId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationName": {
+                        "type": "string"
+                      },
+                      "LastCompleted": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "OutstandingAmount": {
+                        "type": "number"
+                      },
+                      "PaidAmount": {
+                        "type": "number"
+                      },
+                      "ProcessingAmount": {
+                        "type": "number"
+                      },
+                      "TotalAmount": {
+                        "type": "number"
                       }
                     }
                   }
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -1773,6 +1738,7 @@
     },
     "/api/debtorbalance": {
       "get": {
+        "description": "debtorbalance 2.0",
         "operationId": "getconnector-debtorbalance.get-2.0",
         "parameters": [
           {
@@ -1838,36 +1804,44 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Item Not Found",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "AdministrationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationName": {
+                        "type": "string"
+                      },
+                      "RelationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationTypeId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "LastCompleted": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "OutstandingAmount": {
+                        "type": "number"
                       }
                     }
                   }
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -1882,6 +1856,7 @@
     },
     "/api/debtorinvoicebalance": {
       "get": {
+        "description": "debtorinvoicebalance 3.0",
         "operationId": "getconnector-debtorinvoicebalance.get-3.0",
         "parameters": [
           {
@@ -1947,36 +1922,68 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Item Not Found",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "AdministrationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "InvoiceDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "DueDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "InvoiceNumber": {
+                        "type": "string"
+                      },
+                      "CustomerReference": {
+                        "type": "string"
+                      },
+                      "RelationName": {
+                        "type": "string"
+                      },
+                      "InvoiceId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationTypeId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "LastCompleted": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "OutstandingAmount": {
+                        "type": "number"
+                      },
+                      "TotalAmount": {
+                        "type": "number"
+                      },
+                      "PaidAmount": {
+                        "type": "number"
                       }
                     }
                   }
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -1992,6 +1999,7 @@
     },
     "/api/debtorpaymentterms": {
       "get": {
+        "description": "debtorpaymentterms 1.0",
         "operationId": "getconnector-debtorpaymentterms.get-1.0",
         "parameters": [
           {
@@ -2064,36 +2072,63 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Item Not Found",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "AdministationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "OrganisationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "PersonId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "UnknownRelationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "InvoiceDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "InvoiceId": {
+                        "type": "string"
+                      },
+                      "Address": {
+                        "type": "string"
+                      },
+                      "AddressId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "DueDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "RelationId": {
+                        "type": "string"
+                      },
+                      "RelationTypeId": {
+                        "type": "string",
+                        "format": "uuid"
                       }
                     }
                   }
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -2108,6 +2143,7 @@
     },
     "/api/featuretoggles": {
       "get": {
+        "description": "featuretoggles 1.0",
         "operationId": "getconnector-featuretoggles.get-1.0",
         "parameters": [
           {
@@ -2173,36 +2209,47 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Item Not Found",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "AdministrationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "SalesInvoices": {
+                        "type": "boolean"
+                      },
+                      "SalesJournalEntries": {
+                        "type": "boolean"
+                      },
+                      "LinesToBeInvoiced": {
+                        "type": "boolean"
+                      },
+                      "Projects": {
+                        "type": "boolean"
+                      },
+                      "Supplies": {
+                        "type": "boolean"
+                      },
+                      "Services": {
+                        "type": "boolean"
+                      },
+                      "FixedAssets": {
+                        "type": "boolean"
                       }
                     }
                   }
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -2217,6 +2264,7 @@
     },
     "/api/journalentries": {
       "get": {
+        "description": "journalentries 1.1",
         "operationId": "getconnector-journalentries.get-1.1",
         "parameters": [
           {
@@ -2282,36 +2330,134 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Item Not Found",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "AdministrationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "HeaderId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "LineId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "AccountingPeriodId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "AccountingYearId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "LedgerAccountId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "AmountDebit": {
+                        "type": "number"
+                      },
+                      "AmountCredit": {
+                        "type": "number"
+                      },
+                      "AmountTotal": {
+                        "type": "number"
+                      },
+                      "Number": {
+                        "type": "string"
+                      },
+                      "PostingDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "Description": {
+                        "type": "string"
+                      },
+                      "DocumentIdentification": {
+                        "type": "string"
+                      },
+                      "DocumentDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "VatPercentage": {
+                        "type": "number"
+                      },
+                      "VatSection": {
+                        "oneOf": [
+                          {
+                            "const": "Rubriek1a",
+                            "title": "1a verkopen hoog"
+                          },
+                          {
+                            "const": "Rubriek1b",
+                            "title": "1b verkopen laag"
+                          },
+                          {
+                            "const": "Rubriek1c",
+                            "title": "1c verkopen overige tarieven"
+                          },
+                          {
+                            "const": "Rubriek1d",
+                            "title": "1d btw privé"
+                          },
+                          {
+                            "const": "Rubriek2a",
+                            "title": "2a/5b inkopen verlegd"
+                          },
+                          {
+                            "const": "Rubriek3a",
+                            "title": "3a verkopen buiten de EU"
+                          },
+                          {
+                            "const": "Rubriek3b",
+                            "title": "3b verkopen binnen de EU"
+                          },
+                          {
+                            "const": "Rubriek3c",
+                            "title": "3c afstandsverkopen"
+                          },
+                          {
+                            "const": "Rubriek4a",
+                            "title": "4a/5b inkopen buiten de EU"
+                          },
+                          {
+                            "const": "Rubriek4b",
+                            "title": "4b/5b inkopen binnen de EU"
+                          },
+                          {
+                            "const": "Rubriek5b",
+                            "title": "5b voorbelasting"
+                          },
+                          {
+                            "const": "Rubriek1e",
+                            "title": "1e verkopen 0%"
+                          }
+                        ]
+                      },
+                      "VatAmount": {
+                        "type": "number"
+                      },
+                      "AuditCreatedOnDate": {
+                        "type": "string",
+                        "format": "date-time"
                       }
                     }
                   }
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -2326,6 +2472,7 @@
     },
     "/api/ledgeraccounts": {
       "get": {
+        "description": "ledgeraccounts 1.0",
         "summary": "ListLedgeraccounts",
         "operationId": "getconnector-ledgeraccounts.get-1.0",
         "parameters": [
@@ -2392,36 +2539,63 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Item Not Found",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "Description": {
+                        "type": "string"
+                      },
+                      "LedgerAccountNumber": {
+                        "type": "string"
+                      },
+                      "TypeId": {
+                        "oneOf": [
+                          {
+                            "const": "Activa",
+                            "title": "activa"
+                          },
+                          {
+                            "const": "Kosten",
+                            "title": "kosten"
+                          },
+                          {
+                            "const": "Opbrengsten",
+                            "title": "opbrengsten"
+                          },
+                          {
+                            "const": "Passiva",
+                            "title": "passiva"
+                          }
+                        ]
+                      },
+                      "InstanceId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "AdministrationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "InvestInAsset": {
+                        "type": "boolean"
                       }
                     }
                   }
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -2446,6 +2620,7 @@
     },
     "/api/ledgerperiodtotals": {
       "get": {
+        "description": "ledgerperiodtotals 1.0",
         "operationId": "getconnector-ledgerperiodtotals.get-1.0",
         "parameters": [
           {
@@ -2511,36 +2686,78 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Item Not Found",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "AdministrationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "AccountingYear": {
+                        "type": "string"
+                      },
+                      "AccountingYearId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "AccountingYearStartDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "AccountingYearEndDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "AccountingPeriod": {
+                        "type": "string"
+                      },
+                      "AccountingPeriodId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "AccountingPeriodStartDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "AccountingPeriodEndDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "LedgerAccountId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "LedgerAccount": {
+                        "type": "string"
+                      },
+                      "IsOpeningBalance": {
+                        "type": "boolean"
+                      },
+                      "RgsCode": {
+                        "type": "string"
+                      },
+                      "RgsDescription": {
+                        "type": "string"
+                      },
+                      "LedgerAccountNumber": {
+                        "type": "string"
+                      },
+                      "Total": {
+                        "type": "number"
                       }
                     }
                   }
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -2557,6 +2774,7 @@
     },
     "/api/linestobeinvoiced": {
       "get": {
+        "description": "linestobeinvoiced 1.0",
         "operationId": "getconnector-linestobeinvoiced.get-1.0",
         "parameters": [
           {
@@ -2629,36 +2847,182 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Item Not Found",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "InstanceId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "AdministrationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationTypeId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationNumber": {
+                        "type": "string"
+                      },
+                      "RelationDescription": {
+                        "type": "string"
+                      },
+                      "ProductId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "Description": {
+                        "type": "string"
+                      },
+                      "Quantity": {
+                        "type": "number"
+                      },
+                      "Price": {
+                        "type": "number"
+                      },
+                      "TotalAmount": {
+                        "type": "number"
+                      },
+                      "ProjectId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "ProjectDescription": {
+                        "type": "string"
+                      },
+                      "Status": {
+                        "oneOf": [
+                          {
+                            "const": "TODO",
+                            "title": "te factureren"
+                          },
+                          {
+                            "const": "BUSY",
+                            "title": "onderweg"
+                          },
+                          {
+                            "const": "DONE",
+                            "title": "gefactureerd"
+                          },
+                          {
+                            "const": "DONEEDIT",
+                            "title": "bezig met wijzigen van gefactureerd"
+                          },
+                          {
+                            "const": "DONEERROR",
+                            "title": "in fout staat"
+                          },
+                          {
+                            "const": "REDO",
+                            "title": "opnieuw te factureren"
+                          },
+                          {
+                            "const": "CANNOTBEDONE",
+                            "title": "niet te factureren"
+                          },
+                          {
+                            "const": "CANNOTBEREDONE",
+                            "title": "niet opnieuw te factureren"
+                          },
+                          {
+                            "const": "TOCREDIT",
+                            "title": "te crediteren"
+                          },
+                          {
+                            "const": "CREDITED",
+                            "title": "gecrediteerd"
+                          },
+                          {
+                            "const": "DELETED",
+                            "title": "verwijderd"
+                          },
+                          {
+                            "const": "TODOERROR",
+                            "title": "in fout staat"
+                          },
+                          {
+                            "const": "TODOEDIT",
+                            "title": "bezig met wijzigen van te factureren"
+                          },
+                          {
+                            "const": "TODOPENDING",
+                            "title": "bezig met wachten"
+                          },
+                          {
+                            "const": "REPLACED",
+                            "title": "gespecificeerd"
+                          },
+                          {
+                            "const": "TOSPECIFY",
+                            "title": "af te letteren"
+                          },
+                          {
+                            "const": "SPECIFIED",
+                            "title": "afgeletterd"
+                          },
+                          {
+                            "const": "ALTERNATIVELYSPECIFIED",
+                            "title": "alternatief gespecificeerd"
+                          },
+                          {
+                            "const": "INITIALIZED",
+                            "title": "geïnitialiseerd"
+                          },
+                          {
+                            "const": "INITIALIZEDEDIT",
+                            "title": "geïnitialiseerd"
+                          },
+                          {
+                            "const": "PENDINGAPPROVAL",
+                            "title": "te accorderen"
+                          },
+                          {
+                            "const": "PENDINGCOMPLETION",
+                            "title": "te factureren"
+                          },
+                          {
+                            "const": "COMPLETED",
+                            "title": "gefactureerd"
+                          },
+                          {
+                            "const": "DECLINED",
+                            "title": "afgewezen"
+                          },
+                          {
+                            "const": "TEMPLATE",
+                            "title": "sjabloon"
+                          },
+                          {
+                            "const": "TEMPLATEEDIT",
+                            "title": "bezig met wijzigen van factureren"
+                          },
+                          {
+                            "const": "TEMPLATEERROR",
+                            "title": "in fout staat"
+                          }
+                        ]
+                      },
+                      "SalesInvoiceNumber": {
+                        "type": "string"
                       }
                     }
                   }
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -2672,6 +3036,7 @@
         ]
       },
       "post": {
+        "description": "linestobeinvoiced 1.0",
         "operationId": "updateconnector-linestobeinvoiced.Post-1.0",
         "parameters": [
           {
@@ -2692,11 +3057,13 @@
           },
           {
             "in": "header",
-            "name": "AccessToken",
+            "name": "Tracking-Identifier",
             "schema": {
-              "type": "string"
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
             },
-            "required": false
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
           }
         ],
         "requestBody": {
@@ -2725,6 +3092,7 @@
         ]
       },
       "delete": {
+        "description": "linestobeinvoiced 1.0",
         "operationId": "updateconnector-linestobeinvoiced.Delete-1.0",
         "parameters": [
           {
@@ -2745,11 +3113,13 @@
           },
           {
             "in": "header",
-            "name": "AccessToken",
+            "name": "Tracking-Identifier",
             "schema": {
-              "type": "string"
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
             },
-            "required": false
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
           }
         ],
         "requestBody": {
@@ -2778,6 +3148,7 @@
         ]
       },
       "put": {
+        "description": "linestobeinvoiced 1.0",
         "operationId": "updateconnector-linestobeinvoiced.Put-1.0",
         "parameters": [
           {
@@ -2798,11 +3169,13 @@
           },
           {
             "in": "header",
-            "name": "AccessToken",
+            "name": "Tracking-Identifier",
             "schema": {
-              "type": "string"
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
             },
-            "required": false
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
           }
         ],
         "requestBody": {
@@ -2833,6 +3206,7 @@
     },
     "/api/organisations": {
       "get": {
+        "description": "organisations 2.0",
         "operationId": "getconnector-organisations.get-2.0",
         "parameters": [
           {
@@ -2898,36 +3272,53 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Item Not Found",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "Name": {
+                        "type": "string"
+                      },
+                      "CocNumber": {
+                        "type": "string"
+                      },
+                      "VatNumber": {
+                        "type": "string"
+                      },
+                      "PhoneNumber": {
+                        "type": "string"
+                      },
+                      "EmailAddress": {
+                        "type": "string"
+                      },
+                      "SbiCode": {
+                        "type": "string"
+                      },
+                      "RelationId": {
+                        "type": "string"
+                      },
+                      "ExternalId": {
+                        "type": "string"
+                      },
+                      "IsArchived": {
+                        "type": "boolean"
                       }
                     }
                   }
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -2950,6 +3341,7 @@
     },
     "/api/paymentconditions": {
       "get": {
+        "description": "paymentconditions 1.0",
         "operationId": "getconnector-paymentconditions.get-1.0",
         "parameters": [
           {
@@ -3015,36 +3407,33 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Item Not Found",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "AdministrationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "Description": {
+                        "type": "string"
                       }
                     }
                   }
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -3064,6 +3453,7 @@
     },
     "/api/persons": {
       "get": {
+        "description": "persons 2.0",
         "operationId": "getconnector-persons.get-2.0",
         "parameters": [
           {
@@ -3129,36 +3519,53 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Item Not Found",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "Name": {
+                        "type": "string"
+                      },
+                      "FirstName": {
+                        "type": "string"
+                      },
+                      "Initials": {
+                        "type": "string"
+                      },
+                      "Prefix": {
+                        "type": "string"
+                      },
+                      "Lastname": {
+                        "type": "string"
+                      },
+                      "PhoneNumber": {
+                        "type": "string"
+                      },
+                      "EmailAddress": {
+                        "type": "string"
+                      },
+                      "ExternalId": {
+                        "type": "string"
+                      },
+                      "IsArchived": {
+                        "type": "boolean"
                       }
                     }
                   }
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -3181,6 +3588,7 @@
     },
     "/api/products": {
       "get": {
+        "description": "products 3.0",
         "operationId": "getconnector-products.get-3.0",
         "parameters": [
           {
@@ -3246,29 +3654,141 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Item Not Found",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "AdministrationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "Id": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "Description": {
+                        "type": "string"
+                      },
+                      "Code": {
+                        "type": "string"
+                      },
+                      "InternalId": {
+                        "type": "string"
+                      },
+                      "PriceExcludingVAT": {
+                        "type": "number"
+                      },
+                      "PriceIncludingVAT": {
+                        "type": "number"
+                      },
+                      "ProductGroup": {
+                        "type": "string"
+                      },
+                      "Barcode": {
+                        "type": "string"
+                      },
+                      "Category": {
+                        "type": "string"
+                      },
+                      "ExtraDescription": {
+                        "type": "string"
+                      },
+                      "ProductStyle": {
+                        "oneOf": [
+                          {
+                            "const": "AantalVanSoort",
+                            "title": "aantal van soort"
+                          },
+                          {
+                            "const": "Afdeling",
+                            "title": "afdeling"
+                          },
+                          {
+                            "const": "Bankrekening",
+                            "title": "bankrekening"
+                          },
+                          {
+                            "const": "Contactpersoon",
+                            "title": "contactpersoon"
+                          },
+                          {
+                            "const": "Deelname",
+                            "title": "deelname"
+                          },
+                          {
+                            "const": "Gegeven",
+                            "title": "gegeven"
+                          },
+                          {
+                            "const": "Goed",
+                            "title": "goed"
+                          },
+                          {
+                            "const": "Kas",
+                            "title": "kas"
+                          },
+                          {
+                            "const": "Kosten",
+                            "title": "kosten"
+                          },
+                          {
+                            "const": "Land",
+                            "title": "land"
+                          },
+                          {
+                            "const": "Onbekend",
+                            "title": "onbekend"
+                          },
+                          {
+                            "const": "Organisatie",
+                            "title": "organisatie"
+                          },
+                          {
+                            "const": "Persoon",
+                            "title": "persoon"
+                          },
+                          {
+                            "const": "Ruimte",
+                            "title": "ruimte"
+                          },
+                          {
+                            "const": "Tijd",
+                            "title": "tijd"
+                          }
+                        ]
+                      },
+                      "IsArchived": {
+                        "type": "boolean"
+                      },
+                      "IsBlocked": {
+                        "type": "boolean"
+                      },
+                      "IsDisabled": {
+                        "type": "boolean"
+                      },
+                      "Blob": {
+                        "type": "object",
+                        "properties": {
+                          "Id": {
+                            "type": "string",
+                            "format": "uuid"
+                          },
+                          "ReadKey": {
+                            "type": "string"
+                          },
+                          "FileName": {
+                            "type": "string"
+                          },
+                          "ContentType": {
+                            "type": "string"
+                          },
+                          "ContentLength": {
+                            "type": "number"
+                          }
                         }
                       }
                     }
@@ -3276,6 +3796,9 @@
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -3293,6 +3816,7 @@
     },
     "/api/projects": {
       "get": {
+        "description": "projects 1.0",
         "operationId": "getconnector-projects.get-1.0",
         "parameters": [
           {
@@ -3358,36 +3882,33 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Item Not Found",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "AdministrationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "InstanceId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "Omschrijving": {
+                        "type": "string"
                       }
                     }
                   }
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -3403,6 +3924,7 @@
     },
     "/api/salesinvoices": {
       "get": {
+        "description": "salesinvoices 1.0",
         "summary": "ListSalesInvoices",
         "operationId": "getconnector-salesinvoices.get-1.0",
         "parameters": [
@@ -3476,36 +3998,204 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Item Not Found",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "InstanceId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "SalesInvoiceNumber": {
+                        "type": "string"
+                      },
+                      "IssueDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "AdministrationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationTypeId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationNumber": {
+                        "type": "string"
+                      },
+                      "RelationDescription": {
+                        "type": "string"
+                      },
+                      "Status": {
+                        "oneOf": [
+                          {
+                            "const": "TODO",
+                            "title": "te verzenden"
+                          },
+                          {
+                            "const": "BUSY",
+                            "title": "onderweg"
+                          },
+                          {
+                            "const": "DONE",
+                            "title": "verzonden"
+                          },
+                          {
+                            "const": "DONEEDIT",
+                            "title": "bezig met wijzigen van verzonden"
+                          },
+                          {
+                            "const": "DONEERROR",
+                            "title": "in fout staat"
+                          },
+                          {
+                            "const": "REDO",
+                            "title": "opnieuw te verzenden"
+                          },
+                          {
+                            "const": "CANNOTBEDONE",
+                            "title": "niet te verzenden"
+                          },
+                          {
+                            "const": "CANNOTBEREDONE",
+                            "title": "niet opnieuw te verzenden"
+                          },
+                          {
+                            "const": "TOCREDIT",
+                            "title": "te crediteren"
+                          },
+                          {
+                            "const": "CREDITED",
+                            "title": "gecrediteerd"
+                          },
+                          {
+                            "const": "DELETED",
+                            "title": "verwijderd"
+                          },
+                          {
+                            "const": "TODOERROR",
+                            "title": "in fout staat"
+                          },
+                          {
+                            "const": "TODOEDIT",
+                            "title": "bezig met wijzigen van te verzenden"
+                          },
+                          {
+                            "const": "TODOPENDING",
+                            "title": "bezig met wachten"
+                          },
+                          {
+                            "const": "REPLACED",
+                            "title": "gespecificeerd"
+                          },
+                          {
+                            "const": "TOSPECIFY",
+                            "title": "af te letteren"
+                          },
+                          {
+                            "const": "SPECIFIED",
+                            "title": "afgeletterd"
+                          },
+                          {
+                            "const": "ALTERNATIVELYSPECIFIED",
+                            "title": "alternatief gespecificeerd"
+                          },
+                          {
+                            "const": "INITIALIZED",
+                            "title": "geïnitialiseerd"
+                          },
+                          {
+                            "const": "INITIALIZEDEDIT",
+                            "title": "geïnitialiseerd"
+                          },
+                          {
+                            "const": "PENDINGAPPROVAL",
+                            "title": "te accorderen"
+                          },
+                          {
+                            "const": "PENDINGCOMPLETION",
+                            "title": "te factureren"
+                          },
+                          {
+                            "const": "COMPLETED",
+                            "title": "gefactureerd"
+                          },
+                          {
+                            "const": "DECLINED",
+                            "title": "afgewezen"
+                          },
+                          {
+                            "const": "TEMPLATE",
+                            "title": "sjabloon"
+                          },
+                          {
+                            "const": "TEMPLATEEDIT",
+                            "title": "bezig met wijzigen van verzenden"
+                          },
+                          {
+                            "const": "TEMPLATEERROR",
+                            "title": "in fout staat"
+                          },
+                          {
+                            "const": "MESSAGEPENDING",
+                            "title": "Bezig met verzenden"
+                          },
+                          {
+                            "const": "MESSAGESEND",
+                            "title": "Verzonden"
+                          },
+                          {
+                            "const": "MESSAGEFAILED",
+                            "title": "Fout bij verzenden"
+                          }
+                        ]
+                      },
+                      "Blob": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "Id": {
+                              "type": "string",
+                              "format": "uuid"
+                            },
+                            "ReadKey": {
+                              "type": "string"
+                            },
+                            "FileName": {
+                              "type": "string"
+                            },
+                            "ContentType": {
+                              "type": "string"
+                            },
+                            "ContentLength": {
+                              "type": "number"
+                            }
+                          }
                         }
+                      },
+                      "AmountExcludingVat": {
+                        "type": "number"
+                      },
+                      "AmountVat": {
+                        "type": "number"
+                      },
+                      "AmountInvoiced": {
+                        "type": "number"
                       }
                     }
                   }
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -3521,6 +4211,7 @@
     },
     "/api/salespricesperrelation": {
       "get": {
+        "description": "salespricesperrelation 1.0",
         "operationId": "getconnector-salespricesperrelation.get-1.0",
         "parameters": [
           {
@@ -3586,36 +4277,55 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Item Not Found",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "ProductDescription": {
+                        "type": "string"
+                      },
+                      "PriceExcludingVAT": {
+                        "type": "number"
+                      },
+                      "StartDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "EndDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "RelationDescription": {
+                        "type": "string"
+                      },
+                      "ProductId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationTypeId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationId": {
+                        "type": "string",
+                        "format": "uuid"
                       }
                     }
                   }
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -3633,6 +4343,7 @@
     },
     "/api/salesrelations": {
       "get": {
+        "description": "salesrelations 1.0",
         "operationId": "getconnector-salesrelations.get-1.0",
         "parameters": [
           {
@@ -3698,36 +4409,43 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Item Not Found",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "AdministrationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationTypeId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationNumber": {
+                        "type": "string"
+                      },
+                      "RelationDescription": {
+                        "type": "string"
+                      },
+                      "VatNumber": {
+                        "type": "string"
                       }
                     }
                   }
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -3743,6 +4461,7 @@
     },
     "/api/unknownrelation": {
       "get": {
+        "description": "unknownrelation 1.0",
         "operationId": "getconnector-unknownrelation.get-1.0",
         "parameters": [
           {
@@ -3808,36 +4527,38 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Item Not Found",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "Name": {
+                        "type": "string"
+                      },
+                      "SalesRelation": {
+                        "type": "boolean"
+                      },
+                      "PurchaseRelation": {
+                        "type": "boolean"
+                      },
+                      "IsBlocked": {
+                        "type": "boolean"
                       }
                     }
                   }
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -3858,6 +4579,7 @@
     },
     "/api/vatrate": {
       "get": {
+        "description": "vatrate 1.0",
         "summary": "ListVatRates",
         "operationId": "getconnector-vatrate.get-1.0",
         "parameters": [
@@ -3924,36 +4646,29 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Item Not Found",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "Description": {
+                        "type": "string"
                       }
                     }
                   }
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -3968,6 +4683,7 @@
     },
     "/api/vattype": {
       "get": {
+        "description": "vattype 1.0",
         "summary": "ListVatTypes",
         "operationId": "getconnector-vattype.get-1.0",
         "parameters": [
@@ -4034,36 +4750,29 @@
         ],
         "responses": {
           "200": {
-            "description": "OK"
-          },
-          "404": {
-            "description": "Item Not Found",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {
-                    "StatusCode": {
-                      "type": "string"
-                    },
-                    "Message": {
-                      "type": "string"
-                    },
-                    "TraceId": {
-                      "type": "string"
-                    },
-                    "AdditionalInfo": {
-                      "type": "object",
-                      "properties": {
-                        "ExceptionType": {
-                          "type": "string"
-                        }
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "Description": {
+                        "type": "string"
                       }
                     }
                   }
                 }
               }
             }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -4078,6 +4787,7 @@
     },
     "/api/address": {
       "post": {
+        "description": "address 1.0",
         "operationId": "updateconnector-address.Post-1.0",
         "parameters": [
           {
@@ -4098,11 +4808,13 @@
           },
           {
             "in": "header",
-            "name": "AccessToken",
+            "name": "Tracking-Identifier",
             "schema": {
-              "type": "string"
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
             },
-            "required": false
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
           }
         ],
         "requestBody": {
@@ -4111,8 +4823,7 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/requestBodies/address-1.0-Create-JsonSchema"
-              },
-              "Examples": "{\r\n  \"OrganisationId\": \"8afb1a9a-1613-5e2b-ab19-20c0f4f3e216\",\r\n  \"Firstname\": \"Rosella\",\r\n  \"Initials\": \"III\",\r\n  \"Prefix\": \"Mr.\",\r\n  \"Lastname\": \"Predovic\",\r\n  \"EmailAddress\": \"Karli61@example.com\",\r\n  \"PhoneNumber\": \"223-385-8892\"\r\n}"
+              }
             }
           }
         },
@@ -4133,6 +4844,7 @@
     },
     "/api/bankaccount": {
       "post": {
+        "description": "bankaccount 1.0",
         "operationId": "updateconnector-bankaccount.Post-1.0",
         "parameters": [
           {
@@ -4153,11 +4865,13 @@
           },
           {
             "in": "header",
-            "name": "AccessToken",
+            "name": "Tracking-Identifier",
             "schema": {
-              "type": "string"
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
             },
-            "required": false
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
           }
         ],
         "requestBody": {
@@ -4187,6 +4901,7 @@
     },
     "/api/cashmutation": {
       "post": {
+        "description": "cashmutation 3.0",
         "operationId": "updateconnector-cashmutation.Post-3.0",
         "parameters": [
           {
@@ -4207,11 +4922,13 @@
           },
           {
             "in": "header",
-            "name": "AccessToken",
+            "name": "Tracking-Identifier",
             "schema": {
-              "type": "string"
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
             },
-            "required": false
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
           }
         ],
         "requestBody": {
@@ -4242,6 +4959,7 @@
     },
     "/api/contact": {
       "post": {
+        "description": "contact 2.0",
         "summary": "Contact",
         "operationId": "updateconnector-contact.Post-2.0",
         "parameters": [
@@ -4263,11 +4981,13 @@
           },
           {
             "in": "header",
-            "name": "AccessToken",
+            "name": "Tracking-Identifier",
             "schema": {
-              "type": "string"
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
             },
-            "required": false
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
           }
         ],
         "requestBody": {
@@ -4298,6 +5018,7 @@
     },
     "/api/emailaddress": {
       "post": {
+        "description": "emailaddress 2.0",
         "summary": "CreateEmailAddress",
         "operationId": "updateconnector-emailaddress.Post-2.0",
         "parameters": [
@@ -4319,11 +5040,13 @@
           },
           {
             "in": "header",
-            "name": "AccessToken",
+            "name": "Tracking-Identifier",
             "schema": {
-              "type": "string"
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
             },
-            "required": false
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
           }
         ],
         "requestBody": {
@@ -4354,6 +5077,7 @@
     },
     "/api/financialjournalentry": {
       "post": {
+        "description": "financialjournalentry 1.0",
         "operationId": "updateconnector-financialjournalentry.Post-1.0",
         "parameters": [
           {
@@ -4374,11 +5098,13 @@
           },
           {
             "in": "header",
-            "name": "AccessToken",
+            "name": "Tracking-Identifier",
             "schema": {
-              "type": "string"
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
             },
-            "required": false
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
           }
         ],
         "requestBody": {
@@ -4407,6 +5133,7 @@
         ]
       },
       "delete": {
+        "description": "financialjournalentry 1.0",
         "operationId": "updateconnector-financialjournalentry.Delete-1.0",
         "parameters": [
           {
@@ -4427,11 +5154,13 @@
           },
           {
             "in": "header",
-            "name": "AccessToken",
+            "name": "Tracking-Identifier",
             "schema": {
-              "type": "string"
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
             },
-            "required": false
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
           }
         ],
         "requestBody": {
@@ -4462,6 +5191,7 @@
     },
     "/api/mandates": {
       "post": {
+        "description": "mandates 1.0",
         "operationId": "updateconnector-mandates.Post-1.0",
         "parameters": [
           {
@@ -4482,11 +5212,13 @@
           },
           {
             "in": "header",
-            "name": "AccessToken",
+            "name": "Tracking-Identifier",
             "schema": {
-              "type": "string"
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
             },
-            "required": false
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
           }
         ],
         "requestBody": {
@@ -4519,6 +5251,7 @@
     },
     "/api/organisation": {
       "post": {
+        "description": "organisation 4.0",
         "operationId": "updateconnector-organisation.Post-4.0",
         "parameters": [
           {
@@ -4539,11 +5272,13 @@
           },
           {
             "in": "header",
-            "name": "AccessToken",
+            "name": "Tracking-Identifier",
             "schema": {
-              "type": "string"
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
             },
-            "required": false
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
           }
         ],
         "requestBody": {
@@ -4574,6 +5309,7 @@
         ]
       },
       "put": {
+        "description": "organisation 4.0",
         "operationId": "updateconnector-organisation.Put-4.0",
         "parameters": [
           {
@@ -4594,11 +5330,13 @@
           },
           {
             "in": "header",
-            "name": "AccessToken",
+            "name": "Tracking-Identifier",
             "schema": {
-              "type": "string"
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
             },
-            "required": false
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
           }
         ],
         "requestBody": {
@@ -4631,6 +5369,7 @@
     },
     "/api/payrolljournalentry": {
       "post": {
+        "description": "payrolljournalentry 1.0",
         "operationId": "updateconnector-payrolljournalentry.Post-1.0",
         "parameters": [
           {
@@ -4651,11 +5390,13 @@
           },
           {
             "in": "header",
-            "name": "AccessToken",
+            "name": "Tracking-Identifier",
             "schema": {
-              "type": "string"
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
             },
-            "required": false
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
           }
         ],
         "requestBody": {
@@ -4685,6 +5426,7 @@
     },
     "/api/person": {
       "post": {
+        "description": "person 4.0",
         "operationId": "updateconnector-person.Post-4.0",
         "parameters": [
           {
@@ -4705,11 +5447,13 @@
           },
           {
             "in": "header",
-            "name": "AccessToken",
+            "name": "Tracking-Identifier",
             "schema": {
-              "type": "string"
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
             },
-            "required": false
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
           }
         ],
         "requestBody": {
@@ -4740,6 +5484,7 @@
         ]
       },
       "put": {
+        "description": "person 4.0",
         "operationId": "updateconnector-person.Put-4.0",
         "parameters": [
           {
@@ -4760,11 +5505,13 @@
           },
           {
             "in": "header",
-            "name": "AccessToken",
+            "name": "Tracking-Identifier",
             "schema": {
-              "type": "string"
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
             },
-            "required": false
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
           }
         ],
         "requestBody": {
@@ -4797,6 +5544,7 @@
     },
     "/api/phonenumber": {
       "post": {
+        "description": "phonenumber 1.0",
         "summary": "CreatePhoneNumber",
         "operationId": "updateconnector-phonenumber.Post-1.0",
         "parameters": [
@@ -4818,11 +5566,13 @@
           },
           {
             "in": "header",
-            "name": "AccessToken",
+            "name": "Tracking-Identifier",
             "schema": {
-              "type": "string"
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
             },
-            "required": false
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
           }
         ],
         "requestBody": {
@@ -4853,6 +5603,7 @@
     },
     "/api/purchasejournalentry": {
       "post": {
+        "description": "purchasejournalentry 1.1",
         "operationId": "updateconnector-purchasejournalentry.Post-1.1",
         "parameters": [
           {
@@ -4873,11 +5624,13 @@
           },
           {
             "in": "header",
-            "name": "AccessToken",
+            "name": "Tracking-Identifier",
             "schema": {
-              "type": "string"
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
             },
-            "required": false
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
           }
         ],
         "requestBody": {
@@ -4907,6 +5660,7 @@
     },
     "/api/salesinvoice": {
       "post": {
+        "description": "salesinvoice 2.0",
         "operationId": "updateconnector-salesinvoice.Post-2.0",
         "parameters": [
           {
@@ -4927,11 +5681,13 @@
           },
           {
             "in": "header",
-            "name": "AccessToken",
+            "name": "Tracking-Identifier",
             "schema": {
-              "type": "string"
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
             },
-            "required": false
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
           }
         ],
         "requestBody": {
@@ -4960,6 +5716,7 @@
         ]
       },
       "delete": {
+        "description": "salesinvoice 2.0",
         "operationId": "updateconnector-salesinvoice.Delete-2.0",
         "parameters": [
           {
@@ -4980,11 +5737,13 @@
           },
           {
             "in": "header",
-            "name": "AccessToken",
+            "name": "Tracking-Identifier",
             "schema": {
-              "type": "string"
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
             },
-            "required": false
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
           }
         ],
         "requestBody": {
@@ -5015,6 +5774,7 @@
     },
     "/api/salesjournalentry": {
       "post": {
+        "description": "salesjournalentry 2.0",
         "operationId": "updateconnector-salesjournalentry.Post-2.0",
         "parameters": [
           {
@@ -5035,11 +5795,13 @@
           },
           {
             "in": "header",
-            "name": "AccessToken",
+            "name": "Tracking-Identifier",
             "schema": {
-              "type": "string"
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
             },
-            "required": false
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
           }
         ],
         "requestBody": {
@@ -5068,6 +5830,7 @@
         ]
       },
       "delete": {
+        "description": "salesjournalentry 2.0",
         "operationId": "updateconnector-salesjournalentry.Delete-2.0",
         "parameters": [
           {
@@ -5088,11 +5851,13 @@
           },
           {
             "in": "header",
-            "name": "AccessToken",
+            "name": "Tracking-Identifier",
             "schema": {
-              "type": "string"
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
             },
-            "required": false
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
           }
         ],
         "requestBody": {
@@ -5121,6 +5886,7 @@
         ]
       },
       "put": {
+        "description": "salesjournalentry 2.0",
         "operationId": "updateconnector-salesjournalentry.Put-2.0",
         "parameters": [
           {
@@ -5141,11 +5907,13 @@
           },
           {
             "in": "header",
-            "name": "AccessToken",
+            "name": "Tracking-Identifier",
             "schema": {
-              "type": "string"
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
             },
-            "required": false
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
           }
         ],
         "requestBody": {
@@ -5176,6 +5944,7 @@
     },
     "/api/supplier": {
       "post": {
+        "description": "supplier 1.0",
         "operationId": "updateconnector-supplier.Post-1.0",
         "parameters": [
           {
@@ -5196,11 +5965,13 @@
           },
           {
             "in": "header",
-            "name": "AccessToken",
+            "name": "Tracking-Identifier",
             "schema": {
-              "type": "string"
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
             },
-            "required": false
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
           }
         ],
         "requestBody": {
@@ -5229,14 +6000,104 @@
       }
     }
   },
+  "tags": [
+    {
+      "name": "Autorisatie",
+      "description": "Endpoints voor autorisatie"
+    },
+    {
+      "name": "Bijlagen",
+      "description": "Endpoints voor bijlagen"
+    },
+    {
+      "name": "Crediteuren",
+      "description": "Crediteuren connectoren"
+    },
+    {
+      "name": "Debiteuren",
+      "description": "Debiteuren connectoren"
+    },
+    {
+      "name": "Publiek: Financiële dashboarding",
+      "description": "Financiële dashboarding voor publieke api"
+    },
+    {
+      "name": "Publiek: Financiële journaalpost",
+      "description": "Financiële journaalpost voor publieke api"
+    },
+    {
+      "name": "Financiële journaalpost",
+      "description": "Financiële journaalpost connectors"
+    },
+    {
+      "name": "Publiek: Financiële rapportage",
+      "description": "Financiële rapportage voor publieke api"
+    },
+    {
+      "name": "Financiele rapportage",
+      "description": "Financiele rapportage connectoren"
+    },
+    {
+      "name": "Publiek: Externe verkoopregels",
+      "description": "Verkoopregels voor publieke api"
+    },
+    {
+      "name": "Verkoopregels",
+      "description": "Verkoopregels connectors"
+    },
+    {
+      "name": "Loonjournaalpost",
+      "description": "Loonjournaalpost connectors"
+    },
+    {
+      "name": "Publiek: POS Transacties",
+      "description": "POS transacties voor publieke api"
+    },
+    {
+      "name": "POS Transacties",
+      "description": "POS transacties"
+    },
+    {
+      "name": "Inkoopjournaalpost",
+      "description": "Inkoopjournaalpost connectors"
+    },
+    {
+      "name": "Publiek: Relatiemanagement",
+      "description": "Relatiemanagement voor publieke api"
+    },
+    {
+      "name": "Relaties",
+      "description": "Relatie connectors"
+    },
+    {
+      "name": "Publiek: Facturatie",
+      "description": "Facturatie voor publieke api"
+    },
+    {
+      "name": "Verkoopfactuur",
+      "description": "Verkoopfactuur connectors"
+    },
+    {
+      "name": "Publiek: Externe facturatie",
+      "description": "Externe facturatie voor publieke api"
+    },
+    {
+      "name": "Verkoopjournaalpost",
+      "description": "Verkoopjournaalpost connectors"
+    },
+    {
+      "name": "TechnischeInfo",
+      "description": "Technische informatie"
+    }
+  ],
   "components": {
     "securitySchemes": {
       "oAuth2": {
         "type": "oauth2",
         "flows": {
           "authorizationCode": {
-            "authorizationUrl": "https://nl02-thga.afasgroep.nl:11112/est1/app/auth",
-            "tokenUrl": "https://nl02-thga.afasgroep.nl:11112/est1/app/token",
+            "authorizationUrl": "https://{{domain}}.afasfocus.nl/{{customerenvironment}}/app/auth",
+            "tokenUrl": "https://{{domain}}.afasfocus.nl/{{customerenvironment}}/app/token",
             "scopes": {}
           }
         }
@@ -7617,7 +8478,6 @@
           },
           "Website": {
             "type": "string",
-            "format": "uri",
             "description": "The website of the organisation"
           },
           "PhoneNumber": {
@@ -7905,7 +8765,6 @@
           },
           "Website": {
             "type": "string",
-            "format": "uri",
             "description": "The website of the organisation"
           },
           "PhoneNumber": {
@@ -11638,6 +12497,373 @@
             }
           }
         ]
+      }
+    },
+    "responses": {
+      "400": {
+        "description": "Bad Request",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "x-examples": {
+                "Example 1": {
+                  "result": "PartiallySucceeded",
+                  "traceId": "b06e41e4-4ff1-4b40-9331-5f2145b2a9a2",
+                  "instances": [
+                    {
+                      "Code": "Organisatie",
+                      "Id": "1bfbc287-5fb4-59b5-9782-376fa601e4ad",
+                      "Relatienummer": "000025"
+                    },
+                    {
+                      "Code": "Instelling",
+                      "Id": "32a8c5d4-2227-512f-9f45-495192933809"
+                    },
+                    {
+                      "Code": "Leverancier",
+                      "Id": "0afea90d-4ecb-5791-8e4b-787c70656f75"
+                    },
+                    {
+                      "Code": "Begunstigde",
+                      "Id": "32a8c5d4-2227-512f-9f45-495192933809"
+                    }
+                  ],
+                  "errors": [
+                    {
+                      "Instelling": "'identificatie' bevat een verwijzing naar een ongeldige waarde."
+                    }
+                  ]
+                }
+              },
+              "properties": {
+                "result": {
+                  "type": "string"
+                },
+                "traceId": {
+                  "type": "string"
+                },
+                "instances": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Code": {
+                        "type": "string"
+                      },
+                      "Id": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "errors": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            },
+            "examples": {
+              "PartiallySucceeded": {
+                "value": {
+                  "result": "PartiallySucceeded",
+                  "traceId": "b06e41e4-4ff1-4b40-9331-5f2145b2a9a2",
+                  "instances": [
+                    {
+                      "Code": "Organisatie",
+                      "Id": "1bfbc287-5fb4-59b5-9782-376fa601e4ad",
+                      "Relatienummer": "000025"
+                    },
+                    {
+                      "Code": "Instelling",
+                      "Id": "32a8c5d4-2227-512f-9f45-495192933809"
+                    },
+                    {
+                      "Code": "Leverancier",
+                      "Id": "0afea90d-4ecb-5791-8e4b-787c70656f75"
+                    },
+                    {
+                      "Code": "Begunstigde",
+                      "Id": "32a8c5d4-2227-512f-9f45-495192933809"
+                    }
+                  ],
+                  "errors": [
+                    {
+                      "Instelling": "'identificatie' bevat een verwijzing naar een ongeldige waarde."
+                    }
+                  ]
+                }
+              },
+              "Bad Request - Invalid JSON": {
+                "value": {
+                  "StatusCode": 400,
+                  "Message": "Invalid JSON request String",
+                  "ExceptionCode": "DS3100",
+                  "TraceId": "802033b876ed48bbb83a01a717ccb960",
+                  "AdditionalInfo": {
+                    "ExceptionType": "DeserializationException",
+                    "DefinitionName": "salesinvoice.UpdateConnectorHandler",
+                    "PropertyNames": ""
+                  }
+                }
+              },
+              "Bad request - Invalid UUID": {
+                "value": {
+                  "StatusCode": 400,
+                  "Message": "Invalid JSON request String '' does not validate against format 'uuid'. Path 'RelationId', line 3, position 18.",
+                  "ExceptionCode": "DS3100",
+                  "TraceId": "57887d8213dd4327ae1429e860250b24",
+                  "AdditionalInfo": {
+                    "ExceptionType": "DeserializationException",
+                    "DefinitionName": "address.UpdateConnectorHandler",
+                    "PropertyNames": ""
+                  }
+                }
+              },
+              "Ongeldig gebruikersfilter": {
+                "value": {
+                  "StatusCode": 400,
+                  "Message": "Ongeldig gebruikersfilter.",
+                  "TraceId": "3b022f499ab040dea4ef992d90901963",
+                  "AdditionalInfo": {
+                    "ExceptionType": "AntaUserException"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "headers": {
+          "Server": {
+            "schema": {
+              "type": "string",
+              "example": "nginx"
+            }
+          },
+          "Date": {
+            "schema": {
+              "type": "string",
+              "example": "Wed, 19 Oct 2022 12:05:20 GMT"
+            }
+          },
+          "Content-Type": {
+            "schema": {
+              "type": "string",
+              "example": "application/json"
+            }
+          },
+          "Transfer-Encoding": {
+            "schema": {
+              "type": "string",
+              "example": "chunked"
+            }
+          },
+          "Connection": {
+            "schema": {
+              "type": "string",
+              "example": "keep-alive"
+            }
+          },
+          "Content-Version": {
+            "schema": {
+              "type": "number",
+              "example": 1
+            }
+          },
+          "X-Content-Type-Options": {
+            "schema": {
+              "type": "string",
+              "example": "nosniff"
+            }
+          },
+          "X-XSS-Protection": {
+            "schema": {
+              "type": "string",
+              "example": "1; mode=block"
+            }
+          },
+          "X-Frame-Options": {
+            "schema": {
+              "type": "string",
+              "example": "SAMEORIGIN"
+            }
+          },
+          "Strict-Transport-Security": {
+            "schema": {
+              "type": "string",
+              "example": "max-age=300"
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "StatusCode": {
+                  "type": "integer"
+                },
+                "Message": {
+                  "type": "string"
+                },
+                "TraceId": {
+                  "type": "string"
+                },
+                "AdditionalInfo": {
+                  "type": "object",
+                  "properties": {
+                    "ExceptionType": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "examples": {
+              "Unauthorized": {
+                "value": {
+                  "StatusCode": 401,
+                  "Message": "Er is geen ingelogde gebruiker.",
+                  "TraceId": "b41c2c8219494f40bef50bc24ea6844d",
+                  "AdditionalInfo": {
+                    "ExceptionType": "NotAuthenticatedException"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "headers": {
+          "Server": {
+            "schema": {
+              "type": "string",
+              "example": "nginx"
+            }
+          },
+          "Date": {
+            "schema": {
+              "type": "string",
+              "example": "Wed, 19 Oct 2024 12:05:20 GMT"
+            }
+          },
+          "Transfer-Encoding": {
+            "schema": {
+              "type": "string",
+              "example": "chunked"
+            }
+          },
+          "Connection": {
+            "schema": {
+              "type": "string",
+              "example": "keep-alive"
+            }
+          },
+          "Content-Version": {
+            "schema": {
+              "type": "number",
+              "example": 1
+            }
+          },
+          "X-Content-Type-Options": {
+            "schema": {
+              "type": "string",
+              "example": "nosniff"
+            }
+          },
+          "X-XSS-Protection": {
+            "schema": {
+              "type": "string",
+              "example": "1; mode=block"
+            }
+          },
+          "X-Frame-Options": {
+            "schema": {
+              "type": "string",
+              "example": "SAMEORIGIN"
+            }
+          },
+          "Strict-Transport-Security": {
+            "schema": {
+              "type": "string",
+              "example": "max-age=300"
+            }
+          }
+        }
+      },
+      "403": {
+        "description": "Forbidden",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "StatusCode": {
+                  "type": "integer"
+                },
+                "Message": {
+                  "type": "string"
+                },
+                "TraceId": {
+                  "type": "string"
+                },
+                "AdditionalInfo": {
+                  "type": "object",
+                  "properties": {
+                    "ExceptionType": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "examples": {
+              "Unauthorized": {
+                "value": {
+                  "StatusCode": 403,
+                  "Message": "De ingelogde gebruiker heeft niet voldoende rechten.",
+                  "TraceId": "7c4cdf827b824c5384a3b9b22966c3c3",
+                  "AdditionalInfo": {
+                    "ExceptionType": "NotAuthorizedException"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "404": {
+        "description": "Item Not Found",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "StatusCode": {
+                  "type": "string"
+                },
+                "Message": {
+                  "type": "string"
+                },
+                "TraceId": {
+                  "type": "string"
+                },
+                "AdditionalInfo": {
+                  "type": "object",
+                  "properties": {
+                    "ExceptionType": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
