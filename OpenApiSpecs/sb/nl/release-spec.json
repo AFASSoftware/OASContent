@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.2",
   "info": {
-    "version": null,
+    "version": 6.1,
     "title": "AFAS SB API",
     "description": "AFAS SB API for integrating with the accounting software for accountants and entrepreneurs."
   },
