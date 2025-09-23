@@ -1,0 +1,26 @@
+{
+    "administrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+    "description": "3 types of mutations",
+    "date": "2024-03-15",
+    "totalAmount": -10,
+	"lines":[
+        {
+            "ledgerAccountId": "06ef1d5b-a0f4-5a5a-a8d8-383776dee5a3",
+			"vatPercentage": 21,
+            "vatTarive": "high",
+            "creditIncludingVat": 20,
+            "vatType": "sales"
+        },
+        {
+            "ledgerAccountId": "5b470d51-5e56-5543-91b0-6474d486239b",
+			"vatPercentage": 21,
+            "vatTarive": "high",
+            "debetIncludingVat": 20,
+            "vatType": "purchase"
+        },
+        {
+            "ledgerAccountId": "787a2259-e460-5b90-9ffe-7843e7cd9e52",
+            "debetIncludingVat": 10
+        }
+	]
+}

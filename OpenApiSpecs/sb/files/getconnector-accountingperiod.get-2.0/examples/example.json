@@ -1,0 +1,11 @@
+[
+    {
+        "AdministrationId": "d8497bdd-a324-5145-afd0-a78acc7e07a8",
+        "Id": "6b39b98c-4fc0-4c51-9cc6-d9b6657b725a",
+        "Description": "Januari 2024",
+        "StartDate": "2024-01-01T00:00:00Z",
+        "EndDate": "2024-01-31T00:00:00Z",
+        "PeriodNumber": 1.0000000000,
+        "AccountingYear": "2024"
+    }
+]

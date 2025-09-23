@@ -1,0 +1,12 @@
+{
+    "administrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+    "description": "crosjournal entry",
+    "date": "2024-03-15",
+    "totalAmount": -10,
+	"lines":[
+        {
+            "ledgerAccountId": "787a2259-e460-5b90-9ffe-7843e7cd9e52",
+            "debetIncludingVat": 10
+        }
+	]
+}

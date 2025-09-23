@@ -1,0 +1,34 @@
+{
+	"AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+	"SupplierInvoiceId": "2023-0345",
+	"OrderReference": "VF45765",
+	"SupplierOrganisationId": "863d895a-3782-5500-b933-dd487d736138",
+	"IssueDate": "2023-10-03",
+	"DueDate": "2023-10-25",
+	"PaymentMethodId": "afa50000-0000-0102-b0d1-f91a25e6c442",
+	"InvoiceLine": [
+		{
+			"Description": "Administratiekosten",
+			"LedgerAccountNumberId": "0cee16b9-c2ef-5bb3-a69e-ce6765dbe93b",
+			"LineExtensionAmount": "500.10",
+			"TaxAmount": "105.10",
+			"VatTypeId": "afa50000-0000-0b71-8790-807f97e85c54",
+			"VatRateId": "afa50000-0000-0465-aa85-e1a761ca3a33",
+			"PerformanceDateTypeId": "1f913260-fa35-4d3c-aab6-d04219b025f6",
+			"OtherPerformanceDate": "2023-10-03",
+			"LineNumber": 0
+		},
+		{
+			"Description": "Marketingkosten",
+			"LedgerAccountNumberId": "22edee70-753a-5f8c-a613-39fe661fffbe",
+			"LineExtensionAmount": "100.00",
+			"TaxAmount": "21.00",
+			"VatTypeId": "afa50000-0000-0b71-8790-807f97e85c54",
+			"VatRateId": "afa50000-0000-0b41-9465-e9f88bcaef86",
+			"PerformanceDateTypeId": "654b73f6-9bec-4588-97c7-0c080fbe564a",
+			"PerformanceStartDate": "2023-10-03",
+			"PerformanceEndDate": "2023-11-03",
+			"LineNumber": 1
+		}
+	]
+}

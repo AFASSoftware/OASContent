@@ -1,0 +1,26 @@
+{
+    "result": "Succeeded",
+    "instances": [
+        {
+            "Code": "Persoon",
+            "Id": "1ffd89bf-7f53-592b-9ca9-98ea522ac832"
+        },
+        {
+            "Code": "Emailadres",
+            "Id": "e7792f47-eb75-4021-b546-6801b6b6f238"
+        },
+        {
+            "Code": "Telefoonnummer",
+            "Id": "2e224583-09ec-44ad-bd15-918161a06867"
+        },
+        {
+            "Code": "Bankrekening",
+            "Id": "3495674e-f29a-41e0-9121-0f604b4c5c7b"
+        },
+        {
+            "Code": "Adres",
+            "Id": "1b5cf83f-607d-4bd3-82dc-07c9460f007d"
+        }
+    ],
+    "errors": []
+}

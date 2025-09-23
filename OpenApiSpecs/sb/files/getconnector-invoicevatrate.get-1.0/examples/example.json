@@ -1,0 +1,14 @@
+[
+    {
+        "AdministrationCountryId": "afa50000-0000-0f5e-93b9-4fc1abc0cb22",
+        "LedgerAccountId": "cfb59b79-b3ec-55ef-8cde-000499c3179e",
+        "VatRateId": "afa50000-0000-0b41-9465-e9f88bcaef86",
+        "InstanceId": "d98ba9ca-a053-44aa-ac84-f075d317a595"
+    },
+    {
+        "AdministrationCountryId": "afa50000-0000-0f5e-93b9-4fc1abc0cb22",
+        "LedgerAccountId": "3c0e6b01-8b34-53ff-80dc-002152014f45",
+        "VatRateId": "afa50000-0000-0b41-9465-e9f88bcaef86",
+        "InstanceId": "c892bc98-27e0-4171-9228-a95ebb8fbac9"
+    }
+]

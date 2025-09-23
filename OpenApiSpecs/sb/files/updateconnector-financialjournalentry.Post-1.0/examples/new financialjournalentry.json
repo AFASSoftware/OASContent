@@ -1,0 +1,19 @@
+{
+  "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502",
+  "Description": "journaalpost_002",
+  "EntryDate": "2024-01-22",
+  "EntryLine": [
+    {
+        "Description": "Regel1",
+        "LedgerAccountId": "5a663714-2c36-5d94-a009-3a210bc2ce52",
+        "AmountDebit": 4000.65,
+        "VatDirection": "sales",
+        "VatType": "high"
+    },
+    {
+        "Description": "Regel2",
+        "LedgerAccountId": "5a663714-2c36-5d94-a009-3a210bc2ce52",
+        "AmountCredit": 4000.65
+    }
+  ]
+}

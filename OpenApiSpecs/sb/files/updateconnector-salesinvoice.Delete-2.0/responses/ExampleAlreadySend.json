@@ -1,0 +1,8 @@
+{
+    "result": "Failed",
+    "traceId": "93a3cfbe-f20b-4fd2-9ec3-5cdd930eebc7",
+    "instances": [],
+    "errors": [
+        "SalesInvoice cannot be deleted because it is not a draft or it is already deleted"
+    ]
+}

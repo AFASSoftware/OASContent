@@ -1,0 +1,23 @@
+{
+    "result": "Succeeded",
+    "instances": [
+        {
+            "Code": "Leverancier",
+            "Id": "40d42397-61b2-4a09-a595-24a9e48b3524"
+        },
+        {
+            "Code": "Begunstigde",
+            "Id": "48921982-05ad-4796-b78c-f80e545748fe"
+        },
+        {
+            "Code": "UitgaandeBetaling",
+            "Id": "d8183b65-8400-5c58-8085-3ef9de6b4428"
+        },
+        {
+            "Code": "Inkoopfactuur",
+            "Id": "d8183b65-8400-5c58-8085-3ef9de6b4428",
+            "Nummer": "IF240002"
+        }
+    ],
+    "errors": []
+}

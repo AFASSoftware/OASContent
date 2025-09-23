@@ -1,0 +1,18 @@
+{
+    "TrackingToken": "202410211314120",
+    "Result": [
+        {
+            "Id": "b4632ca6-2298-4139-8d67-2f5ca122d039",
+            "PriceExcludingVAT": 1512.1500000000,
+            "StartDate": null,
+            "EndDate": null,
+            "ProductId": "4eb7c821-7e37-4132-b27d-95563f93687a",
+            "ProductDescription": "Acer Laptop",
+            "RelationDescription": "Architectenbureau Brauw B.V.",
+            "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+            "RelationId": "3eff9a76-45d7-4595-a372-09e1e076c540",
+            "InstanceId": "bcd2883b-0559-4337-aa87-9583d1860a51",
+            "RelationType": "organisation"
+        }
+    ]
+}

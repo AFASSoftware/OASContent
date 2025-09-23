@@ -1,0 +1,38 @@
+{
+    "result": "Succeeded",
+    "instances": [
+        {
+            "Code": "Organisatie",
+            "Id": "7de00e97-06df-5778-99ae-c995b7992adb"
+        },
+        {
+            "Code": "Handelsnaam",
+            "Id": "f368c6b2-a6e5-4d2e-94cd-8529c170c559"
+        },
+        {
+            "Code": "Emailadres",
+            "Id": "c0634695-9106-4e82-b2c5-8ffc5e636a37"
+        },
+        {
+            "Code": "Telefoonnummer",
+            "Id": "a322be0a-9600-4c34-90d9-7fb5a7a50c99"
+        },
+        {
+            "Code": "Bankrekening",
+            "Id": "2f1907fb-193d-45b6-9321-9d17a046d884"
+        },
+        {
+            "Code": "Bankrekening",
+            "Id": "540a3c68-fc6c-4810-bd4f-d4d72309daa2"
+        },
+        {
+            "Code": "Adres",
+            "Id": "99c91ce4-1235-4fc8-8060-6c8ecfc0422c"
+        },
+        {
+            "Code": "Adres",
+            "Id": "3a1c2961-ff57-413c-ba83-e21706a5bffd"
+        }
+    ],
+    "errors": []
+}

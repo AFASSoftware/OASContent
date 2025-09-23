@@ -1,0 +1,25 @@
+{
+	"TrackingToken": "202401291319301",
+	"Result": [
+		{
+			"Id": "e36e77f0-9a1c-50d0-a3f3-004f1fee8720",
+			"Name": "Erbi Lara B.V. (000019)",
+			"CocNumber": null,
+			"VatNumber": null,
+			"RelationId": "000019",
+			"ExternalId": null,
+			"IsArchived": false,
+			"EmailAddress": "info@erbilara.afas"
+		},
+		{
+			"Id": "45aafd00-a21b-5440-bf57-0aa5fa6c2294",
+			"Name": "Alsach Musik GmbH (000037)",
+			"CocNumber": null,
+			"VatNumber": "DE184475234",
+			"RelationId": "000037",
+			"ExternalId": null,
+			"IsArchived": false,
+			"EmailAddress": "info@alsachmusic.afasde"
+		}
+	]
+}

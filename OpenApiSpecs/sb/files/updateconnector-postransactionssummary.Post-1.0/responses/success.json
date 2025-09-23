@@ -1,0 +1,14 @@
+{
+    "result": "Succeeded",
+    "instances": [
+        {
+            "Code": "Kasmutatie",
+            "Id": "db9629c8-d2de-4815-a192-573cf4fc64a8"
+        },
+        {
+            "Code": "OverigeBoeking",
+            "Id": "ad5fc45d-8d9a-4b8a-a471-06a6e9261de8"
+        }
+    ],
+    "errors": []
+}

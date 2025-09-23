@@ -1,0 +1,15 @@
+{
+    "TrackingToken": "202406211218251",
+    "Result": [
+        {
+            "Id": "afa50000-0000-0ab9-bf40-00958bc94cc8",
+            "Description": "Tadzjikistan",
+            "CodeISOAlpha2": "TJ"
+        },
+        {
+            "Id": "afa50000-0000-0be2-8a70-01f36103d3cd",
+            "Description": "Heard Eiland en McDonald Eilanden",
+            "CodeISOAlpha2": "HM"
+        }
+    ]
+}

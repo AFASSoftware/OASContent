@@ -1,0 +1,18 @@
+[
+    {
+        "OutstandingAmount": 177.8700000000,
+        "AdministationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+        "CustomerId": "c9e0fced-a61e-544e-b7ca-3e0428579f9f",
+        "CustomerName": "Administratiekantoor Beers",
+        "OrganisationId": "bb3fd8ef-5a0e-5919-8e67-77b396abf212",
+        "InstanceId": "9ec419a7-a54f-44d6-a7a0-ca5bdf1f0e4f"
+    },
+    {
+        "OutstandingAmount": 181.5000000000,
+        "AdministationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+        "CustomerId": "50c0d1f6-b9e0-56fb-b97e-6fbda357073f",
+        "CustomerName": "Oostendorp-Nederland Service B.V.",
+        "OrganisationId": "1e1467e5-e9e3-56db-9aab-674bc42a4948",
+        "InstanceId": "0f446933-136e-4e6b-8cd3-928c77446cec"
+    }
+]

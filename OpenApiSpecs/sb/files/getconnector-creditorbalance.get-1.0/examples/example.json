@@ -1,0 +1,20 @@
+[
+    {
+        "OutstandingAmount": 1586.3100000000,
+        "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502",
+        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+        "RelationId": "296a5ec3-0efb-528d-9afd-7ab3b3c914c1",
+        "RelationName": "Stichting Mollie Payments",
+        "InstanceId": "8b0ecc00-2b87-4eaa-bd19-3b9db7f297c4",
+        "RelationType": "organisation"
+    },
+    {
+        "OutstandingAmount": 28597.1400000000,
+        "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502",
+        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+        "RelationId": "7b8e279b-b551-556e-a00a-a815392d0d38",
+        "RelationName": "AFAS Software B.V.",
+        "InstanceId": "072672c2-c859-4eef-a0be-7e760b57af6f",
+        "RelationType": "organisation"
+    }
+]

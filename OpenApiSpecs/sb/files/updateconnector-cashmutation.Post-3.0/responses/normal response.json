@@ -1,0 +1,9 @@
+{
+    "result": "Succeeded",
+    "traceId": "8f266c6b-f405-4107-92ff-32130bd13a6b",
+    "data": {
+        "CashMutationId": "1bff704a-d4a1-4d92-b276-79eece12bb87",
+        "FinancialBookingId": "723e515f-c997-4d27-ae89-b922f3975a07"
+    },
+    "errors": []
+}

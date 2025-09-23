@@ -1,0 +1,24 @@
+[
+    {
+        "DueDate": "2024-02-16T00:00:00Z",
+        "AdministationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+        "InvoiceDate": "2024-02-02T00:00:00Z",
+        "InvoiceId": "V01240018",
+        "CustomerId": "c9e0fced-a61e-544e-b7ca-3e0428579f9f",
+        "CustomerName": "Administratiekantoor Beers",
+        "OrganisationId": "bb3fd8ef-5a0e-5919-8e67-77b396abf212",
+        "AddressId": "9e009e67-42d5-508c-9939-eb09cadb8f81",
+        "Address": "Postbus 779, 2700 AT, Zoetermeer, Nederland"
+    },
+    {
+        "DueDate": "2024-02-02T00:00:00Z",
+        "AdministationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+        "InvoiceDate": "2024-01-19T00:00:00Z",
+        "InvoiceId": "V01240012",
+        "CustomerId": "c6734a65-7205-59e7-9777-ed5aef340c68",
+        "CustomerName": "Bus Grondstoffen B.V.",
+        "OrganisationId": "1ac6ea9d-9a7f-54f4-b9ef-fe161a55d9f6",
+        "AddressId": "b6fc9651-1785-53f9-9862-d7a2c84d664b",
+        "Address": "Eerste Tochtweg 2, 2913 LP, Capelle aan den IJssel, Nederland"
+    }
+]

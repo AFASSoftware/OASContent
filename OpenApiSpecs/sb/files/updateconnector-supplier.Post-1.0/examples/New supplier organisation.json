@@ -1,0 +1,16 @@
+{
+    "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+    "EmailAddress": "klant@afas.nl",
+    "PhoneNumber": "0696856831",
+    "BankAccountNumber": "NL29TRIO0110845005",
+    "Bic": "TRIONL2U",
+    "LedgerAccountId": "4a2014b0-dcdc-500d-add2-fcf73ac8f88d",
+    "PaymentMethod": "banktransfer",
+    "PaymentConditionId": "ee64c81b-56ff-506f-9dac-855d64bf193a",
+    "Organisation": {
+        "Name": "Jansen Haarden",
+        "CompanyIdCoc": "80446353",
+        "CompanyIdVat": "NL861674881B01",
+        "TradeName": "Jansen Holding B.V."
+    }
+}

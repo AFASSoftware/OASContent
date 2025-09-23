@@ -1,0 +1,18 @@
+{
+    "TrackingToken": "202409230720571",
+    "Result": [
+        {
+            "Id": "56528a1b-4bea-5699-abb8-f66155e9c497",
+            "StreetName": "Reactorweg",
+            "HouseNumber": "47",
+            "HouseNumberAddition": null,
+            "PostalZone": "3542 AD",
+            "RelationId": "4fa13b8e-44dc-5cf7-b2ef-35e14be401e8",
+            "IsPreferedInvoiceAddress": true,
+            "IsPreferedSupplierAddress": true,
+            "CityName": "Utrecht",
+            "CountryName": "Nederland",
+            "RelationType": "organisation"
+        }
+    ]
+}

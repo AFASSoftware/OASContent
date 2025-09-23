@@ -1,0 +1,29 @@
+{
+    "name": "Terry - Powlowski",
+    "cocNumber": "38012622",
+    "vatNumber": "NL003276211B01",
+    "emailAddress": "Amelie_Bogisich@example.com",
+    "phoneNumber": "738-407-2156",
+    "ExternalId": "801-331-6473",
+    "address": [
+      {
+        "StreetName": "Tillman Glen",
+        "HouseNumber": 1,
+        "HouseNumberAddition": "b",
+        "Explanation": "Headquarters",
+        "PostalZone": "3833AV",
+        "State": "Utrecht",
+        "CityName": "Leusden",
+        "CountryCode": "NL"
+      }
+    ],
+    "bankAccounts": [
+      {
+        "AccountNumber": "NL85CHAS0874238307",
+        "BankId": "CHAS",
+        "Bic": "CHASNL2X",
+        "CountryCode": "NL",
+        "AccountHolderName": "Kees Zandbergen"
+      }
+    ]
+  }

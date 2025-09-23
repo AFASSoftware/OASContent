@@ -1,0 +1,50 @@
+[
+    {
+        "OutstandingAmount": 123.4200000000,
+        "TotalAmount": 123.4200000000,
+        "PaidAmount": 0.0000000000,
+        "DueDate": "2024-12-27T00:00:00Z",
+        "InvoiceId": "a9095b6f-990d-4f5a-bda3-737939ab5fda",
+        "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502",
+        "InvoiceDate": "2024-12-13T00:00:00Z",
+        "InvoiceNumber": "VF240002",
+        "CustomerReference": null,
+        "RelationName": "AFAS Software B.V.",
+        "RelationId": "7b8e279b-b551-556e-a00a-a815392d0d38",
+        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+        "InstanceId": "206b831d-d5b1-43cd-a6d3-949bab3f45ee",
+        "RelationType": "organisation"
+    },
+    {
+        "OutstandingAmount": 561.4400000000,
+        "TotalAmount": 561.4400000000,
+        "PaidAmount": 0.0000000000,
+        "DueDate": "2024-12-27T00:00:00Z",
+        "InvoiceId": "157f441e-530d-4571-b6f7-e6681dc0ddac",
+        "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502",
+        "InvoiceDate": "2024-12-13T00:00:00Z",
+        "InvoiceNumber": "VF240001",
+        "CustomerReference": null,
+        "RelationName": "AFAS Software B.V.",
+        "RelationId": "7b8e279b-b551-556e-a00a-a815392d0d38",
+        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+        "InstanceId": "3f5ac81a-89d5-423d-ad2c-dea22585dc36",
+        "RelationType": "organisation"
+    },
+    {
+        "OutstandingAmount": 640.0900000000,
+        "TotalAmount": 640.0900000000,
+        "PaidAmount": 0.0000000000,
+        "DueDate": "2024-12-27T00:00:00Z",
+        "InvoiceId": "5fa9bfee-7a07-4ea9-b438-f19b3cdda6ca",
+        "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502",
+        "InvoiceDate": "2024-12-13T00:00:00Z",
+        "InvoiceNumber": "VF240003",
+        "CustomerReference": null,
+        "RelationName": "Mollie B.V.",
+        "RelationId": "3709fb45-c646-5cca-8de7-e6433404316a",
+        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+        "InstanceId": "961616ec-27db-436c-bd86-eb95a46bb141",
+        "RelationType": "organisation"
+    }
+]

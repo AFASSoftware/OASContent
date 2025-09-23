@@ -1,0 +1,9 @@
+{
+    "administrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+    "description": "Omzet algemeen",
+    "date": "2024-03-15",
+    "ledgerAccountId": "cfb59b79-b3ec-55ef-8cde-000499c3179e",
+    "vatPercentage": 21,
+    "vatTarive": "high",
+    "amountIncludingVat": 400
+}
