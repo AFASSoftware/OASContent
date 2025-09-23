@@ -1,0 +1,16 @@
+[
+    {
+        "Id": "e33e2205-fd7e-5921-8262-0006aea0e891",
+        "Description": "Microsoft Power Platform App maker",
+        "InternalId": "000018",
+        "PriceExcludingVAT": 250.0000000000,
+        "ProductGroup": "Cursussen"
+    },
+    {
+        "Id": "93c1a3a2-f102-5c38-a0df-039ab5b61104",
+        "Description": "Vast actief (btw laag)",
+        "InternalId": null,
+        "PriceExcludingVAT": 0.0000000000,
+        "ProductGroup": "Vaste activa"
+    }
+]

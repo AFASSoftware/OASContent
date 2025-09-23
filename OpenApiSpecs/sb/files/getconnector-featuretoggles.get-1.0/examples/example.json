@@ -1,0 +1,18 @@
+[
+    {
+        "AdministrationId": "d8497bdd-a324-5145-afd0-a78acc7e07a8",
+        "LinesToBeInvoiced": false,
+        "Projects": false,
+        "Supplies": true,
+        "Services": true,
+        "FixedAssets": true
+    },
+    {
+        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+        "LinesToBeInvoiced": false,
+        "Projects": false,
+        "Supplies": true,
+        "Services": true,
+        "FixedAssets": true
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "Id": "afa50000-0000-0b1e-8a4b-309cd658b570",
+        "Description": "Nul"
+    },
+    {
+        "Id": "afa50000-0000-07cf-8b24-5ef474ab1b2a",
+        "Description": "Extra laag"
+    },
+    {
+        "Id": "afa50000-0000-0246-9965-b18e164c600e",
+        "Description": "Speciaal"
+    },
+    {
+        "Id": "afa50000-0000-0465-aa85-e1a761ca3a33",
+        "Description": "Laag"
+    },
+    {
+        "Id": "afa50000-0000-0b41-9465-e9f88bcaef86",
+        "Description": "Hoog"
+    }
+]

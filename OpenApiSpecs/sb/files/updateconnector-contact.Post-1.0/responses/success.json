@@ -1,0 +1,22 @@
+{
+  "result": "Succeeded",
+  "instances": [
+    {
+      "Code": "Persoon",
+      "Id": "3375a0f0-1cf0-5408-98f9-cd3599d96721"
+    },
+    {
+      "Code": "Emailadres",
+      "Id": "3f669df2-b5d2-41fd-bb7e-7d7030e9d8be"
+    },
+    {
+      "Code": "Telefoonnummer",
+      "Id": "2349ac50-64eb-4d05-b440-f8372dbd850f"
+    },
+    {
+      "Code": "Contactpersoon",
+      "Id": "ba9a935d-32ac-447d-9749-105a02079372"
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,18 @@
+{
+    "InvoiceNumber": "7",
+    "InvoiceDate": "2024-01-24",
+    "Description": "Unbranded Steel Sausages",
+    "AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+    "RelationType": "organisation",
+    "RelationId": "9bafbc7a-611b-5465-a584-5f0c88734b35",
+    "PaymentMethod": "banktransfer",
+    "PaymentConditionId": "eb44c60d-06e4-564b-a90c-7715c78788a5",
+    "InvoiceLine": [
+        {
+            "LedgerAccountId": "ebf99e77-1d73-51f2-936d-b3185d8a84ad",
+            "AmountVat": 183.54,
+            "VatType": "high",
+            "AmountExcludingVat": 874
+        }
+    ]
+}

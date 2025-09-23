@@ -1,0 +1,17 @@
+{
+    "TrackingToken": "202405021144501",
+    "Result": [
+        {
+            "Id": "adef5ea1-c4ec-557d-93a5-0ac82709ad8a",
+            "Name": "Diverse debiteuren",
+            "IsBlocked": false,
+            "SalesRelation": true
+        },
+        {
+            "Id": "2438541d-5088-5d1d-8caa-94a87cb14dc2",
+            "Name": "Diverse crediteuren",
+            "IsBlocked": false,
+            "PurchaseRelation": true
+        }
+    ]
+}

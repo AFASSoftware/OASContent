@@ -1,0 +1,24 @@
+{
+  "AdministrationId": "95c0de1b-e269-4c74-ab6a-ece7fb15a4ff",
+  "Description": "journaalpost_001",
+  "EntryDate": "2024-01-22",
+  "EntryLine": [
+    {
+        "Description": "Regel1",
+        "LedgerAccountId": "5a663714-2c36-5d94-a009-3a210bc2ce52",
+        "AmountDebit": 4000.65,
+        "VatDirection": "Sales",
+        "VatType": "High",
+        "AmountCredit": 0,
+        "PeriodAllocation": true,
+        "PeriodAllocationBeginDate": "2024-01-01",
+        "PeriodAllocationEndDate":"2024-12-31"
+    },
+    {
+        "Description": "Regel2",
+        "LedgerAccountId": "5a663714-2c36-5d94-a009-3a210bc2ce52",
+        "AmountCredit": 4000.65,
+        "AmountDebit": 0
+    }
+  ]
+}

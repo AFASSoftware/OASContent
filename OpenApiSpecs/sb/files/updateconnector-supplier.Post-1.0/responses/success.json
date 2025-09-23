@@ -1,0 +1,34 @@
+{
+    "result": "Succeeded",
+    "instances": [
+        {
+            "Code": "Persoon",
+            "Id": "e55f5d3b-780b-576b-9370-760b58e937ec"
+        },
+        {
+            "Code": "Instelling",
+            "Id": "20eb199e-c652-5513-b7eb-c39f927d1ef3"
+        },
+        {
+            "Code": "Leverancier",
+            "Id": "20eb199e-c652-5513-b7eb-c39f927d1ef3"
+        },
+        {
+            "Code": "Begunstigde",
+            "Id": "7afec8a8-c9f4-4ec7-aa68-8d9bc995468d"
+        },
+        {
+            "Code": "Emailadres",
+            "Id": "4fc10096-8bb4-4be8-8039-5239b4125757"
+        },
+        {
+            "Code": "Telefoonnummer",
+            "Id": "5e553026-0ad2-4f4c-bd2e-5dbdd6c0096f"
+        },
+        {
+            "Code": "Bankrekening",
+            "Id": "d18e1122-e014-4468-aa65-585b333359c1"
+        }
+    ],
+    "errors": []
+}

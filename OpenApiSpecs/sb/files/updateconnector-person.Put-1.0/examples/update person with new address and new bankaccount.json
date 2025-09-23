@@ -1,0 +1,27 @@
+{
+    "RelationId": "b09841f6-338e-4d5e-af4e-bb3d62405c66",
+    "Firstname": "Julianne",
+    "Initials": "J",
+    "Prefix": "Mr",
+    "LastName": "Pouros",
+    "Addresses": [{
+        "StreetName": "Krommeweg",
+        "HouseNumber": 18,
+        "HouseNumberAddition": "",
+        "Explanation": "",
+        "PostalZone": "8071TE",
+        "CityName": "Nunspeet",
+        "CountryCode": "NL",
+        "PreferredSupplierAddress": true,
+        "PreferredShippingAddress": true,
+        "PreferredBillingAddress": true
+    }],
+    "BankAccounts": [{
+        "AccountNumber": "NL93LOYD0175300941",
+        "BankId": "LOYD",
+        "Bic": "LOYDNL2A",
+        "CountryCode": "NL",
+        "PreferredOutgoingPayments": true,
+        "PreferredIncommingPayments": true
+    }]
+}

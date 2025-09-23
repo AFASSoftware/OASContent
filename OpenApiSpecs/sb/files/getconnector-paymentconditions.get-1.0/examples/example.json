@@ -1,0 +1,72 @@
+[
+    {
+        "Id": "9b5d768a-c71b-583e-b6ee-09d64aa935d4",
+        "AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+        "Description": "21 dagen"
+    },
+    {
+        "Id": "b8ca9e8d-6fef-5ef6-95ba-0bd221aebc6f",
+        "AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+        "Description": "60 dagen"
+    },
+    {
+        "Id": "a59bab3a-36bb-5974-bdad-276f6395d6b6",
+        "AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+        "Description": "14 dagen"
+    },
+    {
+        "Id": "b98e24e9-a611-5a98-8cf9-40fed321dc6c",
+        "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+        "Description": "60 dagen"
+    },
+    {
+        "Id": "c06d2eb9-1332-5e78-a8b3-58dd62dcee45",
+        "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+        "Description": "7 dagen"
+    },
+    {
+        "Id": "0066f624-c140-5262-9fbb-5e3141d32876",
+        "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+        "Description": "14 dagen"
+    },
+    {
+        "Id": "eb44c60d-06e4-564b-a90c-7715c78788a5",
+        "AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+        "Description": "45 dagen"
+    },
+    {
+        "Id": "a629b70b-6a91-5906-9f9d-97f83dfd0c58",
+        "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+        "Description": "90 dagen"
+    },
+    {
+        "Id": "ab8b0914-74a2-5db5-a948-ae34ea6b7f7e",
+        "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+        "Description": "30 dagen"
+    },
+    {
+        "Id": "2d8304eb-1472-5fad-8fed-b1c30b2a1749",
+        "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+        "Description": "21 dagen"
+    },
+    {
+        "Id": "3bed98d9-94d0-5147-9cb8-cad047a0b9bd",
+        "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+        "Description": "45 dagen"
+    },
+    {
+        "Id": "6372c28d-7468-5c58-8826-cea9bf70758a",
+        "AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+        "Description": "90 dagen"
+    },
+    {
+        "Id": "4a09121c-4f48-5a29-9cef-ecfb5bb74dcf",
+        "AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+        "Description": "7 dagen"
+    },
+    {
+        "Id": "596a0343-fd85-597a-8918-ed3198de119d",
+        "AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+        "Description": "30 dagen"
+    }
+]

@@ -1,0 +1,25 @@
+{
+    "InvoiceNumber": "SAL341434345403",
+    "InvoiceDate": "2024-01-24",
+    "Description": "null",
+    "AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+    "RelationType": "person",
+    "RelationId": "d36cb9bb-0e5f-5253-ab28-2331804d65ba",
+    "PaymentMethod": "banktransfer",
+    "PaymentConditionId": "eb44c60d-06e4-564b-a90c-7715c78788a5",
+    "InvoiceLine": [
+        {
+            "LedgerAccountId": "ebf99e77-1d73-51f2-936d-b3185d8a84ad",
+            "AmountVat": 21,
+            "VatType": "high",
+            "AmountExcludingVat": 100
+        },
+        {
+            "LedgerAccountId": "ebf99e77-1d73-51f2-936d-b3185d8a84ad",
+            "AmountVat": 450.55,
+            "VatType": "low",
+            "AmountExcludingVat": 40.55,
+            "VatCalculation": "exempt"
+        }
+    ]
+}

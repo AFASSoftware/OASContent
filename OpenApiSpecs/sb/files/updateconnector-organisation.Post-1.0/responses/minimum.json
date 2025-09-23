@@ -1,0 +1,14 @@
+{
+    "result": "Succeeded",
+    "instances": [
+        {
+            "Code": "Organisatie",
+            "Id": "dce0f32a-7a3a-595e-9ffb-dafe3ba9aaae"
+        },
+        {
+            "Code": "Handelsnaam",
+            "Id": "c1bd5b90-6909-4afc-9958-5a14217deaa5"
+        }
+    ],
+    "errors": []
+}

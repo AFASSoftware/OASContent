@@ -1,0 +1,15 @@
+{
+    "result": "Succeeded",
+    "instances": [
+        {
+            "Code": "UitgaandeBetaling",
+            "Id": "12fa6582-1684-58ba-a7e4-554056ea9651"
+        },
+        {
+            "Code": "Inkoopfactuur",
+            "Id": "12fa6582-1684-58ba-a7e4-554056ea9651",
+            "Nummer": "IF230002"
+        }
+    ],
+    "errors": []
+}

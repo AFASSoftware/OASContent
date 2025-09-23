@@ -1,0 +1,58 @@
+{
+    "Name": "Nitzsche, Dickinson and Predovic",
+    "CocNumber": "38012622",
+    "VatNumber": "NL003276211B01",
+    "Tradename": "Johns - Swaniawski",
+    "EmailAddress": "Damion94@example.org",
+    "Website": "https://astrid.info",
+    "PhoneNumber": "738-407-2156",
+    "ExternalId": "123456789",
+    "Addresses": [
+      {
+        "StreetName": "inspiratielaan",
+        "HouseNumber": 1,
+        "HouseNumberAddition": "b",
+        "Explanation": "Headquarters",
+        "PostalZone": "3833AV",
+        "State": "Utrecht",
+        "CityName": "Leusden",
+        "CountryCode": "NL",
+        "PreferredSupplierAddress": true,
+        "PreferredShippingAddress": false,
+        "PreferredBillingAddress": true
+      },
+      {
+        "StreetName": "inspiratielaan",
+        "HouseNumber": 3,
+        "HouseNumberAddition": "b",
+        "Explanation": "Headquarters",
+        "PostalZone": "3833AV",
+        "State": "Utrecht",
+        "CityName": "Leusden",
+        "CountryCode": "NL",
+        "PreferredSupplierAddress": false,
+        "PreferredShippingAddress": true,
+        "PreferredBillingAddress": false
+      }
+    ],
+    "BankAccounts": [
+      {
+        "AccountNumber": "NL85CHAS0874238307",
+        "BankId": "CHAS",
+        "Bic": "CHASNL2X",
+        "CountryCode": "NL",
+        "AccountHolderName": "Kees Zandbergen",
+        "PreferredOutgoingPayments": true,
+        "PreferredIncommingPayments": true
+      },
+      {
+        "AccountNumber": "NL44DNIB0736664289",
+        "BankId": "DNIB",
+        "Bic": "DNIBNL2G",
+        "CountryCode": "NL",
+        "AccountHolderName": "Jan Zandbergen",
+        "PreferredOutgoingPayments": false,
+        "PreferredIncommingPayments": false
+      }
+    ]
+  }

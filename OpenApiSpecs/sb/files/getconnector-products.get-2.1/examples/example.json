@@ -1,0 +1,19 @@
+{
+    "TrackingToken": "202401291328551",
+    "Result": [
+        {
+            "Id": "0137b2ad-ff73-54a4-a6a2-d9216c521906",
+            "Description": "Draadloos toestenbord + muis Lenovo",
+            "InternalId": "000009",
+            "PriceExcludingVAT": 67.7300000000,
+            "ProductGroup": "Randapparatuur"
+        },
+        {
+            "Id": "7b2a0351-eb84-5c86-857a-ec17af0901e1",
+            "Description": "Bouwen",
+            "InternalId": "000018",
+            "PriceExcludingVAT": 75.0000000000,
+            "ProductGroup": "Web Design"
+        }
+    ]
+}

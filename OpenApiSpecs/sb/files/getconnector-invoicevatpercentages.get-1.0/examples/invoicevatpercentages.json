@@ -1,0 +1,14 @@
+[
+    {
+        "VatPercentage": 0.0000000000,
+        "AdministrationCountryId": "afa50000-0000-0e86-9865-0403053be617",
+        "VatRateId": "afa50000-0000-0b1e-8a4b-309cd658b570",
+        "InstanceId": "ba2d4a3b-524f-48a6-97bc-06663bbb8319"
+    },
+    {
+        "VatPercentage": 0.0000000000,
+        "AdministrationCountryId": "afa50000-0000-04a5-9968-121a87793c72",
+        "VatRateId": "afa50000-0000-0b1e-8a4b-309cd658b570",
+        "InstanceId": "58cdd8f4-5b32-4d98-b34a-6af0b831560e"
+    }
+]

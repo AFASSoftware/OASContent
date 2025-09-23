@@ -1,0 +1,16 @@
+{
+    "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+    "EmailAddress": "Jamel17@yahoo.com",
+    "PhoneNumber": "840-407-0252",
+    "BankAccountNumber": "NL89BICK0806286059",
+    "Bic": "BICKNL2A",
+    "LedgerAccountId": "cfb59b79-b3ec-55ef-8cde-000499c3179e",
+    "PaymentMethod": "banktransfer",
+    "PaymentConditionId": "b98e24e9-a611-5a98-8cf9-40fed321dc6c",
+    "person": {
+        "Firstname": "Lexie",
+        "Initials": "II",
+        "Prefix": "Ms.",
+        "Lastname": "Bednar"
+    }   
+}

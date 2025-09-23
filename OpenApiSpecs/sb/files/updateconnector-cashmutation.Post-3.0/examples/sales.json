@@ -1,0 +1,9 @@
+{
+    "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+    "Description": "Omzet algemeen",
+    "Date": "2024-03-15",
+    "LedgerAccountId": "cfb59b79-b3ec-55ef-8cde-000499c3179e",
+    "VatPercentage": 21,
+    "VatTarive": "high",
+    "AmountIncludingVat": 400
+}

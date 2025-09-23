@@ -1,0 +1,21 @@
+{
+    "administrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+    "description": "Kasmutatie_001",
+    "date": "2024-03-15",
+	"vatLines":[
+        {
+            "ledgerAccountId": "9d6044a1-7437-5e17-ac04-be1b6a8bcc68",
+			"vatPercentage": 21,
+            "vatTarive": "high",
+            "debitIncludingVat": 5000,
+            "vatType": "purchase"
+        },
+        {
+            "ledgerAccountId": "9d6044a1-7437-5e17-ac04-be1b6a8bcc68",
+			"vatPercentage": 9,
+            "vatTarive": "low",
+            "creditIncludingVat": 1300,
+            "vatType": "sales"
+        }
+	]
+}

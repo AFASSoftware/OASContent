@@ -1,0 +1,17 @@
+{
+    "administrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+    "description": "Aanschaf kleine machines en gereedschap_387",
+    "date": "2024-03-15",
+    "ledgerAccountId": "c031b2e8-f8ac-5ab2-a428-93bf9789fc5e",
+    "vatPercentage": 21,
+    "vatTarive": "high",
+    "amountIncludingVat": -200,
+    "attachments": [
+        {
+            "attachmentId": "bcbee6a4-f3de-44c3-91c8-e8921bf15107"
+        },
+        {
+            "attachmentId": "6676ad1f-9fc3-4a4f-8a44-d88d8284c598"
+        }
+    ]
+}

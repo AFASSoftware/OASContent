@@ -1,0 +1,72 @@
+[
+    {
+        "Id": "a8efbf98-a825-43bb-adce-006a4817de74",
+        "Description": "Juli 2037",
+        "StartDate": "2037-07-01T00:00:00Z",
+        "EndDate": "2037-07-31T00:00:00Z",
+        "AccountingYear": "e35f93f1-ccbb-4687-be5f-16b75c8d10db"
+    },
+    {
+        "Id": "ac308a83-0de4-4396-bc48-028e0eb27fb0",
+        "Description": "Juli 2051",
+        "StartDate": "2051-07-01T00:00:00Z",
+        "EndDate": "2051-07-31T00:00:00Z",
+        "AccountingYear": "b7517955-2179-4d21-aa10-ed9a57858f79"
+    },
+    {
+        "Id": "0d06fd00-ab71-4fdd-8064-02e062a6b8b9",
+        "Description": "Mei 2047",
+        "StartDate": "2047-05-01T00:00:00Z",
+        "EndDate": "2047-05-31T00:00:00Z",
+        "AccountingYear": "450f0f1f-998a-4e22-89d9-78c310f02158"
+    },
+    {
+        "Id": "0da61200-855e-4e19-a9c8-03801ba05e58",
+        "Description": "Maart 2023",
+        "StartDate": "2023-03-01T00:00:00Z",
+        "EndDate": "2023-03-31T00:00:00Z",
+        "AccountingYear": "0f0c88f6-81e9-49bb-98da-996054aedcb2"
+    },
+    {
+        "Id": "d84e67a0-e69f-44d8-b44d-038ca22aed9d",
+        "Description": "Januari 2021",
+        "StartDate": "2021-01-01T00:00:00Z",
+        "EndDate": "2021-01-31T00:00:00Z",
+        "AccountingYear": "b07043c5-9e20-4884-92f9-8da9deeae84f"
+    },
+    {
+        "Id": "8dbdf892-bf68-48a8-ae76-03f617a232db",
+        "Description": "Juni 2025",
+        "StartDate": "2025-06-01T00:00:00Z",
+        "EndDate": "2025-06-30T00:00:00Z",
+        "AccountingYear": "0b80213d-5aa9-4d4f-88a3-b286cb3d9642"
+    },
+    {
+        "Id": "cc85b76f-03df-4fef-88d6-03f6e5cf1d6c",
+        "Description": "Juli 2048",
+        "StartDate": "2048-07-01T00:00:00Z",
+        "EndDate": "2048-07-31T00:00:00Z",
+        "AccountingYear": "08723b52-f16f-4400-828b-7b8b5e1607dc"
+    },
+    {
+        "Id": "6af7d56c-c0ea-487c-9d59-045e7ece543f",
+        "Description": "Februari 2042",
+        "StartDate": "2042-02-01T00:00:00Z",
+        "EndDate": "2042-02-28T00:00:00Z",
+        "AccountingYear": "8737c613-8b1e-485f-8266-13b255f34d81"
+    },
+    {
+        "Id": "e6b6c5ff-f032-4eaa-9bb9-05d4cb0f3ed4",
+        "Description": "Oktober 2022",
+        "StartDate": "2022-10-01T00:00:00Z",
+        "EndDate": "2022-10-31T00:00:00Z",
+        "AccountingYear": "6317474b-c5b4-4bac-8c51-5f28dbc6c9bb"
+    },
+    {
+        "Id": "5ee13ba7-b57f-4646-b066-068f26700f40",
+        "Description": "April 2050",
+        "StartDate": "2050-04-01T00:00:00Z",
+        "EndDate": "2050-04-30T00:00:00Z",
+        "AccountingYear": "f38bc252-f698-49e4-a202-ca27c7780afc"
+    }
+]

@@ -1,0 +1,14 @@
+{
+    "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+    "IssueDate": "2025-05-16",
+    "RelationType": "organisation",
+    "SentInvoiceEmail": false,
+    "RelationId": "7b8e279b-b551-556e-a00a-a815392d0d38",
+    "PaymentMethod": "banktransfer",
+    "InvoiceLine": [
+        {
+            "ItemId": "5dbb40d7-52b5-51b6-809e-5a16dddeb650",
+            "Quantity": 2
+        }
+    ]
+}

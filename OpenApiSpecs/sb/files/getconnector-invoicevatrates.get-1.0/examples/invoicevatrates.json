@@ -1,0 +1,12 @@
+[
+    {
+        "AdministrationCountryId": "afa50000-0000-0f5e-93b9-4fc1abc0cb22",
+        "VatRateId": "afa50000-0000-0b1e-8a4b-309cd658b570",
+        "InstanceId": "88346683-3211-426f-a63b-b79404306fdb"
+    },
+    {
+        "AdministrationCountryId": "afa50000-0000-0f5e-93b9-4fc1abc0cb22",
+        "VatRateId": "afa50000-0000-0465-aa85-e1a761ca3a33",
+        "InstanceId": "117587d7-d354-4f4a-b918-e9d46cf9e30c"
+    }
+]

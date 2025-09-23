@@ -1,0 +1,18 @@
+{
+    "result": "Succeeded",
+    "instances": [
+        {
+            "Code": "Klant",
+            "Id": "3078570a-a152-4fcb-9463-d0e9a63f0120"
+        },
+        {
+            "Code": "Betaler",
+            "Id": "285f9355-0cdf-4b90-a4af-225ed9dd02fa"
+        },
+        {
+            "Code": "VrkpJrnlpstInkomendeBetalingChain",
+            "Id": "0b8aa57c-aec7-5cc1-9b75-775cec63b7c7"
+        }
+    ],
+    "errors": []
+}

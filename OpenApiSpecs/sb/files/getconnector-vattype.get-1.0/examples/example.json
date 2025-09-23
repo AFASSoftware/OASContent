@@ -1,0 +1,18 @@
+[
+    {
+        "Id": "afa50000-0000-02bb-9338-0a6629f07fce",
+        "Description": "Verlegd"
+    },
+    {
+        "Id": "afa50000-0000-0d9c-9502-4fc953f3e012",
+        "Description": "Vrijgesteld"
+    },
+    {
+        "Id": "afa50000-0000-0b71-8790-807f97e85c54",
+        "Description": "Belast"
+    },
+    {
+        "Id": "afa50000-0000-0a2d-9cec-bd890979929c",
+        "Description": "Geen btw"
+    }
+]

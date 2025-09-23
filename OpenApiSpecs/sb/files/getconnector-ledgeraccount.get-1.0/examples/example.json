@@ -1,0 +1,20 @@
+[
+    {
+        "Id": "cfb59b79-b3ec-55ef-8cde-000499c3179e",
+        "Description": "Omzet Algemeen",
+        "LedgerAccountNumber": "8000",
+        "TypeId": "aae9334f-0fa8-43cb-ad52-cff973b4c863",
+        "InstanceId": "cfb59b79-b3ec-55ef-8cde-000499c3179e",
+        "InvestInAsset": false,
+        "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911"
+    },
+    {
+        "Id": "68730415-2a59-50ce-9968-00303319780d",
+        "Description": "Schepen",
+        "LedgerAccountNumber": "0247",
+        "TypeId": "980eb36a-8bec-45d9-97f6-06dd2c551818",
+        "InstanceId": "68730415-2a59-50ce-9968-00303319780d",
+        "InvestInAsset": true,
+        "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911"
+    }
+]

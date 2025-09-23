@@ -1,0 +1,24 @@
+[
+    {
+        "AdministrationId": "d8497bdd-a324-5145-afd0-a78acc7e07a8",
+        "Description": "EnYoi Holding B.V.",
+        "VatNumber": null,
+        "VatTaxNumber": "NL123456782B02",
+        "RsinNumber": "123456782",
+        "FixedFalse": false,
+        "VatExemption": null,
+        "ProjectsInSales": false,
+        "ProjectsInSalesCanDeviate": false
+    },
+    {
+        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+        "Description": "EnYoi ICT Services B.V.",
+        "VatNumber": null,
+        "VatTaxNumber": "NL123456782B01",
+        "RsinNumber": "123456782",
+        "FixedFalse": false,
+        "VatExemption": null,
+        "ProjectsInSales": false,
+        "ProjectsInSalesCanDeviate": false
+    }
+]
