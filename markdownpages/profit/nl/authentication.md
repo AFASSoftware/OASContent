@@ -11,7 +11,7 @@ De AFAS Profit REST API ondersteunt twee manieren van authenticatie:
 1.	Classic token 
 2.	OAuth
     1.	Client credentials flow
-    2.	Autorization code flow
+    2.	Autorization code flow with PKCE
 
 Welke methode er gebruikt wordt, hangt af van de instellingen van de [App Connector](https://docs.afas.help/profit/nl/concepts#app-connector) waarvan gebruikgemaakt wordt.
 
@@ -64,7 +64,7 @@ Wanneer het token niet geldig is of je deze niet correct toepast, krijg je HTTP 
 
 Binnen het OAuth protocol ondersteunen we twee typen flows:
 1.	Client credentials flow
-2.	Authorization code flow
+2.	Authorization code flow with PKCE
 
 
 ### Client credential flow
@@ -90,9 +90,9 @@ Om toegang te krijgen tot de API, volg je de volgende stappen:
         1.	Kopieer de access token, zet er 'Bearer' voor, en voeg hem toe in je Authorization header.
 
 
-### Authorization code flow
+### Authorization code flow with PKCE
 
-De Authorization Code Flow is ideaal voor webapplicaties die namens een gebruiker toegang tot resources moeten verkrijgen. Dit proces begint met gebruikersauthenticatie en autorisatie, waarbij de gebruiker inlogt en toestemming geeft. Vervolgens wordt een autorisatiecode verstrekt, die kan worden ingewisseld voor een access token. Deze flow biedt een veilige manier om toegang te krijgen tot gegevens bij externe services, doordat het de betrokkenheid van de gebruiker vereist voordat toegang wordt verleend.
+De Authorization Code Flow with PKCE is ideaal voor webapplicaties die namens een gebruiker toegang tot resources moeten verkrijgen. Dit proces begint met gebruikersauthenticatie en autorisatie, waarbij de gebruiker inlogt en toestemming geeft. Vervolgens wordt een autorisatiecode verstrekt, die kan worden ingewisseld voor een access token. Deze flow biedt een veilige manier om toegang te krijgen tot gegevens bij externe services, doordat het de betrokkenheid van de gebruiker vereist voordat toegang wordt verleend.
 
 
 #### Stappen voor Toegang tot de API
@@ -105,6 +105,8 @@ Om toegang te krijgen tot de API via de Authorization Code Flow, volg je de volg
         3.	redirect_uri: `<vul redirect URI in>`
         4.	scope: `<vul gewenste scopes in>`
         5.	state: `<optionele unieke waarde ter bescherming tegen CSRF>`
+        6.  code_challenge: `<vul codeChallenge in>`
+        7.  code_challenge_method: `<vul codeChallenge methode in>`
     2.	De gebruiker logt in en geeft toestemming. Na toestemming wordt de gebruiker teruggeleid naar de opgegeven redirect_uri met een autorisatiecode.
 2.	Wissel de Autorisatiecode in voor een Access Token
     1.	Roep het [token endpoint](#token-endpoint) (POST) aan met de volgende informatie in de body:
@@ -113,6 +115,7 @@ Om toegang te krijgen tot de API via de Authorization Code Flow, volg je de volg
         3.	redirect_uri: `<vul redirect URI in>`
         4.	client_id: `<vul client id in>`
         5.	client_secret: `<vul client secret in>`
+        6.  code_verifier: `<vul code verifier in>`
 3.	In de response van deze aanroep vind je de volgende velden:
     1.	access_token: de access token die je in de Authorization header moet toevoegen.
     2.	refresh_token: een token dat kan worden gebruikt om een nieuw access token te verkrijgen.

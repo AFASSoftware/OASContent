@@ -11,7 +11,7 @@ The AFAS Profit REST API supports two authentication methods:
 1. Classic token
 2. OAuth
     1. Client credentials flow
-    2. Authorization code flow
+    2. Authorization code flow with PKCE
 
 Which method is used depends on the settings of the [App Connector](https://docs.afas.help/profit/en/concepts#app-connector) that is being used.
 
@@ -65,7 +65,7 @@ If the token is invalid or not applied correctly you will receive an HTTP 401 re
 
 Within the OAuth protocol we support two flow types:
 1. Client credentials flow
-2. Authorization code flow
+2. Authorization code flow with PKCE
 
 
 ### Client credentials flow
@@ -91,9 +91,9 @@ To access the API, follow these steps:
         1. Copy the access token, prefix it with 'Bearer', and add it to your Authorization header.
 
 
-### Authorization code flow
+### Authorization code flow with PKCE
 
-The Authorization Code Flow is ideal for web applications that need to obtain access to resources on behalf of a user. The process starts with user authentication and authorization, where the user logs in and grants permission. An authorization code is then issued, which can be exchanged for an access token. This flow provides a secure way to access data from external services because it requires the user's involvement before access is granted.
+The Authorization Code Flow with PKCE is ideal for web applications that need to obtain access to resources on behalf of a user. The process starts with user authentication and authorization, where the user logs in and grants permission. An authorization code is then issued, which can be exchanged for an access token. This flow provides a secure way to access data from external services because it requires the user's involvement before access is granted.
 
 
 #### Steps to access the API
@@ -106,6 +106,8 @@ To access the API via the Authorization Code Flow, follow these steps:
         3. redirect_uri: `<fill in redirect URI>`
         4. scope: `<fill in desired scopes>`
         5. state: `<optional unique value to protect against CSRF>`
+        6. code_challenge: `<fill in codeChallenge>`
+        7. code_challenge_method: `<fill in codeChallenge method>`
     2. The user logs in and grants permission. After granting permission the user is redirected back to the provided redirect_uri with an authorization code.
 2. Exchange the authorization code for an access token
     1. Call the [token endpoint](#token-endpoint) (POST) with the following information in the body:
@@ -114,6 +116,7 @@ To access the API via the Authorization Code Flow, follow these steps:
         3. redirect_uri: `<fill in redirect URI>`
         4. client_id: `<fill in client id>`
         5. client_secret: `<fill in client secret>`
+        6. code_verifier: `<fill in code verifier>`
 3. In the response of this call you will find the following fields:
     1. access_token: the access token you must add to the Authorization header.
     2. refresh_token: a token that can be used to obtain a new access token.
