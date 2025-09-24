@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.2",
   "info": {
-    "version": 6.1,
+    "version": null,
     "title": "AFAS SB API",
     "description": "AFAS SB API for integrating with the accounting software for accountants and entrepreneurs."
   },
@@ -377,8 +377,8 @@
     },
     "/api/accountingperiod": {
       "get": {
-        "description": "accountingperiod 2.0",
-        "operationId": "getconnector-accountingperiod.get-2.0",
+        "summary": "accountingperiod 2.0",
+        "operationId": "getconnector-accountingperiod-get-2.0",
         "parameters": [
           {
             "in": "header",
@@ -501,8 +501,8 @@
     },
     "/api/accountingyear": {
       "get": {
-        "summary": "**⚠️ This request is in BETA** \r\n ",
-        "operationId": "getconnector-accountingyear.get-2.0",
+        "summary": "accountingyear 2.0",
+        "operationId": "getconnector-accountingyear-get-2.0",
         "parameters": [
           {
             "in": "header",
@@ -601,14 +601,7 @@
             }
           },
           "404": {
-            "description": "Item Not Found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/reponses/404"
-                }
-              }
-            }
+            "$ref": "#/components/responses/404"
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -625,8 +618,8 @@
     },
     "/api/addresses": {
       "get": {
-        "description": "addresses 1.0",
-        "operationId": "getconnector-addresses.get-1.0",
+        "summary": "addresses 1.0",
+        "operationId": "getconnector-addresses-get-1.0",
         "parameters": [
           {
             "in": "header",
@@ -761,9 +754,9 @@
     },
     "/api/administration": {
       "get": {
-        "description": "administration 1.0",
-        "summary": "ListAdministration",
-        "operationId": "getconnector-administration.get-1.0",
+        "description": "ListAdministration",
+        "summary": "administration 1.0",
+        "operationId": "getconnector-administration-get-1.0",
         "parameters": [
           {
             "in": "header",
@@ -873,9 +866,9 @@
     },
     "/api/administrations": {
       "get": {
-        "description": "administrations 1.0",
-        "summary": "ListAdministrations",
-        "operationId": "getconnector-administrations.get-1.0",
+        "description": "ListAdministrations",
+        "summary": "administrations 1.0",
+        "operationId": "getconnector-administrations-get-1.0",
         "parameters": [
           {
             "in": "header",
@@ -996,9 +989,9 @@
     },
     "/api/bankaccounts": {
       "get": {
-        "description": "bankaccounts 1.0",
-        "summary": "Get bankaccount for organisation or person.",
-        "operationId": "getconnector-bankaccounts.get-1.0",
+        "description": "Get bankaccount for organisation or person.",
+        "summary": "bankaccounts 1.0",
+        "operationId": "getconnector-bankaccounts-get-1.0",
         "parameters": [
           {
             "in": "header",
@@ -1113,8 +1106,8 @@
     },
     "/api/cashregisters": {
       "get": {
-        "description": "cashregisters 1.0",
-        "operationId": "getconnector-cashregisters.get-1.0",
+        "summary": "cashregisters 1.0",
+        "operationId": "getconnector-cashregisters-get-1.0",
         "parameters": [
           {
             "in": "header",
@@ -1221,8 +1214,8 @@
     },
     "/api/contacts": {
       "get": {
-        "description": "contacts 1.0",
-        "operationId": "getconnector-contacts.get-1.0",
+        "summary": "contacts 1.0",
+        "operationId": "getconnector-contacts-get-1.0",
         "parameters": [
           {
             "in": "header",
@@ -1363,9 +1356,9 @@
     },
     "/api/countries": {
       "get": {
-        "description": "countries 1.0",
-        "summary": "ListCountries",
-        "operationId": "getconnector-countries.get-1.0",
+        "description": "ListCountries",
+        "summary": "countries 1.0",
+        "operationId": "getconnector-countries-get-1.0",
         "parameters": [
           {
             "in": "header",
@@ -1472,8 +1465,8 @@
     },
     "/api/creditorbalance": {
       "get": {
-        "description": "creditorbalance 1.0",
-        "operationId": "getconnector-creditorbalance.get-1.0",
+        "summary": "creditorbalance 1.0",
+        "operationId": "getconnector-creditorbalance-get-1.0",
         "parameters": [
           {
             "in": "header",
@@ -1590,8 +1583,8 @@
     },
     "/api/creditorinvoicebalance": {
       "get": {
-        "description": "creditorinvoicebalance 1.0",
-        "operationId": "getconnector-creditorinvoicebalance.get-1.0",
+        "summary": "creditorinvoicebalance 1.0",
+        "operationId": "getconnector-creditorinvoicebalance-get-1.0",
         "parameters": [
           {
             "in": "header",
@@ -1738,8 +1731,8 @@
     },
     "/api/debtorbalance": {
       "get": {
-        "description": "debtorbalance 2.0",
-        "operationId": "getconnector-debtorbalance.get-2.0",
+        "summary": "debtorbalance 2.0",
+        "operationId": "getconnector-debtorbalance-get-2.0",
         "parameters": [
           {
             "in": "header",
@@ -1856,8 +1849,8 @@
     },
     "/api/debtorinvoicebalance": {
       "get": {
-        "description": "debtorinvoicebalance 3.0",
-        "operationId": "getconnector-debtorinvoicebalance.get-3.0",
+        "summary": "debtorinvoicebalance 3.0",
+        "operationId": "getconnector-debtorinvoicebalance-get-3.0",
         "parameters": [
           {
             "in": "header",
@@ -1999,8 +1992,8 @@
     },
     "/api/debtorpaymentterms": {
       "get": {
-        "description": "debtorpaymentterms 1.0",
-        "operationId": "getconnector-debtorpaymentterms.get-1.0",
+        "summary": "debtorpaymentterms 1.0",
+        "operationId": "getconnector-debtorpaymentterms-get-1.0",
         "parameters": [
           {
             "in": "query",
@@ -2143,8 +2136,8 @@
     },
     "/api/featuretoggles": {
       "get": {
-        "description": "featuretoggles 1.0",
-        "operationId": "getconnector-featuretoggles.get-1.0",
+        "summary": "featuretoggles 1.0",
+        "operationId": "getconnector-featuretoggles-get-1.0",
         "parameters": [
           {
             "in": "header",
@@ -2264,8 +2257,8 @@
     },
     "/api/journalentries": {
       "get": {
-        "description": "journalentries 1.1",
-        "operationId": "getconnector-journalentries.get-1.1",
+        "summary": "journalentries 1.1",
+        "operationId": "getconnector-journalentries-get-1.1",
         "parameters": [
           {
             "in": "header",
@@ -2472,9 +2465,9 @@
     },
     "/api/ledgeraccounts": {
       "get": {
-        "description": "ledgeraccounts 1.0",
-        "summary": "ListLedgeraccounts",
-        "operationId": "getconnector-ledgeraccounts.get-1.0",
+        "description": "ListLedgeraccounts",
+        "summary": "ledgeraccounts 1.0",
+        "operationId": "getconnector-ledgeraccounts-get-1.0",
         "parameters": [
           {
             "in": "header",
@@ -2620,8 +2613,8 @@
     },
     "/api/ledgerperiodtotals": {
       "get": {
-        "description": "ledgerperiodtotals 1.0",
-        "operationId": "getconnector-ledgerperiodtotals.get-1.0",
+        "summary": "ledgerperiodtotals 1.0",
+        "operationId": "getconnector-ledgerperiodtotals-get-1.0",
         "parameters": [
           {
             "in": "header",
@@ -2774,8 +2767,8 @@
     },
     "/api/linestobeinvoiced": {
       "get": {
-        "description": "linestobeinvoiced 1.0",
-        "operationId": "getconnector-linestobeinvoiced.get-1.0",
+        "summary": "linestobeinvoiced 1.0",
+        "operationId": "getconnector-linestobeinvoiced-get-1.0",
         "parameters": [
           {
             "in": "query",
@@ -3036,8 +3029,8 @@
         ]
       },
       "post": {
-        "description": "linestobeinvoiced 1.0",
-        "operationId": "updateconnector-linestobeinvoiced.Post-1.0",
+        "summary": "linestobeinvoiced 1.0",
+        "operationId": "updateconnector-linestobeinvoiced-Post-1.0",
         "parameters": [
           {
             "in": "header",
@@ -3067,6 +3060,7 @@
           }
         ],
         "requestBody": {
+          "description": "linestobeinvoiced 1.0",
           "required": true,
           "content": {
             "application/json": {
@@ -3092,8 +3086,8 @@
         ]
       },
       "delete": {
-        "description": "linestobeinvoiced 1.0",
-        "operationId": "updateconnector-linestobeinvoiced.Delete-1.0",
+        "summary": "linestobeinvoiced 1.0",
+        "operationId": "updateconnector-linestobeinvoiced-Delete-1.0",
         "parameters": [
           {
             "in": "header",
@@ -3123,6 +3117,7 @@
           }
         ],
         "requestBody": {
+          "description": "linestobeinvoiced 1.0",
           "required": true,
           "content": {
             "application/json": {
@@ -3148,8 +3143,8 @@
         ]
       },
       "put": {
-        "description": "linestobeinvoiced 1.0",
-        "operationId": "updateconnector-linestobeinvoiced.Put-1.0",
+        "summary": "linestobeinvoiced 1.0",
+        "operationId": "updateconnector-linestobeinvoiced-Put-1.0",
         "parameters": [
           {
             "in": "header",
@@ -3179,6 +3174,7 @@
           }
         ],
         "requestBody": {
+          "description": "linestobeinvoiced 1.0",
           "required": true,
           "content": {
             "application/json": {
@@ -3206,8 +3202,8 @@
     },
     "/api/organisations": {
       "get": {
-        "description": "organisations 2.0",
-        "operationId": "getconnector-organisations.get-2.0",
+        "summary": "organisations 2.0",
+        "operationId": "getconnector-organisations-get-2.0",
         "parameters": [
           {
             "in": "header",
@@ -3341,8 +3337,8 @@
     },
     "/api/paymentconditions": {
       "get": {
-        "description": "paymentconditions 1.0",
-        "operationId": "getconnector-paymentconditions.get-1.0",
+        "summary": "paymentconditions 1.0",
+        "operationId": "getconnector-paymentconditions-get-1.0",
         "parameters": [
           {
             "in": "header",
@@ -3453,8 +3449,8 @@
     },
     "/api/persons": {
       "get": {
-        "description": "persons 2.0",
-        "operationId": "getconnector-persons.get-2.0",
+        "summary": "persons 2.0",
+        "operationId": "getconnector-persons-get-2.0",
         "parameters": [
           {
             "in": "header",
@@ -3588,8 +3584,8 @@
     },
     "/api/products": {
       "get": {
-        "description": "products 3.0",
-        "operationId": "getconnector-products.get-3.0",
+        "summary": "products 3.0",
+        "operationId": "getconnector-products-get-3.0",
         "parameters": [
           {
             "in": "header",
@@ -3816,8 +3812,8 @@
     },
     "/api/projects": {
       "get": {
-        "description": "projects 1.0",
-        "operationId": "getconnector-projects.get-1.0",
+        "summary": "projects 1.0",
+        "operationId": "getconnector-projects-get-1.0",
         "parameters": [
           {
             "in": "header",
@@ -3924,9 +3920,9 @@
     },
     "/api/salesinvoices": {
       "get": {
-        "description": "salesinvoices 1.0",
-        "summary": "ListSalesInvoices",
-        "operationId": "getconnector-salesinvoices.get-1.0",
+        "description": "ListSalesInvoices",
+        "summary": "salesinvoices 1.0",
+        "operationId": "getconnector-salesinvoices-get-1.0",
         "parameters": [
           {
             "in": "query",
@@ -4211,8 +4207,8 @@
     },
     "/api/salespricesperrelation": {
       "get": {
-        "description": "salespricesperrelation 1.0",
-        "operationId": "getconnector-salespricesperrelation.get-1.0",
+        "summary": "salespricesperrelation 1.0",
+        "operationId": "getconnector-salespricesperrelation-get-1.0",
         "parameters": [
           {
             "in": "header",
@@ -4343,8 +4339,8 @@
     },
     "/api/salesrelations": {
       "get": {
-        "description": "salesrelations 1.0",
-        "operationId": "getconnector-salesrelations.get-1.0",
+        "summary": "salesrelations 1.0",
+        "operationId": "getconnector-salesrelations-get-1.0",
         "parameters": [
           {
             "in": "header",
@@ -4461,8 +4457,8 @@
     },
     "/api/unknownrelation": {
       "get": {
-        "description": "unknownrelation 1.0",
-        "operationId": "getconnector-unknownrelation.get-1.0",
+        "summary": "unknownrelation 1.0",
+        "operationId": "getconnector-unknownrelation-get-1.0",
         "parameters": [
           {
             "in": "header",
@@ -4579,9 +4575,9 @@
     },
     "/api/vatrate": {
       "get": {
-        "description": "vatrate 1.0",
-        "summary": "ListVatRates",
-        "operationId": "getconnector-vatrate.get-1.0",
+        "description": "ListVatRates",
+        "summary": "vatrate 1.0",
+        "operationId": "getconnector-vatrate-get-1.0",
         "parameters": [
           {
             "in": "header",
@@ -4683,9 +4679,9 @@
     },
     "/api/vattype": {
       "get": {
-        "description": "vattype 1.0",
-        "summary": "ListVatTypes",
-        "operationId": "getconnector-vattype.get-1.0",
+        "description": "ListVatTypes",
+        "summary": "vattype 1.0",
+        "operationId": "getconnector-vattype-get-1.0",
         "parameters": [
           {
             "in": "header",
@@ -4787,8 +4783,8 @@
     },
     "/api/address": {
       "post": {
-        "description": "address 1.0",
-        "operationId": "updateconnector-address.Post-1.0",
+        "summary": "address 1.0",
+        "operationId": "updateconnector-address-Post-1.0",
         "parameters": [
           {
             "in": "header",
@@ -4818,6 +4814,7 @@
           }
         ],
         "requestBody": {
+          "description": "address 1.0",
           "required": true,
           "content": {
             "application/json": {
@@ -4844,8 +4841,8 @@
     },
     "/api/bankaccount": {
       "post": {
-        "description": "bankaccount 1.0",
-        "operationId": "updateconnector-bankaccount.Post-1.0",
+        "summary": "bankaccount 1.0",
+        "operationId": "updateconnector-bankaccount-Post-1.0",
         "parameters": [
           {
             "in": "header",
@@ -4875,6 +4872,7 @@
           }
         ],
         "requestBody": {
+          "description": "bankaccount 1.0",
           "required": true,
           "content": {
             "application/json": {
@@ -4901,8 +4899,8 @@
     },
     "/api/cashmutation": {
       "post": {
-        "description": "cashmutation 3.0",
-        "operationId": "updateconnector-cashmutation.Post-3.0",
+        "summary": "cashmutation 3.0",
+        "operationId": "updateconnector-cashmutation-Post-3.0",
         "parameters": [
           {
             "in": "header",
@@ -4932,6 +4930,7 @@
           }
         ],
         "requestBody": {
+          "description": "cashmutation 3.0",
           "required": true,
           "content": {
             "application/json": {
@@ -4959,9 +4958,9 @@
     },
     "/api/contact": {
       "post": {
-        "description": "contact 2.0",
-        "summary": "Contact",
-        "operationId": "updateconnector-contact.Post-2.0",
+        "description": "Contact",
+        "summary": "contact 2.0",
+        "operationId": "updateconnector-contact-Post-2.0",
         "parameters": [
           {
             "in": "header",
@@ -4991,7 +4990,7 @@
           }
         ],
         "requestBody": {
-          "description": "Contact",
+          "description": "contact 2.0",
           "required": true,
           "content": {
             "application/json": {
@@ -5018,9 +5017,9 @@
     },
     "/api/emailaddress": {
       "post": {
-        "description": "emailaddress 2.0",
-        "summary": "CreateEmailAddress",
-        "operationId": "updateconnector-emailaddress.Post-2.0",
+        "description": "CreateEmailAddress",
+        "summary": "emailaddress 2.0",
+        "operationId": "updateconnector-emailaddress-Post-2.0",
         "parameters": [
           {
             "in": "header",
@@ -5050,7 +5049,7 @@
           }
         ],
         "requestBody": {
-          "description": "CreateEmailAddress",
+          "description": "emailaddress 2.0",
           "required": true,
           "content": {
             "application/json": {
@@ -5077,8 +5076,8 @@
     },
     "/api/financialjournalentry": {
       "post": {
-        "description": "financialjournalentry 1.0",
-        "operationId": "updateconnector-financialjournalentry.Post-1.0",
+        "summary": "financialjournalentry 1.0",
+        "operationId": "updateconnector-financialjournalentry-Post-1.0",
         "parameters": [
           {
             "in": "header",
@@ -5108,6 +5107,7 @@
           }
         ],
         "requestBody": {
+          "description": "financialjournalentry 1.0",
           "required": true,
           "content": {
             "application/json": {
@@ -5133,8 +5133,8 @@
         ]
       },
       "delete": {
-        "description": "financialjournalentry 1.0",
-        "operationId": "updateconnector-financialjournalentry.Delete-1.0",
+        "summary": "financialjournalentry 1.0",
+        "operationId": "updateconnector-financialjournalentry-Delete-1.0",
         "parameters": [
           {
             "in": "header",
@@ -5164,6 +5164,7 @@
           }
         ],
         "requestBody": {
+          "description": "financialjournalentry 1.0",
           "required": true,
           "content": {
             "application/json": {
@@ -5191,8 +5192,8 @@
     },
     "/api/mandates": {
       "post": {
-        "description": "mandates 1.0",
-        "operationId": "updateconnector-mandates.Post-1.0",
+        "summary": "mandates 1.0",
+        "operationId": "updateconnector-mandates-Post-1.0",
         "parameters": [
           {
             "in": "header",
@@ -5222,6 +5223,7 @@
           }
         ],
         "requestBody": {
+          "description": "mandates 1.0",
           "required": true,
           "content": {
             "application/json": {
@@ -5251,8 +5253,8 @@
     },
     "/api/organisation": {
       "post": {
-        "description": "organisation 4.0",
-        "operationId": "updateconnector-organisation.Post-4.0",
+        "summary": "organisation 4.0",
+        "operationId": "updateconnector-organisation-Post-4.0",
         "parameters": [
           {
             "in": "header",
@@ -5282,6 +5284,7 @@
           }
         ],
         "requestBody": {
+          "description": "organisation 4.0",
           "required": true,
           "content": {
             "application/json": {
@@ -5309,8 +5312,8 @@
         ]
       },
       "put": {
-        "description": "organisation 4.0",
-        "operationId": "updateconnector-organisation.Put-4.0",
+        "summary": "organisation 4.0",
+        "operationId": "updateconnector-organisation-Put-4.0",
         "parameters": [
           {
             "in": "header",
@@ -5340,6 +5343,7 @@
           }
         ],
         "requestBody": {
+          "description": "organisation 4.0",
           "required": true,
           "content": {
             "application/json": {
@@ -5369,8 +5373,8 @@
     },
     "/api/payrolljournalentry": {
       "post": {
-        "description": "payrolljournalentry 1.0",
-        "operationId": "updateconnector-payrolljournalentry.Post-1.0",
+        "summary": "payrolljournalentry 1.0",
+        "operationId": "updateconnector-payrolljournalentry-Post-1.0",
         "parameters": [
           {
             "in": "header",
@@ -5400,6 +5404,7 @@
           }
         ],
         "requestBody": {
+          "description": "payrolljournalentry 1.0",
           "required": true,
           "content": {
             "application/json": {
@@ -5426,8 +5431,8 @@
     },
     "/api/person": {
       "post": {
-        "description": "person 4.0",
-        "operationId": "updateconnector-person.Post-4.0",
+        "summary": "person 4.0",
+        "operationId": "updateconnector-person-Post-4.0",
         "parameters": [
           {
             "in": "header",
@@ -5457,6 +5462,7 @@
           }
         ],
         "requestBody": {
+          "description": "person 4.0",
           "required": true,
           "content": {
             "application/json": {
@@ -5484,8 +5490,8 @@
         ]
       },
       "put": {
-        "description": "person 4.0",
-        "operationId": "updateconnector-person.Put-4.0",
+        "summary": "person 4.0",
+        "operationId": "updateconnector-person-Put-4.0",
         "parameters": [
           {
             "in": "header",
@@ -5515,6 +5521,7 @@
           }
         ],
         "requestBody": {
+          "description": "person 4.0",
           "required": true,
           "content": {
             "application/json": {
@@ -5544,9 +5551,9 @@
     },
     "/api/phonenumber": {
       "post": {
-        "description": "phonenumber 1.0",
-        "summary": "CreatePhoneNumber",
-        "operationId": "updateconnector-phonenumber.Post-1.0",
+        "description": "CreatePhoneNumber",
+        "summary": "phonenumber 1.0",
+        "operationId": "updateconnector-phonenumber-Post-1.0",
         "parameters": [
           {
             "in": "header",
@@ -5576,7 +5583,7 @@
           }
         ],
         "requestBody": {
-          "description": "CreatePhoneNumber",
+          "description": "phonenumber 1.0",
           "required": true,
           "content": {
             "application/json": {
@@ -5603,8 +5610,8 @@
     },
     "/api/purchasejournalentry": {
       "post": {
-        "description": "purchasejournalentry 1.1",
-        "operationId": "updateconnector-purchasejournalentry.Post-1.1",
+        "summary": "purchasejournalentry 1.1",
+        "operationId": "updateconnector-purchasejournalentry-Post-1.1",
         "parameters": [
           {
             "in": "header",
@@ -5634,6 +5641,7 @@
           }
         ],
         "requestBody": {
+          "description": "purchasejournalentry 1.1",
           "required": true,
           "content": {
             "application/json": {
@@ -5660,8 +5668,8 @@
     },
     "/api/salesinvoice": {
       "post": {
-        "description": "salesinvoice 2.0",
-        "operationId": "updateconnector-salesinvoice.Post-2.0",
+        "summary": "salesinvoice 2.0",
+        "operationId": "updateconnector-salesinvoice-Post-2.0",
         "parameters": [
           {
             "in": "header",
@@ -5691,6 +5699,7 @@
           }
         ],
         "requestBody": {
+          "description": "salesinvoice 2.0",
           "required": true,
           "content": {
             "application/json": {
@@ -5716,8 +5725,8 @@
         ]
       },
       "delete": {
-        "description": "salesinvoice 2.0",
-        "operationId": "updateconnector-salesinvoice.Delete-2.0",
+        "summary": "salesinvoice 2.0",
+        "operationId": "updateconnector-salesinvoice-Delete-2.0",
         "parameters": [
           {
             "in": "header",
@@ -5747,6 +5756,7 @@
           }
         ],
         "requestBody": {
+          "description": "salesinvoice 2.0",
           "required": true,
           "content": {
             "application/json": {
@@ -5774,8 +5784,8 @@
     },
     "/api/salesjournalentry": {
       "post": {
-        "description": "salesjournalentry 2.0",
-        "operationId": "updateconnector-salesjournalentry.Post-2.0",
+        "summary": "salesjournalentry 2.0",
+        "operationId": "updateconnector-salesjournalentry-Post-2.0",
         "parameters": [
           {
             "in": "header",
@@ -5805,6 +5815,7 @@
           }
         ],
         "requestBody": {
+          "description": "salesjournalentry 2.0",
           "required": true,
           "content": {
             "application/json": {
@@ -5830,8 +5841,8 @@
         ]
       },
       "delete": {
-        "description": "salesjournalentry 2.0",
-        "operationId": "updateconnector-salesjournalentry.Delete-2.0",
+        "summary": "salesjournalentry 2.0",
+        "operationId": "updateconnector-salesjournalentry-Delete-2.0",
         "parameters": [
           {
             "in": "header",
@@ -5861,6 +5872,7 @@
           }
         ],
         "requestBody": {
+          "description": "salesjournalentry 2.0",
           "required": true,
           "content": {
             "application/json": {
@@ -5886,8 +5898,8 @@
         ]
       },
       "put": {
-        "description": "salesjournalentry 2.0",
-        "operationId": "updateconnector-salesjournalentry.Put-2.0",
+        "summary": "salesjournalentry 2.0",
+        "operationId": "updateconnector-salesjournalentry-Put-2.0",
         "parameters": [
           {
             "in": "header",
@@ -5917,6 +5929,7 @@
           }
         ],
         "requestBody": {
+          "description": "salesjournalentry 2.0",
           "required": true,
           "content": {
             "application/json": {
@@ -5944,8 +5957,8 @@
     },
     "/api/supplier": {
       "post": {
-        "description": "supplier 1.0",
-        "operationId": "updateconnector-supplier.Post-1.0",
+        "summary": "supplier 1.0",
+        "operationId": "updateconnector-supplier-Post-1.0",
         "parameters": [
           {
             "in": "header",
@@ -5975,6 +5988,7 @@
           }
         ],
         "requestBody": {
+          "description": "supplier 1.0",
           "required": true,
           "content": {
             "application/json": {
