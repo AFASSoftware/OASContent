@@ -7,7 +7,7 @@ tags: kandidaat, flex, front, back, office
 
 ## Inleiding
 
-Hier lees je de standaard opzet voor het werken met een ATS in combinatie met de Flex module van AFAS Profit voor de Backoffice. Deze beschrijving richt zich op het onboarden van een nieuwe kandidaat die door de selectieprocedure is gekomen in de frontoffice en nu als medewerker aangemaakt moet worden. Hierin kan er weining informatie van de kandidaat beschikbaar zijn. AFAS vraagt nadat de kandidaat is aangemaakt deze gegevens automatisch via een workflow op.
+Hier lees je de standaard opzet voor het werken met een ATS in combinatie met de Flex module van AFAS Profit voor de Backoffice. Deze beschrijving richt zich op het onboarden van een nieuwe kandidaat die door de selectieprocedure is gekomen in de frontoffice en nu als medewerker aangemaakt moet worden. Hierin kan er weinig informatie van de kandidaat beschikbaar zijn. AFAS vraagt nadat de kandidaat is aangemaakt deze gegevens automatisch via een workflow op.
 
 - Ophalen bestaande personen
 - Aanmaken nieuwe persoon
