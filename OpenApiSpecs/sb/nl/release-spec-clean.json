@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.2",
   "info": {
-    "version": null,
+    "version": 7.0,
     "title": "AFAS SB API",
     "description": "AFAS SB API for integrating with the accounting software for accountants and entrepreneurs."
   },
@@ -377,6 +377,7 @@
     },
     "/api/accountingperiod": {
       "get": {
+        "description": "Retrieve accounting periods for a specific administration",
         "summary": "accountingperiod 2.0",
         "operationId": "getconnector-accountingperiod-get-2.0",
         "parameters": [
@@ -501,6 +502,7 @@
     },
     "/api/accountingyear": {
       "get": {
+        "description": "Retrieve accounting years for financial reporting periods",
         "summary": "accountingyear 2.0",
         "operationId": "getconnector-accountingyear-get-2.0",
         "parameters": [
@@ -618,6 +620,7 @@
     },
     "/api/addresses": {
       "get": {
+        "description": "Retrieve multiple addresses with detailed contact information",
         "summary": "addresses 1.0",
         "operationId": "getconnector-addresses-get-1.0",
         "parameters": [
@@ -1106,6 +1109,7 @@
     },
     "/api/cashregisters": {
       "get": {
+        "description": "Retrieve cash register configurations and settings",
         "summary": "cashregisters 1.0",
         "operationId": "getconnector-cashregisters-get-1.0",
         "parameters": [
@@ -1214,6 +1218,7 @@
     },
     "/api/contacts": {
       "get": {
+        "description": "Retrieve contact information for persons and organizations",
         "summary": "contacts 1.0",
         "operationId": "getconnector-contacts-get-1.0",
         "parameters": [
@@ -1465,6 +1470,7 @@
     },
     "/api/creditorbalance": {
       "get": {
+        "description": "Retrieve creditor balance information for suppliers",
         "summary": "creditorbalance 1.0",
         "operationId": "getconnector-creditorbalance-get-1.0",
         "parameters": [
@@ -1583,6 +1589,7 @@
     },
     "/api/creditorinvoicebalance": {
       "get": {
+        "description": "Retrieve creditor invoice balance details for payable transactions",
         "summary": "creditorinvoicebalance 1.0",
         "operationId": "getconnector-creditorinvoicebalance-get-1.0",
         "parameters": [
@@ -1731,6 +1738,7 @@
     },
     "/api/debtorbalance": {
       "get": {
+        "description": "Retrieve debtor balance information for customers",
         "summary": "debtorbalance 2.0",
         "operationId": "getconnector-debtorbalance-get-2.0",
         "parameters": [
@@ -1849,6 +1857,7 @@
     },
     "/api/debtorinvoicebalance": {
       "get": {
+        "description": "Retrieve debtor invoice balance details for receivable transactions",
         "summary": "debtorinvoicebalance 3.0",
         "operationId": "getconnector-debtorinvoicebalance-get-3.0",
         "parameters": [
@@ -1992,6 +2001,7 @@
     },
     "/api/debtorpaymentterms": {
       "get": {
+        "description": "Retrieve payment terms configured for debtor relationships",
         "summary": "debtorpaymentterms 1.0",
         "operationId": "getconnector-debtorpaymentterms-get-1.0",
         "parameters": [
@@ -2136,6 +2146,7 @@
     },
     "/api/featuretoggles": {
       "get": {
+        "description": "Retrieve feature toggle settings and configurations",
         "summary": "featuretoggles 1.0",
         "operationId": "getconnector-featuretoggles-get-1.0",
         "parameters": [
@@ -2257,6 +2268,7 @@
     },
     "/api/journalentries": {
       "get": {
+        "description": "Retrieve journal entries for financial bookkeeping",
         "summary": "journalentries 1.1",
         "operationId": "getconnector-journalentries-get-1.1",
         "parameters": [
@@ -2613,6 +2625,7 @@
     },
     "/api/ledgerperiodtotals": {
       "get": {
+        "description": "Retrieve ledger account totals grouped by period for reporting",
         "summary": "ledgerperiodtotals 1.0",
         "operationId": "getconnector-ledgerperiodtotals-get-1.0",
         "parameters": [
@@ -2767,6 +2780,7 @@
     },
     "/api/linestobeinvoiced": {
       "get": {
+        "description": "Retrieve lines that are pending to be invoiced",
         "summary": "linestobeinvoiced 1.0",
         "operationId": "getconnector-linestobeinvoiced-get-1.0",
         "parameters": [
@@ -3029,6 +3043,7 @@
         ]
       },
       "post": {
+        "description": "Create lines to be invoiced for billing processes",
         "summary": "linestobeinvoiced 1.0",
         "operationId": "updateconnector-linestobeinvoiced-Post-1.0",
         "parameters": [
@@ -3086,6 +3101,7 @@
         ]
       },
       "delete": {
+        "description": "Delete lines to be invoiced from billing processes",
         "summary": "linestobeinvoiced 1.0",
         "operationId": "updateconnector-linestobeinvoiced-Delete-1.0",
         "parameters": [
@@ -3143,6 +3159,7 @@
         ]
       },
       "put": {
+        "description": "Update lines to be invoiced for billing processes",
         "summary": "linestobeinvoiced 1.0",
         "operationId": "updateconnector-linestobeinvoiced-Put-1.0",
         "parameters": [
@@ -3202,6 +3219,7 @@
     },
     "/api/organisations": {
       "get": {
+        "description": "Retrieve organization information and business details",
         "summary": "organisations 2.0",
         "operationId": "getconnector-organisations-get-2.0",
         "parameters": [
@@ -3337,6 +3355,7 @@
     },
     "/api/paymentconditions": {
       "get": {
+        "description": "Retrieve payment conditions and terms settings",
         "summary": "paymentconditions 1.0",
         "operationId": "getconnector-paymentconditions-get-1.0",
         "parameters": [
@@ -3449,6 +3468,7 @@
     },
     "/api/persons": {
       "get": {
+        "description": "Retrieve person information and personal details",
         "summary": "persons 2.0",
         "operationId": "getconnector-persons-get-2.0",
         "parameters": [
@@ -3584,6 +3604,7 @@
     },
     "/api/products": {
       "get": {
+        "description": "Retrieve product catalog with pricing and inventory information",
         "summary": "products 3.0",
         "operationId": "getconnector-products-get-3.0",
         "parameters": [
@@ -3812,6 +3833,7 @@
     },
     "/api/projects": {
       "get": {
+        "description": "Retrieve project information for time tracking and billing",
         "summary": "projects 1.0",
         "operationId": "getconnector-projects-get-1.0",
         "parameters": [
@@ -4207,6 +4229,7 @@
     },
     "/api/salespricesperrelation": {
       "get": {
+        "description": "Retrieve sales prices configured per customer relation",
         "summary": "salespricesperrelation 1.0",
         "operationId": "getconnector-salespricesperrelation-get-1.0",
         "parameters": [
@@ -4339,6 +4362,7 @@
     },
     "/api/salesrelations": {
       "get": {
+        "description": "Retrieve sales relations and customer account information",
         "summary": "salesrelations 1.0",
         "operationId": "getconnector-salesrelations-get-1.0",
         "parameters": [
@@ -4457,6 +4481,7 @@
     },
     "/api/unknownrelation": {
       "get": {
+        "description": "Retrieve unidentified relations for data cleanup and validation",
         "summary": "unknownrelation 1.0",
         "operationId": "getconnector-unknownrelation-get-1.0",
         "parameters": [
@@ -4783,6 +4808,7 @@
     },
     "/api/address": {
       "post": {
+        "description": "Create new address information for organizations and persons",
         "summary": "address 1.0",
         "operationId": "updateconnector-address-Post-1.0",
         "parameters": [
@@ -4841,6 +4867,7 @@
     },
     "/api/bankaccount": {
       "post": {
+        "description": "Create new bank account information for financial transactions",
         "summary": "bankaccount 1.0",
         "operationId": "updateconnector-bankaccount-Post-1.0",
         "parameters": [
@@ -4899,6 +4926,7 @@
     },
     "/api/cashmutation": {
       "post": {
+        "description": "Create cash mutations for cash register transactions",
         "summary": "cashmutation 3.0",
         "operationId": "updateconnector-cashmutation-Post-3.0",
         "parameters": [
@@ -5076,6 +5104,7 @@
     },
     "/api/financialjournalentry": {
       "post": {
+        "description": "Create financial journal entries for bookkeeping",
         "summary": "financialjournalentry 1.0",
         "operationId": "updateconnector-financialjournalentry-Post-1.0",
         "parameters": [
@@ -5133,6 +5162,7 @@
         ]
       },
       "delete": {
+        "description": "Delete financial journal entries from bookkeeping",
         "summary": "financialjournalentry 1.0",
         "operationId": "updateconnector-financialjournalentry-Delete-1.0",
         "parameters": [
@@ -5192,6 +5222,7 @@
     },
     "/api/mandates": {
       "post": {
+        "description": "Create SEPA direct debit mandates for automated payments",
         "summary": "mandates 1.0",
         "operationId": "updateconnector-mandates-Post-1.0",
         "parameters": [
@@ -5253,6 +5284,7 @@
     },
     "/api/organisation": {
       "post": {
+        "description": "Create new organization records and business relationships",
         "summary": "organisation 4.0",
         "operationId": "updateconnector-organisation-Post-4.0",
         "parameters": [
@@ -5312,6 +5344,7 @@
         ]
       },
       "put": {
+        "description": "Update existing organization records and business relationships",
         "summary": "organisation 4.0",
         "operationId": "updateconnector-organisation-Put-4.0",
         "parameters": [
@@ -5373,6 +5406,7 @@
     },
     "/api/payrolljournalentry": {
       "post": {
+        "description": "Create payroll journal entries for salary processing",
         "summary": "payrolljournalentry 1.0",
         "operationId": "updateconnector-payrolljournalentry-Post-1.0",
         "parameters": [
@@ -5431,6 +5465,7 @@
     },
     "/api/person": {
       "post": {
+        "description": "Create new person records and personal relationships",
         "summary": "person 4.0",
         "operationId": "updateconnector-person-Post-4.0",
         "parameters": [
@@ -5490,6 +5525,7 @@
         ]
       },
       "put": {
+        "description": "Update existing person records and personal relationships",
         "summary": "person 4.0",
         "operationId": "updateconnector-person-Put-4.0",
         "parameters": [
@@ -5610,6 +5646,7 @@
     },
     "/api/purchasejournalentry": {
       "post": {
+        "description": "Create purchase journal entries for supplier transactions",
         "summary": "purchasejournalentry 1.1",
         "operationId": "updateconnector-purchasejournalentry-Post-1.1",
         "parameters": [
@@ -5668,6 +5705,7 @@
     },
     "/api/salesinvoice": {
       "post": {
+        "description": "Create sales invoices for customer billing",
         "summary": "salesinvoice 2.0",
         "operationId": "updateconnector-salesinvoice-Post-2.0",
         "parameters": [
@@ -5725,6 +5763,7 @@
         ]
       },
       "delete": {
+        "description": "Delete sales invoices from customer billing",
         "summary": "salesinvoice 2.0",
         "operationId": "updateconnector-salesinvoice-Delete-2.0",
         "parameters": [
@@ -5784,6 +5823,7 @@
     },
     "/api/salesjournalentry": {
       "post": {
+        "description": "Create sales journal entries for customer transactions",
         "summary": "salesjournalentry 2.0",
         "operationId": "updateconnector-salesjournalentry-Post-2.0",
         "parameters": [
@@ -5841,6 +5881,7 @@
         ]
       },
       "delete": {
+        "description": "Delete sales journal entries from customer transactions",
         "summary": "salesjournalentry 2.0",
         "operationId": "updateconnector-salesjournalentry-Delete-2.0",
         "parameters": [
@@ -5898,6 +5939,7 @@
         ]
       },
       "put": {
+        "description": "Update sales journal entries for customer transactions",
         "summary": "salesjournalentry 2.0",
         "operationId": "updateconnector-salesjournalentry-Put-2.0",
         "parameters": [
@@ -5957,6 +5999,7 @@
     },
     "/api/supplier": {
       "post": {
+        "description": "Create new supplier relationships and vendor setup",
         "summary": "supplier 1.0",
         "operationId": "updateconnector-supplier-Post-1.0",
         "parameters": [
