@@ -1,7 +1,7 @@
 ---
 title: New in Profit 7
 author: EZW
-date: 2025-08-25
+date: 2025-10-06
 tags: Profit7
 ---
 
@@ -41,7 +41,7 @@ Please note: the format of the results is different. If you use a standard XML/J
 - The result now comes in one long line without extra line breaks
 - These changes may impact custom string processing of raw JSON
 
-With a metainfo request, you can easily query which endpoints are available. With metainfo/get, you get insight into the available fields in a GetConnector. With metainfo/update, you can see which fields you can populate in an UpdateConnector.
+With a `metainfo` request, you can easily query which endpoints are available. With `metainfo/get`, you get insight into the available fields in a GetConnector. With `metainfo/update`, you can see which fields you can populate in an UpdateConnector.
 
 ## Other changes
 
