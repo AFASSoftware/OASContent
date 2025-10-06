@@ -30,6 +30,19 @@ Deze wijziging levert de volgende voordelen op:
 - De applicatieservers nemen dit werk over, deze zijn makkelijker uit te breiden
 - Het geeft meer kansen voor verbeteringen in de toekomst
 
+### Gewijzigde formattering van de metainfo-request (REST)
+
+Dit geldt voor de volgende requests:
+- /metainfo
+- /metainfo/get/<GetConnector>
+- /metainfo/update/<UpdateConnector>
+
+Let op: het formaat van de resultaten is anders. Als je gebruik maakt van een standaard XML/JSON parser zal dit geen probleem geven.
+- Het resultaat komt nu in één lange regel zonder extra regelafbreking
+- Deze aanpassingen kunnen invloed hebben op aangepaste string verwerking van ruwe JSON
+
+Met een metainfo request vraag je eenvoudig op welke endpoints beschikbaar zijn. Met metainfo/get krijg je inzicht in de beschikbare velden in een GetConnector. Met metainfo/update zie je welke velden je in kunt vullen bij een UpdateConnector.
+
 ## Overige wijzigingen
 
 ### Nieuwe gegevensverzameling: Verstrekkingswijze CC
