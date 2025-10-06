@@ -1,7 +1,7 @@
 ---
 title: Nieuw in Profit 7
 author: EZW
-date: 2025-08-25
+date: 2025-10-06
 tags: Profit7
 ---
 
@@ -41,7 +41,7 @@ Let op: het formaat van de resultaten is anders. Als je gebruik maakt van een st
 - Het resultaat komt nu in één lange regel zonder extra regelafbreking
 - Deze aanpassingen kunnen invloed hebben op aangepaste string verwerking van ruwe JSON
 
-Met een metainfo request vraag je eenvoudig op welke endpoints beschikbaar zijn. Met metainfo/get krijg je inzicht in de beschikbare velden in een GetConnector. Met metainfo/update zie je welke velden je in kunt vullen bij een UpdateConnector.
+Met een `metainfo` request vraag je eenvoudig op welke endpoints beschikbaar zijn. Met `metainfo/get` krijg je inzicht in de beschikbare velden in een GetConnector. Met `metainfo/update` zie je welke velden je in kunt vullen bij een UpdateConnector.
 
 ## Overige wijzigingen
 
