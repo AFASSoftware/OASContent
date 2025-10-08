@@ -99,7 +99,7 @@ De Authorization Code Flow with PKCE is ideaal voor webapplicaties die namens ee
 
 Om toegang te krijgen tot de API via de Authorization Code Flow, volg je de volgende stappen:
 1.	Verkrijg een Autorisatiecode
-    1.	Leid de gebruiker naar het [autorisatie endpoint](#authorization-endpoint) met de volgende parameters:
+    1.	Leid de gebruiker naar het [autorisatie endpoint](#authorization-endpoint) (GET) met de volgende parameters:
         1.	response_type: code
         2. 	client_id: `<vul client id in>`
         3.	redirect_uri: `<vul redirect URI in>`
