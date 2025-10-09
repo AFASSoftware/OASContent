@@ -1,0 +1,4767 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "version": "6.2.0",
+    "title": "AFAS SB API",
+    "description": "AFAS SB API for integrating with the accounting software for accountants and entrepreneurs."
+  },
+  "servers": [
+    {
+      "url": "https://{domain}.afasfocus.nl/{customerenvironment}",
+      "description": "Customer environment URL",
+      "variables": {
+        "domain": {
+          "description": "Identifier for the accountancy environment",
+          "default": "app-center-demo"
+        },
+        "customerenvironment": {
+          "description": "Identifier for the customer environment",
+          "default": "scope"
+        }
+      }
+    },
+    {
+      "url": "https://{subdomein}.afasfocus.nl/admin",
+      "description": "Accounting center URL",
+      "variables": {
+        "subdomein": {
+          "description": "URL unique for the accounting office.",
+          "default": "app-center-demo"
+        }
+      }
+    }
+  ],
+  "paths": {
+    "/api/blob/{uuid}": {
+      "get": {
+        "description": "Retrieve a specific blob by UUI.",
+        "summary": "/api/blob/{uuid}",
+        "operationId": "getBlob",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Accept-Version",
+            "schema": {
+              "type": "string",
+              "example": "1"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Authorization",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "uuid",
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "example": "00000000-0000-0000-0000-000000000000"
+            },
+            "required": true,
+            "description": "UUID of the blob"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/401"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "5XX": {
+            "description": "Internal Server Error"
+          }
+        },
+        "tags": [
+          "Bijlagen",
+          "Inkoopjournaalpost",
+          "Verkoopfactuur",
+          "Verkoopjournaalpost",
+          "Publiek: Externe facturatie"
+        ],
+        "deprecated": false
+      },
+      "put": {
+        "description": "This operation consists of two requests. First call this endpoint with the Blob-* headers, without body to prepare the blob. Then call this endpoint without the Blob-* headers with a body to upload the file. The blob UUID must be generated client side.",
+        "summary": "/api/blob/{uuid}",
+        "operationId": "reserveBlobSpace",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Accept",
+            "schema": {
+              "type": "string",
+              "example": "application/xml"
+            }
+          },
+          {
+            "in": "path",
+            "name": "uuid",
+            "schema": {
+              "type": "string",
+              "format": "uuid",
+              "example": "00000000-0000-0000-0000-000000000000"
+            },
+            "required": true,
+            "description": "UUID of the blob. This should be generated client side."
+          },
+          {
+            "in": "header",
+            "name": "Blob-Content-Length",
+            "schema": {
+              "type": "integer",
+              "example": "100"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Blob-Content-Type",
+            "schema": {
+              "type": "string",
+              "example": "image/jpeg"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Blob-Content-FileName",
+            "schema": {
+              "type": "string",
+              "example": "attachment.jpg"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Blob-Upload-Type",
+            "schema": {
+              "type": "string",
+              "example": "Blob/Image"
+            },
+            "required": true
+          },
+          {
+            "in": "header",
+            "name": "Blob-Format",
+            "schema": {
+              "type": "string",
+              "example": "Default/Thumb/Small/Medium"
+            }
+          },
+          {
+            "in": "header",
+            "name": "AccessToken",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          }
+        ],
+        "requestBody": {
+          "description": "Binary content of the blob",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "$ref": "#/components/responses/401"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "5XX": {
+            "description": "Internal Server Error"
+          }
+        },
+        "tags": [
+          "Bijlagen",
+          "Inkoopjournaalpost",
+          "Verkoopfactuur",
+          "Verkoopjournaalpost",
+          "Publiek: Externe facturatie"
+        ],
+        "deprecated": false
+      }
+    },
+    "/authentication/getaccesstoken": {
+      "post": {
+        "description": "Get AccessToken: Provide an application token created in the current application. An access token is returned which can be used for the \"AccessToken\" header to execute connector requests. The 'scope' property is required in accountancy environments. When scope is not provided in accountancy environments, an identity token is returned which can be used in the 'ScopeSelection' api.",
+        "summary": "/authentication/getaccesstoken",
+        "operationId": "updateconnector-getaccesstoken",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Accept",
+            "schema": {
+              "type": "string",
+              "example": "application/json"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Application token",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "apptoken": {
+                    "type": "string",
+                    "example": "APPTOKEN"
+                  },
+                  "scope": {
+                    "type": "string",
+                    "example": "demo"
+                  }
+                },
+                "required": [
+                  "apptoken"
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "5XX": {
+            "description": "Internal Server Error"
+          }
+        },
+        "tags": [
+          "Autorisatie"
+        ],
+        "deprecated": false
+      }
+    },
+    "/authentication/getscopes": {
+      "post": {
+        "description": "Get scopes: Provide an identity token returned by the 'AccessToken' api.",
+        "summary": "/authentication/getscopes",
+        "operationId": "updateconnector-getscopes",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Accept",
+            "schema": {
+              "type": "string",
+              "example": "application/json"
+            }
+          },
+          {
+            "in": "header",
+            "name": "IdentityToken",
+            "schema": {
+              "type": "string",
+              "example": "IDENTITYTOKEN"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Scopes",
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Name": {
+                        "type": "string",
+                        "example": "Beheer"
+                      },
+                      "Path": {
+                        "type": "string",
+                        "example": "admin"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "5XX": {
+            "description": "Internal Server Error"
+          }
+        },
+        "tags": [
+          "Autorisatie"
+        ],
+        "deprecated": false
+      }
+    },
+    "/app/token": {
+      "post": {
+        "description": "Get an access token for a scope.",
+        "summary": "app/token",
+        "operationId": "updateconnector-token",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "grant_type": {
+                    "type": "string",
+                    "example": "refresh_token"
+                  },
+                  "refresh_token": {
+                    "type": "string"
+                  },
+                  "client_id": {
+                    "type": "string"
+                  },
+                  "client_secret": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "multipart/form-data": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "access_token": {
+                        "type": "string"
+                      },
+                      "expires_in": {
+                        "type": "integer"
+                      },
+                      "token_type": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "5XX": {
+            "description": "Internal Server Error"
+          }
+        },
+        "tags": [
+          "Autorisatie"
+        ],
+        "deprecated": false
+      }
+    },
+    "/api/cashregisters": {
+      "get": {
+        "description": "Retrieve cash register configurations and settings",
+        "summary": "cashregisters 1.0",
+        "operationId": "getconnector-cashregisters-get-1.0",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Accept",
+            "schema": {
+              "type": "string",
+              "example": "application/xml"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Accept-Version",
+            "schema": {
+              "type": "string",
+              "example": "1.0"
+            }
+          },
+          {
+            "in": "header",
+            "name": "AccessToken",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "Skip",
+            "schema": {
+              "type": "integer",
+              "example": "0"
+            }
+          },
+          {
+            "in": "query",
+            "name": "Take",
+            "schema": {
+              "type": "integer",
+              "example": "50"
+            }
+          },
+          {
+            "in": "query",
+            "name": "Sort",
+            "schema": {
+              "type": "string",
+              "format": "sort",
+              "example": "InstanceId Ascending"
+            },
+            "description": "FieldName Ascending|Descending"
+          },
+          {
+            "in": "query",
+            "name": "Filter",
+            "schema": {
+              "type": "string",
+              "format": "filter"
+            },
+            "required": false,
+            "description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "InstanceId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "Description": {
+                        "type": "string"
+                      },
+                      "AdministrationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "cashregisters": {
+                    "value": [
+                      {
+                        "InstanceId": "265424ab-253e-57d4-9d65-036c65ad05c8",
+                        "Description": "Kas",
+                        "AdministrationId": "d8497bdd-a324-5145-afd0-a78acc7e07a8"
+                      },
+                      {
+                        "InstanceId": "25e93133-ec28-543f-9f23-312ddb4e10a3",
+                        "Description": "Kas",
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "5XX": {
+            "description": "Internal Server Error"
+          }
+        },
+        "version": "1.0",
+        "deprecated": false,
+        "tags": [
+          "Publiek: POS Transacties",
+          "POS Transacties"
+        ]
+      }
+    },
+    "/api/contacts": {
+      "get": {
+        "description": "Retrieve contact information for persons and organizations",
+        "summary": "contacts 1.0",
+        "operationId": "getconnector-contacts-get-1.0",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Accept",
+            "schema": {
+              "type": "string",
+              "example": "application/xml"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Accept-Version",
+            "schema": {
+              "type": "string",
+              "example": "1.0"
+            }
+          },
+          {
+            "in": "header",
+            "name": "AccessToken",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "Skip",
+            "schema": {
+              "type": "integer",
+              "example": "0"
+            }
+          },
+          {
+            "in": "query",
+            "name": "Take",
+            "schema": {
+              "type": "integer",
+              "example": "50"
+            }
+          },
+          {
+            "in": "query",
+            "name": "Sort",
+            "schema": {
+              "type": "string",
+              "format": "sort",
+              "example": "Id Ascending"
+            },
+            "description": "FieldName Ascending|Descending"
+          },
+          {
+            "in": "query",
+            "name": "Filter",
+            "schema": {
+              "type": "string",
+              "format": "filter"
+            },
+            "required": false,
+            "description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "OrganisationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "PersonId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "Name": {
+                        "type": "string"
+                      },
+                      "Firstname": {
+                        "type": "string"
+                      },
+                      "Initials": {
+                        "type": "string"
+                      },
+                      "Prefix": {
+                        "type": "string"
+                      },
+                      "Lastname": {
+                        "type": "string"
+                      },
+                      "PhoneNumber": {
+                        "type": "string"
+                      },
+                      "Emailaddress": {
+                        "type": "string"
+                      },
+                      "ExternalId": {
+                        "type": "string"
+                      },
+                      "IsArchived": {
+                        "type": "boolean"
+                      },
+                      "PersonIsArchived": {
+                        "type": "boolean"
+                      },
+                      "OrganisationIsArchived": {
+                        "type": "boolean"
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example": {
+                    "value": {
+                      "TrackingToken": "202403280856491",
+                      "Result": [
+                        {
+                          "Id": "0236d0dc-b5be-5b6e-b191-17f6b767aa5b",
+                          "IsArchived": false,
+                          "OrganisationId": "e97ecfe3-8bcb-5baf-82e4-4e46b2b02126",
+                          "OrganisatieIsArchived": false,
+                          "Name": "Peter de Jager",
+                          "FirstName": "Peter",
+                          "Initials": "P.",
+                          "Prefix": "de",
+                          "Lastname": "Jager",
+                          "ExternalId": null,
+                          "PersoonIsArchived": false
+                        },
+                        {
+                          "Id": "2c5b3f1d-1689-5257-9ab2-2ba634203b2c",
+                          "IsArchived": false,
+                          "OrganisationId": "c589e4b3-d131-5a1b-9eca-44dd2fc17600",
+                          "OrganisatieIsArchived": false,
+                          "Name": "Trudie Feenstra",
+                          "FirstName": "Trudie",
+                          "Initials": "T.",
+                          "Prefix": null,
+                          "Lastname": "Feenstra",
+                          "ExternalId": null,
+                          "PersoonIsArchived": false
+                        },
+                        {
+                          "Id": "416b5ea9-93bd-5cfc-af07-37f1681da00b",
+                          "IsArchived": false,
+                          "OrganisationId": "bb3fd8ef-5a0e-5919-8e67-77b396abf212",
+                          "OrganisatieIsArchived": false,
+                          "Name": "Yousef Martiqui",
+                          "FirstName": "Yousef",
+                          "Initials": "Y.",
+                          "Prefix": null,
+                          "Lastname": "Martiqui",
+                          "ExternalId": null,
+                          "PersoonIsArchived": false
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "5XX": {
+            "description": "Internal Server Error"
+          }
+        },
+        "version": "1.0",
+        "deprecated": false,
+        "tags": [
+          "Publiek: Relatiemanagement",
+          "Relaties"
+        ]
+      }
+    },
+    "/api/creditorbalance": {
+      "get": {
+        "description": "Retrieve creditor balance information for suppliers",
+        "summary": "creditorbalance 1.0",
+        "operationId": "getconnector-creditorbalance-get-1.0",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Accept",
+            "schema": {
+              "type": "string",
+              "example": "application/xml"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Accept-Version",
+            "schema": {
+              "type": "string",
+              "example": "1.0"
+            }
+          },
+          {
+            "in": "header",
+            "name": "AccessToken",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "Skip",
+            "schema": {
+              "type": "integer",
+              "example": "0"
+            }
+          },
+          {
+            "in": "query",
+            "name": "Take",
+            "schema": {
+              "type": "integer",
+              "example": "50"
+            }
+          },
+          {
+            "in": "query",
+            "name": "Sort",
+            "schema": {
+              "type": "string",
+              "format": "sort",
+              "example": "AdministrationId Ascending"
+            },
+            "description": "FieldName Ascending|Descending"
+          },
+          {
+            "in": "query",
+            "name": "Filter",
+            "schema": {
+              "type": "string",
+              "format": "filter"
+            },
+            "required": false,
+            "description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "AdministrationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationTypeId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationName": {
+                        "type": "string"
+                      },
+                      "LastCompleted": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "OutstandingAmount": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example": {
+                    "value": [
+                      {
+                        "OutstandingAmount": 1586.31,
+                        "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "296a5ec3-0efb-528d-9afd-7ab3b3c914c1",
+                        "RelationName": "Stichting Mollie Payments",
+                        "InstanceId": "8b0ecc00-2b87-4eaa-bd19-3b9db7f297c4",
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "OutstandingAmount": 28597.14,
+                        "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "7b8e279b-b551-556e-a00a-a815392d0d38",
+                        "RelationName": "AFAS Software B.V.",
+                        "InstanceId": "072672c2-c859-4eef-a0be-7e760b57af6f",
+                        "RelationType": "organisation"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "5XX": {
+            "description": "Internal Server Error"
+          }
+        },
+        "version": "1.0",
+        "deprecated": false,
+        "tags": [
+          "Crediteuren"
+        ]
+      }
+    },
+    "/api/creditorinvoicebalance": {
+      "get": {
+        "description": "Retrieve creditor invoice balance details for payable transactions",
+        "summary": "creditorinvoicebalance 1.0",
+        "operationId": "getconnector-creditorinvoicebalance-get-1.0",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Accept",
+            "schema": {
+              "type": "string",
+              "example": "application/xml"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Accept-Version",
+            "schema": {
+              "type": "string",
+              "example": "1.0"
+            }
+          },
+          {
+            "in": "header",
+            "name": "AccessToken",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "Skip",
+            "schema": {
+              "type": "integer",
+              "example": "0"
+            }
+          },
+          {
+            "in": "query",
+            "name": "Take",
+            "schema": {
+              "type": "integer",
+              "example": "50"
+            }
+          },
+          {
+            "in": "query",
+            "name": "Sort",
+            "schema": {
+              "type": "string",
+              "format": "sort",
+              "example": "InvoiceNumber Ascending"
+            },
+            "description": "FieldName Ascending|Descending"
+          },
+          {
+            "in": "query",
+            "name": "Filter",
+            "schema": {
+              "type": "string",
+              "format": "filter"
+            },
+            "required": false,
+            "description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "InvoiceNumber": {
+                        "type": "string"
+                      },
+                      "InvoiceDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "CustomerReference": {
+                        "type": "string"
+                      },
+                      "DueDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "InternalInvoiceNumber": {
+                        "type": "string"
+                      },
+                      "InvoiceId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "AdministrationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationTypeId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationName": {
+                        "type": "string"
+                      },
+                      "LastCompleted": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "OutstandingAmount": {
+                        "type": "number"
+                      },
+                      "PaidAmount": {
+                        "type": "number"
+                      },
+                      "ProcessingAmount": {
+                        "type": "number"
+                      },
+                      "TotalAmount": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example": {
+                    "value": [
+                      {
+                        "OutstandingAmount": 1586.31,
+                        "PaidAmount": 0.0,
+                        "ProcessingAmount": 0.0,
+                        "TotalAmount": 1586.31,
+                        "DueDate": "2024-12-13T00:00:00Z",
+                        "InvoiceId": "1ae8da84-9dd1-427a-a636-25aa53162dbf",
+                        "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502",
+                        "InvoiceNumber": "123",
+                        "InvoiceDate": "2024-12-13T00:00:00Z",
+                        "CustomerReference": null,
+                        "InternalInvoiceNumber": "IF240003",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "296a5ec3-0efb-528d-9afd-7ab3b3c914c1",
+                        "RelationName": "Stichting Mollie Payments",
+                        "InstanceId": "9ea0e72a-b424-485d-82b1-09363aefcdce",
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "OutstandingAmount": 28341.83,
+                        "PaidAmount": 0.0,
+                        "ProcessingAmount": 0.0,
+                        "TotalAmount": 28341.83,
+                        "DueDate": "2024-12-27T00:00:00Z",
+                        "InvoiceId": "b3823933-d138-468a-a071-4e517feca9b9",
+                        "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502",
+                        "InvoiceNumber": "20241231",
+                        "InvoiceDate": "2024-12-13T00:00:00Z",
+                        "CustomerReference": null,
+                        "InternalInvoiceNumber": "IF240001",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "7b8e279b-b551-556e-a00a-a815392d0d38",
+                        "RelationName": "AFAS Software B.V.",
+                        "InstanceId": "b7e76bdf-1152-4d54-8224-ad6a421fc84f",
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "OutstandingAmount": 255.31,
+                        "PaidAmount": 0.0,
+                        "ProcessingAmount": 0.0,
+                        "TotalAmount": 255.31,
+                        "DueDate": "2025-01-14T00:00:00Z",
+                        "InvoiceId": "6a25941f-2c35-4736-b963-6c63be0e82b4",
+                        "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502",
+                        "InvoiceNumber": "20241232",
+                        "InvoiceDate": "2024-12-31T00:00:00Z",
+                        "CustomerReference": null,
+                        "InternalInvoiceNumber": "IF240002",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "7b8e279b-b551-556e-a00a-a815392d0d38",
+                        "RelationName": "AFAS Software B.V.",
+                        "InstanceId": "ac5f3b30-6296-4864-86c6-cecede47984d",
+                        "RelationType": "organisation"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "5XX": {
+            "description": "Internal Server Error"
+          }
+        },
+        "version": "1.0",
+        "deprecated": false,
+        "tags": [
+          "Crediteuren"
+        ]
+      }
+    },
+    "/api/projects": {
+      "get": {
+        "description": "Retrieve project information for time tracking and billing",
+        "summary": "projects 1.0",
+        "operationId": "getconnector-projects-get-1.0",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Accept",
+            "schema": {
+              "type": "string",
+              "example": "application/xml"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Accept-Version",
+            "schema": {
+              "type": "string",
+              "example": "1.0"
+            }
+          },
+          {
+            "in": "header",
+            "name": "AccessToken",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "Skip",
+            "schema": {
+              "type": "integer",
+              "example": "0"
+            }
+          },
+          {
+            "in": "query",
+            "name": "Take",
+            "schema": {
+              "type": "integer",
+              "example": "50"
+            }
+          },
+          {
+            "in": "query",
+            "name": "Sort",
+            "schema": {
+              "type": "string",
+              "format": "sort",
+              "example": "AdministrationId Ascending"
+            },
+            "description": "FieldName Ascending|Descending"
+          },
+          {
+            "in": "query",
+            "name": "Filter",
+            "schema": {
+              "type": "string",
+              "format": "filter"
+            },
+            "required": false,
+            "description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "AdministrationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "InstanceId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "Omschrijving": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example": {
+                    "value": {
+                      "TrackingToken": "202412131017330",
+                      "Result": [
+                        {
+                          "InstanceId": "96d5ef01-0d3f-4a60-b5ee-8a915693f5c2",
+                          "Omschrijving": "Implementation Greenshop",
+                          "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502"
+                        },
+                        {
+                          "InstanceId": "e03c053d-3e72-400b-821d-c3398edf1ccc",
+                          "Omschrijving": "Implementation Exceptional",
+                          "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "5XX": {
+            "description": "Internal Server Error"
+          }
+        },
+        "version": "1.0",
+        "deprecated": false,
+        "tags": [
+          "Publiek: Externe verkoopregels",
+          "Verkoopregels"
+        ]
+      }
+    },
+    "/api/salesinvoices": {
+      "get": {
+        "description": "Retrieve sales invoices and billing information",
+        "summary": "salesinvoices 1.0",
+        "operationId": "getconnector-salesinvoices-get-1.0",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "BusinessActivityVersion",
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Accept",
+            "schema": {
+              "type": "string",
+              "example": "application/xml"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Accept-Version",
+            "schema": {
+              "type": "string",
+              "example": "1.0"
+            }
+          },
+          {
+            "in": "header",
+            "name": "AccessToken",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "Skip",
+            "schema": {
+              "type": "integer",
+              "example": "0"
+            }
+          },
+          {
+            "in": "query",
+            "name": "Take",
+            "schema": {
+              "type": "integer",
+              "example": "50"
+            }
+          },
+          {
+            "in": "query",
+            "name": "Sort",
+            "schema": {
+              "type": "string",
+              "format": "sort",
+              "example": "InstanceId Ascending"
+            },
+            "description": "FieldName Ascending|Descending"
+          },
+          {
+            "in": "query",
+            "name": "Filter",
+            "schema": {
+              "type": "string",
+              "format": "filter"
+            },
+            "required": false,
+            "description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "InstanceId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "SalesInvoiceNumber": {
+                        "type": "string"
+                      },
+                      "IssueDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "AdministrationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationTypeId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationNumber": {
+                        "type": "string"
+                      },
+                      "RelationDescription": {
+                        "type": "string"
+                      },
+                      "Status": {
+                        "oneOf": [
+                          {
+                            "const": "TODO",
+                            "title": "te verzenden"
+                          },
+                          {
+                            "const": "BUSY",
+                            "title": "onderweg"
+                          },
+                          {
+                            "const": "DONE",
+                            "title": "verzonden"
+                          },
+                          {
+                            "const": "DONEEDIT",
+                            "title": "bezig met wijzigen van verzonden"
+                          },
+                          {
+                            "const": "DONEERROR",
+                            "title": "in fout staat"
+                          },
+                          {
+                            "const": "REDO",
+                            "title": "opnieuw te verzenden"
+                          },
+                          {
+                            "const": "CANNOTBEDONE",
+                            "title": "niet te verzenden"
+                          },
+                          {
+                            "const": "CANNOTBEREDONE",
+                            "title": "niet opnieuw te verzenden"
+                          },
+                          {
+                            "const": "TOCREDIT",
+                            "title": "te crediteren"
+                          },
+                          {
+                            "const": "CREDITED",
+                            "title": "gecrediteerd"
+                          },
+                          {
+                            "const": "DELETED",
+                            "title": "verwijderd"
+                          },
+                          {
+                            "const": "TODOERROR",
+                            "title": "in fout staat"
+                          },
+                          {
+                            "const": "TODOEDIT",
+                            "title": "bezig met wijzigen van te verzenden"
+                          },
+                          {
+                            "const": "TODOPENDING",
+                            "title": "bezig met wachten"
+                          },
+                          {
+                            "const": "REPLACED",
+                            "title": "gespecificeerd"
+                          },
+                          {
+                            "const": "TOSPECIFY",
+                            "title": "af te letteren"
+                          },
+                          {
+                            "const": "SPECIFIED",
+                            "title": "afgeletterd"
+                          },
+                          {
+                            "const": "ALTERNATIVELYSPECIFIED",
+                            "title": "alternatief gespecificeerd"
+                          },
+                          {
+                            "const": "INITIALIZED",
+                            "title": "geïnitialiseerd"
+                          },
+                          {
+                            "const": "INITIALIZEDEDIT",
+                            "title": "geïnitialiseerd"
+                          },
+                          {
+                            "const": "PENDINGAPPROVAL",
+                            "title": "te accorderen"
+                          },
+                          {
+                            "const": "PENDINGCOMPLETION",
+                            "title": "te factureren"
+                          },
+                          {
+                            "const": "COMPLETED",
+                            "title": "gefactureerd"
+                          },
+                          {
+                            "const": "DECLINED",
+                            "title": "afgewezen"
+                          },
+                          {
+                            "const": "TEMPLATE",
+                            "title": "sjabloon"
+                          },
+                          {
+                            "const": "TEMPLATEEDIT",
+                            "title": "bezig met wijzigen van verzenden"
+                          },
+                          {
+                            "const": "TEMPLATEERROR",
+                            "title": "in fout staat"
+                          },
+                          {
+                            "const": "MESSAGEPENDING",
+                            "title": "Bezig met verzenden"
+                          },
+                          {
+                            "const": "MESSAGESEND",
+                            "title": "Verzonden"
+                          },
+                          {
+                            "const": "MESSAGEFAILED",
+                            "title": "Fout bij verzenden"
+                          }
+                        ]
+                      },
+                      "Blob": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "Id": {
+                              "type": "string",
+                              "format": "uuid"
+                            },
+                            "ReadKey": {
+                              "type": "string"
+                            },
+                            "FileName": {
+                              "type": "string"
+                            },
+                            "ContentType": {
+                              "type": "string"
+                            },
+                            "ContentLength": {
+                              "type": "number"
+                            }
+                          }
+                        }
+                      },
+                      "AmountExcludingVat": {
+                        "type": "number"
+                      },
+                      "AmountVat": {
+                        "type": "number"
+                      },
+                      "AmountInvoiced": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example": {
+                    "value": {
+                      "TrackingToken": "202505141443121",
+                      "Result": [
+                        {
+                          "InstanceId": "076141be-27ea-5cf9-9132-002f6f0f4f97",
+                          "AmountExcludingVat": 1557.69,
+                          "AmountVat": null,
+                          "AmountInvoiced": 1557.69,
+                          "SalesInvoiceNumber": "V01230060",
+                          "IssueDate": "2023-05-19T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": null,
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000032",
+                          "RelationDescription": "Alsach Musik GmbH",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "6645f89b-4d85-56d5-90a4-00701269aeec",
+                          "AmountExcludingVat": 95.0,
+                          "AmountVat": null,
+                          "AmountInvoiced": 95.0,
+                          "SalesInvoiceNumber": "V01240035",
+                          "IssueDate": "2024-03-15T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": [],
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000035",
+                          "RelationDescription": "Architectenbureau Brauw B.V.",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "f6f71f0c-a760-51b7-a2cd-007be3fddf70",
+                          "AmountExcludingVat": 1847.52,
+                          "AmountVat": null,
+                          "AmountInvoiced": 1847.52,
+                          "SalesInvoiceNumber": "V01230069",
+                          "IssueDate": "2023-06-09T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": null,
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000029",
+                          "RelationDescription": "Tijhuis Market B.V.",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "2b460d8b-2c44-5cf4-b23d-00d58ed3e32f",
+                          "AmountExcludingVat": 75.0,
+                          "AmountVat": null,
+                          "AmountInvoiced": 75.0,
+                          "SalesInvoiceNumber": "V01230089",
+                          "IssueDate": "2023-08-04T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": null,
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000021",
+                          "RelationDescription": "Hafkamp Kappers B.V.",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "57a5ef83-b8b1-5d09-80b5-01003a3b459c",
+                          "AmountExcludingVat": 250.0,
+                          "AmountVat": null,
+                          "AmountInvoiced": 250.0,
+                          "SalesInvoiceNumber": "V01230143",
+                          "IssueDate": "2023-11-24T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": null,
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000037",
+                          "RelationDescription": "Industrial Software Ltd",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "8100eee4-73bf-5697-ad18-0116de830c44",
+                          "AmountExcludingVat": 59.88,
+                          "AmountVat": null,
+                          "AmountInvoiced": 59.88,
+                          "SalesInvoiceNumber": "V01230151",
+                          "IssueDate": "2023-12-08T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": null,
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000026",
+                          "RelationDescription": "Vlasblom Communicatie B.V.",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "d9a13ee7-cb04-5261-a7ce-01422b656a21",
+                          "AmountExcludingVat": 3066.57,
+                          "AmountVat": null,
+                          "AmountInvoiced": 3066.57,
+                          "SalesInvoiceNumber": "V01230099",
+                          "IssueDate": "2023-09-01T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": null,
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000028",
+                          "RelationDescription": "Van Ubbens Advies B.V.",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "c5277238-d627-59ad-a7cd-017268ac23f1",
+                          "AmountExcludingVat": 1703.65,
+                          "AmountVat": null,
+                          "AmountInvoiced": 1703.65,
+                          "SalesInvoiceNumber": "V01240031",
+                          "IssueDate": "2024-03-01T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": [],
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000042",
+                          "RelationDescription": "Administratiekantoor Beers",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "57de13df-b94f-5cc5-998c-01b4b275059d",
+                          "AmountExcludingVat": 135.46,
+                          "AmountVat": null,
+                          "AmountInvoiced": 135.46,
+                          "SalesInvoiceNumber": "V01230056",
+                          "IssueDate": "2023-05-19T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": null,
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000025",
+                          "RelationDescription": "Schouten Kunststofprofielen C.V.",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "0eb942ab-445e-5d31-8e8f-01d87cfc4240",
+                          "AmountExcludingVat": 183.75,
+                          "AmountVat": null,
+                          "AmountInvoiced": 183.75,
+                          "SalesInvoiceNumber": "V01230096",
+                          "IssueDate": "2023-08-04T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": null,
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000035",
+                          "RelationDescription": "Architectenbureau Brauw B.V.",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "b5d6f5e1-9c7e-5e0d-8b31-01da69dc7a69",
+                          "AmountExcludingVat": 963.92,
+                          "AmountVat": null,
+                          "AmountInvoiced": 963.92,
+                          "SalesInvoiceNumber": "V01250029",
+                          "IssueDate": "2025-03-07T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": [],
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000043",
+                          "RelationDescription": "Schreurs Administratiekantoor B.V.",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "cd125481-9757-55b0-b90e-0223ffd87241",
+                          "AmountExcludingVat": 2044.38,
+                          "AmountVat": null,
+                          "AmountInvoiced": 2044.38,
+                          "SalesInvoiceNumber": "V01230135",
+                          "IssueDate": "2023-11-03T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": null,
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000034",
+                          "RelationDescription": "Van Kempen Afbouw b.v.",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "00594f8c-a75d-5d54-9f47-0238ea1e13ae",
+                          "AmountExcludingVat": 1990.0,
+                          "AmountVat": null,
+                          "AmountInvoiced": 1990.0,
+                          "SalesInvoiceNumber": "V01230102",
+                          "IssueDate": "2023-09-01T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": null,
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000032",
+                          "RelationDescription": "Alsach Musik GmbH",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "ad737881-b189-59c0-8220-02470643d266",
+                          "AmountExcludingVat": 8000.0,
+                          "AmountVat": null,
+                          "AmountInvoiced": 8000.0,
+                          "SalesInvoiceNumber": "V02230013",
+                          "IssueDate": "2023-12-01T00:00:00Z",
+                          "AdministrationId": "d8497bdd-a324-5145-afd0-a78acc7e07a8",
+                          "Status": "DONE",
+                          "Blob": null,
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000022",
+                          "RelationDescription": "EnYoi ICT Services B.V.",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "e1372648-d465-5122-a187-02681b48a510",
+                          "AmountExcludingVat": 410.56,
+                          "AmountVat": null,
+                          "AmountInvoiced": 410.56,
+                          "SalesInvoiceNumber": "V01230021",
+                          "IssueDate": "2023-03-24T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": null,
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000044",
+                          "RelationDescription": "Notariskantoor Verhoeven B.V.",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "f76127d4-f179-5802-9fcb-02adb1d14c40",
+                          "AmountExcludingVat": 570.0,
+                          "AmountVat": null,
+                          "AmountInvoiced": 570.0,
+                          "SalesInvoiceNumber": "V01250024",
+                          "IssueDate": "2025-02-28T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": [],
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000045",
+                          "RelationDescription": "Meepo Instituut B.V.",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "af54e0b9-749a-55d4-b008-02b740c3e1f2",
+                          "AmountExcludingVat": 122.85,
+                          "AmountVat": null,
+                          "AmountInvoiced": 122.85,
+                          "SalesInvoiceNumber": "V01240053",
+                          "IssueDate": "2024-04-12T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": [],
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000030",
+                          "RelationDescription": "Kuiper Marketing N.V.",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "d7c6bf45-08d3-579b-8bd9-02c0303692e7",
+                          "AmountExcludingVat": 257.25,
+                          "AmountVat": null,
+                          "AmountInvoiced": 257.25,
+                          "SalesInvoiceNumber": "V01240063",
+                          "IssueDate": "2024-05-17T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": [],
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000041",
+                          "RelationDescription": "Hesta Touringcars B.V.",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "44f531fd-3ccf-5abc-813b-0322b308bbec",
+                          "AmountExcludingVat": 2466.45,
+                          "AmountVat": null,
+                          "AmountInvoiced": 2466.45,
+                          "SalesInvoiceNumber": "V01240085",
+                          "IssueDate": "2024-08-02T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": [],
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000031",
+                          "RelationDescription": "Stukadoorsbedrijf Burgers B.V.",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "e3d72108-b8bf-52be-b3b7-033d37601b86",
+                          "AmountExcludingVat": 190.0,
+                          "AmountVat": null,
+                          "AmountInvoiced": 190.0,
+                          "SalesInvoiceNumber": "V01250018",
+                          "IssueDate": "2025-02-07T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": [],
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000032",
+                          "RelationDescription": "Alsach Musik GmbH",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "9aca45ea-6817-54d5-b298-03d45ded8898",
+                          "AmountExcludingVat": 95.55,
+                          "AmountVat": null,
+                          "AmountInvoiced": 95.55,
+                          "SalesInvoiceNumber": "V01240005",
+                          "IssueDate": "2024-01-05T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": null,
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000042",
+                          "RelationDescription": "Administratiekantoor Beers",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "efa3fda2-89a4-50b1-8303-03ef81241754",
+                          "AmountExcludingVat": 450.0,
+                          "AmountVat": null,
+                          "AmountInvoiced": 450.0,
+                          "SalesInvoiceNumber": "V01240042",
+                          "IssueDate": "2024-03-08T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": [],
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000034",
+                          "RelationDescription": "Van Kempen Afbouw b.v.",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "861d280d-cf43-5236-bbb4-0438cb8f345e",
+                          "AmountExcludingVat": 209.51,
+                          "AmountVat": null,
+                          "AmountInvoiced": 209.51,
+                          "SalesInvoiceNumber": "V01230102",
+                          "IssueDate": "2023-09-01T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": null,
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000032",
+                          "RelationDescription": "Alsach Musik GmbH",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "1500f3df-b92e-5e25-a27a-0534ba9062a6",
+                          "AmountExcludingVat": 750.0,
+                          "AmountVat": null,
+                          "AmountInvoiced": 750.0,
+                          "SalesInvoiceNumber": "V01230058",
+                          "IssueDate": "2023-05-19T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": null,
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000031",
+                          "RelationDescription": "Stukadoorsbedrijf Burgers B.V.",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "38c01135-783c-5099-b4e8-0572efacb086",
+                          "AmountExcludingVat": 1231.68,
+                          "AmountVat": null,
+                          "AmountInvoiced": 1231.68,
+                          "SalesInvoiceNumber": "V01230097",
+                          "IssueDate": "2023-08-04T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": null,
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000034",
+                          "RelationDescription": "Van Kempen Afbouw b.v.",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "08575f76-7444-5e42-878a-05c25a214b47",
+                          "AmountExcludingVat": 73.5,
+                          "AmountVat": null,
+                          "AmountInvoiced": 73.5,
+                          "SalesInvoiceNumber": "V01240034",
+                          "IssueDate": "2024-03-15T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": [],
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000018",
+                          "RelationDescription": "Erbi Lara B.V.",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "f513a6eb-f041-5cf8-a3bb-0624b5651240",
+                          "AmountExcludingVat": 300.0,
+                          "AmountVat": null,
+                          "AmountInvoiced": 300.0,
+                          "SalesInvoiceNumber": "V01230016",
+                          "IssueDate": "2023-03-03T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": null,
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000044",
+                          "RelationDescription": "Notariskantoor Verhoeven B.V.",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "8dd2bd36-1e74-5b69-a8d7-063349403b67",
+                          "AmountExcludingVat": 450.0,
+                          "AmountVat": null,
+                          "AmountInvoiced": 450.0,
+                          "SalesInvoiceNumber": "V01250016",
+                          "IssueDate": "2025-02-07T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": [],
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000044",
+                          "RelationDescription": "Notariskantoor Verhoeven B.V.",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "f4de2afa-65d4-5452-83cb-06909807533b",
+                          "AmountExcludingVat": 2409.8,
+                          "AmountVat": null,
+                          "AmountInvoiced": 2409.8,
+                          "SalesInvoiceNumber": "V01240079",
+                          "IssueDate": "2024-07-26T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": [],
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000027",
+                          "RelationDescription": "Talens Havenbedrijf B.V.",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "d80755b1-c607-5701-982a-06a14ecbe394",
+                          "AmountExcludingVat": 150.0,
+                          "AmountVat": null,
+                          "AmountInvoiced": 150.0,
+                          "SalesInvoiceNumber": "V01240096",
+                          "IssueDate": "2024-08-30T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": [],
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationNumber": "000026",
+                          "RelationDescription": "Vlasblom Communicatie B.V.",
+                          "RelationType": "organisation"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "5XX": {
+            "description": "Internal Server Error"
+          }
+        },
+        "version": "1.0",
+        "deprecated": false,
+        "tags": [
+          "Publiek: Facturatie",
+          "Verkoopfactuur"
+        ]
+      }
+    },
+    "/api/salespricesperrelation": {
+      "get": {
+        "description": "Retrieve sales prices configured per customer relation",
+        "summary": "salespricesperrelation 1.0",
+        "operationId": "getconnector-salespricesperrelation-get-1.0",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Accept",
+            "schema": {
+              "type": "string",
+              "example": "application/xml"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Accept-Version",
+            "schema": {
+              "type": "string",
+              "example": "1.0"
+            }
+          },
+          {
+            "in": "header",
+            "name": "AccessToken",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "Skip",
+            "schema": {
+              "type": "integer",
+              "example": "0"
+            }
+          },
+          {
+            "in": "query",
+            "name": "Take",
+            "schema": {
+              "type": "integer",
+              "example": "50"
+            }
+          },
+          {
+            "in": "query",
+            "name": "Sort",
+            "schema": {
+              "type": "string",
+              "format": "sort",
+              "example": "Id Ascending"
+            },
+            "description": "FieldName Ascending|Descending"
+          },
+          {
+            "in": "query",
+            "name": "Filter",
+            "schema": {
+              "type": "string",
+              "format": "filter"
+            },
+            "required": false,
+            "description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "ProductDescription": {
+                        "type": "string"
+                      },
+                      "PriceExcludingVAT": {
+                        "type": "number"
+                      },
+                      "StartDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "EndDate": {
+                        "type": "string",
+                        "format": "date-time"
+                      },
+                      "RelationDescription": {
+                        "type": "string"
+                      },
+                      "ProductId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationTypeId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "RelationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "example": {
+                    "value": {
+                      "TrackingToken": "202410211314120",
+                      "Result": [
+                        {
+                          "Id": "b4632ca6-2298-4139-8d67-2f5ca122d039",
+                          "PriceExcludingVAT": 1512.15,
+                          "StartDate": null,
+                          "EndDate": null,
+                          "ProductId": "4eb7c821-7e37-4132-b27d-95563f93687a",
+                          "ProductDescription": "Acer Laptop",
+                          "RelationDescription": "Architectenbureau Brauw B.V.",
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationId": "3eff9a76-45d7-4595-a372-09e1e076c540",
+                          "InstanceId": "bcd2883b-0559-4337-aa87-9583d1860a51",
+                          "RelationType": "organisation"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "5XX": {
+            "description": "Internal Server Error"
+          }
+        },
+        "version": "1.0",
+        "deprecated": false,
+        "tags": [
+          "Publiek: Externe verkoopregels",
+          "Verkoopregels",
+          "Publiek: Facturatie",
+          "Verkoopfactuur"
+        ]
+      }
+    },
+    "/api/cashmutation": {
+      "post": {
+        "summary": "cashmutation 2.0",
+        "operationId": "updateconnector-cashmutation-Post-2.0",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Accept",
+            "schema": {
+              "type": "string",
+              "example": "application/xml"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Accept-Version",
+            "schema": {
+              "type": "string",
+              "example": "2.0"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Tracking-Identifier",
+            "schema": {
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
+            },
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
+          }
+        ],
+        "requestBody": {
+          "description": "cashmutation 2.0",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/requestBodies/cashmutation-2.0-Create-JsonSchema"
+              },
+              "examples": {
+                "Minimum cash mutuation": {
+                  "value": {
+                    "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+                    "Description": "Creates only a cashmutation without a reconciliation mutation.",
+                    "Date": "2024-03-15",
+                    "AmountIncludingVat": 400
+                  }
+                },
+                "purchase": {
+                  "value": {
+                    "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+                    "Description": "Aanschaf kleine machines en gereedschap",
+                    "Date": "2024-03-15",
+                    "LedgerAccountId": "c031b2e8-f8ac-5ab2-a428-93bf9789fc5e",
+                    "VatPercentage": 21,
+                    "VatTarive": "high",
+                    "AmountIncludingVat": -200
+                  }
+                },
+                "sales": {
+                  "value": {
+                    "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+                    "Description": "Omzet algemeen",
+                    "Date": "2024-03-15",
+                    "LedgerAccountId": "cfb59b79-b3ec-55ef-8cde-000499c3179e",
+                    "VatPercentage": 21,
+                    "VatTarive": "high",
+                    "AmountIncludingVat": 400
+                  }
+                },
+                "with attachments": {
+                  "value": {
+                    "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+                    "Description": "Aanschaf kleine machines en gereedschap_387",
+                    "Date": "2024-03-15",
+                    "LedgerAccountId": "c031b2e8-f8ac-5ab2-a428-93bf9789fc5e",
+                    "VatPercentage": 21,
+                    "VatTarive": "high",
+                    "AmountIncludingVat": -200,
+                    "Attachments": [
+                      {
+                        "AttachmentId": "bcbee6a4-f3de-44c3-91c8-e8921bf15107"
+                      },
+                      {
+                        "AttachmentId": "6676ad1f-9fc3-4a4f-8a44-d88d8284c598"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "normal response": {
+                    "value": {
+                      "result": "Succeeded",
+                      "instances": [
+                        {
+                          "Code": "Kasmutatie",
+                          "Id": "4d4f06ba-e2ff-4531-94b4-f6f0961144bc"
+                        },
+                        {
+                          "Code": "OverigeBoeking",
+                          "Id": "4227593b-e9ad-43b4-a2e4-3e173e11f5c6"
+                        }
+                      ],
+                      "errors": []
+                    }
+                  },
+                  "Only cashmutation": {
+                    "value": {
+                      "result": "Succeeded",
+                      "instances": [
+                        {
+                          "Code": "Kasmutatie",
+                          "Id": "9ef32c38-7f7c-4640-9b2c-eb9cc3fd0490"
+                        }
+                      ],
+                      "errors": []
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "5XX": {
+            "description": "Internal Server Error"
+          }
+        },
+        "version": "2.0",
+        "deprecated": false,
+        "tags": [
+          "Publiek: POS Transacties",
+          "POS Transacties"
+        ]
+      }
+    },
+    "/api/linestobeinvoiced": {
+      "post": {
+        "description": "Create lines to be invoiced for billing processes",
+        "summary": "linestobeinvoiced 1.0",
+        "operationId": "updateconnector-linestobeinvoiced-Post-1.0",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Accept",
+            "schema": {
+              "type": "string",
+              "example": "application/xml"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Accept-Version",
+            "schema": {
+              "type": "string",
+              "example": "1.0"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Tracking-Identifier",
+            "schema": {
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
+            },
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
+          }
+        ],
+        "requestBody": {
+          "description": "linestobeinvoiced 1.0",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/requestBodies/linestobeinvoiced-1.0-Create-JsonSchema"
+              },
+              "examples": {
+                "new linestobeinvoiced": {
+                  "value": {
+                    "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502",
+                    "Date": "2024-12-04",
+                    "Description": "Dell Laptop",
+                    "RelationType": "organisation",
+                    "RelationId": "7b8e279b-b551-556e-a00a-a815392d0d38",
+                    "ItemId": "aaf04330-151c-44d9-9700-8793b1c0d4b4",
+                    "Quantity": 32,
+                    "ProjectId": "e03c053d-3e72-400b-821d-c3398edf1ccc"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "succes": {
+                    "value": {
+                      "result": "Succeeded",
+                      "traceId": "3614178a-f801-47b7-bae1-dad6439f2c54",
+                      "data": {
+                        "LinesToBeInvoiced": "fcb31b25-8da1-4a90-ae33-a93d932184f0"
+                      },
+                      "errors": []
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "5XX": {
+            "description": "Internal Server Error"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "not enabled": {
+                    "value": {
+                      "result": "Failed",
+                      "traceId": "339ee3cf-e6bb-4201-9fd0-577906f9f96a",
+                      "instances": [],
+                      "errors": [
+                        "FeatureToggle not enabled"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "version": "1.0",
+        "deprecated": false,
+        "tags": [
+          "Publiek: Externe verkoopregels",
+          "Verkoopregels"
+        ]
+      },
+      "delete": {
+        "description": "Delete lines to be invoiced from billing processes",
+        "summary": "linestobeinvoiced 1.0",
+        "operationId": "updateconnector-linestobeinvoiced-Delete-1.0",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Accept",
+            "schema": {
+              "type": "string",
+              "example": "application/xml"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Accept-Version",
+            "schema": {
+              "type": "string",
+              "example": "1.0"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Tracking-Identifier",
+            "schema": {
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
+            },
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
+          }
+        ],
+        "requestBody": {
+          "description": "linestobeinvoiced 1.0",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/requestBodies/linestobeinvoiced-1.0-Delete-JsonSchema"
+              },
+              "examples": {
+                "minimal": {
+                  "value": {
+                    "AdministrationId": "e877fb82-b546-4d20-94cf-05c72765fc47",
+                    "Id": "e877fb82-b546-4d20-94cf-05c72765fc47"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "value": {
+                      "result": "Succeeded",
+                      "traceId": "3614178a-f801-47b7-bae1-dad6439f2c54",
+                      "data": {
+                        "LinesToBeInvoiced": "fcb31b25-8da1-4a90-ae33-a93d932184f0"
+                      },
+                      "errors": []
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "5XX": {
+            "description": "Internal Server Error"
+          }
+        },
+        "version": "1.0",
+        "deprecated": false,
+        "tags": [
+          "Publiek: Externe verkoopregels",
+          "Verkoopregels"
+        ]
+      },
+      "put": {
+        "description": "Update lines to be invoiced for billing processes",
+        "summary": "linestobeinvoiced 1.0",
+        "operationId": "updateconnector-linestobeinvoiced-Put-1.0",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Accept",
+            "schema": {
+              "type": "string",
+              "example": "application/xml"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Accept-Version",
+            "schema": {
+              "type": "string",
+              "example": "1.0"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Tracking-Identifier",
+            "schema": {
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
+            },
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
+          }
+        ],
+        "requestBody": {
+          "description": "linestobeinvoiced 1.0",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/requestBodies/linestobeinvoiced-1.0-Update-JsonSchema"
+              },
+              "examples": {
+                "example": {
+                  "value": {
+                    "LineToBeInvoicedId": "547a03a2-19c9-4058-bc77-452063b25d6d",
+                    "AdministrationId": "5c86c621-14fc-5d09-a387-772c599caa5d",
+                    "Date": "2024-11-04",
+                    "Description": "Dell Laptop",
+                    "RelationType": "organisation",
+                    "RelationId": "30bf2fcc-306d-5680-9e03-d99fbfe46bc2",
+                    "ItemId": "4689e028-02c7-5324-885a-556701bd1a9f",
+                    "Quantity": 50
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "succes": {
+                    "value": {
+                      "result": "Succeeded",
+                      "traceId": "3614178a-f801-47b7-bae1-dad6439f2c54",
+                      "data": {
+                        "LinesToBeInvoiced": "fcb31b25-8da1-4a90-ae33-a93d932184f0"
+                      },
+                      "errors": []
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "5XX": {
+            "description": "Internal Server Error"
+          }
+        },
+        "version": "1.0",
+        "deprecated": false,
+        "tags": [
+          "Publiek: Externe verkoopregels",
+          "Verkoopregels"
+        ]
+      }
+    },
+    "/api/organisation": {
+      "put": {
+        "description": "Update existing organization records and business relationships",
+        "summary": "organisation 4.0",
+        "operationId": "updateconnector-organisation-Put-4.0",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Accept",
+            "schema": {
+              "type": "string",
+              "example": "application/xml"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Accept-Version",
+            "schema": {
+              "type": "string",
+              "example": "4.0"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Tracking-Identifier",
+            "schema": {
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
+            },
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
+          }
+        ],
+        "requestBody": {
+          "description": "organisation 4.0",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/requestBodies/organisation-4.0-Update-JsonSchema"
+              },
+              "examples": {
+                "update organisation": {
+                  "value": {
+                    "RelationId": "978638a5-394f-4ecc-a31f-21332f9f79e5",
+                    "Name": "AFAS Software",
+                    "CocNumber": "54041813",
+                    "ExternalId": "SWR23244",
+                    "Tradename": "AFAS Software BV",
+                    "EmailAddress": "info@afas.NL",
+                    "WebSite": "www.afas.nl",
+                    "phoneNumber": "+31334341800",
+                    "Addresses": [
+                      {
+                        "StreetName": "inspiratielaan",
+                        "HouseNumber": 5,
+                        "HouseNumberAddition": "b",
+                        "Explanation": "Headquarters",
+                        "PostalZone": "3833AV",
+                        "State": "Utrecht",
+                        "CityName": "Leusden",
+                        "CountryCode": "NL",
+                        "preferredSupplierAddress": true,
+                        "preferredShippingAddress": false,
+                        "preferredBillingAddress": true
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "response": {
+                    "value": {
+                      "result": "Succeeded",
+                      "traceId": "d8b6d497-cd52-46b1-a4c3-78dd7f9fb957",
+                      "data": {
+                        "RelationId": "978638a5-394f-4ecc-a31f-21332f9f79e5"
+                      },
+                      "errors": []
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "5XX": {
+            "description": "Internal Server Error"
+          }
+        },
+        "version": "4.0",
+        "deprecated": false,
+        "tags": [
+          "Publiek: Externe verkoopregels",
+          "Inkoopjournaalpost",
+          "Relaties",
+          "Publiek: Externe facturatie"
+        ]
+      },
+      "post": {
+        "description": "Create new organization records and business relationships",
+        "summary": "organisation 4.0",
+        "operationId": "updateconnector-organisation-Post-4.0",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Accept",
+            "schema": {
+              "type": "string",
+              "example": "application/xml"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Accept-Version",
+            "schema": {
+              "type": "string",
+              "example": "4.0"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Tracking-Identifier",
+            "schema": {
+              "type": "uuid",
+              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
+            },
+            "required": false,
+            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
+          }
+        ],
+        "requestBody": {
+          "description": "organisation 4.0",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/requestBodies/organisation-4.0-Create-JsonSchema"
+              },
+              "examples": {
+                "new organisation maximal": {
+                  "value": {
+                    "Name": "Nitzsche, Dickinson and Predovic",
+                    "CocNumber": "38012622",
+                    "VatNumber": "NL003276211B01",
+                    "Tradename": "Johns - Swaniawski",
+                    "EmailAddress": "Damion94@example.org",
+                    "Website": "https://astrid.info",
+                    "PhoneNumber": "738-407-2156",
+                    "ExternalId": "123456789",
+                    "Addresses": [
+                      {
+                        "StreetName": "inspiratielaan",
+                        "HouseNumber": 1,
+                        "HouseNumberAddition": "b",
+                        "Explanation": "Headquarters",
+                        "PostalZone": "3833AV",
+                        "State": "Utrecht",
+                        "CityName": "Leusden",
+                        "CountryCode": "NL",
+                        "PreferredSupplierAddress": true,
+                        "PreferredShippingAddress": false,
+                        "PreferredBillingAddress": true
+                      },
+                      {
+                        "StreetName": "inspiratielaan",
+                        "HouseNumber": 3,
+                        "HouseNumberAddition": "b",
+                        "Explanation": "Headquarters",
+                        "PostalZone": "3833AV",
+                        "State": "Utrecht",
+                        "CityName": "Leusden",
+                        "CountryCode": "NL",
+                        "PreferredSupplierAddress": false,
+                        "PreferredShippingAddress": true,
+                        "PreferredBillingAddress": false
+                      }
+                    ],
+                    "BankAccounts": [
+                      {
+                        "AccountNumber": "NL85CHAS0874238307",
+                        "BankId": "CHAS",
+                        "Bic": "CHASNL2X",
+                        "CountryCode": "NL",
+                        "AccountHolderName": "Kees Zandbergen",
+                        "PreferredOutgoingPayments": true,
+                        "PreferredIncommingPayments": true
+                      },
+                      {
+                        "AccountNumber": "NL44DNIB0736664289",
+                        "BankId": "DNIB",
+                        "Bic": "DNIBNL2G",
+                        "CountryCode": "NL",
+                        "AccountHolderName": "Jan Zandbergen",
+                        "PreferredOutgoingPayments": false,
+                        "PreferredIncommingPayments": false
+                      }
+                    ]
+                  }
+                },
+                "new organisation minimal": {
+                  "value": {
+                    "Name": "Larkin Inc"
+                  }
+                },
+                "new organisation": {
+                  "value": {
+                    "Name": "Terry - Powlowski",
+                    "CocNumber": "38012622",
+                    "VatNumber": "NL003276211B01",
+                    "EmailAddress": "Amelie_Bogisich@example.com",
+                    "PhoneNumber": "738-407-2156",
+                    "ExternalId": "801-331-6473",
+                    "Addresses": [
+                      {
+                        "StreetName": "Tillman Glen",
+                        "HouseNumber": 1,
+                        "HouseNumberAddition": "b",
+                        "Explanation": "Headquarters",
+                        "PostalZone": "3833AV",
+                        "State": "Utrecht",
+                        "CityName": "Leusden",
+                        "CountryCode": "NL"
+                      }
+                    ],
+                    "BankAccounts": [
+                      {
+                        "AccountNumber": "NL85CHAS0874238307",
+                        "BankId": "CHAS",
+                        "Bic": "CHASNL2X",
+                        "CountryCode": "NL",
+                        "AccountHolderName": "Kees Zandbergen"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "minimum": {
+                    "value": {
+                      "result": "Succeeded",
+                      "data": {
+                        "RelationId": "9ef691ac-b12c-4e14-9368-8191e03b54c0",
+                        "Addresses": [
+                          {
+                            "AddressId": "a329ffce-7e6c-4e79-acb4-43ac57157dc9",
+                            "AddressDescription": "inspiratielaan 2 3833AV Leusden Nederland"
+                          }
+                        ],
+                        "BankAccounts": [
+                          {
+                            "AccountNumberId": "4395b94c-af56-429b-ab52-52bdc9986fb4",
+                            "AccountNumber": "NL68INGB0801705542"
+                          }
+                        ]
+                      },
+                      "errors": []
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "5XX": {
+            "description": "Internal Server Error"
+          }
+        },
+        "version": "4.0",
+        "deprecated": false,
+        "tags": [
+          "Publiek: Externe verkoopregels",
+          "Inkoopjournaalpost",
+          "Relaties",
+          "Publiek: Externe facturatie"
+        ]
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Autorisatie",
+      "description": "Endpoints voor autorisatie"
+    },
+    {
+      "name": "Bijlagen",
+      "description": "Endpoints voor bijlagen"
+    },
+    {
+      "name": "Crediteuren",
+      "description": "Crediteuren connectoren"
+    },
+    {
+      "name": "Debiteuren",
+      "description": "Debiteuren connectoren"
+    },
+    {
+      "name": "Publiek: Financiële dashboarding",
+      "description": "Financiële dashboarding voor publieke api"
+    },
+    {
+      "name": "Publiek: Financiële journaalpost",
+      "description": "Financiële journaalpost voor publieke api"
+    },
+    {
+      "name": "Financiële journaalpost",
+      "description": "Financiële journaalpost connectors"
+    },
+    {
+      "name": "Publiek: Financiële rapportage",
+      "description": "Financiële rapportage voor publieke api"
+    },
+    {
+      "name": "Financiele rapportage",
+      "description": "Financiele rapportage connectoren"
+    },
+    {
+      "name": "Publiek: Externe verkoopregels",
+      "description": "Verkoopregels voor publieke api"
+    },
+    {
+      "name": "Verkoopregels",
+      "description": "Verkoopregels connectors"
+    },
+    {
+      "name": "Loonjournaalpost",
+      "description": "Loonjournaalpost connectors"
+    },
+    {
+      "name": "Publiek: POS Transacties",
+      "description": "POS transacties voor publieke api"
+    },
+    {
+      "name": "POS Transacties",
+      "description": "POS transacties"
+    },
+    {
+      "name": "Inkoopjournaalpost",
+      "description": "Inkoopjournaalpost connectors"
+    },
+    {
+      "name": "Publiek: Relatiemanagement",
+      "description": "Relatiemanagement voor publieke api"
+    },
+    {
+      "name": "Relaties",
+      "description": "Relatie connectors"
+    },
+    {
+      "name": "Publiek: Facturatie",
+      "description": "Facturatie voor publieke api"
+    },
+    {
+      "name": "Verkoopfactuur",
+      "description": "Verkoopfactuur connectors"
+    },
+    {
+      "name": "Publiek: Externe facturatie",
+      "description": "Externe facturatie voor publieke api"
+    },
+    {
+      "name": "Verkoopjournaalpost",
+      "description": "Verkoopjournaalpost connectors"
+    },
+    {
+      "name": "TechnischeInfo",
+      "description": "Technische informatie"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "oAuth2": {
+        "type": "oauth2",
+        "flows": {
+          "authorizationCode": {
+            "authorizationUrl": "https://{{domain}}.afasfocus.nl/{{customerenvironment}}/app/auth",
+            "tokenUrl": "https://{{domain}}.afasfocus.nl/{{customerenvironment}}/app/token",
+            "scopes": {}
+          }
+        }
+      }
+    },
+    "requestBodies": {
+      "cashmutation-1.0-Create-JsonSchema": {
+        "$schema": "http://json-schema.org/draft-07/schema",
+        "type": "object",
+        "description": "This endpoint allows you to add cash mutations directly from Point of Sale (POS) applications to the accounting software, streamlining the process of recording and managing cash transactions for businesses. For each cashmutation an request must be done.",
+        "properties": {
+          "administrationId": {
+            "type": "string",
+            "format": "uuid",
+            "description": "The Administration ID uniquely identifying an administration. Retrieve it from the endpoint: api/administration"
+          },
+          "description": {
+            "type": "string",
+            "description": "The description providing information about the cash mutation and other bookings"
+          },
+          "date": {
+            "type": "string",
+            "format": "date",
+            "description": "The date when the cash mutation and other bookings occurred"
+          },
+          "ledgerAccountId": {
+            "type": "string",
+            "format": "uuid",
+            "description": "The Ledger Account ID uniquely identifying a ledger account. Retrieve it from the endpoint: api/ledgeraccounts"
+          },
+          "amountIncludingVat": {
+            "type": "number",
+            "multipleOf": 0.01,
+            "description": "The amount including VAT for the cash mutation and other bookings"
+          },
+          "vatPercentage": {
+            "type": "integer",
+            "description": "The percentage of VAT applied to the cash mutation and other bookings"
+          },
+          "vatTarive": {
+            "type": "string",
+            "enum": [
+              "high",
+              "low",
+              "zero"
+            ],
+            "description": "The VAT tarive/category - 'high', 'low', or 'zero'"
+          },
+          "vatType": {
+            "type": "string",
+            "enum": [
+              "purchase",
+              "sales"
+            ],
+            "description": "The type of VAT operation - 'purchase' or 'sales'"
+          },
+          "attachments": {
+            "type": "array",
+            "description": "Use the blob endpoint to create a Attachment. Fill the guid of the attachment.",
+            "items": {
+              "type": "object",
+              "required": [
+                "attachmentId"
+              ],
+              "properties": {
+                "attachmentId": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            }
+          }
+        },
+        "required": [
+          "administrationId",
+          "description",
+          "date",
+          "amountIncludingVat"
+        ]
+      },
+      "cashmutation-2.0-Create-JsonSchema": {
+        "$schema": "http://json-schema.org/draft-07/schema",
+        "type": "object",
+        "description": "This endpoint allows you to add cash mutations directly from Point of Sale (POS) applications to the accounting software, streamlining the process of recording and managing cash transactions for businesses. For each cashmutation an request must be done.",
+        "properties": {
+          "AdministrationId": {
+            "type": "string",
+            "format": "uuid",
+            "description": "The Administration ID uniquely identifying an administration. Retrieve it from the endpoint: api/administration"
+          },
+          "Description": {
+            "type": "string",
+            "description": "The description providing information about the cash mutation and other bookings"
+          },
+          "Date": {
+            "type": "string",
+            "format": "date",
+            "description": "The date when the cash mutation and other bookings occurred"
+          },
+          "LedgerAccountId": {
+            "type": "string",
+            "format": "uuid",
+            "description": "The Ledger Account ID uniquely identifying a ledger account. Retrieve it from the endpoint: api/ledgeraccounts"
+          },
+          "AmountIncludingVat": {
+            "type": "number",
+            "multipleOf": 0.01,
+            "description": "The amount including VAT for the cash mutation and other bookings"
+          },
+          "VatPercentage": {
+            "type": "integer",
+            "description": "The percentage of VAT applied to the cash mutation and other bookings"
+          },
+          "VatTarive": {
+            "type": "string",
+            "enum": [
+              "high",
+              "low",
+              "zero"
+            ],
+            "description": "The VAT tarive/category - 'high', 'low', or 'zero'"
+          },
+          "VatType": {
+            "type": "string",
+            "enum": [
+              "purchase",
+              "sales"
+            ],
+            "description": "The type of VAT operation - 'purchase' or 'sales'"
+          },
+          "Attachments": {
+            "type": "array",
+            "description": "Use the blob endpoint to create a Attachment. Fill the guid of the attachment.",
+            "items": {
+              "type": "object",
+              "required": [
+                "AttachmentId"
+              ],
+              "properties": {
+                "AttachmentId": {
+                  "type": "string",
+                  "format": "uuid"
+                }
+              }
+            }
+          }
+        },
+        "required": [
+          "AdministrationId",
+          "Description",
+          "Date",
+          "AmountIncludingVat"
+        ]
+      },
+      "linestobeinvoiced-1.0-Create-JsonSchema": {
+        "type": "object",
+        "description": "Create a line to be invoiced",
+        "required": [
+          "AdministrationId",
+          "Date",
+          "Description",
+          "RelationType",
+          "RelationId",
+          "Quantity"
+        ],
+        "properties": {
+          "AdministrationId": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Must contain the Administration guid of the target Administration",
+            "examples": [
+              "63fff54b-a110-53fe-92ed-44de73f0fb61"
+            ]
+          },
+          "Date": {
+            "type": "string",
+            "format": "date",
+            "examples": [
+              "2022-10-12"
+            ]
+          },
+          "Description": {
+            "type": "string",
+            "description": "Must contain a description for the Line to be invoiced.",
+            "examples": [
+              "Productomschrijving"
+            ]
+          },
+          "RelationType": {
+            "type": "string",
+            "description": "Must contain one of the enums.",
+            "enum": [
+              "organisation",
+              "person",
+              "unknown"
+            ]
+          },
+          "RelationId": {
+            "type": "string",
+            "description": "Must contain the guid of the organisation, person or unknown relation.",
+            "format": "uuid"
+          },
+          "ItemId": {
+            "type": "string",
+            "description": "Must contain Product guid. This can be retrieved through the products endpoint.",
+            "format": "uuid"
+          },
+          "Quantity": {
+            "type": "number",
+            "description": "Quantity of products of this type",
+            "multipleOf": 0.01
+          },
+          "Price": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Price per product, may be left empty if product with price is provided",
+            "minimum": 0,
+            "multipleOf": 0.01
+          },
+          "ProjectId": {
+            "type": "string",
+            "description": "Must contain the guid of the project.",
+            "format": "uuid"
+          }
+        }
+      },
+      "linestobeinvoiced-1.0-Delete-JsonSchema": {
+        "type": "object",
+        "description": "Delete a line to be invoiced",
+        "required": [
+          "AdministrationId",
+          "Id"
+        ],
+        "properties": {
+          "AdministrationId": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Must contain the Administration guid of the target Administration",
+            "examples": [
+              "63fff54b-a110-53fe-92ed-44de73f0fb61"
+            ]
+          },
+          "Id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Must contain the guid of line to be invoiced.",
+            "examples": [
+              "a7b566cf-e03b-45f0-a294-d8ba1f1c8a52"
+            ]
+          }
+        },
+        "examples": [
+          {
+            "AdministrationId": "63fff54b-a110-53fe-92ed-44de73f0fb61",
+            "Id": "a7b566cf-e03b-45f0-a294-d8ba1f1c8a52"
+          }
+        ]
+      },
+      "linestobeinvoiced-1.0-Update-JsonSchema": {
+        "type": "object",
+        "description": "Update a line to be invoiced",
+        "required": [
+          "AdministrationId",
+          "LineToBeInvoicedId",
+          "Date",
+          "Description",
+          "RelationType",
+          "RelationId",
+          "Quantity"
+        ],
+        "properties": {
+          "AdministrationId": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Must contain the Administration guid of the target Administration",
+            "examples": [
+              "63fff54b-a110-53fe-92ed-44de73f0fb61"
+            ]
+          },
+          "LineToBeInvoicedId": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Must contain the guid of the line to be invoiced",
+            "examples": [
+              "63fff54b-a110-53fe-92ed-44de73f0fb61"
+            ]
+          },
+          "Date": {
+            "type": "string",
+            "format": "date",
+            "examples": [
+              "2022-10-12"
+            ]
+          },
+          "Description": {
+            "type": "string",
+            "description": "Can contain a description for the Line to be invoiced.",
+            "examples": [
+              "Example Journal 001"
+            ]
+          },
+          "RelationType": {
+            "type": "string",
+            "description": "Must contain one of the enums.",
+            "enum": [
+              "organisation",
+              "person",
+              "unknown"
+            ]
+          },
+          "RelationId": {
+            "type": "string",
+            "description": "Must contain the guid of the organisation, person or unknown relation.",
+            "format": "uuid"
+          },
+          "ItemId": {
+            "type": "string",
+            "description": "Must contain Product guid. This can be retrieved through the products endpoint.",
+            "format": "uuid"
+          },
+          "Quantity": {
+            "type": "number",
+            "description": "Quantity of products of this type",
+            "multipleOf": 0.01
+          },
+          "Price": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Price per product, may be left empty if product with price is provided",
+            "minimum": 0,
+            "multipleOf": 0.01
+          },
+          "ProjectId": {
+            "type": "string",
+            "description": "Must contain the guid of the project.",
+            "format": "uuid"
+          }
+        }
+      },
+      "organisation-1.0-Update-JsonSchema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "$id": "https://example.com/organization-update-schema",
+        "type": "object",
+        "title": "Organization Update Schema",
+        "description": "A schema for updating the information of an organization, including its name, external identifier, Chamber of Commerce number, and Value-Added Tax number.",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the organisation",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "externalId": {
+            "type": "string",
+            "description": "ExternalId of the Organisation to use for a client application"
+          },
+          "cocNumber": {
+            "type": "string",
+            "pattern": "^[0-9]{8}$",
+            "description": "The Chamber of Commerce (CoC) number of the organisation"
+          },
+          "vatNumber": {
+            "type": "string",
+            "pattern": "^[A-Z0-9]+$",
+            "description": "The Value-Added Tax (VAT) number of the organisation"
+          }
+        }
+      },
+      "organisation-3.0-Create-JsonSchema": {
+        "$schema": "https://json-schema.org/draft/2019-09/schema",
+        "type": "object",
+        "default": {},
+        "title": "Organisation",
+        "description": "A JSON schema to represent an organization",
+        "required": [
+          "Name"
+        ],
+        "properties": {
+          "Name": {
+            "type": "string",
+            "description": "The name of the organisation",
+            "minLength": 1
+          },
+          "ExternalId": {
+            "type": "string",
+            "description": "ExternalId of the Organisation to use for a client application."
+          },
+          "CocNumber": {
+            "type": "string",
+            "description": "The Chamber of Commerce (CoC) number of the organisation",
+            "pattern": "^[0-9]+$"
+          },
+          "VatNumber": {
+            "type": "string",
+            "description": "The Value-Added Tax (VAT) number of the organisation",
+            "pattern": "^[A-Z0-9]+$"
+          },
+          "Tradename": {
+            "type": "string",
+            "description": "The tradename of the organisation"
+          },
+          "SbiCode": {
+            "type": "string",
+            "description": "The SBICode of the organisation"
+          },
+          "EmailAddress": {
+            "type": "string",
+            "format": "email",
+            "description": "The email address of the organisation"
+          },
+          "Website": {
+            "type": "string",
+            "format": "uri",
+            "description": "The website of the organisation"
+          },
+          "PhoneNumber": {
+            "type": "string",
+            "description": "The phone number of the organisation"
+          },
+          "Addresses": {
+            "type": "array",
+            "default": [],
+            "title": "The address Schema",
+            "items": {
+              "type": "object",
+              "title": "A Schema",
+              "required": [
+                "StreetName",
+                "CityName",
+                "CountryCode"
+              ],
+              "properties": {
+                "StreetName": {
+                  "type": "string",
+                  "examples": [
+                    "inspiratielaan"
+                  ]
+                },
+                "HouseNumber": {
+                  "type": "integer",
+                  "default": 0,
+                  "examples": [
+                    1
+                  ]
+                },
+                "HouseNumberAddition": {
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "a",
+                    "HS-01"
+                  ]
+                },
+                "Explanation": {
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "Headquarters"
+                  ]
+                },
+                "PostalZone": {
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "3833AV"
+                  ]
+                },
+                "State": {
+                  "type": "string",
+                  "default": "",
+                  "description": "Could contain the state or province.",
+                  "examples": [
+                    "Utrecht",
+                    "Florida"
+                  ]
+                },
+                "CityName": {
+                  "type": "string",
+                  "default": "",
+                  "description": "Dutch CityNames are verfied based on a list of CityNames.",
+                  "examples": [
+                    "Leusden"
+                  ]
+                },
+                "CountryCode": {
+                  "type": "string",
+                  "default": "",
+                  "description": "ISO alpha 2 country code.",
+                  "examples": [
+                    "NL",
+                    "De"
+                  ]
+                },
+                "PreferredSupplierAddress": {
+                  "type": "boolean",
+                  "default": true,
+                  "examples": [
+                    true,
+                    false
+                  ]
+                },
+                "PreferredShippingAddress": {
+                  "type": "boolean",
+                  "default": true,
+                  "examples": [
+                    false,
+                    true
+                  ]
+                },
+                "PreferredBillingAddress": {
+                  "type": "boolean",
+                  "default": true,
+                  "examples": [
+                    true,
+                    false
+                  ]
+                }
+              }
+            }
+          },
+          "BankAccounts": {
+            "type": "array",
+            "default": [],
+            "description": "Create 1 or more bankAccounts for an organisation",
+            "items": {
+              "type": "object",
+              "required": [
+                "AccountNumber",
+                "AccountHolderName"
+              ],
+              "properties": {
+                "AccountNumber": {
+                  "type": "string",
+                  "description": "Fill the IBAN code or AccountNumber",
+                  "examples": [
+                    "NL85CHAS0874238307",
+                    "NL44DNIB0736664289"
+                  ]
+                },
+                "BankId": {
+                  "type": "string",
+                  "description": "Fill the bankid. Also known as Bankcode of bank identifier.",
+                  "examples": [
+                    "CHAS",
+                    "DNIB"
+                  ]
+                },
+                "Bic": {
+                  "type": "string",
+                  "description": "Fill the bic code.",
+                  "examples": [
+                    "CHASNL2X",
+                    "DNIBNL2G"
+                  ]
+                },
+                "CountryCode": {
+                  "type": "string",
+                  "description": "ISO alpha 2 country code.",
+                  "examples": [
+                    "NL"
+                  ]
+                },
+                "AccountHolderName": {
+                  "type": "string",
+                  "description": "Must contain the name of the account holder.",
+                  "examples": [
+                    "Kees Zandbergen",
+                    "Jan Zandbergen"
+                  ]
+                },
+                "PreferredOutgoingPayments": {
+                  "type": "boolean",
+                  "default": true,
+                  "examples": [
+                    true,
+                    false
+                  ]
+                },
+                "PreferredIncommingPayments": {
+                  "type": "boolean",
+                  "default": true,
+                  "examples": [
+                    true,
+                    false
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "examples": [
+          {
+            "Name": "Cremin Group",
+            "CocNumber": "38012622",
+            "VatNumber": "NL003276211B01",
+            "Tradename": "Quitzon, Schinner and Jakubowski",
+            "EmailAddress": "Kirsten_Bogisich27@example.org",
+            "Website": "http://antoinette.name",
+            "PhoneNumber": "758-646-8786",
+            "Addresses": [
+              {
+                "StreetName": "inspiratielaan",
+                "HouseNumber": 1,
+                "HouseNumberAddition": "b",
+                "Explanation": "Headquarters",
+                "PostalZone": "3833AV",
+                "State": "Utrecht",
+                "CityName": "Leusden",
+                "CountryCode": "NL",
+                "PreferredSupplierAddress": true,
+                "PreferredShippingAddress": false,
+                "PreferredBillingAddress": true
+              },
+              {
+                "StreetName": "inspiratielaan",
+                "HouseNumber": 3,
+                "HouseNumberAddition": "b",
+                "Explanation": "Headquarters",
+                "PostalZone": "3833AV",
+                "State": "Utrecht",
+                "CityName": "Leusden",
+                "CountryCode": "NL",
+                "PreferredSupplierAddress": false,
+                "PreferredShippingAddress": true,
+                "PreferredBillingAddress": false
+              }
+            ],
+            "BankAccounts": [
+              {
+                "AccountNumber": "NL85CHAS0874238307",
+                "BankId": "CHAS",
+                "Bic": "CHASNL2X",
+                "CountryCode": "NL",
+                "AccountHolderName": "Kees Zandbergen",
+                "PreferredOutgoingPayments": true,
+                "PreferredIncommingPayments": true
+              },
+              {
+                "AccountNumber": "NL44DNIB0736664289",
+                "BankId": "DNIB",
+                "Bic": "DNIBNL2G",
+                "CountryCode": "NL",
+                "AccountHolderName": "Jan Zandbergen",
+                "PreferredOutgoingPayments": false,
+                "PreferredIncommingPayments": false
+              }
+            ]
+          }
+        ]
+      },
+      "organisation-3.0-Update-JsonSchema": {
+        "type": "object",
+        "default": {},
+        "title": "Organisation",
+        "description": "A JSON schema to represent an organization",
+        "required": [
+          "RelationId"
+        ],
+        "properties": {
+          "RelationId": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Must contain the guid of the organisation.",
+            "examples": [
+              "a7b566cf-e03b-45f0-a294-d8ba1f1c8a52"
+            ]
+          },
+          "Name": {
+            "type": "string",
+            "description": "The name of the organisation"
+          },
+          "ExternalId": {
+            "type": "string",
+            "description": "ExternalId of the Organisation to use for a client application."
+          },
+          "CocNumber": {
+            "type": "string",
+            "description": "The Chamber of Commerce (CoC) number of the organisation",
+            "pattern": "^[0-9]+$"
+          },
+          "VatNumber": {
+            "type": "string",
+            "description": "The Value-Added Tax (VAT) number of the organisation",
+            "pattern": "^[A-Z0-9]+$"
+          },
+          "Tradename": {
+            "type": "string",
+            "description": "The tradename of the organisation"
+          },
+          "SbiCode": {
+            "type": "string",
+            "description": "The SBICode of the organisation"
+          },
+          "EmailAddress": {
+            "type": "string",
+            "format": "email",
+            "description": "The email address of the organisation"
+          },
+          "Website": {
+            "type": "string",
+            "format": "uri",
+            "description": "The website of the organisation"
+          },
+          "PhoneNumber": {
+            "type": "string",
+            "description": "The phone number of the organisation"
+          },
+          "Addresses": {
+            "type": "array",
+            "default": [],
+            "title": "The address Schema",
+            "items": {
+              "type": "object",
+              "title": "A Schema",
+              "required": [
+                "StreetName",
+                "CityName",
+                "CountryCode"
+              ],
+              "properties": {
+                "StreetName": {
+                  "type": "string",
+                  "examples": [
+                    "inspiratielaan"
+                  ]
+                },
+                "HouseNumber": {
+                  "type": "integer",
+                  "default": 0,
+                  "examples": [
+                    1
+                  ]
+                },
+                "HouseNumberAddition": {
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "a",
+                    "HS-01"
+                  ]
+                },
+                "Explanation": {
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "Headquarters"
+                  ]
+                },
+                "PostalZone": {
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "3833AV"
+                  ]
+                },
+                "State": {
+                  "type": "string",
+                  "default": "",
+                  "description": "Could contain the state or province.",
+                  "examples": [
+                    "Utrecht",
+                    "Florida"
+                  ]
+                },
+                "CityName": {
+                  "type": "string",
+                  "default": "",
+                  "description": "Dutch CityNames are verfied based on a list of CityNames.",
+                  "examples": [
+                    "Leusden"
+                  ]
+                },
+                "CountryCode": {
+                  "type": "string",
+                  "default": "",
+                  "description": "ISO alpha 2 country code.",
+                  "examples": [
+                    "NL",
+                    "De"
+                  ]
+                },
+                "PreferredSupplierAddress": {
+                  "type": "boolean",
+                  "default": true,
+                  "examples": [
+                    true,
+                    false
+                  ]
+                },
+                "PreferredShippingAddress": {
+                  "type": "boolean",
+                  "default": true,
+                  "examples": [
+                    false,
+                    true
+                  ]
+                },
+                "PreferredBillingAddress": {
+                  "type": "boolean",
+                  "default": true,
+                  "examples": [
+                    true,
+                    false
+                  ]
+                }
+              }
+            }
+          },
+          "BankAccounts": {
+            "type": "array",
+            "default": [],
+            "description": "Create 1 or more bankAccounts for an organisation",
+            "items": {
+              "type": "object",
+              "required": [
+                "AccountNumber",
+                "AccountHolderName"
+              ],
+              "properties": {
+                "AccountNumber": {
+                  "type": "string",
+                  "description": "Fill the IBAN code or AccountNumber",
+                  "examples": [
+                    "NL85CHAS0874238307",
+                    "NL44DNIB0736664289"
+                  ]
+                },
+                "BankId": {
+                  "type": "string",
+                  "description": "Fill the bankid. Also known as Bankcode of bank identifier.",
+                  "examples": [
+                    "CHAS",
+                    "DNIB"
+                  ]
+                },
+                "Bic": {
+                  "type": "string",
+                  "description": "Fill the bic code.",
+                  "examples": [
+                    "CHASNL2X",
+                    "DNIBNL2G"
+                  ]
+                },
+                "CountryCode": {
+                  "type": "string",
+                  "description": "ISO alpha 2 country code.",
+                  "examples": [
+                    "NL"
+                  ]
+                },
+                "AccountHolderName": {
+                  "type": "string",
+                  "description": "Must contain the name of the account holder.",
+                  "examples": [
+                    "Kees Zandbergen",
+                    "Jan Zandbergen"
+                  ]
+                },
+                "PreferredOutgoingPayments": {
+                  "type": "boolean",
+                  "default": true,
+                  "examples": [
+                    true,
+                    false
+                  ]
+                },
+                "PreferredIncommingPayments": {
+                  "type": "boolean",
+                  "default": true,
+                  "examples": [
+                    true,
+                    false
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "examples": [
+          {
+            "Name": "Cremin Group",
+            "CocNumber": "38012622",
+            "VatNumber": "NL003276211B01",
+            "Tradename": "Quitzon, Schinner and Jakubowski",
+            "EmailAddress": "Kirsten_Bogisich27@example.org",
+            "Website": "http://antoinette.name",
+            "PhoneNumber": "758-646-8786",
+            "Addresses": [
+              {
+                "StreetName": "inspiratielaan",
+                "HouseNumber": 1,
+                "HouseNumberAddition": "b",
+                "Explanation": "Headquarters",
+                "PostalZone": "3833AV",
+                "State": "Utrecht",
+                "CityName": "Leusden",
+                "CountryCode": "NL",
+                "PreferredSupplierAddress": true,
+                "PreferredShippingAddress": false,
+                "PreferredBillingAddress": true
+              },
+              {
+                "StreetName": "inspiratielaan",
+                "HouseNumber": 3,
+                "HouseNumberAddition": "b",
+                "Explanation": "Headquarters",
+                "PostalZone": "3833AV",
+                "State": "Utrecht",
+                "CityName": "Leusden",
+                "CountryCode": "NL",
+                "PreferredSupplierAddress": false,
+                "PreferredShippingAddress": true,
+                "PreferredBillingAddress": false
+              }
+            ],
+            "BankAccounts": [
+              {
+                "AccountNumber": "NL85CHAS0874238307",
+                "BankId": "CHAS",
+                "Bic": "CHASNL2X",
+                "CountryCode": "NL",
+                "AccountHolderName": "Kees Zandbergen",
+                "PreferredOutgoingPayments": true,
+                "PreferredIncommingPayments": true
+              },
+              {
+                "AccountNumber": "NL44DNIB0736664289",
+                "BankId": "DNIB",
+                "Bic": "DNIBNL2G",
+                "CountryCode": "NL",
+                "AccountHolderName": "Jan Zandbergen",
+                "PreferredOutgoingPayments": false,
+                "PreferredIncommingPayments": false
+              }
+            ]
+          }
+        ]
+      },
+      "organisation-4.0-Create-JsonSchema": {
+        "$schema": "https://json-schema.org/draft/2019-09/schema",
+        "type": "object",
+        "default": {},
+        "title": "Organisation",
+        "description": "A JSON schema to represent an organization",
+        "required": [
+          "Name"
+        ],
+        "properties": {
+          "Name": {
+            "type": "string",
+            "description": "The name of the organisation",
+            "minLength": 1
+          },
+          "ExternalId": {
+            "type": "string",
+            "description": "ExternalId of the Organisation to use for a client application."
+          },
+          "CocNumber": {
+            "type": "string",
+            "description": "The Chamber of Commerce (CoC) number of the organisation",
+            "pattern": "^[0-9]+$"
+          },
+          "VatNumber": {
+            "type": "string",
+            "description": "The Value-Added Tax (VAT) number of the organisation",
+            "pattern": "^[A-Z0-9]+$"
+          },
+          "Tradename": {
+            "type": "string",
+            "description": "The tradename of the organisation"
+          },
+          "SbiCode": {
+            "type": "string",
+            "description": "The SBICode of the organisation"
+          },
+          "EmailAddress": {
+            "type": "string",
+            "format": "email",
+            "description": "The email address of the organisation"
+          },
+          "Website": {
+            "type": "string",
+            "description": "The website of the organisation"
+          },
+          "PhoneNumber": {
+            "type": "string",
+            "description": "The phone number of the organisation"
+          },
+          "Addresses": {
+            "type": "array",
+            "default": [],
+            "title": "The address Schema",
+            "items": {
+              "type": "object",
+              "title": "A Schema",
+              "required": [
+                "StreetName",
+                "CityName",
+                "CountryCode"
+              ],
+              "properties": {
+                "StreetName": {
+                  "type": "string",
+                  "examples": [
+                    "inspiratielaan"
+                  ]
+                },
+                "HouseNumber": {
+                  "type": "integer",
+                  "default": 0,
+                  "examples": [
+                    1
+                  ]
+                },
+                "HouseNumberAddition": {
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "a",
+                    "HS-01"
+                  ]
+                },
+                "Explanation": {
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "Headquarters"
+                  ]
+                },
+                "PostalZone": {
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "3833AV"
+                  ]
+                },
+                "State": {
+                  "type": "string",
+                  "default": "",
+                  "description": "Could contain the state or province.",
+                  "examples": [
+                    "Utrecht",
+                    "Florida"
+                  ]
+                },
+                "CityName": {
+                  "type": "string",
+                  "default": "",
+                  "description": "Dutch CityNames are verfied based on a list of CityNames.",
+                  "examples": [
+                    "Leusden"
+                  ]
+                },
+                "CountryCode": {
+                  "type": "string",
+                  "default": "",
+                  "description": "ISO alpha 2 country code.",
+                  "examples": [
+                    "NL",
+                    "De"
+                  ]
+                },
+                "PreferredSupplierAddress": {
+                  "type": "boolean",
+                  "default": true,
+                  "examples": [
+                    true,
+                    false
+                  ]
+                },
+                "PreferredShippingAddress": {
+                  "type": "boolean",
+                  "default": true,
+                  "examples": [
+                    false,
+                    true
+                  ]
+                },
+                "PreferredBillingAddress": {
+                  "type": "boolean",
+                  "default": true,
+                  "examples": [
+                    true,
+                    false
+                  ]
+                }
+              }
+            }
+          },
+          "BankAccounts": {
+            "type": "array",
+            "default": [],
+            "description": "Create 1 or more bankAccounts for an organisation",
+            "items": {
+              "type": "object",
+              "required": [
+                "AccountNumber",
+                "AccountHolderName"
+              ],
+              "properties": {
+                "AccountNumber": {
+                  "type": "string",
+                  "description": "Fill the IBAN code or AccountNumber",
+                  "examples": [
+                    "NL85CHAS0874238307",
+                    "NL44DNIB0736664289"
+                  ]
+                },
+                "BankId": {
+                  "type": "string",
+                  "description": "Fill the bankid. Also known as Bankcode of bank identifier.",
+                  "examples": [
+                    "CHAS",
+                    "DNIB"
+                  ]
+                },
+                "Bic": {
+                  "type": "string",
+                  "description": "Fill the bic code.",
+                  "examples": [
+                    "CHASNL2X",
+                    "DNIBNL2G"
+                  ]
+                },
+                "CountryCode": {
+                  "type": "string",
+                  "description": "ISO alpha 2 country code.",
+                  "examples": [
+                    "NL"
+                  ]
+                },
+                "AccountHolderName": {
+                  "type": "string",
+                  "description": "Must contain the name of the account holder.",
+                  "examples": [
+                    "Kees Zandbergen",
+                    "Jan Zandbergen"
+                  ]
+                },
+                "PreferredOutgoingPayments": {
+                  "type": "boolean",
+                  "default": true,
+                  "examples": [
+                    true,
+                    false
+                  ]
+                },
+                "PreferredIncommingPayments": {
+                  "type": "boolean",
+                  "default": true,
+                  "examples": [
+                    true,
+                    false
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "examples": [
+          {
+            "Name": "Cremin Group",
+            "CocNumber": "38012622",
+            "VatNumber": "NL003276211B01",
+            "Tradename": "Quitzon, Schinner and Jakubowski",
+            "EmailAddress": "Kirsten_Bogisich27@example.org",
+            "Website": "http://antoinette.name",
+            "PhoneNumber": "758-646-8786",
+            "Addresses": [
+              {
+                "StreetName": "inspiratielaan",
+                "HouseNumber": 1,
+                "HouseNumberAddition": "b",
+                "Explanation": "Headquarters",
+                "PostalZone": "3833AV",
+                "State": "Utrecht",
+                "CityName": "Leusden",
+                "CountryCode": "NL",
+                "PreferredSupplierAddress": true,
+                "PreferredShippingAddress": false,
+                "PreferredBillingAddress": true
+              },
+              {
+                "StreetName": "inspiratielaan",
+                "HouseNumber": 3,
+                "HouseNumberAddition": "b",
+                "Explanation": "Headquarters",
+                "PostalZone": "3833AV",
+                "State": "Utrecht",
+                "CityName": "Leusden",
+                "CountryCode": "NL",
+                "PreferredSupplierAddress": false,
+                "PreferredShippingAddress": true,
+                "PreferredBillingAddress": false
+              }
+            ],
+            "BankAccounts": [
+              {
+                "AccountNumber": "NL85CHAS0874238307",
+                "BankId": "CHAS",
+                "Bic": "CHASNL2X",
+                "CountryCode": "NL",
+                "AccountHolderName": "Kees Zandbergen",
+                "PreferredOutgoingPayments": true,
+                "PreferredIncommingPayments": true
+              },
+              {
+                "AccountNumber": "NL44DNIB0736664289",
+                "BankId": "DNIB",
+                "Bic": "DNIBNL2G",
+                "CountryCode": "NL",
+                "AccountHolderName": "Jan Zandbergen",
+                "PreferredOutgoingPayments": false,
+                "PreferredIncommingPayments": false
+              }
+            ]
+          }
+        ]
+      },
+      "organisation-4.0-Update-JsonSchema": {
+        "type": "object",
+        "default": {},
+        "title": "Organisation",
+        "description": "A JSON schema to represent an organization",
+        "required": [
+          "RelationId"
+        ],
+        "properties": {
+          "RelationId": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Must contain the guid of the organisation.",
+            "examples": [
+              "a7b566cf-e03b-45f0-a294-d8ba1f1c8a52"
+            ]
+          },
+          "Name": {
+            "type": "string",
+            "description": "The name of the organisation"
+          },
+          "ExternalId": {
+            "type": "string",
+            "description": "ExternalId of the Organisation to use for a client application."
+          },
+          "CocNumber": {
+            "type": "string",
+            "description": "The Chamber of Commerce (CoC) number of the organisation",
+            "pattern": "^[0-9]+$"
+          },
+          "VatNumber": {
+            "type": "string",
+            "description": "The Value-Added Tax (VAT) number of the organisation",
+            "pattern": "^[A-Z0-9]+$"
+          },
+          "Tradename": {
+            "type": "string",
+            "description": "The tradename of the organisation"
+          },
+          "SbiCode": {
+            "type": "string",
+            "description": "The SBICode of the organisation"
+          },
+          "EmailAddress": {
+            "type": "string",
+            "format": "email",
+            "description": "The email address of the organisation"
+          },
+          "Website": {
+            "type": "string",
+            "description": "The website of the organisation"
+          },
+          "PhoneNumber": {
+            "type": "string",
+            "description": "The phone number of the organisation"
+          },
+          "Addresses": {
+            "type": "array",
+            "default": [],
+            "title": "The address Schema",
+            "items": {
+              "type": "object",
+              "title": "A Schema",
+              "required": [
+                "StreetName",
+                "CityName",
+                "CountryCode"
+              ],
+              "properties": {
+                "StreetName": {
+                  "type": "string",
+                  "examples": [
+                    "inspiratielaan"
+                  ]
+                },
+                "HouseNumber": {
+                  "type": "integer",
+                  "default": 0,
+                  "examples": [
+                    1
+                  ]
+                },
+                "HouseNumberAddition": {
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "a",
+                    "HS-01"
+                  ]
+                },
+                "Explanation": {
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "Headquarters"
+                  ]
+                },
+                "PostalZone": {
+                  "type": "string",
+                  "default": "",
+                  "examples": [
+                    "3833AV"
+                  ]
+                },
+                "State": {
+                  "type": "string",
+                  "default": "",
+                  "description": "Could contain the state or province.",
+                  "examples": [
+                    "Utrecht",
+                    "Florida"
+                  ]
+                },
+                "CityName": {
+                  "type": "string",
+                  "default": "",
+                  "description": "Dutch CityNames are verfied based on a list of CityNames.",
+                  "examples": [
+                    "Leusden"
+                  ]
+                },
+                "CountryCode": {
+                  "type": "string",
+                  "default": "",
+                  "description": "ISO alpha 2 country code.",
+                  "examples": [
+                    "NL",
+                    "De"
+                  ]
+                },
+                "PreferredSupplierAddress": {
+                  "type": "boolean",
+                  "default": true,
+                  "examples": [
+                    true,
+                    false
+                  ]
+                },
+                "PreferredShippingAddress": {
+                  "type": "boolean",
+                  "default": true,
+                  "examples": [
+                    false,
+                    true
+                  ]
+                },
+                "PreferredBillingAddress": {
+                  "type": "boolean",
+                  "default": true,
+                  "examples": [
+                    true,
+                    false
+                  ]
+                }
+              }
+            }
+          },
+          "BankAccounts": {
+            "type": "array",
+            "default": [],
+            "description": "Create 1 or more bankAccounts for an organisation",
+            "items": {
+              "type": "object",
+              "required": [
+                "AccountNumber",
+                "AccountHolderName"
+              ],
+              "properties": {
+                "AccountNumber": {
+                  "type": "string",
+                  "description": "Fill the IBAN code or AccountNumber",
+                  "examples": [
+                    "NL85CHAS0874238307",
+                    "NL44DNIB0736664289"
+                  ]
+                },
+                "BankId": {
+                  "type": "string",
+                  "description": "Fill the bankid. Also known as Bankcode of bank identifier.",
+                  "examples": [
+                    "CHAS",
+                    "DNIB"
+                  ]
+                },
+                "Bic": {
+                  "type": "string",
+                  "description": "Fill the bic code.",
+                  "examples": [
+                    "CHASNL2X",
+                    "DNIBNL2G"
+                  ]
+                },
+                "CountryCode": {
+                  "type": "string",
+                  "description": "ISO alpha 2 country code.",
+                  "examples": [
+                    "NL"
+                  ]
+                },
+                "AccountHolderName": {
+                  "type": "string",
+                  "description": "Must contain the name of the account holder.",
+                  "examples": [
+                    "Kees Zandbergen",
+                    "Jan Zandbergen"
+                  ]
+                },
+                "PreferredOutgoingPayments": {
+                  "type": "boolean",
+                  "default": true,
+                  "examples": [
+                    true,
+                    false
+                  ]
+                },
+                "PreferredIncommingPayments": {
+                  "type": "boolean",
+                  "default": true,
+                  "examples": [
+                    true,
+                    false
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "examples": [
+          {
+            "Name": "Cremin Group",
+            "CocNumber": "38012622",
+            "VatNumber": "NL003276211B01",
+            "Tradename": "Quitzon, Schinner and Jakubowski",
+            "EmailAddress": "Kirsten_Bogisich27@example.org",
+            "Website": "http://antoinette.name",
+            "PhoneNumber": "758-646-8786",
+            "Addresses": [
+              {
+                "StreetName": "inspiratielaan",
+                "HouseNumber": 1,
+                "HouseNumberAddition": "b",
+                "Explanation": "Headquarters",
+                "PostalZone": "3833AV",
+                "State": "Utrecht",
+                "CityName": "Leusden",
+                "CountryCode": "NL",
+                "PreferredSupplierAddress": true,
+                "PreferredShippingAddress": false,
+                "PreferredBillingAddress": true
+              },
+              {
+                "StreetName": "inspiratielaan",
+                "HouseNumber": 3,
+                "HouseNumberAddition": "b",
+                "Explanation": "Headquarters",
+                "PostalZone": "3833AV",
+                "State": "Utrecht",
+                "CityName": "Leusden",
+                "CountryCode": "NL",
+                "PreferredSupplierAddress": false,
+                "PreferredShippingAddress": true,
+                "PreferredBillingAddress": false
+              }
+            ],
+            "BankAccounts": [
+              {
+                "AccountNumber": "NL85CHAS0874238307",
+                "BankId": "CHAS",
+                "Bic": "CHASNL2X",
+                "CountryCode": "NL",
+                "AccountHolderName": "Kees Zandbergen",
+                "PreferredOutgoingPayments": true,
+                "PreferredIncommingPayments": true
+              },
+              {
+                "AccountNumber": "NL44DNIB0736664289",
+                "BankId": "DNIB",
+                "Bic": "DNIBNL2G",
+                "CountryCode": "NL",
+                "AccountHolderName": "Jan Zandbergen",
+                "PreferredOutgoingPayments": false,
+                "PreferredIncommingPayments": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "responses": {
+      "400": {
+        "description": "Bad Request",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "x-examples": {
+                "Example 1": {
+                  "result": "PartiallySucceeded",
+                  "traceId": "b06e41e4-4ff1-4b40-9331-5f2145b2a9a2",
+                  "instances": [
+                    {
+                      "Code": "Organisatie",
+                      "Id": "1bfbc287-5fb4-59b5-9782-376fa601e4ad",
+                      "Relatienummer": "000025"
+                    },
+                    {
+                      "Code": "Instelling",
+                      "Id": "32a8c5d4-2227-512f-9f45-495192933809"
+                    },
+                    {
+                      "Code": "Leverancier",
+                      "Id": "0afea90d-4ecb-5791-8e4b-787c70656f75"
+                    },
+                    {
+                      "Code": "Begunstigde",
+                      "Id": "32a8c5d4-2227-512f-9f45-495192933809"
+                    }
+                  ],
+                  "errors": [
+                    {
+                      "Instelling": "'identificatie' bevat een verwijzing naar een ongeldige waarde."
+                    }
+                  ]
+                }
+              },
+              "properties": {
+                "result": {
+                  "type": "string"
+                },
+                "traceId": {
+                  "type": "string"
+                },
+                "instances": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "Code": {
+                        "type": "string"
+                      },
+                      "Id": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "errors": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            },
+            "examples": {
+              "PartiallySucceeded": {
+                "value": {
+                  "result": "PartiallySucceeded",
+                  "traceId": "b06e41e4-4ff1-4b40-9331-5f2145b2a9a2",
+                  "instances": [
+                    {
+                      "Code": "Organisatie",
+                      "Id": "1bfbc287-5fb4-59b5-9782-376fa601e4ad",
+                      "Relatienummer": "000025"
+                    },
+                    {
+                      "Code": "Instelling",
+                      "Id": "32a8c5d4-2227-512f-9f45-495192933809"
+                    },
+                    {
+                      "Code": "Leverancier",
+                      "Id": "0afea90d-4ecb-5791-8e4b-787c70656f75"
+                    },
+                    {
+                      "Code": "Begunstigde",
+                      "Id": "32a8c5d4-2227-512f-9f45-495192933809"
+                    }
+                  ],
+                  "errors": [
+                    {
+                      "Instelling": "'identificatie' bevat een verwijzing naar een ongeldige waarde."
+                    }
+                  ]
+                }
+              },
+              "Bad Request - Invalid JSON": {
+                "value": {
+                  "StatusCode": 400,
+                  "Message": "Invalid JSON request String",
+                  "ExceptionCode": "DS3100",
+                  "TraceId": "802033b876ed48bbb83a01a717ccb960",
+                  "AdditionalInfo": {
+                    "ExceptionType": "DeserializationException",
+                    "DefinitionName": "salesinvoice.UpdateConnectorHandler",
+                    "PropertyNames": ""
+                  }
+                }
+              },
+              "Bad request - Invalid UUID": {
+                "value": {
+                  "StatusCode": 400,
+                  "Message": "Invalid JSON request String '' does not validate against format 'uuid'. Path 'RelationId', line 3, position 18.",
+                  "ExceptionCode": "DS3100",
+                  "TraceId": "57887d8213dd4327ae1429e860250b24",
+                  "AdditionalInfo": {
+                    "ExceptionType": "DeserializationException",
+                    "DefinitionName": "address.UpdateConnectorHandler",
+                    "PropertyNames": ""
+                  }
+                }
+              },
+              "Ongeldig gebruikersfilter": {
+                "value": {
+                  "StatusCode": 400,
+                  "Message": "Ongeldig gebruikersfilter.",
+                  "TraceId": "3b022f499ab040dea4ef992d90901963",
+                  "AdditionalInfo": {
+                    "ExceptionType": "AntaUserException"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "headers": {
+          "Server": {
+            "schema": {
+              "type": "string",
+              "example": "nginx"
+            }
+          },
+          "Date": {
+            "schema": {
+              "type": "string",
+              "example": "Wed, 19 Oct 2022 12:05:20 GMT"
+            }
+          },
+          "Content-Type": {
+            "schema": {
+              "type": "string",
+              "example": "application/json"
+            }
+          },
+          "Transfer-Encoding": {
+            "schema": {
+              "type": "string",
+              "example": "chunked"
+            }
+          },
+          "Connection": {
+            "schema": {
+              "type": "string",
+              "example": "keep-alive"
+            }
+          },
+          "Content-Version": {
+            "schema": {
+              "type": "number",
+              "example": 1
+            }
+          },
+          "X-Content-Type-Options": {
+            "schema": {
+              "type": "string",
+              "example": "nosniff"
+            }
+          },
+          "X-XSS-Protection": {
+            "schema": {
+              "type": "string",
+              "example": "1; mode=block"
+            }
+          },
+          "X-Frame-Options": {
+            "schema": {
+              "type": "string",
+              "example": "SAMEORIGIN"
+            }
+          },
+          "Strict-Transport-Security": {
+            "schema": {
+              "type": "string",
+              "example": "max-age=300"
+            }
+          }
+        }
+      },
+      "401": {
+        "description": "Unauthorized",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "StatusCode": {
+                  "type": "integer"
+                },
+                "Message": {
+                  "type": "string"
+                },
+                "TraceId": {
+                  "type": "string"
+                },
+                "AdditionalInfo": {
+                  "type": "object",
+                  "properties": {
+                    "ExceptionType": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "examples": {
+              "Unauthorized": {
+                "value": {
+                  "StatusCode": 401,
+                  "Message": "Er is geen ingelogde gebruiker.",
+                  "TraceId": "b41c2c8219494f40bef50bc24ea6844d",
+                  "AdditionalInfo": {
+                    "ExceptionType": "NotAuthenticatedException"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "headers": {
+          "Server": {
+            "schema": {
+              "type": "string",
+              "example": "nginx"
+            }
+          },
+          "Date": {
+            "schema": {
+              "type": "string",
+              "example": "Wed, 19 Oct 2024 12:05:20 GMT"
+            }
+          },
+          "Transfer-Encoding": {
+            "schema": {
+              "type": "string",
+              "example": "chunked"
+            }
+          },
+          "Connection": {
+            "schema": {
+              "type": "string",
+              "example": "keep-alive"
+            }
+          },
+          "Content-Version": {
+            "schema": {
+              "type": "number",
+              "example": 1
+            }
+          },
+          "X-Content-Type-Options": {
+            "schema": {
+              "type": "string",
+              "example": "nosniff"
+            }
+          },
+          "X-XSS-Protection": {
+            "schema": {
+              "type": "string",
+              "example": "1; mode=block"
+            }
+          },
+          "X-Frame-Options": {
+            "schema": {
+              "type": "string",
+              "example": "SAMEORIGIN"
+            }
+          },
+          "Strict-Transport-Security": {
+            "schema": {
+              "type": "string",
+              "example": "max-age=300"
+            }
+          }
+        }
+      },
+      "403": {
+        "description": "Forbidden",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "StatusCode": {
+                  "type": "integer"
+                },
+                "Message": {
+                  "type": "string"
+                },
+                "TraceId": {
+                  "type": "string"
+                },
+                "AdditionalInfo": {
+                  "type": "object",
+                  "properties": {
+                    "ExceptionType": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "examples": {
+              "Unauthorized": {
+                "value": {
+                  "StatusCode": 403,
+                  "Message": "De ingelogde gebruiker heeft niet voldoende rechten.",
+                  "TraceId": "7c4cdf827b824c5384a3b9b22966c3c3",
+                  "AdditionalInfo": {
+                    "ExceptionType": "NotAuthorizedException"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "404": {
+        "description": "Item Not Found",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "StatusCode": {
+                  "type": "string"
+                },
+                "Message": {
+                  "type": "string"
+                },
+                "TraceId": {
+                  "type": "string"
+                },
+                "AdditionalInfo": {
+                  "type": "object",
+                  "properties": {
+                    "ExceptionType": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
