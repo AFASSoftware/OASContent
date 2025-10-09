@@ -1,7 +1,7 @@
 ---
 title: New in Profit 7
 author: EZW
-date: 2025-10-06
+date: 2025-10-09
 tags: Profit7
 ---
 
@@ -11,6 +11,22 @@ tags: Profit7
 Starting with Profit 7, several changes have been implemented in the AFAS Profit API. Below are the changes compared to Profit 6. Curious about our roadmap? [Click here](https://www.afas.nl/roadmap)
 
 > How to read this? Profit has an extensive API with many different components. The API specifications are divided into related sections. Changes are indicated per section.
+
+## **Breaking changes**
+
+### Always send AFAS-token base64-encoded
+
+As already announced in the [release notes of Profit 6](news-profit6/), starting **mid-December 2025**, an error message will be displayed if the AFAS-token is not sent correctly.  
+This change will be delivered with a patch at the moment when all affected customers have migrated to Profit 7.
+
+ #### Wrong
+ 
+ -H "Authorization: <token><version>1</version><data>37269582C95943C4AE5DCAEEEF9F4F19170BCB774D45458588517600E1C4302C</data></token>"
+
+ #### Correct
+
+Send the header as "AfasToken <base64-encoded token>":  
+-H "Authorization: AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+MzcyNjk1ODJDOTU5NDNDNEFFNURDQUVFRUY5RjRGMTkxNzBCQ0I3NzRENDU0NTg1ODg1MTc2MDBFMUM0MzAyQzwvZGF0YT48L3Rva2VuPg=="
 
 ## Important changes
 
