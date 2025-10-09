@@ -122,6 +122,95 @@ def coerce_string_example_to_examples(content_map: Dict, content_type: str) -> N
         ct.pop("example", None)
     content_map[content_type] = ct
 
+def infer_schema_from_value(value: Any) -> Dict[str, Any]:
+    """
+    Infer a JSON schema from a given value.
+    This creates a basic schema based on the structure of the example.
+    """
+    if value is None:
+        return {"type": "null"}
+    elif isinstance(value, bool):
+        return {"type": "boolean"}
+    elif isinstance(value, int):
+        return {"type": "integer"}
+    elif isinstance(value, float):
+        return {"type": "number"}
+    elif isinstance(value, str):
+        schema = {"type": "string"}
+        # Check for UUID format
+        if re.match(r'^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$', value, re.IGNORECASE):
+            schema["format"] = "uuid"
+        # Check for date-time format (ISO 8601)
+        elif re.match(r'^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|[+-]\d{2}:\d{2})?$', value):
+            schema["format"] = "date-time"
+        # Check for date format (YYYY-MM-DD)
+        elif re.match(r'^\d{4}-\d{2}-\d{2}$', value):
+            schema["format"] = "date"
+        return schema
+    elif isinstance(value, list):
+        if len(value) == 0:
+            return {"type": "array", "items": {}}
+        else:
+            # Infer schema from first item
+            item_schema = infer_schema_from_value(value[0])
+            return {"type": "array", "items": item_schema}
+    elif isinstance(value, dict):
+        properties = {}
+        for key, val in value.items():
+            properties[key] = infer_schema_from_value(val)
+        return {"type": "object", "properties": properties}
+    else:
+        return {}
+
+def merge_schemas(schema1: Dict[str, Any], schema2: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Merge two schemas by combining their properties.
+    For objects, merge properties. For arrays, merge item schemas.
+    """
+    if not schema1:
+        return schema2
+    if not schema2:
+        return schema1
+    
+    # If types differ, we can't easily merge
+    if schema1.get("type") != schema2.get("type"):
+        return schema1
+    
+    if schema1.get("type") == "object":
+        merged = {"type": "object", "properties": {}}
+        props1 = schema1.get("properties", {})
+        props2 = schema2.get("properties", {})
+        
+        all_keys = set(props1.keys()) | set(props2.keys())
+        for key in all_keys:
+            if key in props1 and key in props2:
+                merged["properties"][key] = merge_schemas(props1[key], props2[key])
+            elif key in props1:
+                merged["properties"][key] = props1[key]
+            else:
+                merged["properties"][key] = props2[key]
+        return merged
+    elif schema1.get("type") == "array":
+        items1 = schema1.get("items", {})
+        items2 = schema2.get("items", {})
+        return {"type": "array", "items": merge_schemas(items1, items2)}
+    else:
+        return schema1
+
+def generate_schema_from_examples(examples: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Generate a JSON schema by analyzing all examples and merging their structures.
+    """
+    if not examples:
+        return {}
+    
+    merged_schema = {}
+    for example_value in examples.values():
+        schema = infer_schema_from_value(example_value)
+        merged_schema = merge_schemas(merged_schema, schema)
+    
+    return merged_schema
+
 def merge_examples_into_content(content_map: Dict, content_types: List[str], examples: Dict[str, Any]) -> None:
     for ctype in content_types:
         coerce_string_example_to_examples(content_map, ctype)
@@ -131,6 +220,13 @@ def merge_examples_into_content(content_map: Dict, content_types: List[str], exa
         for name, val in examples.items():
             ct_examples[name] = {"value": val}
         ct["examples"] = ct_examples
+        
+        # Generate schema from examples if not already present
+        if "schema" not in ct or not ct["schema"]:
+            schema = generate_schema_from_examples(examples)
+            if schema:
+                ct["schema"] = schema
+        
         content_map[ctype] = ct
 
 def collect_files(dirpath: Path) -> List[Path]:
@@ -220,11 +316,26 @@ def main():
     # For each operation in the spec, check whether a folder with its operationId exists
     for op_id, entry in ops_by_operation_id.items():
         op_dir = args.root_dir / op_id
+        method = entry["method"].upper()
+        
         if not op_dir.exists() or not op_dir.is_dir():
-            continue  # nothing to merge for this operation
+            # Uitzondering voor operaties die geen response examples nodig hebben
+            exceptions = [
+                "getBlob",
+                "reserveBlobSpace", 
+                "updateconnector-getaccesstoken",
+                "updateconnector-getscopes",
+                "updateconnector-token"
+            ]
+            if op_id in exceptions:
+                continue
+            # Foutmelding als er geen folder aanwezig is voor een connector (geen responses mogelijk)
+            print(f"ERROR: Geen response aanwezig voor connector '{op_id}' ({method})", file=sys.stderr)
+            sys.exit(1)
 
         # 1) Request examples
         examples_dir = op_dir / "examples"
+        
         if examples_dir.exists():
             example_files = [p for p in examples_dir.rglob("*") if p.is_file()]
             print(f"Found {len(example_files)} example files for operationId '{op_id}'")
@@ -242,6 +353,10 @@ def main():
             req["content"] = content_map
             opobj["requestBody"] = req
             entry["op"] = opobj
+        else:
+            # Waarschuwing als er geen example is voor een update connector (POST/PUT/PATCH)
+            if method in ["POST", "PUT", "PATCH"]:
+                print(f"WARNING: Geen example aanwezig voor update connector '{op_id}' ({method})", file=sys.stderr)
 
         # 2) Response examples
         responses_dir = op_dir / "responses"
@@ -273,6 +388,10 @@ def main():
 
             opobj["responses"] = responses
             entry["op"] = opobj
+        else:
+            # Foutmelding als er geen response aanwezig is voor een connector
+            print(f"ERROR: Geen response aanwezig voor connector '{op_id}' ({method})", file=sys.stderr)
+            sys.exit(1)
 
     # Write output
     if args.inplace:
