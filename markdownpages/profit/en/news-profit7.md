@@ -16,8 +16,8 @@ Starting with Profit 7, several changes have been implemented in the AFAS Profit
 
 ### Always send AFAS-token base64-encoded
 
-As already announced in the [release notes of Profit 6](news-profit6/), starting **end of December 2025**, an error message will be displayed if the AFAS-token is not sent correctly.  
-This change will be delivered with a patch at the moment when all affected customers have migrated to Profit 7.
+As already announced in the [new in Profit 6](news-profit6/#afas-token-altijd-base64-encoded-versturen), starting **end of December 2025**, an error message will be displayed if the AFAS-token is not sent correctly.  
+This change will be delivered with a patch on December 31, 2025. If not all affected customers have migrated to Profit 7 at that time, the patch will be postponed until January 31, 2026.
 
  #### Wrong
  
@@ -34,7 +34,7 @@ Send the header as `"AfasToken <base64-encoded token>"`:
 
 In Profit 6, SQL Server generated the results of a GetConnector. In Profit 7, Profit handles this itself. This applies to JSON in REST and XML in SOAP.
 
-Please note: the format of the results is different. If you use a standard XML/JSON parser, this will not cause any issues.
+**Please note**: the format of the results is different. If you use a standard XML/JSON parser, this will not cause any issues.
 - Decimals look different. Example: -.5 is now -0.5
 - In XML, carriage returns (\r) are displayed differently: from &#X0D to &#XD 
 - JSON now comes in one long line without extra line breaks, while skip and take were previously on separate lines
@@ -53,7 +53,7 @@ This applies to the following requests:
 - /metainfo/get/<GetConnector>
 - /metainfo/update/<UpdateConnector>
 
-Please note: the format of the results is different. If you use a standard XML/JSON parser, this will not cause any issues.
+**Please note**: the format of the results is different. If you use a standard XML/JSON parser, this will not cause any issues.
 - The result now comes in one long line without extra line breaks
 - These changes may impact custom string processing of raw JSON
 
