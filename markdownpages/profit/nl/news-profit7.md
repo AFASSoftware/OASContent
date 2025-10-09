@@ -16,8 +16,8 @@ Vanaf Profit 7 is er een aantal wijzigingen in de AFAS Profit API doorgevoerd. H
 
 ### AFAS-token altijd base64-encoded versturen
 
-Zoals in de [releasenotes van Profit 6](news-profit6/) al aangekondigd, zal vanaf **eind december 2025** een foutmelding worden gegeven als de AFAS-token niet goed wordt doorgestuurd.  
-Deze aanpassing zal met een patch worden uitgeleverd op het moment dat alle klanten die het betreft, over zijn op Profit 7.
+Zoals in de [releasenotes van Profit 6](news-profit6/#afas-token-altijd-base64-encoded-versturen) al aangekondigd, zal vanaf **eind december 2025** een foutmelding worden gegeven als de AFAS-token niet goed wordt doorgestuurd.  
+Deze aanpassing zal met een patch worden uitgeleverd op 31 december. Als op dat moment nog niet alle klanten die het betreft, over zijn op Profit 7, zal deze datum worden uitgesteld naar 31 januari 2026.
 
  #### Fout
  
@@ -35,7 +35,7 @@ Geef de header mee als `"AfasToken <base64-encoded token>"`:
 
 In Profit 6 maakte de SQL Server de resultaten van een GetConnector. In Profit 7 doet Profit dat zelf. Het gaat hierbij om JSON bij REST en XML bij SOAP.
 
-Let op: het formaat van de resultaten is anders. Als je gebruik maakt van een standaard XML/JSON parser zal dit geen probleem geven.
+**Let op**: het formaat van de resultaten is anders. Als je gebruik maakt van een standaard XML/JSON parser zal dit geen probleem geven.
 - Decimalen zien er anders uit. Voorbeeld: -.5 wordt nu -0.5
 - In XML worden carriage returns (\r) anders weergegeven: van &#X0D naar &#XD
 - JSON komt nu in één lange regel zonder extra regelafbreking, terwijl skip en take voorheen op een aparte regel stonden
@@ -54,7 +54,7 @@ Dit geldt voor de volgende requests:
 - /metainfo/get/<GetConnector>
 - /metainfo/update/<UpdateConnector>
 
-Let op: het formaat van de resultaten is anders. Als je gebruik maakt van een standaard XML/JSON parser zal dit geen probleem geven.
+**Let op**: het formaat van de resultaten is anders. Als je gebruik maakt van een standaard XML/JSON parser zal dit geen probleem geven.
 - Het resultaat komt nu in één lange regel zonder extra regelafbreking
 - Deze aanpassingen kunnen invloed hebben op aangepaste string verwerking van ruwe JSON
 
