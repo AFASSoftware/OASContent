@@ -25,7 +25,7 @@ This change will be delivered with a patch at the moment when all affected custo
 
  #### Correct
 
-Send the header as "AfasToken <base64-encoded token>":  
+Send the header as `"AfasToken <base64-encoded token>"`:  
 `-H "Authorization: AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+MzcyNjk1ODJDOTU5NDNDNEFFNURDQUVFRUY5RjRGMTkxNzBCQ0I3NzRENDU0NTg1ODg1MTc2MDBFMUM0MzAyQzwvZGF0YT48L3Rva2VuPg=="`
 
 ## Important changes

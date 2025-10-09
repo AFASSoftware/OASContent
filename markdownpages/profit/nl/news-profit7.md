@@ -25,7 +25,7 @@ Deze aanpassing zal met een patch worden uitgeleverd op het moment dat alle klan
 
  #### Goed
 
-Geef de header mee als "AfasToken <base64-encoded token>":  
+Geef de header mee als `"AfasToken <base64-encoded token>"`:  
 `-H "Authorization: AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+MzcyNjk1ODJDOTU5NDNDNEFFNURDQUVFRUY5RjRGMTkxNzBCQ0I3NzRENDU0NTg1ODg1MTc2MDBFMUM0MzAyQzwvZGF0YT48L3Rva2VuPg=="`
 
 
