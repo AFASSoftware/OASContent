@@ -5,7 +5,7 @@ date: 2025-10-09
 tags: Profit7
 ---
 
-**Profit 7 wordt pas uitgeleverd vanaf November 2025. Dit document is dus nog in bèta en wordt continu aangevuld.**
+**Profit 7 wordt pas uitgeleverd vanaf november 2025. Dit document is dus nog in bèta en wordt continu aangevuld.**
 ---
 
 Vanaf Profit 7 is er een aantal wijzigingen in de AFAS Profit API doorgevoerd. Hieronder staan wijzigingen ten opzichte van Profit 6. Benieuwd naar onze roadmap? [Klik hier](https://www.afas.nl/roadmap)
@@ -16,17 +16,17 @@ Vanaf Profit 7 is er een aantal wijzigingen in de AFAS Profit API doorgevoerd. H
 
 ### AFAS-token altijd base64-encoded versturen
 
-Zoals in de [releasenotes van Profit 6](news-profit6/) al aangekondigd, zal vanaf **medio december 2025** een foutmelding worden gegeven als de AFAS-token niet goed wordt doorgestuurd.  
+Zoals in de [releasenotes van Profit 6](news-profit6/) al aangekondigd, zal vanaf **eind december 2025** een foutmelding worden gegeven als de AFAS-token niet goed wordt doorgestuurd.  
 Deze aanpassing zal met een patch worden uitgeleverd op het moment dat alle klanten die het betreft, over zijn op Profit 7.
 
  #### Fout
  
- -H "Authorization: <token><version>1</version><data>37269582C95943C4AE5DCAEEEF9F4F19170BCB774D45458588517600E1C4302C</data></token>"
+ `-H "Authorization: <token><version>1</version><data>37269582C95943C4AE5DCAEEEF9F4F19170BCB774D45458588517600E1C4302C</data></token>"`
 
  #### Goed
 
 Geef de header mee als "AfasToken <base64-encoded token>":  
--H "Authorization: AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+MzcyNjk1ODJDOTU5NDNDNEFFNURDQUVFRUY5RjRGMTkxNzBCQ0I3NzRENDU0NTg1ODg1MTc2MDBFMUM0MzAyQzwvZGF0YT48L3Rva2VuPg=="
+`-H "Authorization: AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+MzcyNjk1ODJDOTU5NDNDNEFFNURDQUVFRUY5RjRGMTkxNzBCQ0I3NzRENDU0NTg1ODg1MTc2MDBFMUM0MzAyQzwvZGF0YT48L3Rva2VuPg=="`
 
 
 ## Belangrijke wijzigingen
