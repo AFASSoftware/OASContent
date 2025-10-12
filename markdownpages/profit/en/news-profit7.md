@@ -1,7 +1,7 @@
 ---
 title: New in Profit 7
 author: EZW
-date: 2025-10-09
+date: 2025-10-12
 tags: Profit7
 ---
 
@@ -16,8 +16,8 @@ Starting with Profit 7, several changes have been implemented in the AFAS Profit
 
 ### Always send AFAS-token base64-encoded
 
-As already announced in the [new in Profit 6](news-profit6/#afas-token-altijd-base64-encoded-versturen), starting **end of December 2025**, an error message will be displayed if the AFAS-token is not sent correctly.  
-This change will be delivered with a patch on December 31, 2025. If not all affected customers have migrated to Profit 7 at that time, the patch will be postponed until January 31, 2026.
+As already announced in the [new in Profit 6](news-profit6/#afas-token-altijd-base64-encoded-versturen), starting with **Profit 7**, an error message will be displayed if the AFAS-token is not sent correctly.  
+**Please note**: an earlier version of this document stated "End of December, 2025". That has now been changed to "Profit 7".  
 
  #### Wrong
  
