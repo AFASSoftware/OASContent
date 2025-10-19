@@ -62,6 +62,18 @@ Met een `metainfo` request vraag je eenvoudig op welke endpoints beschikbaar zij
 
 ## Overige wijzigingen
 
+### Custom Connectors nu ook in metainfo-request (REST)
+
+Vanaf Profit 7 worden ook Custom Connectors getoond in de metainfo-request. Zo kun je eenvoudig zien welke Custom Connectors er beschikbaar zijn.
+
 ### Nieuwe gegevensverzameling: Verstrekkingswijze CC
 
 In Profit kun je vastleggen hoe een bepaald rapport verstrekt moet worden. [Zie deze video](https://help.afas.nl/video/video_yI5g50mniQk%20). De verstrekkingswijze kon je al ophalen via een GetConnector; nu is er ook een gegevensverzameling beschikbaar gemaakt om de CC ontvangers op te halen. 
+
+### Nieuwe gegevensverzameling: Medewerker/Formatieverdeling (incl. autorisatie)
+
+In Profit kun je nu ook de medewerker/formatieverdeling ophalen, inclusief de bijbehorende autorisaties. Dit maakt het eenvoudiger om inzicht te krijgen in de rolverdeling binnen een team of project.
+
+### Nieuwe gegevensverzameling: Medewerker/Verzuimverloop (incl. autorisatie)
+
+In Profit kun je nu ook de medewerker/verzuimverloop ophalen, inclusief de bijbehorende autorisaties. Dit maakt het eenvoudiger om inzicht te krijgen in het verzuim binnen een team of project.
