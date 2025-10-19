@@ -61,6 +61,19 @@ With a `metainfo` request, you can easily query which endpoints are available. W
 
 ## Other changes
 
+### Custom Connectors now also in metainfo request (REST)
+
+Starting with Profit 7, Custom Connectors are also shown in the metainfo request. This allows you to easily see which Custom Connectors are available.
+
 ### New data collection: Distribution method CC
 
-In Profit, you can specify how a certain report should be distributed. [See this video (in Dutch)](https://help.afas.nl/video/video_yI5g50mniQk%20). The distribution method could already be retrieved via a GetConnector; now a data collection has also been made available to retrieve the CC recipients.
+In Profit, you can specify how a certain report should be distributed. [See this video (in Dutch)](https://help.afas.nl/video/video_yI5g50mniQk%20). The distribution method could already be retrieved via a GetConnector; now a data collection has also been made available to retrieve the CC recipients. 
+
+### New data collection: Employee/Formation distribution (incl. authorization)
+
+In Profit, you can now also retrieve employee/formation distribution, including the associated authorizations. This makes it easier to gain insight into role distribution within a team or project.
+
+### New data collection: Employee/Absence history (incl. authorization)
+
+In Profit, you can now also retrieve employee/absence history, including the associated authorizations. This makes it easier to gain insight into absences within a team or project.
+
