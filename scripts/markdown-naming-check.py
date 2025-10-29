@@ -111,11 +111,11 @@ class MarkdownNamingValidator:
             
         except FileNotFoundError:
             if not self.json_output:
-                print("⚠️  Warning: git not found. Falling back to scanning all files.", file=sys.stderr)
+                print("Warning: git not found. Falling back to scanning all files.", file=sys.stderr)
             return set()
         except Exception as e:
             if not self.json_output:
-                print(f"⚠️  Warning: Error getting git changes: {e}. Falling back to scanning all files.", file=sys.stderr)
+                print(f"Warning: Error getting git changes: {e}. Falling back to scanning all files.", file=sys.stderr)
             return set()
     
     def is_excluded(self, file_path: Path) -> bool:
@@ -251,7 +251,7 @@ class MarkdownNamingValidator:
             markdown_files = list(self.get_changed_markdown_files())
             if not markdown_files:
                 if not self.json_output:
-                    print("ℹ️  No new or modified markdown files found in git.")
+                    print("No new or modified markdown files found in git.")
         else:
             # Find all markdown files recursively
             markdown_files = list(self.root_path.rglob("*.md"))
@@ -359,14 +359,14 @@ class MarkdownNamingValidator:
             if self.violations or self.date_violations:
                 print("SUMMARY:")
                 if self.violations:
-                    print("❌ Naming validation FAILED - Please rename the files above to follow kebab-case convention.")
+                    print("Naming validation FAILED - Please rename the files above to follow kebab-case convention.")
                 if self.date_violations:
-                    print(f"❌ Date validation FAILED - Please update the date in frontmatter to {self.current_date}.")
+                    print(f"Date validation FAILED - Please update the date in frontmatter to {self.current_date}.")
             else:
-                print("✅ All markdown files follow the kebab-case naming convention!")
+                print("All markdown files follow the kebab-case naming convention!")
                 if self.git_mode:
-                    print(f"✅ All changed files have correct date ({self.current_date}) in frontmatter!")
-                print("✅ Validation PASSED")
+                    print(f"All changed files have correct date ({self.current_date}) in frontmatter!")
+                print("Validation PASSED")
     
     def validate(self) -> bool:
         """
@@ -391,7 +391,7 @@ class MarkdownNamingValidator:
                 }
                 print(json.dumps(error_report, indent=2))
             else:
-                print(f"❌ Error during validation: {e}", file=sys.stderr)
+                print(f"Error during validation: {e}", file=sys.stderr)
             return False
 
 
