@@ -4,7 +4,7 @@
       "Fields": {
         "StId": 4,
         "Ds": "Rich text example",
-        "SbTx": "**VET** \r \n _Cursief_ \r \n++Onderstrepen++ \r \n~~Doorhalen~~ \r \n- opsommingsteken \r \n1.Nummering \r \n \r \n# KOP 1 \r \n## KOP 2 \r \n### KOP 3 \r \nNormaal \r \n"
+        "SbTx": "**VET**\n\n_Cursief_\n\n++Onderstrepen++\n\n~~Doorhalen~~\n\n- opsommingsteken\n\n1. Nummering\n\n# KOP 1\n\n## KOP 2\n\n### KOP 3\n\nNormaal"
       },
       "Objects": [
         {
