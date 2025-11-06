@@ -2,8 +2,8 @@
 title: Certification steps for Partners
 author: Eric Zwaal
 date: 2025-09-16
-tags: Partner, Certification, GetConnector
-index: false
+tags: Partner, Certification, GetConnector, IntegrationId, AppConnector
+index: true
 ---
 
 *[Voor Nederlands klik hier](../nl/partner-certification-steps)*

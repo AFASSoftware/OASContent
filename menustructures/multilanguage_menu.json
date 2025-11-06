@@ -266,7 +266,7 @@
       "news": {
           "en": [
             {
-                    "name": "Profit 7 Releasenotes (beta)",
+                    "name": "Profit 7 Releasenotes",
                     "path": "en/news-profit7.md"
                 },
             {
@@ -289,7 +289,7 @@
           ],
           "nl": [
             {
-                    "name": "Profit 7 Releasenotes (bèta)",
+                    "name": "Profit 7 Releasenotes",
                     "path": "nl/news-profit7.md"
                 },
             {
