@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "6.6.9",
+    "version": "7.7.10",
     "title": "AFAS Werkgever API",
     "description": "Deze API beschrijft de endpoints gerelateerd aan Werkgever. Gebruik deze API met de functionele beschrijving van de API."
   },
@@ -51,7 +51,7 @@
     "/connectors/HrCostCarrier": {
       "post": {
         "summary": "Kostendrager",
-        "description": "\n\rAlleen beschikbaar onder conditie: HRM\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_147.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Hrm\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_147.htm",
         "operationId": "POST_HrCostCarrier",
         "requestBody": {
           "content": {
@@ -221,7 +221,7 @@
       },
       "put": {
         "summary": "Kostendrager",
-        "description": "\n\rAlleen beschikbaar onder conditie: HRM\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_147.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Hrm\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_147.htm",
         "operationId": "PUT_HrCostCarrier",
         "requestBody": {
           "content": {
@@ -894,7 +894,7 @@
     "/connectors/HrSalTable": {
       "post": {
         "summary": "Loonschaal",
-        "description": "\n\rAlleen beschikbaar onder conditie: HRM\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_HrSalTable.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Hrm\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_HrSalTable.htm",
         "operationId": "POST_HrSalTable",
         "requestBody": {
           "content": {
@@ -3317,7 +3317,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id\u0027s can be found in the metainfo request result.",
+        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -3463,7 +3463,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -3545,7 +3545,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -3701,7 +3701,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -3853,6 +3853,58 @@
         },
         "operationId": "get_ProfitVersion"
       }
+    },
+    "/connectors/HrEmployerDeclarationInSite": {
+      "post": {
+        "summary": "Werkgeversverklaring InSite",
+        "description": "\n\r ",
+        "operationId": "POST_HrEmployerDeclarationInSite",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HrEmployerDeclarationInSite_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Werkgeversverklaring InSite"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
     }
   },
   "tags": [
@@ -3883,6 +3935,10 @@
     {
       "name": "Organisatorische eenheid",
       "description": "Organisatorische eenheid"
+    },
+    {
+      "name": "Werkgeversverklaring InSite",
+      "description": "Werkgeversverklaring InSite"
     }
   ],
   "components": {
@@ -4105,6 +4161,45 @@
                     "required": [
                       "CmId",
                       "CrId"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "HrEmployerDeclarationInSite_POST": {
+        "type": "object",
+        "properties": {
+          "HrEmployerDeclarationInSite": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "EmId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Medewerker",
+                        "format": ""
+                      },
+                      "EnSe": {
+                        "type": "integer",
+                        "description": "Dienstverband",
+                        "format": ""
+                      },
+                      "ProfileId": {
+                        "type": "integer",
+                        "description": "Instuurprofiel",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "EmId"
                     ]
                   }
                 }
@@ -4384,7 +4479,7 @@
                           "6"
                         ],
                         "maxLength": 20,
-                        "description": "Risicoklasse\n1 = Zittende arbeider en / of in werkplaats;\n2 = Arbeider op de werf;\n3 = Huisbewaarder;\n4 = Werkvrouw, schoonmaker, onderhoudspersoneel;\n401 = Zittende bediende;\n402 = Bediende met sporadische externe opdrachten;\n403 = Bediende met veelvuldige externe opdrachten;\n404 = Vertegenwoordiger, rondtrekkend personeel, loopjongen;\n405 = Bediende die manueel werk verricht;\n406 = Thuiswerkende bedienden;\n407 = Verzorgend personeel;\n408 = Verkoper;\n409 = Voetbalspeler onderworpen aan bezoldigd sportief statuut;\n410 = Voetbalspeler \u003E= 1239,47 EUR of meer;\n411 = Voetbalspeler \u003C 1239,47 EUR;\n412 = Sportbeoefenaar, andere dan voetbalspeler (niet categ. 070);\n5 = Keuken personeel (niet gebruiken voor HORECA);\n6 = Chauffeur;",
+                        "description": "Risicoklasse\n1 = Zittende arbeider en / of in werkplaats;\n2 = Arbeider op de werf;\n3 = Huisbewaarder;\n4 = Werkvrouw, schoonmaker, onderhoudspersoneel;\n401 = Zittende bediende;\n402 = Bediende met sporadische externe opdrachten;\n403 = Bediende met veelvuldige externe opdrachten;\n404 = Vertegenwoordiger, rondtrekkend personeel, loopjongen;\n405 = Bediende die manueel werk verricht;\n406 = Thuiswerkende bedienden;\n407 = Verzorgend personeel;\n408 = Verkoper;\n409 = Voetbalspeler onderworpen aan bezoldigd sportief statuut;\n410 = Voetbalspeler >= 1239,47 EUR of meer;\n411 = Voetbalspeler < 1239,47 EUR;\n412 = Sportbeoefenaar, andere dan voetbalspeler (niet categ. 070);\n5 = Keuken personeel (niet gebruiken voor HORECA);\n6 = Chauffeur;",
                         "format": ""
                       },
                       "WhAl": {
@@ -4532,7 +4627,7 @@
                           "6"
                         ],
                         "maxLength": 20,
-                        "description": "Risicoklasse\n1 = Zittende arbeider en / of in werkplaats;\n2 = Arbeider op de werf;\n3 = Huisbewaarder;\n4 = Werkvrouw, schoonmaker, onderhoudspersoneel;\n401 = Zittende bediende;\n402 = Bediende met sporadische externe opdrachten;\n403 = Bediende met veelvuldige externe opdrachten;\n404 = Vertegenwoordiger, rondtrekkend personeel, loopjongen;\n405 = Bediende die manueel werk verricht;\n406 = Thuiswerkende bedienden;\n407 = Verzorgend personeel;\n408 = Verkoper;\n409 = Voetbalspeler onderworpen aan bezoldigd sportief statuut;\n410 = Voetbalspeler \u003E= 1239,47 EUR of meer;\n411 = Voetbalspeler \u003C 1239,47 EUR;\n412 = Sportbeoefenaar, andere dan voetbalspeler (niet categ. 070);\n5 = Keuken personeel (niet gebruiken voor HORECA);\n6 = Chauffeur;",
+                        "description": "Risicoklasse\n1 = Zittende arbeider en / of in werkplaats;\n2 = Arbeider op de werf;\n3 = Huisbewaarder;\n4 = Werkvrouw, schoonmaker, onderhoudspersoneel;\n401 = Zittende bediende;\n402 = Bediende met sporadische externe opdrachten;\n403 = Bediende met veelvuldige externe opdrachten;\n404 = Vertegenwoordiger, rondtrekkend personeel, loopjongen;\n405 = Bediende die manueel werk verricht;\n406 = Thuiswerkende bedienden;\n407 = Verzorgend personeel;\n408 = Verkoper;\n409 = Voetbalspeler onderworpen aan bezoldigd sportief statuut;\n410 = Voetbalspeler >= 1239,47 EUR of meer;\n411 = Voetbalspeler < 1239,47 EUR;\n412 = Sportbeoefenaar, andere dan voetbalspeler (niet categ. 070);\n5 = Keuken personeel (niet gebruiken voor HORECA);\n6 = Chauffeur;",
                         "format": ""
                       },
                       "WhAl": {
@@ -4789,7 +4884,7 @@
         "name": "Authorization",
         "type": "apiKey",
         "in": "header",
-        "description": "Convert the XML token to Base64 and add \u0027AfasToken \u0027 in front of it."
+        "description": "Convert the XML token to Base64 and add 'AfasToken ' in front of it."
       }
     },
     "parameters": {
@@ -4797,7 +4892,7 @@
         "name": "Accept-Language",
         "in": "header",
         "required": false,
-        "description": "Indicates the client\u0027s preferred language for the response. If not provided, the API defaults to the base environment language.",
+        "description": "Indicates the client's preferred language for the response. If not provided, the API defaults to the base environment language.",
         "schema": {
           "type": "string",
           "enum": [

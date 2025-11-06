@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "6.6.9",
+    "version": "7.7.10",
     "title": "AFAS Flex API",
     "description": "This API describes the endpoints related to Flex. Use this API with the functional description of the API."
   },
@@ -50,7 +50,7 @@
   "paths": {
     "/connectors/PtTariff": {
       "post": {
-        "summary": "Tarief",
+        "summary": "Rate",
         "description": "\n\r https://help.afas.nl/help/NL/SE/130373.htm",
         "operationId": "POST_PtTariff",
         "requestBody": {
@@ -114,7 +114,7 @@
           }
         ],
         "tags": [
-          "Tarief"
+          "Rate"
         ],
         "parameters": [
           {
@@ -126,7 +126,7 @@
         ]
       },
       "put": {
-        "summary": "Tarief",
+        "summary": "Rate",
         "description": "\n\r https://help.afas.nl/help/NL/SE/130373.htm",
         "operationId": "PUT_PtTariff",
         "requestBody": {
@@ -184,7 +184,7 @@
           }
         ],
         "tags": [
-          "Tarief"
+          "Rate"
         ],
         "parameters": [
           {
@@ -209,7 +209,7 @@
         }
       ],
       "delete": {
-        "summary": "Tarief",
+        "summary": "Rate",
         "operationId": "DELETE_PtTariff",
         "description": "\n\r https://help.afas.nl/help/NL/SE/130373.htm",
         "responses": {
@@ -244,7 +244,7 @@
           }
         ],
         "tags": [
-          "Tarief"
+          "Rate"
         ],
         "parameters": [
           {
@@ -255,8 +255,8 @@
     },
     "/connectors/HrReservation": {
       "post": {
-        "summary": "Reservering Hrm",
-        "description": "\n\rAlleen beschikbaar onder conditie: Declaratieverwerking (Activering)\n\r ",
+        "summary": "Reserve HRM",
+        "description": "\n\rAlleen beschikbaar onder conditie: Declaratieverwerking (speciale activering)\n\r ",
         "operationId": "POST_HrReservation",
         "requestBody": {
           "content": {
@@ -293,7 +293,7 @@
           }
         ],
         "tags": [
-          "Reservering Hrm"
+          "Reserve HRM"
         ],
         "parameters": [
           {
@@ -307,8 +307,8 @@
     },
     "/connectors/KnSreCostCentre": {
       "post": {
-        "summary": "Kostenplaats per verkooprelatie",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_KnSreCostCentre.htm",
+        "summary": "Cost centre per sales contact",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_KnSreCostCentre.htm",
         "operationId": "POST_KnSreCostCentre",
         "requestBody": {
           "content": {
@@ -503,7 +503,7 @@
           }
         ],
         "tags": [
-          "Kostenplaats per verkooprelatie"
+          "Cost centre per sales contact"
         ],
         "parameters": [
           {
@@ -515,8 +515,8 @@
         ]
       },
       "put": {
-        "summary": "Kostenplaats per verkooprelatie",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_KnSreCostCentre.htm",
+        "summary": "Cost centre per sales contact",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_KnSreCostCentre.htm",
         "operationId": "PUT_KnSreCostCentre",
         "requestBody": {
           "content": {
@@ -694,7 +694,7 @@
           }
         ],
         "tags": [
-          "Kostenplaats per verkooprelatie"
+          "Cost centre per sales contact"
         ],
         "parameters": [
           {
@@ -708,8 +708,8 @@
     },
     "/connectors/KnSreCostCentre/KnSreCostCentreContact": {
       "post": {
-        "summary": "Kostenplaats per verkooprelatie",
-        "description": "Update main record in KnSreCostCentre and insert subrecord into KnSreCostCentreContact. \n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_KnSreCostCentre.htm",
+        "summary": "Cost centre per sales contact",
+        "description": "Update main record in KnSreCostCentre and insert subrecord into KnSreCostCentreContact. \n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_KnSreCostCentre.htm",
         "operationId": "POSTSubRecordKnSreCostCentreKnSreCostCentreContact",
         "requestBody": {
           "content": {
@@ -851,7 +851,7 @@
           }
         ],
         "tags": [
-          "Kostenplaats per verkooprelatie"
+          "Cost centre per sales contact"
         ],
         "parameters": [
           {
@@ -876,7 +876,7 @@
         }
       ],
       "delete": {
-        "summary": "Kostenplaats per verkooprelatie",
+        "summary": "Cost centre per sales contact",
         "operationId": "DELETE_KnSreCostCentre",
         "description": " \n\r Let op: Bij dit endpoint zijn de parameters om een item te verwijderen nog niet gedocumenteerd. De path parameters kunnen hierdoor afwijken\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_KnSreCostCentre.htm",
         "responses": {
@@ -911,7 +911,7 @@
           }
         ],
         "tags": [
-          "Kostenplaats per verkooprelatie"
+          "Cost centre per sales contact"
         ],
         "parameters": [
           {
@@ -1198,7 +1198,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id\u0027s can be found in the metainfo request result.",
+        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -1344,7 +1344,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -1480,7 +1480,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -1535,7 +1535,7 @@
                           },
                           "BcCo": {
                             "type": "string",
-                            "description": "Nummer org./pers."
+                            "description": "Org/pers number"
                           },
                           "SearchName": {
                             "type": "string",
@@ -1645,8 +1645,8 @@
     },
     "/connectors/PtConceptPlacementContract": {
       "post": {
-        "summary": "Concept plaatsingscontract",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtConceptPlacementContract.htm",
+        "summary": "Placement contract draft",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtConceptPlacementContract.htm",
         "operationId": "POST_PtConceptPlacementContract",
         "requestBody": {
           "content": {
@@ -1840,7 +1840,7 @@
           }
         ],
         "tags": [
-          "Concept plaatsingscontract"
+          "Placement contract draft"
         ],
         "parameters": [
           {
@@ -1854,8 +1854,8 @@
     },
     "/connectors/PtCostPriceComponent": {
       "post": {
-        "summary": "Kostprijscomponent",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r ",
+        "summary": "Cost price component",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r ",
         "operationId": "POST_PtCostPriceComponent",
         "requestBody": {
           "content": {
@@ -2014,7 +2014,7 @@
           }
         ],
         "tags": [
-          "Kostprijscomponent"
+          "Cost price component"
         ],
         "parameters": [
           {
@@ -2026,8 +2026,8 @@
         ]
       },
       "put": {
-        "summary": "Kostprijscomponent",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r ",
+        "summary": "Cost price component",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r ",
         "operationId": "PUT_PtCostPriceComponent",
         "requestBody": {
           "content": {
@@ -2149,7 +2149,7 @@
           }
         ],
         "tags": [
-          "Kostprijscomponent"
+          "Cost price component"
         ],
         "parameters": [
           {
@@ -2163,8 +2163,8 @@
     },
     "/connectors/PtCostPriceComponent/PtCostPriceComponentLine": {
       "post": {
-        "summary": "Kostprijscomponent",
-        "description": "Update main record in PtCostPriceComponent and insert subrecord into PtCostPriceComponentLine. \n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r ",
+        "summary": "Cost price component",
+        "description": "Update main record in PtCostPriceComponent and insert subrecord into PtCostPriceComponentLine. \n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r ",
         "operationId": "POSTSubRecordPtCostPriceComponentPtCostPriceComponentLine",
         "requestBody": {
           "content": {
@@ -2228,7 +2228,7 @@
           }
         ],
         "tags": [
-          "Kostprijscomponent"
+          "Cost price component"
         ],
         "parameters": [
           {
@@ -2253,7 +2253,7 @@
         }
       ],
       "delete": {
-        "summary": "Kostprijscomponent",
+        "summary": "Cost price component",
         "operationId": "DELETE_PtCostPriceComponent",
         "description": "\n\r ",
         "responses": {
@@ -2288,7 +2288,7 @@
           }
         ],
         "tags": [
-          "Kostprijscomponent"
+          "Cost price component"
         ],
         "parameters": [
           {
@@ -2299,8 +2299,8 @@
     },
     "/connectors/PtCostPriceModel": {
       "post": {
-        "summary": "Kostprijsmodel",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtCostPriceModel.htm",
+        "summary": "Cost price model",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtCostPriceModel.htm",
         "operationId": "POST_PtCostPriceModel",
         "requestBody": {
           "content": {
@@ -2562,7 +2562,7 @@
           }
         ],
         "tags": [
-          "Kostprijsmodel"
+          "Cost price model"
         ],
         "parameters": [
           {
@@ -2574,8 +2574,8 @@
         ]
       },
       "put": {
-        "summary": "Kostprijsmodel",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtCostPriceModel.htm",
+        "summary": "Cost price model",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtCostPriceModel.htm",
         "operationId": "PUT_PtCostPriceModel",
         "requestBody": {
           "content": {
@@ -2680,7 +2680,7 @@
           }
         ],
         "tags": [
-          "Kostprijsmodel"
+          "Cost price model"
         ],
         "parameters": [
           {
@@ -2694,8 +2694,8 @@
     },
     "/connectors/PtCostPriceModel/PtCostPriceModelVersion": {
       "post": {
-        "summary": "Kostprijsmodel",
-        "description": "Update main record in PtCostPriceModel and insert subrecord into PtCostPriceModelVersion. \n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtCostPriceModel.htm",
+        "summary": "Cost price model",
+        "description": "Update main record in PtCostPriceModel and insert subrecord into PtCostPriceModelVersion. \n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtCostPriceModel.htm",
         "operationId": "POSTSubRecordPtCostPriceModelPtCostPriceModelVersion",
         "requestBody": {
           "content": {
@@ -2759,7 +2759,7 @@
           }
         ],
         "tags": [
-          "Kostprijsmodel"
+          "Cost price model"
         ],
         "parameters": [
           {
@@ -2784,7 +2784,7 @@
         }
       ],
       "delete": {
-        "summary": "Kostprijsmodel",
+        "summary": "Cost price model",
         "operationId": "DELETE_PtCostPriceModel",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtCostPriceModel.htm",
         "responses": {
@@ -2819,7 +2819,7 @@
           }
         ],
         "tags": [
-          "Kostprijsmodel"
+          "Cost price model"
         ],
         "parameters": [
           {
@@ -2830,8 +2830,8 @@
     },
     "/connectors/PtCostPriceModelPerProject": {
       "post": {
-        "summary": "Kostprijsmodel per klantovereenkomst",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r ",
+        "summary": "Cost price model per customer agreement",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r ",
         "operationId": "POST_PtCostPriceModelPerProject",
         "requestBody": {
           "content": {
@@ -2868,7 +2868,7 @@
           }
         ],
         "tags": [
-          "Kostprijsmodel per klantovereenkomst"
+          "Cost price model per customer agreement"
         ],
         "parameters": [
           {
@@ -2882,8 +2882,8 @@
     },
     "/connectors/PtDeclaration": {
       "post": {
-        "summary": "Declaratie",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtDeclaration.htm",
+        "summary": "Claim",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtDeclaration.htm",
         "operationId": "POST_PtDeclaration",
         "requestBody": {
           "content": {
@@ -3058,7 +3058,7 @@
           }
         ],
         "tags": [
-          "Declaratie"
+          "Claim"
         ],
         "parameters": [
           {
@@ -3070,8 +3070,8 @@
         ]
       },
       "put": {
-        "summary": "Declaratie",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtDeclaration.htm",
+        "summary": "Claim",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtDeclaration.htm",
         "operationId": "PUT_PtDeclaration",
         "requestBody": {
           "content": {
@@ -3244,7 +3244,7 @@
           }
         ],
         "tags": [
-          "Declaratie"
+          "Claim"
         ],
         "parameters": [
           {
@@ -3269,7 +3269,7 @@
         }
       ],
       "delete": {
-        "summary": "Declaratie",
+        "summary": "Claim",
         "operationId": "DELETE_PtDeclaration",
         "description": " \n\r Let op: Bij dit endpoint zijn de parameters om een item te verwijderen nog niet gedocumenteerd. De path parameters kunnen hierdoor afwijken\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtDeclaration.htm",
         "responses": {
@@ -3304,7 +3304,7 @@
           }
         ],
         "tags": [
-          "Declaratie"
+          "Claim"
         ],
         "parameters": [
           {
@@ -3315,8 +3315,8 @@
     },
     "/connectors/PtDeclarationCorrection": {
       "post": {
-        "summary": "Corrigeren nacalculatie per declaratie",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtDeclarationCorrection.htm",
+        "summary": "Correct actual costing per claim",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtDeclarationCorrection.htm",
         "operationId": "POST_PtDeclarationCorrection",
         "requestBody": {
           "content": {
@@ -3381,7 +3381,7 @@
           }
         ],
         "tags": [
-          "Corrigeren nacalculatie per declaratie"
+          "Correct actual costing per claim"
         ],
         "parameters": [
           {
@@ -3393,8 +3393,8 @@
         ]
       },
       "put": {
-        "summary": "Corrigeren nacalculatie per declaratie",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtDeclarationCorrection.htm",
+        "summary": "Correct actual costing per claim",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtDeclarationCorrection.htm",
         "operationId": "PUT_PtDeclarationCorrection",
         "requestBody": {
           "content": {
@@ -3460,7 +3460,7 @@
           }
         ],
         "tags": [
-          "Corrigeren nacalculatie per declaratie"
+          "Correct actual costing per claim"
         ],
         "parameters": [
           {
@@ -3474,8 +3474,8 @@
     },
     "/connectors/PtDeclarationCorrection/PtRealization": {
       "post": {
-        "summary": "Corrigeren nacalculatie per declaratie",
-        "description": "Update main record in PtDeclarationCorrection and insert subrecord into PtRealization. \n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtDeclarationCorrection.htm",
+        "summary": "Correct actual costing per claim",
+        "description": "Update main record in PtDeclarationCorrection and insert subrecord into PtRealization. \n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtDeclarationCorrection.htm",
         "operationId": "POSTSubRecordPtDeclarationCorrectionPtRealization",
         "requestBody": {
           "content": {
@@ -3540,7 +3540,7 @@
           }
         ],
         "tags": [
-          "Corrigeren nacalculatie per declaratie"
+          "Correct actual costing per claim"
         ],
         "parameters": [
           {
@@ -3554,8 +3554,8 @@
     },
     "/connectors/PtFunction": {
       "post": {
-        "summary": "Functie",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtFunction.htm",
+        "summary": "Job",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtFunction.htm",
         "operationId": "POST_PtFunction",
         "requestBody": {
           "content": {
@@ -3793,7 +3793,7 @@
           }
         ],
         "tags": [
-          "Functie"
+          "Job"
         ],
         "parameters": [
           {
@@ -3805,8 +3805,8 @@
         ]
       },
       "put": {
-        "summary": "Functie",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtFunction.htm",
+        "summary": "Job",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtFunction.htm",
         "operationId": "PUT_PtFunction",
         "requestBody": {
           "content": {
@@ -3962,7 +3962,7 @@
           }
         ],
         "tags": [
-          "Functie"
+          "Job"
         ],
         "parameters": [
           {
@@ -3996,7 +3996,7 @@
         }
       ],
       "delete": {
-        "summary": "Functie",
+        "summary": "Job",
         "operationId": "DELETE_PtFunction",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtFunction.htm",
         "responses": {
@@ -4031,7 +4031,7 @@
           }
         ],
         "tags": [
-          "Functie"
+          "Job"
         ],
         "parameters": [
           {
@@ -4042,8 +4042,8 @@
     },
     "/connectors/PtItemSet": {
       "post": {
-        "summary": "Itemset",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtItemSet.htm",
+        "summary": "Item set",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtItemSet.htm",
         "operationId": "POST_PtItemSet",
         "requestBody": {
           "content": {
@@ -4304,13 +4304,13 @@
                                 "Fields": {
                                   "ItCd": "11-C90990",
                                   "#text": [
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E"
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">"
                                   ],
                                   "AmMi": "10.10",
                                   "AmMa": "20.20",
@@ -4431,13 +4431,13 @@
                                 "Fields": {
                                   "ItCd": "11-C90990",
                                   "#text": [
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E"
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">"
                                   ],
                                   "AmMi": "10.10",
                                   "AmMa": "20.20",
@@ -4530,13 +4530,13 @@
                                 "Fields": {
                                   "ItCd": "11-C90990",
                                   "#text": [
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E"
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">"
                                   ],
                                   "AmMi": "10.10",
                                   "AmMa": "20.20",
@@ -4553,11 +4553,11 @@
                                 "Fields": {
                                   "ItCd": "11-C15753",
                                   "#text": [
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E"
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">"
                                   ],
                                   "AmMi": "10.15",
                                   "AmMa": "20.25",
@@ -4572,11 +4572,11 @@
                                 "Fields": {
                                   "ItCd": "11-C11094",
                                   "#text": [
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E"
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">"
                                   ],
                                   "AmMi": "10.10",
                                   "AmMa": "20.20",
@@ -4591,11 +4591,11 @@
                                 "Fields": {
                                   "ItCd": "11-C43372",
                                   "#text": [
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E"
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">"
                                   ],
                                   "AmMi": "10.15",
                                   "AmMa": "20.25",
@@ -4679,8 +4679,8 @@
                                 "Fields": {
                                   "ItCd": "FLEX10-5",
                                   "#text": [
-                                    "\u003E",
-                                    "\u003E"
+                                    ">",
+                                    ">"
                                   ],
                                   "GWPc": "80.98",
                                   "GWMi": "70.97",
@@ -4757,7 +4757,7 @@
           }
         ],
         "tags": [
-          "Itemset"
+          "Item set"
         ],
         "parameters": [
           {
@@ -4769,8 +4769,8 @@
         ]
       },
       "put": {
-        "summary": "Itemset",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtItemSet.htm",
+        "summary": "Item set",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtItemSet.htm",
         "operationId": "PUT_PtItemSet",
         "requestBody": {
           "content": {
@@ -4914,7 +4914,7 @@
           }
         ],
         "tags": [
-          "Itemset"
+          "Item set"
         ],
         "parameters": [
           {
@@ -4928,8 +4928,8 @@
     },
     "/connectors/PtItemSet/PtItemSetLine": {
       "post": {
-        "summary": "Itemset",
-        "description": "Update main record in PtItemSet and insert subrecord into PtItemSetLine. \n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtItemSet.htm",
+        "summary": "Item set",
+        "description": "Update main record in PtItemSet and insert subrecord into PtItemSetLine. \n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtItemSet.htm",
         "operationId": "POSTSubRecordPtItemSetPtItemSetLine",
         "requestBody": {
           "content": {
@@ -4966,7 +4966,7 @@
           }
         ],
         "tags": [
-          "Itemset"
+          "Item set"
         ],
         "parameters": [
           {
@@ -4980,8 +4980,8 @@
     },
     "/connectors/PtItemSet/PtItemsetScaleWage": {
       "post": {
-        "summary": "Itemset",
-        "description": "Update main record in PtItemSet and insert subrecord into PtItemsetScaleWage. \n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtItemSet.htm",
+        "summary": "Item set",
+        "description": "Update main record in PtItemSet and insert subrecord into PtItemsetScaleWage. \n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtItemSet.htm",
         "operationId": "POSTSubRecordPtItemSetPtItemsetScaleWage",
         "requestBody": {
           "content": {
@@ -5018,7 +5018,7 @@
           }
         ],
         "tags": [
-          "Itemset"
+          "Item set"
         ],
         "parameters": [
           {
@@ -5039,11 +5039,11 @@
           "name": "PtItpDaBe",
           "in": "path",
           "required": true,
-          "description": "Begindatum CBS cao-code"
+          "description": "Begindatum\n            CBS cao-code"
         }
       ],
       "delete": {
-        "summary": "Itemset",
+        "summary": "Item set",
         "operationId": "DELETE_PtItemSet",
         "description": " \n\r Let op: Bij dit endpoint zijn de parameters om een item te verwijderen nog niet gedocumenteerd. De path parameters kunnen hierdoor afwijken\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtItemSet.htm",
         "responses": {
@@ -5078,7 +5078,7 @@
           }
         ],
         "tags": [
-          "Itemset"
+          "Item set"
         ],
         "parameters": [
           {
@@ -5089,8 +5089,8 @@
     },
     "/connectors/PtItemSetFunction": {
       "post": {
-        "summary": "Functie per itemset",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/121936.htm",
+        "summary": "Function per item set",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/121936.htm",
         "operationId": "POST_PtItemSetFunction",
         "requestBody": {
           "content": {
@@ -5191,7 +5191,7 @@
           }
         ],
         "tags": [
-          "Functie per itemset"
+          "Function per item set"
         ],
         "parameters": [
           {
@@ -5203,8 +5203,8 @@
         ]
       },
       "put": {
-        "summary": "Functie per itemset",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/121936.htm",
+        "summary": "Function per item set",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/121936.htm",
         "operationId": "PUT_PtItemSetFunction",
         "requestBody": {
           "content": {
@@ -5276,7 +5276,7 @@
           }
         ],
         "tags": [
-          "Functie per itemset"
+          "Function per item set"
         ],
         "parameters": [
           {
@@ -5310,7 +5310,7 @@
         }
       ],
       "delete": {
-        "summary": "Functie per itemset",
+        "summary": "Function per item set",
         "operationId": "DELETE_PtItemSetFunction",
         "description": "\n\r https://help.afas.nl/help/NL/SE/121936.htm",
         "responses": {
@@ -5345,7 +5345,7 @@
           }
         ],
         "tags": [
-          "Functie per itemset"
+          "Function per item set"
         ],
         "parameters": [
           {
@@ -5356,8 +5356,8 @@
     },
     "/connectors/PtPlacementContract": {
       "post": {
-        "summary": "Plaatsing",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtPlacementContract.htm",
+        "summary": "Placement",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtPlacementContract.htm",
         "operationId": "POST_PtPlacementContract",
         "requestBody": {
           "content": {
@@ -5582,7 +5582,7 @@
           }
         ],
         "tags": [
-          "Plaatsing"
+          "Placement"
         ],
         "parameters": [
           {
@@ -5594,8 +5594,8 @@
         ]
       },
       "put": {
-        "summary": "Plaatsing",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtPlacementContract.htm",
+        "summary": "Placement",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtPlacementContract.htm",
         "operationId": "PUT_PtPlacementContract",
         "requestBody": {
           "content": {
@@ -5659,7 +5659,7 @@
           }
         ],
         "tags": [
-          "Plaatsing"
+          "Placement"
         ],
         "parameters": [
           {
@@ -5673,8 +5673,8 @@
     },
     "/connectors/PtPlacementContract/AfasPtPlacementContractLine": {
       "post": {
-        "summary": "Plaatsing",
-        "description": "Update main record in PtPlacementContract and insert subrecord into AfasPtPlacementContractLine. \n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtPlacementContract.htm",
+        "summary": "Placement",
+        "description": "Update main record in PtPlacementContract and insert subrecord into AfasPtPlacementContractLine. \n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtPlacementContract.htm",
         "operationId": "POSTSubRecordPtPlacementContractAfasPtPlacementContractLine",
         "requestBody": {
           "content": {
@@ -5736,7 +5736,7 @@
           }
         ],
         "tags": [
-          "Plaatsing"
+          "Placement"
         ],
         "parameters": [
           {
@@ -5761,7 +5761,7 @@
         }
       ],
       "delete": {
-        "summary": "Plaatsing",
+        "summary": "Placement",
         "operationId": "DELETE_PtPlacementContract",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtPlacementContract.htm",
         "responses": {
@@ -5796,7 +5796,7 @@
           }
         ],
         "tags": [
-          "Plaatsing"
+          "Placement"
         ],
         "parameters": [
           {
@@ -5807,8 +5807,8 @@
     },
     "/connectors/PtPriceAgreement": {
       "post": {
-        "summary": "Prijsafspraak",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Flex_PtPriceAgreement.htm",
+        "summary": "Price agreement",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Flex_PtPriceAgreement.htm",
         "operationId": "POST_PtPriceAgreement",
         "requestBody": {
           "content": {
@@ -6403,7 +6403,7 @@
           }
         ],
         "tags": [
-          "Prijsafspraak"
+          "Price agreement"
         ],
         "parameters": [
           {
@@ -6415,8 +6415,8 @@
         ]
       },
       "put": {
-        "summary": "Prijsafspraak",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Flex_PtPriceAgreement.htm",
+        "summary": "Price agreement",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Flex_PtPriceAgreement.htm",
         "operationId": "PUT_PtPriceAgreement",
         "requestBody": {
           "content": {
@@ -6597,7 +6597,7 @@
           }
         ],
         "tags": [
-          "Prijsafspraak"
+          "Price agreement"
         ],
         "parameters": [
           {
@@ -6611,8 +6611,8 @@
     },
     "/connectors/PtPriceAgreement/PtPriceAgreementVersion": {
       "post": {
-        "summary": "Prijsafspraak",
-        "description": "Update main record in PtPriceAgreement and insert subrecord into PtPriceAgreementVersion. \n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Flex_PtPriceAgreement.htm",
+        "summary": "Price agreement",
+        "description": "Update main record in PtPriceAgreement and insert subrecord into PtPriceAgreementVersion. \n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Flex_PtPriceAgreement.htm",
         "operationId": "POSTSubRecordPtPriceAgreementPtPriceAgreementVersion",
         "requestBody": {
           "content": {
@@ -6649,7 +6649,7 @@
           }
         ],
         "tags": [
-          "Prijsafspraak"
+          "Price agreement"
         ],
         "parameters": [
           {
@@ -6674,7 +6674,7 @@
         }
       ],
       "delete": {
-        "summary": "Prijsafspraak",
+        "summary": "Price agreement",
         "operationId": "DELETE_PtPriceAgreement",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Flex_PtPriceAgreement.htm",
         "responses": {
@@ -6709,7 +6709,7 @@
           }
         ],
         "tags": [
-          "Prijsafspraak"
+          "Price agreement"
         ],
         "parameters": [
           {
@@ -6729,60 +6729,60 @@
       "description": "API Info"
     },
     {
-      "name": "Tarief",
-      "description": "Tarief"
+      "name": "Rate",
+      "description": "Rate"
     },
     {
-      "name": "Reservering Hrm",
-      "description": "Reservering Hrm"
+      "name": "Reserve HRM",
+      "description": "Reserve HRM"
     },
     {
-      "name": "Kostenplaats per verkooprelatie",
-      "description": "Kostenplaats per verkooprelatie"
+      "name": "Cost centre per sales contact",
+      "description": "Cost centre per sales contact"
     },
     {
-      "name": "Concept plaatsingscontract",
-      "description": "Concept plaatsingscontract"
+      "name": "Placement contract draft",
+      "description": "Placement contract draft"
     },
     {
-      "name": "Kostprijscomponent",
-      "description": "Kostprijscomponent"
+      "name": "Cost price component",
+      "description": "Cost price component"
     },
     {
-      "name": "Kostprijsmodel",
-      "description": "Kostprijsmodel"
+      "name": "Cost price model",
+      "description": "Cost price model"
     },
     {
-      "name": "Kostprijsmodel per klantovereenkomst",
-      "description": "Kostprijsmodel per klantovereenkomst"
+      "name": "Cost price model per customer agreement",
+      "description": "Cost price model per customer agreement"
     },
     {
-      "name": "Declaratie",
-      "description": "Declaratie"
+      "name": "Claim",
+      "description": "Claim"
     },
     {
-      "name": "Corrigeren nacalculatie per declaratie",
-      "description": "Corrigeren nacalculatie per declaratie"
+      "name": "Correct actual costing per claim",
+      "description": "Correct actual costing per claim"
     },
     {
-      "name": "Functie",
-      "description": "Functie"
+      "name": "Job",
+      "description": "Job"
     },
     {
-      "name": "Itemset",
-      "description": "Itemset"
+      "name": "Item set",
+      "description": "Item set"
     },
     {
-      "name": "Functie per itemset",
-      "description": "Functie per itemset"
+      "name": "Function per item set",
+      "description": "Function per item set"
     },
     {
-      "name": "Plaatsing",
-      "description": "Plaatsing"
+      "name": "Placement",
+      "description": "Placement"
     },
     {
-      "name": "Prijsafspraak",
-      "description": "Prijsafspraak"
+      "name": "Price agreement",
+      "description": "Price agreement"
     }
   ],
   "components": {
@@ -6827,6 +6827,7 @@
                           "1",
                           "10",
                           "11",
+                          "12",
                           "2",
                           "3",
                           "4",
@@ -6841,7 +6842,7 @@
                           "94"
                         ],
                         "maxLength": 20,
-                        "description": "Reservation type\n1 = Vakantiegeld;\n10 = Eindejaarsuitkering;\n11 = Eindejaarsuitkering (periodiek te factureren);\n2 = Vakantie-uren;\n3 = Vakantieuren in geld;\n4 = Vakantieuren bovenwettelijk;\n5 = Vakantieuren bovenwettelijk in geld;\n6 = Kort verzuim / Bijzonder verlof in geld;\n7 = ADV-uren;\n8 = ADV-uren in geld;\n9 = Tijd-voor-tijd uren;\n91 = Vakantiegeld voor StiPP;\n92 = Reserveringen in uren voor StiPP;\n93 = Vrijgesteld StiPP - vakantiegeld;\n94 = Vrijgesteld StiPP - reserveringen in uren;",
+                        "description": "Reservation type\n1 = Holiday pay;\n10 = End-of-year bonus;\n11 = Eindejaarsuitkering (periodiek te factureren);\n12 = Flexible budget;\n2 = Holiday hours;\n3 = Monetary pay-out of holiday hours;\n4 = Additional holiday hours (above minimum);\n5 = Monetary pay-out of additional holiday hours (above minimum);\n6 = Short absence/special leave in money;\n7 = Hours off in connection with the reduction in working hours scheme;\n8 = Monetary pay-out of hours off in connection with the reduction in working hours scheme;\n9 = Time off in lieu hours;\n91 = Holiday allowance for StiPP;\n92 = Reserves in hours for StiPP;\n93 = Exempt StiPP - holiday pay;\n94 = Exempt StiPP - reservations in hours;",
                         "format": ""
                       },
                       "Amou": {
@@ -7097,7 +7098,7 @@
                           "3M"
                         ],
                         "maxLength": 20,
-                        "description": "Probationary period\n1M = Een maand;\n2M = Twee maanden;\nOM = Overig;\n6M = Een halfjaar;\n12M = Een jaar;\n9M = Negen maanden;\nNM = Geen;\n2W = Twee weken;\n3M = Drie maanden;",
+                        "description": "Probationary period\n1M = One month;\n2M = Two months;\nOM = Other;\n6M = Half year;\n12M = One year;\n9M = Nine months;\nNM = None;\n2W = Two weeks;\n3M = Three months;",
                         "format": ""
                       },
                       "ToTe": {
@@ -7108,11 +7109,11 @@
                       "ToTp": {
                         "type": "string",
                         "enum": [
-                          "U",
+                          "H",
                           "W"
                         ],
                         "maxLength": 20,
-                        "description": "Takeover unit\nU = Uren;\nW = Weken;",
+                        "description": "Takeover unit\nH = Hours;\nW = Weeks;",
                         "format": ""
                       },
                       "ExTe": {
@@ -7123,11 +7124,11 @@
                       "ExTp": {
                         "type": "string",
                         "enum": [
-                          "U",
+                          "H",
                           "W"
                         ],
                         "maxLength": 20,
-                        "description": "Extended placement unit\nU = Uren;\nW = Weken;",
+                        "description": "Extended placement unit\nH = Hours;\nW = Weeks;",
                         "format": ""
                       },
                       "ViFa": {
@@ -7142,11 +7143,11 @@
                           "B",
                           "C",
                           "K",
-                          "O",
+                          "U",
                           "W"
                         ],
                         "maxLength": 20,
-                        "description": "Phase\n1 = Fase 1;\n12 = Fase 1-2;\n2 = Fase 2;\n3 = Fase 3;\n4 = Fase 4;\nA = Fase A;\nB = Fase B;\nC = Fase C;\nK = Ketensysteem;\nO = Onbekend;\nW = Wettelijk regime;",
+                        "description": "Phase\n1 = Phase 1;\n12 = Phase 1-2;\n2 = Phase 2;\n3 = Phase 3;\n4 = Phase 4;\nA = Phase A;\nB = Phase B;\nC = Phase C;\nK = Chain system;\nU = Unknown;\nW = Legal regime;",
                         "format": ""
                       },
                       "ViFc": {
@@ -7157,7 +7158,7 @@
                           "ZU"
                         ],
                         "maxLength": 20,
-                        "description": "Temporary employment clause\nU = met uitzendbeding;\nZ = zonder uitzendbeding;\nZU = zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting;",
+                        "description": "Temporary employment clause\nU = with temporary employment clause;\nZ = without temporary employment clause;\nZU = without temporary employment clause, with exclusion of the continued payment obligation;",
                         "format": ""
                       },
                       "ToTh": {
@@ -7183,7 +7184,7 @@
                           "1"
                         ],
                         "maxLength": 20,
-                        "description": "Type of placement\n0 = Standaard;\n1 = Inkopen;",
+                        "description": "Type of placement\n0 = Default;\n1 = Purchase;",
                         "format": ""
                       },
                       "PRe": {
@@ -7247,23 +7248,23 @@
                                           "VU"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Temporary employment method\nI = Inleen-doorleen;\nL = Leegloop;\nM = Migratie;\nO = Ontslagvergoeding;\nP = Payrolling;\nU = Uitzenden;\nV = Vakantiekracht;\nVU = Verlengd uitzenden;",
+                                        "description": "Temporary employment method\nI = Hire-second;\nL = Idleness;\nM = Migration;\nO = Dismissal compensation;\nP = Payrolling;\nU = Place;\nV = Holiday worker;\nVU = Extended placement;",
                                         "format": ""
                                       },
                                       "ApCo": {
                                         "type": "string",
                                         "enum": [
-                                          "O",
+                                          "U",
                                           "H",
-                                          "J",
-                                          "B",
-                                          "AJ",
+                                          "Y",
+                                          "S",
+                                          "HY",
                                           "7M",
                                           "8M",
                                           "9M"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Placement type\nO = Onbepaalde tijd;\nH = Halfjaarcontract;\nJ = Jaarcontract;\nB = Bepaalde tijd;\nAJ = Anderhalf jaar;\n7M = 7 maanden contract;\n8M = 8 maanden contract;\n9M = 9 maanden contract;",
+                                        "description": "Placement type\nU = Indefinite time;\nH = Half-yearly contract;\nY = Annual contract;\nS = Specific time;\nHY = One and a half years;\n7M = 7-month contract;\n8M = 8-month contract;\n9M = 9-month contract;",
                                         "format": ""
                                       },
                                       "HoGo": {
@@ -7314,7 +7315,7 @@
                                           "4"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Cost centre claim\n0 = Niet van toepassing;\n1 = Invullen door medewerker, wijzigen door klant toegestaan;\n2 = Invullen door medewerker, wijzigen door klant niet toegestaan;\n3 = Invullen door klant verplicht;\n4 = Overnemen van plaatsing;",
+                                        "description": "Cost centre claim\n0 = Not applicable;\n1 = Completion by employee and changing by customer allowed;\n2 = Completion by employee and changing by customer not allowed;\n3 = Completion by customer mandatory;\n4 = Copy from placement;",
                                         "format": ""
                                       },
                                       "VaSc": {
@@ -7391,7 +7392,7 @@
                                           "6"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Determining intercompany amount based on\n1 = Verloning;\n2 = Verkoopbedrag;\n3 = % marge t.o.v. verkoopbedrag;\n4 = Bedrag marge t.o.v. verkoopprijs;\n5 = Intercompanytarief;\n6 = Intercompanytarief * % brutoloon;",
+                                        "description": "Determining intercompany amount based on\n1 = Remuneration;\n2 = Sales amount;\n3 = % margin regarding the sales amount;\n4 = Margin amount compared to sales price;\n5 = Intercompany rate;\n6 = Intercompany rate * % gross salary;",
                                         "format": ""
                                       },
                                       "MaPc": {
@@ -7468,7 +7469,7 @@
                           "21"
                         ],
                         "maxLength": 20,
-                        "description": "Component\n01 = Wachtdagencompensatie;\n02 = Vakantiedagen;\n03 = Feestdagen;\n04 = Kort verzuimdagen;\n05 = Ziekteverzuim;\n06 = Leegloop;\n07 = Vakantiebijslag;\n08 = Sectorpremie;\n09 = Wga-Vast (Whk);\n10 = ZW-Flex ERD (Whk);\n11 = Premie WW/AWF;\n12 = Zvw;\n13 = WAO/WIA basis;\n14 = Opslag Kinderopvang;\n15 = Pensioenpremie;\n16 = Voorziening sociaal fonds;\n17 = Scholing;\n18 = Transitievergoeding;\n19 = Aanvulling ZW;\n20 = Leegloop;\n21 = Uren;",
+                        "description": "Component\n01 = Waiting days compensation;\n02 = Holidays;\n03 = Public holidays;\n04 = Days short sick leave;\n05 = Sick leave;\n06 = Idleness;\n07 = Holiday allowance;\n08 = Sector contribution;\n09 = Wga-Vast (Whk);\n10 = ZW-Flex ERD (Whk);\n11 = Unemployment insurance/General Unemployment Fund contribution;\n12 = 'ZVW';\n13 = Invalidity (WAO)/Capacity for Work (WIA) basis;\n14 = Childcare services premium;\n15 = Pension premium;\n16 = Social fund provision;\n17 = Scholing;\n18 = Transitional allowance;\n19 = Sickness Benefits supplement;\n20 = Idleness;\n21 = Hours;",
                         "format": ""
                       },
                       "Ds": {
@@ -7480,20 +7481,20 @@
                       "VaIt": {
                         "type": "string",
                         "enum": [
-                          "Wst",
+                          "Wtp",
                           "Pid",
-                          "Deg",
+                          "Dgh",
                           "Dim",
-                          "Art",
+                          "Itm",
                           "Txt",
                           "Sub",
-                          "Tsl",
-                          "Kst",
-                          "Sam",
+                          "Sur",
+                          "Cst",
+                          "Cmp",
                           "Crs"
                         ],
                         "maxLength": 20,
-                        "description": "Item type\nWst = Werksoort;\nPid = Productie-indicator;\nDeg = Deeg;\nDim = Artikeldimensietotaal;\nArt = Artikel;\nTxt = Tekst;\nSub = Subtotaal;\nTsl = Toeslag;\nKst = Kosten;\nSam = Samenstelling;\nCrs = Cursus;",
+                        "description": "Item type\nWtp = Work type;\nPid = Production indicator;\nDgh = Dough;\nDim = Item dimension total;\nItm = Article;\nTxt = Text;\nSub = Sub-total;\nSur = Allowance;\nCst = Costs;\nCmp = Assembled item;\nCrs = Course;",
                         "format": ""
                       },
                       "ItCd": {
@@ -7574,17 +7575,17 @@
                                       "VaCt": {
                                         "type": "string",
                                         "enum": [
-                                          "O",
+                                          "U",
                                           "H",
-                                          "J",
-                                          "B",
-                                          "AJ",
+                                          "Y",
+                                          "S",
+                                          "HY",
                                           "7M",
                                           "8M",
                                           "9M"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Placement type\nO = Onbepaalde tijd;\nH = Halfjaarcontract;\nJ = Jaarcontract;\nB = Bepaalde tijd;\nAJ = Anderhalf jaar;\n7M = 7 maanden contract;\n8M = 8 maanden contract;\n9M = 9 maanden contract;",
+                                        "description": "Placement type\nU = Indefinite time;\nH = Half-yearly contract;\nY = Annual contract;\nS = Specific time;\nHY = One and a half years;\n7M = 7-month contract;\n8M = 8-month contract;\n9M = 9-month contract;",
                                         "format": ""
                                       },
                                       "VaFz": {
@@ -7611,7 +7612,7 @@
                                           "K"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Phase\nO = Onbekend of n.v.t.;\n1 = Fase 1 met uitzendbeding (t/m 2019);\n12 = Fase 1-2 met uitzendbeding;\n13 = Fase 1-2 zonder uitzendbeding;\n14 = Fase 1-2 zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting;\nAU = Fase A met uitzendbeding;\nB = Fase B;\nC = Fase C;\n2 = Fase 2 met uitzendbeding (t/m 2019);\n3 = Fase 3;\nAZU = Fase A zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting;\n4 = Fase 4;\nAZ = Fase A zonder uitzendbeding;\n41 = Fase 1 zonder uitzendbeding (t/m 2019);\n42 = Fase 2 zonder uitzendbeding (t/m 2019);\n43 = Fase 1 zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting (t/m 2019);\n44 = Fase 2 zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting (t/m 2019);\nW = Wettelijk regime;\nK = Ketensysteem;",
+                                        "description": "Phase\nO = Unknown or N.A.;\n1 = Phase 1 with temporary employment clause (up to 2019);\n12 = Phase 1-2 with temporary employment clause;\n13 = Phase 1-2 without temporary employment clause;\n14 = Phase 1-2 without temp. employment clause with exclusion of the cont. payment of wages obligation;\nAU = Phase A with transmission request;\nB = Phase B;\nC = Phase C;\n2 = Phase 2 with temporary employment clause (up to 2019);\n3 = Phase 3;\nAZU = Phase A without temporary employment clause, with exclusion of obligation for continued payment;\n4 = Phase 4;\nAZ = Phase A without transmission condition;\n41 = Phase 1 without temporary employment clause (up to 2019);\n42 = Phase 2 without temporary employment clause (up to 2019);\n43 = Phase 1 without temporary employment clause with exclusion of the continued payment of wages obligat;\n44 = Phase 2 without temporary employment clause with exclusion of the continued payment of wages obligat;\nW = Legal regime;\nK = Chain system;",
                                         "format": ""
                                       },
                                       "ViSe": {
@@ -7627,7 +7628,7 @@
                                           "VU"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Temporary employment method\nI = Inleen-doorleen;\nL = Leegloop;\nM = Migratie;\nO = Ontslagvergoeding;\nP = Payrolling;\nU = Uitzenden;\nV = Vakantiekracht;\nVU = Verlengd uitzenden;",
+                                        "description": "Temporary employment method\nI = Hire-second;\nL = Idleness;\nM = Migration;\nO = Dismissal compensation;\nP = Payrolling;\nU = Place;\nV = Holiday worker;\nVU = Extended placement;",
                                         "format": ""
                                       },
                                       "ViTy": {
@@ -7638,7 +7639,7 @@
                                           "T"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Position type\n***** = Niet van toepassing;\nA = Administratief;\nT = Technisch;",
+                                        "description": "Position type\n***** = Not applicable;\nA = Administratief;\nT = Technical;",
                                         "format": ""
                                       },
                                       "PcFa": {
@@ -7729,7 +7730,7 @@
                           "21"
                         ],
                         "maxLength": 20,
-                        "description": "Component\n01 = Wachtdagencompensatie;\n02 = Vakantiedagen;\n03 = Feestdagen;\n04 = Kort verzuimdagen;\n05 = Ziekteverzuim;\n06 = Leegloop;\n07 = Vakantiebijslag;\n08 = Sectorpremie;\n09 = Wga-Vast (Whk);\n10 = ZW-Flex ERD (Whk);\n11 = Premie WW/AWF;\n12 = Zvw;\n13 = WAO/WIA basis;\n14 = Opslag Kinderopvang;\n15 = Pensioenpremie;\n16 = Voorziening sociaal fonds;\n17 = Scholing;\n18 = Transitievergoeding;\n19 = Aanvulling ZW;\n20 = Leegloop;\n21 = Uren;",
+                        "description": "Component\n01 = Waiting days compensation;\n02 = Holidays;\n03 = Public holidays;\n04 = Days short sick leave;\n05 = Sick leave;\n06 = Idleness;\n07 = Holiday allowance;\n08 = Sector contribution;\n09 = Wga-Vast (Whk);\n10 = ZW-Flex ERD (Whk);\n11 = Unemployment insurance/General Unemployment Fund contribution;\n12 = 'ZVW';\n13 = Invalidity (WAO)/Capacity for Work (WIA) basis;\n14 = Childcare services premium;\n15 = Pension premium;\n16 = Social fund provision;\n17 = Scholing;\n18 = Transitional allowance;\n19 = Sickness Benefits supplement;\n20 = Idleness;\n21 = Hours;",
                         "format": ""
                       },
                       "Ds": {
@@ -7741,20 +7742,20 @@
                       "VaIt": {
                         "type": "string",
                         "enum": [
-                          "Wst",
+                          "Wtp",
                           "Pid",
-                          "Deg",
+                          "Dgh",
                           "Dim",
-                          "Art",
+                          "Itm",
                           "Txt",
                           "Sub",
-                          "Tsl",
-                          "Kst",
-                          "Sam",
+                          "Sur",
+                          "Cst",
+                          "Cmp",
                           "Crs"
                         ],
                         "maxLength": 20,
-                        "description": "Item type\nWst = Werksoort;\nPid = Productie-indicator;\nDeg = Deeg;\nDim = Artikeldimensietotaal;\nArt = Artikel;\nTxt = Tekst;\nSub = Subtotaal;\nTsl = Toeslag;\nKst = Kosten;\nSam = Samenstelling;\nCrs = Cursus;",
+                        "description": "Item type\nWtp = Work type;\nPid = Production indicator;\nDgh = Dough;\nDim = Item dimension total;\nItm = Article;\nTxt = Text;\nSub = Sub-total;\nSur = Allowance;\nCst = Costs;\nCmp = Assembled item;\nCrs = Course;",
                         "format": ""
                       },
                       "ItCd": {
@@ -7829,17 +7830,17 @@
                                       "VaCt": {
                                         "type": "string",
                                         "enum": [
-                                          "O",
+                                          "U",
                                           "H",
-                                          "J",
-                                          "B",
-                                          "AJ",
+                                          "Y",
+                                          "S",
+                                          "HY",
                                           "7M",
                                           "8M",
                                           "9M"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Placement type\nO = Onbepaalde tijd;\nH = Halfjaarcontract;\nJ = Jaarcontract;\nB = Bepaalde tijd;\nAJ = Anderhalf jaar;\n7M = 7 maanden contract;\n8M = 8 maanden contract;\n9M = 9 maanden contract;",
+                                        "description": "Placement type\nU = Indefinite time;\nH = Half-yearly contract;\nY = Annual contract;\nS = Specific time;\nHY = One and a half years;\n7M = 7-month contract;\n8M = 8-month contract;\n9M = 9-month contract;",
                                         "format": ""
                                       },
                                       "VaFz": {
@@ -7866,7 +7867,7 @@
                                           "K"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Phase\nO = Onbekend of n.v.t.;\n1 = Fase 1 met uitzendbeding (t/m 2019);\n12 = Fase 1-2 met uitzendbeding;\n13 = Fase 1-2 zonder uitzendbeding;\n14 = Fase 1-2 zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting;\nAU = Fase A met uitzendbeding;\nB = Fase B;\nC = Fase C;\n2 = Fase 2 met uitzendbeding (t/m 2019);\n3 = Fase 3;\nAZU = Fase A zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting;\n4 = Fase 4;\nAZ = Fase A zonder uitzendbeding;\n41 = Fase 1 zonder uitzendbeding (t/m 2019);\n42 = Fase 2 zonder uitzendbeding (t/m 2019);\n43 = Fase 1 zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting (t/m 2019);\n44 = Fase 2 zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting (t/m 2019);\nW = Wettelijk regime;\nK = Ketensysteem;",
+                                        "description": "Phase\nO = Unknown or N.A.;\n1 = Phase 1 with temporary employment clause (up to 2019);\n12 = Phase 1-2 with temporary employment clause;\n13 = Phase 1-2 without temporary employment clause;\n14 = Phase 1-2 without temp. employment clause with exclusion of the cont. payment of wages obligation;\nAU = Phase A with transmission request;\nB = Phase B;\nC = Phase C;\n2 = Phase 2 with temporary employment clause (up to 2019);\n3 = Phase 3;\nAZU = Phase A without temporary employment clause, with exclusion of obligation for continued payment;\n4 = Phase 4;\nAZ = Phase A without transmission condition;\n41 = Phase 1 without temporary employment clause (up to 2019);\n42 = Phase 2 without temporary employment clause (up to 2019);\n43 = Phase 1 without temporary employment clause with exclusion of the continued payment of wages obligat;\n44 = Phase 2 without temporary employment clause with exclusion of the continued payment of wages obligat;\nW = Legal regime;\nK = Chain system;",
                                         "format": ""
                                       },
                                       "ViSe": {
@@ -7882,7 +7883,7 @@
                                           "VU"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Temporary employment method\nI = Inleen-doorleen;\nL = Leegloop;\nM = Migratie;\nO = Ontslagvergoeding;\nP = Payrolling;\nU = Uitzenden;\nV = Vakantiekracht;\nVU = Verlengd uitzenden;",
+                                        "description": "Temporary employment method\nI = Hire-second;\nL = Idleness;\nM = Migration;\nO = Dismissal compensation;\nP = Payrolling;\nU = Place;\nV = Holiday worker;\nVU = Extended placement;",
                                         "format": ""
                                       },
                                       "ViTy": {
@@ -7893,7 +7894,7 @@
                                           "T"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Position type\n***** = Niet van toepassing;\nA = Administratief;\nT = Technisch;",
+                                        "description": "Position type\n***** = Not applicable;\nA = Administratief;\nT = Technical;",
                                         "format": ""
                                       },
                                       "PcFa": {
@@ -8054,12 +8055,12 @@
                                       },
                                       "ApTy": {
                                         "type": "boolean",
-                                        "description": "Apply \u0027Function type\u0027 basis",
+                                        "description": "Apply 'Function type' basis",
                                         "format": ""
                                       },
                                       "ApSt": {
                                         "type": "boolean",
-                                        "description": "Apply the \u0027Hour type\u0027 calculation base for work ty",
+                                        "description": "Apply the 'Hour type' calculation base for work ty",
                                         "format": ""
                                       }
                                     },
@@ -8100,7 +8101,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -8123,17 +8124,17 @@
                                                       "VaCt": {
                                                         "type": "string",
                                                         "enum": [
-                                                          "O",
+                                                          "U",
                                                           "H",
-                                                          "J",
-                                                          "B",
-                                                          "AJ",
+                                                          "Y",
+                                                          "S",
+                                                          "HY",
                                                           "7M",
                                                           "8M",
                                                           "9M"
                                                         ],
                                                         "maxLength": 20,
-                                                        "description": "Placement type\nO = Onbepaalde tijd;\nH = Halfjaarcontract;\nJ = Jaarcontract;\nB = Bepaalde tijd;\nAJ = Anderhalf jaar;\n7M = 7 maanden contract;\n8M = 8 maanden contract;\n9M = 9 maanden contract;",
+                                                        "description": "Placement type\nU = Indefinite time;\nH = Half-yearly contract;\nY = Annual contract;\nS = Specific time;\nHY = One and a half years;\n7M = 7-month contract;\n8M = 8-month contract;\n9M = 9-month contract;",
                                                         "format": ""
                                                       },
                                                       "VaFz": {
@@ -8160,7 +8161,7 @@
                                                           "K"
                                                         ],
                                                         "maxLength": 20,
-                                                        "description": "Phase\nO = Onbekend of n.v.t.;\n1 = Fase 1 met uitzendbeding (t/m 2019);\n12 = Fase 1-2 met uitzendbeding;\n13 = Fase 1-2 zonder uitzendbeding;\n14 = Fase 1-2 zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting;\nAU = Fase A met uitzendbeding;\nB = Fase B;\nC = Fase C;\n2 = Fase 2 met uitzendbeding (t/m 2019);\n3 = Fase 3;\nAZU = Fase A zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting;\n4 = Fase 4;\nAZ = Fase A zonder uitzendbeding;\n41 = Fase 1 zonder uitzendbeding (t/m 2019);\n42 = Fase 2 zonder uitzendbeding (t/m 2019);\n43 = Fase 1 zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting (t/m 2019);\n44 = Fase 2 zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting (t/m 2019);\nW = Wettelijk regime;\nK = Ketensysteem;",
+                                                        "description": "Phase\nO = Unknown or N.A.;\n1 = Phase 1 with temporary employment clause (up to 2019);\n12 = Phase 1-2 with temporary employment clause;\n13 = Phase 1-2 without temporary employment clause;\n14 = Phase 1-2 without temp. employment clause with exclusion of the cont. payment of wages obligation;\nAU = Phase A with transmission request;\nB = Phase B;\nC = Phase C;\n2 = Phase 2 with temporary employment clause (up to 2019);\n3 = Phase 3;\nAZU = Phase A without temporary employment clause, with exclusion of obligation for continued payment;\n4 = Phase 4;\nAZ = Phase A without transmission condition;\n41 = Phase 1 without temporary employment clause (up to 2019);\n42 = Phase 2 without temporary employment clause (up to 2019);\n43 = Phase 1 without temporary employment clause with exclusion of the continued payment of wages obligat;\n44 = Phase 2 without temporary employment clause with exclusion of the continued payment of wages obligat;\nW = Legal regime;\nK = Chain system;",
                                                         "format": ""
                                                       },
                                                       "Fact": {
@@ -8181,7 +8182,7 @@
                                                           "VU"
                                                         ],
                                                         "maxLength": 20,
-                                                        "description": "Temporary employment method\nI = Inleen-doorleen;\nL = Leegloop;\nM = Migratie;\nO = Ontslagvergoeding;\nP = Payrolling;\nU = Uitzenden;\nV = Vakantiekracht;\nVU = Verlengd uitzenden;",
+                                                        "description": "Temporary employment method\nI = Hire-second;\nL = Idleness;\nM = Migration;\nO = Dismissal compensation;\nP = Payrolling;\nU = Place;\nV = Holiday worker;\nVU = Extended placement;",
                                                         "format": ""
                                                       },
                                                       "ViTy": {
@@ -8192,7 +8193,7 @@
                                                           "T"
                                                         ],
                                                         "maxLength": 20,
-                                                        "description": "Position type\n***** = Niet van toepassing;\nA = Administratief;\nT = Technisch;",
+                                                        "description": "Position type\n***** = Not applicable;\nA = Administratief;\nT = Technical;",
                                                         "format": ""
                                                       }
                                                     },
@@ -8287,12 +8288,12 @@
                                       },
                                       "ApTy": {
                                         "type": "boolean",
-                                        "description": "Apply \u0027Function type\u0027 basis",
+                                        "description": "Apply 'Function type' basis",
                                         "format": ""
                                       },
                                       "ApSt": {
                                         "type": "boolean",
-                                        "description": "Apply the \u0027Hour type\u0027 calculation base for work ty",
+                                        "description": "Apply the 'Hour type' calculation base for work ty",
                                         "format": ""
                                       }
                                     },
@@ -8332,7 +8333,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -8355,17 +8356,17 @@
                                                       "VaCt": {
                                                         "type": "string",
                                                         "enum": [
-                                                          "O",
+                                                          "U",
                                                           "H",
-                                                          "J",
-                                                          "B",
-                                                          "AJ",
+                                                          "Y",
+                                                          "S",
+                                                          "HY",
                                                           "7M",
                                                           "8M",
                                                           "9M"
                                                         ],
                                                         "maxLength": 20,
-                                                        "description": "Placement type\nO = Onbepaalde tijd;\nH = Halfjaarcontract;\nJ = Jaarcontract;\nB = Bepaalde tijd;\nAJ = Anderhalf jaar;\n7M = 7 maanden contract;\n8M = 8 maanden contract;\n9M = 9 maanden contract;",
+                                                        "description": "Placement type\nU = Indefinite time;\nH = Half-yearly contract;\nY = Annual contract;\nS = Specific time;\nHY = One and a half years;\n7M = 7-month contract;\n8M = 8-month contract;\n9M = 9-month contract;",
                                                         "format": ""
                                                       },
                                                       "VaFz": {
@@ -8392,7 +8393,7 @@
                                                           "K"
                                                         ],
                                                         "maxLength": 20,
-                                                        "description": "Phase\nO = Onbekend of n.v.t.;\n1 = Fase 1 met uitzendbeding (t/m 2019);\n12 = Fase 1-2 met uitzendbeding;\n13 = Fase 1-2 zonder uitzendbeding;\n14 = Fase 1-2 zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting;\nAU = Fase A met uitzendbeding;\nB = Fase B;\nC = Fase C;\n2 = Fase 2 met uitzendbeding (t/m 2019);\n3 = Fase 3;\nAZU = Fase A zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting;\n4 = Fase 4;\nAZ = Fase A zonder uitzendbeding;\n41 = Fase 1 zonder uitzendbeding (t/m 2019);\n42 = Fase 2 zonder uitzendbeding (t/m 2019);\n43 = Fase 1 zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting (t/m 2019);\n44 = Fase 2 zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting (t/m 2019);\nW = Wettelijk regime;\nK = Ketensysteem;",
+                                                        "description": "Phase\nO = Unknown or N.A.;\n1 = Phase 1 with temporary employment clause (up to 2019);\n12 = Phase 1-2 with temporary employment clause;\n13 = Phase 1-2 without temporary employment clause;\n14 = Phase 1-2 without temp. employment clause with exclusion of the cont. payment of wages obligation;\nAU = Phase A with transmission request;\nB = Phase B;\nC = Phase C;\n2 = Phase 2 with temporary employment clause (up to 2019);\n3 = Phase 3;\nAZU = Phase A without temporary employment clause, with exclusion of obligation for continued payment;\n4 = Phase 4;\nAZ = Phase A without transmission condition;\n41 = Phase 1 without temporary employment clause (up to 2019);\n42 = Phase 2 without temporary employment clause (up to 2019);\n43 = Phase 1 without temporary employment clause with exclusion of the continued payment of wages obligat;\n44 = Phase 2 without temporary employment clause with exclusion of the continued payment of wages obligat;\nW = Legal regime;\nK = Chain system;",
                                                         "format": ""
                                                       },
                                                       "Fact": {
@@ -8414,7 +8415,7 @@
                                                           "VU"
                                                         ],
                                                         "maxLength": 20,
-                                                        "description": "Temporary employment method\nI = Inleen-doorleen;\nL = Leegloop;\nM = Migratie;\nO = Ontslagvergoeding;\nP = Payrolling;\nU = Uitzenden;\nV = Vakantiekracht;\nVU = Verlengd uitzenden;",
+                                                        "description": "Temporary employment method\nI = Hire-second;\nL = Idleness;\nM = Migration;\nO = Dismissal compensation;\nP = Payrolling;\nU = Place;\nV = Holiday worker;\nVU = Extended placement;",
                                                         "format": ""
                                                       },
                                                       "ViTy": {
@@ -8425,7 +8426,7 @@
                                                           "T"
                                                         ],
                                                         "maxLength": 20,
-                                                        "description": "Position type\n***** = Niet van toepassing;\nA = Administratief;\nT = Technisch;",
+                                                        "description": "Position type\n***** = Not applicable;\nA = Administratief;\nT = Technical;",
                                                         "format": ""
                                                       }
                                                     }
@@ -8519,7 +8520,7 @@
                                           "8"
                                         ],
                                         "maxLength": 10,
-                                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                         "format": ""
                                       },
                                       "ItCd": {
@@ -8688,7 +8689,7 @@
                                           "8"
                                         ],
                                         "maxLength": 10,
-                                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                         "format": ""
                                       },
                                       "ItCd": {
@@ -9012,7 +9013,7 @@
                           "T"
                         ],
                         "maxLength": 20,
-                        "description": "Position type\n***** = Niet van toepassing;\nA = Administratief;\nT = Technisch;",
+                        "description": "Position type\n***** = Not applicable;\nA = Administratief;\nT = Technical;",
                         "format": ""
                       }
                     },
@@ -9091,7 +9092,7 @@
                           "T"
                         ],
                         "maxLength": 20,
-                        "description": "Position type\n***** = Niet van toepassing;\nA = Administratief;\nT = Technisch;",
+                        "description": "Position type\n***** = Not applicable;\nA = Administratief;\nT = Technical;",
                         "format": ""
                       }
                     },
@@ -9164,7 +9165,7 @@
                           "T"
                         ],
                         "maxLength": 20,
-                        "description": "Position type\n***** = Niet van toepassing;\nA = Administratief;\nT = Technisch;",
+                        "description": "Position type\n***** = Not applicable;\nA = Administratief;\nT = Technical;",
                         "format": ""
                       }
                     },
@@ -9237,7 +9238,7 @@
                           "T"
                         ],
                         "maxLength": 20,
-                        "description": "Position type\n***** = Niet van toepassing;\nA = Administratief;\nT = Technisch;",
+                        "description": "Position type\n***** = Not applicable;\nA = Administratief;\nT = Technical;",
                         "format": ""
                       }
                     },
@@ -9266,12 +9267,12 @@
                     "properties": {
                       "PtItpDaBe": {
                         "type": "string",
-                        "description": "Begindatum CBS cao-code",
+                        "description": "Begindatum\n            CBS cao-code",
                         "format": "date"
                       },
                       "PtItpTyEj": {
                         "type": "string",
-                        "description": "Soort eindejaarsuitkering",
+                        "description": "Soort\n            eindejaarsuitkering",
                         "format": ""
                       },
                       "PtItpPaDa": {
@@ -9296,7 +9297,7 @@
                       },
                       "PtItpNoPe": {
                         "type": "integer",
-                        "description": "Aantal periodes bij verkooprelatie",
+                        "description": "Aantal periodes bij\n            verkooprelatie",
                         "format": ""
                       },
                       "PtItpPeUn": {
@@ -9319,7 +9320,7 @@
                       "PtItpViTp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Soort periodieke verhoging",
+                        "description": "Soort periodieke\n            verhoging",
                         "format": ""
                       },
                       "PtItpDmon": {
@@ -9354,13 +9355,13 @@
                       },
                       "PtItpPFrA": {
                         "type": "integer",
-                        "description": "Periodieke verhoging vanaf leeftijd",
+                        "description": "Periodieke verhoging\n            vanaf leeftijd",
                         "format": ""
                       },
                       "PtItpViEx": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Extra voorwaarde periodiek",
+                        "description": "Extra voorwaarde\n            periodiek",
                         "format": ""
                       },
                       "PtItpReDa": {
@@ -9392,41 +9393,68 @@
                       },
                       "PtItpWeAg": {
                         "type": "integer",
-                        "description": "Werkervaring opbouwen vanaf leeftijd",
+                        "description": "Werkervaring opbouwen\n            vanaf leeftijd",
                         "format": ""
                       },
                       "PtItpVaIp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Telling onderbrekingsperiode",
+                        "description": "Telling\n            onderbrekingsperiode",
                         "format": ""
                       },
                       "PtItpMoCo": {
                         "type": "integer",
-                        "description": "Maanden opnieuw tellen als onderbrekingsperiode",
+                        "description": "Maanden opnieuw tellen\n            als onderbrekingsperiode",
                         "format": ""
                       },
                       "PtItpVaIe": {
                         "type": "string",
                         "maxLength": 4,
-                        "description": "Onderbrekingsperiode eenheid",
+                        "description": "Onderbrekingsperiode\n            eenheid",
                         "format": ""
                       },
                       "PtItpAcHi": {
                         "type": "boolean",
-                        "description": "Beoordeling inlener benodigd",
+                        "description": "Beoordeling inlener\n            benodigd",
                         "format": ""
                       },
                       "PtItpVaCo": {
                         "type": "string",
                         "maxLength": 4,
-                        "description": "Uitvoeren periodieke verhoging",
+                        "description": "Uitvoeren periodieke\n            verhoging",
                         "format": ""
                       },
                       "PtItpMeMo": {
                         "type": "string",
                         "description": "Opmerking",
                         "format": "byte"
+                      },
+                      "PtItpMeVp": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Opmerking",
+                        "format": ""
+                      },
+                      "PtItpPdVp": {
+                        "type": "integer",
+                        "description": "Opmerking",
+                        "format": ""
+                      },
+                      "PtItpPmVp": {
+                        "type": "integer",
+                        "description": "Opmerking",
+                        "format": ""
+                      },
+                      "PtItpBwVp": {
+                        "type": "integer",
+                        "description": "Opmerking",
+                        "format": ""
+                      },
+                      "PtItpMeMv": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Opmerking",
+                        "format": ""
                       },
                       "IsId": {
                         "type": "integer",
@@ -9458,7 +9486,7 @@
                           "52"
                         ],
                         "maxLength": 20,
-                        "description": "Reference period\n13 = 13 weken;\n26 = 26 weken;\n52 = 52 weken;",
+                        "description": "Reference period\n13 = 13 week(s);\n26 = 26 week(s);\n52 = 52 week(s);",
                         "format": ""
                       },
                       "VaCm": {
@@ -9468,7 +9496,7 @@
                           "P"
                         ],
                         "maxLength": 20,
-                        "description": "Calculation method\nD = Weekdagen binnen referteperiode;\nP = Gehele referteperiode;",
+                        "description": "Calculation method\nD = Weekdays within reference period;\nP = Entire reference period;",
                         "format": ""
                       }
                     },
@@ -9495,20 +9523,20 @@
                                       "VaIt": {
                                         "type": "string",
                                         "enum": [
-                                          "Wst",
+                                          "Wtp",
                                           "Pid",
-                                          "Deg",
+                                          "Dgh",
                                           "Dim",
-                                          "Art",
+                                          "Itm",
                                           "Txt",
                                           "Sub",
-                                          "Tsl",
-                                          "Kst",
-                                          "Sam",
+                                          "Sur",
+                                          "Cst",
+                                          "Cmp",
                                           "Crs"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Item type\nWst = Werksoort;\nPid = Productie-indicator;\nDeg = Deeg;\nDim = Artikeldimensietotaal;\nArt = Artikel;\nTxt = Tekst;\nSub = Subtotaal;\nTsl = Toeslag;\nKst = Kosten;\nSam = Samenstelling;\nCrs = Cursus;",
+                                        "description": "Item type\nWtp = Work type;\nPid = Production indicator;\nDgh = Dough;\nDim = Item dimension total;\nItm = Article;\nTxt = Text;\nSub = Sub-total;\nSur = Allowance;\nCst = Costs;\nCmp = Assembled item;\nCrs = Course;",
                                         "format": ""
                                       },
                                       "ItCd": {
@@ -9614,7 +9642,7 @@
                                           "6"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Rate type\n0 = Vast tarief;\n1 = Tarieffactor;\n2 = Kostprijs \u002B nominale marge;\n3 = % marge t.o.v. kostprijs;\n4 = % marge t.o.v. verkoopprijs;\n5 = Tarieffactor \u002B nominale marge;\n6 = Basistarief;",
+                                        "description": "Rate type\n0 = Fixed rate;\n1 = Rate factor;\n2 = Cost price + nominal margin;\n3 = % margin compared to cost price;\n4 = % margin compared to sales price;\n5 = Rate factor + nominal margin;\n6 = Basic rate;",
                                         "format": ""
                                       },
                                       "FcDf": {
@@ -9749,12 +9777,12 @@
                     "properties": {
                       "PtItpDaBe": {
                         "type": "string",
-                        "description": "Begindatum CBS cao-code",
+                        "description": "Begindatum\n            CBS cao-code",
                         "format": "date"
                       },
                       "PtItpTyEj": {
                         "type": "string",
-                        "description": "Soort eindejaarsuitkering",
+                        "description": "Soort\n            eindejaarsuitkering",
                         "format": ""
                       },
                       "PtItpPaDa": {
@@ -9779,7 +9807,7 @@
                       },
                       "PtItpNoPe": {
                         "type": "integer",
-                        "description": "Aantal periodes bij verkooprelatie",
+                        "description": "Aantal periodes bij\n            verkooprelatie",
                         "format": ""
                       },
                       "PtItpPeUn": {
@@ -9802,7 +9830,7 @@
                       "PtItpViTp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Soort periodieke verhoging",
+                        "description": "Soort periodieke\n            verhoging",
                         "format": ""
                       },
                       "PtItpDmon": {
@@ -9837,13 +9865,13 @@
                       },
                       "PtItpPFrA": {
                         "type": "integer",
-                        "description": "Periodieke verhoging vanaf leeftijd",
+                        "description": "Periodieke verhoging\n            vanaf leeftijd",
                         "format": ""
                       },
                       "PtItpViEx": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Extra voorwaarde periodiek",
+                        "description": "Extra voorwaarde\n            periodiek",
                         "format": ""
                       },
                       "PtItpReDa": {
@@ -9875,41 +9903,68 @@
                       },
                       "PtItpWeAg": {
                         "type": "integer",
-                        "description": "Werkervaring opbouwen vanaf leeftijd",
+                        "description": "Werkervaring opbouwen\n            vanaf leeftijd",
                         "format": ""
                       },
                       "PtItpVaIp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Telling onderbrekingsperiode",
+                        "description": "Telling\n            onderbrekingsperiode",
                         "format": ""
                       },
                       "PtItpMoCo": {
                         "type": "integer",
-                        "description": "Maanden opnieuw tellen als onderbrekingsperiode",
+                        "description": "Maanden opnieuw tellen\n            als onderbrekingsperiode",
                         "format": ""
                       },
                       "PtItpVaIe": {
                         "type": "string",
                         "maxLength": 4,
-                        "description": "Onderbrekingsperiode eenheid",
+                        "description": "Onderbrekingsperiode\n            eenheid",
                         "format": ""
                       },
                       "PtItpAcHi": {
                         "type": "boolean",
-                        "description": "Beoordeling inlener benodigd",
+                        "description": "Beoordeling inlener\n            benodigd",
                         "format": ""
                       },
                       "PtItpVaCo": {
                         "type": "string",
                         "maxLength": 4,
-                        "description": "Uitvoeren periodieke verhoging",
+                        "description": "Uitvoeren periodieke\n            verhoging",
                         "format": ""
                       },
                       "PtItpMeMo": {
                         "type": "string",
                         "description": "Opmerking",
                         "format": "byte"
+                      },
+                      "PtItpMeVp": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Opmerking",
+                        "format": ""
+                      },
+                      "PtItpPdVp": {
+                        "type": "integer",
+                        "description": "Opmerking",
+                        "format": ""
+                      },
+                      "PtItpPmVp": {
+                        "type": "integer",
+                        "description": "Opmerking",
+                        "format": ""
+                      },
+                      "PtItpBwVp": {
+                        "type": "integer",
+                        "description": "Opmerking",
+                        "format": ""
+                      },
+                      "PtItpMeMv": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Opmerking",
+                        "format": ""
                       },
                       "IsId": {
                         "type": "integer",
@@ -9941,7 +9996,7 @@
                           "52"
                         ],
                         "maxLength": 20,
-                        "description": "Reference period\n13 = 13 weken;\n26 = 26 weken;\n52 = 52 weken;",
+                        "description": "Reference period\n13 = 13 week(s);\n26 = 26 week(s);\n52 = 52 week(s);",
                         "format": ""
                       },
                       "VaCm": {
@@ -9951,7 +10006,7 @@
                           "P"
                         ],
                         "maxLength": 20,
-                        "description": "Calculation method\nD = Weekdagen binnen referteperiode;\nP = Gehele referteperiode;",
+                        "description": "Calculation method\nD = Weekdays within reference period;\nP = Entire reference period;",
                         "format": ""
                       }
                     }
@@ -9975,20 +10030,20 @@
                                       "VaIt": {
                                         "type": "string",
                                         "enum": [
-                                          "Wst",
+                                          "Wtp",
                                           "Pid",
-                                          "Deg",
+                                          "Dgh",
                                           "Dim",
-                                          "Art",
+                                          "Itm",
                                           "Txt",
                                           "Sub",
-                                          "Tsl",
-                                          "Kst",
-                                          "Sam",
+                                          "Sur",
+                                          "Cst",
+                                          "Cmp",
                                           "Crs"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Item type\nWst = Werksoort;\nPid = Productie-indicator;\nDeg = Deeg;\nDim = Artikeldimensietotaal;\nArt = Artikel;\nTxt = Tekst;\nSub = Subtotaal;\nTsl = Toeslag;\nKst = Kosten;\nSam = Samenstelling;\nCrs = Cursus;",
+                                        "description": "Item type\nWtp = Work type;\nPid = Production indicator;\nDgh = Dough;\nDim = Item dimension total;\nItm = Article;\nTxt = Text;\nSub = Sub-total;\nSur = Allowance;\nCst = Costs;\nCmp = Assembled item;\nCrs = Course;",
                                         "format": ""
                                       },
                                       "ItCd": {
@@ -10102,7 +10157,7 @@
                                           "6"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Rate type\n0 = Vast tarief;\n1 = Tarieffactor;\n2 = Kostprijs \u002B nominale marge;\n3 = % marge t.o.v. kostprijs;\n4 = % marge t.o.v. verkoopprijs;\n5 = Tarieffactor \u002B nominale marge;\n6 = Basistarief;",
+                                        "description": "Rate type\n0 = Fixed rate;\n1 = Rate factor;\n2 = Cost price + nominal margin;\n3 = % margin compared to cost price;\n4 = % margin compared to sales price;\n5 = Rate factor + nominal margin;\n6 = Basic rate;",
                                         "format": ""
                                       },
                                       "FcDf": {
@@ -10311,7 +10366,7 @@
                           "3M"
                         ],
                         "maxLength": 20,
-                        "description": "Probationary period\n1M = Een maand;\n2M = Twee maanden;\nOM = Overig;\n6M = Een halfjaar;\n12M = Een jaar;\n9M = Negen maanden;\nNM = Geen;\n2W = Twee weken;\n3M = Drie maanden;",
+                        "description": "Probationary period\n1M = One month;\n2M = Two months;\nOM = Other;\n6M = Half year;\n12M = One year;\n9M = Nine months;\nNM = None;\n2W = Two weeks;\n3M = Three months;",
                         "format": ""
                       },
                       "EnPr": {
@@ -10343,7 +10398,7 @@
                           "K"
                         ],
                         "maxLength": 20,
-                        "description": "Flex and Security phase classification\nO = Onbekend of n.v.t.;\n1 = Fase 1 met uitzendbeding (t/m 2019);\n12 = Fase 1-2 met uitzendbeding;\n13 = Fase 1-2 zonder uitzendbeding;\n14 = Fase 1-2 zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting;\nAU = Fase A met uitzendbeding;\nB = Fase B;\nC = Fase C;\n2 = Fase 2 met uitzendbeding (t/m 2019);\n3 = Fase 3;\nAZU = Fase A zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting;\n4 = Fase 4;\nAZ = Fase A zonder uitzendbeding;\n41 = Fase 1 zonder uitzendbeding (t/m 2019);\n42 = Fase 2 zonder uitzendbeding (t/m 2019);\n43 = Fase 1 zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting (t/m 2019);\n44 = Fase 2 zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting (t/m 2019);\nW = Wettelijk regime;\nK = Ketensysteem;",
+                        "description": "Flex and Security phase classification\nO = Unknown or N.A.;\n1 = Phase 1 with temporary employment clause (up to 2019);\n12 = Phase 1-2 with temporary employment clause;\n13 = Phase 1-2 without temporary employment clause;\n14 = Phase 1-2 without temp. employment clause with exclusion of the cont. payment of wages obligation;\nAU = Phase A with transmission request;\nB = Phase B;\nC = Phase C;\n2 = Phase 2 with temporary employment clause (up to 2019);\n3 = Phase 3;\nAZU = Phase A without temporary employment clause, with exclusion of obligation for continued payment;\n4 = Phase 4;\nAZ = Phase A without transmission condition;\n41 = Phase 1 without temporary employment clause (up to 2019);\n42 = Phase 2 without temporary employment clause (up to 2019);\n43 = Phase 1 without temporary employment clause with exclusion of the continued payment of wages obligat;\n44 = Phase 2 without temporary employment clause with exclusion of the continued payment of wages obligat;\nW = Legal regime;\nK = Chain system;",
                         "format": ""
                       },
                       "DaBc": {
@@ -10364,11 +10419,11 @@
                       "ToTp": {
                         "type": "string",
                         "enum": [
-                          "U",
+                          "H",
                           "W"
                         ],
                         "maxLength": 20,
-                        "description": "Takeover unit\nU = Uren;\nW = Weken;",
+                        "description": "Takeover unit\nH = Hours;\nW = Weeks;",
                         "format": ""
                       },
                       "ExTe": {
@@ -10379,11 +10434,11 @@
                       "ExTp": {
                         "type": "string",
                         "enum": [
-                          "U",
+                          "H",
                           "W"
                         ],
                         "maxLength": 20,
-                        "description": "Extended placement unit\nU = Uren;\nW = Weken;",
+                        "description": "Extended placement unit\nH = Hours;\nW = Weeks;",
                         "format": ""
                       },
                       "ViRe": {
@@ -10401,7 +10456,7 @@
                           "10"
                         ],
                         "maxLength": 20,
-                        "description": "Reason of termination\n01 = Einde opdracht;\n02 = Kandidaat over naar volgende fase;\n03 = Kandidaat overgenomen door klant/ander bureau;\n04 = Kandidaat trekt zich terug;\n05 = Kandidaat is ziek;\n06 = Kandidaat krijgt nieuw contract;\n07 = Kandidaat heeft opgezegd;\n08 = Klant heeft opgezegd (niet tevreden);\n09 = Uitzender heeft opgezegd;\n10 = Foutief aangemaakt;",
+                        "description": "Reason of termination\n01 = End of order;\n02 = Candidate to the next phase;\n03 = Candidate taken over by the customer/other agency;\n04 = Candidate withdraws;\n05 = Candidate is sick;\n06 = Candidate given new contract;\n07 = Candidate has cancelled;\n08 = Customer has cancelled (not satisfied);\n09 = Placement agency has cancelled;\n10 = Incorrectly created;",
                         "format": ""
                       },
                       "ViRs": {
@@ -10419,7 +10474,7 @@
                           "10"
                         ],
                         "maxLength": 20,
-                        "description": "Specification reason\n01 = Niet tevreden met arbeidsvoorwaarden;\n02 = Functie komt niet overeen met verwachtingen;\n03 = Onvoldoende ontwikkel/doorgroeimogelijkheden;\n04 = Gaat studeren/reizen;\n05 = Niet tevreden over uren;\n06 = Geen klik met team/manager/cultuur;\n07 = Andere baan die beter aansluit bij opleiding/ervaring;\n08 = Houding en gedrag is onvoldoende;\n09 = Performance is onvoldoende;\n10 = Beschikbaarheid is onvoldoende;",
+                        "description": "Specification reason\n01 = Not satisfied with working conditions;\n02 = The job does not match expectations;\n03 = Insufficient development/advancement opportunities;\n04 = Will be studying/travelling;\n05 = Not satisfied about hours;\n06 = Does not click with team/manager/culture;\n07 = Different job that fits better with education/experience;\n08 = Attitude and behaviour is unsatisfactory;\n09 = Performance is unsatisfactory;\n10 = Availability is unsatisfactory;",
                         "format": ""
                       },
                       "ViFa": {
@@ -10434,11 +10489,11 @@
                           "B",
                           "C",
                           "K",
-                          "O",
+                          "U",
                           "W"
                         ],
                         "maxLength": 20,
-                        "description": "Phase\n1 = Fase 1;\n12 = Fase 1-2;\n2 = Fase 2;\n3 = Fase 3;\n4 = Fase 4;\nA = Fase A;\nB = Fase B;\nC = Fase C;\nK = Ketensysteem;\nO = Onbekend;\nW = Wettelijk regime;",
+                        "description": "Phase\n1 = Phase 1;\n12 = Phase 1-2;\n2 = Phase 2;\n3 = Phase 3;\n4 = Phase 4;\nA = Phase A;\nB = Phase B;\nC = Phase C;\nK = Chain system;\nU = Unknown;\nW = Legal regime;",
                         "format": ""
                       },
                       "ViFc": {
@@ -10449,7 +10504,7 @@
                           "ZU"
                         ],
                         "maxLength": 20,
-                        "description": "Temporary employment clause\nU = met uitzendbeding;\nZ = zonder uitzendbeding;\nZU = zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting;",
+                        "description": "Temporary employment clause\nU = with temporary employment clause;\nZ = without temporary employment clause;\nZU = without temporary employment clause, with exclusion of the continued payment obligation;",
                         "format": ""
                       },
                       "ToTh": {
@@ -10469,7 +10524,7 @@
                           "1"
                         ],
                         "maxLength": 20,
-                        "description": "Type of placement\n0 = Standaard;\n1 = Inkopen;",
+                        "description": "Type of placement\n0 = Default;\n1 = Purchase;",
                         "format": ""
                       },
                       "PRe": {
@@ -10548,23 +10603,23 @@
                                           "VU"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Temporary employment method\nI = Inleen-doorleen;\nL = Leegloop;\nM = Migratie;\nO = Ontslagvergoeding;\nP = Payrolling;\nU = Uitzenden;\nV = Vakantiekracht;\nVU = Verlengd uitzenden;",
+                                        "description": "Temporary employment method\nI = Hire-second;\nL = Idleness;\nM = Migration;\nO = Dismissal compensation;\nP = Payrolling;\nU = Place;\nV = Holiday worker;\nVU = Extended placement;",
                                         "format": ""
                                       },
                                       "ApCo": {
                                         "type": "string",
                                         "enum": [
-                                          "O",
+                                          "U",
                                           "H",
-                                          "J",
-                                          "B",
-                                          "AJ",
+                                          "Y",
+                                          "S",
+                                          "HY",
                                           "7M",
                                           "8M",
                                           "9M"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Placement type\nO = Onbepaalde tijd;\nH = Halfjaarcontract;\nJ = Jaarcontract;\nB = Bepaalde tijd;\nAJ = Anderhalf jaar;\n7M = 7 maanden contract;\n8M = 8 maanden contract;\n9M = 9 maanden contract;",
+                                        "description": "Placement type\nU = Indefinite time;\nH = Half-yearly contract;\nY = Annual contract;\nS = Specific time;\nHY = One and a half years;\n7M = 7-month contract;\n8M = 8-month contract;\n9M = 9-month contract;",
                                         "format": ""
                                       },
                                       "HoGo": {
@@ -10603,6 +10658,11 @@
                                       "Dept": {
                                         "type": "integer",
                                         "description": "Organisational unit",
+                                        "format": ""
+                                      },
+                                      "TaId": {
+                                        "type": "integer",
+                                        "description": "Wage scale type",
                                         "format": ""
                                       },
                                       "VaSc": {
@@ -10652,7 +10712,7 @@
                                           "4"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Cost centre claim\n0 = Niet van toepassing;\n1 = Invullen door medewerker, wijzigen door klant toegestaan;\n2 = Invullen door medewerker, wijzigen door klant niet toegestaan;\n3 = Invullen door klant verplicht;\n4 = Overnemen van plaatsing;",
+                                        "description": "Cost centre claim\n0 = Not applicable;\n1 = Completion by employee and changing by customer allowed;\n2 = Completion by employee and changing by customer not allowed;\n3 = Completion by customer mandatory;\n4 = Copy from placement;",
                                         "format": ""
                                       },
                                       "MiHr": {
@@ -10712,7 +10772,7 @@
                                           "6"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Determining intercompany amount based on\n1 = Verloning;\n2 = Verkoopbedrag;\n3 = % marge t.o.v. verkoopbedrag;\n4 = Bedrag marge t.o.v. verkoopprijs;\n5 = Intercompanytarief;\n6 = Intercompanytarief * % brutoloon;",
+                                        "description": "Determining intercompany amount based on\n1 = Remuneration;\n2 = Sales amount;\n3 = % margin regarding the sales amount;\n4 = Margin amount compared to sales price;\n5 = Intercompany rate;\n6 = Intercompany rate * % gross salary;",
                                         "format": ""
                                       },
                                       "MaPc": {
@@ -10755,6 +10815,34 @@
                                       "RcDo": {
                                         "type": "boolean",
                                         "description": "Reclassification scale/step implemented",
+                                        "format": ""
+                                      },
+                                      "ATrC": {
+                                        "type": "boolean",
+                                        "description": "Automatically calculate travel expenses",
+                                        "format": ""
+                                      },
+                                      "ATrM": {
+                                        "type": "string",
+                                        "enum": [
+                                          "11",
+                                          "12",
+                                          "13",
+                                          "14",
+                                          "15",
+                                          "21",
+                                          "22",
+                                          "29",
+                                          "31",
+                                          "32",
+                                          "38",
+                                          "39",
+                                          "41",
+                                          "49",
+                                          "51"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Automatic travel expenses vehicle\n11 = Petrol vehicle;\n12 = Diesel vehicle;\n13 = Auto (Plug in) Hybrid;\n14 = 100% electric vehicle;\n15 = Other fuel car;\n21 = Motorbike petrol;\n22 = Electric motorcycle;\n29 = Motorbike diesel;\n31 = Petrol moped/scooter;\n32 = Moped/scooter 100% electric;\n38 = Moped/scooter diesel;\n39 = Speed-pedelec;\n41 = (Electric) bicycle;\n49 = By foot;\n51 = Public transport ;",
                                         "format": ""
                                       }
                                     },
@@ -10854,7 +10942,7 @@
                           "3M"
                         ],
                         "maxLength": 20,
-                        "description": "Probationary period\n1M = Een maand;\n2M = Twee maanden;\nOM = Overig;\n6M = Een halfjaar;\n12M = Een jaar;\n9M = Negen maanden;\nNM = Geen;\n2W = Twee weken;\n3M = Drie maanden;",
+                        "description": "Probationary period\n1M = One month;\n2M = Two months;\nOM = Other;\n6M = Half year;\n12M = One year;\n9M = Nine months;\nNM = None;\n2W = Two weeks;\n3M = Three months;",
                         "format": ""
                       },
                       "EnPr": {
@@ -10886,7 +10974,7 @@
                           "K"
                         ],
                         "maxLength": 20,
-                        "description": "Flex and Security phase classification\nO = Onbekend of n.v.t.;\n1 = Fase 1 met uitzendbeding (t/m 2019);\n12 = Fase 1-2 met uitzendbeding;\n13 = Fase 1-2 zonder uitzendbeding;\n14 = Fase 1-2 zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting;\nAU = Fase A met uitzendbeding;\nB = Fase B;\nC = Fase C;\n2 = Fase 2 met uitzendbeding (t/m 2019);\n3 = Fase 3;\nAZU = Fase A zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting;\n4 = Fase 4;\nAZ = Fase A zonder uitzendbeding;\n41 = Fase 1 zonder uitzendbeding (t/m 2019);\n42 = Fase 2 zonder uitzendbeding (t/m 2019);\n43 = Fase 1 zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting (t/m 2019);\n44 = Fase 2 zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting (t/m 2019);\nW = Wettelijk regime;\nK = Ketensysteem;",
+                        "description": "Flex and Security phase classification\nO = Unknown or N.A.;\n1 = Phase 1 with temporary employment clause (up to 2019);\n12 = Phase 1-2 with temporary employment clause;\n13 = Phase 1-2 without temporary employment clause;\n14 = Phase 1-2 without temp. employment clause with exclusion of the cont. payment of wages obligation;\nAU = Phase A with transmission request;\nB = Phase B;\nC = Phase C;\n2 = Phase 2 with temporary employment clause (up to 2019);\n3 = Phase 3;\nAZU = Phase A without temporary employment clause, with exclusion of obligation for continued payment;\n4 = Phase 4;\nAZ = Phase A without transmission condition;\n41 = Phase 1 without temporary employment clause (up to 2019);\n42 = Phase 2 without temporary employment clause (up to 2019);\n43 = Phase 1 without temporary employment clause with exclusion of the continued payment of wages obligat;\n44 = Phase 2 without temporary employment clause with exclusion of the continued payment of wages obligat;\nW = Legal regime;\nK = Chain system;",
                         "format": ""
                       },
                       "DaBc": {
@@ -10907,11 +10995,11 @@
                       "ToTp": {
                         "type": "string",
                         "enum": [
-                          "U",
+                          "H",
                           "W"
                         ],
                         "maxLength": 20,
-                        "description": "Takeover unit\nU = Uren;\nW = Weken;",
+                        "description": "Takeover unit\nH = Hours;\nW = Weeks;",
                         "format": ""
                       },
                       "ExTe": {
@@ -10922,11 +11010,11 @@
                       "ExTp": {
                         "type": "string",
                         "enum": [
-                          "U",
+                          "H",
                           "W"
                         ],
                         "maxLength": 20,
-                        "description": "Extended placement unit\nU = Uren;\nW = Weken;",
+                        "description": "Extended placement unit\nH = Hours;\nW = Weeks;",
                         "format": ""
                       },
                       "ViRe": {
@@ -10944,7 +11032,7 @@
                           "10"
                         ],
                         "maxLength": 20,
-                        "description": "Reason of termination\n01 = Einde opdracht;\n02 = Kandidaat over naar volgende fase;\n03 = Kandidaat overgenomen door klant/ander bureau;\n04 = Kandidaat trekt zich terug;\n05 = Kandidaat is ziek;\n06 = Kandidaat krijgt nieuw contract;\n07 = Kandidaat heeft opgezegd;\n08 = Klant heeft opgezegd (niet tevreden);\n09 = Uitzender heeft opgezegd;\n10 = Foutief aangemaakt;",
+                        "description": "Reason of termination\n01 = End of order;\n02 = Candidate to the next phase;\n03 = Candidate taken over by the customer/other agency;\n04 = Candidate withdraws;\n05 = Candidate is sick;\n06 = Candidate given new contract;\n07 = Candidate has cancelled;\n08 = Customer has cancelled (not satisfied);\n09 = Placement agency has cancelled;\n10 = Incorrectly created;",
                         "format": ""
                       },
                       "ViRs": {
@@ -10962,7 +11050,7 @@
                           "10"
                         ],
                         "maxLength": 20,
-                        "description": "Specification reason\n01 = Niet tevreden met arbeidsvoorwaarden;\n02 = Functie komt niet overeen met verwachtingen;\n03 = Onvoldoende ontwikkel/doorgroeimogelijkheden;\n04 = Gaat studeren/reizen;\n05 = Niet tevreden over uren;\n06 = Geen klik met team/manager/cultuur;\n07 = Andere baan die beter aansluit bij opleiding/ervaring;\n08 = Houding en gedrag is onvoldoende;\n09 = Performance is onvoldoende;\n10 = Beschikbaarheid is onvoldoende;",
+                        "description": "Specification reason\n01 = Not satisfied with working conditions;\n02 = The job does not match expectations;\n03 = Insufficient development/advancement opportunities;\n04 = Will be studying/travelling;\n05 = Not satisfied about hours;\n06 = Does not click with team/manager/culture;\n07 = Different job that fits better with education/experience;\n08 = Attitude and behaviour is unsatisfactory;\n09 = Performance is unsatisfactory;\n10 = Availability is unsatisfactory;",
                         "format": ""
                       },
                       "ViFa": {
@@ -10977,11 +11065,11 @@
                           "B",
                           "C",
                           "K",
-                          "O",
+                          "U",
                           "W"
                         ],
                         "maxLength": 20,
-                        "description": "Phase\n1 = Fase 1;\n12 = Fase 1-2;\n2 = Fase 2;\n3 = Fase 3;\n4 = Fase 4;\nA = Fase A;\nB = Fase B;\nC = Fase C;\nK = Ketensysteem;\nO = Onbekend;\nW = Wettelijk regime;",
+                        "description": "Phase\n1 = Phase 1;\n12 = Phase 1-2;\n2 = Phase 2;\n3 = Phase 3;\n4 = Phase 4;\nA = Phase A;\nB = Phase B;\nC = Phase C;\nK = Chain system;\nU = Unknown;\nW = Legal regime;",
                         "format": ""
                       },
                       "ViFc": {
@@ -10992,7 +11080,7 @@
                           "ZU"
                         ],
                         "maxLength": 20,
-                        "description": "Temporary employment clause\nU = met uitzendbeding;\nZ = zonder uitzendbeding;\nZU = zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting;",
+                        "description": "Temporary employment clause\nU = with temporary employment clause;\nZ = without temporary employment clause;\nZU = without temporary employment clause, with exclusion of the continued payment obligation;",
                         "format": ""
                       },
                       "ToTh": {
@@ -11012,7 +11100,7 @@
                           "1"
                         ],
                         "maxLength": 20,
-                        "description": "Type of placement\n0 = Standaard;\n1 = Inkopen;",
+                        "description": "Type of placement\n0 = Default;\n1 = Purchase;",
                         "format": ""
                       },
                       "PRe": {
@@ -11086,23 +11174,23 @@
                                           "VU"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Temporary employment method\nI = Inleen-doorleen;\nL = Leegloop;\nM = Migratie;\nO = Ontslagvergoeding;\nP = Payrolling;\nU = Uitzenden;\nV = Vakantiekracht;\nVU = Verlengd uitzenden;",
+                                        "description": "Temporary employment method\nI = Hire-second;\nL = Idleness;\nM = Migration;\nO = Dismissal compensation;\nP = Payrolling;\nU = Place;\nV = Holiday worker;\nVU = Extended placement;",
                                         "format": ""
                                       },
                                       "ApCo": {
                                         "type": "string",
                                         "enum": [
-                                          "O",
+                                          "U",
                                           "H",
-                                          "J",
-                                          "B",
-                                          "AJ",
+                                          "Y",
+                                          "S",
+                                          "HY",
                                           "7M",
                                           "8M",
                                           "9M"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Placement type\nO = Onbepaalde tijd;\nH = Halfjaarcontract;\nJ = Jaarcontract;\nB = Bepaalde tijd;\nAJ = Anderhalf jaar;\n7M = 7 maanden contract;\n8M = 8 maanden contract;\n9M = 9 maanden contract;",
+                                        "description": "Placement type\nU = Indefinite time;\nH = Half-yearly contract;\nY = Annual contract;\nS = Specific time;\nHY = One and a half years;\n7M = 7-month contract;\n8M = 8-month contract;\n9M = 9-month contract;",
                                         "format": ""
                                       },
                                       "HoGo": {
@@ -11142,6 +11230,11 @@
                                       "Dept": {
                                         "type": "integer",
                                         "description": "Organisational unit",
+                                        "format": ""
+                                      },
+                                      "TaId": {
+                                        "type": "integer",
+                                        "description": "Wage scale type",
                                         "format": ""
                                       },
                                       "VaSc": {
@@ -11194,7 +11287,7 @@
                                           "4"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Cost centre claim\n0 = Niet van toepassing;\n1 = Invullen door medewerker, wijzigen door klant toegestaan;\n2 = Invullen door medewerker, wijzigen door klant niet toegestaan;\n3 = Invullen door klant verplicht;\n4 = Overnemen van plaatsing;",
+                                        "description": "Cost centre claim\n0 = Not applicable;\n1 = Completion by employee and changing by customer allowed;\n2 = Completion by employee and changing by customer not allowed;\n3 = Completion by customer mandatory;\n4 = Copy from placement;",
                                         "format": ""
                                       },
                                       "MiHr": {
@@ -11256,7 +11349,7 @@
                                           "6"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Determining intercompany amount based on\n1 = Verloning;\n2 = Verkoopbedrag;\n3 = % marge t.o.v. verkoopbedrag;\n4 = Bedrag marge t.o.v. verkoopprijs;\n5 = Intercompanytarief;\n6 = Intercompanytarief * % brutoloon;",
+                                        "description": "Determining intercompany amount based on\n1 = Remuneration;\n2 = Sales amount;\n3 = % margin regarding the sales amount;\n4 = Margin amount compared to sales price;\n5 = Intercompany rate;\n6 = Intercompany rate * % gross salary;",
                                         "format": ""
                                       },
                                       "MaPc": {
@@ -11303,6 +11396,34 @@
                                       "RcDo": {
                                         "type": "boolean",
                                         "description": "Reclassification scale/step implemented",
+                                        "format": ""
+                                      },
+                                      "ATrC": {
+                                        "type": "boolean",
+                                        "description": "Automatically calculate travel expenses",
+                                        "format": ""
+                                      },
+                                      "ATrM": {
+                                        "type": "string",
+                                        "enum": [
+                                          "11",
+                                          "12",
+                                          "13",
+                                          "14",
+                                          "15",
+                                          "21",
+                                          "22",
+                                          "29",
+                                          "31",
+                                          "32",
+                                          "38",
+                                          "39",
+                                          "41",
+                                          "49",
+                                          "51"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Automatic travel expenses vehicle\n11 = Petrol vehicle;\n12 = Diesel vehicle;\n13 = Auto (Plug in) Hybrid;\n14 = 100% electric vehicle;\n15 = Other fuel car;\n21 = Motorbike petrol;\n22 = Electric motorcycle;\n29 = Motorbike diesel;\n31 = Petrol moped/scooter;\n32 = Moped/scooter 100% electric;\n38 = Moped/scooter diesel;\n39 = Speed-pedelec;\n41 = (Electric) bicycle;\n49 = By foot;\n51 = Public transport ;",
                                         "format": ""
                                       }
                                     }
@@ -11352,7 +11473,7 @@
                           "1"
                         ],
                         "maxLength": 20,
-                        "description": "Type of price agreement\n0 = Standaard;\n1 = Inkopen;",
+                        "description": "Type of price agreement\n0 = Default;\n1 = Purchase;",
                         "format": ""
                       },
                       "PrId": {
@@ -11376,17 +11497,17 @@
                       "ApCo": {
                         "type": "string",
                         "enum": [
-                          "O",
+                          "U",
                           "H",
-                          "J",
-                          "B",
-                          "AJ",
+                          "Y",
+                          "S",
+                          "HY",
                           "7M",
                           "8M",
                           "9M"
                         ],
                         "maxLength": 20,
-                        "description": "Placement type\nO = Onbepaalde tijd;\nH = Halfjaarcontract;\nJ = Jaarcontract;\nB = Bepaalde tijd;\nAJ = Anderhalf jaar;\n7M = 7 maanden contract;\n8M = 8 maanden contract;\n9M = 9 maanden contract;",
+                        "description": "Placement type\nU = Indefinite time;\nH = Half-yearly contract;\nY = Annual contract;\nS = Specific time;\nHY = One and a half years;\n7M = 7-month contract;\n8M = 8-month contract;\n9M = 9-month contract;",
                         "format": ""
                       },
                       "VaFz": {
@@ -11413,7 +11534,7 @@
                           "K"
                         ],
                         "maxLength": 20,
-                        "description": "Phase\nO = Onbekend of n.v.t.;\n1 = Fase 1 met uitzendbeding (t/m 2019);\n12 = Fase 1-2 met uitzendbeding;\n13 = Fase 1-2 zonder uitzendbeding;\n14 = Fase 1-2 zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting;\nAU = Fase A met uitzendbeding;\nB = Fase B;\nC = Fase C;\n2 = Fase 2 met uitzendbeding (t/m 2019);\n3 = Fase 3;\nAZU = Fase A zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting;\n4 = Fase 4;\nAZ = Fase A zonder uitzendbeding;\n41 = Fase 1 zonder uitzendbeding (t/m 2019);\n42 = Fase 2 zonder uitzendbeding (t/m 2019);\n43 = Fase 1 zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting (t/m 2019);\n44 = Fase 2 zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting (t/m 2019);\nW = Wettelijk regime;\nK = Ketensysteem;",
+                        "description": "Phase\nO = Unknown or N.A.;\n1 = Phase 1 with temporary employment clause (up to 2019);\n12 = Phase 1-2 with temporary employment clause;\n13 = Phase 1-2 without temporary employment clause;\n14 = Phase 1-2 without temp. employment clause with exclusion of the cont. payment of wages obligation;\nAU = Phase A with transmission request;\nB = Phase B;\nC = Phase C;\n2 = Phase 2 with temporary employment clause (up to 2019);\n3 = Phase 3;\nAZU = Phase A without temporary employment clause, with exclusion of obligation for continued payment;\n4 = Phase 4;\nAZ = Phase A without transmission condition;\n41 = Phase 1 without temporary employment clause (up to 2019);\n42 = Phase 2 without temporary employment clause (up to 2019);\n43 = Phase 1 without temporary employment clause with exclusion of the continued payment of wages obligat;\n44 = Phase 2 without temporary employment clause with exclusion of the continued payment of wages obligat;\nW = Legal regime;\nK = Chain system;",
                         "format": ""
                       },
                       "ViSe": {
@@ -11429,7 +11550,7 @@
                           "VU"
                         ],
                         "maxLength": 20,
-                        "description": "Temporary employment method\nI = Inleen-doorleen;\nL = Leegloop;\nM = Migratie;\nO = Ontslagvergoeding;\nP = Payrolling;\nU = Uitzenden;\nV = Vakantiekracht;\nVU = Verlengd uitzenden;",
+                        "description": "Temporary employment method\nI = Hire-second;\nL = Idleness;\nM = Migration;\nO = Dismissal compensation;\nP = Payrolling;\nU = Place;\nV = Holiday worker;\nVU = Extended placement;",
                         "format": ""
                       },
                       "UsAg": {
@@ -11493,7 +11614,7 @@
                                           "2"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Price agreement version status\n0 = Concept;\n1 = Definitief;\n2 = Afgekeurd;",
+                                        "description": "Price agreement version status\n0 = Draft;\n1 = Permanent;\n2 = Rejected;",
                                         "format": ""
                                       },
                                       "TaBa": {
@@ -11545,7 +11666,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -11608,7 +11729,7 @@
                                                           "6"
                                                         ],
                                                         "maxLength": 20,
-                                                        "description": "Rate type\n0 = Vast tarief;\n1 = Tarieffactor;\n2 = Kostprijs \u002B nominale marge;\n3 = % marge t.o.v. kostprijs;\n4 = % marge t.o.v. verkoopprijs;\n5 = Tarieffactor \u002B nominale marge;\n6 = Basistarief;",
+                                                        "description": "Rate type\n0 = Fixed rate;\n1 = Rate factor;\n2 = Cost price + nominal margin;\n3 = % margin compared to cost price;\n4 = % margin compared to sales price;\n5 = Rate factor + nominal margin;\n6 = Basic rate;",
                                                         "format": ""
                                                       },
                                                       "TaFa": {
@@ -11649,7 +11770,7 @@
                                                           "W"
                                                         ],
                                                         "maxLength": 20,
-                                                        "description": "Automatic suggestions\nA = Voorstellen, niet verwijderbaar door medewerker;\nN = Niet voorstellen, handmatig invoeren;\nW = Voorstellen, verwijderbaar door medewerker;",
+                                                        "description": "Automatic suggestions\nA = Suggestions, cannot be deleted by employee;\nN = No suggestions, manual data entry;\nW = Suggestions can be deleted by the employee;",
                                                         "format": ""
                                                       },
                                                       "HwTy": {
@@ -11659,7 +11780,7 @@
                                                           "T"
                                                         ],
                                                         "maxLength": 20,
-                                                        "description": "Deviating hourly wage type\nM = Gemaximeerd;\nT = Toelage;",
+                                                        "description": "Deviating hourly wage type\nM = Maximised;\nT = Allowance;",
                                                         "format": ""
                                                       },
                                                       "MaDa": {
@@ -11737,7 +11858,7 @@
                           "1"
                         ],
                         "maxLength": 20,
-                        "description": "Type of price agreement\n0 = Standaard;\n1 = Inkopen;",
+                        "description": "Type of price agreement\n0 = Default;\n1 = Purchase;",
                         "format": ""
                       },
                       "PrId": {
@@ -11761,17 +11882,17 @@
                       "ApCo": {
                         "type": "string",
                         "enum": [
-                          "O",
+                          "U",
                           "H",
-                          "J",
-                          "B",
-                          "AJ",
+                          "Y",
+                          "S",
+                          "HY",
                           "7M",
                           "8M",
                           "9M"
                         ],
                         "maxLength": 20,
-                        "description": "Placement type\nO = Onbepaalde tijd;\nH = Halfjaarcontract;\nJ = Jaarcontract;\nB = Bepaalde tijd;\nAJ = Anderhalf jaar;\n7M = 7 maanden contract;\n8M = 8 maanden contract;\n9M = 9 maanden contract;",
+                        "description": "Placement type\nU = Indefinite time;\nH = Half-yearly contract;\nY = Annual contract;\nS = Specific time;\nHY = One and a half years;\n7M = 7-month contract;\n8M = 8-month contract;\n9M = 9-month contract;",
                         "format": ""
                       },
                       "VaFz": {
@@ -11798,7 +11919,7 @@
                           "K"
                         ],
                         "maxLength": 20,
-                        "description": "Phase\nO = Onbekend of n.v.t.;\n1 = Fase 1 met uitzendbeding (t/m 2019);\n12 = Fase 1-2 met uitzendbeding;\n13 = Fase 1-2 zonder uitzendbeding;\n14 = Fase 1-2 zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting;\nAU = Fase A met uitzendbeding;\nB = Fase B;\nC = Fase C;\n2 = Fase 2 met uitzendbeding (t/m 2019);\n3 = Fase 3;\nAZU = Fase A zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting;\n4 = Fase 4;\nAZ = Fase A zonder uitzendbeding;\n41 = Fase 1 zonder uitzendbeding (t/m 2019);\n42 = Fase 2 zonder uitzendbeding (t/m 2019);\n43 = Fase 1 zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting (t/m 2019);\n44 = Fase 2 zonder uitzendbeding, met uitsluiting van loondoorbetalingsverplichting (t/m 2019);\nW = Wettelijk regime;\nK = Ketensysteem;",
+                        "description": "Phase\nO = Unknown or N.A.;\n1 = Phase 1 with temporary employment clause (up to 2019);\n12 = Phase 1-2 with temporary employment clause;\n13 = Phase 1-2 without temporary employment clause;\n14 = Phase 1-2 without temp. employment clause with exclusion of the cont. payment of wages obligation;\nAU = Phase A with transmission request;\nB = Phase B;\nC = Phase C;\n2 = Phase 2 with temporary employment clause (up to 2019);\n3 = Phase 3;\nAZU = Phase A without temporary employment clause, with exclusion of obligation for continued payment;\n4 = Phase 4;\nAZ = Phase A without transmission condition;\n41 = Phase 1 without temporary employment clause (up to 2019);\n42 = Phase 2 without temporary employment clause (up to 2019);\n43 = Phase 1 without temporary employment clause with exclusion of the continued payment of wages obligat;\n44 = Phase 2 without temporary employment clause with exclusion of the continued payment of wages obligat;\nW = Legal regime;\nK = Chain system;",
                         "format": ""
                       },
                       "ViSe": {
@@ -11814,7 +11935,7 @@
                           "VU"
                         ],
                         "maxLength": 20,
-                        "description": "Temporary employment method\nI = Inleen-doorleen;\nL = Leegloop;\nM = Migratie;\nO = Ontslagvergoeding;\nP = Payrolling;\nU = Uitzenden;\nV = Vakantiekracht;\nVU = Verlengd uitzenden;",
+                        "description": "Temporary employment method\nI = Hire-second;\nL = Idleness;\nM = Migration;\nO = Dismissal compensation;\nP = Payrolling;\nU = Place;\nV = Holiday worker;\nVU = Extended placement;",
                         "format": ""
                       },
                       "UsAg": {
@@ -11882,7 +12003,7 @@
                                           "2"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Price agreement version status\n0 = Concept;\n1 = Definitief;\n2 = Afgekeurd;",
+                                        "description": "Price agreement version status\n0 = Draft;\n1 = Permanent;\n2 = Rejected;",
                                         "format": ""
                                       },
                                       "TaBa": {
@@ -11939,7 +12060,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -12004,7 +12125,7 @@
                                                           "6"
                                                         ],
                                                         "maxLength": 20,
-                                                        "description": "Rate type\n0 = Vast tarief;\n1 = Tarieffactor;\n2 = Kostprijs \u002B nominale marge;\n3 = % marge t.o.v. kostprijs;\n4 = % marge t.o.v. verkoopprijs;\n5 = Tarieffactor \u002B nominale marge;\n6 = Basistarief;",
+                                                        "description": "Rate type\n0 = Fixed rate;\n1 = Rate factor;\n2 = Cost price + nominal margin;\n3 = % margin compared to cost price;\n4 = % margin compared to sales price;\n5 = Rate factor + nominal margin;\n6 = Basic rate;",
                                                         "format": ""
                                                       },
                                                       "TaFa": {
@@ -12050,7 +12171,7 @@
                                                           "W"
                                                         ],
                                                         "maxLength": 20,
-                                                        "description": "Automatic suggestions\nA = Voorstellen, niet verwijderbaar door medewerker;\nN = Niet voorstellen, handmatig invoeren;\nW = Voorstellen, verwijderbaar door medewerker;",
+                                                        "description": "Automatic suggestions\nA = Suggestions, cannot be deleted by employee;\nN = No suggestions, manual data entry;\nW = Suggestions can be deleted by the employee;",
                                                         "format": ""
                                                       },
                                                       "HwTy": {
@@ -12060,7 +12181,7 @@
                                                           "T"
                                                         ],
                                                         "maxLength": 20,
-                                                        "description": "Deviating hourly wage type\nM = Gemaximeerd;\nT = Toelage;",
+                                                        "description": "Deviating hourly wage type\nM = Maximised;\nT = Allowance;",
                                                         "format": ""
                                                       },
                                                       "MaDa": {
@@ -12447,7 +12568,7 @@
         "name": "Authorization",
         "type": "apiKey",
         "in": "header",
-        "description": "Convert the XML token to Base64 and add \u0027AfasToken \u0027 in front of it."
+        "description": "Convert the XML token to Base64 and add 'AfasToken ' in front of it."
       }
     },
     "parameters": {
@@ -12455,7 +12576,7 @@
         "name": "Accept-Language",
         "in": "header",
         "required": false,
-        "description": "Indicates the client\u0027s preferred language for the response. If not provided, the API defaults to the base environment language.",
+        "description": "Indicates the client's preferred language for the response. If not provided, the API defaults to the base environment language.",
         "schema": {
           "type": "string",
           "enum": [

@@ -1,0 +1,4016 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "7.7.10",
+    "title": "AFAS Bakkerijen API",
+    "description": "This API describes the endpoints related to Bakkerijen. Use this API with the functional description of the API."
+  },
+  "servers": [
+    {
+      "url": "https://{id}.rest.afas.online/ProfitRestServices",
+      "description": "Production environment",
+      "variables": {
+        "id": {
+          "description": "5 digit environment number",
+          "default": "12345"
+        }
+      }
+    },
+    {
+      "url": "https://{id}.resttest.afas.online/ProfitRestServices",
+      "description": "Test environment",
+      "variables": {
+        "id": {
+          "description": "5 digit environment number",
+          "default": "12345"
+        }
+      }
+    },
+    {
+      "url": "https://{id}.restaccept.afas.online/ProfitRestServices",
+      "description": "Accept environment",
+      "variables": {
+        "id": {
+          "description": "5 digit environment number",
+          "default": "12345"
+        }
+      }
+    },
+    {
+      "url": "https://{id}.restcursus.afas.online/ProfitRestServices",
+      "description": "Cursus environment",
+      "variables": {
+        "id": {
+          "description": "5 digit environment number",
+          "default": "12345"
+        }
+      }
+    }
+  ],
+  "paths": {
+    "/MetaInfo": {
+      "get": {
+        "summary": "Retrieve the meta info of the Profit environment and the available connectors",
+        "tags": [
+          "API Info"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "updateConnectors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "getConnectors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "info": {
+                      "type": "object",
+                      "properties": {
+                        "envid": {
+                          "type": "string"
+                        },
+                        "appName": {
+                          "type": "string"
+                        },
+                        "group": {
+                          "type": "string"
+                        },
+                        "tokenExpiry": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "updateConnectors": [
+                        {
+                          "id": "HrCreateApplicant",
+                          "description": "Aanmaken sollicitatie"
+                        },
+                        {
+                          "id": "FbSubscription",
+                          "description": "Abonnement"
+                        },
+                        {
+                          "id": "KnAddress",
+                          "description": "Adres"
+                        }
+                      ],
+                      "getConnectors": [
+                        {
+                          "id": "Profit_Fin_ChangedEntrydate",
+                          "description": "Profit_Fin_ChangedEntrydate"
+                        },
+                        {
+                          "id": "Profit_Functions",
+                          "description": "Profit_Functions"
+                        }
+                      ],
+                      "info": {
+                        "envid": "A123456AC",
+                        "appName": "OpenAPI Spec Example",
+                        "group": "AuthorizationGroup 101 (12345.USER)",
+                        "tokenExpiry": "0"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_MetaInfo"
+      }
+    },
+    "/Metainfo/{Type}/{Endpoint}": {
+      "get": {
+        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
+        "tags": [
+          "API Info"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "fields": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "fieldId": {
+                            "type": "string"
+                          },
+                          "dataType": {
+                            "type": "string"
+                          },
+                          "label": {
+                            "type": "string"
+                          },
+                          "length": {
+                            "type": "integer"
+                          },
+                          "controlType": {
+                            "type": "integer"
+                          },
+                          "decimals": {
+                            "type": "integer"
+                          },
+                          "decimalsFieldId": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "name": "Profit_Administrations",
+                      "description": "Administraties (Profit)",
+                      "fields": [
+                        {
+                          "id": "AdminId",
+                          "fieldId": "U002",
+                          "dataType": "int",
+                          "label": "Administratie",
+                          "length": 3,
+                          "controlType": 5,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        },
+                        {
+                          "id": "AdminNm",
+                          "fieldId": "U001",
+                          "dataType": "string",
+                          "label": "Naam administratie",
+                          "length": 80,
+                          "controlType": 1,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        },
+                        {
+                          "id": "AdminCd",
+                          "fieldId": "UnCo",
+                          "dataType": "string",
+                          "label": "Administratie",
+                          "length": 10,
+                          "controlType": 1,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_MetaInfoPerConnector",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "get",
+                "update"
+              ],
+              "example": "update"
+            },
+            "in": "path",
+            "name": "Type",
+            "description": "Add the type of connector you want to get the meta info from",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "string",
+              "example": "KnEmployee"
+            },
+            "in": "path",
+            "name": "Endpoint",
+            "description": "Add the endpoint id of the connector you want to get the meta info from",
+            "required": true
+          },
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/{Endpoint}": {
+      "get": {
+        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
+        "tags": [
+          "GET"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "skip": {
+                      "type": "integer"
+                    },
+                    "take": {
+                      "type": "integer"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "EmployeeId": {
+                            "type": "string"
+                          },
+                          "EmploymentEndDate": {
+                            "type": "string"
+                          },
+                          "EmailForDigitalDocuments": {
+                            "type": "string",
+                            "nullable": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example response": {
+                    "value": {
+                      "skip": 0,
+                      "take": 100,
+                      "rows": [
+                        {
+                          "EmployeeId": "000001005",
+                          "EmploymentEndDate": "2020-11-22T00:00:00Z",
+                          "EmailForDigitalDocuments": null
+                        },
+                        {
+                          "EmployeeId": "000001006",
+                          "EmploymentEndDate": "2020-11-22T00:00:00Z",
+                          "EmailForDigitalDocuments": null
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_MetaInfoPerCustomConnector",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "example": "your_custom_endpoint_id"
+            },
+            "in": "path",
+            "name": "Endpoint",
+            "description": "Add the id of connector you want to get the meta info from",
+            "required": true
+          },
+          {
+            "name": "skip",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results skipped. Starts at 0",
+            "schema": {
+              "type": "number",
+              "example": 0
+            }
+          },
+          {
+            "name": "take",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results returned",
+            "schema": {
+              "type": "number",
+              "example": 100
+            }
+          },
+          {
+            "name": "orderbyfieldids",
+            "in": "query",
+            "required": false,
+            "description": "Must be used to prevent reordered results.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterfieldids",
+            "in": "query",
+            "required": false,
+            "description": "The fieldIds of the values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filtervalues",
+            "in": "query",
+            "required": false,
+            "description": "The values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "operatortypes",
+            "in": "query",
+            "required": false,
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
+            "schema": {
+              "type": "number",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "/ProfitVersion": {
+      "get": {
+        "summary": "Get the current Profit version",
+        "tags": [
+          "API Info"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "version": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "version": "22.22.5"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_ProfitVersion"
+      }
+    },
+    "/connectors/FbArticleExtension": {
+      "put": {
+        "summary": "SSpecific item",
+        "description": "\n\rAlleen beschikbaar onder conditie: Bakkerijen\n\r ",
+        "operationId": "PUT_FbArticleExtension",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FbArticleExtension_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "SSpecific item"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/FbDough": {
+      "post": {
+        "summary": "Dough",
+        "description": "\n\rAlleen beschikbaar onder conditie: Bakkerijen\n\r ",
+        "operationId": "POST_FbDough",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FbDough_POST"
+              },
+              "examples": {
+                "alleen goedpaden minimaal": {
+                  "value": {
+                    "FbDough": {
+                      "Element": [
+                        {
+                          "Fields": {
+                            "ItCd": "DG53012",
+                            "Ds": "Droge stof xml",
+                            "BaCo": "8711000008010",
+                            "ViCa": "0",
+                            "PcBl": "50",
+                            "FlCh": "4",
+                            "RoWe": "3"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG53013",
+                            "Ds": "Eindgewicht xml",
+                            "BaCo": "8710408010144",
+                            "ViCa": "1",
+                            "PcBl": "50",
+                            "FlCh": "4",
+                            "RoWe": "3"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG53014",
+                            "Ds": "Eindgewicht met spijs vulling xml",
+                            "BaCo": "5000357100151",
+                            "ViCa": "2",
+                            "PcBl": "0",
+                            "FlCh": "10",
+                            "RoWe": "8",
+                            "ToWe": "8000"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG53015",
+                            "Ds": "Obv. halffabrikaat xml",
+                            "BaCo": "8711200011407",
+                            "ViCa": "3",
+                            "PcBl": "0"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG53016",
+                            "Ds": "Recept met eindproducten xml",
+                            "BaCo": "8713300069623",
+                            "ViCa": "4"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG53017",
+                            "Ds": "Banket",
+                            "BaCo": "3086123008915",
+                            "ViCa": "5",
+                            "PcBl": "1",
+                            "QuCh": "24"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG53018",
+                            "Ds": "Geen deegberekening",
+                            "BaCo": "8710404202253",
+                            "ViCa": "9"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "alle soorten deeg": {
+                  "value": {
+                    "FbDough": {
+                      "Element": [
+                        {
+                          "Fields": {
+                            "ItCd": "DG54020",
+                            "Ds": "Deeg (droge stof) Insert",
+                            "DsEx": "Regels te inserten via UpdateConnector",
+                            "BaCo": "1000000254020",
+                            "ViCa": "0",
+                            "PcBl": "13",
+                            "FlCh": "100",
+                            "RoWe": "3"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG54021",
+                            "Ds": "Deeg (Eindgewicht) Insert",
+                            "DsEx": "Regels te inserten via UpdateConnector",
+                            "BaCo": "1000000554021",
+                            "ViCa": "1",
+                            "PcBl": "13",
+                            "FlCh": "120",
+                            "RoWe": "4"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG54022",
+                            "Ds": "Deeg (Eindgewicht met spijs/vulling) Insert",
+                            "DsEx": "Regels te inserten via UpdateConnector",
+                            "BaCo": "1000000854022",
+                            "ViCa": "2",
+                            "PcBl": "13",
+                            "FlCh": "125",
+                            "RoWe": "10",
+                            "ToWe": "120"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG54023",
+                            "Ds": "Deeg (Obv. halffabrikaat) Insert",
+                            "DsEx": "Regels te inserten via UpdateConnector",
+                            "BaCo": "1000000154023",
+                            "ViCa": "3",
+                            "PcBl": "10.50"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG54024",
+                            "Ds": "Deeg (recept met eindproducten) Insert",
+                            "DsEx": "Regels te inserten via UpdateConnector",
+                            "BaCo": "1000000454024",
+                            "ViCa": "4"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG54025",
+                            "Ds": "Deeg (Banket) Insert",
+                            "DsEx": "Regels te inserten via UpdateConnector",
+                            "BaCo": "1000000754025",
+                            "ViCa": "5",
+                            "PcBl": "13",
+                            "QuCh": "750"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG54026",
+                            "Ds": "Deeg (geen deegberekening) Insert",
+                            "DsEx": "Regels te inserten via UpdateConnector",
+                            "BaCo": "1000000054026",
+                            "ViCa": "9",
+                            "Rm": "Opmerking bij het deeg"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "goedpaden vrij veld": {
+                  "value": {
+                    "FbDough": {
+                      "Element": [
+                        {
+                          "Fields": {
+                            "ItCd": "DG53019",
+                            "Ds": "Droge stof xml",
+                            "DsEx": "Extra omschrijving droge stof xml",
+                            "ChDs": "1",
+                            "Bl": "1",
+                            "BaCo": "1000000530193",
+                            "InPr": "1",
+                            "ViCa": "0",
+                            "PcBl": "50",
+                            "FlCh": "4",
+                            "RoWe": "0.500",
+                            "AjTm": "60",
+                            "AjLs": "1",
+                            "PrTm": "120",
+                            "WrTm": "10",
+                            "Tp": "100",
+                            "BaLi": "1",
+                            "Rm": "Opmerking droge stof xml",
+                            "U4DF35B7E4335FDCEDC582387D7353799": "1"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG53020",
+                            "Ds": "Eindgewicht xml",
+                            "DsEx": "Extra omschrijving eindgewicht xml",
+                            "ChDs": "1",
+                            "Bl": "1",
+                            "BaCo": "1000000530209",
+                            "InPr": "1",
+                            "ViCa": "1",
+                            "PcBl": "50",
+                            "FlCh": "4",
+                            "RoWe": "3",
+                            "AjTm": "60",
+                            "AjLs": "1",
+                            "PrTm": "120",
+                            "WrTm": "10",
+                            "Tp": "100",
+                            "BaLi": "1",
+                            "Rm": "Opmerking eindgewicht xml",
+                            "U4DF35B7E4335FDCEDC582387D7353799": "1"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG53021",
+                            "Ds": "Eindgewicht met spijs vulling xml",
+                            "DsEx": "Extra omschrijving eindgewicht met spijs vulling xml",
+                            "ChDs": "1",
+                            "Bl": "1",
+                            "BaCo": "1000000530216",
+                            "InPr": "1",
+                            "ViCa": "2",
+                            "PcBl": "0",
+                            "FlCh": "10",
+                            "RoWe": "8",
+                            "ToWe": "8000",
+                            "AjTm": "60",
+                            "AjLs": "1",
+                            "PrTm": "120",
+                            "WrTm": "10",
+                            "Tp": "100",
+                            "BaLi": "1",
+                            "Rm": "Opmerking eindgewicht met spijs vulling xml",
+                            "U4DF35B7E4335FDCEDC582387D7353799": "1"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG53022",
+                            "Ds": "Obv. halffabrikaat xml",
+                            "DsEx": "Extra omschrijving obv. halffabrikaat xml",
+                            "ChDs": "1",
+                            "Bl": "1",
+                            "BaCo": "1000000530223",
+                            "InPr": "1",
+                            "ViCa": "3",
+                            "PcBl": "0",
+                            "AjTm": "60",
+                            "AjLs": "1",
+                            "PrTm": "120",
+                            "WrTm": "10",
+                            "Tp": "100",
+                            "BaLi": "1",
+                            "Rm": "Opmerking obv. halffabrikaat xml",
+                            "U4DF35B7E4335FDCEDC582387D7353799": "1"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG53023",
+                            "Ds": "Recept met eindproducten xml",
+                            "DsEx": "Extra omschrijving Recept met eindproducten xml",
+                            "ChDs": "1",
+                            "Bl": "1",
+                            "BaCo": "1000000530230",
+                            "InPr": "1",
+                            "ViCa": "4",
+                            "AjTm": "60",
+                            "AjLs": "1",
+                            "PrTm": "120",
+                            "WrTm": "10",
+                            "Tp": "100",
+                            "BaLi": "1",
+                            "Rm": "Opmerking recept met eindproducten xml",
+                            "U4DF35B7E4335FDCEDC582387D7353799": "1"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG53024",
+                            "Ds": "Banket xml",
+                            "DsEx": "Extra omschrijving Banket xml",
+                            "ChDs": "1",
+                            "Bl": "1",
+                            "BaCo": "1000000530247",
+                            "InPr": "1",
+                            "ViCa": "5",
+                            "PcBl": "1",
+                            "QuCh": "24",
+                            "AjTm": "60",
+                            "AjLs": "1",
+                            "PrTm": "120",
+                            "WrTm": "10",
+                            "Tp": "100",
+                            "BaLi": "1",
+                            "Rm": "Opmerking banket xml",
+                            "U4DF35B7E4335FDCEDC582387D7353799": "1"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG53025",
+                            "Ds": "Geen deegberekening xml",
+                            "DsEx": "Extra omschrijving Geen deegberekening xml",
+                            "ChDs": "1",
+                            "Bl": "1",
+                            "BaCo": "1000000530254",
+                            "InPr": "1",
+                            "ViCa": "9",
+                            "AjTm": "60",
+                            "AjLs": "1",
+                            "PrTm": "120",
+                            "WrTm": "10",
+                            "Tp": "100",
+                            "BaLi": "1",
+                            "Rm": "Opmerking geen deegberekening xml",
+                            "U4DF35B7E4335FDCEDC582387D7353799": "1"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "maximaal": {
+                  "value": {
+                    "FbDough": {
+                      "Element": {
+                        "Fields": {
+                          "ItCd": "DG54027",
+                          "Ds": "Deeg (Eindgewicht met spijt/vulling) InsertMaximaal",
+                          "DsEx": "Extra omschrijving",
+                          "ChDs": "false",
+                          "BaCo": "1000000540277",
+                          "InPr": "true",
+                          "ViCa": "2",
+                          "PcBl": "9.53",
+                          "FlCh": "150",
+                          "RoWe": "2",
+                          "ToWe": "143",
+                          "AjTm": "50",
+                          "AjLs": "4",
+                          "PrTm": "660",
+                          "WrTm": "1",
+                          "Tp": "27.6",
+                          "BaLi": "true",
+                          "Rm": "Opmerking bij Deeg",
+                          "FileName": "example.png",
+                          "FileStream": "iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAIAAACzY+a1AAAEB0lEQVR4nO3YQU/yShiG4SmlBSwYjEIQCyaSqmHl//8NLNgZSaORAmJQxCC0dihzFs3hEPQkX8KXlid5rl1r9YW5w2RQ63Q6gpBl0n4BtC8mhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J42bRfwH88zxNCNBqN+HK5XPZ6ve0HHMexLEsIoZQaj8fT6TSKouPjY9u2s9m93kiKo/d3KAnH4/H7+/vp6enmThAEpmm22+1fH57NZq1WS9f1fr//9PTkOA7i6L8i/Y00DEPXdSeTiWma2/eDIMjn8z+fV0pNJpNarZbP5w3DaDabi8VisVhgjf6L0k+4XC5N07y9vc3lctv3/28dfd9fr9fxtiaEMAzDNM2ddZzNZt1udz6fx5ePj48PDw9KqQRGJy/9jbRcLpfL5Z/34/W6v7+XUhYKhXq9Hq+dlFIIYRjG5knDMMIw3PmbJycng8Hg5uZmNpvN5/Pr62tN0xIYnbz0P4W/iqJISmmapuM47Xb76OjIdd0gCIQQ6/VaCLHdQ9O0n58w27bX67XnecPhsFarFQqFxEYn7EAT6rp+d3fXbDaz2Ww2m724uMjlcm9vb+LfFdxeOKVUJrP7RnRdt2374+Mjl8tVq9UkRyfsQBP+ZJpmvI/FR4/VarX5kZRye3Pb8H1fCBGGYRRFCY9O0oEm/Pr66na739/f8aVSanPEyOfzmUxmc4iQUoZhuDlibPi+//r6Wq/XdV2Pv/YlNjphB5rQsqxCoeB5XhiGq9VqMBhEUVSpVIQQmUzm7OxsNBr5vi+l7Pf7lmXtrKNS6vn5uVgsVqvVRqPx+fk5nU6TGZ289E+kv9I07erqajQa9Xq9+BzvOM7m/yDn5+dKKdd1hRClUuny8nLn119eXqSUrVZLCFEsFiuVynA4LJVKf7Lp7Tk6eVqn00n7NdBeDnQjpT/HhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEN4/cnznZiQb6hsAAAAASUVORK5CYII=",
+                          "U4DF35B7E4335FDCEDC582387D7353799": "true"
+                        }
+                      }
+                    }
+                  }
+                },
+                "soortBarcode-0": {
+                  "value": {
+                    "FbDough": {
+                      "Element": {
+                        "Fields": {
+                          "ItCd": "DG54030",
+                          "Ds": "Deeg met Barcode - Geen controle",
+                          "DsEx": "Extra omschrijving",
+                          "ChDs": "false",
+                          "VaBc": "0",
+                          "BaCo": "",
+                          "InPr": "true",
+                          "ViCa": "2",
+                          "PcBl": "9.53",
+                          "FlCh": "150",
+                          "RoWe": "2",
+                          "ToWe": "143",
+                          "AjTm": "50",
+                          "AjLs": "4",
+                          "PrTm": "660",
+                          "WrTm": "1",
+                          "Tp": "27.6",
+                          "BaLi": "true",
+                          "Rm": "Insert met Type Barcode Geen controle"
+                        }
+                      }
+                    }
+                  }
+                },
+                "soortBarcode-1": {
+                  "value": {
+                    "FbDough": {
+                      "Element": {
+                        "Fields": {
+                          "ItCd": "DG54031",
+                          "Ds": "Deeg met Barcode - Barcode EAN8",
+                          "DsEx": "Extra omschrijving",
+                          "ChDs": "false",
+                          "VaBc": "1",
+                          "BaCo": "50061648",
+                          "InPr": "true",
+                          "ViCa": "2",
+                          "PcBl": "9.53",
+                          "FlCh": "150",
+                          "RoWe": "2",
+                          "ToWe": "143",
+                          "AjTm": "50",
+                          "AjLs": "4",
+                          "PrTm": "660",
+                          "WrTm": "1",
+                          "Tp": "27.6",
+                          "BaLi": "true",
+                          "Rm": "Insert met Type Barcode Barcode EAN8"
+                        }
+                      }
+                    }
+                  }
+                },
+                "soortBarcode-2": {
+                  "value": {
+                    "FbDough": {
+                      "Element": {
+                        "Fields": {
+                          "ItCd": "DG54032",
+                          "Ds": "Deeg met Barcode - Barcode UPC",
+                          "DsEx": "Extra omschrijving",
+                          "ChDs": "false",
+                          "VaBc": "2",
+                          "BaCo": "641674982140",
+                          "InPr": "true",
+                          "ViCa": "2",
+                          "PcBl": "9.53",
+                          "FlCh": "150",
+                          "RoWe": "2",
+                          "ToWe": "143",
+                          "AjTm": "50",
+                          "AjLs": "4",
+                          "PrTm": "660",
+                          "WrTm": "1",
+                          "Tp": "27.6",
+                          "BaLi": "true",
+                          "Rm": "Insert met Type Barcode Barcode UPC"
+                        }
+                      }
+                    }
+                  }
+                },
+                "soortBarcode-3": {
+                  "value": {
+                    "FbDough": {
+                      "Element": {
+                        "Fields": {
+                          "ItCd": "DG54033",
+                          "Ds": "Deeg met Barcode - Barcode EAN13",
+                          "DsEx": "Extra omschrijving",
+                          "ChDs": "false",
+                          "VaBc": "3",
+                          "BaCo": "1000006413674",
+                          "InPr": "true",
+                          "ViCa": "2",
+                          "PcBl": "9.53",
+                          "FlCh": "150",
+                          "RoWe": "2",
+                          "ToWe": "143",
+                          "AjTm": "50",
+                          "AjLs": "4",
+                          "PrTm": "660",
+                          "WrTm": "1",
+                          "Tp": "27.6",
+                          "BaLi": "true",
+                          "Rm": "Insert met Type Barcode Barcode EAN13"
+                        }
+                      }
+                    }
+                  }
+                },
+                "soortBarcode-4": {
+                  "value": {
+                    "FbDough": {
+                      "Element": {
+                        "Fields": {
+                          "ItCd": "DG54034",
+                          "Ds": "Deeg met Barcode - Barcode EAN14",
+                          "DsEx": "Extra omschrijving",
+                          "ChDs": "false",
+                          "VaBc": "4",
+                          "BaCo": "10000643126577",
+                          "InPr": "true",
+                          "ViCa": "2",
+                          "PcBl": "9.53",
+                          "FlCh": "150",
+                          "RoWe": "2",
+                          "ToWe": "143",
+                          "AjTm": "50",
+                          "AjLs": "4",
+                          "PrTm": "660",
+                          "WrTm": "1",
+                          "Tp": "27.6",
+                          "BaLi": "true",
+                          "Rm": "Insert met Type Barcode Barcode EAN14"
+                        }
+                      }
+                    }
+                  }
+                },
+                "soortBarcode-5": {
+                  "value": {
+                    "FbDough": {
+                      "Element": {
+                        "Fields": {
+                          "ItCd": "DG54035",
+                          "Ds": "Deeg met Barcode - Barcode SSCC",
+                          "DsEx": "Extra omschrijving",
+                          "ChDs": "false",
+                          "VaBc": "5",
+                          "BaCo": "100061349746158940",
+                          "InPr": "true",
+                          "ViCa": "2",
+                          "PcBl": "9.53",
+                          "FlCh": "150",
+                          "RoWe": "2",
+                          "ToWe": "143",
+                          "AjTm": "50",
+                          "AjLs": "4",
+                          "PrTm": "660",
+                          "WrTm": "1",
+                          "Tp": "27.6",
+                          "BaLi": "true",
+                          "Rm": "Insert met Type Barcode Barcode SSCC"
+                        }
+                      }
+                    }
+                  }
+                },
+                "soortBarcode-6": {
+                  "value": {
+                    "FbDough": {
+                      "Element": {
+                        "Fields": {
+                          "ItCd": "DG54036",
+                          "Ds": "Deeg met Barcode - Code 128",
+                          "DsEx": "Extra omschrijving",
+                          "ChDs": "false",
+                          "VaBc": "6",
+                          "BaCo": "BARCODE128-sdfg",
+                          "InPr": "true",
+                          "ViCa": "2",
+                          "PcBl": "9.53",
+                          "FlCh": "150",
+                          "RoWe": "2",
+                          "ToWe": "143",
+                          "AjTm": "50",
+                          "AjLs": "4",
+                          "PrTm": "660",
+                          "WrTm": "1",
+                          "Tp": "27.6",
+                          "BaLi": "true",
+                          "Rm": "Insert met Type Barcode Code 128"
+                        }
+                      }
+                    }
+                  }
+                },
+                "soortBarcode-7": {
+                  "value": {
+                    "FbDough": {
+                      "Element": {
+                        "Fields": {
+                          "ItCd": "DG54037",
+                          "Ds": "Deeg met Barcode - Interleaved 2/5",
+                          "DsEx": "Extra omschrijving",
+                          "ChDs": "false",
+                          "VaBc": "7",
+                          "BaCo": "1645216487154948",
+                          "InPr": "true",
+                          "ViCa": "2",
+                          "PcBl": "9.53",
+                          "FlCh": "150",
+                          "RoWe": "2",
+                          "ToWe": "143",
+                          "AjTm": "50",
+                          "AjLs": "4",
+                          "PrTm": "660",
+                          "WrTm": "1",
+                          "Tp": "27.6",
+                          "BaLi": "true",
+                          "Rm": "Insert met Type Barcode Interleaved 2/5"
+                        }
+                      }
+                    }
+                  }
+                },
+                "soortBarcode-8": {
+                  "value": {
+                    "FbDough": {
+                      "Element": {
+                        "Fields": {
+                          "ItCd": "DG54038",
+                          "Ds": "Deeg met Barcode - Interleaved 2/5 (controlegetal)",
+                          "DsEx": "Extra omschrijving",
+                          "ChDs": "false",
+                          "VaBc": "8",
+                          "BaCo": "1645216487154103",
+                          "InPr": "true",
+                          "ViCa": "2",
+                          "PcBl": "9.53",
+                          "FlCh": "150",
+                          "RoWe": "2",
+                          "ToWe": "143",
+                          "AjTm": "50",
+                          "AjLs": "4",
+                          "PrTm": "660",
+                          "WrTm": "1",
+                          "Tp": "27.6",
+                          "BaLi": "true",
+                          "Rm": "Insert met Type Barcode Interleaved 2/5 (controlegetal)"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Dough"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Dough",
+        "description": "\n\rAlleen beschikbaar onder conditie: Bakkerijen\n\r ",
+        "operationId": "PUT_FbDough",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FbDough_PUT"
+              },
+              "examples": {
+                "deeg": {
+                  "value": {
+                    "FbDough": {
+                      "Element": {
+                        "Fields": {
+                          "ItCd": "DG54004",
+                          "Rm": "Opmerking bij Deeg"
+                        }
+                      }
+                    }
+                  }
+                },
+                "Deegtemperatuur": {
+                  "value": {
+                    "FbDough": {
+                      "Element": [
+                        {
+                          "Fields": {
+                            "ItCd": "DG53012",
+                            "Bl": "0",
+                            "Tp": "666"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG53013",
+                            "Bl": "0",
+                            "Tp": "666"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG53014",
+                            "Bl": "0",
+                            "Tp": "666"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG53015",
+                            "Bl": "0",
+                            "Tp": "666"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG53016",
+                            "Bl": "0",
+                            "Tp": "666"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG53017",
+                            "Bl": "0",
+                            "Tp": "666"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG53018",
+                            "Bl": "0",
+                            "Tp": "666"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Dough"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/FbDough/FbDough/@ItCd/{ItCd}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "ItCd",
+          "in": "path",
+          "required": true,
+          "description": "Code"
+        }
+      ],
+      "delete": {
+        "summary": "Dough",
+        "operationId": "DELETE_FbDough",
+        "description": " \n\r Let op: Bij dit endpoint zijn de parameters om een item te verwijderen nog niet gedocumenteerd. De path parameters kunnen hierdoor afwijken\n\r ",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Dough"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/FbDoughLines": {
+      "post": {
+        "summary": "Dough line",
+        "description": "\n\rAlleen beschikbaar onder conditie: Bakkerijen\n\r ",
+        "operationId": "POST_FbDoughLines",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FbDoughLines_POST"
+              },
+              "examples": {
+                "0 droge stof": {
+                  "value": {
+                    "FbDoughLines": {
+                      "Element": [
+                        {
+                          "Fields": {
+                            "ItCd": "DG54010",
+                            "SqNo": "1",
+                            "VaIt": "art",
+                            "RwId": "GR405209",
+                            "PcFw": "50",
+                            "QyPr": "100",
+                            "BaLi": "true",
+                            "WeSp": "0",
+                            "PcBl": "10",
+                            "ViRt": "0",
+                            "PcKw": "9.51",
+                            "FlPr": "true",
+                            "SeDe": "true",
+                            "DeDe": "Meel",
+                            "BaFi": "false",
+                            "WeLi": "150"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG54010",
+                            "SqNo": "2",
+                            "VaIt": "art",
+                            "RwId": "GR000001",
+                            "PcFw": "50",
+                            "QyPr": "100",
+                            "BaLi": "true",
+                            "WeSp": "0",
+                            "PcBl": "10",
+                            "ViRt": "1",
+                            "PcKw": "9.01",
+                            "FlPr": "false",
+                            "SeDe": "false",
+                            "DeDe": "choco druppels",
+                            "BaFi": "false",
+                            "WeLi": "150"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "1 Eindgewicht": {
+                  "value": {
+                    "FbDoughLines": {
+                      "Element": [
+                        {
+                          "Fields": {
+                            "ItCd": "DG54011",
+                            "SqNo": "1",
+                            "VaIt": "art",
+                            "RwId": "GR405209",
+                            "PcFw": "50",
+                            "QyPr": "100",
+                            "BaLi": "true",
+                            "WeSp": "0",
+                            "PcBl": "10",
+                            "ViRt": "0",
+                            "PcKw": "9.56",
+                            "FlPr": "true",
+                            "SeDe": "true",
+                            "DeDe": "Meel",
+                            "BaFi": "false",
+                            "WeLi": "150"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG54011",
+                            "SqNo": "2",
+                            "VaIt": "art",
+                            "RwId": "GR000001",
+                            "PcFw": "50",
+                            "QyPr": "100",
+                            "BaLi": "true",
+                            "WeSp": "0",
+                            "PcBl": "10",
+                            "ViRt": "1",
+                            "PcKw": "9.56",
+                            "FlPr": "false",
+                            "SeDe": "false",
+                            "DeDe": "choco druppels",
+                            "BaFi": "false",
+                            "WeLi": "150"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "2 Eindbewicht spijs": {
+                  "value": {
+                    "FbDoughLines": {
+                      "Element": [
+                        {
+                          "Fields": {
+                            "ItCd": "DG54012",
+                            "SqNo": "1",
+                            "VaIt": "art",
+                            "RwId": "GR405209",
+                            "PcFw": "50",
+                            "QyPr": "100",
+                            "BaLi": "true",
+                            "WeSp": "0",
+                            "PcBl": "10",
+                            "ViRt": "0",
+                            "PcKw": "9.56",
+                            "FlPr": "true",
+                            "SeDe": "true",
+                            "DeDe": "Meel",
+                            "BaFi": "false",
+                            "WeLi": "150"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG54012",
+                            "SqNo": "2",
+                            "VaIt": "art",
+                            "RwId": "GR000001",
+                            "PcFw": "50",
+                            "QyPr": "100",
+                            "BaLi": "true",
+                            "WeSp": "0",
+                            "PcBl": "10",
+                            "ViRt": "1",
+                            "PcKw": "9.56",
+                            "FlPr": "false",
+                            "SeDe": "false",
+                            "DeDe": "choco druppels",
+                            "BaFi": "false",
+                            "WeLi": "150"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG54012",
+                            "SqNo": "3",
+                            "VaIt": "art",
+                            "RwId": "GR351022",
+                            "PcFw": "50",
+                            "QyPr": "100",
+                            "BaLi": "true",
+                            "WeSp": "0",
+                            "PcBl": "10",
+                            "ViRt": "2",
+                            "PcKw": "9.56",
+                            "FlPr": "false",
+                            "SeDe": "false",
+                            "DeDe": "Spijs",
+                            "BaFi": "false",
+                            "WeLi": "150"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "3 Halffabrikaat": {
+                  "value": {
+                    "FbDoughLines": {
+                      "Element": [
+                        {
+                          "Fields": {
+                            "ItCd": "DG54013",
+                            "SqNo": "1",
+                            "VaIt": "art",
+                            "RwId": "GR405209",
+                            "PcFw": "50",
+                            "QyPr": "100",
+                            "BaLi": "true",
+                            "WeSp": "0",
+                            "PcBl": "10",
+                            "ViRt": "0",
+                            "PcKw": "9.56",
+                            "FlPr": "true",
+                            "SeDe": "true",
+                            "DeDe": "Meel",
+                            "BaFi": "false",
+                            "WeLi": "150"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG54013",
+                            "SqNo": "2",
+                            "VaIt": "art",
+                            "RwId": "GR000001",
+                            "PcFw": "50",
+                            "QyPr": "100",
+                            "BaLi": "true",
+                            "WeSp": "0",
+                            "PcBl": "10",
+                            "ViRt": "1",
+                            "PcKw": "9.56",
+                            "FlPr": "false",
+                            "SeDe": "false",
+                            "DeDe": "choco druppels",
+                            "BaFi": "false",
+                            "WeLi": "150"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "4 Eindproduct": {
+                  "value": {
+                    "FbDoughLines": {
+                      "Element": {
+                        "Fields": {
+                          "ItCd": "DG54014",
+                          "SqNo": "1",
+                          "VaIt": "sam",
+                          "RwId": "5027",
+                          "PcFw": "50",
+                          "QyPr": "100",
+                          "BaLi": "true",
+                          "WeSp": "0",
+                          "PcBl": "10",
+                          "ViRt": "4",
+                          "PcKw": "9.56",
+                          "FlPr": "true",
+                          "SeDe": "true",
+                          "DeDe": "Eindproduct",
+                          "BaFi": "false",
+                          "WeLi": "150"
+                        }
+                      }
+                    }
+                  }
+                },
+                "5 Banket": {
+                  "value": {
+                    "FbDoughLines": {
+                      "Element": [
+                        {
+                          "Fields": {
+                            "ItCd": "DG54015",
+                            "SqNo": "1",
+                            "VaIt": "art",
+                            "RwId": "GR405209",
+                            "PcFw": "50",
+                            "QyPr": "100",
+                            "BaLi": "true",
+                            "WeSp": "0",
+                            "PcBl": "10",
+                            "ViRt": "0",
+                            "PcKw": "9.56",
+                            "FlPr": "true",
+                            "SeDe": "true",
+                            "DeDe": "Meel",
+                            "BaFi": "false",
+                            "WeLi": "150"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG54015",
+                            "SqNo": "2",
+                            "VaIt": "art",
+                            "RwId": "GR000001",
+                            "PcFw": "50",
+                            "QyPr": "100",
+                            "BaLi": "true",
+                            "WeSp": "0",
+                            "PcBl": "10",
+                            "ViRt": "1",
+                            "PcKw": "9.56",
+                            "FlPr": "false",
+                            "SeDe": "false",
+                            "DeDe": "choco druppels",
+                            "BaFi": "false",
+                            "WeLi": "150"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Dough line"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Dough line",
+        "description": "\n\rAlleen beschikbaar onder conditie: Bakkerijen\n\r ",
+        "operationId": "PUT_FbDoughLines",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FbDoughLines_PUT"
+              },
+              "examples": {
+                "deegregel": {
+                  "value": {
+                    "FbDoughLines": {
+                      "Element": [
+                        {
+                          "Fields": {
+                            "ItCd": "DG54000",
+                            "SqNo": "1",
+                            "RwId": "GR405230",
+                            "PcFw": "90"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG54000",
+                            "SqNo": "2",
+                            "DeDe": "Aangepaste omschrijving"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "ItCd": "DG54000",
+                            "SqNo": "3",
+                            "PcFw": "1.25",
+                            "SeDe": "true",
+                            "DeDe": "Omschrijving Declaratie"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Dough line"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/FbDoughLines/FbDoughLines/@ItCd/{ItCd}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "ItCd",
+          "in": "path",
+          "required": true,
+          "description": "Code"
+        }
+      ],
+      "delete": {
+        "summary": "Dough line",
+        "operationId": "DELETE_FbDoughLines",
+        "description": " \n\r Let op: Bij dit endpoint zijn de parameters om een item te verwijderen nog niet gedocumenteerd. De path parameters kunnen hierdoor afwijken\n\r ",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Dough line"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/FbRawMaterialIngredient": {
+      "post": {
+        "summary": "Ingredient per raw material",
+        "description": "\n\rAlleen beschikbaar onder conditie: Bakkerijen\n\r ",
+        "operationId": "POST_FbRawMaterialIngredient",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FbRawMaterialIngredient_POST"
+              },
+              "examples": {
+                "maximaal": {
+                  "value": {
+                    "FbRawMaterialIngredient": {
+                      "Element": {
+                        "Fields": {
+                          "ItCd": "GR000004",
+                          "IgId": "10",
+                          "LeTh": "1",
+                          "Pc": "10",
+                          "IsBi": "v. Jansen",
+                          "CoOr": "Nederland",
+                          "Dc": "1"
+                        }
+                      }
+                    }
+                  }
+                },
+                "minimaal": {
+                  "value": {
+                    "FbRawMaterialIngredient": {
+                      "Element": {
+                        "Fields": {
+                          "ItCd": "GR000004",
+                          "IgId": "15",
+                          "Pc": "10"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Ingredient per raw material"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Ingredient per raw material",
+        "description": "\n\rAlleen beschikbaar onder conditie: Bakkerijen\n\r ",
+        "operationId": "PUT_FbRawMaterialIngredient",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FbRawMaterialIngredient_PUT"
+              },
+              "examples": {
+                "maximaal": {
+                  "value": {
+                    "FbRawMaterialIngredient": {
+                      "Element": {
+                        "Fields": {
+                          "ItCd": "GR000006",
+                          "IgId": "10",
+                          "LeTh": "0",
+                          "Pc": "15",
+                          "IsBi": "v. Jansen",
+                          "CoOr": "Belgie",
+                          "Dc": "0"
+                        }
+                      }
+                    }
+                  }
+                },
+                "minimaal": {
+                  "value": {
+                    "FbRawMaterialIngredient": {
+                      "Element": {
+                        "Fields": {
+                          "ItCd": "GR000006",
+                          "IgId": "10",
+                          "Pc": "15"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Ingredient per raw material"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/FbRawMaterialIngredient/FbRawMaterialIngredient/@IgId/{IgId}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "IgId",
+          "in": "path",
+          "required": true,
+          "description": "Ingredient"
+        }
+      ],
+      "delete": {
+        "summary": "Ingredient per raw material",
+        "operationId": "DELETE_FbRawMaterialIngredient",
+        "description": "\n\r ",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Ingredient per raw material"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "GET",
+      "description": "GET"
+    },
+    {
+      "name": "API Info",
+      "description": "API Info"
+    },
+    {
+      "name": "SSpecific item",
+      "description": "SSpecific item"
+    },
+    {
+      "name": "Dough",
+      "description": "Dough"
+    },
+    {
+      "name": "Dough line",
+      "description": "Dough line"
+    },
+    {
+      "name": "Ingredient per raw material",
+      "description": "Ingredient per raw material"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "FbArticleExtension_PUT": {
+        "type": "object",
+        "properties": {
+          "FbArticleExtension": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "ItCd": {
+                        "type": "string",
+                        "maxLength": 30,
+                        "description": "Code",
+                        "format": ""
+                      },
+                      "En": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Energy",
+                        "format": "float"
+                      },
+                      "Ew": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Proteins",
+                        "format": "float"
+                      },
+                      "Veg": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Of which vegetable",
+                        "format": "float"
+                      },
+                      "Ani": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Of which animal",
+                        "format": "float"
+                      },
+                      "Ch": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Carbohydrates",
+                        "format": "float"
+                      },
+                      "Su": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Of which sugars",
+                        "format": "float"
+                      },
+                      "St": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Of which starch",
+                        "format": "float"
+                      },
+                      "Po": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Polyols",
+                        "format": "float"
+                      },
+                      "Fa": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Fats",
+                        "format": "float"
+                      },
+                      "Sa": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Of which saturated",
+                        "format": "float"
+                      },
+                      "UsS": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Mono-unsaturated",
+                        "format": "float"
+                      },
+                      "UsC": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Polyunsaturated",
+                        "format": "float"
+                      },
+                      "Tf": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Trans fatty acids",
+                        "format": "float"
+                      },
+                      "Chol": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Cholesterol",
+                        "format": "float"
+                      },
+                      "Fi": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Dietary fibre",
+                        "format": "float"
+                      },
+                      "Al": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Alcohol",
+                        "format": "float"
+                      },
+                      "Sat": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Salatrims",
+                        "format": "float"
+                      },
+                      "Ac": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Organische zuren",
+                        "format": "float"
+                      },
+                      "VA": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Vitamin A",
+                        "format": "float"
+                      },
+                      "VB1": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Vitamin B1",
+                        "format": "float"
+                      },
+                      "VB2": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Vitamin B2",
+                        "format": "float"
+                      },
+                      "VB3": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Vitamin B3",
+                        "format": "float"
+                      },
+                      "VB5": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Vitamin B5",
+                        "format": "float"
+                      },
+                      "VB6": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Vitamin B6",
+                        "format": "float"
+                      },
+                      "VB8": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Vitamin B8",
+                        "format": "float"
+                      },
+                      "VB11": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Vitamin B11",
+                        "format": "float"
+                      },
+                      "VB12": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Vitamin B12",
+                        "format": "float"
+                      },
+                      "VC": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Vitamin C",
+                        "format": "float"
+                      },
+                      "VD": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Vitamin D",
+                        "format": "float"
+                      },
+                      "VE": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Vitamin E",
+                        "format": "float"
+                      },
+                      "Na": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Sodium",
+                        "format": "float"
+                      },
+                      "Iron": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Iron",
+                        "format": "float"
+                      },
+                      "Calc": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Calcium",
+                        "format": "float"
+                      },
+                      "Magn": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Magnesium",
+                        "format": "float"
+                      },
+                      "Zinc": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Zinc",
+                        "format": "float"
+                      },
+                      "Pota": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Potassium",
+                        "format": "float"
+                      },
+                      "Chro": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Chromium",
+                        "format": "float"
+                      },
+                      "Io": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Iodine",
+                        "format": "float"
+                      },
+                      "Sal": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Salt added",
+                        "format": "float"
+                      },
+                      "SO3": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Sulphite",
+                        "format": "float"
+                      },
+                      "PcDm": {
+                        "type": "number",
+                        "multipleOf": 0.01,
+                        "description": "Dry matter (%)",
+                        "format": "float"
+                      },
+                      "QuPa": {
+                        "type": "number",
+                        "multipleOf": 0.01,
+                        "description": "Quantity per packaging unit",
+                        "format": "float"
+                      },
+                      "UnWe": {
+                        "type": "number",
+                        "multipleOf": 0.001,
+                        "description": "Weight per unit (g)",
+                        "format": "float"
+                      },
+                      "Dc": {
+                        "type": "boolean",
+                        "description": "Keep assembled raw materials together",
+                        "format": ""
+                      },
+                      "Gl": {
+                        "type": "boolean",
+                        "description": "GZP tax",
+                        "format": ""
+                      },
+                      "Dp": {
+                        "type": "boolean",
+                        "description": "Current price",
+                        "format": ""
+                      },
+                      "Gmo": {
+                        "type": "boolean",
+                        "description": "GMO (genetically modified)",
+                        "format": ""
+                      },
+                      "Xray": {
+                        "type": "boolean",
+                        "description": "Irradiated",
+                        "format": ""
+                      },
+                      "DaVe": {
+                        "type": "string",
+                        "description": "Version date specification",
+                        "format": "date"
+                      },
+                      "InDc": {
+                        "type": "string",
+                        "description": "Storage conditions",
+                        "format": "byte"
+                      },
+                      "Cl": {
+                        "type": "string",
+                        "maxLength": 80,
+                        "description": "Clamp",
+                        "format": ""
+                      },
+                      "Mt": {
+                        "type": "string",
+                        "maxLength": 80,
+                        "description": "Material",
+                        "format": ""
+                      },
+                      "Th": {
+                        "type": "number",
+                        "description": "Thickness (mu)",
+                        "format": "number"
+                      },
+                      "Fd": {
+                        "type": "number",
+                        "description": "Fold (mm)",
+                        "format": "number"
+                      },
+                      "FlTh": {
+                        "type": "number",
+                        "description": "Valve (mm)",
+                        "format": "number"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "FbDoughLines_POST": {
+        "type": "object",
+        "properties": {
+          "FbDoughLines": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "ItCd": {
+                        "type": "string",
+                        "maxLength": 40,
+                        "description": "Code",
+                        "format": ""
+                      },
+                      "SqNo": {
+                        "type": "integer",
+                        "description": "Sequence number",
+                        "format": ""
+                      },
+                      "VaIt": {
+                        "type": "string",
+                        "enum": [
+                          "Wtp",
+                          "Pid",
+                          "Dgh",
+                          "Dim",
+                          "Itm",
+                          "Txt",
+                          "Sub",
+                          "Sur",
+                          "Cst",
+                          "Cmp",
+                          "Crs"
+                        ],
+                        "maxLength": 20,
+                        "description": "Raw material item type\nWtp = Work type;\nPid = Production indicator;\nDgh = Dough;\nDim = Item dimension total;\nItm = Article;\nTxt = Text;\nSub = Sub-total;\nSur = Allowance;\nCst = Costs;\nCmp = Assembled item;\nCrs = Course;",
+                        "format": ""
+                      },
+                      "RwId": {
+                        "type": "string",
+                        "maxLength": 40,
+                        "description": "Raw material",
+                        "format": ""
+                      },
+                      "PcFw": {
+                        "type": "number",
+                        "description": "% of flour weight",
+                        "format": "number"
+                      },
+                      "QyPr": {
+                        "type": "number",
+                        "description": "Quantity per dough type",
+                        "format": "number"
+                      },
+                      "BaLi": {
+                        "type": "boolean",
+                        "description": "Baking street line",
+                        "format": ""
+                      },
+                      "WeSp": {
+                        "type": "number",
+                        "description": "Filling weight (grams)",
+                        "format": "number"
+                      },
+                      "PcBl": {
+                        "type": "number",
+                        "description": "%baking loss, filling",
+                        "format": "number"
+                      },
+                      "ViRt": {
+                        "type": "string",
+                        "enum": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4"
+                        ],
+                        "maxLength": 20,
+                        "description": "Raw material type\n0 = Raw material;\n1 = Additive;\n2 = Almond paste;\n3 = Semi-manufactured;\n4 = End product;",
+                        "format": ""
+                      },
+                      "PcKw": {
+                        "type": "number",
+                        "description": "KWID %",
+                        "format": "number"
+                      },
+                      "FlPr": {
+                        "type": "boolean",
+                        "description": "Flour product",
+                        "format": ""
+                      },
+                      "SeDe": {
+                        "type": "boolean",
+                        "description": "Separately at the bottom of the declaration",
+                        "format": ""
+                      },
+                      "DeDe": {
+                        "type": "string",
+                        "maxLength": 80,
+                        "description": "Declaration description",
+                        "format": ""
+                      },
+                      "BaFi": {
+                        "type": "boolean",
+                        "description": "Created centrally",
+                        "format": ""
+                      },
+                      "WeLi": {
+                        "type": "number",
+                        "description": "Weight (kg)/charge",
+                        "format": "number"
+                      }
+                    },
+                    "required": [
+                      "ItCd",
+                      "SqNo"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "FbDoughLines_PUT": {
+        "type": "object",
+        "properties": {
+          "FbDoughLines": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "ItCd": {
+                        "type": "string",
+                        "maxLength": 40,
+                        "description": "Code",
+                        "format": ""
+                      },
+                      "SqNo": {
+                        "type": "integer",
+                        "description": "Sequence number",
+                        "format": ""
+                      },
+                      "VaIt": {
+                        "type": "string",
+                        "enum": [
+                          "Wtp",
+                          "Pid",
+                          "Dgh",
+                          "Dim",
+                          "Itm",
+                          "Txt",
+                          "Sub",
+                          "Sur",
+                          "Cst",
+                          "Cmp",
+                          "Crs"
+                        ],
+                        "maxLength": 20,
+                        "description": "Raw material item type\nWtp = Work type;\nPid = Production indicator;\nDgh = Dough;\nDim = Item dimension total;\nItm = Article;\nTxt = Text;\nSub = Sub-total;\nSur = Allowance;\nCst = Costs;\nCmp = Assembled item;\nCrs = Course;",
+                        "format": ""
+                      },
+                      "RwId": {
+                        "type": "string",
+                        "maxLength": 40,
+                        "description": "Raw material",
+                        "format": ""
+                      },
+                      "PcFw": {
+                        "type": "number",
+                        "multipleOf": 0.001,
+                        "description": "% of flour weight",
+                        "format": "float"
+                      },
+                      "QyPr": {
+                        "type": "number",
+                        "multipleOf": 0.001,
+                        "description": "Quantity per dough type",
+                        "format": "float"
+                      },
+                      "BaLi": {
+                        "type": "boolean",
+                        "description": "Baking street line",
+                        "format": ""
+                      },
+                      "WeSp": {
+                        "type": "number",
+                        "multipleOf": 0.001,
+                        "description": "Filling weight (grams)",
+                        "format": "float"
+                      },
+                      "PcBl": {
+                        "type": "number",
+                        "multipleOf": 0.01,
+                        "description": "%baking loss, filling",
+                        "format": "float"
+                      },
+                      "ViRt": {
+                        "type": "string",
+                        "enum": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4"
+                        ],
+                        "maxLength": 20,
+                        "description": "Raw material type\n0 = Raw material;\n1 = Additive;\n2 = Almond paste;\n3 = Semi-manufactured;\n4 = End product;",
+                        "format": ""
+                      },
+                      "PcKw": {
+                        "type": "number",
+                        "multipleOf": 0.01,
+                        "description": "KWID %",
+                        "format": "float"
+                      },
+                      "FlPr": {
+                        "type": "boolean",
+                        "description": "Flour product",
+                        "format": ""
+                      },
+                      "SeDe": {
+                        "type": "boolean",
+                        "description": "Separately at the bottom of the declaration",
+                        "format": ""
+                      },
+                      "DeDe": {
+                        "type": "string",
+                        "maxLength": 80,
+                        "description": "Declaration description",
+                        "format": ""
+                      },
+                      "BaFi": {
+                        "type": "boolean",
+                        "description": "Created centrally",
+                        "format": ""
+                      },
+                      "WeLi": {
+                        "type": "number",
+                        "multipleOf": 0.001,
+                        "description": "Weight (kg)/charge",
+                        "format": "float"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "FbDough_POST": {
+        "type": "object",
+        "properties": {
+          "FbDough": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "ItCd": {
+                        "type": "string",
+                        "maxLength": 40,
+                        "description": "Code",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Omschrijving",
+                        "format": ""
+                      },
+                      "Ds_1031": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Omschrijving (Duits)",
+                        "format": ""
+                      },
+                      "Ds_1036": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Omschrijving (Frans)",
+                        "format": ""
+                      },
+                      "Ds_1043": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Omschrijving (Nederlands)",
+                        "format": ""
+                      },
+                      "Ds_2057": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Omschrijving (Engels)",
+                        "format": ""
+                      },
+                      "Ds_2067": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Omschrijving (Vlaams)",
+                        "format": ""
+                      },
+                      "DsEx": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Extra omschrijving",
+                        "format": ""
+                      },
+                      "DsEx_1031": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Extra omschrijving (Duits)",
+                        "format": ""
+                      },
+                      "DsEx_1036": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Extra omschrijving (Frans)",
+                        "format": ""
+                      },
+                      "DsEx_1043": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Extra omschrijving (Nederlands)",
+                        "format": ""
+                      },
+                      "DsEx_2057": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Extra omschrijving (Engels)",
+                        "format": ""
+                      },
+                      "DsEx_2067": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Extra omschrijving (Vlaams)",
+                        "format": ""
+                      },
+                      "ChDs": {
+                        "type": "boolean",
+                        "description": "Omschrijving aanpasbaar",
+                        "format": ""
+                      },
+                      "Bl": {
+                        "type": "boolean",
+                        "description": "Geblokkeerd",
+                        "format": ""
+                      },
+                      "VaBc": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Type barcode",
+                        "format": ""
+                      },
+                      "BaCo": {
+                        "type": "string",
+                        "maxLength": 30,
+                        "description": "Barcode",
+                        "format": ""
+                      },
+                      "InPr": {
+                        "type": "boolean",
+                        "description": "In productie",
+                        "format": ""
+                      },
+                      "ViCa": {
+                        "type": "string",
+                        "enum": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4",
+                          "5",
+                          "9"
+                        ],
+                        "maxLength": 20,
+                        "description": "Measured weight calculation\n0 = Dry matter;\n1 = Final weight;\n2 = Final weight including almond paste/filling;\n3 = Based on semi-finished product;\n4 = Recipe with end products;\n5 = Confectionery;\n9 = No dough calculation;",
+                        "format": ""
+                      },
+                      "PcBl": {
+                        "type": "number",
+                        "description": "%baking loss",
+                        "format": "number"
+                      },
+                      "FlCh": {
+                        "type": "number",
+                        "description": "Flour weight/charge (kg)",
+                        "format": "number"
+                      },
+                      "RoWe": {
+                        "type": "number",
+                        "description": "Rejected per dough type (kg)",
+                        "format": "number"
+                      },
+                      "ToWe": {
+                        "type": "integer",
+                        "description": "Final weight (grams)",
+                        "format": ""
+                      },
+                      "QuCh": {
+                        "type": "number",
+                        "description": "Units/charge",
+                        "format": "number"
+                      },
+                      "AjTm": {
+                        "type": "integer",
+                        "description": "Changeover time (seconds)",
+                        "format": ""
+                      },
+                      "AjLs": {
+                        "type": "integer",
+                        "description": "Changeover loss (kg)",
+                        "format": ""
+                      },
+                      "PrTm": {
+                        "type": "integer",
+                        "description": "Machine time (sec) / charge",
+                        "format": ""
+                      },
+                      "WrTm": {
+                        "type": "number",
+                        "description": "Number of persons",
+                        "format": "number"
+                      },
+                      "Tp": {
+                        "type": "number",
+                        "description": "Dough temperature",
+                        "format": "number"
+                      },
+                      "BaLi": {
+                        "type": "boolean",
+                        "description": "Dough in baking street",
+                        "format": ""
+                      },
+                      "Rm": {
+                        "type": "string",
+                        "description": "Opmerking",
+                        "format": "byte"
+                      },
+                      "Rm_1031": {
+                        "type": "string",
+                        "description": "Opmerking (Duits)",
+                        "format": "byte"
+                      },
+                      "Rm_1036": {
+                        "type": "string",
+                        "description": "Opmerking (Frans)",
+                        "format": "byte"
+                      },
+                      "Rm_1043": {
+                        "type": "string",
+                        "description": "Opmerking (Nederlands)",
+                        "format": "byte"
+                      },
+                      "Rm_2057": {
+                        "type": "string",
+                        "description": "Opmerking (Engels)",
+                        "format": "byte"
+                      },
+                      "Rm_2067": {
+                        "type": "string",
+                        "description": "Opmerking (Vlaams)",
+                        "format": "byte"
+                      },
+                      "FileName": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Filename",
+                        "format": ""
+                      },
+                      "FileStream": {
+                        "type": "string",
+                        "description": "File as byte-array",
+                        "format": "byte"
+                      }
+                    },
+                    "required": [
+                      "ItCd"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "FbDough_PUT": {
+        "type": "object",
+        "properties": {
+          "FbDough": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "ItCd": {
+                        "type": "string",
+                        "maxLength": 40,
+                        "description": "Code",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Omschrijving",
+                        "format": ""
+                      },
+                      "Ds_1031": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Omschrijving (Duits)",
+                        "format": ""
+                      },
+                      "Ds_1036": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Omschrijving (Frans)",
+                        "format": ""
+                      },
+                      "Ds_1043": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Omschrijving (Nederlands)",
+                        "format": ""
+                      },
+                      "Ds_2057": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Omschrijving (Engels)",
+                        "format": ""
+                      },
+                      "Ds_2067": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Omschrijving (Vlaams)",
+                        "format": ""
+                      },
+                      "DsEx": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Extra omschrijving",
+                        "format": ""
+                      },
+                      "DsEx_1031": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Extra omschrijving (Duits)",
+                        "format": ""
+                      },
+                      "DsEx_1036": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Extra omschrijving (Frans)",
+                        "format": ""
+                      },
+                      "DsEx_1043": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Extra omschrijving (Nederlands)",
+                        "format": ""
+                      },
+                      "DsEx_2057": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Extra omschrijving (Engels)",
+                        "format": ""
+                      },
+                      "DsEx_2067": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Extra omschrijving (Vlaams)",
+                        "format": ""
+                      },
+                      "ChDs": {
+                        "type": "boolean",
+                        "description": "Omschrijving aanpasbaar",
+                        "format": ""
+                      },
+                      "Bl": {
+                        "type": "boolean",
+                        "description": "Geblokkeerd",
+                        "format": ""
+                      },
+                      "VaBc": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Type barcode",
+                        "format": ""
+                      },
+                      "BaCo": {
+                        "type": "string",
+                        "maxLength": 30,
+                        "description": "Barcode",
+                        "format": ""
+                      },
+                      "InPr": {
+                        "type": "boolean",
+                        "description": "In productie",
+                        "format": ""
+                      },
+                      "ViCa": {
+                        "type": "string",
+                        "enum": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4",
+                          "5",
+                          "9"
+                        ],
+                        "maxLength": 20,
+                        "description": "Measured weight calculation\n0 = Dry matter;\n1 = Final weight;\n2 = Final weight including almond paste/filling;\n3 = Based on semi-finished product;\n4 = Recipe with end products;\n5 = Confectionery;\n9 = No dough calculation;",
+                        "format": ""
+                      },
+                      "PcBl": {
+                        "type": "number",
+                        "multipleOf": 0.01,
+                        "description": "%baking loss",
+                        "format": "float"
+                      },
+                      "FlCh": {
+                        "type": "number",
+                        "multipleOf": 0.001,
+                        "description": "Flour weight/charge (kg)",
+                        "format": "float"
+                      },
+                      "RoWe": {
+                        "type": "number",
+                        "multipleOf": 0.001,
+                        "description": "Rejected per dough type (kg)",
+                        "format": "float"
+                      },
+                      "ToWe": {
+                        "type": "integer",
+                        "description": "Final weight (grams)",
+                        "format": ""
+                      },
+                      "QuCh": {
+                        "type": "number",
+                        "multipleOf": 0.01,
+                        "description": "Units/charge",
+                        "format": "float"
+                      },
+                      "AjTm": {
+                        "type": "integer",
+                        "description": "Changeover time (seconds)",
+                        "format": ""
+                      },
+                      "AjLs": {
+                        "type": "integer",
+                        "description": "Changeover loss (kg)",
+                        "format": ""
+                      },
+                      "PrTm": {
+                        "type": "integer",
+                        "description": "Machine time (sec) / charge",
+                        "format": ""
+                      },
+                      "WrTm": {
+                        "type": "number",
+                        "multipleOf": 0.01,
+                        "description": "Number of persons",
+                        "format": "float"
+                      },
+                      "Tp": {
+                        "type": "number",
+                        "multipleOf": 0.1,
+                        "description": "Dough temperature",
+                        "format": "float"
+                      },
+                      "BaLi": {
+                        "type": "boolean",
+                        "description": "Dough in baking street",
+                        "format": ""
+                      },
+                      "Rm": {
+                        "type": "string",
+                        "description": "Opmerking",
+                        "format": "byte"
+                      },
+                      "Rm_1031": {
+                        "type": "string",
+                        "description": "Opmerking (Duits)",
+                        "format": "byte"
+                      },
+                      "Rm_1036": {
+                        "type": "string",
+                        "description": "Opmerking (Frans)",
+                        "format": "byte"
+                      },
+                      "Rm_1043": {
+                        "type": "string",
+                        "description": "Opmerking (Nederlands)",
+                        "format": "byte"
+                      },
+                      "Rm_2057": {
+                        "type": "string",
+                        "description": "Opmerking (Engels)",
+                        "format": "byte"
+                      },
+                      "Rm_2067": {
+                        "type": "string",
+                        "description": "Opmerking (Vlaams)",
+                        "format": "byte"
+                      },
+                      "FileName": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Filename",
+                        "format": ""
+                      },
+                      "FileStream": {
+                        "type": "string",
+                        "description": "File as byte-array",
+                        "format": "byte"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "FbRawMaterialIngredient_POST": {
+        "type": "object",
+        "properties": {
+          "FbRawMaterialIngredient": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "ItCd": {
+                        "type": "string",
+                        "maxLength": 30,
+                        "description": "Code",
+                        "format": ""
+                      },
+                      "IgId": {
+                        "type": "integer",
+                        "description": "Ingredient",
+                        "format": ""
+                      },
+                      "LeTh": {
+                        "type": "boolean",
+                        "description": "Smaller than",
+                        "format": ""
+                      },
+                      "Pc": {
+                        "type": "number",
+                        "description": "Percentage",
+                        "format": "number"
+                      },
+                      "IsBi": {
+                        "type": "boolean",
+                        "description": "Biological ingredient",
+                        "format": ""
+                      },
+                      "CoOr": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Country of origin",
+                        "format": ""
+                      },
+                      "Dc": {
+                        "type": "boolean",
+                        "description": "To declare",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "ItCd",
+                      "IgId"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "FbRawMaterialIngredient_PUT": {
+        "type": "object",
+        "properties": {
+          "FbRawMaterialIngredient": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "ItCd": {
+                        "type": "string",
+                        "maxLength": 30,
+                        "description": "Code",
+                        "format": ""
+                      },
+                      "IgId": {
+                        "type": "integer",
+                        "description": "Ingredient",
+                        "format": ""
+                      },
+                      "LeTh": {
+                        "type": "boolean",
+                        "description": "Smaller than",
+                        "format": ""
+                      },
+                      "Pc": {
+                        "type": "number",
+                        "multipleOf": 1E-05,
+                        "description": "Percentage",
+                        "format": "float"
+                      },
+                      "IsBi": {
+                        "type": "boolean",
+                        "description": "Biological ingredient",
+                        "format": ""
+                      },
+                      "CoOr": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Country of origin",
+                        "format": ""
+                      },
+                      "Dc": {
+                        "type": "boolean",
+                        "description": "To declare",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "IgId"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "AfasToken": {
+        "name": "Authorization",
+        "type": "apiKey",
+        "in": "header",
+        "description": "Convert the XML token to Base64 and add 'AfasToken ' in front of it."
+      }
+    },
+    "parameters": {
+      "Accept-Language": {
+        "name": "Accept-Language",
+        "in": "header",
+        "required": false,
+        "description": "Indicates the client's preferred language for the response. If not provided, the API defaults to the base environment language.",
+        "schema": {
+          "type": "string",
+          "enum": [
+            "en-us",
+            "nl-nl",
+            "nl-be",
+            "fr-fr",
+            "de-de"
+          ],
+          "example": "en-us"
+        }
+      },
+      "Content-Type": {
+        "name": "Content-Type",
+        "in": "header",
+        "required": false,
+        "description": "Specifies the media type and character encoding for the request body. Ensures proper decoding and interpretation of the transmitted data.",
+        "schema": {
+          "type": "string",
+          "example": "application/json;charset=utf-8"
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "OK; request is successfully executed.",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(0ms), complete(418ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Thu, 23 Nov 2023 12:11:06 GMT",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "0",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request; invalid request"
+      },
+      "401": {
+        "description": "Unauthorized; valid token but no access to this endpoint.",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(0ms), complete(418ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Thu, 23 Nov 2023 12:11:06 GMT",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "0",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "403": {
+        "description": "Forbidden; Due to IP restrictions in AFAS environment.",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(0ms), complete(418ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Thu, 23 Nov 2023 12:11:06 GMT",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "0",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "404": {
+        "description": "Not Found; requested resource is not available on the server.",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(0ms), complete(101ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Thu, 23 Nov 2023 12:11:06 GMT",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "0",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "413": {
+        "description": "Payload Too Large.",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(0ms), complete(418ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Thu, 23 Nov 2023 12:11:06 GMT",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "0",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "500": {
+        "description": "Internal Server Error",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(1ms), complete(2192ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Tue, 30 Jan 2024 20:30:07 GMT",
+            "schema": {
+              "type": "string"
+            }
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "errorNumber": {
+                  "type": "integer",
+                  "example": {
+                    "example": 0
+                  }
+                },
+                "externalMessage": {
+                  "type": "string",
+                  "example": {
+                    "example": "string"
+                  }
+                },
+                "profitLogReference": {
+                  "type": "string",
+                  "example": {
+                    "example": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "503": {
+        "description": "Service unavailable; retry at a later time. Contains the number of seconds to wait before retrying the request",
+        "headers": {
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "61",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Retry-After": {
+            "description": "7200",
+            "schema": {
+              "type": "string"
+            }
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "string",
+                      "example": {
+                        "example": "503"
+                      }
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": {
+                        "example": "Service temporarily unavailable due to scheduled maintenance. Please check afasstatus.nl for details."
+                      }
+                    }
+                  }
+                },
+                "retry_after": {
+                  "type": "integer",
+                  "example": 7200
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "AfasToken": []
+    }
+  ]
+}

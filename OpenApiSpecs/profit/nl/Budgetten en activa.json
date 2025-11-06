@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "6.6.9",
+    "version": "7.7.10",
     "title": "AFAS Budgetten en activa API",
     "description": "Deze API beschrijft de endpoints gerelateerd aan Budgetten en activa. Gebruik deze API met de functionele beschrijving van de API."
   },
@@ -1842,7 +1842,7 @@
     "/connectors/FiCommitment": {
       "post": {
         "summary": "Verplichting",
-        "description": "\n\rAlleen beschikbaar onder conditie: Systeem Financieel (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiComt.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Financieel\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiComt.htm",
         "operationId": "POST_FiCommitment",
         "requestBody": {
           "content": {
@@ -2455,7 +2455,7 @@
       },
       "put": {
         "summary": "Verplichting",
-        "description": "\n\rAlleen beschikbaar onder conditie: Systeem Financieel (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiComt.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Financieel\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiComt.htm",
         "operationId": "PUT_FiCommitment",
         "requestBody": {
           "content": {
@@ -2789,7 +2789,7 @@
                           "AmPr": "2400.24",
                           "AmIn": "1200.12",
                           "DaVa": "2015-02-02",
-                          "Re": "Opmerking bij contract. Geen idee hoe lang dit veld mag zijn maar dit is genoeg? \r\n En een nieuwe regel. \r\n Nog \uFFFD\uFFFDn.",
+                          "Re": "Opmerking bij contract. Geen idee hoe lang dit veld mag zijn maar dit is genoeg? \r\n En een nieuwe regel. \r\n Nog ��n.",
                           "Prol": "0",
                           "EmId": "FLOORA",
                           "EmOw": "AllardJ",
@@ -2977,7 +2977,7 @@
                           "AmPr": "24000.24",
                           "AmIn": "1000000",
                           "DaVa": "2013-12-02",
-                          "Re": "Opmerking bij contract. Geen idee hoe lang dit veld mag zijn maar dit is genoeg? \r\n En een nieuwe regel. \r\n Nog \uFFFD\uFFFDn.",
+                          "Re": "Opmerking bij contract. Geen idee hoe lang dit veld mag zijn maar dit is genoeg? \r\n En een nieuwe regel. \r\n Nog ��n.",
                           "Prol": "1",
                           "EmId": "FLOORA",
                           "UnId": "1",
@@ -3523,7 +3523,7 @@
     "/connectors/FiFixedAssets": {
       "post": {
         "summary": "Vaste activa",
-        "description": "\n\rAlleen beschikbaar onder conditie: Fixed Assets\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiFixedAssets.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Vaste Activa\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiFixedAssets.htm",
         "operationId": "POST_FiFixedAssets",
         "requestBody": {
           "content": {
@@ -3706,7 +3706,7 @@
     "/connectors/FiFixedAssetsBuy": {
       "post": {
         "summary": "Vaste activa investering",
-        "description": "\n\rAlleen beschikbaar onder conditie: Fixed Assets\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiFixedAssetsSale.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Vaste Activa\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiFixedAssetsSale.htm",
         "operationId": "POST_FiFixedAssetsBuy",
         "requestBody": {
           "content": {
@@ -3793,7 +3793,7 @@
     "/connectors/FiFixedAssetsSale": {
       "post": {
         "summary": "Vaste activa verkoop",
-        "description": "\n\rAlleen beschikbaar onder conditie: Fixed Assets\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiFixedAssetsSale.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Vaste Activa\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiFixedAssetsSale.htm",
         "operationId": "POST_FiFixedAssetsSale",
         "requestBody": {
           "content": {
@@ -3918,7 +3918,7 @@
       },
       "put": {
         "summary": "Vaste activa verkoop",
-        "description": "\n\rAlleen beschikbaar onder conditie: Fixed Assets\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiFixedAssetsSale.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Vaste Activa\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiFixedAssetsSale.htm",
         "operationId": "PUT_FiFixedAssetsSale",
         "requestBody": {
           "content": {
@@ -4053,7 +4053,7 @@
     "/connectors/FiReservation": {
       "post": {
         "summary": "Reservering financieel",
-        "description": "\n\rAlleen beschikbaar onder conditie: Fi Budget extended\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiResv.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Financieel\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiResv.htm",
         "operationId": "POST_FiReservation",
         "requestBody": {
           "content": {
@@ -4461,7 +4461,7 @@
       },
       "put": {
         "summary": "Reservering financieel",
-        "description": "\n\rAlleen beschikbaar onder conditie: Fi Budget extended\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiResv.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Financieel\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiResv.htm",
         "operationId": "PUT_FiReservation",
         "requestBody": {
           "content": {
@@ -5003,7 +5003,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id\u0027s can be found in the metainfo request result.",
+        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -5149,7 +5149,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -5227,6 +5227,58 @@
         },
         "operationId": "get_ProfitVersion"
       }
+    },
+    "/connectors/FiBudgetRequest": {
+      "post": {
+        "summary": "Budgetaanvraag",
+        "description": "\n\rAlleen beschikbaar onder conditie: Budgetaanvragen (activering)\n\r ",
+        "operationId": "POST_FiBudgetRequest",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FiBudgetRequest_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Budgetaanvraag"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
     }
   },
   "tags": [
@@ -5265,10 +5317,231 @@
     {
       "name": "Reservering financieel",
       "description": "Reservering financieel"
+    },
+    {
+      "name": "Budgetaanvraag",
+      "description": "Budgetaanvraag"
     }
   ],
   "components": {
     "schemas": {
+      "FiBudgetRequest_POST": {
+        "type": "object",
+        "properties": {
+          "FiBudgetRequest": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "BrNr": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Nummer aanvraag",
+                        "format": ""
+                      },
+                      "Prof": {
+                        "type": "integer",
+                        "description": "Profiel",
+                        "format": ""
+                      },
+                      "Appl": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Aanvrager",
+                        "format": ""
+                      },
+                      "CkBn": {
+                        "type": "string",
+                        "enum": [
+                          "A",
+                          "G",
+                          "V"
+                        ],
+                        "maxLength": 20,
+                        "description": "Controle budgetneutraal\nA = Controle op budgetneutraal;\nG = Geen controle op budgetneutraal;\nV = Vraag stellen indien niet budgetneutraal;",
+                        "format": ""
+                      },
+                      "UnId": {
+                        "type": "integer",
+                        "description": "Administratie",
+                        "format": ""
+                      },
+                      "ScId": {
+                        "type": "string",
+                        "maxLength": 6,
+                        "description": "Budgetscenario",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Omschrijving",
+                        "format": ""
+                      },
+                      "Dcsn": {
+                        "type": "string",
+                        "description": "Besluit",
+                        "format": "byte"
+                      },
+                      "ChTp": {
+                        "type": "string",
+                        "enum": [
+                          "10",
+                          "20"
+                        ],
+                        "maxLength": 20,
+                        "description": "Wijzigingssoort\n10 = Overboeking;\n20 = Uitbreiding;",
+                        "format": ""
+                      },
+                      "ChPe": {
+                        "type": "string",
+                        "enum": [
+                          "I1",
+                          "I2",
+                          "I3",
+                          "I4",
+                          "I5",
+                          "S"
+                        ],
+                        "maxLength": 20,
+                        "description": "Periodieke wijziging\nI1 = Incidenteel;\nI2 = Incidenteel 2 jaar;\nI3 = Incidenteel 3 jaar;\nI4 = Incidenteel 4 jaar;\nI5 = Incidenteel 5 jaar;\nS = Structureel;",
+                        "format": ""
+                      },
+                      "Rm": {
+                        "type": "string",
+                        "description": "Opmerking",
+                        "format": "byte"
+                      },
+                      "FiAtNa": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Bestandsnaam bijlage",
+                        "format": ""
+                      },
+                      "FiAtDa": {
+                        "type": "string",
+                        "description": "Inhoud bijlage",
+                        "format": "byte"
+                      }
+                    },
+                    "required": [
+                      "Prof",
+                      "CkBn",
+                      "UnId"
+                    ]
+                  },
+                  "Objects": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "FiBudgetRequestLine": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "Yr": {
+                                        "type": "integer",
+                                        "description": "Boekjaar",
+                                        "format": ""
+                                      },
+                                      "PeFr": {
+                                        "type": "integer",
+                                        "description": "Periode van",
+                                        "format": ""
+                                      },
+                                      "PeTo": {
+                                        "type": "integer",
+                                        "description": "Periode t/m",
+                                        "format": ""
+                                      },
+                                      "AcNr": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "Rekening",
+                                        "format": ""
+                                      },
+                                      "V1Cd": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "Code verbijzonderingsas 1",
+                                        "format": ""
+                                      },
+                                      "V2Cd": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "Code verbijzonderingsas 2",
+                                        "format": ""
+                                      },
+                                      "V3Cd": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "Code verbijzonderingsas 3",
+                                        "format": ""
+                                      },
+                                      "V4Cd": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "Code verbijzonderingsas 4",
+                                        "format": ""
+                                      },
+                                      "V5Cd": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "Code verbijzonderingsas 5",
+                                        "format": ""
+                                      },
+                                      "Amt": {
+                                        "type": "number",
+                                        "description": "Bedrag",
+                                        "format": "number"
+                                      },
+                                      "Qua": {
+                                        "type": "number",
+                                        "description": "Aantal",
+                                        "format": "number"
+                                      },
+                                      "Ds": {
+                                        "type": "string",
+                                        "maxLength": 100,
+                                        "description": "Omschrijving",
+                                        "format": ""
+                                      },
+                                      "Rm": {
+                                        "type": "string",
+                                        "description": "Opmerking",
+                                        "format": "byte"
+                                      }
+                                    },
+                                    "required": [
+                                      "Yr",
+                                      "AcNr"
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "FiBudget_POST": {
         "type": "object",
         "properties": {
@@ -7173,7 +7446,7 @@
                           "5"
                         ],
                         "maxLength": 20,
-                        "description": "Best. boekwinst/verlies\n1 = Rekening verlies/winst;\n2 = Rekening herinvesteringsreserve;\n3 = Herinvesteringsreserve vervangend actief;\n4 = Commerciele boekwinst vervangend actief;\n5 = Fiscaal en commerci\u00EBle reserve;",
+                        "description": "Best. boekwinst/verlies\n1 = Rekening verlies/winst;\n2 = Rekening herinvesteringsreserve;\n3 = Herinvesteringsreserve vervangend actief;\n4 = Commerciele boekwinst vervangend actief;\n5 = Fiscaal en commerciële reserve;",
                         "format": ""
                       },
                       "ReSn": {
@@ -7291,7 +7564,7 @@
                           "5"
                         ],
                         "maxLength": 20,
-                        "description": "Best. boekwinst/verlies\n1 = Rekening verlies/winst;\n2 = Rekening herinvesteringsreserve;\n3 = Herinvesteringsreserve vervangend actief;\n4 = Commerciele boekwinst vervangend actief;\n5 = Fiscaal en commerci\u00EBle reserve;",
+                        "description": "Best. boekwinst/verlies\n1 = Rekening verlies/winst;\n2 = Rekening herinvesteringsreserve;\n3 = Herinvesteringsreserve vervangend actief;\n4 = Commerciele boekwinst vervangend actief;\n5 = Fiscaal en commerciële reserve;",
                         "format": ""
                       },
                       "ReSn": {
@@ -7458,7 +7731,7 @@
                           "A"
                         ],
                         "maxLength": 20,
-                        "description": "Afschrijvingsmethode\nD = Direct afschrijven;\nR = Percentage lineaire afschrijving incl. renteberekening;\nL = Bedrag lineaire afschrijving;\nP = Percentage lineaire afschrijving;\nB = Percentage van de boekwaarde;\nM = Degressieve methode;\nW = Willekeurig afschrijven;\nA = Percentage annu\u00EFtaire afschrijving incl. renteberekening;",
+                        "description": "Afschrijvingsmethode\nD = Direct afschrijven;\nR = Percentage lineaire afschrijving incl. renteberekening;\nL = Bedrag lineaire afschrijving;\nP = Percentage lineaire afschrijving;\nB = Percentage van de boekwaarde;\nM = Degressieve methode;\nW = Willekeurig afschrijven;\nA = Percentage annuïtaire afschrijving incl. renteberekening;",
                         "format": ""
                       },
                       "FiAm": {
@@ -7523,7 +7796,7 @@
                       },
                       "CoYn": {
                         "type": "boolean",
-                        "description": "Commerci\u00EBle afschrijving",
+                        "description": "Commerciële afschrijving",
                         "format": ""
                       },
                       "ViDc": {
@@ -7538,7 +7811,7 @@
                           "A"
                         ],
                         "maxLength": 20,
-                        "description": "Afschrijvingsmethode\nD = Direct afschrijven;\nR = Percentage lineaire afschrijving incl. renteberekening;\nL = Bedrag lineaire afschrijving;\nP = Percentage lineaire afschrijving;\nB = Percentage van de boekwaarde;\nM = Degressieve methode;\nA = Percentage annu\u00EFtaire afschrijving incl. renteberekening;",
+                        "description": "Afschrijvingsmethode\nD = Direct afschrijven;\nR = Percentage lineaire afschrijving incl. renteberekening;\nL = Bedrag lineaire afschrijving;\nP = Percentage lineaire afschrijving;\nB = Percentage van de boekwaarde;\nM = Degressieve methode;\nA = Percentage annuïtaire afschrijving incl. renteberekening;",
                         "format": ""
                       },
                       "FiCa": {
@@ -8129,7 +8402,7 @@
         "name": "Authorization",
         "type": "apiKey",
         "in": "header",
-        "description": "Convert the XML token to Base64 and add \u0027AfasToken \u0027 in front of it."
+        "description": "Convert the XML token to Base64 and add 'AfasToken ' in front of it."
       }
     },
     "parameters": {
@@ -8137,7 +8410,7 @@
         "name": "Accept-Language",
         "in": "header",
         "required": false,
-        "description": "Indicates the client\u0027s preferred language for the response. If not provided, the API defaults to the base environment language.",
+        "description": "Indicates the client's preferred language for the response. If not provided, the API defaults to the base environment language.",
         "schema": {
           "type": "string",
           "enum": [

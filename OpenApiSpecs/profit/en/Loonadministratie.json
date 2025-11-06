@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "6.6.9",
+    "version": "7.7.10",
     "title": "AFAS Loonadministratie API",
     "description": "This API describes the endpoints related to Loonadministratie. Use this API with the functional description of the API."
   },
@@ -50,8 +50,8 @@
   "paths": {
     "/connectors/HrCalculationplan": {
       "post": {
-        "summary": "Salarisverwerkingsplan",
-        "description": "\n\rAlleen beschikbaar onder conditie: HRM\n\r https://help.afas.nl/help/NL/SE/127963.htm",
+        "summary": "Salary processing plan",
+        "description": "\n\rAlleen beschikbaar onder conditie: Hrm\n\r https://help.afas.nl/help/NL/SE/127963.htm",
         "operationId": "POST_HrCalculationplan",
         "requestBody": {
           "content": {
@@ -103,7 +103,7 @@
           }
         ],
         "tags": [
-          "Salarisverwerkingsplan"
+          "Salary processing plan"
         ],
         "parameters": [
           {
@@ -117,8 +117,8 @@
     },
     "/connectors/HrCompMut": {
       "post": {
-        "summary": "Loonmutatie",
-        "description": "\n\rAlleen beschikbaar onder conditie: HRM\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_130.htm",
+        "summary": "Wage entry",
+        "description": "\n\rAlleen beschikbaar onder conditie: Hrm\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_131.htm",
         "operationId": "POST_HrCompMut",
         "requestBody": {
           "content": {
@@ -373,7 +373,7 @@
           }
         ],
         "tags": [
-          "Loonmutatie"
+          "Wage entry"
         ],
         "parameters": [
           {
@@ -385,8 +385,8 @@
         ]
       },
       "put": {
-        "summary": "Loonmutatie",
-        "description": "\n\rAlleen beschikbaar onder conditie: HRM\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_130.htm",
+        "summary": "Wage entry",
+        "description": "\n\rAlleen beschikbaar onder conditie: Hrm\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_131.htm",
         "operationId": "PUT_HrCompMut",
         "requestBody": {
           "content": {
@@ -549,7 +549,7 @@
           }
         ],
         "tags": [
-          "Loonmutatie"
+          "Wage entry"
         ],
         "parameters": [
           {
@@ -637,9 +637,9 @@
         }
       ],
       "delete": {
-        "summary": "Loonmutatie",
+        "summary": "Wage entry",
         "operationId": "DELETE_HrCompMut",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_130.htm",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_131.htm",
         "responses": {
           "400": {
             "$ref": "#/components/responses/400"
@@ -672,7 +672,7 @@
           }
         ],
         "tags": [
-          "Loonmutatie"
+          "Wage entry"
         ],
         "parameters": [
           {
@@ -683,8 +683,8 @@
     },
     "/connectors/HrCompMutGUID": {
       "post": {
-        "summary": "Loonmutatie (unieke sleutel)",
-        "description": "\n\rAlleen beschikbaar onder conditie: HRM\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_130.htm",
+        "summary": "Wage entry (unique key)",
+        "description": "\n\rAlleen beschikbaar onder conditie: Hrm\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_131.htm",
         "operationId": "POST_HrCompMutGUID",
         "requestBody": {
           "content": {
@@ -847,7 +847,7 @@
           }
         ],
         "tags": [
-          "Loonmutatie (unieke sleutel)"
+          "Wage entry (unique key)"
         ],
         "parameters": [
           {
@@ -859,8 +859,8 @@
         ]
       },
       "put": {
-        "summary": "Loonmutatie (unieke sleutel)",
-        "description": "\n\rAlleen beschikbaar onder conditie: HRM\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_130.htm",
+        "summary": "Wage entry (unique key)",
+        "description": "\n\rAlleen beschikbaar onder conditie: Hrm\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_131.htm",
         "operationId": "PUT_HrCompMutGUID",
         "requestBody": {
           "content": {
@@ -1015,7 +1015,7 @@
           }
         ],
         "tags": [
-          "Loonmutatie (unieke sleutel)"
+          "Wage entry (unique key)"
         ],
         "parameters": [
           {
@@ -1040,9 +1040,9 @@
         }
       ],
       "delete": {
-        "summary": "Loonmutatie (unieke sleutel)",
+        "summary": "Wage entry (unique key)",
         "operationId": "DELETE_HrCompMutGUID",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_130.htm",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_131.htm",
         "responses": {
           "400": {
             "$ref": "#/components/responses/400"
@@ -1075,7 +1075,7 @@
           }
         ],
         "tags": [
-          "Loonmutatie (unieke sleutel)"
+          "Wage entry (unique key)"
         ],
         "parameters": [
           {
@@ -1086,8 +1086,8 @@
     },
     "/connectors/HrEmpCareerHistory": {
       "post": {
-        "summary": "Loopbaanhistorie",
-        "description": "\n\rAlleen beschikbaar onder conditie: HRM\n\r https://help.afas.nl/help/NL/SE/119687.htm",
+        "summary": "Career history",
+        "description": "\n\rAlleen beschikbaar onder conditie: Hrm\n\r https://help.afas.nl/help/NL/SE/119687.htm",
         "operationId": "POST_HrEmpCareerHistory",
         "requestBody": {
           "content": {
@@ -1270,7 +1270,7 @@
           }
         ],
         "tags": [
-          "Loopbaanhistorie"
+          "Career history"
         ],
         "parameters": [
           {
@@ -1282,8 +1282,8 @@
         ]
       },
       "put": {
-        "summary": "Loopbaanhistorie",
-        "description": "\n\rAlleen beschikbaar onder conditie: HRM\n\r https://help.afas.nl/help/NL/SE/119687.htm",
+        "summary": "Career history",
+        "description": "\n\rAlleen beschikbaar onder conditie: Hrm\n\r https://help.afas.nl/help/NL/SE/119687.htm",
         "operationId": "PUT_HrEmpCareerHistory",
         "requestBody": {
           "content": {
@@ -1368,7 +1368,7 @@
           }
         ],
         "tags": [
-          "Loopbaanhistorie"
+          "Career history"
         ],
         "parameters": [
           {
@@ -1382,8 +1382,8 @@
     },
     "/connectors/HrEmployeeDeposit": {
       "post": {
-        "summary": "Voorschot",
-        "description": "\n\rAlleen beschikbaar onder conditie: Systeem Payroll basis (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_HrEmployeeDeposit.htm",
+        "summary": "Advance",
+        "description": "\n\rAlleen beschikbaar onder conditie: Payroll\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_HrEmployeeDeposit.htm",
         "operationId": "POST_HrEmployeeDeposit",
         "requestBody": {
           "content": {
@@ -1420,7 +1420,7 @@
           }
         ],
         "tags": [
-          "Voorschot"
+          "Advance"
         ],
         "parameters": [
           {
@@ -1432,8 +1432,8 @@
         ]
       },
       "put": {
-        "summary": "Voorschot",
-        "description": "\n\rAlleen beschikbaar onder conditie: Systeem Payroll basis (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_HrEmployeeDeposit.htm",
+        "summary": "Advance",
+        "description": "\n\rAlleen beschikbaar onder conditie: Payroll\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_HrEmployeeDeposit.htm",
         "operationId": "PUT_HrEmployeeDeposit",
         "requestBody": {
           "content": {
@@ -1470,7 +1470,7 @@
           }
         ],
         "tags": [
-          "Voorschot"
+          "Advance"
         ],
         "parameters": [
           {
@@ -1495,7 +1495,7 @@
         }
       ],
       "delete": {
-        "summary": "Voorschot",
+        "summary": "Advance",
         "operationId": "DELETE_HrEmployeeDeposit",
         "description": " \n\r Let op: Bij dit endpoint zijn de parameters om een item te verwijderen nog niet gedocumenteerd. De path parameters kunnen hierdoor afwijken\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_HrEmployeeDeposit.htm",
         "responses": {
@@ -1530,7 +1530,7 @@
           }
         ],
         "tags": [
-          "Voorschot"
+          "Advance"
         ],
         "parameters": [
           {
@@ -1541,7 +1541,7 @@
     },
     "/connectors/HrEmpPaySlip": {
       "post": {
-        "summary": "Loonstrook",
+        "summary": "Pay slip",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_HrEmpPaySlip.htm",
         "operationId": "POST_HrEmpPaySlip",
         "requestBody": {
@@ -1559,7 +1559,7 @@
                           "EmId": "1124",
                           "Ds": "Loonstrook April 2019 via updateconnector",
                           "FileName": "example.png",
-                          "FileStream": "iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAIAAACzY\u002Ba1AAAEB0lEQVR4nO3YQU/yShiG4SmlBSwYjEIQCyaSqmHl//8NLNgZSaORAmJQxCC0dihzFs3hEPQkX8KXlid5rl1r9YW5w2RQ63Q6gpBl0n4BtC8mhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J42bRfwH88zxNCNBqN\u002BHK5XPZ6ve0HHMexLEsIoZQaj8fT6TSKouPjY9u2s9m93kiKo/d3KAnH4/H7\u002B/vp6enmThAEpmm22\u002B1fH57NZq1WS9f1fr//9PTkOA7i6L8i/Y00DEPXdSeTiWma2/eDIMjn8z\u002BfV0pNJpNarZbP5w3DaDabi8VisVhgjf6L0k\u002B4XC5N07y9vc3lctv3/28dfd9fr9fxtiaEMAzDNM2ddZzNZt1udz6fx5ePj48PDw9KqQRGJy/9jbRcLpfL5Z/34/W6v7\u002BXUhYKhXq9Hq\u002BdlFIIYRjG5knDMMIw3PmbJycng8Hg5uZmNpvN5/Pr62tN0xIYnbz0P4W/iqJISmmapuM47Xb76OjIdd0gCIQQ6/VaCLHdQ9O0n58w27bX67XnecPhsFarFQqFxEYn7EAT6rp\u002Bd3fXbDaz2Ww2m724uMjlcm9vb\u002BLfFdxeOKVUJrP7RnRdt2374\u002BMjl8tVq9UkRyfsQBP\u002BZJpmvI/FR4/VarX5kZRye3Pb8H1fCBGGYRRFCY9O0oEm/Pr66na739/f8aVSanPEyOfzmUxmc4iQUoZhuDlibPi\u002B//r6Wq/XdV2Pv/YlNjphB5rQsqxCoeB5XhiGq9VqMBhEUVSpVIQQmUzm7OxsNBr5vi\u002Bl7Pf7lmXtrKNS6vn5uVgsVqvVRqPx\u002Bfk5nU6TGZ289E\u002Bkv9I07erqajQa9Xq9\u002BBzvOM7m/yDn5\u002BdKKdd1hRClUuny8nLn119eXqSUrVZLCFEsFiuVynA4LJVKf7Lp7Tk6eVqn00n7NdBeDnQjpT/HhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEN4/cnznZiQb6hsAAAAASUVORK5CYII="
+                          "FileStream": "iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAIAAACzY+a1AAAEB0lEQVR4nO3YQU/yShiG4SmlBSwYjEIQCyaSqmHl//8NLNgZSaORAmJQxCC0dihzFs3hEPQkX8KXlid5rl1r9YW5w2RQ63Q6gpBl0n4BtC8mhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J42bRfwH88zxNCNBqN+HK5XPZ6ve0HHMexLEsIoZQaj8fT6TSKouPjY9u2s9m93kiKo/d3KAnH4/H7+/vp6enmThAEpmm22+1fH57NZq1WS9f1fr//9PTkOA7i6L8i/Y00DEPXdSeTiWma2/eDIMjn8z+fV0pNJpNarZbP5w3DaDabi8VisVhgjf6L0k+4XC5N07y9vc3lctv3/28dfd9fr9fxtiaEMAzDNM2ddZzNZt1udz6fx5ePj48PDw9KqQRGJy/9jbRcLpfL5Z/34/W6v7+XUhYKhXq9Hq+dlFIIYRjG5knDMMIw3PmbJycng8Hg5uZmNpvN5/Pr62tN0xIYnbz0P4W/iqJISmmapuM47Xb76OjIdd0gCIQQ6/VaCLHdQ9O0n58w27bX67XnecPhsFarFQqFxEYn7EAT6rp+d3fXbDaz2Ww2m724uMjlcm9vb+LfFdxeOKVUJrP7RnRdt2374+Mjl8tVq9UkRyfsQBP+ZJpmvI/FR4/VarX5kZRye3Pb8H1fCBGGYRRFCY9O0oEm/Pr66na739/f8aVSanPEyOfzmUxmc4iQUoZhuDlibPi+//r6Wq/XdV2Pv/YlNjphB5rQsqxCoeB5XhiGq9VqMBhEUVSpVIQQmUzm7OxsNBr5vi+l7Pf7lmXtrKNS6vn5uVgsVqvVRqPx+fk5nU6TGZ289E+kv9I07erqajQa9Xq9+BzvOM7m/yDn5+dKKdd1hRClUuny8nLn119eXqSUrVZLCFEsFiuVynA4LJVKf7Lp7Tk6eVqn00n7NdBeDnQjpT/HhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEN4/cnznZiQb6hsAAAAASUVORK5CYII="
                         }
                       }
                     }
@@ -1699,7 +1699,7 @@
           }
         ],
         "tags": [
-          "Loonstrook"
+          "Pay slip"
         ],
         "parameters": [
           {
@@ -1713,8 +1713,8 @@
     },
     "/connectors/HrVarValue": {
       "post": {
-        "summary": "Looncomponent parameterwaarde",
-        "description": "\n\rAlleen beschikbaar onder conditie: HRM\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_135.htm",
+        "summary": "Wage component parameter value",
+        "description": "\n\rAlleen beschikbaar onder conditie: Hrm\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_135.htm",
         "operationId": "POST_HrVarValue",
         "requestBody": {
           "content": {
@@ -2800,7 +2800,7 @@
           }
         ],
         "tags": [
-          "Looncomponent parameterwaarde"
+          "Wage component parameter value"
         ],
         "parameters": [
           {
@@ -2812,8 +2812,8 @@
         ]
       },
       "put": {
-        "summary": "Looncomponent parameterwaarde",
-        "description": "\n\rAlleen beschikbaar onder conditie: HRM\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_135.htm",
+        "summary": "Wage component parameter value",
+        "description": "\n\rAlleen beschikbaar onder conditie: Hrm\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_135.htm",
         "operationId": "PUT_HrVarValue",
         "requestBody": {
           "content": {
@@ -2867,7 +2867,7 @@
           }
         ],
         "tags": [
-          "Looncomponent parameterwaarde"
+          "Wage component parameter value"
         ],
         "parameters": [
           {
@@ -2892,7 +2892,7 @@
         }
       ],
       "delete": {
-        "summary": "Looncomponent parameterwaarde",
+        "summary": "Wage component parameter value",
         "operationId": "DELETE_HrVarValue",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_135.htm",
         "responses": {
@@ -2927,7 +2927,7 @@
           }
         ],
         "tags": [
-          "Looncomponent parameterwaarde"
+          "Wage component parameter value"
         ],
         "parameters": [
           {
@@ -3214,7 +3214,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id\u0027s can be found in the metainfo request result.",
+        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -3360,7 +3360,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -3442,7 +3442,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -3602,7 +3602,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -3766,7 +3766,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -3845,7 +3845,7 @@
                           },
                           "FuNm": {
                             "type": "string",
-                            "description": "Achternaam, init voorvoegsel (voornaam)"
+                            "description": "Last name, init prefix (first name)"
                           },
                           "PrId": {
                             "type": "string",
@@ -3974,32 +3974,32 @@
       "description": "API Info"
     },
     {
-      "name": "Salarisverwerkingsplan",
-      "description": "Salarisverwerkingsplan"
+      "name": "Salary processing plan",
+      "description": "Salary processing plan"
     },
     {
-      "name": "Loonmutatie",
-      "description": "Loonmutatie"
+      "name": "Wage entry",
+      "description": "Wage entry"
     },
     {
-      "name": "Loonmutatie (unieke sleutel)",
-      "description": "Loonmutatie (unieke sleutel)"
+      "name": "Wage entry (unique key)",
+      "description": "Wage entry (unique key)"
     },
     {
-      "name": "Loopbaanhistorie",
-      "description": "Loopbaanhistorie"
+      "name": "Career history",
+      "description": "Career history"
     },
     {
-      "name": "Voorschot",
-      "description": "Voorschot"
+      "name": "Advance",
+      "description": "Advance"
     },
     {
-      "name": "Loonstrook",
-      "description": "Loonstrook"
+      "name": "Pay slip",
+      "description": "Pay slip"
     },
     {
-      "name": "Looncomponent parameterwaarde",
-      "description": "Looncomponent parameterwaarde"
+      "name": "Wage component parameter value",
+      "description": "Wage component parameter value"
     }
   ],
   "components": {
@@ -4170,7 +4170,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Means of transport\n11 = Auto\u2019s benzine;\n12 = Auto\u2019s diesel;\n13 = Auto\u2019s die behoren tot de (plug in) hybrides;\n14 = Auto\u2019s 100% elektrisch;\n15 = Auto\u2019s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
+                        "description": "Means of transport\n11 = Petrol vehicles;\n12 = Diesel vehicle;\n13 = Cars belonging to (plug-in) hybrids;\n14 = Cars 100% electric;\n15 = Other fuel cars;\n21 = Petrol/diesel motorcycle ;\n22 = Electric motorcycle;\n31 = Petrol or diesel moped/scooter;\n32 = Electric moped/scooter (including speed-pedelec);\n41 = (Electric) bicycle (not being a speed-pedelec) or walking;\n51 = Public transportation;",
                         "format": ""
                       },
                       "ViTv": {
@@ -4180,7 +4180,7 @@
                           "02"
                         ],
                         "maxLength": 20,
-                        "description": "Type of journey\n01 = Woon-werk;\n02 = Zakelijke dienstreis;",
+                        "description": "Type of journey\n01 = Commuting;\n02 = Business trip;",
                         "format": ""
                       }
                     },
@@ -4331,7 +4331,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Means of transport\n11 = Auto\u2019s benzine;\n12 = Auto\u2019s diesel;\n13 = Auto\u2019s die behoren tot de (plug in) hybrides;\n14 = Auto\u2019s 100% elektrisch;\n15 = Auto\u2019s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
+                        "description": "Means of transport\n11 = Petrol vehicles;\n12 = Diesel vehicle;\n13 = Cars belonging to (plug-in) hybrids;\n14 = Cars 100% electric;\n15 = Other fuel cars;\n21 = Petrol/diesel motorcycle ;\n22 = Electric motorcycle;\n31 = Petrol or diesel moped/scooter;\n32 = Electric moped/scooter (including speed-pedelec);\n41 = (Electric) bicycle (not being a speed-pedelec) or walking;\n51 = Public transportation;",
                         "format": ""
                       },
                       "ViTv": {
@@ -4341,7 +4341,7 @@
                           "02"
                         ],
                         "maxLength": 20,
-                        "description": "Type of journey\n01 = Woon-werk;\n02 = Zakelijke dienstreis;",
+                        "description": "Type of journey\n01 = Commuting;\n02 = Business trip;",
                         "format": ""
                       }
                     },
@@ -4481,7 +4481,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Means of transport\n11 = Auto\u2019s benzine;\n12 = Auto\u2019s diesel;\n13 = Auto\u2019s die behoren tot de (plug in) hybrides;\n14 = Auto\u2019s 100% elektrisch;\n15 = Auto\u2019s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
+                        "description": "Means of transport\n11 = Petrol vehicles;\n12 = Diesel vehicle;\n13 = Cars belonging to (plug-in) hybrids;\n14 = Cars 100% electric;\n15 = Other fuel cars;\n21 = Petrol/diesel motorcycle ;\n22 = Electric motorcycle;\n31 = Petrol or diesel moped/scooter;\n32 = Electric moped/scooter (including speed-pedelec);\n41 = (Electric) bicycle (not being a speed-pedelec) or walking;\n51 = Public transportation;",
                         "format": ""
                       },
                       "ViTv": {
@@ -4491,7 +4491,7 @@
                           "02"
                         ],
                         "maxLength": 20,
-                        "description": "Type of journey\n01 = Woon-werk;\n02 = Zakelijke dienstreis;",
+                        "description": "Type of journey\n01 = Commuting;\n02 = Business trip;",
                         "format": ""
                       }
                     },
@@ -4641,7 +4641,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Means of transport\n11 = Auto\u2019s benzine;\n12 = Auto\u2019s diesel;\n13 = Auto\u2019s die behoren tot de (plug in) hybrides;\n14 = Auto\u2019s 100% elektrisch;\n15 = Auto\u2019s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
+                        "description": "Means of transport\n11 = Petrol vehicles;\n12 = Diesel vehicle;\n13 = Cars belonging to (plug-in) hybrids;\n14 = Cars 100% electric;\n15 = Other fuel cars;\n21 = Petrol/diesel motorcycle ;\n22 = Electric motorcycle;\n31 = Petrol or diesel moped/scooter;\n32 = Electric moped/scooter (including speed-pedelec);\n41 = (Electric) bicycle (not being a speed-pedelec) or walking;\n51 = Public transportation;",
                         "format": ""
                       },
                       "ViTv": {
@@ -4651,7 +4651,7 @@
                           "02"
                         ],
                         "maxLength": 20,
-                        "description": "Type of journey\n01 = Woon-werk;\n02 = Zakelijke dienstreis;",
+                        "description": "Type of journey\n01 = Commuting;\n02 = Business trip;",
                         "format": ""
                       }
                     },
@@ -4740,7 +4740,7 @@
                       },
                       "HaCa": {
                         "type": "boolean",
-                        "description": "Don\u0027t count foregoing lines for yrs service paym.",
+                        "description": "Don't count foregoing lines for yrs service paym.",
                         "format": ""
                       },
                       "EmPr": {
@@ -4750,12 +4750,12 @@
                       },
                       "TCh1": {
                         "type": "boolean",
-                        "description": "\u2018Ambtstijd\u2019",
+                        "description": "‘Ambtstijd’",
                         "format": ""
                       },
                       "TCh2": {
                         "type": "boolean",
-                        "description": "\u2018Onderwijstijd\u2019",
+                        "description": "‘Onderwijstijd’",
                         "format": ""
                       },
                       "TCh3": {
@@ -4765,22 +4765,22 @@
                       },
                       "TCh4": {
                         "type": "boolean",
-                        "description": "\u2018Schooltijd\u2019",
+                        "description": "‘Schooltijd’",
                         "format": ""
                       },
                       "TCh5": {
                         "type": "boolean",
-                        "description": "\u2018Directietijd\u2019",
+                        "description": "‘Directietijd’",
                         "format": ""
                       },
                       "TCh6": {
                         "type": "boolean",
-                        "description": "\u2018Uitkeringstijd\u2019",
+                        "description": "‘Uitkeringstijd’",
                         "format": ""
                       },
                       "TCh7": {
                         "type": "boolean",
-                        "description": "\u2018Zorgtijd\u2019",
+                        "description": "‘Zorgtijd’",
                         "format": ""
                       },
                       "EIId": {
@@ -4800,6 +4800,16 @@
                         "maxLength": 20,
                         "description": "Redundancy category",
                         "format": ""
+                      },
+                      "HdDb": {
+                        "type": "boolean",
+                        "description": "Deviating start date career history",
+                        "format": ""
+                      },
+                      "DfDb": {
+                        "type": "string",
+                        "description": "Deviating start date",
+                        "format": "date"
                       }
                     },
                     "required": [
@@ -4816,7 +4826,8 @@
                       "TCh4",
                       "TCh5",
                       "TCh6",
-                      "TCh7"
+                      "TCh7",
+                      "HdDb"
                     ]
                   }
                 }
@@ -4893,7 +4904,7 @@
                       },
                       "HaCa": {
                         "type": "boolean",
-                        "description": "Don\u0027t count foregoing lines for yrs service paym.",
+                        "description": "Don't count foregoing lines for yrs service paym.",
                         "format": ""
                       },
                       "EmPr": {
@@ -4903,12 +4914,12 @@
                       },
                       "TCh1": {
                         "type": "boolean",
-                        "description": "\u2018Ambtstijd\u2019",
+                        "description": "‘Ambtstijd’",
                         "format": ""
                       },
                       "TCh2": {
                         "type": "boolean",
-                        "description": "\u2018Onderwijstijd\u2019",
+                        "description": "‘Onderwijstijd’",
                         "format": ""
                       },
                       "TCh3": {
@@ -4918,22 +4929,22 @@
                       },
                       "TCh4": {
                         "type": "boolean",
-                        "description": "\u2018Schooltijd\u2019",
+                        "description": "‘Schooltijd’",
                         "format": ""
                       },
                       "TCh5": {
                         "type": "boolean",
-                        "description": "\u2018Directietijd\u2019",
+                        "description": "‘Directietijd’",
                         "format": ""
                       },
                       "TCh6": {
                         "type": "boolean",
-                        "description": "\u2018Uitkeringstijd\u2019",
+                        "description": "‘Uitkeringstijd’",
                         "format": ""
                       },
                       "TCh7": {
                         "type": "boolean",
-                        "description": "\u2018Zorgtijd\u2019",
+                        "description": "‘Zorgtijd’",
                         "format": ""
                       },
                       "EIId": {
@@ -4953,6 +4964,16 @@
                         "maxLength": 20,
                         "description": "Redundancy category",
                         "format": ""
+                      },
+                      "HdDb": {
+                        "type": "boolean",
+                        "description": "Deviating start date career history",
+                        "format": ""
+                      },
+                      "DfDb": {
+                        "type": "string",
+                        "description": "Deviating start date",
+                        "format": "date"
                       }
                     },
                     "required": [
@@ -5002,7 +5023,7 @@
                           "03"
                         ],
                         "maxLength": 20,
-                        "description": "Initiative\n01 = Medewerker;\n02 = Werkgever;\n03 = Declaratie;",
+                        "description": "Initiative\n01 = Employee;\n02 = Employer;\n03 = Claim;",
                         "format": ""
                       },
                       "DePa": {
@@ -5012,7 +5033,7 @@
                           "02"
                         ],
                         "maxLength": 20,
-                        "description": "Payment method\n01 = Kasbetaling;\n02 = Direct uitbetalen;",
+                        "description": "Payment method\n01 = Cash payment;\n02 = Pay directly;",
                         "format": ""
                       },
                       "Cmnt": {
@@ -5095,7 +5116,7 @@
                           "03"
                         ],
                         "maxLength": 20,
-                        "description": "Initiative\n01 = Medewerker;\n02 = Werkgever;\n03 = Declaratie;",
+                        "description": "Initiative\n01 = Employee;\n02 = Employer;\n03 = Claim;",
                         "format": ""
                       },
                       "DePa": {
@@ -5105,7 +5126,7 @@
                           "02"
                         ],
                         "maxLength": 20,
-                        "description": "Payment method\n01 = Kasbetaling;\n02 = Direct uitbetalen;",
+                        "description": "Payment method\n01 = Cash payment;\n02 = Pay directly;",
                         "format": ""
                       },
                       "Cmnt": {
@@ -5242,7 +5263,7 @@
                           "H"
                         ],
                         "maxLength": 20,
-                        "description": "Application\nT = Toepassen bij alle dienstverbanden;\nV = Verdelen over alle dienstverbanden;\nH = Toepassen op hoofddienstverband;",
+                        "description": "Application\nT = Apply to all employments;\nV = Distribute across all employments;\nH = Apply to main employment;",
                         "format": ""
                       },
                       "ReAu": {
@@ -5315,7 +5336,7 @@
                           "H"
                         ],
                         "maxLength": 20,
-                        "description": "Application\nT = Toepassen bij alle dienstverbanden;\nV = Verdelen over alle dienstverbanden;\nH = Toepassen op hoofddienstverband;",
+                        "description": "Application\nT = Apply to all employments;\nV = Distribute across all employments;\nH = Apply to main employment;",
                         "format": ""
                       },
                       "ReAu": {
@@ -5340,7 +5361,7 @@
         "name": "Authorization",
         "type": "apiKey",
         "in": "header",
-        "description": "Convert the XML token to Base64 and add \u0027AfasToken \u0027 in front of it."
+        "description": "Convert the XML token to Base64 and add 'AfasToken ' in front of it."
       }
     },
     "parameters": {
@@ -5348,7 +5369,7 @@
         "name": "Accept-Language",
         "in": "header",
         "required": false,
-        "description": "Indicates the client\u0027s preferred language for the response. If not provided, the API defaults to the base environment language.",
+        "description": "Indicates the client's preferred language for the response. If not provided, the API defaults to the base environment language.",
         "schema": {
           "type": "string",
           "enum": [

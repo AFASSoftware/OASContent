@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "6.6.9",
+    "version": "7.7.10",
     "title": "AFAS Bouw API",
     "description": "This API describes the endpoints related to Bouw. Use this API with the functional description of the API."
   },
@@ -326,7 +326,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id\u0027s can be found in the metainfo request result.",
+        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -472,7 +472,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -553,8 +553,8 @@
     },
     "/connectors/PtAllowedOutPurch": {
       "post": {
-        "summary": "Toegestaan buiten inkoop",
-        "description": "\n\rAlleen beschikbaar onder conditie: Bouw (Activering)\n\r https://help.afas.nl/help/NL/SE/106604.htm",
+        "summary": "Allowed (outside purchase)",
+        "description": "\n\rAlleen beschikbaar onder conditie: Bouw (activering)\n\r https://help.afas.nl/help/NL/SE/106604.htm",
         "operationId": "POST_PtAllowedOutPurch",
         "requestBody": {
           "content": {
@@ -591,7 +591,7 @@
           }
         ],
         "tags": [
-          "Toegestaan buiten inkoop"
+          "Allowed (outside purchase)"
         ],
         "parameters": [
           {
@@ -605,8 +605,8 @@
     },
     "/connectors/PtConProjectForecast": {
       "post": {
-        "summary": "Standopname per project",
-        "description": "\n\rAlleen beschikbaar onder conditie: Bouw (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_PtProjFC.htm",
+        "summary": "Status survey per project",
+        "description": "\n\rAlleen beschikbaar onder conditie: Bouw (activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_PtProjFC.htm",
         "operationId": "POST_PtConProjectForecast",
         "requestBody": {
           "content": {
@@ -643,7 +643,7 @@
           }
         ],
         "tags": [
-          "Standopname per project"
+          "Status survey per project"
         ],
         "parameters": [
           {
@@ -657,8 +657,8 @@
     },
     "/connectors/PtMeasurement": {
       "post": {
-        "summary": "Meetstaat",
-        "description": "\n\rAlleen beschikbaar onder conditie: Bouw (Activering)\n\r https://help.afas.nl/help/NL/SE/Pro_Constr_Calc_Measr_InvProp.htm",
+        "summary": "Bill of quantities",
+        "description": "\n\rAlleen beschikbaar onder conditie: Bouw (activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_PtMeasurement.htm",
         "operationId": "POST_PtMeasurement",
         "requestBody": {
           "content": {
@@ -934,7 +934,7 @@
           }
         ],
         "tags": [
-          "Meetstaat"
+          "Bill of quantities"
         ],
         "parameters": [
           {
@@ -946,8 +946,8 @@
         ]
       },
       "put": {
-        "summary": "Meetstaat",
-        "description": "\n\rAlleen beschikbaar onder conditie: Bouw (Activering)\n\r https://help.afas.nl/help/NL/SE/Pro_Constr_Calc_Measr_InvProp.htm",
+        "summary": "Bill of quantities",
+        "description": "\n\rAlleen beschikbaar onder conditie: Bouw (activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_PtMeasurement.htm",
         "operationId": "PUT_PtMeasurement",
         "requestBody": {
           "content": {
@@ -1117,7 +1117,7 @@
           }
         ],
         "tags": [
-          "Meetstaat"
+          "Bill of quantities"
         ],
         "parameters": [
           {
@@ -1131,8 +1131,8 @@
     },
     "/connectors/PtMeasurement/PtMeasurementLines": {
       "post": {
-        "summary": "Meetstaat",
-        "description": "Update main record in PtMeasurement and insert subrecord into PtMeasurementLines. \n\rAlleen beschikbaar onder conditie: Bouw (Activering)\n\r https://help.afas.nl/help/NL/SE/Pro_Constr_Calc_Measr_InvProp.htm",
+        "summary": "Bill of quantities",
+        "description": "Update main record in PtMeasurement and insert subrecord into PtMeasurementLines. \n\rAlleen beschikbaar onder conditie: Bouw (activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_PtMeasurement.htm",
         "operationId": "POSTSubRecordPtMeasurementPtMeasurementLines",
         "requestBody": {
           "content": {
@@ -1305,7 +1305,7 @@
           }
         ],
         "tags": [
-          "Meetstaat"
+          "Bill of quantities"
         ],
         "parameters": [
           {
@@ -1319,8 +1319,8 @@
     },
     "/connectors/PtMonitor": {
       "post": {
-        "summary": "Bewakingscode",
-        "description": "\n\rAlleen beschikbaar onder conditie: Bouw (Activering)\n\r https://help.afas.nl/help/NL/SE/104457.htm",
+        "summary": "Monitoring code",
+        "description": "\n\rAlleen beschikbaar onder conditie: Bouw (activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_PtMon.htm",
         "operationId": "POST_PtMonitor",
         "requestBody": {
           "content": {
@@ -1416,7 +1416,7 @@
           }
         ],
         "tags": [
-          "Bewakingscode"
+          "Monitoring code"
         ],
         "parameters": [
           {
@@ -1428,8 +1428,8 @@
         ]
       },
       "put": {
-        "summary": "Bewakingscode",
-        "description": "\n\rAlleen beschikbaar onder conditie: Bouw (Activering)\n\r https://help.afas.nl/help/NL/SE/104457.htm",
+        "summary": "Monitoring code",
+        "description": "\n\rAlleen beschikbaar onder conditie: Bouw (activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_PtMon.htm",
         "operationId": "PUT_PtMonitor",
         "requestBody": {
           "content": {
@@ -1510,7 +1510,7 @@
           }
         ],
         "tags": [
-          "Bewakingscode"
+          "Monitoring code"
         ],
         "parameters": [
           {
@@ -1524,8 +1524,8 @@
     },
     "/connectors/PtOptionList": {
       "post": {
-        "summary": "Optielijst",
-        "description": "\n\rAlleen beschikbaar onder conditie: Bouw (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_PtOptCh.htm",
+        "summary": "Option list",
+        "description": "\n\rAlleen beschikbaar onder conditie: Bouw (activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_PtOptCh.htm",
         "operationId": "POST_PtOptionList",
         "requestBody": {
           "content": {
@@ -1691,7 +1691,7 @@
           }
         ],
         "tags": [
-          "Optielijst"
+          "Option list"
         ],
         "parameters": [
           {
@@ -1703,8 +1703,8 @@
         ]
       },
       "put": {
-        "summary": "Optielijst",
-        "description": "\n\rAlleen beschikbaar onder conditie: Bouw (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_PtOptCh.htm",
+        "summary": "Option list",
+        "description": "\n\rAlleen beschikbaar onder conditie: Bouw (activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_PtOptCh.htm",
         "operationId": "PUT_PtOptionList",
         "requestBody": {
           "content": {
@@ -1871,7 +1871,7 @@
           }
         ],
         "tags": [
-          "Optielijst"
+          "Option list"
         ],
         "parameters": [
           {
@@ -1885,8 +1885,8 @@
     },
     "/connectors/PtOptionList/PtOptionListLines": {
       "post": {
-        "summary": "Optielijst",
-        "description": "Update main record in PtOptionList and insert subrecord into PtOptionListLines. \n\rAlleen beschikbaar onder conditie: Bouw (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_PtOptCh.htm",
+        "summary": "Option list",
+        "description": "Update main record in PtOptionList and insert subrecord into PtOptionListLines. \n\rAlleen beschikbaar onder conditie: Bouw (activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_PtOptCh.htm",
         "operationId": "POSTSubRecordPtOptionListPtOptionListLines",
         "requestBody": {
           "content": {
@@ -2050,7 +2050,7 @@
           }
         ],
         "tags": [
-          "Optielijst"
+          "Option list"
         ],
         "parameters": [
           {
@@ -2064,8 +2064,8 @@
     },
     "/connectors/PtOptionListLine": {
       "post": {
-        "summary": "Optiekeuzelijstregel",
-        "description": "\n\rAlleen beschikbaar onder conditie: Bouw (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_PtOptCh.htm",
+        "summary": "Option list line",
+        "description": "\n\rAlleen beschikbaar onder conditie: Bouw (activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_PtOptCh.htm",
         "operationId": "POST_PtOptionListLine",
         "requestBody": {
           "content": {
@@ -2225,7 +2225,7 @@
           }
         ],
         "tags": [
-          "Optiekeuzelijstregel"
+          "Option list line"
         ],
         "parameters": [
           {
@@ -2237,8 +2237,8 @@
         ]
       },
       "put": {
-        "summary": "Optiekeuzelijstregel",
-        "description": "\n\rAlleen beschikbaar onder conditie: Bouw (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_PtOptCh.htm",
+        "summary": "Option list line",
+        "description": "\n\rAlleen beschikbaar onder conditie: Bouw (activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_PtOptCh.htm",
         "operationId": "PUT_PtOptionListLine",
         "requestBody": {
           "content": {
@@ -2398,7 +2398,7 @@
           }
         ],
         "tags": [
-          "Optiekeuzelijstregel"
+          "Option list line"
         ],
         "parameters": [
           {
@@ -2421,28 +2421,28 @@
       "description": "API Info"
     },
     {
-      "name": "Toegestaan buiten inkoop",
-      "description": "Toegestaan buiten inkoop"
+      "name": "Allowed (outside purchase)",
+      "description": "Allowed (outside purchase)"
     },
     {
-      "name": "Standopname per project",
-      "description": "Standopname per project"
+      "name": "Status survey per project",
+      "description": "Status survey per project"
     },
     {
-      "name": "Meetstaat",
-      "description": "Meetstaat"
+      "name": "Bill of quantities",
+      "description": "Bill of quantities"
     },
     {
-      "name": "Bewakingscode",
-      "description": "Bewakingscode"
+      "name": "Monitoring code",
+      "description": "Monitoring code"
     },
     {
-      "name": "Optielijst",
-      "description": "Optielijst"
+      "name": "Option list",
+      "description": "Option list"
     },
     {
-      "name": "Optiekeuzelijstregel",
-      "description": "Optiekeuzelijstregel"
+      "name": "Option list line",
+      "description": "Option list line"
     }
   ],
   "components": {
@@ -2662,17 +2662,17 @@
                                           "3"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Type of bill of quantities line\n1 = Aantal;\n2 = Bedrag;\n3 = Tekst;",
+                                        "description": "Type of bill of quantities line\n1 = Number;\n2 = Amount;\n3 = Text;",
                                         "format": ""
                                       },
                                       "VaMk": {
                                         "type": "string",
                                         "enum": [
                                           "M",
-                                          "O"
+                                          "o"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Type of bill of quantities line\nM = Meer- of minderwerk;\nO = Origineel;",
+                                        "description": "Type of bill of quantities line\nM = Additional or less work;\no = Original;",
                                         "format": ""
                                       },
                                       "VaPr": {
@@ -2684,7 +2684,7 @@
                                           "V"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Method of processing\nA = Te accorderen;\nF = Fictief;\nN = Niet verrekenbaar;\nV = Verrekenbaar;",
+                                        "description": "Method of processing\nA = To approve;\nF = Fictitious;\nN = Non-deductible;\nV = Deductible;",
                                         "format": ""
                                       },
                                       "CoLi": {
@@ -2708,7 +2708,7 @@
                                           "O"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                                         "format": ""
                                       },
                                       "VaIt": {
@@ -2727,7 +2727,7 @@
                                           "8"
                                         ],
                                         "maxLength": 10,
-                                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                         "format": ""
                                       },
                                       "ItCd": {
@@ -2918,17 +2918,17 @@
                                           "3"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Type of bill of quantities line\n1 = Aantal;\n2 = Bedrag;\n3 = Tekst;",
+                                        "description": "Type of bill of quantities line\n1 = Number;\n2 = Amount;\n3 = Text;",
                                         "format": ""
                                       },
                                       "VaMk": {
                                         "type": "string",
                                         "enum": [
                                           "M",
-                                          "O"
+                                          "o"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Type of bill of quantities line\nM = Meer- of minderwerk;\nO = Origineel;",
+                                        "description": "Type of bill of quantities line\nM = Additional or less work;\no = Original;",
                                         "format": ""
                                       },
                                       "VaPr": {
@@ -2940,7 +2940,7 @@
                                           "V"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Method of processing\nA = Te accorderen;\nF = Fictief;\nN = Niet verrekenbaar;\nV = Verrekenbaar;",
+                                        "description": "Method of processing\nA = To approve;\nF = Fictitious;\nN = Non-deductible;\nV = Deductible;",
                                         "format": ""
                                       },
                                       "CoLi": {
@@ -2964,7 +2964,7 @@
                                           "O"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                                         "format": ""
                                       },
                                       "VaIt": {
@@ -2983,7 +2983,7 @@
                                           "8"
                                         ],
                                         "maxLength": 10,
-                                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                         "format": ""
                                       },
                                       "ItCd": {
@@ -3140,7 +3140,7 @@
                           "O"
                         ],
                         "maxLength": 20,
-                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                         "format": ""
                       },
                       "MPul": {
@@ -3152,7 +3152,7 @@
                           "3"
                         ],
                         "maxLength": 20,
-                        "description": "Several purchase orders\n0 = Niet toegestaan;\n1 = Toegestaan, alleen bij overschrijding meetellen in inkoopresultaat;\n2 = Toegestaan, direct meetellen in inkoopresultaat;\n3 = Toegestaan, inkoop- en uitvoerresultaat terug in begr.;",
+                        "description": "Several purchase orders\n0 = Not allowed;\n1 = Allowed, only when exceeding including in the purchase result;\n2 = Allowed, include directly in the purchase result;\n3 = Allowed, purchase and output result back in budget.;",
                         "format": ""
                       },
                       "Chap": {
@@ -3212,7 +3212,7 @@
                           "O"
                         ],
                         "maxLength": 20,
-                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                         "format": ""
                       },
                       "MPul": {
@@ -3224,7 +3224,7 @@
                           "3"
                         ],
                         "maxLength": 20,
-                        "description": "Several purchase orders\n0 = Niet toegestaan;\n1 = Toegestaan, alleen bij overschrijding meetellen in inkoopresultaat;\n2 = Toegestaan, direct meetellen in inkoopresultaat;\n3 = Toegestaan, inkoop- en uitvoerresultaat terug in begr.;",
+                        "description": "Several purchase orders\n0 = Not allowed;\n1 = Allowed, only when exceeding including in the purchase result;\n2 = Allowed, include directly in the purchase result;\n3 = Allowed, purchase and output result back in budget.;",
                         "format": ""
                       },
                       "Chap": {
@@ -3295,7 +3295,7 @@
                       "GuLi": {
                         "type": "string",
                         "maxLength": 38,
-                        "description": "Line GUID",
+                        "description": "GUID line",
                         "format": "uuid"
                       },
                       "QuId": {
@@ -3323,7 +3323,7 @@
                           "2"
                         ],
                         "maxLength": 20,
-                        "description": "Construction phase\n1 = Ruwbouw;\n2 = Afbouw;",
+                        "description": "Construction phase\n1 = Carcass work;\n2 = Reduction;",
                         "format": ""
                       },
                       "ClDa": {
@@ -3431,7 +3431,7 @@
                           "V"
                         ],
                         "maxLength": 20,
-                        "description": "Buyer attachment mandatory\nN = Niet toegestaan;\nT = Toegestaan;\nV = Verplicht;",
+                        "description": "Buyer attachment mandatory\nN = Not allowed;\nT = Allowed;\nV = Mandatory;",
                         "format": ""
                       }
                     },
@@ -3519,7 +3519,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -3802,7 +3802,7 @@
                                                           "O"
                                                         ],
                                                         "maxLength": 20,
-                                                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                                                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                                                         "format": ""
                                                       },
                                                       "NoHo": {
@@ -3828,7 +3828,7 @@
                                                           "07"
                                                         ],
                                                         "maxLength": 20,
-                                                        "description": "Entry type\n01 = Origineel;\n02 = Meer-/minderwerk;\n03 = Gesplitst;\n04 = Verplaatst;\n05 = Gewijzigd;\n06 = Verwijderd;\n07 = Vrijgegeven;",
+                                                        "description": "Entry type\n01 = Original;\n02 = More/less work;\n03 = Split;\n04 = Moved;\n05 = Changed;\n06 = Deleted;\n07 = Released;",
                                                         "format": ""
                                                       },
                                                       "MuRe": {
@@ -3911,7 +3911,7 @@
                       "GuLi": {
                         "type": "string",
                         "maxLength": 38,
-                        "description": "Line GUID",
+                        "description": "GUID line",
                         "format": "uuid"
                       },
                       "QuId": {
@@ -3939,7 +3939,7 @@
                           "2"
                         ],
                         "maxLength": 20,
-                        "description": "Construction phase\n1 = Ruwbouw;\n2 = Afbouw;",
+                        "description": "Construction phase\n1 = Carcass work;\n2 = Reduction;",
                         "format": ""
                       },
                       "ClDa": {
@@ -4050,7 +4050,7 @@
                           "V"
                         ],
                         "maxLength": 20,
-                        "description": "Buyer attachment mandatory\nN = Niet toegestaan;\nT = Toegestaan;\nV = Verplicht;",
+                        "description": "Buyer attachment mandatory\nN = Not allowed;\nT = Allowed;\nV = Mandatory;",
                         "format": ""
                       }
                     }
@@ -4138,7 +4138,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -4432,7 +4432,7 @@
                                                           "O"
                                                         ],
                                                         "maxLength": 20,
-                                                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                                                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                                                         "format": ""
                                                       },
                                                       "NoHo": {
@@ -4459,7 +4459,7 @@
                                                           "07"
                                                         ],
                                                         "maxLength": 20,
-                                                        "description": "Entry type\n01 = Origineel;\n02 = Meer-/minderwerk;\n03 = Gesplitst;\n04 = Verplaatst;\n05 = Gewijzigd;\n06 = Verwijderd;\n07 = Vrijgegeven;",
+                                                        "description": "Entry type\n01 = Original;\n02 = More/less work;\n03 = Split;\n04 = Moved;\n05 = Changed;\n06 = Deleted;\n07 = Released;",
                                                         "format": ""
                                                       },
                                                       "MuRe": {
@@ -4528,7 +4528,7 @@
                           "2"
                         ],
                         "maxLength": 20,
-                        "description": "Construction phase\n1 = Ruwbouw;\n2 = Afbouw;",
+                        "description": "Construction phase\n1 = Carcass work;\n2 = Reduction;",
                         "format": ""
                       },
                       "AvFr": {
@@ -4568,7 +4568,7 @@
                                       "GuLi": {
                                         "type": "string",
                                         "maxLength": 38,
-                                        "description": "Line GUID",
+                                        "description": "GUID line",
                                         "format": "uuid"
                                       },
                                       "Code": {
@@ -4602,7 +4602,7 @@
                                           "2"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Construction phase\n1 = Ruwbouw;\n2 = Afbouw;",
+                                        "description": "Construction phase\n1 = Carcass work;\n2 = Reduction;",
                                         "format": ""
                                       },
                                       "ClDa": {
@@ -4699,7 +4699,7 @@
                                           "V"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Buyer attachment mandatory\nN = Niet toegestaan;\nT = Toegestaan;\nV = Verplicht;",
+                                        "description": "Buyer attachment mandatory\nN = Not allowed;\nT = Allowed;\nV = Mandatory;",
                                         "format": ""
                                       }
                                     }
@@ -4784,7 +4784,7 @@
                                                                           "8"
                                                                         ],
                                                                         "maxLength": 10,
-                                                                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                                                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                                         "format": ""
                                                                       },
                                                                       "ItCd": {
@@ -5067,7 +5067,7 @@
                                                                           "O"
                                                                         ],
                                                                         "maxLength": 20,
-                                                                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                                                                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                                                                         "format": ""
                                                                       },
                                                                       "NoHo": {
@@ -5093,7 +5093,7 @@
                                                                           "07"
                                                                         ],
                                                                         "maxLength": 20,
-                                                                        "description": "Entry type\n01 = Origineel;\n02 = Meer-/minderwerk;\n03 = Gesplitst;\n04 = Verplaatst;\n05 = Gewijzigd;\n06 = Verwijderd;\n07 = Vrijgegeven;",
+                                                                        "description": "Entry type\n01 = Original;\n02 = More/less work;\n03 = Split;\n04 = Moved;\n05 = Changed;\n06 = Deleted;\n07 = Released;",
                                                                         "format": ""
                                                                       },
                                                                       "MuRe": {
@@ -5173,7 +5173,7 @@
                           "2"
                         ],
                         "maxLength": 20,
-                        "description": "Construction phase\n1 = Ruwbouw;\n2 = Afbouw;",
+                        "description": "Construction phase\n1 = Carcass work;\n2 = Reduction;",
                         "format": ""
                       },
                       "AvFr": {
@@ -5216,7 +5216,7 @@
                                       "GuLi": {
                                         "type": "string",
                                         "maxLength": 38,
-                                        "description": "Line GUID",
+                                        "description": "GUID line",
                                         "format": "uuid"
                                       },
                                       "Code": {
@@ -5250,7 +5250,7 @@
                                           "2"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Construction phase\n1 = Ruwbouw;\n2 = Afbouw;",
+                                        "description": "Construction phase\n1 = Carcass work;\n2 = Reduction;",
                                         "format": ""
                                       },
                                       "ClDa": {
@@ -5350,7 +5350,7 @@
                                           "V"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Buyer attachment mandatory\nN = Niet toegestaan;\nT = Toegestaan;\nV = Verplicht;",
+                                        "description": "Buyer attachment mandatory\nN = Not allowed;\nT = Allowed;\nV = Mandatory;",
                                         "format": ""
                                       }
                                     }
@@ -5438,7 +5438,7 @@
                                                                           "8"
                                                                         ],
                                                                         "maxLength": 10,
-                                                                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                                                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                                         "format": ""
                                                                       },
                                                                       "ItCd": {
@@ -5732,7 +5732,7 @@
                                                                           "O"
                                                                         ],
                                                                         "maxLength": 20,
-                                                                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                                                                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                                                                         "format": ""
                                                                       },
                                                                       "NoHo": {
@@ -5759,7 +5759,7 @@
                                                                           "07"
                                                                         ],
                                                                         "maxLength": 20,
-                                                                        "description": "Entry type\n01 = Origineel;\n02 = Meer-/minderwerk;\n03 = Gesplitst;\n04 = Verplaatst;\n05 = Gewijzigd;\n06 = Verwijderd;\n07 = Vrijgegeven;",
+                                                                        "description": "Entry type\n01 = Original;\n02 = More/less work;\n03 = Split;\n04 = Moved;\n05 = Changed;\n06 = Deleted;\n07 = Released;",
                                                                         "format": ""
                                                                       },
                                                                       "MuRe": {
@@ -5805,7 +5805,7 @@
         "name": "Authorization",
         "type": "apiKey",
         "in": "header",
-        "description": "Convert the XML token to Base64 and add \u0027AfasToken \u0027 in front of it."
+        "description": "Convert the XML token to Base64 and add 'AfasToken ' in front of it."
       }
     },
     "parameters": {
@@ -5813,7 +5813,7 @@
         "name": "Accept-Language",
         "in": "header",
         "required": false,
-        "description": "Indicates the client\u0027s preferred language for the response. If not provided, the API defaults to the base environment language.",
+        "description": "Indicates the client's preferred language for the response. If not provided, the API defaults to the base environment language.",
         "schema": {
           "type": "string",
           "enum": [

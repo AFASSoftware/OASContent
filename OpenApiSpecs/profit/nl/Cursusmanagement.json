@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "6.6.9",
+    "version": "7.7.10",
     "title": "AFAS Cursusmanagement API",
     "description": "Deze API beschrijft de endpoints gerelateerd aan Cursusmanagement. Gebruik deze API met de functionele beschrijving van de API."
   },
@@ -78,7 +78,7 @@
                           "MaPt": "12",
                           "UnFi": "1",
                           "PrId": "910004",
-                          "CrRm": "Opmerking voor AlGu Introduc\uFFFD toestaan",
+                          "CrRm": "Opmerking voor AlGu Introduc� toestaan",
                           "CuId": "USD"
                         },
                         "Objects": {
@@ -726,7 +726,7 @@
     "/connectors/KnCourseGroupLines": {
       "post": {
         "summary": "Cursusplanning",
-        "description": "\n\rAlleen beschikbaar onder conditie: Cursustraject (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_kncoursegrouplines.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Cursustraject (activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_kncoursegrouplines.htm",
         "operationId": "POST_KnCourseGroupLines",
         "requestBody": {
           "content": {
@@ -1531,7 +1531,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id\u0027s can be found in the metainfo request result.",
+        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -1677,7 +1677,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -1874,7 +1874,7 @@
                       },
                       "AlGu": {
                         "type": "boolean",
-                        "description": "Introduc\u00E9 toestaan",
+                        "description": "Introducé toestaan",
                         "format": ""
                       },
                       "MiPt": {
@@ -2210,7 +2210,7 @@
                       },
                       "AlGu": {
                         "type": "boolean",
-                        "description": "Introduc\u00E9 toestaan",
+                        "description": "Introducé toestaan",
                         "format": ""
                       },
                       "MiPt": {
@@ -2524,7 +2524,7 @@
                       "BcCo": {
                         "type": "string",
                         "maxLength": 15,
-                        "description": "BasicContactCode (verwijzing naar: Organisatie/Persoon =\u003E AfasKnBasicContact)",
+                        "description": "BasicContactCode (verwijzing naar: Organisatie/Persoon => AfasKnBasicContact)",
                         "format": ""
                       },
                       "CrId": {
@@ -2621,7 +2621,7 @@
                       "BcCo": {
                         "type": "string",
                         "maxLength": 15,
-                        "description": "BasicContactCode (verwijzing naar: Organisatie/Persoon =\u003E AfasKnBasicContact)",
+                        "description": "BasicContactCode (verwijzing naar: Organisatie/Persoon => AfasKnBasicContact)",
                         "format": ""
                       },
                       "CrId": {
@@ -2760,7 +2760,7 @@
         "name": "Authorization",
         "type": "apiKey",
         "in": "header",
-        "description": "Convert the XML token to Base64 and add \u0027AfasToken \u0027 in front of it."
+        "description": "Convert the XML token to Base64 and add 'AfasToken ' in front of it."
       }
     },
     "parameters": {
@@ -2768,7 +2768,7 @@
         "name": "Accept-Language",
         "in": "header",
         "required": false,
-        "description": "Indicates the client\u0027s preferred language for the response. If not provided, the API defaults to the base environment language.",
+        "description": "Indicates the client's preferred language for the response. If not provided, the API defaults to the base environment language.",
         "schema": {
           "type": "string",
           "enum": [

@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "6.6.9",
+    "version": "7.7.10",
     "title": "AFAS Projecten en nacalculatie API",
     "description": "This API describes the endpoints related to Projecten en nacalculatie. Use this API with the functional description of the API."
   },
@@ -50,7 +50,7 @@
   "paths": {
     "/connectors/KnQuotation": {
       "post": {
-        "summary": "Voorcalculatie",
+        "summary": "Cost estimate",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_ProEst.htm",
         "operationId": "POST_KnQuotation",
         "requestBody": {
@@ -203,7 +203,7 @@
                                   "Fields": {
                                     "VaIt": "2",
                                     "ItCd": "VC400",
-                                    "Ds": "Vlonderplank Composiet \u0027Antraciet - 400x15x2.5cm",
+                                    "Ds": "Vlonderplank Composiet 'Antraciet - 400x15x2.5cm",
                                     "UnId": "STK",
                                     "QuUn": "100",
                                     "PrFc": "1",
@@ -377,7 +377,7 @@
           }
         ],
         "tags": [
-          "Voorcalculatie"
+          "Cost estimate"
         ],
         "parameters": [
           {
@@ -389,7 +389,7 @@
         ]
       },
       "put": {
-        "summary": "Voorcalculatie",
+        "summary": "Cost estimate",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_ProEst.htm",
         "operationId": "PUT_KnQuotation",
         "requestBody": {
@@ -426,35 +426,35 @@
                               {
                                 "Fields": {
                                   "GuLi": "{57E41029-1B11-4548-A9AB-2483D824395B}",
-                                  "Ds": "Gewijzigde datum planning \u002B benodigd",
+                                  "Ds": "Gewijzigde datum planning + benodigd",
                                   "PlDa": "2015-06-01"
                                 }
                               },
                               {
                                 "Fields": {
                                   "GuLi": "{213E6520-3AC6-4E97-9B9A-EEFF067572C6}",
-                                  "Ds": "Gewijzigde datum planning \u002B benodigd",
+                                  "Ds": "Gewijzigde datum planning + benodigd",
                                   "PlDa": "2015-06-01"
                                 }
                               },
                               {
                                 "Fields": {
                                   "GuLi": "{7E4C792E-C111-4F31-8545-0B861BC7B210}",
-                                  "Ds": "Gewijzigde datum planning \u002B benodigd",
+                                  "Ds": "Gewijzigde datum planning + benodigd",
                                   "PlDa": "2015-06-01"
                                 }
                               },
                               {
                                 "Fields": {
                                   "GuLi": "{195F1674-3112-4E0E-BE6B-3268E08E2734}",
-                                  "Ds": "Gewijzigde datum planning \u002B benodigd",
+                                  "Ds": "Gewijzigde datum planning + benodigd",
                                   "PlDa": "2015-06-01"
                                 }
                               },
                               {
                                 "Fields": {
                                   "GuLi": "{D73DE628-2125-463C-8A99-D153C3CD8ECF}",
-                                  "Ds": "Gewijzigde datum planning \u002B benodigd",
+                                  "Ds": "Gewijzigde datum planning + benodigd",
                                   "PlDa": "2015-06-01"
                                 }
                               }
@@ -623,7 +623,7 @@
           }
         ],
         "tags": [
-          "Voorcalculatie"
+          "Cost estimate"
         ],
         "parameters": [
           {
@@ -637,7 +637,7 @@
     },
     "/connectors/KnQuotation/KnQuotationLine": {
       "post": {
-        "summary": "Voorcalculatie",
+        "summary": "Cost estimate",
         "description": "Update main record in KnQuotation and insert subrecord into KnQuotationLine. \n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_ProEst.htm",
         "operationId": "POSTSubRecordKnQuotationKnQuotationLine",
         "requestBody": {
@@ -813,7 +813,7 @@
           }
         ],
         "tags": [
-          "Voorcalculatie"
+          "Cost estimate"
         ],
         "parameters": [
           {
@@ -838,7 +838,7 @@
         }
       ],
       "delete": {
-        "summary": "Voorcalculatie",
+        "summary": "Cost estimate",
         "operationId": "DELETE_KnQuotation",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_ProEst.htm",
         "responses": {
@@ -873,7 +873,7 @@
           }
         ],
         "tags": [
-          "Voorcalculatie"
+          "Cost estimate"
         ],
         "parameters": [
           {
@@ -884,7 +884,7 @@
     },
     "/connectors/KnTeamMember": {
       "post": {
-        "summary": "Teamlid",
+        "summary": "Team member",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_ProTm.htm",
         "operationId": "POST_KnTeamMember",
         "requestBody": {
@@ -1153,7 +1153,7 @@
           }
         ],
         "tags": [
-          "Teamlid"
+          "Team member"
         ],
         "parameters": [
           {
@@ -1165,7 +1165,7 @@
         ]
       },
       "put": {
-        "summary": "Teamlid",
+        "summary": "Team member",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_ProTm.htm",
         "operationId": "PUT_KnTeamMember",
         "requestBody": {
@@ -1271,7 +1271,7 @@
           }
         ],
         "tags": [
-          "Teamlid"
+          "Team member"
         ],
         "parameters": [
           {
@@ -1296,7 +1296,7 @@
         }
       ],
       "delete": {
-        "summary": "Teamlid",
+        "summary": "Team member",
         "operationId": "DELETE_KnTeamMember",
         "description": " \n\r Let op: Bij dit endpoint zijn de parameters om een item te verwijderen nog niet gedocumenteerd. De path parameters kunnen hierdoor afwijken\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_ProTm.htm",
         "responses": {
@@ -1331,7 +1331,7 @@
           }
         ],
         "tags": [
-          "Teamlid"
+          "Team member"
         ],
         "parameters": [
           {
@@ -1618,7 +1618,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id\u0027s can be found in the metainfo request result.",
+        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -1764,7 +1764,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -1846,7 +1846,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -1901,7 +1901,7 @@
                           },
                           "TimeType": {
                             "type": "string",
-                            "description": "Uurtype"
+                            "description": "Hour type"
                           },
                           "CreateDate": {
                             "type": "string",
@@ -2002,7 +2002,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -2158,7 +2158,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -2205,15 +2205,15 @@
                         "properties": {
                           "ProjectId": {
                             "type": "string",
-                            "description": "Projectnummer"
+                            "description": "Project number"
                           },
                           "Description": {
                             "type": "string",
-                            "description": "Projectomschrijving"
+                            "description": "Project description"
                           },
                           "UnitId": {
                             "type": "integer",
-                            "description": "Projectadministratie"
+                            "description": "Project administration"
                           },
                           "ProjectGroup": {
                             "type": "string",
@@ -2225,7 +2225,7 @@
                           },
                           "BcCo": {
                             "type": "string",
-                            "description": "Organisatie/persoon"
+                            "description": "Organisation/person"
                           },
                           "DebtorId": {
                             "type": "string",
@@ -2342,7 +2342,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -2514,7 +2514,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -2585,7 +2585,7 @@
                           },
                           "ItemType": {
                             "type": "string",
-                            "description": "Type item code"
+                            "description": "Item type code"
                           },
                           "ItemCodeId": {
                             "type": "string",
@@ -2617,7 +2617,7 @@
                           },
                           "QuotationStatus": {
                             "type": "string",
-                            "description": "Code status offerte"
+                            "description": "Quotation status code"
                           }
                         }
                       }
@@ -2710,7 +2710,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -2854,7 +2854,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -2921,7 +2921,7 @@
                           },
                           "ProjectId": {
                             "type": "string",
-                            "description": "Projectnummer"
+                            "description": "Project number"
                           },
                           "Description": {
                             "type": "string",
@@ -2929,7 +2929,7 @@
                           },
                           "ItemType": {
                             "type": "string",
-                            "description": "Type item"
+                            "description": "Item type"
                           },
                           "ItemCodeId": {
                             "type": "string",
@@ -3054,7 +3054,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -3209,8 +3209,8 @@
     },
     "/connectors/PtLinesToBeInvoiced": {
       "post": {
-        "summary": "Te factureren regel",
-        "description": "\n\rAlleen beschikbaar onder conditie: Project\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_110.htm",
+        "summary": "Line to be invoiced",
+        "description": "\n\rAlleen beschikbaar onder conditie: Projecten\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_110.htm",
         "operationId": "POST_PtLinesToBeInvoiced",
         "requestBody": {
           "content": {
@@ -3406,7 +3406,7 @@
           }
         ],
         "tags": [
-          "Te factureren regel"
+          "Line to be invoiced"
         ],
         "parameters": [
           {
@@ -3420,8 +3420,8 @@
     },
     "/connectors/PtPrognosisProject": {
       "post": {
-        "summary": "Projectvoortgang",
-        "description": "\n\rAlleen beschikbaar onder conditie: Systeem Projecten (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Progress.htm",
+        "summary": "Project progress",
+        "description": "\n\rAlleen beschikbaar onder conditie: Projecten\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Progress.htm",
         "operationId": "POST_PtPrognosisProject",
         "requestBody": {
           "content": {
@@ -3504,7 +3504,7 @@
           }
         ],
         "tags": [
-          "Projectvoortgang"
+          "Project progress"
         ],
         "parameters": [
           {
@@ -3516,8 +3516,8 @@
         ]
       },
       "put": {
-        "summary": "Projectvoortgang",
-        "description": "\n\rAlleen beschikbaar onder conditie: Systeem Projecten (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Progress.htm",
+        "summary": "Project progress",
+        "description": "\n\rAlleen beschikbaar onder conditie: Projecten\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Progress.htm",
         "operationId": "PUT_PtPrognosisProject",
         "requestBody": {
           "content": {
@@ -3582,7 +3582,7 @@
           }
         ],
         "tags": [
-          "Projectvoortgang"
+          "Project progress"
         ],
         "parameters": [
           {
@@ -3607,7 +3607,7 @@
         }
       ],
       "delete": {
-        "summary": "Projectvoortgang",
+        "summary": "Project progress",
         "operationId": "DELETE_PtPrognosisProject",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Progress.htm",
         "responses": {
@@ -3642,7 +3642,7 @@
           }
         ],
         "tags": [
-          "Projectvoortgang"
+          "Project progress"
         ],
         "parameters": [
           {
@@ -3654,7 +3654,7 @@
     "/connectors/PtProject": {
       "post": {
         "summary": "Project",
-        "description": "\n\rAlleen beschikbaar onder conditie: Project\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Phase.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Projecten\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Phase.htm",
         "operationId": "POST_PtProject",
         "requestBody": {
           "content": {
@@ -4636,7 +4636,7 @@
                           "DeDi": "0",
                           "DeRe": "0",
                           "FileName": "example.png",
-                          "FileStream": "iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAIAAACzY\u002Ba1AAAEB0lEQVR4nO3YQU/yShiG4SmlBSwYjEIQCyaSqmHl//8NLNgZSaORAmJQxCC0dihzFs3hEPQkX8KXlid5rl1r9YW5w2RQ63Q6gpBl0n4BtC8mhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J42bRfwH88zxNCNBqN\u002BHK5XPZ6ve0HHMexLEsIoZQaj8fT6TSKouPjY9u2s9m93kiKo/d3KAnH4/H7\u002B/vp6enmThAEpmm22\u002B1fH57NZq1WS9f1fr//9PTkOA7i6L8i/Y00DEPXdSeTiWma2/eDIMjn8z\u002BfV0pNJpNarZbP5w3DaDabi8VisVhgjf6L0k\u002B4XC5N07y9vc3lctv3/28dfd9fr9fxtiaEMAzDNM2ddZzNZt1udz6fx5ePj48PDw9KqQRGJy/9jbRcLpfL5Z/34/W6v7\u002BXUhYKhXq9Hq\u002BdlFIIYRjG5knDMMIw3PmbJycng8Hg5uZmNpvN5/Pr62tN0xIYnbz0P4W/iqJISmmapuM47Xb76OjIdd0gCIQQ6/VaCLHdQ9O0n58w27bX67XnecPhsFarFQqFxEYn7EAT6rp\u002Bd3fXbDaz2Ww2m724uMjlcm9vb\u002BLfFdxeOKVUJrP7RnRdt2374\u002BMjl8tVq9UkRyfsQBP\u002BZJpmvI/FR4/VarX5kZRye3Pb8H1fCBGGYRRFCY9O0oEm/Pr66na739/f8aVSanPEyOfzmUxmc4iQUoZhuDlibPi\u002B//r6Wq/XdV2Pv/YlNjphB5rQsqxCoeB5XhiGq9VqMBhEUVSpVIQQmUzm7OxsNBr5vi\u002Bl7Pf7lmXtrKNS6vn5uVgsVqvVRqPx\u002Bfk5nU6TGZ289E\u002Bkv9I07erqajQa9Xq9\u002BBzvOM7m/yDn5\u002BdKKdd1hRClUuny8nLn119eXqSUrVZLCFEsFiuVynA4LJVKf7Lp7Tk6eVqn00n7NdBeDnQjpT/HhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEN4/cnznZiQb6hsAAAAASUVORK5CYII="
+                          "FileStream": "iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAIAAACzY+a1AAAEB0lEQVR4nO3YQU/yShiG4SmlBSwYjEIQCyaSqmHl//8NLNgZSaORAmJQxCC0dihzFs3hEPQkX8KXlid5rl1r9YW5w2RQ63Q6gpBl0n4BtC8mhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J42bRfwH88zxNCNBqN+HK5XPZ6ve0HHMexLEsIoZQaj8fT6TSKouPjY9u2s9m93kiKo/d3KAnH4/H7+/vp6enmThAEpmm22+1fH57NZq1WS9f1fr//9PTkOA7i6L8i/Y00DEPXdSeTiWma2/eDIMjn8z+fV0pNJpNarZbP5w3DaDabi8VisVhgjf6L0k+4XC5N07y9vc3lctv3/28dfd9fr9fxtiaEMAzDNM2ddZzNZt1udz6fx5ePj48PDw9KqQRGJy/9jbRcLpfL5Z/34/W6v7+XUhYKhXq9Hq+dlFIIYRjG5knDMMIw3PmbJycng8Hg5uZmNpvN5/Pr62tN0xIYnbz0P4W/iqJISmmapuM47Xb76OjIdd0gCIQQ6/VaCLHdQ9O0n58w27bX67XnecPhsFarFQqFxEYn7EAT6rp+d3fXbDaz2Ww2m724uMjlcm9vb+LfFdxeOKVUJrP7RnRdt2374+Mjl8tVq9UkRyfsQBP+ZJpmvI/FR4/VarX5kZRye3Pb8H1fCBGGYRRFCY9O0oEm/Pr66na739/f8aVSanPEyOfzmUxmc4iQUoZhuDlibPi+//r6Wq/XdV2Pv/YlNjphB5rQsqxCoeB5XhiGq9VqMBhEUVSpVIQQmUzm7OxsNBr5vi+l7Pf7lmXtrKNS6vn5uVgsVqvVRqPx+fk5nU6TGZ289E+kv9I07erqajQa9Xq9+BzvOM7m/yDn5+dKKdd1hRClUuny8nLn119eXqSUrVZLCFEsFiuVynA4LJVKf7Lp7Tk6eVqn00n7NdBeDnQjpT/HhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEN4/cnznZiQb6hsAAAAASUVORK5CYII="
                         }
                       }
                     }
@@ -4829,7 +4829,7 @@
       },
       "put": {
         "summary": "Project",
-        "description": "\n\rAlleen beschikbaar onder conditie: Project\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Phase.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Projecten\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Phase.htm",
         "operationId": "PUT_PtProject",
         "requestBody": {
           "content": {
@@ -5023,7 +5023,7 @@
                         "Fields": {
                           "PrId": "300000",
                           "FileName": "example.png",
-                          "FileStream": "iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAIAAACzY\u002Ba1AAAEB0lEQVR4nO3YQU/yShiG4SmlBSwYjEIQCyaSqmHl//8NLNgZSaORAmJQxCC0dihzFs3hEPQkX8KXlid5rl1r9YW5w2RQ63Q6gpBl0n4BtC8mhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J42bRfwH88zxNCNBqN\u002BHK5XPZ6ve0HHMexLEsIoZQaj8fT6TSKouPjY9u2s9m93kiKo/d3KAnH4/H7\u002B/vp6enmThAEpmm22\u002B1fH57NZq1WS9f1fr//9PTkOA7i6L8i/Y00DEPXdSeTiWma2/eDIMjn8z\u002BfV0pNJpNarZbP5w3DaDabi8VisVhgjf6L0k\u002B4XC5N07y9vc3lctv3/28dfd9fr9fxtiaEMAzDNM2ddZzNZt1udz6fx5ePj48PDw9KqQRGJy/9jbRcLpfL5Z/34/W6v7\u002BXUhYKhXq9Hq\u002BdlFIIYRjG5knDMMIw3PmbJycng8Hg5uZmNpvN5/Pr62tN0xIYnbz0P4W/iqJISmmapuM47Xb76OjIdd0gCIQQ6/VaCLHdQ9O0n58w27bX67XnecPhsFarFQqFxEYn7EAT6rp\u002Bd3fXbDaz2Ww2m724uMjlcm9vb\u002BLfFdxeOKVUJrP7RnRdt2374\u002BMjl8tVq9UkRyfsQBP\u002BZJpmvI/FR4/VarX5kZRye3Pb8H1fCBGGYRRFCY9O0oEm/Pr66na739/f8aVSanPEyOfzmUxmc4iQUoZhuDlibPi\u002B//r6Wq/XdV2Pv/YlNjphB5rQsqxCoeB5XhiGq9VqMBhEUVSpVIQQmUzm7OxsNBr5vi\u002Bl7Pf7lmXtrKNS6vn5uVgsVqvVRqPx\u002Bfk5nU6TGZ289E\u002Bkv9I07erqajQa9Xq9\u002BBzvOM7m/yDn5\u002BdKKdd1hRClUuny8nLn119eXqSUrVZLCFEsFiuVynA4LJVKf7Lp7Tk6eVqn00n7NdBeDnQjpT/HhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEN4/cnznZiQb6hsAAAAASUVORK5CYII="
+                          "FileStream": "iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAIAAACzY+a1AAAEB0lEQVR4nO3YQU/yShiG4SmlBSwYjEIQCyaSqmHl//8NLNgZSaORAmJQxCC0dihzFs3hEPQkX8KXlid5rl1r9YW5w2RQ63Q6gpBl0n4BtC8mhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J42bRfwH88zxNCNBqN+HK5XPZ6ve0HHMexLEsIoZQaj8fT6TSKouPjY9u2s9m93kiKo/d3KAnH4/H7+/vp6enmThAEpmm22+1fH57NZq1WS9f1fr//9PTkOA7i6L8i/Y00DEPXdSeTiWma2/eDIMjn8z+fV0pNJpNarZbP5w3DaDabi8VisVhgjf6L0k+4XC5N07y9vc3lctv3/28dfd9fr9fxtiaEMAzDNM2ddZzNZt1udz6fx5ePj48PDw9KqQRGJy/9jbRcLpfL5Z/34/W6v7+XUhYKhXq9Hq+dlFIIYRjG5knDMMIw3PmbJycng8Hg5uZmNpvN5/Pr62tN0xIYnbz0P4W/iqJISmmapuM47Xb76OjIdd0gCIQQ6/VaCLHdQ9O0n58w27bX67XnecPhsFarFQqFxEYn7EAT6rp+d3fXbDaz2Ww2m724uMjlcm9vb+LfFdxeOKVUJrP7RnRdt2374+Mjl8tVq9UkRyfsQBP+ZJpmvI/FR4/VarX5kZRye3Pb8H1fCBGGYRRFCY9O0oEm/Pr66na739/f8aVSanPEyOfzmUxmc4iQUoZhuDlibPi+//r6Wq/XdV2Pv/YlNjphB5rQsqxCoeB5XhiGq9VqMBhEUVSpVIQQmUzm7OxsNBr5vi+l7Pf7lmXtrKNS6vn5uVgsVqvVRqPx+fk5nU6TGZ289E+kv9I07erqajQa9Xq9+BzvOM7m/yDn5+dKKdd1hRClUuny8nLn119eXqSUrVZLCFEsFiuVynA4LJVKf7Lp7Tk6eVqn00n7NdBeDnQjpT/HhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEN4/cnznZiQb6hsAAAAASUVORK5CYII="
                         }
                       }
                     }
@@ -5253,7 +5253,7 @@
     "/connectors/PtProject/KnBasicAddressAdr": {
       "post": {
         "summary": "Project",
-        "description": "Update main record in PtProject and insert subrecord into KnBasicAddressAdr. \n\rAlleen beschikbaar onder conditie: Project\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Phase.htm",
+        "description": "Update main record in PtProject and insert subrecord into KnBasicAddressAdr. \n\rAlleen beschikbaar onder conditie: Projecten\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Phase.htm",
         "operationId": "POSTSubRecordPtProjectKnBasicAddressAdr",
         "requestBody": {
           "content": {
@@ -5409,7 +5409,7 @@
     "/connectors/PtProject/PtProjectStage": {
       "post": {
         "summary": "Project",
-        "description": "Update main record in PtProject and insert subrecord into PtProjectStage. \n\rAlleen beschikbaar onder conditie: Project\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Phase.htm",
+        "description": "Update main record in PtProject and insert subrecord into PtProjectStage. \n\rAlleen beschikbaar onder conditie: Projecten\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Phase.htm",
         "operationId": "POSTSubRecordPtProjectPtProjectStage",
         "requestBody": {
           "content": {
@@ -5565,7 +5565,7 @@
     "/connectors/PtProject/PtTailSpend": {
       "post": {
         "summary": "Project",
-        "description": "Update main record in PtProject and insert subrecord into PtTailSpend. \n\rAlleen beschikbaar onder conditie: Project\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Phase.htm",
+        "description": "Update main record in PtProject and insert subrecord into PtTailSpend. \n\rAlleen beschikbaar onder conditie: Projecten\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Phase.htm",
         "operationId": "POSTSubRecordPtProjectPtTailSpend",
         "requestBody": {
           "content": {
@@ -5777,8 +5777,8 @@
     },
     "/connectors/PtProjectDimCode": {
       "post": {
-        "summary": "Project / verbijzondering",
-        "description": "\n\rAlleen beschikbaar onder conditie: Project\n\r ",
+        "summary": "Project/allocation",
+        "description": "\n\rAlleen beschikbaar onder conditie: Projecten\n\r ",
         "operationId": "POST_PtProjectDimCode",
         "requestBody": {
           "content": {
@@ -5815,7 +5815,7 @@
           }
         ],
         "tags": [
-          "Project / verbijzondering"
+          "Project/allocation"
         ],
         "parameters": [
           {
@@ -5827,8 +5827,8 @@
         ]
       },
       "put": {
-        "summary": "Project / verbijzondering",
-        "description": "\n\rAlleen beschikbaar onder conditie: Project\n\r ",
+        "summary": "Project/allocation",
+        "description": "\n\rAlleen beschikbaar onder conditie: Projecten\n\r ",
         "operationId": "PUT_PtProjectDimCode",
         "requestBody": {
           "content": {
@@ -5865,7 +5865,7 @@
           }
         ],
         "tags": [
-          "Project / verbijzondering"
+          "Project/allocation"
         ],
         "parameters": [
           {
@@ -5890,7 +5890,7 @@
         }
       ],
       "delete": {
-        "summary": "Project / verbijzondering",
+        "summary": "Project/allocation",
         "operationId": "DELETE_PtProjectDimCode",
         "description": "\n\r ",
         "responses": {
@@ -5925,7 +5925,7 @@
           }
         ],
         "tags": [
-          "Project / verbijzondering"
+          "Project/allocation"
         ],
         "parameters": [
           {
@@ -5936,8 +5936,8 @@
     },
     "/connectors/PtProjectProgress": {
       "post": {
-        "summary": "Voortgang",
-        "description": "\n\rAlleen beschikbaar onder conditie: Project\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Progr.htm",
+        "summary": "Progress",
+        "description": "\n\rAlleen beschikbaar onder conditie: Projecten\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Progr.htm",
         "operationId": "POST_PtProjectProgress",
         "requestBody": {
           "content": {
@@ -6010,7 +6010,7 @@
           }
         ],
         "tags": [
-          "Voortgang"
+          "Progress"
         ],
         "parameters": [
           {
@@ -6022,8 +6022,8 @@
         ]
       },
       "put": {
-        "summary": "Voortgang",
-        "description": "\n\rAlleen beschikbaar onder conditie: Project\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Progr.htm",
+        "summary": "Progress",
+        "description": "\n\rAlleen beschikbaar onder conditie: Projecten\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Progr.htm",
         "operationId": "PUT_PtProjectProgress",
         "requestBody": {
           "content": {
@@ -6075,7 +6075,7 @@
           }
         ],
         "tags": [
-          "Voortgang"
+          "Progress"
         ],
         "parameters": [
           {
@@ -6100,7 +6100,7 @@
         }
       ],
       "delete": {
-        "summary": "Voortgang",
+        "summary": "Progress",
         "operationId": "DELETE_PtProjectProgress",
         "description": " \n\r Let op: Bij dit endpoint zijn de parameters om een item te verwijderen nog niet gedocumenteerd. De path parameters kunnen hierdoor afwijken\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Progr.htm",
         "responses": {
@@ -6135,7 +6135,7 @@
           }
         ],
         "tags": [
-          "Voortgang"
+          "Progress"
         ],
         "parameters": [
           {
@@ -6146,7 +6146,7 @@
     },
     "/connectors/PtProjectRaiseRules": {
       "post": {
-        "summary": "Projectopslagregel",
+        "summary": "Project surcharge line",
         "description": "\n\r https://help.afas.nl/help/NL/SE/119769.htm",
         "operationId": "POST_PtProjectRaiseRules",
         "requestBody": {
@@ -6240,7 +6240,7 @@
           }
         ],
         "tags": [
-          "Projectopslagregel"
+          "Project surcharge line"
         ],
         "parameters": [
           {
@@ -6252,7 +6252,7 @@
         ]
       },
       "put": {
-        "summary": "Projectopslagregel",
+        "summary": "Project surcharge line",
         "description": "\n\r https://help.afas.nl/help/NL/SE/119769.htm",
         "operationId": "PUT_PtProjectRaiseRules",
         "requestBody": {
@@ -6320,7 +6320,7 @@
           }
         ],
         "tags": [
-          "Projectopslagregel"
+          "Project surcharge line"
         ],
         "parameters": [
           {
@@ -6341,11 +6341,11 @@
           "name": "PrrI",
           "in": "path",
           "required": true,
-          "description": "$17367=Identity"
+          "description": "Identity"
         }
       ],
       "delete": {
-        "summary": "Projectopslagregel",
+        "summary": "Project surcharge line",
         "operationId": "DELETE_PtProjectRaiseRules",
         "description": "\n\r https://help.afas.nl/help/NL/SE/119769.htm",
         "responses": {
@@ -6380,7 +6380,7 @@
           }
         ],
         "tags": [
-          "Projectopslagregel"
+          "Project surcharge line"
         ],
         "parameters": [
           {
@@ -6391,7 +6391,7 @@
     },
     "/connectors/PtRealization": {
       "post": {
-        "summary": "Nacalculatie",
+        "summary": "Actual costing",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_CalcPt.htm",
         "operationId": "POST_PtRealization",
         "requestBody": {
@@ -6778,7 +6778,7 @@
                           "AmSe": "150",
                           "Ch": false,
                           "FileName": "example.png",
-                          "FileStream": "iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAIAAACzY\u002Ba1AAAEB0lEQVR4nO3YQU/yShiG4SmlBSwYjEIQCyaSqmHl//8NLNgZSaORAmJQxCC0dihzFs3hEPQkX8KXlid5rl1r9YW5w2RQ63Q6gpBl0n4BtC8mhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J42bRfwH88zxNCNBqN\u002BHK5XPZ6ve0HHMexLEsIoZQaj8fT6TSKouPjY9u2s9m93kiKo/d3KAnH4/H7\u002B/vp6enmThAEpmm22\u002B1fH57NZq1WS9f1fr//9PTkOA7i6L8i/Y00DEPXdSeTiWma2/eDIMjn8z\u002BfV0pNJpNarZbP5w3DaDabi8VisVhgjf6L0k\u002B4XC5N07y9vc3lctv3/28dfd9fr9fxtiaEMAzDNM2ddZzNZt1udz6fx5ePj48PDw9KqQRGJy/9jbRcLpfL5Z/34/W6v7\u002BXUhYKhXq9Hq\u002BdlFIIYRjG5knDMMIw3PmbJycng8Hg5uZmNpvN5/Pr62tN0xIYnbz0P4W/iqJISmmapuM47Xb76OjIdd0gCIQQ6/VaCLHdQ9O0n58w27bX67XnecPhsFarFQqFxEYn7EAT6rp\u002Bd3fXbDaz2Ww2m724uMjlcm9vb\u002BLfFdxeOKVUJrP7RnRdt2374\u002BMjl8tVq9UkRyfsQBP\u002BZJpmvI/FR4/VarX5kZRye3Pb8H1fCBGGYRRFCY9O0oEm/Pr66na739/f8aVSanPEyOfzmUxmc4iQUoZhuDlibPi\u002B//r6Wq/XdV2Pv/YlNjphB5rQsqxCoeB5XhiGq9VqMBhEUVSpVIQQmUzm7OxsNBr5vi\u002Bl7Pf7lmXtrKNS6vn5uVgsVqvVRqPx\u002Bfk5nU6TGZ289E\u002Bkv9I07erqajQa9Xq9\u002BBzvOM7m/yDn5\u002BdKKdd1hRClUuny8nLn119eXqSUrVZLCFEsFiuVynA4LJVKf7Lp7Tk6eVqn00n7NdBeDnQjpT/HhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEN4/cnznZiQb6hsAAAAASUVORK5CYII="
+                          "FileStream": "iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAIAAACzY+a1AAAEB0lEQVR4nO3YQU/yShiG4SmlBSwYjEIQCyaSqmHl//8NLNgZSaORAmJQxCC0dihzFs3hEPQkX8KXlid5rl1r9YW5w2RQ63Q6gpBl0n4BtC8mhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J42bRfwH88zxNCNBqN+HK5XPZ6ve0HHMexLEsIoZQaj8fT6TSKouPjY9u2s9m93kiKo/d3KAnH4/H7+/vp6enmThAEpmm22+1fH57NZq1WS9f1fr//9PTkOA7i6L8i/Y00DEPXdSeTiWma2/eDIMjn8z+fV0pNJpNarZbP5w3DaDabi8VisVhgjf6L0k+4XC5N07y9vc3lctv3/28dfd9fr9fxtiaEMAzDNM2ddZzNZt1udz6fx5ePj48PDw9KqQRGJy/9jbRcLpfL5Z/34/W6v7+XUhYKhXq9Hq+dlFIIYRjG5knDMMIw3PmbJycng8Hg5uZmNpvN5/Pr62tN0xIYnbz0P4W/iqJISmmapuM47Xb76OjIdd0gCIQQ6/VaCLHdQ9O0n58w27bX67XnecPhsFarFQqFxEYn7EAT6rp+d3fXbDaz2Ww2m724uMjlcm9vb+LfFdxeOKVUJrP7RnRdt2374+Mjl8tVq9UkRyfsQBP+ZJpmvI/FR4/VarX5kZRye3Pb8H1fCBGGYRRFCY9O0oEm/Pr66na739/f8aVSanPEyOfzmUxmc4iQUoZhuDlibPi+//r6Wq/XdV2Pv/YlNjphB5rQsqxCoeB5XhiGq9VqMBhEUVSpVIQQmUzm7OxsNBr5vi+l7Pf7lmXtrKNS6vn5uVgsVqvVRqPx+fk5nU6TGZ289E+kv9I07erqajQa9Xq9+BzvOM7m/yDn5+dKKdd1hRClUuny8nLn119eXqSUrVZLCFEsFiuVynA4LJVKf7Lp7Tk6eVqn00n7NdBeDnQjpT/HhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEN4/cnznZiQb6hsAAAAASUVORK5CYII="
                         }
                       }
                     }
@@ -7076,7 +7076,7 @@
           }
         ],
         "tags": [
-          "Nacalculatie"
+          "Actual costing"
         ],
         "parameters": [
           {
@@ -7088,7 +7088,7 @@
         ]
       },
       "put": {
-        "summary": "Nacalculatie",
+        "summary": "Actual costing",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_CalcPt.htm",
         "operationId": "PUT_PtRealization",
         "requestBody": {
@@ -7329,7 +7329,7 @@
           }
         ],
         "tags": [
-          "Nacalculatie"
+          "Actual costing"
         ],
         "parameters": [
           {
@@ -7344,7 +7344,7 @@
     "/connectors/PtRealization/PtRealization/@UseSetImport/{UseSetImport}": {
       "parameters": [],
       "delete": {
-        "summary": "Nacalculatie",
+        "summary": "Actual costing",
         "operationId": "DELETE_PtRealization",
         "description": " \n\r Let op: Bij dit endpoint zijn de parameters om een item te verwijderen nog niet gedocumenteerd. De path parameters kunnen hierdoor afwijken\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_CalcPt.htm",
         "responses": {
@@ -7379,7 +7379,7 @@
           }
         ],
         "tags": [
-          "Nacalculatie"
+          "Actual costing"
         ],
         "parameters": [
           {
@@ -7390,8 +7390,8 @@
     },
     "/connectors/PtRealizationWeek": {
       "post": {
-        "summary": "Nacalculatie per week",
-        "description": "\n\rAlleen beschikbaar onder conditie: Nacalculatie per week (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_105.htm",
+        "summary": "Actual costing per week",
+        "description": "\n\rAlleen beschikbaar onder conditie: Nacalculatie per week (activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_105.htm",
         "operationId": "POST_PtRealizationWeek",
         "requestBody": {
           "content": {
@@ -7541,7 +7541,7 @@
           }
         ],
         "tags": [
-          "Nacalculatie per week"
+          "Actual costing per week"
         ],
         "parameters": [
           {
@@ -7553,8 +7553,8 @@
         ]
       },
       "put": {
-        "summary": "Nacalculatie per week",
-        "description": "\n\rAlleen beschikbaar onder conditie: Nacalculatie per week (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_105.htm",
+        "summary": "Actual costing per week",
+        "description": "\n\rAlleen beschikbaar onder conditie: Nacalculatie per week (activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_105.htm",
         "operationId": "PUT_PtRealizationWeek",
         "requestBody": {
           "content": {
@@ -7654,7 +7654,7 @@
           }
         ],
         "tags": [
-          "Nacalculatie per week"
+          "Actual costing per week"
         ],
         "parameters": [
           {
@@ -7679,7 +7679,7 @@
         }
       ],
       "delete": {
-        "summary": "Nacalculatie per week",
+        "summary": "Actual costing per week",
         "operationId": "DELETE_PtRealizationWeek",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_105.htm",
         "responses": {
@@ -7714,7 +7714,7 @@
           }
         ],
         "tags": [
-          "Nacalculatie per week"
+          "Actual costing per week"
         ],
         "parameters": [
           {
@@ -7725,7 +7725,7 @@
     },
     "/connectors/PtTariff": {
       "post": {
-        "summary": "Tarief",
+        "summary": "Rate",
         "description": "\n\r https://help.afas.nl/help/NL/SE/130373.htm",
         "operationId": "POST_PtTariff",
         "requestBody": {
@@ -7789,7 +7789,7 @@
           }
         ],
         "tags": [
-          "Tarief"
+          "Rate"
         ],
         "parameters": [
           {
@@ -7801,7 +7801,7 @@
         ]
       },
       "put": {
-        "summary": "Tarief",
+        "summary": "Rate",
         "description": "\n\r https://help.afas.nl/help/NL/SE/130373.htm",
         "operationId": "PUT_PtTariff",
         "requestBody": {
@@ -7859,7 +7859,7 @@
           }
         ],
         "tags": [
-          "Tarief"
+          "Rate"
         ],
         "parameters": [
           {
@@ -7884,7 +7884,7 @@
         }
       ],
       "delete": {
-        "summary": "Tarief",
+        "summary": "Rate",
         "operationId": "DELETE_PtTariff",
         "description": "\n\r https://help.afas.nl/help/NL/SE/130373.htm",
         "responses": {
@@ -7919,7 +7919,7 @@
           }
         ],
         "tags": [
-          "Tarief"
+          "Rate"
         ],
         "parameters": [
           {
@@ -7930,7 +7930,7 @@
     },
     "/connectors/PtValComb": {
       "post": {
-        "summary": "Geldigheidscombinatie",
+        "summary": "Validity combination",
         "description": "\n\r https://help.afas.nl/help/NL/SE/130366.htm",
         "operationId": "POST_PtValComb",
         "requestBody": {
@@ -7968,7 +7968,7 @@
           }
         ],
         "tags": [
-          "Geldigheidscombinatie"
+          "Validity combination"
         ],
         "parameters": [
           {
@@ -7980,7 +7980,7 @@
         ]
       },
       "put": {
-        "summary": "Geldigheidscombinatie",
+        "summary": "Validity combination",
         "description": "\n\r https://help.afas.nl/help/NL/SE/130366.htm",
         "operationId": "PUT_PtValComb",
         "requestBody": {
@@ -8018,7 +8018,7 @@
           }
         ],
         "tags": [
-          "Geldigheidscombinatie"
+          "Validity combination"
         ],
         "parameters": [
           {
@@ -8043,7 +8043,7 @@
         }
       ],
       "delete": {
-        "summary": "Geldigheidscombinatie",
+        "summary": "Validity combination",
         "operationId": "DELETE_PtValComb",
         "description": "\n\r https://help.afas.nl/help/NL/SE/130366.htm",
         "responses": {
@@ -8078,7 +8078,166 @@
           }
         ],
         "tags": [
-          "Geldigheidscombinatie"
+          "Validity combination"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/PtLinesToBeUnraveled": {
+      "post": {
+        "summary": "Actual costing lines to be unravelled",
+        "description": "\n\rAlleen beschikbaar onder conditie: Urenontrafelaar (speciale activering)\n\r ",
+        "operationId": "POST_PtLinesToBeUnraveled",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PtLinesToBeUnraveled_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Actual costing lines to be unravelled"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Actual costing lines to be unravelled",
+        "description": "\n\rAlleen beschikbaar onder conditie: Urenontrafelaar (speciale activering)\n\r ",
+        "operationId": "PUT_PtLinesToBeUnraveled",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PtLinesToBeUnraveled_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Actual costing lines to be unravelled"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/PtLinesToBeUnraveled/PtLinesToBeUnraveled/@Id/{Id}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "Id",
+          "in": "path",
+          "required": true,
+          "description": "Code"
+        }
+      ],
+      "delete": {
+        "summary": "Actual costing lines to be unravelled",
+        "operationId": "DELETE_PtLinesToBeUnraveled",
+        "description": "\n\r ",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Actual costing lines to be unravelled"
         ],
         "parameters": [
           {
@@ -8098,52 +8257,56 @@
       "description": "API Info"
     },
     {
-      "name": "Voorcalculatie",
-      "description": "Voorcalculatie"
+      "name": "Cost estimate",
+      "description": "Cost estimate"
     },
     {
-      "name": "Teamlid",
-      "description": "Teamlid"
+      "name": "Team member",
+      "description": "Team member"
     },
     {
-      "name": "Te factureren regel",
-      "description": "Te factureren regel"
+      "name": "Line to be invoiced",
+      "description": "Line to be invoiced"
     },
     {
-      "name": "Projectvoortgang",
-      "description": "Projectvoortgang"
+      "name": "Project progress",
+      "description": "Project progress"
     },
     {
       "name": "Project",
       "description": "Project"
     },
     {
-      "name": "Project / verbijzondering",
-      "description": "Project / verbijzondering"
+      "name": "Project/allocation",
+      "description": "Project/allocation"
     },
     {
-      "name": "Voortgang",
-      "description": "Voortgang"
+      "name": "Progress",
+      "description": "Progress"
     },
     {
-      "name": "Projectopslagregel",
-      "description": "Projectopslagregel"
+      "name": "Project surcharge line",
+      "description": "Project surcharge line"
     },
     {
-      "name": "Nacalculatie",
-      "description": "Nacalculatie"
+      "name": "Actual costing",
+      "description": "Actual costing"
     },
     {
-      "name": "Nacalculatie per week",
-      "description": "Nacalculatie per week"
+      "name": "Actual costing per week",
+      "description": "Actual costing per week"
     },
     {
-      "name": "Tarief",
-      "description": "Tarief"
+      "name": "Rate",
+      "description": "Rate"
     },
     {
-      "name": "Geldigheidscombinatie",
-      "description": "Geldigheidscombinatie"
+      "name": "Validity combination",
+      "description": "Validity combination"
+    },
+    {
+      "name": "Actual costing lines to be unravelled",
+      "description": "Actual costing lines to be unravelled"
     }
   ],
   "components": {
@@ -8260,25 +8423,25 @@
                       "V2Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 2",
+                        "description": "Allocation axis code 2",
                         "format": ""
                       },
                       "V3Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 3",
+                        "description": "Allocation axis code 3",
                         "format": ""
                       },
                       "V4Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 4",
+                        "description": "Allocation axis code 4",
                         "format": ""
                       },
                       "V5Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 5",
+                        "description": "Allocation axis code 5",
                         "format": ""
                       },
                       "InPc": {
@@ -8354,7 +8517,7 @@
                           "S"
                         ],
                         "maxLength": 20,
-                        "description": "Order type\nI = Installatie;\nO = Onderhoud;\nS = Storing;",
+                        "description": "Order type\nI = Installation;\nO = Maintenance;\nS = Fault;",
                         "format": ""
                       },
                       "War": {
@@ -8397,7 +8560,7 @@
                                           "8"
                                         ],
                                         "maxLength": 10,
-                                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                         "format": ""
                                       },
                                       "ItCd": {
@@ -8690,7 +8853,7 @@
                                           "O"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                                         "format": ""
                                       },
                                       "NoHo": {
@@ -8716,7 +8879,7 @@
                                           "07"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Entry type\n01 = Origineel;\n02 = Meer-/minderwerk;\n03 = Gesplitst;\n04 = Verplaatst;\n05 = Gewijzigd;\n06 = Verwijderd;\n07 = Vrijgegeven;",
+                                        "description": "Entry type\n01 = Original;\n02 = More/less work;\n03 = Split;\n04 = Moved;\n05 = Changed;\n06 = Deleted;\n07 = Released;",
                                         "format": ""
                                       },
                                       "MuRe": {
@@ -8847,7 +9010,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Part item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                                        "description": "Part item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -9054,25 +9217,25 @@
                       "V2Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 2",
+                        "description": "Allocation axis code 2",
                         "format": ""
                       },
                       "V3Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 3",
+                        "description": "Allocation axis code 3",
                         "format": ""
                       },
                       "V4Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 4",
+                        "description": "Allocation axis code 4",
                         "format": ""
                       },
                       "V5Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 5",
+                        "description": "Allocation axis code 5",
                         "format": ""
                       },
                       "InPc": {
@@ -9150,7 +9313,7 @@
                           "S"
                         ],
                         "maxLength": 20,
-                        "description": "Order type\nI = Installatie;\nO = Onderhoud;\nS = Storing;",
+                        "description": "Order type\nI = Installation;\nO = Maintenance;\nS = Fault;",
                         "format": ""
                       },
                       "War": {
@@ -9196,7 +9359,7 @@
                                           "8"
                                         ],
                                         "maxLength": 10,
-                                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                         "format": ""
                                       },
                                       "ItCd": {
@@ -9502,7 +9665,7 @@
                                           "O"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                                         "format": ""
                                       },
                                       "NoHo": {
@@ -9529,7 +9692,7 @@
                                           "07"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Entry type\n01 = Origineel;\n02 = Meer-/minderwerk;\n03 = Gesplitst;\n04 = Verplaatst;\n05 = Gewijzigd;\n06 = Verwijderd;\n07 = Vrijgegeven;",
+                                        "description": "Entry type\n01 = Original;\n02 = More/less work;\n03 = Split;\n04 = Moved;\n05 = Changed;\n06 = Deleted;\n07 = Released;",
                                         "format": ""
                                       },
                                       "MuRe": {
@@ -9654,7 +9817,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Part item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                                        "description": "Part item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -9774,7 +9937,7 @@
                       },
                       "SiPr": {
                         "type": "boolean",
-                        "description": "Specifiek voor \u00E9\u00E9n project",
+                        "description": "Specifiek voor één project",
                         "format": ""
                       },
                       "PrId": {
@@ -9852,7 +10015,7 @@
                       },
                       "SiPr": {
                         "type": "boolean",
-                        "description": "Specifiek voor \u00E9\u00E9n project",
+                        "description": "Specifiek voor één project",
                         "format": ""
                       },
                       "PrId": {
@@ -9939,7 +10102,7 @@
                           "8"
                         ],
                         "maxLength": 10,
-                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                         "format": ""
                       },
                       "ItCd": {
@@ -10243,6 +10406,738 @@
           }
         }
       },
+      "PtLinesToBeUnraveled_POST": {
+        "type": "object",
+        "properties": {
+          "PtLinesToBeUnraveled": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "integer",
+                        "description": "Code",
+                        "format": ""
+                      },
+                      "DaTi": {
+                        "type": "string",
+                        "description": "Date",
+                        "format": "date"
+                      },
+                      "EmId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Employee",
+                        "format": ""
+                      },
+                      "VaIt": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "10",
+                          "11",
+                          "14",
+                          "2",
+                          "3",
+                          "4",
+                          "5",
+                          "6",
+                          "7",
+                          "8"
+                        ],
+                        "maxLength": 10,
+                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
+                        "format": ""
+                      },
+                      "ItCd": {
+                        "type": "string",
+                        "maxLength": 40,
+                        "description": "Itemcode",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Description",
+                        "format": ""
+                      },
+                      "QuUn": {
+                        "type": "number",
+                        "description": "Number",
+                        "format": "number"
+                      },
+                      "QuSa": {
+                        "type": "number",
+                        "description": "Sales (number)",
+                        "format": "number"
+                      },
+                      "CuId": {
+                        "type": "string",
+                        "maxLength": 3,
+                        "description": "Currency",
+                        "format": ""
+                      },
+                      "AmCo": {
+                        "type": "number",
+                        "description": "Cost price",
+                        "format": "number"
+                      },
+                      "CoAm": {
+                        "type": "number",
+                        "description": "Reimbursement",
+                        "format": "number"
+                      },
+                      "VaRc": {
+                        "type": "string",
+                        "maxLength": 4,
+                        "description": "VAT rate group",
+                        "format": ""
+                      },
+                      "Ch": {
+                        "type": "boolean",
+                        "description": "Charge",
+                        "format": ""
+                      },
+                      "V1Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Exception axis code 1",
+                        "format": ""
+                      },
+                      "V2Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Exception axis code 2",
+                        "format": ""
+                      },
+                      "V3Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Exception axis code 3",
+                        "format": ""
+                      },
+                      "V4Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Exception axis code 4",
+                        "format": ""
+                      },
+                      "V5Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Exception axis code 5",
+                        "format": ""
+                      },
+                      "PrId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Project",
+                        "format": ""
+                      },
+                      "PrSt": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Project phase",
+                        "format": ""
+                      },
+                      "DbId": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Sales contact",
+                        "format": ""
+                      },
+                      "StTi": {
+                        "type": "string",
+                        "description": "Start time",
+                        "format": "date-time"
+                      },
+                      "EnTi": {
+                        "type": "string",
+                        "description": "End time",
+                        "format": "date-time"
+                      },
+                      "PaTi": {
+                        "type": "string",
+                        "description": "Break time",
+                        "format": "date-time"
+                      },
+                      "Di01": {
+                        "type": "integer",
+                        "description": "(not used)",
+                        "format": ""
+                      },
+                      "Di02": {
+                        "type": "integer",
+                        "description": "(not used)",
+                        "format": ""
+                      },
+                      "Di03": {
+                        "type": "integer",
+                        "description": "(not used)",
+                        "format": ""
+                      },
+                      "Di04": {
+                        "type": "integer",
+                        "description": "(not used)",
+                        "format": ""
+                      },
+                      "Di05": {
+                        "type": "integer",
+                        "description": "(not used)",
+                        "format": ""
+                      },
+                      "ErId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Employer",
+                        "format": ""
+                      },
+                      "EnSe": {
+                        "type": "integer",
+                        "description": "Employment",
+                        "format": ""
+                      },
+                      "FuId": {
+                        "type": "string",
+                        "maxLength": 30,
+                        "description": "Job",
+                        "format": ""
+                      },
+                      "CoLa": {
+                        "type": "string",
+                        "maxLength": 3,
+                        "description": "Legislative country",
+                        "format": ""
+                      },
+                      "Rem": {
+                        "type": "string",
+                        "maxLength": 30,
+                        "description": "Remark",
+                        "format": ""
+                      },
+                      "AxId": {
+                        "type": "string",
+                        "maxLength": 1,
+                        "description": "Project allocation axis",
+                        "format": ""
+                      },
+                      "VbCo": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Code verbijzondering",
+                        "format": ""
+                      },
+                      "UpFc": {
+                        "type": "number",
+                        "description": "Price per unit",
+                        "format": "number"
+                      },
+                      "AmFc": {
+                        "type": "number",
+                        "description": "Sales price",
+                        "format": "number"
+                      },
+                      "PcId": {
+                        "type": "string",
+                        "maxLength": 12,
+                        "description": "Placement",
+                        "format": ""
+                      },
+                      "AmPy": {
+                        "type": "number",
+                        "description": "Wage price",
+                        "format": "number"
+                      },
+                      "CcSr": {
+                        "type": "string",
+                        "maxLength": 30,
+                        "description": "Cost centre sales contact",
+                        "format": ""
+                      },
+                      "RfCs": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Order number/reference",
+                        "format": ""
+                      },
+                      "Fref": {
+                        "type": "string",
+                        "maxLength": 32,
+                        "description": "Invoice reference",
+                        "format": ""
+                      },
+                      "DsIn": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Internal description",
+                        "format": ""
+                      },
+                      "DsEx": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Description external",
+                        "format": ""
+                      },
+                      "WoHo": {
+                        "type": "boolean",
+                        "description": "Working from home",
+                        "format": ""
+                      },
+                      "ViTr": {
+                        "type": "string",
+                        "enum": [
+                          "11",
+                          "12",
+                          "13",
+                          "14",
+                          "15",
+                          "21",
+                          "22",
+                          "31",
+                          "32",
+                          "41",
+                          "51"
+                        ],
+                        "maxLength": 20,
+                        "description": "Means of transport\n11 = Petrol vehicles;\n12 = Diesel vehicle;\n13 = Cars belonging to (plug-in) hybrids;\n14 = Cars 100% electric;\n15 = Other fuel cars;\n21 = Petrol/diesel motorcycle ;\n22 = Electric motorcycle;\n31 = Petrol or diesel moped/scooter;\n32 = Electric moped/scooter (including speed-pedelec);\n41 = (Electric) bicycle (not being a speed-pedelec) or walking;\n51 = Public transportation;",
+                        "format": ""
+                      },
+                      "ViTv": {
+                        "type": "string",
+                        "enum": [
+                          "01",
+                          "02"
+                        ],
+                        "maxLength": 20,
+                        "description": "Type of journey\n01 = Commuting;\n02 = Business trip;",
+                        "format": ""
+                      },
+                      "ViTm": {
+                        "type": "string",
+                        "enum": [
+                          "11",
+                          "12",
+                          "13",
+                          "14",
+                          "15",
+                          "21",
+                          "22",
+                          "29",
+                          "31",
+                          "32",
+                          "38",
+                          "39",
+                          "41",
+                          "49",
+                          "51"
+                        ],
+                        "maxLength": 20,
+                        "description": "Means of transport for travel expenses\n11 = Petrol vehicle;\n12 = Diesel vehicle;\n13 = Auto (Plug in) Hybrid;\n14 = 100% electric vehicle;\n15 = Other fuel car;\n21 = Motorbike petrol;\n22 = Electric motorcycle;\n29 = Motorbike diesel;\n31 = Petrol moped/scooter;\n32 = Moped/scooter 100% electric;\n38 = Moped/scooter diesel;\n39 = Speed-pedelec;\n41 = (Electric) bicycle;\n49 = By foot;\n51 = Public transport ;",
+                        "format": ""
+                      },
+                      "FileId": {
+                        "type": "string",
+                        "maxLength": 32,
+                        "description": "File Id",
+                        "format": ""
+                      },
+                      "FileName": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Filename",
+                        "format": ""
+                      },
+                      "FileStream": {
+                        "type": "string",
+                        "description": "File as byte-array",
+                        "format": "byte"
+                      }
+                    },
+                    "required": [
+                      "DaTi",
+                      "EmId",
+                      "VaIt",
+                      "ItCd"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "PtLinesToBeUnraveled_PUT": {
+        "type": "object",
+        "properties": {
+          "PtLinesToBeUnraveled": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "integer",
+                        "description": "Code",
+                        "format": ""
+                      },
+                      "DaTi": {
+                        "type": "string",
+                        "description": "Date",
+                        "format": "date"
+                      },
+                      "EmId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Employee",
+                        "format": ""
+                      },
+                      "VaIt": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "10",
+                          "11",
+                          "14",
+                          "2",
+                          "3",
+                          "4",
+                          "5",
+                          "6",
+                          "7",
+                          "8"
+                        ],
+                        "maxLength": 10,
+                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
+                        "format": ""
+                      },
+                      "ItCd": {
+                        "type": "string",
+                        "maxLength": 40,
+                        "description": "Itemcode",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Description",
+                        "format": ""
+                      },
+                      "QuUn": {
+                        "type": "number",
+                        "multipleOf": 1E-05,
+                        "description": "Number",
+                        "format": "float"
+                      },
+                      "QuSa": {
+                        "type": "number",
+                        "multipleOf": 1E-05,
+                        "description": "Sales (number)",
+                        "format": "float"
+                      },
+                      "CuId": {
+                        "type": "string",
+                        "maxLength": 3,
+                        "description": "Currency",
+                        "format": ""
+                      },
+                      "AmCo": {
+                        "type": "number",
+                        "multipleOf": 1E-10,
+                        "description": "Cost price",
+                        "format": "float"
+                      },
+                      "CoAm": {
+                        "type": "number",
+                        "multipleOf": 1E-10,
+                        "description": "Reimbursement",
+                        "format": "float"
+                      },
+                      "VaRc": {
+                        "type": "string",
+                        "maxLength": 4,
+                        "description": "VAT rate group",
+                        "format": ""
+                      },
+                      "Ch": {
+                        "type": "boolean",
+                        "description": "Charge",
+                        "format": ""
+                      },
+                      "V1Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Exception axis code 1",
+                        "format": ""
+                      },
+                      "V2Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Exception axis code 2",
+                        "format": ""
+                      },
+                      "V3Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Exception axis code 3",
+                        "format": ""
+                      },
+                      "V4Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Exception axis code 4",
+                        "format": ""
+                      },
+                      "V5Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Exception axis code 5",
+                        "format": ""
+                      },
+                      "PrId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Project",
+                        "format": ""
+                      },
+                      "PrSt": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Project phase",
+                        "format": ""
+                      },
+                      "DbId": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Sales contact",
+                        "format": ""
+                      },
+                      "StTi": {
+                        "type": "string",
+                        "description": "Start time",
+                        "format": "date-time"
+                      },
+                      "EnTi": {
+                        "type": "string",
+                        "description": "End time",
+                        "format": "date-time"
+                      },
+                      "PaTi": {
+                        "type": "string",
+                        "description": "Break time",
+                        "format": "date-time"
+                      },
+                      "Di01": {
+                        "type": "integer",
+                        "description": "(not used)",
+                        "format": ""
+                      },
+                      "Di02": {
+                        "type": "integer",
+                        "description": "(not used)",
+                        "format": ""
+                      },
+                      "Di03": {
+                        "type": "integer",
+                        "description": "(not used)",
+                        "format": ""
+                      },
+                      "Di04": {
+                        "type": "integer",
+                        "description": "(not used)",
+                        "format": ""
+                      },
+                      "Di05": {
+                        "type": "integer",
+                        "description": "(not used)",
+                        "format": ""
+                      },
+                      "ErId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Employer",
+                        "format": ""
+                      },
+                      "EnSe": {
+                        "type": "integer",
+                        "description": "Employment",
+                        "format": ""
+                      },
+                      "FuId": {
+                        "type": "string",
+                        "maxLength": 30,
+                        "description": "Job",
+                        "format": ""
+                      },
+                      "CoLa": {
+                        "type": "string",
+                        "maxLength": 3,
+                        "description": "Legislative country",
+                        "format": ""
+                      },
+                      "Rem": {
+                        "type": "string",
+                        "maxLength": 30,
+                        "description": "Remark",
+                        "format": ""
+                      },
+                      "AxId": {
+                        "type": "string",
+                        "maxLength": 1,
+                        "description": "Project allocation axis",
+                        "format": ""
+                      },
+                      "VbCo": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Code verbijzondering",
+                        "format": ""
+                      },
+                      "UpFc": {
+                        "type": "number",
+                        "multipleOf": 1E-10,
+                        "description": "Price per unit",
+                        "format": "float"
+                      },
+                      "AmFc": {
+                        "type": "number",
+                        "multipleOf": 1E-10,
+                        "description": "Sales price",
+                        "format": "float"
+                      },
+                      "PcId": {
+                        "type": "string",
+                        "maxLength": 12,
+                        "description": "Placement",
+                        "format": ""
+                      },
+                      "AmPy": {
+                        "type": "number",
+                        "multipleOf": 1E-10,
+                        "description": "Wage price",
+                        "format": "float"
+                      },
+                      "CcSr": {
+                        "type": "string",
+                        "maxLength": 30,
+                        "description": "Cost centre sales contact",
+                        "format": ""
+                      },
+                      "RfCs": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Order number/reference",
+                        "format": ""
+                      },
+                      "Fref": {
+                        "type": "string",
+                        "maxLength": 32,
+                        "description": "Invoice reference",
+                        "format": ""
+                      },
+                      "DsIn": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Internal description",
+                        "format": ""
+                      },
+                      "DsEx": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Description external",
+                        "format": ""
+                      },
+                      "WoHo": {
+                        "type": "boolean",
+                        "description": "Working from home",
+                        "format": ""
+                      },
+                      "ViTr": {
+                        "type": "string",
+                        "enum": [
+                          "11",
+                          "12",
+                          "13",
+                          "14",
+                          "15",
+                          "21",
+                          "22",
+                          "31",
+                          "32",
+                          "41",
+                          "51"
+                        ],
+                        "maxLength": 20,
+                        "description": "Means of transport\n11 = Petrol vehicles;\n12 = Diesel vehicle;\n13 = Cars belonging to (plug-in) hybrids;\n14 = Cars 100% electric;\n15 = Other fuel cars;\n21 = Petrol/diesel motorcycle ;\n22 = Electric motorcycle;\n31 = Petrol or diesel moped/scooter;\n32 = Electric moped/scooter (including speed-pedelec);\n41 = (Electric) bicycle (not being a speed-pedelec) or walking;\n51 = Public transportation;",
+                        "format": ""
+                      },
+                      "ViTv": {
+                        "type": "string",
+                        "enum": [
+                          "01",
+                          "02"
+                        ],
+                        "maxLength": 20,
+                        "description": "Type of journey\n01 = Commuting;\n02 = Business trip;",
+                        "format": ""
+                      },
+                      "ViTm": {
+                        "type": "string",
+                        "enum": [
+                          "11",
+                          "12",
+                          "13",
+                          "14",
+                          "15",
+                          "21",
+                          "22",
+                          "29",
+                          "31",
+                          "32",
+                          "38",
+                          "39",
+                          "41",
+                          "49",
+                          "51"
+                        ],
+                        "maxLength": 20,
+                        "description": "Means of transport for travel expenses\n11 = Petrol vehicle;\n12 = Diesel vehicle;\n13 = Auto (Plug in) Hybrid;\n14 = 100% electric vehicle;\n15 = Other fuel car;\n21 = Motorbike petrol;\n22 = Electric motorcycle;\n29 = Motorbike diesel;\n31 = Petrol moped/scooter;\n32 = Moped/scooter 100% electric;\n38 = Moped/scooter diesel;\n39 = Speed-pedelec;\n41 = (Electric) bicycle;\n49 = By foot;\n51 = Public transport ;",
+                        "format": ""
+                      },
+                      "FileId": {
+                        "type": "string",
+                        "maxLength": 32,
+                        "description": "File Id",
+                        "format": ""
+                      },
+                      "FileName": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Filename",
+                        "format": ""
+                      },
+                      "FileStream": {
+                        "type": "string",
+                        "description": "File as byte-array",
+                        "format": "byte"
+                      }
+                    },
+                    "required": [
+                      "Id"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "PtPrognosisProject_POST": {
         "type": "object",
         "properties": {
@@ -10387,7 +11282,7 @@
                       "VbCo": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Allocation code",
+                        "description": "Code verbijzondering",
                         "format": ""
                       },
                       "PrId": {
@@ -10440,7 +11335,7 @@
                       "VbCo": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Allocation code",
+                        "description": "Code verbijzondering",
                         "format": ""
                       },
                       "PrId": {
@@ -10481,7 +11376,7 @@
                       "GuPa": {
                         "type": "string",
                         "maxLength": 38,
-                        "description": "Related line \u0027GUID\u0027",
+                        "description": "Related line 'GUID'",
                         "format": "uuid"
                       },
                       "Type": {
@@ -10564,7 +11459,7 @@
                       "GuPa": {
                         "type": "string",
                         "maxLength": 38,
-                        "description": "Related line \u0027GUID\u0027",
+                        "description": "Related line 'GUID'",
                         "format": "uuid"
                       },
                       "Type": {
@@ -10636,7 +11531,7 @@
                     "properties": {
                       "PrrI": {
                         "type": "integer",
-                        "description": "$17367=Identity",
+                        "description": "Identity",
                         "format": ""
                       },
                       "PrId": {
@@ -10693,7 +11588,7 @@
                     "properties": {
                       "PrrI": {
                         "type": "integer",
-                        "description": "$17367=Identity",
+                        "description": "Identity",
                         "format": ""
                       },
                       "PrId": {
@@ -11033,7 +11928,7 @@
                           "3"
                         ],
                         "maxLength": 20,
-                        "description": "Collect\n1 = Overeenkomstig verkooprelatie;\n2 = Factuur niet incasseren;\n3 = Factuur incasseren;",
+                        "description": "Collect\n1 = In accordance with sales contact;\n2 = Do not collect invoice;\n3 = Collect invoice;",
                         "format": ""
                       },
                       "RpIp": {
@@ -11067,7 +11962,7 @@
                           "3"
                         ],
                         "maxLength": 20,
-                        "description": "Project type\n0 = Standaard;\n1 = Klantovereenkomst;\n2 = Werkbon;\n3 = Investeringsproject;",
+                        "description": "Project type\n0 = Default;\n1 = Customer agreement;\n2 = Work slip;\n3 = Investment project;",
                         "format": ""
                       },
                       "CmId": {
@@ -11086,7 +11981,7 @@
                           "4"
                         ],
                         "maxLength": 20,
-                        "description": "Cost centre claim\n0 = Niet van toepassing;\n1 = Invullen door medewerker, wijzigen door klant toegestaan;\n2 = Invullen door medewerker, wijzigen door klant niet toegestaan;\n3 = Invullen door klant verplicht;\n4 = Overnemen van plaatsing;",
+                        "description": "Cost centre claim\n0 = Not applicable;\n1 = Completion by employee and changing by customer allowed;\n2 = Completion by employee and changing by customer not allowed;\n3 = Completion by customer mandatory;\n4 = Copy from placement;",
                         "format": ""
                       },
                       "RpDe": {
@@ -11130,7 +12025,7 @@
                           "3M"
                         ],
                         "maxLength": 20,
-                        "description": "Probationary period\n1M = Een maand;\n2M = Twee maanden;\nOM = Overig;\n6M = Een halfjaar;\n12M = Een jaar;\n9M = Negen maanden;\nNM = Geen;\n2W = Twee weken;\n3M = Drie maanden;",
+                        "description": "Probationary period\n1M = One month;\n2M = Two months;\nOM = Other;\n6M = Half year;\n12M = One year;\n9M = Nine months;\nNM = None;\n2W = Two weeks;\n3M = Three months;",
                         "format": ""
                       },
                       "ToTe": {
@@ -11141,11 +12036,11 @@
                       "ToTp": {
                         "type": "string",
                         "enum": [
-                          "U",
+                          "H",
                           "W"
                         ],
                         "maxLength": 20,
-                        "description": "Takeover period\nU = Uren;\nW = Weken;",
+                        "description": "Takeover period\nH = Hours;\nW = Weeks;",
                         "format": ""
                       },
                       "ExTe": {
@@ -11156,11 +12051,11 @@
                       "ExTp": {
                         "type": "string",
                         "enum": [
-                          "U",
+                          "H",
                           "W"
                         ],
                         "maxLength": 20,
-                        "description": "Extended placement period\nU = Uren;\nW = Weken;",
+                        "description": "Extended placement period\nH = Hours;\nW = Weeks;",
                         "format": ""
                       },
                       "ApPe": {
@@ -11172,7 +12067,7 @@
                           "3"
                         ],
                         "maxLength": 20,
-                        "description": "Apply regularly\n0 = Periodiek vanaf verjaardag;\n1 = Periodiek in huidige periode;\n2 = Periodiek in volgende periode;\n3 = Periodiek vanaf begin jaar (ABU);",
+                        "description": "Apply regularly\n0 = Regularly as of birthday;\n1 = Periodic in current period;\n2 = Periodic in next period;\n3 = Regularly as of start year (ABU);",
                         "format": ""
                       },
                       "CPeP": {
@@ -11184,7 +12079,7 @@
                           "3"
                         ],
                         "maxLength": 20,
-                        "description": "Collection period\n0 = Niet verzamelen per periode;\n1 = Per week;\n2 = Per maand;\n3 = Per 4 weken;",
+                        "description": "Collection period\n0 = No collection per period;\n1 = Per week;\n2 = Per month;\n3 = Per 4 weeks;",
                         "format": ""
                       },
                       "CMeP": {
@@ -11205,7 +12100,7 @@
                           "99"
                         ],
                         "maxLength": 20,
-                        "description": "Collection method\n0 = Per verkooprelatie;\n1 = Per verkooprelatie/medewerker;\n10 = Per kostenplaats verkooprelatie / medewerker;\n11 = Per conceptdebiteur;\n2 = Per project;\n3 = Per projectfase;\n4 = Per project / medewerker;\n5 = Per projectfase / medewerker;\n6 = Per kostenplaats verkooprelatie;\n7 = Per afdeling;\n8 = Per afdeling / kostenplaats verkooprelatie;\n9 = Per referentie opdrachtgever;\n99 = Per regel;",
+                        "description": "Collection method\n0 = Per customer relation;\n1 = Per customer relation/employee;\n10 = Sales contact/employee per cost centre;\n11 = Per draft debtor;\n2 = Per project;\n3 = Per project phase;\n4 = Per project / employee;\n5 = Per project phase / employee;\n6 = Sales contact per cost centre;\n7 = Per department;\n8 = Sales contact per department/cost centre;\n9 = Per client reference;\n99 = Per line;",
                         "format": ""
                       },
                       "PrRe": {
@@ -11219,7 +12114,7 @@
                           "5"
                         ],
                         "maxLength": 20,
-                        "description": "Attachment issuing\n0 = Alle bijlagen verstrekken uit de factuur;\n1 = Alle bijlagen verstrekken uit de verkooporder en de projectbon;\n2 = Alle bijlagen verstrekken uit de projectbon;\n3 = Alle bijlagen verstrekken uit de nacalculatie;\n4 = Alle bijlagen verstrekken uit de verkooporder, pakbon en de nacalculatie;\n5 = Alle bijlagen verstrekken uit de projectbon en de nacalculatie;",
+                        "description": "Attachment issuing\n0 = Provide all attachments from the invoice;\n1 = Issue all attachments from the sales order and project form;\n2 = Issue all attachments from the project form;\n3 = Issue all attachments from actual costing;\n4 = Issue all attachments from the sales order, packing slip and actual costing;\n5 = Issue all attachments from the project form and actual costing;",
                         "format": ""
                       },
                       "ClId": {
@@ -11237,7 +12132,7 @@
                           "3"
                         ],
                         "maxLength": 20,
-                        "description": "Price agreement for placement\n0 = Niet verplicht;\n1 = Verplicht, afwijken niet toegestaan;\n2 = Verplicht, afwijken op uurloon en kostenregels en uitsluiten regels toegestaan;\n3 = Verplicht, afwijken op kostenregels en uitsluiten regels toegestaan;",
+                        "description": "Price agreement for placement\n0 = Not required;\n1 = Required, not permitted to deviate;\n2 = Required, deviating from the hourly wage, cost lines and exclusions allowed;\n3 = Required, deviating from the cost lines and exclusions allowed;",
                         "format": ""
                       },
                       "NPDP": {
@@ -11248,7 +12143,7 @@
                           "2"
                         ],
                         "maxLength": 20,
-                        "description": "Purchase price agreement on placement\n0 = Niet verplicht;\n1 = Verplicht, afwijken en uitsluiten toegestaan;\n2 = Verplicht, afwijken en uitsluiten niet toegestaan;",
+                        "description": "Purchase price agreement on placement\n0 = Not mandatory;\n1 = Mandatory, deviation and exclusion allowed;\n2 = Mandatory, deviation and exclusion not allowed;",
                         "format": ""
                       },
                       "CrMe": {
@@ -11263,7 +12158,7 @@
                           "7"
                         ],
                         "maxLength": 20,
-                        "description": "Crediting method\n1 = Gesaldeerde correctiefactuur, splitsen per verzamelperiode;\n2 = Volledige credit- en vervangende debetfactuur, splitsen per verzamelperiode;\n3 = Aparte credit- en debetfactuur met alleen de correcties, splitsen per verzamelperiode;\n4 = Gesaldeerde correctiefactuur, niet splitsen per verzamelperiode;\n5 = Volledige credit- en vervangende debetfactuur, niet splitsen per verzamelperiode;\n6 = Aparte credit- en debetfactuur met alleen de correcties, niet splitsen per verzamelperiode;\n7 = Gesaldeerde correctiefactuur per klantovereenkomst;",
+                        "description": "Crediting method\n1 = Set-off correction invoice, split per collection period;\n2 = Full credit and replacement debit invoice, split per collection period;\n3 = Separate credit and debit invoice with only corrections, split per collection period;\n4 = Set-off correction invoice, not split per collection period;\n5 = Full credit and replacement debit invoice, not split per collection period;\n6 = Separate credit and debit invoice with only corrections, not split per collection period;\n7 = Set off correction invoice per customer agreement;",
                         "format": ""
                       },
                       "IsId": {
@@ -11284,7 +12179,7 @@
                           "7"
                         ],
                         "maxLength": 20,
-                        "description": "Work in progress method\n0 = Geen onderhanden werk;\n1 = Resultaat o.b.v. gereed project (CC);\n2 = Resultaat o.b.v. nacalculatie (NTF);\n3 = Resultaat o.b.v. voortgang (POC);\n4 = Kosten o.b.v. uurloon, toeslag en opslag;\n5 = Omzettoekenning o.b.v. nacalculatie;\n6 = Omzettoekenning o.b.v. urenvoortgang project;\n7 = Omzettoekenning o.b.v. urenvoortgang werksoort;",
+                        "description": "Work in progress method\n0 = No work in progress;\n1 = Result based on a ready project (CC);\n2 = Result based on actual costing (NTF);\n3 = Result based on progress (POC);\n4 = Costs based on hourly wage, allowance and surcharge;\n5 = Revenue allocation based on actual costing;\n6 = Revenue allocation based on project time progress;\n7 = Revenue allocation based on hours of work progress;",
                         "format": ""
                       },
                       "RBMt": {
@@ -11295,7 +12190,7 @@
                           "2"
                         ],
                         "maxLength": 20,
-                        "description": "Reversed billing method\n0 = Niet van toepassing;\n1 = Import via reversed billing, geen factuur verstrekken;\n2 = Import via reversed billing, wel factuur verstrekken;",
+                        "description": "Reversed billing method\n0 = Not applicable;\n1 = Import via reversed billing, do not issue invoice;\n2 = Import via reversed billing, invoice issued;",
                         "format": ""
                       },
                       "ChDe": {
@@ -11319,7 +12214,7 @@
                           "5"
                         ],
                         "maxLength": 20,
-                        "description": "Project progress method\n1 = Op basis van uren;\n2 = Op basis van kosten;\n3 = Handmatig;\n4 = Op basis van facturatie;\n5 = Op basis van prognose kosten;",
+                        "description": "Project progress method\n1 = Based on number of hours;\n2 = Based on costs;\n3 = Manually;\n4 = Based on invoicing;\n5 = Based on forecasted costs;",
                         "format": ""
                       },
                       "MePr": {
@@ -11329,7 +12224,7 @@
                           "P"
                         ],
                         "maxLength": 20,
-                        "description": "Project progress per\nF = Projectfase;\nP = Project;",
+                        "description": "Project progress per\nF = Project phase;\nP = Project;",
                         "format": ""
                       },
                       "MePe": {
@@ -11339,7 +12234,7 @@
                           "P"
                         ],
                         "maxLength": 20,
-                        "description": "Interim result per\nF = Projectfase;\nP = Project;",
+                        "description": "Interim result per\nF = Project phase;\nP = Project;",
                         "format": ""
                       },
                       "SpIr": {
@@ -11359,7 +12254,7 @@
                           "7"
                         ],
                         "maxLength": 20,
-                        "description": "Check of the processing based on\n1 = Maandag;\n2 = Dinsdag;\n3 = Woensdag;\n4 = Donderdag;\n5 = Vrijdag;\n6 = Zaterdag;\n7 = Zondag;",
+                        "description": "Check of the processing based on\n1 = Monday;\n2 = Tuesday;\n3 = Wednesday;\n4 = Thursday;\n5 = Friday;\n6 = Saturday;\n7 = Sunday;",
                         "format": ""
                       },
                       "Freq": {
@@ -11419,7 +12314,7 @@
                           "REG"
                         ],
                         "maxLength": 20,
-                        "description": "Appointment method\nAFK = Afkoop;\nANS = Aanneemsom;\nEHP = Eenheidsprijs;\nREG = Regie;",
+                        "description": "Appointment method\nAFK = Redemption;\nANS = Agreed price;\nEHP = Unit price;\nREG = Management;",
                         "format": ""
                       },
                       "ViWo": {
@@ -11430,7 +12325,7 @@
                           "REP"
                         ],
                         "maxLength": 20,
-                        "description": "Order type\nINS = Inspectie;\nMUT = Mutatie;\nREP = Reparatie;",
+                        "description": "Order type\nINS = Inspection;\nMUT = Entry;\nREP = Repair;",
                         "format": ""
                       },
                       "ViOr": {
@@ -11441,7 +12336,7 @@
                           "ORG"
                         ],
                         "maxLength": 20,
-                        "description": "Order characterisation\nGAR = Garantie;\nMWK = Meerwerk/aanvullen;\nORG = Origineel;",
+                        "description": "Order characterisation\nGAR = Guarantee;\nMWK = Additional work/supplement;\nORG = Original;",
                         "format": ""
                       },
                       "NoCt": {
@@ -11482,18 +12377,18 @@
                       "Bankaccount": {
                         "type": "string",
                         "maxLength": 40,
-                        "description": "Banknummer afwijkend",
+                        "description": "Banknummer\n            afwijkend",
                         "format": ""
                       },
                       "FileName": {
                         "type": "string",
                         "maxLength": 255,
-                        "description": "Filename",
+                        "description": "\n            Filename",
                         "format": ""
                       },
                       "FileStream": {
                         "type": "string",
-                        "description": "File as byte-array",
+                        "description": "File\n            as byte-array",
                         "format": "byte"
                       },
                       "CdI1": {
@@ -11504,18 +12399,18 @@
                       "SignatureFileId1": {
                         "type": "string",
                         "maxLength": 32,
-                        "description": "Handtekening1 bestand",
+                        "description": "Handtekening1\n            bestand",
                         "format": ""
                       },
                       "SignatureFileName1": {
                         "type": "string",
                         "maxLength": 255,
-                        "description": "Handtekening1 naam bestand",
+                        "description": "Handtekening1\n            naam bestand",
                         "format": ""
                       },
                       "SignatureFileStream1": {
                         "type": "string",
-                        "description": "Handtekening1 afbeelding",
+                        "description": "Handtekening1\n            afbeelding",
                         "format": "byte"
                       },
                       "CdI2": {
@@ -11526,18 +12421,18 @@
                       "SignatureFileId2": {
                         "type": "string",
                         "maxLength": 32,
-                        "description": "Handtekening2 bestand",
+                        "description": "Handtekening2\n            bestand",
                         "format": ""
                       },
                       "SignatureFileName2": {
                         "type": "string",
                         "maxLength": 255,
-                        "description": "Handtekening2 naam bestand",
+                        "description": "Handtekening2\n            naam bestand",
                         "format": ""
                       },
                       "SignatureFileStream2": {
                         "type": "string",
-                        "description": "Handtekening2 afbeelding",
+                        "description": "Handtekening2\n            afbeelding",
                         "format": "byte"
                       },
                       "CdIp": {
@@ -11563,12 +12458,12 @@
                       },
                       "PtPrpDaBe": {
                         "type": "string",
-                        "description": "Begindatum cao inlener",
+                        "description": "Begindatum\n            cao inlener",
                         "format": "date"
                       },
                       "PtPrpTyEj": {
                         "type": "string",
-                        "description": "Soort eindejaarsuitkering",
+                        "description": "Soort\n            eindejaarsuitkering",
                         "format": ""
                       },
                       "PtPrpPaDa": {
@@ -11593,7 +12488,7 @@
                       },
                       "PtPrpNoPe": {
                         "type": "integer",
-                        "description": "Aantal periodes bij verkooprelatie",
+                        "description": "Aantal periodes bij\n            verkooprelatie",
                         "format": ""
                       },
                       "PtPrpPeUn": {
@@ -11610,13 +12505,13 @@
                       "PtPrpViTa": {
                         "type": "string",
                         "maxLength": 4,
-                        "description": "Afwijkende CBS cao-code",
+                        "description": "Afwijkende CBS\n            cao-code",
                         "format": ""
                       },
                       "PtPrpViTp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Soort periodieke verhoging",
+                        "description": "Soort periodieke\n            verhoging",
                         "format": ""
                       },
                       "PtPrpDmon": {
@@ -11651,13 +12546,13 @@
                       },
                       "PtPrpPFrA": {
                         "type": "integer",
-                        "description": "Periodieke verhoging vanaf leeftijd",
+                        "description": "Periodieke verhoging\n            vanaf leeftijd",
                         "format": ""
                       },
                       "PtPrpViEx": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Extra voorwaarde periodiek",
+                        "description": "Extra voorwaarde\n            periodiek",
                         "format": ""
                       },
                       "PtPrpReDa": {
@@ -11689,35 +12584,62 @@
                       },
                       "PtPrpWeAg": {
                         "type": "integer",
-                        "description": "Werkervaring opbouwen vanaf leeftijd",
+                        "description": "Werkervaring opbouwen\n            vanaf leeftijd",
                         "format": ""
                       },
                       "PtPrpVaIp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Telling onderbrekingsperiode",
+                        "description": "Telling\n            onderbrekingsperiode",
                         "format": ""
                       },
                       "PtPrpMoCo": {
                         "type": "integer",
-                        "description": "Kalenderdagen opnieuw tellen als onderbr.per.",
+                        "description": "Kalenderdagen opnieuw\n            tellen als onderbr.per.",
                         "format": ""
                       },
                       "PtPrpVaIe": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Onderbrekingsperiode eenheid",
+                        "description": "Onderbrekingsperiode\n            eenheid",
                         "format": ""
                       },
                       "PtPrpAcHi": {
                         "type": "boolean",
-                        "description": "Beoordeling inlener benodigd",
+                        "description": "Beoordeling inlener\n            benodigd",
                         "format": ""
                       },
                       "PtPrpVaCo": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Uitvoeren periodieke verhoging",
+                        "description": "Uitvoeren periodieke\n            verhoging",
+                        "format": ""
+                      },
+                      "PtPrpMeVp": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Methode opbouw vakantiegeld",
+                        "format": ""
+                      },
+                      "PtPrpPdVp": {
+                        "type": "integer",
+                        "description": "Peildag vakantiegeld",
+                        "format": ""
+                      },
+                      "PtPrpPmVp": {
+                        "type": "integer",
+                        "description": "Peilmaand vakantiegeld",
+                        "format": ""
+                      },
+                      "PtPrpBwVp": {
+                        "type": "integer",
+                        "description": "Opbouw vanaf week",
+                        "format": ""
+                      },
+                      "PtPrpMeMv": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Methode minimum vakantiegeld",
                         "format": ""
                       },
                       "PtPrpMeMo": {
@@ -11778,7 +12700,7 @@
                                       "HmAd": {
                                         "type": "string",
                                         "maxLength": 30,
-                                        "description": "House number addition",
+                                        "description": "Extension (a, b, etc.) to house number",
                                         "format": ""
                                       },
                                       "ZpCd": {
@@ -11890,7 +12812,7 @@
                                           "5"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Method to calculate progress rate\n1 = Op basis van uren;\n2 = Op basis van kosten;\n3 = Handmatig;\n4 = Op basis van facturatie;\n5 = Op basis van prognose kosten;",
+                                        "description": "Method to calculate progress rate\n1 = Based on number of hours;\n2 = Based on costs;\n3 = Manually;\n4 = Based on invoicing;\n5 = Based on forecasted costs;",
                                         "format": ""
                                       },
                                       "SpIr": {
@@ -11906,7 +12828,7 @@
                                           "2"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Charge\n0 = Conform project;\n1 = Nacalculatie doorbelasten;\n2 = Nacalculatie niet doorbelasten;",
+                                        "description": "Charge\n0 = Conform project;\n1 = Pass on charges for actual costing;\n2 = Charges for actual costing not passed on;",
                                         "format": ""
                                       },
                                       "PsMn": {
@@ -12271,7 +13193,7 @@
                           "3"
                         ],
                         "maxLength": 20,
-                        "description": "Collect\n1 = Overeenkomstig verkooprelatie;\n2 = Factuur niet incasseren;\n3 = Factuur incasseren;",
+                        "description": "Collect\n1 = In accordance with sales contact;\n2 = Do not collect invoice;\n3 = Collect invoice;",
                         "format": ""
                       },
                       "RpIp": {
@@ -12305,7 +13227,7 @@
                           "3"
                         ],
                         "maxLength": 20,
-                        "description": "Project type\n0 = Standaard;\n1 = Klantovereenkomst;\n2 = Werkbon;\n3 = Investeringsproject;",
+                        "description": "Project type\n0 = Default;\n1 = Customer agreement;\n2 = Work slip;\n3 = Investment project;",
                         "format": ""
                       },
                       "CmId": {
@@ -12324,7 +13246,7 @@
                           "4"
                         ],
                         "maxLength": 20,
-                        "description": "Cost centre claim\n0 = Niet van toepassing;\n1 = Invullen door medewerker, wijzigen door klant toegestaan;\n2 = Invullen door medewerker, wijzigen door klant niet toegestaan;\n3 = Invullen door klant verplicht;\n4 = Overnemen van plaatsing;",
+                        "description": "Cost centre claim\n0 = Not applicable;\n1 = Completion by employee and changing by customer allowed;\n2 = Completion by employee and changing by customer not allowed;\n3 = Completion by customer mandatory;\n4 = Copy from placement;",
                         "format": ""
                       },
                       "RpDe": {
@@ -12369,7 +13291,7 @@
                           "3M"
                         ],
                         "maxLength": 20,
-                        "description": "Probationary period\n1M = Een maand;\n2M = Twee maanden;\nOM = Overig;\n6M = Een halfjaar;\n12M = Een jaar;\n9M = Negen maanden;\nNM = Geen;\n2W = Twee weken;\n3M = Drie maanden;",
+                        "description": "Probationary period\n1M = One month;\n2M = Two months;\nOM = Other;\n6M = Half year;\n12M = One year;\n9M = Nine months;\nNM = None;\n2W = Two weeks;\n3M = Three months;",
                         "format": ""
                       },
                       "ToTe": {
@@ -12380,11 +13302,11 @@
                       "ToTp": {
                         "type": "string",
                         "enum": [
-                          "U",
+                          "H",
                           "W"
                         ],
                         "maxLength": 20,
-                        "description": "Takeover period\nU = Uren;\nW = Weken;",
+                        "description": "Takeover period\nH = Hours;\nW = Weeks;",
                         "format": ""
                       },
                       "ExTe": {
@@ -12395,11 +13317,11 @@
                       "ExTp": {
                         "type": "string",
                         "enum": [
-                          "U",
+                          "H",
                           "W"
                         ],
                         "maxLength": 20,
-                        "description": "Extended placement period\nU = Uren;\nW = Weken;",
+                        "description": "Extended placement period\nH = Hours;\nW = Weeks;",
                         "format": ""
                       },
                       "ApPe": {
@@ -12411,7 +13333,7 @@
                           "3"
                         ],
                         "maxLength": 20,
-                        "description": "Apply regularly\n0 = Periodiek vanaf verjaardag;\n1 = Periodiek in huidige periode;\n2 = Periodiek in volgende periode;\n3 = Periodiek vanaf begin jaar (ABU);",
+                        "description": "Apply regularly\n0 = Regularly as of birthday;\n1 = Periodic in current period;\n2 = Periodic in next period;\n3 = Regularly as of start year (ABU);",
                         "format": ""
                       },
                       "CPeP": {
@@ -12423,7 +13345,7 @@
                           "3"
                         ],
                         "maxLength": 20,
-                        "description": "Collection period\n0 = Niet verzamelen per periode;\n1 = Per week;\n2 = Per maand;\n3 = Per 4 weken;",
+                        "description": "Collection period\n0 = No collection per period;\n1 = Per week;\n2 = Per month;\n3 = Per 4 weeks;",
                         "format": ""
                       },
                       "CMeP": {
@@ -12444,7 +13366,7 @@
                           "99"
                         ],
                         "maxLength": 20,
-                        "description": "Collection method\n0 = Per verkooprelatie;\n1 = Per verkooprelatie/medewerker;\n10 = Per kostenplaats verkooprelatie / medewerker;\n11 = Per conceptdebiteur;\n2 = Per project;\n3 = Per projectfase;\n4 = Per project / medewerker;\n5 = Per projectfase / medewerker;\n6 = Per kostenplaats verkooprelatie;\n7 = Per afdeling;\n8 = Per afdeling / kostenplaats verkooprelatie;\n9 = Per referentie opdrachtgever;\n99 = Per regel;",
+                        "description": "Collection method\n0 = Per customer relation;\n1 = Per customer relation/employee;\n10 = Sales contact/employee per cost centre;\n11 = Per draft debtor;\n2 = Per project;\n3 = Per project phase;\n4 = Per project / employee;\n5 = Per project phase / employee;\n6 = Sales contact per cost centre;\n7 = Per department;\n8 = Sales contact per department/cost centre;\n9 = Per client reference;\n99 = Per line;",
                         "format": ""
                       },
                       "PrRe": {
@@ -12458,7 +13380,7 @@
                           "5"
                         ],
                         "maxLength": 20,
-                        "description": "Attachment issuing\n0 = Alle bijlagen verstrekken uit de factuur;\n1 = Alle bijlagen verstrekken uit de verkooporder en de projectbon;\n2 = Alle bijlagen verstrekken uit de projectbon;\n3 = Alle bijlagen verstrekken uit de nacalculatie;\n4 = Alle bijlagen verstrekken uit de verkooporder, pakbon en de nacalculatie;\n5 = Alle bijlagen verstrekken uit de projectbon en de nacalculatie;",
+                        "description": "Attachment issuing\n0 = Provide all attachments from the invoice;\n1 = Issue all attachments from the sales order and project form;\n2 = Issue all attachments from the project form;\n3 = Issue all attachments from actual costing;\n4 = Issue all attachments from the sales order, packing slip and actual costing;\n5 = Issue all attachments from the project form and actual costing;",
                         "format": ""
                       },
                       "ClId": {
@@ -12476,7 +13398,7 @@
                           "3"
                         ],
                         "maxLength": 20,
-                        "description": "Price agreement for placement\n0 = Niet verplicht;\n1 = Verplicht, afwijken niet toegestaan;\n2 = Verplicht, afwijken op uurloon en kostenregels en uitsluiten regels toegestaan;\n3 = Verplicht, afwijken op kostenregels en uitsluiten regels toegestaan;",
+                        "description": "Price agreement for placement\n0 = Not required;\n1 = Required, not permitted to deviate;\n2 = Required, deviating from the hourly wage, cost lines and exclusions allowed;\n3 = Required, deviating from the cost lines and exclusions allowed;",
                         "format": ""
                       },
                       "NPDP": {
@@ -12487,7 +13409,7 @@
                           "2"
                         ],
                         "maxLength": 20,
-                        "description": "Purchase price agreement on placement\n0 = Niet verplicht;\n1 = Verplicht, afwijken en uitsluiten toegestaan;\n2 = Verplicht, afwijken en uitsluiten niet toegestaan;",
+                        "description": "Purchase price agreement on placement\n0 = Not mandatory;\n1 = Mandatory, deviation and exclusion allowed;\n2 = Mandatory, deviation and exclusion not allowed;",
                         "format": ""
                       },
                       "CrMe": {
@@ -12502,7 +13424,7 @@
                           "7"
                         ],
                         "maxLength": 20,
-                        "description": "Crediting method\n1 = Gesaldeerde correctiefactuur, splitsen per verzamelperiode;\n2 = Volledige credit- en vervangende debetfactuur, splitsen per verzamelperiode;\n3 = Aparte credit- en debetfactuur met alleen de correcties, splitsen per verzamelperiode;\n4 = Gesaldeerde correctiefactuur, niet splitsen per verzamelperiode;\n5 = Volledige credit- en vervangende debetfactuur, niet splitsen per verzamelperiode;\n6 = Aparte credit- en debetfactuur met alleen de correcties, niet splitsen per verzamelperiode;\n7 = Gesaldeerde correctiefactuur per klantovereenkomst;",
+                        "description": "Crediting method\n1 = Set-off correction invoice, split per collection period;\n2 = Full credit and replacement debit invoice, split per collection period;\n3 = Separate credit and debit invoice with only corrections, split per collection period;\n4 = Set-off correction invoice, not split per collection period;\n5 = Full credit and replacement debit invoice, not split per collection period;\n6 = Separate credit and debit invoice with only corrections, not split per collection period;\n7 = Set off correction invoice per customer agreement;",
                         "format": ""
                       },
                       "IsId": {
@@ -12523,7 +13445,7 @@
                           "7"
                         ],
                         "maxLength": 20,
-                        "description": "Work in progress method\n0 = Geen onderhanden werk;\n1 = Resultaat o.b.v. gereed project (CC);\n2 = Resultaat o.b.v. nacalculatie (NTF);\n3 = Resultaat o.b.v. voortgang (POC);\n4 = Kosten o.b.v. uurloon, toeslag en opslag;\n5 = Omzettoekenning o.b.v. nacalculatie;\n6 = Omzettoekenning o.b.v. urenvoortgang project;\n7 = Omzettoekenning o.b.v. urenvoortgang werksoort;",
+                        "description": "Work in progress method\n0 = No work in progress;\n1 = Result based on a ready project (CC);\n2 = Result based on actual costing (NTF);\n3 = Result based on progress (POC);\n4 = Costs based on hourly wage, allowance and surcharge;\n5 = Revenue allocation based on actual costing;\n6 = Revenue allocation based on project time progress;\n7 = Revenue allocation based on hours of work progress;",
                         "format": ""
                       },
                       "RBMt": {
@@ -12534,7 +13456,7 @@
                           "2"
                         ],
                         "maxLength": 20,
-                        "description": "Reversed billing method\n0 = Niet van toepassing;\n1 = Import via reversed billing, geen factuur verstrekken;\n2 = Import via reversed billing, wel factuur verstrekken;",
+                        "description": "Reversed billing method\n0 = Not applicable;\n1 = Import via reversed billing, do not issue invoice;\n2 = Import via reversed billing, invoice issued;",
                         "format": ""
                       },
                       "ChDe": {
@@ -12558,7 +13480,7 @@
                           "5"
                         ],
                         "maxLength": 20,
-                        "description": "Project progress method\n1 = Op basis van uren;\n2 = Op basis van kosten;\n3 = Handmatig;\n4 = Op basis van facturatie;\n5 = Op basis van prognose kosten;",
+                        "description": "Project progress method\n1 = Based on number of hours;\n2 = Based on costs;\n3 = Manually;\n4 = Based on invoicing;\n5 = Based on forecasted costs;",
                         "format": ""
                       },
                       "MePr": {
@@ -12568,7 +13490,7 @@
                           "P"
                         ],
                         "maxLength": 20,
-                        "description": "Project progress per\nF = Projectfase;\nP = Project;",
+                        "description": "Project progress per\nF = Project phase;\nP = Project;",
                         "format": ""
                       },
                       "MePe": {
@@ -12578,7 +13500,7 @@
                           "P"
                         ],
                         "maxLength": 20,
-                        "description": "Interim result per\nF = Projectfase;\nP = Project;",
+                        "description": "Interim result per\nF = Project phase;\nP = Project;",
                         "format": ""
                       },
                       "SpIr": {
@@ -12599,7 +13521,7 @@
                           "7"
                         ],
                         "maxLength": 20,
-                        "description": "Check of the processing based on\n1 = Maandag;\n2 = Dinsdag;\n3 = Woensdag;\n4 = Donderdag;\n5 = Vrijdag;\n6 = Zaterdag;\n7 = Zondag;",
+                        "description": "Check of the processing based on\n1 = Monday;\n2 = Tuesday;\n3 = Wednesday;\n4 = Thursday;\n5 = Friday;\n6 = Saturday;\n7 = Sunday;",
                         "format": ""
                       },
                       "Freq": {
@@ -12659,7 +13581,7 @@
                           "REG"
                         ],
                         "maxLength": 20,
-                        "description": "Appointment method\nAFK = Afkoop;\nANS = Aanneemsom;\nEHP = Eenheidsprijs;\nREG = Regie;",
+                        "description": "Appointment method\nAFK = Redemption;\nANS = Agreed price;\nEHP = Unit price;\nREG = Management;",
                         "format": ""
                       },
                       "ViWo": {
@@ -12670,7 +13592,7 @@
                           "REP"
                         ],
                         "maxLength": 20,
-                        "description": "Order type\nINS = Inspectie;\nMUT = Mutatie;\nREP = Reparatie;",
+                        "description": "Order type\nINS = Inspection;\nMUT = Entry;\nREP = Repair;",
                         "format": ""
                       },
                       "ViOr": {
@@ -12681,7 +13603,7 @@
                           "ORG"
                         ],
                         "maxLength": 20,
-                        "description": "Order characterisation\nGAR = Garantie;\nMWK = Meerwerk/aanvullen;\nORG = Origineel;",
+                        "description": "Order characterisation\nGAR = Guarantee;\nMWK = Additional work/supplement;\nORG = Original;",
                         "format": ""
                       },
                       "NoCt": {
@@ -12723,18 +13645,18 @@
                       "Bankaccount": {
                         "type": "string",
                         "maxLength": 40,
-                        "description": "Banknummer afwijkend",
+                        "description": "Banknummer\n            afwijkend",
                         "format": ""
                       },
                       "FileName": {
                         "type": "string",
                         "maxLength": 255,
-                        "description": "Filename",
+                        "description": "\n            Filename",
                         "format": ""
                       },
                       "FileStream": {
                         "type": "string",
-                        "description": "File as byte-array",
+                        "description": "File\n            as byte-array",
                         "format": "byte"
                       },
                       "CdI1": {
@@ -12745,18 +13667,18 @@
                       "SignatureFileId1": {
                         "type": "string",
                         "maxLength": 32,
-                        "description": "Handtekening1 bestand",
+                        "description": "Handtekening1\n            bestand",
                         "format": ""
                       },
                       "SignatureFileName1": {
                         "type": "string",
                         "maxLength": 255,
-                        "description": "Handtekening1 naam bestand",
+                        "description": "Handtekening1\n            naam bestand",
                         "format": ""
                       },
                       "SignatureFileStream1": {
                         "type": "string",
-                        "description": "Handtekening1 afbeelding",
+                        "description": "Handtekening1\n            afbeelding",
                         "format": "byte"
                       },
                       "CdI2": {
@@ -12767,18 +13689,18 @@
                       "SignatureFileId2": {
                         "type": "string",
                         "maxLength": 32,
-                        "description": "Handtekening2 bestand",
+                        "description": "Handtekening2\n            bestand",
                         "format": ""
                       },
                       "SignatureFileName2": {
                         "type": "string",
                         "maxLength": 255,
-                        "description": "Handtekening2 naam bestand",
+                        "description": "Handtekening2\n            naam bestand",
                         "format": ""
                       },
                       "SignatureFileStream2": {
                         "type": "string",
-                        "description": "Handtekening2 afbeelding",
+                        "description": "Handtekening2\n            afbeelding",
                         "format": "byte"
                       },
                       "CdIp": {
@@ -12804,12 +13726,12 @@
                       },
                       "PtPrpDaBe": {
                         "type": "string",
-                        "description": "Begindatum cao inlener",
+                        "description": "Begindatum\n            cao inlener",
                         "format": "date"
                       },
                       "PtPrpTyEj": {
                         "type": "string",
-                        "description": "Soort eindejaarsuitkering",
+                        "description": "Soort\n            eindejaarsuitkering",
                         "format": ""
                       },
                       "PtPrpPaDa": {
@@ -12834,7 +13756,7 @@
                       },
                       "PtPrpNoPe": {
                         "type": "integer",
-                        "description": "Aantal periodes bij verkooprelatie",
+                        "description": "Aantal periodes bij\n            verkooprelatie",
                         "format": ""
                       },
                       "PtPrpPeUn": {
@@ -12851,13 +13773,13 @@
                       "PtPrpViTa": {
                         "type": "string",
                         "maxLength": 4,
-                        "description": "Afwijkende CBS cao-code",
+                        "description": "Afwijkende CBS\n            cao-code",
                         "format": ""
                       },
                       "PtPrpViTp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Soort periodieke verhoging",
+                        "description": "Soort periodieke\n            verhoging",
                         "format": ""
                       },
                       "PtPrpDmon": {
@@ -12892,13 +13814,13 @@
                       },
                       "PtPrpPFrA": {
                         "type": "integer",
-                        "description": "Periodieke verhoging vanaf leeftijd",
+                        "description": "Periodieke verhoging\n            vanaf leeftijd",
                         "format": ""
                       },
                       "PtPrpViEx": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Extra voorwaarde periodiek",
+                        "description": "Extra voorwaarde\n            periodiek",
                         "format": ""
                       },
                       "PtPrpReDa": {
@@ -12930,35 +13852,62 @@
                       },
                       "PtPrpWeAg": {
                         "type": "integer",
-                        "description": "Werkervaring opbouwen vanaf leeftijd",
+                        "description": "Werkervaring opbouwen\n            vanaf leeftijd",
                         "format": ""
                       },
                       "PtPrpVaIp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Telling onderbrekingsperiode",
+                        "description": "Telling\n            onderbrekingsperiode",
                         "format": ""
                       },
                       "PtPrpMoCo": {
                         "type": "integer",
-                        "description": "Kalenderdagen opnieuw tellen als onderbr.per.",
+                        "description": "Kalenderdagen opnieuw\n            tellen als onderbr.per.",
                         "format": ""
                       },
                       "PtPrpVaIe": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Onderbrekingsperiode eenheid",
+                        "description": "Onderbrekingsperiode\n            eenheid",
                         "format": ""
                       },
                       "PtPrpAcHi": {
                         "type": "boolean",
-                        "description": "Beoordeling inlener benodigd",
+                        "description": "Beoordeling inlener\n            benodigd",
                         "format": ""
                       },
                       "PtPrpVaCo": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Uitvoeren periodieke verhoging",
+                        "description": "Uitvoeren periodieke\n            verhoging",
+                        "format": ""
+                      },
+                      "PtPrpMeVp": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Methode opbouw vakantiegeld",
+                        "format": ""
+                      },
+                      "PtPrpPdVp": {
+                        "type": "integer",
+                        "description": "Peildag vakantiegeld",
+                        "format": ""
+                      },
+                      "PtPrpPmVp": {
+                        "type": "integer",
+                        "description": "Peilmaand vakantiegeld",
+                        "format": ""
+                      },
+                      "PtPrpBwVp": {
+                        "type": "integer",
+                        "description": "Opbouw vanaf week",
+                        "format": ""
+                      },
+                      "PtPrpMeMv": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Methode minimum vakantiegeld",
                         "format": ""
                       },
                       "PtPrpMeMo": {
@@ -13015,7 +13964,7 @@
                                       "HmAd": {
                                         "type": "string",
                                         "maxLength": 30,
-                                        "description": "House number addition",
+                                        "description": "Extension (a, b, etc.) to house number",
                                         "format": ""
                                       },
                                       "ZpCd": {
@@ -13123,7 +14072,7 @@
                                           "5"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Method to calculate progress rate\n1 = Op basis van uren;\n2 = Op basis van kosten;\n3 = Handmatig;\n4 = Op basis van facturatie;\n5 = Op basis van prognose kosten;",
+                                        "description": "Method to calculate progress rate\n1 = Based on number of hours;\n2 = Based on costs;\n3 = Manually;\n4 = Based on invoicing;\n5 = Based on forecasted costs;",
                                         "format": ""
                                       },
                                       "SpIr": {
@@ -13140,7 +14089,7 @@
                                           "2"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Charge\n0 = Conform project;\n1 = Nacalculatie doorbelasten;\n2 = Nacalculatie niet doorbelasten;",
+                                        "description": "Charge\n0 = Conform project;\n1 = Pass on charges for actual costing;\n2 = Charges for actual costing not passed on;",
                                         "format": ""
                                       },
                                       "PsMn": {
@@ -13822,7 +14771,7 @@
                           "8"
                         ],
                         "maxLength": 10,
-                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                         "format": ""
                       },
                       "ItCd": {
@@ -14133,7 +15082,7 @@
                           "O"
                         ],
                         "maxLength": 20,
-                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                         "format": ""
                       },
                       "CuId": {
@@ -14321,7 +15270,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Means of transport\n11 = Auto\u2019s benzine;\n12 = Auto\u2019s diesel;\n13 = Auto\u2019s die behoren tot de (plug in) hybrides;\n14 = Auto\u2019s 100% elektrisch;\n15 = Auto\u2019s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
+                        "description": "Means of transport\n11 = Petrol vehicles;\n12 = Diesel vehicle;\n13 = Cars belonging to (plug-in) hybrids;\n14 = Cars 100% electric;\n15 = Other fuel cars;\n21 = Petrol/diesel motorcycle ;\n22 = Electric motorcycle;\n31 = Petrol or diesel moped/scooter;\n32 = Electric moped/scooter (including speed-pedelec);\n41 = (Electric) bicycle (not being a speed-pedelec) or walking;\n51 = Public transportation;",
                         "format": ""
                       },
                       "ViTv": {
@@ -14331,7 +15280,7 @@
                           "02"
                         ],
                         "maxLength": 20,
-                        "description": "Type of journey\n01 = Woon-werk;\n02 = Zakelijke dienstreis;",
+                        "description": "Type of journey\n01 = Commuting;\n02 = Business trip;",
                         "format": ""
                       },
                       "RfPu": {
@@ -14432,7 +15381,7 @@
                           "8"
                         ],
                         "maxLength": 10,
-                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                         "format": ""
                       },
                       "ItCd": {
@@ -14754,7 +15703,7 @@
                           "O"
                         ],
                         "maxLength": 20,
-                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                         "format": ""
                       },
                       "CuId": {
@@ -14955,7 +15904,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Means of transport\n11 = Auto\u2019s benzine;\n12 = Auto\u2019s diesel;\n13 = Auto\u2019s die behoren tot de (plug in) hybrides;\n14 = Auto\u2019s 100% elektrisch;\n15 = Auto\u2019s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
+                        "description": "Means of transport\n11 = Petrol vehicles;\n12 = Diesel vehicle;\n13 = Cars belonging to (plug-in) hybrids;\n14 = Cars 100% electric;\n15 = Other fuel cars;\n21 = Petrol/diesel motorcycle ;\n22 = Electric motorcycle;\n31 = Petrol or diesel moped/scooter;\n32 = Electric moped/scooter (including speed-pedelec);\n41 = (Electric) bicycle (not being a speed-pedelec) or walking;\n51 = Public transportation;",
                         "format": ""
                       },
                       "ViTv": {
@@ -14965,7 +15914,7 @@
                           "02"
                         ],
                         "maxLength": 20,
-                        "description": "Type of journey\n01 = Woon-werk;\n02 = Zakelijke dienstreis;",
+                        "description": "Type of journey\n01 = Commuting;\n02 = Business trip;",
                         "format": ""
                       },
                       "RfPu": {
@@ -15342,20 +16291,20 @@
                       "VaV1": {
                         "type": "string",
                         "enum": [
-                          "Wst",
+                          "Wtp",
                           "Pid",
-                          "Deg",
+                          "Dgh",
                           "Dim",
-                          "Art",
+                          "Itm",
                           "Txt",
                           "Sub",
-                          "Tsl",
-                          "Kst",
-                          "Sam",
+                          "Sur",
+                          "Cst",
+                          "Cmp",
                           "Crs"
                         ],
                         "maxLength": 20,
-                        "description": "Item type\nWst = Werksoort;\nPid = Productie-indicator;\nDeg = Deeg;\nDim = Artikeldimensietotaal;\nArt = Artikel;\nTxt = Tekst;\nSub = Subtotaal;\nTsl = Toeslag;\nKst = Kosten;\nSam = Samenstelling;\nCrs = Cursus;",
+                        "description": "Item type\nWtp = Work type;\nPid = Production indicator;\nDgh = Dough;\nDim = Item dimension total;\nItm = Article;\nTxt = Text;\nSub = Sub-total;\nSur = Allowance;\nCst = Costs;\nCmp = Assembled item;\nCrs = Course;",
                         "format": ""
                       },
                       "BaV1": {
@@ -15367,20 +16316,20 @@
                       "VaV2": {
                         "type": "string",
                         "enum": [
-                          "Wst",
+                          "Wtp",
                           "Pid",
-                          "Deg",
+                          "Dgh",
                           "Dim",
-                          "Art",
+                          "Itm",
                           "Txt",
                           "Sub",
-                          "Tsl",
-                          "Kst",
-                          "Sam",
+                          "Sur",
+                          "Cst",
+                          "Cmp",
                           "Crs"
                         ],
                         "maxLength": 20,
-                        "description": "Item type\nWst = Werksoort;\nPid = Productie-indicator;\nDeg = Deeg;\nDim = Artikeldimensietotaal;\nArt = Artikel;\nTxt = Tekst;\nSub = Subtotaal;\nTsl = Toeslag;\nKst = Kosten;\nSam = Samenstelling;\nCrs = Cursus;",
+                        "description": "Item type\nWtp = Work type;\nPid = Production indicator;\nDgh = Dough;\nDim = Item dimension total;\nItm = Article;\nTxt = Text;\nSub = Sub-total;\nSur = Allowance;\nCst = Costs;\nCmp = Assembled item;\nCrs = Course;",
                         "format": ""
                       },
                       "BaV2": {
@@ -15392,20 +16341,20 @@
                       "VaV3": {
                         "type": "string",
                         "enum": [
-                          "Wst",
+                          "Wtp",
                           "Pid",
-                          "Deg",
+                          "Dgh",
                           "Dim",
-                          "Art",
+                          "Itm",
                           "Txt",
                           "Sub",
-                          "Tsl",
-                          "Kst",
-                          "Sam",
+                          "Sur",
+                          "Cst",
+                          "Cmp",
                           "Crs"
                         ],
                         "maxLength": 20,
-                        "description": "Item type\nWst = Werksoort;\nPid = Productie-indicator;\nDeg = Deeg;\nDim = Artikeldimensietotaal;\nArt = Artikel;\nTxt = Tekst;\nSub = Subtotaal;\nTsl = Toeslag;\nKst = Kosten;\nSam = Samenstelling;\nCrs = Cursus;",
+                        "description": "Item type\nWtp = Work type;\nPid = Production indicator;\nDgh = Dough;\nDim = Item dimension total;\nItm = Article;\nTxt = Text;\nSub = Sub-total;\nSur = Allowance;\nCst = Costs;\nCmp = Assembled item;\nCrs = Course;",
                         "format": ""
                       },
                       "BaV3": {
@@ -15452,20 +16401,20 @@
                       "VaV1": {
                         "type": "string",
                         "enum": [
-                          "Wst",
+                          "Wtp",
                           "Pid",
-                          "Deg",
+                          "Dgh",
                           "Dim",
-                          "Art",
+                          "Itm",
                           "Txt",
                           "Sub",
-                          "Tsl",
-                          "Kst",
-                          "Sam",
+                          "Sur",
+                          "Cst",
+                          "Cmp",
                           "Crs"
                         ],
                         "maxLength": 20,
-                        "description": "Item type\nWst = Werksoort;\nPid = Productie-indicator;\nDeg = Deeg;\nDim = Artikeldimensietotaal;\nArt = Artikel;\nTxt = Tekst;\nSub = Subtotaal;\nTsl = Toeslag;\nKst = Kosten;\nSam = Samenstelling;\nCrs = Cursus;",
+                        "description": "Item type\nWtp = Work type;\nPid = Production indicator;\nDgh = Dough;\nDim = Item dimension total;\nItm = Article;\nTxt = Text;\nSub = Sub-total;\nSur = Allowance;\nCst = Costs;\nCmp = Assembled item;\nCrs = Course;",
                         "format": ""
                       },
                       "BaV1": {
@@ -15477,20 +16426,20 @@
                       "VaV2": {
                         "type": "string",
                         "enum": [
-                          "Wst",
+                          "Wtp",
                           "Pid",
-                          "Deg",
+                          "Dgh",
                           "Dim",
-                          "Art",
+                          "Itm",
                           "Txt",
                           "Sub",
-                          "Tsl",
-                          "Kst",
-                          "Sam",
+                          "Sur",
+                          "Cst",
+                          "Cmp",
                           "Crs"
                         ],
                         "maxLength": 20,
-                        "description": "Item type\nWst = Werksoort;\nPid = Productie-indicator;\nDeg = Deeg;\nDim = Artikeldimensietotaal;\nArt = Artikel;\nTxt = Tekst;\nSub = Subtotaal;\nTsl = Toeslag;\nKst = Kosten;\nSam = Samenstelling;\nCrs = Cursus;",
+                        "description": "Item type\nWtp = Work type;\nPid = Production indicator;\nDgh = Dough;\nDim = Item dimension total;\nItm = Article;\nTxt = Text;\nSub = Sub-total;\nSur = Allowance;\nCst = Costs;\nCmp = Assembled item;\nCrs = Course;",
                         "format": ""
                       },
                       "BaV2": {
@@ -15502,20 +16451,20 @@
                       "VaV3": {
                         "type": "string",
                         "enum": [
-                          "Wst",
+                          "Wtp",
                           "Pid",
-                          "Deg",
+                          "Dgh",
                           "Dim",
-                          "Art",
+                          "Itm",
                           "Txt",
                           "Sub",
-                          "Tsl",
-                          "Kst",
-                          "Sam",
+                          "Sur",
+                          "Cst",
+                          "Cmp",
                           "Crs"
                         ],
                         "maxLength": 20,
-                        "description": "Item type\nWst = Werksoort;\nPid = Productie-indicator;\nDeg = Deeg;\nDim = Artikeldimensietotaal;\nArt = Artikel;\nTxt = Tekst;\nSub = Subtotaal;\nTsl = Toeslag;\nKst = Kosten;\nSam = Samenstelling;\nCrs = Cursus;",
+                        "description": "Item type\nWtp = Work type;\nPid = Production indicator;\nDgh = Dough;\nDim = Item dimension total;\nItm = Article;\nTxt = Text;\nSub = Sub-total;\nSur = Allowance;\nCst = Costs;\nCmp = Assembled item;\nCrs = Course;",
                         "format": ""
                       },
                       "BaV3": {
@@ -15551,7 +16500,7 @@
         "name": "Authorization",
         "type": "apiKey",
         "in": "header",
-        "description": "Convert the XML token to Base64 and add \u0027AfasToken \u0027 in front of it."
+        "description": "Convert the XML token to Base64 and add 'AfasToken ' in front of it."
       }
     },
     "parameters": {
@@ -15559,7 +16508,7 @@
         "name": "Accept-Language",
         "in": "header",
         "required": false,
-        "description": "Indicates the client\u0027s preferred language for the response. If not provided, the API defaults to the base environment language.",
+        "description": "Indicates the client's preferred language for the response. If not provided, the API defaults to the base environment language.",
         "schema": {
           "type": "string",
           "enum": [

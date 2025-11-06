@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "6.6.9",
+    "version": "7.7.10",
     "title": "AFAS Flex API",
     "description": "Deze API beschrijft de endpoints gerelateerd aan Flex. Gebruik deze API met de functionele beschrijving van de API."
   },
@@ -256,7 +256,7 @@
     "/connectors/HrReservation": {
       "post": {
         "summary": "Reservering Hrm",
-        "description": "\n\rAlleen beschikbaar onder conditie: Declaratieverwerking (Activering)\n\r ",
+        "description": "\n\rAlleen beschikbaar onder conditie: Declaratieverwerking (speciale activering)\n\r ",
         "operationId": "POST_HrReservation",
         "requestBody": {
           "content": {
@@ -308,7 +308,7 @@
     "/connectors/KnSreCostCentre": {
       "post": {
         "summary": "Kostenplaats per verkooprelatie",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_KnSreCostCentre.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_KnSreCostCentre.htm",
         "operationId": "POST_KnSreCostCentre",
         "requestBody": {
           "content": {
@@ -516,7 +516,7 @@
       },
       "put": {
         "summary": "Kostenplaats per verkooprelatie",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_KnSreCostCentre.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_KnSreCostCentre.htm",
         "operationId": "PUT_KnSreCostCentre",
         "requestBody": {
           "content": {
@@ -709,7 +709,7 @@
     "/connectors/KnSreCostCentre/KnSreCostCentreContact": {
       "post": {
         "summary": "Kostenplaats per verkooprelatie",
-        "description": "Update main record in KnSreCostCentre and insert subrecord into KnSreCostCentreContact. \n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_KnSreCostCentre.htm",
+        "description": "Update main record in KnSreCostCentre and insert subrecord into KnSreCostCentreContact. \n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_KnSreCostCentre.htm",
         "operationId": "POSTSubRecordKnSreCostCentreKnSreCostCentreContact",
         "requestBody": {
           "content": {
@@ -1198,7 +1198,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id\u0027s can be found in the metainfo request result.",
+        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -1344,7 +1344,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -1480,7 +1480,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -1579,7 +1579,7 @@
                           },
                           "PayCon": {
                             "type": "string",
-                            "description": "Betaalvoorwaarde"
+                            "description": "Betalingsvoorwaarde"
                           },
                           "VatDuty": {
                             "type": "string",
@@ -1646,7 +1646,7 @@
     "/connectors/PtConceptPlacementContract": {
       "post": {
         "summary": "Concept plaatsingscontract",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtConceptPlacementContract.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtConceptPlacementContract.htm",
         "operationId": "POST_PtConceptPlacementContract",
         "requestBody": {
           "content": {
@@ -1855,7 +1855,7 @@
     "/connectors/PtCostPriceComponent": {
       "post": {
         "summary": "Kostprijscomponent",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r ",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r ",
         "operationId": "POST_PtCostPriceComponent",
         "requestBody": {
           "content": {
@@ -2027,7 +2027,7 @@
       },
       "put": {
         "summary": "Kostprijscomponent",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r ",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r ",
         "operationId": "PUT_PtCostPriceComponent",
         "requestBody": {
           "content": {
@@ -2164,7 +2164,7 @@
     "/connectors/PtCostPriceComponent/PtCostPriceComponentLine": {
       "post": {
         "summary": "Kostprijscomponent",
-        "description": "Update main record in PtCostPriceComponent and insert subrecord into PtCostPriceComponentLine. \n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r ",
+        "description": "Update main record in PtCostPriceComponent and insert subrecord into PtCostPriceComponentLine. \n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r ",
         "operationId": "POSTSubRecordPtCostPriceComponentPtCostPriceComponentLine",
         "requestBody": {
           "content": {
@@ -2300,7 +2300,7 @@
     "/connectors/PtCostPriceModel": {
       "post": {
         "summary": "Kostprijsmodel",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtCostPriceModel.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtCostPriceModel.htm",
         "operationId": "POST_PtCostPriceModel",
         "requestBody": {
           "content": {
@@ -2575,7 +2575,7 @@
       },
       "put": {
         "summary": "Kostprijsmodel",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtCostPriceModel.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtCostPriceModel.htm",
         "operationId": "PUT_PtCostPriceModel",
         "requestBody": {
           "content": {
@@ -2695,7 +2695,7 @@
     "/connectors/PtCostPriceModel/PtCostPriceModelVersion": {
       "post": {
         "summary": "Kostprijsmodel",
-        "description": "Update main record in PtCostPriceModel and insert subrecord into PtCostPriceModelVersion. \n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtCostPriceModel.htm",
+        "description": "Update main record in PtCostPriceModel and insert subrecord into PtCostPriceModelVersion. \n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtCostPriceModel.htm",
         "operationId": "POSTSubRecordPtCostPriceModelPtCostPriceModelVersion",
         "requestBody": {
           "content": {
@@ -2831,7 +2831,7 @@
     "/connectors/PtCostPriceModelPerProject": {
       "post": {
         "summary": "Kostprijsmodel per klantovereenkomst",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r ",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r ",
         "operationId": "POST_PtCostPriceModelPerProject",
         "requestBody": {
           "content": {
@@ -2883,7 +2883,7 @@
     "/connectors/PtDeclaration": {
       "post": {
         "summary": "Declaratie",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtDeclaration.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtDeclaration.htm",
         "operationId": "POST_PtDeclaration",
         "requestBody": {
           "content": {
@@ -3071,7 +3071,7 @@
       },
       "put": {
         "summary": "Declaratie",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtDeclaration.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtDeclaration.htm",
         "operationId": "PUT_PtDeclaration",
         "requestBody": {
           "content": {
@@ -3316,7 +3316,7 @@
     "/connectors/PtDeclarationCorrection": {
       "post": {
         "summary": "Corrigeren nacalculatie per declaratie",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtDeclarationCorrection.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtDeclarationCorrection.htm",
         "operationId": "POST_PtDeclarationCorrection",
         "requestBody": {
           "content": {
@@ -3394,7 +3394,7 @@
       },
       "put": {
         "summary": "Corrigeren nacalculatie per declaratie",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtDeclarationCorrection.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtDeclarationCorrection.htm",
         "operationId": "PUT_PtDeclarationCorrection",
         "requestBody": {
           "content": {
@@ -3475,7 +3475,7 @@
     "/connectors/PtDeclarationCorrection/PtRealization": {
       "post": {
         "summary": "Corrigeren nacalculatie per declaratie",
-        "description": "Update main record in PtDeclarationCorrection and insert subrecord into PtRealization. \n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtDeclarationCorrection.htm",
+        "description": "Update main record in PtDeclarationCorrection and insert subrecord into PtRealization. \n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtDeclarationCorrection.htm",
         "operationId": "POSTSubRecordPtDeclarationCorrectionPtRealization",
         "requestBody": {
           "content": {
@@ -3555,7 +3555,7 @@
     "/connectors/PtFunction": {
       "post": {
         "summary": "Functie",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtFunction.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtFunction.htm",
         "operationId": "POST_PtFunction",
         "requestBody": {
           "content": {
@@ -3806,7 +3806,7 @@
       },
       "put": {
         "summary": "Functie",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtFunction.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtFunction.htm",
         "operationId": "PUT_PtFunction",
         "requestBody": {
           "content": {
@@ -4043,7 +4043,7 @@
     "/connectors/PtItemSet": {
       "post": {
         "summary": "Itemset",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtItemSet.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtItemSet.htm",
         "operationId": "POST_PtItemSet",
         "requestBody": {
           "content": {
@@ -4304,13 +4304,13 @@
                                 "Fields": {
                                   "ItCd": "11-C90990",
                                   "#text": [
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E"
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">"
                                   ],
                                   "AmMi": "10.10",
                                   "AmMa": "20.20",
@@ -4431,13 +4431,13 @@
                                 "Fields": {
                                   "ItCd": "11-C90990",
                                   "#text": [
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E"
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">"
                                   ],
                                   "AmMi": "10.10",
                                   "AmMa": "20.20",
@@ -4530,13 +4530,13 @@
                                 "Fields": {
                                   "ItCd": "11-C90990",
                                   "#text": [
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E"
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">"
                                   ],
                                   "AmMi": "10.10",
                                   "AmMa": "20.20",
@@ -4553,11 +4553,11 @@
                                 "Fields": {
                                   "ItCd": "11-C15753",
                                   "#text": [
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E"
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">"
                                   ],
                                   "AmMi": "10.15",
                                   "AmMa": "20.25",
@@ -4572,11 +4572,11 @@
                                 "Fields": {
                                   "ItCd": "11-C11094",
                                   "#text": [
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E"
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">"
                                   ],
                                   "AmMi": "10.10",
                                   "AmMa": "20.20",
@@ -4591,11 +4591,11 @@
                                 "Fields": {
                                   "ItCd": "11-C43372",
                                   "#text": [
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E",
-                                    "\u003E"
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">",
+                                    ">"
                                   ],
                                   "AmMi": "10.15",
                                   "AmMa": "20.25",
@@ -4679,8 +4679,8 @@
                                 "Fields": {
                                   "ItCd": "FLEX10-5",
                                   "#text": [
-                                    "\u003E",
-                                    "\u003E"
+                                    ">",
+                                    ">"
                                   ],
                                   "GWPc": "80.98",
                                   "GWMi": "70.97",
@@ -4770,7 +4770,7 @@
       },
       "put": {
         "summary": "Itemset",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtItemSet.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtItemSet.htm",
         "operationId": "PUT_PtItemSet",
         "requestBody": {
           "content": {
@@ -4929,7 +4929,7 @@
     "/connectors/PtItemSet/PtItemSetLine": {
       "post": {
         "summary": "Itemset",
-        "description": "Update main record in PtItemSet and insert subrecord into PtItemSetLine. \n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtItemSet.htm",
+        "description": "Update main record in PtItemSet and insert subrecord into PtItemSetLine. \n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtItemSet.htm",
         "operationId": "POSTSubRecordPtItemSetPtItemSetLine",
         "requestBody": {
           "content": {
@@ -4981,7 +4981,7 @@
     "/connectors/PtItemSet/PtItemsetScaleWage": {
       "post": {
         "summary": "Itemset",
-        "description": "Update main record in PtItemSet and insert subrecord into PtItemsetScaleWage. \n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtItemSet.htm",
+        "description": "Update main record in PtItemSet and insert subrecord into PtItemsetScaleWage. \n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtItemSet.htm",
         "operationId": "POSTSubRecordPtItemSetPtItemsetScaleWage",
         "requestBody": {
           "content": {
@@ -5039,7 +5039,7 @@
           "name": "PtItpDaBe",
           "in": "path",
           "required": true,
-          "description": "Begindatum CBS cao-code"
+          "description": "Begindatum\n            CBS cao-code"
         }
       ],
       "delete": {
@@ -5090,7 +5090,7 @@
     "/connectors/PtItemSetFunction": {
       "post": {
         "summary": "Functie per itemset",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/121936.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/121936.htm",
         "operationId": "POST_PtItemSetFunction",
         "requestBody": {
           "content": {
@@ -5204,7 +5204,7 @@
       },
       "put": {
         "summary": "Functie per itemset",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/121936.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/121936.htm",
         "operationId": "PUT_PtItemSetFunction",
         "requestBody": {
           "content": {
@@ -5357,7 +5357,7 @@
     "/connectors/PtPlacementContract": {
       "post": {
         "summary": "Plaatsing",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtPlacementContract.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtPlacementContract.htm",
         "operationId": "POST_PtPlacementContract",
         "requestBody": {
           "content": {
@@ -5595,7 +5595,7 @@
       },
       "put": {
         "summary": "Plaatsing",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtPlacementContract.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtPlacementContract.htm",
         "operationId": "PUT_PtPlacementContract",
         "requestBody": {
           "content": {
@@ -5674,7 +5674,7 @@
     "/connectors/PtPlacementContract/AfasPtPlacementContractLine": {
       "post": {
         "summary": "Plaatsing",
-        "description": "Update main record in PtPlacementContract and insert subrecord into AfasPtPlacementContractLine. \n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtPlacementContract.htm",
+        "description": "Update main record in PtPlacementContract and insert subrecord into AfasPtPlacementContractLine. \n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_PtPlacementContract.htm",
         "operationId": "POSTSubRecordPtPlacementContractAfasPtPlacementContractLine",
         "requestBody": {
           "content": {
@@ -5808,7 +5808,7 @@
     "/connectors/PtPriceAgreement": {
       "post": {
         "summary": "Prijsafspraak",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Flex_PtPriceAgreement.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Flex_PtPriceAgreement.htm",
         "operationId": "POST_PtPriceAgreement",
         "requestBody": {
           "content": {
@@ -6416,7 +6416,7 @@
       },
       "put": {
         "summary": "Prijsafspraak",
-        "description": "\n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Flex_PtPriceAgreement.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Flex_PtPriceAgreement.htm",
         "operationId": "PUT_PtPriceAgreement",
         "requestBody": {
           "content": {
@@ -6612,7 +6612,7 @@
     "/connectors/PtPriceAgreement/PtPriceAgreementVersion": {
       "post": {
         "summary": "Prijsafspraak",
-        "description": "Update main record in PtPriceAgreement and insert subrecord into PtPriceAgreementVersion. \n\rAlleen beschikbaar onder conditie: Flex (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Flex_PtPriceAgreement.htm",
+        "description": "Update main record in PtPriceAgreement and insert subrecord into PtPriceAgreementVersion. \n\rAlleen beschikbaar onder conditie: Flex (speciale activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Flex_PtPriceAgreement.htm",
         "operationId": "POSTSubRecordPtPriceAgreementPtPriceAgreementVersion",
         "requestBody": {
           "content": {
@@ -6827,6 +6827,7 @@
                           "1",
                           "10",
                           "11",
+                          "12",
                           "2",
                           "3",
                           "4",
@@ -6841,7 +6842,7 @@
                           "94"
                         ],
                         "maxLength": 20,
-                        "description": "Type reservering\n1 = Vakantiegeld;\n10 = Eindejaarsuitkering;\n11 = Eindejaarsuitkering (periodiek te factureren);\n2 = Vakantie-uren;\n3 = Vakantieuren in geld;\n4 = Vakantieuren bovenwettelijk;\n5 = Vakantieuren bovenwettelijk in geld;\n6 = Kort verzuim / Bijzonder verlof in geld;\n7 = ADV-uren;\n8 = ADV-uren in geld;\n9 = Tijd-voor-tijd uren;\n91 = Vakantiegeld voor StiPP;\n92 = Reserveringen in uren voor StiPP;\n93 = Vrijgesteld StiPP - vakantiegeld;\n94 = Vrijgesteld StiPP - reserveringen in uren;",
+                        "description": "Type reservering\n1 = Vakantiegeld;\n10 = Eindejaarsuitkering;\n11 = Eindejaarsuitkering (periodiek te factureren);\n12 = Flexibel budget;\n2 = Vakantie-uren;\n3 = Vakantieuren in geld;\n4 = Vakantieuren bovenwettelijk;\n5 = Vakantieuren bovenwettelijk in geld;\n6 = Kort verzuim / Bijzonder verlof in geld;\n7 = ADV-uren;\n8 = ADV-uren in geld;\n9 = Tijd-voor-tijd uren;\n91 = Vakantiegeld voor StiPP;\n92 = Reserveringen in uren voor StiPP;\n93 = Vrijgesteld StiPP - vakantiegeld;\n94 = Vrijgesteld StiPP - reserveringen in uren;",
                         "format": ""
                       },
                       "Amou": {
@@ -8054,12 +8055,12 @@
                                       },
                                       "ApTy": {
                                         "type": "boolean",
-                                        "description": "Grondslag \u0027Type functie\u0027 toepassen",
+                                        "description": "Grondslag 'Type functie' toepassen",
                                         "format": ""
                                       },
                                       "ApSt": {
                                         "type": "boolean",
-                                        "description": "Grondslag \u0027Urensoort\u0027 toepassen voor werksoorten",
+                                        "description": "Grondslag 'Urensoort' toepassen voor werksoorten",
                                         "format": ""
                                       }
                                     },
@@ -8287,12 +8288,12 @@
                                       },
                                       "ApTy": {
                                         "type": "boolean",
-                                        "description": "Grondslag \u0027Type functie\u0027 toepassen",
+                                        "description": "Grondslag 'Type functie' toepassen",
                                         "format": ""
                                       },
                                       "ApSt": {
                                         "type": "boolean",
-                                        "description": "Grondslag \u0027Urensoort\u0027 toepassen voor werksoorten",
+                                        "description": "Grondslag 'Urensoort' toepassen voor werksoorten",
                                         "format": ""
                                       }
                                     },
@@ -9266,12 +9267,12 @@
                     "properties": {
                       "PtItpDaBe": {
                         "type": "string",
-                        "description": "Begindatum CBS cao-code",
+                        "description": "Begindatum\n            CBS cao-code",
                         "format": "date"
                       },
                       "PtItpTyEj": {
                         "type": "string",
-                        "description": "Soort eindejaarsuitkering",
+                        "description": "Soort\n            eindejaarsuitkering",
                         "format": ""
                       },
                       "PtItpPaDa": {
@@ -9296,7 +9297,7 @@
                       },
                       "PtItpNoPe": {
                         "type": "integer",
-                        "description": "Aantal periodes bij verkooprelatie",
+                        "description": "Aantal periodes bij\n            verkooprelatie",
                         "format": ""
                       },
                       "PtItpPeUn": {
@@ -9319,7 +9320,7 @@
                       "PtItpViTp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Soort periodieke verhoging",
+                        "description": "Soort periodieke\n            verhoging",
                         "format": ""
                       },
                       "PtItpDmon": {
@@ -9354,13 +9355,13 @@
                       },
                       "PtItpPFrA": {
                         "type": "integer",
-                        "description": "Periodieke verhoging vanaf leeftijd",
+                        "description": "Periodieke verhoging\n            vanaf leeftijd",
                         "format": ""
                       },
                       "PtItpViEx": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Extra voorwaarde periodiek",
+                        "description": "Extra voorwaarde\n            periodiek",
                         "format": ""
                       },
                       "PtItpReDa": {
@@ -9392,41 +9393,68 @@
                       },
                       "PtItpWeAg": {
                         "type": "integer",
-                        "description": "Werkervaring opbouwen vanaf leeftijd",
+                        "description": "Werkervaring opbouwen\n            vanaf leeftijd",
                         "format": ""
                       },
                       "PtItpVaIp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Telling onderbrekingsperiode",
+                        "description": "Telling\n            onderbrekingsperiode",
                         "format": ""
                       },
                       "PtItpMoCo": {
                         "type": "integer",
-                        "description": "Maanden opnieuw tellen als onderbrekingsperiode",
+                        "description": "Maanden opnieuw tellen\n            als onderbrekingsperiode",
                         "format": ""
                       },
                       "PtItpVaIe": {
                         "type": "string",
                         "maxLength": 4,
-                        "description": "Onderbrekingsperiode eenheid",
+                        "description": "Onderbrekingsperiode\n            eenheid",
                         "format": ""
                       },
                       "PtItpAcHi": {
                         "type": "boolean",
-                        "description": "Beoordeling inlener benodigd",
+                        "description": "Beoordeling inlener\n            benodigd",
                         "format": ""
                       },
                       "PtItpVaCo": {
                         "type": "string",
                         "maxLength": 4,
-                        "description": "Uitvoeren periodieke verhoging",
+                        "description": "Uitvoeren periodieke\n            verhoging",
                         "format": ""
                       },
                       "PtItpMeMo": {
                         "type": "string",
                         "description": "Opmerking",
                         "format": "byte"
+                      },
+                      "PtItpMeVp": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Opmerking",
+                        "format": ""
+                      },
+                      "PtItpPdVp": {
+                        "type": "integer",
+                        "description": "Opmerking",
+                        "format": ""
+                      },
+                      "PtItpPmVp": {
+                        "type": "integer",
+                        "description": "Opmerking",
+                        "format": ""
+                      },
+                      "PtItpBwVp": {
+                        "type": "integer",
+                        "description": "Opmerking",
+                        "format": ""
+                      },
+                      "PtItpMeMv": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Opmerking",
+                        "format": ""
                       },
                       "IsId": {
                         "type": "integer",
@@ -9614,7 +9642,7 @@
                                           "6"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Tariefsoort\n0 = Vast tarief;\n1 = Tarieffactor;\n2 = Kostprijs \u002B nominale marge;\n3 = % marge t.o.v. kostprijs;\n4 = % marge t.o.v. verkoopprijs;\n5 = Tarieffactor \u002B nominale marge;\n6 = Basistarief;",
+                                        "description": "Tariefsoort\n0 = Vast tarief;\n1 = Tarieffactor;\n2 = Kostprijs + nominale marge;\n3 = % marge t.o.v. kostprijs;\n4 = % marge t.o.v. verkoopprijs;\n5 = Tarieffactor + nominale marge;\n6 = Basistarief;",
                                         "format": ""
                                       },
                                       "FcDf": {
@@ -9749,12 +9777,12 @@
                     "properties": {
                       "PtItpDaBe": {
                         "type": "string",
-                        "description": "Begindatum CBS cao-code",
+                        "description": "Begindatum\n            CBS cao-code",
                         "format": "date"
                       },
                       "PtItpTyEj": {
                         "type": "string",
-                        "description": "Soort eindejaarsuitkering",
+                        "description": "Soort\n            eindejaarsuitkering",
                         "format": ""
                       },
                       "PtItpPaDa": {
@@ -9779,7 +9807,7 @@
                       },
                       "PtItpNoPe": {
                         "type": "integer",
-                        "description": "Aantal periodes bij verkooprelatie",
+                        "description": "Aantal periodes bij\n            verkooprelatie",
                         "format": ""
                       },
                       "PtItpPeUn": {
@@ -9802,7 +9830,7 @@
                       "PtItpViTp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Soort periodieke verhoging",
+                        "description": "Soort periodieke\n            verhoging",
                         "format": ""
                       },
                       "PtItpDmon": {
@@ -9837,13 +9865,13 @@
                       },
                       "PtItpPFrA": {
                         "type": "integer",
-                        "description": "Periodieke verhoging vanaf leeftijd",
+                        "description": "Periodieke verhoging\n            vanaf leeftijd",
                         "format": ""
                       },
                       "PtItpViEx": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Extra voorwaarde periodiek",
+                        "description": "Extra voorwaarde\n            periodiek",
                         "format": ""
                       },
                       "PtItpReDa": {
@@ -9875,41 +9903,68 @@
                       },
                       "PtItpWeAg": {
                         "type": "integer",
-                        "description": "Werkervaring opbouwen vanaf leeftijd",
+                        "description": "Werkervaring opbouwen\n            vanaf leeftijd",
                         "format": ""
                       },
                       "PtItpVaIp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Telling onderbrekingsperiode",
+                        "description": "Telling\n            onderbrekingsperiode",
                         "format": ""
                       },
                       "PtItpMoCo": {
                         "type": "integer",
-                        "description": "Maanden opnieuw tellen als onderbrekingsperiode",
+                        "description": "Maanden opnieuw tellen\n            als onderbrekingsperiode",
                         "format": ""
                       },
                       "PtItpVaIe": {
                         "type": "string",
                         "maxLength": 4,
-                        "description": "Onderbrekingsperiode eenheid",
+                        "description": "Onderbrekingsperiode\n            eenheid",
                         "format": ""
                       },
                       "PtItpAcHi": {
                         "type": "boolean",
-                        "description": "Beoordeling inlener benodigd",
+                        "description": "Beoordeling inlener\n            benodigd",
                         "format": ""
                       },
                       "PtItpVaCo": {
                         "type": "string",
                         "maxLength": 4,
-                        "description": "Uitvoeren periodieke verhoging",
+                        "description": "Uitvoeren periodieke\n            verhoging",
                         "format": ""
                       },
                       "PtItpMeMo": {
                         "type": "string",
                         "description": "Opmerking",
                         "format": "byte"
+                      },
+                      "PtItpMeVp": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Opmerking",
+                        "format": ""
+                      },
+                      "PtItpPdVp": {
+                        "type": "integer",
+                        "description": "Opmerking",
+                        "format": ""
+                      },
+                      "PtItpPmVp": {
+                        "type": "integer",
+                        "description": "Opmerking",
+                        "format": ""
+                      },
+                      "PtItpBwVp": {
+                        "type": "integer",
+                        "description": "Opmerking",
+                        "format": ""
+                      },
+                      "PtItpMeMv": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Opmerking",
+                        "format": ""
                       },
                       "IsId": {
                         "type": "integer",
@@ -10102,7 +10157,7 @@
                                           "6"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Tariefsoort\n0 = Vast tarief;\n1 = Tarieffactor;\n2 = Kostprijs \u002B nominale marge;\n3 = % marge t.o.v. kostprijs;\n4 = % marge t.o.v. verkoopprijs;\n5 = Tarieffactor \u002B nominale marge;\n6 = Basistarief;",
+                                        "description": "Tariefsoort\n0 = Vast tarief;\n1 = Tarieffactor;\n2 = Kostprijs + nominale marge;\n3 = % marge t.o.v. kostprijs;\n4 = % marge t.o.v. verkoopprijs;\n5 = Tarieffactor + nominale marge;\n6 = Basistarief;",
                                         "format": ""
                                       },
                                       "FcDf": {
@@ -10316,7 +10371,7 @@
                       },
                       "EnPr": {
                         "type": "integer",
-                        "description": "Onboardenprofiel",
+                        "description": "Onboarden-profiel",
                         "format": ""
                       },
                       "ViFz": {
@@ -10401,7 +10456,7 @@
                           "10"
                         ],
                         "maxLength": 20,
-                        "description": "Reden be\u00EBindiging\n01 = Einde opdracht;\n02 = Kandidaat over naar volgende fase;\n03 = Kandidaat overgenomen door klant/ander bureau;\n04 = Kandidaat trekt zich terug;\n05 = Kandidaat is ziek;\n06 = Kandidaat krijgt nieuw contract;\n07 = Kandidaat heeft opgezegd;\n08 = Klant heeft opgezegd (niet tevreden);\n09 = Uitzender heeft opgezegd;\n10 = Foutief aangemaakt;",
+                        "description": "Reden beëindiging\n01 = Einde opdracht;\n02 = Kandidaat over naar volgende fase;\n03 = Kandidaat overgenomen door klant/ander bureau;\n04 = Kandidaat trekt zich terug;\n05 = Kandidaat is ziek;\n06 = Kandidaat krijgt nieuw contract;\n07 = Kandidaat heeft opgezegd;\n08 = Klant heeft opgezegd (niet tevreden);\n09 = Uitzender heeft opgezegd;\n10 = Foutief aangemaakt;",
                         "format": ""
                       },
                       "ViRs": {
@@ -10605,6 +10660,11 @@
                                         "description": "Organisatorische eenheid",
                                         "format": ""
                                       },
+                                      "TaId": {
+                                        "type": "integer",
+                                        "description": "Soort loonschaal",
+                                        "format": ""
+                                      },
                                       "VaSc": {
                                         "type": "string",
                                         "enum": [
@@ -10756,6 +10816,34 @@
                                         "type": "boolean",
                                         "description": "Herindeling schaal/trede doorgevoerd",
                                         "format": ""
+                                      },
+                                      "ATrC": {
+                                        "type": "boolean",
+                                        "description": "Automatisch reiskosten berekenen",
+                                        "format": ""
+                                      },
+                                      "ATrM": {
+                                        "type": "string",
+                                        "enum": [
+                                          "11",
+                                          "12",
+                                          "13",
+                                          "14",
+                                          "15",
+                                          "21",
+                                          "22",
+                                          "29",
+                                          "31",
+                                          "32",
+                                          "38",
+                                          "39",
+                                          "41",
+                                          "49",
+                                          "51"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Automatische reiskosten vervoermiddel\n11 = Auto benzine;\n12 = Auto diesel;\n13 = Auto (plug in) hybride;\n14 = Auto 100% elektrisch;\n15 = Auto andere brandstoffen;\n21 = Motorfiets benzine;\n22 = Motorfiets elektrisch;\n29 = Motorfiets diesel;\n31 = Bromfiets/scooter benzine;\n32 = Bromfiets/scooter 100% elektrisch;\n38 = Bromfiets/scooter diesel;\n39 = Speed-pedelec;\n41 = (Elektrische) fiets;\n49 = Te voet;\n51 = Openbaar vervoer ;",
+                                        "format": ""
                                       }
                                     },
                                     "required": [
@@ -10859,7 +10947,7 @@
                       },
                       "EnPr": {
                         "type": "integer",
-                        "description": "Onboardenprofiel",
+                        "description": "Onboarden-profiel",
                         "format": ""
                       },
                       "ViFz": {
@@ -10944,7 +11032,7 @@
                           "10"
                         ],
                         "maxLength": 20,
-                        "description": "Reden be\u00EBindiging\n01 = Einde opdracht;\n02 = Kandidaat over naar volgende fase;\n03 = Kandidaat overgenomen door klant/ander bureau;\n04 = Kandidaat trekt zich terug;\n05 = Kandidaat is ziek;\n06 = Kandidaat krijgt nieuw contract;\n07 = Kandidaat heeft opgezegd;\n08 = Klant heeft opgezegd (niet tevreden);\n09 = Uitzender heeft opgezegd;\n10 = Foutief aangemaakt;",
+                        "description": "Reden beëindiging\n01 = Einde opdracht;\n02 = Kandidaat over naar volgende fase;\n03 = Kandidaat overgenomen door klant/ander bureau;\n04 = Kandidaat trekt zich terug;\n05 = Kandidaat is ziek;\n06 = Kandidaat krijgt nieuw contract;\n07 = Kandidaat heeft opgezegd;\n08 = Klant heeft opgezegd (niet tevreden);\n09 = Uitzender heeft opgezegd;\n10 = Foutief aangemaakt;",
                         "format": ""
                       },
                       "ViRs": {
@@ -11144,6 +11232,11 @@
                                         "description": "Organisatorische eenheid",
                                         "format": ""
                                       },
+                                      "TaId": {
+                                        "type": "integer",
+                                        "description": "Soort loonschaal",
+                                        "format": ""
+                                      },
                                       "VaSc": {
                                         "type": "string",
                                         "enum": [
@@ -11303,6 +11396,34 @@
                                       "RcDo": {
                                         "type": "boolean",
                                         "description": "Herindeling schaal/trede doorgevoerd",
+                                        "format": ""
+                                      },
+                                      "ATrC": {
+                                        "type": "boolean",
+                                        "description": "Automatisch reiskosten berekenen",
+                                        "format": ""
+                                      },
+                                      "ATrM": {
+                                        "type": "string",
+                                        "enum": [
+                                          "11",
+                                          "12",
+                                          "13",
+                                          "14",
+                                          "15",
+                                          "21",
+                                          "22",
+                                          "29",
+                                          "31",
+                                          "32",
+                                          "38",
+                                          "39",
+                                          "41",
+                                          "49",
+                                          "51"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Automatische reiskosten vervoermiddel\n11 = Auto benzine;\n12 = Auto diesel;\n13 = Auto (plug in) hybride;\n14 = Auto 100% elektrisch;\n15 = Auto andere brandstoffen;\n21 = Motorfiets benzine;\n22 = Motorfiets elektrisch;\n29 = Motorfiets diesel;\n31 = Bromfiets/scooter benzine;\n32 = Bromfiets/scooter 100% elektrisch;\n38 = Bromfiets/scooter diesel;\n39 = Speed-pedelec;\n41 = (Elektrische) fiets;\n49 = Te voet;\n51 = Openbaar vervoer ;",
                                         "format": ""
                                       }
                                     }
@@ -11608,7 +11729,7 @@
                                                           "6"
                                                         ],
                                                         "maxLength": 20,
-                                                        "description": "Tariefsoort\n0 = Vast tarief;\n1 = Tarieffactor;\n2 = Kostprijs \u002B nominale marge;\n3 = % marge t.o.v. kostprijs;\n4 = % marge t.o.v. verkoopprijs;\n5 = Tarieffactor \u002B nominale marge;\n6 = Basistarief;",
+                                                        "description": "Tariefsoort\n0 = Vast tarief;\n1 = Tarieffactor;\n2 = Kostprijs + nominale marge;\n3 = % marge t.o.v. kostprijs;\n4 = % marge t.o.v. verkoopprijs;\n5 = Tarieffactor + nominale marge;\n6 = Basistarief;",
                                                         "format": ""
                                                       },
                                                       "TaFa": {
@@ -12004,7 +12125,7 @@
                                                           "6"
                                                         ],
                                                         "maxLength": 20,
-                                                        "description": "Tariefsoort\n0 = Vast tarief;\n1 = Tarieffactor;\n2 = Kostprijs \u002B nominale marge;\n3 = % marge t.o.v. kostprijs;\n4 = % marge t.o.v. verkoopprijs;\n5 = Tarieffactor \u002B nominale marge;\n6 = Basistarief;",
+                                                        "description": "Tariefsoort\n0 = Vast tarief;\n1 = Tarieffactor;\n2 = Kostprijs + nominale marge;\n3 = % marge t.o.v. kostprijs;\n4 = % marge t.o.v. verkoopprijs;\n5 = Tarieffactor + nominale marge;\n6 = Basistarief;",
                                                         "format": ""
                                                       },
                                                       "TaFa": {
@@ -12447,7 +12568,7 @@
         "name": "Authorization",
         "type": "apiKey",
         "in": "header",
-        "description": "Convert the XML token to Base64 and add \u0027AfasToken \u0027 in front of it."
+        "description": "Convert the XML token to Base64 and add 'AfasToken ' in front of it."
       }
     },
     "parameters": {
@@ -12455,7 +12576,7 @@
         "name": "Accept-Language",
         "in": "header",
         "required": false,
-        "description": "Indicates the client\u0027s preferred language for the response. If not provided, the API defaults to the base environment language.",
+        "description": "Indicates the client's preferred language for the response. If not provided, the API defaults to the base environment language.",
         "schema": {
           "type": "string",
           "enum": [

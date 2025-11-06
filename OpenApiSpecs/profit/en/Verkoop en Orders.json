@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "6.6.9",
+    "version": "7.7.10",
     "title": "AFAS Verkoop en Orders API",
     "description": "This API describes the endpoints related to Verkoop en Orders. Use this API with the functional description of the API."
   },
@@ -460,7 +460,7 @@
     },
     "/connectors/FbAssembly": {
       "post": {
-        "summary": "Productie",
+        "summary": "Production",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FbAssembly.htm",
         "operationId": "POST_FbAssembly",
         "requestBody": {
@@ -1426,7 +1426,7 @@
           }
         ],
         "tags": [
-          "Productie"
+          "Production"
         ],
         "parameters": [
           {
@@ -1438,7 +1438,7 @@
         ]
       },
       "put": {
-        "summary": "Productie",
+        "summary": "Production",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FbAssembly.htm",
         "operationId": "PUT_FbAssembly",
         "requestBody": {
@@ -1635,7 +1635,7 @@
           }
         ],
         "tags": [
-          "Productie"
+          "Production"
         ],
         "parameters": [
           {
@@ -1649,7 +1649,7 @@
     },
     "/connectors/FbAssembly/FbAssemblyLines": {
       "post": {
-        "summary": "Productie",
+        "summary": "Production",
         "description": "Update main record in FbAssembly and insert subrecord into FbAssemblyLines. \n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FbAssembly.htm",
         "operationId": "POSTSubRecordFbAssemblyFbAssemblyLines",
         "requestBody": {
@@ -1791,7 +1791,7 @@
           }
         ],
         "tags": [
-          "Productie"
+          "Production"
         ],
         "parameters": [
           {
@@ -1805,7 +1805,7 @@
     },
     "/connectors/FbAssemblyPrep": {
       "post": {
-        "summary": "Productieorder",
+        "summary": "Production order",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FbAssemblyPrep.htm",
         "operationId": "POST_FbAssemblyPrep",
         "requestBody": {
@@ -2142,7 +2142,7 @@
           }
         ],
         "tags": [
-          "Productieorder"
+          "Production order"
         ],
         "parameters": [
           {
@@ -2154,7 +2154,7 @@
         ]
       },
       "put": {
-        "summary": "Productieorder",
+        "summary": "Production order",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FbAssemblyPrep.htm",
         "operationId": "PUT_FbAssemblyPrep",
         "requestBody": {
@@ -2359,7 +2359,7 @@
           }
         ],
         "tags": [
-          "Productieorder"
+          "Production order"
         ],
         "parameters": [
           {
@@ -2373,7 +2373,7 @@
     },
     "/connectors/FbAssemblyPrep/FbAssemblyLines": {
       "post": {
-        "summary": "Productieorder",
+        "summary": "Production order",
         "description": "Update main record in FbAssemblyPrep and insert subrecord into FbAssemblyLines. \n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FbAssemblyPrep.htm",
         "operationId": "POSTSubRecordFbAssemblyPrepFbAssemblyLines",
         "requestBody": {
@@ -2515,7 +2515,7 @@
           }
         ],
         "tags": [
-          "Productieorder"
+          "Production order"
         ],
         "parameters": [
           {
@@ -2540,7 +2540,7 @@
         }
       ],
       "delete": {
-        "summary": "Productieorder",
+        "summary": "Production order",
         "operationId": "DELETE_FbAssemblyPrep",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FbAssemblyPrep.htm",
         "responses": {
@@ -2575,7 +2575,7 @@
           }
         ],
         "tags": [
-          "Productieorder"
+          "Production order"
         ],
         "parameters": [
           {
@@ -2586,7 +2586,7 @@
     },
     "/connectors/FbDeliveryNote": {
       "post": {
-        "summary": "Pakbon",
+        "summary": "Packing slip",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_180.htm",
         "operationId": "POST_FbDeliveryNote",
         "requestBody": {
@@ -3863,7 +3863,7 @@
           }
         ],
         "tags": [
-          "Pakbon"
+          "Packing slip"
         ],
         "parameters": [
           {
@@ -3875,7 +3875,7 @@
         ]
       },
       "put": {
-        "summary": "Pakbon",
+        "summary": "Packing slip",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_180.htm",
         "operationId": "PUT_FbDeliveryNote",
         "requestBody": {
@@ -4392,7 +4392,7 @@
           }
         ],
         "tags": [
-          "Pakbon"
+          "Packing slip"
         ],
         "parameters": [
           {
@@ -4406,7 +4406,7 @@
     },
     "/connectors/FbDeliveryNote/FbDeliveryNoteLines": {
       "post": {
-        "summary": "Pakbon",
+        "summary": "Packing slip",
         "description": "Update main record in FbDeliveryNote and insert subrecord into FbDeliveryNoteLines. \n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_180.htm",
         "operationId": "POSTSubRecordFbDeliveryNoteFbDeliveryNoteLines",
         "requestBody": {
@@ -4548,7 +4548,7 @@
           }
         ],
         "tags": [
-          "Pakbon"
+          "Packing slip"
         ],
         "parameters": [
           {
@@ -4573,7 +4573,7 @@
         }
       ],
       "delete": {
-        "summary": "Pakbon",
+        "summary": "Packing slip",
         "operationId": "DELETE_FbDeliveryNote",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_180.htm",
         "responses": {
@@ -4608,7 +4608,7 @@
           }
         ],
         "tags": [
-          "Pakbon"
+          "Packing slip"
         ],
         "parameters": [
           {
@@ -4619,8 +4619,8 @@
     },
     "/connectors/FbDirectInvoice": {
       "post": {
-        "summary": "Balie-/directfactuur",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_085.htm",
+        "summary": "Counter/direct invoice",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_86.htm",
         "operationId": "POST_FbDirectInvoice",
         "requestBody": {
           "content": {
@@ -5531,7 +5531,7 @@
           }
         ],
         "tags": [
-          "Balie-/directfactuur"
+          "Counter/direct invoice"
         ],
         "parameters": [
           {
@@ -5543,8 +5543,8 @@
         ]
       },
       "put": {
-        "summary": "Balie-/directfactuur",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_085.htm",
+        "summary": "Counter/direct invoice",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_86.htm",
         "operationId": "PUT_FbDirectInvoice",
         "requestBody": {
           "content": {
@@ -5816,7 +5816,7 @@
           }
         ],
         "tags": [
-          "Balie-/directfactuur"
+          "Counter/direct invoice"
         ],
         "parameters": [
           {
@@ -5830,8 +5830,8 @@
     },
     "/connectors/FbDirectInvoice/FbDirectInvoiceLines": {
       "post": {
-        "summary": "Balie-/directfactuur",
-        "description": "Update main record in FbDirectInvoice and insert subrecord into FbDirectInvoiceLines. \n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_085.htm",
+        "summary": "Counter/direct invoice",
+        "description": "Update main record in FbDirectInvoice and insert subrecord into FbDirectInvoiceLines. \n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_86.htm",
         "operationId": "POSTSubRecordFbDirectInvoiceFbDirectInvoiceLines",
         "requestBody": {
           "content": {
@@ -5973,7 +5973,7 @@
           }
         ],
         "tags": [
-          "Balie-/directfactuur"
+          "Counter/direct invoice"
         ],
         "parameters": [
           {
@@ -5998,9 +5998,9 @@
         }
       ],
       "delete": {
-        "summary": "Balie-/directfactuur",
+        "summary": "Counter/direct invoice",
         "operationId": "DELETE_FbDirectInvoice",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_085.htm",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_86.htm",
         "responses": {
           "400": {
             "$ref": "#/components/responses/400"
@@ -6033,7 +6033,7 @@
           }
         ],
         "tags": [
-          "Balie-/directfactuur"
+          "Counter/direct invoice"
         ],
         "parameters": [
           {
@@ -6044,7 +6044,7 @@
     },
     "/connectors/FbFreeOrder": {
       "post": {
-        "summary": "Vrijgeven order",
+        "summary": "Release of order",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_081.htm",
         "operationId": "POST_FbFreeOrder",
         "requestBody": {
@@ -6121,7 +6121,7 @@
           }
         ],
         "tags": [
-          "Vrijgeven order"
+          "Release of order"
         ],
         "parameters": [
           {
@@ -6135,7 +6135,7 @@
     },
     "/connectors/FbGenSSCCForDen": {
       "post": {
-        "summary": "Genereren SSCC-labels voor pakbon",
+        "summary": "Generate SSCC labels for packing slip",
         "description": "\n\r https://help.afas.nl/help/NL/SE/120380.htm",
         "operationId": "POST_FbGenSSCCForDen",
         "requestBody": {
@@ -6187,7 +6187,7 @@
           }
         ],
         "tags": [
-          "Genereren SSCC-labels voor pakbon"
+          "Generate SSCC labels for packing slip"
         ],
         "parameters": [
           {
@@ -6201,7 +6201,7 @@
     },
     "/connectors/FbItemCodeCustomer": {
       "post": {
-        "summary": "Itemcode verkooprelatie",
+        "summary": "Sales contact item code",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FbItemCodeSupplier.htm",
         "operationId": "POST_FbItemCodeCustomer",
         "requestBody": {
@@ -6297,7 +6297,7 @@
           }
         ],
         "tags": [
-          "Itemcode verkooprelatie"
+          "Sales contact item code"
         ],
         "parameters": [
           {
@@ -6309,7 +6309,7 @@
         ]
       },
       "put": {
-        "summary": "Itemcode verkooprelatie",
+        "summary": "Sales contact item code",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FbItemCodeSupplier.htm",
         "operationId": "PUT_FbItemCodeCustomer",
         "requestBody": {
@@ -6369,7 +6369,7 @@
           }
         ],
         "tags": [
-          "Itemcode verkooprelatie"
+          "Sales contact item code"
         ],
         "parameters": [
           {
@@ -6403,7 +6403,7 @@
         }
       ],
       "delete": {
-        "summary": "Itemcode verkooprelatie",
+        "summary": "Sales contact item code",
         "operationId": "DELETE_FbItemCodeCustomer",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FbItemCodeSupplier.htm",
         "responses": {
@@ -6438,7 +6438,7 @@
           }
         ],
         "tags": [
-          "Itemcode verkooprelatie"
+          "Sales contact item code"
         ],
         "parameters": [
           {
@@ -6449,7 +6449,7 @@
     },
     "/connectors/FbItemCodeSupplier": {
       "post": {
-        "summary": "Itemcode inkooprelatie",
+        "summary": "Purchase contact item code",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_210.htm",
         "operationId": "POST_FbItemCodeSupplier",
         "requestBody": {
@@ -6875,7 +6875,7 @@
           }
         ],
         "tags": [
-          "Itemcode inkooprelatie"
+          "Purchase contact item code"
         ],
         "parameters": [
           {
@@ -6887,7 +6887,7 @@
         ]
       },
       "put": {
-        "summary": "Itemcode inkooprelatie",
+        "summary": "Purchase contact item code",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_210.htm",
         "operationId": "PUT_FbItemCodeSupplier",
         "requestBody": {
@@ -6947,7 +6947,7 @@
           }
         ],
         "tags": [
-          "Itemcode inkooprelatie"
+          "Purchase contact item code"
         ],
         "parameters": [
           {
@@ -6981,7 +6981,7 @@
         }
       ],
       "delete": {
-        "summary": "Itemcode inkooprelatie",
+        "summary": "Purchase contact item code",
         "operationId": "DELETE_FbItemCodeSupplier",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_210.htm",
         "responses": {
@@ -7016,7 +7016,7 @@
           }
         ],
         "tags": [
-          "Itemcode inkooprelatie"
+          "Purchase contact item code"
         ],
         "parameters": [
           {
@@ -7027,8 +7027,8 @@
     },
     "/connectors/FbProductGroup": {
       "post": {
-        "summary": "Productgroep",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_PrdGrp.htm",
+        "summary": "Product group",
+        "description": "\n\rAlleen beschikbaar onder conditie: Ordermanagement\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_PrdGrp.htm",
         "operationId": "POST_FbProductGroup",
         "requestBody": {
           "content": {
@@ -7065,7 +7065,7 @@
           }
         ],
         "tags": [
-          "Productgroep"
+          "Product group"
         ],
         "parameters": [
           {
@@ -7077,8 +7077,8 @@
         ]
       },
       "put": {
-        "summary": "Productgroep",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_PrdGrp.htm",
+        "summary": "Product group",
+        "description": "\n\rAlleen beschikbaar onder conditie: Ordermanagement\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_PrdGrp.htm",
         "operationId": "PUT_FbProductGroup",
         "requestBody": {
           "content": {
@@ -7115,7 +7115,7 @@
           }
         ],
         "tags": [
-          "Productgroep"
+          "Product group"
         ],
         "parameters": [
           {
@@ -7140,7 +7140,7 @@
         }
       ],
       "delete": {
-        "summary": "Productgroep",
+        "summary": "Product group",
         "operationId": "DELETE_FbProductGroup",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_PrdGrp.htm",
         "responses": {
@@ -7175,7 +7175,7 @@
           }
         ],
         "tags": [
-          "Productgroep"
+          "Product group"
         ],
         "parameters": [
           {
@@ -7186,8 +7186,8 @@
     },
     "/connectors/FbProductGroupLines": {
       "post": {
-        "summary": "Productgroepregel",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_PrdGrp_Lines.htm",
+        "summary": "Product group line",
+        "description": "\n\rAlleen beschikbaar onder conditie: Ordermanagement\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_PrdGrp_Lines.htm",
         "operationId": "POST_FbProductGroupLines",
         "requestBody": {
           "content": {
@@ -7224,7 +7224,7 @@
           }
         ],
         "tags": [
-          "Productgroepregel"
+          "Product group line"
         ],
         "parameters": [
           {
@@ -7249,7 +7249,7 @@
         }
       ],
       "delete": {
-        "summary": "Productgroepregel",
+        "summary": "Product group line",
         "operationId": "DELETE_FbProductGroupLines",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_PrdGrp_Lines.htm",
         "responses": {
@@ -7284,7 +7284,7 @@
           }
         ],
         "tags": [
-          "Productgroepregel"
+          "Product group line"
         ],
         "parameters": [
           {
@@ -7295,7 +7295,7 @@
     },
     "/connectors/FbSales": {
       "post": {
-        "summary": "Verkooporder",
+        "summary": "Sales order",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_080.htm",
         "operationId": "POST_FbSales",
         "requestBody": {
@@ -7967,7 +7967,7 @@
           }
         ],
         "tags": [
-          "Verkooporder"
+          "Sales order"
         ],
         "parameters": [
           {
@@ -7979,7 +7979,7 @@
         ]
       },
       "put": {
-        "summary": "Verkooporder",
+        "summary": "Sales order",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_080.htm",
         "operationId": "PUT_FbSales",
         "requestBody": {
@@ -8304,7 +8304,7 @@
           }
         ],
         "tags": [
-          "Verkooporder"
+          "Sales order"
         ],
         "parameters": [
           {
@@ -8318,7 +8318,7 @@
     },
     "/connectors/FbSales/FbSalesLines": {
       "post": {
-        "summary": "Verkooporder",
+        "summary": "Sales order",
         "description": "Update main record in FbSales and insert subrecord into FbSalesLines. \n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_080.htm",
         "operationId": "POSTSubRecordFbSalesFbSalesLines",
         "requestBody": {
@@ -8488,7 +8488,7 @@
           }
         ],
         "tags": [
-          "Verkooporder"
+          "Sales order"
         ],
         "parameters": [
           {
@@ -8513,7 +8513,7 @@
         }
       ],
       "delete": {
-        "summary": "Verkooporder",
+        "summary": "Sales order",
         "operationId": "DELETE_FbSales",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_080.htm",
         "responses": {
@@ -8548,7 +8548,7 @@
           }
         ],
         "tags": [
-          "Verkooporder"
+          "Sales order"
         ],
         "parameters": [
           {
@@ -8559,7 +8559,7 @@
     },
     "/connectors/FbSalesPrice": {
       "post": {
-        "summary": "Verkoopprijs",
+        "summary": "Sales price",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FbSalesPrice.htm",
         "operationId": "POST_FbSalesPrice",
         "requestBody": {
@@ -8686,7 +8686,7 @@
           }
         ],
         "tags": [
-          "Verkoopprijs"
+          "Sales price"
         ],
         "parameters": [
           {
@@ -8700,7 +8700,7 @@
     },
     "/connectors/FbSalesQuotation": {
       "post": {
-        "summary": "Verkoopofferte",
+        "summary": "Sales quotation",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_083.htm",
         "operationId": "POST_FbSalesQuotation",
         "requestBody": {
@@ -9026,7 +9026,7 @@
           }
         ],
         "tags": [
-          "Verkoopofferte"
+          "Sales quotation"
         ],
         "parameters": [
           {
@@ -9038,7 +9038,7 @@
         ]
       },
       "put": {
-        "summary": "Verkoopofferte",
+        "summary": "Sales quotation",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_083.htm",
         "operationId": "PUT_FbSalesQuotation",
         "requestBody": {
@@ -9229,7 +9229,7 @@
           }
         ],
         "tags": [
-          "Verkoopofferte"
+          "Sales quotation"
         ],
         "parameters": [
           {
@@ -9243,7 +9243,7 @@
     },
     "/connectors/FbSalesQuotation/FbSalesQuotationLines": {
       "post": {
-        "summary": "Verkoopofferte",
+        "summary": "Sales quotation",
         "description": "Update main record in FbSalesQuotation and insert subrecord into FbSalesQuotationLines. \n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_083.htm",
         "operationId": "POSTSubRecordFbSalesQuotationFbSalesQuotationLines",
         "requestBody": {
@@ -9385,7 +9385,7 @@
           }
         ],
         "tags": [
-          "Verkoopofferte"
+          "Sales quotation"
         ],
         "parameters": [
           {
@@ -9410,7 +9410,7 @@
         }
       ],
       "delete": {
-        "summary": "Verkoopofferte",
+        "summary": "Sales quotation",
         "operationId": "DELETE_FbSalesQuotation",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_083.htm",
         "responses": {
@@ -9445,7 +9445,7 @@
           }
         ],
         "tags": [
-          "Verkoopofferte"
+          "Sales quotation"
         ],
         "parameters": [
           {
@@ -9456,7 +9456,7 @@
     },
     "/connectors/FbSettleOrder": {
       "post": {
-        "summary": "Afhandelen order",
+        "summary": "Complete order",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FbSettleOrder.htm",
         "operationId": "POST_FbSettleOrder",
         "requestBody": {
@@ -9494,7 +9494,7 @@
           }
         ],
         "tags": [
-          "Afhandelen order"
+          "Complete order"
         ],
         "parameters": [
           {
@@ -9508,7 +9508,7 @@
     },
     "/connectors/FbSubscription": {
       "post": {
-        "summary": "Abonnement",
+        "summary": "Subscription",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Sub.htm",
         "operationId": "POST_FbSubscription",
         "requestBody": {
@@ -11625,7 +11625,7 @@
           }
         ],
         "tags": [
-          "Abonnement"
+          "Subscription"
         ],
         "parameters": [
           {
@@ -11637,7 +11637,7 @@
         ]
       },
       "put": {
-        "summary": "Abonnement",
+        "summary": "Subscription",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Sub.htm",
         "operationId": "PUT_FbSubscription",
         "requestBody": {
@@ -11867,7 +11867,7 @@
           }
         ],
         "tags": [
-          "Abonnement"
+          "Subscription"
         ],
         "parameters": [
           {
@@ -11881,7 +11881,7 @@
     },
     "/connectors/FbSubscription/FbSubscriptionLines": {
       "post": {
-        "summary": "Abonnement",
+        "summary": "Subscription",
         "description": "Update main record in FbSubscription and insert subrecord into FbSubscriptionLines. \n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Sub.htm",
         "operationId": "POSTSubRecordFbSubscriptionFbSubscriptionLines",
         "requestBody": {
@@ -12024,7 +12024,7 @@
           }
         ],
         "tags": [
-          "Abonnement"
+          "Subscription"
         ],
         "parameters": [
           {
@@ -12049,7 +12049,7 @@
         }
       ],
       "delete": {
-        "summary": "Abonnement",
+        "summary": "Subscription",
         "operationId": "DELETE_FbSubscription",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Sub.htm",
         "responses": {
@@ -12084,7 +12084,7 @@
           }
         ],
         "tags": [
-          "Abonnement"
+          "Subscription"
         ],
         "parameters": [
           {
@@ -12095,7 +12095,7 @@
     },
     "/connectors/FbUpdateActemiumDeliveryNote": {
       "put": {
-        "summary": "Pakbon Actemium",
+        "summary": "Actemium packing slip",
         "description": "\n\r ",
         "operationId": "PUT_FbUpdateActemiumDeliveryNote",
         "requestBody": {
@@ -12133,7 +12133,7 @@
           }
         ],
         "tags": [
-          "Pakbon Actemium"
+          "Actemium packing slip"
         ],
         "parameters": [
           {
@@ -12423,7 +12423,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id\u0027s can be found in the metainfo request result.",
+        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -12569,7 +12569,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -12651,7 +12651,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -12746,7 +12746,7 @@
                           },
                           "A_Toev_Huisnr.": {
                             "type": "string",
-                            "description": "House number addition"
+                            "description": "Extension (a, b, etc.) to house number"
                           },
                           "A_Postcode": {
                             "type": "string",
@@ -12758,7 +12758,7 @@
                           },
                           "Adrestype_code_2": {
                             "type": "string",
-                            "description": "Adrestype code"
+                            "description": "Address type code"
                           },
                           "A_Land": {
                             "type": "string",
@@ -12766,7 +12766,7 @@
                           },
                           "DebiteurID": {
                             "type": "string",
-                            "description": "Debiteur Id"
+                            "description": "Debtor ID"
                           }
                         }
                       }
@@ -12859,7 +12859,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -13007,7 +13007,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -13151,7 +13151,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -13226,7 +13226,7 @@
                           },
                           "LineStatusCode": {
                             "type": "string",
-                            "description": "Regel statuscode"
+                            "description": "Status code line"
                           },
                           "LineGuid": {
                             "type": "string",
@@ -13234,7 +13234,7 @@
                           },
                           "ItemTypeCode": {
                             "type": "string",
-                            "description": "Type item code"
+                            "description": "Item type code"
                           },
                           "ItemCodeId": {
                             "type": "string",
@@ -13367,7 +13367,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -13418,7 +13418,7 @@
                           },
                           "OrderNumber": {
                             "type": "string",
-                            "description": "Ordernummer"
+                            "description": "Order number"
                           },
                           "Status": {
                             "type": "string",
@@ -13555,7 +13555,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -13739,7 +13739,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -13802,7 +13802,7 @@
                           },
                           "ValueIntIdSu": {
                             "type": "string",
-                            "description": "Type abonnement code"
+                            "description": "Subscription type code"
                           },
                           "ProjectId": {
                             "type": "string",
@@ -13822,7 +13822,7 @@
                           },
                           "ItemType": {
                             "type": "string",
-                            "description": "Type item code"
+                            "description": "Item type code"
                           },
                           "Itemcode": {
                             "type": "string",
@@ -13967,68 +13967,68 @@
       "description": "Forecast"
     },
     {
-      "name": "Productie",
-      "description": "Productie"
+      "name": "Production",
+      "description": "Production"
     },
     {
-      "name": "Productieorder",
-      "description": "Productieorder"
+      "name": "Production order",
+      "description": "Production order"
     },
     {
-      "name": "Pakbon",
-      "description": "Pakbon"
+      "name": "Packing slip",
+      "description": "Packing slip"
     },
     {
-      "name": "Balie-/directfactuur",
-      "description": "Balie-/directfactuur"
+      "name": "Counter/direct invoice",
+      "description": "Counter/direct invoice"
     },
     {
-      "name": "Vrijgeven order",
-      "description": "Vrijgeven order"
+      "name": "Release of order",
+      "description": "Release of order"
     },
     {
-      "name": "Genereren SSCC-labels voor pakbon",
-      "description": "Genereren SSCC-labels voor pakbon"
+      "name": "Generate SSCC labels for packing slip",
+      "description": "Generate SSCC labels for packing slip"
     },
     {
-      "name": "Itemcode verkooprelatie",
-      "description": "Itemcode verkooprelatie"
+      "name": "Sales contact item code",
+      "description": "Sales contact item code"
     },
     {
-      "name": "Itemcode inkooprelatie",
-      "description": "Itemcode inkooprelatie"
+      "name": "Purchase contact item code",
+      "description": "Purchase contact item code"
     },
     {
-      "name": "Productgroep",
-      "description": "Productgroep"
+      "name": "Product group",
+      "description": "Product group"
     },
     {
-      "name": "Productgroepregel",
-      "description": "Productgroepregel"
+      "name": "Product group line",
+      "description": "Product group line"
     },
     {
-      "name": "Verkooporder",
-      "description": "Verkooporder"
+      "name": "Sales order",
+      "description": "Sales order"
     },
     {
-      "name": "Verkoopprijs",
-      "description": "Verkoopprijs"
+      "name": "Sales price",
+      "description": "Sales price"
     },
     {
-      "name": "Verkoopofferte",
-      "description": "Verkoopofferte"
+      "name": "Sales quotation",
+      "description": "Sales quotation"
     },
     {
-      "name": "Afhandelen order",
-      "description": "Afhandelen order"
+      "name": "Complete order",
+      "description": "Complete order"
     },
     {
-      "name": "Abonnement",
-      "description": "Abonnement"
+      "name": "Subscription",
+      "description": "Subscription"
     },
     {
-      "name": "Pakbon Actemium",
-      "description": "Pakbon Actemium"
+      "name": "Actemium packing slip",
+      "description": "Actemium packing slip"
     }
   ],
   "components": {
@@ -14140,12 +14140,12 @@
                       "ViOp": {
                         "type": "string",
                         "enum": [
-                          "G",
+                          "C",
                           "N",
                           "O"
                         ],
                         "maxLength": 20,
-                        "description": "Result\nG = Gesloten en gescoord;\nN = Gesloten en niet gescoord;\nO = Open;",
+                        "description": "Result\nC = Closed and scored;\nN = Closed and not scored;\nO = Open;",
                         "format": ""
                       },
                       "ViRe": {
@@ -14322,12 +14322,12 @@
                       "ViOp": {
                         "type": "string",
                         "enum": [
-                          "G",
+                          "C",
                           "N",
                           "O"
                         ],
                         "maxLength": 20,
-                        "description": "Result\nG = Gesloten en gescoord;\nN = Gesloten en niet gescoord;\nO = Open;",
+                        "description": "Result\nC = Closed and scored;\nN = Closed and not scored;\nO = Open;",
                         "format": ""
                       },
                       "ViRe": {
@@ -14484,7 +14484,7 @@
                           "8"
                         ],
                         "maxLength": 20,
-                        "description": "Barcode type\n0 = Geen controle;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (controlegetal);",
+                        "description": "Barcode type\n0 = No check;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (checksum);",
                         "format": ""
                       },
                       "BaCo": {
@@ -14555,7 +14555,7 @@
                                           "8"
                                         ],
                                         "maxLength": 10,
-                                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                         "format": ""
                                       },
                                       "ItCd": {
@@ -14629,7 +14629,7 @@
                                           "5"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Weight unit\n0 = Geen gewicht;\n1 = Microgram (\u00B5g);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
+                                        "description": "Weight unit\n0 = No weight;\n1 = Microgram (µg);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
                                         "format": ""
                                       },
                                       "NeWe": {
@@ -14863,7 +14863,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Part item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                                        "description": "Part item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -15240,7 +15240,7 @@
                           "8"
                         ],
                         "maxLength": 20,
-                        "description": "Barcode type\n0 = Geen controle;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (controlegetal);",
+                        "description": "Barcode type\n0 = No check;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (checksum);",
                         "format": ""
                       },
                       "BaCo": {
@@ -15314,7 +15314,7 @@
                                           "8"
                                         ],
                                         "maxLength": 10,
-                                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                         "format": ""
                                       },
                                       "ItCd": {
@@ -15393,7 +15393,7 @@
                                           "5"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Weight unit\n0 = Geen gewicht;\n1 = Microgram (\u00B5g);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
+                                        "description": "Weight unit\n0 = No weight;\n1 = Microgram (µg);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
                                         "format": ""
                                       },
                                       "NeWe": {
@@ -15624,7 +15624,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Part item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                                        "description": "Part item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -16013,7 +16013,7 @@
                           "8"
                         ],
                         "maxLength": 20,
-                        "description": "Barcode type\n0 = Geen controle;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (controlegetal);",
+                        "description": "Barcode type\n0 = No check;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (checksum);",
                         "format": ""
                       },
                       "BaCo": {
@@ -16084,7 +16084,7 @@
                                           "8"
                                         ],
                                         "maxLength": 10,
-                                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                         "format": ""
                                       },
                                       "ItCd": {
@@ -16170,7 +16170,7 @@
                                           "5"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Weight unit\n0 = Geen gewicht;\n1 = Microgram (\u00B5g);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
+                                        "description": "Weight unit\n0 = No weight;\n1 = Microgram (µg);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
                                         "format": ""
                                       },
                                       "NeWe": {
@@ -16486,7 +16486,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Part item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                                        "description": "Part item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -17012,7 +17012,7 @@
                           "8"
                         ],
                         "maxLength": 20,
-                        "description": "Barcode type\n0 = Geen controle;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (controlegetal);",
+                        "description": "Barcode type\n0 = No check;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (checksum);",
                         "format": ""
                       },
                       "BaCo": {
@@ -17086,7 +17086,7 @@
                                           "8"
                                         ],
                                         "maxLength": 10,
-                                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                         "format": ""
                                       },
                                       "ItCd": {
@@ -17177,7 +17177,7 @@
                                           "5"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Weight unit\n0 = Geen gewicht;\n1 = Microgram (\u00B5g);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
+                                        "description": "Weight unit\n0 = No weight;\n1 = Microgram (µg);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
                                         "format": ""
                                       },
                                       "NeWe": {
@@ -17484,7 +17484,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Part item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                                        "description": "Part item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -18071,7 +18071,7 @@
                           "3"
                         ],
                         "maxLength": 20,
-                        "description": "Delivery conditions\n0 = Deellevering toestaan;\n1 = Regel volledig uitleveren;\n2 = Order volledig uitleveren;\n3 = Geen backorders leveren;",
+                        "description": "Delivery conditions\n0 = Allow short-supply;\n1 = Deliver line completely;\n2 = Deliver order completely;\n3 = Do not deliver backorders;",
                         "format": ""
                       },
                       "CsTy": {
@@ -18093,7 +18093,7 @@
                           "9"
                         ],
                         "maxLength": 20,
-                        "description": "Type of Statistics Netherlands transport\n1 = Zeevaart;\n2 = Spoorvervoer;\n3 = Wegvervoer;\n4 = Luchtvaart;\n5 = Postzendingen;\n7 = Pijpleidingvervoer;\n8 = Binnenvaart;\n9 = Eigen vervoer;",
+                        "description": "Type of Statistics Netherlands transport\n1 = Shipping;\n2 = Rail transport;\n3 = Road transport;\n4 = Air traffic;\n5 = Shipping by post;\n7 = Pipeline transport;\n8 = Inland navigation;\n9 = Own transportation;",
                         "format": ""
                       },
                       "Inco": {
@@ -18106,13 +18106,14 @@
                           "DAP",
                           "DAT",
                           "DDP",
+                          "DPU",
                           "EXW",
                           "FAS",
                           "FCA",
                           "FOB"
                         ],
                         "maxLength": 20,
-                        "description": "Incoterm\nCFR = Kostprijs en vracht;\nCIF = Kostprijs, verzekering en vracht;\nCIP = Vracht en verzekering betaald tot;\nCPT = Vracht betaald tot;\nDAP = Geleverd tot bestemming;\nDAT = Geleverd op terminal;\nDDP = Geleverd rechten tot betaald;\nEXW = Af fabriek;\nFAS = Vrachtvrij langszij schip;\nFCA = Vrachtvrij tot vervoerder;\nFOB = Vrachtvrij aan boord;",
+                        "description": "Incoterm\nCFR = Cost price and freight;\nCIF = Cost price, insurance and freight;\nCIP = Freight and insurance paid to;\nCPT = Freight paid to;\nDAP = Delivered to destination;\nDAT = Delivered to terminal;\nDDP = Delivered duties to paid;\nDPU = Delivered on site, unloaded;\nEXW = Ex factory;\nFAS = Freight paid alongside ship;\nFCA = Freight paid to transporter;\nFOB = Free On Board;",
                         "format": ""
                       },
                       "VaSt": {
@@ -18127,7 +18128,7 @@
                           "10"
                         ],
                         "maxLength": 20,
-                        "description": "\u0027CBS\u0027 statistical system\n00 = Reguliere invoer/ICV en uitvoer/ICL;\n01 = Doorlevering (ICL) van onbewerkte goederen naar een andere EU-lidstaat;\n02 = Wederverkoop (ICL of uitvoer) van onbewerkte goederen;\n03 = Invoer van goederen, doorlevering/uitvoer onbewerkte goederen;\n04 = Verwerving/levering v\u00F3\u00F3r eigen voorraadverplaatsing (fictieve zending);\n05 = Verwerving/levering n\u00E1 eigen voorraadverplaatsing (fictieve zending);\n10 = Actieve douaneveredeling met toepassing van het terugbetalingssysteem;",
+                        "description": "'CBS' statistical system\n00 = Regular import/ICV and export/ICL;\n01 = Onward supply (ICL) of unprocessed goods to another EU member state;\n02 = Resale (ICL or export) of unprocessed goods;\n03 = Import of goods, delivery to others/export of raw materials;\n04 = Acquisition/delivery prior to own stock transfer (fictitious dispatch);\n05 = Acquisition/delivery after own stock transfer (fictitious dispatch);\n10 = Active customs processing with application of the repayment system;",
                         "format": ""
                       },
                       "VaGs": {
@@ -18137,7 +18138,7 @@
                           "7"
                         ],
                         "maxLength": 20,
-                        "description": "\u0027CBS\u0027 goods flow\n6 = Invoer/intra-cummunautaire verwerving (ICV);\n7 = Uitvoer/intra-communautaire levering (ICL);",
+                        "description": "'CBS' goods flow\n6 = Import/intracommunity acquisition (ICV);\n7 = Export/intracommunity delivery (ICL);",
                         "format": ""
                       },
                       "VaTa": {
@@ -18173,7 +18174,7 @@
                           "99"
                         ],
                         "maxLength": 20,
-                        "description": "\u0027CBS\u0027 transaction\n1 = Transacties die gepaard gaan met een eigendomsoverdracht met financi\u00EBle of andere tegenprestatie;\n11 = Definitieve aan- of verkoop, uitgezonderd directe handel met/door private consumenten;\n12 = Directe handel met/door private consumenten (inclusief verkoop op afstand);\n2 = Retourzendingen en gratis vervanging van goederen na registratie van de oorspronkelijke transactie;\n21 = Retourzendingen van goederen;\n22 = Vervanging van geretourneerde goederen;\n23 = Vervanging (bijv. onder garantie) voor goederen die niet zijn geretourneerd;\n3 = Transacties die gepaard gaan met een eigendomsoverdracht zonder financi\u00EBle tegenprestatie;\n31 = Verplaatsingen van of naar een opslag, uitgezonderd levering in consignatie of voorraden op afroep;\n32 = Zicht- of proefzending, inclusief levering in consignatie of via voorraden op afroep;\n33 = Financi\u00EBle lease (huurkoop);\n34 = Transacties die gepaard gaan met eigendomsoverdracht zonder financi\u00EBle tegenprestatie;\n4 = Verrichtingen met het oog op loonveredeling zonder eigendomsoverdracht aan de bewerker;\n41 = Goederen die naar verwachting terugkeren naar de aanvank. lidstaat van verzending/land export;\n42 = Goederen die naar verwachting niet terugkeren naar de aanvank. lidstaat van verzending/land export;\n5 = Verrichtingen na loonveredeling (zonder eigendomsoverdracht aan de bewerker);\n51 = Goederen die terugkeren naar de aanvankelijke lidstaat van verzending of het land van export;\n52 = Goederen die niet terugkeren naar de aanvankelijke lidstaat van verzending of het land van export;\n6 = Tijdelijke in- en uitvoer en retour tijdelijke in- en uitvoer;\n60 = Bijzondere voor nationale doeleinden geregistreerde transacties, zoals reparatiezendingen;\n7 = Verrichtingen in het kader van gezamenlijke fabricage (defensie, intergouvernementeel);\n71 = In het vrije verkeer brengen van goederen in een EU-lidstaat incl. latere verzending andere lidstaat;\n72 = Vervoer van goederen van de ene EU-lidstaat naar een andere EU-lidstaat onder de uitvoer procedure;\n8 = Transacties die gepaard gaan met de levering van bouwmaterialen in het kader van een contract;\n80 = Transacties die gepaard gaan met de levering van bouwmaterialen in het kader van een contract;\n9 = Overige transacties; niet elders vermeld;\n91 = Huur, bruikleen of operationele lease langer dan 24 maanden;\n99 = Andere;",
+                        "description": "'CBS' transaction\n1 = Transactions that are coupled to a transfer of ownership with financial or other consideration;\n11 = Definitive purchases or sales except for direct trade with/by private consumers;\n12 = Direct trade with/by private consumers (including distance selling);\n2 = Return shipments and free replacement of products after registration of the original transaction;\n21 = Return shipment of products;\n22 = Replacement of returned products;\n23 = Replacement (for example, under guarantee) for products that have not been returned;\n3 = Transactions that are coupled to a transfer of ownership without financial or other consideration;\n31 = Movements from one to another storage location except deliveries in consignment or on-demand stock;\n32 = Visual or test shipment including deliveries in assignation or through on-demand stock;\n33 = Financial lease (rent-to-buy);\n34 = Transactions that are coupled to a transfer of ownership without financial consideration;\n4 = Operations with a view of contract processing without transfer of ownership to the processor;\n41 = Products that are expected to return to the original member state of shipment/export country;\n42 = Products that are expected not to return to the original member state of shipment/export country;\n5 = Operations after contract processing (without transfer of ownership to the processor);\n51 = Products that return to the original member state of shipments or the export country;\n52 = Products that do not return to the original member state of shipments or the export country;\n6 = Temporary import and export and return of temporary import and export;\n60 = Special transactions registered for national objectives such as repair shipments;\n7 = Operations within the framework of joint fabrication (defence and intergovernmental);\n71 = Placing products into free circulation in an EU member state incl. later shipment to another mr. st.;\n72 = Transport of products from one EU member state to another EU member state under the export procedure;\n8 = Transactions coupled with the delivery of construction materials within the framework of a contract;\n80 = Transactions coupled with the delivery of construction materials within the framework of a contract;\n9 = Other transactions; not specified elsewhere;\n91 = Rental, loan for use or operational lease longer than 24 months;\n99 = Andere;",
                         "format": ""
                       },
                       "InPc": {
@@ -18225,7 +18226,7 @@
                           "8"
                         ],
                         "maxLength": 20,
-                        "description": "Barcode type\n0 = Geen controle;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (controlegetal);",
+                        "description": "Barcode type\n0 = No check;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (checksum);",
                         "format": ""
                       },
                       "BaCo": {
@@ -18268,7 +18269,7 @@
                           "4"
                         ],
                         "maxLength": 20,
-                        "description": "Status shipment\n0 = Niet aanbieden aan vervoerder;\n1 = Aanbieden aan vervoerder;\n2 = Aangeboden aan vervoerder;\n3 = Verzending correct ontvangen;\n4 = Fout bij aanbieden verzending;",
+                        "description": "Status shipment\n0 = Do not hand over to transporter;\n1 = Hand over to transporter;\n2 = Handed over to transporter;\n3 = Shipment received correctly;\n4 = Error handing over shipment;",
                         "format": ""
                       },
                       "SeWe": {
@@ -18284,16 +18285,16 @@
                       "PkTp": {
                         "type": "string",
                         "enum": [
-                          "BLOKPALLET",
-                          "BOX",
-                          "BUNDEL",
-                          "DIVERSEN",
-                          "ENVELOPE",
-                          "EURPALLET",
-                          "PALLET"
+                          "blockpallet",
+                          "box",
+                          "bundle",
+                          "various",
+                          "envelope",
+                          "europallet",
+                          "pallet"
                         ],
                         "maxLength": 20,
-                        "description": "Packaging type\nBLOKPALLET = Blokpallet;\nBOX = Box;\nBUNDEL = Bundel;\nDIVERSEN = Diversen;\nENVELOPE = Envelope;\nEURPALLET = Europallet;\nPALLET = Pallet;",
+                        "description": "Packaging type\nblockpallet = Blockpallet;\nbox = Box;\nbundle = Bundle;\nvarious = Various;\nenvelope = Envelope;\neuropallet = Europallet;\npallet = Pallet;",
                         "format": ""
                       },
                       "TrPt": {
@@ -18350,7 +18351,7 @@
                       "CoId": {
                         "type": "string",
                         "maxLength": 3,
-                        "description": "\u0027CBS\u0027 destination country",
+                        "description": "'CBS' destination country",
                         "format": ""
                       },
                       "OrPr": {
@@ -18365,7 +18366,7 @@
                           "7"
                         ],
                         "maxLength": 20,
-                        "description": "Processing order\n1 = Pakbon, factuur na levering;\n2 = Pakbon en factuur;\n3 = Factuur, levering na vooruitbetaling;\n4 = Pakbon, geen factuur;\n5 = Pakbon, factuur via nacalculatie;\n6 = Pakbon en factuur, factuur niet afdrukken of verzenden;\n7 = Aanbetalen, levering na aanbetaling;",
+                        "description": "Processing order\n1 = Packing slip, invoice after delivery;\n2 = Packing slip and invoice;\n3 = Invoice, delivery after advance payment;\n4 = Packing slip, no invoice;\n5 = Packing slip, invoice through actual costing;\n6 = Packing slip and invoice, do not print or send invoice;\n7 = Down pay, delivery after down payment;",
                         "format": ""
                       },
                       "Fref": {
@@ -18411,7 +18412,7 @@
                                           "8"
                                         ],
                                         "maxLength": 10,
-                                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                         "format": ""
                                       },
                                       "ItCd": {
@@ -18491,7 +18492,7 @@
                                           "5"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Weight unit\n0 = Geen gewicht;\n1 = Microgram (\u00B5g);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
+                                        "description": "Weight unit\n0 = No weight;\n1 = Microgram (µg);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
                                         "format": ""
                                       },
                                       "NeWe": {
@@ -18523,7 +18524,7 @@
                                           "3"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Discount allowed\n0 = Factuur- en regelkorting;\n1 = Factuurkorting;\n2 = Regelkorting;\n3 = Geen factuur- en regelkorting;",
+                                        "description": "Discount allowed\n0 = Invoice and line discount;\n1 = Invoice discount;\n2 = Line discount;\n3 = No invoice and line discount;",
                                         "format": ""
                                       },
                                       "PRDc": {
@@ -18658,7 +18659,7 @@
                                           "O"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                                         "format": ""
                                       }
                                     },
@@ -18963,7 +18964,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Part item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                                        "description": "Part item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -19530,7 +19531,7 @@
                           "3"
                         ],
                         "maxLength": 20,
-                        "description": "Delivery conditions\n0 = Deellevering toestaan;\n1 = Regel volledig uitleveren;\n2 = Order volledig uitleveren;\n3 = Geen backorders leveren;",
+                        "description": "Delivery conditions\n0 = Allow short-supply;\n1 = Deliver line completely;\n2 = Deliver order completely;\n3 = Do not deliver backorders;",
                         "format": ""
                       },
                       "CsTy": {
@@ -19552,7 +19553,7 @@
                           "9"
                         ],
                         "maxLength": 20,
-                        "description": "Type of Statistics Netherlands transport\n1 = Zeevaart;\n2 = Spoorvervoer;\n3 = Wegvervoer;\n4 = Luchtvaart;\n5 = Postzendingen;\n7 = Pijpleidingvervoer;\n8 = Binnenvaart;\n9 = Eigen vervoer;",
+                        "description": "Type of Statistics Netherlands transport\n1 = Shipping;\n2 = Rail transport;\n3 = Road transport;\n4 = Air traffic;\n5 = Shipping by post;\n7 = Pipeline transport;\n8 = Inland navigation;\n9 = Own transportation;",
                         "format": ""
                       },
                       "Inco": {
@@ -19565,13 +19566,14 @@
                           "DAP",
                           "DAT",
                           "DDP",
+                          "DPU",
                           "EXW",
                           "FAS",
                           "FCA",
                           "FOB"
                         ],
                         "maxLength": 20,
-                        "description": "Incoterm\nCFR = Kostprijs en vracht;\nCIF = Kostprijs, verzekering en vracht;\nCIP = Vracht en verzekering betaald tot;\nCPT = Vracht betaald tot;\nDAP = Geleverd tot bestemming;\nDAT = Geleverd op terminal;\nDDP = Geleverd rechten tot betaald;\nEXW = Af fabriek;\nFAS = Vrachtvrij langszij schip;\nFCA = Vrachtvrij tot vervoerder;\nFOB = Vrachtvrij aan boord;",
+                        "description": "Incoterm\nCFR = Cost price and freight;\nCIF = Cost price, insurance and freight;\nCIP = Freight and insurance paid to;\nCPT = Freight paid to;\nDAP = Delivered to destination;\nDAT = Delivered to terminal;\nDDP = Delivered duties to paid;\nDPU = Delivered on site, unloaded;\nEXW = Ex factory;\nFAS = Freight paid alongside ship;\nFCA = Freight paid to transporter;\nFOB = Free On Board;",
                         "format": ""
                       },
                       "VaSt": {
@@ -19586,7 +19588,7 @@
                           "10"
                         ],
                         "maxLength": 20,
-                        "description": "\u0027CBS\u0027 statistical system\n00 = Reguliere invoer/ICV en uitvoer/ICL;\n01 = Doorlevering (ICL) van onbewerkte goederen naar een andere EU-lidstaat;\n02 = Wederverkoop (ICL of uitvoer) van onbewerkte goederen;\n03 = Invoer van goederen, doorlevering/uitvoer onbewerkte goederen;\n04 = Verwerving/levering v\u00F3\u00F3r eigen voorraadverplaatsing (fictieve zending);\n05 = Verwerving/levering n\u00E1 eigen voorraadverplaatsing (fictieve zending);\n10 = Actieve douaneveredeling met toepassing van het terugbetalingssysteem;",
+                        "description": "'CBS' statistical system\n00 = Regular import/ICV and export/ICL;\n01 = Onward supply (ICL) of unprocessed goods to another EU member state;\n02 = Resale (ICL or export) of unprocessed goods;\n03 = Import of goods, delivery to others/export of raw materials;\n04 = Acquisition/delivery prior to own stock transfer (fictitious dispatch);\n05 = Acquisition/delivery after own stock transfer (fictitious dispatch);\n10 = Active customs processing with application of the repayment system;",
                         "format": ""
                       },
                       "VaGs": {
@@ -19596,7 +19598,7 @@
                           "7"
                         ],
                         "maxLength": 20,
-                        "description": "\u0027CBS\u0027 goods flow\n6 = Invoer/intra-cummunautaire verwerving (ICV);\n7 = Uitvoer/intra-communautaire levering (ICL);",
+                        "description": "'CBS' goods flow\n6 = Import/intracommunity acquisition (ICV);\n7 = Export/intracommunity delivery (ICL);",
                         "format": ""
                       },
                       "VaTa": {
@@ -19632,7 +19634,7 @@
                           "99"
                         ],
                         "maxLength": 20,
-                        "description": "\u0027CBS\u0027 transaction\n1 = Transacties die gepaard gaan met een eigendomsoverdracht met financi\u00EBle of andere tegenprestatie;\n11 = Definitieve aan- of verkoop, uitgezonderd directe handel met/door private consumenten;\n12 = Directe handel met/door private consumenten (inclusief verkoop op afstand);\n2 = Retourzendingen en gratis vervanging van goederen na registratie van de oorspronkelijke transactie;\n21 = Retourzendingen van goederen;\n22 = Vervanging van geretourneerde goederen;\n23 = Vervanging (bijv. onder garantie) voor goederen die niet zijn geretourneerd;\n3 = Transacties die gepaard gaan met een eigendomsoverdracht zonder financi\u00EBle tegenprestatie;\n31 = Verplaatsingen van of naar een opslag, uitgezonderd levering in consignatie of voorraden op afroep;\n32 = Zicht- of proefzending, inclusief levering in consignatie of via voorraden op afroep;\n33 = Financi\u00EBle lease (huurkoop);\n34 = Transacties die gepaard gaan met eigendomsoverdracht zonder financi\u00EBle tegenprestatie;\n4 = Verrichtingen met het oog op loonveredeling zonder eigendomsoverdracht aan de bewerker;\n41 = Goederen die naar verwachting terugkeren naar de aanvank. lidstaat van verzending/land export;\n42 = Goederen die naar verwachting niet terugkeren naar de aanvank. lidstaat van verzending/land export;\n5 = Verrichtingen na loonveredeling (zonder eigendomsoverdracht aan de bewerker);\n51 = Goederen die terugkeren naar de aanvankelijke lidstaat van verzending of het land van export;\n52 = Goederen die niet terugkeren naar de aanvankelijke lidstaat van verzending of het land van export;\n6 = Tijdelijke in- en uitvoer en retour tijdelijke in- en uitvoer;\n60 = Bijzondere voor nationale doeleinden geregistreerde transacties, zoals reparatiezendingen;\n7 = Verrichtingen in het kader van gezamenlijke fabricage (defensie, intergouvernementeel);\n71 = In het vrije verkeer brengen van goederen in een EU-lidstaat incl. latere verzending andere lidstaat;\n72 = Vervoer van goederen van de ene EU-lidstaat naar een andere EU-lidstaat onder de uitvoer procedure;\n8 = Transacties die gepaard gaan met de levering van bouwmaterialen in het kader van een contract;\n80 = Transacties die gepaard gaan met de levering van bouwmaterialen in het kader van een contract;\n9 = Overige transacties; niet elders vermeld;\n91 = Huur, bruikleen of operationele lease langer dan 24 maanden;\n99 = Andere;",
+                        "description": "'CBS' transaction\n1 = Transactions that are coupled to a transfer of ownership with financial or other consideration;\n11 = Definitive purchases or sales except for direct trade with/by private consumers;\n12 = Direct trade with/by private consumers (including distance selling);\n2 = Return shipments and free replacement of products after registration of the original transaction;\n21 = Return shipment of products;\n22 = Replacement of returned products;\n23 = Replacement (for example, under guarantee) for products that have not been returned;\n3 = Transactions that are coupled to a transfer of ownership without financial or other consideration;\n31 = Movements from one to another storage location except deliveries in consignment or on-demand stock;\n32 = Visual or test shipment including deliveries in assignation or through on-demand stock;\n33 = Financial lease (rent-to-buy);\n34 = Transactions that are coupled to a transfer of ownership without financial consideration;\n4 = Operations with a view of contract processing without transfer of ownership to the processor;\n41 = Products that are expected to return to the original member state of shipment/export country;\n42 = Products that are expected not to return to the original member state of shipment/export country;\n5 = Operations after contract processing (without transfer of ownership to the processor);\n51 = Products that return to the original member state of shipments or the export country;\n52 = Products that do not return to the original member state of shipments or the export country;\n6 = Temporary import and export and return of temporary import and export;\n60 = Special transactions registered for national objectives such as repair shipments;\n7 = Operations within the framework of joint fabrication (defence and intergovernmental);\n71 = Placing products into free circulation in an EU member state incl. later shipment to another mr. st.;\n72 = Transport of products from one EU member state to another EU member state under the export procedure;\n8 = Transactions coupled with the delivery of construction materials within the framework of a contract;\n80 = Transactions coupled with the delivery of construction materials within the framework of a contract;\n9 = Other transactions; not specified elsewhere;\n91 = Rental, loan for use or operational lease longer than 24 months;\n99 = Andere;",
                         "format": ""
                       },
                       "InPc": {
@@ -19687,7 +19689,7 @@
                           "8"
                         ],
                         "maxLength": 20,
-                        "description": "Barcode type\n0 = Geen controle;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (controlegetal);",
+                        "description": "Barcode type\n0 = No check;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (checksum);",
                         "format": ""
                       },
                       "BaCo": {
@@ -19730,7 +19732,7 @@
                           "4"
                         ],
                         "maxLength": 20,
-                        "description": "Status shipment\n0 = Niet aanbieden aan vervoerder;\n1 = Aanbieden aan vervoerder;\n2 = Aangeboden aan vervoerder;\n3 = Verzending correct ontvangen;\n4 = Fout bij aanbieden verzending;",
+                        "description": "Status shipment\n0 = Do not hand over to transporter;\n1 = Hand over to transporter;\n2 = Handed over to transporter;\n3 = Shipment received correctly;\n4 = Error handing over shipment;",
                         "format": ""
                       },
                       "SeWe": {
@@ -19747,16 +19749,16 @@
                       "PkTp": {
                         "type": "string",
                         "enum": [
-                          "BLOKPALLET",
-                          "BOX",
-                          "BUNDEL",
-                          "DIVERSEN",
-                          "ENVELOPE",
-                          "EURPALLET",
-                          "PALLET"
+                          "blockpallet",
+                          "box",
+                          "bundle",
+                          "various",
+                          "envelope",
+                          "europallet",
+                          "pallet"
                         ],
                         "maxLength": 20,
-                        "description": "Packaging type\nBLOKPALLET = Blokpallet;\nBOX = Box;\nBUNDEL = Bundel;\nDIVERSEN = Diversen;\nENVELOPE = Envelope;\nEURPALLET = Europallet;\nPALLET = Pallet;",
+                        "description": "Packaging type\nblockpallet = Blockpallet;\nbox = Box;\nbundle = Bundle;\nvarious = Various;\nenvelope = Envelope;\neuropallet = Europallet;\npallet = Pallet;",
                         "format": ""
                       },
                       "TrPt": {
@@ -19813,7 +19815,7 @@
                       "CoId": {
                         "type": "string",
                         "maxLength": 3,
-                        "description": "\u0027CBS\u0027 destination country",
+                        "description": "'CBS' destination country",
                         "format": ""
                       },
                       "OrPr": {
@@ -19828,7 +19830,7 @@
                           "7"
                         ],
                         "maxLength": 20,
-                        "description": "Processing order\n1 = Pakbon, factuur na levering;\n2 = Pakbon en factuur;\n3 = Factuur, levering na vooruitbetaling;\n4 = Pakbon, geen factuur;\n5 = Pakbon, factuur via nacalculatie;\n6 = Pakbon en factuur, factuur niet afdrukken of verzenden;\n7 = Aanbetalen, levering na aanbetaling;",
+                        "description": "Processing order\n1 = Packing slip, invoice after delivery;\n2 = Packing slip and invoice;\n3 = Invoice, delivery after advance payment;\n4 = Packing slip, no invoice;\n5 = Packing slip, invoice through actual costing;\n6 = Packing slip and invoice, do not print or send invoice;\n7 = Down pay, delivery after down payment;",
                         "format": ""
                       },
                       "Fref": {
@@ -19874,7 +19876,7 @@
                                           "8"
                                         ],
                                         "maxLength": 10,
-                                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                         "format": ""
                                       },
                                       "ItCd": {
@@ -19959,7 +19961,7 @@
                                           "5"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Weight unit\n0 = Geen gewicht;\n1 = Microgram (\u00B5g);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
+                                        "description": "Weight unit\n0 = No weight;\n1 = Microgram (µg);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
                                         "format": ""
                                       },
                                       "NeWe": {
@@ -19995,7 +19997,7 @@
                                           "3"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Discount allowed\n0 = Factuur- en regelkorting;\n1 = Factuurkorting;\n2 = Regelkorting;\n3 = Geen factuur- en regelkorting;",
+                                        "description": "Discount allowed\n0 = Invoice and line discount;\n1 = Invoice discount;\n2 = Line discount;\n3 = No invoice and line discount;",
                                         "format": ""
                                       },
                                       "PRDc": {
@@ -20132,7 +20134,7 @@
                                           "O"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                                         "format": ""
                                       }
                                     }
@@ -20423,7 +20425,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Part item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                                        "description": "Part item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -20974,7 +20976,7 @@
                           "3"
                         ],
                         "maxLength": 20,
-                        "description": "Delivery conditions\n0 = Deellevering toestaan;\n1 = Regel volledig uitleveren;\n2 = Order volledig uitleveren;\n3 = Geen backorders leveren;",
+                        "description": "Delivery conditions\n0 = Allow short-supply;\n1 = Deliver line completely;\n2 = Deliver order completely;\n3 = Do not deliver backorders;",
                         "format": ""
                       },
                       "CsTy": {
@@ -20996,7 +20998,7 @@
                           "9"
                         ],
                         "maxLength": 20,
-                        "description": "Type of Statistics Netherlands transport\n1 = Zeevaart;\n2 = Spoorvervoer;\n3 = Wegvervoer;\n4 = Luchtvaart;\n5 = Postzendingen;\n7 = Pijpleidingvervoer;\n8 = Binnenvaart;\n9 = Eigen vervoer;",
+                        "description": "Type of Statistics Netherlands transport\n1 = Shipping;\n2 = Rail transport;\n3 = Road transport;\n4 = Air traffic;\n5 = Shipping by post;\n7 = Pipeline transport;\n8 = Inland navigation;\n9 = Own transportation;",
                         "format": ""
                       },
                       "VaSt": {
@@ -21011,7 +21013,7 @@
                           "10"
                         ],
                         "maxLength": 20,
-                        "description": "\u0027CBS\u0027 statistical system\n00 = Reguliere invoer/ICV en uitvoer/ICL;\n01 = Doorlevering (ICL) van onbewerkte goederen naar een andere EU-lidstaat;\n02 = Wederverkoop (ICL of uitvoer) van onbewerkte goederen;\n03 = Invoer van goederen, doorlevering/uitvoer onbewerkte goederen;\n04 = Verwerving/levering v\u00F3\u00F3r eigen voorraadverplaatsing (fictieve zending);\n05 = Verwerving/levering n\u00E1 eigen voorraadverplaatsing (fictieve zending);\n10 = Actieve douaneveredeling met toepassing van het terugbetalingssysteem;",
+                        "description": "'CBS' statistical system\n00 = Regular import/ICV and export/ICL;\n01 = Onward supply (ICL) of unprocessed goods to another EU member state;\n02 = Resale (ICL or export) of unprocessed goods;\n03 = Import of goods, delivery to others/export of raw materials;\n04 = Acquisition/delivery prior to own stock transfer (fictitious dispatch);\n05 = Acquisition/delivery after own stock transfer (fictitious dispatch);\n10 = Active customs processing with application of the repayment system;",
                         "format": ""
                       },
                       "VaGs": {
@@ -21021,7 +21023,7 @@
                           "7"
                         ],
                         "maxLength": 20,
-                        "description": "\u0027CBS\u0027 goods flow\n6 = Invoer/intra-cummunautaire verwerving (ICV);\n7 = Uitvoer/intra-communautaire levering (ICL);",
+                        "description": "'CBS' goods flow\n6 = Import/intracommunity acquisition (ICV);\n7 = Export/intracommunity delivery (ICL);",
                         "format": ""
                       },
                       "VaTa": {
@@ -21057,7 +21059,7 @@
                           "99"
                         ],
                         "maxLength": 20,
-                        "description": "\u0027CBS\u0027 transaction\n1 = Transacties die gepaard gaan met een eigendomsoverdracht met financi\u00EBle of andere tegenprestatie;\n11 = Definitieve aan- of verkoop, uitgezonderd directe handel met/door private consumenten;\n12 = Directe handel met/door private consumenten (inclusief verkoop op afstand);\n2 = Retourzendingen en gratis vervanging van goederen na registratie van de oorspronkelijke transactie;\n21 = Retourzendingen van goederen;\n22 = Vervanging van geretourneerde goederen;\n23 = Vervanging (bijv. onder garantie) voor goederen die niet zijn geretourneerd;\n3 = Transacties die gepaard gaan met een eigendomsoverdracht zonder financi\u00EBle tegenprestatie;\n31 = Verplaatsingen van of naar een opslag, uitgezonderd levering in consignatie of voorraden op afroep;\n32 = Zicht- of proefzending, inclusief levering in consignatie of via voorraden op afroep;\n33 = Financi\u00EBle lease (huurkoop);\n34 = Transacties die gepaard gaan met eigendomsoverdracht zonder financi\u00EBle tegenprestatie;\n4 = Verrichtingen met het oog op loonveredeling zonder eigendomsoverdracht aan de bewerker;\n41 = Goederen die naar verwachting terugkeren naar de aanvank. lidstaat van verzending/land export;\n42 = Goederen die naar verwachting niet terugkeren naar de aanvank. lidstaat van verzending/land export;\n5 = Verrichtingen na loonveredeling (zonder eigendomsoverdracht aan de bewerker);\n51 = Goederen die terugkeren naar de aanvankelijke lidstaat van verzending of het land van export;\n52 = Goederen die niet terugkeren naar de aanvankelijke lidstaat van verzending of het land van export;\n6 = Tijdelijke in- en uitvoer en retour tijdelijke in- en uitvoer;\n60 = Bijzondere voor nationale doeleinden geregistreerde transacties, zoals reparatiezendingen;\n7 = Verrichtingen in het kader van gezamenlijke fabricage (defensie, intergouvernementeel);\n71 = In het vrije verkeer brengen van goederen in een EU-lidstaat incl. latere verzending andere lidstaat;\n72 = Vervoer van goederen van de ene EU-lidstaat naar een andere EU-lidstaat onder de uitvoer procedure;\n8 = Transacties die gepaard gaan met de levering van bouwmaterialen in het kader van een contract;\n80 = Transacties die gepaard gaan met de levering van bouwmaterialen in het kader van een contract;\n9 = Overige transacties; niet elders vermeld;\n91 = Huur, bruikleen of operationele lease langer dan 24 maanden;\n99 = Andere;",
+                        "description": "'CBS' transaction\n1 = Transactions that are coupled to a transfer of ownership with financial or other consideration;\n11 = Definitive purchases or sales except for direct trade with/by private consumers;\n12 = Direct trade with/by private consumers (including distance selling);\n2 = Return shipments and free replacement of products after registration of the original transaction;\n21 = Return shipment of products;\n22 = Replacement of returned products;\n23 = Replacement (for example, under guarantee) for products that have not been returned;\n3 = Transactions that are coupled to a transfer of ownership without financial or other consideration;\n31 = Movements from one to another storage location except deliveries in consignment or on-demand stock;\n32 = Visual or test shipment including deliveries in assignation or through on-demand stock;\n33 = Financial lease (rent-to-buy);\n34 = Transactions that are coupled to a transfer of ownership without financial consideration;\n4 = Operations with a view of contract processing without transfer of ownership to the processor;\n41 = Products that are expected to return to the original member state of shipment/export country;\n42 = Products that are expected not to return to the original member state of shipment/export country;\n5 = Operations after contract processing (without transfer of ownership to the processor);\n51 = Products that return to the original member state of shipments or the export country;\n52 = Products that do not return to the original member state of shipments or the export country;\n6 = Temporary import and export and return of temporary import and export;\n60 = Special transactions registered for national objectives such as repair shipments;\n7 = Operations within the framework of joint fabrication (defence and intergovernmental);\n71 = Placing products into free circulation in an EU member state incl. later shipment to another mr. st.;\n72 = Transport of products from one EU member state to another EU member state under the export procedure;\n8 = Transactions coupled with the delivery of construction materials within the framework of a contract;\n80 = Transactions coupled with the delivery of construction materials within the framework of a contract;\n9 = Other transactions; not specified elsewhere;\n91 = Rental, loan for use or operational lease longer than 24 months;\n99 = Andere;",
                         "format": ""
                       },
                       "InPc": {
@@ -21104,7 +21106,7 @@
                           "8"
                         ],
                         "maxLength": 20,
-                        "description": "Barcode type\n0 = Geen controle;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (controlegetal);",
+                        "description": "Barcode type\n0 = No check;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (checksum);",
                         "format": ""
                       },
                       "BaCo": {
@@ -21173,7 +21175,7 @@
                       "CoId": {
                         "type": "string",
                         "maxLength": 3,
-                        "description": "\u0027CBS\u0027 destination country",
+                        "description": "'CBS' destination country",
                         "format": ""
                       },
                       "Fref": {
@@ -21219,7 +21221,7 @@
                                           "8"
                                         ],
                                         "maxLength": 10,
-                                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                         "format": ""
                                       },
                                       "ItCd": {
@@ -21299,7 +21301,7 @@
                                           "5"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Weight unit\n0 = Geen gewicht;\n1 = Microgram (\u00B5g);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
+                                        "description": "Weight unit\n0 = No weight;\n1 = Microgram (µg);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
                                         "format": ""
                                       },
                                       "NeWe": {
@@ -21331,7 +21333,7 @@
                                           "3"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Discount allowed\n0 = Factuur- en regelkorting;\n1 = Factuurkorting;\n2 = Regelkorting;\n3 = Geen factuur- en regelkorting;",
+                                        "description": "Discount allowed\n0 = Invoice and line discount;\n1 = Invoice discount;\n2 = Line discount;\n3 = No invoice and line discount;",
                                         "format": ""
                                       },
                                       "PRDc": {
@@ -21443,7 +21445,7 @@
                                           "O"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                                         "format": ""
                                       }
                                     },
@@ -21748,7 +21750,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Part item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                                        "description": "Part item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -22309,7 +22311,7 @@
                           "3"
                         ],
                         "maxLength": 20,
-                        "description": "Delivery conditions\n0 = Deellevering toestaan;\n1 = Regel volledig uitleveren;\n2 = Order volledig uitleveren;\n3 = Geen backorders leveren;",
+                        "description": "Delivery conditions\n0 = Allow short-supply;\n1 = Deliver line completely;\n2 = Deliver order completely;\n3 = Do not deliver backorders;",
                         "format": ""
                       },
                       "CsTy": {
@@ -22331,7 +22333,7 @@
                           "9"
                         ],
                         "maxLength": 20,
-                        "description": "Type of Statistics Netherlands transport\n1 = Zeevaart;\n2 = Spoorvervoer;\n3 = Wegvervoer;\n4 = Luchtvaart;\n5 = Postzendingen;\n7 = Pijpleidingvervoer;\n8 = Binnenvaart;\n9 = Eigen vervoer;",
+                        "description": "Type of Statistics Netherlands transport\n1 = Shipping;\n2 = Rail transport;\n3 = Road transport;\n4 = Air traffic;\n5 = Shipping by post;\n7 = Pipeline transport;\n8 = Inland navigation;\n9 = Own transportation;",
                         "format": ""
                       },
                       "VaSt": {
@@ -22346,7 +22348,7 @@
                           "10"
                         ],
                         "maxLength": 20,
-                        "description": "\u0027CBS\u0027 statistical system\n00 = Reguliere invoer/ICV en uitvoer/ICL;\n01 = Doorlevering (ICL) van onbewerkte goederen naar een andere EU-lidstaat;\n02 = Wederverkoop (ICL of uitvoer) van onbewerkte goederen;\n03 = Invoer van goederen, doorlevering/uitvoer onbewerkte goederen;\n04 = Verwerving/levering v\u00F3\u00F3r eigen voorraadverplaatsing (fictieve zending);\n05 = Verwerving/levering n\u00E1 eigen voorraadverplaatsing (fictieve zending);\n10 = Actieve douaneveredeling met toepassing van het terugbetalingssysteem;",
+                        "description": "'CBS' statistical system\n00 = Regular import/ICV and export/ICL;\n01 = Onward supply (ICL) of unprocessed goods to another EU member state;\n02 = Resale (ICL or export) of unprocessed goods;\n03 = Import of goods, delivery to others/export of raw materials;\n04 = Acquisition/delivery prior to own stock transfer (fictitious dispatch);\n05 = Acquisition/delivery after own stock transfer (fictitious dispatch);\n10 = Active customs processing with application of the repayment system;",
                         "format": ""
                       },
                       "VaGs": {
@@ -22356,7 +22358,7 @@
                           "7"
                         ],
                         "maxLength": 20,
-                        "description": "\u0027CBS\u0027 goods flow\n6 = Invoer/intra-cummunautaire verwerving (ICV);\n7 = Uitvoer/intra-communautaire levering (ICL);",
+                        "description": "'CBS' goods flow\n6 = Import/intracommunity acquisition (ICV);\n7 = Export/intracommunity delivery (ICL);",
                         "format": ""
                       },
                       "VaTa": {
@@ -22392,7 +22394,7 @@
                           "99"
                         ],
                         "maxLength": 20,
-                        "description": "\u0027CBS\u0027 transaction\n1 = Transacties die gepaard gaan met een eigendomsoverdracht met financi\u00EBle of andere tegenprestatie;\n11 = Definitieve aan- of verkoop, uitgezonderd directe handel met/door private consumenten;\n12 = Directe handel met/door private consumenten (inclusief verkoop op afstand);\n2 = Retourzendingen en gratis vervanging van goederen na registratie van de oorspronkelijke transactie;\n21 = Retourzendingen van goederen;\n22 = Vervanging van geretourneerde goederen;\n23 = Vervanging (bijv. onder garantie) voor goederen die niet zijn geretourneerd;\n3 = Transacties die gepaard gaan met een eigendomsoverdracht zonder financi\u00EBle tegenprestatie;\n31 = Verplaatsingen van of naar een opslag, uitgezonderd levering in consignatie of voorraden op afroep;\n32 = Zicht- of proefzending, inclusief levering in consignatie of via voorraden op afroep;\n33 = Financi\u00EBle lease (huurkoop);\n34 = Transacties die gepaard gaan met eigendomsoverdracht zonder financi\u00EBle tegenprestatie;\n4 = Verrichtingen met het oog op loonveredeling zonder eigendomsoverdracht aan de bewerker;\n41 = Goederen die naar verwachting terugkeren naar de aanvank. lidstaat van verzending/land export;\n42 = Goederen die naar verwachting niet terugkeren naar de aanvank. lidstaat van verzending/land export;\n5 = Verrichtingen na loonveredeling (zonder eigendomsoverdracht aan de bewerker);\n51 = Goederen die terugkeren naar de aanvankelijke lidstaat van verzending of het land van export;\n52 = Goederen die niet terugkeren naar de aanvankelijke lidstaat van verzending of het land van export;\n6 = Tijdelijke in- en uitvoer en retour tijdelijke in- en uitvoer;\n60 = Bijzondere voor nationale doeleinden geregistreerde transacties, zoals reparatiezendingen;\n7 = Verrichtingen in het kader van gezamenlijke fabricage (defensie, intergouvernementeel);\n71 = In het vrije verkeer brengen van goederen in een EU-lidstaat incl. latere verzending andere lidstaat;\n72 = Vervoer van goederen van de ene EU-lidstaat naar een andere EU-lidstaat onder de uitvoer procedure;\n8 = Transacties die gepaard gaan met de levering van bouwmaterialen in het kader van een contract;\n80 = Transacties die gepaard gaan met de levering van bouwmaterialen in het kader van een contract;\n9 = Overige transacties; niet elders vermeld;\n91 = Huur, bruikleen of operationele lease langer dan 24 maanden;\n99 = Andere;",
+                        "description": "'CBS' transaction\n1 = Transactions that are coupled to a transfer of ownership with financial or other consideration;\n11 = Definitive purchases or sales except for direct trade with/by private consumers;\n12 = Direct trade with/by private consumers (including distance selling);\n2 = Return shipments and free replacement of products after registration of the original transaction;\n21 = Return shipment of products;\n22 = Replacement of returned products;\n23 = Replacement (for example, under guarantee) for products that have not been returned;\n3 = Transactions that are coupled to a transfer of ownership without financial or other consideration;\n31 = Movements from one to another storage location except deliveries in consignment or on-demand stock;\n32 = Visual or test shipment including deliveries in assignation or through on-demand stock;\n33 = Financial lease (rent-to-buy);\n34 = Transactions that are coupled to a transfer of ownership without financial consideration;\n4 = Operations with a view of contract processing without transfer of ownership to the processor;\n41 = Products that are expected to return to the original member state of shipment/export country;\n42 = Products that are expected not to return to the original member state of shipment/export country;\n5 = Operations after contract processing (without transfer of ownership to the processor);\n51 = Products that return to the original member state of shipments or the export country;\n52 = Products that do not return to the original member state of shipments or the export country;\n6 = Temporary import and export and return of temporary import and export;\n60 = Special transactions registered for national objectives such as repair shipments;\n7 = Operations within the framework of joint fabrication (defence and intergovernmental);\n71 = Placing products into free circulation in an EU member state incl. later shipment to another mr. st.;\n72 = Transport of products from one EU member state to another EU member state under the export procedure;\n8 = Transactions coupled with the delivery of construction materials within the framework of a contract;\n80 = Transactions coupled with the delivery of construction materials within the framework of a contract;\n9 = Other transactions; not specified elsewhere;\n91 = Rental, loan for use or operational lease longer than 24 months;\n99 = Andere;",
                         "format": ""
                       },
                       "InPc": {
@@ -22442,7 +22444,7 @@
                           "8"
                         ],
                         "maxLength": 20,
-                        "description": "Barcode type\n0 = Geen controle;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (controlegetal);",
+                        "description": "Barcode type\n0 = No check;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (checksum);",
                         "format": ""
                       },
                       "BaCo": {
@@ -22511,7 +22513,7 @@
                       "CoId": {
                         "type": "string",
                         "maxLength": 3,
-                        "description": "\u0027CBS\u0027 destination country",
+                        "description": "'CBS' destination country",
                         "format": ""
                       },
                       "Fref": {
@@ -22557,7 +22559,7 @@
                                           "8"
                                         ],
                                         "maxLength": 10,
-                                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                         "format": ""
                                       },
                                       "ItCd": {
@@ -22642,7 +22644,7 @@
                                           "5"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Weight unit\n0 = Geen gewicht;\n1 = Microgram (\u00B5g);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
+                                        "description": "Weight unit\n0 = No weight;\n1 = Microgram (µg);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
                                         "format": ""
                                       },
                                       "NeWe": {
@@ -22678,7 +22680,7 @@
                                           "3"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Discount allowed\n0 = Factuur- en regelkorting;\n1 = Factuurkorting;\n2 = Regelkorting;\n3 = Geen factuur- en regelkorting;",
+                                        "description": "Discount allowed\n0 = Invoice and line discount;\n1 = Invoice discount;\n2 = Line discount;\n3 = No invoice and line discount;",
                                         "format": ""
                                       },
                                       "PRDc": {
@@ -22792,7 +22794,7 @@
                                           "O"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                                         "format": ""
                                       }
                                     }
@@ -23083,7 +23085,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Part item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                                        "description": "Part item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -23521,7 +23523,7 @@
                           "81"
                         ],
                         "maxLength": 20,
-                        "description": "Order type\n01 = Verkoopbasisorder;\n02 = Verkoopofferte;\n03 = Verkooporder;\n04 = Pakbon;\n05 = Verkoopfactuur;\n06 = Pro forma factuur;\n07 = Verkoop orderadvies;\n08 = Factuurvoorstel;\n09 = Declaratiefactuurvoorstel;\n11 = Inkoopbasisorder;\n12 = Inkoopofferte;\n13 = Inkooporder;\n14 = Ontvangst;\n15 = Inkoopfactuur;\n16 = Inkoopaanvraag;\n21 = Productieorder;\n22 = Productiebon;\n31 = Magazijnopboeking;\n32 = Magazijnafboeking;\n33 = Magazijnverplaatsing reservering;\n34 = Magazijnverplaatsing bestelling;\n35 = Verzendbon;\n36 = Ontvangstbon;\n41 = Opboeking;\n42 = Afboeking;\n43 = Overboeking;\n51 = Inventarisatie;\n52 = Bestelvoorstel;\n61 = Samenstelling;\n62 = Partij;\n63 = Serie;\n64 = Dimensie;\n71 = Nacalculatie;\n72 = Voorcalculatie;\n81 = EDI-order;",
+                        "description": "Order type\n01 = Basic sales order;\n02 = Sales quotation;\n03 = Sales order;\n04 = Packing slip;\n05 = Sales invoice;\n06 = Pro forma invoice;\n07 = Sales order recommendation;\n08 = Invoice proposal;\n09 = Expense claim invoice proposal;\n11 = Basic purchase order;\n12 = Purchase quotation;\n13 = Purchase order;\n14 = Receipt;\n15 = Purchase invoice;\n16 = Purchase request;\n21 = Production order;\n22 = Production slip;\n31 = Warehouse entry;\n32 = Warehouse write-off;\n33 = Warehouse transfer reservation;\n34 = Warehouse transfer order;\n35 = Dispatch slip;\n36 = Receipt slip;\n41 = Stock entry;\n42 = Writing off;\n43 = Transfer;\n51 = Stocktaking;\n52 = Order proposal;\n61 = Assembled item;\n62 = Lot;\n63 = Series;\n64 = Dimension;\n71 = Actual costing;\n72 = Cost estimate;\n81 = EDI order;",
                         "format": ""
                       },
                       "OrNu": {
@@ -23621,7 +23623,7 @@
                           "8"
                         ],
                         "maxLength": 10,
-                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                         "format": ""
                       },
                       "ItCd": {
@@ -23673,7 +23675,7 @@
                           "8"
                         ],
                         "maxLength": 20,
-                        "description": "Barcode type\n0 = Geen controle;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (controlegetal);",
+                        "description": "Barcode type\n0 = No check;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (checksum);",
                         "format": ""
                       },
                       "BaCo": {
@@ -23766,7 +23768,7 @@
                           "8"
                         ],
                         "maxLength": 10,
-                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                         "format": ""
                       },
                       "ItCd": {
@@ -23818,7 +23820,7 @@
                           "8"
                         ],
                         "maxLength": 20,
-                        "description": "Barcode type\n0 = Geen controle;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (controlegetal);",
+                        "description": "Barcode type\n0 = No check;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (checksum);",
                         "format": ""
                       },
                       "BaCo": {
@@ -23920,7 +23922,7 @@
                           "8"
                         ],
                         "maxLength": 10,
-                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                         "format": ""
                       },
                       "ItCd": {
@@ -23982,7 +23984,7 @@
                           "8"
                         ],
                         "maxLength": 20,
-                        "description": "Barcode type\n0 = Geen controle;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (controlegetal);",
+                        "description": "Barcode type\n0 = No check;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (checksum);",
                         "format": ""
                       },
                       "BaCo": {
@@ -24075,7 +24077,7 @@
                           "8"
                         ],
                         "maxLength": 10,
-                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                         "format": ""
                       },
                       "ItCd": {
@@ -24137,7 +24139,7 @@
                           "8"
                         ],
                         "maxLength": 20,
-                        "description": "Barcode type\n0 = Geen controle;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (controlegetal);",
+                        "description": "Barcode type\n0 = No check;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (checksum);",
                         "format": ""
                       },
                       "BaCo": {
@@ -24458,7 +24460,7 @@
                           "8"
                         ],
                         "maxLength": 10,
-                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                         "format": ""
                       },
                       "ItCd": {
@@ -24544,7 +24546,7 @@
                           "3"
                         ],
                         "maxLength": 20,
-                        "description": "Discount allowed\n0 = Factuur- en regelkorting;\n1 = Factuurkorting;\n2 = Regelkorting;\n3 = Geen factuur- en regelkorting;",
+                        "description": "Discount allowed\n0 = Invoice and line discount;\n1 = Invoice discount;\n2 = Line discount;\n3 = No invoice and line discount;",
                         "format": ""
                       },
                       "DsLi": {
@@ -24565,12 +24567,12 @@
                       "ViBc": {
                         "type": "string",
                         "enum": [
-                          "HKP",
-                          "HVP",
-                          "HIP"
+                          "CCP",
+                          "CSP",
+                          "CPP"
                         ],
                         "maxLength": 20,
-                        "description": "Calculation basis\nHKP = Huidige kostprijs;\nHVP = Huidige verrekenprijs;\nHIP = Huidige inkoopprijs;",
+                        "description": "Calculation basis\nCCP = Current cost price;\nCSP = Current settlement price;\nCPP = Current purchase price;",
                         "format": ""
                       },
                       "ViRo": {
@@ -24788,7 +24790,7 @@
                           "3"
                         ],
                         "maxLength": 20,
-                        "description": "Delivery conditions\n0 = Deellevering toestaan;\n1 = Regel volledig uitleveren;\n2 = Order volledig uitleveren;\n3 = Geen backorders leveren;",
+                        "description": "Delivery conditions\n0 = Allow short-supply;\n1 = Deliver line completely;\n2 = Deliver order completely;\n3 = Do not deliver backorders;",
                         "format": ""
                       },
                       "CsTy": {
@@ -24810,7 +24812,7 @@
                           "9"
                         ],
                         "maxLength": 20,
-                        "description": "Type of Statistics Netherlands transport\n1 = Zeevaart;\n2 = Spoorvervoer;\n3 = Wegvervoer;\n4 = Luchtvaart;\n5 = Postzendingen;\n7 = Pijpleidingvervoer;\n8 = Binnenvaart;\n9 = Eigen vervoer;",
+                        "description": "Type of Statistics Netherlands transport\n1 = Shipping;\n2 = Rail transport;\n3 = Road transport;\n4 = Air traffic;\n5 = Shipping by post;\n7 = Pipeline transport;\n8 = Inland navigation;\n9 = Own transportation;",
                         "format": ""
                       },
                       "VaSt": {
@@ -24825,7 +24827,7 @@
                           "10"
                         ],
                         "maxLength": 20,
-                        "description": "\u0027CBS\u0027 statistical system\n00 = Reguliere invoer/ICV en uitvoer/ICL;\n01 = Doorlevering (ICL) van onbewerkte goederen naar een andere EU-lidstaat;\n02 = Wederverkoop (ICL of uitvoer) van onbewerkte goederen;\n03 = Invoer van goederen, doorlevering/uitvoer onbewerkte goederen;\n04 = Verwerving/levering v\u00F3\u00F3r eigen voorraadverplaatsing (fictieve zending);\n05 = Verwerving/levering n\u00E1 eigen voorraadverplaatsing (fictieve zending);\n10 = Actieve douaneveredeling met toepassing van het terugbetalingssysteem;",
+                        "description": "'CBS' statistical system\n00 = Regular import/ICV and export/ICL;\n01 = Onward supply (ICL) of unprocessed goods to another EU member state;\n02 = Resale (ICL or export) of unprocessed goods;\n03 = Import of goods, delivery to others/export of raw materials;\n04 = Acquisition/delivery prior to own stock transfer (fictitious dispatch);\n05 = Acquisition/delivery after own stock transfer (fictitious dispatch);\n10 = Active customs processing with application of the repayment system;",
                         "format": ""
                       },
                       "VaGs": {
@@ -24835,7 +24837,7 @@
                           "7"
                         ],
                         "maxLength": 20,
-                        "description": "\u0027CBS\u0027 goods flow\n6 = Invoer/intra-cummunautaire verwerving (ICV);\n7 = Uitvoer/intra-communautaire levering (ICL);",
+                        "description": "'CBS' goods flow\n6 = Import/intracommunity acquisition (ICV);\n7 = Export/intracommunity delivery (ICL);",
                         "format": ""
                       },
                       "VaTa": {
@@ -24871,7 +24873,7 @@
                           "99"
                         ],
                         "maxLength": 20,
-                        "description": "\u0027CBS\u0027 transaction\n1 = Transacties die gepaard gaan met een eigendomsoverdracht met financi\u00EBle of andere tegenprestatie;\n11 = Definitieve aan- of verkoop, uitgezonderd directe handel met/door private consumenten;\n12 = Directe handel met/door private consumenten (inclusief verkoop op afstand);\n2 = Retourzendingen en gratis vervanging van goederen na registratie van de oorspronkelijke transactie;\n21 = Retourzendingen van goederen;\n22 = Vervanging van geretourneerde goederen;\n23 = Vervanging (bijv. onder garantie) voor goederen die niet zijn geretourneerd;\n3 = Transacties die gepaard gaan met een eigendomsoverdracht zonder financi\u00EBle tegenprestatie;\n31 = Verplaatsingen van of naar een opslag, uitgezonderd levering in consignatie of voorraden op afroep;\n32 = Zicht- of proefzending, inclusief levering in consignatie of via voorraden op afroep;\n33 = Financi\u00EBle lease (huurkoop);\n34 = Transacties die gepaard gaan met eigendomsoverdracht zonder financi\u00EBle tegenprestatie;\n4 = Verrichtingen met het oog op loonveredeling zonder eigendomsoverdracht aan de bewerker;\n41 = Goederen die naar verwachting terugkeren naar de aanvank. lidstaat van verzending/land export;\n42 = Goederen die naar verwachting niet terugkeren naar de aanvank. lidstaat van verzending/land export;\n5 = Verrichtingen na loonveredeling (zonder eigendomsoverdracht aan de bewerker);\n51 = Goederen die terugkeren naar de aanvankelijke lidstaat van verzending of het land van export;\n52 = Goederen die niet terugkeren naar de aanvankelijke lidstaat van verzending of het land van export;\n6 = Tijdelijke in- en uitvoer en retour tijdelijke in- en uitvoer;\n60 = Bijzondere voor nationale doeleinden geregistreerde transacties, zoals reparatiezendingen;\n7 = Verrichtingen in het kader van gezamenlijke fabricage (defensie, intergouvernementeel);\n71 = In het vrije verkeer brengen van goederen in een EU-lidstaat incl. latere verzending andere lidstaat;\n72 = Vervoer van goederen van de ene EU-lidstaat naar een andere EU-lidstaat onder de uitvoer procedure;\n8 = Transacties die gepaard gaan met de levering van bouwmaterialen in het kader van een contract;\n80 = Transacties die gepaard gaan met de levering van bouwmaterialen in het kader van een contract;\n9 = Overige transacties; niet elders vermeld;\n91 = Huur, bruikleen of operationele lease langer dan 24 maanden;\n99 = Andere;",
+                        "description": "'CBS' transaction\n1 = Transactions that are coupled to a transfer of ownership with financial or other consideration;\n11 = Definitive purchases or sales except for direct trade with/by private consumers;\n12 = Direct trade with/by private consumers (including distance selling);\n2 = Return shipments and free replacement of products after registration of the original transaction;\n21 = Return shipment of products;\n22 = Replacement of returned products;\n23 = Replacement (for example, under guarantee) for products that have not been returned;\n3 = Transactions that are coupled to a transfer of ownership without financial or other consideration;\n31 = Movements from one to another storage location except deliveries in consignment or on-demand stock;\n32 = Visual or test shipment including deliveries in assignation or through on-demand stock;\n33 = Financial lease (rent-to-buy);\n34 = Transactions that are coupled to a transfer of ownership without financial consideration;\n4 = Operations with a view of contract processing without transfer of ownership to the processor;\n41 = Products that are expected to return to the original member state of shipment/export country;\n42 = Products that are expected not to return to the original member state of shipment/export country;\n5 = Operations after contract processing (without transfer of ownership to the processor);\n51 = Products that return to the original member state of shipments or the export country;\n52 = Products that do not return to the original member state of shipments or the export country;\n6 = Temporary import and export and return of temporary import and export;\n60 = Special transactions registered for national objectives such as repair shipments;\n7 = Operations within the framework of joint fabrication (defence and intergovernmental);\n71 = Placing products into free circulation in an EU member state incl. later shipment to another mr. st.;\n72 = Transport of products from one EU member state to another EU member state under the export procedure;\n8 = Transactions coupled with the delivery of construction materials within the framework of a contract;\n80 = Transactions coupled with the delivery of construction materials within the framework of a contract;\n9 = Other transactions; not specified elsewhere;\n91 = Rental, loan for use or operational lease longer than 24 months;\n99 = Andere;",
                         "format": ""
                       },
                       "InPc": {
@@ -24923,7 +24925,7 @@
                           "8"
                         ],
                         "maxLength": 20,
-                        "description": "Barcode type\n0 = Geen controle;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (controlegetal);",
+                        "description": "Barcode type\n0 = No check;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (checksum);",
                         "format": ""
                       },
                       "BaCo": {
@@ -24990,7 +24992,7 @@
                           "7"
                         ],
                         "maxLength": 20,
-                        "description": "Processing order\n1 = Pakbon, factuur na levering;\n2 = Pakbon en factuur;\n3 = Factuur, levering na vooruitbetaling;\n4 = Pakbon, geen factuur;\n5 = Pakbon, factuur via nacalculatie;\n6 = Pakbon en factuur, factuur niet afdrukken of verzenden;\n7 = Aanbetalen, levering na aanbetaling;",
+                        "description": "Processing order\n1 = Packing slip, invoice after delivery;\n2 = Packing slip and invoice;\n3 = Invoice, delivery after advance payment;\n4 = Packing slip, no invoice;\n5 = Packing slip, invoice through actual costing;\n6 = Packing slip and invoice, do not print or send invoice;\n7 = Down pay, delivery after down payment;",
                         "format": ""
                       },
                       "AmDp": {
@@ -25045,7 +25047,7 @@
                       "CoId": {
                         "type": "string",
                         "maxLength": 3,
-                        "description": "\u0027CBS\u0027 destination country",
+                        "description": "'CBS' destination country",
                         "format": ""
                       },
                       "PuSa": {
@@ -25066,7 +25068,7 @@
                           "7"
                         ],
                         "maxLength": 20,
-                        "description": "Quotation status\n0 = Onderhanden;\n1 = Definitief;\n2 = Akkoord verkooprelatie;\n3 = Vervallen;\n4 = Deellevering;\n5 = Geleverd;\n6 = Handmatig afgehandeld;\n7 = Afgehandeld;",
+                        "description": "Quotation status\n0 = Current;\n1 = Permanent;\n2 = Sales contact approval;\n3 = Expired;\n4 = Short-supply;\n5 = Delivered;\n6 = Manually completed;\n7 = Completed;",
                         "format": ""
                       }
                     },
@@ -25106,7 +25108,7 @@
                                           "8"
                                         ],
                                         "maxLength": 10,
-                                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                         "format": ""
                                       },
                                       "ItCd": {
@@ -25186,7 +25188,7 @@
                                           "5"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Weight unit\n0 = Geen gewicht;\n1 = Microgram (\u00B5g);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
+                                        "description": "Weight unit\n0 = No weight;\n1 = Microgram (µg);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
                                         "format": ""
                                       },
                                       "NeWe": {
@@ -25218,7 +25220,7 @@
                                           "3"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Discount allowed\n0 = Factuur- en regelkorting;\n1 = Factuurkorting;\n2 = Regelkorting;\n3 = Geen factuur- en regelkorting;",
+                                        "description": "Discount allowed\n0 = Invoice and line discount;\n1 = Invoice discount;\n2 = Line discount;\n3 = No invoice and line discount;",
                                         "format": ""
                                       },
                                       "PRDc": {
@@ -25335,7 +25337,7 @@
                                           "O"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                                         "format": ""
                                       }
                                     },
@@ -25378,7 +25380,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Part item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                                        "description": "Part item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -25658,7 +25660,7 @@
                           "3"
                         ],
                         "maxLength": 20,
-                        "description": "Delivery conditions\n0 = Deellevering toestaan;\n1 = Regel volledig uitleveren;\n2 = Order volledig uitleveren;\n3 = Geen backorders leveren;",
+                        "description": "Delivery conditions\n0 = Allow short-supply;\n1 = Deliver line completely;\n2 = Deliver order completely;\n3 = Do not deliver backorders;",
                         "format": ""
                       },
                       "CsTy": {
@@ -25680,7 +25682,7 @@
                           "9"
                         ],
                         "maxLength": 20,
-                        "description": "Type of Statistics Netherlands transport\n1 = Zeevaart;\n2 = Spoorvervoer;\n3 = Wegvervoer;\n4 = Luchtvaart;\n5 = Postzendingen;\n7 = Pijpleidingvervoer;\n8 = Binnenvaart;\n9 = Eigen vervoer;",
+                        "description": "Type of Statistics Netherlands transport\n1 = Shipping;\n2 = Rail transport;\n3 = Road transport;\n4 = Air traffic;\n5 = Shipping by post;\n7 = Pipeline transport;\n8 = Inland navigation;\n9 = Own transportation;",
                         "format": ""
                       },
                       "VaSt": {
@@ -25695,7 +25697,7 @@
                           "10"
                         ],
                         "maxLength": 20,
-                        "description": "\u0027CBS\u0027 statistical system\n00 = Reguliere invoer/ICV en uitvoer/ICL;\n01 = Doorlevering (ICL) van onbewerkte goederen naar een andere EU-lidstaat;\n02 = Wederverkoop (ICL of uitvoer) van onbewerkte goederen;\n03 = Invoer van goederen, doorlevering/uitvoer onbewerkte goederen;\n04 = Verwerving/levering v\u00F3\u00F3r eigen voorraadverplaatsing (fictieve zending);\n05 = Verwerving/levering n\u00E1 eigen voorraadverplaatsing (fictieve zending);\n10 = Actieve douaneveredeling met toepassing van het terugbetalingssysteem;",
+                        "description": "'CBS' statistical system\n00 = Regular import/ICV and export/ICL;\n01 = Onward supply (ICL) of unprocessed goods to another EU member state;\n02 = Resale (ICL or export) of unprocessed goods;\n03 = Import of goods, delivery to others/export of raw materials;\n04 = Acquisition/delivery prior to own stock transfer (fictitious dispatch);\n05 = Acquisition/delivery after own stock transfer (fictitious dispatch);\n10 = Active customs processing with application of the repayment system;",
                         "format": ""
                       },
                       "VaGs": {
@@ -25705,7 +25707,7 @@
                           "7"
                         ],
                         "maxLength": 20,
-                        "description": "\u0027CBS\u0027 goods flow\n6 = Invoer/intra-cummunautaire verwerving (ICV);\n7 = Uitvoer/intra-communautaire levering (ICL);",
+                        "description": "'CBS' goods flow\n6 = Import/intracommunity acquisition (ICV);\n7 = Export/intracommunity delivery (ICL);",
                         "format": ""
                       },
                       "VaTa": {
@@ -25741,7 +25743,7 @@
                           "99"
                         ],
                         "maxLength": 20,
-                        "description": "\u0027CBS\u0027 transaction\n1 = Transacties die gepaard gaan met een eigendomsoverdracht met financi\u00EBle of andere tegenprestatie;\n11 = Definitieve aan- of verkoop, uitgezonderd directe handel met/door private consumenten;\n12 = Directe handel met/door private consumenten (inclusief verkoop op afstand);\n2 = Retourzendingen en gratis vervanging van goederen na registratie van de oorspronkelijke transactie;\n21 = Retourzendingen van goederen;\n22 = Vervanging van geretourneerde goederen;\n23 = Vervanging (bijv. onder garantie) voor goederen die niet zijn geretourneerd;\n3 = Transacties die gepaard gaan met een eigendomsoverdracht zonder financi\u00EBle tegenprestatie;\n31 = Verplaatsingen van of naar een opslag, uitgezonderd levering in consignatie of voorraden op afroep;\n32 = Zicht- of proefzending, inclusief levering in consignatie of via voorraden op afroep;\n33 = Financi\u00EBle lease (huurkoop);\n34 = Transacties die gepaard gaan met eigendomsoverdracht zonder financi\u00EBle tegenprestatie;\n4 = Verrichtingen met het oog op loonveredeling zonder eigendomsoverdracht aan de bewerker;\n41 = Goederen die naar verwachting terugkeren naar de aanvank. lidstaat van verzending/land export;\n42 = Goederen die naar verwachting niet terugkeren naar de aanvank. lidstaat van verzending/land export;\n5 = Verrichtingen na loonveredeling (zonder eigendomsoverdracht aan de bewerker);\n51 = Goederen die terugkeren naar de aanvankelijke lidstaat van verzending of het land van export;\n52 = Goederen die niet terugkeren naar de aanvankelijke lidstaat van verzending of het land van export;\n6 = Tijdelijke in- en uitvoer en retour tijdelijke in- en uitvoer;\n60 = Bijzondere voor nationale doeleinden geregistreerde transacties, zoals reparatiezendingen;\n7 = Verrichtingen in het kader van gezamenlijke fabricage (defensie, intergouvernementeel);\n71 = In het vrije verkeer brengen van goederen in een EU-lidstaat incl. latere verzending andere lidstaat;\n72 = Vervoer van goederen van de ene EU-lidstaat naar een andere EU-lidstaat onder de uitvoer procedure;\n8 = Transacties die gepaard gaan met de levering van bouwmaterialen in het kader van een contract;\n80 = Transacties die gepaard gaan met de levering van bouwmaterialen in het kader van een contract;\n9 = Overige transacties; niet elders vermeld;\n91 = Huur, bruikleen of operationele lease langer dan 24 maanden;\n99 = Andere;",
+                        "description": "'CBS' transaction\n1 = Transactions that are coupled to a transfer of ownership with financial or other consideration;\n11 = Definitive purchases or sales except for direct trade with/by private consumers;\n12 = Direct trade with/by private consumers (including distance selling);\n2 = Return shipments and free replacement of products after registration of the original transaction;\n21 = Return shipment of products;\n22 = Replacement of returned products;\n23 = Replacement (for example, under guarantee) for products that have not been returned;\n3 = Transactions that are coupled to a transfer of ownership without financial or other consideration;\n31 = Movements from one to another storage location except deliveries in consignment or on-demand stock;\n32 = Visual or test shipment including deliveries in assignation or through on-demand stock;\n33 = Financial lease (rent-to-buy);\n34 = Transactions that are coupled to a transfer of ownership without financial consideration;\n4 = Operations with a view of contract processing without transfer of ownership to the processor;\n41 = Products that are expected to return to the original member state of shipment/export country;\n42 = Products that are expected not to return to the original member state of shipment/export country;\n5 = Operations after contract processing (without transfer of ownership to the processor);\n51 = Products that return to the original member state of shipments or the export country;\n52 = Products that do not return to the original member state of shipments or the export country;\n6 = Temporary import and export and return of temporary import and export;\n60 = Special transactions registered for national objectives such as repair shipments;\n7 = Operations within the framework of joint fabrication (defence and intergovernmental);\n71 = Placing products into free circulation in an EU member state incl. later shipment to another mr. st.;\n72 = Transport of products from one EU member state to another EU member state under the export procedure;\n8 = Transactions coupled with the delivery of construction materials within the framework of a contract;\n80 = Transactions coupled with the delivery of construction materials within the framework of a contract;\n9 = Other transactions; not specified elsewhere;\n91 = Rental, loan for use or operational lease longer than 24 months;\n99 = Andere;",
                         "format": ""
                       },
                       "InPc": {
@@ -25796,7 +25798,7 @@
                           "8"
                         ],
                         "maxLength": 20,
-                        "description": "Barcode type\n0 = Geen controle;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (controlegetal);",
+                        "description": "Barcode type\n0 = No check;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (checksum);",
                         "format": ""
                       },
                       "BaCo": {
@@ -25863,7 +25865,7 @@
                           "7"
                         ],
                         "maxLength": 20,
-                        "description": "Processing order\n1 = Pakbon, factuur na levering;\n2 = Pakbon en factuur;\n3 = Factuur, levering na vooruitbetaling;\n4 = Pakbon, geen factuur;\n5 = Pakbon, factuur via nacalculatie;\n6 = Pakbon en factuur, factuur niet afdrukken of verzenden;\n7 = Aanbetalen, levering na aanbetaling;",
+                        "description": "Processing order\n1 = Packing slip, invoice after delivery;\n2 = Packing slip and invoice;\n3 = Invoice, delivery after advance payment;\n4 = Packing slip, no invoice;\n5 = Packing slip, invoice through actual costing;\n6 = Packing slip and invoice, do not print or send invoice;\n7 = Down pay, delivery after down payment;",
                         "format": ""
                       },
                       "AmDp": {
@@ -25919,7 +25921,7 @@
                       "CoId": {
                         "type": "string",
                         "maxLength": 3,
-                        "description": "\u0027CBS\u0027 destination country",
+                        "description": "'CBS' destination country",
                         "format": ""
                       },
                       "PuSa": {
@@ -25940,7 +25942,7 @@
                           "7"
                         ],
                         "maxLength": 20,
-                        "description": "Quotation status\n0 = Onderhanden;\n1 = Definitief;\n2 = Akkoord verkooprelatie;\n3 = Vervallen;\n4 = Deellevering;\n5 = Geleverd;\n6 = Handmatig afgehandeld;\n7 = Afgehandeld;",
+                        "description": "Quotation status\n0 = Current;\n1 = Permanent;\n2 = Sales contact approval;\n3 = Expired;\n4 = Short-supply;\n5 = Delivered;\n6 = Manually completed;\n7 = Completed;",
                         "format": ""
                       }
                     },
@@ -25980,7 +25982,7 @@
                                           "8"
                                         ],
                                         "maxLength": 10,
-                                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                         "format": ""
                                       },
                                       "ItCd": {
@@ -26065,7 +26067,7 @@
                                           "5"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Weight unit\n0 = Geen gewicht;\n1 = Microgram (\u00B5g);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
+                                        "description": "Weight unit\n0 = No weight;\n1 = Microgram (µg);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
                                         "format": ""
                                       },
                                       "NeWe": {
@@ -26101,7 +26103,7 @@
                                           "3"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Discount allowed\n0 = Factuur- en regelkorting;\n1 = Factuurkorting;\n2 = Regelkorting;\n3 = Geen factuur- en regelkorting;",
+                                        "description": "Discount allowed\n0 = Invoice and line discount;\n1 = Invoice discount;\n2 = Line discount;\n3 = No invoice and line discount;",
                                         "format": ""
                                       },
                                       "PRDc": {
@@ -26220,7 +26222,7 @@
                                           "O"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                                         "format": ""
                                       }
                                     }
@@ -26257,7 +26259,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Part item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                                        "description": "Part item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -26546,7 +26548,7 @@
                           "3"
                         ],
                         "maxLength": 20,
-                        "description": "Delivery conditions\n0 = Deellevering toestaan;\n1 = Regel volledig uitleveren;\n2 = Order volledig uitleveren;\n3 = Geen backorders leveren;",
+                        "description": "Delivery conditions\n0 = Allow short-supply;\n1 = Deliver line completely;\n2 = Deliver order completely;\n3 = Do not deliver backorders;",
                         "format": ""
                       },
                       "CsTy": {
@@ -26568,7 +26570,7 @@
                           "9"
                         ],
                         "maxLength": 20,
-                        "description": "Type of Statistics Netherlands transport\n1 = Zeevaart;\n2 = Spoorvervoer;\n3 = Wegvervoer;\n4 = Luchtvaart;\n5 = Postzendingen;\n7 = Pijpleidingvervoer;\n8 = Binnenvaart;\n9 = Eigen vervoer;",
+                        "description": "Type of Statistics Netherlands transport\n1 = Shipping;\n2 = Rail transport;\n3 = Road transport;\n4 = Air traffic;\n5 = Shipping by post;\n7 = Pipeline transport;\n8 = Inland navigation;\n9 = Own transportation;",
                         "format": ""
                       },
                       "VaSt": {
@@ -26583,7 +26585,7 @@
                           "10"
                         ],
                         "maxLength": 20,
-                        "description": "\u0027CBS\u0027 statistical system\n00 = Reguliere invoer/ICV en uitvoer/ICL;\n01 = Doorlevering (ICL) van onbewerkte goederen naar een andere EU-lidstaat;\n02 = Wederverkoop (ICL of uitvoer) van onbewerkte goederen;\n03 = Invoer van goederen, doorlevering/uitvoer onbewerkte goederen;\n04 = Verwerving/levering v\u00F3\u00F3r eigen voorraadverplaatsing (fictieve zending);\n05 = Verwerving/levering n\u00E1 eigen voorraadverplaatsing (fictieve zending);\n10 = Actieve douaneveredeling met toepassing van het terugbetalingssysteem;",
+                        "description": "'CBS' statistical system\n00 = Regular import/ICV and export/ICL;\n01 = Onward supply (ICL) of unprocessed goods to another EU member state;\n02 = Resale (ICL or export) of unprocessed goods;\n03 = Import of goods, delivery to others/export of raw materials;\n04 = Acquisition/delivery prior to own stock transfer (fictitious dispatch);\n05 = Acquisition/delivery after own stock transfer (fictitious dispatch);\n10 = Active customs processing with application of the repayment system;",
                         "format": ""
                       },
                       "VaGs": {
@@ -26593,7 +26595,7 @@
                           "7"
                         ],
                         "maxLength": 20,
-                        "description": "\u0027CBS\u0027 goods flow\n6 = Invoer/intra-cummunautaire verwerving (ICV);\n7 = Uitvoer/intra-communautaire levering (ICL);",
+                        "description": "'CBS' goods flow\n6 = Import/intracommunity acquisition (ICV);\n7 = Export/intracommunity delivery (ICL);",
                         "format": ""
                       },
                       "VaTa": {
@@ -26629,7 +26631,7 @@
                           "99"
                         ],
                         "maxLength": 20,
-                        "description": "\u0027CBS\u0027 transaction\n1 = Transacties die gepaard gaan met een eigendomsoverdracht met financi\u00EBle of andere tegenprestatie;\n11 = Definitieve aan- of verkoop, uitgezonderd directe handel met/door private consumenten;\n12 = Directe handel met/door private consumenten (inclusief verkoop op afstand);\n2 = Retourzendingen en gratis vervanging van goederen na registratie van de oorspronkelijke transactie;\n21 = Retourzendingen van goederen;\n22 = Vervanging van geretourneerde goederen;\n23 = Vervanging (bijv. onder garantie) voor goederen die niet zijn geretourneerd;\n3 = Transacties die gepaard gaan met een eigendomsoverdracht zonder financi\u00EBle tegenprestatie;\n31 = Verplaatsingen van of naar een opslag, uitgezonderd levering in consignatie of voorraden op afroep;\n32 = Zicht- of proefzending, inclusief levering in consignatie of via voorraden op afroep;\n33 = Financi\u00EBle lease (huurkoop);\n34 = Transacties die gepaard gaan met eigendomsoverdracht zonder financi\u00EBle tegenprestatie;\n4 = Verrichtingen met het oog op loonveredeling zonder eigendomsoverdracht aan de bewerker;\n41 = Goederen die naar verwachting terugkeren naar de aanvank. lidstaat van verzending/land export;\n42 = Goederen die naar verwachting niet terugkeren naar de aanvank. lidstaat van verzending/land export;\n5 = Verrichtingen na loonveredeling (zonder eigendomsoverdracht aan de bewerker);\n51 = Goederen die terugkeren naar de aanvankelijke lidstaat van verzending of het land van export;\n52 = Goederen die niet terugkeren naar de aanvankelijke lidstaat van verzending of het land van export;\n6 = Tijdelijke in- en uitvoer en retour tijdelijke in- en uitvoer;\n60 = Bijzondere voor nationale doeleinden geregistreerde transacties, zoals reparatiezendingen;\n7 = Verrichtingen in het kader van gezamenlijke fabricage (defensie, intergouvernementeel);\n71 = In het vrije verkeer brengen van goederen in een EU-lidstaat incl. latere verzending andere lidstaat;\n72 = Vervoer van goederen van de ene EU-lidstaat naar een andere EU-lidstaat onder de uitvoer procedure;\n8 = Transacties die gepaard gaan met de levering van bouwmaterialen in het kader van een contract;\n80 = Transacties die gepaard gaan met de levering van bouwmaterialen in het kader van een contract;\n9 = Overige transacties; niet elders vermeld;\n91 = Huur, bruikleen of operationele lease langer dan 24 maanden;\n99 = Andere;",
+                        "description": "'CBS' transaction\n1 = Transactions that are coupled to a transfer of ownership with financial or other consideration;\n11 = Definitive purchases or sales except for direct trade with/by private consumers;\n12 = Direct trade with/by private consumers (including distance selling);\n2 = Return shipments and free replacement of products after registration of the original transaction;\n21 = Return shipment of products;\n22 = Replacement of returned products;\n23 = Replacement (for example, under guarantee) for products that have not been returned;\n3 = Transactions that are coupled to a transfer of ownership without financial or other consideration;\n31 = Movements from one to another storage location except deliveries in consignment or on-demand stock;\n32 = Visual or test shipment including deliveries in assignation or through on-demand stock;\n33 = Financial lease (rent-to-buy);\n34 = Transactions that are coupled to a transfer of ownership without financial consideration;\n4 = Operations with a view of contract processing without transfer of ownership to the processor;\n41 = Products that are expected to return to the original member state of shipment/export country;\n42 = Products that are expected not to return to the original member state of shipment/export country;\n5 = Operations after contract processing (without transfer of ownership to the processor);\n51 = Products that return to the original member state of shipments or the export country;\n52 = Products that do not return to the original member state of shipments or the export country;\n6 = Temporary import and export and return of temporary import and export;\n60 = Special transactions registered for national objectives such as repair shipments;\n7 = Operations within the framework of joint fabrication (defence and intergovernmental);\n71 = Placing products into free circulation in an EU member state incl. later shipment to another mr. st.;\n72 = Transport of products from one EU member state to another EU member state under the export procedure;\n8 = Transactions coupled with the delivery of construction materials within the framework of a contract;\n80 = Transactions coupled with the delivery of construction materials within the framework of a contract;\n9 = Other transactions; not specified elsewhere;\n91 = Rental, loan for use or operational lease longer than 24 months;\n99 = Andere;",
                         "format": ""
                       },
                       "InPc": {
@@ -26676,7 +26678,7 @@
                           "8"
                         ],
                         "maxLength": 20,
-                        "description": "Barcode type\n0 = Geen controle;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (controlegetal);",
+                        "description": "Barcode type\n0 = No check;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (checksum);",
                         "format": ""
                       },
                       "BaCo": {
@@ -26729,7 +26731,7 @@
                           "4"
                         ],
                         "maxLength": 20,
-                        "description": "Status shipment\n0 = Niet aanbieden aan vervoerder;\n1 = Aanbieden aan vervoerder;\n2 = Aangeboden aan vervoerder;\n3 = Verzending correct ontvangen;\n4 = Fout bij aanbieden verzending;",
+                        "description": "Status shipment\n0 = Do not hand over to transporter;\n1 = Hand over to transporter;\n2 = Handed over to transporter;\n3 = Shipment received correctly;\n4 = Error handing over shipment;",
                         "format": ""
                       },
                       "SeWe": {
@@ -26745,16 +26747,16 @@
                       "PkTp": {
                         "type": "string",
                         "enum": [
-                          "BLOKPALLET",
-                          "BOX",
-                          "BUNDEL",
-                          "DIVERSEN",
-                          "ENVELOPE",
-                          "EURPALLET",
-                          "PALLET"
+                          "blockpallet",
+                          "box",
+                          "bundle",
+                          "various",
+                          "envelope",
+                          "europallet",
+                          "pallet"
                         ],
                         "maxLength": 20,
-                        "description": "Packaging type\nBLOKPALLET = Blokpallet;\nBOX = Box;\nBUNDEL = Bundel;\nDIVERSEN = Diversen;\nENVELOPE = Envelope;\nEURPALLET = Europallet;\nPALLET = Pallet;",
+                        "description": "Packaging type\nblockpallet = Blockpallet;\nbox = Box;\nbundle = Bundle;\nvarious = Various;\nenvelope = Envelope;\neuropallet = Europallet;\npallet = Pallet;",
                         "format": ""
                       },
                       "TrPt": {
@@ -26781,7 +26783,7 @@
                           "7"
                         ],
                         "maxLength": 20,
-                        "description": "Processing order\n1 = Pakbon, factuur na levering;\n2 = Pakbon en factuur;\n3 = Factuur, levering na vooruitbetaling;\n4 = Pakbon, geen factuur;\n5 = Pakbon, factuur via nacalculatie;\n6 = Pakbon en factuur, factuur niet afdrukken of verzenden;\n7 = Aanbetalen, levering na aanbetaling;",
+                        "description": "Processing order\n1 = Packing slip, invoice after delivery;\n2 = Packing slip and invoice;\n3 = Invoice, delivery after advance payment;\n4 = Packing slip, no invoice;\n5 = Packing slip, invoice through actual costing;\n6 = Packing slip and invoice, do not print or send invoice;\n7 = Down pay, delivery after down payment;",
                         "format": ""
                       },
                       "AmDp": {
@@ -26825,7 +26827,7 @@
                       "CoId": {
                         "type": "string",
                         "maxLength": 3,
-                        "description": "\u0027CBS\u0027 destination country",
+                        "description": "'CBS' destination country",
                         "format": ""
                       },
                       "PuSa": {
@@ -26841,7 +26843,7 @@
                           "S"
                         ],
                         "maxLength": 20,
-                        "description": "Order type\nI = Installatie;\nO = Onderhoud;\nS = Storing;",
+                        "description": "Order type\nI = Installation;\nO = Maintenance;\nS = Fault;",
                         "format": ""
                       },
                       "Fref": {
@@ -26903,7 +26905,7 @@
                                           "8"
                                         ],
                                         "maxLength": 10,
-                                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                         "format": ""
                                       },
                                       "ItCd": {
@@ -26998,7 +27000,7 @@
                                           "5"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Weight unit\n0 = Geen gewicht;\n1 = Microgram (\u00B5g);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
+                                        "description": "Weight unit\n0 = No weight;\n1 = Microgram (µg);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
                                         "format": ""
                                       },
                                       "NeWe": {
@@ -27030,7 +27032,7 @@
                                           "3"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Discount allowed\n0 = Factuur- en regelkorting;\n1 = Factuurkorting;\n2 = Regelkorting;\n3 = Geen factuur- en regelkorting;",
+                                        "description": "Discount allowed\n0 = Invoice and line discount;\n1 = Invoice discount;\n2 = Line discount;\n3 = No invoice and line discount;",
                                         "format": ""
                                       },
                                       "PRDc": {
@@ -27157,7 +27159,7 @@
                                           "O"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                                         "format": ""
                                       }
                                     },
@@ -27337,7 +27339,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Part item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                                        "description": "Part item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -27798,7 +27800,7 @@
                           "3"
                         ],
                         "maxLength": 20,
-                        "description": "Delivery conditions\n0 = Deellevering toestaan;\n1 = Regel volledig uitleveren;\n2 = Order volledig uitleveren;\n3 = Geen backorders leveren;",
+                        "description": "Delivery conditions\n0 = Allow short-supply;\n1 = Deliver line completely;\n2 = Deliver order completely;\n3 = Do not deliver backorders;",
                         "format": ""
                       },
                       "CsTy": {
@@ -27820,7 +27822,7 @@
                           "9"
                         ],
                         "maxLength": 20,
-                        "description": "Type of Statistics Netherlands transport\n1 = Zeevaart;\n2 = Spoorvervoer;\n3 = Wegvervoer;\n4 = Luchtvaart;\n5 = Postzendingen;\n7 = Pijpleidingvervoer;\n8 = Binnenvaart;\n9 = Eigen vervoer;",
+                        "description": "Type of Statistics Netherlands transport\n1 = Shipping;\n2 = Rail transport;\n3 = Road transport;\n4 = Air traffic;\n5 = Shipping by post;\n7 = Pipeline transport;\n8 = Inland navigation;\n9 = Own transportation;",
                         "format": ""
                       },
                       "VaSt": {
@@ -27835,7 +27837,7 @@
                           "10"
                         ],
                         "maxLength": 20,
-                        "description": "\u0027CBS\u0027 statistical system\n00 = Reguliere invoer/ICV en uitvoer/ICL;\n01 = Doorlevering (ICL) van onbewerkte goederen naar een andere EU-lidstaat;\n02 = Wederverkoop (ICL of uitvoer) van onbewerkte goederen;\n03 = Invoer van goederen, doorlevering/uitvoer onbewerkte goederen;\n04 = Verwerving/levering v\u00F3\u00F3r eigen voorraadverplaatsing (fictieve zending);\n05 = Verwerving/levering n\u00E1 eigen voorraadverplaatsing (fictieve zending);\n10 = Actieve douaneveredeling met toepassing van het terugbetalingssysteem;",
+                        "description": "'CBS' statistical system\n00 = Regular import/ICV and export/ICL;\n01 = Onward supply (ICL) of unprocessed goods to another EU member state;\n02 = Resale (ICL or export) of unprocessed goods;\n03 = Import of goods, delivery to others/export of raw materials;\n04 = Acquisition/delivery prior to own stock transfer (fictitious dispatch);\n05 = Acquisition/delivery after own stock transfer (fictitious dispatch);\n10 = Active customs processing with application of the repayment system;",
                         "format": ""
                       },
                       "VaGs": {
@@ -27845,7 +27847,7 @@
                           "7"
                         ],
                         "maxLength": 20,
-                        "description": "\u0027CBS\u0027 goods flow\n6 = Invoer/intra-cummunautaire verwerving (ICV);\n7 = Uitvoer/intra-communautaire levering (ICL);",
+                        "description": "'CBS' goods flow\n6 = Import/intracommunity acquisition (ICV);\n7 = Export/intracommunity delivery (ICL);",
                         "format": ""
                       },
                       "VaTa": {
@@ -27881,7 +27883,7 @@
                           "99"
                         ],
                         "maxLength": 20,
-                        "description": "\u0027CBS\u0027 transaction\n1 = Transacties die gepaard gaan met een eigendomsoverdracht met financi\u00EBle of andere tegenprestatie;\n11 = Definitieve aan- of verkoop, uitgezonderd directe handel met/door private consumenten;\n12 = Directe handel met/door private consumenten (inclusief verkoop op afstand);\n2 = Retourzendingen en gratis vervanging van goederen na registratie van de oorspronkelijke transactie;\n21 = Retourzendingen van goederen;\n22 = Vervanging van geretourneerde goederen;\n23 = Vervanging (bijv. onder garantie) voor goederen die niet zijn geretourneerd;\n3 = Transacties die gepaard gaan met een eigendomsoverdracht zonder financi\u00EBle tegenprestatie;\n31 = Verplaatsingen van of naar een opslag, uitgezonderd levering in consignatie of voorraden op afroep;\n32 = Zicht- of proefzending, inclusief levering in consignatie of via voorraden op afroep;\n33 = Financi\u00EBle lease (huurkoop);\n34 = Transacties die gepaard gaan met eigendomsoverdracht zonder financi\u00EBle tegenprestatie;\n4 = Verrichtingen met het oog op loonveredeling zonder eigendomsoverdracht aan de bewerker;\n41 = Goederen die naar verwachting terugkeren naar de aanvank. lidstaat van verzending/land export;\n42 = Goederen die naar verwachting niet terugkeren naar de aanvank. lidstaat van verzending/land export;\n5 = Verrichtingen na loonveredeling (zonder eigendomsoverdracht aan de bewerker);\n51 = Goederen die terugkeren naar de aanvankelijke lidstaat van verzending of het land van export;\n52 = Goederen die niet terugkeren naar de aanvankelijke lidstaat van verzending of het land van export;\n6 = Tijdelijke in- en uitvoer en retour tijdelijke in- en uitvoer;\n60 = Bijzondere voor nationale doeleinden geregistreerde transacties, zoals reparatiezendingen;\n7 = Verrichtingen in het kader van gezamenlijke fabricage (defensie, intergouvernementeel);\n71 = In het vrije verkeer brengen van goederen in een EU-lidstaat incl. latere verzending andere lidstaat;\n72 = Vervoer van goederen van de ene EU-lidstaat naar een andere EU-lidstaat onder de uitvoer procedure;\n8 = Transacties die gepaard gaan met de levering van bouwmaterialen in het kader van een contract;\n80 = Transacties die gepaard gaan met de levering van bouwmaterialen in het kader van een contract;\n9 = Overige transacties; niet elders vermeld;\n91 = Huur, bruikleen of operationele lease langer dan 24 maanden;\n99 = Andere;",
+                        "description": "'CBS' transaction\n1 = Transactions that are coupled to a transfer of ownership with financial or other consideration;\n11 = Definitive purchases or sales except for direct trade with/by private consumers;\n12 = Direct trade with/by private consumers (including distance selling);\n2 = Return shipments and free replacement of products after registration of the original transaction;\n21 = Return shipment of products;\n22 = Replacement of returned products;\n23 = Replacement (for example, under guarantee) for products that have not been returned;\n3 = Transactions that are coupled to a transfer of ownership without financial or other consideration;\n31 = Movements from one to another storage location except deliveries in consignment or on-demand stock;\n32 = Visual or test shipment including deliveries in assignation or through on-demand stock;\n33 = Financial lease (rent-to-buy);\n34 = Transactions that are coupled to a transfer of ownership without financial consideration;\n4 = Operations with a view of contract processing without transfer of ownership to the processor;\n41 = Products that are expected to return to the original member state of shipment/export country;\n42 = Products that are expected not to return to the original member state of shipment/export country;\n5 = Operations after contract processing (without transfer of ownership to the processor);\n51 = Products that return to the original member state of shipments or the export country;\n52 = Products that do not return to the original member state of shipments or the export country;\n6 = Temporary import and export and return of temporary import and export;\n60 = Special transactions registered for national objectives such as repair shipments;\n7 = Operations within the framework of joint fabrication (defence and intergovernmental);\n71 = Placing products into free circulation in an EU member state incl. later shipment to another mr. st.;\n72 = Transport of products from one EU member state to another EU member state under the export procedure;\n8 = Transactions coupled with the delivery of construction materials within the framework of a contract;\n80 = Transactions coupled with the delivery of construction materials within the framework of a contract;\n9 = Other transactions; not specified elsewhere;\n91 = Rental, loan for use or operational lease longer than 24 months;\n99 = Andere;",
                         "format": ""
                       },
                       "InPc": {
@@ -27931,7 +27933,7 @@
                           "8"
                         ],
                         "maxLength": 20,
-                        "description": "Barcode type\n0 = Geen controle;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (controlegetal);",
+                        "description": "Barcode type\n0 = No check;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (checksum);",
                         "format": ""
                       },
                       "BaCo": {
@@ -27984,7 +27986,7 @@
                           "4"
                         ],
                         "maxLength": 20,
-                        "description": "Status shipment\n0 = Niet aanbieden aan vervoerder;\n1 = Aanbieden aan vervoerder;\n2 = Aangeboden aan vervoerder;\n3 = Verzending correct ontvangen;\n4 = Fout bij aanbieden verzending;",
+                        "description": "Status shipment\n0 = Do not hand over to transporter;\n1 = Hand over to transporter;\n2 = Handed over to transporter;\n3 = Shipment received correctly;\n4 = Error handing over shipment;",
                         "format": ""
                       },
                       "SeWe": {
@@ -28001,16 +28003,16 @@
                       "PkTp": {
                         "type": "string",
                         "enum": [
-                          "BLOKPALLET",
-                          "BOX",
-                          "BUNDEL",
-                          "DIVERSEN",
-                          "ENVELOPE",
-                          "EURPALLET",
-                          "PALLET"
+                          "blockpallet",
+                          "box",
+                          "bundle",
+                          "various",
+                          "envelope",
+                          "europallet",
+                          "pallet"
                         ],
                         "maxLength": 20,
-                        "description": "Packaging type\nBLOKPALLET = Blokpallet;\nBOX = Box;\nBUNDEL = Bundel;\nDIVERSEN = Diversen;\nENVELOPE = Envelope;\nEURPALLET = Europallet;\nPALLET = Pallet;",
+                        "description": "Packaging type\nblockpallet = Blockpallet;\nbox = Box;\nbundle = Bundle;\nvarious = Various;\nenvelope = Envelope;\neuropallet = Europallet;\npallet = Pallet;",
                         "format": ""
                       },
                       "TrPt": {
@@ -28037,7 +28039,7 @@
                           "7"
                         ],
                         "maxLength": 20,
-                        "description": "Processing order\n1 = Pakbon, factuur na levering;\n2 = Pakbon en factuur;\n3 = Factuur, levering na vooruitbetaling;\n4 = Pakbon, geen factuur;\n5 = Pakbon, factuur via nacalculatie;\n6 = Pakbon en factuur, factuur niet afdrukken of verzenden;\n7 = Aanbetalen, levering na aanbetaling;",
+                        "description": "Processing order\n1 = Packing slip, invoice after delivery;\n2 = Packing slip and invoice;\n3 = Invoice, delivery after advance payment;\n4 = Packing slip, no invoice;\n5 = Packing slip, invoice through actual costing;\n6 = Packing slip and invoice, do not print or send invoice;\n7 = Down pay, delivery after down payment;",
                         "format": ""
                       },
                       "AmDp": {
@@ -28082,7 +28084,7 @@
                       "CoId": {
                         "type": "string",
                         "maxLength": 3,
-                        "description": "\u0027CBS\u0027 destination country",
+                        "description": "'CBS' destination country",
                         "format": ""
                       },
                       "PuSa": {
@@ -28098,7 +28100,7 @@
                           "S"
                         ],
                         "maxLength": 20,
-                        "description": "Order type\nI = Installatie;\nO = Onderhoud;\nS = Storing;",
+                        "description": "Order type\nI = Installation;\nO = Maintenance;\nS = Fault;",
                         "format": ""
                       },
                       "Fref": {
@@ -28160,7 +28162,7 @@
                                           "8"
                                         ],
                                         "maxLength": 10,
-                                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                         "format": ""
                                       },
                                       "ItCd": {
@@ -28263,7 +28265,7 @@
                                           "5"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Weight unit\n0 = Geen gewicht;\n1 = Microgram (\u00B5g);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
+                                        "description": "Weight unit\n0 = No weight;\n1 = Microgram (µg);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
                                         "format": ""
                                       },
                                       "NeWe": {
@@ -28299,7 +28301,7 @@
                                           "3"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Discount allowed\n0 = Factuur- en regelkorting;\n1 = Factuurkorting;\n2 = Regelkorting;\n3 = Geen factuur- en regelkorting;",
+                                        "description": "Discount allowed\n0 = Invoice and line discount;\n1 = Invoice discount;\n2 = Line discount;\n3 = No invoice and line discount;",
                                         "format": ""
                                       },
                                       "PRDc": {
@@ -28428,7 +28430,7 @@
                                           "O"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                                         "format": ""
                                       }
                                     }
@@ -28601,7 +28603,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Part item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                                        "description": "Part item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -28993,7 +28995,7 @@
                           "W1"
                         ],
                         "maxLength": 20,
-                        "description": "Cycle invoicing\nD7 = 7 Dagen;\nI = Incidenteel;\nJ1 = Jaar;\nM1 = Maand;\nW1 = Week;",
+                        "description": "Cycle invoicing\nD7 = 7 Days;\nI = Incidental;\nJ1 = Year;\nM1 = Month;\nW1 = Week;",
                         "format": ""
                       },
                       "DaSt": {
@@ -29032,7 +29034,7 @@
                           "W1"
                         ],
                         "maxLength": 20,
-                        "description": "Cycle extension\nD7 = 7 Dagen;\nI = Incidenteel;\nJ1 = Jaar;\nM1 = Maand;\nW1 = Week;",
+                        "description": "Cycle extension\nD7 = 7 Days;\nI = Incidental;\nJ1 = Year;\nM1 = Month;\nW1 = Week;",
                         "format": ""
                       },
                       "DaRe": {
@@ -29223,7 +29225,7 @@
                                           "8"
                                         ],
                                         "maxLength": 10,
-                                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                         "format": ""
                                       },
                                       "ItCd": {
@@ -29457,7 +29459,7 @@
                           "W1"
                         ],
                         "maxLength": 20,
-                        "description": "Cycle invoicing\nD7 = 7 Dagen;\nI = Incidenteel;\nJ1 = Jaar;\nM1 = Maand;\nW1 = Week;",
+                        "description": "Cycle invoicing\nD7 = 7 Days;\nI = Incidental;\nJ1 = Year;\nM1 = Month;\nW1 = Week;",
                         "format": ""
                       },
                       "DaSt": {
@@ -29497,7 +29499,7 @@
                           "W1"
                         ],
                         "maxLength": 20,
-                        "description": "Cycle extension\nD7 = 7 Dagen;\nI = Incidenteel;\nJ1 = Jaar;\nM1 = Maand;\nW1 = Week;",
+                        "description": "Cycle extension\nD7 = 7 Days;\nI = Incidental;\nJ1 = Year;\nM1 = Month;\nW1 = Week;",
                         "format": ""
                       },
                       "DaRe": {
@@ -29688,7 +29690,7 @@
                                           "8"
                                         ],
                                         "maxLength": 10,
-                                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                         "format": ""
                                       },
                                       "ItCd": {
@@ -30094,7 +30096,7 @@
         "name": "Authorization",
         "type": "apiKey",
         "in": "header",
-        "description": "Convert the XML token to Base64 and add \u0027AfasToken \u0027 in front of it."
+        "description": "Convert the XML token to Base64 and add 'AfasToken ' in front of it."
       }
     },
     "parameters": {
@@ -30102,7 +30104,7 @@
         "name": "Accept-Language",
         "in": "header",
         "required": false,
-        "description": "Indicates the client\u0027s preferred language for the response. If not provided, the API defaults to the base environment language.",
+        "description": "Indicates the client's preferred language for the response. If not provided, the API defaults to the base environment language.",
         "schema": {
           "type": "string",
           "enum": [

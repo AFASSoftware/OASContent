@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "6.6.9",
+    "version": "7.7.10",
     "title": "AFAS Inrichting API",
     "description": "Deze API beschrijft de endpoints gerelateerd aan Inrichting. Gebruik deze API met de functionele beschrijving van de API."
   },
@@ -51,7 +51,7 @@
     "/connectors/KnCSRLine": {
       "post": {
         "summary": "CSR",
-        "description": "\n\rAlleen beschikbaar onder conditie: CSR (Activering)\n\r https://help.afas.nl/help/NL/SE/123800.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: CSR (speciale activering)\n\r https://help.afas.nl/help/NL/SE/123800.htm",
         "operationId": "POST_KnCSRLine",
         "requestBody": {
           "content": {
@@ -203,7 +203,7 @@
       },
       "put": {
         "summary": "CSR",
-        "description": "\n\rAlleen beschikbaar onder conditie: CSR (Activering)\n\r https://help.afas.nl/help/NL/SE/123800.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: CSR (speciale activering)\n\r https://help.afas.nl/help/NL/SE/123800.htm",
         "operationId": "PUT_KnCSRLine",
         "requestBody": {
           "content": {
@@ -820,1477 +820,6 @@
         ],
         "tags": [
           "Vrij bestand 01"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          }
-        ]
-      }
-    },
-    "/connectors/KnCustomK02": {
-      "post": {
-        "summary": "Vrij bestand 02",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
-        "operationId": "POST_KnCustomK02",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/KnCustomK02_POST"
-              },
-              "examples": {
-                "massa 100": {
-                  "value": {
-                    "KnCustomK02": {
-                      "Element": [
-                        {
-                          "Fields": {
-                            "AuNu": true,
-                            "Da": "2023-01-15",
-                            "Ds": "Omschrijving 100",
-                            "U977E29AD43062ADCD6C1F9999DEEF079": "Poging 5",
-                            "UA76EA82042ADD8F52A8861B9510C5214": "Veld 2",
-                            "U7DB2B6D349C3B6B1374D6691CB33B72E": "FLOORA"
-                          }
-                        },
-                        {
-                          "Fields": {
-                            "AuNu": true,
-                            "Da": "2023-01-15",
-                            "Ds": "Omschrijving 101",
-                            "U977E29AD43062ADCD6C1F9999DEEF079": "Poging 5",
-                            "UA76EA82042ADD8F52A8861B9510C5214": "Veld 2",
-                            "U7DB2B6D349C3B6B1374D6691CB33B72E": "FLOORA"
-                          }
-                        },
-                        {
-                          "Fields": {
-                            "AuNu": true,
-                            "Da": "2023-01-15",
-                            "Ds": "Omschrijving 102",
-                            "U977E29AD43062ADCD6C1F9999DEEF079": "Poging 5",
-                            "UA76EA82042ADD8F52A8861B9510C5214": "Veld 2",
-                            "U7DB2B6D349C3B6B1374D6691CB33B72E": "FLOORA"
-                          }
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Vrij bestand 02"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      },
-      "put": {
-        "summary": "Vrij bestand 02",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
-        "operationId": "PUT_KnCustomK02",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/KnCustomK02_PUT"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Vrij bestand 02"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      }
-    },
-    "/connectors/KnCustomK02/KnCustomK02/@SqNo/{SqNo}": {
-      "parameters": [
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "SqNo",
-          "in": "path",
-          "required": true,
-          "description": "Volgnummer"
-        }
-      ],
-      "delete": {
-        "summary": "Vrij bestand 02",
-        "operationId": "DELETE_KnCustomK02",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "$ref": "#/components/responses/200"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Vrij bestand 02"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          }
-        ]
-      }
-    },
-    "/connectors/KnCustomK03": {
-      "post": {
-        "summary": "Vrij bestand 03",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
-        "operationId": "POST_KnCustomK03",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/KnCustomK03_POST"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Vrij bestand 03"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      },
-      "put": {
-        "summary": "Vrij bestand 03",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
-        "operationId": "PUT_KnCustomK03",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/KnCustomK03_PUT"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Vrij bestand 03"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      }
-    },
-    "/connectors/KnCustomK03/KnCustomK03/@SqNo/{SqNo}": {
-      "parameters": [
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "SqNo",
-          "in": "path",
-          "required": true,
-          "description": "Volgnummer"
-        }
-      ],
-      "delete": {
-        "summary": "Vrij bestand 03",
-        "operationId": "DELETE_KnCustomK03",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "$ref": "#/components/responses/200"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Vrij bestand 03"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          }
-        ]
-      }
-    },
-    "/connectors/KnCustomK04": {
-      "post": {
-        "summary": "Vrij bestand 04",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
-        "operationId": "POST_KnCustomK04",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/KnCustomK04_POST"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Vrij bestand 04"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      },
-      "put": {
-        "summary": "Vrij bestand 04",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
-        "operationId": "PUT_KnCustomK04",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/KnCustomK04_PUT"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Vrij bestand 04"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      }
-    },
-    "/connectors/KnCustomK04/KnCustomK04/@SqNo/{SqNo}": {
-      "parameters": [
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "SqNo",
-          "in": "path",
-          "required": true,
-          "description": "Volgnummer"
-        }
-      ],
-      "delete": {
-        "summary": "Vrij bestand 04",
-        "operationId": "DELETE_KnCustomK04",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "$ref": "#/components/responses/200"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Vrij bestand 04"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          }
-        ]
-      }
-    },
-    "/connectors/KnCustomK05": {
-      "post": {
-        "summary": "Vrij bestand 05",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
-        "operationId": "POST_KnCustomK05",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/KnCustomK05_POST"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Vrij bestand 05"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      },
-      "put": {
-        "summary": "Vrij bestand 05",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
-        "operationId": "PUT_KnCustomK05",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/KnCustomK05_PUT"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Vrij bestand 05"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      }
-    },
-    "/connectors/KnCustomK05/KnCustomK05/@SqNo/{SqNo}": {
-      "parameters": [
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "SqNo",
-          "in": "path",
-          "required": true,
-          "description": "Volgnummer"
-        }
-      ],
-      "delete": {
-        "summary": "Vrij bestand 05",
-        "operationId": "DELETE_KnCustomK05",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "$ref": "#/components/responses/200"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Vrij bestand 05"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          }
-        ]
-      }
-    },
-    "/connectors/KnCustomK06": {
-      "post": {
-        "summary": "Vrij bestand 06",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
-        "operationId": "POST_KnCustomK06",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/KnCustomK06_POST"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Vrij bestand 06"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      },
-      "put": {
-        "summary": "Vrij bestand 06",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
-        "operationId": "PUT_KnCustomK06",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/KnCustomK06_PUT"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Vrij bestand 06"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      }
-    },
-    "/connectors/KnCustomK06/KnCustomK06/@SqNo/{SqNo}": {
-      "parameters": [
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "SqNo",
-          "in": "path",
-          "required": true,
-          "description": "Volgnummer"
-        }
-      ],
-      "delete": {
-        "summary": "Vrij bestand 06",
-        "operationId": "DELETE_KnCustomK06",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "$ref": "#/components/responses/200"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Vrij bestand 06"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          }
-        ]
-      }
-    },
-    "/connectors/KnCustomK07": {
-      "post": {
-        "summary": "Vrij bestand 07",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
-        "operationId": "POST_KnCustomK07",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/KnCustomK07_POST"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Vrij bestand 07"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      },
-      "put": {
-        "summary": "Vrij bestand 07",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
-        "operationId": "PUT_KnCustomK07",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/KnCustomK07_PUT"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Vrij bestand 07"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      }
-    },
-    "/connectors/KnCustomK07/KnCustomK07/@SqNo/{SqNo}": {
-      "parameters": [
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "SqNo",
-          "in": "path",
-          "required": true,
-          "description": "Volgnummer"
-        }
-      ],
-      "delete": {
-        "summary": "Vrij bestand 07",
-        "operationId": "DELETE_KnCustomK07",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "$ref": "#/components/responses/200"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Vrij bestand 07"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          }
-        ]
-      }
-    },
-    "/connectors/KnCustomK08": {
-      "post": {
-        "summary": "Vrij bestand 08",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
-        "operationId": "POST_KnCustomK08",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/KnCustomK08_POST"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Vrij bestand 08"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      },
-      "put": {
-        "summary": "Vrij bestand 08",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
-        "operationId": "PUT_KnCustomK08",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/KnCustomK08_PUT"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Vrij bestand 08"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      }
-    },
-    "/connectors/KnCustomK08/KnCustomK08/@SqNo/{SqNo}": {
-      "parameters": [
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "SqNo",
-          "in": "path",
-          "required": true,
-          "description": "Volgnummer"
-        }
-      ],
-      "delete": {
-        "summary": "Vrij bestand 08",
-        "operationId": "DELETE_KnCustomK08",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "$ref": "#/components/responses/200"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Vrij bestand 08"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          }
-        ]
-      }
-    },
-    "/connectors/KnCustomK09": {
-      "post": {
-        "summary": "Vrij bestand 09",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
-        "operationId": "POST_KnCustomK09",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/KnCustomK09_POST"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Vrij bestand 09"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      },
-      "put": {
-        "summary": "Vrij bestand 09",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
-        "operationId": "PUT_KnCustomK09",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/KnCustomK09_PUT"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Vrij bestand 09"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      }
-    },
-    "/connectors/KnCustomK09/KnCustomK09/@SqNo/{SqNo}": {
-      "parameters": [
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "SqNo",
-          "in": "path",
-          "required": true,
-          "description": "Volgnummer"
-        }
-      ],
-      "delete": {
-        "summary": "Vrij bestand 09",
-        "operationId": "DELETE_KnCustomK09",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "$ref": "#/components/responses/200"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Vrij bestand 09"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          }
-        ]
-      }
-    },
-    "/connectors/KnCustomK10": {
-      "post": {
-        "summary": "Vrij bestand 10",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
-        "operationId": "POST_KnCustomK10",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/KnCustomK10_POST"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Vrij bestand 10"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      },
-      "put": {
-        "summary": "Vrij bestand 10",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
-        "operationId": "PUT_KnCustomK10",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/KnCustomK10_PUT"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Vrij bestand 10"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      }
-    },
-    "/connectors/KnCustomK10/KnCustomK10/@SqNo/{SqNo}": {
-      "parameters": [
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "SqNo",
-          "in": "path",
-          "required": true,
-          "description": "Volgnummer"
-        }
-      ],
-      "delete": {
-        "summary": "Vrij bestand 10",
-        "operationId": "DELETE_KnCustomK10",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "$ref": "#/components/responses/200"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Vrij bestand 10"
         ],
         "parameters": [
           {
@@ -3069,7 +1598,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id\u0027s can be found in the metainfo request result.",
+        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -3215,7 +1744,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -3393,7 +1922,7 @@
                 "examples": {
                   "Example response": {
                     "value": {
-                      "token": "\u003Ctoken\u003E\u003Cversion\u003E1\u003C/version\u003E\u003Cdata\u003E979D703A5D92417998F36ECE577E10CD2822304B4E687A46AAB4598889FA5804\u003C/data\u003E\u003C/token\u003E\r\n"
+                      "token": "<token><version>1</version><data>979D703A5D92417998F36ECE577E10CD2822304B4E687A46AAB4598889FA5804</data></token>\r\n"
                     }
                   }
                 }
@@ -3504,7 +2033,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -3664,7 +2193,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -3855,7 +2384,7 @@
                 "examples": {
                   "Example response": {
                     "value": {
-                      "filedata": "iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAYAAAAxU7r0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAANRoSURBVHhe7L0HgGVHda67\u002BuTQOUwezSjnBAgEQgQ=",
+                      "filedata": "iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAYAAAAxU7r0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAANRoSURBVHhe7L0HgGVHda67+uTQOUwezSjnBAgEQgQ=",
                       "mimetype": "application/pdf"
                     }
                   }
@@ -3898,7 +2427,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -3922,6 +2451,237 @@
           }
         ]
       }
+    },
+    "/connectors/KnKpiRow": {
+      "post": {
+        "summary": "KPI-regel",
+        "description": "\n\rAlleen beschikbaar onder conditie: BI\n\r ",
+        "operationId": "POST_KnKpiRow",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnKpiRow_POST"
+              },
+              "examples": {
+                "minmaal": {
+                  "value": {
+                    "KnKpiRow": {
+                      "Element": {
+                        "Fields": {
+                          "KpId": "1",
+                          "KpTy": "1",
+                          "KpYe": "2020",
+                          "EmId": "ANDREO",
+                          "WgId": "001",
+                          "KpCt": "1",
+                          "KpAm": "1",
+                          "ViKM": "1"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "KPI-regel"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "KPI-regel",
+        "description": "\n\rAlleen beschikbaar onder conditie: BI\n\r ",
+        "operationId": "PUT_KnKpiRow",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnKpiRow_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "KPI-regel"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnKpiRow/KnKpiRow/@KpId/{KpId}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "KpId",
+          "in": "path",
+          "required": true,
+          "description": "KPI ID"
+        }
+      ],
+      "delete": {
+        "summary": "KPI-regel",
+        "operationId": "DELETE_KnKpiRow",
+        "description": "\n\r ",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "KPI-regel"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/KnPeppol": {
+      "post": {
+        "summary": "PeppolCallback",
+        "description": "\n\r ",
+        "operationId": "POST_KnPeppol",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnPeppol_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "PeppolCallback"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
     }
   },
   "tags": [
@@ -3942,44 +2702,16 @@
       "description": "Vrij bestand 01"
     },
     {
-      "name": "Vrij bestand 02",
-      "description": "Vrij bestand 02"
-    },
-    {
-      "name": "Vrij bestand 03",
-      "description": "Vrij bestand 03"
-    },
-    {
-      "name": "Vrij bestand 04",
-      "description": "Vrij bestand 04"
-    },
-    {
-      "name": "Vrij bestand 05",
-      "description": "Vrij bestand 05"
-    },
-    {
-      "name": "Vrij bestand 06",
-      "description": "Vrij bestand 06"
-    },
-    {
-      "name": "Vrij bestand 07",
-      "description": "Vrij bestand 07"
-    },
-    {
-      "name": "Vrij bestand 08",
-      "description": "Vrij bestand 08"
-    },
-    {
-      "name": "Vrij bestand 09",
-      "description": "Vrij bestand 09"
-    },
-    {
-      "name": "Vrij bestand 10",
-      "description": "Vrij bestand 10"
-    },
-    {
       "name": "Vrij contactbestand 01",
       "description": "Vrij contactbestand 01"
+    },
+    {
+      "name": "KPI-regel",
+      "description": "KPI-regel"
+    },
+    {
+      "name": "PeppolCallback",
+      "description": "PeppolCallback"
     }
   ],
   "components": {
@@ -4240,771 +2972,6 @@
           }
         }
       },
-      "KnCustomK02_POST": {
-        "type": "object",
-        "properties": {
-          "KnCustomK02": {
-            "type": "object",
-            "properties": {
-              "Element": {
-                "type": "object",
-                "properties": {
-                  "Fields": {
-                    "type": "object",
-                    "properties": {
-                      "AuNu": {
-                        "type": "boolean",
-                        "description": "Autonummering gebruiken",
-                        "format": ""
-                      },
-                      "SqNo": {
-                        "type": "integer",
-                        "description": "Volgnummer",
-                        "format": ""
-                      },
-                      "Da": {
-                        "type": "string",
-                        "description": "Datum",
-                        "format": "date"
-                      },
-                      "Ds": {
-                        "type": "string",
-                        "maxLength": 50,
-                        "description": "Omschrijving",
-                        "format": ""
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "KnCustomK02_PUT": {
-        "type": "object",
-        "properties": {
-          "KnCustomK02": {
-            "type": "object",
-            "properties": {
-              "Element": {
-                "type": "object",
-                "properties": {
-                  "Fields": {
-                    "type": "object",
-                    "properties": {
-                      "AuNu": {
-                        "type": "boolean",
-                        "description": "Autonummering gebruiken",
-                        "format": ""
-                      },
-                      "SqNo": {
-                        "type": "integer",
-                        "description": "Volgnummer",
-                        "format": ""
-                      },
-                      "Da": {
-                        "type": "string",
-                        "description": "Datum",
-                        "format": "date"
-                      },
-                      "Ds": {
-                        "type": "string",
-                        "maxLength": 50,
-                        "description": "Omschrijving",
-                        "format": ""
-                      }
-                    },
-                    "required": [
-                      "SqNo"
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "KnCustomK03_POST": {
-        "type": "object",
-        "properties": {
-          "KnCustomK03": {
-            "type": "object",
-            "properties": {
-              "Element": {
-                "type": "object",
-                "properties": {
-                  "Fields": {
-                    "type": "object",
-                    "properties": {
-                      "AuNu": {
-                        "type": "boolean",
-                        "description": "Autonummering gebruiken",
-                        "format": ""
-                      },
-                      "SqNo": {
-                        "type": "integer",
-                        "description": "Volgnummer",
-                        "format": ""
-                      },
-                      "Da": {
-                        "type": "string",
-                        "description": "Datum",
-                        "format": "date"
-                      },
-                      "Ds": {
-                        "type": "string",
-                        "maxLength": 50,
-                        "description": "Omschrijving",
-                        "format": ""
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "KnCustomK03_PUT": {
-        "type": "object",
-        "properties": {
-          "KnCustomK03": {
-            "type": "object",
-            "properties": {
-              "Element": {
-                "type": "object",
-                "properties": {
-                  "Fields": {
-                    "type": "object",
-                    "properties": {
-                      "AuNu": {
-                        "type": "boolean",
-                        "description": "Autonummering gebruiken",
-                        "format": ""
-                      },
-                      "SqNo": {
-                        "type": "integer",
-                        "description": "Volgnummer",
-                        "format": ""
-                      },
-                      "Da": {
-                        "type": "string",
-                        "description": "Datum",
-                        "format": "date"
-                      },
-                      "Ds": {
-                        "type": "string",
-                        "maxLength": 50,
-                        "description": "Omschrijving",
-                        "format": ""
-                      }
-                    },
-                    "required": [
-                      "SqNo"
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "KnCustomK04_POST": {
-        "type": "object",
-        "properties": {
-          "KnCustomK04": {
-            "type": "object",
-            "properties": {
-              "Element": {
-                "type": "object",
-                "properties": {
-                  "Fields": {
-                    "type": "object",
-                    "properties": {
-                      "AuNu": {
-                        "type": "boolean",
-                        "description": "Autonummering gebruiken",
-                        "format": ""
-                      },
-                      "SqNo": {
-                        "type": "integer",
-                        "description": "Volgnummer",
-                        "format": ""
-                      },
-                      "Da": {
-                        "type": "string",
-                        "description": "Datum",
-                        "format": "date"
-                      },
-                      "Ds": {
-                        "type": "string",
-                        "maxLength": 50,
-                        "description": "Omschrijving",
-                        "format": ""
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "KnCustomK04_PUT": {
-        "type": "object",
-        "properties": {
-          "KnCustomK04": {
-            "type": "object",
-            "properties": {
-              "Element": {
-                "type": "object",
-                "properties": {
-                  "Fields": {
-                    "type": "object",
-                    "properties": {
-                      "AuNu": {
-                        "type": "boolean",
-                        "description": "Autonummering gebruiken",
-                        "format": ""
-                      },
-                      "SqNo": {
-                        "type": "integer",
-                        "description": "Volgnummer",
-                        "format": ""
-                      },
-                      "Da": {
-                        "type": "string",
-                        "description": "Datum",
-                        "format": "date"
-                      },
-                      "Ds": {
-                        "type": "string",
-                        "maxLength": 50,
-                        "description": "Omschrijving",
-                        "format": ""
-                      }
-                    },
-                    "required": [
-                      "SqNo"
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "KnCustomK05_POST": {
-        "type": "object",
-        "properties": {
-          "KnCustomK05": {
-            "type": "object",
-            "properties": {
-              "Element": {
-                "type": "object",
-                "properties": {
-                  "Fields": {
-                    "type": "object",
-                    "properties": {
-                      "AuNu": {
-                        "type": "boolean",
-                        "description": "Autonummering gebruiken",
-                        "format": ""
-                      },
-                      "SqNo": {
-                        "type": "integer",
-                        "description": "Volgnummer",
-                        "format": ""
-                      },
-                      "Da": {
-                        "type": "string",
-                        "description": "Datum",
-                        "format": "date"
-                      },
-                      "Ds": {
-                        "type": "string",
-                        "maxLength": 50,
-                        "description": "Omschrijving",
-                        "format": ""
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "KnCustomK05_PUT": {
-        "type": "object",
-        "properties": {
-          "KnCustomK05": {
-            "type": "object",
-            "properties": {
-              "Element": {
-                "type": "object",
-                "properties": {
-                  "Fields": {
-                    "type": "object",
-                    "properties": {
-                      "AuNu": {
-                        "type": "boolean",
-                        "description": "Autonummering gebruiken",
-                        "format": ""
-                      },
-                      "SqNo": {
-                        "type": "integer",
-                        "description": "Volgnummer",
-                        "format": ""
-                      },
-                      "Da": {
-                        "type": "string",
-                        "description": "Datum",
-                        "format": "date"
-                      },
-                      "Ds": {
-                        "type": "string",
-                        "maxLength": 50,
-                        "description": "Omschrijving",
-                        "format": ""
-                      }
-                    },
-                    "required": [
-                      "SqNo"
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "KnCustomK06_POST": {
-        "type": "object",
-        "properties": {
-          "KnCustomK06": {
-            "type": "object",
-            "properties": {
-              "Element": {
-                "type": "object",
-                "properties": {
-                  "Fields": {
-                    "type": "object",
-                    "properties": {
-                      "AuNu": {
-                        "type": "boolean",
-                        "description": "Autonummering gebruiken",
-                        "format": ""
-                      },
-                      "SqNo": {
-                        "type": "integer",
-                        "description": "Volgnummer",
-                        "format": ""
-                      },
-                      "Da": {
-                        "type": "string",
-                        "description": "Datum",
-                        "format": "date"
-                      },
-                      "Ds": {
-                        "type": "string",
-                        "maxLength": 50,
-                        "description": "Omschrijving",
-                        "format": ""
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "KnCustomK06_PUT": {
-        "type": "object",
-        "properties": {
-          "KnCustomK06": {
-            "type": "object",
-            "properties": {
-              "Element": {
-                "type": "object",
-                "properties": {
-                  "Fields": {
-                    "type": "object",
-                    "properties": {
-                      "AuNu": {
-                        "type": "boolean",
-                        "description": "Autonummering gebruiken",
-                        "format": ""
-                      },
-                      "SqNo": {
-                        "type": "integer",
-                        "description": "Volgnummer",
-                        "format": ""
-                      },
-                      "Da": {
-                        "type": "string",
-                        "description": "Datum",
-                        "format": "date"
-                      },
-                      "Ds": {
-                        "type": "string",
-                        "maxLength": 50,
-                        "description": "Omschrijving",
-                        "format": ""
-                      }
-                    },
-                    "required": [
-                      "SqNo"
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "KnCustomK07_POST": {
-        "type": "object",
-        "properties": {
-          "KnCustomK07": {
-            "type": "object",
-            "properties": {
-              "Element": {
-                "type": "object",
-                "properties": {
-                  "Fields": {
-                    "type": "object",
-                    "properties": {
-                      "AuNu": {
-                        "type": "boolean",
-                        "description": "Autonummering gebruiken",
-                        "format": ""
-                      },
-                      "SqNo": {
-                        "type": "integer",
-                        "description": "Volgnummer",
-                        "format": ""
-                      },
-                      "Da": {
-                        "type": "string",
-                        "description": "Datum",
-                        "format": "date"
-                      },
-                      "Ds": {
-                        "type": "string",
-                        "maxLength": 50,
-                        "description": "Omschrijving",
-                        "format": ""
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "KnCustomK07_PUT": {
-        "type": "object",
-        "properties": {
-          "KnCustomK07": {
-            "type": "object",
-            "properties": {
-              "Element": {
-                "type": "object",
-                "properties": {
-                  "Fields": {
-                    "type": "object",
-                    "properties": {
-                      "AuNu": {
-                        "type": "boolean",
-                        "description": "Autonummering gebruiken",
-                        "format": ""
-                      },
-                      "SqNo": {
-                        "type": "integer",
-                        "description": "Volgnummer",
-                        "format": ""
-                      },
-                      "Da": {
-                        "type": "string",
-                        "description": "Datum",
-                        "format": "date"
-                      },
-                      "Ds": {
-                        "type": "string",
-                        "maxLength": 50,
-                        "description": "Omschrijving",
-                        "format": ""
-                      }
-                    },
-                    "required": [
-                      "SqNo"
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "KnCustomK08_POST": {
-        "type": "object",
-        "properties": {
-          "KnCustomK08": {
-            "type": "object",
-            "properties": {
-              "Element": {
-                "type": "object",
-                "properties": {
-                  "Fields": {
-                    "type": "object",
-                    "properties": {
-                      "AuNu": {
-                        "type": "boolean",
-                        "description": "Autonummering gebruiken",
-                        "format": ""
-                      },
-                      "SqNo": {
-                        "type": "integer",
-                        "description": "Volgnummer",
-                        "format": ""
-                      },
-                      "Da": {
-                        "type": "string",
-                        "description": "Datum",
-                        "format": "date"
-                      },
-                      "Ds": {
-                        "type": "string",
-                        "maxLength": 50,
-                        "description": "Omschrijving",
-                        "format": ""
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "KnCustomK08_PUT": {
-        "type": "object",
-        "properties": {
-          "KnCustomK08": {
-            "type": "object",
-            "properties": {
-              "Element": {
-                "type": "object",
-                "properties": {
-                  "Fields": {
-                    "type": "object",
-                    "properties": {
-                      "AuNu": {
-                        "type": "boolean",
-                        "description": "Autonummering gebruiken",
-                        "format": ""
-                      },
-                      "SqNo": {
-                        "type": "integer",
-                        "description": "Volgnummer",
-                        "format": ""
-                      },
-                      "Da": {
-                        "type": "string",
-                        "description": "Datum",
-                        "format": "date"
-                      },
-                      "Ds": {
-                        "type": "string",
-                        "maxLength": 50,
-                        "description": "Omschrijving",
-                        "format": ""
-                      }
-                    },
-                    "required": [
-                      "SqNo"
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "KnCustomK09_POST": {
-        "type": "object",
-        "properties": {
-          "KnCustomK09": {
-            "type": "object",
-            "properties": {
-              "Element": {
-                "type": "object",
-                "properties": {
-                  "Fields": {
-                    "type": "object",
-                    "properties": {
-                      "AuNu": {
-                        "type": "boolean",
-                        "description": "Autonummering gebruiken",
-                        "format": ""
-                      },
-                      "SqNo": {
-                        "type": "integer",
-                        "description": "Volgnummer",
-                        "format": ""
-                      },
-                      "Da": {
-                        "type": "string",
-                        "description": "Datum",
-                        "format": "date"
-                      },
-                      "Ds": {
-                        "type": "string",
-                        "maxLength": 50,
-                        "description": "Omschrijving",
-                        "format": ""
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "KnCustomK09_PUT": {
-        "type": "object",
-        "properties": {
-          "KnCustomK09": {
-            "type": "object",
-            "properties": {
-              "Element": {
-                "type": "object",
-                "properties": {
-                  "Fields": {
-                    "type": "object",
-                    "properties": {
-                      "AuNu": {
-                        "type": "boolean",
-                        "description": "Autonummering gebruiken",
-                        "format": ""
-                      },
-                      "SqNo": {
-                        "type": "integer",
-                        "description": "Volgnummer",
-                        "format": ""
-                      },
-                      "Da": {
-                        "type": "string",
-                        "description": "Datum",
-                        "format": "date"
-                      },
-                      "Ds": {
-                        "type": "string",
-                        "maxLength": 50,
-                        "description": "Omschrijving",
-                        "format": ""
-                      }
-                    },
-                    "required": [
-                      "SqNo"
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "KnCustomK10_POST": {
-        "type": "object",
-        "properties": {
-          "KnCustomK10": {
-            "type": "object",
-            "properties": {
-              "Element": {
-                "type": "object",
-                "properties": {
-                  "Fields": {
-                    "type": "object",
-                    "properties": {
-                      "AuNu": {
-                        "type": "boolean",
-                        "description": "Autonummering gebruiken",
-                        "format": ""
-                      },
-                      "SqNo": {
-                        "type": "integer",
-                        "description": "Volgnummer",
-                        "format": ""
-                      },
-                      "Da": {
-                        "type": "string",
-                        "description": "Datum",
-                        "format": "date"
-                      },
-                      "Ds": {
-                        "type": "string",
-                        "maxLength": 50,
-                        "description": "Omschrijving",
-                        "format": ""
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "KnCustomK10_PUT": {
-        "type": "object",
-        "properties": {
-          "KnCustomK10": {
-            "type": "object",
-            "properties": {
-              "Element": {
-                "type": "object",
-                "properties": {
-                  "Fields": {
-                    "type": "object",
-                    "properties": {
-                      "AuNu": {
-                        "type": "boolean",
-                        "description": "Autonummering gebruiken",
-                        "format": ""
-                      },
-                      "SqNo": {
-                        "type": "integer",
-                        "description": "Volgnummer",
-                        "format": ""
-                      },
-                      "Da": {
-                        "type": "string",
-                        "description": "Datum",
-                        "format": "date"
-                      },
-                      "Ds": {
-                        "type": "string",
-                        "maxLength": 50,
-                        "description": "Omschrijving",
-                        "format": ""
-                      }
-                    },
-                    "required": [
-                      "SqNo"
-                    ]
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
       "KnCustomLinkC01_POST": {
         "type": "object",
         "properties": {
@@ -5042,7 +3009,7 @@
                           "KNCD2"
                         ],
                         "maxLength": 5,
-                        "description": "Vergelijken op\nKNOGA = Organisatie;\nKNPER = Persoon;\nKNUSR = Gebruiker;\nKNSRE = Verkooprelatie;\nKNPRE = Inkooprelatie;\nKNEMP = Medewerker;\nHRAPL = Sollicitant;\nTXCLI = Cli\u00EBnt IB;\nTXCOM = Cli\u00EBnt VPB;\nTXACC = Accountant;\nTXINS = Inspectie;\nHREMR = Werkgever;\nHRACY = Instantie;\nKNCDT = Contact;\nKNCD2 = ContactData;",
+                        "description": "Vergelijken op\nKNOGA = Organisatie;\nKNPER = Persoon;\nKNUSR = Gebruiker;\nKNSRE = Verkooprelatie;\nKNPRE = Inkooprelatie;\nKNEMP = Medewerker;\nHRAPL = Sollicitant;\nTXCLI = Cliënt IB;\nTXCOM = Cliënt VPB;\nTXACC = Accountant;\nTXINS = Inspectie;\nHREMR = Werkgever;\nHRACY = Instantie;\nKNCDT = Contact;\nKNCD2 = ContactData;",
                         "format": ""
                       },
                       "Id": {
@@ -5112,7 +3079,7 @@
                           "KNCD2"
                         ],
                         "maxLength": 5,
-                        "description": "Vergelijken op\nKNOGA = Organisatie;\nKNPER = Persoon;\nKNUSR = Gebruiker;\nKNSRE = Verkooprelatie;\nKNPRE = Inkooprelatie;\nKNEMP = Medewerker;\nHRAPL = Sollicitant;\nTXCLI = Cli\u00EBnt IB;\nTXCOM = Cli\u00EBnt VPB;\nTXACC = Accountant;\nTXINS = Inspectie;\nHREMR = Werkgever;\nHRACY = Instantie;\nKNCDT = Contact;\nKNCD2 = ContactData;",
+                        "description": "Vergelijken op\nKNOGA = Organisatie;\nKNPER = Persoon;\nKNUSR = Gebruiker;\nKNSRE = Verkooprelatie;\nKNPRE = Inkooprelatie;\nKNEMP = Medewerker;\nHRAPL = Sollicitant;\nTXCLI = Cliënt IB;\nTXCOM = Cliënt VPB;\nTXACC = Accountant;\nTXINS = Inspectie;\nHREMR = Werkgever;\nHRACY = Instantie;\nKNCDT = Contact;\nKNCD2 = ContactData;",
                         "format": ""
                       },
                       "Id": {
@@ -5143,6 +3110,369 @@
             }
           }
         }
+      },
+      "KnKpiRow_POST": {
+        "type": "object",
+        "properties": {
+          "KnKpiRow": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "KpId": {
+                        "type": "integer",
+                        "description": "KPI ID",
+                        "format": ""
+                      },
+                      "KpTy": {
+                        "type": "integer",
+                        "description": "KPI-type ID",
+                        "format": ""
+                      },
+                      "KpYe": {
+                        "type": "integer",
+                        "description": "Jaar",
+                        "format": ""
+                      },
+                      "EmId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Medewerker",
+                        "format": ""
+                      },
+                      "FuId": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Functie",
+                        "format": ""
+                      },
+                      "FTId": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Type functie",
+                        "format": ""
+                      },
+                      "OuId": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Organisatorische eenheid",
+                        "format": ""
+                      },
+                      "CmId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Werkgever",
+                        "format": ""
+                      },
+                      "UnId": {
+                        "type": "integer",
+                        "description": "Administratie",
+                        "format": ""
+                      },
+                      "WgId": {
+                        "type": "string",
+                        "maxLength": 6,
+                        "description": "Werksoortgroep",
+                        "format": ""
+                      },
+                      "KNV1": {
+                        "type": "number",
+                        "description": "1e Normeringswaarde t/m",
+                        "format": "number"
+                      },
+                      "KNV2": {
+                        "type": "number",
+                        "description": "2e Normeringswaarde t/m",
+                        "format": "number"
+                      },
+                      "KpCt": {
+                        "type": "number",
+                        "description": "Bedrag",
+                        "format": "number"
+                      },
+                      "KpAm": {
+                        "type": "integer",
+                        "description": "Aantal",
+                        "format": ""
+                      },
+                      "ViKM": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "10",
+                          "11",
+                          "12",
+                          "2",
+                          "3",
+                          "4",
+                          "5",
+                          "6",
+                          "7",
+                          "8",
+                          "9"
+                        ],
+                        "maxLength": 20,
+                        "description": "Maand\n1 = Januari;\n10 = Oktober;\n11 = November;\n12 = December;\n2 = Februari;\n3 = Maart;\n4 = April;\n5 = Mei;\n6 = Juni;\n7 = Juli;\n8 = Augustus;\n9 = September;",
+                        "format": ""
+                      },
+                      "ViKQ": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "2",
+                          "3",
+                          "4"
+                        ],
+                        "maxLength": 20,
+                        "description": "Kwartaal\n1 = Eerste kwartaal: januari - maart;\n2 = Tweede kwartaal: april - juni;\n3 = Derde kwartaal: juli - september;\n4 = Vierde kwartaal: oktober - december;",
+                        "format": ""
+                      },
+                      "KpWS": {
+                        "type": "integer",
+                        "description": "Start week",
+                        "format": ""
+                      },
+                      "LoId": {
+                        "type": "string",
+                        "maxLength": 25,
+                        "description": "Locatie",
+                        "format": ""
+                      },
+                      "CaCo": {
+                        "type": "string",
+                        "maxLength": 5,
+                        "description": "CSR-categorie",
+                        "format": ""
+                      },
+                      "TyCo": {
+                        "type": "string",
+                        "maxLength": 5,
+                        "description": "CSR-type",
+                        "format": ""
+                      },
+                      "ViCS": {
+                        "type": "string",
+                        "enum": [
+                          "N",
+                          "O",
+                          "V"
+                        ],
+                        "maxLength": 20,
+                        "description": "CSR verbruikt\nN = Niet van toepassing;\nO = Opgewekt;\nV = Verbruikt;",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "KpId",
+                      "KpTy",
+                      "KpYe"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnKpiRow_PUT": {
+        "type": "object",
+        "properties": {
+          "KnKpiRow": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "KpId": {
+                        "type": "integer",
+                        "description": "KPI ID",
+                        "format": ""
+                      },
+                      "KpTy": {
+                        "type": "integer",
+                        "description": "KPI-type ID",
+                        "format": ""
+                      },
+                      "KpYe": {
+                        "type": "integer",
+                        "description": "Jaar",
+                        "format": ""
+                      },
+                      "EmId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Medewerker",
+                        "format": ""
+                      },
+                      "FuId": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Functie",
+                        "format": ""
+                      },
+                      "FTId": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Type functie",
+                        "format": ""
+                      },
+                      "OuId": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Organisatorische eenheid",
+                        "format": ""
+                      },
+                      "CmId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Werkgever",
+                        "format": ""
+                      },
+                      "UnId": {
+                        "type": "integer",
+                        "description": "Administratie",
+                        "format": ""
+                      },
+                      "WgId": {
+                        "type": "string",
+                        "maxLength": 6,
+                        "description": "Werksoortgroep",
+                        "format": ""
+                      },
+                      "KNV1": {
+                        "type": "number",
+                        "multipleOf": 1E-05,
+                        "description": "1e Normeringswaarde t/m",
+                        "format": "float"
+                      },
+                      "KNV2": {
+                        "type": "number",
+                        "multipleOf": 1E-05,
+                        "description": "2e Normeringswaarde t/m",
+                        "format": "float"
+                      },
+                      "KpCt": {
+                        "type": "number",
+                        "multipleOf": 1E-10,
+                        "description": "Bedrag",
+                        "format": "float"
+                      },
+                      "KpAm": {
+                        "type": "integer",
+                        "description": "Aantal",
+                        "format": ""
+                      },
+                      "ViKM": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "10",
+                          "11",
+                          "12",
+                          "2",
+                          "3",
+                          "4",
+                          "5",
+                          "6",
+                          "7",
+                          "8",
+                          "9"
+                        ],
+                        "maxLength": 20,
+                        "description": "Maand\n1 = Januari;\n10 = Oktober;\n11 = November;\n12 = December;\n2 = Februari;\n3 = Maart;\n4 = April;\n5 = Mei;\n6 = Juni;\n7 = Juli;\n8 = Augustus;\n9 = September;",
+                        "format": ""
+                      },
+                      "ViKQ": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "2",
+                          "3",
+                          "4"
+                        ],
+                        "maxLength": 20,
+                        "description": "Kwartaal\n1 = Eerste kwartaal: januari - maart;\n2 = Tweede kwartaal: april - juni;\n3 = Derde kwartaal: juli - september;\n4 = Vierde kwartaal: oktober - december;",
+                        "format": ""
+                      },
+                      "KpWS": {
+                        "type": "integer",
+                        "description": "Start week",
+                        "format": ""
+                      },
+                      "LoId": {
+                        "type": "string",
+                        "maxLength": 25,
+                        "description": "Locatie",
+                        "format": ""
+                      },
+                      "CaCo": {
+                        "type": "string",
+                        "maxLength": 5,
+                        "description": "CSR-categorie",
+                        "format": ""
+                      },
+                      "TyCo": {
+                        "type": "string",
+                        "maxLength": 5,
+                        "description": "CSR-type",
+                        "format": ""
+                      },
+                      "ViCS": {
+                        "type": "string",
+                        "enum": [
+                          "N",
+                          "O",
+                          "V"
+                        ],
+                        "maxLength": 20,
+                        "description": "CSR verbruikt\nN = Niet van toepassing;\nO = Opgewekt;\nV = Verbruikt;",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "KpId"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnPeppol_POST": {
+        "type": "object",
+        "properties": {
+          "KnPeppol": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "Data": {
+                        "type": "string",
+                        "description": "Data",
+                        "format": "byte"
+                      }
+                    },
+                    "required": [
+                      "Data"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     },
     "securitySchemes": {
@@ -5150,7 +3480,7 @@
         "name": "Authorization",
         "type": "apiKey",
         "in": "header",
-        "description": "Convert the XML token to Base64 and add \u0027AfasToken \u0027 in front of it."
+        "description": "Convert the XML token to Base64 and add 'AfasToken ' in front of it."
       }
     },
     "parameters": {
@@ -5158,7 +3488,7 @@
         "name": "Accept-Language",
         "in": "header",
         "required": false,
-        "description": "Indicates the client\u0027s preferred language for the response. If not provided, the API defaults to the base environment language.",
+        "description": "Indicates the client's preferred language for the response. If not provided, the API defaults to the base environment language.",
         "schema": {
           "type": "string",
           "enum": [

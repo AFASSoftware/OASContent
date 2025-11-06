@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "6.6.9",
+    "version": "7.7.10",
     "title": "AFAS Budgetten en activa API",
     "description": "This API describes the endpoints related to Budgetten en activa. Use this API with the functional description of the API."
   },
@@ -1841,8 +1841,8 @@
     },
     "/connectors/FiCommitment": {
       "post": {
-        "summary": "Verplichting",
-        "description": "\n\rAlleen beschikbaar onder conditie: Systeem Financieel (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiComt.htm",
+        "summary": "Obligation",
+        "description": "\n\rAlleen beschikbaar onder conditie: Financieel\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiComt.htm",
         "operationId": "POST_FiCommitment",
         "requestBody": {
           "content": {
@@ -2442,7 +2442,7 @@
           }
         ],
         "tags": [
-          "Verplichting"
+          "Obligation"
         ],
         "parameters": [
           {
@@ -2454,8 +2454,8 @@
         ]
       },
       "put": {
-        "summary": "Verplichting",
-        "description": "\n\rAlleen beschikbaar onder conditie: Systeem Financieel (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiComt.htm",
+        "summary": "Obligation",
+        "description": "\n\rAlleen beschikbaar onder conditie: Financieel\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiComt.htm",
         "operationId": "PUT_FiCommitment",
         "requestBody": {
           "content": {
@@ -2627,7 +2627,7 @@
           }
         ],
         "tags": [
-          "Verplichting"
+          "Obligation"
         ],
         "parameters": [
           {
@@ -2657,11 +2657,11 @@
           "name": "SeNo",
           "in": "path",
           "required": true,
-          "description": "Liability number"
+          "description": "Obligation number"
         }
       ],
       "delete": {
-        "summary": "Verplichting",
+        "summary": "Obligation",
         "operationId": "DELETE_FiCommitment",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiComt.htm",
         "responses": {
@@ -2696,7 +2696,7 @@
           }
         ],
         "tags": [
-          "Verplichting"
+          "Obligation"
         ],
         "parameters": [
           {
@@ -2789,7 +2789,7 @@
                           "AmPr": "2400.24",
                           "AmIn": "1200.12",
                           "DaVa": "2015-02-02",
-                          "Re": "Opmerking bij contract. Geen idee hoe lang dit veld mag zijn maar dit is genoeg? \r\n En een nieuwe regel. \r\n Nog \uFFFD\uFFFDn.",
+                          "Re": "Opmerking bij contract. Geen idee hoe lang dit veld mag zijn maar dit is genoeg? \r\n En een nieuwe regel. \r\n Nog ��n.",
                           "Prol": "0",
                           "EmId": "FLOORA",
                           "EmOw": "AllardJ",
@@ -2977,7 +2977,7 @@
                           "AmPr": "24000.24",
                           "AmIn": "1000000",
                           "DaVa": "2013-12-02",
-                          "Re": "Opmerking bij contract. Geen idee hoe lang dit veld mag zijn maar dit is genoeg? \r\n En een nieuwe regel. \r\n Nog \uFFFD\uFFFDn.",
+                          "Re": "Opmerking bij contract. Geen idee hoe lang dit veld mag zijn maar dit is genoeg? \r\n En een nieuwe regel. \r\n Nog ��n.",
                           "Prol": "1",
                           "EmId": "FLOORA",
                           "UnId": "1",
@@ -3522,8 +3522,8 @@
     },
     "/connectors/FiFixedAssets": {
       "post": {
-        "summary": "Vaste activa",
-        "description": "\n\rAlleen beschikbaar onder conditie: Fixed Assets\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiFixedAssets.htm",
+        "summary": "Fixed assets",
+        "description": "\n\rAlleen beschikbaar onder conditie: Vaste Activa\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiFixedAssets.htm",
         "operationId": "POST_FiFixedAssets",
         "requestBody": {
           "content": {
@@ -3691,7 +3691,7 @@
           }
         ],
         "tags": [
-          "Vaste activa"
+          "Fixed assets"
         ],
         "parameters": [
           {
@@ -3705,8 +3705,8 @@
     },
     "/connectors/FiFixedAssetsBuy": {
       "post": {
-        "summary": "Vaste activa investering",
-        "description": "\n\rAlleen beschikbaar onder conditie: Fixed Assets\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiFixedAssetsSale.htm",
+        "summary": "Fixed assets investment",
+        "description": "\n\rAlleen beschikbaar onder conditie: Vaste Activa\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiFixedAssetsSale.htm",
         "operationId": "POST_FiFixedAssetsBuy",
         "requestBody": {
           "content": {
@@ -3778,7 +3778,7 @@
           }
         ],
         "tags": [
-          "Vaste activa investering"
+          "Fixed assets investment"
         ],
         "parameters": [
           {
@@ -3792,8 +3792,8 @@
     },
     "/connectors/FiFixedAssetsSale": {
       "post": {
-        "summary": "Vaste activa verkoop",
-        "description": "\n\rAlleen beschikbaar onder conditie: Fixed Assets\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiFixedAssetsSale.htm",
+        "summary": "Fixed assets sales",
+        "description": "\n\rAlleen beschikbaar onder conditie: Vaste Activa\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiFixedAssetsSale.htm",
         "operationId": "POST_FiFixedAssetsSale",
         "requestBody": {
           "content": {
@@ -3905,7 +3905,7 @@
           }
         ],
         "tags": [
-          "Vaste activa verkoop"
+          "Fixed assets sales"
         ],
         "parameters": [
           {
@@ -3917,8 +3917,8 @@
         ]
       },
       "put": {
-        "summary": "Vaste activa verkoop",
-        "description": "\n\rAlleen beschikbaar onder conditie: Fixed Assets\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiFixedAssetsSale.htm",
+        "summary": "Fixed assets sales",
+        "description": "\n\rAlleen beschikbaar onder conditie: Vaste Activa\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiFixedAssetsSale.htm",
         "operationId": "PUT_FiFixedAssetsSale",
         "requestBody": {
           "content": {
@@ -3972,7 +3972,7 @@
           }
         ],
         "tags": [
-          "Vaste activa verkoop"
+          "Fixed assets sales"
         ],
         "parameters": [
           {
@@ -4006,7 +4006,7 @@
         }
       ],
       "delete": {
-        "summary": "Vaste activa verkoop",
+        "summary": "Fixed assets sales",
         "operationId": "DELETE_FiFixedAssetsSale",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiFixedAssetsSale.htm",
         "responses": {
@@ -4041,7 +4041,7 @@
           }
         ],
         "tags": [
-          "Vaste activa verkoop"
+          "Fixed assets sales"
         ],
         "parameters": [
           {
@@ -4052,8 +4052,8 @@
     },
     "/connectors/FiReservation": {
       "post": {
-        "summary": "Reservering financieel",
-        "description": "\n\rAlleen beschikbaar onder conditie: Fi Budget extended\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiResv.htm",
+        "summary": "Reserve financial",
+        "description": "\n\rAlleen beschikbaar onder conditie: Financieel\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiResv.htm",
         "operationId": "POST_FiReservation",
         "requestBody": {
           "content": {
@@ -4448,7 +4448,7 @@
           }
         ],
         "tags": [
-          "Reservering financieel"
+          "Reserve financial"
         ],
         "parameters": [
           {
@@ -4460,8 +4460,8 @@
         ]
       },
       "put": {
-        "summary": "Reservering financieel",
-        "description": "\n\rAlleen beschikbaar onder conditie: Fi Budget extended\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiResv.htm",
+        "summary": "Reserve financial",
+        "description": "\n\rAlleen beschikbaar onder conditie: Financieel\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiResv.htm",
         "operationId": "PUT_FiReservation",
         "requestBody": {
           "content": {
@@ -4647,7 +4647,7 @@
           }
         ],
         "tags": [
-          "Reservering financieel"
+          "Reserve financial"
         ],
         "parameters": [
           {
@@ -4681,7 +4681,7 @@
         }
       ],
       "delete": {
-        "summary": "Reservering financieel",
+        "summary": "Reserve financial",
         "operationId": "DELETE_FiReservation",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiResv.htm",
         "responses": {
@@ -4716,7 +4716,7 @@
           }
         ],
         "tags": [
-          "Reservering financieel"
+          "Reserve financial"
         ],
         "parameters": [
           {
@@ -5003,7 +5003,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id\u0027s can be found in the metainfo request result.",
+        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -5149,7 +5149,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -5227,6 +5227,58 @@
         },
         "operationId": "get_ProfitVersion"
       }
+    },
+    "/connectors/FiBudgetRequest": {
+      "post": {
+        "summary": "Budget request",
+        "description": "\n\rAlleen beschikbaar onder conditie: Budgetaanvragen (activering)\n\r ",
+        "operationId": "POST_FiBudgetRequest",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FiBudgetRequest_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Budget request"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
     }
   },
   "tags": [
@@ -5243,32 +5295,253 @@
       "description": "Budget"
     },
     {
-      "name": "Verplichting",
-      "description": "Verplichting"
+      "name": "Obligation",
+      "description": "Obligation"
     },
     {
       "name": "Contract",
       "description": "Contract"
     },
     {
-      "name": "Vaste activa",
-      "description": "Vaste activa"
+      "name": "Fixed assets",
+      "description": "Fixed assets"
     },
     {
-      "name": "Vaste activa investering",
-      "description": "Vaste activa investering"
+      "name": "Fixed assets investment",
+      "description": "Fixed assets investment"
     },
     {
-      "name": "Vaste activa verkoop",
-      "description": "Vaste activa verkoop"
+      "name": "Fixed assets sales",
+      "description": "Fixed assets sales"
     },
     {
-      "name": "Reservering financieel",
-      "description": "Reservering financieel"
+      "name": "Reserve financial",
+      "description": "Reserve financial"
+    },
+    {
+      "name": "Budget request",
+      "description": "Budget request"
     }
   ],
   "components": {
     "schemas": {
+      "FiBudgetRequest_POST": {
+        "type": "object",
+        "properties": {
+          "FiBudgetRequest": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "BrNr": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Request number",
+                        "format": ""
+                      },
+                      "Prof": {
+                        "type": "integer",
+                        "description": "Profile",
+                        "format": ""
+                      },
+                      "Appl": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Requester",
+                        "format": ""
+                      },
+                      "CkBn": {
+                        "type": "string",
+                        "enum": [
+                          "A",
+                          "G",
+                          "V"
+                        ],
+                        "maxLength": 20,
+                        "description": "Control budget neutral\nA = Control on budget neutral;\nG = No check on budget neutral;\nV = Pose question if not budget neutral;",
+                        "format": ""
+                      },
+                      "UnId": {
+                        "type": "integer",
+                        "description": "Administration",
+                        "format": ""
+                      },
+                      "ScId": {
+                        "type": "string",
+                        "maxLength": 6,
+                        "description": "Budget scenario",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Description",
+                        "format": ""
+                      },
+                      "Dcsn": {
+                        "type": "string",
+                        "description": "Decision",
+                        "format": "byte"
+                      },
+                      "ChTp": {
+                        "type": "string",
+                        "enum": [
+                          "10",
+                          "20"
+                        ],
+                        "maxLength": 20,
+                        "description": "Type of change\n10 = Transfer;\n20 = Extension;",
+                        "format": ""
+                      },
+                      "ChPe": {
+                        "type": "string",
+                        "enum": [
+                          "I1",
+                          "I2",
+                          "I3",
+                          "I4",
+                          "I5",
+                          "S"
+                        ],
+                        "maxLength": 20,
+                        "description": "Periodic change\nI1 = Incidental;\nI2 = Incidental 2 years;\nI3 = \tIncidental 3 year;\nI4 = Incidental 4 years;\nI5 = Incidental 5 years;\nS = Structural;",
+                        "format": ""
+                      },
+                      "Rm": {
+                        "type": "string",
+                        "description": "Remark",
+                        "format": "byte"
+                      },
+                      "FiAtNa": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Bestandsnaam bijlage",
+                        "format": ""
+                      },
+                      "FiAtDa": {
+                        "type": "string",
+                        "description": "Inhoud bijlage",
+                        "format": "byte"
+                      }
+                    },
+                    "required": [
+                      "Prof",
+                      "CkBn",
+                      "UnId"
+                    ]
+                  },
+                  "Objects": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "FiBudgetRequestLine": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "Yr": {
+                                        "type": "integer",
+                                        "description": "Financial year",
+                                        "format": ""
+                                      },
+                                      "PeFr": {
+                                        "type": "integer",
+                                        "description": "Period from",
+                                        "format": ""
+                                      },
+                                      "PeTo": {
+                                        "type": "integer",
+                                        "description": "Period up to and incl",
+                                        "format": ""
+                                      },
+                                      "AcNr": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "Account",
+                                        "format": ""
+                                      },
+                                      "V1Cd": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "Exception axis code 1",
+                                        "format": ""
+                                      },
+                                      "V2Cd": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "Exception axis code 2",
+                                        "format": ""
+                                      },
+                                      "V3Cd": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "Exception axis code 3",
+                                        "format": ""
+                                      },
+                                      "V4Cd": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "Exception axis code 4",
+                                        "format": ""
+                                      },
+                                      "V5Cd": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "Exception axis code 5",
+                                        "format": ""
+                                      },
+                                      "Amt": {
+                                        "type": "number",
+                                        "description": "Amount",
+                                        "format": "number"
+                                      },
+                                      "Qua": {
+                                        "type": "number",
+                                        "description": "Number",
+                                        "format": "number"
+                                      },
+                                      "Ds": {
+                                        "type": "string",
+                                        "maxLength": 100,
+                                        "description": "Description",
+                                        "format": ""
+                                      },
+                                      "Rm": {
+                                        "type": "string",
+                                        "description": "Remark",
+                                        "format": "byte"
+                                      }
+                                    },
+                                    "required": [
+                                      "Yr",
+                                      "AcNr"
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "FiBudget_POST": {
         "type": "object",
         "properties": {
@@ -5640,7 +5913,7 @@
                       },
                       "SeNo": {
                         "type": "integer",
-                        "description": "Liability number",
+                        "description": "Obligation number",
                         "format": ""
                       },
                       "CuId": {
@@ -5716,7 +5989,7 @@
                           "8"
                         ],
                         "maxLength": 10,
-                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                         "format": ""
                       },
                       "ItCd": {
@@ -5849,7 +6122,7 @@
                           "O"
                         ],
                         "maxLength": 20,
-                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                         "format": ""
                       },
                       "Rmrk": {
@@ -5905,7 +6178,7 @@
                       },
                       "SeNo": {
                         "type": "integer",
-                        "description": "Liability number",
+                        "description": "Obligation number",
                         "format": ""
                       },
                       "CuId": {
@@ -5982,7 +6255,7 @@
                           "8"
                         ],
                         "maxLength": 10,
-                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                         "format": ""
                       },
                       "ItCd": {
@@ -6120,7 +6393,7 @@
                           "O"
                         ],
                         "maxLength": 20,
-                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                         "format": ""
                       },
                       "Rmrk": {
@@ -6263,7 +6536,7 @@
                           "07"
                         ],
                         "maxLength": 20,
-                        "description": "Contract type\n01 = Verzekering;\n02 = Onderhoud;\n03 = Abonnement;\n04 = Huur- en leasecontracten;\n05 = Certificaat;\n06 = Sponsoring;\n07 = Raamcontract;",
+                        "description": "Contract type\n01 = Insurance;\n02 = Maintenance;\n03 = Subscription;\n04 = Rental and lease contracts;\n05 = Certificate;\n06 = Sponsoring;\n07 = Framework contract;",
                         "format": ""
                       },
                       "SiCo": {
@@ -6316,7 +6589,7 @@
                           "M9"
                         ],
                         "maxLength": 20,
-                        "description": "Renewal duration\nJ1 = 1 jaar;\nJ10 = 10 jaar;\nJ2 = 2 jaar;\nJ3 = 3 jaar;\nJ4 = 4 jaar;\nJ5 = 5 jaar;\nJ6 = 6 jaar;\nJ7 = 7 jaar;\nJ8 = 8 jaar;\nJ9 = 9 jaar;\nM1 = 1 maand;\nM3 = 3 maand;\nM6 = 6 maand;\nM9 = 9 maand;",
+                        "description": "Renewal duration\nJ1 = 1 year;\nJ10 = 10 jaar;\nJ2 = 2 year;\nJ3 = 3 year;\nJ4 = 4 year;\nJ5 = 5 year;\nJ6 = 6 jaar;\nJ7 = 7 jaar;\nJ8 = 8 jaar;\nJ9 = 9 jaar;\nM1 = 1 month;\nM3 = 3 maand;\nM6 = 6 maand;\nM9 = 9 maand;",
                         "format": ""
                       },
                       "LoId": {
@@ -6358,7 +6631,7 @@
                                           "02"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Contract value based on\n01 = Factuurwaarde;\n02 = Contractwaarde;",
+                                        "description": "Contract value based on\n01 = Invoice value;\n02 = Contract value;",
                                         "format": ""
                                       },
                                       "VaCy": {
@@ -6371,7 +6644,7 @@
                                           "W4"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Supplier billing cycle\nJ1 = Jaar;\nM1 = Maand;\nM3 = Kwartaal;\nM6 = Half jaar;\nW4 = 4-weken;",
+                                        "description": "Supplier billing cycle\nJ1 = Year;\nM1 = Month;\nM3 = Quarter;\nM6 = Half year;\nW4 = 4 weeks;",
                                         "format": ""
                                       },
                                       "DaBe": {
@@ -6392,14 +6665,14 @@
                                       "VaPe": {
                                         "type": "string",
                                         "enum": [
-                                          "J",
+                                          "Y",
                                           "K",
                                           "M",
                                           "P",
                                           "T"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Contract value per\nJ = Jaar;\nK = Kwartaal;\nM = Maand;\nP = Periode (4 weken);\nT = Totale looptijd contractregel;",
+                                        "description": "Contract value per\nY = Year;\nK = Quarter;\nM = Month;\nP = Period (4 week(s);\nT = Total contract line duration;",
                                         "format": ""
                                       },
                                       "Prol": {
@@ -6430,7 +6703,7 @@
                                           "6"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Generate obligation\n0 = Geen verplichting genereren;\n1 = Per jaar, vanaf  periode begindatum;\n2 = Per jaar, pro rata verdelen;\n3 = Per maand, evenredig verdelen;\n4 = Per maand, pro rata verdelen;\n5 = Per periode (4 weken), evenredig verdelen;\n6 = Per periode (4 weken), pro rata verdelen;",
+                                        "description": "Generate obligation\n0 = Do not generate obligation;\n1 = Per year as from the start date period;\n2 = Per year, distribute proportionally;\n3 = Per month, distribute proportionally;\n4 = Per month, distribute proportionally;\n5 = Per period (4 weeks), distribute proportionally;\n6 = Per period (4 weeks), distribute proportionally;",
                                         "format": ""
                                       },
                                       "AcNr": {
@@ -6513,7 +6786,7 @@
                                           "O"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                                         "format": ""
                                       },
                                       "VaId": {
@@ -6697,7 +6970,7 @@
                           "07"
                         ],
                         "maxLength": 20,
-                        "description": "Contract type\n01 = Verzekering;\n02 = Onderhoud;\n03 = Abonnement;\n04 = Huur- en leasecontracten;\n05 = Certificaat;\n06 = Sponsoring;\n07 = Raamcontract;",
+                        "description": "Contract type\n01 = Insurance;\n02 = Maintenance;\n03 = Subscription;\n04 = Rental and lease contracts;\n05 = Certificate;\n06 = Sponsoring;\n07 = Framework contract;",
                         "format": ""
                       },
                       "SiCo": {
@@ -6752,7 +7025,7 @@
                           "M9"
                         ],
                         "maxLength": 20,
-                        "description": "Renewal duration\nJ1 = 1 jaar;\nJ10 = 10 jaar;\nJ2 = 2 jaar;\nJ3 = 3 jaar;\nJ4 = 4 jaar;\nJ5 = 5 jaar;\nJ6 = 6 jaar;\nJ7 = 7 jaar;\nJ8 = 8 jaar;\nJ9 = 9 jaar;\nM1 = 1 maand;\nM3 = 3 maand;\nM6 = 6 maand;\nM9 = 9 maand;",
+                        "description": "Renewal duration\nJ1 = 1 year;\nJ10 = 10 jaar;\nJ2 = 2 year;\nJ3 = 3 year;\nJ4 = 4 year;\nJ5 = 5 year;\nJ6 = 6 jaar;\nJ7 = 7 jaar;\nJ8 = 8 jaar;\nJ9 = 9 jaar;\nM1 = 1 month;\nM3 = 3 maand;\nM6 = 6 maand;\nM9 = 9 maand;",
                         "format": ""
                       },
                       "LoId": {
@@ -6794,7 +7067,7 @@
                                           "02"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Contract value based on\n01 = Factuurwaarde;\n02 = Contractwaarde;",
+                                        "description": "Contract value based on\n01 = Invoice value;\n02 = Contract value;",
                                         "format": ""
                                       },
                                       "VaCy": {
@@ -6807,7 +7080,7 @@
                                           "W4"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Supplier billing cycle\nJ1 = Jaar;\nM1 = Maand;\nM3 = Kwartaal;\nM6 = Half jaar;\nW4 = 4-weken;",
+                                        "description": "Supplier billing cycle\nJ1 = Year;\nM1 = Month;\nM3 = Quarter;\nM6 = Half year;\nW4 = 4 weeks;",
                                         "format": ""
                                       },
                                       "DaBe": {
@@ -6829,14 +7102,14 @@
                                       "VaPe": {
                                         "type": "string",
                                         "enum": [
-                                          "J",
+                                          "Y",
                                           "K",
                                           "M",
                                           "P",
                                           "T"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Contract value per\nJ = Jaar;\nK = Kwartaal;\nM = Maand;\nP = Periode (4 weken);\nT = Totale looptijd contractregel;",
+                                        "description": "Contract value per\nY = Year;\nK = Quarter;\nM = Month;\nP = Period (4 week(s);\nT = Total contract line duration;",
                                         "format": ""
                                       },
                                       "Prol": {
@@ -6868,7 +7141,7 @@
                                           "6"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Generate obligation\n0 = Geen verplichting genereren;\n1 = Per jaar, vanaf  periode begindatum;\n2 = Per jaar, pro rata verdelen;\n3 = Per maand, evenredig verdelen;\n4 = Per maand, pro rata verdelen;\n5 = Per periode (4 weken), evenredig verdelen;\n6 = Per periode (4 weken), pro rata verdelen;",
+                                        "description": "Generate obligation\n0 = Do not generate obligation;\n1 = Per year as from the start date period;\n2 = Per year, distribute proportionally;\n3 = Per month, distribute proportionally;\n4 = Per month, distribute proportionally;\n5 = Per period (4 weeks), distribute proportionally;\n6 = Per period (4 weeks), distribute proportionally;",
                                         "format": ""
                                       },
                                       "AcNr": {
@@ -6951,7 +7224,7 @@
                                           "O"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                                         "format": ""
                                       },
                                       "VaId": {
@@ -7059,11 +7332,11 @@
                       "ViTp": {
                         "type": "string",
                         "enum": [
-                          "T",
+                          "R",
                           "D"
                         ],
                         "maxLength": 20,
-                        "description": "Calculation type\nT = Terugwerkend vanaf begin afschrijving;\nD = Vanaf datum wijziging;",
+                        "description": "Calculation type\nR = With retroactive effect from start of depreciation;\nD = From date of change;",
                         "format": ""
                       }
                     },
@@ -7107,7 +7380,7 @@
                           "V"
                         ],
                         "maxLength": 20,
-                        "description": "Type of sale\nD = Deelverkoop/afvoer;\nV = Volledige verkoop/afvoer;",
+                        "description": "Type of sale\nD = Partial sale/disposal;\nV = Full sale/disposal;",
                         "format": ""
                       },
                       "SaDs": {
@@ -7125,7 +7398,7 @@
                           "04"
                         ],
                         "maxLength": 20,
-                        "description": "Reason for sale/disposal\n01 = Verkoop;\n02 = Defect;\n03 = Kwijt;\n04 = Diefstal;",
+                        "description": "Reason for sale/disposal\n01 = Sales;\n02 = Defect;\n03 = Lost;\n04 = Theft;",
                         "format": ""
                       },
                       "DaSa": {
@@ -7173,7 +7446,7 @@
                           "5"
                         ],
                         "maxLength": 20,
-                        "description": "Affect. perte/profit comptable\n1 = Rekening verlies/winst;\n2 = Rekening herinvesteringsreserve;\n3 = Herinvesteringsreserve vervangend actief;\n4 = Commerciele boekwinst vervangend actief;\n5 = Fiscaal en commerci\u00EBle reserve;",
+                        "description": "Affect. perte/profit comptable\n1 = Account loss/profit Debit/Credit;\n2 = Reinvestment reserve account;\n3 = Reinvestment reserve replacement asset;\n4 = Commercial book profit on replacement asset;\n5 = Fiscal and commercial reserve;",
                         "format": ""
                       },
                       "ReSn": {
@@ -7221,7 +7494,7 @@
                           "V"
                         ],
                         "maxLength": 20,
-                        "description": "Type of sale\nD = Deelverkoop/afvoer;\nV = Volledige verkoop/afvoer;",
+                        "description": "Type of sale\nD = Partial sale/disposal;\nV = Full sale/disposal;",
                         "format": ""
                       },
                       "SaDs": {
@@ -7239,7 +7512,7 @@
                           "04"
                         ],
                         "maxLength": 20,
-                        "description": "Reason for sale/disposal\n01 = Verkoop;\n02 = Defect;\n03 = Kwijt;\n04 = Diefstal;",
+                        "description": "Reason for sale/disposal\n01 = Sales;\n02 = Defect;\n03 = Lost;\n04 = Theft;",
                         "format": ""
                       },
                       "DaSa": {
@@ -7291,7 +7564,7 @@
                           "5"
                         ],
                         "maxLength": 20,
-                        "description": "Affect. perte/profit comptable\n1 = Rekening verlies/winst;\n2 = Rekening herinvesteringsreserve;\n3 = Herinvesteringsreserve vervangend actief;\n4 = Commerciele boekwinst vervangend actief;\n5 = Fiscaal en commerci\u00EBle reserve;",
+                        "description": "Affect. perte/profit comptable\n1 = Account loss/profit Debit/Credit;\n2 = Reinvestment reserve account;\n3 = Reinvestment reserve replacement asset;\n4 = Commercial book profit on replacement asset;\n5 = Fiscal and commercial reserve;",
                         "format": ""
                       },
                       "ReSn": {
@@ -7442,7 +7715,7 @@
                           "4"
                         ],
                         "maxLength": 20,
-                        "description": "Type of asset\n1 = Bedrijfspand;\n2 = Goodwill;\n3 = Overige activa;\n4 = Overige activa (uitzonderingen);",
+                        "description": "Type of asset\n1 = Business premises;\n2 = Goodwill;\n3 = Other assets;\n4 = Other assets (exceptions);",
                         "format": ""
                       },
                       "ViDf": {
@@ -7454,11 +7727,11 @@
                           "P",
                           "B",
                           "M",
-                          "W",
+                          "R",
                           "A"
                         ],
                         "maxLength": 20,
-                        "description": "Depreciation method\nD = Direct afschrijven;\nR = Percentage lineaire afschrijving incl. renteberekening;\nL = Bedrag lineaire afschrijving;\nP = Percentage lineaire afschrijving;\nB = Percentage van de boekwaarde;\nM = Degressieve methode;\nW = Willekeurig afschrijven;\nA = Percentage annu\u00EFtaire afschrijving incl. renteberekening;",
+                        "description": "Depreciation method\nD = Direct depreciation;\nR = Percentage straight-line depreciation incl. interest calculation;\nL = Straight line depreciation amount;\nP = Straight line depreciation percentage;\nB = Percentage of the book value asset sale;\nM = Degressive method;\nR = Random depreciation;\nA = Percentage annuity-based depreciation incl. interest calculation;",
                         "format": ""
                       },
                       "FiAm": {
@@ -7538,7 +7811,7 @@
                           "A"
                         ],
                         "maxLength": 20,
-                        "description": "Depreciation method\nD = Direct afschrijven;\nR = Percentage lineaire afschrijving incl. renteberekening;\nL = Bedrag lineaire afschrijving;\nP = Percentage lineaire afschrijving;\nB = Percentage van de boekwaarde;\nM = Degressieve methode;\nA = Percentage annu\u00EFtaire afschrijving incl. renteberekening;",
+                        "description": "Depreciation method\nD = Direct depreciation;\nR = Percentage straight-line depreciation incl. interest calculation;\nL = Straight line depreciation amount;\nP = Straight line depreciation percentage;\nB = Percentage of the book value asset sale;\nM = Degressive method;\nA = Percentage annuity-based depreciation incl. interest calculation;",
                         "format": ""
                       },
                       "FiCa": {
@@ -7643,7 +7916,7 @@
                           "O"
                         ],
                         "maxLength": 20,
-                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                         "format": ""
                       },
                       "DiPt": {
@@ -7776,7 +8049,7 @@
                           "8"
                         ],
                         "maxLength": 10,
-                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                         "format": ""
                       },
                       "ItCd": {
@@ -7881,7 +8154,7 @@
                           "O"
                         ],
                         "maxLength": 20,
-                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                         "format": ""
                       }
                     },
@@ -7998,7 +8271,7 @@
                           "8"
                         ],
                         "maxLength": 10,
-                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                         "format": ""
                       },
                       "ItCd": {
@@ -8108,7 +8381,7 @@
                           "O"
                         ],
                         "maxLength": 20,
-                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                         "format": ""
                       }
                     },
@@ -8129,7 +8402,7 @@
         "name": "Authorization",
         "type": "apiKey",
         "in": "header",
-        "description": "Convert the XML token to Base64 and add \u0027AfasToken \u0027 in front of it."
+        "description": "Convert the XML token to Base64 and add 'AfasToken ' in front of it."
       }
     },
     "parameters": {
@@ -8137,7 +8410,7 @@
         "name": "Accept-Language",
         "in": "header",
         "required": false,
-        "description": "Indicates the client\u0027s preferred language for the response. If not provided, the API defaults to the base environment language.",
+        "description": "Indicates the client's preferred language for the response. If not provided, the API defaults to the base environment language.",
         "schema": {
           "type": "string",
           "enum": [

@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "6.6.9",
+    "version": "7.7.10",
     "title": "AFAS Magazijn API",
     "description": "Deze API beschrijft de endpoints gerelateerd aan Magazijn. Gebruik deze API met de functionele beschrijving van de API."
   },
@@ -5120,7 +5120,7 @@
     "/connectors/FbPurchaseSales": {
       "post": {
         "summary": "Toewijzing",
-        "description": "\n\rAlleen beschikbaar onder conditie: Voorraad (Activering)\n\r https://help.afas.nl/help/NL/SE/132951.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Voorraad (activering)\n\r https://help.afas.nl/help/NL/SE/132951.htm",
         "operationId": "POST_FbPurchaseSales",
         "requestBody": {
           "content": {
@@ -5170,7 +5170,7 @@
       },
       "put": {
         "summary": "Toewijzing",
-        "description": "\n\rAlleen beschikbaar onder conditie: Voorraad (Activering)\n\r https://help.afas.nl/help/NL/SE/132951.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Voorraad (activering)\n\r https://help.afas.nl/help/NL/SE/132951.htm",
         "operationId": "PUT_FbPurchaseSales",
         "requestBody": {
           "content": {
@@ -5647,7 +5647,7 @@
     "/connectors/FbWarTransferOut": {
       "post": {
         "summary": "Magazijnverplaatsing (verzendbon)",
-        "description": "\n\rAlleen beschikbaar onder conditie: Meerdere magazijnen (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FbWarTransferOut.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Meerdere magazijnen (activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FbWarTransferOut.htm",
         "operationId": "POST_FbWarTransferOut",
         "requestBody": {
           "content": {
@@ -5880,7 +5880,7 @@
       },
       "put": {
         "summary": "Magazijnverplaatsing (verzendbon)",
-        "description": "\n\rAlleen beschikbaar onder conditie: Meerdere magazijnen (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FbWarTransferOut.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Meerdere magazijnen (activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FbWarTransferOut.htm",
         "operationId": "PUT_FbWarTransferOut",
         "requestBody": {
           "content": {
@@ -6735,7 +6735,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id\u0027s can be found in the metainfo request result.",
+        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -6881,7 +6881,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -6963,7 +6963,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -7119,7 +7119,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -7592,13 +7592,14 @@
                           "DAP",
                           "DAT",
                           "DDP",
+                          "DPU",
                           "EXW",
                           "FAS",
                           "FCA",
                           "FOB"
                         ],
                         "maxLength": 20,
-                        "description": "Incoterm\nCFR = Kostprijs en vracht;\nCIF = Kostprijs, verzekering en vracht;\nCIP = Vracht en verzekering betaald tot;\nCPT = Vracht betaald tot;\nDAP = Geleverd tot bestemming;\nDAT = Geleverd op terminal;\nDDP = Geleverd rechten tot betaald;\nEXW = Af fabriek;\nFAS = Vrachtvrij langszij schip;\nFCA = Vrachtvrij tot vervoerder;\nFOB = Vrachtvrij aan boord;",
+                        "description": "Incoterm\nCFR = Kostprijs en vracht;\nCIF = Kostprijs, verzekering en vracht;\nCIP = Vracht en verzekering betaald tot;\nCPT = Vracht betaald tot;\nDAP = Geleverd tot bestemming;\nDAT = Geleverd op terminal;\nDDP = Geleverd rechten tot betaald;\nDPU = Geleverd ter plaatse, gelost;\nEXW = Af fabriek;\nFAS = Vrachtvrij langszij schip;\nFCA = Vrachtvrij tot vervoerder;\nFOB = Vrachtvrij aan boord;",
                         "format": ""
                       },
                       "VaSt": {
@@ -7613,7 +7614,7 @@
                           "10"
                         ],
                         "maxLength": 20,
-                        "description": "Statistisch stelsel CBS\n00 = Reguliere invoer/ICV en uitvoer/ICL;\n01 = Doorlevering (ICL) van onbewerkte goederen naar een andere EU-lidstaat;\n02 = Wederverkoop (ICL of uitvoer) van onbewerkte goederen;\n03 = Invoer van goederen, doorlevering/uitvoer onbewerkte goederen;\n04 = Verwerving/levering v\u00F3\u00F3r eigen voorraadverplaatsing (fictieve zending);\n05 = Verwerving/levering n\u00E1 eigen voorraadverplaatsing (fictieve zending);\n10 = Actieve douaneveredeling met toepassing van het terugbetalingssysteem;",
+                        "description": "Statistisch stelsel CBS\n00 = Reguliere invoer/ICV en uitvoer/ICL;\n01 = Doorlevering (ICL) van onbewerkte goederen naar een andere EU-lidstaat;\n02 = Wederverkoop (ICL of uitvoer) van onbewerkte goederen;\n03 = Invoer van goederen, doorlevering/uitvoer onbewerkte goederen;\n04 = Verwerving/levering vóór eigen voorraadverplaatsing (fictieve zending);\n05 = Verwerving/levering ná eigen voorraadverplaatsing (fictieve zending);\n10 = Actieve douaneveredeling met toepassing van het terugbetalingssysteem;",
                         "format": ""
                       },
                       "VaGs": {
@@ -7659,7 +7660,7 @@
                           "99"
                         ],
                         "maxLength": 20,
-                        "description": "Transactie CBS\n1 = Transacties die gepaard gaan met een eigendomsoverdracht met financi\u00EBle of andere tegenprestatie;\n11 = Definitieve aan- of verkoop, uitgezonderd directe handel met/door private consumenten;\n12 = Directe handel met/door private consumenten (inclusief verkoop op afstand);\n2 = Retourzendingen en gratis vervanging van goederen na registratie van de oorspronkelijke transactie;\n21 = Retourzendingen van goederen;\n22 = Vervanging van geretourneerde goederen;\n23 = Vervanging (bijv. onder garantie) voor goederen die niet zijn geretourneerd;\n3 = Transacties die gepaard gaan met een eigendomsoverdracht zonder financi\u00EBle tegenprestatie;\n31 = Verplaatsingen van of naar een opslag, uitgezonderd levering in consignatie of voorraden op afroep;\n32 = Zicht- of proefzending, inclusief levering in consignatie of via voorraden op afroep;\n33 = Financi\u00EBle lease (huurkoop);\n34 = Transacties die gepaard gaan met eigendomsoverdracht zonder financi\u00EBle tegenprestatie;\n4 = Verrichtingen met het oog op loonveredeling zonder eigendomsoverdracht aan de bewerker;\n41 = Goederen die naar verwachting terugkeren naar de aanvank. lidstaat van verzending/land export;\n42 = Goederen die naar verwachting niet terugkeren naar de aanvank. lidstaat van verzending/land export;\n5 = Verrichtingen na loonveredeling (zonder eigendomsoverdracht aan de bewerker);\n51 = Goederen die terugkeren naar de aanvankelijke lidstaat van verzending of het land van export;\n52 = Goederen die niet terugkeren naar de aanvankelijke lidstaat van verzending of het land van export;\n6 = Tijdelijke in- en uitvoer en retour tijdelijke in- en uitvoer;\n60 = Bijzondere voor nationale doeleinden geregistreerde transacties, zoals reparatiezendingen;\n7 = Verrichtingen in het kader van gezamenlijke fabricage (defensie, intergouvernementeel);\n71 = In het vrije verkeer brengen van goederen in een EU-lidstaat incl. latere verzending andere lidstaat;\n72 = Vervoer van goederen van de ene EU-lidstaat naar een andere EU-lidstaat onder de uitvoer procedure;\n8 = Transacties die gepaard gaan met de levering van bouwmaterialen in het kader van een contract;\n80 = Transacties die gepaard gaan met de levering van bouwmaterialen in het kader van een contract;\n9 = Overige transacties; niet elders vermeld;\n91 = Huur, bruikleen of operationele lease langer dan 24 maanden;\n99 = Andere;",
+                        "description": "Transactie CBS\n1 = Transacties die gepaard gaan met een eigendomsoverdracht met financiële of andere tegenprestatie;\n11 = Definitieve aan- of verkoop, uitgezonderd directe handel met/door private consumenten;\n12 = Directe handel met/door private consumenten (inclusief verkoop op afstand);\n2 = Retourzendingen en gratis vervanging van goederen na registratie van de oorspronkelijke transactie;\n21 = Retourzendingen van goederen;\n22 = Vervanging van geretourneerde goederen;\n23 = Vervanging (bijv. onder garantie) voor goederen die niet zijn geretourneerd;\n3 = Transacties die gepaard gaan met een eigendomsoverdracht zonder financiële tegenprestatie;\n31 = Verplaatsingen van of naar een opslag, uitgezonderd levering in consignatie of voorraden op afroep;\n32 = Zicht- of proefzending, inclusief levering in consignatie of via voorraden op afroep;\n33 = Financiële lease (huurkoop);\n34 = Transacties die gepaard gaan met eigendomsoverdracht zonder financiële tegenprestatie;\n4 = Verrichtingen met het oog op loonveredeling zonder eigendomsoverdracht aan de bewerker;\n41 = Goederen die naar verwachting terugkeren naar de aanvank. lidstaat van verzending/land export;\n42 = Goederen die naar verwachting niet terugkeren naar de aanvank. lidstaat van verzending/land export;\n5 = Verrichtingen na loonveredeling (zonder eigendomsoverdracht aan de bewerker);\n51 = Goederen die terugkeren naar de aanvankelijke lidstaat van verzending of het land van export;\n52 = Goederen die niet terugkeren naar de aanvankelijke lidstaat van verzending of het land van export;\n6 = Tijdelijke in- en uitvoer en retour tijdelijke in- en uitvoer;\n60 = Bijzondere voor nationale doeleinden geregistreerde transacties, zoals reparatiezendingen;\n7 = Verrichtingen in het kader van gezamenlijke fabricage (defensie, intergouvernementeel);\n71 = In het vrije verkeer brengen van goederen in een EU-lidstaat incl. latere verzending andere lidstaat;\n72 = Vervoer van goederen van de ene EU-lidstaat naar een andere EU-lidstaat onder de uitvoer procedure;\n8 = Transacties die gepaard gaan met de levering van bouwmaterialen in het kader van een contract;\n80 = Transacties die gepaard gaan met de levering van bouwmaterialen in het kader van een contract;\n9 = Overige transacties; niet elders vermeld;\n91 = Huur, bruikleen of operationele lease langer dan 24 maanden;\n99 = Andere;",
                         "format": ""
                       },
                       "CoId": {
@@ -7918,7 +7919,7 @@
                                           "5"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Gewichtseenheid\n0 = Geen gewicht;\n1 = Microgram (\u00B5g);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
+                                        "description": "Gewichtseenheid\n0 = Geen gewicht;\n1 = Microgram (µg);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
                                         "format": ""
                                       },
                                       "NeWe": {
@@ -8511,13 +8512,14 @@
                           "DAP",
                           "DAT",
                           "DDP",
+                          "DPU",
                           "EXW",
                           "FAS",
                           "FCA",
                           "FOB"
                         ],
                         "maxLength": 20,
-                        "description": "Incoterm\nCFR = Kostprijs en vracht;\nCIF = Kostprijs, verzekering en vracht;\nCIP = Vracht en verzekering betaald tot;\nCPT = Vracht betaald tot;\nDAP = Geleverd tot bestemming;\nDAT = Geleverd op terminal;\nDDP = Geleverd rechten tot betaald;\nEXW = Af fabriek;\nFAS = Vrachtvrij langszij schip;\nFCA = Vrachtvrij tot vervoerder;\nFOB = Vrachtvrij aan boord;",
+                        "description": "Incoterm\nCFR = Kostprijs en vracht;\nCIF = Kostprijs, verzekering en vracht;\nCIP = Vracht en verzekering betaald tot;\nCPT = Vracht betaald tot;\nDAP = Geleverd tot bestemming;\nDAT = Geleverd op terminal;\nDDP = Geleverd rechten tot betaald;\nDPU = Geleverd ter plaatse, gelost;\nEXW = Af fabriek;\nFAS = Vrachtvrij langszij schip;\nFCA = Vrachtvrij tot vervoerder;\nFOB = Vrachtvrij aan boord;",
                         "format": ""
                       },
                       "VaSt": {
@@ -8532,7 +8534,7 @@
                           "10"
                         ],
                         "maxLength": 20,
-                        "description": "Statistisch stelsel CBS\n00 = Reguliere invoer/ICV en uitvoer/ICL;\n01 = Doorlevering (ICL) van onbewerkte goederen naar een andere EU-lidstaat;\n02 = Wederverkoop (ICL of uitvoer) van onbewerkte goederen;\n03 = Invoer van goederen, doorlevering/uitvoer onbewerkte goederen;\n04 = Verwerving/levering v\u00F3\u00F3r eigen voorraadverplaatsing (fictieve zending);\n05 = Verwerving/levering n\u00E1 eigen voorraadverplaatsing (fictieve zending);\n10 = Actieve douaneveredeling met toepassing van het terugbetalingssysteem;",
+                        "description": "Statistisch stelsel CBS\n00 = Reguliere invoer/ICV en uitvoer/ICL;\n01 = Doorlevering (ICL) van onbewerkte goederen naar een andere EU-lidstaat;\n02 = Wederverkoop (ICL of uitvoer) van onbewerkte goederen;\n03 = Invoer van goederen, doorlevering/uitvoer onbewerkte goederen;\n04 = Verwerving/levering vóór eigen voorraadverplaatsing (fictieve zending);\n05 = Verwerving/levering ná eigen voorraadverplaatsing (fictieve zending);\n10 = Actieve douaneveredeling met toepassing van het terugbetalingssysteem;",
                         "format": ""
                       },
                       "VaGs": {
@@ -8578,7 +8580,7 @@
                           "99"
                         ],
                         "maxLength": 20,
-                        "description": "Transactie CBS\n1 = Transacties die gepaard gaan met een eigendomsoverdracht met financi\u00EBle of andere tegenprestatie;\n11 = Definitieve aan- of verkoop, uitgezonderd directe handel met/door private consumenten;\n12 = Directe handel met/door private consumenten (inclusief verkoop op afstand);\n2 = Retourzendingen en gratis vervanging van goederen na registratie van de oorspronkelijke transactie;\n21 = Retourzendingen van goederen;\n22 = Vervanging van geretourneerde goederen;\n23 = Vervanging (bijv. onder garantie) voor goederen die niet zijn geretourneerd;\n3 = Transacties die gepaard gaan met een eigendomsoverdracht zonder financi\u00EBle tegenprestatie;\n31 = Verplaatsingen van of naar een opslag, uitgezonderd levering in consignatie of voorraden op afroep;\n32 = Zicht- of proefzending, inclusief levering in consignatie of via voorraden op afroep;\n33 = Financi\u00EBle lease (huurkoop);\n34 = Transacties die gepaard gaan met eigendomsoverdracht zonder financi\u00EBle tegenprestatie;\n4 = Verrichtingen met het oog op loonveredeling zonder eigendomsoverdracht aan de bewerker;\n41 = Goederen die naar verwachting terugkeren naar de aanvank. lidstaat van verzending/land export;\n42 = Goederen die naar verwachting niet terugkeren naar de aanvank. lidstaat van verzending/land export;\n5 = Verrichtingen na loonveredeling (zonder eigendomsoverdracht aan de bewerker);\n51 = Goederen die terugkeren naar de aanvankelijke lidstaat van verzending of het land van export;\n52 = Goederen die niet terugkeren naar de aanvankelijke lidstaat van verzending of het land van export;\n6 = Tijdelijke in- en uitvoer en retour tijdelijke in- en uitvoer;\n60 = Bijzondere voor nationale doeleinden geregistreerde transacties, zoals reparatiezendingen;\n7 = Verrichtingen in het kader van gezamenlijke fabricage (defensie, intergouvernementeel);\n71 = In het vrije verkeer brengen van goederen in een EU-lidstaat incl. latere verzending andere lidstaat;\n72 = Vervoer van goederen van de ene EU-lidstaat naar een andere EU-lidstaat onder de uitvoer procedure;\n8 = Transacties die gepaard gaan met de levering van bouwmaterialen in het kader van een contract;\n80 = Transacties die gepaard gaan met de levering van bouwmaterialen in het kader van een contract;\n9 = Overige transacties; niet elders vermeld;\n91 = Huur, bruikleen of operationele lease langer dan 24 maanden;\n99 = Andere;",
+                        "description": "Transactie CBS\n1 = Transacties die gepaard gaan met een eigendomsoverdracht met financiële of andere tegenprestatie;\n11 = Definitieve aan- of verkoop, uitgezonderd directe handel met/door private consumenten;\n12 = Directe handel met/door private consumenten (inclusief verkoop op afstand);\n2 = Retourzendingen en gratis vervanging van goederen na registratie van de oorspronkelijke transactie;\n21 = Retourzendingen van goederen;\n22 = Vervanging van geretourneerde goederen;\n23 = Vervanging (bijv. onder garantie) voor goederen die niet zijn geretourneerd;\n3 = Transacties die gepaard gaan met een eigendomsoverdracht zonder financiële tegenprestatie;\n31 = Verplaatsingen van of naar een opslag, uitgezonderd levering in consignatie of voorraden op afroep;\n32 = Zicht- of proefzending, inclusief levering in consignatie of via voorraden op afroep;\n33 = Financiële lease (huurkoop);\n34 = Transacties die gepaard gaan met eigendomsoverdracht zonder financiële tegenprestatie;\n4 = Verrichtingen met het oog op loonveredeling zonder eigendomsoverdracht aan de bewerker;\n41 = Goederen die naar verwachting terugkeren naar de aanvank. lidstaat van verzending/land export;\n42 = Goederen die naar verwachting niet terugkeren naar de aanvank. lidstaat van verzending/land export;\n5 = Verrichtingen na loonveredeling (zonder eigendomsoverdracht aan de bewerker);\n51 = Goederen die terugkeren naar de aanvankelijke lidstaat van verzending of het land van export;\n52 = Goederen die niet terugkeren naar de aanvankelijke lidstaat van verzending of het land van export;\n6 = Tijdelijke in- en uitvoer en retour tijdelijke in- en uitvoer;\n60 = Bijzondere voor nationale doeleinden geregistreerde transacties, zoals reparatiezendingen;\n7 = Verrichtingen in het kader van gezamenlijke fabricage (defensie, intergouvernementeel);\n71 = In het vrije verkeer brengen van goederen in een EU-lidstaat incl. latere verzending andere lidstaat;\n72 = Vervoer van goederen van de ene EU-lidstaat naar een andere EU-lidstaat onder de uitvoer procedure;\n8 = Transacties die gepaard gaan met de levering van bouwmaterialen in het kader van een contract;\n80 = Transacties die gepaard gaan met de levering van bouwmaterialen in het kader van een contract;\n9 = Overige transacties; niet elders vermeld;\n91 = Huur, bruikleen of operationele lease langer dan 24 maanden;\n99 = Andere;",
                         "format": ""
                       },
                       "CoId": {
@@ -8842,7 +8844,7 @@
                                           "5"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Gewichtseenheid\n0 = Geen gewicht;\n1 = Microgram (\u00B5g);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
+                                        "description": "Gewichtseenheid\n0 = Geen gewicht;\n1 = Microgram (µg);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
                                         "format": ""
                                       },
                                       "NeWe": {
@@ -9374,7 +9376,6 @@
                     },
                     "required": [
                       "VaIt",
-                      "ItCd",
                       "War"
                     ]
                   }
@@ -9894,7 +9895,7 @@
                           "5"
                         ],
                         "maxLength": 20,
-                        "description": "Gewichtseenheid\n0 = Geen gewicht;\n1 = Microgram (\u00B5g);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
+                        "description": "Gewichtseenheid\n0 = Geen gewicht;\n1 = Microgram (µg);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
                         "format": ""
                       },
                       "NeWe": {
@@ -9912,7 +9913,6 @@
                       "VaOt",
                       "ReId",
                       "VaIt",
-                      "ItCd",
                       "War",
                       "Loc",
                       "BiUn",
@@ -12709,7 +12709,7 @@
         "name": "Authorization",
         "type": "apiKey",
         "in": "header",
-        "description": "Convert the XML token to Base64 and add \u0027AfasToken \u0027 in front of it."
+        "description": "Convert the XML token to Base64 and add 'AfasToken ' in front of it."
       }
     },
     "parameters": {
@@ -12717,7 +12717,7 @@
         "name": "Accept-Language",
         "in": "header",
         "required": false,
-        "description": "Indicates the client\u0027s preferred language for the response. If not provided, the API defaults to the base environment language.",
+        "description": "Indicates the client's preferred language for the response. If not provided, the API defaults to the base environment language.",
         "schema": {
           "type": "string",
           "enum": [
