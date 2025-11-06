@@ -163,53 +163,11 @@ No changes for this release.
 
 ## Inrichting Specification
 
-### Breaking Changes
-
-| Description | Connector | Operation |
-| --- | --- | --- |
-| api path removed without deprecation | KnCustomK02 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK02), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK02), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK02/KnCustomK02/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK03 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK03), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK03), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK03/KnCustomK03/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK04 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK04), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK04), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK04/KnCustomK04/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK05 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK05), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK05), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK05/KnCustomK05/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK06 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK06), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK06), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK06/KnCustomK06/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK07 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK07), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK07), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK07/KnCustomK07/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK08 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK08), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK08), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK08/KnCustomK08/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK09 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK09), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK09), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK09/KnCustomK09/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK10 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK10), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK10), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK10/KnCustomK10/@SqNo/-SqNo-) |
-
 ### Changelog
 
 | Description | Connector | Operation |
 | --- | --- | --- |
-| removed the schema 'KnCustomK02_POST' |  |  |
-| removed the schema 'KnCustomK02_PUT' |  |  |
-| removed the schema 'KnCustomK03_POST' |  |  |
-| removed the schema 'KnCustomK03_PUT' |  |  |
-| removed the schema 'KnCustomK04_POST' |  |  |
-| removed the schema 'KnCustomK04_PUT' |  |  |
-| removed the schema 'KnCustomK05_POST' |  |  |
-| removed the schema 'KnCustomK05_PUT' |  |  |
-| removed the schema 'KnCustomK06_POST' |  |  |
-| removed the schema 'KnCustomK06_PUT' |  |  |
-| removed the schema 'KnCustomK07_POST' |  |  |
-| removed the schema 'KnCustomK07_PUT' |  |  |
-| removed the schema 'KnCustomK08_POST' |  |  |
-| removed the schema 'KnCustomK08_PUT' |  |  |
-| removed the schema 'KnCustomK09_POST' |  |  |
-| removed the schema 'KnCustomK09_PUT' |  |  |
-| removed the schema 'KnCustomK10_POST' |  |  |
-| removed the schema 'KnCustomK10_PUT' |  |  |
-| api path removed without deprecation | KnCustomK02 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK02), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK02), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK02/KnCustomK02/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK03 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK03), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK03), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK03/KnCustomK03/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK04 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK04), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK04), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK04/KnCustomK04/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK05 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK05), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK05), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK05/KnCustomK05/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK06 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK06), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK06), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK06/KnCustomK06/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK07 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK07), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK07), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK07/KnCustomK07/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK08 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK08), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK08), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK08/KnCustomK08/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK09 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK09), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK09), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK09/KnCustomK09/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK10 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK10), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK10), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK10/KnCustomK10/@SqNo/-SqNo-) |
-| endpoint added | KnKpiRow | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnKpiRow), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnKpiRow), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnKpiRow/KnKpiRow/@KpId/-KpId-) |
-| endpoint added | KnPeppol | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnPeppol) |
+| endpoint added | KnKpiRow | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnKpiRow), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnKpiRow), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnKpiRow/KnKpiRow/@KpId/{KpId}) |
 
 ## Loonadministratie Specification
 
@@ -742,6 +700,8 @@ No changes for this release.
 
 ### Breaking Changes
 
+> KnProfile always only supported PUT, so this is only change in documentation.
+
 | Description | Connector | Operation |
 | --- | --- | --- |
 | api path removed without deprecation | KnProfile | [DELETE](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#delete-/connectors/KnProfile/KnProfile/@PrId/-PrId-) |
@@ -766,85 +726,7 @@ No changes for this release.
 
 ## Overige Specification
 
-### Breaking Changes
-
-| Description | Connector | Operation |
-| --- | --- | --- |
-| api path removed without deprecation | HrPopFormAppointment | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/HrPopFormAppointment) |
-| api path removed without deprecation | KnEmpCompetenceScores | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnEmpCompetenceScores) |
-| api path removed without deprecation | KnEmployeeCompetence | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnEmployeeCompetence), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnEmployeeCompetence) |
-
-### Changelog
-
-| Description | Connector | Operation |
-| --- | --- | --- |
-| removed the schema 'HrPopFormAppointment_POST' |  |  |
-| removed the schema 'KnEmpCompetenceScores_POST' |  |  |
-| removed the schema 'KnEmployeeCompetence_POST' |  |  |
-| removed the schema 'KnEmployeeCompetence_PUT' |  |  |
-| endpoint added | FbDeliveryNoteFast | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/FbDeliveryNoteFast), [DELETE](https://docs.afas.help/apidoc/nl/Overige#delete-/connectors/FbDeliveryNoteFast/FbDeliveryNoteFast/@Ye/-Ye-) |
-| endpoint added | FbGoodsReceivedPocket | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/FbGoodsReceivedPocket), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/FbGoodsReceivedPocket), [DELETE](https://docs.afas.help/apidoc/nl/Overige#delete-/connectors/FbGoodsReceivedPocket/FbGoodsReceived/@OrNu/-OrNu-) |
-| endpoint added | HrEmpWorkLocation | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/HrEmpWorkLocation) |
-| api path removed without deprecation | HrPopFormAppointment | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/HrPopFormAppointment) |
-| added the new '6' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyAcerta/Element/Fields/ExFi' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '7' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyAcerta/Element/Fields/ExFi' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4536' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4537' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4538' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4539' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4540' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4541' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4542' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4543' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4544' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4545' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4546' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4547' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4548' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4549' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4550' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4551' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4552' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4553' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4554' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4555' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4556' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4557' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4558' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4559' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4560' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4561' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4562' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4563' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4564' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4565' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4566' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4567' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4568' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4569' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4570' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4571' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4572' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4573' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4574' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4575' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4576' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4577' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4578' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4579' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4580' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4581' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '4582' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '8311' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '8312' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyFiscus/Element/Fields/ViFc' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '6' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyPartena/Element/Fields/ExFi' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '7' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyPartena/Element/Fields/ExFi' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '902' enum value to the request property 'KnDayContract/Element/Objects/AfasContract/Element/Fields/ReTy' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '6' enum value to the request property 'KnDayContract/Element/Objects/AfasContract/Element/Objects/AfasContractAddition/Element/Fields/ExFi' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| added the new '7' enum value to the request property 'KnDayContract/Element/Objects/AfasContract/Element/Objects/AfasContractAddition/Element/Fields/ExFi' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| api path removed without deprecation | KnEmpCompetenceScores | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnEmpCompetenceScores) |
-| api path removed without deprecation | KnEmployeeCompetence | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnEmployeeCompetence), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnEmployeeCompetence) |
-| endpoint added | KnPocketNotStatus | [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnPocketNotStatus) |
+No changes for this release.
 
 ## Projecten en nacalculatie Specification
 

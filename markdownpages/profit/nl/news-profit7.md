@@ -162,52 +162,11 @@ No changes for this release.
 
 ## Inrichting Specification
 
-### Breaking Changes
-
-| Description | Connector | Operation |
-| --- | --- | --- |
-| api path removed without deprecation | KnCustomK02 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK02), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK02), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK02/KnCustomK02/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK03 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK03), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK03), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK03/KnCustomK03/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK04 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK04), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK04), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK04/KnCustomK04/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK05 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK05), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK05), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK05/KnCustomK05/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK06 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK06), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK06), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK06/KnCustomK06/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK07 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK07), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK07), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK07/KnCustomK07/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK08 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK08), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK08), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK08/KnCustomK08/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK09 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK09), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK09), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK09/KnCustomK09/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK10 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK10), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK10), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK10/KnCustomK10/@SqNo/-SqNo-) |
-
 ### Changelog
 
 | Description | Connector | Operation |
 | --- | --- | --- |
-| removed the schema 'KnCustomK02_POST' |  |  |
-| removed the schema 'KnCustomK02_PUT' |  |  |
-| removed the schema 'KnCustomK03_POST' |  |  |
-| removed the schema 'KnCustomK03_PUT' |  |  |
-| removed the schema 'KnCustomK04_POST' |  |  |
-| removed the schema 'KnCustomK04_PUT' |  |  |
-| removed the schema 'KnCustomK05_POST' |  |  |
-| removed the schema 'KnCustomK05_PUT' |  |  |
-| removed the schema 'KnCustomK06_POST' |  |  |
-| removed the schema 'KnCustomK06_PUT' |  |  |
-| removed the schema 'KnCustomK07_POST' |  |  |
-| removed the schema 'KnCustomK07_PUT' |  |  |
-| removed the schema 'KnCustomK08_POST' |  |  |
-| removed the schema 'KnCustomK08_PUT' |  |  |
-| removed the schema 'KnCustomK09_POST' |  |  |
-| removed the schema 'KnCustomK09_PUT' |  |  |
-| removed the schema 'KnCustomK10_POST' |  |  |
-| removed the schema 'KnCustomK10_PUT' |  |  |
-| api path removed without deprecation | KnCustomK02 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK02), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK02), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK02/KnCustomK02/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK03 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK03), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK03), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK03/KnCustomK03/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK04 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK04), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK04), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK04/KnCustomK04/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK05 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK05), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK05), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK05/KnCustomK05/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK06 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK06), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK06), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK06/KnCustomK06/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK07 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK07), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK07), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK07/KnCustomK07/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK08 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK08), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK08), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK08/KnCustomK08/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK09 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK09), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK09), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK09/KnCustomK09/@SqNo/-SqNo-) |
-| api path removed without deprecation | KnCustomK10 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK10), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK10), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK10/KnCustomK10/@SqNo/-SqNo-) |
-| endpoint added | KnKpiRow | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnKpiRow), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnKpiRow), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnKpiRow/KnKpiRow/@KpId/-KpId-) |
+| endpoint added | KnKpiRow | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnKpiRow), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnKpiRow), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnKpiRow/KnKpiRow/@KpId/{KpId}) |
 | endpoint added | KnPeppol | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnPeppol) |
 
 ## Loonadministratie Specification
@@ -741,6 +700,8 @@ No changes for this release.
 
 ### Breaking Changes
 
+> KnProfile heeft altijd alleen maar PUT ondersteund, dus het betreft hier een opschoning van de documentatie.
+
 | Description | Connector | Operation |
 | --- | --- | --- |
 | api path removed without deprecation | KnProfile | [DELETE](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#delete-/connectors/KnProfile/KnProfile/@PrId/-PrId-) |
@@ -766,6 +727,8 @@ No changes for this release.
 ## Overige Specification
 
 ### Breaking Changes
+
+> Deze endpoints zijn *deprecated*. Onderzoek je integratie en stap over op alternatieven indien mogelijk. Ze zullen nog wel een tijdlang blijven werken.
 
 | Description | Connector | Operation |
 | --- | --- | --- |
