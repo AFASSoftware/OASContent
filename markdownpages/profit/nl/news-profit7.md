@@ -166,7 +166,7 @@ No changes for this release.
 
 | Description | Connector | Operation |
 | --- | --- | --- |
-| endpoint added | KnKpiRow | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnKpiRow), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnKpiRow), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnKpiRow/KnKpiRow/@KpId/{KpId}) |
+| endpoint added | KnKpiRow | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnKpiRow), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnKpiRow), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnKpiRow/KnKpiRow/@KpId/-KpId-) |
 | endpoint added | KnPeppol | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnPeppol) |
 
 ## Loonadministratie Specification
@@ -728,13 +728,13 @@ No changes for this release.
 
 ### Breaking Changes
 
-> Deze endpoints zijn *deprecated*. Onderzoek je integratie en stap over op alternatieven indien mogelijk. Ze zullen nog wel een tijdlang blijven werken.
+> Deze endpoints zijn *deprecated*. Onderzoek je integratie en stap over op alternatieven indien mogelijk. Ze zullen naar verwachting nog wel een tijdlang blijven werken.
 
 | Description | Connector | Operation |
 | --- | --- | --- |
-| api path removed without deprecation | HrPopFormAppointment | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/HrPopFormAppointment) |
-| api path removed without deprecation | KnEmpCompetenceScores | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnEmpCompetenceScores) |
-| api path removed without deprecation | KnEmployeeCompetence | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnEmployeeCompetence), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnEmployeeCompetence) |
+| api path removed | HrPopFormAppointment | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/HrPopFormAppointment) |
+| api path removed | KnEmpCompetenceScores | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnEmpCompetenceScores) |
+| api path removed  KnEmployeeCompetence | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnEmployeeCompetence), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnEmployeeCompetence) |
 
 ### Changelog
 
