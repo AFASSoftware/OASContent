@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "6.6.9",
+    "version": "7.7.10",
     "title": "AFAS Werkgever API",
     "description": "This API describes the endpoints related to Werkgever. Use this API with the functional description of the API."
   },
@@ -50,8 +50,8 @@
   "paths": {
     "/connectors/HrCostCarrier": {
       "post": {
-        "summary": "Kostendrager",
-        "description": "\n\rAlleen beschikbaar onder conditie: HRM\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_147.htm",
+        "summary": "Cost unit",
+        "description": "\n\rAlleen beschikbaar onder conditie: Hrm\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_147.htm",
         "operationId": "POST_HrCostCarrier",
         "requestBody": {
           "content": {
@@ -208,7 +208,7 @@
           }
         ],
         "tags": [
-          "Kostendrager"
+          "Cost unit"
         ],
         "parameters": [
           {
@@ -220,8 +220,8 @@
         ]
       },
       "put": {
-        "summary": "Kostendrager",
-        "description": "\n\rAlleen beschikbaar onder conditie: HRM\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_147.htm",
+        "summary": "Cost unit",
+        "description": "\n\rAlleen beschikbaar onder conditie: Hrm\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_147.htm",
         "operationId": "PUT_HrCostCarrier",
         "requestBody": {
           "content": {
@@ -391,7 +391,7 @@
           }
         ],
         "tags": [
-          "Kostendrager"
+          "Cost unit"
         ],
         "parameters": [
           {
@@ -425,7 +425,7 @@
         }
       ],
       "delete": {
-        "summary": "Kostendrager",
+        "summary": "Cost unit",
         "operationId": "DELETE_HrCostCarrier",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_147.htm",
         "responses": {
@@ -460,7 +460,7 @@
           }
         ],
         "tags": [
-          "Kostendrager"
+          "Cost unit"
         ],
         "parameters": [
           {
@@ -471,7 +471,7 @@
     },
     "/connectors/HrCostCentre": {
       "post": {
-        "summary": "Kostenplaats",
+        "summary": "Cost centre",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_146.htm",
         "operationId": "POST_HrCostCentre",
         "requestBody": {
@@ -630,7 +630,7 @@
           }
         ],
         "tags": [
-          "Kostenplaats"
+          "Cost centre"
         ],
         "parameters": [
           {
@@ -642,7 +642,7 @@
         ]
       },
       "put": {
-        "summary": "Kostenplaats",
+        "summary": "Cost centre",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_146.htm",
         "operationId": "PUT_HrCostCentre",
         "requestBody": {
@@ -813,7 +813,7 @@
           }
         ],
         "tags": [
-          "Kostenplaats"
+          "Cost centre"
         ],
         "parameters": [
           {
@@ -847,7 +847,7 @@
         }
       ],
       "delete": {
-        "summary": "Kostenplaats",
+        "summary": "Cost centre",
         "operationId": "DELETE_HrCostCentre",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_146.htm",
         "responses": {
@@ -882,7 +882,7 @@
           }
         ],
         "tags": [
-          "Kostenplaats"
+          "Cost centre"
         ],
         "parameters": [
           {
@@ -893,8 +893,8 @@
     },
     "/connectors/HrSalTable": {
       "post": {
-        "summary": "Loonschaal",
-        "description": "\n\rAlleen beschikbaar onder conditie: HRM\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_HrSalTable.htm",
+        "summary": "Wage scale",
+        "description": "\n\rAlleen beschikbaar onder conditie: Hrm\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_flex_HrSalTable.htm",
         "operationId": "POST_HrSalTable",
         "requestBody": {
           "content": {
@@ -1069,7 +1069,7 @@
           }
         ],
         "tags": [
-          "Loonschaal"
+          "Wage scale"
         ],
         "parameters": [
           {
@@ -1083,7 +1083,7 @@
     },
     "/connectors/KnOrgEmrFun": {
       "post": {
-        "summary": "Medewerker functie",
+        "summary": "Employee job",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_167.htm",
         "operationId": "POST_KnOrgEmrFun",
         "requestBody": {
@@ -2222,7 +2222,7 @@
           }
         ],
         "tags": [
-          "Medewerker functie"
+          "Employee job"
         ],
         "parameters": [
           {
@@ -2234,7 +2234,7 @@
         ]
       },
       "put": {
-        "summary": "Medewerker functie",
+        "summary": "Employee job",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_167.htm",
         "operationId": "PUT_KnOrgEmrFun",
         "requestBody": {
@@ -2433,7 +2433,7 @@
           }
         ],
         "tags": [
-          "Medewerker functie"
+          "Employee job"
         ],
         "parameters": [
           {
@@ -2467,7 +2467,7 @@
         }
       ],
       "delete": {
-        "summary": "Medewerker functie",
+        "summary": "Employee job",
         "operationId": "DELETE_KnOrgEmrFun",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_167.htm",
         "responses": {
@@ -2502,7 +2502,7 @@
           }
         ],
         "tags": [
-          "Medewerker functie"
+          "Employee job"
         ],
         "parameters": [
           {
@@ -2513,7 +2513,7 @@
     },
     "/connectors/KnOrgUnit": {
       "post": {
-        "summary": "Organisatorische eenheid",
+        "summary": "Organisational unit",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_KnOrgUnit.htm",
         "operationId": "POST_KnOrgUnit",
         "requestBody": {
@@ -2797,7 +2797,7 @@
           }
         ],
         "tags": [
-          "Organisatorische eenheid"
+          "Organisational unit"
         ],
         "parameters": [
           {
@@ -2809,7 +2809,7 @@
         ]
       },
       "put": {
-        "summary": "Organisatorische eenheid",
+        "summary": "Organisational unit",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_KnOrgUnit.htm",
         "operationId": "PUT_KnOrgUnit",
         "requestBody": {
@@ -2970,7 +2970,7 @@
           }
         ],
         "tags": [
-          "Organisatorische eenheid"
+          "Organisational unit"
         ],
         "parameters": [
           {
@@ -2995,7 +2995,7 @@
         }
       ],
       "delete": {
-        "summary": "Organisatorische eenheid",
+        "summary": "Organisational unit",
         "operationId": "DELETE_KnOrgUnit",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_KnOrgUnit.htm",
         "responses": {
@@ -3030,7 +3030,7 @@
           }
         ],
         "tags": [
-          "Organisatorische eenheid"
+          "Organisational unit"
         ],
         "parameters": [
           {
@@ -3317,7 +3317,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id\u0027s can be found in the metainfo request result.",
+        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -3463,7 +3463,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -3545,7 +3545,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -3701,7 +3701,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -3853,6 +3853,58 @@
         },
         "operationId": "get_ProfitVersion"
       }
+    },
+    "/connectors/HrEmployerDeclarationInSite": {
+      "post": {
+        "summary": "Employer's statement InSite",
+        "description": "\n\r ",
+        "operationId": "POST_HrEmployerDeclarationInSite",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HrEmployerDeclarationInSite_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Employer's statement InSite"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
     }
   },
   "tags": [
@@ -3865,24 +3917,28 @@
       "description": "API Info"
     },
     {
-      "name": "Kostendrager",
-      "description": "Kostendrager"
+      "name": "Cost unit",
+      "description": "Cost unit"
     },
     {
-      "name": "Kostenplaats",
-      "description": "Kostenplaats"
+      "name": "Cost centre",
+      "description": "Cost centre"
     },
     {
-      "name": "Loonschaal",
-      "description": "Loonschaal"
+      "name": "Wage scale",
+      "description": "Wage scale"
     },
     {
-      "name": "Medewerker functie",
-      "description": "Medewerker functie"
+      "name": "Employee job",
+      "description": "Employee job"
     },
     {
-      "name": "Organisatorische eenheid",
-      "description": "Organisatorische eenheid"
+      "name": "Organisational unit",
+      "description": "Organisational unit"
+    },
+    {
+      "name": "Employer's statement InSite",
+      "description": "Employer's statement InSite"
     }
   ],
   "components": {
@@ -4026,7 +4082,7 @@
                           "03"
                         ],
                         "maxLength": 20,
-                        "description": "Cost centre type\n01 = Standaard;\n02 = Lening;\n03 = Keuzemodel;",
+                        "description": "Cost centre type\n01 = Default;\n02 = Loan;\n03 = Choice model;",
                         "format": ""
                       },
                       "SmId": {
@@ -4092,7 +4148,7 @@
                           "03"
                         ],
                         "maxLength": 20,
-                        "description": "Cost centre type\n01 = Standaard;\n02 = Lening;\n03 = Keuzemodel;",
+                        "description": "Cost centre type\n01 = Default;\n02 = Loan;\n03 = Choice model;",
                         "format": ""
                       },
                       "SmId": {
@@ -4105,6 +4161,45 @@
                     "required": [
                       "CmId",
                       "CrId"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "HrEmployerDeclarationInSite_POST": {
+        "type": "object",
+        "properties": {
+          "HrEmployerDeclarationInSite": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "EmId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Employee",
+                        "format": ""
+                      },
+                      "EnSe": {
+                        "type": "integer",
+                        "description": "Employment",
+                        "format": ""
+                      },
+                      "ProfileId": {
+                        "type": "integer",
+                        "description": "Instuurprofiel",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "EmId"
                     ]
                   }
                 }
@@ -4139,13 +4234,13 @@
                       "ViRt": {
                         "type": "string",
                         "enum": [
-                          "Eigen",
-                          "Bouw",
-                          "Landbouw",
-                          "Ovrg"
+                          "Own",
+                          "Construction",
+                          "Agriculture",
+                          "Other"
                         ],
                         "maxLength": 20,
-                        "description": "CLA type\nEigen = Eigen cao;\nBouw = Bouw;\nLandbouw = Landbouw;\nOvrg = Overig;",
+                        "description": "CLA type\nOwn = Own CLA;\nConstruction = Build;\nAgriculture = Agriculture;\nOther = Other;",
                         "format": ""
                       },
                       "Visp": {
@@ -4160,7 +4255,7 @@
                           "7"
                         ],
                         "maxLength": 20,
-                        "description": "Time frame\n1 = Jaar;\n2 = Halfjaar;\n3 = Kwartaal;\n4 = Maand;\n5 = 4 weken;\n6 = Week;\n7 = Uur;",
+                        "description": "Time frame\n1 = Year;\n2 = Half year;\n3 = Quarter;\n4 = Month;\n5 = 4 Weeks;\n6 = Week;\n7 = Hour;",
                         "format": ""
                       },
                       "MnMx": {
@@ -4175,7 +4270,7 @@
                           "2"
                         ],
                         "maxLength": 20,
-                        "description": "Periodic increase rounding\n1 = Niet afronden;\n2 = Afronden naar boven;",
+                        "description": "Periodic increase rounding\n1 = No rounding;\n2 = Upwards rounding;",
                         "format": ""
                       },
                       "MmTp": {
@@ -4186,7 +4281,7 @@
                           "3"
                         ],
                         "maxLength": 20,
-                        "description": "Increase method\n1 = Verhoging met bedrag;\n2 = Verhoging met percentage t.o.v. max;\n3 = Verhoging met percentage t.o.v. midden;",
+                        "description": "Increase method\n1 = Increase by an amount;\n2 = Percentage increase relative to max.;\n3 = Percentage increase relative to medium;",
                         "format": ""
                       },
                       "DbId": {
@@ -4340,7 +4435,7 @@
                       },
                       "InGl": {
                         "type": "boolean",
-                        "description": "Include in \u0027GGL\u0027 (Prim. ed.)",
+                        "description": "Include in 'GGL' (Prim. ed.)",
                         "format": ""
                       },
                       "Z69": {
@@ -4352,7 +4447,7 @@
                           "3"
                         ],
                         "maxLength": 20,
-                        "description": "Management staff\n0 = Uitvoerend personeel;\n1 = Leidinggevende niveau 1;\n2 = Leidinggevende niveau 2;\n3 = Kaderlid;",
+                        "description": "Management staff\n0 = Uitvoerend personeel;\n1 = Managerial level 1;\n2 = Managerial level 2;\n3 = Executive member;",
                         "format": ""
                       },
                       "KWA": {
@@ -4384,7 +4479,7 @@
                           "6"
                         ],
                         "maxLength": 20,
-                        "description": "Risk class\n1 = Zittende arbeider en / of in werkplaats;\n2 = Arbeider op de werf;\n3 = Huisbewaarder;\n4 = Werkvrouw, schoonmaker, onderhoudspersoneel;\n401 = Zittende bediende;\n402 = Bediende met sporadische externe opdrachten;\n403 = Bediende met veelvuldige externe opdrachten;\n404 = Vertegenwoordiger, rondtrekkend personeel, loopjongen;\n405 = Bediende die manueel werk verricht;\n406 = Thuiswerkende bedienden;\n407 = Verzorgend personeel;\n408 = Verkoper;\n409 = Voetbalspeler onderworpen aan bezoldigd sportief statuut;\n410 = Voetbalspeler \u003E= 1239,47 EUR of meer;\n411 = Voetbalspeler \u003C 1239,47 EUR;\n412 = Sportbeoefenaar, andere dan voetbalspeler (niet categ. 070);\n5 = Keuken personeel (niet gebruiken voor HORECA);\n6 = Chauffeur;",
+                        "description": "Risk class\n1 = Sedentary employee and/or at workplace;\n2 = Worker on the factory floor;\n3 = Caretaker;\n4 = Charlady, cleaner, maintenance personnel;\n401 = Sedentary office worker;\n402 = Office worker with sporadic external tasks;\n403 = Office worker with frequent external tasks;\n404 = Representative, travelling personnel, messenger boy;\n405 = Office worker who performs manual labour;\n406 = Home-working office worker;\n407 = Care personnel;\n408 = Salesperson;\n409 = Footballer subject to paid sportsperson status;\n410 = Footballer >= 1239,47 EUR or more;\n411 = Footballer < 1239,47 EUR;\n412 = Athlete, other than footballer (not categ. 070);\n5 = Kitchen personnel (do not use for HOTELS, RESTAURANTS OR CATERING);\n6 = Driver;",
                         "format": ""
                       },
                       "WhAl": {
@@ -4488,7 +4583,7 @@
                       },
                       "InGl": {
                         "type": "boolean",
-                        "description": "Include in \u0027GGL\u0027 (Prim. ed.)",
+                        "description": "Include in 'GGL' (Prim. ed.)",
                         "format": ""
                       },
                       "Z69": {
@@ -4500,7 +4595,7 @@
                           "3"
                         ],
                         "maxLength": 20,
-                        "description": "Management staff\n0 = Uitvoerend personeel;\n1 = Leidinggevende niveau 1;\n2 = Leidinggevende niveau 2;\n3 = Kaderlid;",
+                        "description": "Management staff\n0 = Uitvoerend personeel;\n1 = Managerial level 1;\n2 = Managerial level 2;\n3 = Executive member;",
                         "format": ""
                       },
                       "KWA": {
@@ -4532,7 +4627,7 @@
                           "6"
                         ],
                         "maxLength": 20,
-                        "description": "Risk class\n1 = Zittende arbeider en / of in werkplaats;\n2 = Arbeider op de werf;\n3 = Huisbewaarder;\n4 = Werkvrouw, schoonmaker, onderhoudspersoneel;\n401 = Zittende bediende;\n402 = Bediende met sporadische externe opdrachten;\n403 = Bediende met veelvuldige externe opdrachten;\n404 = Vertegenwoordiger, rondtrekkend personeel, loopjongen;\n405 = Bediende die manueel werk verricht;\n406 = Thuiswerkende bedienden;\n407 = Verzorgend personeel;\n408 = Verkoper;\n409 = Voetbalspeler onderworpen aan bezoldigd sportief statuut;\n410 = Voetbalspeler \u003E= 1239,47 EUR of meer;\n411 = Voetbalspeler \u003C 1239,47 EUR;\n412 = Sportbeoefenaar, andere dan voetbalspeler (niet categ. 070);\n5 = Keuken personeel (niet gebruiken voor HORECA);\n6 = Chauffeur;",
+                        "description": "Risk class\n1 = Sedentary employee and/or at workplace;\n2 = Worker on the factory floor;\n3 = Caretaker;\n4 = Charlady, cleaner, maintenance personnel;\n401 = Sedentary office worker;\n402 = Office worker with sporadic external tasks;\n403 = Office worker with frequent external tasks;\n404 = Representative, travelling personnel, messenger boy;\n405 = Office worker who performs manual labour;\n406 = Home-working office worker;\n407 = Care personnel;\n408 = Salesperson;\n409 = Footballer subject to paid sportsperson status;\n410 = Footballer >= 1239,47 EUR or more;\n411 = Footballer < 1239,47 EUR;\n412 = Athlete, other than footballer (not categ. 070);\n5 = Kitchen personnel (do not use for HOTELS, RESTAURANTS OR CATERING);\n6 = Driver;",
                         "format": ""
                       },
                       "WhAl": {
@@ -4789,7 +4884,7 @@
         "name": "Authorization",
         "type": "apiKey",
         "in": "header",
-        "description": "Convert the XML token to Base64 and add \u0027AfasToken \u0027 in front of it."
+        "description": "Convert the XML token to Base64 and add 'AfasToken ' in front of it."
       }
     },
     "parameters": {
@@ -4797,7 +4892,7 @@
         "name": "Accept-Language",
         "in": "header",
         "required": false,
-        "description": "Indicates the client\u0027s preferred language for the response. If not provided, the API defaults to the base environment language.",
+        "description": "Indicates the client's preferred language for the response. If not provided, the API defaults to the base environment language.",
         "schema": {
           "type": "string",
           "enum": [

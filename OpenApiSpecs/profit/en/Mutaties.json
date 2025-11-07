@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "6.6.9",
+    "version": "7.7.10",
     "title": "AFAS Mutaties API",
     "description": "This API describes the endpoints related to Mutaties. Use this API with the functional description of the API."
   },
@@ -50,8 +50,8 @@
   "paths": {
     "/connectors/FbConfrontation": {
       "post": {
-        "summary": "Confrontatie",
-        "description": "\n\rAlleen beschikbaar onder conditie: Confrontatie (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FbConfrontation.htm",
+        "summary": "Reconciliation",
+        "description": "\n\rAlleen beschikbaar onder conditie: Confrontatie (activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FbConfrontation.htm",
         "operationId": "POST_FbConfrontation",
         "requestBody": {
           "content": {
@@ -264,7 +264,7 @@
           }
         ],
         "tags": [
-          "Confrontatie"
+          "Reconciliation"
         ],
         "parameters": [
           {
@@ -289,7 +289,7 @@
         }
       ],
       "delete": {
-        "summary": "Confrontatie",
+        "summary": "Reconciliation",
         "operationId": "DELETE_FbConfrontation",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FbConfrontation.htm",
         "responses": {
@@ -324,7 +324,7 @@
           }
         ],
         "tags": [
-          "Confrontatie"
+          "Reconciliation"
         ],
         "parameters": [
           {
@@ -335,7 +335,7 @@
     },
     "/connectors/FbInstalment": {
       "post": {
-        "summary": "Factuurtermijn",
+        "summary": "Invoice instalment",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Instlm.htm",
         "operationId": "POST_FbInstalment",
         "requestBody": {
@@ -503,7 +503,7 @@
           }
         ],
         "tags": [
-          "Factuurtermijn"
+          "Invoice instalment"
         ],
         "parameters": [
           {
@@ -515,7 +515,7 @@
         ]
       },
       "put": {
-        "summary": "Factuurtermijn",
+        "summary": "Invoice instalment",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Instlm.htm",
         "operationId": "PUT_FbInstalment",
         "requestBody": {
@@ -725,7 +725,7 @@
           }
         ],
         "tags": [
-          "Factuurtermijn"
+          "Invoice instalment"
         ],
         "parameters": [
           {
@@ -739,7 +739,7 @@
     },
     "/connectors/FbInstalment/FbInstalmentLines": {
       "post": {
-        "summary": "Factuurtermijn",
+        "summary": "Invoice instalment",
         "description": "Update main record in FbInstalment and insert subrecord into FbInstalmentLines. \n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Instlm.htm",
         "operationId": "POSTSubRecordFbInstalmentFbInstalmentLines",
         "requestBody": {
@@ -882,7 +882,7 @@
           }
         ],
         "tags": [
-          "Factuurtermijn"
+          "Invoice instalment"
         ],
         "parameters": [
           {
@@ -896,7 +896,7 @@
     },
     "/connectors/FiElectronicInvoicePurchase": {
       "post": {
-        "summary": "E-inkoopfactuur",
+        "summary": "Electronic purchase invoice",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_FiElectronicInvoicePurchase.htm",
         "operationId": "POST_FiElectronicInvoicePurchase",
         "requestBody": {
@@ -912,9 +912,9 @@
                       "Element": {
                         "Fields": {
                           "FXml": "example.xml",
-                          "XML": "iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAIAAACzY\u002Ba1AAAEB0lEQVR4nO3YQU/yShiG4SmlBSwYjEIQCyaSqmHl//8NLNgZSaORAmJQxCC0dihzFs3hEPQkX8KXlid5rl1r9YW5w2RQ63Q6gpBl0n4BtC8mhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J42bRfwH88zxNCNBqN\u002BHK5XPZ6ve0HHMexLEsIoZQaj8fT6TSKouPjY9u2s9m93kiKo/d3KAnH4/H7\u002B/vp6enmThAEpmm22\u002B1fH57NZq1WS9f1fr//9PTkOA7i6L8i/Y00DEPXdSeTiWma2/eDIMjn8z\u002BfV0pNJpNarZbP5w3DaDabi8VisVhgjf6L0k\u002B4XC5N07y9vc3lctv3/28dfd9fr9fxtiaEMAzDNM2ddZzNZt1udz6fx5ePj48PDw9KqQRGJy/9jbRcLpfL5Z/34/W6v7\u002BXUhYKhXq9Hq\u002BdlFIIYRjG5knDMMIw3PmbJycng8Hg5uZmNpvN5/Pr62tN0xIYnbz0P4W/iqJISmmapuM47Xb76OjIdd0gCIQQ6/VaCLHdQ9O0n58w27bX67XnecPhsFarFQqFxEYn7EAT6rp\u002Bd3fXbDaz2Ww2m724uMjlcm9vb\u002BLfFdxeOKVUJrP7RnRdt2374\u002BMjl8tVq9UkRyfsQBP\u002BZJpmvI/FR4/VarX5kZRye3Pb8H1fCBGGYRRFCY9O0oEm/Pr66na739/f8aVSanPEyOfzmUxmc4iQUoZhuDlibPi\u002B//r6Wq/XdV2Pv/YlNjphB5rQsqxCoeB5XhiGq9VqMBhEUVSpVIQQmUzm7OxsNBr5vi\u002Bl7Pf7lmXtrKNS6vn5uVgsVqvVRqPx\u002Bfk5nU6TGZ289E\u002Bkv9I07erqajQa9Xq9\u002BBzvOM7m/yDn5\u002BdKKdd1hRClUuny8nLn119eXqSUrVZLCFEsFiuVynA4LJVKf7Lp7Tk6eVqn00n7NdBeDnQjpT/HhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEN4/cnznZiQb6hsAAAAASUVORK5CYII=",
+                          "XML": "iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAIAAACzY+a1AAAEB0lEQVR4nO3YQU/yShiG4SmlBSwYjEIQCyaSqmHl//8NLNgZSaORAmJQxCC0dihzFs3hEPQkX8KXlid5rl1r9YW5w2RQ63Q6gpBl0n4BtC8mhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J42bRfwH88zxNCNBqN+HK5XPZ6ve0HHMexLEsIoZQaj8fT6TSKouPjY9u2s9m93kiKo/d3KAnH4/H7+/vp6enmThAEpmm22+1fH57NZq1WS9f1fr//9PTkOA7i6L8i/Y00DEPXdSeTiWma2/eDIMjn8z+fV0pNJpNarZbP5w3DaDabi8VisVhgjf6L0k+4XC5N07y9vc3lctv3/28dfd9fr9fxtiaEMAzDNM2ddZzNZt1udz6fx5ePj48PDw9KqQRGJy/9jbRcLpfL5Z/34/W6v7+XUhYKhXq9Hq+dlFIIYRjG5knDMMIw3PmbJycng8Hg5uZmNpvN5/Pr62tN0xIYnbz0P4W/iqJISmmapuM47Xb76OjIdd0gCIQQ6/VaCLHdQ9O0n58w27bX67XnecPhsFarFQqFxEYn7EAT6rp+d3fXbDaz2Ww2m724uMjlcm9vb+LfFdxeOKVUJrP7RnRdt2374+Mjl8tVq9UkRyfsQBP+ZJpmvI/FR4/VarX5kZRye3Pb8H1fCBGGYRRFCY9O0oEm/Pr66na739/f8aVSanPEyOfzmUxmc4iQUoZhuDlibPi+//r6Wq/XdV2Pv/YlNjphB5rQsqxCoeB5XhiGq9VqMBhEUVSpVIQQmUzm7OxsNBr5vi+l7Pf7lmXtrKNS6vn5uVgsVqvVRqPx+fk5nU6TGZ289E+kv9I07erqajQa9Xq9+BzvOM7m/yDn5+dKKdd1hRClUuny8nLn119eXqSUrVZLCFEsFiuVynA4LJVKf7Lp7Tk6eVqn00n7NdBeDnQjpT/HhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEN4/cnznZiQb6hsAAAAASUVORK5CYII=",
                           "FPdf": "example.pdf",
-                          "PDF": "iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAIAAACzY\u002Ba1AAAEB0lEQVR4nO3YQU/yShiG4SmlBSwYjEIQCyaSqmHl//8NLNgZSaORAmJQxCC0dihzFs3hEPQkX8KXlid5rl1r9YW5w2RQ63Q6gpBl0n4BtC8mhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J42bRfwH88zxNCNBqN\u002BHK5XPZ6ve0HHMexLEsIoZQaj8fT6TSKouPjY9u2s9m93kiKo/d3KAnH4/H7\u002B/vp6enmThAEpmm22\u002B1fH57NZq1WS9f1fr//9PTkOA7i6L8i/Y00DEPXdSeTiWma2/eDIMjn8z\u002BfV0pNJpNarZbP5w3DaDabi8VisVhgjf6L0k\u002B4XC5N07y9vc3lctv3/28dfd9fr9fxtiaEMAzDNM2ddZzNZt1udz6fx5ePj48PDw9KqQRGJy/9jbRcLpfL5Z/34/W6v7\u002BXUhYKhXq9Hq\u002BdlFIIYRjG5knDMMIw3PmbJycng8Hg5uZmNpvN5/Pr62tN0xIYnbz0P4W/iqJISmmapuM47Xb76OjIdd0gCIQQ6/VaCLHdQ9O0n58w27bX67XnecPhsFarFQqFxEYn7EAT6rp\u002Bd3fXbDaz2Ww2m724uMjlcm9vb\u002BLfFdxeOKVUJrP7RnRdt2374\u002BMjl8tVq9UkRyfsQBP\u002BZJpmvI/FR4/VarX5kZRye3Pb8H1fCBGGYRRFCY9O0oEm/Pr66na739/f8aVSanPEyOfzmUxmc4iQUoZhuDlibPi\u002B//r6Wq/XdV2Pv/YlNjphB5rQsqxCoeB5XhiGq9VqMBhEUVSpVIQQmUzm7OxsNBr5vi\u002Bl7Pf7lmXtrKNS6vn5uVgsVqvVRqPx\u002Bfk5nU6TGZ289E\u002Bkv9I07erqajQa9Xq9\u002BBzvOM7m/yDn5\u002BdKKdd1hRClUuny8nLn119eXqSUrVZLCFEsFiuVynA4LJVKf7Lp7Tk6eVqn00n7NdBeDnQjpT/HhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEN4/cnznZiQb6hsAAAAASUVORK5CYII=",
+                          "PDF": "iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAIAAACzY+a1AAAEB0lEQVR4nO3YQU/yShiG4SmlBSwYjEIQCyaSqmHl//8NLNgZSaORAmJQxCC0dihzFs3hEPQkX8KXlid5rl1r9YW5w2RQ63Q6gpBl0n4BtC8mhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J42bRfwH88zxNCNBqN+HK5XPZ6ve0HHMexLEsIoZQaj8fT6TSKouPjY9u2s9m93kiKo/d3KAnH4/H7+/vp6enmThAEpmm22+1fH57NZq1WS9f1fr//9PTkOA7i6L8i/Y00DEPXdSeTiWma2/eDIMjn8z+fV0pNJpNarZbP5w3DaDabi8VisVhgjf6L0k+4XC5N07y9vc3lctv3/28dfd9fr9fxtiaEMAzDNM2ddZzNZt1udz6fx5ePj48PDw9KqQRGJy/9jbRcLpfL5Z/34/W6v7+XUhYKhXq9Hq+dlFIIYRjG5knDMMIw3PmbJycng8Hg5uZmNpvN5/Pr62tN0xIYnbz0P4W/iqJISmmapuM47Xb76OjIdd0gCIQQ6/VaCLHdQ9O0n58w27bX67XnecPhsFarFQqFxEYn7EAT6rp+d3fXbDaz2Ww2m724uMjlcm9vb+LfFdxeOKVUJrP7RnRdt2374+Mjl8tVq9UkRyfsQBP+ZJpmvI/FR4/VarX5kZRye3Pb8H1fCBGGYRRFCY9O0oEm/Pr66na739/f8aVSanPEyOfzmUxmc4iQUoZhuDlibPi+//r6Wq/XdV2Pv/YlNjphB5rQsqxCoeB5XhiGq9VqMBhEUVSpVIQQmUzm7OxsNBr5vi+l7Pf7lmXtrKNS6vn5uVgsVqvVRqPx+fk5nU6TGZ289E+kv9I07erqajQa9Xq9+BzvOM7m/yDn5+dKKdd1hRClUuny8nLn119eXqSUrVZLCFEsFiuVynA4LJVKf7Lp7Tk6eVqn00n7NdBeDnQjpT/HhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEN4/cnznZiQb6hsAAAAASUVORK5CYII=",
                           "Proc": "1"
                         }
                       }
@@ -951,7 +951,7 @@
           }
         ],
         "tags": [
-          "E-inkoopfactuur"
+          "Electronic purchase invoice"
         ],
         "parameters": [
           {
@@ -965,7 +965,7 @@
     },
     "/connectors/FiEntries": {
       "post": {
-        "summary": "Financi\u00EBle mutatie",
+        "summary": "Financial entry",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_070.htm",
         "operationId": "POST_FiEntries",
         "requestBody": {
@@ -3116,7 +3116,7 @@
           }
         ],
         "tags": [
-          "Financi\u00EBle mutatie"
+          "Financial entry"
         ],
         "parameters": [
           {
@@ -3141,7 +3141,7 @@
         }
       ],
       "delete": {
-        "summary": "Financi\u00EBle mutatie",
+        "summary": "Financial entry",
         "operationId": "DELETE_FiEntries",
         "description": " \n\r Let op: Bij dit endpoint zijn de parameters om een item te verwijderen nog niet gedocumenteerd. De path parameters kunnen hierdoor afwijken\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_070.htm",
         "responses": {
@@ -3176,7 +3176,7 @@
           }
         ],
         "tags": [
-          "Financi\u00EBle mutatie"
+          "Financial entry"
         ],
         "parameters": [
           {
@@ -3187,7 +3187,7 @@
     },
     "/connectors/FiEntriesCustom": {
       "put": {
-        "summary": "Financi\u00EBle mutatie vrije velden",
+        "summary": "Financial movement free fields",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Free_Field.htm",
         "operationId": "PUT_FiEntriesCustom",
         "requestBody": {
@@ -3292,7 +3292,7 @@
           }
         ],
         "tags": [
-          "Financi\u00EBle mutatie vrije velden"
+          "Financial movement free fields"
         ],
         "parameters": [
           {
@@ -3306,7 +3306,7 @@
     },
     "/connectors/FiInvoice": {
       "put": {
-        "summary": "Financi\u00EBle factuur",
+        "summary": "Financial invoice",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_075.htm",
         "operationId": "PUT_FiInvoice",
         "requestBody": {
@@ -3407,7 +3407,7 @@
           }
         ],
         "tags": [
-          "Financi\u00EBle factuur"
+          "Financial invoice"
         ],
         "parameters": [
           {
@@ -3421,8 +3421,8 @@
     },
     "/connectors/FiSepaDirectDebit": {
       "post": {
-        "summary": "SEPA-incasso",
-        "description": "\n\rAlleen beschikbaar onder conditie: Systeem Financieel (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_SEPA_Debits.htm",
+        "summary": "SEPA direct debit",
+        "description": "\n\rAlleen beschikbaar onder conditie: Financieel\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_SEPA_Debits.htm",
         "operationId": "POST_FiSepaDirectDebit",
         "requestBody": {
           "content": {
@@ -3623,7 +3623,7 @@
           }
         ],
         "tags": [
-          "SEPA-incasso"
+          "SEPA direct debit"
         ],
         "parameters": [
           {
@@ -3635,8 +3635,8 @@
         ]
       },
       "put": {
-        "summary": "SEPA-incasso",
-        "description": "\n\rAlleen beschikbaar onder conditie: Systeem Financieel (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_SEPA_Debits.htm",
+        "summary": "SEPA direct debit",
+        "description": "\n\rAlleen beschikbaar onder conditie: Financieel\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_SEPA_Debits.htm",
         "operationId": "PUT_FiSepaDirectDebit",
         "requestBody": {
           "content": {
@@ -3799,7 +3799,7 @@
           }
         ],
         "tags": [
-          "SEPA-incasso"
+          "SEPA direct debit"
         ],
         "parameters": [
           {
@@ -3824,7 +3824,7 @@
         }
       ],
       "delete": {
-        "summary": "SEPA-incasso",
+        "summary": "SEPA direct debit",
         "operationId": "DELETE_FiSepaDirectDebit",
         "description": " \n\r Let op: Bij dit endpoint zijn de parameters om een item te verwijderen nog niet gedocumenteerd. De path parameters kunnen hierdoor afwijken\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_SEPA_Debits.htm",
         "responses": {
@@ -3859,7 +3859,7 @@
           }
         ],
         "tags": [
-          "SEPA-incasso"
+          "SEPA direct debit"
         ],
         "parameters": [
           {
@@ -4146,7 +4146,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id\u0027s can be found in the metainfo request result.",
+        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -4292,7 +4292,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -4374,7 +4374,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -4429,11 +4429,11 @@
                           },
                           "Type": {
                             "type": "string",
-                            "description": "Type rekeningcode"
+                            "description": "Account code type"
                           },
                           "Sort": {
                             "type": "string",
-                            "description": "Soort rekening code"
+                            "description": "Account type code"
                           },
                           "Blocked": {
                             "type": "boolean",
@@ -4445,11 +4445,11 @@
                           },
                           "CollectAccountType": {
                             "type": "string",
-                            "description": "Type verzamelrekening code"
+                            "description": "Summary account type code"
                           },
                           "Feature": {
                             "type": "string",
-                            "description": "Kenmerk rekening code"
+                            "description": "Account feature code"
                           },
                           "CollectOn": {
                             "type": "string",
@@ -4465,31 +4465,31 @@
                           },
                           "Budget": {
                             "type": "string",
-                            "description": "Budgetteren code"
+                            "description": "Budget code"
                           },
                           "ToProject": {
                             "type": "string",
-                            "description": "Doorboeken projecten code"
+                            "description": "Code for carrying forward projects"
                           },
                           "DimAx1": {
                             "type": "string",
-                            "description": "Verbijzonderingsas 1 code"
+                            "description": "Allocation axis 1 code"
                           },
                           "DimAx2": {
                             "type": "string",
-                            "description": "Verbijzonderingsas 2 code"
+                            "description": "Allocation axis 2 code"
                           },
                           "DimAx3": {
                             "type": "string",
-                            "description": "Verbijzonderingsas 3 code"
+                            "description": "Allocation axis 3 code"
                           },
                           "DimAx4": {
                             "type": "string",
-                            "description": "Verbijzonderingsas 4 code"
+                            "description": "Allocation axis 4 code"
                           },
                           "DimAx5": {
                             "type": "string",
-                            "description": "Verbijzonderingsas 5 code"
+                            "description": "Allocation axis 5 code"
                           }
                         }
                       }
@@ -4582,7 +4582,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -4633,7 +4633,7 @@
                           },
                           "AdminNm": {
                             "type": "string",
-                            "description": "Administration name"
+                            "description": "Name administration"
                           },
                           "AdminCd": {
                             "type": "string",
@@ -4730,7 +4730,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -4890,7 +4890,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -4977,15 +4977,15 @@
                           },
                           "Budget": {
                             "type": "number",
-                            "description": "Bedrag budget"
+                            "description": "Amount budget"
                           },
                           "Reserved": {
                             "type": "number",
-                            "description": "Saldo reservering basisvaluta"
+                            "description": "Reservation balance in basic currency"
                           },
                           "Obligation": {
                             "type": "number",
-                            "description": "Saldo verplichting basisvaluta"
+                            "description": "Obligation balance in basic currency"
                           }
                         }
                       }
@@ -5078,7 +5078,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -5234,7 +5234,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -5390,7 +5390,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -5445,7 +5445,7 @@
                           },
                           "BcCo": {
                             "type": "string",
-                            "description": "Org nr."
+                            "description": "Org. no."
                           },
                           "SearchName": {
                             "type": "string",
@@ -5485,7 +5485,7 @@
                           },
                           "PaymentCondition": {
                             "type": "string",
-                            "description": "Betalingsvoorwaarde"
+                            "description": "Payment condition"
                           },
                           "CreditLimit": {
                             "type": "number",
@@ -5606,7 +5606,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -5657,7 +5657,7 @@
                           },
                           "CreditorId": {
                             "type": "string",
-                            "description": "Crediteurnr"
+                            "description": "Creditor no"
                           },
                           "InvoiceNr": {
                             "type": "string",
@@ -5669,7 +5669,7 @@
                           },
                           "BookPieceDate": {
                             "type": "string",
-                            "description": "Factuurdatum"
+                            "description": "Invoice date"
                           },
                           "CurrencyId": {
                             "type": "string",
@@ -5786,7 +5786,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -5942,7 +5942,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -5997,7 +5997,7 @@
                           },
                           "BcCo": {
                             "type": "string",
-                            "description": "Nummer org./pers."
+                            "description": "Org/pers number"
                           },
                           "SearchName": {
                             "type": "string",
@@ -6162,7 +6162,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -6213,7 +6213,7 @@
                           },
                           "DebtorId": {
                             "type": "string",
-                            "description": "Debiteurennummer"
+                            "description": "Debtor number"
                           },
                           "InvoiceNr": {
                             "type": "string",
@@ -6342,7 +6342,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -6486,7 +6486,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -6545,7 +6545,7 @@
                           },
                           "JournalType": {
                             "type": "string",
-                            "description": "Dagboeksoort code"
+                            "description": "Journal type code"
                           },
                           "Blocked": {
                             "type": "boolean",
@@ -6642,7 +6642,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -6721,7 +6721,7 @@
                           },
                           "Budget": {
                             "type": "number",
-                            "description": "Bedrag budget"
+                            "description": "Amount budget"
                           }
                         }
                       }
@@ -6814,7 +6814,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -6986,7 +6986,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -7138,7 +7138,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -7201,7 +7201,7 @@
                           },
                           "Period": {
                             "type": "integer",
-                            "description": "Periodenummer"
+                            "description": "Period number"
                           },
                           "JournalId": {
                             "type": "string",
@@ -7346,7 +7346,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -7409,7 +7409,7 @@
                           },
                           "Period": {
                             "type": "integer",
-                            "description": "Periodenummer"
+                            "description": "Period number"
                           },
                           "JournalId": {
                             "type": "string",
@@ -7469,11 +7469,11 @@
                           },
                           "Type": {
                             "type": "string",
-                            "description": "Type rekening"
+                            "description": "Type of account"
                           },
                           "Collect_On": {
                             "type": "string",
-                            "description": "Type verzamelrekening"
+                            "description": "Type of summary account"
                           },
                           "DimAx1": {
                             "type": "string",
@@ -7586,7 +7586,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -7657,11 +7657,11 @@
                           },
                           "VatMethod": {
                             "type": "string",
-                            "description": "Berekeningsmethode"
+                            "description": "Calculation method"
                           },
                           "VatType": {
                             "type": "string",
-                            "description": "Code inkoop/verkoop code"
+                            "description": "Purchase code/sales code"
                           }
                         }
                       }
@@ -7750,6 +7750,108 @@
         },
         "operationId": "get_ProfitVersion"
       }
+    },
+    "/connectors/FiLoan": {
+      "post": {
+        "summary": "Loan",
+        "description": "\n\rAlleen beschikbaar onder conditie: Financiële leningen (activering)\n\r ",
+        "operationId": "POST_FiLoan",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FiLoan_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Loan"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Loan",
+        "description": "\n\rAlleen beschikbaar onder conditie: Financiële leningen (activering)\n\r ",
+        "operationId": "PUT_FiLoan",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FiLoan_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Loan"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
     }
   },
   "tags": [
@@ -7762,32 +7864,36 @@
       "description": "API Info"
     },
     {
-      "name": "Confrontatie",
-      "description": "Confrontatie"
+      "name": "Reconciliation",
+      "description": "Reconciliation"
     },
     {
-      "name": "Factuurtermijn",
-      "description": "Factuurtermijn"
+      "name": "Invoice instalment",
+      "description": "Invoice instalment"
     },
     {
-      "name": "E-inkoopfactuur",
-      "description": "E-inkoopfactuur"
+      "name": "Electronic purchase invoice",
+      "description": "Electronic purchase invoice"
     },
     {
-      "name": "Financi\u00EBle mutatie",
-      "description": "Financi\u00EBle mutatie"
+      "name": "Financial entry",
+      "description": "Financial entry"
     },
     {
-      "name": "Financi\u00EBle mutatie vrije velden",
-      "description": "Financi\u00EBle mutatie vrije velden"
+      "name": "Financial movement free fields",
+      "description": "Financial movement free fields"
     },
     {
-      "name": "Financi\u00EBle factuur",
-      "description": "Financi\u00EBle factuur"
+      "name": "Financial invoice",
+      "description": "Financial invoice"
     },
     {
-      "name": "SEPA-incasso",
-      "description": "SEPA-incasso"
+      "name": "SEPA direct debit",
+      "description": "SEPA direct debit"
+    },
+    {
+      "name": "Loan",
+      "description": "Loan"
     }
   ],
   "components": {
@@ -8093,7 +8199,7 @@
                                           "O"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                                         "format": ""
                                       },
                                       "MWrk": {
@@ -8296,7 +8402,7 @@
                                           "O"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                                         "format": ""
                                       },
                                       "MWrk": {
@@ -8406,7 +8512,7 @@
                     "properties": {
                       "UnId": {
                         "type": "integer",
-                        "description": "Administratie (verwijzing naar: Administratie =\u003E AfasKnUnit)",
+                        "description": "Administratie (verwijzing naar: Administratie => AfasKnUnit)",
                         "format": ""
                       },
                       "EnNo": {
@@ -8625,7 +8731,7 @@
                                       },
                                       "AmGa": {
                                         "type": "number",
-                                        "description": "\u0027G\u0027-account amount",
+                                        "description": "'G'-account amount",
                                         "format": "number"
                                       },
                                       "RsNo": {
@@ -8635,7 +8741,7 @@
                                       },
                                       "CmNo": {
                                         "type": "integer",
-                                        "description": "Liability number",
+                                        "description": "Obligation number",
                                         "format": ""
                                       },
                                       "PaCd": {
@@ -8867,7 +8973,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Item type\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                                                        "description": "Item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -8975,7 +9081,7 @@
                                                           "O"
                                                         ],
                                                         "maxLength": 20,
-                                                        "description": "Type of project costs\nMA = Materiaal;\nA = Arbeid;\nME = Materieel;\nOA = Onderaanneming;\nO = Overige kosten;",
+                                                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                                                         "format": ""
                                                       }
                                                     },
@@ -9036,7 +9142,7 @@
                                                           "D"
                                                         ],
                                                         "maxLength": 20,
-                                                        "description": "Rounding\nN = Niet afronden;\nG = Afronden op gehele getallen;\nT = Afronden op tientallen;\nH = Afronden op honderdtallen;\nD = Afronden op duizendtallen;",
+                                                        "description": "Rounding\nN = No rounding;\nG = Round to integers;\nT = Round to tens;\nH = Round to hundreds;\nD = Round to thousands;",
                                                         "format": ""
                                                       }
                                                     },
@@ -9220,7 +9326,7 @@
                           "RSZ"
                         ],
                         "maxLength": 20,
-                        "description": "Obligation to withhold\nALL = FOD Financi\u00EBn en Rijksdienst voor Sociale Zekerheid;\nFOD = FOD Financi\u00EBn;\nRSZ = Rijksdienst voor Sociale Zekerheid;",
+                        "description": "Obligation to withhold\nALL = FOD Financiën en Rijksdienst voor Sociale Zekerheid;\nFOD = FOD Financiën;\nRSZ = Rijksdienst voor Sociale Zekerheid;",
                         "format": ""
                       },
                       "AmFO": {
@@ -9272,6 +9378,370 @@
           }
         }
       },
+      "FiLoan_POST": {
+        "type": "object",
+        "properties": {
+          "FiLoan": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "SeNo": {
+                        "type": "integer",
+                        "description": "Loan code",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Description",
+                        "format": ""
+                      },
+                      "LGId": {
+                        "type": "integer",
+                        "description": "Loan group",
+                        "format": ""
+                      },
+                      "DaPu": {
+                        "type": "string",
+                        "description": "Date of signature",
+                        "format": "date"
+                      },
+                      "CrId": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Creditor",
+                        "format": ""
+                      },
+                      "LoCr": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Creditor reference",
+                        "format": ""
+                      },
+                      "Typ": {
+                        "type": "string",
+                        "enum": [
+                          "01",
+                          "02"
+                        ],
+                        "maxLength": 20,
+                        "description": "Type loan\n01 = Mortgage;\n02 = Financial lease;",
+                        "format": ""
+                      },
+                      "AuPa": {
+                        "type": "boolean",
+                        "description": "Automatic payment",
+                        "format": ""
+                      },
+                      "PaAd": {
+                        "type": "integer",
+                        "description": "Payment repayment",
+                        "format": ""
+                      },
+                      "Capi": {
+                        "type": "number",
+                        "description": "Kapitaal",
+                        "format": "number"
+                      },
+                      "InRa": {
+                        "type": "number",
+                        "description": "Rente (%)",
+                        "format": "number"
+                      },
+                      "PaOf": {
+                        "type": "number",
+                        "description": "Capital already repaid",
+                        "format": "number"
+                      },
+                      "PaYe": {
+                        "type": "integer",
+                        "description": "Already repaid up to year",
+                        "format": ""
+                      },
+                      "PaPe": {
+                        "type": "integer",
+                        "description": "Already repaid up to period",
+                        "format": ""
+                      },
+                      "PaMe": {
+                        "type": "string",
+                        "enum": [
+                          "A",
+                          "L"
+                        ],
+                        "maxLength": 20,
+                        "description": "Repayment method\nA = Annuity;\nL = Linear;",
+                        "format": ""
+                      },
+                      "ReMe": {
+                        "type": "string",
+                        "enum": [
+                          "01",
+                          "02"
+                        ],
+                        "maxLength": 20,
+                        "description": "Method for generating repayment schedule\n01 = Automatically calculate;\n02 = Manual input;",
+                        "format": ""
+                      },
+                      "DaIn": {
+                        "type": "string",
+                        "description": "Start date interest payment",
+                        "format": "date"
+                      },
+                      "InRM": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "2",
+                          "3"
+                        ],
+                        "maxLength": 20,
+                        "description": "Rounding method interest\n1 = Mathematical;\n2 = Down;\n3 = Upwards;",
+                        "format": ""
+                      },
+                      "DaPa": {
+                        "type": "string",
+                        "description": "Start date repayment",
+                        "format": "date"
+                      },
+                      "TeMo": {
+                        "type": "integer",
+                        "description": "Term in months",
+                        "format": ""
+                      },
+                      "PaTe": {
+                        "type": "string",
+                        "enum": [
+                          "M1",
+                          "M3",
+                          "J1"
+                        ],
+                        "maxLength": 20,
+                        "description": "Repayment instalment\nM1 = Monthly;\nM3 = Quarter;\nJ1 = Year;",
+                        "format": ""
+                      },
+                      "InMe": {
+                        "type": "string",
+                        "enum": [
+                          "01",
+                          "02",
+                          "03",
+                          "04"
+                        ],
+                        "maxLength": 20,
+                        "description": "Interest calculation method\n01 = Actual/Actual;\n02 = Actual/360;\n03 = Actual/365;\n04 = 30/360;",
+                        "format": ""
+                      },
+                      "Memo": {
+                        "type": "string",
+                        "description": "Remark",
+                        "format": "byte"
+                      }
+                    },
+                    "required": [
+                      "SeNo",
+                      "Ds",
+                      "LGId",
+                      "DaPu",
+                      "CrId",
+                      "Typ",
+                      "PaAd",
+                      "Capi",
+                      "DaIn",
+                      "DaPa",
+                      "TeMo",
+                      "PaTe"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "FiLoan_PUT": {
+        "type": "object",
+        "properties": {
+          "FiLoan": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "SeNo": {
+                        "type": "integer",
+                        "description": "Loan code",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Description",
+                        "format": ""
+                      },
+                      "LGId": {
+                        "type": "integer",
+                        "description": "Loan group",
+                        "format": ""
+                      },
+                      "DaPu": {
+                        "type": "string",
+                        "description": "Date of signature",
+                        "format": "date"
+                      },
+                      "CrId": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Creditor",
+                        "format": ""
+                      },
+                      "LoCr": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Creditor reference",
+                        "format": ""
+                      },
+                      "Typ": {
+                        "type": "string",
+                        "enum": [
+                          "01",
+                          "02"
+                        ],
+                        "maxLength": 20,
+                        "description": "Type loan\n01 = Mortgage;\n02 = Financial lease;",
+                        "format": ""
+                      },
+                      "AuPa": {
+                        "type": "boolean",
+                        "description": "Automatic payment",
+                        "format": ""
+                      },
+                      "PaAd": {
+                        "type": "integer",
+                        "description": "Payment repayment",
+                        "format": ""
+                      },
+                      "Capi": {
+                        "type": "number",
+                        "multipleOf": 1E-10,
+                        "description": "Kapitaal",
+                        "format": "float"
+                      },
+                      "InRa": {
+                        "type": "number",
+                        "multipleOf": 0.0001,
+                        "description": "Rente (%)",
+                        "format": "float"
+                      },
+                      "PaOf": {
+                        "type": "number",
+                        "multipleOf": 1E-10,
+                        "description": "Capital already repaid",
+                        "format": "float"
+                      },
+                      "PaYe": {
+                        "type": "integer",
+                        "description": "Already repaid up to year",
+                        "format": ""
+                      },
+                      "PaPe": {
+                        "type": "integer",
+                        "description": "Already repaid up to period",
+                        "format": ""
+                      },
+                      "PaMe": {
+                        "type": "string",
+                        "enum": [
+                          "A",
+                          "L"
+                        ],
+                        "maxLength": 20,
+                        "description": "Repayment method\nA = Annuity;\nL = Linear;",
+                        "format": ""
+                      },
+                      "ReMe": {
+                        "type": "string",
+                        "enum": [
+                          "01",
+                          "02"
+                        ],
+                        "maxLength": 20,
+                        "description": "Method for generating repayment schedule\n01 = Automatically calculate;\n02 = Manual input;",
+                        "format": ""
+                      },
+                      "DaIn": {
+                        "type": "string",
+                        "description": "Start date interest payment",
+                        "format": "date"
+                      },
+                      "InRM": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "2",
+                          "3"
+                        ],
+                        "maxLength": 20,
+                        "description": "Rounding method interest\n1 = Mathematical;\n2 = Down;\n3 = Upwards;",
+                        "format": ""
+                      },
+                      "DaPa": {
+                        "type": "string",
+                        "description": "Start date repayment",
+                        "format": "date"
+                      },
+                      "TeMo": {
+                        "type": "integer",
+                        "description": "Term in months",
+                        "format": ""
+                      },
+                      "PaTe": {
+                        "type": "string",
+                        "enum": [
+                          "M1",
+                          "M3",
+                          "J1"
+                        ],
+                        "maxLength": 20,
+                        "description": "Repayment instalment\nM1 = Monthly;\nM3 = Quarter;\nJ1 = Year;",
+                        "format": ""
+                      },
+                      "InMe": {
+                        "type": "string",
+                        "enum": [
+                          "01",
+                          "02",
+                          "03",
+                          "04"
+                        ],
+                        "maxLength": 20,
+                        "description": "Interest calculation method\n01 = Actual/Actual;\n02 = Actual/360;\n03 = Actual/365;\n04 = 30/360;",
+                        "format": ""
+                      },
+                      "Memo": {
+                        "type": "string",
+                        "description": "Remark",
+                        "format": "byte"
+                      }
+                    },
+                    "required": [
+                      "SeNo"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "FiSepaDirectDebit_POST": {
         "type": "object",
         "properties": {
@@ -9298,7 +9768,7 @@
                           "8"
                         ],
                         "maxLength": 10,
-                        "description": "Organisatie vergelijken op\n0 = Organisatie-code;\n1 = KvK-nummer;\n2 = BTW-nummer;\n3 = IBAN-nummer;\n4 = Naam (debiteur);\n5 = Domicili\u00EBringsnummer;\n6 = Debiteurnummer;\n7 = Debiteurnummer \u002B IBAN-nummer;\n8 = Machtigings-Id;",
+                        "description": "Organisatie vergelijken op\n0 = Organisatie-code;\n1 = KvK-nummer;\n2 = BTW-nummer;\n3 = IBAN-nummer;\n4 = Naam (debiteur);\n5 = Domiciliëringsnummer;\n6 = Debiteurnummer;\n7 = Debiteurnummer + IBAN-nummer;\n8 = Machtigings-Id;",
                         "format": ""
                       },
                       "Ds": {
@@ -9320,7 +9790,7 @@
                           "S"
                         ],
                         "maxLength": 20,
-                        "description": "SEPA collection method\nB = B2B;\nS = Standaard;",
+                        "description": "SEPA collection method\nB = B2B;\nS = Default;",
                         "format": ""
                       },
                       "PaId": {
@@ -9360,7 +9830,7 @@
                           "RCUR"
                         ],
                         "maxLength": 20,
-                        "description": "Transaction delivery code\nAUTO = Automatisch aan de hand van incassohistorie;\nFNAL = Laatste opdracht in een reeks incassotransacties;\nFRST = Eerste opdracht in een reeks incassotransacties;\nOOFF = Eenmalige incassotransactie;\nRCUR = Vervolgopdracht in een reeks incassotransacties;",
+                        "description": "Transaction delivery code\nAUTO = Automatically based on collection history;\nFNAL = Last instruction in a range of collection transactions;\nFRST = First instruction in a range of collection transactions;\nOOFF = Single collection transaction;\nRCUR = Next instruction in a range of collection transactions;",
                         "format": ""
                       },
                       "Iban": {
@@ -9409,7 +9879,7 @@
                           "7"
                         ],
                         "maxLength": 20,
-                        "description": "Mandate status\n1 = Te ondertekenen;\n2 = Verstrekt;\n3 = Actief (getekend);\n4 = Voltooid (eenmalige machtiging);\n5 = Ingetrokken;\n6 = Vervallen;\n7 = Inactief;",
+                        "description": "Mandate status\n1 = To be signed;\n2 = Provided;\n3 = Active (signed);\n4 = Completed (one-time mandate);\n5 = Withdrawn;\n6 = Expired;\n7 = Inactive;",
                         "format": ""
                       },
                       "PvDa": {
@@ -9460,7 +9930,7 @@
                           "8"
                         ],
                         "maxLength": 10,
-                        "description": "Organisatie vergelijken op\n0 = Organisatie-code;\n1 = KvK-nummer;\n2 = BTW-nummer;\n3 = IBAN-nummer;\n4 = Naam (debiteur);\n5 = Domicili\u00EBringsnummer;\n6 = Debiteurnummer;\n7 = Debiteurnummer \u002B IBAN-nummer;\n8 = Machtigings-Id;",
+                        "description": "Organisatie vergelijken op\n0 = Organisatie-code;\n1 = KvK-nummer;\n2 = BTW-nummer;\n3 = IBAN-nummer;\n4 = Naam (debiteur);\n5 = Domiciliëringsnummer;\n6 = Debiteurnummer;\n7 = Debiteurnummer + IBAN-nummer;\n8 = Machtigings-Id;",
                         "format": ""
                       },
                       "Ds": {
@@ -9482,7 +9952,7 @@
                           "S"
                         ],
                         "maxLength": 20,
-                        "description": "SEPA collection method\nB = B2B;\nS = Standaard;",
+                        "description": "SEPA collection method\nB = B2B;\nS = Default;",
                         "format": ""
                       },
                       "PaId": {
@@ -9522,7 +9992,7 @@
                           "RCUR"
                         ],
                         "maxLength": 20,
-                        "description": "Transaction delivery code\nAUTO = Automatisch aan de hand van incassohistorie;\nFNAL = Laatste opdracht in een reeks incassotransacties;\nFRST = Eerste opdracht in een reeks incassotransacties;\nOOFF = Eenmalige incassotransactie;\nRCUR = Vervolgopdracht in een reeks incassotransacties;",
+                        "description": "Transaction delivery code\nAUTO = Automatically based on collection history;\nFNAL = Last instruction in a range of collection transactions;\nFRST = First instruction in a range of collection transactions;\nOOFF = Single collection transaction;\nRCUR = Next instruction in a range of collection transactions;",
                         "format": ""
                       },
                       "Iban": {
@@ -9571,7 +10041,7 @@
                           "7"
                         ],
                         "maxLength": 20,
-                        "description": "Mandate status\n1 = Te ondertekenen;\n2 = Verstrekt;\n3 = Actief (getekend);\n4 = Voltooid (eenmalige machtiging);\n5 = Ingetrokken;\n6 = Vervallen;\n7 = Inactief;",
+                        "description": "Mandate status\n1 = To be signed;\n2 = Provided;\n3 = Active (signed);\n4 = Completed (one-time mandate);\n5 = Withdrawn;\n6 = Expired;\n7 = Inactive;",
                         "format": ""
                       },
                       "PvDa": {
@@ -9593,7 +10063,7 @@
         "name": "Authorization",
         "type": "apiKey",
         "in": "header",
-        "description": "Convert the XML token to Base64 and add \u0027AfasToken \u0027 in front of it."
+        "description": "Convert the XML token to Base64 and add 'AfasToken ' in front of it."
       }
     },
     "parameters": {
@@ -9601,7 +10071,7 @@
         "name": "Accept-Language",
         "in": "header",
         "required": false,
-        "description": "Indicates the client\u0027s preferred language for the response. If not provided, the API defaults to the base environment language.",
+        "description": "Indicates the client's preferred language for the response. If not provided, the API defaults to the base environment language.",
         "schema": {
           "type": "string",
           "enum": [

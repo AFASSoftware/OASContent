@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "6.6.9",
+    "version": "7.7.10",
     "title": "AFAS Verlof en Ziekte API",
     "description": "This API describes the endpoints related to Verlof en Ziekte. Use this API with the functional description of the API."
   },
@@ -50,8 +50,8 @@
   "paths": {
     "/connectors/HrAbsBalance": {
       "put": {
-        "summary": "Verlofsaldo",
-        "description": "\n\rAlleen beschikbaar onder conditie: HRM\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_HrAbsBalance.htm",
+        "summary": "Leave balance",
+        "description": "\n\rAlleen beschikbaar onder conditie: Hrm\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_HrAbsBalance.htm",
         "operationId": "PUT_HrAbsBalance",
         "requestBody": {
           "content": {
@@ -105,7 +105,7 @@
           }
         ],
         "tags": [
-          "Verlofsaldo"
+          "Leave balance"
         ],
         "parameters": [
           {
@@ -119,8 +119,8 @@
     },
     "/connectors/HrAbsCorrection": {
       "post": {
-        "summary": "Verlofcorrectie",
-        "description": "\n\rAlleen beschikbaar onder conditie: HRM\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_165.htm",
+        "summary": "Leave balance correction",
+        "description": "\n\rAlleen beschikbaar onder conditie: Hrm\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_165.htm",
         "operationId": "POST_HrAbsCorrection",
         "requestBody": {
           "content": {
@@ -370,7 +370,7 @@
           }
         ],
         "tags": [
-          "Verlofcorrectie"
+          "Leave balance correction"
         ],
         "parameters": [
           {
@@ -384,8 +384,8 @@
     },
     "/connectors/HrAbsence": {
       "post": {
-        "summary": "Verlofboeking",
-        "description": "\n\rAlleen beschikbaar onder conditie: HRM\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_145.htm",
+        "summary": "Leave entry",
+        "description": "\n\rAlleen beschikbaar onder conditie: Hrm\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_145.htm",
         "operationId": "POST_HrAbsence",
         "requestBody": {
           "content": {
@@ -655,7 +655,7 @@
           }
         ],
         "tags": [
-          "Verlofboeking"
+          "Leave entry"
         ],
         "parameters": [
           {
@@ -667,8 +667,8 @@
         ]
       },
       "put": {
-        "summary": "Verlofboeking",
-        "description": "\n\rAlleen beschikbaar onder conditie: HRM\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_145.htm",
+        "summary": "Leave entry",
+        "description": "\n\rAlleen beschikbaar onder conditie: Hrm\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_145.htm",
         "operationId": "PUT_HrAbsence",
         "requestBody": {
           "content": {
@@ -829,7 +829,7 @@
           }
         ],
         "tags": [
-          "Verlofboeking"
+          "Leave entry"
         ],
         "parameters": [
           {
@@ -854,7 +854,7 @@
         }
       ],
       "delete": {
-        "summary": "Verlofboeking",
+        "summary": "Leave entry",
         "operationId": "DELETE_HrAbsence",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_145.htm",
         "responses": {
@@ -889,7 +889,7 @@
           }
         ],
         "tags": [
-          "Verlofboeking"
+          "Leave entry"
         ],
         "parameters": [
           {
@@ -900,8 +900,8 @@
     },
     "/connectors/HrAbsenceID": {
       "post": {
-        "summary": "Verlofboeking (regelnummer)",
-        "description": "\n\rAlleen beschikbaar onder conditie: HRM\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_145.htm",
+        "summary": "Leave booking (line number)",
+        "description": "\n\rAlleen beschikbaar onder conditie: Hrm\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_145.htm",
         "operationId": "POST_HrAbsenceID",
         "requestBody": {
           "content": {
@@ -957,7 +957,7 @@
           }
         ],
         "tags": [
-          "Verlofboeking (regelnummer)"
+          "Leave booking (line number)"
         ],
         "parameters": [
           {
@@ -969,8 +969,8 @@
         ]
       },
       "put": {
-        "summary": "Verlofboeking (regelnummer)",
-        "description": "\n\rAlleen beschikbaar onder conditie: HRM\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_145.htm",
+        "summary": "Leave booking (line number)",
+        "description": "\n\rAlleen beschikbaar onder conditie: Hrm\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_145.htm",
         "operationId": "PUT_HrAbsenceID",
         "requestBody": {
           "content": {
@@ -1024,7 +1024,7 @@
           }
         ],
         "tags": [
-          "Verlofboeking (regelnummer)"
+          "Leave booking (line number)"
         ],
         "parameters": [
           {
@@ -1058,7 +1058,7 @@
         }
       ],
       "delete": {
-        "summary": "Verlofboeking (regelnummer)",
+        "summary": "Leave booking (line number)",
         "operationId": "DELETE_HrAbsenceID",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_145.htm",
         "responses": {
@@ -1093,7 +1093,7 @@
           }
         ],
         "tags": [
-          "Verlofboeking (regelnummer)"
+          "Leave booking (line number)"
         ],
         "parameters": [
           {
@@ -1104,8 +1104,8 @@
     },
     "/connectors/HrAbsenceInSite": {
       "post": {
-        "summary": "Verlofboeking InSite",
-        "description": "\n\rAlleen beschikbaar onder conditie: HRM\n\r ",
+        "summary": "InSite leave entry",
+        "description": "\n\rAlleen beschikbaar onder conditie: Hrm\n\r ",
         "operationId": "POST_HrAbsenceInSite",
         "requestBody": {
           "content": {
@@ -1288,7 +1288,7 @@
           }
         ],
         "tags": [
-          "Verlofboeking InSite"
+          "InSite leave entry"
         ],
         "parameters": [
           {
@@ -1302,7 +1302,7 @@
     },
     "/connectors/HrIllness": {
       "post": {
-        "summary": "Verzuimmelding",
+        "summary": "Absence entry",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_140.htm",
         "operationId": "POST_HrIllness",
         "requestBody": {
@@ -1508,7 +1508,7 @@
           }
         ],
         "tags": [
-          "Verzuimmelding"
+          "Absence entry"
         ],
         "parameters": [
           {
@@ -1520,7 +1520,7 @@
         ]
       },
       "put": {
-        "summary": "Verzuimmelding",
+        "summary": "Absence entry",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_140.htm",
         "operationId": "PUT_HrIllness",
         "requestBody": {
@@ -1819,7 +1819,7 @@
           }
         ],
         "tags": [
-          "Verzuimmelding"
+          "Absence entry"
         ],
         "parameters": [
           {
@@ -1833,7 +1833,7 @@
     },
     "/connectors/HrIllness/HrAbsIllnessProgress": {
       "post": {
-        "summary": "Verzuimmelding",
+        "summary": "Absence entry",
         "description": "Update main record in HrIllness and insert subrecord into HrAbsIllnessProgress. \n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_140.htm",
         "operationId": "POSTSubRecordHrIllnessHrAbsIllnessProgress",
         "requestBody": {
@@ -2042,7 +2042,7 @@
           }
         ],
         "tags": [
-          "Verzuimmelding"
+          "Absence entry"
         ],
         "parameters": [
           {
@@ -2067,7 +2067,7 @@
         }
       ],
       "delete": {
-        "summary": "Verzuimmelding",
+        "summary": "Absence entry",
         "operationId": "DELETE_HrIllness",
         "description": " \n\r Let op: Bij dit endpoint zijn de parameters om een item te verwijderen nog niet gedocumenteerd. De path parameters kunnen hierdoor afwijken\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_140.htm",
         "responses": {
@@ -2102,7 +2102,7 @@
           }
         ],
         "tags": [
-          "Verzuimmelding"
+          "Absence entry"
         ],
         "parameters": [
           {
@@ -2113,7 +2113,7 @@
     },
     "/connectors/HrIllnessGUID": {
       "post": {
-        "summary": "Verzuimmelding (unieke sleutel)",
+        "summary": "Absence entry (unique key)",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_140.htm",
         "operationId": "POST_HrIllnessGUID",
         "requestBody": {
@@ -2430,7 +2430,7 @@
           }
         ],
         "tags": [
-          "Verzuimmelding (unieke sleutel)"
+          "Absence entry (unique key)"
         ],
         "parameters": [
           {
@@ -2442,7 +2442,7 @@
         ]
       },
       "put": {
-        "summary": "Verzuimmelding (unieke sleutel)",
+        "summary": "Absence entry (unique key)",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_140.htm",
         "operationId": "PUT_HrIllnessGUID",
         "requestBody": {
@@ -2698,7 +2698,7 @@
           }
         ],
         "tags": [
-          "Verzuimmelding (unieke sleutel)"
+          "Absence entry (unique key)"
         ],
         "parameters": [
           {
@@ -2712,7 +2712,7 @@
     },
     "/connectors/HrIllnessGUID/HrAbsIllnessProgress": {
       "post": {
-        "summary": "Verzuimmelding (unieke sleutel)",
+        "summary": "Absence entry (unique key)",
         "description": "Update main record in HrIllnessGUID and insert subrecord into HrAbsIllnessProgress. \n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_140.htm",
         "operationId": "POSTSubRecordHrIllnessGUIDHrAbsIllnessProgress",
         "requestBody": {
@@ -3008,7 +3008,7 @@
           }
         ],
         "tags": [
-          "Verzuimmelding (unieke sleutel)"
+          "Absence entry (unique key)"
         ],
         "parameters": [
           {
@@ -3029,11 +3029,11 @@
           "name": "GUID",
           "in": "path",
           "required": true,
-          "description": "$3790=GUID"
+          "description": "GUID"
         }
       ],
       "delete": {
-        "summary": "Verzuimmelding (unieke sleutel)",
+        "summary": "Absence entry (unique key)",
         "operationId": "DELETE_HrIllnessGUID",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_140.htm",
         "responses": {
@@ -3068,7 +3068,7 @@
           }
         ],
         "tags": [
-          "Verzuimmelding (unieke sleutel)"
+          "Absence entry (unique key)"
         ],
         "parameters": [
           {
@@ -3079,7 +3079,7 @@
     },
     "/connectors/HrIllnessInSite": {
       "post": {
-        "summary": "Ziekmelding InSite",
+        "summary": "InSite sickness entry",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_140.htm",
         "operationId": "POST_HrIllnessInSite",
         "requestBody": {
@@ -3130,7 +3130,7 @@
                                   "Element": {
                                     "Fields": {
                                       "FileName": "example.png",
-                                      "FileStream": "iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAIAAACzY\u002Ba1AAAEB0lEQVR4nO3YQU/yShiG4SmlBSwYjEIQCyaSqmHl//8NLNgZSaORAmJQxCC0dihzFs3hEPQkX8KXlid5rl1r9YW5w2RQ63Q6gpBl0n4BtC8mhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J42bRfwH88zxNCNBqN\u002BHK5XPZ6ve0HHMexLEsIoZQaj8fT6TSKouPjY9u2s9m93kiKo/d3KAnH4/H7\u002B/vp6enmThAEpmm22\u002B1fH57NZq1WS9f1fr//9PTkOA7i6L8i/Y00DEPXdSeTiWma2/eDIMjn8z\u002BfV0pNJpNarZbP5w3DaDabi8VisVhgjf6L0k\u002B4XC5N07y9vc3lctv3/28dfd9fr9fxtiaEMAzDNM2ddZzNZt1udz6fx5ePj48PDw9KqQRGJy/9jbRcLpfL5Z/34/W6v7\u002BXUhYKhXq9Hq\u002BdlFIIYRjG5knDMMIw3PmbJycng8Hg5uZmNpvN5/Pr62tN0xIYnbz0P4W/iqJISmmapuM47Xb76OjIdd0gCIQQ6/VaCLHdQ9O0n58w27bX67XnecPhsFarFQqFxEYn7EAT6rp\u002Bd3fXbDaz2Ww2m724uMjlcm9vb\u002BLfFdxeOKVUJrP7RnRdt2374\u002BMjl8tVq9UkRyfsQBP\u002BZJpmvI/FR4/VarX5kZRye3Pb8H1fCBGGYRRFCY9O0oEm/Pr66na739/f8aVSanPEyOfzmUxmc4iQUoZhuDlibPi\u002B//r6Wq/XdV2Pv/YlNjphB5rQsqxCoeB5XhiGq9VqMBhEUVSpVIQQmUzm7OxsNBr5vi\u002Bl7Pf7lmXtrKNS6vn5uVgsVqvVRqPx\u002Bfk5nU6TGZ289E\u002Bkv9I07erqajQa9Xq9\u002BBzvOM7m/yDn5\u002BdKKdd1hRClUuny8nLn119eXqSUrVZLCFEsFiuVynA4LJVKf7Lp7Tk6eVqn00n7NdBeDnQjpT/HhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEN4/cnznZiQb6hsAAAAASUVORK5CYII="
+                                      "FileStream": "iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAIAAACzY+a1AAAEB0lEQVR4nO3YQU/yShiG4SmlBSwYjEIQCyaSqmHl//8NLNgZSaORAmJQxCC0dihzFs3hEPQkX8KXlid5rl1r9YW5w2RQ63Q6gpBl0n4BtC8mhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J42bRfwH88zxNCNBqN+HK5XPZ6ve0HHMexLEsIoZQaj8fT6TSKouPjY9u2s9m93kiKo/d3KAnH4/H7+/vp6enmThAEpmm22+1fH57NZq1WS9f1fr//9PTkOA7i6L8i/Y00DEPXdSeTiWma2/eDIMjn8z+fV0pNJpNarZbP5w3DaDabi8VisVhgjf6L0k+4XC5N07y9vc3lctv3/28dfd9fr9fxtiaEMAzDNM2ddZzNZt1udz6fx5ePj48PDw9KqQRGJy/9jbRcLpfL5Z/34/W6v7+XUhYKhXq9Hq+dlFIIYRjG5knDMMIw3PmbJycng8Hg5uZmNpvN5/Pr62tN0xIYnbz0P4W/iqJISmmapuM47Xb76OjIdd0gCIQQ6/VaCLHdQ9O0n58w27bX67XnecPhsFarFQqFxEYn7EAT6rp+d3fXbDaz2Ww2m724uMjlcm9vb+LfFdxeOKVUJrP7RnRdt2374+Mjl8tVq9UkRyfsQBP+ZJpmvI/FR4/VarX5kZRye3Pb8H1fCBGGYRRFCY9O0oEm/Pr66na739/f8aVSanPEyOfzmUxmc4iQUoZhuDlibPi+//r6Wq/XdV2Pv/YlNjphB5rQsqxCoeB5XhiGq9VqMBhEUVSpVIQQmUzm7OxsNBr5vi+l7Pf7lmXtrKNS6vn5uVgsVqvVRqPx+fk5nU6TGZ289E+kv9I07erqajQa9Xq9+BzvOM7m/yDn5+dKKdd1hRClUuny8nLn119eXqSUrVZLCFEsFiuVynA4LJVKf7Lp7Tk6eVqn00n7NdBeDnQjpT/HhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEN4/cnznZiQb6hsAAAAASUVORK5CYII="
                                     }
                                   }
                                 }
@@ -3268,13 +3268,13 @@
                                     {
                                       "Fields": {
                                         "FileName": "example.png",
-                                        "FileStream": "iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAIAAACzY\u002Ba1AAAEB0lEQVR4nO3YQU/yShiG4SmlBSwYjEIQCyaSqmHl//8NLNgZSaORAmJQxCC0dihzFs3hEPQkX8KXlid5rl1r9YW5w2RQ63Q6gpBl0n4BtC8mhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J42bRfwH88zxNCNBqN\u002BHK5XPZ6ve0HHMexLEsIoZQaj8fT6TSKouPjY9u2s9m93kiKo/d3KAnH4/H7\u002B/vp6enmThAEpmm22\u002B1fH57NZq1WS9f1fr//9PTkOA7i6L8i/Y00DEPXdSeTiWma2/eDIMjn8z\u002BfV0pNJpNarZbP5w3DaDabi8VisVhgjf6L0k\u002B4XC5N07y9vc3lctv3/28dfd9fr9fxtiaEMAzDNM2ddZzNZt1udz6fx5ePj48PDw9KqQRGJy/9jbRcLpfL5Z/34/W6v7\u002BXUhYKhXq9Hq\u002BdlFIIYRjG5knDMMIw3PmbJycng8Hg5uZmNpvN5/Pr62tN0xIYnbz0P4W/iqJISmmapuM47Xb76OjIdd0gCIQQ6/VaCLHdQ9O0n58w27bX67XnecPhsFarFQqFxEYn7EAT6rp\u002Bd3fXbDaz2Ww2m724uMjlcm9vb\u002BLfFdxeOKVUJrP7RnRdt2374\u002BMjl8tVq9UkRyfsQBP\u002BZJpmvI/FR4/VarX5kZRye3Pb8H1fCBGGYRRFCY9O0oEm/Pr66na739/f8aVSanPEyOfzmUxmc4iQUoZhuDlibPi\u002B//r6Wq/XdV2Pv/YlNjphB5rQsqxCoeB5XhiGq9VqMBhEUVSpVIQQmUzm7OxsNBr5vi\u002Bl7Pf7lmXtrKNS6vn5uVgsVqvVRqPx\u002Bfk5nU6TGZ289E\u002Bkv9I07erqajQa9Xq9\u002BBzvOM7m/yDn5\u002BdKKdd1hRClUuny8nLn119eXqSUrVZLCFEsFiuVynA4LJVKf7Lp7Tk6eVqn00n7NdBeDnQjpT/HhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEN4/cnznZiQb6hsAAAAASUVORK5CYII="
+                                        "FileStream": "iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAIAAACzY+a1AAAEB0lEQVR4nO3YQU/yShiG4SmlBSwYjEIQCyaSqmHl//8NLNgZSaORAmJQxCC0dihzFs3hEPQkX8KXlid5rl1r9YW5w2RQ63Q6gpBl0n4BtC8mhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J42bRfwH88zxNCNBqN+HK5XPZ6ve0HHMexLEsIoZQaj8fT6TSKouPjY9u2s9m93kiKo/d3KAnH4/H7+/vp6enmThAEpmm22+1fH57NZq1WS9f1fr//9PTkOA7i6L8i/Y00DEPXdSeTiWma2/eDIMjn8z+fV0pNJpNarZbP5w3DaDabi8VisVhgjf6L0k+4XC5N07y9vc3lctv3/28dfd9fr9fxtiaEMAzDNM2ddZzNZt1udz6fx5ePj48PDw9KqQRGJy/9jbRcLpfL5Z/34/W6v7+XUhYKhXq9Hq+dlFIIYRjG5knDMMIw3PmbJycng8Hg5uZmNpvN5/Pr62tN0xIYnbz0P4W/iqJISmmapuM47Xb76OjIdd0gCIQQ6/VaCLHdQ9O0n58w27bX67XnecPhsFarFQqFxEYn7EAT6rp+d3fXbDaz2Ww2m724uMjlcm9vb+LfFdxeOKVUJrP7RnRdt2374+Mjl8tVq9UkRyfsQBP+ZJpmvI/FR4/VarX5kZRye3Pb8H1fCBGGYRRFCY9O0oEm/Pr66na739/f8aVSanPEyOfzmUxmc4iQUoZhuDlibPi+//r6Wq/XdV2Pv/YlNjphB5rQsqxCoeB5XhiGq9VqMBhEUVSpVIQQmUzm7OxsNBr5vi+l7Pf7lmXtrKNS6vn5uVgsVqvVRqPx+fk5nU6TGZ289E+kv9I07erqajQa9Xq9+BzvOM7m/yDn5+dKKdd1hRClUuny8nLn119eXqSUrVZLCFEsFiuVynA4LJVKf7Lp7Tk6eVqn00n7NdBeDnQjpT/HhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEN4/cnznZiQb6hsAAAAASUVORK5CYII="
                                       }
                                     },
                                     {
                                       "Fields": {
                                         "FileName": "example.png",
-                                        "FileStream": "iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAIAAACzY\u002Ba1AAAEB0lEQVR4nO3YQU/yShiG4SmlBSwYjEIQCyaSqmHl//8NLNgZSaORAmJQxCC0dihzFs3hEPQkX8KXlid5rl1r9YW5w2RQ63Q6gpBl0n4BtC8mhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J42bRfwH88zxNCNBqN\u002BHK5XPZ6ve0HHMexLEsIoZQaj8fT6TSKouPjY9u2s9m93kiKo/d3KAnH4/H7\u002B/vp6enmThAEpmm22\u002B1fH57NZq1WS9f1fr//9PTkOA7i6L8i/Y00DEPXdSeTiWma2/eDIMjn8z\u002BfV0pNJpNarZbP5w3DaDabi8VisVhgjf6L0k\u002B4XC5N07y9vc3lctv3/28dfd9fr9fxtiaEMAzDNM2ddZzNZt1udz6fx5ePj48PDw9KqQRGJy/9jbRcLpfL5Z/34/W6v7\u002BXUhYKhXq9Hq\u002BdlFIIYRjG5knDMMIw3PmbJycng8Hg5uZmNpvN5/Pr62tN0xIYnbz0P4W/iqJISmmapuM47Xb76OjIdd0gCIQQ6/VaCLHdQ9O0n58w27bX67XnecPhsFarFQqFxEYn7EAT6rp\u002Bd3fXbDaz2Ww2m724uMjlcm9vb\u002BLfFdxeOKVUJrP7RnRdt2374\u002BMjl8tVq9UkRyfsQBP\u002BZJpmvI/FR4/VarX5kZRye3Pb8H1fCBGGYRRFCY9O0oEm/Pr66na739/f8aVSanPEyOfzmUxmc4iQUoZhuDlibPi\u002B//r6Wq/XdV2Pv/YlNjphB5rQsqxCoeB5XhiGq9VqMBhEUVSpVIQQmUzm7OxsNBr5vi\u002Bl7Pf7lmXtrKNS6vn5uVgsVqvVRqPx\u002Bfk5nU6TGZ289E\u002Bkv9I07erqajQa9Xq9\u002BBzvOM7m/yDn5\u002BdKKdd1hRClUuny8nLn119eXqSUrVZLCFEsFiuVynA4LJVKf7Lp7Tk6eVqn00n7NdBeDnQjpT/HhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEN4/cnznZiQb6hsAAAAASUVORK5CYII="
+                                        "FileStream": "iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAIAAACzY+a1AAAEB0lEQVR4nO3YQU/yShiG4SmlBSwYjEIQCyaSqmHl//8NLNgZSaORAmJQxCC0dihzFs3hEPQkX8KXlid5rl1r9YW5w2RQ63Q6gpBl0n4BtC8mhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J42bRfwH88zxNCNBqN+HK5XPZ6ve0HHMexLEsIoZQaj8fT6TSKouPjY9u2s9m93kiKo/d3KAnH4/H7+/vp6enmThAEpmm22+1fH57NZq1WS9f1fr//9PTkOA7i6L8i/Y00DEPXdSeTiWma2/eDIMjn8z+fV0pNJpNarZbP5w3DaDabi8VisVhgjf6L0k+4XC5N07y9vc3lctv3/28dfd9fr9fxtiaEMAzDNM2ddZzNZt1udz6fx5ePj48PDw9KqQRGJy/9jbRcLpfL5Z/34/W6v7+XUhYKhXq9Hq+dlFIIYRjG5knDMMIw3PmbJycng8Hg5uZmNpvN5/Pr62tN0xIYnbz0P4W/iqJISmmapuM47Xb76OjIdd0gCIQQ6/VaCLHdQ9O0n58w27bX67XnecPhsFarFQqFxEYn7EAT6rp+d3fXbDaz2Ww2m724uMjlcm9vb+LfFdxeOKVUJrP7RnRdt2374+Mjl8tVq9UkRyfsQBP+ZJpmvI/FR4/VarX5kZRye3Pb8H1fCBGGYRRFCY9O0oEm/Pr66na739/f8aVSanPEyOfzmUxmc4iQUoZhuDlibPi+//r6Wq/XdV2Pv/YlNjphB5rQsqxCoeB5XhiGq9VqMBhEUVSpVIQQmUzm7OxsNBr5vi+l7Pf7lmXtrKNS6vn5uVgsVqvVRqPx+fk5nU6TGZ289E+kv9I07erqajQa9Xq9+BzvOM7m/yDn5+dKKdd1hRClUuny8nLn119eXqSUrVZLCFEsFiuVynA4LJVKf7Lp7Tk6eVqn00n7NdBeDnQjpT/HhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEN4/cnznZiQb6hsAAAAASUVORK5CYII="
                                       }
                                     }
                                   ]
@@ -3480,7 +3480,7 @@
           }
         ],
         "tags": [
-          "Ziekmelding InSite"
+          "InSite sickness entry"
         ],
         "parameters": [
           {
@@ -3494,7 +3494,7 @@
     },
     "/connectors/HrIllnessProgressInSite": {
       "post": {
-        "summary": "Ziekteverloop InSite",
+        "summary": "InSite illness trajectory",
         "description": "\n\r ",
         "operationId": "POST_HrIllnessProgressInSite",
         "requestBody": {
@@ -3653,7 +3653,7 @@
           }
         ],
         "tags": [
-          "Ziekteverloop InSite"
+          "InSite illness trajectory"
         ],
         "parameters": [
           {
@@ -3665,7 +3665,7 @@
         ]
       },
       "put": {
-        "summary": "Ziekteverloop InSite",
+        "summary": "InSite illness trajectory",
         "description": "\n\r ",
         "operationId": "PUT_HrIllnessProgressInSite",
         "requestBody": {
@@ -3805,7 +3805,7 @@
           }
         ],
         "tags": [
-          "Ziekteverloop InSite"
+          "InSite illness trajectory"
         ],
         "parameters": [
           {
@@ -3819,7 +3819,7 @@
     },
     "/connectors/HrIllnessProgressInSite/KnBasicAddress": {
       "post": {
-        "summary": "Ziekteverloop InSite",
+        "summary": "InSite illness trajectory",
         "description": "Update main record in HrIllnessProgressInSite and insert subrecord into KnBasicAddress. \n\r ",
         "operationId": "POSTSubRecordHrIllnessProgressInSiteKnBasicAddress",
         "requestBody": {
@@ -3959,7 +3959,7 @@
           }
         ],
         "tags": [
-          "Ziekteverloop InSite"
+          "InSite illness trajectory"
         ],
         "parameters": [
           {
@@ -3973,7 +3973,7 @@
     },
     "/connectors/HrIllnessProgressInSite/HrPlacement": {
       "post": {
-        "summary": "Ziekteverloop InSite",
+        "summary": "InSite illness trajectory",
         "description": "Update main record in HrIllnessProgressInSite and insert subrecord into HrPlacement. \n\r ",
         "operationId": "POSTSubRecordHrIllnessProgressInSiteHrPlacement",
         "requestBody": {
@@ -4113,7 +4113,7 @@
           }
         ],
         "tags": [
-          "Ziekteverloop InSite"
+          "InSite illness trajectory"
         ],
         "parameters": [
           {
@@ -4127,7 +4127,7 @@
     },
     "/connectors/HrWellnessInSite": {
       "put": {
-        "summary": "Betermelding InSite",
+        "summary": "InSite recovery entry",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_166.htm",
         "operationId": "PUT_HrWellnessInSite",
         "requestBody": {
@@ -4165,7 +4165,7 @@
           }
         ],
         "tags": [
-          "Betermelding InSite"
+          "InSite recovery entry"
         ],
         "parameters": [
           {
@@ -4455,7 +4455,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id\u0027s can be found in the metainfo request result.",
+        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -4601,7 +4601,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -4683,7 +4683,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -4734,7 +4734,7 @@
                           },
                           "GUID": {
                             "type": "string",
-                            "description": "$3790=GUID"
+                            "description": "GUID"
                           },
                           "EmployerId": {
                             "type": "string",
@@ -4746,7 +4746,7 @@
                           },
                           "BSN": {
                             "type": "string",
-                            "description": "Social security number (\u0027BSN\u0027)"
+                            "description": "Social security number ('BSN')"
                           },
                           "AbsenceId": {
                             "type": "integer",
@@ -4754,7 +4754,7 @@
                           },
                           "StartDate": {
                             "type": "string",
-                            "description": "Begindatum/-tijd"
+                            "description": "Start date/time"
                           },
                           "EndDate": {
                             "type": "string",
@@ -4762,19 +4762,19 @@
                           },
                           "AbsenceTypeId": {
                             "type": "string",
-                            "description": "Type verzuim code"
+                            "description": "Absence type code"
                           },
                           "AbsenceTypeDesc": {
                             "type": "string",
-                            "description": "Type verzuim"
+                            "description": "Absence type"
                           },
                           "ReasonId": {
                             "type": "string",
-                            "description": "Reden verzuim code"
+                            "description": "Absence reason code"
                           },
                           "ReasonDesc": {
                             "type": "string",
-                            "description": "Reden verzuim"
+                            "description": "Absence reason"
                           },
                           "Presence": {
                             "type": "number",
@@ -4782,11 +4782,11 @@
                           },
                           "TypeWorkResumption": {
                             "type": "string",
-                            "description": "Soort werkhervatting code"
+                            "description": "Work resumption type code"
                           },
                           "TypeWorkResumptionDesc": {
                             "type": "string",
-                            "description": "Soort werkhervatting omschr."
+                            "description": "Work resumption type descr."
                           },
                           "Phone": {
                             "type": "string",
@@ -4802,7 +4802,7 @@
                           },
                           "AddNumber": {
                             "type": "string",
-                            "description": "House number addition"
+                            "description": "Extension (a, b, etc.) to house number"
                           },
                           "ZIPCode": {
                             "type": "string",
@@ -4814,7 +4814,7 @@
                           },
                           "Address4": {
                             "type": "string",
-                            "description": "Land"
+                            "description": "Country"
                           },
                           "ModifiedDate": {
                             "type": "string",
@@ -4842,7 +4842,7 @@
                           },
                           "Vangnet": {
                             "type": "integer",
-                            "description": "\u0027Vangnet\u0027 arrangement"
+                            "description": "'Vangnet' arrangement"
                           },
                           "NoStatistic": {
                             "type": "integer",
@@ -4854,7 +4854,7 @@
                           },
                           "ReasonEnd": {
                             "type": "string",
-                            "description": "Reden afsluiten code"
+                            "description": "Reason for closing code"
                           },
                           "PresentLastDay": {
                             "type": "integer",
@@ -4870,7 +4870,7 @@
                           },
                           "RecoveredCode": {
                             "type": "string",
-                            "description": "Code hersteld code"
+                            "description": "Recovery code"
                           },
                           "HourWeekPresent": {
                             "type": "integer",
@@ -4886,7 +4886,7 @@
                           },
                           "NursingAddress": {
                             "type": "string",
-                            "description": "Naam verpleegadres"
+                            "description": "Nursing address name"
                           }
                         }
                       }
@@ -4979,7 +4979,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -5159,7 +5159,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -5218,7 +5218,7 @@
                           },
                           "BSN": {
                             "type": "string",
-                            "description": "Social security number (\u0027BSN\u0027)"
+                            "description": "Social security number ('BSN')"
                           },
                           "Export": {
                             "type": "boolean",
@@ -5246,19 +5246,19 @@
                           },
                           "LeaveCode": {
                             "type": "string",
-                            "description": "Type verlof code"
+                            "description": "Leave type code"
                           },
                           "LeaveDescr": {
                             "type": "string",
-                            "description": "Type verlof omschrijving"
+                            "description": "Leave type description"
                           },
                           "ReasonCode": {
                             "type": "string",
-                            "description": "Reden verlof code"
+                            "description": "Reasons for leave code"
                           },
                           "ReasonDescr": {
                             "type": "string",
-                            "description": "Reden verlof omschrijving"
+                            "description": "Leave reason description"
                           }
                         }
                       }
@@ -5351,7 +5351,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -5539,7 +5539,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -5719,44 +5719,44 @@
       "description": "API Info"
     },
     {
-      "name": "Verlofsaldo",
-      "description": "Verlofsaldo"
+      "name": "Leave balance",
+      "description": "Leave balance"
     },
     {
-      "name": "Verlofcorrectie",
-      "description": "Verlofcorrectie"
+      "name": "Leave balance correction",
+      "description": "Leave balance correction"
     },
     {
-      "name": "Verlofboeking",
-      "description": "Verlofboeking"
+      "name": "Leave entry",
+      "description": "Leave entry"
     },
     {
-      "name": "Verlofboeking (regelnummer)",
-      "description": "Verlofboeking (regelnummer)"
+      "name": "Leave booking (line number)",
+      "description": "Leave booking (line number)"
     },
     {
-      "name": "Verlofboeking InSite",
-      "description": "Verlofboeking InSite"
+      "name": "InSite leave entry",
+      "description": "InSite leave entry"
     },
     {
-      "name": "Verzuimmelding",
-      "description": "Verzuimmelding"
+      "name": "Absence entry",
+      "description": "Absence entry"
     },
     {
-      "name": "Verzuimmelding (unieke sleutel)",
-      "description": "Verzuimmelding (unieke sleutel)"
+      "name": "Absence entry (unique key)",
+      "description": "Absence entry (unique key)"
     },
     {
-      "name": "Ziekmelding InSite",
-      "description": "Ziekmelding InSite"
+      "name": "InSite sickness entry",
+      "description": "InSite sickness entry"
     },
     {
-      "name": "Ziekteverloop InSite",
-      "description": "Ziekteverloop InSite"
+      "name": "InSite illness trajectory",
+      "description": "InSite illness trajectory"
     },
     {
-      "name": "Betermelding InSite",
-      "description": "Betermelding InSite"
+      "name": "InSite recovery entry",
+      "description": "InSite recovery entry"
     }
   ],
   "components": {
@@ -5874,7 +5874,7 @@
                           "RBO"
                         ],
                         "maxLength": 20,
-                        "description": "Correction reason\nC = Conversie;\nRBO = Restsaldo betaald ouderschapsverlof;",
+                        "description": "Correction reason\nC = Conversion;\nRBO = Remaining paid parental leave;",
                         "format": ""
                       },
                       "Re": {
@@ -5967,7 +5967,7 @@
                           "12"
                         ],
                         "maxLength": 20,
-                        "description": "Reason leave\nTvT = Tijd-voor-tijd;\nVak = Vakantie;\n01 = Huwelijk werknemer;\n02 = Huwelijk familie 1e graads;\n03 = Bevalling partner;\n04 = Overlijden partner/ongehuwde kinderen;\n05 = Overlijden gehuwde kinderen;\n06 = Overlijden ouders;\n07 = Overlijden grootouders/broers of zusters;\n08 = Dienstjubileum;\n09 = Huwelijkjubileum;\n10 = Huwelijksjubileum ouders/grootouders;\n11 = Verhuizing (zelfstandig wonen);\n12 = Examen opleiding t.b.v. functie;",
+                        "description": "Reason leave\nTvT = Time off in lieu;\nVak = Vakantie;\n01 = Huwelijk werknemer;\n02 = Huwelijk familie 1e graads;\n03 = Bevalling partner;\n04 = Overlijden partner/ongehuwde kinderen;\n05 = Overlijden gehuwde kinderen;\n06 = Overlijden ouders;\n07 = Overlijden grootouders/broers of zusters;\n08 = Dienstjubileum;\n09 = Huwelijkjubileum;\n10 = Huwelijksjubileum ouders/grootouders;\n11 = Verhuizing (zelfstandig wonen);\n12 = Examen opleiding t.b.v. functie;",
                         "format": ""
                       },
                       "DuRa": {
@@ -6023,7 +6023,7 @@
                           "99"
                         ],
                         "maxLength": 20,
-                        "description": "\u0027VF\u0027 absence reason\n02 = Kort buitengewoon verlof, imperatief (declarabel t/m 2014);\n04 = Overig buitengewoon verlof (declarabel t/m 2014);\n09 = Verlof i.v.m. overleg- en advieswerkzaamheden (declarabel t/m 2014);\n13 = Schorsing;\n80 = Calamiteitenverlof (declarabel t/m 2014);\n86 = Vervroegd re-integratietraject (declarabel t/m 2014);\n99 = Lang buitengewoon verlof (niet declarabel);",
+                        "description": "'VF' absence reason\n02 = Short extraordinary leave, mandatory (can be declared up to 2014);\n04 = Other extraordinary leave (can be declared up to 2014);\n09 = Leave related to consultation and advice activities (can be declared up to 2014);\n13 = Suspension;\n80 = Emergency leave (can be declared up to 2014);\n86 = Early reintegration process (can be declared up to 2014);\n99 = Long special leave (non-chargeable);",
                         "format": ""
                       },
                       "FaSn": {
@@ -6110,7 +6110,7 @@
                           "12"
                         ],
                         "maxLength": 20,
-                        "description": "Reason leave\nTvT = Tijd-voor-tijd;\nVak = Vakantie;\n01 = Huwelijk werknemer;\n02 = Huwelijk familie 1e graads;\n03 = Bevalling partner;\n04 = Overlijden partner/ongehuwde kinderen;\n05 = Overlijden gehuwde kinderen;\n06 = Overlijden ouders;\n07 = Overlijden grootouders/broers of zusters;\n08 = Dienstjubileum;\n09 = Huwelijkjubileum;\n10 = Huwelijksjubileum ouders/grootouders;\n11 = Verhuizing (zelfstandig wonen);\n12 = Examen opleiding t.b.v. functie;",
+                        "description": "Reason leave\nTvT = Time off in lieu;\nVak = Vakantie;\n01 = Huwelijk werknemer;\n02 = Huwelijk familie 1e graads;\n03 = Bevalling partner;\n04 = Overlijden partner/ongehuwde kinderen;\n05 = Overlijden gehuwde kinderen;\n06 = Overlijden ouders;\n07 = Overlijden grootouders/broers of zusters;\n08 = Dienstjubileum;\n09 = Huwelijkjubileum;\n10 = Huwelijksjubileum ouders/grootouders;\n11 = Verhuizing (zelfstandig wonen);\n12 = Examen opleiding t.b.v. functie;",
                         "format": ""
                       },
                       "DuRa": {
@@ -6166,7 +6166,7 @@
                           "99"
                         ],
                         "maxLength": 20,
-                        "description": "\u0027VF\u0027 absence reason\n02 = Kort buitengewoon verlof, imperatief (declarabel t/m 2014);\n04 = Overig buitengewoon verlof (declarabel t/m 2014);\n09 = Verlof i.v.m. overleg- en advieswerkzaamheden (declarabel t/m 2014);\n13 = Schorsing;\n80 = Calamiteitenverlof (declarabel t/m 2014);\n86 = Vervroegd re-integratietraject (declarabel t/m 2014);\n99 = Lang buitengewoon verlof (niet declarabel);",
+                        "description": "'VF' absence reason\n02 = Short extraordinary leave, mandatory (can be declared up to 2014);\n04 = Other extraordinary leave (can be declared up to 2014);\n09 = Leave related to consultation and advice activities (can be declared up to 2014);\n13 = Suspension;\n80 = Emergency leave (can be declared up to 2014);\n86 = Early reintegration process (can be declared up to 2014);\n99 = Long special leave (non-chargeable);",
                         "format": ""
                       },
                       "FaSn": {
@@ -6244,7 +6244,7 @@
                           "12"
                         ],
                         "maxLength": 20,
-                        "description": "Reason leave\nTvT = Tijd-voor-tijd;\nVak = Vakantie;\n01 = Huwelijk werknemer;\n02 = Huwelijk familie 1e graads;\n03 = Bevalling partner;\n04 = Overlijden partner/ongehuwde kinderen;\n05 = Overlijden gehuwde kinderen;\n06 = Overlijden ouders;\n07 = Overlijden grootouders/broers of zusters;\n08 = Dienstjubileum;\n09 = Huwelijkjubileum;\n10 = Huwelijksjubileum ouders/grootouders;\n11 = Verhuizing (zelfstandig wonen);\n12 = Examen opleiding t.b.v. functie;",
+                        "description": "Reason leave\nTvT = Time off in lieu;\nVak = Vakantie;\n01 = Huwelijk werknemer;\n02 = Huwelijk familie 1e graads;\n03 = Bevalling partner;\n04 = Overlijden partner/ongehuwde kinderen;\n05 = Overlijden gehuwde kinderen;\n06 = Overlijden ouders;\n07 = Overlijden grootouders/broers of zusters;\n08 = Dienstjubileum;\n09 = Huwelijkjubileum;\n10 = Huwelijksjubileum ouders/grootouders;\n11 = Verhuizing (zelfstandig wonen);\n12 = Examen opleiding t.b.v. functie;",
                         "format": ""
                       },
                       "EnSe": {
@@ -6305,7 +6305,7 @@
                           "99"
                         ],
                         "maxLength": 20,
-                        "description": "\u0027VF\u0027 absence reason\n02 = Kort buitengewoon verlof, imperatief (declarabel t/m 2014);\n04 = Overig buitengewoon verlof (declarabel t/m 2014);\n09 = Verlof i.v.m. overleg- en advieswerkzaamheden (declarabel t/m 2014);\n13 = Schorsing;\n80 = Calamiteitenverlof (declarabel t/m 2014);\n86 = Vervroegd re-integratietraject (declarabel t/m 2014);\n99 = Lang buitengewoon verlof (niet declarabel);",
+                        "description": "'VF' absence reason\n02 = Short extraordinary leave, mandatory (can be declared up to 2014);\n04 = Other extraordinary leave (can be declared up to 2014);\n09 = Leave related to consultation and advice activities (can be declared up to 2014);\n13 = Suspension;\n80 = Emergency leave (can be declared up to 2014);\n86 = Early reintegration process (can be declared up to 2014);\n99 = Long special leave (non-chargeable);",
                         "format": ""
                       },
                       "LeId": {
@@ -6452,7 +6452,7 @@
                           "12"
                         ],
                         "maxLength": 20,
-                        "description": "Reason leave\nTvT = Tijd-voor-tijd;\nVak = Vakantie;\n01 = Huwelijk werknemer;\n02 = Huwelijk familie 1e graads;\n03 = Bevalling partner;\n04 = Overlijden partner/ongehuwde kinderen;\n05 = Overlijden gehuwde kinderen;\n06 = Overlijden ouders;\n07 = Overlijden grootouders/broers of zusters;\n08 = Dienstjubileum;\n09 = Huwelijkjubileum;\n10 = Huwelijksjubileum ouders/grootouders;\n11 = Verhuizing (zelfstandig wonen);\n12 = Examen opleiding t.b.v. functie;",
+                        "description": "Reason leave\nTvT = Time off in lieu;\nVak = Vakantie;\n01 = Huwelijk werknemer;\n02 = Huwelijk familie 1e graads;\n03 = Bevalling partner;\n04 = Overlijden partner/ongehuwde kinderen;\n05 = Overlijden gehuwde kinderen;\n06 = Overlijden ouders;\n07 = Overlijden grootouders/broers of zusters;\n08 = Dienstjubileum;\n09 = Huwelijkjubileum;\n10 = Huwelijksjubileum ouders/grootouders;\n11 = Verhuizing (zelfstandig wonen);\n12 = Examen opleiding t.b.v. functie;",
                         "format": ""
                       },
                       "EnSe": {
@@ -6513,7 +6513,7 @@
                           "99"
                         ],
                         "maxLength": 20,
-                        "description": "\u0027VF\u0027 absence reason\n02 = Kort buitengewoon verlof, imperatief (declarabel t/m 2014);\n04 = Overig buitengewoon verlof (declarabel t/m 2014);\n09 = Verlof i.v.m. overleg- en advieswerkzaamheden (declarabel t/m 2014);\n13 = Schorsing;\n80 = Calamiteitenverlof (declarabel t/m 2014);\n86 = Vervroegd re-integratietraject (declarabel t/m 2014);\n99 = Lang buitengewoon verlof (niet declarabel);",
+                        "description": "'VF' absence reason\n02 = Short extraordinary leave, mandatory (can be declared up to 2014);\n04 = Other extraordinary leave (can be declared up to 2014);\n09 = Leave related to consultation and advice activities (can be declared up to 2014);\n13 = Suspension;\n80 = Emergency leave (can be declared up to 2014);\n86 = Early reintegration process (can be declared up to 2014);\n99 = Long special leave (non-chargeable);",
                         "format": ""
                       },
                       "FaSn": {
@@ -6596,7 +6596,7 @@
                           "12"
                         ],
                         "maxLength": 20,
-                        "description": "Reason leave\nTvT = Tijd-voor-tijd;\nVak = Vakantie;\n01 = Huwelijk werknemer;\n02 = Huwelijk familie 1e graads;\n03 = Bevalling partner;\n04 = Overlijden partner/ongehuwde kinderen;\n05 = Overlijden gehuwde kinderen;\n06 = Overlijden ouders;\n07 = Overlijden grootouders/broers of zusters;\n08 = Dienstjubileum;\n09 = Huwelijkjubileum;\n10 = Huwelijksjubileum ouders/grootouders;\n11 = Verhuizing (zelfstandig wonen);\n12 = Examen opleiding t.b.v. functie;",
+                        "description": "Reason leave\nTvT = Time off in lieu;\nVak = Vakantie;\n01 = Huwelijk werknemer;\n02 = Huwelijk familie 1e graads;\n03 = Bevalling partner;\n04 = Overlijden partner/ongehuwde kinderen;\n05 = Overlijden gehuwde kinderen;\n06 = Overlijden ouders;\n07 = Overlijden grootouders/broers of zusters;\n08 = Dienstjubileum;\n09 = Huwelijkjubileum;\n10 = Huwelijksjubileum ouders/grootouders;\n11 = Verhuizing (zelfstandig wonen);\n12 = Examen opleiding t.b.v. functie;",
                         "format": ""
                       },
                       "EnSe": {
@@ -6657,7 +6657,7 @@
                           "99"
                         ],
                         "maxLength": 20,
-                        "description": "\u0027VF\u0027 absence reason\n02 = Kort buitengewoon verlof, imperatief (declarabel t/m 2014);\n04 = Overig buitengewoon verlof (declarabel t/m 2014);\n09 = Verlof i.v.m. overleg- en advieswerkzaamheden (declarabel t/m 2014);\n13 = Schorsing;\n80 = Calamiteitenverlof (declarabel t/m 2014);\n86 = Vervroegd re-integratietraject (declarabel t/m 2014);\n99 = Lang buitengewoon verlof (niet declarabel);",
+                        "description": "'VF' absence reason\n02 = Short extraordinary leave, mandatory (can be declared up to 2014);\n04 = Other extraordinary leave (can be declared up to 2014);\n09 = Leave related to consultation and advice activities (can be declared up to 2014);\n13 = Suspension;\n80 = Emergency leave (can be declared up to 2014);\n86 = Early reintegration process (can be declared up to 2014);\n99 = Long special leave (non-chargeable);",
                         "format": ""
                       },
                       "FaSn": {
@@ -6696,7 +6696,7 @@
                       "GUID": {
                         "type": "string",
                         "maxLength": 38,
-                        "description": "$3790=GUID",
+                        "description": "GUID",
                         "format": "uuid"
                       },
                       "EmId": {
@@ -6730,7 +6730,7 @@
                         "enum": [
                           "A",
                           "AO",
-                          "B",
+                          "I",
                           "BR",
                           "D",
                           "F",
@@ -6738,16 +6738,16 @@
                           "P",
                           "PM",
                           "PO",
-                          "PZ",
+                          "PC",
                           "TO",
-                          "Z",
+                          "S",
                           "ZB",
                           "ZOD",
-                          "ZW",
+                          "PR",
                           "ZZW"
                         ],
                         "maxLength": 20,
-                        "description": "Type of absence\nA = Adoptie;\nAO = Arbeidsongeval;\nB = Bedrijfsongeval;\nBR = Borstvoedingsrust;\nD = Arbeidsongeschikt door derde;\nF = Familieomstandigheden;\nO = Overig ongeval;\nP = Pleegzorg;\nPM = Preventieve moederrust;\nPO = Priv\u00E9-ongeval;\nPZ = Palliatieve zorg;\nTO = Tijdelijke werkeloosheid wegens medische overmacht;\nZ = Ziek;\nZB = Ziek als gevolg van bevalling;\nZOD = Ziek als gevolg van orgaandonatie;\nZW = Zwangerschap / bevalling;\nZZW = Ziek als gevolg van zwangerschap;",
+                        "description": "Type of absence\nA = Adoption;\nAO = Industrial accident;\nI = Industrial accident;\nBR = Breastfeeding repose;\nD = Disabled by third party;\nF = Family circumstances;\nO = Other accidents;\nP = Nursing care;\nPM = Preventive mother repose;\nPO = Personal accident;\nPC = Palliative care;\nTO = Temporary unemployment due to medical circumstances;\nS = Sick;\nZB = Sick because of childbirth;\nZOD = Sick because of organ donation;\nPR = Pregnancy/childbirth;\nZZW = Sick because of pregnancy;",
                         "format": ""
                       },
                       "ViIr": {
@@ -6782,7 +6782,7 @@
                       },
                       "SfNt": {
                         "type": "boolean",
-                        "description": "\u0027Vangnet\u0027 arrangement",
+                        "description": "'Vangnet' arrangement",
                         "format": ""
                       },
                       "RtDa": {
@@ -6852,7 +6852,7 @@
                           "6"
                         ],
                         "maxLength": 20,
-                        "description": "Reason for closing\n1 = Hersteld;\n2 = Uit dienst (einde contract);\n3 = Overleden;\n4 = Hersteld (gedeeltelijk arbeidsongeschikt);\n5 = Uit dienst (arbeidsongeschikt);\n6 = Aansluitend verzuim met andere oorzaak;",
+                        "description": "Reason for closing\n1 = Recovered;\n2 = No longer employed (termination of contract);\n3 = Deceased;\n4 = Recovered (partially unable to work);\n5 = No longer employed (unable to work);\n6 = Consecutive absence with other reason;",
                         "format": ""
                       },
                       "TPEn": {
@@ -6882,7 +6882,7 @@
                           "99"
                         ],
                         "maxLength": 20,
-                        "description": "Absence cause\n1 = Onbekend, geen of onvoldoende informatie;\n10 = Arbeidsongeval;\n11 = Verkeersongeval met regresmogelijkheid;\n2 = Bedrijfssportongeval;\n3 = Bedrijfsverkeersongeval;\n4 = Overige bedrijfsongevallen;\n5 = Sportongeval;\n6 = Verkeersongeval;\n7 = Overige ongevallen;\n8 = Overige priv\u00E9 oorzaken;\n9 = Overige arbeidsgebonden oorzaken;\n99 = Overige redenen;",
+                        "description": "Absence cause\n1 = Unknown, no or insuffient information;\n10 = Industrial accident;\n11 = Verkeersongeval met regresmogelijkheid;\n2 = Company sports accident;\n3 = Company road accident;\n4 = Other industrial accidents;\n5 = Sports accident;\n6 = Road accident;\n7 = Other accidents;\n8 = Other private causes;\n9 = Other work related causes;\n99 = Other reasons;",
                         "format": ""
                       },
                       "AcAr": {
@@ -6907,7 +6907,7 @@
                           "17"
                         ],
                         "maxLength": 20,
-                        "description": "ARBO service action\n01 = Conform afspraak;\n02 = Huisbezoek verzuimrapporteur;\n03 = Uitnodigen spreekuur BA;\n04 = Spoedcontrole;\n05 = Actie in overleg;\n06 = Uitnodigen spreekuur binnen 24 uur;\n07 = Overleg BA;\n08 = Geen actie;\n09 = Geen huisbezoek;\n10 = Huisbezoek dag 1;\n11 = Huisbezoek dag 2/3;\n12 = Schriftelijke enqu\u00EAte;\n13 = Telefonische enqu\u00EAte;\n14 = Spreekuuroproep;\n15 = Administratieve controle;\n16 = Controle op het werk;\n17 = Avond/weekend controle;",
+                        "description": "ARBO service action\n01 = In conformity with agreement|;\n02 = House call absence reporter;\n03 = Invite for consultation BA;\n04 = Urgency control;\n05 = Action in consultation;\n06 = Invite for consultation within 24 hours;\n07 = Consultation BA;\n08 = No action;\n09 = No house call;\n10 = House call day 1;\n11 = House call day 2/3;\n12 = Written survey;\n13 = Telephone survey;\n14 = Surgery call;\n15 = Administrative check;\n16 = Check of the work;\n17 = Evening/weekend check;",
                         "format": ""
                       },
                       "ReAe": {
@@ -6927,7 +6927,7 @@
                           "99"
                         ],
                         "maxLength": 20,
-                        "description": "Absence end reason\n01 = Hersteld;\n03 = Overleden;\n04 = Uit dienst;\n05 = Overgang naar WAZO;\n07 = WIA;\n08 = WGA \u003C 35%;\n09 = WGA 35-80%;\n10 = IVA 80-100%;\n11 = WIA 80-100%;\n12 = Einde WGA;\n13 = Ziek uit dienst;\n99 = Onbekend;",
+                        "description": "Absence end reason\n01 = Recovered;\n03 = Deceased;\n04 = Employment ended;\n05 = Transit to 'WAZO';\n07 = 'WIA';\n08 = WGA < 35%;\n09 = WGA 35-80%;\n10 = IVA 80-100%;\n11 = WIA 80-100%;\n12 = 'WGA' end;\n13 = Sick after end of employment;\n99 = Unknown;",
                         "format": ""
                       },
                       "DaPr": {
@@ -6972,7 +6972,7 @@
                                       "GUID": {
                                         "type": "string",
                                         "maxLength": 38,
-                                        "description": "$3790=GUID",
+                                        "description": "GUID",
                                         "format": "uuid"
                                       },
                                       "DaTi": {
@@ -7351,7 +7351,7 @@
                                                       "HmAd": {
                                                         "type": "string",
                                                         "maxLength": 30,
-                                                        "description": "House number addition",
+                                                        "description": "Extension (a, b, etc.) to house number",
                                                         "format": ""
                                                       },
                                                       "ZpCd": {
@@ -7448,7 +7448,7 @@
                       "GUID": {
                         "type": "string",
                         "maxLength": 38,
-                        "description": "$3790=GUID",
+                        "description": "GUID",
                         "format": "uuid"
                       },
                       "EmId": {
@@ -7482,7 +7482,7 @@
                         "enum": [
                           "A",
                           "AO",
-                          "B",
+                          "I",
                           "BR",
                           "D",
                           "F",
@@ -7490,16 +7490,16 @@
                           "P",
                           "PM",
                           "PO",
-                          "PZ",
+                          "PC",
                           "TO",
-                          "Z",
+                          "S",
                           "ZB",
                           "ZOD",
-                          "ZW",
+                          "PR",
                           "ZZW"
                         ],
                         "maxLength": 20,
-                        "description": "Type of absence\nA = Adoptie;\nAO = Arbeidsongeval;\nB = Bedrijfsongeval;\nBR = Borstvoedingsrust;\nD = Arbeidsongeschikt door derde;\nF = Familieomstandigheden;\nO = Overig ongeval;\nP = Pleegzorg;\nPM = Preventieve moederrust;\nPO = Priv\u00E9-ongeval;\nPZ = Palliatieve zorg;\nTO = Tijdelijke werkeloosheid wegens medische overmacht;\nZ = Ziek;\nZB = Ziek als gevolg van bevalling;\nZOD = Ziek als gevolg van orgaandonatie;\nZW = Zwangerschap / bevalling;\nZZW = Ziek als gevolg van zwangerschap;",
+                        "description": "Type of absence\nA = Adoption;\nAO = Industrial accident;\nI = Industrial accident;\nBR = Breastfeeding repose;\nD = Disabled by third party;\nF = Family circumstances;\nO = Other accidents;\nP = Nursing care;\nPM = Preventive mother repose;\nPO = Personal accident;\nPC = Palliative care;\nTO = Temporary unemployment due to medical circumstances;\nS = Sick;\nZB = Sick because of childbirth;\nZOD = Sick because of organ donation;\nPR = Pregnancy/childbirth;\nZZW = Sick because of pregnancy;",
                         "format": ""
                       },
                       "ViIr": {
@@ -7534,7 +7534,7 @@
                       },
                       "SfNt": {
                         "type": "boolean",
-                        "description": "\u0027Vangnet\u0027 arrangement",
+                        "description": "'Vangnet' arrangement",
                         "format": ""
                       },
                       "RtDa": {
@@ -7604,7 +7604,7 @@
                           "6"
                         ],
                         "maxLength": 20,
-                        "description": "Reason for closing\n1 = Hersteld;\n2 = Uit dienst (einde contract);\n3 = Overleden;\n4 = Hersteld (gedeeltelijk arbeidsongeschikt);\n5 = Uit dienst (arbeidsongeschikt);\n6 = Aansluitend verzuim met andere oorzaak;",
+                        "description": "Reason for closing\n1 = Recovered;\n2 = No longer employed (termination of contract);\n3 = Deceased;\n4 = Recovered (partially unable to work);\n5 = No longer employed (unable to work);\n6 = Consecutive absence with other reason;",
                         "format": ""
                       },
                       "TPEn": {
@@ -7634,7 +7634,7 @@
                           "99"
                         ],
                         "maxLength": 20,
-                        "description": "Absence cause\n1 = Onbekend, geen of onvoldoende informatie;\n10 = Arbeidsongeval;\n11 = Verkeersongeval met regresmogelijkheid;\n2 = Bedrijfssportongeval;\n3 = Bedrijfsverkeersongeval;\n4 = Overige bedrijfsongevallen;\n5 = Sportongeval;\n6 = Verkeersongeval;\n7 = Overige ongevallen;\n8 = Overige priv\u00E9 oorzaken;\n9 = Overige arbeidsgebonden oorzaken;\n99 = Overige redenen;",
+                        "description": "Absence cause\n1 = Unknown, no or insuffient information;\n10 = Industrial accident;\n11 = Verkeersongeval met regresmogelijkheid;\n2 = Company sports accident;\n3 = Company road accident;\n4 = Other industrial accidents;\n5 = Sports accident;\n6 = Road accident;\n7 = Other accidents;\n8 = Other private causes;\n9 = Other work related causes;\n99 = Other reasons;",
                         "format": ""
                       },
                       "AcAr": {
@@ -7659,7 +7659,7 @@
                           "17"
                         ],
                         "maxLength": 20,
-                        "description": "ARBO service action\n01 = Conform afspraak;\n02 = Huisbezoek verzuimrapporteur;\n03 = Uitnodigen spreekuur BA;\n04 = Spoedcontrole;\n05 = Actie in overleg;\n06 = Uitnodigen spreekuur binnen 24 uur;\n07 = Overleg BA;\n08 = Geen actie;\n09 = Geen huisbezoek;\n10 = Huisbezoek dag 1;\n11 = Huisbezoek dag 2/3;\n12 = Schriftelijke enqu\u00EAte;\n13 = Telefonische enqu\u00EAte;\n14 = Spreekuuroproep;\n15 = Administratieve controle;\n16 = Controle op het werk;\n17 = Avond/weekend controle;",
+                        "description": "ARBO service action\n01 = In conformity with agreement|;\n02 = House call absence reporter;\n03 = Invite for consultation BA;\n04 = Urgency control;\n05 = Action in consultation;\n06 = Invite for consultation within 24 hours;\n07 = Consultation BA;\n08 = No action;\n09 = No house call;\n10 = House call day 1;\n11 = House call day 2/3;\n12 = Written survey;\n13 = Telephone survey;\n14 = Surgery call;\n15 = Administrative check;\n16 = Check of the work;\n17 = Evening/weekend check;",
                         "format": ""
                       },
                       "ReAe": {
@@ -7679,7 +7679,7 @@
                           "99"
                         ],
                         "maxLength": 20,
-                        "description": "Absence end reason\n01 = Hersteld;\n03 = Overleden;\n04 = Uit dienst;\n05 = Overgang naar WAZO;\n07 = WIA;\n08 = WGA \u003C 35%;\n09 = WGA 35-80%;\n10 = IVA 80-100%;\n11 = WIA 80-100%;\n12 = Einde WGA;\n13 = Ziek uit dienst;\n99 = Onbekend;",
+                        "description": "Absence end reason\n01 = Recovered;\n03 = Deceased;\n04 = Employment ended;\n05 = Transit to 'WAZO';\n07 = 'WIA';\n08 = WGA < 35%;\n09 = WGA 35-80%;\n10 = IVA 80-100%;\n11 = WIA 80-100%;\n12 = 'WGA' end;\n13 = Sick after end of employment;\n99 = Unknown;",
                         "format": ""
                       },
                       "DaPr": {
@@ -7711,7 +7711,7 @@
                                       "GUID": {
                                         "type": "string",
                                         "maxLength": 38,
-                                        "description": "$3790=GUID",
+                                        "description": "GUID",
                                         "format": "uuid"
                                       },
                                       "DaTi": {
@@ -8086,7 +8086,7 @@
                                                       "HmAd": {
                                                         "type": "string",
                                                         "maxLength": 30,
-                                                        "description": "House number addition",
+                                                        "description": "Extension (a, b, etc.) to house number",
                                                         "format": ""
                                                       },
                                                       "ZpCd": {
@@ -8204,7 +8204,7 @@
                         "enum": [
                           "A",
                           "AO",
-                          "B",
+                          "I",
                           "BR",
                           "D",
                           "F",
@@ -8212,16 +8212,16 @@
                           "P",
                           "PM",
                           "PO",
-                          "PZ",
+                          "PC",
                           "TO",
-                          "Z",
+                          "S",
                           "ZB",
                           "ZOD",
-                          "ZW",
+                          "PR",
                           "ZZW"
                         ],
                         "maxLength": 20,
-                        "description": "Type of absence\nA = Adoptie;\nAO = Arbeidsongeval;\nB = Bedrijfsongeval;\nBR = Borstvoedingsrust;\nD = Arbeidsongeschikt door derde;\nF = Familieomstandigheden;\nO = Overig ongeval;\nP = Pleegzorg;\nPM = Preventieve moederrust;\nPO = Priv\u00E9-ongeval;\nPZ = Palliatieve zorg;\nTO = Tijdelijke werkeloosheid wegens medische overmacht;\nZ = Ziek;\nZB = Ziek als gevolg van bevalling;\nZOD = Ziek als gevolg van orgaandonatie;\nZW = Zwangerschap / bevalling;\nZZW = Ziek als gevolg van zwangerschap;",
+                        "description": "Type of absence\nA = Adoption;\nAO = Industrial accident;\nI = Industrial accident;\nBR = Breastfeeding repose;\nD = Disabled by third party;\nF = Family circumstances;\nO = Other accidents;\nP = Nursing care;\nPM = Preventive mother repose;\nPO = Personal accident;\nPC = Palliative care;\nTO = Temporary unemployment due to medical circumstances;\nS = Sick;\nZB = Sick because of childbirth;\nZOD = Sick because of organ donation;\nPR = Pregnancy/childbirth;\nZZW = Sick because of pregnancy;",
                         "format": ""
                       },
                       "ViIr": {
@@ -8256,7 +8256,7 @@
                       },
                       "SfNt": {
                         "type": "boolean",
-                        "description": "\u0027Vangnet\u0027 arrangement",
+                        "description": "'Vangnet' arrangement",
                         "format": ""
                       },
                       "RtDa": {
@@ -8326,7 +8326,7 @@
                           "6"
                         ],
                         "maxLength": 20,
-                        "description": "Reason for closing\n1 = Hersteld;\n2 = Uit dienst (einde contract);\n3 = Overleden;\n4 = Hersteld (gedeeltelijk arbeidsongeschikt);\n5 = Uit dienst (arbeidsongeschikt);\n6 = Aansluitend verzuim met andere oorzaak;",
+                        "description": "Reason for closing\n1 = Recovered;\n2 = No longer employed (termination of contract);\n3 = Deceased;\n4 = Recovered (partially unable to work);\n5 = No longer employed (unable to work);\n6 = Consecutive absence with other reason;",
                         "format": ""
                       },
                       "TPEn": {
@@ -8356,7 +8356,7 @@
                           "99"
                         ],
                         "maxLength": 20,
-                        "description": "Absence cause\n1 = Onbekend, geen of onvoldoende informatie;\n10 = Arbeidsongeval;\n11 = Verkeersongeval met regresmogelijkheid;\n2 = Bedrijfssportongeval;\n3 = Bedrijfsverkeersongeval;\n4 = Overige bedrijfsongevallen;\n5 = Sportongeval;\n6 = Verkeersongeval;\n7 = Overige ongevallen;\n8 = Overige priv\u00E9 oorzaken;\n9 = Overige arbeidsgebonden oorzaken;\n99 = Overige redenen;",
+                        "description": "Absence cause\n1 = Unknown, no or insuffient information;\n10 = Industrial accident;\n11 = Verkeersongeval met regresmogelijkheid;\n2 = Company sports accident;\n3 = Company road accident;\n4 = Other industrial accidents;\n5 = Sports accident;\n6 = Road accident;\n7 = Other accidents;\n8 = Other private causes;\n9 = Other work related causes;\n99 = Other reasons;",
                         "format": ""
                       },
                       "AcAr": {
@@ -8381,7 +8381,7 @@
                           "17"
                         ],
                         "maxLength": 20,
-                        "description": "ARBO service action\n01 = Conform afspraak;\n02 = Huisbezoek verzuimrapporteur;\n03 = Uitnodigen spreekuur BA;\n04 = Spoedcontrole;\n05 = Actie in overleg;\n06 = Uitnodigen spreekuur binnen 24 uur;\n07 = Overleg BA;\n08 = Geen actie;\n09 = Geen huisbezoek;\n10 = Huisbezoek dag 1;\n11 = Huisbezoek dag 2/3;\n12 = Schriftelijke enqu\u00EAte;\n13 = Telefonische enqu\u00EAte;\n14 = Spreekuuroproep;\n15 = Administratieve controle;\n16 = Controle op het werk;\n17 = Avond/weekend controle;",
+                        "description": "ARBO service action\n01 = In conformity with agreement|;\n02 = House call absence reporter;\n03 = Invite for consultation BA;\n04 = Urgency control;\n05 = Action in consultation;\n06 = Invite for consultation within 24 hours;\n07 = Consultation BA;\n08 = No action;\n09 = No house call;\n10 = House call day 1;\n11 = House call day 2/3;\n12 = Written survey;\n13 = Telephone survey;\n14 = Surgery call;\n15 = Administrative check;\n16 = Check of the work;\n17 = Evening/weekend check;",
                         "format": ""
                       },
                       "ReAe": {
@@ -8401,7 +8401,7 @@
                           "99"
                         ],
                         "maxLength": 20,
-                        "description": "Absence end reason\n01 = Hersteld;\n03 = Overleden;\n04 = Uit dienst;\n05 = Overgang naar WAZO;\n07 = WIA;\n08 = WGA \u003C 35%;\n09 = WGA 35-80%;\n10 = IVA 80-100%;\n11 = WIA 80-100%;\n12 = Einde WGA;\n13 = Ziek uit dienst;\n99 = Onbekend;",
+                        "description": "Absence end reason\n01 = Recovered;\n03 = Deceased;\n04 = Employment ended;\n05 = Transit to 'WAZO';\n07 = 'WIA';\n08 = WGA < 35%;\n09 = WGA 35-80%;\n10 = IVA 80-100%;\n11 = WIA 80-100%;\n12 = 'WGA' end;\n13 = Sick after end of employment;\n99 = Unknown;",
                         "format": ""
                       },
                       "DaPr": {
@@ -8822,7 +8822,7 @@
                                                       "HmAd": {
                                                         "type": "string",
                                                         "maxLength": 30,
-                                                        "description": "House number addition",
+                                                        "description": "Extension (a, b, etc.) to house number",
                                                         "format": ""
                                                       },
                                                       "ZpCd": {
@@ -8969,7 +8969,7 @@
                       },
                       "ApSn": {
                         "type": "integer",
-                        "description": "$17367=Identity",
+                        "description": "Identity",
                         "format": ""
                       },
                       "DaTi": {
@@ -9350,7 +9350,7 @@
                                       "HmAd": {
                                         "type": "string",
                                         "maxLength": 30,
-                                        "description": "House number addition",
+                                        "description": "Extension (a, b, etc.) to house number",
                                         "format": ""
                                       },
                                       "ZpCd": {
@@ -9454,7 +9454,7 @@
                       },
                       "ApSn": {
                         "type": "integer",
-                        "description": "$17367=Identity",
+                        "description": "Identity",
                         "format": ""
                       },
                       "DaTi": {
@@ -9829,7 +9829,7 @@
                                       "HmAd": {
                                         "type": "string",
                                         "maxLength": 30,
-                                        "description": "House number addition",
+                                        "description": "Extension (a, b, etc.) to house number",
                                         "format": ""
                                       },
                                       "ZpCd": {
@@ -9939,7 +9939,7 @@
                         "enum": [
                           "A",
                           "AO",
-                          "B",
+                          "I",
                           "BR",
                           "D",
                           "F",
@@ -9947,16 +9947,16 @@
                           "P",
                           "PM",
                           "PO",
-                          "PZ",
+                          "PC",
                           "TO",
-                          "Z",
+                          "S",
                           "ZB",
                           "ZOD",
-                          "ZW",
+                          "PR",
                           "ZZW"
                         ],
                         "maxLength": 20,
-                        "description": "Type of absence\nA = Adoptie;\nAO = Arbeidsongeval;\nB = Bedrijfsongeval;\nBR = Borstvoedingsrust;\nD = Arbeidsongeschikt door derde;\nF = Familieomstandigheden;\nO = Overig ongeval;\nP = Pleegzorg;\nPM = Preventieve moederrust;\nPO = Priv\u00E9-ongeval;\nPZ = Palliatieve zorg;\nTO = Tijdelijke werkeloosheid wegens medische overmacht;\nZ = Ziek;\nZB = Ziek als gevolg van bevalling;\nZOD = Ziek als gevolg van orgaandonatie;\nZW = Zwangerschap / bevalling;\nZZW = Ziek als gevolg van zwangerschap;",
+                        "description": "Type of absence\nA = Adoption;\nAO = Industrial accident;\nI = Industrial accident;\nBR = Breastfeeding repose;\nD = Disabled by third party;\nF = Family circumstances;\nO = Other accidents;\nP = Nursing care;\nPM = Preventive mother repose;\nPO = Personal accident;\nPC = Palliative care;\nTO = Temporary unemployment due to medical circumstances;\nS = Sick;\nZB = Sick because of childbirth;\nZOD = Sick because of organ donation;\nPR = Pregnancy/childbirth;\nZZW = Sick because of pregnancy;",
                         "format": ""
                       },
                       "ViIr": {
@@ -9991,7 +9991,7 @@
                       },
                       "SfNt": {
                         "type": "boolean",
-                        "description": "\u0027Vangnet\u0027 arrangement",
+                        "description": "'Vangnet' arrangement",
                         "format": ""
                       },
                       "RtDa": {
@@ -10061,7 +10061,7 @@
                           "6"
                         ],
                         "maxLength": 20,
-                        "description": "Reason for closing\n1 = Hersteld;\n2 = Uit dienst (einde contract);\n3 = Overleden;\n4 = Hersteld (gedeeltelijk arbeidsongeschikt);\n5 = Uit dienst (arbeidsongeschikt);\n6 = Aansluitend verzuim met andere oorzaak;",
+                        "description": "Reason for closing\n1 = Recovered;\n2 = No longer employed (termination of contract);\n3 = Deceased;\n4 = Recovered (partially unable to work);\n5 = No longer employed (unable to work);\n6 = Consecutive absence with other reason;",
                         "format": ""
                       },
                       "TPEn": {
@@ -10091,7 +10091,7 @@
                           "99"
                         ],
                         "maxLength": 20,
-                        "description": "Absence cause\n1 = Onbekend, geen of onvoldoende informatie;\n10 = Arbeidsongeval;\n11 = Verkeersongeval met regresmogelijkheid;\n2 = Bedrijfssportongeval;\n3 = Bedrijfsverkeersongeval;\n4 = Overige bedrijfsongevallen;\n5 = Sportongeval;\n6 = Verkeersongeval;\n7 = Overige ongevallen;\n8 = Overige priv\u00E9 oorzaken;\n9 = Overige arbeidsgebonden oorzaken;\n99 = Overige redenen;",
+                        "description": "Absence cause\n1 = Unknown, no or insuffient information;\n10 = Industrial accident;\n11 = Verkeersongeval met regresmogelijkheid;\n2 = Company sports accident;\n3 = Company road accident;\n4 = Other industrial accidents;\n5 = Sports accident;\n6 = Road accident;\n7 = Other accidents;\n8 = Other private causes;\n9 = Other work related causes;\n99 = Other reasons;",
                         "format": ""
                       },
                       "AcAr": {
@@ -10116,7 +10116,7 @@
                           "17"
                         ],
                         "maxLength": 20,
-                        "description": "ARBO service action\n01 = Conform afspraak;\n02 = Huisbezoek verzuimrapporteur;\n03 = Uitnodigen spreekuur BA;\n04 = Spoedcontrole;\n05 = Actie in overleg;\n06 = Uitnodigen spreekuur binnen 24 uur;\n07 = Overleg BA;\n08 = Geen actie;\n09 = Geen huisbezoek;\n10 = Huisbezoek dag 1;\n11 = Huisbezoek dag 2/3;\n12 = Schriftelijke enqu\u00EAte;\n13 = Telefonische enqu\u00EAte;\n14 = Spreekuuroproep;\n15 = Administratieve controle;\n16 = Controle op het werk;\n17 = Avond/weekend controle;",
+                        "description": "ARBO service action\n01 = In conformity with agreement|;\n02 = House call absence reporter;\n03 = Invite for consultation BA;\n04 = Urgency control;\n05 = Action in consultation;\n06 = Invite for consultation within 24 hours;\n07 = Consultation BA;\n08 = No action;\n09 = No house call;\n10 = House call day 1;\n11 = House call day 2/3;\n12 = Written survey;\n13 = Telephone survey;\n14 = Surgery call;\n15 = Administrative check;\n16 = Check of the work;\n17 = Evening/weekend check;",
                         "format": ""
                       },
                       "ReAe": {
@@ -10136,7 +10136,7 @@
                           "99"
                         ],
                         "maxLength": 20,
-                        "description": "Absence end reason\n01 = Hersteld;\n03 = Overleden;\n04 = Uit dienst;\n05 = Overgang naar WAZO;\n07 = WIA;\n08 = WGA \u003C 35%;\n09 = WGA 35-80%;\n10 = IVA 80-100%;\n11 = WIA 80-100%;\n12 = Einde WGA;\n13 = Ziek uit dienst;\n99 = Onbekend;",
+                        "description": "Absence end reason\n01 = Recovered;\n03 = Deceased;\n04 = Employment ended;\n05 = Transit to 'WAZO';\n07 = 'WIA';\n08 = WGA < 35%;\n09 = WGA 35-80%;\n10 = IVA 80-100%;\n11 = WIA 80-100%;\n12 = 'WGA' end;\n13 = Sick after end of employment;\n99 = Unknown;",
                         "format": ""
                       },
                       "DaPr": {
@@ -10552,7 +10552,7 @@
                                                       "HmAd": {
                                                         "type": "string",
                                                         "maxLength": 30,
-                                                        "description": "House number addition",
+                                                        "description": "Extension (a, b, etc.) to house number",
                                                         "format": ""
                                                       },
                                                       "ZpCd": {
@@ -10677,7 +10677,7 @@
                         "enum": [
                           "A",
                           "AO",
-                          "B",
+                          "I",
                           "BR",
                           "D",
                           "F",
@@ -10685,16 +10685,16 @@
                           "P",
                           "PM",
                           "PO",
-                          "PZ",
+                          "PC",
                           "TO",
-                          "Z",
+                          "S",
                           "ZB",
                           "ZOD",
-                          "ZW",
+                          "PR",
                           "ZZW"
                         ],
                         "maxLength": 20,
-                        "description": "Type of absence\nA = Adoptie;\nAO = Arbeidsongeval;\nB = Bedrijfsongeval;\nBR = Borstvoedingsrust;\nD = Arbeidsongeschikt door derde;\nF = Familieomstandigheden;\nO = Overig ongeval;\nP = Pleegzorg;\nPM = Preventieve moederrust;\nPO = Priv\u00E9-ongeval;\nPZ = Palliatieve zorg;\nTO = Tijdelijke werkeloosheid wegens medische overmacht;\nZ = Ziek;\nZB = Ziek als gevolg van bevalling;\nZOD = Ziek als gevolg van orgaandonatie;\nZW = Zwangerschap / bevalling;\nZZW = Ziek als gevolg van zwangerschap;",
+                        "description": "Type of absence\nA = Adoption;\nAO = Industrial accident;\nI = Industrial accident;\nBR = Breastfeeding repose;\nD = Disabled by third party;\nF = Family circumstances;\nO = Other accidents;\nP = Nursing care;\nPM = Preventive mother repose;\nPO = Personal accident;\nPC = Palliative care;\nTO = Temporary unemployment due to medical circumstances;\nS = Sick;\nZB = Sick because of childbirth;\nZOD = Sick because of organ donation;\nPR = Pregnancy/childbirth;\nZZW = Sick because of pregnancy;",
                         "format": ""
                       },
                       "ViIr": {
@@ -10729,7 +10729,7 @@
                       },
                       "SfNt": {
                         "type": "boolean",
-                        "description": "\u0027Vangnet\u0027 arrangement",
+                        "description": "'Vangnet' arrangement",
                         "format": ""
                       },
                       "RtDa": {
@@ -10799,7 +10799,7 @@
                           "6"
                         ],
                         "maxLength": 20,
-                        "description": "Reason for closing\n1 = Hersteld;\n2 = Uit dienst (einde contract);\n3 = Overleden;\n4 = Hersteld (gedeeltelijk arbeidsongeschikt);\n5 = Uit dienst (arbeidsongeschikt);\n6 = Aansluitend verzuim met andere oorzaak;",
+                        "description": "Reason for closing\n1 = Recovered;\n2 = No longer employed (termination of contract);\n3 = Deceased;\n4 = Recovered (partially unable to work);\n5 = No longer employed (unable to work);\n6 = Consecutive absence with other reason;",
                         "format": ""
                       },
                       "TPEn": {
@@ -10829,7 +10829,7 @@
                           "99"
                         ],
                         "maxLength": 20,
-                        "description": "Absence cause\n1 = Onbekend, geen of onvoldoende informatie;\n10 = Arbeidsongeval;\n11 = Verkeersongeval met regresmogelijkheid;\n2 = Bedrijfssportongeval;\n3 = Bedrijfsverkeersongeval;\n4 = Overige bedrijfsongevallen;\n5 = Sportongeval;\n6 = Verkeersongeval;\n7 = Overige ongevallen;\n8 = Overige priv\u00E9 oorzaken;\n9 = Overige arbeidsgebonden oorzaken;\n99 = Overige redenen;",
+                        "description": "Absence cause\n1 = Unknown, no or insuffient information;\n10 = Industrial accident;\n11 = Verkeersongeval met regresmogelijkheid;\n2 = Company sports accident;\n3 = Company road accident;\n4 = Other industrial accidents;\n5 = Sports accident;\n6 = Road accident;\n7 = Other accidents;\n8 = Other private causes;\n9 = Other work related causes;\n99 = Other reasons;",
                         "format": ""
                       },
                       "AcAr": {
@@ -10854,7 +10854,7 @@
                           "17"
                         ],
                         "maxLength": 20,
-                        "description": "ARBO service action\n01 = Conform afspraak;\n02 = Huisbezoek verzuimrapporteur;\n03 = Uitnodigen spreekuur BA;\n04 = Spoedcontrole;\n05 = Actie in overleg;\n06 = Uitnodigen spreekuur binnen 24 uur;\n07 = Overleg BA;\n08 = Geen actie;\n09 = Geen huisbezoek;\n10 = Huisbezoek dag 1;\n11 = Huisbezoek dag 2/3;\n12 = Schriftelijke enqu\u00EAte;\n13 = Telefonische enqu\u00EAte;\n14 = Spreekuuroproep;\n15 = Administratieve controle;\n16 = Controle op het werk;\n17 = Avond/weekend controle;",
+                        "description": "ARBO service action\n01 = In conformity with agreement|;\n02 = House call absence reporter;\n03 = Invite for consultation BA;\n04 = Urgency control;\n05 = Action in consultation;\n06 = Invite for consultation within 24 hours;\n07 = Consultation BA;\n08 = No action;\n09 = No house call;\n10 = House call day 1;\n11 = House call day 2/3;\n12 = Written survey;\n13 = Telephone survey;\n14 = Surgery call;\n15 = Administrative check;\n16 = Check of the work;\n17 = Evening/weekend check;",
                         "format": ""
                       },
                       "ReAe": {
@@ -10874,7 +10874,7 @@
                           "99"
                         ],
                         "maxLength": 20,
-                        "description": "Absence end reason\n01 = Hersteld;\n03 = Overleden;\n04 = Uit dienst;\n05 = Overgang naar WAZO;\n07 = WIA;\n08 = WGA \u003C 35%;\n09 = WGA 35-80%;\n10 = IVA 80-100%;\n11 = WIA 80-100%;\n12 = Einde WGA;\n13 = Ziek uit dienst;\n99 = Onbekend;",
+                        "description": "Absence end reason\n01 = Recovered;\n03 = Deceased;\n04 = Employment ended;\n05 = Transit to 'WAZO';\n07 = 'WIA';\n08 = WGA < 35%;\n09 = WGA 35-80%;\n10 = IVA 80-100%;\n11 = WIA 80-100%;\n12 = 'WGA' end;\n13 = Sick after end of employment;\n99 = Unknown;",
                         "format": ""
                       },
                       "DaPr": {
@@ -11269,7 +11269,7 @@
                                                       "HmAd": {
                                                         "type": "string",
                                                         "maxLength": 30,
-                                                        "description": "House number addition",
+                                                        "description": "Extension (a, b, etc.) to house number",
                                                         "format": ""
                                                       },
                                                       "ZpCd": {
@@ -11358,7 +11358,7 @@
                     "properties": {
                       "AbId": {
                         "type": "integer",
-                        "description": "$17367=Identity",
+                        "description": "Identity",
                         "format": ""
                       },
                       "DaEn": {
@@ -11382,7 +11382,7 @@
                           "6"
                         ],
                         "maxLength": 20,
-                        "description": "Reason for closing\n1 = Hersteld;\n2 = Uit dienst (einde contract);\n3 = Overleden;\n4 = Hersteld (gedeeltelijk arbeidsongeschikt);\n5 = Uit dienst (arbeidsongeschikt);\n6 = Aansluitend verzuim met andere oorzaak;",
+                        "description": "Reason for closing\n1 = Recovered;\n2 = No longer employed (termination of contract);\n3 = Deceased;\n4 = Recovered (partially unable to work);\n5 = No longer employed (unable to work);\n6 = Consecutive absence with other reason;",
                         "format": ""
                       },
                       "TPEn": {
@@ -11417,7 +11417,7 @@
                           "99"
                         ],
                         "maxLength": 20,
-                        "description": "Absence end reason\n01 = Hersteld;\n03 = Overleden;\n04 = Uit dienst;\n05 = Overgang naar WAZO;\n07 = WIA;\n08 = WGA \u003C 35%;\n09 = WGA 35-80%;\n10 = IVA 80-100%;\n11 = WIA 80-100%;\n12 = Einde WGA;\n13 = Ziek uit dienst;\n99 = Onbekend;",
+                        "description": "Absence end reason\n01 = Recovered;\n03 = Deceased;\n04 = Employment ended;\n05 = Transit to 'WAZO';\n07 = 'WIA';\n08 = WGA < 35%;\n09 = WGA 35-80%;\n10 = IVA 80-100%;\n11 = WIA 80-100%;\n12 = 'WGA' end;\n13 = Sick after end of employment;\n99 = Unknown;",
                         "format": ""
                       },
                       "ProfileId": {
@@ -11473,7 +11473,7 @@
         "name": "Authorization",
         "type": "apiKey",
         "in": "header",
-        "description": "Convert the XML token to Base64 and add \u0027AfasToken \u0027 in front of it."
+        "description": "Convert the XML token to Base64 and add 'AfasToken ' in front of it."
       }
     },
     "parameters": {
@@ -11481,7 +11481,7 @@
         "name": "Accept-Language",
         "in": "header",
         "required": false,
-        "description": "Indicates the client\u0027s preferred language for the response. If not provided, the API defaults to the base environment language.",
+        "description": "Indicates the client's preferred language for the response. If not provided, the API defaults to the base environment language.",
         "schema": {
           "type": "string",
           "enum": [

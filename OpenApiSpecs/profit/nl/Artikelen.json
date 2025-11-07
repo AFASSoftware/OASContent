@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "6.6.9",
+    "version": "7.7.10",
     "title": "AFAS Artikelen API",
     "description": "Deze API beschrijft de endpoints gerelateerd aan Artikelen. Gebruik deze API met de functionele beschrijving van de API."
   },
@@ -159,7 +159,7 @@
                       "Element": {
                         "Fields": {
                           "ItCd": "3203",
-                          "Ds": "Actiesysteem\u003E",
+                          "Ds": "Actiesysteem>",
                           "DsEx": "Speciale aanbieding",
                           "ChDs": "0",
                           "Grp": "300",
@@ -3025,7 +3025,7 @@
     "/connectors/FbUpdateAdB": {
       "post": {
         "summary": "Artikeldimensie per item",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_191.htm",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_192_2.htm",
         "operationId": "POST_FbUpdateAdB",
         "requestBody": {
           "content": {
@@ -3160,7 +3160,7 @@
                 "examples": {
                   "Example response": {
                     "value": {
-                      "filedata": "iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAYAAAAxU7r0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAANRoSURBVHhe7L0HgGVHda67\u002BuTQOUwezSjnBAgEQgQ=",
+                      "filedata": "iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAYAAAAxU7r0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAANRoSURBVHhe7L0HgGVHda67+uTQOUwezSjnBAgEQgQ=",
                       "mimetype": "image/png"
                     }
                   }
@@ -3476,7 +3476,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id\u0027s can be found in the metainfo request result.",
+        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -3622,7 +3622,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -3704,7 +3704,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -3916,7 +3916,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -4092,7 +4092,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -4244,7 +4244,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -4388,7 +4388,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -4568,7 +4568,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -4715,6 +4715,190 @@
         ]
       }
     },
+    "/connectors/Profit_Stock": {
+      "get": {
+        "summary": "Voorraad (virtueel) per locatie",
+        "operationId": "Get_Profit_Stock",
+        "description": " ",
+        "parameters": [
+          {
+            "name": "skip",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results skipped. Starts at 0",
+            "schema": {
+              "type": "number",
+              "example": 0
+            }
+          },
+          {
+            "name": "take",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results returned",
+            "schema": {
+              "type": "number",
+              "example": 100
+            }
+          },
+          {
+            "name": "orderbyfieldids",
+            "in": "query",
+            "required": false,
+            "description": "Must be used to prevent reordered results",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterfieldids",
+            "in": "query",
+            "required": false,
+            "description": "The fieldIds of the values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filtervalues",
+            "in": "query",
+            "required": false,
+            "description": "The values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "operatortypes",
+            "in": "query",
+            "required": false,
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
+            "schema": {
+              "type": "number",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            }
+          },
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "skip": {
+                      "type": "integer"
+                    },
+                    "take": {
+                      "type": "integer"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "ItemTypeCode": {
+                            "type": "string",
+                            "description": "Type item code"
+                          },
+                          "ItemCodeId": {
+                            "type": "string",
+                            "description": "Itemcode"
+                          },
+                          "Description": {
+                            "type": "string",
+                            "description": "Omschrijving"
+                          },
+                          "WareHouse": {
+                            "type": "string",
+                            "description": "Magazijn"
+                          },
+                          "Location": {
+                            "type": "string",
+                            "description": "Locatie"
+                          },
+                          "StockActual": {
+                            "type": "number",
+                            "description": "Op voorraad"
+                          },
+                          "StockEconomic": {
+                            "type": "number",
+                            "description": "Economische voorraad"
+                          },
+                          "UnitId": {
+                            "type": "string",
+                            "description": "Eenheid"
+                          },
+                          "BatchNumberId": {
+                            "type": "string",
+                            "description": "Partijnummer"
+                          },
+                          "SerialNumberId": {
+                            "type": "string",
+                            "description": "Serienummer"
+                          },
+                          "StockDimCode1": {
+                            "type": "string",
+                            "description": "Artikeldimensiecode 1"
+                          },
+                          "StockDimCode2": {
+                            "type": "string",
+                            "description": "Artikeldimensiecode 2"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "GET"
+        ]
+      }
+    },
     "/connectors/Profit_Unit_per_Item": {
       "get": {
         "summary": "Eenheid per item",
@@ -4772,7 +4956,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -4924,6 +5108,530 @@
         },
         "operationId": "get_ProfitVersion"
       }
+    },
+    "/connectors/FbBatchNumber": {
+      "post": {
+        "summary": "Partijnummer",
+        "description": "\n\rAlleen beschikbaar onder conditie: Partijen (activering)\n\r https://help.afas.nl/help/NL/SE/137826.htm",
+        "operationId": "POST_FbBatchNumber",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FbBatchNumber_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Partijnummer"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Partijnummer",
+        "description": "\n\rAlleen beschikbaar onder conditie: Partijen (activering)\n\r https://help.afas.nl/help/NL/SE/137826.htm",
+        "operationId": "PUT_FbBatchNumber",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FbBatchNumber_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Partijnummer"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/PtPriceRevisionFormula": {
+      "post": {
+        "summary": "Prijsherzieningsformule",
+        "description": "\n\rAlleen beschikbaar onder conditie: Bouw België\n\r ",
+        "operationId": "POST_PtPriceRevisionFormula",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PtPriceRevisionFormula_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Prijsherzieningsformule"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Prijsherzieningsformule",
+        "description": "\n\rAlleen beschikbaar onder conditie: Bouw België\n\r ",
+        "operationId": "PUT_PtPriceRevisionFormula",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PtPriceRevisionFormula_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Prijsherzieningsformule"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/PtPriceRevisionFormula/PtPriceRevisionFormulaLines": {
+      "post": {
+        "summary": "Prijsherzieningsformule",
+        "description": "Update main record in PtPriceRevisionFormula and insert subrecord into PtPriceRevisionFormulaLines. \n\rAlleen beschikbaar onder conditie: Bouw België\n\r ",
+        "operationId": "POSTSubRecordPtPriceRevisionFormulaPtPriceRevisionFormulaLines",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PtPriceRevisionFormula_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Prijsherzieningsformule"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/PtPriceRevisionFormula/PtPriceRevisionFormula/@Id/{Id}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "Id",
+          "in": "path",
+          "required": true,
+          "description": "Code"
+        }
+      ],
+      "delete": {
+        "summary": "Prijsherzieningsformule",
+        "operationId": "DELETE_PtPriceRevisionFormula",
+        "description": "\n\r ",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Prijsherzieningsformule"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/FbSerialNumber": {
+      "post": {
+        "summary": "Serienummer",
+        "description": "\n\rAlleen beschikbaar onder conditie: Serienummers (activering)\n\r https://help.afas.nl/help/NL/SE/137832.htm",
+        "operationId": "POST_FbSerialNumber",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FbSerialNumber_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Serienummer"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Serienummer",
+        "description": "\n\rAlleen beschikbaar onder conditie: Serienummers (activering)\n\r https://help.afas.nl/help/NL/SE/137832.htm",
+        "operationId": "PUT_FbSerialNumber",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FbSerialNumber_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Serienummer"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/FbSSCC": {
+      "put": {
+        "summary": "SSCC-labels update en delete",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/132962.htm",
+        "operationId": "PUT_FbSSCC",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FbSSCC_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "SSCC-labels update en delete"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/FbSSCC/FbSSCCLabels/@BaCo/{BaCo}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "BaCo",
+          "in": "path",
+          "required": true,
+          "description": "Barcode"
+        }
+      ],
+      "delete": {
+        "summary": "SSCC-labels update en delete",
+        "operationId": "DELETE_FbSSCC",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/132962.htm",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "SSCC-labels update en delete"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
     }
   },
   "tags": [
@@ -4958,10 +5666,246 @@
     {
       "name": "Artikeldimensie per item",
       "description": "Artikeldimensie per item"
+    },
+    {
+      "name": "Partijnummer",
+      "description": "Partijnummer"
+    },
+    {
+      "name": "Prijsherzieningsformule",
+      "description": "Prijsherzieningsformule"
+    },
+    {
+      "name": "Serienummer",
+      "description": "Serienummer"
+    },
+    {
+      "name": "SSCC-labels update en delete",
+      "description": "SSCC-labels update en delete"
     }
   ],
   "components": {
     "schemas": {
+      "FbBatchNumber_POST": {
+        "type": "object",
+        "properties": {
+          "FbBatchNumber": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "VaIt": {
+                        "type": "string",
+                        "enum": [
+                          "Wst",
+                          "Pid",
+                          "Deg",
+                          "Dim",
+                          "Art",
+                          "Txt",
+                          "Sub",
+                          "Tsl",
+                          "Kst",
+                          "Sam",
+                          "Crs"
+                        ],
+                        "maxLength": 20,
+                        "description": "Type item\nWst = Werksoort;\nPid = Productie-indicator;\nDeg = Deeg;\nDim = Artikeldimensietotaal;\nArt = Artikel;\nTxt = Tekst;\nSub = Subtotaal;\nTsl = Toeslag;\nKst = Kosten;\nSam = Samenstelling;\nCrs = Cursus;",
+                        "format": ""
+                      },
+                      "ItCd": {
+                        "type": "string",
+                        "maxLength": 40,
+                        "description": "Itemcode",
+                        "format": ""
+                      },
+                      "BaNu": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Partijnummer",
+                        "format": ""
+                      },
+                      "BaNuNew": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Gewijzigd partijnummer",
+                        "format": ""
+                      },
+                      "VaBc": {
+                        "type": "string",
+                        "enum": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4",
+                          "5",
+                          "6",
+                          "7",
+                          "8"
+                        ],
+                        "maxLength": 20,
+                        "description": "Type barcode\n0 = Geen controle;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (controlegetal);",
+                        "format": ""
+                      },
+                      "BaCo": {
+                        "type": "string",
+                        "maxLength": 30,
+                        "description": "Barcode",
+                        "format": ""
+                      },
+                      "DaEx": {
+                        "type": "string",
+                        "description": "Expiratiedatum",
+                        "format": "date"
+                      },
+                      "Bl": {
+                        "type": "boolean",
+                        "description": "Geblokkeerd",
+                        "format": ""
+                      },
+                      "Re": {
+                        "type": "string",
+                        "description": "Opmerking",
+                        "format": "byte"
+                      },
+                      "FileName": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Filename",
+                        "format": ""
+                      },
+                      "FileStream": {
+                        "type": "string",
+                        "description": "File as byte-array",
+                        "format": "byte"
+                      }
+                    },
+                    "required": [
+                      "VaIt",
+                      "ItCd",
+                      "BaNu"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "FbBatchNumber_PUT": {
+        "type": "object",
+        "properties": {
+          "FbBatchNumber": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "VaIt": {
+                        "type": "string",
+                        "enum": [
+                          "Wst",
+                          "Pid",
+                          "Deg",
+                          "Dim",
+                          "Art",
+                          "Txt",
+                          "Sub",
+                          "Tsl",
+                          "Kst",
+                          "Sam",
+                          "Crs"
+                        ],
+                        "maxLength": 20,
+                        "description": "Type item\nWst = Werksoort;\nPid = Productie-indicator;\nDeg = Deeg;\nDim = Artikeldimensietotaal;\nArt = Artikel;\nTxt = Tekst;\nSub = Subtotaal;\nTsl = Toeslag;\nKst = Kosten;\nSam = Samenstelling;\nCrs = Cursus;",
+                        "format": ""
+                      },
+                      "ItCd": {
+                        "type": "string",
+                        "maxLength": 40,
+                        "description": "Itemcode",
+                        "format": ""
+                      },
+                      "BaNu": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Partijnummer",
+                        "format": ""
+                      },
+                      "BaNuNew": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Gewijzigd partijnummer",
+                        "format": ""
+                      },
+                      "VaBc": {
+                        "type": "string",
+                        "enum": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4",
+                          "5",
+                          "6",
+                          "7",
+                          "8"
+                        ],
+                        "maxLength": 20,
+                        "description": "Type barcode\n0 = Geen controle;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (controlegetal);",
+                        "format": ""
+                      },
+                      "BaCo": {
+                        "type": "string",
+                        "maxLength": 30,
+                        "description": "Barcode",
+                        "format": ""
+                      },
+                      "DaEx": {
+                        "type": "string",
+                        "description": "Expiratiedatum",
+                        "format": "date"
+                      },
+                      "Bl": {
+                        "type": "boolean",
+                        "description": "Geblokkeerd",
+                        "format": ""
+                      },
+                      "Re": {
+                        "type": "string",
+                        "description": "Opmerking",
+                        "format": "byte"
+                      },
+                      "FileName": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Filename",
+                        "format": ""
+                      },
+                      "FileStream": {
+                        "type": "string",
+                        "description": "File as byte-array",
+                        "format": "byte"
+                      }
+                    },
+                    "required": [
+                      "VaIt"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "FbComposition_POST": {
         "type": "object",
         "properties": {
@@ -5202,7 +6146,7 @@
                           "5"
                         ],
                         "maxLength": 20,
-                        "description": "Gewichtseenheid\n0 = Geen gewicht;\n1 = Microgram (\u00B5g);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
+                        "description": "Gewichtseenheid\n0 = Geen gewicht;\n1 = Microgram (µg);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
                         "format": ""
                       },
                       "NeWe": {
@@ -6185,7 +7129,7 @@
                           "5"
                         ],
                         "maxLength": 20,
-                        "description": "Gewichtseenheid\n0 = Geen gewicht;\n1 = Microgram (\u00B5g);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
+                        "description": "Gewichtseenheid\n0 = Geen gewicht;\n1 = Microgram (µg);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
                         "format": ""
                       },
                       "NeWe": {
@@ -7396,7 +8340,7 @@
                           "5"
                         ],
                         "maxLength": 20,
-                        "description": "Gewichtseenheid\n0 = Geen gewicht;\n1 = Microgram (\u00B5g);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
+                        "description": "Gewichtseenheid\n0 = Geen gewicht;\n1 = Microgram (µg);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
                         "format": ""
                       },
                       "NeWe": {
@@ -8159,7 +9103,7 @@
                           "5"
                         ],
                         "maxLength": 20,
-                        "description": "Gewichtseenheid\n0 = Geen gewicht;\n1 = Microgram (\u00B5g);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
+                        "description": "Gewichtseenheid\n0 = Geen gewicht;\n1 = Microgram (µg);\n2 = Milligram (mg);\n3 = Gram (g);\n4 = Kilogram (kg);\n5 = Ton;",
                         "format": ""
                       },
                       "NeWe": {
@@ -8660,6 +9604,330 @@
           }
         }
       },
+      "FbSerialNumber_POST": {
+        "type": "object",
+        "properties": {
+          "FbSerialNumber": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "VaIt": {
+                        "type": "string",
+                        "enum": [
+                          "Wst",
+                          "Pid",
+                          "Deg",
+                          "Dim",
+                          "Art",
+                          "Txt",
+                          "Sub",
+                          "Tsl",
+                          "Kst",
+                          "Sam",
+                          "Crs"
+                        ],
+                        "maxLength": 20,
+                        "description": "Type item\nWst = Werksoort;\nPid = Productie-indicator;\nDeg = Deeg;\nDim = Artikeldimensietotaal;\nArt = Artikel;\nTxt = Tekst;\nSub = Subtotaal;\nTsl = Toeslag;\nKst = Kosten;\nSam = Samenstelling;\nCrs = Cursus;",
+                        "format": ""
+                      },
+                      "ItCd": {
+                        "type": "string",
+                        "maxLength": 40,
+                        "description": "Itemcode",
+                        "format": ""
+                      },
+                      "SeNu": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Serienummer",
+                        "format": ""
+                      },
+                      "SeNuNew": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Gewijzigd serienummer",
+                        "format": ""
+                      },
+                      "VaBc": {
+                        "type": "string",
+                        "enum": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4",
+                          "5",
+                          "6",
+                          "7",
+                          "8"
+                        ],
+                        "maxLength": 20,
+                        "description": "Type barcode\n0 = Geen controle;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (controlegetal);",
+                        "format": ""
+                      },
+                      "BaCo": {
+                        "type": "string",
+                        "maxLength": 30,
+                        "description": "Barcode",
+                        "format": ""
+                      },
+                      "Bl": {
+                        "type": "boolean",
+                        "description": "Geblokkeerd",
+                        "format": ""
+                      },
+                      "Re": {
+                        "type": "string",
+                        "description": "Opmerking",
+                        "format": "byte"
+                      }
+                    },
+                    "required": [
+                      "VaIt",
+                      "ItCd",
+                      "SeNu"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "FbSerialNumber_PUT": {
+        "type": "object",
+        "properties": {
+          "FbSerialNumber": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "VaIt": {
+                        "type": "string",
+                        "enum": [
+                          "Wst",
+                          "Pid",
+                          "Deg",
+                          "Dim",
+                          "Art",
+                          "Txt",
+                          "Sub",
+                          "Tsl",
+                          "Kst",
+                          "Sam",
+                          "Crs"
+                        ],
+                        "maxLength": 20,
+                        "description": "Type item\nWst = Werksoort;\nPid = Productie-indicator;\nDeg = Deeg;\nDim = Artikeldimensietotaal;\nArt = Artikel;\nTxt = Tekst;\nSub = Subtotaal;\nTsl = Toeslag;\nKst = Kosten;\nSam = Samenstelling;\nCrs = Cursus;",
+                        "format": ""
+                      },
+                      "ItCd": {
+                        "type": "string",
+                        "maxLength": 40,
+                        "description": "Itemcode",
+                        "format": ""
+                      },
+                      "SeNu": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Serienummer",
+                        "format": ""
+                      },
+                      "SeNuNew": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Gewijzigd serienummer",
+                        "format": ""
+                      },
+                      "VaBc": {
+                        "type": "string",
+                        "enum": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4",
+                          "5",
+                          "6",
+                          "7",
+                          "8"
+                        ],
+                        "maxLength": 20,
+                        "description": "Type barcode\n0 = Geen controle;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (controlegetal);",
+                        "format": ""
+                      },
+                      "BaCo": {
+                        "type": "string",
+                        "maxLength": 30,
+                        "description": "Barcode",
+                        "format": ""
+                      },
+                      "Bl": {
+                        "type": "boolean",
+                        "description": "Geblokkeerd",
+                        "format": ""
+                      },
+                      "Re": {
+                        "type": "string",
+                        "description": "Opmerking",
+                        "format": "byte"
+                      }
+                    },
+                    "required": [
+                      "VaIt"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "FbSSCC_PUT": {
+        "type": "object",
+        "properties": {
+          "FbSSCCLabels": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "VaBc": {
+                        "type": "string",
+                        "enum": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4",
+                          "5",
+                          "6",
+                          "7",
+                          "8"
+                        ],
+                        "maxLength": 20,
+                        "description": "Type barcode\n0 = Geen controle;\n1 = Barcode EAN8;\n2 = Barcode UPC;\n3 = Barcode EAN13;\n4 = Barcode EAN14;\n5 = Barcode SSCC;\n6 = Code 128;\n7 = Interleaved 2/5;\n8 = Interleaved 2/5 (controlegetal);",
+                        "format": ""
+                      },
+                      "BaCo": {
+                        "type": "string",
+                        "maxLength": 30,
+                        "description": "Barcode",
+                        "format": ""
+                      },
+                      "OrNu": {
+                        "type": "string",
+                        "maxLength": 12,
+                        "description": "Nummer pakbon",
+                        "format": ""
+                      },
+                      "GuLi": {
+                        "type": "string",
+                        "maxLength": 38,
+                        "description": "GUID regel",
+                        "format": ""
+                      },
+                      "VaIt": {
+                        "type": "string",
+                        "enum": [
+                          "Wst",
+                          "Pid",
+                          "Deg",
+                          "Dim",
+                          "Art",
+                          "Txt",
+                          "Sub",
+                          "Tsl",
+                          "Kst",
+                          "Sam",
+                          "Crs"
+                        ],
+                        "maxLength": 20,
+                        "description": "Type item\nWst = Werksoort;\nPid = Productie-indicator;\nDeg = Deeg;\nDim = Artikeldimensietotaal;\nArt = Artikel;\nTxt = Tekst;\nSub = Subtotaal;\nTsl = Toeslag;\nKst = Kosten;\nSam = Samenstelling;\nCrs = Cursus;",
+                        "format": ""
+                      },
+                      "BiId": {
+                        "type": "string",
+                        "maxLength": 40,
+                        "description": "Itemcode",
+                        "format": ""
+                      },
+                      "OrDa": {
+                        "type": "string",
+                        "description": "Pakbon datum",
+                        "format": "date"
+                      },
+                      "QuCl": {
+                        "type": "number",
+                        "multipleOf": 1E-05,
+                        "description": "Aantal colli",
+                        "format": "float"
+                      },
+                      "BiDc": {
+                        "type": "integer",
+                        "description": "Aantal decimalen",
+                        "format": ""
+                      },
+                      "BiUn": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Eenheid",
+                        "format": ""
+                      },
+                      "ThDa": {
+                        "type": "string",
+                        "description": "THT datum",
+                        "format": "date"
+                      },
+                      "Prin": {
+                        "type": "boolean",
+                        "description": "Afgedrukt",
+                        "format": ""
+                      },
+                      "DeAd": {
+                        "type": "boolean",
+                        "description": "DESADV",
+                        "format": ""
+                      },
+                      "SuPa": {
+                        "type": "boolean",
+                        "description": "Bovenliggende ladingdrager",
+                        "format": ""
+                      },
+                      "Qu": {
+                        "type": "number",
+                        "multipleOf": 1E-05,
+                        "description": "Aantal",
+                        "format": "float"
+                      },
+                      "QuDc": {
+                        "type": "integer",
+                        "description": "Aantal decimalen",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "BaCo"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "FbUnitBasicItem_POST": {
         "type": "object",
         "properties": {
@@ -8937,12 +10205,7 @@
                         "description": "Berekening o.b.v. gewicht 5",
                         "format": ""
                       }
-                    },
-                    "required": [
-                      "VaIt",
-                      "ItCd",
-                      "BiUn"
-                    ]
+                    }
                   }
                 }
               }
@@ -9368,12 +10631,242 @@
                         "description": "Locatie",
                         "format": ""
                       }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "PtPriceRevisionFormula_POST": {
+        "type": "object",
+        "properties": {
+          "PtPriceRevisionFormula": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "integer",
+                        "description": "Code",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 80,
+                        "description": "Omschrijving",
+                        "format": ""
+                      },
+                      "PrId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Project",
+                        "format": ""
+                      }
                     },
                     "required": [
-                      "VaIt",
-                      "ItCd",
-                      "StL1"
+                      "Ds",
+                      "PrId"
                     ]
+                  },
+                  "Objects": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "PtPriceRevisionFormulaLines": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "FoId": {
+                                        "type": "string",
+                                        "maxLength": 12,
+                                        "description": "Herzieningsformule",
+                                        "format": ""
+                                      },
+                                      "WeCo": {
+                                        "type": "number",
+                                        "description": "Wegingscoëfficiënt",
+                                        "format": "number"
+                                      },
+                                      "InSt": {
+                                        "type": "number",
+                                        "description": "Index aanvang",
+                                        "format": "number"
+                                      },
+                                      "ViPr": {
+                                        "type": "string",
+                                        "enum": [
+                                          "S"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Component\nS = Lonen;",
+                                        "format": ""
+                                      },
+                                      "ViPp": {
+                                        "type": "string",
+                                        "enum": [
+                                          "A",
+                                          "B1",
+                                          "B10",
+                                          "B2",
+                                          "B3",
+                                          "B4",
+                                          "B5",
+                                          "B6",
+                                          "B7",
+                                          "B8",
+                                          "B9",
+                                          "C"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Parameter\nA = A;\nB1 = B1;\nB10 = B10;\nB2 = B2;\nB3 = B3;\nB4 = B4;\nB5 = B5;\nB6 = B6;\nB7 = B7;\nB8 = B8;\nB9 = B9;\nC = C;",
+                                        "format": ""
+                                      }
+                                    },
+                                    "required": [
+                                      "FoId",
+                                      "WeCo",
+                                      "ViPp"
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "PtPriceRevisionFormula_PUT": {
+        "type": "object",
+        "properties": {
+          "PtPriceRevisionFormula": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "integer",
+                        "description": "Code",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 80,
+                        "description": "Omschrijving",
+                        "format": ""
+                      },
+                      "PrId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Project",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "Id"
+                    ]
+                  },
+                  "Objects": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "PtPriceRevisionFormulaLines": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "FoId": {
+                                        "type": "string",
+                                        "maxLength": 12,
+                                        "description": "Herzieningsformule",
+                                        "format": ""
+                                      },
+                                      "WeCo": {
+                                        "type": "number",
+                                        "multipleOf": 0.01,
+                                        "description": "Wegingscoëfficiënt",
+                                        "format": "float"
+                                      },
+                                      "InSt": {
+                                        "type": "number",
+                                        "multipleOf": 1E-05,
+                                        "description": "Index aanvang",
+                                        "format": "float"
+                                      },
+                                      "ViPr": {
+                                        "type": "string",
+                                        "enum": [
+                                          "S"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Component\nS = Lonen;",
+                                        "format": ""
+                                      },
+                                      "ViPp": {
+                                        "type": "string",
+                                        "enum": [
+                                          "A",
+                                          "B1",
+                                          "B10",
+                                          "B2",
+                                          "B3",
+                                          "B4",
+                                          "B5",
+                                          "B6",
+                                          "B7",
+                                          "B8",
+                                          "B9",
+                                          "C"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Parameter\nA = A;\nB1 = B1;\nB10 = B10;\nB2 = B2;\nB3 = B3;\nB4 = B4;\nB5 = B5;\nB6 = B6;\nB7 = B7;\nB8 = B8;\nB9 = B9;\nC = C;",
+                                        "format": ""
+                                      }
+                                    },
+                                    "required": [
+                                      "FoId",
+                                      "WeCo",
+                                      "ViPp"
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
                   }
                 }
               }
@@ -9387,7 +10880,7 @@
         "name": "Authorization",
         "type": "apiKey",
         "in": "header",
-        "description": "Convert the XML token to Base64 and add \u0027AfasToken \u0027 in front of it."
+        "description": "Convert the XML token to Base64 and add 'AfasToken ' in front of it."
       }
     },
     "parameters": {
@@ -9395,7 +10888,7 @@
         "name": "Accept-Language",
         "in": "header",
         "required": false,
-        "description": "Indicates the client\u0027s preferred language for the response. If not provided, the API defaults to the base environment language.",
+        "description": "Indicates the client's preferred language for the response. If not provided, the API defaults to the base environment language.",
         "schema": {
           "type": "string",
           "enum": [

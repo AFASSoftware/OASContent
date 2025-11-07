@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "6.6.9",
+    "version": "7.7.10",
     "title": "AFAS Projecten en nacalculatie API",
     "description": "Deze API beschrijft de endpoints gerelateerd aan Projecten en nacalculatie. Gebruik deze API met de functionele beschrijving van de API."
   },
@@ -203,7 +203,7 @@
                                   "Fields": {
                                     "VaIt": "2",
                                     "ItCd": "VC400",
-                                    "Ds": "Vlonderplank Composiet \u0027Antraciet - 400x15x2.5cm",
+                                    "Ds": "Vlonderplank Composiet 'Antraciet - 400x15x2.5cm",
                                     "UnId": "STK",
                                     "QuUn": "100",
                                     "PrFc": "1",
@@ -426,35 +426,35 @@
                               {
                                 "Fields": {
                                   "GuLi": "{57E41029-1B11-4548-A9AB-2483D824395B}",
-                                  "Ds": "Gewijzigde datum planning \u002B benodigd",
+                                  "Ds": "Gewijzigde datum planning + benodigd",
                                   "PlDa": "2015-06-01"
                                 }
                               },
                               {
                                 "Fields": {
                                   "GuLi": "{213E6520-3AC6-4E97-9B9A-EEFF067572C6}",
-                                  "Ds": "Gewijzigde datum planning \u002B benodigd",
+                                  "Ds": "Gewijzigde datum planning + benodigd",
                                   "PlDa": "2015-06-01"
                                 }
                               },
                               {
                                 "Fields": {
                                   "GuLi": "{7E4C792E-C111-4F31-8545-0B861BC7B210}",
-                                  "Ds": "Gewijzigde datum planning \u002B benodigd",
+                                  "Ds": "Gewijzigde datum planning + benodigd",
                                   "PlDa": "2015-06-01"
                                 }
                               },
                               {
                                 "Fields": {
                                   "GuLi": "{195F1674-3112-4E0E-BE6B-3268E08E2734}",
-                                  "Ds": "Gewijzigde datum planning \u002B benodigd",
+                                  "Ds": "Gewijzigde datum planning + benodigd",
                                   "PlDa": "2015-06-01"
                                 }
                               },
                               {
                                 "Fields": {
                                   "GuLi": "{D73DE628-2125-463C-8A99-D153C3CD8ECF}",
-                                  "Ds": "Gewijzigde datum planning \u002B benodigd",
+                                  "Ds": "Gewijzigde datum planning + benodigd",
                                   "PlDa": "2015-06-01"
                                 }
                               }
@@ -1618,7 +1618,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id\u0027s can be found in the metainfo request result.",
+        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -1764,7 +1764,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -1846,7 +1846,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -2002,7 +2002,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -2158,7 +2158,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -2342,7 +2342,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -2514,7 +2514,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -2710,7 +2710,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -2854,7 +2854,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -3054,7 +3054,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -3210,7 +3210,7 @@
     "/connectors/PtLinesToBeInvoiced": {
       "post": {
         "summary": "Te factureren regel",
-        "description": "\n\rAlleen beschikbaar onder conditie: Project\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_110.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Projecten\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_110.htm",
         "operationId": "POST_PtLinesToBeInvoiced",
         "requestBody": {
           "content": {
@@ -3421,7 +3421,7 @@
     "/connectors/PtPrognosisProject": {
       "post": {
         "summary": "Projectvoortgang",
-        "description": "\n\rAlleen beschikbaar onder conditie: Systeem Projecten (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Progress.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Projecten\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Progress.htm",
         "operationId": "POST_PtPrognosisProject",
         "requestBody": {
           "content": {
@@ -3517,7 +3517,7 @@
       },
       "put": {
         "summary": "Projectvoortgang",
-        "description": "\n\rAlleen beschikbaar onder conditie: Systeem Projecten (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Progress.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Projecten\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Progress.htm",
         "operationId": "PUT_PtPrognosisProject",
         "requestBody": {
           "content": {
@@ -3654,7 +3654,7 @@
     "/connectors/PtProject": {
       "post": {
         "summary": "Project",
-        "description": "\n\rAlleen beschikbaar onder conditie: Project\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Phase.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Projecten\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Phase.htm",
         "operationId": "POST_PtProject",
         "requestBody": {
           "content": {
@@ -4636,7 +4636,7 @@
                           "DeDi": "0",
                           "DeRe": "0",
                           "FileName": "example.png",
-                          "FileStream": "iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAIAAACzY\u002Ba1AAAEB0lEQVR4nO3YQU/yShiG4SmlBSwYjEIQCyaSqmHl//8NLNgZSaORAmJQxCC0dihzFs3hEPQkX8KXlid5rl1r9YW5w2RQ63Q6gpBl0n4BtC8mhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J42bRfwH88zxNCNBqN\u002BHK5XPZ6ve0HHMexLEsIoZQaj8fT6TSKouPjY9u2s9m93kiKo/d3KAnH4/H7\u002B/vp6enmThAEpmm22\u002B1fH57NZq1WS9f1fr//9PTkOA7i6L8i/Y00DEPXdSeTiWma2/eDIMjn8z\u002BfV0pNJpNarZbP5w3DaDabi8VisVhgjf6L0k\u002B4XC5N07y9vc3lctv3/28dfd9fr9fxtiaEMAzDNM2ddZzNZt1udz6fx5ePj48PDw9KqQRGJy/9jbRcLpfL5Z/34/W6v7\u002BXUhYKhXq9Hq\u002BdlFIIYRjG5knDMMIw3PmbJycng8Hg5uZmNpvN5/Pr62tN0xIYnbz0P4W/iqJISmmapuM47Xb76OjIdd0gCIQQ6/VaCLHdQ9O0n58w27bX67XnecPhsFarFQqFxEYn7EAT6rp\u002Bd3fXbDaz2Ww2m724uMjlcm9vb\u002BLfFdxeOKVUJrP7RnRdt2374\u002BMjl8tVq9UkRyfsQBP\u002BZJpmvI/FR4/VarX5kZRye3Pb8H1fCBGGYRRFCY9O0oEm/Pr66na739/f8aVSanPEyOfzmUxmc4iQUoZhuDlibPi\u002B//r6Wq/XdV2Pv/YlNjphB5rQsqxCoeB5XhiGq9VqMBhEUVSpVIQQmUzm7OxsNBr5vi\u002Bl7Pf7lmXtrKNS6vn5uVgsVqvVRqPx\u002Bfk5nU6TGZ289E\u002Bkv9I07erqajQa9Xq9\u002BBzvOM7m/yDn5\u002BdKKdd1hRClUuny8nLn119eXqSUrVZLCFEsFiuVynA4LJVKf7Lp7Tk6eVqn00n7NdBeDnQjpT/HhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEN4/cnznZiQb6hsAAAAASUVORK5CYII="
+                          "FileStream": "iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAIAAACzY+a1AAAEB0lEQVR4nO3YQU/yShiG4SmlBSwYjEIQCyaSqmHl//8NLNgZSaORAmJQxCC0dihzFs3hEPQkX8KXlid5rl1r9YW5w2RQ63Q6gpBl0n4BtC8mhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J42bRfwH88zxNCNBqN+HK5XPZ6ve0HHMexLEsIoZQaj8fT6TSKouPjY9u2s9m93kiKo/d3KAnH4/H7+/vp6enmThAEpmm22+1fH57NZq1WS9f1fr//9PTkOA7i6L8i/Y00DEPXdSeTiWma2/eDIMjn8z+fV0pNJpNarZbP5w3DaDabi8VisVhgjf6L0k+4XC5N07y9vc3lctv3/28dfd9fr9fxtiaEMAzDNM2ddZzNZt1udz6fx5ePj48PDw9KqQRGJy/9jbRcLpfL5Z/34/W6v7+XUhYKhXq9Hq+dlFIIYRjG5knDMMIw3PmbJycng8Hg5uZmNpvN5/Pr62tN0xIYnbz0P4W/iqJISmmapuM47Xb76OjIdd0gCIQQ6/VaCLHdQ9O0n58w27bX67XnecPhsFarFQqFxEYn7EAT6rp+d3fXbDaz2Ww2m724uMjlcm9vb+LfFdxeOKVUJrP7RnRdt2374+Mjl8tVq9UkRyfsQBP+ZJpmvI/FR4/VarX5kZRye3Pb8H1fCBGGYRRFCY9O0oEm/Pr66na739/f8aVSanPEyOfzmUxmc4iQUoZhuDlibPi+//r6Wq/XdV2Pv/YlNjphB5rQsqxCoeB5XhiGq9VqMBhEUVSpVIQQmUzm7OxsNBr5vi+l7Pf7lmXtrKNS6vn5uVgsVqvVRqPx+fk5nU6TGZ289E+kv9I07erqajQa9Xq9+BzvOM7m/yDn5+dKKdd1hRClUuny8nLn119eXqSUrVZLCFEsFiuVynA4LJVKf7Lp7Tk6eVqn00n7NdBeDnQjpT/HhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEN4/cnznZiQb6hsAAAAASUVORK5CYII="
                         }
                       }
                     }
@@ -4829,7 +4829,7 @@
       },
       "put": {
         "summary": "Project",
-        "description": "\n\rAlleen beschikbaar onder conditie: Project\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Phase.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Projecten\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Phase.htm",
         "operationId": "PUT_PtProject",
         "requestBody": {
           "content": {
@@ -5023,7 +5023,7 @@
                         "Fields": {
                           "PrId": "300000",
                           "FileName": "example.png",
-                          "FileStream": "iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAIAAACzY\u002Ba1AAAEB0lEQVR4nO3YQU/yShiG4SmlBSwYjEIQCyaSqmHl//8NLNgZSaORAmJQxCC0dihzFs3hEPQkX8KXlid5rl1r9YW5w2RQ63Q6gpBl0n4BtC8mhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J42bRfwH88zxNCNBqN\u002BHK5XPZ6ve0HHMexLEsIoZQaj8fT6TSKouPjY9u2s9m93kiKo/d3KAnH4/H7\u002B/vp6enmThAEpmm22\u002B1fH57NZq1WS9f1fr//9PTkOA7i6L8i/Y00DEPXdSeTiWma2/eDIMjn8z\u002BfV0pNJpNarZbP5w3DaDabi8VisVhgjf6L0k\u002B4XC5N07y9vc3lctv3/28dfd9fr9fxtiaEMAzDNM2ddZzNZt1udz6fx5ePj48PDw9KqQRGJy/9jbRcLpfL5Z/34/W6v7\u002BXUhYKhXq9Hq\u002BdlFIIYRjG5knDMMIw3PmbJycng8Hg5uZmNpvN5/Pr62tN0xIYnbz0P4W/iqJISmmapuM47Xb76OjIdd0gCIQQ6/VaCLHdQ9O0n58w27bX67XnecPhsFarFQqFxEYn7EAT6rp\u002Bd3fXbDaz2Ww2m724uMjlcm9vb\u002BLfFdxeOKVUJrP7RnRdt2374\u002BMjl8tVq9UkRyfsQBP\u002BZJpmvI/FR4/VarX5kZRye3Pb8H1fCBGGYRRFCY9O0oEm/Pr66na739/f8aVSanPEyOfzmUxmc4iQUoZhuDlibPi\u002B//r6Wq/XdV2Pv/YlNjphB5rQsqxCoeB5XhiGq9VqMBhEUVSpVIQQmUzm7OxsNBr5vi\u002Bl7Pf7lmXtrKNS6vn5uVgsVqvVRqPx\u002Bfk5nU6TGZ289E\u002Bkv9I07erqajQa9Xq9\u002BBzvOM7m/yDn5\u002BdKKdd1hRClUuny8nLn119eXqSUrVZLCFEsFiuVynA4LJVKf7Lp7Tk6eVqn00n7NdBeDnQjpT/HhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEN4/cnznZiQb6hsAAAAASUVORK5CYII="
+                          "FileStream": "iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAIAAACzY+a1AAAEB0lEQVR4nO3YQU/yShiG4SmlBSwYjEIQCyaSqmHl//8NLNgZSaORAmJQxCC0dihzFs3hEPQkX8KXlid5rl1r9YW5w2RQ63Q6gpBl0n4BtC8mhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J42bRfwH88zxNCNBqN+HK5XPZ6ve0HHMexLEsIoZQaj8fT6TSKouPjY9u2s9m93kiKo/d3KAnH4/H7+/vp6enmThAEpmm22+1fH57NZq1WS9f1fr//9PTkOA7i6L8i/Y00DEPXdSeTiWma2/eDIMjn8z+fV0pNJpNarZbP5w3DaDabi8VisVhgjf6L0k+4XC5N07y9vc3lctv3/28dfd9fr9fxtiaEMAzDNM2ddZzNZt1udz6fx5ePj48PDw9KqQRGJy/9jbRcLpfL5Z/34/W6v7+XUhYKhXq9Hq+dlFIIYRjG5knDMMIw3PmbJycng8Hg5uZmNpvN5/Pr62tN0xIYnbz0P4W/iqJISmmapuM47Xb76OjIdd0gCIQQ6/VaCLHdQ9O0n58w27bX67XnecPhsFarFQqFxEYn7EAT6rp+d3fXbDaz2Ww2m724uMjlcm9vb+LfFdxeOKVUJrP7RnRdt2374+Mjl8tVq9UkRyfsQBP+ZJpmvI/FR4/VarX5kZRye3Pb8H1fCBGGYRRFCY9O0oEm/Pr66na739/f8aVSanPEyOfzmUxmc4iQUoZhuDlibPi+//r6Wq/XdV2Pv/YlNjphB5rQsqxCoeB5XhiGq9VqMBhEUVSpVIQQmUzm7OxsNBr5vi+l7Pf7lmXtrKNS6vn5uVgsVqvVRqPx+fk5nU6TGZ289E+kv9I07erqajQa9Xq9+BzvOM7m/yDn5+dKKdd1hRClUuny8nLn119eXqSUrVZLCFEsFiuVynA4LJVKf7Lp7Tk6eVqn00n7NdBeDnQjpT/HhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEN4/cnznZiQb6hsAAAAASUVORK5CYII="
                         }
                       }
                     }
@@ -5253,7 +5253,7 @@
     "/connectors/PtProject/KnBasicAddressAdr": {
       "post": {
         "summary": "Project",
-        "description": "Update main record in PtProject and insert subrecord into KnBasicAddressAdr. \n\rAlleen beschikbaar onder conditie: Project\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Phase.htm",
+        "description": "Update main record in PtProject and insert subrecord into KnBasicAddressAdr. \n\rAlleen beschikbaar onder conditie: Projecten\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Phase.htm",
         "operationId": "POSTSubRecordPtProjectKnBasicAddressAdr",
         "requestBody": {
           "content": {
@@ -5409,7 +5409,7 @@
     "/connectors/PtProject/PtProjectStage": {
       "post": {
         "summary": "Project",
-        "description": "Update main record in PtProject and insert subrecord into PtProjectStage. \n\rAlleen beschikbaar onder conditie: Project\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Phase.htm",
+        "description": "Update main record in PtProject and insert subrecord into PtProjectStage. \n\rAlleen beschikbaar onder conditie: Projecten\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Phase.htm",
         "operationId": "POSTSubRecordPtProjectPtProjectStage",
         "requestBody": {
           "content": {
@@ -5565,7 +5565,7 @@
     "/connectors/PtProject/PtTailSpend": {
       "post": {
         "summary": "Project",
-        "description": "Update main record in PtProject and insert subrecord into PtTailSpend. \n\rAlleen beschikbaar onder conditie: Project\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Phase.htm",
+        "description": "Update main record in PtProject and insert subrecord into PtTailSpend. \n\rAlleen beschikbaar onder conditie: Projecten\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Phase.htm",
         "operationId": "POSTSubRecordPtProjectPtTailSpend",
         "requestBody": {
           "content": {
@@ -5778,7 +5778,7 @@
     "/connectors/PtProjectDimCode": {
       "post": {
         "summary": "Project / verbijzondering",
-        "description": "\n\rAlleen beschikbaar onder conditie: Project\n\r ",
+        "description": "\n\rAlleen beschikbaar onder conditie: Projecten\n\r ",
         "operationId": "POST_PtProjectDimCode",
         "requestBody": {
           "content": {
@@ -5828,7 +5828,7 @@
       },
       "put": {
         "summary": "Project / verbijzondering",
-        "description": "\n\rAlleen beschikbaar onder conditie: Project\n\r ",
+        "description": "\n\rAlleen beschikbaar onder conditie: Projecten\n\r ",
         "operationId": "PUT_PtProjectDimCode",
         "requestBody": {
           "content": {
@@ -5937,7 +5937,7 @@
     "/connectors/PtProjectProgress": {
       "post": {
         "summary": "Voortgang",
-        "description": "\n\rAlleen beschikbaar onder conditie: Project\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Progr.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Projecten\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Progr.htm",
         "operationId": "POST_PtProjectProgress",
         "requestBody": {
           "content": {
@@ -6023,7 +6023,7 @@
       },
       "put": {
         "summary": "Voortgang",
-        "description": "\n\rAlleen beschikbaar onder conditie: Project\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Progr.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Projecten\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_Pro_Progr.htm",
         "operationId": "PUT_PtProjectProgress",
         "requestBody": {
           "content": {
@@ -6778,7 +6778,7 @@
                           "AmSe": "150",
                           "Ch": false,
                           "FileName": "example.png",
-                          "FileStream": "iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAIAAACzY\u002Ba1AAAEB0lEQVR4nO3YQU/yShiG4SmlBSwYjEIQCyaSqmHl//8NLNgZSaORAmJQxCC0dihzFs3hEPQkX8KXlid5rl1r9YW5w2RQ63Q6gpBl0n4BtC8mhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J42bRfwH88zxNCNBqN\u002BHK5XPZ6ve0HHMexLEsIoZQaj8fT6TSKouPjY9u2s9m93kiKo/d3KAnH4/H7\u002B/vp6enmThAEpmm22\u002B1fH57NZq1WS9f1fr//9PTkOA7i6L8i/Y00DEPXdSeTiWma2/eDIMjn8z\u002BfV0pNJpNarZbP5w3DaDabi8VisVhgjf6L0k\u002B4XC5N07y9vc3lctv3/28dfd9fr9fxtiaEMAzDNM2ddZzNZt1udz6fx5ePj48PDw9KqQRGJy/9jbRcLpfL5Z/34/W6v7\u002BXUhYKhXq9Hq\u002BdlFIIYRjG5knDMMIw3PmbJycng8Hg5uZmNpvN5/Pr62tN0xIYnbz0P4W/iqJISmmapuM47Xb76OjIdd0gCIQQ6/VaCLHdQ9O0n58w27bX67XnecPhsFarFQqFxEYn7EAT6rp\u002Bd3fXbDaz2Ww2m724uMjlcm9vb\u002BLfFdxeOKVUJrP7RnRdt2374\u002BMjl8tVq9UkRyfsQBP\u002BZJpmvI/FR4/VarX5kZRye3Pb8H1fCBGGYRRFCY9O0oEm/Pr66na739/f8aVSanPEyOfzmUxmc4iQUoZhuDlibPi\u002B//r6Wq/XdV2Pv/YlNjphB5rQsqxCoeB5XhiGq9VqMBhEUVSpVIQQmUzm7OxsNBr5vi\u002Bl7Pf7lmXtrKNS6vn5uVgsVqvVRqPx\u002Bfk5nU6TGZ289E\u002Bkv9I07erqajQa9Xq9\u002BBzvOM7m/yDn5\u002BdKKdd1hRClUuny8nLn119eXqSUrVZLCFEsFiuVynA4LJVKf7Lp7Tk6eVqn00n7NdBeDnQjpT/HhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEN4/cnznZiQb6hsAAAAASUVORK5CYII="
+                          "FileStream": "iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAIAAACzY+a1AAAEB0lEQVR4nO3YQU/yShiG4SmlBSwYjEIQCyaSqmHl//8NLNgZSaORAmJQxCC0dihzFs3hEPQkX8KXlid5rl1r9YW5w2RQ63Q6gpBl0n4BtC8mhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J42bRfwH88zxNCNBqN+HK5XPZ6ve0HHMexLEsIoZQaj8fT6TSKouPjY9u2s9m93kiKo/d3KAnH4/H7+/vp6enmThAEpmm22+1fH57NZq1WS9f1fr//9PTkOA7i6L8i/Y00DEPXdSeTiWma2/eDIMjn8z+fV0pNJpNarZbP5w3DaDabi8VisVhgjf6L0k+4XC5N07y9vc3lctv3/28dfd9fr9fxtiaEMAzDNM2ddZzNZt1udz6fx5ePj48PDw9KqQRGJy/9jbRcLpfL5Z/34/W6v7+XUhYKhXq9Hq+dlFIIYRjG5knDMMIw3PmbJycng8Hg5uZmNpvN5/Pr62tN0xIYnbz0P4W/iqJISmmapuM47Xb76OjIdd0gCIQQ6/VaCLHdQ9O0n58w27bX67XnecPhsFarFQqFxEYn7EAT6rp+d3fXbDaz2Ww2m724uMjlcm9vb+LfFdxeOKVUJrP7RnRdt2374+Mjl8tVq9UkRyfsQBP+ZJpmvI/FR4/VarX5kZRye3Pb8H1fCBGGYRRFCY9O0oEm/Pr66na739/f8aVSanPEyOfzmUxmc4iQUoZhuDlibPi+//r6Wq/XdV2Pv/YlNjphB5rQsqxCoeB5XhiGq9VqMBhEUVSpVIQQmUzm7OxsNBr5vi+l7Pf7lmXtrKNS6vn5uVgsVqvVRqPx+fk5nU6TGZ289E+kv9I07erqajQa9Xq9+BzvOM7m/yDn5+dKKdd1hRClUuny8nLn119eXqSUrVZLCFEsFiuVynA4LJVKf7Lp7Tk6eVqn00n7NdBeDnQjpT/HhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEN4/cnznZiQb6hsAAAAASUVORK5CYII="
                         }
                       }
                     }
@@ -7391,7 +7391,7 @@
     "/connectors/PtRealizationWeek": {
       "post": {
         "summary": "Nacalculatie per week",
-        "description": "\n\rAlleen beschikbaar onder conditie: Nacalculatie per week (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_105.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Nacalculatie per week (activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_105.htm",
         "operationId": "POST_PtRealizationWeek",
         "requestBody": {
           "content": {
@@ -7554,7 +7554,7 @@
       },
       "put": {
         "summary": "Nacalculatie per week",
-        "description": "\n\rAlleen beschikbaar onder conditie: Nacalculatie per week (Activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_105.htm",
+        "description": "\n\rAlleen beschikbaar onder conditie: Nacalculatie per week (activering)\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_105.htm",
         "operationId": "PUT_PtRealizationWeek",
         "requestBody": {
           "content": {
@@ -8086,6 +8086,165 @@
           }
         ]
       }
+    },
+    "/connectors/PtLinesToBeUnraveled": {
+      "post": {
+        "summary": "Te ontrafelen nacalculatieregels",
+        "description": "\n\rAlleen beschikbaar onder conditie: Urenontrafelaar (speciale activering)\n\r ",
+        "operationId": "POST_PtLinesToBeUnraveled",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PtLinesToBeUnraveled_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Te ontrafelen nacalculatieregels"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Te ontrafelen nacalculatieregels",
+        "description": "\n\rAlleen beschikbaar onder conditie: Urenontrafelaar (speciale activering)\n\r ",
+        "operationId": "PUT_PtLinesToBeUnraveled",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PtLinesToBeUnraveled_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Te ontrafelen nacalculatieregels"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/PtLinesToBeUnraveled/PtLinesToBeUnraveled/@Id/{Id}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "Id",
+          "in": "path",
+          "required": true,
+          "description": "Code"
+        }
+      ],
+      "delete": {
+        "summary": "Te ontrafelen nacalculatieregels",
+        "operationId": "DELETE_PtLinesToBeUnraveled",
+        "description": "\n\r ",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Te ontrafelen nacalculatieregels"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
     }
   },
   "tags": [
@@ -8144,6 +8303,10 @@
     {
       "name": "Geldigheidscombinatie",
       "description": "Geldigheidscombinatie"
+    },
+    {
+      "name": "Te ontrafelen nacalculatieregels",
+      "description": "Te ontrafelen nacalculatieregels"
     }
   ],
   "components": {
@@ -9774,7 +9937,7 @@
                       },
                       "SiPr": {
                         "type": "boolean",
-                        "description": "Specifiek voor \u00E9\u00E9n project",
+                        "description": "Specifiek voor één project",
                         "format": ""
                       },
                       "PrId": {
@@ -9852,7 +10015,7 @@
                       },
                       "SiPr": {
                         "type": "boolean",
-                        "description": "Specifiek voor \u00E9\u00E9n project",
+                        "description": "Specifiek voor één project",
                         "format": ""
                       },
                       "PrId": {
@@ -10235,6 +10398,738 @@
                       "DaTi",
                       "VaIt",
                       "ItCd"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "PtLinesToBeUnraveled_POST": {
+        "type": "object",
+        "properties": {
+          "PtLinesToBeUnraveled": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "integer",
+                        "description": "Code",
+                        "format": ""
+                      },
+                      "DaTi": {
+                        "type": "string",
+                        "description": "Datum",
+                        "format": "date"
+                      },
+                      "EmId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Medewerker",
+                        "format": ""
+                      },
+                      "VaIt": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "10",
+                          "11",
+                          "14",
+                          "2",
+                          "3",
+                          "4",
+                          "5",
+                          "6",
+                          "7",
+                          "8"
+                        ],
+                        "maxLength": 10,
+                        "description": "Type item\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                        "format": ""
+                      },
+                      "ItCd": {
+                        "type": "string",
+                        "maxLength": 40,
+                        "description": "Itemcode",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Omschrijving",
+                        "format": ""
+                      },
+                      "QuUn": {
+                        "type": "number",
+                        "description": "Aantal",
+                        "format": "number"
+                      },
+                      "QuSa": {
+                        "type": "number",
+                        "description": "Verkoop (aantal)",
+                        "format": "number"
+                      },
+                      "CuId": {
+                        "type": "string",
+                        "maxLength": 3,
+                        "description": "Valuta",
+                        "format": ""
+                      },
+                      "AmCo": {
+                        "type": "number",
+                        "description": "Kostprijs",
+                        "format": "number"
+                      },
+                      "CoAm": {
+                        "type": "number",
+                        "description": "Vergoeding",
+                        "format": "number"
+                      },
+                      "VaRc": {
+                        "type": "string",
+                        "maxLength": 4,
+                        "description": "Btw-tariefgroep",
+                        "format": ""
+                      },
+                      "Ch": {
+                        "type": "boolean",
+                        "description": "Doorbelasten",
+                        "format": ""
+                      },
+                      "V1Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Code verbijzonderingsas 1",
+                        "format": ""
+                      },
+                      "V2Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Code verbijzonderingsas 2",
+                        "format": ""
+                      },
+                      "V3Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Code verbijzonderingsas 3",
+                        "format": ""
+                      },
+                      "V4Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Code verbijzonderingsas 4",
+                        "format": ""
+                      },
+                      "V5Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Code verbijzonderingsas 5",
+                        "format": ""
+                      },
+                      "PrId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Project",
+                        "format": ""
+                      },
+                      "PrSt": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Projectfase",
+                        "format": ""
+                      },
+                      "DbId": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Verkooprelatie",
+                        "format": ""
+                      },
+                      "StTi": {
+                        "type": "string",
+                        "description": "Begintijd",
+                        "format": "date-time"
+                      },
+                      "EnTi": {
+                        "type": "string",
+                        "description": "Eindtijd",
+                        "format": "date-time"
+                      },
+                      "PaTi": {
+                        "type": "string",
+                        "description": "Pauzeduur",
+                        "format": "date-time"
+                      },
+                      "Di01": {
+                        "type": "integer",
+                        "description": "(ongebruikt)",
+                        "format": ""
+                      },
+                      "Di02": {
+                        "type": "integer",
+                        "description": "(ongebruikt)",
+                        "format": ""
+                      },
+                      "Di03": {
+                        "type": "integer",
+                        "description": "(ongebruikt)",
+                        "format": ""
+                      },
+                      "Di04": {
+                        "type": "integer",
+                        "description": "(ongebruikt)",
+                        "format": ""
+                      },
+                      "Di05": {
+                        "type": "integer",
+                        "description": "(ongebruikt)",
+                        "format": ""
+                      },
+                      "ErId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Werkgever",
+                        "format": ""
+                      },
+                      "EnSe": {
+                        "type": "integer",
+                        "description": "Dienstverband",
+                        "format": ""
+                      },
+                      "FuId": {
+                        "type": "string",
+                        "maxLength": 30,
+                        "description": "Functie",
+                        "format": ""
+                      },
+                      "CoLa": {
+                        "type": "string",
+                        "maxLength": 3,
+                        "description": "Land wetgeving",
+                        "format": ""
+                      },
+                      "Rem": {
+                        "type": "string",
+                        "maxLength": 30,
+                        "description": "Opmerking",
+                        "format": ""
+                      },
+                      "AxId": {
+                        "type": "string",
+                        "maxLength": 1,
+                        "description": "Verbijzonderingsas project",
+                        "format": ""
+                      },
+                      "VbCo": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Code verbijzondering",
+                        "format": ""
+                      },
+                      "UpFc": {
+                        "type": "number",
+                        "description": "Prijs per eenheid",
+                        "format": "number"
+                      },
+                      "AmFc": {
+                        "type": "number",
+                        "description": "Verkoopprijs",
+                        "format": "number"
+                      },
+                      "PcId": {
+                        "type": "string",
+                        "maxLength": 12,
+                        "description": "Plaatsing",
+                        "format": ""
+                      },
+                      "AmPy": {
+                        "type": "number",
+                        "description": "Loonprijs",
+                        "format": "number"
+                      },
+                      "CcSr": {
+                        "type": "string",
+                        "maxLength": 30,
+                        "description": "Kostenplaats verkooprelatie",
+                        "format": ""
+                      },
+                      "RfCs": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Opdrachtnummer/referentie",
+                        "format": ""
+                      },
+                      "Fref": {
+                        "type": "string",
+                        "maxLength": 32,
+                        "description": "Factuurreferentie",
+                        "format": ""
+                      },
+                      "DsIn": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Omschrijving intern",
+                        "format": ""
+                      },
+                      "DsEx": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Omschrijving extern",
+                        "format": ""
+                      },
+                      "WoHo": {
+                        "type": "boolean",
+                        "description": "Thuiswerken",
+                        "format": ""
+                      },
+                      "ViTr": {
+                        "type": "string",
+                        "enum": [
+                          "11",
+                          "12",
+                          "13",
+                          "14",
+                          "15",
+                          "21",
+                          "22",
+                          "31",
+                          "32",
+                          "41",
+                          "51"
+                        ],
+                        "maxLength": 20,
+                        "description": "Vervoermiddel\n11 = Auto’s benzine;\n12 = Auto’s diesel;\n13 = Auto’s die behoren tot de (plug in) hybrides;\n14 = Auto’s 100% elektrisch;\n15 = Auto’s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
+                        "format": ""
+                      },
+                      "ViTv": {
+                        "type": "string",
+                        "enum": [
+                          "01",
+                          "02"
+                        ],
+                        "maxLength": 20,
+                        "description": "Type reis\n01 = Woon-werk;\n02 = Zakelijke dienstreis;",
+                        "format": ""
+                      },
+                      "ViTm": {
+                        "type": "string",
+                        "enum": [
+                          "11",
+                          "12",
+                          "13",
+                          "14",
+                          "15",
+                          "21",
+                          "22",
+                          "29",
+                          "31",
+                          "32",
+                          "38",
+                          "39",
+                          "41",
+                          "49",
+                          "51"
+                        ],
+                        "maxLength": 20,
+                        "description": "Vervoermiddel voor reiskosten\n11 = Auto benzine;\n12 = Auto diesel;\n13 = Auto (plug in) hybride;\n14 = Auto 100% elektrisch;\n15 = Auto andere brandstoffen;\n21 = Motorfiets benzine;\n22 = Motorfiets elektrisch;\n29 = Motorfiets diesel;\n31 = Bromfiets/scooter benzine;\n32 = Bromfiets/scooter 100% elektrisch;\n38 = Bromfiets/scooter diesel;\n39 = Speed-pedelec;\n41 = (Elektrische) fiets;\n49 = Te voet;\n51 = Openbaar vervoer ;",
+                        "format": ""
+                      },
+                      "FileId": {
+                        "type": "string",
+                        "maxLength": 32,
+                        "description": "File Id",
+                        "format": ""
+                      },
+                      "FileName": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Filename",
+                        "format": ""
+                      },
+                      "FileStream": {
+                        "type": "string",
+                        "description": "File as byte-array",
+                        "format": "byte"
+                      }
+                    },
+                    "required": [
+                      "DaTi",
+                      "EmId",
+                      "VaIt",
+                      "ItCd"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "PtLinesToBeUnraveled_PUT": {
+        "type": "object",
+        "properties": {
+          "PtLinesToBeUnraveled": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "Id": {
+                        "type": "integer",
+                        "description": "Code",
+                        "format": ""
+                      },
+                      "DaTi": {
+                        "type": "string",
+                        "description": "Datum",
+                        "format": "date"
+                      },
+                      "EmId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Medewerker",
+                        "format": ""
+                      },
+                      "VaIt": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "10",
+                          "11",
+                          "14",
+                          "2",
+                          "3",
+                          "4",
+                          "5",
+                          "6",
+                          "7",
+                          "8"
+                        ],
+                        "maxLength": 10,
+                        "description": "Type item\n1 = Werksoort;\n10 = Productie-indicator;\n11 = Deeg;\n14 = Artikeldimensietotaal;\n2 = Artikel;\n3 = Tekst;\n4 = Subtotaal;\n5 = Toeslag;\n6 = Kosten;\n7 = Samenstelling;\n8 = Cursus;",
+                        "format": ""
+                      },
+                      "ItCd": {
+                        "type": "string",
+                        "maxLength": 40,
+                        "description": "Itemcode",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Omschrijving",
+                        "format": ""
+                      },
+                      "QuUn": {
+                        "type": "number",
+                        "multipleOf": 1E-05,
+                        "description": "Aantal",
+                        "format": "float"
+                      },
+                      "QuSa": {
+                        "type": "number",
+                        "multipleOf": 1E-05,
+                        "description": "Verkoop (aantal)",
+                        "format": "float"
+                      },
+                      "CuId": {
+                        "type": "string",
+                        "maxLength": 3,
+                        "description": "Valuta",
+                        "format": ""
+                      },
+                      "AmCo": {
+                        "type": "number",
+                        "multipleOf": 1E-10,
+                        "description": "Kostprijs",
+                        "format": "float"
+                      },
+                      "CoAm": {
+                        "type": "number",
+                        "multipleOf": 1E-10,
+                        "description": "Vergoeding",
+                        "format": "float"
+                      },
+                      "VaRc": {
+                        "type": "string",
+                        "maxLength": 4,
+                        "description": "Btw-tariefgroep",
+                        "format": ""
+                      },
+                      "Ch": {
+                        "type": "boolean",
+                        "description": "Doorbelasten",
+                        "format": ""
+                      },
+                      "V1Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Code verbijzonderingsas 1",
+                        "format": ""
+                      },
+                      "V2Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Code verbijzonderingsas 2",
+                        "format": ""
+                      },
+                      "V3Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Code verbijzonderingsas 3",
+                        "format": ""
+                      },
+                      "V4Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Code verbijzonderingsas 4",
+                        "format": ""
+                      },
+                      "V5Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Code verbijzonderingsas 5",
+                        "format": ""
+                      },
+                      "PrId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Project",
+                        "format": ""
+                      },
+                      "PrSt": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Projectfase",
+                        "format": ""
+                      },
+                      "DbId": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Verkooprelatie",
+                        "format": ""
+                      },
+                      "StTi": {
+                        "type": "string",
+                        "description": "Begintijd",
+                        "format": "date-time"
+                      },
+                      "EnTi": {
+                        "type": "string",
+                        "description": "Eindtijd",
+                        "format": "date-time"
+                      },
+                      "PaTi": {
+                        "type": "string",
+                        "description": "Pauzeduur",
+                        "format": "date-time"
+                      },
+                      "Di01": {
+                        "type": "integer",
+                        "description": "(ongebruikt)",
+                        "format": ""
+                      },
+                      "Di02": {
+                        "type": "integer",
+                        "description": "(ongebruikt)",
+                        "format": ""
+                      },
+                      "Di03": {
+                        "type": "integer",
+                        "description": "(ongebruikt)",
+                        "format": ""
+                      },
+                      "Di04": {
+                        "type": "integer",
+                        "description": "(ongebruikt)",
+                        "format": ""
+                      },
+                      "Di05": {
+                        "type": "integer",
+                        "description": "(ongebruikt)",
+                        "format": ""
+                      },
+                      "ErId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Werkgever",
+                        "format": ""
+                      },
+                      "EnSe": {
+                        "type": "integer",
+                        "description": "Dienstverband",
+                        "format": ""
+                      },
+                      "FuId": {
+                        "type": "string",
+                        "maxLength": 30,
+                        "description": "Functie",
+                        "format": ""
+                      },
+                      "CoLa": {
+                        "type": "string",
+                        "maxLength": 3,
+                        "description": "Land wetgeving",
+                        "format": ""
+                      },
+                      "Rem": {
+                        "type": "string",
+                        "maxLength": 30,
+                        "description": "Opmerking",
+                        "format": ""
+                      },
+                      "AxId": {
+                        "type": "string",
+                        "maxLength": 1,
+                        "description": "Verbijzonderingsas project",
+                        "format": ""
+                      },
+                      "VbCo": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Code verbijzondering",
+                        "format": ""
+                      },
+                      "UpFc": {
+                        "type": "number",
+                        "multipleOf": 1E-10,
+                        "description": "Prijs per eenheid",
+                        "format": "float"
+                      },
+                      "AmFc": {
+                        "type": "number",
+                        "multipleOf": 1E-10,
+                        "description": "Verkoopprijs",
+                        "format": "float"
+                      },
+                      "PcId": {
+                        "type": "string",
+                        "maxLength": 12,
+                        "description": "Plaatsing",
+                        "format": ""
+                      },
+                      "AmPy": {
+                        "type": "number",
+                        "multipleOf": 1E-10,
+                        "description": "Loonprijs",
+                        "format": "float"
+                      },
+                      "CcSr": {
+                        "type": "string",
+                        "maxLength": 30,
+                        "description": "Kostenplaats verkooprelatie",
+                        "format": ""
+                      },
+                      "RfCs": {
+                        "type": "string",
+                        "maxLength": 100,
+                        "description": "Opdrachtnummer/referentie",
+                        "format": ""
+                      },
+                      "Fref": {
+                        "type": "string",
+                        "maxLength": 32,
+                        "description": "Factuurreferentie",
+                        "format": ""
+                      },
+                      "DsIn": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Omschrijving intern",
+                        "format": ""
+                      },
+                      "DsEx": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Omschrijving extern",
+                        "format": ""
+                      },
+                      "WoHo": {
+                        "type": "boolean",
+                        "description": "Thuiswerken",
+                        "format": ""
+                      },
+                      "ViTr": {
+                        "type": "string",
+                        "enum": [
+                          "11",
+                          "12",
+                          "13",
+                          "14",
+                          "15",
+                          "21",
+                          "22",
+                          "31",
+                          "32",
+                          "41",
+                          "51"
+                        ],
+                        "maxLength": 20,
+                        "description": "Vervoermiddel\n11 = Auto’s benzine;\n12 = Auto’s diesel;\n13 = Auto’s die behoren tot de (plug in) hybrides;\n14 = Auto’s 100% elektrisch;\n15 = Auto’s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
+                        "format": ""
+                      },
+                      "ViTv": {
+                        "type": "string",
+                        "enum": [
+                          "01",
+                          "02"
+                        ],
+                        "maxLength": 20,
+                        "description": "Type reis\n01 = Woon-werk;\n02 = Zakelijke dienstreis;",
+                        "format": ""
+                      },
+                      "ViTm": {
+                        "type": "string",
+                        "enum": [
+                          "11",
+                          "12",
+                          "13",
+                          "14",
+                          "15",
+                          "21",
+                          "22",
+                          "29",
+                          "31",
+                          "32",
+                          "38",
+                          "39",
+                          "41",
+                          "49",
+                          "51"
+                        ],
+                        "maxLength": 20,
+                        "description": "Vervoermiddel voor reiskosten\n11 = Auto benzine;\n12 = Auto diesel;\n13 = Auto (plug in) hybride;\n14 = Auto 100% elektrisch;\n15 = Auto andere brandstoffen;\n21 = Motorfiets benzine;\n22 = Motorfiets elektrisch;\n29 = Motorfiets diesel;\n31 = Bromfiets/scooter benzine;\n32 = Bromfiets/scooter 100% elektrisch;\n38 = Bromfiets/scooter diesel;\n39 = Speed-pedelec;\n41 = (Elektrische) fiets;\n49 = Te voet;\n51 = Openbaar vervoer ;",
+                        "format": ""
+                      },
+                      "FileId": {
+                        "type": "string",
+                        "maxLength": 32,
+                        "description": "File Id",
+                        "format": ""
+                      },
+                      "FileName": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Filename",
+                        "format": ""
+                      },
+                      "FileStream": {
+                        "type": "string",
+                        "description": "File as byte-array",
+                        "format": "byte"
+                      }
+                    },
+                    "required": [
+                      "Id"
                     ]
                   }
                 }
@@ -11482,18 +12377,18 @@
                       "Bankaccount": {
                         "type": "string",
                         "maxLength": 40,
-                        "description": "Banknummer afwijkend",
+                        "description": "Banknummer\n            afwijkend",
                         "format": ""
                       },
                       "FileName": {
                         "type": "string",
                         "maxLength": 255,
-                        "description": "Filename",
+                        "description": "\n            Filename",
                         "format": ""
                       },
                       "FileStream": {
                         "type": "string",
-                        "description": "File as byte-array",
+                        "description": "File\n            as byte-array",
                         "format": "byte"
                       },
                       "CdI1": {
@@ -11504,18 +12399,18 @@
                       "SignatureFileId1": {
                         "type": "string",
                         "maxLength": 32,
-                        "description": "Handtekening1 bestand",
+                        "description": "Handtekening1\n            bestand",
                         "format": ""
                       },
                       "SignatureFileName1": {
                         "type": "string",
                         "maxLength": 255,
-                        "description": "Handtekening1 naam bestand",
+                        "description": "Handtekening1\n            naam bestand",
                         "format": ""
                       },
                       "SignatureFileStream1": {
                         "type": "string",
-                        "description": "Handtekening1 afbeelding",
+                        "description": "Handtekening1\n            afbeelding",
                         "format": "byte"
                       },
                       "CdI2": {
@@ -11526,18 +12421,18 @@
                       "SignatureFileId2": {
                         "type": "string",
                         "maxLength": 32,
-                        "description": "Handtekening2 bestand",
+                        "description": "Handtekening2\n            bestand",
                         "format": ""
                       },
                       "SignatureFileName2": {
                         "type": "string",
                         "maxLength": 255,
-                        "description": "Handtekening2 naam bestand",
+                        "description": "Handtekening2\n            naam bestand",
                         "format": ""
                       },
                       "SignatureFileStream2": {
                         "type": "string",
-                        "description": "Handtekening2 afbeelding",
+                        "description": "Handtekening2\n            afbeelding",
                         "format": "byte"
                       },
                       "CdIp": {
@@ -11563,12 +12458,12 @@
                       },
                       "PtPrpDaBe": {
                         "type": "string",
-                        "description": "Begindatum cao inlener",
+                        "description": "Begindatum\n            cao inlener",
                         "format": "date"
                       },
                       "PtPrpTyEj": {
                         "type": "string",
-                        "description": "Soort eindejaarsuitkering",
+                        "description": "Soort\n            eindejaarsuitkering",
                         "format": ""
                       },
                       "PtPrpPaDa": {
@@ -11593,7 +12488,7 @@
                       },
                       "PtPrpNoPe": {
                         "type": "integer",
-                        "description": "Aantal periodes bij verkooprelatie",
+                        "description": "Aantal periodes bij\n            verkooprelatie",
                         "format": ""
                       },
                       "PtPrpPeUn": {
@@ -11610,13 +12505,13 @@
                       "PtPrpViTa": {
                         "type": "string",
                         "maxLength": 4,
-                        "description": "Afwijkende CBS cao-code",
+                        "description": "Afwijkende CBS\n            cao-code",
                         "format": ""
                       },
                       "PtPrpViTp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Soort periodieke verhoging",
+                        "description": "Soort periodieke\n            verhoging",
                         "format": ""
                       },
                       "PtPrpDmon": {
@@ -11651,13 +12546,13 @@
                       },
                       "PtPrpPFrA": {
                         "type": "integer",
-                        "description": "Periodieke verhoging vanaf leeftijd",
+                        "description": "Periodieke verhoging\n            vanaf leeftijd",
                         "format": ""
                       },
                       "PtPrpViEx": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Extra voorwaarde periodiek",
+                        "description": "Extra voorwaarde\n            periodiek",
                         "format": ""
                       },
                       "PtPrpReDa": {
@@ -11689,35 +12584,62 @@
                       },
                       "PtPrpWeAg": {
                         "type": "integer",
-                        "description": "Werkervaring opbouwen vanaf leeftijd",
+                        "description": "Werkervaring opbouwen\n            vanaf leeftijd",
                         "format": ""
                       },
                       "PtPrpVaIp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Telling onderbrekingsperiode",
+                        "description": "Telling\n            onderbrekingsperiode",
                         "format": ""
                       },
                       "PtPrpMoCo": {
                         "type": "integer",
-                        "description": "Kalenderdagen opnieuw tellen als onderbr.per.",
+                        "description": "Kalenderdagen opnieuw\n            tellen als onderbr.per.",
                         "format": ""
                       },
                       "PtPrpVaIe": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Onderbrekingsperiode eenheid",
+                        "description": "Onderbrekingsperiode\n            eenheid",
                         "format": ""
                       },
                       "PtPrpAcHi": {
                         "type": "boolean",
-                        "description": "Beoordeling inlener benodigd",
+                        "description": "Beoordeling inlener\n            benodigd",
                         "format": ""
                       },
                       "PtPrpVaCo": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Uitvoeren periodieke verhoging",
+                        "description": "Uitvoeren periodieke\n            verhoging",
+                        "format": ""
+                      },
+                      "PtPrpMeVp": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Methode opbouw vakantiegeld",
+                        "format": ""
+                      },
+                      "PtPrpPdVp": {
+                        "type": "integer",
+                        "description": "Peildag vakantiegeld",
+                        "format": ""
+                      },
+                      "PtPrpPmVp": {
+                        "type": "integer",
+                        "description": "Peilmaand vakantiegeld",
+                        "format": ""
+                      },
+                      "PtPrpBwVp": {
+                        "type": "integer",
+                        "description": "Opbouw vanaf week",
+                        "format": ""
+                      },
+                      "PtPrpMeMv": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Methode minimum vakantiegeld",
                         "format": ""
                       },
                       "PtPrpMeMo": {
@@ -12723,18 +13645,18 @@
                       "Bankaccount": {
                         "type": "string",
                         "maxLength": 40,
-                        "description": "Banknummer afwijkend",
+                        "description": "Banknummer\n            afwijkend",
                         "format": ""
                       },
                       "FileName": {
                         "type": "string",
                         "maxLength": 255,
-                        "description": "Filename",
+                        "description": "\n            Filename",
                         "format": ""
                       },
                       "FileStream": {
                         "type": "string",
-                        "description": "File as byte-array",
+                        "description": "File\n            as byte-array",
                         "format": "byte"
                       },
                       "CdI1": {
@@ -12745,18 +13667,18 @@
                       "SignatureFileId1": {
                         "type": "string",
                         "maxLength": 32,
-                        "description": "Handtekening1 bestand",
+                        "description": "Handtekening1\n            bestand",
                         "format": ""
                       },
                       "SignatureFileName1": {
                         "type": "string",
                         "maxLength": 255,
-                        "description": "Handtekening1 naam bestand",
+                        "description": "Handtekening1\n            naam bestand",
                         "format": ""
                       },
                       "SignatureFileStream1": {
                         "type": "string",
-                        "description": "Handtekening1 afbeelding",
+                        "description": "Handtekening1\n            afbeelding",
                         "format": "byte"
                       },
                       "CdI2": {
@@ -12767,18 +13689,18 @@
                       "SignatureFileId2": {
                         "type": "string",
                         "maxLength": 32,
-                        "description": "Handtekening2 bestand",
+                        "description": "Handtekening2\n            bestand",
                         "format": ""
                       },
                       "SignatureFileName2": {
                         "type": "string",
                         "maxLength": 255,
-                        "description": "Handtekening2 naam bestand",
+                        "description": "Handtekening2\n            naam bestand",
                         "format": ""
                       },
                       "SignatureFileStream2": {
                         "type": "string",
-                        "description": "Handtekening2 afbeelding",
+                        "description": "Handtekening2\n            afbeelding",
                         "format": "byte"
                       },
                       "CdIp": {
@@ -12804,12 +13726,12 @@
                       },
                       "PtPrpDaBe": {
                         "type": "string",
-                        "description": "Begindatum cao inlener",
+                        "description": "Begindatum\n            cao inlener",
                         "format": "date"
                       },
                       "PtPrpTyEj": {
                         "type": "string",
-                        "description": "Soort eindejaarsuitkering",
+                        "description": "Soort\n            eindejaarsuitkering",
                         "format": ""
                       },
                       "PtPrpPaDa": {
@@ -12834,7 +13756,7 @@
                       },
                       "PtPrpNoPe": {
                         "type": "integer",
-                        "description": "Aantal periodes bij verkooprelatie",
+                        "description": "Aantal periodes bij\n            verkooprelatie",
                         "format": ""
                       },
                       "PtPrpPeUn": {
@@ -12851,13 +13773,13 @@
                       "PtPrpViTa": {
                         "type": "string",
                         "maxLength": 4,
-                        "description": "Afwijkende CBS cao-code",
+                        "description": "Afwijkende CBS\n            cao-code",
                         "format": ""
                       },
                       "PtPrpViTp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Soort periodieke verhoging",
+                        "description": "Soort periodieke\n            verhoging",
                         "format": ""
                       },
                       "PtPrpDmon": {
@@ -12892,13 +13814,13 @@
                       },
                       "PtPrpPFrA": {
                         "type": "integer",
-                        "description": "Periodieke verhoging vanaf leeftijd",
+                        "description": "Periodieke verhoging\n            vanaf leeftijd",
                         "format": ""
                       },
                       "PtPrpViEx": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Extra voorwaarde periodiek",
+                        "description": "Extra voorwaarde\n            periodiek",
                         "format": ""
                       },
                       "PtPrpReDa": {
@@ -12930,35 +13852,62 @@
                       },
                       "PtPrpWeAg": {
                         "type": "integer",
-                        "description": "Werkervaring opbouwen vanaf leeftijd",
+                        "description": "Werkervaring opbouwen\n            vanaf leeftijd",
                         "format": ""
                       },
                       "PtPrpVaIp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Telling onderbrekingsperiode",
+                        "description": "Telling\n            onderbrekingsperiode",
                         "format": ""
                       },
                       "PtPrpMoCo": {
                         "type": "integer",
-                        "description": "Kalenderdagen opnieuw tellen als onderbr.per.",
+                        "description": "Kalenderdagen opnieuw\n            tellen als onderbr.per.",
                         "format": ""
                       },
                       "PtPrpVaIe": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Onderbrekingsperiode eenheid",
+                        "description": "Onderbrekingsperiode\n            eenheid",
                         "format": ""
                       },
                       "PtPrpAcHi": {
                         "type": "boolean",
-                        "description": "Beoordeling inlener benodigd",
+                        "description": "Beoordeling inlener\n            benodigd",
                         "format": ""
                       },
                       "PtPrpVaCo": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Uitvoeren periodieke verhoging",
+                        "description": "Uitvoeren periodieke\n            verhoging",
+                        "format": ""
+                      },
+                      "PtPrpMeVp": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Methode opbouw vakantiegeld",
+                        "format": ""
+                      },
+                      "PtPrpPdVp": {
+                        "type": "integer",
+                        "description": "Peildag vakantiegeld",
+                        "format": ""
+                      },
+                      "PtPrpPmVp": {
+                        "type": "integer",
+                        "description": "Peilmaand vakantiegeld",
+                        "format": ""
+                      },
+                      "PtPrpBwVp": {
+                        "type": "integer",
+                        "description": "Opbouw vanaf week",
+                        "format": ""
+                      },
+                      "PtPrpMeMv": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Methode minimum vakantiegeld",
                         "format": ""
                       },
                       "PtPrpMeMo": {
@@ -14321,7 +15270,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Vervoermiddel\n11 = Auto\u2019s benzine;\n12 = Auto\u2019s diesel;\n13 = Auto\u2019s die behoren tot de (plug in) hybrides;\n14 = Auto\u2019s 100% elektrisch;\n15 = Auto\u2019s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
+                        "description": "Vervoermiddel\n11 = Auto’s benzine;\n12 = Auto’s diesel;\n13 = Auto’s die behoren tot de (plug in) hybrides;\n14 = Auto’s 100% elektrisch;\n15 = Auto’s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
                         "format": ""
                       },
                       "ViTv": {
@@ -14955,7 +15904,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Vervoermiddel\n11 = Auto\u2019s benzine;\n12 = Auto\u2019s diesel;\n13 = Auto\u2019s die behoren tot de (plug in) hybrides;\n14 = Auto\u2019s 100% elektrisch;\n15 = Auto\u2019s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
+                        "description": "Vervoermiddel\n11 = Auto’s benzine;\n12 = Auto’s diesel;\n13 = Auto’s die behoren tot de (plug in) hybrides;\n14 = Auto’s 100% elektrisch;\n15 = Auto’s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
                         "format": ""
                       },
                       "ViTv": {
@@ -15551,7 +16500,7 @@
         "name": "Authorization",
         "type": "apiKey",
         "in": "header",
-        "description": "Convert the XML token to Base64 and add \u0027AfasToken \u0027 in front of it."
+        "description": "Convert the XML token to Base64 and add 'AfasToken ' in front of it."
       }
     },
     "parameters": {
@@ -15559,7 +16508,7 @@
         "name": "Accept-Language",
         "in": "header",
         "required": false,
-        "description": "Indicates the client\u0027s preferred language for the response. If not provided, the API defaults to the base environment language.",
+        "description": "Indicates the client's preferred language for the response. If not provided, the API defaults to the base environment language.",
         "schema": {
           "type": "string",
           "enum": [

@@ -1,9 +1,9 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "6.6.9",
-    "title": "AFAS Financi\u00EBle Inrichting API",
-    "description": "This API describes the endpoints related to Financi\u00EBle Inrichting. Use this API with the functional description of the API."
+    "version": "7.7.10",
+    "title": "AFAS Financiële Inrichting API",
+    "description": "This API describes the endpoints related to Financiële Inrichting. Use this API with the functional description of the API."
   },
   "servers": [
     {
@@ -50,8 +50,8 @@
   "paths": {
     "/connectors/FiIVY": {
       "post": {
-        "summary": "Iv3-indeling per jaar",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/130524.htm",
+        "summary": "Iv3 classification by year",
+        "description": "\n\rAlleen beschikbaar onder conditie: Rapportage Informatie voor Derden (IV3) (activering)\n\r https://help.afas.nl/help/NL/SE/130524.htm",
         "operationId": "POST_FiIVY",
         "requestBody": {
           "content": {
@@ -239,7 +239,7 @@
           }
         ],
         "tags": [
-          "Iv3-indeling per jaar"
+          "Iv3 classification by year"
         ],
         "parameters": [
           {
@@ -251,8 +251,8 @@
         ]
       },
       "put": {
-        "summary": "Iv3-indeling per jaar",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/130524.htm",
+        "summary": "Iv3 classification by year",
+        "description": "\n\rAlleen beschikbaar onder conditie: Rapportage Informatie voor Derden (IV3) (activering)\n\r https://help.afas.nl/help/NL/SE/130524.htm",
         "operationId": "PUT_FiIVY",
         "requestBody": {
           "content": {
@@ -410,7 +410,7 @@
           }
         ],
         "tags": [
-          "Iv3-indeling per jaar"
+          "Iv3 classification by year"
         ],
         "parameters": [
           {
@@ -435,7 +435,7 @@
         }
       ],
       "delete": {
-        "summary": "Iv3-indeling per jaar",
+        "summary": "Iv3 classification by year",
         "operationId": "DELETE_FiIVY",
         "description": "\n\r https://help.afas.nl/help/NL/SE/130524.htm",
         "responses": {
@@ -470,7 +470,7 @@
           }
         ],
         "tags": [
-          "Iv3-indeling per jaar"
+          "Iv3 classification by year"
         ],
         "parameters": [
           {
@@ -481,7 +481,7 @@
     },
     "/connectors/KnAccount": {
       "post": {
-        "summary": "Grootboekrekening",
+        "summary": "Ledger account",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_KnAcc.htm",
         "operationId": "POST_KnAccount",
         "requestBody": {
@@ -542,7 +542,7 @@
           }
         ],
         "tags": [
-          "Grootboekrekening"
+          "Ledger account"
         ],
         "parameters": [
           {
@@ -554,7 +554,7 @@
         ]
       },
       "put": {
-        "summary": "Grootboekrekening",
+        "summary": "Ledger account",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_KnAcc.htm",
         "operationId": "PUT_KnAccount",
         "requestBody": {
@@ -592,7 +592,7 @@
           }
         ],
         "tags": [
-          "Grootboekrekening"
+          "Ledger account"
         ],
         "parameters": [
           {
@@ -617,7 +617,7 @@
         }
       ],
       "delete": {
-        "summary": "Grootboekrekening",
+        "summary": "Ledger account",
         "operationId": "DELETE_KnAccount",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_KnAcc.htm",
         "responses": {
@@ -652,7 +652,7 @@
           }
         ],
         "tags": [
-          "Grootboekrekening"
+          "Ledger account"
         ],
         "parameters": [
           {
@@ -663,7 +663,7 @@
     },
     "/connectors/KnBankTransaction": {
       "post": {
-        "summary": "Transactie-instelling",
+        "summary": "Transaction configuration",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_KnBnkT.htm",
         "operationId": "POST_KnBankTransaction",
         "requestBody": {
@@ -701,7 +701,7 @@
           }
         ],
         "tags": [
-          "Transactie-instelling"
+          "Transaction configuration"
         ],
         "parameters": [
           {
@@ -713,7 +713,7 @@
         ]
       },
       "put": {
-        "summary": "Transactie-instelling",
+        "summary": "Transaction configuration",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_KnBnkT.htm",
         "operationId": "PUT_KnBankTransaction",
         "requestBody": {
@@ -751,7 +751,7 @@
           }
         ],
         "tags": [
-          "Transactie-instelling"
+          "Transaction configuration"
         ],
         "parameters": [
           {
@@ -765,7 +765,7 @@
     },
     "/connectors/KnBankTransaction/KnTransactionDimension": {
       "post": {
-        "summary": "Transactie-instelling",
+        "summary": "Transaction configuration",
         "description": "Update main record in KnBankTransaction and insert subrecord into KnTransactionDimension. \n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_KnBnkT.htm",
         "operationId": "POSTSubRecordKnBankTransactionKnTransactionDimension",
         "requestBody": {
@@ -803,7 +803,7 @@
           }
         ],
         "tags": [
-          "Transactie-instelling"
+          "Transaction configuration"
         ],
         "parameters": [
           {
@@ -828,7 +828,7 @@
         }
       ],
       "delete": {
-        "summary": "Transactie-instelling",
+        "summary": "Transaction configuration",
         "operationId": "DELETE_KnBankTransaction",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_KnBnkT.htm",
         "responses": {
@@ -863,7 +863,7 @@
           }
         ],
         "tags": [
-          "Transactie-instelling"
+          "Transaction configuration"
         ],
         "parameters": [
           {
@@ -874,7 +874,7 @@
     },
     "/connectors/KnDimCode": {
       "post": {
-        "summary": "Code verbijzondering",
+        "summary": "Allocation code",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_060.htm",
         "operationId": "POST_KnDimCode",
         "requestBody": {
@@ -1039,7 +1039,7 @@
           }
         ],
         "tags": [
-          "Code verbijzondering"
+          "Allocation code"
         ],
         "parameters": [
           {
@@ -1051,7 +1051,7 @@
         ]
       },
       "put": {
-        "summary": "Code verbijzondering",
+        "summary": "Allocation code",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_060.htm",
         "operationId": "PUT_KnDimCode",
         "requestBody": {
@@ -1144,7 +1144,7 @@
           }
         ],
         "tags": [
-          "Code verbijzondering"
+          "Allocation code"
         ],
         "parameters": [
           {
@@ -1178,7 +1178,7 @@
         }
       ],
       "delete": {
-        "summary": "Code verbijzondering",
+        "summary": "Allocation code",
         "operationId": "DELETE_KnDimCode",
         "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_060.htm",
         "responses": {
@@ -1213,7 +1213,7 @@
           }
         ],
         "tags": [
-          "Code verbijzondering"
+          "Allocation code"
         ],
         "parameters": [
           {
@@ -1500,7 +1500,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id\u0027s can be found in the metainfo request result.",
+        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -1646,7 +1646,7 @@
             "name": "operatortypes",
             "in": "query",
             "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* \u00601\u0060 - =  (is equal to)\n* \u00602\u0060 - \u003E= (is greater or equal to)\n* \u00603\u0060 - \u003C= (is less or equal to)\n* \u00604\u0060 - \u003E  (is greater than)\n* \u00605\u0060 - \u003C  (is less than)\n* \u00606\u0060 - *  (contains text)\n* \u00607\u0060 - != (is not equal to)\n* \u00608\u0060 - [] (is empty)\n* \u00609\u0060 - ![] (is not empty)\n* \u006010\u0060 - @   (starts with)\n* \u006011\u0060 - !* (does not contain text)\n* \u006012\u0060 - !@ (does not start with)\n* \u006013\u0060 - \u0026  (ends with)\n* \u006014\u0060 - !\u0026 (does not end with)\n* \u006015\u0060 - Sf (quickfilter)\n",
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
             "schema": {
               "type": "number",
               "enum": [
@@ -1736,20 +1736,20 @@
       "description": "API Info"
     },
     {
-      "name": "Iv3-indeling per jaar",
-      "description": "Iv3-indeling per jaar"
+      "name": "Iv3 classification by year",
+      "description": "Iv3 classification by year"
     },
     {
-      "name": "Grootboekrekening",
-      "description": "Grootboekrekening"
+      "name": "Ledger account",
+      "description": "Ledger account"
     },
     {
-      "name": "Transactie-instelling",
-      "description": "Transactie-instelling"
+      "name": "Transaction configuration",
+      "description": "Transaction configuration"
     },
     {
-      "name": "Code verbijzondering",
-      "description": "Code verbijzondering"
+      "name": "Allocation code",
+      "description": "Allocation code"
     }
   ],
   "components": {
@@ -2007,7 +2007,7 @@
                           "4"
                         ],
                         "maxLength": 20,
-                        "description": "Type of account\n1 = Activa;\n2 = Passiva;\n3 = Opbrengsten;\n4 = Kosten;",
+                        "description": "Type of account\n1 = Assets;\n2 = Liabilities;\n3 = Revenues;\n4 = Costs;",
                         "format": ""
                       },
                       "VaPc": {
@@ -2021,7 +2021,7 @@
                           "GD"
                         ],
                         "maxLength": 20,
-                        "description": "Kind of account\nG = Goederen;\nD = Diensten;\nI = Investeringen;\nB = Btw;\nO = Overige;\nGD = Goederen en diensten;",
+                        "description": "Kind of account\nG = Goods;\nD = Services;\nI = Investments;\nB = VAT;\nO = Other;\nGD = Goods and services;",
                         "format": ""
                       },
                       "VaDc": {
@@ -2032,7 +2032,7 @@
                           "C"
                         ],
                         "maxLength": 20,
-                        "description": "Preference (debit/credit)\nN = Geen voorkeur;\nD = Debet;\nC = Credit;",
+                        "description": "Preference (debit/credit)\nN = No preference;\nD = Debit;\nC = Credit;",
                         "format": ""
                       },
                       "VaYn": {
@@ -2065,7 +2065,7 @@
                           "P"
                         ],
                         "maxLength": 20,
-                        "description": "Allocation axis 1\nN = Niet verbijzonderen;\nB = Handmatig bij boeking (op bedrag);\nP = Automatisch (percentueel);",
+                        "description": "Allocation axis 1\nN = Do not allocate;\nB = Manually on entry (on amount);\nP = Automatically (as a percentage);",
                         "format": ""
                       },
                       "VaA2": {
@@ -2076,7 +2076,7 @@
                           "P"
                         ],
                         "maxLength": 20,
-                        "description": "Allocation axis 2\nN = Niet verbijzonderen;\nB = Handmatig bij boeking (op bedrag);\nP = Automatisch (percentueel);",
+                        "description": "Allocation axis 2\nN = Do not allocate;\nB = Manually on entry (on amount);\nP = Automatically (as a percentage);",
                         "format": ""
                       },
                       "VaA3": {
@@ -2087,7 +2087,7 @@
                           "P"
                         ],
                         "maxLength": 20,
-                        "description": "Allocation axis 3\nN = Niet verbijzonderen;\nB = Handmatig bij boeking (op bedrag);\nP = Automatisch (percentueel);",
+                        "description": "Allocation axis 3\nN = Do not allocate;\nB = Manually on entry (on amount);\nP = Automatically (as a percentage);",
                         "format": ""
                       },
                       "VaA4": {
@@ -2098,7 +2098,7 @@
                           "P"
                         ],
                         "maxLength": 20,
-                        "description": "Allocation axis 4\nN = Niet verbijzonderen;\nB = Handmatig bij boeking (op bedrag);\nP = Automatisch (percentueel);",
+                        "description": "Allocation axis 4\nN = Do not allocate;\nB = Manually on entry (on amount);\nP = Automatically (as a percentage);",
                         "format": ""
                       },
                       "VaA5": {
@@ -2109,7 +2109,7 @@
                           "P"
                         ],
                         "maxLength": 20,
-                        "description": "Allocation axis 5\nN = Niet verbijzonderen;\nB = Handmatig bij boeking (op bedrag);\nP = Automatisch (percentueel);",
+                        "description": "Allocation axis 5\nN = Do not allocate;\nB = Manually on entry (on amount);\nP = Automatically (as a percentage);",
                         "format": ""
                       },
                       "VaPp": {
@@ -2121,7 +2121,7 @@
                           "I"
                         ],
                         "maxLength": 20,
-                        "description": "Carry projects forward\nN = Geen projectboeking;\nT = Projectboeking toegestaan;\nV = Projectboeking verplicht;\nI = Investeringsproject verplicht;",
+                        "description": "Carry projects forward\nN = No project entry;\nT = Project entry allowed;\nV = Project entry mandatory;\nI = Investment project required;",
                         "format": ""
                       },
                       "AcMm": {
@@ -2138,7 +2138,7 @@
                           "G"
                         ],
                         "maxLength": 20,
-                        "description": "Type of summary account\nN = Geen verzamelrekening;\nD = Debiteur;\nC = Crediteur;\nG = Grootboek;",
+                        "description": "Type of summary account\nN = No summary account;\nD = Debtor;\nC = Creditor;\nG = Ledger;",
                         "format": ""
                       },
                       "ColA": {
@@ -2156,12 +2156,12 @@
                         "type": "string",
                         "enum": [
                           "N",
-                          "B",
-                          "BA",
-                          "A"
+                          "A",
+                          "AQ",
+                          "Q"
                         ],
                         "maxLength": 20,
-                        "description": "Budget\nN = Niet van toepassing;\nB = Bedrag;\nBA = Bedrag \u002B aantal;\nA = Aantal;",
+                        "description": "Budget\nN = Not applicable;\nA = Amount;\nAQ = Amount + quantity;\nQ = Number;",
                         "format": ""
                       },
                       "LiAc": {
@@ -2183,7 +2183,7 @@
                           "B"
                         ],
                         "maxLength": 20,
-                        "description": "Show in operations\nR = Realisatie;\nB = Budget;",
+                        "description": "Show in operations\nR = Realisation;\nB = Budget;",
                         "format": ""
                       },
                       "CmYN": {
@@ -2324,7 +2324,7 @@
                           "4"
                         ],
                         "maxLength": 20,
-                        "description": "Type of account\n1 = Activa;\n2 = Passiva;\n3 = Opbrengsten;\n4 = Kosten;",
+                        "description": "Type of account\n1 = Assets;\n2 = Liabilities;\n3 = Revenues;\n4 = Costs;",
                         "format": ""
                       },
                       "VaPc": {
@@ -2338,7 +2338,7 @@
                           "GD"
                         ],
                         "maxLength": 20,
-                        "description": "Kind of account\nG = Goederen;\nD = Diensten;\nI = Investeringen;\nB = Btw;\nO = Overige;\nGD = Goederen en diensten;",
+                        "description": "Kind of account\nG = Goods;\nD = Services;\nI = Investments;\nB = VAT;\nO = Other;\nGD = Goods and services;",
                         "format": ""
                       },
                       "VaDc": {
@@ -2349,7 +2349,7 @@
                           "C"
                         ],
                         "maxLength": 20,
-                        "description": "Preference (debit/credit)\nN = Geen voorkeur;\nD = Debet;\nC = Credit;",
+                        "description": "Preference (debit/credit)\nN = No preference;\nD = Debit;\nC = Credit;",
                         "format": ""
                       },
                       "VaYn": {
@@ -2382,7 +2382,7 @@
                           "P"
                         ],
                         "maxLength": 20,
-                        "description": "Allocation axis 1\nN = Niet verbijzonderen;\nB = Handmatig bij boeking (op bedrag);\nP = Automatisch (percentueel);",
+                        "description": "Allocation axis 1\nN = Do not allocate;\nB = Manually on entry (on amount);\nP = Automatically (as a percentage);",
                         "format": ""
                       },
                       "VaA2": {
@@ -2393,7 +2393,7 @@
                           "P"
                         ],
                         "maxLength": 20,
-                        "description": "Allocation axis 2\nN = Niet verbijzonderen;\nB = Handmatig bij boeking (op bedrag);\nP = Automatisch (percentueel);",
+                        "description": "Allocation axis 2\nN = Do not allocate;\nB = Manually on entry (on amount);\nP = Automatically (as a percentage);",
                         "format": ""
                       },
                       "VaA3": {
@@ -2404,7 +2404,7 @@
                           "P"
                         ],
                         "maxLength": 20,
-                        "description": "Allocation axis 3\nN = Niet verbijzonderen;\nB = Handmatig bij boeking (op bedrag);\nP = Automatisch (percentueel);",
+                        "description": "Allocation axis 3\nN = Do not allocate;\nB = Manually on entry (on amount);\nP = Automatically (as a percentage);",
                         "format": ""
                       },
                       "VaA4": {
@@ -2415,7 +2415,7 @@
                           "P"
                         ],
                         "maxLength": 20,
-                        "description": "Allocation axis 4\nN = Niet verbijzonderen;\nB = Handmatig bij boeking (op bedrag);\nP = Automatisch (percentueel);",
+                        "description": "Allocation axis 4\nN = Do not allocate;\nB = Manually on entry (on amount);\nP = Automatically (as a percentage);",
                         "format": ""
                       },
                       "VaA5": {
@@ -2426,7 +2426,7 @@
                           "P"
                         ],
                         "maxLength": 20,
-                        "description": "Allocation axis 5\nN = Niet verbijzonderen;\nB = Handmatig bij boeking (op bedrag);\nP = Automatisch (percentueel);",
+                        "description": "Allocation axis 5\nN = Do not allocate;\nB = Manually on entry (on amount);\nP = Automatically (as a percentage);",
                         "format": ""
                       },
                       "VaPp": {
@@ -2438,7 +2438,7 @@
                           "I"
                         ],
                         "maxLength": 20,
-                        "description": "Carry projects forward\nN = Geen projectboeking;\nT = Projectboeking toegestaan;\nV = Projectboeking verplicht;\nI = Investeringsproject verplicht;",
+                        "description": "Carry projects forward\nN = No project entry;\nT = Project entry allowed;\nV = Project entry mandatory;\nI = Investment project required;",
                         "format": ""
                       },
                       "AcMm": {
@@ -2455,7 +2455,7 @@
                           "G"
                         ],
                         "maxLength": 20,
-                        "description": "Type of summary account\nN = Geen verzamelrekening;\nD = Debiteur;\nC = Crediteur;\nG = Grootboek;",
+                        "description": "Type of summary account\nN = No summary account;\nD = Debtor;\nC = Creditor;\nG = Ledger;",
                         "format": ""
                       },
                       "ColA": {
@@ -2473,12 +2473,12 @@
                         "type": "string",
                         "enum": [
                           "N",
-                          "B",
-                          "BA",
-                          "A"
+                          "A",
+                          "AQ",
+                          "Q"
                         ],
                         "maxLength": 20,
-                        "description": "Budget\nN = Niet van toepassing;\nB = Bedrag;\nBA = Bedrag \u002B aantal;\nA = Aantal;",
+                        "description": "Budget\nN = Not applicable;\nA = Amount;\nAQ = Amount + quantity;\nQ = Number;",
                         "format": ""
                       },
                       "LiAc": {
@@ -2500,7 +2500,7 @@
                           "B"
                         ],
                         "maxLength": 20,
-                        "description": "Show in operations\nR = Realisatie;\nB = Budget;",
+                        "description": "Show in operations\nR = Realisation;\nB = Budget;",
                         "format": ""
                       },
                       "CmYN": {
@@ -3052,7 +3052,7 @@
         "name": "Authorization",
         "type": "apiKey",
         "in": "header",
-        "description": "Convert the XML token to Base64 and add \u0027AfasToken \u0027 in front of it."
+        "description": "Convert the XML token to Base64 and add 'AfasToken ' in front of it."
       }
     },
     "parameters": {
@@ -3060,7 +3060,7 @@
         "name": "Accept-Language",
         "in": "header",
         "required": false,
-        "description": "Indicates the client\u0027s preferred language for the response. If not provided, the API defaults to the base environment language.",
+        "description": "Indicates the client's preferred language for the response. If not provided, the API defaults to the base environment language.",
         "schema": {
           "type": "string",
           "enum": [
