@@ -1,8 +1,8 @@
 ---
-title: Ophalen van bijlagen uit AFAS Profit
 author: CLN
-date: 2024-12-03
-tags: attachement, bijlage, pdf, loonstrook, jaaropgave
+date: 2025-11-08
+tags: Tutorial, GetConnector, UpdateConnector, AppConnector, Authentication, Hr
+title: Ophalen van bijlagen uit AFAS Profit
 ---
 
 ## Inleiding

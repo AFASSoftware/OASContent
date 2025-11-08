@@ -1,9 +1,10 @@
 ---
-title: Authentication
 author: CLN
-date: 2024-06-28
-tags: tokens, jwt, bearer, oauth, access
+date: 2025-11-08
+tags: Tutorial, GetConnector, UpdateConnector, AppConnector, Integration, Configuration
+title: Authentication
 ---
+
 The AFAS Profit REST API uses static tokens that you include in the http authentication header of your request. These static tokens are created in the [`App Connector`](./concepts#app-connector) in Profit. An AFAS administrator with access to the Profit environment can create a token.
 
 > A token is unique to one environment and linked to a user. The permissions of this user will affect the permissions of the token.

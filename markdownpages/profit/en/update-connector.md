@@ -1,9 +1,10 @@
 ---
-title: UpdateConnector
 author: CLN
-date: 2024-02-18
-tags: insert, update, delete, put, post, create, remove, create, add, update
+date: 2025-11-08
+tags: UpdateConnector, Authentication, Authorization, Finance, Hr, Order Management
+title: UpdateConnector
 ---
+
 An external application can add, change, or delete records in the Profit database with an UpdateConnector. Each endpoint has different options. In UpdateConnectors with subobjects, you can do a specific action on a subobject.
 
 ## POST

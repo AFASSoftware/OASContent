@@ -1,8 +1,8 @@
 ---
-title: Fouten verhelpen
 author: CLN
-date: 2025-01-06
-tags: error, debug, debugging, mismatch, server, fout, foutmelding
+date: 2025-11-08
+tags: GetConnector, UpdateConnector, AppConnector, Integration, Authentication, Hr
+title: Fouten verhelpen
 ---
 
 Fouten ontstaan altijd tijdens het ontwikkelen, testen en draaien van applicaties. Een goed begrip van welk soort fouten er zijn en op welke manier je solide foutafhandeling inbouwt, maak het verschil in de uiteindelijke kwaliteit van een integratie.

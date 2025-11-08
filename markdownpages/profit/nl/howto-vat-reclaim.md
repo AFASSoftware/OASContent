@@ -1,10 +1,10 @@
 ---
-title: Btw-terugvordering via de API
 author: EZW
-date: 2024-09-30
-tags: Financieel, mutaties, boeken, inkoop, btw
+date: 2025-11-08
+tags: Partner, Tutorial, GetConnector, UpdateConnector, Profit3, AppConnector
+title: Btw-terugvordering via de API
 ---
-  
+
 ## Inleiding
 
 ### Stuur jij vanuit een scan- en herkenoplossing financiële mutaties naar AFAS? Lees deze pagina dan zorgvuldig!
@@ -80,4 +80,3 @@ Niet doen: Gewoon proberen en kijken of je een foutcode krijgt.
 ### Ik maak gebruik van de mogelijkheid om automatisch nieuwe verbijzonderingstoewijzingen te maken (AdDa). Wat nu?
 
 Die mogelijkheid blijft gewoon bestaan. Aan de aitomatisch aangemaakte verbijzonderingstoewijzing wordt geen btw-terugvorderingscode gekoppeld.
-

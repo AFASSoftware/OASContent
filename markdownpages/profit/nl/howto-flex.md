@@ -1,8 +1,8 @@
 ---
-title: Verkooprelatie en klantovereenkomst - flex
 author: CLN
-date: 2024-04-11
-tags: flex, verkooprelatie, klantovereenkomst
+date: 2025-11-08
+tags: Tutorial, GetConnector, UpdateConnector, Authentication, Crm, Projects
+title: Verkooprelatie en klantovereenkomst - flex
 ---
 
 ## Inleiding

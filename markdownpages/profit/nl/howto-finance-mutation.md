@@ -1,8 +1,8 @@
 ---
-title: Financiële Mutatie Verkoop 
 author: CLN
-date: 2024-10-28
-tags: Financieel, mutaties, boeken, verkoop
+date: 2025-11-08
+tags: Tutorial, GetConnector, UpdateConnector, Integration, Configuration, Authentication
+title: Financiële Mutatie Verkoop
 ---
 
 ## Inleiding

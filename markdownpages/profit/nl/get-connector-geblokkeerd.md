@@ -1,9 +1,10 @@
 ---
-title: GetConnector geblokkeerd
 author: EZW
-date: 2024-07-22
-tags: GetConnector, troubleshoot
+date: 2025-11-08
+tags: GetConnector, Integration, Crm
+title: GetConnector geblokkeerd
 ---
+
 Heb jij een bericht gekregen dat er een GetConnector in jouw omgeving geblokkeerd is? Dan is dit artikel voor jou bestemd.
 
 AFAS hanteert een Fair Use policy voor het gebruik van de API. In de praktijk betekent dat, dat elke dag de 10 zwaarste gebruikers een bericht krijgen dat ze hun proces moeten aanpassen.

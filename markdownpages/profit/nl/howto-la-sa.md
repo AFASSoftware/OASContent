@@ -1,8 +1,8 @@
 ---
-title: Loonadministratie aansluiten op salarisadministratie
 author: Eric Zwaal
-date: 2025-01-21
-tags: looncomponent, journaalpost
+date: 2025-11-08
+tags: Tutorial, GetConnector, Authentication, Hr, Payroll
+title: Loonadministratie aansluiten op salarisadministratie
 ---
 
 ## Inleiding

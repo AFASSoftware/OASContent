@@ -1,8 +1,8 @@
 ---
-title: GetConnector
 author: CLN
-date: 2024-12-17
-tags: get, data, sorting
+date: 2025-11-08
+tags: GetConnector, AppConnector, Integration, Authorization, Hr, Order Management
+title: GetConnector
 ---
 
 A GetConnector is an endpoint that allows an application to retrieve records from the Profit database. An AFAS administrator can compose these GetConnector definitions themselves, determining the records and fields that can be retrieved.

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "API-Documentation",
+			"path": "../API-Documentation"
+		},
+		{
+			"name": "OASContent",
+			"path": "."
+		}
+	],
+	"settings": {}
+}

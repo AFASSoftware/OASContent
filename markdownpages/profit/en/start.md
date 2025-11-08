@@ -1,8 +1,8 @@
 ---
-title: AFAS Profit API Quick Start
 author: CLN
-date: 2024-05-28
-tags: environment, test environment, sandbox, partner program, certification
+date: 2025-11-08
+tags: Partner, GetConnector, UpdateConnector, AppConnector, Integration, Authentication
+title: AFAS Profit API Quick Start
 ---
 
 ## Introduction to AFAS Profit
@@ -64,7 +64,7 @@ We mention the tasks of the administrator here. These tasks are not explained in
 
 ## AFAS Release Policy
 
-AFAS releases two or three versions (updates) each year. All AFAS customers use the AFAS Online platform, which is a cloud platform. With each new version, AFAS will migrate all customer environments to this new version, based on an schedule. Each customer will be informed of the migration date on which the environments will be emigrated to the new version.
+AFAS releases two versions (updates) each year: around June and November. All AFAS customers use the AFAS Online platform, which is a cloud platform. With each new version, AFAS will migrate all customer environments to this new version, based on an schedule. This migration takes a maximum of 3 months. Each customer will be informed of the migration date on which the environments will be emigrated to the new version.
 
 As a result, two situations can occur:
 

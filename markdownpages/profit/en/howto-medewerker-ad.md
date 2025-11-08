@@ -1,8 +1,8 @@
 ---
-title: Employee synchronization with Active Directory
 author: CLN
-date: 2024-03-06
-tags: AD, Active Directory, employee onboarding, employee offboarding
+date: 2025-11-08
+tags: Tutorial, GetConnector, UpdateConnector, Authentication, Authorization, Hr
+title: Employee synchronization with Active Directory
 ---
 
 ## Introduction

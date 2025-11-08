@@ -1,8 +1,8 @@
 ---
-title: Financial mutations purchasing
 author: CLN
-date: 2024-04-04
-tags: purchasing, confrontation, purchase invoice
+date: 2025-11-08
+tags: Tutorial, GetConnector, UpdateConnector, Integration, Authentication, Finance
+title: Financial mutations purchasing
 ---
 
 ## Introduction

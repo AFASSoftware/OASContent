@@ -1,8 +1,8 @@
 ---
-title: Vervoermiddel voor medewerker
 author: CLN
-date: 2024-04-04
-tags: auto, fiets, vervoer, mobiliteit
+date: 2025-11-08
+tags: Tutorial, GetConnector, UpdateConnector, Integration, Configuration, Authentication
+title: Vervoermiddel voor medewerker
 ---
 
 ## Inleiding

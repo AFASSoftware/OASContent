@@ -1,8 +1,8 @@
 ---
-title: Data vanuit AFAS Profit naar BI
 author: CLN
-date: 2024-06-19
-tags: PowerBI, qlik, business, inteligence
+date: 2025-11-08
+tags: Tutorial, GetConnector, Integration, Authentication, Finance, Hr
+title: Data vanuit AFAS Profit naar BI
 ---
 
 ## Inleiding

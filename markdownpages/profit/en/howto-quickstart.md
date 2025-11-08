@@ -1,8 +1,8 @@
 ---
-title: Quickstart - setup for your first request
 author: CLN
-date: 2024-05-28
-tags: Quickstart, setup, first request, API
+date: 2025-11-08
+tags: Partner, Tutorial, GetConnector, Integration, Configuration, Authentication
+title: Quickstart - setup for your first request
 ---
 
 This How-To provides you with everything you need to get started with using the AFAS Profit REST API. We guide you through generating your token, finding the request URL, and making your first API call.

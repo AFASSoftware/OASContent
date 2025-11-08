@@ -1,9 +1,9 @@
 ---
-title: AppConnector auditor voor Partners
 author: Eric Zwaal
-date: 2025-09-16
-tags: Appconnector, inrichting, GetConnector
+date: 2025-11-08
 index: true
+tags: Partner, IntegrationId, Tutorial, GetConnector, Profit5, AppConnector
+title: AppConnector auditor voor Partners
 ---
 
 ## Inleiding

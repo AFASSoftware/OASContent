@@ -1,8 +1,8 @@
 ---
-title: Retrieving attachments from AFAS Profit
 author: CLN
-date: 2024-04-27
-tags: attachment, appendix, pdf, payslip, annual statement
+date: 2025-11-08
+tags: Tutorial, GetConnector, UpdateConnector, AppConnector, Authentication, Authorization
+title: Retrieving attachments from AFAS Profit
 ---
 
 ## Introduction

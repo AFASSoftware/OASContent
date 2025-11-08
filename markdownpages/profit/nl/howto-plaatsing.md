@@ -1,8 +1,8 @@
 ---
-title: Plaatsing - flex
 author: CLN
-date: 2024-05-02
-tags: flex, Plaatsing, conceptplaatsing
+date: 2025-11-08
+tags: Tutorial, GetConnector, UpdateConnector, Integration, Authentication, Hr
+title: Plaatsing - flex
 ---
 
 > LET OP; deze How-To is in concept.

@@ -1,8 +1,8 @@
 ---
-title: GetConnector
 author: CLN
-date: 2024-12-17
-tags: get, data, sortering, 
+date: 2025-11-08
+tags: GetConnector, AppConnector, Integration, Authorization, Hr
+title: GetConnector
 ---
 
 Een GetConnector is een endpoint waarmee een applicatie records kan ophalen uit de Profit-database. Een AFAS-beheerder kan deze GetConnector-definities zelf samenstellen en bepaalt daarmee de records en velden die je kunt ophalen.

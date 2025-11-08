@@ -1,8 +1,8 @@
 ---
-title: Sales relation and customer agreement - flex
 author: CLN
-date: 2024-03-04
-tags: sales, customer, agreement, flex
+date: 2025-11-08
+tags: Tutorial, GetConnector, UpdateConnector, Configuration, Authorization, Finance
+title: Sales relation and customer agreement - flex
 ---
 
 ## Introduction 

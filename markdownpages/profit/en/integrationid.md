@@ -1,8 +1,8 @@
 ---
-title: AFAS IntegrationId
 author: CLN
-date: 2024-06-27
-tags:
+date: 2025-11-08
+tags: Partner, IntegrationId, UpdateConnector, Integration, Authorization, Crm
+title: AFAS IntegrationId
 ---
 
 ## What is an IntegrationId

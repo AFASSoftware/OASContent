@@ -1,9 +1,11 @@
 ---
-title: Concepts
 author: CLN
-date: 2024-05-28
-tags: Appconnector, GetConnector, UpdateConnector
+date: 2025-11-08
+tags: GetConnector, UpdateConnector, AppConnector, Configuration, Authentication,
+  Authorization
+title: Concepts
 ---
+
 ## App Connector
 
 The App Connector is the component in AFAS Profit through which you can integrate your App. The AFAS administrator sets it up in several steps. The App Connectors authorize GetConnectors and UpdateConnectors, and the administrator creates the token here. Profit administrators can add an unlimited number of App Connectors.

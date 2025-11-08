@@ -1,9 +1,10 @@
 ---
-title: UpdateConnector
 author: CLN
-date: 2024-02-18
-tags: insert, update, delete, put, post, create, remove, aanmaken, toevoegen, bijwerken
+date: 2025-11-08
+tags: UpdateConnector, Authorization, Hr, Order Management
+title: UpdateConnector
 ---
+
 Een externe applicatie kan records in de Profit-database toevoegen, wijzigen of verwijderen via een UpdateConnector (de mogelijkheden verschillen per endpoint). In UpdateConnectoren met subobjecten is het mogelijk om een specifieke actie op een subobject mee te geven.
 
 ## POST

@@ -1,8 +1,8 @@
 ---
-title: Onboarding a new candidate
 author: EZW
-date: 2025-09-02
-tags: candidate, flex, front, back, office
+date: 2025-11-08
+tags: Tutorial, GetConnector, UpdateConnector, Profit4, Configuration, Authorization
+title: Onboarding a new candidate
 ---
 
 ## Introduction

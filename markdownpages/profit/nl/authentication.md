@@ -1,9 +1,10 @@
 ---
-title: Authenticatie
 author: CLN
-date: 2024-06-28
-tags: tokens, jwt, bearer, oauth, access
+date: 2025-11-08
+tags: GetConnector, AppConnector, Integration, Configuration, Authentication, Authorization
+title: Authenticatie
 ---
+
 De AFAS Profit REST API maakt gebruik van statische tokens die je meegeeft in de http authenticatie header van je request. Deze statische tokens worden aangemaakt in het onderdeel [`App Connector`](./concepts#app-connector) in Profit. Een AFAS-beheerder met toegang tot de Profit-omgeving kan een token aanmaken.
 
 > Een token is uniek voor 1 omgeving en gekoppeld aan een gebruiker. De rechten van deze gebruiker hebben effect op de rechten van het token.

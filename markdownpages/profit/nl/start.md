@@ -1,9 +1,10 @@
 ---
-title: AFAS Profit API Quick start
 author: CLN
-date: 2024-02-18
-tags: omgeving, testomgeving, sandbox, partner programma, certificering
+date: 2025-11-08
+tags: Partner, GetConnector, UpdateConnector, AppConnector, Integration, Authentication
+title: AFAS Profit API Quick start
 ---
+
 ## Introductie AFAS Profit
 
 Met AFAS Profit worden alle administratieve processen in één softwareoplossing verwerkt. Dit betekent ook dat er gebruik gemaakt wordt van één database. Daardoor kunnen de bedrijfsprocessen naadloos op elkaar worden afgestemd. Gegevens worden eenmalig vastgelegd. De salarisadministratie wordt hierdoor een logisch gevolg van de HR-administratie en de financiële administratie wordt een logisch gevolg van je bedrijfsprocessen. En het mooiste is: veel administratief werk in je organisatie wordt geautomatiseerd.
@@ -63,7 +64,7 @@ We noemen hier de taken van de beheerder. In deze API-documentatie worden de beh
 
 ## Releasebeleid van AFAS
 
-AFAS brengt elk jaar twee of drie versies (updates) uit. Alle AFAS-klanten maken gebruik van het AFAS Online platform, dit is een cloud-platform. Bij elke nieuwe versie zal AFAS alle klantomgevingen op basis van een planning migreren naar deze nieuwe versie. Elke klant wordt op de hoogte gesteld van de datum waarop de omgevingen worden gemigreerd naar de nieuwe versie. 
+AFAS brengt elk jaar twee versies (updates) uit: rond juni en november. Alle AFAS-klanten maken gebruik van het AFAS Online platform, dit is een cloud-platform. Bij elke nieuwe versie zal AFAS alle klantomgevingen op basis van een planning migreren naar deze nieuwe versie. Deze migratie duurt maximaal 3 maanden. Elke klant wordt op de hoogte gesteld van de datum waarop de omgevingen worden gemigreerd naar de nieuwe versie. 
 
 Hierdoor kunnen zich twee situaties voordoen:
 

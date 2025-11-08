@@ -1,9 +1,9 @@
 ---
-title: Partner Integration Self Service voor AFAS medewerkers
 author: Eric Zwaal
-date: 2025-01-21
-tags: Appconnector, inrichting, GetConnector
+date: 2025-11-08
 index: false
+tags: Partner, GetConnector, AppConnector, Integration, Hr
+title: Partner Integration Self Service voor AFAS medewerkers
 ---
 
 Deze versie van de AppConnector Auditor toont vrijwel alle punten die ook op andere niveaus getoond worden. Daarnaast bevat het een flinke dosis technische informatie. Doel daarvan is:

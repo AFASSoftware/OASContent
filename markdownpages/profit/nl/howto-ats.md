@@ -1,8 +1,8 @@
 ---
-title: Onboarden van een nieuwe kandidaat
 author: CLN
-date: 2024-04-08
-tags: kandidaat, flex, front, back, office
+date: 2025-11-08
+tags: Tutorial, GetConnector, UpdateConnector, Profit4, Hr, Crm
+title: Onboarden van een nieuwe kandidaat
 ---
 
 ## Inleiding

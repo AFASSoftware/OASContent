@@ -1,9 +1,11 @@
 ---
-title: Concepten
 author: CLN
-date: 2024-02-18
-tags: Appconnector, GetConnector, UpdateConnector
+date: 2025-11-08
+tags: GetConnector, UpdateConnector, AppConnector, Configuration, Authentication,
+  Crm
+title: Concepten
 ---
+
 ## App Connector
 
 De App Connector is het onderdeel in AFAS Profit waarmee je  App kunt integreren. De AFAS-beheerder richt deze in een aantal stappen in. In de App Connectoren worden GetConnectoren en UpdateConnectoren geautoriseerd en hier maakt de beheerder de token aan. Profit beheerders kunnen onbeperkt App Connectoren toevoegen.

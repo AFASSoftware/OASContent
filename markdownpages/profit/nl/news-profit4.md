@@ -1,8 +1,8 @@
 ---
-title: Nieuw in Profit 4
 author: EZW
-date: 2024-10-25
-tags: Profit4
+date: 2025-11-08
+tags: UpdateConnector, Profit4, Profit3, Configuration, Hr, Payroll
+title: Nieuw in Profit 4
 ---
 
 Vanaf Profit 4 is er een aantal wijzigingen in de AFAS Profit API doorgevoerd. Hieronder staan wijzigingen ten opzichte van Profit 3. Benieuwd naar onze roadmap? [Klik hier](https://www.afas.nl/roadmap)
@@ -316,4 +316,3 @@ Change in documentation only; endpoint was never available.
 | Description | Connector | Operation |
 | --- | --- | --- |
 | endpoint added | HrOnboarding | [POST](../../apidoc/nl/Werving%20en%20selectie#post-/connectors/HrOnboarding) |
-
