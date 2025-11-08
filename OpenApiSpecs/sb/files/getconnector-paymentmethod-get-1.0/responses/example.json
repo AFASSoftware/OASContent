@@ -1,0 +1,38 @@
+[
+    {
+        "Id": "afa50000-0000-0181-a66a-0eee1b383d80",
+        "Description": "Creditcard"
+    },
+    {
+        "Id": "afa50000-0000-00c8-9eec-375e35359e5f",
+        "Description": "Incasso"
+    },
+    {
+        "Id": "afa50000-0000-0dfe-8783-89ff34e106ec",
+        "Description": "Rekening-courant aandeelhouder"
+    },
+    {
+        "Id": "afa50000-0000-0cde-bc05-905891515287",
+        "Description": "Pin"
+    },
+    {
+        "Id": "afa50000-0000-0f93-a3ff-98c91e8a5d66",
+        "Description": "Privé"
+    },
+    {
+        "Id": "afa50000-0000-0969-925a-a5077ccd2c36",
+        "Description": "Onbekend"
+    },
+    {
+        "Id": "afa50000-0000-0f79-87ed-e26c431bb44e",
+        "Description": "Contant"
+    },
+    {
+        "Id": "afa50000-0000-015f-89ac-f4a839ef5d7f",
+        "Description": "iDEAL"
+    },
+    {
+        "Id": "afa50000-0000-0102-b0d1-f91a25e6c442",
+        "Description": "Op rekening"
+    }
+]

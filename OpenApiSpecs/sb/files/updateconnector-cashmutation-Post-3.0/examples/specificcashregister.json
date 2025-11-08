@@ -1,0 +1,9 @@
+{
+  "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+  "Description": "Omzet algemeen",
+  "Date": "2025-03-15",
+  "LedgerAccountId": "0cc7471d-9973-5214-8106-a960bbaa348e",
+  "VatTarive": "high",
+  "CashregisterId": "25e93133-ec28-543f-9f23-312ddb4e10a3",
+  "AmountIncludingVat": 800
+}

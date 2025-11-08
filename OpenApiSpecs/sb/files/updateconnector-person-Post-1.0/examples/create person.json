@@ -1,0 +1,54 @@
+{
+    "Firstname": "John",
+    "Initials": "J",
+    "Prefix": "Mr",
+    "lastName": "Doe",
+    "emailaddress": "johndoe@gmail.com",
+    "phonenumber": "1-555-123-4567",
+    "address": [
+        {
+            "StreetName": "Main Street",
+            "HouseNumber": 1234,
+            "HouseNumberAddition": "",
+            "Explanation": "",
+            "PostalZone": "90210",
+            "State": "California",
+            "CityName": "Beverly Hills",
+            "CountryCode": "US",
+            "preferredSupplierAddress": false,
+            "preferredShippingAddress": true,
+            "preferredBillingAddress": false
+        },
+        {
+            "StreetName": "Park Avenue",
+            "HouseNumber": 567,
+            "HouseNumberAddition": "Apt 3B",
+            "Explanation": "",
+            "PostalZone": "10022",
+            "State": "New York",
+            "CityName": "New York",
+            "CountryCode": "US",
+            "preferredSupplierAddress": true,
+            "preferredShippingAddress": false,
+            "preferredBillingAddress": true
+        }
+    ],
+    "bankAccounts": [
+        {
+            "AccountNumber": "NL93LOYD0175300941",
+            "BankId": "LOYD",
+            "Bic": "LOYDNL2A",
+            "CountryCode": "NL",
+            "preferredOutgoingPayments": true,
+            "preferredIncommingPayments": false
+        },
+        {
+            "AccountNumber": "NL67VOWA0136875262",
+            "BankId": "VOWA",
+            "Bic": "VOWANL21",
+            "CountryCode": "NL",
+            "preferredOutgoingPayments": false,
+            "preferredIncommingPayments": true
+        }
+    ]
+}

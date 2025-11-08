@@ -1,0 +1,30 @@
+{
+  "result": "Succeeded",
+  "instances": [
+    {
+      "Code": "Klant",
+      "Id": "a8dcbe97-99b1-41bf-a45b-65fd997a415c"
+    },
+    {
+      "Code": "Betaler",
+      "Id": "c36f6228-44f3-4aa1-94ac-460358cd0444"
+    },
+    {
+      "Code": "VrkpfctrInkmndBtlngChain",
+      "Id": "c62e495e-02d7-4af4-be0f-c9caa6384fe6"
+    }
+  ],
+  "data": [
+    {
+      "BusinessActivityId": "c62e495e-02d7-4af4-be0f-c9caa6384fe6",
+      "Factuurnummer": "VF230001",
+      "RowCount": 2
+    },
+    {
+      "BusinessActivityId": "c62e495e-02d7-4af4-be0f-c9caa6384fe6",
+      "Factuurnummer": "VF230001",
+      "RowCount": 2
+    }
+  ],
+  "errors": []
+}

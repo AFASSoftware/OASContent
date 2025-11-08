@@ -1,0 +1,8 @@
+{
+  "result": "Failed",
+  "traceId": "339ee3cf-e6bb-4201-9fd0-577906f9f96a",
+  "instances": [],
+  "errors": [
+      "FeatureToggle not enabled"
+  ]
+}

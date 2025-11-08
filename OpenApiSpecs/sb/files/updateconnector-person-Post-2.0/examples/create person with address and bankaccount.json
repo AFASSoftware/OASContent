@@ -1,0 +1,28 @@
+{
+    "Firstname": "Julianne",
+    "Initials": "J",
+    "Prefix": "Mr",
+    "LastName": "Pouros",
+    "Emailaddress": "Alyce58@gmail.com",
+    "Phonenumber": "1-555-123-4567",
+    "Address": [{
+        "StreetName": "Krommeweg",
+        "HouseNumber": 18,
+        "HouseNumberAddition": "",
+        "Explanation": "",
+        "PostalZone": "8071TE",
+        "CityName": "Nunspeet",
+        "CountryCode": "NL",
+        "PreferredSupplierAddress": true,
+        "PreferredShippingAddress": true,
+        "PreferredBillingAddress": true
+    }],
+    "BankAccounts": [{
+        "AccountNumber": "NL93LOYD0175300941",
+        "BankId": "LOYD",
+        "Bic": "LOYDNL2A",
+        "CountryCode": "NL",
+        "PreferredOutgoingPayments": true,
+        "PreferredIncommingPayments": true
+    }]
+}

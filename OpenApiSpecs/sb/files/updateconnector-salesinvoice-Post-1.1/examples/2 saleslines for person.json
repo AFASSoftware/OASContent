@@ -1,0 +1,18 @@
+{
+    "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+    "IssueDate": "2023-05-16",
+    "RelationType": "person",
+    "RelationId": "8afb1a9a-1613-5e2b-ab19-20c0f4f3e216",
+    "InvoiceLine": [
+        {
+            "ItemId": "e33e2205-fd7e-5921-8262-0006aea0e891",
+            "Price": 250,
+            "Quantity": 1
+        },
+        {
+            "ItemId": "ab4635de-3b28-5019-9a8a-25fa54362bdd",
+            "Price": 2,
+            "Quantity": 2
+        }
+    ]
+}

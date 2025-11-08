@@ -1,0 +1,20 @@
+[
+    {
+        "OutstandingAmount": 684.8600000000,
+        "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502",
+        "RelationName": "AFAS Software B.V.",
+        "RelationId": "7b8e279b-b551-556e-a00a-a815392d0d38",
+        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+        "InstanceId": "9b9c7f38-d059-4a9c-b3a0-3e0562bd0115",
+        "RelationType": "organisation"
+    },
+    {
+        "OutstandingAmount": 640.0900000000,
+        "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502",
+        "RelationName": "Mollie B.V.",
+        "RelationId": "3709fb45-c646-5cca-8de7-e6433404316a",
+        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+        "InstanceId": "d33f3c36-d120-448c-92bd-0dbdeb2985bd",
+        "RelationType": "organisation"
+    }
+]

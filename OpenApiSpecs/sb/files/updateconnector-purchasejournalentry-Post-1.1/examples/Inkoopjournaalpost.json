@@ -1,0 +1,30 @@
+{
+    "AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+    "InvoiceNumber": "3gKm5gtrBcjWHNY3dwwjyza4AZYAyBW",
+    "RelationType": "organisation",
+    "RelationId": "863d895a-3782-5500-b933-dd487d736138",
+    "InvoiceDate": "2024-01-22",
+    "DueDate": "2024-02-28",
+    "PaymentMethod": "creditcard",
+    "Attachments": [
+       {
+           "AttachmentId": "039e63a5-5761-4a6e-a58b-d0fcda003e0c"
+       }
+    ],
+    "InvoiceLine": [
+        {
+            "Description": "Inkopen btw hoog",
+            "LedgerAccountId": "55eeb0a9-25d0-5c60-830b-07f515fc0c0c",
+            "VatType": "high",
+            "AmountExcludingVat": 22,
+            "AmountVat": 4.62
+        },
+        {
+            "Description": "Inkopen btw laag",
+            "LedgerAccountId": "22edee70-753a-5f8c-a613-39fe661fffbe",
+            "VatType": "low",
+            "AmountExcludingVat": 100,
+            "AmountVat": 9
+        }
+    ]
+}

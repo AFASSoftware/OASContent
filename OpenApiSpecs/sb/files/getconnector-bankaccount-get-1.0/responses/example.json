@@ -1,0 +1,12 @@
+[
+    {
+        "Id": "0d83610b-e1fc-53a2-a951-00f9098e0154",
+        "Bankrekening": "NL10INGB0675488052",
+        "RelationId": "b323458f-5bae-542b-8294-9040c9801805"
+    },
+    {
+        "Id": "dd6cbc4b-6ec6-59c0-95ca-020b5977b39a",
+        "Bankrekening": "NL16RABO0300417497",
+        "RelationId": "b24405d6-fee2-52f5-8f24-c1a0180e46f2"
+    }
+]

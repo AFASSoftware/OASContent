@@ -1,0 +1,6 @@
+{
+    "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+    "Description": "Creates only a cashmutation without a reconciliation mutation.",
+    "Date": "2024-03-15",
+    "AmountIncludingVat": 400
+}

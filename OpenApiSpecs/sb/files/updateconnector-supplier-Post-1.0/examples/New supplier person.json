@@ -1,0 +1,17 @@
+{
+	"AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+	"EmailAddress": "Delfina2@example.net",
+	"PhoneNumber": "30-702-386-4989",
+	"BankAccountNumber": "NL29TRIO0110845005",
+	"Bic": "TRIONL2U",
+	"Person": {
+		"Firstname": "Lacy",
+		"Initials": "MD",
+		"Prefix": "Ms.",
+		"Lastname": "Harber"
+	},
+	"PaymentMethod": "null",
+    "LedgerAccountId": "cfb59b79-b3ec-55ef-8cde-000499c3179e",
+    "PaymentCondition": "b98e24e9-a611-5a98-8cf9-40fed321dc6c",
+    "VatCalculation": "null"
+}

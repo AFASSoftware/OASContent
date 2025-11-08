@@ -1,0 +1,32 @@
+[
+    {
+        "InstanceId": "fcb31b25-8da1-4a90-ae33-a93d932184f0",
+        "Ownorganization": {
+            "Id": "73109da3-0fcf-4fbe-bd2c-209a399ae502",
+            "ComponentId": "cbb9b7ef-ef04-4c84-9e80-4989bd526865"
+        },
+        "DatumGepland": "2024-12-04T00:00:00Z",
+        "Klant": {
+            "Id": "509e24de-67fb-4e02-b149-f8c615fef64c",
+            "ComponentId": "8e352e23-04af-45b7-952a-0afc7575ea7a"
+        },
+        "ProjectKoppelen": true,
+        "Project": {
+            "Id": "e03c053d-3e72-400b-821d-c3398edf1ccc",
+            "ComponentId": "497fc9c2-340d-4d18-b097-c6bbd06bbab7"
+        },
+        "Verkoopproduct": {
+            "Id": "aaf04330-151c-44d9-9700-8793b1c0d4b4",
+            "ComponentId": "230b4172-613e-4e1b-9ed5-93496c4eed6b"
+        },
+        "Description": "AFAS Software B.V. (000003) - 04-12-2024",
+        "Aantal": 32.0000000000,
+        "Prijs": 539.7000000000,
+        "Bedrag": 17270.4000000000,
+        "MethodeBepalenPrijs": "52085b0b-a85a-418e-8e33-a00e48666512",
+        "Status": "692a0b09-b83b-44cb-b75a-e431eb66302f",
+        "KlantDescription": "AFAS Software B.V. (000003)",
+        "ProjectDescription": "Implementation Exceptional",
+        "VerkoopproductDescription": "Acer Laptop (3320, 000001)"
+    }
+]

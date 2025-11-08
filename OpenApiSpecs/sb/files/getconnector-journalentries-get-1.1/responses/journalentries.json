@@ -1,0 +1,40 @@
+[
+    {
+        "LineId": "20a899d9-7a95-56f7-a54b-000b17fb8d24",
+        "AmountDebit": 3932.1700000000,
+        "AmountCredit": 0.0000000000,
+        "AmountTotal": 3932.1700000000,
+        "VatPercentage": null,
+        "VatSection": null,
+        "VatAmount": null,
+        "AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+        "HeaderId": "938afbd9-f317-53af-bcde-b1c8e5d28472",
+        "Number": "2477",
+        "PostingDate": "2022-10-31T00:00:00Z",
+        "DocumentDate": "2022-10-31T00:00:00Z",
+        "AccountingPeriodId": "59aaf644-e6da-45eb-962f-bc37555d4262",
+        "AccountingYearId": "f37fc13c-870f-45ae-96e1-a5fa70c861c1",
+        "LedgerAccountId": "349016af-3fa7-5b11-b77d-454cc05a17ee",
+        "Description": "Overige uitgave - NL77ABNA0441631347 - Salarisbetaling",
+        "DocumentIdentification": null
+    },
+    {
+        "LineId": "a34bf47d-ecab-5185-b4ac-002cdb062855",
+        "AmountDebit": 88.9400000000,
+        "AmountCredit": 0.0000000000,
+        "AmountTotal": 88.9400000000,
+        "VatPercentage": null,
+        "VatSection": null,
+        "VatAmount": null,
+        "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+        "HeaderId": "c0c3b86b-a023-5838-9353-ceb1ab7198fa",
+        "Number": "2112",
+        "PostingDate": "2024-04-02T00:00:00Z",
+        "DocumentDate": "2024-03-15T00:00:00Z",
+        "AccountingPeriodId": "49a93c26-2f8c-44c3-9be2-552f3b6a8fce",
+        "AccountingYearId": "cc0b784f-a591-4e37-8cb4-ba06374d18df",
+        "LedgerAccountId": "78685f08-fb5c-593f-a7d8-b4ed2886ef9d",
+        "Description": "Verkoopfactuur - Erbi Lara B.V.",
+        "DocumentIdentification": "V01240034"
+    }
+]

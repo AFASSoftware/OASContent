@@ -1,0 +1,16 @@
+{
+    "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+    "Organisation": {
+        "Name": "Kuhic - Cartwright",
+        "CompanyIdCoc": "80446353",
+        "CompanyIdVat": "NL861674881B01",
+        "tradename": "McKenzie - Rice bv."
+    },
+    "EmailAddress": "Joaquin85@yahoo.com",
+    "PhoneNumber": "625-968-5184",
+    "BankAccountNumber": "NL57ARBN0677339755",
+    "Bic": "ARBNNL22",
+    "LedgerAccountId": "cfb59b79-b3ec-55ef-8cde-000499c3179e",
+    "PaymentMethod": "null",
+    "PaymentConditionId": "b98e24e9-a611-5a98-8cf9-40fed321dc6c"
+}

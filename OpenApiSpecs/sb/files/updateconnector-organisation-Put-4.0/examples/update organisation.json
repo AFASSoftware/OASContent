@@ -1,0 +1,25 @@
+{
+  "RelationId": "978638a5-394f-4ecc-a31f-21332f9f79e5",
+  "Name": "AFAS Software",
+  "CocNumber": "54041813",
+  "ExternalId": "SWR23244",
+  "Tradename": "AFAS Software BV",
+  "EmailAddress": "info@afas.NL",
+  "WebSite": "www.afas.nl",
+  "phoneNumber": "+31334341800",
+  "Addresses": [
+    {
+      "StreetName": "inspiratielaan",
+      "HouseNumber": 5,
+      "HouseNumberAddition": "b",
+      "Explanation": "Headquarters",
+      "PostalZone": "3833AV",
+      "State": "Utrecht",
+      "CityName": "Leusden",
+      "CountryCode": "NL",
+      "preferredSupplierAddress": true,
+      "preferredShippingAddress": false,
+      "preferredBillingAddress": true
+    }
+    ]
+}

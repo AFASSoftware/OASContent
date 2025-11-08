@@ -1,0 +1,19 @@
+{
+	"AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+	"Description": "Loonjournaalpost_001",
+	"Date": "2024-01-22",
+	"PayrollJournalEntryLine": [
+		{
+			"LedgerAccountNumber": "1700",
+			"AmountDebit": 4000
+		},
+		{
+			"LedgerAccountNumber": "1710",
+			"AmountCredit": 1300
+		},
+		{
+			"LedgerAccountNumber": "2300",
+			"AmountCredit": 2700
+		}
+	]
+}

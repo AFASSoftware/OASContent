@@ -1,0 +1,19 @@
+{
+    "result": "Succeeded",
+    "data": {
+        "RelationId": "9ef691ac-b12c-4e14-9368-8191e03b54c0",
+        "Addresses": [
+            {
+                "AddressId": "a329ffce-7e6c-4e79-acb4-43ac57157dc9",
+                "AddressDescription": "inspiratielaan 2 3833AV Leusden Nederland"
+            }
+        ],
+        "BankAccounts": [
+            {
+                "AccountNumberId": "4395b94c-af56-429b-ab52-52bdc9986fb4",
+                "AccountNumber": "NL68INGB0801705542"
+            }
+        ]
+    },
+    "errors": []
+}

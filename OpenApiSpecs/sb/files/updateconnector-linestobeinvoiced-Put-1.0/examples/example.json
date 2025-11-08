@@ -1,0 +1,10 @@
+{
+  "LineToBeInvoicedId": "547a03a2-19c9-4058-bc77-452063b25d6d",
+    "AdministrationId": "5c86c621-14fc-5d09-a387-772c599caa5d",
+    "Date": "2024-11-04",
+    "Description": "Dell Laptop",
+    "RelationType": "organisation",
+    "RelationId": "30bf2fcc-306d-5680-9e03-d99fbfe46bc2",
+    "ItemId": "4689e028-02c7-5324-885a-556701bd1a9f",
+    "Quantity": 50
+  }

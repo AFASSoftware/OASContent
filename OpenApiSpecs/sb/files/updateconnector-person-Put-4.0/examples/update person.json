@@ -1,0 +1,20 @@
+{
+  "RelationId": "69a7cab4-3a34-4fdf-8017-c6df8a9375df",
+  "FirstName": "John",
+  "LastName": "Doe",
+  "Addresses": [
+  {
+    "StreetName": "inspiratielaan",
+    "HouseNumber": 5,
+    "HouseNumberAddition": "b",
+    "Explanation": "Headquarters",
+    "PostalZone": "3833AV",
+    "State": "Utrecht",
+    "CityName": "Leusden",
+    "CountryCode": "NL",
+    "preferredSupplierAddress": true,
+    "preferredShippingAddress": true,
+    "preferredBillingAddress": true
+  }
+  ]
+}

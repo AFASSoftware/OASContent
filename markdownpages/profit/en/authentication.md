@@ -5,55 +5,139 @@ tags: Tutorial, GetConnector, UpdateConnector, AppConnector, Integration, Config
 title: Authentication
 ---
 
-The AFAS Profit REST API uses static tokens that you include in the http authentication header of your request. These static tokens are created in the [`App Connector`](./concepts#app-connector) in Profit. An AFAS administrator with access to the Profit environment can create a token.
+## Introduction
 
-> A token is unique to one environment and linked to a user. The permissions of this user will affect the permissions of the token.
+The AFAS Profit REST API supports two authentication methods:
+1. Classic token
+2. OAuth
+    1. Client credentials flow
+    2. Authorization code flow with PKCE
 
-The AFAS Profit REST API uses an authentication header to authenticate requests (the header is only used for authentication). To use this API, you always need to provide this header. In this description, you will learn How-To apply the token. Creating the token is done by the AFAS administrator or, if you have access to AFAS Profit, you can do it yourself. To do this, follow the steps in [Creating App Connectors](https://help.afas.nl/help/NL/SE/120718.htm).
+Which method is used depends on the settings of the [App Connector](https://docs.afas.help/profit/en/concepts#app-connector) that is being used.
 
-> TLS 1.2 is mandatory for all requests.
 
-## Format and conversion
+## Classic token
 
-This is an example format of a token as generated in AFAS Profit:
+This method uses static tokens which you include in the HTTP Authorization header of all your requests. A token is unique to a single environment and is linked to a user. The permissions of that user affect the rights of the token.
+
+The AFAS administrator creates the token, or if you have access to AFAS Profit you can create it yourself. Follow the steps in [Eigen app connector inrichten in vogelvlucht](https://help.afas.nl/help/NL/SE/120718.htm).
+
+TLS 1.2 is required for all requests.
+
+
+### Format and conversion
+
+A classic token as generated in AFAS Profit looks like this:
 
 ``` xml
 <token><version>1</version><data>949C1A9CD9AE4797950D94F55A7A4D056770472D4963CB9A8D3800BEE0CCE6A2</data></token>
 ```
 
-To use this token, you must convert it to **Base64**. After conversion, the token might look like this:
-`PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg==`
+To use this token in requests you must convert it to Base64. After conversion the token looks for example like this:
 
-Example token conversion:
-
-```csharp
-string token = await GetKeyVaultSecretAsync(keyVaultUri, secretName);
-string base64AfasToken = Convert.ToBase64String(Encoding.UTF8.GetBytes(token));
+``` xml
+PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg==
 ```
 
-## Applying token
 
-Use the token in the http request header with an `AfasToken` prefix. Use the `Authorization` header with the token value `AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb04+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg==`
+### Applying the token
 
-``` bash
-curl -X GET "https://12345.rest.afas.online/ProfitRestServices/ProfitVersion" \
- -H "Accept: application/json" \
- -H "Authorization: AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb04+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg=="
+Use the token in the HTTP request header with an `AfasToken` prefix. Use the `Authorization` header with the token value:
+
+``` xml
+AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg==
 ```
+**Note**: Handle the token carefully as it provides access to sensitive data. Follow best practices when storing and managing the token and consider having your integration reviewed by an external security expert to address potential vulnerabilities.
 
-> **Note:** Handle the token with care, as it provides access to sensitive data. Ensure that you follow best practices for storing and managing the token and consider having your integration reviewed by an external security expert to address potential vulnerabilities.
 
-## Unauthorized and Forbidden
+### Generating a token for a user via OTP
 
-When the token is not valid or not correctly applied, you will receive an HTTP 401 response. Request a new token or validate whether you correctly convert the token. Use the tools on [connect.afas.nl](https://connect.afas.nl/) to validate if you correctly execute the request.
+AFAS provides the option to use a One Time Password (OTP) to obtain a token. This is useful in scenarios where users must register themselves in an application.
 
-You will receive a forbidden message when an IP restriction applies to the App Connector. These IP restrictions are managed in the AFAS environment. Report this to the AFAS administrator of the environment you are connecting to and request to adjust it with your IP address.
 
-## Generate token for user via OTP
+### Unauthorized
 
-AFAS offers the option to use a [One Time Password (OTP)](../../apidoc/en/Inrichting#post-/OtpRequest) instead of a token. This is useful in situations where users need to register themselves in an application.
+If the token is invalid or not applied correctly you will receive an HTTP 401 response. Request a new token or validate that you convert the token correctly. Use the tooling on [connect.afas.nl](https://connect.afas.nl) to validate that you are making the request correctly.
 
-The OTP option offers a way to retrieve a token without sharing this via an external tool or email for example.
+
+
+## OAuth
+
+Within the OAuth protocol we support two flow types:
+1. Client credentials flow
+2. Authorization code flow with PKCE
+
+
+### Client credentials flow
+
+The Client Credentials Flow is primarily used for server-to-server communication where there is no direct involvement of an end user. This flow is ideal for applications that need access to resources on their own behalf rather than on behalf of a user. It is suitable for situations where an application requires access to APIs to perform background tasks, such as syncing data or running batch jobs.
+
+When an app connector uses the Client Credentials Flow, an 'OAuth client id' and an 'OAuth client secret' are created. The OAuth client secret is provided once during creation and cannot be retrieved afterwards.
+
+#### Steps to access the API
+
+To access the API, follow these steps:
+1. Obtain an access token
+    1. Call the [token endpoint](#token-endpoint) (POST) with the following information in the body:
+        1. grant_type: client_credentials
+        2. client_id: `<fill in client id>`
+        3. client_secret: `<fill in client secret>`
+    2. In the response of this call you will find the following fields:
+        1. access_token: the access token you must add to the Authorization header.
+        2. refresh_token: for the client credentials flow this is always "null".
+        3. token_type: Bearer
+        4. expires_in: validity of the access token in seconds.
+    3. Use the access token
+        1. Copy the access token, prefix it with 'Bearer', and add it to your Authorization header.
+
+
+### Authorization code flow with PKCE
+
+The Authorization Code Flow with PKCE is ideal for web applications that need to obtain access to resources on behalf of a user. The process starts with user authentication and authorization, where the user logs in and grants permission. An authorization code is then issued, which can be exchanged for an access token. This flow provides a secure way to access data from external services because it requires the user's involvement before access is granted.
+
+
+#### Steps to access the API
+
+To access the API via the Authorization Code Flow, follow these steps:
+1. Obtain an authorization code
+    1. Redirect the user to the [authorization endpoint](#authorization-endpoint) with the following parameters:
+        1. response_type: code
+        2. client_id: `<fill in client id>`
+        3. redirect_uri: `<fill in redirect URI>`
+        4. scope: `<fill in desired scopes>`
+        5. state: `<optional unique value to protect against CSRF>`
+        6. code_challenge: `<fill in codeChallenge>`
+        7. code_challenge_method: `<fill in codeChallenge method>`
+    2. The user logs in and grants permission. After granting permission the user is redirected back to the provided redirect_uri with an authorization code.
+2. Exchange the authorization code for an access token
+    1. Call the [token endpoint](#token-endpoint) (POST) with the following information in the body:
+        1. grant_type: authorization_code
+        2. code: `<replace with obtained authorization code>`
+        3. redirect_uri: `<fill in redirect URI>`
+        4. client_id: `<fill in client id>`
+        5. client_secret: `<fill in client secret>`
+        6. code_verifier: `<fill in code verifier>`
+3. In the response of this call you will find the following fields:
+    1. access_token: the access token you must add to the Authorization header.
+    2. refresh_token: a token that can be used to obtain a new access token.
+    3. token_type: Bearer
+    4. expires_in: validity of the access token in seconds.
+3. Use the access token
+    1. Copy the access token, prefix it with 'Bearer', and add it to your Authorization header.
+
+### Token endpoint
+Production: https://`<omgevingsnummer>`.rest.afas.online/ProfitRestServices/oauth/token
+
+Accept: : https://`<omgevingsnummer>`.restaccept.afas.online/ProfitRestServices/oauth/token
+
+Test: https://`<omgevingsnummer>`.resttest.afas.online/ProfitRestServices/oauth/token
+
+### Authorization endpoint
+Production: https://`<omgevingsnummer>`.rest.afas.online/ProfitRestServices/oauth/authorize
+
+Accept: https://`<omgevingsnummer>`.restaccept.afas.online/ProfitRestServices/oauth/authorize
+
+Test: https://`<omgevingsnummer>`.resttest.afas.online/ProfitRestServices/oauth/authorize
 
 ### Read more
 

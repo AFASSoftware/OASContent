@@ -1,0 +1,9 @@
+{
+    "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+    "Description": "Aanschaf kleine machines en gereedschap",
+    "Date": "2024-03-15",
+    "LedgerAccountId": "c031b2e8-f8ac-5ab2-a428-93bf9789fc5e",
+    "VatPercentage": 21,
+    "VatTarive": "high",
+    "AmountIncludingVat": -200
+}

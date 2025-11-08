@@ -1,0 +1,15 @@
+{
+    "TrackingToken": "202412131017330",
+    "Result": [
+        {
+            "InstanceId": "96d5ef01-0d3f-4a60-b5ee-8a915693f5c2",
+            "Omschrijving": "Implementation Greenshop",
+            "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502"
+        },
+        {
+            "InstanceId": "e03c053d-3e72-400b-821d-c3398edf1ccc",
+            "Omschrijving": "Implementation Exceptional",
+            "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502"
+        }
+    ]
+}

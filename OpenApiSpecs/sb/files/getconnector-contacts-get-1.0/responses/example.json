@@ -1,0 +1,44 @@
+{
+    "TrackingToken": "202403280856491",
+    "Result": [
+        {
+            "Id": "0236d0dc-b5be-5b6e-b191-17f6b767aa5b",
+            "IsArchived": false,
+            "OrganisationId": "e97ecfe3-8bcb-5baf-82e4-4e46b2b02126",
+            "OrganisatieIsArchived": false,
+            "Name": "Peter de Jager",
+            "FirstName": "Peter",
+            "Initials": "P.",
+            "Prefix": "de",
+            "Lastname": "Jager",
+            "ExternalId": null,
+            "PersoonIsArchived": false
+        },
+        {
+            "Id": "2c5b3f1d-1689-5257-9ab2-2ba634203b2c",
+            "IsArchived": false,
+            "OrganisationId": "c589e4b3-d131-5a1b-9eca-44dd2fc17600",
+            "OrganisatieIsArchived": false,
+            "Name": "Trudie Feenstra",
+            "FirstName": "Trudie",
+            "Initials": "T.",
+            "Prefix": null,
+            "Lastname": "Feenstra",
+            "ExternalId": null,
+            "PersoonIsArchived": false
+        },
+        {
+            "Id": "416b5ea9-93bd-5cfc-af07-37f1681da00b",
+            "IsArchived": false,
+            "OrganisationId": "bb3fd8ef-5a0e-5919-8e67-77b396abf212",
+            "OrganisatieIsArchived": false,
+            "Name": "Yousef Martiqui",
+            "FirstName": "Yousef",
+            "Initials": "Y.",
+            "Prefix": null,
+            "Lastname": "Martiqui",
+            "ExternalId": null,
+            "PersoonIsArchived": false
+        }
+    ]
+}

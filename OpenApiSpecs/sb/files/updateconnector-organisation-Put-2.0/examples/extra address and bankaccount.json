@@ -1,0 +1,24 @@
+{
+    "RelationId": "b09841f6-338e-4d5e-af4e-bb3d62405c66",
+    "Addresses": [
+      {
+        "StreetName": "Tillman Glen",
+        "HouseNumber": 1,
+        "HouseNumberAddition": "b",
+        "Explanation": "Headquarters",
+        "PostalZone": "3833AV",
+        "State": "Utrecht",
+        "CityName": "Leusden",
+        "CountryCode": "NL"
+      }
+    ],
+    "BankAccounts": [
+      {
+        "AccountNumber": "NL85CHAS0874238307",
+        "BankId": "CHAS",
+        "Bic": "CHASNL2X",
+        "CountryCode": "NL",
+        "AccountHolderName": "Kees Zandbergen"
+      }
+    ]
+  }
