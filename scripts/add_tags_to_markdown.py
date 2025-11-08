@@ -126,8 +126,6 @@ def generate_tags(filepath: Path, content: str, frontmatter: dict) -> List[str]:
     # Sort prioritized tags by their priority order
     prioritized_tags.sort(key=lambda x: priority_tags_list.index(x) if x in priority_tags_list else 999)
     
-    filtered_existing_tags=[]
-
     # Step 5: Combine in order: priority tags -> existing tags -> remaining generated tags
     final_tags = prioritized_tags + filtered_existing_tags + remaining_generated_tags
     
