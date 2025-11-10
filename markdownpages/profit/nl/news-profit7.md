@@ -30,7 +30,7 @@ Geef de header mee als `"AfasToken <base64-encoded token>"`:
 
 ### Gewijzigde formattering van resultaten van GetConnector
 
-In Profit 6 maakte de SQL Server de resultaten van een GetConnector. In Profit 7 doet Profit dat zelf. Het gaat hierbij om JSON bij REST en XML bij SOAP.
+In Profit 6 maakte de SQL Server de resultaten van een GetConnector. In Profit 7 doet Profit dat zelf. Het gaat hierbij om JSON bij REST en XML bij SOAP.  
 
 **Let op**: het formaat van de resultaten is anders. Als je gebruik maakt van een standaard XML/JSON parser zal dit geen probleem geven.
 - Decimalen zien er anders uit. Voorbeeld: -.5 wordt nu -0.5
