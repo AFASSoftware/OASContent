@@ -30,21 +30,22 @@ TAG_KEYWORDS = {
     'AppConnector': ['appconnector', 'app connector'],
     'Partner': ['partner', 'partners'],
     'IntegrationId': ['integrationid'],
-    'Integration': ['integration', 'integratie', 'koppeling', 'certificering'],
+    'Integration': ['integration', 'integratie', 'koppeling', 'certificering', 'certification'],
     'Configuration': ['configuration', 'config', 'setup', 'instellingen', 'inrichting', 'tokens'],
     'Authentication': ['authentication', 'auth', 'token', 'login', 'credential', 'security'],
     'Authorization': ['authorization', 'permission', 'role', 'access', 'rights'],
     
     # Domain areas
-    'Finance': ['finance', 'financial', 'grootboek', 'journaal', 'invoice', 'factuur', 'debit', 'credit', 'payment', 'betaling'],
+    'Finance': ['finance', 'financial', 'grootboek', 'journaal', 'ledger', 'journal', 'invoice', 'factuur', 'debit', 'credit', 'payment', 'betaling'],
     'Hr': ['hr', 'hrm', 'employee', 'employees', 'medewerker', 'medewerkers', 'absence', 'verlof', 'salary', 'salaris', 'applicant', 'applicants', 'sollicitant', 'sollicitanten'],
-    'Payroll': ['payroll', 'loonadministratie', 'loonheffingen', 'looncomponent', 'looncomponenten'],
+    'Payroll': ['payroll', 'loonadministratie', 'loonheffingen', 'looncomponent', 'looncomponenten', 'salary component', 'salary components'],
     'Crm': ['crm', 'contact', 'customer', 'klant', 'debtor', 'debiteur', 'creditor', 'crediteur', 'organisatie', 'persoon', 'organization', 'person'],
     'Order Management': ['sales', 'order', 'bestelling', 'purchase', 'inkoop', 'delivery', 'levering', 'goods'],
     'Projects': ['project', 'hour', 'hours', 'uur', 'uren', 'registration', 'urenregistratie'],
     'Taxes': ['fiscaal', 'ib', 'tax', 'vpb', 'aangifte'],
     'Construction': ['bouw', 'construction'],
-    'Flex': ['flex', 'flexmodule', 'flex module', 'plaatsing', 'plaatsingen', 'kanditdaat', 'kandidaten', 'uitzendkracht', 'uitzendkrachten'],
+    'Flex': ['flex', 'flexmodule', 'flex module', 'plaatsing', 'plaatsingen', 'kandidaat', 'kandidaten', 'uitzendkracht', 'uitzendkrachten'
+             , 'candidate', 'candidates', 'temporary worker', 'temporary workers'],
                  
     # Specific entities
     'Dossier': ['subject', 'dossier', 'bijlage'],

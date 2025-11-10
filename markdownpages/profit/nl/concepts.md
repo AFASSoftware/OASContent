@@ -1,8 +1,7 @@
 ---
 author: CLN
 date: 2025-11-08
-tags: GetConnector, UpdateConnector, AppConnector, Configuration, Authentication,
-  Crm
+tags: GetConnector, UpdateConnector, AppConnector, Configuration, Authentication, Crm
 title: Concepten
 ---
 
