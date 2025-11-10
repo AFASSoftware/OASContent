@@ -6,6 +6,10 @@ This directory contains scripts for validating markdown file naming conventions 
 
 - `markdown-naming-check.py` - Main validation script that checks if markdown files follow kebab-case naming convention. The script will provide suggested names for any violations found.
 
+- `merge_openapi_examples.py` - Script for merging OpenAPI example files from markdown into OpenAPI specification files.
+
+- `merge_openapi_examples.md` - Documentation for the OpenAPI examples merge script
+
 - `README.md` - This documentation file
 
 ## Naming Convention
