@@ -1,13 +1,13 @@
 ---
 author: EZW
-date: 2025-11-09
-tags: Profit7, GetConnector, UpdateConnector, Profit6, Integration, Configuration
+date: '2025-11-10'
+tags: Profit7, GetConnector, UpdateConnector, Integration, Configuration
 title: New in Profit 7
 ---
 
-Starting with Profit 7, several changes have been implemented in the AFAS Profit API. Below are the changes compared to Profit 6. Curious about our roadmap? [Click here](https://www.afas.nl/roadmap)
+Starting with Profit 7, several changes have been implemented in the AFAS Profit API. Below are the changes compared to Profit 6. Curious about our roadmap? [Click here](https://www.afas.nl/roadmap)  
 
-> How to read this? Profit has an extensive API with many different components. The API specifications are divided into related sections. Changes are indicated per section.
+> How to read this? Profit has an extensive API with many different components. The API specifications are divided into related sections. Changes are indicated per section.  
 
 ## **Breaking changes**
 

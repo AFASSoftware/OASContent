@@ -66,12 +66,25 @@ class MarkdownNamingValidator:
             Set of Path objects for changed markdown files
         """
         try:
+            # Get the git root directory
+            git_root_result = subprocess.run(
+                ['git', 'rev-parse', '--show-toplevel'],
+                capture_output=True,
+                text=True,
+                cwd=self.root_path
+            )
+            
+            if git_root_result.returncode != 0:
+                return set()
+            
+            git_root = Path(git_root_result.stdout.strip())
+            
             # Get staged files (git add)
             staged_result = subprocess.run(
                 ['git', 'diff', '--cached', '--name-only', '--diff-filter=ACMR'],
                 capture_output=True,
                 text=True,
-                cwd=self.root_path
+                cwd=git_root
             )
             
             # Get unstaged files (modified but not added)
@@ -79,7 +92,7 @@ class MarkdownNamingValidator:
                 ['git', 'diff', '--name-only', '--diff-filter=ACMR'],
                 capture_output=True,
                 text=True,
-                cwd=self.root_path
+                cwd=git_root
             )
             
             # Get untracked files
@@ -87,7 +100,7 @@ class MarkdownNamingValidator:
                 ['git', 'ls-files', '--others', '--exclude-standard'],
                 capture_output=True,
                 text=True,
-                cwd=self.root_path
+                cwd=git_root
             )
             
             # Combine all changed files
@@ -103,12 +116,21 @@ class MarkdownNamingValidator:
                 all_files.update(untracked_result.stdout.strip().split('\n'))
             
             # Filter for markdown files only and convert to Path objects
+            # Files must be under self.root_path and be markdown files
             markdown_files = set()
             for file in all_files:
                 if file and file.endswith('.md'):
-                    file_path = self.root_path / file
+                    # Construct full path from git root
+                    file_path = git_root / file
+                    # Check if file is under our root_path and exists
                     if file_path.exists():
-                        markdown_files.add(file_path)
+                        try:
+                            # Check if the file is within our root_path
+                            file_path.relative_to(self.root_path)
+                            markdown_files.add(file_path)
+                        except ValueError:
+                            # File is not under root_path, skip it
+                            pass
             
             return markdown_files
             
@@ -233,8 +255,9 @@ class MarkdownNamingValidator:
             with open(file_path, 'r', encoding='utf-8') as f:
                 post = frontmatter.load(f)
             
-            # Update the date
-            post.metadata['date'] = self.current_date
+            # Update the date as a date object (without time)
+            current_datetime = datetime.strptime(self.current_date, '%Y-%m-%d')
+            post.metadata['date'] = current_datetime.date()
             
             # Write back to file
             with open(file_path, 'w', encoding='utf-8') as f:

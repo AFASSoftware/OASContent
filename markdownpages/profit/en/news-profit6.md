@@ -1,7 +1,7 @@
 ---
 author: EZW
 date: 2025-11-08
-tags: GetConnector, UpdateConnector, Profit6, Profit5, Configuration, Authentication
+tags: Profit6, GetConnector, UpdateConnector, Configuration, Authentication
 title: New in Profit 6
 ---
 
