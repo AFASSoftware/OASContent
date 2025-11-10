@@ -77,7 +77,7 @@ In Profit, you can now also retrieve employee/absence history, including the ass
 ### New response header: X-Trace-Identifier
 
 Every call that successfully reaches our application layer now receives a response header `X-Trace-Identifier`. This header contains a unique identifier for the specific API call. This can be useful for tracing and debugging requests in collaboration with AFAS System Integrators. This header is available for both REST and SOAP API calls.  
-Please note that the layout of the identifier may change in the future, depending on the web server technology used.
+Please note that the layout of the identifier may change in the future, depending on the web server technology used.  
 
 ## Artikelen Specification
 

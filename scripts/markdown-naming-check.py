@@ -36,7 +36,7 @@ if sys.platform == 'win32':
 class MarkdownNamingValidator:
     """Validates markdown file naming conventions and date consistency."""
     
-    def __init__(self, root_path: str = ".", exclusions: List[str] = None, json_output: bool = False, git_mode: bool = False):
+    def __init__(self, root_path: str = ".", exclusions: List[str] = None, json_output: bool = False, git_mode: bool = False, fix_dates: bool = False):
         """
         Initialize the validator.
         
@@ -45,13 +45,16 @@ class MarkdownNamingValidator:
             exclusions: List of patterns to exclude from validation
             json_output: Whether to output results in JSON format
             git_mode: If True, only check new/modified files in git
+            fix_dates: If True, automatically update dates in frontmatter
         """
         self.root_path = Path(root_path).resolve()
         self.exclusions = exclusions or []
         self.json_output = json_output
         self.git_mode = git_mode
+        self.fix_dates = fix_dates
         self.violations = []
         self.date_violations = []
+        self.date_fixes = []
         self.total_files = 0
         self.current_date = datetime.now().strftime('%Y-%m-%d')
         
@@ -216,6 +219,34 @@ class MarkdownNamingValidator:
             # If we can't read the file or parse frontmatter, skip validation
             return True, ""
     
+    def fix_date(self, file_path: Path) -> bool:
+        """
+        Update the date in frontmatter to current date.
+        
+        Args:
+            file_path: Path to the markdown file
+            
+        Returns:
+            True if date was updated successfully, False otherwise
+        """
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                post = frontmatter.load(f)
+            
+            # Update the date
+            post.metadata['date'] = self.current_date
+            
+            # Write back to file
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(frontmatter.dumps(post))
+            
+            return True
+            
+        except Exception as e:
+            if not self.json_output:
+                print(f"Error updating date in {file_path}: {e}", file=sys.stderr)
+            return False
+    
     def to_kebab_case(self, text: str) -> str:
         """
         Convert text to kebab-case.
@@ -286,18 +317,49 @@ class MarkdownNamingValidator:
                 date_valid, file_date = self.validate_date(file_path)
                 
                 if not date_valid:
-                    try:
-                        relative_path = str(file_path.relative_to(self.root_path))
-                    except ValueError:
-                        relative_path = str(file_path)
-                    
-                    date_violation = {
-                        "file_path": relative_path,
-                        "current_date": file_date,
-                        "expected_date": self.current_date,
-                        "full_path": str(file_path)
-                    }
-                    self.date_violations.append(date_violation)
+                    if self.fix_dates:
+                        # Try to fix the date automatically
+                        if self.fix_date(file_path):
+                            try:
+                                relative_path = str(file_path.relative_to(self.root_path))
+                            except ValueError:
+                                relative_path = str(file_path)
+                            
+                            fix_info = {
+                                "file_path": relative_path,
+                                "old_date": file_date,
+                                "new_date": self.current_date,
+                                "full_path": str(file_path)
+                            }
+                            self.date_fixes.append(fix_info)
+                        else:
+                            # Fix failed, record as violation
+                            try:
+                                relative_path = str(file_path.relative_to(self.root_path))
+                            except ValueError:
+                                relative_path = str(file_path)
+                            
+                            date_violation = {
+                                "file_path": relative_path,
+                                "current_date": file_date,
+                                "expected_date": self.current_date,
+                                "full_path": str(file_path)
+                            }
+                            self.date_violations.append(date_violation)
+                    else:
+                        # Not fixing, just record violation
+                        try:
+                            relative_path = str(file_path.relative_to(self.root_path))
+                        except ValueError:
+                            relative_path = str(file_path)
+                        
+                        date_violation = {
+                            "file_path": relative_path,
+                            "current_date": file_date,
+                            "expected_date": self.current_date,
+                            "full_path": str(file_path)
+                        }
+                        self.date_violations.append(date_violation)
     
     def generate_report(self) -> Dict:
         """
@@ -336,7 +398,18 @@ class MarkdownNamingValidator:
             print(f"Naming violations found: {len(self.violations)}")
             if self.git_mode:
                 print(f"Date violations found: {len(self.date_violations)}")
+                if self.fix_dates:
+                    print(f"Dates automatically fixed: {len(self.date_fixes)}")
             print()
+            
+            if self.date_fixes:
+                print("DATES AUTOMATICALLY FIXED:")
+                print("-" * 40)
+                for i, fix in enumerate(self.date_fixes, 1):
+                    print(f"{i}. File: {fix['file_path']}")
+                    print(f"   Old date: {fix['old_date']}")
+                    print(f"   New date: {fix['new_date']}")
+                    print()
             
             if self.violations:
                 print("NAMING VIOLATIONS DETECTED:")
@@ -411,6 +484,9 @@ Examples:
   # Check only new/modified files in git
   python markdown-naming-check.py --git
   
+  # Check and automatically fix dates in changed files
+  python markdown-naming-check.py --git --fix-dates
+  
   # Check specific directory
   python markdown-naming-check.py --root-path ./docs
   
@@ -432,6 +508,12 @@ Examples:
         "--git",
         action="store_true",
         help="Only check new or modified files in git (staged, unstaged, and untracked)"
+    )
+    
+    parser.add_argument(
+        "--fix-dates",
+        action="store_true",
+        help="Automatically update dates in frontmatter to current date (only with --git)"
     )
     
     parser.add_argument(
@@ -460,7 +542,8 @@ Examples:
         root_path=args.root_path,
         exclusions=args.exclude,
         json_output=args.json,
-        git_mode=args.git
+        git_mode=args.git,
+        fix_dates=args.fix_dates
     )
     
     # Run validation

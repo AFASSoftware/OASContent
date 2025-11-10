@@ -79,7 +79,7 @@ In Profit kun je nu ook de medewerker/verzuimverloop ophalen, inclusief de bijbe
 ### Nieuwe response header: X-Trace-Identifier
 
 Elke call die succesvol tot in onze applicatielaag is gekomen, krijgt nu een responseheader `X-Trace-Identifier`. Deze header bevat een unieke identifier voor de specifieke API-aanroep. Dit kan nuttig zijn voor het traceren en debuggen van verzoeken in samenwerking met de AFAS Systemintegrators. Deze header is beschikbaar voor zowel REST als SOAP API-aanroepen.  
-Let op dat in de toekomst de layout van de identifier kan wijzigen, afhankelijk van de gebruikte webserver technologie. 
+Let op dat in de toekomst de layout van de identifier kan wijzigen, afhankelijk van de gebruikte webserver technologie.  
 
 ## Artikelen Specification
 
