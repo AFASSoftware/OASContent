@@ -5,9 +5,6 @@ tags: Profit7, GetConnector, UpdateConnector, Profit6, Integration, Configuratio
 title: New in Profit 7
 ---
 
-**Profit 7 will not be released until November 2025. This document is still in beta and is continuously being updated.**
----
-
 Starting with Profit 7, several changes have been implemented in the AFAS Profit API. Below are the changes compared to Profit 6. Curious about our roadmap? [Click here](https://www.afas.nl/roadmap)
 
 > How to read this? Profit has an extensive API with many different components. The API specifications are divided into related sections. Changes are indicated per section.
@@ -76,6 +73,11 @@ In Profit, you can now also retrieve employee/formation distribution, including 
 ### New data collection: Employee/Absence history (incl. authorization)
 
 In Profit, you can now also retrieve employee/absence history, including the associated authorizations. This makes it easier to gain insight into absences within a team or project.
+
+### New response header: X-Trace-Identifier
+
+Every call that successfully reaches our application layer now receives a response header `X-Trace-Identifier`. This header contains a unique identifier for the specific API call. This can be useful for tracing and debugging requests in collaboration with AFAS System Integrators. This header is available for both REST and SOAP API calls.  
+Please note that the layout of the identifier may change in the future, depending on the web server technology used.
 
 ## Artikelen Specification
 
