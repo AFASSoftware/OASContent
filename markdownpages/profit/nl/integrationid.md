@@ -1,7 +1,7 @@
 ---
 author: CLN
 date: 2025-11-08
-tags: Partner, IntegrationId, UpdateConnector, Integration, Authorization, Crm
+tags: Partner, IntegrationId, UpdateConnector, Integration, Authorization, Certification
 title: AFAS IntegrationId
 ---
 

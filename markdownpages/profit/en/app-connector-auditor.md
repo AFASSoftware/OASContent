@@ -2,7 +2,7 @@
 author: Eric Zwaal
 date: 2025-11-08
 index: true
-tags: Partner, GetConnector, UpdateConnector, AppConnector, Integration, Configuration
+tags: GetConnector, UpdateConnector, AppConnector, Integration, Configuration
 title: AppConnector Auditor
 ---
 

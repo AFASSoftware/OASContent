@@ -2,7 +2,7 @@
 author: Eric Zwaal
 date: 2025-11-08
 index: true
-tags: Partner, IntegrationId, Tutorial, GetConnector, UpdateConnector, Profit5
+tags: Partner, IntegrationId, GetConnector, UpdateConnector, Certification
 title: AppConnector Auditor for Partners
 ---
 
