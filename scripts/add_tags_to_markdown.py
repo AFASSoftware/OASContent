@@ -1,7 +1,6 @@
 """
 Script to automatically add relevant tags to markdown files in the markdownpages directory.
 Maximum of 6 tags per document based on content, filename, and location.
-Also updates the date in frontmatter to the current date when modifying files.
 """
 
 import os
@@ -169,10 +168,6 @@ def add_frontmatter_to_file(filepath: Path, base_path: Path) -> bool:
         
         # Update metadata with tags as comma-separated string
         post.metadata['tags'] = ', '.join(tags)
-        
-        # Update date to current date as a date object (not string) to avoid quotes
-        current_date = datetime.now().date()
-        post.metadata['date'] = current_date
         
         # Convert back to markdown with frontmatter
         new_content = frontmatter.dumps(post)
