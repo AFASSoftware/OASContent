@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2025-11-08
+date: 2025-11-11
 index: true
 tags: Partner, IntegrationId, GetConnector, UpdateConnector, Certification
 title: AppConnector Auditor for Partners
