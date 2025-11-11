@@ -1,6 +1,6 @@
 ---
 author: EZW
-date: 2025-11-08
+date: 2025-11-11
 tags: Partner, Tutorial, GetConnector, UpdateConnector, Profit3, AppConnector
 title: Btw-terugvordering via de API
 ---
