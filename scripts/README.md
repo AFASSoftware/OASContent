@@ -220,9 +220,9 @@ bash scripts/enable-pre-commit-hook.sh
 If you need to update dates in frontmatter for changed files:
 
 ```bash
-# Use the --fix_dates flag to updates dates
+# Use the --fix-dates flag to updates dates
 cd scripts
-python markdown-naming-check.py --fix_dates
+python markdown-naming-check.py --fix-dates
 ```
 
 This will:
