@@ -1,8 +1,8 @@
 ---
-title: Authenticatie
 author: CLN
-date: 2024-06-28
-tags: tokens, jwt, bearer, oauth, access
+date: 2025-11-08
+tags: GetConnector, AppConnector, Integration, Configuration, Authentication, Authorization
+title: Authenticatie
 ---
 
 ## Introductie

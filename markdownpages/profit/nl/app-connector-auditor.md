@@ -1,9 +1,9 @@
 ---
-title: AppConnector auditor
 author: Eric Zwaal
-date: 2025-09-16
-tags: Appconnector, inrichting, GetConnector, autorisatie
+date: 2025-11-08
 index: true
+tags: Partner, GetConnector, AppConnector, Integration, Configuration, Authentication
+title: AppConnector auditor
 ---
 
 ## Inleiding

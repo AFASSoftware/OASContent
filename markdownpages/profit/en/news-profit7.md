@@ -1,16 +1,13 @@
 ---
-title: New in Profit 7
 author: EZW
-date: 2025-11-06
-tags: Profit7
+date: 2025-11-10
+tags: Profit7, GetConnector, UpdateConnector, Integration, Configuration
+title: New in Profit 7
 ---
 
-**Profit 7 will not be released until November 2025. This document is still in beta and is continuously being updated.**
----
+Starting with Profit 7, several changes have been implemented in the AFAS Profit API. Below are the changes compared to Profit 6. Curious about our roadmap? [Click here](https://www.afas.nl/roadmap)  
 
-Starting with Profit 7, several changes have been implemented in the AFAS Profit API. Below are the changes compared to Profit 6. Curious about our roadmap? [Click here](https://www.afas.nl/roadmap)
-
-> How to read this? Profit has an extensive API with many different components. The API specifications are divided into related sections. Changes are indicated per section.
+> How to read this? Profit has an extensive API with many different components. The API specifications are divided into related sections. Changes are indicated per section.  
 
 ## **Breaking changes**
 
@@ -26,7 +23,7 @@ As already announced in the [new in Profit 6](news-profit6/#afas-token-altijd-ba
  #### Correct
 
 Send the header as `"AfasToken <base64-encoded token>"`:  
-`-H "Authorization: AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+MzcyNjk1ODJDOTU5NDNDNEFFNURDQUVFRUY5RjRGMTkxNzBCQ0I3NzRENDU0NTg1ODg1MTc2MDBFMUM0MzAyQzwvZGF0YT48L3Rva2VuPg=="`
+`-H "Authorization: AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+MzcyNjk1ODJDOTU5NDNDNEFFNURDQUVFRUY5RjRGMTkxNzBCQ0I3NzRENDU0NTg1ODg1MTc2MDBFMUM0MzAyQzwvZGF0YT48L3Rva2VuPg=="`  
 
 ## Important changes
 
@@ -76,6 +73,11 @@ In Profit, you can now also retrieve employee/formation distribution, including 
 ### New data collection: Employee/Absence history (incl. authorization)
 
 In Profit, you can now also retrieve employee/absence history, including the associated authorizations. This makes it easier to gain insight into absences within a team or project.
+
+### New response header: X-Trace-Identifier
+
+Every call that successfully reaches our application layer now receives a response header `X-Trace-Identifier`. This header contains a unique identifier for the specific API call. This can be useful for tracing and debugging requests in collaboration with AFAS System Integrators. This header is available for both REST and SOAP API calls.  
+Please note that the layout of the identifier may change in the future, depending on the web server technology used.  
 
 ## Artikelen Specification
 
@@ -1063,4 +1065,3 @@ No changes for this release.
 | added the new optional request property 'AfasPerson/Element/Objects/AfasTimeTable/Element/Fields/PsBi' | HrOnboarding | [POST](https://docs.afas.help/apidoc/nl/Werving%20en%20selectie#post-/connectors/HrOnboarding) |
 | added the new optional request property 'AfasPerson/Element/Objects/AfasTimeTable/Element/Objects' | HrOnboarding | [POST](https://docs.afas.help/apidoc/nl/Werving%20en%20selectie#post-/connectors/HrOnboarding) |
 | endpoint added | HrVacancy | [POST](https://docs.afas.help/apidoc/nl/Werving%20en%20selectie#post-/connectors/HrVacancy), [PUT](https://docs.afas.help/apidoc/nl/Werving%20en%20selectie#put-/connectors/HrVacancy), [DELETE](https://docs.afas.help/apidoc/nl/Werving%20en%20selectie#delete-/connectors/HrVacancy/HrVacancy/@VcSn,@CmId/-VcSn-,-CmId-) |
-

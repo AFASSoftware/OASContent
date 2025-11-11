@@ -1,8 +1,8 @@
 ---
-title: Custom Fields
 author: CLN
-date: 2024-05-28
-tags: custom, customfields, custom fields, guids
+date: 2025-11-08
+tags: GetConnector, UpdateConnector, Configuration
+title: Custom Fields
 ---
 
 AFAS administrators can add custom fields (vrije velden) to most tables in Profit. These custom fields will then become available in the endpoints.

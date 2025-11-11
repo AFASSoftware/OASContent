@@ -1,13 +1,13 @@
 ---
-title: Nieuw in Profit 7
 author: EZW
-date: 2025-11-06
-tags: Profit7
+date: 2025-11-10
+tags: Profit7, GetConnector, UpdateConnector, Integration, Configuration
+title: Nieuw in Profit 7
 ---
 
-Vanaf Profit 7 is er een aantal wijzigingen in de AFAS Profit API doorgevoerd. Hieronder staan wijzigingen ten opzichte van Profit 6. Benieuwd naar onze roadmap? [Klik hier](https://www.afas.nl/roadmap)
+Vanaf Profit 7 is er een aantal wijzigingen in de AFAS Profit API doorgevoerd. Hieronder staan wijzigingen ten opzichte van Profit 6. Benieuwd naar onze roadmap? [Klik hier](https://www.afas.nl/roadmap)  
 
-> Hoe lees je dit? Profit heeft een omvangrijke API met veel verschillende onderdelen. De API specificaties zijn opgedeeld in onderdelen die bij elkaar horen. Per onderdeel zijn de wijzigingen aangegeven.
+> Hoe lees je dit? Profit heeft een omvangrijke API met veel verschillende onderdelen. De API specificaties zijn opgedeeld in onderdelen die bij elkaar horen. Per onderdeel zijn de wijzigingen aangegeven.  
 
 ## ***Breaking* wijzigingen**
 
@@ -30,7 +30,7 @@ Geef de header mee als `"AfasToken <base64-encoded token>"`:
 
 ### Gewijzigde formattering van resultaten van GetConnector
 
-In Profit 6 maakte de SQL Server de resultaten van een GetConnector. In Profit 7 doet Profit dat zelf. Het gaat hierbij om JSON bij REST en XML bij SOAP.
+In Profit 6 maakte de SQL Server de resultaten van een GetConnector. In Profit 7 doet Profit dat zelf. Het gaat hierbij om JSON bij REST en XML bij SOAP.  
 
 **Let op**: het formaat van de resultaten is anders. Als je gebruik maakt van een standaard XML/JSON parser zal dit geen probleem geven.
 - Decimalen zien er anders uit. Voorbeeld: -.5 wordt nu -0.5
@@ -75,6 +75,11 @@ In Profit kun je nu ook de medewerker/formatieverdeling ophalen, inclusief de bi
 ### Nieuwe gegevensverzameling: Medewerker/Verzuimverloop (incl. autorisatie)
 
 In Profit kun je nu ook de medewerker/verzuimverloop ophalen, inclusief de bijbehorende autorisaties. Dit maakt het eenvoudiger om inzicht te krijgen in het verzuim binnen een team of project.
+
+### Nieuwe response header: X-Trace-Identifier
+
+Elke call die succesvol tot in onze applicatielaag is gekomen, krijgt nu een responseheader `X-Trace-Identifier`. Deze header bevat een unieke identifier voor de specifieke API-aanroep. Dit kan nuttig zijn voor het traceren en debuggen van verzoeken in samenwerking met de AFAS Systemintegrators. Deze header is beschikbaar voor zowel REST als SOAP API-aanroepen.  
+Let op dat in de toekomst de layout van de identifier kan wijzigen, afhankelijk van de gebruikte webserver technologie.  
 
 ## Artikelen Specification
 
@@ -1062,4 +1067,3 @@ No changes for this release.
 | added the new optional request property 'AfasPerson/Element/Objects/AfasTimeTable/Element/Fields/PsBi' | HrOnboarding | [POST](https://docs.afas.help/apidoc/nl/Werving%20en%20selectie#post-/connectors/HrOnboarding) |
 | added the new optional request property 'AfasPerson/Element/Objects/AfasTimeTable/Element/Objects' | HrOnboarding | [POST](https://docs.afas.help/apidoc/nl/Werving%20en%20selectie#post-/connectors/HrOnboarding) |
 | endpoint added | HrVacancy | [POST](https://docs.afas.help/apidoc/nl/Werving%20en%20selectie#post-/connectors/HrVacancy), [PUT](https://docs.afas.help/apidoc/nl/Werving%20en%20selectie#put-/connectors/HrVacancy), [DELETE](https://docs.afas.help/apidoc/nl/Werving%20en%20selectie#delete-/connectors/HrVacancy/HrVacancy/@VcSn,@CmId/-VcSn-,-CmId-) |
-

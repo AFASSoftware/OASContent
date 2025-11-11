@@ -1,8 +1,8 @@
 ---
-title: Financial mutations basics
 author: CLN
-date: 2024-10-28
-tags: Financial, mutations, accounting
+date: 2025-11-08
+tags: Tutorial, GetConnector, UpdateConnector, Integration, Authentication, Finance
+title: Financial mutations basics
 ---
 
 ## Introduction

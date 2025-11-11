@@ -1,8 +1,8 @@
 ---
-title: Vrije velden
 author: CLN
-date: 2024-02-18
-tags: custom, customfields, vrijveld, vrijevelden, vrije velden, guids
+date: 2025-11-08
+tags: GetConnector, UpdateConnector, Configuration
+title: Vrije velden
 ---
 
 AFAS-beheerders kunnen vrije velden (custom fields) toevoegen in de meeste tabellen in Profit. Deze vrije velden worden vervolgens beschikbaar in de endpoints.

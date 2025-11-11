@@ -1,9 +1,9 @@
 ---
-title: AppConnector Auditor for Partners
 author: Eric Zwaal
-date: 2025-09-16
-tags: Appconnector, setup, GetConnector
+date: 2025-11-08
 index: true
+tags: Partner, IntegrationId, Tutorial, GetConnector, UpdateConnector, Profit5
+title: AppConnector Auditor for Partners
 ---
 
 *this file is an AI-translated version of the [Dutch document](../nl/app-connector-auditor-afas) and may contain errors.*

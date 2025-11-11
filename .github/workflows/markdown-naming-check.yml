@@ -1,6 +1,5 @@
 name: Markdown Naming Convention Check
 
-# Trigger the workflow on push and pull request events
 on:
   push:
     branches:
@@ -28,12 +27,11 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      # Checkout the repository code
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           # Fetch full history for better file analysis
-          fetch-depth: 0
+          fetch-depth: 0  
       
       # Set up Python environment
       - name: Set up Python
@@ -42,32 +40,23 @@ jobs:
           python-version: '3.9'
           cache: 'pip'
       
-      # Install dependencies (if any are added in the future)
+      # Install dependencies
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          # Add any future dependencies here
-          # pip install -r requirements.txt
-        shell: bash
-      
+          pip install python-frontmatter PyYAML
+  
       # Make the validation script executable
       - name: Make script executable
         run: chmod +x scripts/markdown-naming-check.py
         shell: bash
-      
+  
       # Run the markdown naming validation
       - name: Run markdown naming validation
-        id: validation
+        id: validate
         run: |
           echo "Starting markdown file naming validation..."
-          # Check if markdownpages directory exists
-          if [ -d "markdownpages" ]; then
-            python scripts/markdown-naming-check.py --root-path markdownpages
-          else
-            echo "No markdownpages directory found!"
-            exit 1
-          fi
-        shell: bash
+          python scripts/markdown-naming-check.py --root-path markdownpages
         continue-on-error: true
       
       # Generate detailed report for PR comments (if needed)
@@ -79,7 +68,7 @@ jobs:
           
           # Run the validation and capture both exit code and output
           set +e  # Temporarily disable exit on error
-          
+            
           # Check which directory exists and run validation accordingly
           if [ -d "markdownpages" ]; then
             python scripts/markdown-naming-check.py --root-path markdownpages --json > validation-report.json
@@ -87,10 +76,10 @@ jobs:
             echo '{"error": "No markdownpages directory found", "success": false, "total_files_checked": 0, "violations_found": 0, "violations": []}' > validation-report.json
             validation_exit_code=1
           fi
-          
+            
           validation_exit_code=$?
           set -e  # Re-enable exit on error
-          
+            
           # Check if there are violations based on exit code
           if [ $validation_exit_code -eq 0 ]; then
             echo "validation_status=success" >> $GITHUB_OUTPUT
@@ -105,7 +94,7 @@ jobs:
             echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
           fi
         shell: bash
-      
+  
       # Upload validation report as artifact
       - name: Upload validation report
         if: always()

@@ -1,8 +1,8 @@
 ---
-title: Dossieritems aanmaken en workflowactie uitvoeren
 author: CLN
-date: 2024-07-09
-tags: AFAS, Profit, API, dossier-items, workflow, bijlagen, kenmerken
+date: 2025-11-08
+tags: Tutorial, GetConnector, UpdateConnector, Integration, Configuration, Authentication
+title: Dossieritems aanmaken en workflowactie uitvoeren
 ---
 
 ## Inleiding

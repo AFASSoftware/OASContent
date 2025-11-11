@@ -1,9 +1,9 @@
 ---
-title: Certificeringsstappen voor partners
 author: Eric Zwaal
-date: 2025-09-16
-tags: Partner, Certificering, GetConnector, IntegrationId
+date: 2025-11-08
 index: true
+tags: Partner, IntegrationId, GetConnector, AppConnector, Integration, Configuration
+title: Certificeringsstappen voor partners
 ---
 
 *[For English click here](../en/partner-certification-steps)*

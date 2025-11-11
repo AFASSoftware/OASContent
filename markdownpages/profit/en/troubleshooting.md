@@ -1,9 +1,10 @@
 ---
-title: Troubleshooting
 author: CLN
-date: 2024-02-18
-tags: error, debug, debugging, mismatch, server
+date: 2025-11-08
+tags: Tutorial, GetConnector, UpdateConnector, AppConnector, Integration, Authentication
+title: Troubleshooting
 ---
+
 Errors always occur during the development, testing, and running of applications. A good understanding of the types of errors and How-To implement solid error handling makes a difference in the final quality of an integration.
 
 This section focuses on general error handling and troubleshooting tips.

@@ -1,8 +1,8 @@
 ---
-title: Financiële mutaties inkoop
 author: CLN
-date: 2024-04-11
-tags: inkoop, confrontatie, inkoopfactuur
+date: 2025-11-08
+tags: Tutorial, GetConnector, UpdateConnector, Integration, Authentication, Finance
+title: Financiële mutaties inkoop
 ---
 
 ## Inleiding

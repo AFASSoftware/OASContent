@@ -1,8 +1,8 @@
 ---
-title: New in Profit 6
 author: EZW
-date: 2025-06-16
-tags: Profit6
+date: 2025-11-10
+tags: Profit6, GetConnector, UpdateConnector, Configuration, Authentication
+title: New in Profit 6
 ---
 
 Starting with Profit 6, a number of changes have been made to the AFAS Profit API. Below are the changes compared to Profit 5. Interested in our roadmap? [Klik hier](https://www.afas.nl/roadmap)
@@ -445,4 +445,3 @@ No changes for this release.
 | added the new optional request property 'AfasPerson/Element/Objects/AfasHrApplic' | HrOnboarding | [POST](../../apidoc/nl/Werving%20en%20selectie#post-/connectors/HrOnboarding) |
 | removed the enum value 'KS' of the request property 'AfasPerson/Element/Fields/PsNa' | HrOnboarding | [POST](../../apidoc/nl/Werving%20en%20selectie#post-/connectors/HrOnboarding) |
 | removed the enum value 'KS' of the request property 'AfasPerson/Element/Objects/AfasIdentityDocument/Element/Fields/ViNa' | HrOnboarding | [POST](../../apidoc/nl/Werving%20en%20selectie#post-/connectors/HrOnboarding) |
-

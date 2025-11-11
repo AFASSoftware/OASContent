@@ -2,27 +2,40 @@
 """
 Markdown File Naming Validator
 
-This script validates that all markdown files in the repository follow kebab-case naming convention,
-except for AppConnectorAuditor* files which are allowed to be named differently.
-It recursively scans for *.md files and reports any violations.
+This script validates that all markdown files in the repository follow kebab-case naming convention.
+It can scan all files or only new/modified files in git.
+Also validates that the date in frontmatter matches the current date for changed files.
 
 Author: GitHub Copilot
 Date: 2025-07-29
 """
 
-import os
 import sys
 import argparse
 import json
+import subprocess
 from pathlib import Path
-from typing import List, Dict, Tuple
+from typing import List, Dict, Tuple, Set
 import re
+from datetime import datetime
+import frontmatter
+
+# Set UTF-8 encoding for Windows console to handle emojis
+if sys.platform == 'win32':
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+        sys.stderr.reconfigure(encoding='utf-8')
+    except AttributeError:
+        # Python < 3.7
+        import codecs
+        sys.stdout = codecs.getwriter('utf-8')(sys.stdout.buffer, 'strict')
+        sys.stderr = codecs.getwriter('utf-8')(sys.stderr.buffer, 'strict')
 
 
 class MarkdownNamingValidator:
-    """Validates markdown file naming conventions."""
+    """Validates markdown file naming conventions and date consistency."""
     
-    def __init__(self, root_path: str = ".", exclusions: List[str] = None, json_output: bool = False):
+    def __init__(self, root_path: str = ".", exclusions: List[str] = None, json_output: bool = False, git_mode: bool = False, fix_dates: bool = False):
         """
         Initialize the validator.
         
@@ -30,13 +43,105 @@ class MarkdownNamingValidator:
             root_path: Root directory to start scanning from
             exclusions: List of patterns to exclude from validation
             json_output: Whether to output results in JSON format
+            git_mode: If True, only check new/modified files in git
+            fix_dates: If True, automatically update dates in frontmatter
         """
         self.root_path = Path(root_path).resolve()
         self.exclusions = exclusions or []
         self.json_output = json_output
+        self.git_mode = git_mode
+        self.fix_dates = fix_dates
         self.violations = []
+        self.date_violations = []
+        self.date_fixes = []
         self.total_files = 0
+        self.current_date = datetime.now().strftime('%Y-%m-%d')
         
+    def get_changed_markdown_files(self) -> Set[Path]:
+        """
+        Get list of new or modified markdown files from git.
+        
+        Returns:
+            Set of Path objects for changed markdown files
+        """
+        try:
+            # Get the git root directory
+            git_root_result = subprocess.run(
+                ['git', 'rev-parse', '--show-toplevel'],
+                capture_output=True,
+                text=True,
+                cwd=self.root_path
+            )
+            
+            if git_root_result.returncode != 0:
+                return set()
+            
+            git_root = Path(git_root_result.stdout.strip())
+            
+            # Get staged files (git add)
+            staged_result = subprocess.run(
+                ['git', 'diff', '--cached', '--name-only', '--diff-filter=ACMR'],
+                capture_output=True,
+                text=True,
+                cwd=git_root
+            )
+            
+            # Get unstaged files (modified but not added)
+            unstaged_result = subprocess.run(
+                ['git', 'diff', '--name-only', '--diff-filter=ACMR'],
+                capture_output=True,
+                text=True,
+                cwd=git_root
+            )
+            
+            # Get untracked files
+            untracked_result = subprocess.run(
+                ['git', 'ls-files', '--others', '--exclude-standard'],
+                capture_output=True,
+                text=True,
+                cwd=git_root
+            )
+            
+            # Combine all changed files
+            all_files = set()
+            
+            if staged_result.returncode == 0:
+                all_files.update(staged_result.stdout.strip().split('\n'))
+            
+            if unstaged_result.returncode == 0:
+                all_files.update(unstaged_result.stdout.strip().split('\n'))
+            
+            if untracked_result.returncode == 0:
+                all_files.update(untracked_result.stdout.strip().split('\n'))
+            
+            # Filter for markdown files only and convert to Path objects
+            # Files must be under self.root_path and be markdown files
+            markdown_files = set()
+            for file in all_files:
+                if file and file.endswith('.md'):
+                    # Construct full path from git root
+                    file_path = git_root / file
+                    # Check if file is under our root_path and exists
+                    if file_path.exists():
+                        try:
+                            # Check if the file is within our root_path
+                            file_path.relative_to(self.root_path)
+                            markdown_files.add(file_path)
+                        except ValueError:
+                            # File is not under root_path, skip it
+                            pass
+            
+            return markdown_files
+            
+        except FileNotFoundError:
+            if not self.json_output:
+                print("Warning: git not found. Falling back to scanning all files.", file=sys.stderr)
+            return set()
+        except Exception as e:
+            if not self.json_output:
+                print(f"Warning: Error getting git changes: {e}. Falling back to scanning all files.", file=sys.stderr)
+            return set()
+    
     def is_excluded(self, file_path: Path) -> bool:
         """
         Check if a file should be excluded from validation.
@@ -47,7 +152,11 @@ class MarkdownNamingValidator:
         Returns:
             True if the file should be excluded, False otherwise
         """
-        relative_path = str(file_path.relative_to(self.root_path)).replace('\\', '/')
+        try:
+            relative_path = str(file_path.relative_to(self.root_path)).replace('\\', '/')
+        except ValueError:
+            relative_path = str(file_path)
+        
         filename = file_path.name
         
         for pattern in self.exclusions:
@@ -93,6 +202,73 @@ class MarkdownNamingValidator:
         
         return False, suggested_filename
     
+    def validate_date(self, file_path: Path) -> Tuple[bool, str]:
+        """
+        Validate that the date in frontmatter matches current date for changed files.
+        Only validates if git_mode is True.
+        
+        Args:
+            file_path: Path to the markdown file
+            
+        Returns:
+            Tuple of (is_valid, current_date_in_file)
+        """
+        # Only validate dates in git mode (for changed files)
+        if not self.git_mode:
+            return True, ""
+        
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                post = frontmatter.load(f)
+            
+            file_date = post.metadata.get('date', '')
+            
+            # If no date field exists, it's not valid
+            if not file_date:
+                return False, "missing"
+            
+            # Convert date to string if it's a datetime object
+            if isinstance(file_date, datetime):
+                file_date = file_date.strftime('%Y-%m-%d')
+            else:
+                file_date = str(file_date)
+            
+            # Check if date matches current date
+            return file_date == self.current_date, file_date
+            
+        except Exception as e:
+            # If we can't read the file or parse frontmatter, skip validation
+            return True, ""
+    
+    def fix_date(self, file_path: Path) -> bool:
+        """
+        Update the date in frontmatter to current date.
+        
+        Args:
+            file_path: Path to the markdown file
+            
+        Returns:
+            True if date was updated successfully, False otherwise
+        """
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                post = frontmatter.load(f)
+            
+            # Update the date as a date object (without time)
+            current_datetime = datetime.strptime(self.current_date, '%Y-%m-%d')
+            post.metadata['date'] = current_datetime.date()
+            
+            # Write back to file
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(frontmatter.dumps(post))
+            
+            return True
+            
+        except Exception as e:
+            if not self.json_output:
+                print(f"Error updating date in {file_path}: {e}", file=sys.stderr)
+            return False
+    
     def to_kebab_case(self, text: str) -> str:
         """
         Convert text to kebab-case.
@@ -123,8 +299,16 @@ class MarkdownNamingValidator:
     def scan_directory(self) -> None:
         """Recursively scan directory for markdown files and validate naming."""
         
-        # Find all markdown files recursively
-        markdown_files = list(self.root_path.rglob("*.md"))
+        if self.git_mode:
+            # Only check changed files
+            markdown_files = list(self.get_changed_markdown_files())
+            if not markdown_files:
+                if not self.json_output:
+                    print("No new or modified markdown files found in git.")
+        else:
+            # Find all markdown files recursively
+            markdown_files = list(self.root_path.rglob("*.md"))
+        
         self.total_files = len(markdown_files)
         
         for file_path in markdown_files:
@@ -137,7 +321,11 @@ class MarkdownNamingValidator:
             is_valid, suggested_name = self.validate_filename(file_path)
             
             if not is_valid:
-                relative_path = str(file_path.relative_to(self.root_path))
+                try:
+                    relative_path = str(file_path.relative_to(self.root_path))
+                except ValueError:
+                    relative_path = str(file_path)
+                
                 violation = {
                     "file_path": relative_path,
                     "current_name": file_path.name,
@@ -145,6 +333,55 @@ class MarkdownNamingValidator:
                     "full_path": str(file_path)
                 }
                 self.violations.append(violation)
+            
+            # Validate date in frontmatter (only in git mode)
+            if self.git_mode:
+                date_valid, file_date = self.validate_date(file_path)
+                
+                if not date_valid:
+                    if self.fix_dates:
+                        # Try to fix the date automatically
+                        if self.fix_date(file_path):
+                            try:
+                                relative_path = str(file_path.relative_to(self.root_path))
+                            except ValueError:
+                                relative_path = str(file_path)
+                            
+                            fix_info = {
+                                "file_path": relative_path,
+                                "old_date": file_date,
+                                "new_date": self.current_date,
+                                "full_path": str(file_path)
+                            }
+                            self.date_fixes.append(fix_info)
+                        else:
+                            # Fix failed, record as violation
+                            try:
+                                relative_path = str(file_path.relative_to(self.root_path))
+                            except ValueError:
+                                relative_path = str(file_path)
+                            
+                            date_violation = {
+                                "file_path": relative_path,
+                                "current_date": file_date,
+                                "expected_date": self.current_date,
+                                "full_path": str(file_path)
+                            }
+                            self.date_violations.append(date_violation)
+                    else:
+                        # Not fixing, just record violation
+                        try:
+                            relative_path = str(file_path.relative_to(self.root_path))
+                        except ValueError:
+                            relative_path = str(file_path)
+                        
+                        date_violation = {
+                            "file_path": relative_path,
+                            "current_date": file_date,
+                            "expected_date": self.current_date,
+                            "full_path": str(file_path)
+                        }
+                        self.date_violations.append(date_violation)
     
     def generate_report(self) -> Dict:
         """
@@ -154,10 +391,13 @@ class MarkdownNamingValidator:
             Dictionary containing validation results
         """
         return {
+            "mode": "git" if self.git_mode else "all",
             "total_files_checked": self.total_files,
             "violations_found": len(self.violations),
+            "date_violations_found": len(self.date_violations),
             "violations": self.violations,
-            "success": len(self.violations) == 0
+            "date_violations": self.date_violations,
+            "success": len(self.violations) == 0 and len(self.date_violations) == 0
         }
     
     def print_report(self) -> None:
@@ -171,25 +411,57 @@ class MarkdownNamingValidator:
             # Human-readable output
             print("=" * 60)
             print("Markdown File Naming Validation Report")
+            if self.git_mode:
+                print("Mode: Git changes only (new/modified files)")
+            else:
+                print("Mode: All files")
             print("=" * 60)
             print(f"Total markdown files checked: {self.total_files}")
-            print(f"Violations found: {len(self.violations)}")
+            print(f"Naming violations found: {len(self.violations)}")
+            if self.git_mode:
+                print(f"Date violations found: {len(self.date_violations)}")
+                if self.fix_dates:
+                    print(f"Dates automatically fixed: {len(self.date_fixes)}")
             print()
             
+            if self.date_fixes:
+                print("DATES AUTOMATICALLY FIXED:")
+                print("-" * 40)
+                for i, fix in enumerate(self.date_fixes, 1):
+                    print(f"{i}. File: {fix['file_path']}")
+                    print(f"   Old date: {fix['old_date']}")
+                    print(f"   New date: {fix['new_date']}")
+                    print()
+            
             if self.violations:
-                print("VIOLATIONS DETECTED:")
+                print("NAMING VIOLATIONS DETECTED:")
                 print("-" * 40)
                 for i, violation in enumerate(self.violations, 1):
                     print(f"{i}. File: {violation['file_path']}")
                     print(f"   Current name: {violation['current_name']}")
                     print(f"   Suggested name: {violation['suggested_name']}")
                     print()
-                
+            
+            if self.date_violations:
+                print("DATE VIOLATIONS DETECTED:")
+                print("-" * 40)
+                for i, violation in enumerate(self.date_violations, 1):
+                    print(f"{i}. File: {violation['file_path']}")
+                    print(f"   Current date: {violation['current_date']}")
+                    print(f"   Expected date: {violation['expected_date']}")
+                    print()
+            
+            if self.violations or self.date_violations:
                 print("SUMMARY:")
-                print("❌ Validation FAILED - Please rename the files above to follow kebab-case convention.")
+                if self.violations:
+                    print("Naming validation FAILED - Please rename the files above to follow kebab-case convention.")
+                if self.date_violations:
+                    print(f"Date validation FAILED - Please update the date in frontmatter to {self.current_date}.")
             else:
-                print("✅ All markdown files follow the kebab-case naming convention!")
-                print("✅ Validation PASSED")
+                print("All markdown files follow the kebab-case naming convention!")
+                if self.git_mode:
+                    print(f"All changed files have correct date ({self.current_date}) in frontmatter!")
+                print("Validation PASSED")
     
     def validate(self) -> bool:
         """
@@ -201,19 +473,20 @@ class MarkdownNamingValidator:
         try:
             self.scan_directory()
             self.print_report()
-            return len(self.violations) == 0
+            return len(self.violations) == 0 and len(self.date_violations) == 0
         except Exception as e:
             if self.json_output:
                 error_report = {
                     "error": str(e),
                     "success": False,
+                    "mode": "git" if self.git_mode else "all",
                     "total_files_checked": 0,
                     "violations_found": 0,
                     "violations": []
                 }
                 print(json.dumps(error_report, indent=2))
             else:
-                print(f"❌ Error during validation: {e}", file=sys.stderr)
+                print(f"Error during validation: {e}", file=sys.stderr)
             return False
 
 
@@ -227,9 +500,22 @@ def main():
 This script validates that markdown files follow kebab-case naming convention.
 
 Examples:
+  # Check all files
   python markdown-naming-check.py
+  
+  # Check only new/modified files in git
+  python markdown-naming-check.py --git
+  
+  # Check and automatically fix dates in changed files
+  python markdown-naming-check.py --git --fix-dates
+  
+  # Check specific directory
   python markdown-naming-check.py --root-path ./docs
-  python markdown-naming-check.py --json
+  
+  # JSON output for CI/CD
+  python markdown-naming-check.py --git --json
+  
+  # Exclude specific patterns
   python markdown-naming-check.py --exclude "temp/*" "draft_*.md"
         """
     )
@@ -238,6 +524,18 @@ Examples:
         "--root-path",
         default=".",
         help="Root directory to start scanning from (default: current directory)"
+    )
+    
+    parser.add_argument(
+        "--git",
+        action="store_true",
+        help="Only check new or modified files in git (staged, unstaged, and untracked)"
+    )
+    
+    parser.add_argument(
+        "--fix-dates",
+        action="store_true",
+        help="Automatically update dates in frontmatter to current date (only with --git)"
     )
     
     parser.add_argument(
@@ -265,7 +563,9 @@ Examples:
     validator = MarkdownNamingValidator(
         root_path=args.root_path,
         exclusions=args.exclude,
-        json_output=args.json
+        json_output=args.json,
+        git_mode=args.git,
+        fix_dates=args.fix_dates
     )
     
     # Run validation

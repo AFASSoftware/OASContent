@@ -1,8 +1,8 @@
 ---
-title: Medewerker synchronisatie met Active Directory
 author: CLN
-date: 2024-04-11
-tags: AD, Active, directory
+date: 2025-11-08
+tags: Tutorial, GetConnector, UpdateConnector, Authentication, Hr, Crm
+title: Medewerker synchronisatie met Active Directory
 ---
 
 ## Inleiding

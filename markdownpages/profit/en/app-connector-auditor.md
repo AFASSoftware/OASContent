@@ -1,9 +1,9 @@
 ---
-title: AppConnector Auditor
 author: Eric Zwaal
-date: 2025-09-16
-tags: Appconnector, setup, GetConnector, authorization
+date: 2025-11-08
 index: true
+tags: Partner, GetConnector, UpdateConnector, AppConnector, Integration, Configuration
+title: AppConnector Auditor
 ---
 
 *this document is an AI-translated version of the [Dutch documentation](../nl/app-connector-auditor) and may contain errors.*
@@ -179,4 +179,3 @@ See [above](#there-are-getconnectors-with-more-than-10-joins). This GetConnector
 #### This GetConnector retrieves data from tables more than 5 levels deep
 
 See [above](#there-are-getconnectors-that-retrieve-data-more-than-5-levels-deep). This GetConnector may be optimized if you experience performance issues with the integration.
-

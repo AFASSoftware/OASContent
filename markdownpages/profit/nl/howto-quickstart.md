@@ -1,8 +1,8 @@
 ---
-title: Quickstart - Maak je eerste request
 author: CLN
-date: 2024-05-28
-tags: quickstart, token
+date: 2025-11-08
+tags: Partner, Tutorial, GetConnector, Integration, Authentication, Authorization
+title: Quickstart - Maak je eerste request
 ---
 
 Deze How-To geeft je alles wat je nodig hebt om te beginnen met het gebruik van de AFAS Profit REST API. 

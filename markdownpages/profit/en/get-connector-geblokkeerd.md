@@ -1,9 +1,10 @@
 ---
-title: GetConnector blocked
 author: EZW
-date: 2024-07-22
-tags: GetConnector, troubleshoot
+date: 2025-11-08
+tags: GetConnector, Integration, Crm
+title: GetConnector blocked
 ---
+
 Have you received a message that a GetConnector in your environment has been blocked? Then this article is for you.
 
 AFAS maintains a Fair Use policy for API usage. In practice, this means that every day the 10 heaviest users receive a message that they need to adjust their process.
