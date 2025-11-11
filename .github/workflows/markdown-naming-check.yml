@@ -84,7 +84,7 @@ jobs:
           if [ $validation_exit_code -eq 0 ]; then
             echo "validation_status=success" >> $GITHUB_OUTPUT
             echo "All markdown files follow naming conventions! ✅" >> $GITHUB_STEP_SUMMARY
-            else
+          else
             echo "validation_status=failure" >> $GITHUB_OUTPUT
             echo "Markdown naming violations detected! ❌" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
