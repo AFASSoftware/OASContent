@@ -79,4 +79,4 @@ Niet doen: Gewoon proberen en kijken of je een foutcode krijgt.
 
 ### Ik maak gebruik van de mogelijkheid om automatisch nieuwe verbijzonderingstoewijzingen te maken (AdDa). Wat nu?
 
-Die mogelijkheid blijft gewoon bestaan. Aan de aitomatisch aangemaakte verbijzonderingstoewijzing wordt geen btw-terugvorderingscode gekoppeld.
+Die mogelijkheid blijft gewoon bestaan. Aan de automatisch aangemaakte verbijzonderingstoewijzing wordt geen btw-terugvorderingscode gekoppeld.

@@ -43,8 +43,7 @@ TAG_KEYWORDS = {
     'Projects': ['project', 'hour', 'hours', 'uur', 'uren', 'registration', 'urenregistratie'],
     'Taxes': ['fiscaal', 'ib', 'tax', 'vpb', 'aangifte'],
     'Construction': ['bouw', 'construction'],
-    'Flex': ['flex', 'flexmodule', 'flex module', 'plaatsing', 'plaatsingen', 'kandidaat', 'kandidaten', 'uitzendkracht', 'uitzendkrachten'
-             , 'candidate', 'candidates', 'temporary worker', 'temporary workers'],
+    'Flex': ['flex', 'flexmodule', 'flex module', 'plaatsing', 'plaatsingen', 'kandidaat', 'kandidaten', 'uitzendkracht', 'uitzendkrachten', 'candidate', 'candidates', 'temporary worker', 'temporary workers'],
                  
     # Specific entities
     'Dossier': ['subject', 'dossier', 'bijlage'],
