@@ -1,8 +1,8 @@
 ---
 author: Eric Zwaal
-date: 2025-11-08
+date: 2025-11-11
 index: true
-tags: Partner, GetConnector, AppConnector, Integration, Configuration, Authentication
+tags: GetConnector, AppConnector, Integration, Configuration, Authentication
 title: AppConnector auditor
 ---
 

@@ -42,7 +42,7 @@ All markdown files must follow **kebab-case** naming convention:
 ## Date Validation
 
 When using the `--git` flag, the script also validates that the `date` field in the frontmatter of changed files matches the current date. This ensures that modified documents have up-to-date timestamps.  
-Updating the date can be done automatically using the `--fix_dates` flag.
+Updating the date can be done automatically using the `--fix-dates` flag.
 
 ### Date Format
 The date in frontmatter should be in ISO format without quotes:
@@ -215,7 +215,7 @@ bash scripts/enable-pre-commit-hook.sh
 1. **Python not found**: Hook will skip with warning, validation runs in GitHub Actions
 2. **Validation failing**: Check output for specific files that need renaming or date updates
 3. **False positives**: Verify AppConnectorAuditor files are excluded
-4. **Date mismatch**: Use `--fix_dates` flag to automatically update dates
+4. **Date mismatch**: Use `--fix-dates` flag to automatically update dates
 5. **Encoding errors**: Script now handles UTF-8 properly for emoji output on Windows
 6. **Bypass validation**: Use `git commit --no-verify` (not recommended)
 
@@ -224,9 +224,9 @@ bash scripts/enable-pre-commit-hook.sh
 If you need to update dates in frontmatter for changed files:
 
 ```bash
-# Use the --fix_dates flag to updates dates
+# Use the --fix-dates flag to updates dates
 cd scripts
-python markdown-naming-check.py --fix_dates
+python markdown-naming-check.py --fix-dates
 ```
 
 This will:
