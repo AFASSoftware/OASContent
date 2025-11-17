@@ -2,7 +2,7 @@
 author: Eric Zwaal
 date: 2025-11-08
 index: true
-tags: Partner, IntegrationId, GetConnector, AppConnector, Integration, Configuration
+tags: Partner, IntegrationId, Certification, Integration, Configuration
 title: Certificeringsstappen voor partners
 ---
 
@@ -19,7 +19,8 @@ Welkom bij het certificeringstraject voor partners! In dit document nemen we je 
 
 Veiligheid voor alles! Een PENtest is een absoluut onmisbaar onderdeel van het partnerschap. Bij aanvang van het certificeringstraject moet er een PENtest gedaan zijn, of er moet een concrete datum ingepland zijn.  
 Vragen hierover? Kijk op https://partner.afas.nl/portal-landingspagina/faq#Security.  
-In plaats van een PENtest kun je ook een Security Quickscan laten uitvoeren door Computest. [In dit artikel lees je daar meer over.](https://partner.afas.nl/portal-partnerportal/security-quickscan)
+In plaats van een PENtest kun je ook een Security Quickscan laten uitvoeren door Computest. [In dit artikel lees je daar meer over.](https://partner.afas.nl/portal-partnerportal/security-quickscan)  
+Uiteraard gaan wij vertrouwelijk om met de resultaten van de PENtest of Security Quickscan.  
 
 
 ### Contactpersonen aanmaken

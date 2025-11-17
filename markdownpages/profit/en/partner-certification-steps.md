@@ -2,7 +2,7 @@
 author: Eric Zwaal
 date: 2025-11-08
 index: true
-tags: Partner, IntegrationId, Tutorial, GetConnector, UpdateConnector, AppConnector
+tags: Partner, IntegrationId, Certification, Integration, Configuration
 title: Certification steps for Partners
 ---
 
@@ -19,7 +19,8 @@ Welcome to the partner certification journey! In this document, we guide you ste
 
 Safety first! A PEN test is an absolutely essential part of the partnership. At the start of the certification process, a PEN test must have been performed, or a concrete date must be scheduled.
 Questions? [See our FAQ (in Dutch)](https://partner.afas.nl/portal-landingspagina/faq#Security).
-Instead of a PEN test, you can also have a Security Quickscan performed by Computest. [Read more in this article (in Dutch).](https://partner.afas.nl/portal-partnerportal/security-quickscan)
+Instead of a PEN test, you can also have a Security Quickscan performed by Computest. [Read more in this article (in Dutch).](https://partner.afas.nl/portal-partnerportal/security-quickscan)  
+Neededless to say, we handle the results of the PEN test or Security Quickscan confidentially.  
 
 ### Add contacts
 
