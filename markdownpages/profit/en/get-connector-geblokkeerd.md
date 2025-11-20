@@ -20,9 +20,11 @@ A GetConnector is always called by another process; this is often an external ap
 ## Solve the problem
 
 1. Is it an external application? Contact the supplier and explain that their GetConnector has been blocked by AFAS. If it's a certified integration with AFAS, the supplier can then contact AFAS to solve the problem.
-2. Is it an internal process? Discuss with the responsible colleague that fewer calls need to be made, or look at how the calls can be improved so they consume fewer resources on AFAS servers. If necessary, contact AFAS via a [System Integrator Request](https://klant.afas.nl/systemintegrators). Note, there are costs involved.
+2. Is it an internal process? Discuss with the responsible colleague that fewer calls need to be made, or look at how the calls can be improved so they consume fewer resources on AFAS servers. If necessary, contact AFAS via a [System Integrator Request](https://klant.afas.nl/systemintegrators). Note, there are costs involved.  
+
+On this AFAS page you will find more information about optimizing GetConnectors: [Optimize GetConnector performance](./troubleshooting#optimize-the-performance-of-getconnectors).
 
 ## Unblock the GetConnector
 
-Once the problem is solved, you can unblock the GetConnector. You unblock a GetConnector via the following path: **General / Output / Management / GetConnector**. Then choose the action **Definition**. With this action you open the properties of the GetConnector. You uncheck the **Blocked** field. Are the blocked rows not visible in the view? Then click the gear wheel at the top right and click **Show blocked rows**.
+Once the problem is solved, you can unblock the GetConnector. You unblock a GetConnector via the following path: **General / Output / Management / GetConnector**. Then choose the action **Definition**. With this action you open the properties of the GetConnector. You uncheck the **Blocked** field. Are the blocked rows not visible in the view? Then click the pad lock icon at the top right and click **Show blocked rows**.
 *source: https://help.afas.nl/meldingen/NL/SE/99797.htm*
