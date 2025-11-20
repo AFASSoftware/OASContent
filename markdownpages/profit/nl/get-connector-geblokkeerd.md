@@ -1,6 +1,6 @@
 ---
 author: EZW
-date: 2025-11-08
+date: 2025-11-20
 tags: GetConnector, Integration, Crm
 title: GetConnector geblokkeerd
 ---
