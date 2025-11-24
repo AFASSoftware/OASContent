@@ -1,6 +1,6 @@
 ---
 author: EZW
-date: 2025-11-24
+date: 2025-11-25
 tags: Profit7, GetConnector, UpdateConnector, Integration, Configuration
 title: New in Profit 7
 ---
@@ -11,23 +11,28 @@ Starting with Profit 7, several changes have been implemented in the AFAS Profit
 
 ## **Breaking changes**
 
-### Always send AFAS-token base64-encoded
+### Always send AFAS token base64-encoded
 
-As already announced in the [new in Profit 6](news-profit6/#afas-token-altijd-base64-encoded-versturen), starting with **Profit 7**, an error message will be displayed if the AFAS-token is not sent correctly.  
-**Please note**: an earlier version of this document stated "End of December, 2025". That has now been changed to "Profit 7".  
+As already announced in the [release notes of Profit 6](news-profit6/#always-send-afas-token-in-base64-encoded-format), an error message will be given from **Profit 7** onwards if the AFAS token is not sent correctly in the Authorization header of a request.  
+PLEASE NOTE: an earlier version of this message stated "end of December 2025". This has now been changed to "Profit 7".
 
  #### Wrong
- 
- `-H "Authorization: <token><version>1</version><data>37269582C95943C4AE5DCAEEEF9F4F19170BCB774D45458588517600E1C4302C</data></token>"`
+
+``` curl 
+-H "Authorization: <token><version>1</version><data>37269582C95943C4AE5DCAEEEF9F4F19170BCB774D45458588517600E1C4302C</data></token>"
+```
 
  #### Correct
 
-Send the header as `"AfasToken <base64-encoded token>"`:  
-`-H "Authorization: AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+MzcyNjk1ODJDOTU5NDNDNEFFNURDQUVFRUY5RjRGMTkxNzBCQ0I3NzRENDU0NTg1ODg1MTc2MDBFMUM0MzAyQzwvZGF0YT48L3Rva2VuPg=="`  
+Pass the header as `"AfasToken <base64-encoded token>"`:  
+```curl
+-H "Authorization: AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+MzcyNjk1ODJDOTU5NDNDNEFFNURDQUVFRUY5RjRGMTkxNzBCQ0I3NzRENDU0NTg1ODg1MTc2MDBFMUM0MzAyQzwvZGF0YT48L3Rva2VuPg=="
+```
 
 #### SOAP
 
-For now, it remains possible to include the token in the Body of a SOAP message. This method is strongly discouraged and will be discontinued in the future.  
+For now, it remains possible to pass the token in the Body in a SOAP message. This method is strongly discouraged and will be phased out in the future. We advise to always pass the token in the Authorization header.  
+
 
 ## Important changes
 

@@ -1,6 +1,6 @@
 ---
 author: EZW
-date: 2025-11-24
+date: 2025-11-25
 tags: Profit7, GetConnector, UpdateConnector, Integration, Configuration
 title: Nieuw in Profit 7
 ---
@@ -13,21 +13,25 @@ Vanaf Profit 7 is er een aantal wijzigingen in de AFAS Profit API doorgevoerd. H
 
 ### AFAS-token altijd base64-encoded versturen
 
-Zoals in de [releasenotes van Profit 6](news-profit6/#afas-token-altijd-base64-encoded-versturen) al aangekondigd werd, zal vanaf **Profit 7** een foutmelding worden gegeven als de AFAS-token niet goed wordt doorgestuurd.  
+Zoals in de [releasenotes van Profit 6](news-profit6/#afas-token-altijd-base64-encoded-versturen) al aangekondigd werd, zal vanaf **Profit 7** een foutmelding worden gegeven als de AFAS-token niet goed wordt doorgestuurd in de Authorization header van een request.  
 LET OP: in een eerdere versie van dit bericht stond nog "eind december 2025". Dat is nu gewijzigd naar "Profit 7".  
 
  #### Fout
- 
- `-H "Authorization: <token><version>1</version><data>37269582C95943C4AE5DCAEEEF9F4F19170BCB774D45458588517600E1C4302C</data></token>"`
+
+``` curl 
+-H "Authorization: <token><version>1</version><data>37269582C95943C4AE5DCAEEEF9F4F19170BCB774D45458588517600E1C4302C</data></token>"
+```
 
  #### Goed
 
 Geef de header mee als `"AfasToken <base64-encoded token>"`:  
-`-H "Authorization: AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+MzcyNjk1ODJDOTU5NDNDNEFFNURDQUVFRUY5RjRGMTkxNzBCQ0I3NzRENDU0NTg1ODg1MTc2MDBFMUM0MzAyQzwvZGF0YT48L3Rva2VuPg=="`
+```curl
+-H "Authorization: AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+MzcyNjk1ODJDOTU5NDNDNEFFNURDQUVFRUY5RjRGMTkxNzBCQ0I3NzRENDU0NTg1ODg1MTc2MDBFMUM0MzAyQzwvZGF0YT48L3Rva2VuPg=="
+```
 
 #### SOAP
 
-Vooralsnog blijft het in een SOAP bericht ook mogelijk om de token mee te geven in de Body. Deze methode wordt sterk ontraden en zal op termijn worden afgeschaft.  
+Vooralsnog blijft het in een SOAP bericht ook mogelijk om de token mee te geven in de Body. Deze methode wordt sterk ontraden en zal op termijn worden afgeschaft. We adviseren om de token altijd in de Authorization header mee te geven. 
 
 ## Belangrijke wijzigingen
 
