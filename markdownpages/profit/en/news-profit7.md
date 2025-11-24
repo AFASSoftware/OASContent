@@ -1,6 +1,6 @@
 ---
 author: EZW
-date: 2025-11-10
+date: 2025-11-24
 tags: Profit7, GetConnector, UpdateConnector, Integration, Configuration
 title: New in Profit 7
 ---
@@ -24,6 +24,10 @@ As already announced in the [new in Profit 6](news-profit6/#afas-token-altijd-ba
 
 Send the header as `"AfasToken <base64-encoded token>"`:  
 `-H "Authorization: AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+MzcyNjk1ODJDOTU5NDNDNEFFNURDQUVFRUY5RjRGMTkxNzBCQ0I3NzRENDU0NTg1ODg1MTc2MDBFMUM0MzAyQzwvZGF0YT48L3Rva2VuPg=="`  
+
+#### SOAP
+
+For now, it remains possible to include the token in the Body of a SOAP message. This method is strongly discouraged and will be discontinued in the future.  
 
 ## Important changes
 

@@ -1,6 +1,6 @@
 ---
 author: EZW
-date: 2025-11-10
+date: 2025-11-24
 tags: Profit7, GetConnector, UpdateConnector, Integration, Configuration
 title: Nieuw in Profit 7
 ---
@@ -25,6 +25,9 @@ LET OP: in een eerdere versie van dit bericht stond nog "eind december 2025". Da
 Geef de header mee als `"AfasToken <base64-encoded token>"`:  
 `-H "Authorization: AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+MzcyNjk1ODJDOTU5NDNDNEFFNURDQUVFRUY5RjRGMTkxNzBCQ0I3NzRENDU0NTg1ODg1MTc2MDBFMUM0MzAyQzwvZGF0YT48L3Rva2VuPg=="`
 
+#### SOAP
+
+Vooralsnog blijft het in een SOAP bericht ook mogelijk om de token mee te geven in de Body. Deze methode wordt sterk ontraden en zal op termijn worden afgeschaft.  
 
 ## Belangrijke wijzigingen
 
