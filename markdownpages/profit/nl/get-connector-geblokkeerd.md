@@ -1,6 +1,6 @@
 ---
 author: EZW
-date: 2025-11-08
+date: 2025-11-20
 tags: GetConnector, Integration, Crm
 title: GetConnector geblokkeerd
 ---
@@ -20,9 +20,11 @@ Een GetConnector wordt altijd aangeroepen door een ander proces; dat is vaak een
 ## Los het probleem op
 
 1. Is het een externe applicatie? Neem contact op met de leverancier en leg uit dat hun GetConnector geblokkeerd is door AFAS. Als het om een gecertificeerde koppeling met AFAS gaat, kan de leverancier vervolgens contact opnemen met AFAS om het probleem op te lossen.
-2. Is het een intern proces? Bespreek met de verantwoordelijke collega dat er minder aanroepen gedaan moeten worden, of kijk hoe de aanroepen verbeterd kunnen worden zodat ze minder resources eten op de servers van AFAS. Neem zonodig contact op met AFAS via een [Aanvraag Systemintegrator](https://klant.afas.nl/systemintegrators). Let op, daar zijn kosten aan verbonden.
+2. Is het een intern proces? Bespreek met de verantwoordelijke collega dat er minder aanroepen gedaan moeten worden, of kijk hoe de aanroepen verbeterd kunnen worden zodat ze minder resources eten op de servers van AFAS. Neem zonodig contact op met AFAS via een [Aanvraag Systemintegrator](https://klant.afas.nl/systemintegrators). Let op, daar zijn kosten aan verbonden.  
+
+Op deze pagina van AFAS vind je meer informatie over het optimaliseren van GetConnectors: [Performance van GetConnectoren optimaliseren](./troubleshooting#performance-van-getconnectoren-optimaliseren).
 
 ## Deblokkeer de GetConnector
 
-Als het probleem is opgelost, kun je de GetConnector weer deblokkeren. Je deblokkeert een GetConnector via het volgende pad: **Algemeen / Uitvoer / Beheer / GetConnector**. Vervolgens kies je voor de actie **Definitie**. Je opent met deze actie de eigenschappen van de GetConnector. Je vinkt het veld **Geblokkeerd** uit. Zijn de geblokkeerde regels niet zichtbaar in de weergave? Klik dan op het tandwiel rechtsboven en klik op **Geblokkeerde regels tonen**.
+Als het probleem is opgelost, kun je de GetConnector weer deblokkeren. Je deblokkeert een GetConnector via het volgende pad: **Algemeen / Uitvoer / Beheer / GetConnector**. Vervolgens kies je voor de actie **Definitie**. Je opent met deze actie de eigenschappen van de GetConnector. Je vinkt het veld **Geblokkeerd** uit. Zijn de geblokkeerde regels niet zichtbaar in de weergave? Klik dan op het icoontje van een hangslotje rechtsboven en klik op **Geblokkeerde regels tonen**.
 *bron: https://help.afas.nl/meldingen/NL/SE/99797.htm*
