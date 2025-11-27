@@ -1384,6 +1384,11 @@
       "descriptionNl": "Itemcode magazijn",
       "url": "Magazijn#put-/connectors/FbItemCodeWarehouse",
       "descriptionEn": "Item code warehouse"
+    },
+    "delete": {
+      "descriptionNl": "Itemcode magazijn",
+      "url": "Magazijn#put-/connectors/FbItemCodeWarehouse/FbItemCodeWarehouse/@VaIt,@War/-VaIt-,-War-",
+      "descriptionEn": "Item code warehouse"
     }
   },
   "FbStockMutation": {
