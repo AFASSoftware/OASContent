@@ -15,58 +15,66 @@
           ]
       },
       "documentation": {
-          "en": [
-              {
-                  "name": "Concepts",
-                  "path": "en/concepts.md"
-              },
-              {
-                  "name": "Authentication",
-                  "path": "en/authentication.md"
-              },
-              {
-                  "name": "GetConnector",
-                  "path": "en/get-connector.md"
-              },
-              {
-                  "name": "UpdateConnector",
-                  "path": "en/update-connector.md"
-              },
-              {
-                  "name": "Troubleshooting",
-                  "path": "en/troubleshooting.md"
-              },
-              {
-                  "name": "Custom Fields",
-                  "path": "en/custom-fields.md"
-              }
-          ],
-          "nl": [
-              {
-                  "name": "Concepten",
-                  "path": "nl/concepts.md"
-              },
-              {
-                  "name": "Authenticatie",
-                  "path": "nl/authentication.md"
-              },
-              {
-                  "name": "GetConnector",
-                  "path": "nl/get-connector.md"
-              },
-              {
-                  "name": "UpdateConnector",
-                  "path": "nl/update-connector.md"
-              },
-              {
-                  "name": "Fouten verhelpen",
-                  "path": "nl/troubleshooting.md"
-              },
-              {
-                  "name": "Vrije velden",
-                  "path": "nl/custom-fields.md"
-              }
-          ]
+        "en": [
+          {
+            "name": "Concepts",
+            "path": "en/concepts.md"
+          },
+          {
+            "name": "Authentication",
+            "path": "en/authentication.md"
+          },
+          {
+            "name": "GetConnector",
+            "path": "en/get-connector.md"
+          },
+          {
+            "name": "UpdateConnector",
+            "path": "en/update-connector.md"
+          },
+          {
+            "name": "Troubleshooting",
+            "path": "en/troubleshooting.md"
+          },
+          {
+            "name": "Custom Fields",
+            "path": "en/custom-fields.md"
+          },
+          {
+            "name": "BI-models",
+            "path": "en/bi-models.md"
+          }
+        ],
+        "nl": [
+          {
+            "name": "Concepten",
+            "path": "nl/concepts.md"
+          },
+          {
+            "name": "Authenticatie",
+            "path": "nl/authentication.md"
+          },
+          {
+            "name": "GetConnector",
+            "path": "nl/get-connector.md"
+          },
+          {
+            "name": "UpdateConnector",
+            "path": "nl/update-connector.md"
+          },
+          {
+            "name": "Fouten verhelpen",
+            "path": "nl/troubleshooting.md"
+          },
+          {
+            "name": "Vrije velden",
+            "path": "nl/custom-fields.md"
+          },
+          {
+            "name": "BI-modellen",
+            "path": "nl/bi-modellen.md"
+          }
+        ]
       },
       "howtos": {
           "en": [
