@@ -1,5 +1,5 @@
 ---
-title: BI-modellen
+title: BI-models
 author: TOKL
 date: 2025-11-20
 tags: BI, OData, bi-modellen
