@@ -21,6 +21,6 @@ When you retrieve large amounts of data via an OData connector and do not includ
 This means the server returns the data in smaller chunks (pages) instead of all at once. 
 The server sends a response back, which includes a link to the next page of data. When there is no more data, no link is provided.
 
-## Skip and Top
-You can also specify how many records you want to retrieve and from which record you want to start using the skip and top parameters. 
+## Client-side pagination
+You can also specify how many records you want to retrieve and from which record you want to start using the 'skip' and 'top' parameters. 
 You do not need to provide sorting because a fixed order is already maintained on the server side.

@@ -20,7 +20,7 @@ Wanneer je grote hoeveelheden data ophaald via een OData-connector en je geeft g
 Dit betekent dat de server de data in kleinere brokken (pagina's) teruggeeft in plaats van alles in één keer.
 De server stuurt een response terug en in deze response zit een link naar de volgende pagina met data. Wanneer er geen data meer is, wordt er geen link meer meegegeven.
 
-## Skip en top
-Je kunt ook zelf aangeven hoeveel records je wilt ophalen en vanaf welk record je wilt beginnen met de skip en top parameters. 
+## Client side pagination
+Je kunt ook zelf aangeven hoeveel records je wilt ophalen en vanaf welk record je wilt beginnen met de 'skip' en 'top' parameters. 
 Je hoeft hierbij geen sortering mee te geven omdat aan de server kant al een vast volgorde wordt aangehouden. 
 
