@@ -41,11 +41,11 @@ The BI model editor opens; a **fact table** is automatically created in the mode
 
 It is often more efficient not to include all fields in one fact table, but to build the model as a so-called **star schema**. You place values that occur frequently in a separate table (*dimension table*) and reference that dimension table from the fact table.
 
-```
+__Example__
+
 An example of this is the field DebtorName in Financial mutations. Suppose there are 150 mutations for one debtor. This debtor's name is: EenHeleLangeNaam B.V.
 
 If you use only one fact table, that name will be stored 150 times in the table. If you create a dimension table with debtor names, each debtor name will only appear once. In the fact table you then store not the full name but a reference to the debtor name table, for example 115. The number of characters then goes from 21 to 3. This is much more efficient when transferring information.
-```
 
 ### Adding a dimension table
 You can add fields that can be expanded into the fact table, or you can include them as a new dimension. To do this, right-click the field and choose *New dimension* from the menu. A new dimension table is then created automatically. A reference to this dimension table is added in the fact table.

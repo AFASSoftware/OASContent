@@ -42,11 +42,12 @@ De BI-modeleditor opent zich; er wordt automatisch een **feitentabel** aangemaak
 
 Het is vaak efficiënter om niet alle velden in één feitentabel op te nemen, maar het model op te bouwen in een zogenoemd **ster-model**. Je plaatst waarden die vaak terugkomen in een aparte tabel (*dimensietabel*) en verwijst vanuit de feitentabel naar die dimensietabel.
 
-```
-Een voorbeeld hiervan is het veld Debiteurnaam in Financiële mutaties. Stel dat er voor één debiteur 150 mutaties zijn. Deze debiteur heet: EenHeleLangeNaam B.V.
+__Voorbeeld__
+
+Een voorbeeld is het veld Debiteurnaam in Financiële mutaties. Stel dat er voor één debiteur 150 mutaties zijn. Deze debiteur heet: EenHeleLangeNaam B.V.
 
 Als je slechts één feitentabel gebruikt, wordt die naam dus 150 keer in de tabel opgenomen. Kies je er daarentegen voor om een dimensietabel met debiteurnamen te maken, dan komt elke debiteurnaam maar één keer voor. In de feitentabel sla je dan geen volledige naam op, maar een verwijzing naar de debiteurnamentabel, bijvoorbeeld 115. Het aantal karakters gaat dan van 21 naar 3. Dit is veel efficiënter bij de overdracht van informatie.
-```
+
 
 ### Dimensietabel toevoegen
 Je kunt velden die uitgeklapt kunnen worden aan de feitentabel toevoegen, maar je kunt ze ook als nieuwe dimensie opnemen. Dit doe je door met de rechtermuisknop op het veld te klikken en in het menu te kiezen voor Nieuwe dimensie. Er wordt dan automatisch een nieuwe dimensietabel gemaakt. In de feitentabel wordt een verwijzing naar deze dimensietabel opgenomen.
