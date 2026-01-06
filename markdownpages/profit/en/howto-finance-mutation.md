@@ -1,8 +1,8 @@
 ---
 author: CLN
 date: 2025-11-08
-tags: Tutorial, GetConnector, UpdateConnector, Integration, Authentication, Finance
-title: Financial mutations basics
+tags: Tutorial, GetConnector, UpdateConnector, Integration, Configuration, Authentication
+title: Financial Mutation Sales
 ---
 
 ## Introduction
@@ -39,8 +39,8 @@ Use the AccountId / `AcNr` when creating the financial mutation in combination w
 
 Pay attention to these fields:
 
-- If `DimAx1` and `DimAx2` are filled, the object `FiEntries/FiDimEntries` must be filled
-- If `ToProject` is TRUE, the object `FiEntries/FiPrjEntries` must be filled
+- If one or more of the fields `DimAx1` to `DimAx5` are filled with value "B", the object `FiEntries/FiDimEntries` must be filled
+- If `ToProject` is "J", the object `FiEntries/FiPrjEntries` must be filled
 
 #### Allocations
 
@@ -72,64 +72,64 @@ Endpoint: [Get VAT Code](../../apidoc/en/Mutaties#get-/connectors/Profit_VAT_cod
 
 Use the VATCode when creating the financial mutation.
 
-## Create financial mutation 
+## Create financial mutation
 
 Endpoint: [POST FiEntries](../../apidoc/en/Mutaties#post-/connectors/FiEntries)
 
-The next step is to create the financial mutation. For this you need the data from the previous GET requests.
+The next step is to create the financial mutation. For this you need the data from the previous GET requests. The example below is a simple sales invoice with the debtor in the first line, the revenue account in the second line, and the VAT in the third line. Because autonumbering is enabled via `"AuNu": "1"`, no invoice number needs to be provided.
 
 ```json Financial mutation sales with VAT
 {
-  "FiEntryPar": {
-    "Element": {
-      "Fields": {
-        "Year": "2024",
-        "Peri": "1",
-        "UnId": "1",
-        "JoCo": "20",
-        "AuNu": "1"
-      },
-      "Objects": {
-        "FiEntries": {
-          "Element": [
-            {
-              "Fields": {
-                "VaAs": "2",
-                "AcNr": "10004",
-                "EnDa": "2024-01-01",
-                "BpDa": "2024-01-01", 
-                "AmDe": "12100",
-                "AmCr": "0",
-                "DaEx": "2024-02-01"
-              }
+    "FiEntryPar": {
+        "Element": {
+            "Fields": {
+                "Year": "2026",
+                "Peri": "1",
+                "UnId": "1",
+                "JoCo": "20",
+                "AuNu": "1"
             },
-            {
-              "Fields": {
-                "VaAs": "1",
-                "AcNr": "8010",
-                "EnDa": "2024-01-01",
-                "BpDa": "2024-01-01",
-                "AmDe": "0",
-                "AmCr": "10000",
-                "VaId": "1"
-              }
-            },
-            {
-              "Fields": {
-                "VaAs": "1",
-                "AcNr": "1510",
-                "EnDa": "2024-01-01",
-                "BpDa": "2024-01-01",
-                "AmDe": "0",
-                "AmCr": "2100", 
-                "VaId": "1"
-              }
+            "Objects": {
+                "FiEntries": {
+                    "Element": [
+                        {
+                            "Fields": {
+                                "VaAs": "2",
+                                "AcNr": "10001",
+                                "EnDa": "2026-01-01",
+                                "BpDa": "2026-01-01",
+                                "AmDe": "12100",
+                                "AmCr": "0",
+                                "DaEx": "2026-02-01"
+                            }
+                        },
+                        {
+                            "Fields": {
+                                "VaAs": "1",
+                                "AcNr": "8010",
+                                "EnDa": "2026-01-01",
+                                "BpDa": "2026-01-01",
+                                "AmDe": "0",
+                                "AmCr": "10000",
+                                "VaId": "1"
+                            }
+                        },
+                        {
+                            "Fields": {
+                                "VaAs": "1",
+                                "AcNr": "1510",
+                                "EnDa": "2026-01-01",
+                                "BpDa": "2026-01-01",
+                                "AmDe": "0",
+                                "AmCr": "2100",
+                                "VaId": "1"
+                            }
+                        }
+                    ]
+                }
             }
-          ]
         }
-      }
     }
-  }
 }
 ```
 
@@ -138,7 +138,7 @@ The next step is to create the financial mutation. For this you need the data fr
     "FiEntryPar": {
         "UnId": "1",
         "EnNo": "48227",
-        "InId": "IH001057X"
+        "InId": "V008001"
     }
 }
 ```
@@ -147,14 +147,14 @@ The financial mutation has now been created. You need to save the `InId` for cre
 
 ## Create financial mutation with allocation
 
-It is possible to provide an allocation to the financial mutation. Depending on the settings on a ledger account, this may be mandatory.
+It is possible to provide an allocation to the financial mutation. Depending on the settings on a ledger account, this may be mandatory. In the example below, a sales invoice is created again and the revenue account is allocated across all 5 allocation axes.
 
 ```json Mutation with allocation/FiDimEntries
 {
   "FiEntryPar": {
     "Element": {
       "Fields": {
-        "Year": "2024",
+        "Year": "2026",
         "Peri": "1",
         "UnId": "1",
         "JoCo": "82",
@@ -166,22 +166,20 @@ It is possible to provide an allocation to the financial mutation. Depending on 
             {
               "Fields": {
                 "VaAs": "2",
-                "AcNr": "50001",
-                "EnDa": "2024-01-01",
-                "BpDa": "2024-01-01",
-                "BpNr": "TR00000023",
+                "AcNr": "10001",
+                "EnDa": "2026-01-01",
+                "BpDa": "2026-01-01",
                 "AmDe": "12100",
                 "AmCr": "0",
-                "DaEx": "2024-02-01"
+                "DaEx": "2026-02-01"
               }
             },
             {
               "Fields": {
                 "VaAs": "1",
                 "AcNr": "8000",
-                "EnDa": "2024-01-01",
-                "BpDa": "2024-01-01",
-                "BpNr": "TR00000023",
+                "EnDa": "2026-01-01",
+                "BpDa": "2026-01-01",
                 "AmDe": "0",
                 "AmCr": "10000",
                 "VaId": "1"
@@ -206,9 +204,8 @@ It is possible to provide an allocation to the financial mutation. Depending on 
               "Fields": {
                 "VaAs": "1",
                 "AcNr": "1510",
-                "EnDa": "2024-01-01",
-                "BpDa": "2024-01-01",
-                "BpNr": "TR00000023",
+                "EnDa": "2026-01-01",
+                "BpDa": "2026-01-01",
                 "AmDe": "0",
                 "AmCr": "2100",
                 "VaId": "1"
@@ -224,14 +221,14 @@ It is possible to provide an allocation to the financial mutation. Depending on 
 
 ## Create financial mutation with Project booking
 
-It is possible to provide a Project booking to the financial mutation. Depending on the settings on a ledger account, this may be mandatory. This way you create an integration with the projects administration in AFAS via the financial mutation.
+It is possible to provide a Project booking to the financial mutation. Depending on the settings on a ledger account, this may be mandatory. This way you create an integration with the projects administration in AFAS via the financial mutation. In the example below, the revenue line is split into 2 cost types on one project.
 
 ```json Mutation with Project booking/FiPrjEntries
 {
   "FiEntryPar": {
     "Element": {
       "Fields": {
-        "Year": "2024", 
+        "Year": "2026",
         "Peri": "1",
         "UnId": "1",
         "JoCo": "20",
@@ -243,20 +240,20 @@ It is possible to provide a Project booking to the financial mutation. Depending
             {
               "Fields": {
                 "VaAs": "2",
-                "AcNr": "50001",
-                "EnDa": "2024-01-01",
-                "BpDa": "2024-01-01",
+                "AcNr": "10001",
+                "EnDa": "2026-01-01",
+                "BpDa": "2026-01-01",
                 "AmDe": "12100",
                 "AmCr": "0",
-                "DaEx": "2024-02-01"
+                "DaEx": "2026-02-01"
               }
             },
             {
               "Fields": {
                 "VaAs": "1",
                 "AcNr": "8080",
-                "EnDa": "2024-01-01",
-                "BpDa": "2024-01-01",
+                "EnDa": "2026-01-01",
+                "BpDa": "2026-01-01",
                 "AmDe": "0",
                 "AmCr": "10000",
                 "VaId": "1"
@@ -283,7 +280,7 @@ It is possible to provide a Project booking to the financial mutation. Depending
                         "AmCo": "5000",
                         "Ch": "1",
                         "AmSe": "5000",
-                        "Qu": "1"   
+                        "Qu": "1"
                       }
                     }
                   ]
@@ -294,8 +291,8 @@ It is possible to provide a Project booking to the financial mutation. Depending
               "Fields": {
                 "VaAs": "1",
                 "AcNr": "1510",
-                "EnDa": "2024-01-01",
-                "BpDa": "2024-01-01",
+                "EnDa": "2026-01-01",
+                "BpDa": "2026-01-01",
                 "AmDe": "0",
                 "AmCr": "2100",
                 "VaId": "1"
@@ -318,10 +315,11 @@ When you create a sales invoice in AFAS, you usually also have an attachment. Fo
 These fields are important:
 
 - Sales
-  - `SiUn` - AdministrationId  
+  - `SiUn` - AdministrationId
   - `SiTp` - Type is always 1
   - `SiId` - InvoiceId / `InId`
 
+In the example below, an attachment is linked to the sales invoice from the first example.
 ```json Add attachment to sales invoice
 {
   "KnSubject": {
@@ -329,7 +327,7 @@ These fields are important:
       "Fields": {
         "StId": 5,
         "Ds": "Invoice VK004979 [VKF]",
-        "Da": "2024-03-21T13:42:59"
+        "Da": "2026-03-21T13:42:59"
       },
       "Objects": [
         {
@@ -338,10 +336,10 @@ These fields are important:
               "Fields": {
                 "DoCRM": true,
                 "SfTp": 4,
-                "SfId": "49299",
+                "SfId": "10001",
                 "SiUn": 1,
                 "SiTp": 1,
-                "SiId": "VK004979"
+                "SiId": "V008001"
               }
             }
           }
@@ -350,7 +348,7 @@ These fields are important:
           "KnSubjectAttachment": {
             "Element": {
               "Fields": {
-                "FileName": "example.png",
+                "FileName": "Invoice VK004979.png",
                 "FileStream": "iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAIAAACzY+a1AAAEB0lEQVR4nO3YQU/yShiG4SmlBSwYjEIQCyaSqmHl//8NLNgZSaORAmJQxCC0dihzFs3hEPQkX8KXlid5rl1r9YW5w2RQ63Q6gpBl0n4BtC8mhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J42bRfwH88zxNCNBqN+HK5XPZ6ve0HHMexLEsIoZQaj8fT6TSKouPjY9u2s9m93kiKo/d3KAnH4/H7+/vp6enmThAEpmm22+1fH57NZq1WS9f1fr//9PTkOA7i6L8i/Y00DEPXdSeTiWma2/eDIMjn8z+fV0pNJpNarZbP5w3DaDabi8VisVhgjf6L0k+4XC5N07y9vc3lctv3/28dfd9fr9fxtiaEMAzDNM2ddZzNZt1udz6fx5ePj48PDw9KqQRGJy/9jbRcLpfL5Z/34/W6v7+XUhYKhXq9Hq+dlFIIYRjG5knDMMIw3PmbJycng8Hg5uZmNpvN5/Pr62tN0xIYnbz0P4W/iqJISmmapuM47Xb76OjIdd0gCIQQ6/VaCLHdQ9O0n58w27bX67XnecPhsFarFQqFxEYn7EAT6rp+d3fXbDaz2Ww2m724uMjlcm9vb+LfFdxeOKVUJrP7RnRdt2374+Mjl8tVq9UkRyfsQBP+ZJpmvI/FR4/VarX5kZRye3Pb8H1fCBGGYRRFCY9O0oEm/Pr66na739/f8aVSanPEyOfzmUxmc4iQUoZhuDlibPi+//r6Wq/XdV2Pv/YlNjphB5rQsqxCoeB5XhiGq9VqMBhEUVSpVIQQmUzm7OxsNBr5vi+l7Pf7lmXtrKNS6vn5uVgsVqvVRqPx+fk5nU6TGZ289E+kv9I07erqajQa9Xq9+BzvOM7m/yDn5+dKKdd1hRClUuny8nLn119eXqSUrVZLCFEsFiuVynA4LJVKf7Lp7Tk6eVqn00n7NdBeDnQjpT/HhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEN4/cnznZiQb6hsAAAAASUVORK5CYII="
               }
             }
@@ -366,7 +364,7 @@ These fields are important:
 
 Endpoint: [Put FiInvoice](../../apidoc/en/Mutaties#put-/connectors/FiInvoice)
 
-In some situations, you may want to edit the financial invoice, which is automatically created when submitting `FiEntries`, afterwards.
+In some situations, you may want to edit the financial invoice, which is automatically created when submitting `FiEntries`, afterwards. Such as in this example, where you unblock the invoice for payment.
 
 ```json Unblock for payment
 {

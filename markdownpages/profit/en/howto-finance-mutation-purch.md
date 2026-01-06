@@ -116,14 +116,14 @@ The goods receipt has now been created. You must save the `OrNu` for the confron
 
 Endpoint: [POST FiEntries](../../apidoc/en/Mutaties#post-/connectors/FiEntries)
 
-The next step is to create the financial mutation. For this you need the data from the previous GET requests.
+The next step is to create the financial mutation. For this you need the data from the previous GET requests. In the example below, a purchase invoice is created. The purchase relation on the first line, the inventory account on the second line, and finally the VAT.
 
 ```json Creating financial mutation
 {
     "FiEntryPar": {
         "Element": {
             "Fields": {
-                "Year": 2024,
+                "Year": 2026,
                 "Peri": 5,
                 "UnId": 1,
                 "JoCo": "10"
@@ -136,8 +136,8 @@ The next step is to create the financial mutation. For this you need the data fr
                                 "Fields": {
                                     "VaAs": "3",
                                     "AcNr": "50028",
-                                    "EnDa": "2024-05-25",
-                                    "BpDa": "2024-05-25",
+                                    "EnDa": "2026-05-25",
+                                    "BpDa": "2026-05-25",
                                     "InId": "IH001057X",
                                     "AmCr": "400"
                                 }
@@ -146,8 +146,8 @@ The next step is to create the financial mutation. For this you need the data fr
                                 "Fields": {
                                     "VaAs": "1",
                                     "AcNr": "3600",
-                                    "EnDa": "2024-05-25",
-                                    "BpDa": "2024-05-25",
+                                    "EnDa": "2026-05-25",
+                                    "BpDa": "2026-05-25",
                                     "InId": "IH001057X",
                                     "Ds": "Purchase to ledger",
                                     "AmDe": "330.58",
@@ -158,8 +158,8 @@ The next step is to create the financial mutation. For this you need the data fr
                                 "Fields": {
                                     "VaAs": "1",
                                     "AcNr": "1500",
-                                    "EnDa": "2024-05-25",
-                                    "BpDa": "2024-05-25",
+                                    "EnDa": "2026-05-25",
+                                    "BpDa": "2026-05-25",
                                     "InId": "IH001057X",
                                     "Ds": "VAT",
                                     "AmDe": "69.42",
@@ -191,6 +191,83 @@ Optionally, you now want to do the following:
 
 1. Create an invoice attachment via [KnSubject](../../apidoc/en/Dossiers%20en%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
 2. Modify the financial invoice that was created via [FiInvoice](../../apidoc/en/Mutaties#put-/connectors/FiInvoice)
+
+## Add attachment to financial mutation
+
+Endpoint: [Post KnSubject](../../apidoc/en/Dossiers%20en%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
+
+When you create a purchase invoice in AFAS, you usually also have an attachment. For example, a PDF file with the purchase invoice. You can add this to the financial mutation.
+
+These fields are important:
+
+- Purchase:
+  - `PiUn` - AdministrationId
+  - `PiTp` - Type is always 1
+  - `PiId` - InvoiceId / `InId`
+
+In the example below, an attachment is linked to the purchase invoice from the first example.
+
+```json Add attachment to purchase invoice
+{
+  "KnSubject": {
+    "Element": {
+      "Fields": {
+        "StId": 5,
+        "Ds": "Purchase PUR004979",
+        "Da": "2026-03-21T13:42:59"
+      },
+      "Objects": [
+        {
+          "KnSubjectLink": {
+            "Element": {
+              "Fields": {
+                "DoCRM": true,
+                "SfTp": 11,
+                "SfId": "48227",
+                "PiUn": 1,
+                "PiTp": 1,
+                "PiId": "PUR004979"
+              }
+            }
+          }
+        },
+        {
+          "KnSubjectAttachment": {
+            "Element": {
+              "Fields": {
+                "FileName": "purchase PUR004979.png",
+                "FileStream": "iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAIAAACzY+a1AAAEB0lEQVR4nO3YQU/yShiG4SmlBSwYjEIQCyaSqmHl//8NLNgZSaORAmJQxCC0dihzFs3hEPQkX8KXlid5rl1r9YW5w2RQ63Q6gpBl0n4BtC8mhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J4TAiPCeExITwmhMeE8JgQHhPCY0J42bRfwH88zxNCNBqN+HK5XPZ6ve0HHMexLEsIoZQaj8fT6TSKouPjY9u2s9m93kiKo/d3KAnH4/H7+/vp6enmThAEpmm22+1fH57NZq1WS9f1fr//9PTkOA7i6L8i/Y00DEPXdSeTiWma2/eDIMjn8z+fV0pNJpNarZbP5w3DaDabi8VisVhgjf6L0k+4XC5N07y9vc3lctv3/28dfd9fr9fxtiaEMAzDNM2ddZzNZt1udz6fx5ePj48PDw9KqQRGJy/9jbRcLpfL5Z/34/W6v7+XUhYKhXq9Hq+dlFIIYRjG5knDMMIw3PmbJycng8Hg5uZmNpvN5/Pr62tN0xIYnbz0P4W/iqJISmmapuM47Xb76OjIdd0gCIQQ6/VaCLHdQ9O0n58w27bX67XnecPhsFarFQqFxEYn7EAT6rp+d3fXbDaz2Ww2m724uMjlcm9vb+LfFdxeOKVUJrP7RnRdt2374+Mjl8tVq9UkRyfsQBP+ZJpmvI/FR4/VarX5kZRye3Pb8H1fCBGGYRRFCY9O0oEm/Pr66na739/f8aVSanPEyOfzmUxmc4iQUoZhuDlibPi+//r6Wq/XdV2Pv/YlNjphB5rQsqxCoeB5XhiGq9VqMBhEUVSpVIQQmUzm7OxsNBr5vi+l7Pf7lmXtrKNS6vn5uVgsVqvVRqPx+fk5nU6TGZ289E+kv9I07erqajQa9Xq9+BzvOM7m/yDn5+dKKdd1hRClUuny8nLn119eXqSUrVZLCFEsFiuVynA4LJVKf7Lp7Tk6eVqn00n7NdBeDnQjpT/HhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEB4TwmNCeEwIjwnhMSE8JoTHhPCYEN4/cnznZiQb6hsAAAAASUVORK5CYII="
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+```
+
+## Adjust the Financial Invoice
+
+Endpoint: [Put FiInvoice](../../apidoc/en/Mutaties#put-/connectors/FiInvoice)
+
+In some situations, you may want to edit the financial invoice, which is automatically created when submitting `FiEntries`, afterwards. Such as in this example, where you unblock the invoice for payment.
+
+```json Unblock for payment
+{
+  "FiInvoice": {
+    "Element": {
+      "Fields": {
+        "UnId": "1",
+        "VaAd": "3",
+        "DcNr": "50022",
+        "InId": "INK00200",
+        "BlPa": "0"
+      }
+    }
+  }
+}
+```
 
 ## Creating confrontation
 
