@@ -1,6 +1,6 @@
 ---
 author: CLN
-date: 2025-11-08
+date: 2026-01-06
 tags: Tutorial, GetConnector, UpdateConnector, Integration, Authentication, Finance
 title: Financial mutations purchasing
 ---
