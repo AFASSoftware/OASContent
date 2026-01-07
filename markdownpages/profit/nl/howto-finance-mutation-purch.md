@@ -212,7 +212,7 @@ In het voorbeeld hieronder wordt er een bijlage gekoppeld aan de inkoopfactuur u
   "KnSubject": {
     "Element": {
       "Fields": {
-        "StId": 5,
+        "StId": -5,
         "Ds": "Purchase PUR004979",
         "Da": "2026-03-21T13:42:59"
       },
