@@ -1,6 +1,6 @@
 ---
 author: CLN
-date: 2025-11-08
+date: 2026-01-06
 tags: Tutorial, GetConnector, UpdateConnector, Integration, Authentication, Finance
 title: Financiële mutaties inkoop
 ---
@@ -123,7 +123,7 @@ De volgende stap is om de financiële mutatie aan te maken. Hiervoor heb je de g
     "FiEntryPar": {
         "Element": {
             "Fields": {
-                "Year": 2024,
+                "Year": 2026,
                 "Peri": 5,
                 "UnId": 1,
                 "JoCo": "10"
@@ -136,8 +136,8 @@ De volgende stap is om de financiële mutatie aan te maken. Hiervoor heb je de g
                                 "Fields": {
                                     "VaAs": "3",
                                     "AcNr": "50028",
-                                    "EnDa": "2024-05-25",
-                                    "BpDa": "2024-05-25",
+                                    "EnDa": "2026-05-25",
+                                    "BpDa": "2026-05-25",
                                     "InId": "IH001057X",
                                     "AmCr": "400"
                                 }
@@ -146,8 +146,8 @@ De volgende stap is om de financiële mutatie aan te maken. Hiervoor heb je de g
                                 "Fields": {
                                     "VaAs": "1",
                                     "AcNr": "3600",
-                                    "EnDa": "2024-05-25",
-                                    "BpDa": "2024-05-25",
+                                    "EnDa": "2026-05-25",
+                                    "BpDa": "2026-05-25",
                                     "InId": "IH001057X",
                                     "Ds": "Inkoop naar grootboek",
                                     "AmDe": "330.58",
@@ -158,8 +158,8 @@ De volgende stap is om de financiële mutatie aan te maken. Hiervoor heb je de g
                                 "Fields": {
                                     "VaAs": "1",
                                     "AcNr": "1500",
-                                    "EnDa": "2024-05-25",
-                                    "BpDa": "2024-05-25",
+                                    "EnDa": "2026-05-25",
+                                    "BpDa": "2026-05-25",
                                     "InId": "IH001057X",
                                     "Ds": "BTW",
                                     "AmDe": "69.42",
@@ -196,7 +196,7 @@ Optioneel wil je nu het volgende doen:
 
 Endpoint: [Post KnSubject](../../apidoc/nl/Dossiers%20en%20bijlagen%20en%20workflows#post-/connectors/KnSubject)
 
-Als je een verkoopfactuur aanmaakt in AFAS heb je meestal ook een bijlage. Bijvoorbeeld een pdf bestand met de verkoopfactuur die naar de klant is gestuurd. Deze kan je toevoegen aan de financiële mutatie.
+Als je een inkoopfactuur aanmaakt in AFAS heb je meestal ook een bijlage. Bijvoorbeeld een pdf bestand met de inkoopfactuur. Deze kan je toevoegen aan de financiële mutatie.
 
 Deze velden zijn belangrijk hierbij:
 
@@ -205,16 +205,16 @@ Deze velden zijn belangrijk hierbij:
   - `PiTp` - Type is altijd 1
   - `PiId` - FactuurId / `InId`
 
-In het voorbeeld hieronder wordt er een bijlage gekoppeld aan de verkoopfactuur uit het eerste voorbeeld.
+In het voorbeeld hieronder wordt er een bijlage gekoppeld aan de inkoopfactuur uit het eerste voorbeeld.
 
-```json Toevoegen bijlage aan verkoopfactuur
+```json Toevoegen bijlage aan inkoopfactuur
 {
   "KnSubject": {
     "Element": {
       "Fields": {
         "StId": 5,
         "Ds": "Purchase PUR004979",
-        "Da": "2024-03-21T13:42:59"
+        "Da": "2026-03-21T13:42:59"
       },
       "Objects": [
         {
@@ -223,10 +223,10 @@ In het voorbeeld hieronder wordt er een bijlage gekoppeld aan de verkoopfactuur 
               "Fields": {
                 "DoCRM": true,
                 "SfTp": 11,
-                "SfId": "10001",
-                "SiUn": 1,
-                "SiTp": 1,
-                "SiId": "PUR004979"
+                "SfId": "48227",
+                "PiUn": 1,
+                "PiTp": 1,
+                "PiId": "PUR004979"
               }
             }
           }

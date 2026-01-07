@@ -1,6 +1,6 @@
 ---
 author: CLN
-date: 2025-11-08
+date: 2026-01-06
 tags: Tutorial, GetConnector, UpdateConnector, Integration, Configuration, Authentication
 title: Financiële Mutatie Verkoop
 ---
@@ -83,7 +83,7 @@ De volgende stap is om de financiële mutatie aan te maken. Hiervoor heb je de g
     "FiEntryPar": {
         "Element": {
             "Fields": {
-                "Year": "2024",
+                "Year": "2026",
                 "Peri": "1",
                 "UnId": "1",
                 "JoCo": "20",
@@ -95,20 +95,20 @@ De volgende stap is om de financiële mutatie aan te maken. Hiervoor heb je de g
                         {
                             "Fields": {
                                 "VaAs": "2",
-                                "AcNr": "10004",
-                                "EnDa": "2024-01-01",
-                                "BpDa": "2024-01-01",
+                                "AcNr": "10001",
+                                "EnDa": "2026-01-01",
+                                "BpDa": "2026-01-01",
                                 "AmDe": "12100",
                                 "AmCr": "0",
-                                "DaEx": "2024-02-01"
+                                "DaEx": "2026-02-01"
                             }
                         },
                         {
                             "Fields": {
                                 "VaAs": "1",
                                 "AcNr": "8010",
-                                "EnDa": "2024-01-01",
-                                "BpDa": "2024-01-01",
+                                "EnDa": "2026-01-01",
+                                "BpDa": "2026-01-01",
                                 "AmDe": "0",
                                 "AmCr": "10000",
                                 "VaId": "1"
@@ -118,8 +118,8 @@ De volgende stap is om de financiële mutatie aan te maken. Hiervoor heb je de g
                             "Fields": {
                                 "VaAs": "1",
                                 "AcNr": "1510",
-                                "EnDa": "2024-01-01",
-                                "BpDa": "2024-01-01",
+                                "EnDa": "2026-01-01",
+                                "BpDa": "2026-01-01",
                                 "AmDe": "0",
                                 "AmCr": "2100",
                                 "VaId": "1"
@@ -154,7 +154,7 @@ Het is mogelijk om een verbijzondering mee te geven aan de financiële mutatie. 
   "FiEntryPar": {
     "Element": {
       "Fields": {
-        "Year": "2024",
+        "Year": "2026",
         "Peri": "1",
         "UnId": "1",
         "JoCo": "82",
@@ -167,19 +167,19 @@ Het is mogelijk om een verbijzondering mee te geven aan de financiële mutatie. 
               "Fields": {
                 "VaAs": "2",
                 "AcNr": "10001",
-                "EnDa": "2024-01-01",
-                "BpDa": "2024-01-01",
+                "EnDa": "2026-01-01",
+                "BpDa": "2026-01-01",
                 "AmDe": "12100",
                 "AmCr": "0",
-                "DaEx": "2024-02-01"
+                "DaEx": "2026-02-01"
               }
             },
             {
               "Fields": {
                 "VaAs": "1",
                 "AcNr": "8000",
-                "EnDa": "2024-01-01",
-                "BpDa": "2024-01-01",
+                "EnDa": "2026-01-01",
+                "BpDa": "2026-01-01",
                 "AmDe": "0",
                 "AmCr": "10000",
                 "VaId": "1"
@@ -204,8 +204,8 @@ Het is mogelijk om een verbijzondering mee te geven aan de financiële mutatie. 
               "Fields": {
                 "VaAs": "1",
                 "AcNr": "1510",
-                "EnDa": "2024-01-01",
-                "BpDa": "2024-01-01",
+                "EnDa": "2026-01-01",
+                "BpDa": "2026-01-01",
                 "AmDe": "0",
                 "AmCr": "2100",
                 "VaId": "1"
@@ -228,7 +228,7 @@ Het is mogelijk om een Projectboeking mee te geven aan de financiële mutatie. A
   "FiEntryPar": {
     "Element": {
       "Fields": {
-        "Year": "2024",
+        "Year": "2026",
         "Peri": "1",
         "UnId": "1",
         "JoCo": "20",
@@ -241,19 +241,19 @@ Het is mogelijk om een Projectboeking mee te geven aan de financiële mutatie. A
               "Fields": {
                 "VaAs": "2",
                 "AcNr": "10001",
-                "EnDa": "2024-01-01",
-                "BpDa": "2024-01-01",
+                "EnDa": "2026-01-01",
+                "BpDa": "2026-01-01",
                 "AmDe": "12100",
                 "AmCr": "0",
-                "DaEx": "2024-02-01"
+                "DaEx": "2026-02-01"
               }
             },
             {
               "Fields": {
                 "VaAs": "1",
                 "AcNr": "8080",
-                "EnDa": "2024-01-01",
-                "BpDa": "2024-01-01",
+                "EnDa": "2026-01-01",
+                "BpDa": "2026-01-01",
                 "AmDe": "0",
                 "AmCr": "10000",
                 "VaId": "1"
@@ -291,8 +291,8 @@ Het is mogelijk om een Projectboeking mee te geven aan de financiële mutatie. A
               "Fields": {
                 "VaAs": "1",
                 "AcNr": "1510",
-                "EnDa": "2024-01-01",
-                "BpDa": "2024-01-01",
+                "EnDa": "2026-01-01",
+                "BpDa": "2026-01-01",
                 "AmDe": "0",
                 "AmCr": "2100",
                 "VaId": "1"
@@ -327,7 +327,7 @@ In het voorbeeld hieronder wordt er een bijlage gekoppeld aan de verkoopfactuur 
       "Fields": {
         "StId": 5,
         "Ds": "Invoice VK004979 [VKF]",
-        "Da": "2024-03-21T13:42:59"
+        "Da": "2026-03-21T13:42:59"
       },
       "Objects": [
         {
