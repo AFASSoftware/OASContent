@@ -1,0 +1,37 @@
+{
+	"InvoiceNumber": "t",
+	"InvoiceDate": "2024-01-23",
+	"Description": "Handmade Concrete Car",
+	"AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+	"RelationType": "organisation",
+	"RelationId": "863d895a-3782-5500-b933-dd487d736138",
+	"PaymentMethod": "banktransfer",
+	"PaymentConditionId": "b98e24e9-a611-5a98-8cf9-40fed321dc6c",
+	"InvoiceLine": [
+		{
+			"LedgerAccountId": "de3184b9-23f0-55e6-9bd0-ccb5c2b5b5ce",
+			"AmountVat": 21,
+			"VatType": "high",
+			"AmountExcludingVat": 100
+		},
+		{
+			"LedgerAccountId": "de3184b9-23f0-55e6-9bd0-ccb5c2b5b5ce",
+			"AmountVat": 40.55,
+			"VatType": "low",
+			"AmountExcludingVat": 40.55,
+			"VatCalculation": "exempt"
+		},
+		{
+			"LedgerAccountId": "de3184b9-23f0-55e6-9bd0-ccb5c2b5b5ce",
+			"AmountVat": 0,
+			"VatType": "zero",
+			"AmountExcludingVat": 40.55
+		},
+		{
+			"LedgerAccountId": "de3184b9-23f0-55e6-9bd0-ccb5c2b5b5ce",
+			"AmountVat": 18,
+			"VatType": "low",
+			"AmountExcludingVat": 200
+		}
+	]
+}

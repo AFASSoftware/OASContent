@@ -1,0 +1,8 @@
+{
+    "result": "Failed",
+    "traceId": "3ca43e3a-00b6-460d-8bf1-be2f391f3f4c",
+    "instances": [],
+    "errors": [
+        "SalesJournalEntry with invoicenumber SB_API_2204202410006 already exists"
+    ]
+}
