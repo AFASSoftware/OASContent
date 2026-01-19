@@ -1,0 +1,22 @@
+{
+    "InvoiceNumber": "a",
+    "InvoiceDate": "2024-01-30",
+    "Description": "Unbranded Fresh Pizza",
+    "AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+    "RelationType": "organisation",
+    "RelationId": "c6f3b724-845c-5af2-8360-2fc751601115",
+    "PaymentMethod": "banktransfer",
+    "PaymentConditionId": "9b5d768a-c71b-583e-b6ee-09d64aa935d4",
+    "InvoiceLine": [
+        {
+            "LedgerAccountId": "1a8042a9-576d-5fab-9e5f-75e6f7d5ab63",
+            "VatType": "zero",
+            "AmountExcludingVat": 100
+        },
+        {
+            "LedgerAccountId": "1a8042a9-576d-5fab-9e5f-75e6f7d5ab63",
+            "VatType": "zero",
+            "AmountExcludingVat": 211
+        }
+    ]
+}

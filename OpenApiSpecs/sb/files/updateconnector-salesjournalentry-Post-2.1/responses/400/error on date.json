@@ -1,0 +1,9 @@
+{
+    "result": "Failed",
+    "traceId": "57f10a49-6720-4bb8-8826-8ef92387560f",
+    "instances": [],
+    "errors": [
+        "Entity is made with one or more errors. Please correct this error in application or delete SalesJournalEntry with id: b32ee6e1-f807-4644-a6d5-d785d8bd7c61",
+        "De factuurdatum ligt vóór de beginbalansdatum. Dit is niet toegestaan."
+    ]
+}

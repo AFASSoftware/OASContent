@@ -296,7 +296,12 @@ def main():
     parser.add_argument("--inplace", action="store_true", help="Overwrite the input spec file (a backup .bak is created).")
     parser.add_argument("--content-types", nargs="+", default=["application/json"], help="Content types to target for examples.")
     parser.add_argument("--default-status", default="200", help="Default status code for response files placed directly in 'responses' (no subfolder).")
+    parser.add_argument("--check", action="store_true", help="Check mode: report all missing folders without stopping at the first error.")
     args = parser.parse_args()
+
+    # Track errors in check mode
+    missing_folders = []
+    missing_responses = []
 
     spec = load_spec(args.spec_path)
     if not isinstance(spec, dict):
@@ -330,8 +335,12 @@ def main():
             if op_id in exceptions:
                 continue
             # Foutmelding als er geen folder aanwezig is voor een connector (geen responses mogelijk)
-            print(f"ERROR: Geen response aanwezig voor connector '{op_id}' ({method})", file=sys.stderr)
-            sys.exit(1)
+            if args.check:
+                missing_folders.append((op_id, method))
+                continue
+            else:
+                print(f"ERROR: Geen response aanwezig voor connector '{op_id}' ({method})", file=sys.stderr)
+                sys.exit(1)
 
         # 1) Request examples
         examples_dir = op_dir / "examples"
@@ -390,8 +399,36 @@ def main():
             entry["op"] = opobj
         else:
             # Foutmelding als er geen response aanwezig is voor een connector
-            print(f"ERROR: Geen response aanwezig voor connector '{op_id}' ({method})", file=sys.stderr)
+            if args.check:
+                missing_responses.append((op_id, method))
+            else:
+                print(f"ERROR: Geen response aanwezig voor connector '{op_id}' ({method})", file=sys.stderr)
+                sys.exit(1)
+
+    # In check mode, report all errors and exit
+    if args.check:
+        if missing_folders or missing_responses:
+            print(f"\n{'='*60}")
+            print("CHECK RESULTS - Missing folders/responses")
+            print(f"{'='*60}\n")
+            
+            if missing_folders:
+                print(f"Missing operation folders ({len(missing_folders)}):")
+                for op_id, method in sorted(missing_folders):
+                    print(f"  - {op_id} ({method})")
+                print()
+            
+            if missing_responses:
+                print(f"Missing responses folders ({len(missing_responses)}):")
+                for op_id, method in sorted(missing_responses):
+                    print(f"  - {op_id}/responses/ ({method})")
+                print()
+            
+            print(f"Total issues: {len(missing_folders) + len(missing_responses)}")
             sys.exit(1)
+        else:
+            print("\nCheck passed: All operations have matching folders and responses.")
+            sys.exit(0)
 
     # Write output
     if args.inplace:
