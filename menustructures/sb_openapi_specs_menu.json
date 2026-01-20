@@ -3,7 +3,7 @@
         "nl": [
             {
                 "name": "Versie 7.1.0",
-                "path": "OpenApiSpecs/sb/nl/7-0-0.json",
+                "path": "OpenApiSpecs/sb/nl/7-1-0.json",
                 "description": "Huidige productieversie"
             },            {
                 "name": "Versie 7.0.0",
