@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2025-11-17
+date: 2026-01-22
 index: true
 tags: Partner, IntegrationId, Certification, Integration, Configuration
 title: Certificeringsstappen voor partners
@@ -17,10 +17,10 @@ Welkom bij het certificeringstraject voor partners! In dit document nemen we je 
 
 ### Security check
 
-Veiligheid voor alles! Een PENtest is een absoluut onmisbaar onderdeel van het partnerschap. Bij aanvang van het certificeringstraject moet er een PENtest gedaan zijn, of er moet een concrete datum ingepland zijn.  
+Veiligheid voor alles! Een pentest is een absoluut onmisbaar onderdeel van de certficering. Bij aanvang van het certificeringstraject moet er een pentest gedaan zijn, of er moet een concrete datum ingepland zijn. Zorg er bij voorkeur voor dat de pentest wordt uitgevoerd door een [CCV-erkende partij](https://hetccv.nl/certificaat-schema/pentesten).  
 Vragen hierover? Kijk op https://partner.afas.nl/portal-landingspagina/faq#Security.  
-In plaats van een PENtest kun je ook een Security Quickscan laten uitvoeren door Computest. [In dit artikel lees je daar meer over.](https://partner.afas.nl/portal-partnerportal/security-quickscan)  
-Uiteraard gaan wij vertrouwelijk om met de resultaten van de PENtest of Security Quickscan.  
+In plaats van een pentest kun je ook een Security Quickscan laten uitvoeren door Defion. [In dit artikel lees je daar meer over.](https://partner.afas.nl/portal-partnerportal/security-quickscan)  
+Uiteraard gaan wij vertrouwelijk om met de resultaten van de pentest of Security Quickscan. Al onze medewerkers zijn gebonden aan een geheimhoudingsverklaring en hebben een Verklaring omtrent gedrag.  
 
 
 ### Contactpersonen aanmaken
@@ -88,7 +88,7 @@ Een eigen GetConnector maken is niet moeilijk ([lees dit help artikel maar](http
 
 #### 3. Controleer de GetConnectoren
 
-De GetConnectoren maak je beschikbaar voor de API door in jouw eigen testomgeving een AppConnector in te richten; net zoals een klant dat zou doen. Vanuit die AppConnector run je de [AppConnector Auditor](./app-connector-auditor-partner.md) en los je de gevonden issues op. Kom je er niet uit? [Stuur een aanvraag in](#contact).
+De GetConnectoren maak je beschikbaar voor de API door in jouw eigen testomgeving een AppConnector in te richten; net zoals een klant dat zou doen. Vanuit die AppConnector run je de [AppConnector Auditor](./app-connector-auditor-partner) en los je de gevonden issues op. Kom je er niet uit? [Stuur een aanvraag in](#contact).
 
 
 #### 4. Wij doen een laatste controle
