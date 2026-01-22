@@ -119,6 +119,11 @@ An integration without customers is not an integration. To give our mutual custo
 
 Proud of your customers? Then submit references from customers where the integration runs to their satisfaction. You can do this at https://partner.afas.nl/aanmaken-aanvraag-partnerportal/referentie.
 
+### Datastroomdiagram van de API-integratie
+Een datastroomdiagram van een API‑integratie laat zien hoe gegevens tussen systemen bewegen. Het richt zich niet op de interne werking van de systemen, maar op welke data wordt uitgewisseld (bijvoorbeeld medewerkergegevens of verlofboekingen), in welke richting, via welke API‑aanroepen en door welke gebeurtenis of planning dit wordt gestart. Zo wordt helder welke endpoints gebruikt worden, wie de bron is, wie de ontvanger is en onder welke omstandigheden de uitwisseling plaatsvindt.
+
+Dit is belangrijk omdat het misverstanden voorkomt over wie welke data levert en ontvangt, en omdat het ontwikkelaars en beheerders helpt de integratie goed te ontwerpen, bouwen en beheren. Het diagram maakt impactanalyses bij wijzigingen eenvoudiger, omdat je direct ziet welke stromen geraakt worden, en het fungeert als duidelijke, blijvende documentatie voor beheer en toekomstige uitbreidingen. Bovendien biedt het een concreet hulpmiddel om de koppeling te optimaliseren, bijvoorbeeld door overbodige datastromen te schrappen of efficiëntere uitwisselmomenten te kiezen.
+
 ## Contact
 
 We are ready to ensure your integration runs smoothly and retrieves the right data. We are also happy to help with other questions. Do not send an email, but submit a request via the portal! That's easy:
