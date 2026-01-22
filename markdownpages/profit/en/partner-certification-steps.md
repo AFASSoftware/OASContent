@@ -17,10 +17,10 @@ Welcome to the partner certification journey! In this document, we guide you ste
 
 ### Security check
 
-Safety first! A pentest is an absolutely essential part of the partnership. At the start of the certification process, a pentest must have been performed, or a concrete date must be scheduled. Preferably the pentest is performed by a [CCV-certified party](https://hetccv.nl/certificaat-schema/pentesten).
+Safety first! A pentest is an absolutely essential part of the certification. At the start of the certification process, a pentest must have been performed, or a concrete date must be scheduled. Make sure the pentest is preferably performed by a [CCV-certified party](https://hetccv.nl/certificaat-schema/pentesten).
 Questions about this? Check https://partner.afas.nl/portal-landingspagina/faq#Security.
 Instead of a pentest, you can also have a Security Quickscan performed by Defion. [Read more in this article.](https://partner.afas.nl/portal-partnerportal/security-quickscan)
-Of course, we handle the results of the pentest or Security Quickscan confidentially.  
+Of course, we handle the results of the pentest or Security Quickscan confidentially. All our employees are bound by a confidentiality agreement and have a Certificate of Good Conduct.  
 
 ### Add contacts
 
@@ -49,11 +49,13 @@ Go to https://klant.afas.nl/supportplus and activate it!
 Register for a course where you will learn everything about calling our API. There is a lot of focus on creating your own [GetConnectors](#supplying-getconnectors).
 This course is free for 1 colleague. Check https://klant.afas.nl/opleiding/specialisatiecursus-connector for information and dates.
 
+**Making integrations for other partners?** In that case, at least 1 colleague in your company must have completed the expert test "Integrations" with a score of at least 7. Please contact the System Integrator if this applies to you.
+
 ### Sending IntegrationId
 
 Send a special HTTP header with all calls to the AFAS API. This header identifies the calls from your integration and is always the same.
 
-[This article describes in detail what it is](./integrationid), what we use it for, and how to implement it.
+[This article](./integrationid) describes in detail what it is, what we use it for, and how to implement it.
 
 The specific IntegrationId for your integration can be found in the task and in the [AppConnector Auditor](./app-connector-auditor-partner).
 
@@ -90,7 +92,7 @@ Ensure that our mutual customers use the checked GetConnectors. For example, mak
 Did you land a new customer? Congratulations!
 Some setup in AFAS will need to be done before the new customer can go live. This is not much work and it is not difficult, so the customer can easily do it themselves. But because each integration uses its own set of Get and UpdateConnectors, it is important that there is a document that tells the AFAS administrator exactly what needs to be done.
 
-Use this help page as the basis for the document: [https://partner.afas.nl/portal-partnerportal/template-documentatie](https://partner.afas.nl/portal-partnerportal/template-documentatie).
+Use this help page as the basis for the document: https://partner.afas.nl/portal-partnerportal/template-documentatie
 
 Submit the document as an attachment in a reply to the task. Or even better: make it a web page that you can always keep up to date. Post the link in a reply.
 
@@ -105,7 +107,7 @@ If the demo is approved, you can move on to the next part.
 
 Is the [demo](#give-a-demo) approved?
 
-Then go to [https://partner.afas.nl/mijn-paginas](https://partner.afas.nl/mijn-paginas) and follow the instructions so that your integration is displayed on our partner page. By using Markdown for formatting, you can make it an attractive page.
+Then go to https://partner.afas.nl/mijn-paginas and follow the instructions so that your integration is displayed on our partner page. By using Markdown for formatting, you can make it an attractive page.
 
 **Tip**: In the Website field, refer to a landing page on your own site, where the integration with AFAS is described in more detail.
 
@@ -115,7 +117,7 @@ From now on you may also use the AFAS name and logo on your website. At [www.afa
 
 An integration without customers is not an integration. To give our mutual customers confidence that the integration has been well tested and runs smoothly, your certification is only complete when you serve 5 or more mutual customers with your integration. We check this based on the IntegrationId ([see above](#sending-integrationid)).
 
-Proud of your customers? Then submit references from customers where the integration runs to their satisfaction. You can do this at [https://partner.afas.nl/aanmaken-aanvraag-partnerportal/referentie](https://partner.afas.nl/aanmaken-aanvraag-partnerportal/referentie).
+Proud of your customers? Then submit references from customers where the integration runs to their satisfaction. You can do this at https://partner.afas.nl/aanmaken-aanvraag-partnerportal/referentie.
 
 ## Contact
 

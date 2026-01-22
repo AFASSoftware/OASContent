@@ -58,6 +58,8 @@ Ga naar https://klant.afas.nl/supportplus en activeer het!
 Schrijf je in voor een cursus waarin je alles leert over de aanroep van onze API. Er is veel aandacht voor het maken van je eigen [GetConnectoren](#getconnectoren-aanleveren).  
 Deze cursus is gratis voor 1 collega. Kijk op https://klant.afas.nl/opleiding/specialisatiecursus-connector voor informatie en data.
 
+**Maak je integraties voor andere partners?** In dat geval moet er in jouw bedrijf minimaal 1 collega de experttoets "Integraties" met ten minste een 7 afgerond hebben. Neem contact op met de Systemintegrator als dit voor jou van toepassing is.
+
 
 ### IntegrationId meesturen
 
