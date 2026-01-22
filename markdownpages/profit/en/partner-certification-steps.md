@@ -117,6 +117,12 @@ An integration without customers is not an integration. To give our mutual custo
 
 Proud of your customers? Then submit references from customers where the integration is running satisfactorily. You can do this at https://partner.afas.nl/aanmaken-aanvraag-partnerportal/referentie.
 
+### Data flow diagram of the API integration
+
+A data flow diagram of an API integration shows how data moves between systems. It does not focus on the internal workings of the systems, but rather on what data is exchanged (for example, employee data or leave bookings), in which direction, via which API calls, and what event or schedule triggers this exchange. This makes it clear which endpoints are used, who the source is, who the recipient is, and under what circumstances the exchange takes place.
+
+This is important because it prevents misunderstandings about who supplies and receives what data, and because it helps developers and administrators design, build, and maintain the integration properly. The diagram makes impact analyses of changes easier, as you can directly see which flows are affected, and it serves as clear, lasting documentation for management and future expansions. Additionally, it provides a concrete tool to optimize the integration, for example by removing redundant data flows or choosing more efficient exchange moments.
+
 ## Contact
 
 We are here to ensure your integration runs smoothly and retrieves the right data. We are also happy to help with other questions. Do not send an email, but submit a request via the portal! It's easy:
