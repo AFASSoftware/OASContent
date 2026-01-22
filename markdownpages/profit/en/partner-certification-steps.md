@@ -124,6 +124,12 @@ Een datastroomdiagram van een API‑integratie laat zien hoe gegevens tussen sys
 
 Dit is belangrijk omdat het misverstanden voorkomt over wie welke data levert en ontvangt, en omdat het ontwikkelaars en beheerders helpt de integratie goed te ontwerpen, bouwen en beheren. Het diagram maakt impactanalyses bij wijzigingen eenvoudiger, omdat je direct ziet welke stromen geraakt worden, en het fungeert als duidelijke, blijvende documentatie voor beheer en toekomstige uitbreidingen. Bovendien biedt het een concreet hulpmiddel om de koppeling te optimaliseren, bijvoorbeeld door overbodige datastromen te schrappen of efficiëntere uitwisselmomenten te kiezen.
 
+### Data flow diagram of the API integration
+
+A data flow diagram of an API integration shows how data moves between systems. It does not focus on the internal workings of the systems, but rather on what data is exchanged (for example, employee data or leave bookings), in which direction, via which API calls, and what event or schedule triggers this exchange. This makes it clear which endpoints are used, who the source is, who the recipient is, and under what circumstances the exchange takes place.
+
+This is important because it prevents misunderstandings about who supplies and receives what data, and because it helps developers and administrators design, build, and maintain the integration properly. The diagram makes impact analyses of changes easier, as you can directly see which flows are affected, and it serves as clear, lasting documentation for management and future expansions. Additionally, it provides a concrete tool to optimize the integration, for example by removing redundant data flows or choosing more efficient exchange moments.
+
 ## Contact
 
 We are ready to ensure your integration runs smoothly and retrieves the right data. We are also happy to help with other questions. Do not send an email, but submit a request via the portal! That's easy:
