@@ -1,329 +1,483 @@
 ---
 author: Eric Zwaal
-date: 2025-11-11
+date: 2026-01-25
 index: true
-tags: Partner, IntegrationId, GetConnector, AppConnector, Certification
-title: AppConnector auditor voor Partners
+tags: AppConnector, Auditor, Partner, Certificering, GetConnector, pentest
+title: AppConnector Auditor - Partnerrapport
 ---
 
-## Inleiding
+# AppConnector Auditor - Partnerrapport
 
-Sinds Profit 5 (najaar 2024) kennen we de AppConnector Auditor: een mooi hulpmiddel om snel inzicht te krijgen in een AppConnector. Voor jou als partner is het ideaal om te zien in hoeverre jouw integratie aan de eisen en best practices voldoet. Op termijn gaan we de auditor gebruiken om jouw integratie een beoordeling te geven. Zorg er dus voor dat je nu al goed op de hoogte bent van wat er komen gaat!  
+> 📊 **Dit rapport is voor AFAS Partners**. Ben je eindgebruiker of in-house ontwikkelaar? Zie:
+> * [AppConnector Auditor](app-connector-auditor.md) voor eindgebruikers en functioneel beheerders
+> * [Ontwikkelaarsrapport](app-connector-auditor-developer.md) voor developers (minder strikte eisen)
 
-In een nieuwe versie van Profit kunnen er controles zijn toegevoegd, aangepast, of verwijderd. Dit zal altijd genoemd worden in de technische releasenotes op [https://docs.afas.help/profit](https://docs.afas.help/profit). Controleer dus bij elke nieuwe versie van Profit of er nog aanpassingen nodig zijn aan jouw integratie.
+---
 
-## Wat heb je nodig
+## Introductie voor partners
 
-- AFAS Omgeving
-- De omgeving moet horen bij een partner-licentie 
-- Een AppConnector die is ingericht zoals je dat ook bij een klant zou laten doen 
-- De AppConnector moet van het type "Onderhoud door klant" zijn 
-- De juiste rechten: 
-  - `Autorisatie tool > Autorisatie > Algemeen > Beheer > App connector > Acties > AppConnector auditor` 
+Dit rapport is specifiek bedoeld voor **AFAS Partners** en bevat de strengste controles. Meldingen in dit rapport zijn direct gekoppeld aan je **certificeringsstatus**.
 
-## Gebruik van de auditor
+### Belangrijke verschillen met het ontwikkelaarsrapport
 
-1. Ga in het menu naar `Algemeen > Beheer > App connector` 
-2. Open de eigenschappen van de AppConnector die je wilt analyseren
-3. Klik naast het rijtje tabbladen aan de linkerkant op `Acties`
-4. Klik op de actie `Auditor (voor partners)`.
-5. Na een paar seconden is de auditor klaar
-6. Kies hoe je het bestand wilt opslaan. Pdf werkt fijn, html is sneller.
+* **Fouten zijn blokkerend:** Rode meldingen ❌ blokkeren je certificering
+* **Strengere eisen:** Meer controles en hogere kwaliteitsnormen
+* **Certificerings-impact:** Elke melding heeft invloed op je partnerstatus
+* **Deadlines:** Voor sommige meldingen gelden harde deadlines
 
-## Uitleg van de analyse
+> Tijdens het certificeringstraject is er intensief contact met AFAS Systemintegrators. Twijfel je over een melding of kun je deze niet zelfstandig oplossen, neem dan altijd contact met ons op.
 
-Wat je te zien krijgt in de Auditor is natuurlijk afhankelijk van de AppConnector. In dit onderdeel behandel ik welke meldingen je mogelijk te zien krijgt, en wat je daarmee kan doen. Doordat er vertaling wordt toegepast kan een tekst er bij jou net wat anders uitzien. Ook de volgorde kan afwijken.
+---
 
-### Jouw gegevens
+## Partnergegevens en administratie
 
-Deze sectie toont een aantal gegevens die wij bij AFAS van jou hebben. Een korte checklist toont of er nog gegevens missen.
+Voor uitleg over de secties **Partnergegevens** en **Jouw koppelingen** die bovenaan het rapport worden getoond, zie [Partnergegevens en koppelingen](./app-connector-auditor-partnergegevens).
 
-- [ ] **Je gegevens bij AFAS zijn compleet**: Je bent bekend als partner en je hebt een lopend abonnement.
-- [ ] **Je hebt 2 of meer contacten voor partner-/expertcommunicatie**: Deze contactpersonen benaderen wij als er vragen, issues of nieuws over jouw koppeling is. 
-- [ ] **Je PENtest is geldig**: Dit vinkje staat aan zolang jouw PENtest geldig is.  
+Deze sectie bevat kritieke informatie over:
+* Je partnerstatus en certificering
+* pentest-geldigheid en verloopdata
+* Contactpersonen en projectleiders
+* Openstaande projecttaken en deadlines
 
-Tabel met jouw gegevens
+⚠️ **Let op:** Verlopen pentests of overschreden deadlines hebben direct gevolgen voor de certificering van je koppeling.
 
-- **Naam**: De naam van jouw bedrijf. Omdat hier ook de factuur naar verstuurd wordt, is het van belang dat dit jouw officiële bedrijfsnaam is.
-- **Abonnementsnummer**: Het nummer van het abonnement bij AFAS waar jouw partner-licentie onder valt. Dit is ook het eerste deel van het IntegrationId dat je meestuurt.
-- **Debiteurnummer**: Jouw klantnummer bij AFAS.
-- **Contactpersonen voor partner/-expertcommunicatie**: Deze contactpersonen benaderen wij als er vragen, issues of nieuws over jouw koppeling is. Dat kunnen technische vragen zijn, of vragen over jouw partnerschap. Je kunt contactpersonen toevoegen of verwijderen in de [klantportal](https://klant.afas.nl) onder `Mijn gegevens > Organisatiegegevens > Contactpersonen`. 
-- **Verantwoordelijke bij AFAS**: Jouw eerste aanspreekpunt bij vragen die niet over een specifieke koppeling gaan.
-- **Status PENtest**: Als je de resultaten van een PENtest hebt laten zien, geven wij daar een score aan; die zie je hier. Als je een PENtest of Quickscan door Computest laat uitvoeren, bepalen zij de score op basis van "risico voor AFAS". Een Groene score is 3 jaar geldig, een Oranje score is 15 maanden geldig en een Rode score is 6 maanden geldig. Dit is gerekend vanaf de datum die op het PENtestrapport genoemd wordt.
-- **Einddatum geldigheid PENtest**: Dit is de datum van de laatste PENtest, opgehoogd met de geldigheidsduur (zie punt hierboven). Na deze datum voldoe je formeel niet meer als partner en zal de opzegtermijn van AFAS (12 maanden) ingaan. Na afloop van de opzegtermijn heeft AFAS het recht om het partnercontract éénzijdig te beëindigen.
+---
 
-#### Jouw koppelingen
+## Partner-specifieke vereisten
 
-Je kunt meerdere gecertificeerde koppelingen hebben bij AFAS. Deze worden apart getoond op de partnerportal en ook apart gecertificeerd.
+### Certificeringscriteria
 
-#### "Naam van de koppeling"
+Je koppeling is alleen gecertificeerd zolang je aan alle onderstaande eisen voldoet:
 
-Deze sectie toont gegevens voor deze specifieke koppeling. Als je meerdere koppelingen met AFAS hebt, wordt deze sectie meerdere keren getoond.  
-De "Naam van de koppeling" is zoals die zichtbaar is op de [partnerportal](https://partner.afas.nl/koppelingen). Dit kun je aanpassen op [https://partner.afas.nl/mijn-paginas](https://partner.afas.nl/mijn-paginas).
+* ✅ Alle rode meldingen (fouten) zijn opgelost
+* ✅ Oranje meldingen (waarschuwingen) zijn opgelost of onderbouwd
+* ✅ pentest is geldig (vervaldatum is afhankelijk van score)
+* ✅ Alle projecttaken zijn afgerond
+* ✅ Je stuurt het juiste IntegrationId mee bij elke aanroep
+* ✅ Je hebt een geldig partnerabonnement
+* ✅ Je hebt minimaal 5 klanten die je koppeling actief gebruiken
 
-- [ ] **Je certificering is afgerond**
-- [ ] **Je integratie wordt getoond op [https://partner.afas.nl/koppelingen](https://partner.afas.nl/koppelingen)**  
+---
 
-Tabel met gegevens over jouw koppeling
+## Opzet van deze help
 
-- **IntegrationId**: Een technische identificatie van deze koppeling. [Lees meer](https://docs.afas.help/profit/nl/integrationid).
-- **Projectcode**: Voor elke integratie hebben we een project gemaakt. Als je partner bent geworden na maart 2023, bevat dit project ook jouw projecttaken.
-- **Artikelcode**: Nummer van het artikel waarmee je zichtbaar bent op de partnersite. 
-- **AFAS projectleider**: Jouw aanspreekpunt bij AFAS voor wat betreft deze koppeling. Dat zal meestal een SystemIntegrator zijn. Dit veld is leeg bij koppelingen die al langer bestaan.
-- **Teamleden**: De eerste 5 contactpersonen die toegang hebben tot de projecttaken. Alfabetisch gesorteerd.
-- **Certificering afgerond**: "Ja" als er geen openstaande projecttaken meer zijn. Anders "Nee".
-- **Aantal openstaande projecttaken**: Teamleden (zie hierboven) kunnen deze taken inzien op [https://partner.afas.nl/product-partner-portal](https://partner.afas.nl/product-partner-portal).  
-Alleen zichtbaar als de certificering nog niet is afgerond.  
-[Uitleg over de taken is nu ook beschikbaar in onze Docs!](./partner-certification-steps)  
-- **Deadline voor certificering**: De uiterste datum waarop alle projecttaken afgehandeld moeten zijn, berekend als "Startdatum van de certificering + 12 maanden". Als er na deze datum nog taken openstaan, zal AFAS je benaderen voor een laatste gesprek. Lukt het niet om alle taken af te handelen, dan zal het partnercontract beëindigd worden.  
-Alleen zichtbaar als de certificering nog niet is afgerond.  
-Ga je het niet halen? Neem dan op tijd [contact](#kom-in-gesprek) op met ons.
-- **Partnerportal-pagina**: De pagina waarop jouw integratie te zien is. De tekst en logo kun je zelf aanpassen op [https://partner.afas.nl/mijn-paginas](https://partner.afas.nl/mijn-paginas). De volgende 4 regels tonen de details van die pagina:
-- **Introductie**: De introductie. Pipeline-karakters (|) zijn vervangen door een afbreekstreepje (-). 
-- **Beschrijving**: De beschrijving, afgekapt op 100 tekens of het eerste pipeline-karakter (|).
-- **Website**: De website
-- **Zichtbaar in**: De branches waarin jouw koppeling getoond wordt. De sortering van de koppelingen binnen een branche wordt bepaald door het aantal klanten in die branche.
-- **Koppeling zichtbaar op de partnerportal**: "Nee" als jouw koppeling niet getoond wordt. Dat komt meestal doordat het veld **Website** niet gevuld is.  
-Alleen zichtbaar als je koppeling nog niet zichtbaar is.
+* De meldingen zijn **gegroepeerd per onderwerp**, zoals in het rapport
+* Vanuit het rapport wordt voor elke melding hier direct naartoe gelinkt
+* Per melding leggen we uit:
+  * Waarom de melding verschijnt
+  * Wat het risico of aandachtspunt is
+  * **Impact op certificering**  
+  * Hoe je de melding moet oplossen (technisch en concreet)
 
+### Ernst-niveaus voor partners
 
+* **❌ Fout** – Blokkeert certificering. Moet worden opgelost.
+* **⚠️ Waarschuwing** – Moet worden opgelost of onderbouwd in gesprek met AFAS.
+* **ℹ️ Informatief** – Geen actie vereist, wel documenteren indien relevant.
 
-### App Connector "Naam"
+---
 
-#### Checklist voor deze AppConnector
+## AppConnector
 
-3 Checklists waarbij je in één oogopslag ziet wat de status van je integratie is. Een vinkje gaat uit als er bij één of meerdere GetConnectoren een relevant aandachtspunt gevonden is. Uitgebreide uitleg van de punten in deze checklists vind je daarom bij de relevante aandachtspunten per GetConnector.  
+Deze sectie bevat partner-specifieke meldingen over de AppConnector zelf (niet de GetConnectoren).
 
-##### Verplicht (Essentieel)
+**Aantal per niveau** – Een snel overzicht van het aantal meldingen per ernst-niveau
 
-Alle punten in deze sectie moeten zijn aangevinkt.   
-In de basis heb je een **goede integratie** als alle punten een vinkje hebben, maar dat is niet sluitend. Ook als alle punten een vinkje hebben, kan het zijn dat AFAS nog wil dat je aanpassingen doorvoert.
+**Aantal per categorie** – Overzicht van het aantal meldingen per categorie (bijv. Autorisatie, Performance, Datamodel)
 
-> Als een klant in zijn eigen omgeving de auditor draait, ziet hij deze checklist ook.  
+**Aandachtspunten voor in het implementatiedocument** – Lijst van zaken die je moet documenteren in het implementatiedocument voor certificering. Dat zijn 1 of meer van de volgende onderwerpen:
+* Vermeld welke autorisatiefilters van toepassing zijn
+* Vermeld welke privacy-gevoelige velden er uitgewisseld worden
+* Bied de vrije velden aan als .fie bestand en beschrijf hoe ze geïmporteerd moeten worden
 
-*Ben je van mening dat een vinkje onterecht uit staat? Neem dan [contact](#kom-in-gesprek) op met de SystemIntegrators. We werken aan mogelijkheden om afwijkingen vast te leggen bij een specifieke integratie. En misschien is er een goede reden waarom het vinkje uit staat.*
+---
 
+## GetConnectoren – Overkoepelend
 
-- [ ] **Een eigen set van GetConnectoren is in gebruik**: Gebruik geen meegeleverde GetConnectoren.
-- [ ] **Alle GetConnectoren hebben een geldige naam**: Gebruik een duidelijk herkenbare, unieke naam voor een GetConnector.
-- [ ] **Alle GetConnector-velden hebben een geldige naam**: Een punt in de naam van een veld is niet toegestaan.
-- [ ] **Alleen bekende velden zijn aanwezig**: Houd je GetConnectoren *clean* en *up-to-date*.
-- [ ] **Meerdere dienstverbanden worden correct verwerkt**: Ook aangevinkt als je niets met HRM doet.
-- [ ] **Financiële mutaties worden correct verwerkt**: Ook aangevinkt als je niets met financiële mutaties doet.
-- [ ] **Nacalculatie wordt correct verwerkt**: Ook aangevinkt als je niets met nacalculatie doet.
-- [ ] **Filters zijn correct ingesteld**: Slechte filters kunnen een aanroep vertragen met een factor 100.
+### Datamodel
 
-##### Aanbevolen (Wenselijk)
+#### <a id="DATA-20"></a>`Dienstverbandnummer` en `Volgnummer dienstverband` worden beide gebruikt
 
-Deze sectie is wat minder zwart/wit, omdat er een goede reden kan zijn om niet te voldoen aan de controles. Is dat bij jou het geval? [Kom in gesprek!](#kom-in-gesprek)  
+**Niveau:** ❌ Fout  
+**Certificerings-impact:** **Blokkeert certificering**  
 
-Een klant ziet deze checklist niet en zal er dus ook geen vragen over stellen.
+**Waarom zie je dit?**  
+Jouw integratie gebruikt twee verschillende dienstverbandnummers door elkaar: een interne (`Volgnummer dienstverband`) en het dienstverbandnummer dat je ziet bij het contract van een medewerker.
 
-- [ ] **Alle indexvelden zijn aanwezig in de GetConnectoren**: Deze controle kijkt naar de *Primary key* van de hoofdtabel.
-- [ ] **Alle indexvelden zijn zichtbaar, zodat er gesorteerd en gefilterd kan worden**: 
+**Risico / aandachtspunt**  
+Deze 2 nummers zijn *vaak* hetzelfde, maar kunnen verschillen. Bij meerdere of wisselende dienstverbanden ontstaan foutieve of dubbele gegevens. Deze fouten zijn zeer moeilijk te traceren.
 
-##### Best practice (Optioneel, maar aanbevolen)
+**Oplossing**  
+Pas je GetConnectoren aan zodat je overal gebruik maakt van `Dienstverband` en niet meer van `Volgnummer dienstverband`.
 
-Informatief. Controleer of het klopt met je verwachtingen.
+**Uitzondering**  
+Een klein aantal tabellen gebruikt `Volgnummer dienstverband` in de primaire sleutel. In die gevallen is het toegestaan dit veld te gebruiken om op te filteren en te sorteren. Inhoudelijk maak je nog steeds gebruik van `Dienstverband`. De auditor houdt hier nog geen rekening mee.
 
-Een klant ziet deze checklist niet en zal er dus ook geen vragen over stellen.
+---
 
-- [ ] **Geen vrije velden zijn aanwezig**
-- [ ] **Geen velden met een speciaal formaat zijn aanwezig**
+### Performance & schaalbaarheid
 
-##### Mogelijke performance optimalisaties
+#### <a id="PERF-30"></a>Financiële mutaties zonder `Gewijzigde boekingsdagen`
 
-Een goede aanroep naar een goede GetConnector is in principe binnen 1 seconde klaar. Ga je aan de slag met onderstaande punten? Maak het jezelf niet te moeilijk en [plan een afspraak in](#kom-in-gesprek).
+**Niveau:** ❌ Fout  
+**Certificerings-impact:** **Blokkeert certificering**  
 
-- [ ] **Eén of meer van de 10 grootste tabellen in de omgeving wordt uitgevraagd**: Alleen als er meer dan 1.000.000 regels in die tabel zitten.
-- [ ] **Er zijn GetConnectoren met meer dan 10 joins**: Dit duidt vaak op redundante gegevens. Als deze GetConnector slecht presteert, overweeg dan om op te splitsen in meerdere GetConnectoren.
-- [ ] **Er zijn GetConnectoren die meer dan 5 niveaus diep gegevens ophalen**: Als deze GetConnector slecht presteert, overweeg dan om op te splitsen in meerdere GetConnectoren.
+**Waarom zie je dit?**  
+Er worden Financiële mutaties opgehaald, maar `Gewijzigde boekingsdagen` wordt niet gebruikt.
 
-#### Checklist voor punten die je moet behandelen In je implementatiedocument
+**Risico / aandachtspunt**  
+Zeer grote datasets, slechte performance en onnodige belasting.
 
-Het is voor de klant belangrijk om geïnformeerd te worden over deze punten. Elke check is alleen zichtbaar als het van toepassing op jouw integratie.
+**Oplossing**  
+Maak gebruik van een extra GetConnector, gebaseerd op de gegevensverzameling `Gewijzigde boekingsdagen`. [Lees dit help artikel](https://help.afas.nl/help/NL/SE/App_Cnnct_View_Audit.htm#o79118) voor meer informatie.
 
-- [ ] **Bied de vrije velden aan als .fie bestand en beschrijf hoe ze geïmporteerd moeten worden**
-- [ ] **Vermeld welke autorisatie-filters van toepassing zijn**
-- [ ] **Vermeld welke privacy-gevoelige velden er uitgewisseld worden**
+---
 
+#### <a id="PERF-31"></a>Nacalculatie zonder `Gewijzigde boekingsdagen nacalculatie` 
 
+**Niveau:** ❌ Fout  
+**Certificerings-impact:** **Blokkeert certificering**  
 
-### UpdateConnectoren
+**Waarom zie je dit?**  
+Nacalculatieregels worden volledig opgehaald.
 
-Deze sectie geeft een lijst van UpdateConnectoren die beschikbaar zijn om aan te roepen.
+**Risico / aandachtspunt**  
+Zeer grote datasets, slechte performance en onnodige belasting.
 
+**Oplossing**  
+Maak gebruik van een extra GetConnector, gebaseerd op de gegevensverzameling `Gewijzigde boekingsdagen nacalculatie`. [Lees dit help artikel](https://help.afas.nl/help/NL/SE/App_Cnnct_View_Audit.htm#o95619) voor meer informatie.
 
+---
 
-### Overige Connectoren
+## GetConnector – Individueel
 
-Deze sectie geeft een lijst van overige Connectoren die beschikbaar zijn om aan te roepen. Denk daarbij aan connectoren om bijlagen op te halen.
+### Connectorstructuur
 
+#### <a id="STRUCT-27"></a>Dit is een meegeleverde Profit GetConnector. Maak hier een eigen kopie van.
 
+**Niveau:** ❌ Fout  
+**Certificerings-impact:** **Blokkeert certificering**  
 
-### GetConnectoren
+**Waarom zie je dit?**  
+In een gecertificeerde koppeling moet je een eigen set GetConnectoren gebruiken. Meegeleverde Profit GetConnectoren mag je niet gebruiken.
 
-Dit is de belangrijkste sectie. Eerst worden er meldingen gegeven die te maken hebben met de samenhang tussen meerdere GetConnectoren. Daarna worden de GetConnectoren die beschikbaar zijn om aan te roepen stuk voor stuk getoond.
+**Risico / aandachtspunt**  
+* Ze worden door AFAS onderhouden en kunnen zonder waarschuwing aangepast worden
+* Ze bevatten waarschijnlijk niet precies de velden die jij nodig hebt
+* Een eindgebruiker kan geen filters instellen
 
-#### Er worden onbekende velden gebruikt. In de GetConnector geven die een vaste waarde "(vervangen)".
+**Oplossing**  
+Maak een kopie van deze GetConnector. Geef je GetConnector een naam volgens:
 
-Er worden velden gebruikt die niet in jouw omgeving beschikbaar zijn. Meestal gaat het om vrije velden die niet (meer) aanwezig zijn. Er zijn 2 mogelijke oplossingen:  
-1. Verwijder de verwijzing uit de GetConnector
-2. Importeer het vrije veld. Pas daarna de GetConnector aan zodat het weer verwijst naar het juiste veld.
+```
+<JouwApp>_<FunctioneleNaam>
+```
 
-#### Er worden vrije velden gebruikt.
+Gebruik nooit `Profit` of `AFAS` in de naam; dat is voor de klant wel duidelijk.
 
-Zorg ervoor dat je deze ook aanbiedt en dat je in het implementatiedocument hier aandacht aan besteedt. [Vrije velden kun je vanuit jouw AFAS testomgeving exporteren](https://help.afas.nl/help/NL/SE/App_UDF_ExpImp.htm) en als downloadbare bestanden aanbieden, samen met de GetConnectoren.
+---
 
-#### De volgende autorisaties worden toegepast, zorg dat je dat noemt in je implementatiedocument.
+#### <a id="STRUCT-28"></a>Deze GetConnector heeft een naam die begint met `Profit_`.
 
-Veel GetConnectoren tonen alleen gegevens die door de eindgebruiker in de autorisatiefilters zijn toegestaan. Door in je implementatiedocument te vermelden welke filters van toepassing zijn op jouw integratie, kan de AFAS beheerder alles goed inrichten.  
-Dit is van groot belang voor een goede werking van de integratie!
+**Niveau:** ❌ Fout  
+**Certificerings-impact:** **Blokkeert certificering\*\*  
 
-#### EnSe en DvSn worden beide gebruikt.
+**Waarom zie je dit?**  
+Een GetConnector heeft een naam die begint met `Profit_`.
 
-Kort gezegd: AFAS Profit kent 2 verschillende nummers die het dienstverband aanduiden. Als je die door elkaar heen gebruikt, loop je eerder of later tegen lastig te traceren fouten aan. [Lees daarom dit artikel goed door](./howto-bi#medewerkers-en-dienstverband). Schroom niet om dit te overleggen tijdens een afspraak met een SystemIntegrator.
+**Risico / aandachtspunt**  
+De naam kan conflicteren met toekomstige meegeleverde GetConnectoren van AFAS.
 
-#### Er worden Financiële mutaties opgehaald, maar **Gewijzigde boekingsdagen** wordt niet gebruikt.
+**Oplossing**  
+Geef je GetConnector een naam volgens:
 
-Haal je veel Financiële mutatie op? Gebruik dan ook de GetConnector `Gewijzigde boekingsdagen`. [Lees dit artikel goed door](https://help.afas.nl/help/NL/SE/App_Cnnct_View_Audit.htm#o79118).
+```
+<JouwApp>_<FunctioneleNaam>
+```
 
-Mogelijk ben je ook geïnteresseerd in het ophalen van verwijderde mutaties. [Lees daarvoor dit artikel](https://help.afas.nl/help/NL/SE/App_Cnnct_Deleted_Data.htm#o124753).
+Gebruik nooit `Profit` of `AFAS` in de naam.
 
-#### Er wordt Nacalculatie opgehaald, maar **Gewijzigde boekingsdagen nacalculatie** wordt niet gebruikt.
+---
 
-Haal je veel nacalculatieregels op? Gebruik dan ook de GetConnector `Gewijzigde boekingsdagen nacalculatie`. [Lees dit artikel goed door](https://help.afas.nl/help/NL/SE/App_Cnnct_View_Audit.htm#o95619).
+#### <a id="STRUCT-29"></a>Deze GetConnector heeft 1 of meer velden met een punt in de naam.
 
-Mogelijk ben je ook geïnteresseerd in het ophalen van verwijderde nacalculatie. [Lees daarvoor dit artikel](https://help.afas.nl/help/NL/SE/App_Cnnct_Deleted_Data.htm#o124754).
+**Niveau:** ❌ Fout  
+**Certificerings-impact:** **Blokkeert certificering**  
 
-#### Hieronder staan de autorisaties die van toepassing zijn en hoe de rechten in jouw omgeving zijn toegekend.
+**Waarom zie je dit?**  
+Deze GetConnector heeft 1 of meer velden met een punt in de naam.
 
-Alleen zichtbaar in de klant-versie van de auditor.  
-Deze sectie geeft de AFAS beheerder inzicht in de inrichting van de autorisatie die effect heeft op jouw integratie. Elke klant zal dit anders hebben ingericht.
+**Risico / aandachtspunt**  
+Een veldnaam die een punt bevat kan onverwachte fouten geven bij het verwerken van je aanroep.
 
+**Oplossing**  
+Pas de betreffende veldnamen aan en verwijder de punt.
 
+---
 
-### GetConnectoren: Meldingen per GetConnector
+### Datamodel
 
-#### Gebaseerd op gegevensverzameling "naam"
+#### <a id="DATA-21"></a>Deze GetConnector haalt velden uit Actuele gegevens per arbeidsverhouding
 
-Informatief. 
+**Niveau:** ❌ Fout  
+**Certificerings-impact:** **Blokkeert certificering**  
 
-#### Aantal velden, Aanbevolen take
+**Waarom zie je dit?**  
+Deze GetConnector haalt velden uit `Actuele gegevens per arbeidsverhouding`, maar de integratie gebruikt gegevens per dienstverband.
 
-Informatief. De aanbevolen `take` is gebaseerd op best practices en berekend als 150.000 / \[Aantal velden\].  
-De `take` bepaalt hoeveel regels je per call ophaalt. Als je teveel regels per keer ophaalt, kan dat geheugenproblemen geven op onze server. Daarmee belast je jezelf, de klant, maar ook andere klanten die op dezelfde gedeelde resources zitten. Door je te houden aan de aanbevolen `take` kunnen calls soepel worden afgehandeld.  
-In feite gaat het niet om de hoeveel regels, maar om de totale omvang (ongecomprimeerd) van de gegevens die je ophaalt.
+**Risico / aandachtspunt**  
+Bij meerdere gelijktijdige dienstverbanden worden onjuiste of onvolledige gegevens opgehaald.
 
-#### Dit is een meegeleverde Profit GetConnector. Maak hier een eigen kopie van.
+**Oplossing**  
+Gebruik `Actuele gegevens per dienstverband` of vermijd actuele tabellen volledig. Overleg bij twijfel met de Systemintegrators.
 
-*Checklist*: [Verplicht](#verplicht-essentieel), Een eigen set van GetConnectoren is in gebruik
+---
 
-Maak altijd voor elke integratie een eigen set GetConnectoren.  
-Het is verleidelijk om de standaard Profit-GetConnectoren te gebruiken, maar de nadelen wegen zwaarder:
-- Er zitten velden in die je niet gebruikt,
-- Je kunt ze niet aanpassen, dus als je een veld mist moet je daar alsnog een eigen GetConnector voor maken,
-- Er kan geen filter worden toegepast. Jij kan nog een filter meegeven in de URL, maar de AFAS beheerder heeft niet de mogelijkheid om specifieke gegevens af te schermen,
-- Je kan geen *versioning* toepassen.
+#### <a id="DATA-23"></a>Deze GetConnector heeft 1 of meer onbekende velden
 
-#### Ongeldige naam. Deze GetConnector heeft een naam die begint met "Profit_".
+**Niveau:** ❌ Fout  
+**Certificerings-impact:** **Blokkeert certificering**  
 
-*Checklist*: [Verplicht](#verplicht-essentieel), Alle GetConnectoren hebben een geldige naam
+**Waarom zie je dit?**  
+Deze GetConnector heeft 1 of meer onbekende velden.
 
-Geef jouw GetConnectoren bij voorkeur een naam die begint met jouw bedrijfsnaam, of de naam van de app die je koppelt. Daarmee voorkom je dat er conflicten optreden als een klant meerdere integraties heeft.
+**Risico / aandachtspunt**  
+Onbekende velden zijn niet meer gekoppeld aan een veld in de database. In het resultaat geven ze een vaste waarde "(vervangen)".
 
-#### Deze GetConnector heeft 1 of meer velden met een punt in de naam.
+**Oplossing**  
+Verwijder de onbekende velden, of koppel ze aan een veld in de database.
 
-*Checklist*: [Verplicht](#verplicht-essentieel), Alle GetConnectoren hebben een geldige naam
+---
 
-Dat kan een probleem geven als je in de URL op deze velden wilt filteren of sorteren. Pas de naam aan zodat er geen punt in voorkomt.
+#### <a id="DATA-24"></a>Vrije velden gebruikt
 
-#### Deze GetConnector heeft 1 of meer onbekende velden.
+**Niveau:** ⚠️ Waarschuwing  
+**Certificerings-impact:** Moet opgelost of gedocumenteerd worden
 
-*Checklist*: [Verplicht](#verplicht-essentieel), Alleen bekende velden zijn aanwezig
+**Waarom zie je dit?**  
+De integratie maakt gebruik van vrije velden.
 
-Zie [hierboven](#er-worden-onbekende-velden-gebruikt-in-de-getconnector-geven-die-een-vaste-waarde-vervangen).
+**Wat betekent dit?**  
+Vrije velden bestaan niet standaard in elke klantomgeving.
 
-#### De integratie gebruikt gegevens per dienstverband, maar deze GetConnector haalt velden uit Actuele gegevens per arbeidsverhouding.
+**Actie**  
 
-*Checklist*: [Verplicht](#verplicht-essentieel), Meerdere dienstverbanden worden correct verwerkt
+* Lever vrije velden aan als `.fie`-bestand
+* Beschrijf in het implementatiedocument hoe klanten deze importeren
 
-Actuele gegevens per arbeidsverhouding toont enkel gegevens uit het hoofddienstverband. Aangezien jouw integratie op andere plekken gegevens per dienstverband ophaalt, kan het zijn dat deze GetConnector de verkeerde gegevens toont. Dit kan lastig te traceren fouten veroorzaken. [Lees daarom dit artikel goed door](./howto-bi#medewerkers-en-dienstverband). Schroom niet om te [overleggen met een SystemIntegrator](#kom-in-gesprek).
+---
 
-#### Deze GetConnector haalt velden uit een tabel met gegevens per dienstverband, maar nergens in de integratie wordt Dienstverbandnummer opgehaald.
+#### <a id="DATA-25"></a>Verdichting toegepast
 
-*Checklist*: [Verplicht](#verplicht-essentieel), Meerdere dienstverbanden worden correct verwerkt
+**Niveau:** ℹ️ Informatief  
+**Certificerings-impact:** Geen
 
-Als een medewerker meerdere dienstverbanden heeft, kan dit dubbele regels tot gevolg hebben. [Lees dit artikel goed door](./howto-bi#medewerkers-en-dienstverband) voor meer informatie over meerdere dienstverbanden. Plan ook gerust een overleg in met een SystemIntegrator.
+**Waarom zie je dit?**  
+De GetConnector gebruikt verdichting (groepering).
 
-#### Filters
+**Wat kun je ermee?**  
+Verdichting is geschikt voor totalen, maar niet om dubbele regels te maskeren.
 
-*Checklist*: [Verplicht](#verplicht-essentieel), Filters zijn correct ingesteld
+**Advies**  
+Gebruik verdichting alleen bewust. Bij twijfel: overleg met AFAS.
 
-Deze sectie toont de filters die in de GetConnector zijn opgeslagen. Controleer of ze voor alle klanten van toepassing zijn. Zo niet, geef dan een filter mee bij de aanroep in de URL. Of besteed er aandacht aan in je implementatiedocument. 
-Omdat niet alle GetConnectoren de filterautorisatie in de klantomgeving respecteren, is het vaak nodig dat de klant zelf ook aanpassingen moet doen in het filter. 
+---
 
-#### Langzaam filter
+#### <a id="DATA-26"></a>Velden met speciaal formaat
 
-*Checklist*: [Verplicht](#verplicht-essentieel), Filters zijn correct ingesteld
+**Niveau:** ⚠️ Waarschuwing  
+**Certificerings-impact:** Moet opgelost worden
 
-Deze GetConnector heeft een filter dat slecht presteert. In een gecertificeerde koppeling is dat niet toegestaan; het is namelijk niet ondenkbaar dat door zo'n filter een GetConnector meer dan 100x zo langzaam wordt. 
+**Waarom zie je dit?**  
+Deze GetConnector heeft velden met een speciaal formaat. Op deze velden mag niet worden gefilterd of gesorteerd.
 
+**Risico / aandachtspunt**  
+Sorteren of filteren op deze velden heeft grote performance-impact.
 
-#### Indexen
+**Oplossing**  
+Gebruik deze velden alleen voor presentatie en filter/sorteer nooit op deze velden.
 
-*Checklist*: [Aanbevolen](#aanbevolen-wenselijk), Alle indexvelden zijn aanwezig in de GetConnectoren  
-*Checklist*: [Aanbevolen](#aanbevolen-wenselijk), Alle indexvelden zijn zichtbaar, zodat er gesorteerd en gefilterd kan worden
+---
 
-In deze sectie zie je alle indexen die op de hoofdtabel liggen. Als dat een tabel is met veel regels, zorg er dan voor dat je zoveel mogelijk gebruik maakt van deze indexen. Dat geldt voor filteren en voor sorteren. Als je dat niet doet, kan dat een dramatische impact op de performance van de GetConnector hebben.  
+### Performance
 
-Gebruik bij voorkeur index 1; dat is de geclusterde, unieke primary key van de tabel. De velden die hier in staan, geven een unieke identificatie van elke regel. Een paar vuistregels:
-- Geef altijd een sortering mee in de URL
-- Sorteer op zoveel mogelijk velden van index 1, in de opgegeven volgorde van de velden. Dus als er een index ligt op Medewerker, Begindatum: sorteer dan in ek geval op die 2 velden.
-- Sommige velden zijn helaas niet direct beschikbaar. Een Systemintegrator kan jouw GetConnector eventueel aanpassen en de verborgen velden toevoegen.
-- Als je filtert in de GetConnector, doe dat dan ook zoveel mogelijk op indexvelden.
-- Is index 1 niet beschikbaar of niet logisch voor jou? Gebruik dan één van de andere indexen. Let op, die zijn niet altijd uniek.
+#### <a id="PERF-32"></a>Cyclische verwijzing
 
+**Niveau:** ⚠️ Waarschuwing  
+**Certificerings-impact:** Moet opgelost of onderbouwd worden
 
-#### Deze GetConnector heeft 1 of meer vrije velden.
+**Waarom zie je dit?**  
+Dezelfde tabel komt meerdere keren voor in het join-pad.
 
-*Checklist*: [Best practice](#best-practice-optioneel-maar-aanbevolen), Geen vrije velden zijn aanwezig  
-*Checklist*: [Implementatiedocument](#checklist-voor-punten-die-je-moet-behandelen-in-je-implementatiedocument), Bied de vrije velden aan als .fie bestand en beschrijf hoe ze geïmporteerd moeten worden
+**Risico / aandachtspunt**  
+Onnodige JOINs → performanceverlies.
 
-Zie [hierboven](#er-worden-vrije-velden-gebruikt).
+**Oplossing**  
+Controleer of de verwijzing functioneel nodig is.
+Zo niet: vereenvoudig de GetConnector.
 
-#### Deze GetConnector heeft velden met een speciaal formaat.
+---
 
-*Checklist*: [Best practice](#best-practice-optioneel-maar-aanbevolen), Geen velden met een speciaal formaat zijn aanwezig
+#### <a id="PERF-33"></a>Mogelijke subselect
 
-Je kan in een GetConnector een veld op een andere manier weergeven; bijvoorbeeld een datum/tijd als enkel datum of als een ander datumformaat. In veel gevallen wijzigt daardoor het veldtype. Dat is op zich geen probleem. Als je echter op dit gewijzigde veldtype gaat filteren of sorteren, maakt dat de GetConnector vele malen trager, vooral als er veel gegevens in de brontabel zitten. Dat kan oplopen tot meer dan een factor 100!
+**Niveau:** ⚠️ Waarschuwing  
+**Certificerings-impact:** Monitor performance
 
-#### Deze GetConnector gebruikt verdichting. Controleer of dat terecht is.
+**Waarom zie je dit?**  
+In de SQL-definitie komt meerdere keren `SELECT` voor.
 
-*Checklist*: [Best practice](#best-practice-optioneel-maar-aanbevolen), Geen velden met een speciaal formaat zijn aanwezig
+**Risico / aandachtspunt**  
+Subselects kunnen per rij worden uitgevoerd en zijn duur.
 
-Verdichting is een fantastich hulpmiddel om totalen te laten bepalen, of om verdubbelingen te voorkomen. Maar als je je er niet van bewust bent, levert de GetConnector onverwachte resultaten op.  
-Op grote tabellen heeft het gebruik van verdichting invloed op de performance.
+**Oplossing**  
+Alleen actie nodig bij performanceproblemen. Laat je adviseren door Systemintegrators.
 
-#### Deze GetConnector is geautoriseerd.
+---
 
-*Checklist*: [Implementatiedocument](#checklist-voor-punten-die-je-moet-behandelen-in-je-implementatiedocument), Vermeld welke autorisatie-filters van toepassing zijn
+#### <a id="PERF-36"></a>Deze GetConnector haalt velden uit een tabel die ook als alias beschikbaar is.
 
-Hier zie je welke autorisatiefilters van toepassing zijn op deze specifieke GetConnector. Als een bepaalde autorisatie er niet bij staat, dan wordt die autorisatie niet toegepast op de GetConnector. Mocht je toch gegevens willen tegenhouden, maak dan gebruik van een filter in de GetConnector zelf.
+**Niveau:** ⚠️ Waarschuwing  
+**Certificerings-impact:** Monitor en optimaliseer indien nodig
 
-#### Deze GetConnector heeft velden die zijn gemarkeerd als privacy-gevoelig.
+**Waarom zie je dit?**  
+De GetConnector haalt velden op uit een tabel die ook als alias (snelkoppeling) beschikbaar is.
 
-*Checklist*: [Implementatiedocument](#checklist-voor-punten-die-je-moet-behandelen-in-je-implementatiedocument), Vermeld welke privacy-gevoelige velden er uitgewisseld worden
+**Risico / aandachtspunt**  
+Het gebruik van alias-tabellen is efficiënter. Het huidige pad kan performance beïnvloeden.
 
-In Profit is een set met gegevens gekenmerkt als privacy-gevoelig. In deze sectie zie je welke van die velden gebruikt worden in de integratie. Kijk de lijst goed door; ga het gesprek aan met de leverancier als er velden tussen staan die de gekoppelde app niet noodzakelijkerwijs nodig heeft om goed te functioneren.
+**Oplossing**  
+Controleer of je de alias-tabel kunt gebruiken in plaats van het langere pad. Dit geeft betere performance.
 
+---
 
+#### <a id="PERF-45"></a>Indexvelden ontbreken
 
+**Niveau:** ⚠️ Waarschuwing  
+**Certificerings-impact:** Moet opgelost worden
 
-## Kom in gesprek!
+**Waarom zie je dit?**  
+Niet alle indexvelden zijn zichtbaar in de GetConnector.
 
-Heb je vragen, opmerkingen, bugreports, verbetersuggesties, klachten, etc? Kom bij ons in de lucht! De bedoeling van de auditor is dat het een hulpmiddel is voor jou als partner, voor AFAS zelf en natuurlijk uiteindelijk voor de klant. Ga daarom naar jouw eigen partner-pagina [https://partner.afas.nl/product-partner-portal](https://partner.afas.nl/product-partner-portal), log in met de link rechtsbovenin, en ga naar de tegel `Stel een vraag`. 
+**Risico / aandachtspunt**  
+Sortering en filtering zijn inefficiënt.
 
-###### Heb je geen inlog? 
+**Oplossing**  
+Maak indexvelden zichtbaar en gebruik deze in sortering en filtering.
 
-Een of meer van jouw collega's zijn beheerder op de klantportal en kunnen jou toevoegen als contactpersoon, zodat jij zelf ook in kunt loggen.
+---
+
+#### <a id="PERF-46"></a>Aanbevolen indexgebruik
+
+**Niveau:** ℹ️ Informatief  
+**Certificerings-impact:** Best practice
+
+**Waarom zie je dit?**  
+De auditor toont aanbevolen indexen.
+
+**Wat kun je ermee?**  
+Gebruik deze indexen voor optimale performance.
+
+---
+
+### Selectie & filtering
+
+#### <a id="FILT-47"></a>Langzaam filtertype gebruikt
+
+**Niveau:** ❌ Fout  
+**Certificerings-impact:** **Blokkeert certificering**  
+
+**Waarom zie je dit?**  
+Het filter maakt gebruik van 'bevat (niet)', 'begint (niet) met' of 'eindigt (niet) op'.
+
+**Risico / aandachtspunt**  
+Indexen worden niet gebruikt → >100× langzamer.
+
+**Oplossing**  
+Gebruik gelijkheidsfilters (`=`, `>`, `<` etc.) op indexvelden.
+
+---
+
+#### <a id="FILT-48"></a>Gebruikersfilter aanwezig
+
+**Niveau:** ⚠️ Waarschuwing  
+**Certificerings-impact:** Moet opgelost of gedocumenteerd worden
+
+**Waarom zie je dit?**  
+De GetConnector bevat een vast filter.
+
+**Risico / aandachtspunt**  
+Het filter is mogelijk niet geschikt voor alle klanten.
+
+**Oplossing**  
+Maak filters dynamisch via URL-parameters of documenteer beperkingen.
+
+---
+
+## Autorisatie & Privacy
+
+#### <a id="AUT-16"></a>Geautoriseerde GetConnector
+
+**Niveau:** ℹ️ Informatief  
+**Certificerings-impact:** Documenteren
+
+**Waarom zie je dit?**  
+De GetConnector respecteert filterautorisatie.
+
+**Wat kun je ermee?**  
+Bij onverwachte resultaten ligt de oorzaak vaak bij autorisatie.
+
+**Actie**  
+Documenteer gebruikte autorisaties in het implementatiedocument.
+
+---
+
+#### <a id="AUT-17"></a>Autorisaties in implementatiedocument
+
+**Niveau:** ⚠️ Waarschuwing  
+**Certificerings-impact:** Moet opgelost of gedocumenteerd worden
+
+**Waarom zie je dit?**  
+De integratie maakt gebruik van filterautorisatie.
+
+**Risico / aandachtspunt**  
+Als autorisaties niet goed zijn ingericht, krijgt de integratie te veel of te weinig gegevens.
+
+**Oplossing**  
+Noem in je implementatiedocument:
+
+* Welke autorisatiefilters van toepassing zijn
+* Hoe klanten deze in hun omgeving moeten instellen
+* Welke rechten de token-gebruiker nodig heeft
+
+---
+
+#### <a id="AUT-19"></a>Privacy-gevoelige velden
+
+**Niveau:** ⚠️ Waarschuwing  
+**Certificerings-impact:** Moet gedocumenteerd en onderbouwd worden
+
+**Waarom zie je dit?**  
+Er worden velden opgehaald die als privacy-gevoelig zijn gemarkeerd.
+
+**Risico / aandachtspunt**  
+Mogelijk AVG-risico.
+
+**Oplossing**  
+
+* Haal alleen strikt noodzakelijke gegevens op
+* Benoem deze expliciet in het implementatiedocument
+
+---
+
+## Afronding
+
+Deze help is bedoeld als **naslagwerk en technische specificatie**, niet als vervanging van persoonlijk overleg.
+
+> Kom je een melding tegen die voor jou niet haalbaar is, of heb je een goed onderbouwde reden om hiervan af te wijken?
+> Neem contact op met de Systemintegrators – afwijkingen kunnen samen worden beoordeeld en vastgelegd.
+
+Dit document is nooit af. Zie je iets dat niet klopt, of heb je suggesties voor verbetering? Maak een pull request aan op de [GitHub-pagina van de documentatie](https://github.com/AFASSoftware/OASContent/blob/main/markdownpages/profit/nl/app-connector-auditor-partner.md).
+
+*Happy coding!*
+
+---
