@@ -119,6 +119,16 @@ Zorg ervoor dat onze gezamenlijke klanten gebruikmaken van de gecontroleerde Get
 
 ---
 
+### Datastroomdiagram van de API-integratie aanleveren
+
+Een datastroomdiagram van een API-integratie laat zien hoe gegevens tussen systemen bewegen. Het diagram richt zich niet op de interne werking van de systemen, maar op welke data wordt uitgewisseld (bijvoorbeeld medewerkergegevens of verlofboekingen), in welke richting, via welke API-aanroepen en door welke gebeurtenis of planning dit proces wordt gestart.
+
+Hiermee wordt inzichtelijk welke endpoints worden gebruikt, wie de bron is, wie de ontvanger is en onder welke omstandigheden de gegevensuitwisseling plaatsvindt.
+
+We vragen daarom om één high-level data flow diagram van de API-integratie, gemaakt in een gratis tool zoals draw.io en aangeleverd als PDF of PNG. Het diagram laat op hoofdlijnen zien welke systemen betrokken zijn, welke endpoints worden gebruikt en hoe de datastroom door ons platform loopt. Het is geen diep technisch document, maar wel voldoende om de functionele aansluiting te toetsen.
+
+---
+
 ### Implementatiedocument aanleveren
 
 Scoor je een nieuwe klant? Gefeliciteerd!  
@@ -160,15 +170,6 @@ Je mag vanaf nu ook naam en logo van AFAS op jouw website gebruiken. Op [www.afa
 Een koppeling zonder klanten is geen koppeling. Om onze gezamenlijke klanten zekerheid te bieden dat de integratie goed getest is en soepel loopt, is je certificering pas compleet als je 5 of meer gezamenlijke klanten met jouw koppeling bedient. Dit controleren we aan de hand van het IntegrationId ([zie hierboven](#integrationid-meesturen)).  
 
 Ben je trots op je klanten? Stuur dan referenties in van de klanten waar de koppeling naar tevredenheid loopt. Dat doe je op https://partner.afas.nl/aanmaken-aanvraag-partnerportal/referentie.
-
-
----
-
-### Datastroomdiagram van de API-integratie aanleveren
-
-Een datastroomdiagram van een API‑integratie laat zien hoe gegevens tussen systemen bewegen. Het richt zich niet op de interne werking van de systemen, maar op welke data wordt uitgewisseld (bijvoorbeeld medewerkergegevens of verlofboekingen), in welke richting, via welke API‑aanroepen en door welke gebeurtenis of planning dit wordt gestart. Zo wordt helder welke endpoints gebruikt worden, wie de bron is, wie de ontvanger is en onder welke omstandigheden de uitwisseling plaatsvindt.
-
-Dit is belangrijk omdat het misverstanden voorkomt over wie welke data levert en ontvangt, en omdat het ontwikkelaars en beheerders helpt de integratie goed te ontwerpen, bouwen en beheren. Het diagram maakt impactanalyses bij wijzigingen eenvoudiger, omdat je direct ziet welke stromen geraakt worden, en het fungeert als duidelijke, blijvende documentatie voor beheer en toekomstige uitbreidingen. Bovendien biedt het een concreet hulpmiddel om de koppeling te optimaliseren, bijvoorbeeld door overbodige datastromen te schrappen of efficiëntere uitwisselmomenten te kiezen.
 
 
 ---
