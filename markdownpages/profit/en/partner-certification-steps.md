@@ -113,6 +113,16 @@ Ensure that our mutual customers use the checked GetConnectors. For example, mak
 
 ---
 
+### Provide a data flow diagram of the API integration
+
+A data flow diagram of an API integration shows how data moves between systems. The diagram does not focus on the internal workings of the systems, but on what data is exchanged (e.g. employee data or leave bookings), in which direction, via which API calls and by which event or schedule this process is initiated.
+
+This provides insight into which endpoints are used, who the source is, who the recipient is, and under what circumstances the data exchange takes place.
+
+We therefore request a single high-level data flow diagram of the API integration, created in a free tool such as draw.io and delivered as a PDF or PNG. The diagram shows in broad terms which systems are involved, which endpoints are used, and how the data flow runs through our platform. It is not a deeply technical document, but it is sufficient to test the functional connection.
+
+---
+
 ### Supply the implementation document
 
 Did you land a new customer? Congratulations!
@@ -154,16 +164,6 @@ From now on you may also use the AFAS name and logo on your website. At [www.afa
 An integration without customers is not an integration. To give our mutual customers confidence that the integration has been well tested and runs smoothly, your certification is only complete when you serve 5 or more mutual customers with your integration. We check this based on the IntegrationId ([see above](#sending-integrationid)).
 
 Proud of your customers? Then submit references from customers where the integration runs to their satisfaction. You can do this at https://partner.afas.nl/aanmaken-aanvraag-partnerportal/referentie.
-
-
----
-
-### Provide a data flow diagram of the API integration
-
-A data flow diagram of an API integration shows how data moves between systems. It does not focus on the internal workings of the systems, but rather on what data is exchanged (for example, employee data or leave bookings), in which direction, via which API calls, and what event or schedule triggers this exchange. This makes it clear which endpoints are used, who the source is, who the recipient is, and under what circumstances the exchange takes place.
-
-This is important because it prevents misunderstandings about who supplies and receives what data, and because it helps developers and administrators design, build, and maintain the integration properly. The diagram makes impact analyses of changes easier, as you can directly see which flows are affected, and it serves as clear, lasting documentation for management and future expansions. Additionally, it provides a concrete tool to optimize the integration, for example by removing redundant data flows or choosing more efficient exchange moments.
-
 
 ---
 
