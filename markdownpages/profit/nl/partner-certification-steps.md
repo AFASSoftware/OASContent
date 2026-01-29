@@ -66,7 +66,7 @@ Ga naar https://klant.afas.nl/supportplus en activeer het!
 
 ---
 
-### Specialisatiecursus: Connectoren
+### Cursus volgen
 
 Schrijf je in voor een cursus waarin je alles leert over de aanroep van onze API. Er is veel aandacht voor het maken van je eigen [GetConnectoren](#getconnectoren-aanleveren).  
 Deze cursus is gratis voor 1 collega. Kijk op https://klant.afas.nl/opleiding/specialisatiecursus-connector voor informatie en data.
