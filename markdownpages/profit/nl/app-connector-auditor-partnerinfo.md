@@ -50,7 +50,7 @@ Onder de partnergegevens worden alle door jou aangemelde koppelingen afzonderlij
 
 **Checklist per koppeling**  
 
-* **Je certificering is afgerond**  
+* **De certificering is afgerond**  
   Dit vinkje is groen als de koppeling gecertificeerd is. Is de koppeling nog niet gecertificeerd, dan worden de openstaande projecttaken getoond die je moet afronden om certificering te behalen.
 
 * **Je integratie wordt getoond op de partnerportal**  
