@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2026-02-03
+date: 2026-02-04
 index: true
 tags: Partner, IntegrationId, Certification, Integration, Configuration
 title: Certification steps for Partners
@@ -100,7 +100,7 @@ Creating your own GetConnector is not difficult ([read this help article](https:
 
 #### Check the GetConnectors with the **AppConnector Auditor**
 
-You make the GetConnectors available to the API by setting up an AppConnector in your own test environment, just as a customer would do. From that AppConnector, run the [**AppConnector Auditor**](./app-connector-auditor-partner) and resolve the errors found. You must resolve the warnings or be able to justify them.  
+You make the GetConnectors available to the API by setting up an AppConnector in your own test environment, just as a customer would do. From that AppConnector, run the [**AppConnector Auditor**](./app-connector-auditor-partner) and resolve the errors found. The warnings should be resolved or you should be able to justify them.  
 
 
 #### We do a final check

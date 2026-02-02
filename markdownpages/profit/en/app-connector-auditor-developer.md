@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2026-02-03
+date: 2026-02-04
 index: true
 tags: AppConnector, Auditor, Developer, GetConnector, API, Integration
 title: AppConnector Auditor - Developer Report
@@ -48,109 +48,39 @@ The levels are:
 
 ## GetConnectors – Overall
 
+
+
 ### Data model
 
-#### <a id="DATA-20"></a>`Employment` and `Employment sequence number` used interchangeably
-
-**Level:** Error
-
-**Why do you see this?**  
-The integration uses both `Employment` and `Employment sequence number`.
-
-**Risk / point of attention**  
-With multiple or changing employments, incorrect or duplicate data arises.
-
-**Solution**  
-Consistently use `Employment` as the functional number.  
-A small number of tables use `Employment sequence number` in the primary key. In those cases, you can add this field additionally to use for filtering and sorting. Functionally, you still use `Employment`.
-
-
----
-
-### Performance & scalability
-
-#### <a id="PERF-30"></a>Financial transactions without `Changed booking days` 
-
-**Level:** Error
-
-**Why do you see this?**  
-Financial transactions are fully retrieved.
-
-**Risk / point of attention**  
-Very large datasets, poor performance, and unnecessary load.
-
-**Solution**  
-Use an additional GetConnector based on the data collection `Changed booking days`. [Read this help article](https://help.afas.nl/help/NL/SE/App_Cnnct_View_Audit.htm#o79118) for more information.
-
----
-
-#### <a id="PERF-31"></a>Post-calculation without `Changed booking days post-calculation` 
+#### <a id="DATA-20"></a>`Employment number` and `Employment sequence number` are both used.
 
 **Level:** ❌ Error  
-**Certification impact:** **Blocks certification**  
 
 **Why do you see this?**  
-Post-calculation lines are fully retrieved.
+Your integration uses two different employment numbers interchangeably: an internal one (`Employment sequence number`) and the employment number you see in an employee's contract.
 
 **Risk / point of attention**  
-Very large datasets, poor performance, and unnecessary load.
+These 2 numbers are *often* the same, but can differ. With multiple or changing employments, incorrect or duplicate data arises. These errors are very difficult to trace.
 
 **Solution**  
-Use an additional GetConnector based on the data collection `Changed booking days post-calculation`. [Read this help article](https://help.afas.nl/help/NL/SE/App_Cnnct_View_Audit.htm#o95619) for more information.
+Adjust your GetConnectors to use `Employment` everywhere and no longer use `Employment sequence number`.
+
+**Exception**  
+A small number of tables use `Employment sequence number` in the primary key. In those cases, it is allowed to use this field for filtering and sorting. Functionally, you still use `Employment`. The auditor does not yet take this into account.
+
 
 ---
 
-## GetConnector – Individual
+## GetConnector – Individueel
 
-### Connector structure
+### Datamodel
 
-#### <a id="STRUCT-27"></a>This is a supplied Profit GetConnector. Make your own copy.
+#### <a id="DATA-21"></a>This GetConnector retrieves fields from `Current data per employment relationship`, but the integration uses data per employment.
 
-**Level:** Error
-
-**Why do you see this?**  
-A standard Profit GetConnector is being used.
-
-**Risk / point of attention**  
-
-* Can change without warning
-* Contains too many fields
-* No customer filters possible
-
-**Solution**  
-Make your **own copy** and rename it according to:
-
-```
-<YourApp>_<FunctionalName>
-```
-
-Never use `Profit` or `AFAS` in the name.
-
----
-
-#### <a id="STRUCT-29"></a>This GetConnector has 1 or more fields with a period in the name.
-
-**Level:** Error
+**Level:** ❌ Error
 
 **Why do you see this?**  
-One or more fields contain a `.` in the name.
-
-**Risk / point of attention**  
-Filtering and sorting via URL can fail because of this.
-
-**Solution**  
-Adjust the field name and remove the period.
-
----
-
-### Data model
-
-#### <a id="DATA-21"></a>This GetConnector retrieves fields from `Current data per employment relationship`
-
-**Level:** Error
-
-**Why do you see this?**  
-The GetConnector retrieves data from `Current data per employment relationship`, while the integration works with employments elsewhere.
+This GetConnector retrieves fields from `Current data per employment relationship`, but the integration uses data per employment.
 
 **Risk / point of attention**  
 With multiple simultaneous employments, incorrect or incomplete data is retrieved.
@@ -160,24 +90,24 @@ Use `Current data per employment` or avoid current tables entirely. Consult with
 
 ---
 
-#### <a id="DATA-23"></a>This GetConnector has 1 or more unknown fields
+#### <a id="DATA-23"></a>This GetConnector has 1 or more unknown fields.
 
-**Level:** Error
+**Level:** ❌ Error
 
 **Why do you see this?**  
-The GetConnector contains fields that no longer exist in the database. These return the value `(replaced)`.
+This GetConnector has 1 or more unknown fields.
 
 **Risk / point of attention**  
-The GetConnector is technically inconsistent and cannot be further extended.
+Unknown fields are no longer linked to a field in the database. In the result, they give a fixed value "(replaced)".
 
 **Solution**  
-Remove these fields or link them again to an existing database field.
+Remove the unknown fields, or link them to a field in the database. If they are custom fields, make sure they are provided as a `.fie` file and document how customers should import them.
 
 ---
 
-#### <a id="DATA-24"></a>Custom fields used
+#### <a id="DATA-24"></a>This GetConnector has 1 or more custom fields.
 
-**Level:** Warning
+**Niveau:** ℹ️ Informatief
 
 **Why do you see this?**  
 The integration uses custom fields.
@@ -186,13 +116,14 @@ The integration uses custom fields.
 Custom fields do not exist by default in every customer environment.
 
 **Action**  
-Supply custom fields as a `.fie` file
+If you want to use this GetConnector in another environment, these custom fields should be exported and imported into the other environment.
+
 
 ---
 
-#### <a id="DATA-25"></a>Compression applied
+#### <a id="DATA-25"></a>This GetConnector uses compression.
 
-**Level:** Informational
+**Level:** ℹ️ Informational
 
 **Why do you see this?**  
 The GetConnector uses compression (grouping).
@@ -205,12 +136,12 @@ Use compression only consciously. If in doubt: consult with AFAS.
 
 ---
 
-#### <a id="DATA-26"></a>Fields with special format
+#### <a id="DATA-26"></a>This GetConnector has fields with a special format.
 
-**Level:** Warning
+**Level:** ⚠️ Warning
 
 **Why do you see this?**  
-One or more fields use a SQL function (e.g., date formatting).
+This GetConnector has fields with a special format. These fields may not be filtered or sorted on.
 
 **Risk / point of attention**  
 Sorting or filtering on these fields has a major performance impact.
@@ -222,40 +153,10 @@ Use these fields only for presentation and never filter/sort on these fields.
 
 ### Performance
 
-#### <a id="PERF-32"></a>Cyclic reference
 
-**Level:** Warning
+#### <a id="PERF-45"></a>Voor deze GetConnector ontbreken velden die nodig zijn om de indexen optimaal te gebruiken voor sortering.
 
-**Why do you see this?**  
-The same table appears multiple times in the join path.
-
-**Risk / point of attention**  
-Unnecessary JOINs → performance loss.
-
-**Solution**  
-Check if the reference is functionally necessary.
-If not: simplify the GetConnector.
-
----
-
-#### <a id="PERF-33"></a>Possible subselect
-
-**Level:** Warning
-
-**Why do you see this?**  
-`SELECT` appears multiple times in the SQL definition.
-
-**Risk / point of attention**  
-Subselects can be executed per row and are expensive.
-
-**Solution**  
-Only action needed if performance issues occur. Get advice from System Integrators.
-
----
-
-#### <a id="PERF-45"></a>Index fields missing
-
-**Level:** Warning
+**Level:** ⚠️ Warning
 
 **Why do you see this?**  
 Not all index fields are visible in the GetConnector.
@@ -268,15 +169,33 @@ Make index fields visible and use them in sorting and filtering.
 
 ---
 
-#### <a id="PERF-46"></a>Recommended index usage
+#### <a id="PERF-46"></a>Use one of the following unique indexes on the main table for sorting and filtering.
 
-**Level:** Informational
+**Level:** ℹ️ Informational
 
 **Why do you see this?**  
 The auditor shows recommended indexes.
 
 **What can you do with it?**  
-Use these indexes for optimal performance.
+Use these indexes for optimal performance. The fields in these indexes identify unique rows.
+
+---
+
+#### <a id="PERF-52"></a>This GetConnector retrieves data from tables more than 5 levels deep.
+
+**Level:** ⚠️ Warning
+
+**Why do you see this?**
+The GetConnector retrieves data from tables that are nested more than 5 levels deep.
+
+**Risk / point of attention**  
+Deep joins can cause performance problems.
+
+**Solution**  
+Check if you can simplify the GetConnector by using less deeply nested tables.
+
+
+
 
 ---
 
@@ -284,7 +203,7 @@ Use these indexes for optimal performance.
 
 #### <a id="FILT-47"></a>The filter uses 'contains (not)', 'starts (not) with' or 'ends (not) with'.
 
-**Level:** Error
+**Level:** ❌ Error
 
 **Why do you see this?**  
 Filtering is done with `contains`, `starts with` or `ends with`.
@@ -297,73 +216,58 @@ Use equality filters (`=`, `>`, `<` etc.) on index fields.
 
 ---
 
-#### <a id="FILT-48"></a>User filter present
 
-**Level:** Warning
+#### <a id="PERF-34"></a>Deze GetConnector haalt gegevens op uit meer dan 5 verschillende tabellen.
 
-**Why do you see this?**  
-The GetConnector contains a fixed filter.
+**Level:** ⚠️ Warning
+
+**Why do you see this?**
+The GetConnector retrieves data from more than 5 different tables.
 
 **Risk / point of attention**  
-The filter may not be suitable for all customers.
+Using many joins can cause performance problems, especially with large tables.
+
 
 **Solution**  
-Make filters dynamic via URL parameters or document limitations.
+Only action needed if performance issues occur. In that case, create multiple GetConnectors that each use fewer tables. Get advice from System Integrators.
 
 ---
 
-## Performance & Scalability
+#### <a id="PERF-35"></a>This GetConnector retrieves data from a very large table.
 
-#### <a id="PERF-34"></a>Many joins
+**Level:** ⚠️ Warning
 
-**Level:** Warning
-
-**Why do you see this?**  
-The GetConnector retrieves data from more than 5 tables.
+**Why do you see this?**
+The GetConnector retrieves data from one of the 10 largest tables in the database.
 
 **Risk / point of attention**  
-Complex SQL with potentially poor performance.
+Retrieving data from very large tables can cause performance problems. 
 
 **Solution**  
-Consider splitting into multiple GetConnectors.
-
----
-
-#### <a id="PERF-35"></a>Deep nesting or large tables
-
-**Level:** Warning
-
-**Why do you see this?**  
-Deep nesting is used or reading from very large tables.
-
-**Risk / point of attention**  
-Slow queries with larger datasets.
-
-**Solution**  
-Minimize fields, joins, and calculations.
+Ensure that your filters and sorting make optimal use of indexes. Use as few joins as possible, in other words: follow as few references to other tables as possible. Consult with AFAS if in doubt. 
 
 ---
 
 ## Authorization & Privacy
 
-#### <a id="AUT-16"></a>Authorized GetConnector
+#### <a id="AUT-16"></a>This GetConnector is authorized.
 
-**Level:** Informational
+**Level:** ⚠️ Warning
 
 **Why do you see this?**  
-The GetConnector respects filter authorization.
+The GetConnector is authorized.
 
-**What can you do with it?**  
-If results are unexpected, the cause often lies with authorization.
+**What does this mean?**  
+If results are unexpected, the cause often lies with authorization. The integration may not retrieve all expected data.
 
 **Action**  
-Document the authorizations used.
+Be sure the connector user received the correct access rights.
 
 ---
 
-#### <a id="AUT-19"></a>Privacy-sensitive fields
+#### <a id="AUT-19"></a>This GetConnector has fields that are marked as privacy-sensitive.
 
-**Level:** Warning
+**Level:** ⚠️ Warning
 
 **Why do you see this?**  
 Fields marked as privacy-sensitive are retrieved.
@@ -373,6 +277,7 @@ Possible GDPR risk.
 
 **Solution**  
 Only retrieve strictly necessary data
+
 
 ---
 

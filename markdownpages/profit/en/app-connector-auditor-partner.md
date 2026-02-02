@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2026-02-03
+date: 2026-02-04
 index: true
 tags: AppConnector, Auditor, Partner, Certification, GetConnector, pentest
 title: AppConnector Auditor - Partner Report
@@ -94,9 +94,32 @@ This section contains partner-specific messages about the AppConnector itself (n
 
 ## GetConnectors – Overall
 
+### Authorization & Privacy
+
+#### <a id="AUT-17"></a>The following authorizations are applied, make sure you mention this in your implementation document.
+
+**Level:** ⚠️ Warning  
+**Certification impact:** Must be resolved or documented
+
+**Why do you see this?**  
+The integration uses authorization.
+
+**What does this mean?**  
+If authorizations are not properly configured, the integration gets too much or too little data.
+
+**Action**  
+
+* State in your implementation document:
+  * Which authorization filters apply
+
+
+---
+
+
+
 ### Data model
 
-#### <a id="DATA-20"></a>`Employment number` and `Employment sequence number` are both used
+#### <a id="DATA-20"></a>`Employment number` and `Employment sequence number` are both used.
 
 **Level:** ❌ Error  
 **Certification impact:** **Blocks certification**  
@@ -117,7 +140,7 @@ A small number of tables use `Employment sequence number` in the primary key. In
 
 ### Performance & scalability
 
-#### <a id="PERF-30"></a>Financial transactions without `Changed booking days`
+#### <a id="PERF-30"></a>Financial transactions are retrieved, but `Changed booking days` is not used.
 
 **Level:** ❌ Error  
 **Certification impact:** **Blocks certification**  
@@ -133,7 +156,8 @@ Use an additional GetConnector based on the data collection `Changed booking day
 
 ---
 
-#### <a id="PERF-31"></a>Post-calculation without `Changed booking days post-calculation`
+#### <a id="PERF-31"></a>Post-calculation is retrieved, but `Changed booking days post-calculation` is not used.
+
 
 **Level:** ❌ Error  
 **Certification impact:** **Blocks certification**  
@@ -217,7 +241,9 @@ Adjust the relevant field names and remove the period.
 
 ### Data model
 
-#### <a id="DATA-21"></a>This GetConnector retrieves fields from Current data per employment relationship
+#### <a id="DATA-21"></a>This GetConnector retrieves fields from `Current data per employment relationship`, but the integration uses data per employment.
+
+
 
 **Level:** ❌ Error  
 **Certification impact:** **Blocks certification**  
@@ -233,7 +259,7 @@ Use `Current data per employment` or avoid current tables entirely. Consult with
 
 ---
 
-#### <a id="DATA-23"></a>This GetConnector has 1 or more unknown fields
+#### <a id="DATA-23"></a>This GetConnector has 1 or more unknown fields.
 
 **Level:** ❌ Error  
 **Certification impact:** **Blocks certification**  
@@ -245,11 +271,13 @@ This GetConnector has 1 or more unknown fields.
 Unknown fields are no longer linked to a field in the database. In the result, they give a fixed value "(replaced)".
 
 **Solution**  
-Remove the unknown fields, or link them to a field in the database.
+Remove the unknown fields, or link them to a field in the database. If they are custom fields, make sure they are provided as a `.fie` file and document how customers should import them.
 
 ---
 
-#### <a id="DATA-24"></a>Custom fields used
+#### <a id="DATA-24"></a>This GetConnector has 1 or more custom fields.
+
+
 
 **Level:** ⚠️ Warning  
 **Certification impact:** Must be resolved or documented
@@ -267,7 +295,9 @@ Custom fields do not exist by default in every customer environment.
 
 ---
 
-#### <a id="DATA-25"></a>Compression applied
+#### <a id="DATA-25"></a>This GetConnector uses compression.
+
+
 
 **Level:** ℹ️ Informational  
 **Certification impact:** None
@@ -283,10 +313,10 @@ Use compression only consciously. If in doubt: consult with AFAS.
 
 ---
 
-#### <a id="DATA-26"></a>Fields with special format
+#### <a id="DATA-26"></a>This GetConnector has fields with a special format.
 
 **Level:** ⚠️ Warning  
-**Certification impact:** Must be resolved
+**Certification impact:** Must be resolved or justified
 
 **Why do you see this?**  
 This GetConnector has fields with a special format. These fields may not be filtered or sorted on.
@@ -301,7 +331,8 @@ Use these fields only for presentation and never filter/sort on these fields.
 
 ### Performance
 
-#### <a id="PERF-32"></a>Cyclic reference
+#### <a id="PERF-32"></a>This GetConnector has (possibly) a cyclic reference.
+
 
 **Level:** ⚠️ Warning  
 **Certification impact:** Must be resolved or justified
@@ -318,7 +349,8 @@ If not: simplify the GetConnector.
 
 ---
 
-#### <a id="PERF-33"></a>Possible subselect
+#### <a id="PERF-33"></a>This GetConnector possibly uses a subselect.
+
 
 **Level:** ⚠️ Warning  
 **Certification impact:** Monitor performance
@@ -327,14 +359,55 @@ If not: simplify the GetConnector.
 `SELECT` appears multiple times in the SQL definition.
 
 **Risk / point of attention**  
-Subselects can be executed per row and are expensive.
+Subselects can be executed per row and can negatively affect performance.
 
 **Solution**  
 Only action needed if performance issues occur. Get advice from System Integrators.
 
 ---
 
+
+#### <a id="PERF-34"></a>This GetConnector retrieves data from more than 5 different tables.
+
+
+**Level:** ⚠️ Warning  
+**Certification impact:** Monitor and optimize if needed
+
+**Why do you see this?**
+The GetConnector retrieves data from more than 5 different tables.
+
+**Risk / point of attention**  
+Using many joins can cause performance problems, especially with large tables.
+
+
+**Solution**  
+Only action needed if performance issues occur. In that case, create multiple GetConnectors that each use fewer tables. Get advice from System Integrators.
+
+
+
+---
+
+#### <a id="PERF-35"></a>This GetConnector retrieves data from a very large table.
+
+
+**Level:** ⚠️ Warning  
+**Certification impact:** Resolve or justify
+
+**Why do you see this?**
+The GetConnector retrieves data from one of the 10 largest tables in the database.
+
+**Risk / point of attention**  
+Retrieving data from very large tables can cause performance problems. 
+
+**Solution**  
+Ensure that your filters and sorting make optimal use of indexes. Use as few joins as possible, in other words: follow as few references to other tables as possible. Consult with AFAS if in doubt. 
+
+
+---
+
 #### <a id="PERF-36"></a>This GetConnector retrieves fields from a table that is also available as an alias.
+
+
 
 **Level:** ⚠️ Warning  
 **Certification impact:** Monitor and optimize if needed
@@ -350,7 +423,26 @@ Check if you can use the alias table instead of the longer path. This gives bett
 
 ---
 
-#### <a id="PERF-45"></a>Index fields missing
+#### <a id="PERF-37"></a>This GetConnector also retrieves fields from another alias. 
+
+
+**Level:** ⚠️ Warning  
+**Certification impact:** Monitor and optimize if needed
+
+**Why do you see this?**  
+The GetConnector retrieves fields from a table that is also available as an alias (shortcut). 
+
+**Risk / point of attention**  
+Some aliases contain a 1-to-n relationship, which can cause rows from the main table to appear multiple times. The displayed indexes are then not unique.
+
+**Solution**  
+Test yourself, or consult with AFAS, whether the indexes are unique. If not: expand the sorting with additional fields so that it becomes unique.
+
+
+---
+
+
+#### <a id="PERF-45"></a>For this GetConnector, fields are missing that are needed to optimally use the indexes for sorting.
 
 **Level:** ⚠️ Warning  
 **Certification impact:** Must be resolved
@@ -366,7 +458,7 @@ Make index fields visible and use them in sorting and filtering.
 
 ---
 
-#### <a id="PERF-46"></a>Recommended index usage
+#### <a id="PERF-46"></a>Use one of the following unique indexes on the main table for sorting and filtering.
 
 **Level:** ℹ️ Informational  
 **Certification impact:** Best practice
@@ -375,13 +467,33 @@ Make index fields visible and use them in sorting and filtering.
 The auditor shows recommended indexes.
 
 **What can you do with it?**  
-Use these indexes for optimal performance.
+Use these indexes for optimal performance. The fields in these indexes identify unique rows.
+
+---
+
+#### <a id="PERF-52"></a>This GetConnector retrieves data from tables more than 5 levels deep.
+
+**Level:** ⚠️ Warning  
+**Certification impact:** Resolve or justify
+
+**Why do you see this?**
+The GetConnector retrieves data from tables that are nested more than 5 levels deep.
+
+**Risk / point of attention**  
+Deep joins can cause performance problems.
+
+**Solution**  
+Check if you can simplify the GetConnector by using less deeply nested tables.
+
+
+
 
 ---
 
 ### Selection & filtering
 
-#### <a id="FILT-47"></a>Slow filter type used
+#### <a id="FILT-47"></a>The filter uses 'contains (not)', 'starts (not) with' or 'ends (not) with'.
+
 
 **Level:** ❌ Error  
 **Certification impact:** **Blocks certification**  
@@ -397,7 +509,7 @@ Use equality filters (`=`, `>`, `<` etc.) on index fields.
 
 ---
 
-#### <a id="FILT-48"></a>User filter present
+#### <a id="FILT-48"></a>This GetConnector has a user filter, check if it applies to all customers.
 
 **Level:** ⚠️ Warning  
 **Certification impact:** Must be resolved or documented
@@ -415,19 +527,20 @@ Make filters dynamic via URL parameters or document limitations.
 
 ## Authorization & Privacy
 
-#### <a id="AUT-16"></a>Authorized GetConnector
+#### <a id="AUT-16"></a>This GetConnector is authorized.
 
-**Level:** ℹ️ Informational  
+
+**Level:** ⚠️ Warning  
 **Certification impact:** Document
 
 **Why do you see this?**  
-The GetConnector respects filter authorization.
+The GetConnector is authorized.
 
-**What can you do with it?**  
-If results are unexpected, the cause often lies with authorization.
+**What does this mean?**  
+If results are unexpected, the cause often lies with authorization. The integration may not retrieve all expected data.
 
 **Action**  
-Document the authorizations used in the implementation document.
+State in your implementation document which authorization filters apply
 
 ---
 
@@ -451,7 +564,8 @@ State in your implementation document:
 
 ---
 
-#### <a id="AUT-19"></a>Privacy-sensitive fields
+#### <a id="AUT-19"></a>This GetConnector has fields that are marked as privacy-sensitive.
+
 
 **Level:** ⚠️ Warning  
 **Certification impact:** Must be documented and justified
