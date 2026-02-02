@@ -56,6 +56,7 @@ Your integration is only certified as long as you meet all the following require
 * ✅ You send the correct IntegrationId with every call
 * ✅ You have a valid partner subscription
 * ✅ You have at least 5 customers actively using your integration
+* ✅ You have at least 2 contact persons registered as "Partner/expert communication" with AFAS
 
 ---
 

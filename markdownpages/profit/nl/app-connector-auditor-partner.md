@@ -56,6 +56,7 @@ Je koppeling is alleen gecertificeerd zolang je aan alle onderstaande eisen vold
 * ✅ Je stuurt het juiste IntegrationId mee bij elke aanroep
 * ✅ Je hebt een geldig partnerabonnement
 * ✅ Je hebt minimaal 5 klanten die je koppeling actief gebruiken
+* ✅ Je hebt minimaal 2 contactpersonen als "Partner-/expertcommunicatie" geregistreerd bij AFAS
 
 ---
 
