@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2026-01-25
+date: 2026-02-03
 index: true
 tags: AppConnector, Auditor, Partner, Certification, GetConnector, pentest
 title: AppConnector Auditor - Partner Report
@@ -31,7 +31,7 @@ This report is specifically designed for **AFAS Partners** and contains the stri
 
 ## Partner data and administration
 
-For an explanation of the **Partner data** and **Your integrations** sections shown at the top of the report, see [Partner data and integrations](./app-connector-auditor-partnergegevens).
+For an explanation of the **Partner data** and **Your integrations** sections shown at the top of the report, see [Partner data and integrations](./app-connector-auditor-partnerinfo).
 
 This section contains critical information about:
 * Your partner status and certification

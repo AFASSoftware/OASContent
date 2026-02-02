@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2026-01-25
+date: 2026-02-03
 index: true
 tags: Partner, Administratie, Certificering, Partnergegevens
 title: Partnergegevens en koppelingen
@@ -8,7 +8,9 @@ title: Partnergegevens en koppelingen
 
 # Partner information and integrations
 
-This chapter describes the **Partner information** and **Integrations** sections as shown at the top of the AppConnector Auditor report. This information is intended to give you as a partner insight into your administrative status at AFAS and the progress and status of your certifications.
+This chapter describes the **Partner information** and **Integrations** sections as shown at the top of the AppConnector Auditor report. This information is intended to give you as a partner insight into your administrative status at AFAS and the progress and status of your certifications.  
+
+> This data is only visible to you, in the environment(s) associated with your partner subscription. Customers cannot view this data. The data is retrieved directly from the AFAS partner administration and is separate from the technical analysis that the AppConnector Auditor performs on your integrations.
 
 ---
 
@@ -23,22 +25,20 @@ This section shows the data that AFAS uses from your organization within the par
 
 * **You have 2 or more contacts for partner/expert communication**
   We use these contacts for technical questions, news, and issues regarding your integrations.
-  Manage these via the partner portal.
+  Manage these via the [customer portal](https://klant.afas.nl).
 
 * **Your PEN test is valid**
   This checkmark is green as long as the validity of your most recent PEN test has not expired.
 
-**Displayed data**
+**Your data: {your name}**
 
-* **Name** – Official company name of your organization.
 * **Subscription number** – The number of your partner license. This is also the first part of the `IntegrationId`.
-* **Customer number** – Your customer number at AFAS.
-* **Contacts for partner/expert communication** – Persons who can be contacted by AFAS.
+* **Contacts for partner/expert communication** – Persons who can be contacted by AFAS about partner matters.
 * **Responsible person at AFAS** – Your permanent contact within AFAS.
-* **PEN test status** – Green, orange, or red, depending on the result and validity.
+* **PEN test status** – Green, orange, or red, depending on the result. A Green score is valid for 3 years, an Orange score is valid for 15 months, and a Red score is valid for 6 months. This is calculated from the date mentioned in the PEN test report.
 * **End date of PEN test validity** – After this date, you formally no longer meet the partner requirements.
 
-> ⚠️ Has your PEN test expired or is it about to expire? Contact AFAS in time to avoid consequences for your partnership.
+> ⚠️ Has your PEN test expired or is it about to expire? Have a new test performed in time to avoid consequences for your partnership.
 
 ---
 
@@ -46,24 +46,25 @@ This section shows the data that AFAS uses from your organization within the par
 
 Under the partner information, all integrations you have registered are shown separately. Each integration has its own section and its own certification process.
 
+**Title** – `Name of the integration` as shown on the partner portal.
+
 **Checklist per integration**
 
-* **Your certification is complete**
-  This checkmark is green when all project tasks have been completed.
+* **The certification is complete**
+  This checkmark is green if the integration is certified. If the integration is not yet certified, the outstanding project tasks that you need to complete to achieve certification are shown.
 
 * **Your integration is shown on the partner portal**
-  Not all integrations are shown on [https://partner.afas.nl/koppelingen](https://partner.afas.nl/koppelingen). The integration must be certified and the partner must have provided the data on [https://partner.afas.nl/mijn-paginas](https://partner.afas.nl/mijn-paginas).
+  Your integration is shown on [https://partner.afas.nl/koppelingen](https://partner.afas.nl/koppelingen) if it is certified. You must have provided the data on [https://partner.afas.nl/mijn-paginas](https://partner.afas.nl/mijn-paginas).
 
 **Displayed data per integration**
 
-* **Name of the integration** – As visible on the partner portal.
-* **IntegrationId** – Technical identification of the integration (`<SubscriptionNumber>_<UniqueId>`).
+* **IntegrationId** – Technical identification of the integration (`<SubscriptionNumber>_<UniqueId>` or `<SubscriptionNumber>_<ProjectCode>`).
 * **Project code** – AFAS project in which the certification is tracked.
 * **AFAS project manager** – Usually a System Integrator; may be empty for older integrations.
-* **Team members** – Contacts with access to the project tasks. Missing colleagues? Add them yourself on the partner portal, and contact your AFAS project manager to give them access to the project.
+* **Team members** – Contacts with access to the project tasks. Missing colleagues? Add them yourself on the partner portal, and contact your AFAS project manager to give them access to the project. This field may be empty for older integrations.
 * **Certification complete** – Yes/No.
-* **Number of outstanding project tasks** – Only visible while certification is ongoing.
-* **Deadline for certification** – Start date + 12 months.
+* **Number of outstanding tasks** – Only visible while certification is ongoing.
+* **Deadline for certification** – Start date + 12 months. Only visible while certification is ongoing.
 * **Partner portal page** – The page where your integration is presented.
 * **Introduction / Description / Website** – Texts as visible on the partner portal.
 

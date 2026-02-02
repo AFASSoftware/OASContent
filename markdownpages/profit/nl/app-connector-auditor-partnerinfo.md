@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2026-01-25
+date: 2026-02-03
 index: true
 tags: Partner, Administratie, Certificering, Partnergegevens
 title: Partnergegevens en koppelingen
@@ -30,11 +30,9 @@ Deze sectie toont de gegevens die AFAS van jouw organisatie gebruikt binnen het 
 * **Je pentest is geldig**  
   Dit vinkje is groen zolang de geldigheid van je meest recente pentest niet is verlopen.
 
-**Getoonde gegevens**  
+**Jouw gegevens: {jouw naam}**  
 
-* **Naam** – Officiële bedrijfsnaam van je organisatie.
 * **Abonnementsnummer** – Het nummer van jouw partnerlicentie. Dit is ook het eerste deel van het `IntegrationId`.
-* **Debiteurnummer** – Jouw klantnummer bij AFAS.
 * **Contactpersonen voor partner-/expertcommunicatie** – Personen die door AFAS benaderd kunnen worden over partnerzaken.
 * **Verantwoordelijke bij AFAS** – Jouw vaste aanspreekpunt binnen AFAS.
 * **Status pentest** – Groen, oranje of rood, afhankelijk van de uitkomst. Een Groene score is 3 jaar geldig, een Oranje score is 15 maanden geldig en een Rode score is 6 maanden geldig. Dit is gerekend vanaf de datum die op het pentestrapport genoemd wordt.
@@ -64,12 +62,11 @@ Onder de partnergegevens worden alle door jou aangemelde koppelingen afzonderlij
 * **Projectcode** – AFAS-project waarin de certificering wordt bijgehouden.
 * **AFAS-projectleider** – Meestal een Systemintegrator; kan leeg zijn bij oudere koppelingen.
 * **Teamleden** – Contactpersonen met toegang tot de projecttaken. Missen er collega's? Voeg ze zelf toe op de partnerportal, en neem contact op met je AFAS-projectleider om ze toegang te geven tot het project. Dit veld kan leeg zijn bij oudere koppelingen.
-* **Certificering afgerond** – Ja/Nee.
-* **Aantal openstaande projecttaken** – Alleen zichtbaar zolang de certificering loopt.
+* **De certificering is afgerond** – Ja/Nee.
+* **Aantal openstaande taken** – Alleen zichtbaar zolang de certificering loopt.
 * **Deadline voor certificering** – Startdatum + 12 maanden. Alleen zichtbaar zolang de certificering loopt.
 * **Partnerportal-pagina** – De pagina waarop je koppeling wordt gepresenteerd.
 * **Introductie / Beschrijving / Website** – Teksten zoals zichtbaar op de partnerportal. 
-* **Koppeling zichtbaar op de partnerportal** – Nee. Alleen zichtbaar als je de gegevens nog niet hebt aangeleverd.
 
 > ⏳ Dreig je de deadline voor certificering niet te halen? Neem dan tijdig contact op met je AFAS-projectleider.
 

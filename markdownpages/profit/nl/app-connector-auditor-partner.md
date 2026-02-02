@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2026-01-25
+date: 2026-02-03
 index: true
 tags: AppConnector, Auditor, Partner, Certificering, GetConnector, pentest
 title: AppConnector Auditor - Partnerrapport
@@ -31,7 +31,7 @@ Dit rapport is specifiek bedoeld voor **AFAS Partners** en bevat de strengste co
 
 ## Partnergegevens en administratie
 
-Voor uitleg over de secties **Partnergegevens** en **Jouw koppelingen** die bovenaan het rapport worden getoond, zie [Partnergegevens en koppelingen](./app-connector-auditor-partnergegevens).
+Voor uitleg over de secties **Partnergegevens** en **Jouw koppelingen** die bovenaan het rapport worden getoond, zie [Partnergegevens en koppelingen](./app-connector-auditor-partnerinfo).
 
 Deze sectie bevat kritieke informatie over:
 * Je partnerstatus en certificering
