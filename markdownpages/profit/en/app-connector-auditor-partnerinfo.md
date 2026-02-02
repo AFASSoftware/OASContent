@@ -62,7 +62,6 @@ Under the partner information, all integrations you have registered are shown se
 * **Project code** – AFAS project in which the certification is tracked.
 * **AFAS project manager** – Usually a System Integrator; may be empty for older integrations.
 * **Team members** – Contacts with access to the project tasks. Missing colleagues? Add them yourself on the partner portal, and contact your AFAS project manager to give them access to the project. This field may be empty for older integrations.
-* **The certification is complete** – Yes/No.
 * **Number of outstanding tasks** – Only visible while certification is ongoing.
 * **Deadline for certification** – Start date + 12 months. Only visible while certification is ongoing.
 * **Partner portal page** – The page where your integration is presented.

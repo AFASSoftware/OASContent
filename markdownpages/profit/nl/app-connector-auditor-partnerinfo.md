@@ -62,7 +62,6 @@ Onder de partnergegevens worden alle door jou aangemelde koppelingen afzonderlij
 * **Projectcode** – AFAS-project waarin de certificering wordt bijgehouden.
 * **AFAS-projectleider** – Meestal een Systemintegrator; kan leeg zijn bij oudere koppelingen.
 * **Teamleden** – Contactpersonen met toegang tot de projecttaken. Missen er collega's? Voeg ze zelf toe op de partnerportal, en neem contact op met je AFAS-projectleider om ze toegang te geven tot het project. Dit veld kan leeg zijn bij oudere koppelingen.
-* **De certificering is afgerond** – Ja/Nee.
 * **Aantal openstaande taken** – Alleen zichtbaar zolang de certificering loopt.
 * **Deadline voor certificering** – Startdatum + 12 maanden. Alleen zichtbaar zolang de certificering loopt.
 * **Partnerportal-pagina** – De pagina waarop je koppeling wordt gepresenteerd.
