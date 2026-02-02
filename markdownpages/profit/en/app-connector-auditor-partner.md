@@ -97,13 +97,13 @@ This section contains partner-specific messages about the AppConnector itself (n
 
 ### Authorization & Privacy
 
-#### <a id="AUT-17"></a>The following authorizations are applied, make sure you mention this in your implementation document.
+#### <a id="AUT-17"></a>Filter authorization is applied.
 
 **Level:** ⚠️ Warning  
 **Certification impact:** Must be resolved or documented
 
 **Why do you see this?**  
-The integration uses authorization.
+The integration uses filter authorization.
 
 **What does this mean?**  
 If authorizations are not properly configured, the integration gets too much or too little data.
@@ -178,7 +178,7 @@ Use an additional GetConnector based on the data collection `Changed booking day
 
 ### Connector structure
 
-#### <a id="STRUCT-27"></a>This is a supplied Profit GetConnector. Make your own copy.
+#### <a id="STRUCT-27"></a>This is a supplied Profit GetConnector. 
 
 **Level:** ❌ Error  
 **Certification impact:** **Blocks certification**  
@@ -224,13 +224,13 @@ Never use `Profit` or `AFAS` in the name.
 
 ---
 
-#### <a id="STRUCT-29"></a>This GetConnector has 1 or more fields with a period in the name.
+#### <a id="STRUCT-29"></a>This GetConnector has fields with a period in the name.
 
 **Level:** ❌ Error  
 **Certification impact:** **Blocks certification**  
 
 **Why do you see this?**  
-This GetConnector has 1 or more fields with a period in the name.
+This GetConnector has fields with a period in the name. The report shows which ones.
 
 **Risk / point of attention**  
 A field name containing a period can cause unexpected errors when processing your call.
@@ -260,13 +260,13 @@ Use `Current data per employment` or avoid current tables entirely. Consult with
 
 ---
 
-#### <a id="DATA-23"></a>This GetConnector has 1 or more unknown fields.
+#### <a id="DATA-23"></a>This GetConnector has unknown fields.
 
 **Level:** ❌ Error  
 **Certification impact:** **Blocks certification**  
 
 **Why do you see this?**  
-This GetConnector has 1 or more unknown fields.
+This GetConnector has unknown fields. The report shows which ones.
 
 **Risk / point of attention**  
 Unknown fields are no longer linked to a field in the database. In the result, they give a fixed value "(replaced)".
@@ -276,7 +276,7 @@ Remove the unknown fields, or link them to a field in the database. If they are 
 
 ---
 
-#### <a id="DATA-24"></a>This GetConnector has 1 or more custom fields.
+#### <a id="DATA-24"></a>This GetConnector has custom fields.
 
 
 
@@ -284,7 +284,7 @@ Remove the unknown fields, or link them to a field in the database. If they are 
 **Certification impact:** Must be resolved or documented
 
 **Why do you see this?**  
-The integration uses custom fields.
+The integration uses custom fields. The report shows which ones.
 
 **What does this mean?**  
 Custom fields do not exist by default in every customer environment.
@@ -443,7 +443,7 @@ Test yourself, or consult with AFAS, whether the indexes are unique. If not: exp
 ---
 
 
-#### <a id="PERF-45"></a>For this GetConnector, fields are missing that are needed to optimally use the indexes for sorting.
+#### <a id="PERF-45"></a>This GetConnector lacks fields that are needed to optimally use the indexes for sorting.
 
 **Level:** ⚠️ Warning  
 **Certification impact:** Must be resolved
@@ -459,7 +459,7 @@ Make index fields visible and use them in sorting and filtering.
 
 ---
 
-#### <a id="PERF-46"></a>Use one of the following unique indexes on the main table for sorting and filtering.
+#### <a id="PERF-46"></a>Unique indexes on the main table of this GetConnector.
 
 **Level:** ℹ️ Informational  
 **Certification impact:** Best practice
@@ -468,7 +468,7 @@ Make index fields visible and use them in sorting and filtering.
 The auditor shows recommended indexes.
 
 **What can you do with it?**  
-Use these indexes for optimal performance. The fields in these indexes identify unique rows.
+Use these indexes for optimal performance. The fields in these indexes identify unique rows. Use preferably the fields of index 1, but index 2 or 3 can also be used if index 1 does not contain all necessary fields. Sort on the fields in the order of the index.
 
 ---
 
@@ -510,18 +510,20 @@ Use equality filters (`=`, `>`, `<` etc.) on index fields.
 
 ---
 
-#### <a id="FILT-48"></a>This GetConnector has a user filter, check if it applies to all customers.
+#### <a id="FILT-48"></a>This GetConnector has a user filter.
 
 **Level:** ⚠️ Warning  
 **Certification impact:** Must be resolved or documented
 
 **Why do you see this?**  
-The GetConnector contains a fixed filter.
+The GetConnector contains a fixed filter. 
 
 **Risk / point of attention**  
 The filter may not be suitable for all customers.
 
 **Solution**  
+Check if the filter is suitable for all customers.
+If not:
 Make filters dynamic via URL parameters or document limitations.
 
 ---
@@ -535,33 +537,13 @@ Make filters dynamic via URL parameters or document limitations.
 **Certification impact:** Document
 
 **Why do you see this?**  
-The GetConnector is authorized.
+The GetConnector is authorized. See also the [overall message](./app-connector-auditor-partner#AUT-17).
 
 **What does this mean?**  
 If results are unexpected, the cause often lies with authorization. The integration may not retrieve all expected data.
 
 **Action**  
 State in your implementation document which authorization filters apply
-
----
-
-#### <a id="AUT-17"></a>Authorizations in implementation document
-
-**Level:** ⚠️ Warning  
-**Certification impact:** Must be resolved or documented
-
-**Why do you see this?**  
-The integration uses filter authorization.
-
-**Risk / point of attention**  
-If authorizations are not properly configured, the integration gets too much or too little data.
-
-**Solution**  
-State in your implementation document:
-
-* Which authorization filters apply
-* How customers should configure them in their environment
-* What rights the token user needs
 
 ---
 

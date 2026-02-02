@@ -97,19 +97,19 @@ Deze sectie bevat partner-specifieke meldingen over de AppConnector zelf (niet d
 
 ### Autorisatie & Privacy
 
-#### <a id="AUT-17"></a>De volgende autorisaties worden toegepast, zorg dat je dat noemt in je implementatiedocument.
+#### <a id="AUT-17"></a>Er wordt filterautorisatie toegepast.
+
 
 **Niveau:** ⚠️ Waarschuwing  
-**Certificerings-impact:** Moet opgelost of gedocumenteerd worden
+**Certificerings-impact:** Noem in je implementatiedocument welke autorisatiefilters van toepassing zijn. 
 
 **Waarom zie je dit?**  
-De integratie maakt gebruik van autorisatie.
+De integratie maakt gebruik van autorisatie. 
 
 **Wat betekent dit?**  
 Als autorisaties niet goed zijn ingericht, krijgt de integratie te veel of te weinig gegevens.
 
 **Actie**  
-
 * Noem in je implementatiedocument:
   * Welke autorisatiefilters van toepassing zijn
 
@@ -178,7 +178,7 @@ Maak gebruik van een extra GetConnector, gebaseerd op de gegevensverzameling `Ge
 
 ### Connectorstructuur
 
-#### <a id="STRUCT-27"></a>Dit is een meegeleverde Profit GetConnector. Maak hier een eigen kopie van.
+#### <a id="STRUCT-27"></a>Dit is een meegeleverde Profit GetConnector.
 
 **Niveau:** ❌ Fout  
 **Certificerings-impact:** **Blokkeert certificering**  
@@ -224,13 +224,13 @@ Gebruik nooit `Profit` of `AFAS` in de naam.
 
 ---
 
-#### <a id="STRUCT-29"></a>Deze GetConnector heeft 1 of meer velden met een punt in de naam.
+#### <a id="STRUCT-29"></a>Deze GetConnector heeft velden met een punt in de naam.
 
 **Niveau:** ❌ Fout  
 **Certificerings-impact:** **Blokkeert certificering**  
 
 **Waarom zie je dit?**  
-Deze GetConnector heeft 1 of meer velden met een punt in de naam.
+Deze GetConnector heeft velden met een punt in de naam. Het rapport toont welke dat zijn.
 
 **Risico / aandachtspunt**  
 Een veldnaam die een punt bevat kan onverwachte fouten geven bij het verwerken van je aanroep.
@@ -260,13 +260,13 @@ Gebruik `Actuele gegevens per dienstverband` of vermijd actuele tabellen volledi
 
 ---
 
-#### <a id="DATA-23"></a>Deze GetConnector heeft 1 of meer onbekende velden.
+#### <a id="DATA-23"></a>Deze GetConnector heeft onbekende velden.
 
 **Niveau:** ❌ Fout  
 **Certificerings-impact:** **Blokkeert certificering**  
 
 **Waarom zie je dit?**  
-Deze GetConnector heeft 1 of meer onbekende velden.
+Deze GetConnector heeft onbekende velden. Het rapport toont welke dat zijn.
 
 **Risico / aandachtspunt**  
 Onbekende velden zijn niet meer gekoppeld aan een veld in de database. In het resultaat geven ze een vaste waarde "(vervangen)".
@@ -276,7 +276,7 @@ Verwijder de onbekende velden, of koppel ze aan een veld in de database. Als het
 
 ---
 
-#### <a id="DATA-24"></a>Deze GetConnector heeft 1 of meer vrije velden.
+#### <a id="DATA-24"></a>Deze GetConnector heeft vrije velden.
 
 
 
@@ -284,7 +284,7 @@ Verwijder de onbekende velden, of koppel ze aan een veld in de database. Als het
 **Certificerings-impact:** Moet opgelost of gedocumenteerd worden
 
 **Waarom zie je dit?**  
-De integratie maakt gebruik van vrije velden.
+De integratie maakt gebruik van vrije velden. Het rapport toont welke dat zijn.
 
 **Wat betekent dit?**  
 Vrije velden bestaan niet standaard in elke klantomgeving.
@@ -443,7 +443,7 @@ Test zelf, of overleg met AFAS, of de indexen uniek zijn. Zo niet: breid de sort
 ---
 
 
-#### <a id="PERF-45"></a>Voor deze GetConnector ontbreken velden die nodig zijn om de indexen optimaal te gebruiken voor sortering.
+#### <a id="PERF-45"></a>Deze GetConnector mist velden die nodig zijn om de indexen optimaal te gebruiken voor sortering.
 
 **Niveau:** ⚠️ Waarschuwing  
 **Certificerings-impact:** Moet opgelost worden
@@ -459,7 +459,7 @@ Maak indexvelden zichtbaar en gebruik deze in sortering en filtering.
 
 ---
 
-#### <a id="PERF-46"></a>Gebruik één van de volgende unieke indexen op de hoofdtabel om op te sorteren en te filteren.
+#### <a id="PERF-46"></a>Unieke indexen op de hoofdtabel van deze GetConnector.
 
 **Niveau:** ℹ️ Informatief  
 **Certificerings-impact:** Best practice
@@ -468,7 +468,7 @@ Maak indexvelden zichtbaar en gebruik deze in sortering en filtering.
 De auditor toont aanbevolen indexen.
 
 **Wat kun je ermee?**  
-Gebruik deze indexen voor optimale performance. De velden in deze indexen identificeren unieke regels.
+Gebruik deze indexen voor optimale performance. De velden in deze indexen identificeren unieke regels. Gebruik bij voorkeur de velden van index 1, maar index 2 of 3 kunnen ook gebruikt worden als index 1 niet alle benodigde velden bevat. Sorteer op de velden in de volgorde van de index.
 
 ---
 
@@ -510,7 +510,7 @@ Gebruik gelijkheidsfilters (`=`, `>`, `<` etc.) op indexvelden.
 
 ---
 
-#### <a id="FILT-48"></a>Deze GetConnector heeft een gebruikersfilter, controleer of het voor alle klanten van toepassing is.
+#### <a id="FILT-48"></a>Deze GetConnector heeft een gebruikersfilter.
 
 **Niveau:** ⚠️ Waarschuwing  
 **Certificerings-impact:** Moet opgelost of gedocumenteerd worden
@@ -522,6 +522,8 @@ De GetConnector bevat een vast filter.
 Het filter is mogelijk niet geschikt voor alle klanten.
 
 **Oplossing**  
+Controleer of het filter voor alle klanten geschikt is.
+Zo niet:
 Maak filters dynamisch via URL-parameters of documenteer beperkingen.
 
 ---
@@ -535,33 +537,13 @@ Maak filters dynamisch via URL-parameters of documenteer beperkingen.
 **Certificerings-impact:** Documenteren
 
 **Waarom zie je dit?**  
-De GetConnector respecteert filterautorisatie.
+De GetConnector respecteert filterautorisatie. Zie ook de [overkoepelende melding](./app-connector-auditor-partner#AUT-17).
 
 **Wat kun je ermee?**  
 Bij onverwachte resultaten ligt de oorzaak vaak bij autorisatie.
 
 **Actie**  
 Documenteer gebruikte autorisaties in het implementatiedocument.
-
----
-
-#### <a id="AUT-17"></a>Autorisaties in implementatiedocument
-
-**Niveau:** ⚠️ Waarschuwing  
-**Certificerings-impact:** Moet opgelost of gedocumenteerd worden
-
-**Waarom zie je dit?**  
-De integratie maakt gebruik van filterautorisatie.
-
-**Risico / aandachtspunt**  
-Als autorisaties niet goed zijn ingericht, krijgt de integratie te veel of te weinig gegevens.
-
-**Oplossing**  
-Noem in je implementatiedocument:
-
-* Welke autorisatiefilters van toepassing zijn
-* Hoe klanten deze in hun omgeving moeten instellen
-* Welke rechten de token-gebruiker nodig heeft
 
 ---
 

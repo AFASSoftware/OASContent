@@ -90,12 +90,12 @@ Use `Current data per employment` or avoid current tables entirely. Consult with
 
 ---
 
-#### <a id="DATA-23"></a>This GetConnector has 1 or more unknown fields.
+#### <a id="DATA-23"></a>This GetConnector has unknown fields.
 
 **Level:** ❌ Error
 
 **Why do you see this?**  
-This GetConnector has 1 or more unknown fields.
+This GetConnector has unknown fields. The report shows which ones.
 
 **Risk / point of attention**  
 Unknown fields are no longer linked to a field in the database. In the result, they give a fixed value "(replaced)".
@@ -105,12 +105,12 @@ Remove the unknown fields, or link them to a field in the database. If they are 
 
 ---
 
-#### <a id="DATA-24"></a>This GetConnector has 1 or more custom fields.
+#### <a id="DATA-24"></a>This GetConnector has custom fields.
 
 **Niveau:** ℹ️ Informatief
 
 **Why do you see this?**  
-The integration uses custom fields.
+The integration uses custom fields. The report shows which ones.
 
 **What does this mean?**  
 Custom fields do not exist by default in every customer environment.
@@ -154,7 +154,7 @@ Use these fields only for presentation and never filter/sort on these fields.
 ### Performance
 
 
-#### <a id="PERF-45"></a>Voor deze GetConnector ontbreken velden die nodig zijn om de indexen optimaal te gebruiken voor sortering.
+#### <a id="PERF-45"></a>This GetConnector lacks fields that are needed to optimally use the indexes for sorting.
 
 **Level:** ⚠️ Warning
 
@@ -169,7 +169,7 @@ Make index fields visible and use them in sorting and filtering.
 
 ---
 
-#### <a id="PERF-46"></a>Use one of the following unique indexes on the main table for sorting and filtering.
+#### <a id="PERF-46"></a>Unique indexes on the main table of this GetConnector.
 
 **Level:** ℹ️ Informational
 
@@ -177,7 +177,7 @@ Make index fields visible and use them in sorting and filtering.
 The auditor shows recommended indexes.
 
 **What can you do with it?**  
-Use these indexes for optimal performance. The fields in these indexes identify unique rows.
+Use these indexes for optimal performance. The fields in these indexes identify unique rows. Use preferably the fields of index 1, but index 2 or 3 can also be used if index 1 does not contain all necessary fields. Sort on the fields in the order of the index.
 
 ---
 
@@ -217,7 +217,7 @@ Use equality filters (`=`, `>`, `<` etc.) on index fields.
 ---
 
 
-#### <a id="PERF-34"></a>Deze GetConnector haalt gegevens op uit meer dan 5 verschillende tabellen.
+#### <a id="PERF-34"></a>This GetConnector retrieves data from more than 5 different tables.
 
 **Level:** ⚠️ Warning
 

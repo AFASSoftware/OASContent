@@ -90,12 +90,12 @@ Gebruik `Actuele gegevens per dienstverband` of vermijd actuele tabellen volledi
 
 ---
 
-#### <a id="DATA-23"></a>Deze GetConnector heeft 1 of meer onbekende velden.
+#### <a id="DATA-23"></a>Deze GetConnector heeft onbekende velden.
 
 **Niveau:** ❌ Fout
 
 **Waarom zie je dit?**  
-Deze GetConnector heeft 1 of meer onbekende velden.
+Deze GetConnector heeft onbekende velden. Het rapport toont welke dat zijn.
 
 **Risico / aandachtspunt**  
 Onbekende velden zijn niet meer gekoppeld aan een veld in de database. In het resultaat geven ze een vaste waarde "(vervangen)".
@@ -105,12 +105,12 @@ Verwijder de onbekende velden, of koppel ze aan een veld in de database. Mogelij
 
 ---
 
-#### <a id="DATA-24"></a>Deze GetConnector heeft 1 of meer vrije velden.
+#### <a id="DATA-24"></a>Deze GetConnector heeft vrije velden.
 
 **Niveau:** ℹ️ Informatief
 
 **Waarom zie je dit?**  
-De integratie maakt gebruik van vrije velden.
+De integratie maakt gebruik van vrije velden. Het rapport toont welke dat zijn.
 
 **Wat betekent dit?**  
 Vrije velden zijn niet standaard in elke omgeving aanwezig. 
@@ -155,7 +155,7 @@ Gebruik deze velden alleen voor presentatie en filter/sorteer nooit op deze veld
 ### Performance
 
 
-#### <a id="PERF-45"></a>Voor deze GetConnector ontbreken velden die nodig zijn om de indexen optimaal te gebruiken voor sortering.
+#### <a id="PERF-45"></a>Deze GetConnector mist velden die nodig zijn om de indexen optimaal te gebruiken voor sortering.
 
 **Niveau:** ⚠️ Waarschuwing
 
@@ -170,7 +170,7 @@ Maak indexvelden zichtbaar en gebruik deze in sortering en filtering.
 
 ---
 
-#### <a id="PERF-46"></a>Gebruik één van de volgende unieke indexen op de hoofdtabel om op te sorteren en te filteren.
+#### <a id="PERF-46"></a>Unieke indexen op de hoofdtabel van deze GetConnector.
 
 **Niveau:** ℹ️ Informatief
 
@@ -178,7 +178,7 @@ Maak indexvelden zichtbaar en gebruik deze in sortering en filtering.
 De auditor toont aanbevolen indexen.
 
 **Wat kun je ermee?**  
-Gebruik deze indexen voor optimale performance. De velden in deze indexen identificeren unieke regels.
+Gebruik deze indexen voor optimale performance. De velden in deze indexen identificeren unieke regels. Gebruik bij voorkeur de velden van index 1, maar index 2 of 3 kunnen ook gebruikt worden als index 1 niet alle benodigde velden bevat. Sorteer op de velden in de volgorde van de index.
 
 ---
 
