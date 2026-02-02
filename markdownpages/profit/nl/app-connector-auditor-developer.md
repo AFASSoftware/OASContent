@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2026-01-25
+date: 2026-02-03
 index: true
 tags: AppConnector, Auditor, Developer, GetConnector, API, Integration
 title: AppConnector Auditor - Ontwikkelaarsrapport
@@ -9,8 +9,8 @@ title: AppConnector Auditor - Ontwikkelaarsrapport
 # AppConnector Auditor - Ontwikkelaarsrapport
 
 > 📊 **Dit rapport is voor ontwikkelaars** (partner of in-house). Ben je eindgebruiker of AFAS Partner? Zie:
-> * [AppConnector Auditor](app-connector-auditor.md) voor eindgebruikers en functioneel beheerders
-> * [Partnerrapport](app-connector-auditor-partner.md) voor AFAS Partners (striktere eisen voor certificering)
+> * [AppConnector Auditor](./app-connector-auditor) voor eindgebruikers en functioneel beheerders
+> * [Partnerrapport](./app-connector-auditor-partner) voor AFAS Partners (striktere eisen voor certificering)
 
 ---
 
@@ -380,7 +380,7 @@ Haal alleen strikt noodzakelijke gegevens op
 
 Deze help is bedoeld als **naslagwerk en technische specificatie**, niet als vervanging van persoonlijk overleg.
 
-Dit document is nooit af. Zie je iets dat niet klopt, of heb je suggesties voor verbetering? Maak een pull request aan op de [GitHub-pagina van de documentatie](https://github.com/AFASSoftware/OASContent/blob/main/markdownpages/profit/nl/app-connector-auditor-partner.md).
+Dit document is nooit af. Zie je iets dat niet klopt, of heb je suggesties voor verbetering? Maak een pull request aan op de [GitHub-pagina van de documentatie](https://github.com/AFASSoftware/OASContent/blob/main/markdownpages/profit/nl/app-connector-auditor-developer.md).
 
 *Happy coding!*
 

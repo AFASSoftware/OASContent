@@ -9,8 +9,8 @@ title: AppConnector Auditor - Partner Report
 # AppConnector Auditor - Partner Report
 
 > 📊 **This report is for AFAS Partners**. Are you an end user or in-house developer? See:
-> * [AppConnector Auditor](app-connector-auditor.md) for end users and functional administrators
-> * [Developer Report](app-connector-auditor-developer.md) for developers (less strict requirements)
+> * [AppConnector Auditor](./app-connector-auditor) for end users and functional administrators
+> * [Developer Report](./app-connector-auditor-developer) for developers (less strict requirements)
 
 ---
 

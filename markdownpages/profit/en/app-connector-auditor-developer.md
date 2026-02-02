@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2026-01-25
+date: 2026-02-03
 index: true
 tags: AppConnector, Auditor, Developer, GetConnector, API, Integration
 title: AppConnector Auditor - Developer Report
@@ -9,8 +9,8 @@ title: AppConnector Auditor - Developer Report
 # AppConnector Auditor - Developer Report
 
 > 📊 **This report is for developers** (partner or in-house). Are you an end user or AFAS Partner? See:
-> * [AppConnector Auditor](app-connector-auditor.md) for end users and functional administrators
-> * [Partner Report](app-connector-auditor-partner.md) for AFAS Partners (stricter requirements for certification)
+> * [AppConnector Auditor](./app-connector-auditor) for end users and functional administrators
+> * [Partner Report](./app-connector-auditor-partner) for AFAS Partners (stricter requirements for certification)
 
 ---
 

@@ -9,8 +9,8 @@ title: AppConnector Auditor - Partnerrapport
 # AppConnector Auditor - Partnerrapport
 
 > 📊 **Dit rapport is voor AFAS Partners**. Ben je eindgebruiker of in-house ontwikkelaar? Zie:
-> * [AppConnector Auditor](app-connector-auditor.md) voor eindgebruikers en functioneel beheerders
-> * [Ontwikkelaarsrapport](app-connector-auditor-developer.md) voor developers (minder strikte eisen)
+> * [AppConnector Auditor](./app-connector-auditor) voor eindgebruikers en functioneel beheerders
+> * [Ontwikkelaarsrapport](./app-connector-auditor-developer) voor developers (minder strikte eisen)
 
 ---
 
@@ -180,7 +180,7 @@ Gebruik nooit `Profit` of `AFAS` in de naam; dat is voor de klant wel duidelijk.
 #### <a id="STRUCT-28"></a>Deze GetConnector heeft een naam die begint met `Profit_`.
 
 **Niveau:** ❌ Fout  
-**Certificerings-impact:** **Blokkeert certificering\*\*  
+**Certificerings-impact:** **Blokkeert certificering**  
 
 **Waarom zie je dit?**  
 Een GetConnector heeft een naam die begint met `Profit_`.

@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2026-01-25
+date: 2026-02-03
 index: true
 tags: Partner, IntegrationId, Certification, Integration, Configuration
 title: Certification steps for Partners
@@ -62,7 +62,7 @@ Go to https://klant.afas.nl/supportplus and activate it!
 
 ### Specialization course: Connectors
 
-Register for a course where you will learn everything about calling our API. There is a lot of focus on creating your own [GetConnectors](#supplying-getconnectors).
+Register for a course where you will learn everything about calling our API. There is a lot of focus on creating your own [GetConnectors](#supply-getconnectors).
 This course is free for 1 colleague. Check https://klant.afas.nl/opleiding/specialisatiecursus-connector for information and dates.
 
 **Making integrations for other partners?** In that case, at least 1 colleague in your company must have completed the expert test "Integrations" with a score of at least 7. Please contact the System Integrator if this applies to you.
@@ -80,9 +80,9 @@ The specific IntegrationId for your integration can be found in the task and in 
 
 ---
 
-### Suppl GetConnectors
+### Supply GetConnectors
 
-To retrieve data from Profit, you need GetConnectors. Many GetConnectors are supplied as standard in AFAS Profit, but for a certified integration you must create your own set of GetConnectors. [Read why here.](./app-connector-auditor-partner#STRUCT-27)
+To retrieve data from Profit, you need GetConnectors. Many GetConnectors are supplied as standard in AFAS Profit, however for a certified integration you need to create your own set of GetConnectors. [Read why here.](./app-connector-auditor-partner#STRUCT-27)
 
 #### Determine which data you need
 

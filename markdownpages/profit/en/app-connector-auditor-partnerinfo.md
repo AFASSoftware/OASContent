@@ -3,7 +3,7 @@ author: Eric Zwaal
 date: 2026-02-03
 index: true
 tags: Partner, Administratie, Certificering, Partnergegevens
-title: Partnergegevens en koppelingen
+title: Partner information and integrations
 ---
 
 # Partner information and integrations
