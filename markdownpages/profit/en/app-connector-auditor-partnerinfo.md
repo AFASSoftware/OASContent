@@ -27,18 +27,18 @@ This section shows the data that AFAS uses from your organization within the par
   We use these contacts for technical questions, news, and issues regarding your integrations.
   Manage these via the [customer portal](https://klant.afas.nl).
 
-* **Your PEN test is valid**
-  This checkmark is green as long as the validity of your most recent PEN test has not expired.
+* **Your pentest is valid**
+  This checkmark is green as long as the validity of your most recent pentest has not expired.
 
 **Your data: {your name}**
 
 * **Subscription number** – The number of your partner license. This is also the first part of the `IntegrationId`.
 * **Contacts for partner/expert communication** – Persons who can be contacted by AFAS about partner matters.
 * **Responsible person at AFAS** – Your permanent contact within AFAS.
-* **PEN test status** – Green, orange, or red, depending on the result. A Green score is valid for 3 years, an Orange score is valid for 15 months, and a Red score is valid for 6 months. This is calculated from the date mentioned in the PEN test report.
-* **End date of PEN test validity** – After this date, you formally no longer meet the partner requirements.
+* **pentest status** – Green, orange, or red, depending on the result. A Green score is valid for 3 years, an Orange score is valid for 15 months, and a Red score is valid for 6 months. This is calculated from the date mentioned in the pentest report.
+* **End date of pentest validity** – After this date, you formally no longer meet the partner requirements.
 
-> ⚠️ Has your PEN test expired or is it about to expire? Have a new test performed in time to avoid consequences for your partnership.
+> ⚠️ Has your pentest expired or is it about to expire? Have a new test performed in time to avoid consequences for your partnership.
 
 ---
 
