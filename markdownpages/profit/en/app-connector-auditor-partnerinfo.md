@@ -35,7 +35,7 @@ This section shows the data that AFAS uses from your organization within the par
 * **Subscription number** – The number of your partner license. This is also the first part of the `IntegrationId`.
 * **Contacts for partner/expert communication** – Persons who can be contacted by AFAS about partner matters.
 * **Responsible person at AFAS** – Your permanent contact within AFAS.
-* **pentest status** – Green, orange, or red, depending on the result. A Green score is valid for 3 years, an Orange score is valid for 15 months, and a Red score is valid for 6 months. This is calculated from the date mentioned in the pentest report.
+* **Pentest status** – Green, orange, or red, depending on the result. A Green score is valid for 3 years, an Orange score is valid for 15 months, and a Red score is valid for 6 months. This is calculated from the date mentioned in the pentest report.
 * **End date of pentest validity** – After this date, you formally no longer meet the partner requirements.
 
 > ⚠️ Has your pentest expired or is it about to expire? Have a new test performed in time to avoid consequences for your partnership.
