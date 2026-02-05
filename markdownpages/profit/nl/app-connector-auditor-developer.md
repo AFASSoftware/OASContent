@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2026-01-25
+date: 2026-02-04
 index: true
 tags: AppConnector, Auditor, Developer, GetConnector, API, Integration
 title: AppConnector Auditor - Ontwikkelaarsrapport
@@ -9,8 +9,8 @@ title: AppConnector Auditor - Ontwikkelaarsrapport
 # AppConnector Auditor - Ontwikkelaarsrapport
 
 > 📊 **Dit rapport is voor ontwikkelaars** (partner of in-house). Ben je eindgebruiker of AFAS Partner? Zie:
-> * [AppConnector Auditor](app-connector-auditor.md) voor eindgebruikers en functioneel beheerders
-> * [Partnerrapport](app-connector-auditor-partner.md) voor AFAS Partners (striktere eisen voor certificering)
+> * [AppConnector Auditor](./app-connector-auditor) voor eindgebruikers en functioneel beheerders
+> * [Partnerrapport](./app-connector-auditor-partner) voor AFAS Partners (striktere eisen voor certificering)
 
 ---
 
@@ -48,109 +48,39 @@ De niveaus zijn:
 
 ## GetConnectoren – Overkoepelend
 
+
+
 ### Datamodel
 
-#### <a id="DATA-20"></a>Dienstverbandnummer en Volgnummer dienstverband door elkaar gebruikt
-
-**Niveau:** Fout
-
-**Waarom zie je dit?**  
-De integratie gebruikt zowel `Dienstverband` als `Volgnummer dienstverband`.
-
-**Risico / aandachtspunt**  
-Bij meerdere of wisselende dienstverbanden ontstaan foutieve of dubbele gegevens.
-
-**Oplossing**  
-Gebruik consistent `Dienstverband` als functioneel nummer.  
-Een klein aantal tabellen gebruikt `Volgnummer dienstverband` in de primaire sleutel. In die gevallen kun je dit veld extra toevoegen om te gebruiken om op te filteren en te sorteren. Inhoudelijk maak je nog steeds gebruik van `Dienstverband`.
-
-
----
-
-### Performance & schaalbaarheid
-
-#### <a id="PERF-30"></a>Financiële mutaties zonder `Gewijzigde boekingsdagen` 
-
-**Niveau:** Fout
-
-**Waarom zie je dit?**  
-Financiële mutaties worden volledig opgehaald.
-
-**Risico / aandachtspunt**  
-Zeer grote datasets, slechte performance en onnodige belasting.
-
-**Oplossing**  
-Maak gebruik van een extra GetConnector, gebaseerd op de gegevensverzameling `Gewijzigde boekingsdagen`. [Lees dit help artikel](https://help.afas.nl/help/NL/SE/App_Cnnct_View_Audit.htm#o79118) voor meer informatie.
-
----
-
-#### <a id="PERF-31"></a>Nacalculatie zonder `Gewijzigde boekingsdagen nacalculatie` 
+#### <a id="DATA-20"></a>`Dienstverbandnummer` en `Volgnummer dienstverband` worden beide gebruikt.
 
 **Niveau:** ❌ Fout  
-**Certificerings-impact:** **Blokkeert certificering**  
 
 **Waarom zie je dit?**  
-Nacalculatieregels worden volledig opgehaald.
+Jouw integratie gebruikt twee verschillende dienstverbandnummers door elkaar: een interne (`Volgnummer dienstverband`) en het dienstverbandnummer dat je ziet bij het contract van een medewerker.
 
 **Risico / aandachtspunt**  
-Zeer grote datasets, slechte performance en onnodige belasting.
+Deze 2 nummers zijn *vaak* hetzelfde, maar kunnen verschillen. Bij meerdere of wisselende dienstverbanden ontstaan foutieve of dubbele gegevens. Deze fouten zijn zeer moeilijk te traceren.
 
 **Oplossing**  
-Maak gebruik van een extra GetConnector, gebaseerd op de gegevensverzameling `Gewijzigde boekingsdagen nacalculatie`. [Lees dit help artikel](https://help.afas.nl/help/NL/SE/App_Cnnct_View_Audit.htm#o95619) voor meer informatie.
+Pas je GetConnectoren aan zodat je overal gebruik maakt van `Dienstverband` en niet meer van `Volgnummer dienstverband`.
+
+**Uitzondering**  
+Een klein aantal tabellen gebruikt `Volgnummer dienstverband` in de primaire sleutel. In die gevallen is het toegestaan dit veld te gebruiken om op te filteren en te sorteren. Inhoudelijk maak je nog steeds gebruik van `Dienstverband`. De auditor houdt hier nog geen rekening mee.
+
 
 ---
 
 ## GetConnector – Individueel
 
-### Connectorstructuur
-
-#### <a id="STRUCT-27"></a>Dit is een meegeleverde Profit GetConnector. Maak hier een eigen kopie van.
-
-**Niveau:** Fout
-
-**Waarom zie je dit?**  
-Er wordt een standaard Profit GetConnector gebruikt.
-
-**Risico / aandachtspunt**  
-
-* Kan zonder waarschuwing wijzigen
-* Bevat te veel velden
-* Geen klantfilters mogelijk
-
-**Oplossing**  
-Maak een **eigen kopie** en hernoem deze volgens:
-
-```
-<JouwApp>_<FunctioneleNaam>
-```
-
-Gebruik nooit `Profit` of `AFAS` in de naam.
-
----
-
-#### <a id="STRUCT-29"></a>Deze GetConnector heeft 1 of meer velden met een punt in de naam.
-
-**Niveau:** Fout
-
-**Waarom zie je dit?**  
-Eén of meer velden bevatten een `.` in de naam.
-
-**Risico / aandachtspunt**  
-Filtering en sortering via URL kan hierdoor falen.
-
-**Oplossing**  
-Pas de veldnaam aan en verwijder de punt.
-
----
-
 ### Datamodel
 
-#### <a id="DATA-21"></a>Deze GetConnector haalt velden uit `Actuele gegevens per arbeidsverhouding`
+#### <a id="DATA-21"></a>Deze GetConnector haalt velden uit `Actuele gegevens per arbeidsverhouding`, maar de integratie gebruikt gegevens per dienstverband.
 
-**Niveau:** Fout
+**Niveau:** ❌ Fout
 
 **Waarom zie je dit?**  
-De GetConnector haalt gegevens uit `Actuele gegevens per arbeidsverhouding`, terwijl de integratie elders met dienstverbanden werkt.
+Deze GetConnector haalt velden uit `Actuele gegevens per arbeidsverhouding`, maar de integratie gebruikt gegevens per dienstverband.
 
 **Risico / aandachtspunt**  
 Bij meerdere gelijktijdige dienstverbanden worden onjuiste of onvolledige gegevens opgehaald.
@@ -160,57 +90,59 @@ Gebruik `Actuele gegevens per dienstverband` of vermijd actuele tabellen volledi
 
 ---
 
-#### <a id="DATA-23"></a>Deze GetConnector heeft 1 of meer onbekende velden
+#### <a id="DATA-23"></a>Deze GetConnector heeft onbekende velden.
 
-**Niveau:** Fout
+**Niveau:** ❌ Fout
 
 **Waarom zie je dit?**  
-De GetConnector bevat velden die niet (meer) bestaan in de database. Deze leveren de waarde `(vervangen)`.
+Deze GetConnector heeft onbekende velden. Het rapport toont welke dat zijn.
 
 **Risico / aandachtspunt**  
-De GetConnector is technisch inconsistent en kan niet verder worden uitgebreid.
+Onbekende velden zijn niet meer gekoppeld aan een veld in de database. In het resultaat geven ze een vaste waarde "(vervangen)".
 
 **Oplossing**  
-Verwijder deze velden of koppel ze opnieuw aan een bestaand databaseveld.
+Verwijder de onbekende velden, of koppel ze aan een veld in de database. Mogelijk gaat het om vrije velden die bij de integratie horen en in jouw omgeving nog ontbreken.
 
 ---
 
-#### <a id="DATA-24"></a>Vrije velden gebruikt
+#### <a id="DATA-24"></a>Deze GetConnector heeft vrije velden.
 
-**Niveau:** Waarschuwing
+**Niveau:** ℹ️ Informatief
 
 **Waarom zie je dit?**  
-De integratie maakt gebruik van vrije velden.
+De integratie maakt gebruik van vrije velden. Het rapport toont welke dat zijn.
 
 **Wat betekent dit?**  
-Vrije velden bestaan niet standaard in elke klantomgeving.
+Vrije velden zijn niet standaard in elke omgeving aanwezig. 
 
 **Actie**  
-Lever vrije velden aan als `.fie`-bestand
+Als je deze GetConnector ook in een andere omgeving wilt gebruiken, moet je deze vrije velden eerst exporteren en in de andere omgeving importeren.
+
 
 ---
 
-#### <a id="DATA-25"></a>Verdichting toegepast
+#### <a id="DATA-25"></a>Deze GetConnector gebruikt verdichting.
 
-**Niveau:** Informatief
+**Niveau:** ℹ️ Informatief
 
 **Waarom zie je dit?**  
 De GetConnector gebruikt verdichting (groepering).
 
 **Wat kun je ermee?**  
-Verdichting is geschikt voor totalen, maar niet om dubbele regels te maskeren.
+Verdichting is geschikt voor totalen, maar niet om dubbele regels te maskeren. Het kan duiden op een onjuiste datamodelkeuze. Bij grote tabellen kan verdichting performanceproblemen veroorzaken.
 
 **Advies**  
 Gebruik verdichting alleen bewust. Bij twijfel: overleg met AFAS.
 
+
 ---
 
-#### <a id="DATA-26"></a>Velden met speciaal formaat
+#### <a id="DATA-26"></a>Deze GetConnector heeft velden met een speciaal formaat.
 
-**Niveau:** Waarschuwing
+**Niveau:** ⚠️ Waarschuwing
 
 **Waarom zie je dit?**  
-Een of meer velden gebruiken een SQL-functie (bijv. datumformattering).
+Deze GetConnector heeft velden met een speciaal formaat. Op deze velden mag niet worden gefilterd of gesorteerd.
 
 **Risico / aandachtspunt**  
 Sorteren of filteren op deze velden heeft grote performance-impact.
@@ -222,40 +154,10 @@ Gebruik deze velden alleen voor presentatie en filter/sorteer nooit op deze veld
 
 ### Performance
 
-#### <a id="PERF-32"></a>Cyclische verwijzing
 
-**Niveau:** Waarschuwing
+#### <a id="PERF-45"></a>Deze GetConnector mist velden die nodig zijn om de indexen optimaal te gebruiken voor sortering.
 
-**Waarom zie je dit?**  
-Dezelfde tabel komt meerdere keren voor in het join-pad.
-
-**Risico / aandachtspunt**  
-Onnodige JOINs → performanceverlies.
-
-**Oplossing**  
-Controleer of de verwijzing functioneel nodig is.
-Zo niet: vereenvoudig de GetConnector.
-
----
-
-#### <a id="PERF-33"></a>Mogelijke subselect
-
-**Niveau:** Waarschuwing
-
-**Waarom zie je dit?**  
-In de SQL-definitie komt meerdere keren `SELECT` voor.
-
-**Risico / aandachtspunt**  
-Subselects kunnen per rij worden uitgevoerd en zijn duur.
-
-**Oplossing**  
-Alleen actie nodig bij performanceproblemen. Laat je adviseren door Systemintegrators.
-
----
-
-#### <a id="PERF-45"></a>Indexvelden ontbreken
-
-**Niveau:** Waarschuwing
+**Niveau:** ⚠️ Waarschuwing
 
 **Waarom zie je dit?**  
 Niet alle indexvelden zijn zichtbaar in de GetConnector.
@@ -268,15 +170,33 @@ Maak indexvelden zichtbaar en gebruik deze in sortering en filtering.
 
 ---
 
-#### <a id="PERF-46"></a>Aanbevolen indexgebruik
+#### <a id="PERF-46"></a>Unieke indexen op de hoofdtabel van deze GetConnector.
 
-**Niveau:** Informatief
+**Niveau:** ℹ️ Informatief
 
 **Waarom zie je dit?**  
 De auditor toont aanbevolen indexen.
 
 **Wat kun je ermee?**  
-Gebruik deze indexen voor optimale performance.
+Gebruik deze indexen voor optimale performance. De velden in deze indexen identificeren unieke regels. Gebruik bij voorkeur de velden van index 1, maar index 2 of 3 kunnen ook gebruikt worden als index 1 niet alle benodigde velden bevat. Sorteer op de velden in de volgorde van de index.
+
+---
+
+#### <a id="PERF-52"></a>Deze GetConnector haalt gegevens op uit tabellen van meer dan 5 niveaus diep.
+
+**Niveau:** ⚠️ Waarschuwing
+
+**Waarom zie je dit?**
+De GetConnector haalt gegevens op uit tabellen die meer dan 5 niveaus diep genest zijn.
+
+**Risico / aandachtspunt**  
+Diepe joins kunnen performanceproblemen veroorzaken.
+
+**Oplossing**  
+Controleer of je de GetConnector kunt vereenvoudigen door minder diepe tabellen te gebruiken.
+
+
+
 
 ---
 
@@ -284,7 +204,7 @@ Gebruik deze indexen voor optimale performance.
 
 #### <a id="FILT-47"></a>Het filter maakt gebruik van 'bevat (niet)', 'begint (niet) met' of 'eindigt (niet) op'.
 
-**Niveau:** Fout
+**Niveau:** ❌ Fout
 
 **Waarom zie je dit?**  
 Er wordt gefilterd met `bevat`, `begint met` of `eindigt op`.
@@ -297,73 +217,58 @@ Gebruik gelijkheidsfilters (`=`, `>`, `<` etc.) op indexvelden.
 
 ---
 
-#### <a id="FILT-48"></a>Gebruikersfilter aanwezig
 
-**Niveau:** Waarschuwing
+#### <a id="PERF-34"></a>Deze GetConnector haalt gegevens op uit meer dan 5 verschillende tabellen.
 
-**Waarom zie je dit?**  
-De GetConnector bevat een vast filter.
+**Niveau:** ⚠️ Waarschuwing
+
+**Waarom zie je dit?**
+De GetConnector haalt gegevens op uit meer dan 5 verschillende tabellen.
 
 **Risico / aandachtspunt**  
-Het filter is mogelijk niet geschikt voor alle klanten.
+Het gebruik van veel joins kan performanceproblemen veroorzaken, met name bij grote tabellen.
+
 
 **Oplossing**  
-Maak filters dynamisch via URL-parameters of documenteer beperkingen.
+Alleen actie nodig bij performanceproblemen. Maak in dat geval meerdere GetConnectoren aan die elk minder tabellen gebruiken. Laat je adviseren door Systemintegrators.
 
 ---
 
-## Performance & Schaalbaarheid
+#### <a id="PERF-35"></a>Deze GetConnector haalt gegevens op uit een zeer grote tabel.
 
-#### <a id="PERF-34"></a>Veel joins
+**Niveau:** ⚠️ Waarschuwing
 
-**Niveau:** Waarschuwing
-
-**Waarom zie je dit?**  
-De GetConnector haalt gegevens uit meer dan 5 tabellen.
+**Waarom zie je dit?**
+De GetConnector haalt gegevens op uit één van de 10 grootste tabellen uit de database.
 
 **Risico / aandachtspunt**  
-Complexe SQL met mogelijk slechte performance.
+Gegevens ophalen uit zeer grote tabellen kan performanceproblemen veroorzaken. 
 
 **Oplossing**  
-Overweeg opsplitsen in meerdere GetConnectoren.
-
----
-
-#### <a id="PERF-35"></a>Diepe nesting of grote tabellen
-
-**Niveau:** Waarschuwing
-
-**Waarom zie je dit?**  
-Er wordt diep genest of uit zeer grote tabellen gelezen.
-
-**Risico / aandachtspunt**  
-Langzame queries bij grotere datasets.
-
-**Oplossing**  
-Minimaliseer velden, joins en berekeningen.
+Zorg ervoor dat je filters en sortering optimaal gebruikmaken van indexen. Gebruik zo weinig mogelijk joins, anders gezegd: volg zo weinig mogelijk verwijzingen naar andere tabellen. Overleg bij twijfel met AFAS. 
 
 ---
 
 ## Autorisatie & Privacy
 
-#### <a id="AUT-16"></a>Geautoriseerde GetConnector
+#### <a id="AUT-16"></a>Deze GetConnector is geautoriseerd.
 
-**Niveau:** Informatief
+**Niveau:** ⚠️ Waarschuwing
 
 **Waarom zie je dit?**  
-De GetConnector respecteert filterautorisatie.
+De GetConnector is geautoriseerd.
 
-**Wat kun je ermee?**  
-Bij onverwachte resultaten ligt de oorzaak vaak bij autorisatie.
+**Wat betekent dit?**  
+Bij onverwachte resultaten ligt de oorzaak vaak bij autorisatie. De integratie haalt dan mogelijk niet alle verwachte data op.
 
 **Actie**  
-Documenteer gebruikte autorisaties.
+Zorg ervoor dat de connectorgebruiker de juiste autorisaties heeft.
 
 ---
 
-#### <a id="AUT-19"></a>Privacy-gevoelige velden
+#### <a id="AUT-19"></a>Deze GetConnector heeft velden die zijn gemarkeerd als privacygevoelig.
 
-**Niveau:** Waarschuwing
+**Niveau:** ⚠️ Waarschuwing
 
 **Waarom zie je dit?**  
 Er worden velden opgehaald die als privacy-gevoelig zijn gemarkeerd.
@@ -374,13 +279,14 @@ Mogelijk AVG-risico.
 **Oplossing**  
 Haal alleen strikt noodzakelijke gegevens op
 
+
 ---
 
 ## Tot slot
 
 Deze help is bedoeld als **naslagwerk en technische specificatie**, niet als vervanging van persoonlijk overleg.
 
-Dit document is nooit af. Zie je iets dat niet klopt, of heb je suggesties voor verbetering? Maak een pull request aan op de [GitHub-pagina van de documentatie](https://github.com/AFASSoftware/OASContent/blob/main/markdownpages/profit/nl/app-connector-auditor-partner.md).
+Dit document is nooit af. Zie je iets dat niet klopt, of heb je suggesties voor verbetering? Maak een pull request aan op de [GitHub-pagina van de documentatie](https://github.com/AFASSoftware/OASContent/blob/main/markdownpages/profit/nl/app-connector-auditor-developer.md).
 
 *Happy coding!*
 

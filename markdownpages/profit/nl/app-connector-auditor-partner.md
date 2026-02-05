@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2026-01-25
+date: 2026-02-04
 index: true
 tags: AppConnector, Auditor, Partner, Certificering, GetConnector, pentest
 title: AppConnector Auditor - Partnerrapport
@@ -9,8 +9,8 @@ title: AppConnector Auditor - Partnerrapport
 # AppConnector Auditor - Partnerrapport
 
 > 📊 **Dit rapport is voor AFAS Partners**. Ben je eindgebruiker of in-house ontwikkelaar? Zie:
-> * [AppConnector Auditor](app-connector-auditor.md) voor eindgebruikers en functioneel beheerders
-> * [Ontwikkelaarsrapport](app-connector-auditor-developer.md) voor developers (minder strikte eisen)
+> * [AppConnector Auditor](./app-connector-auditor) voor eindgebruikers en functioneel beheerders
+> * [Ontwikkelaarsrapport](./app-connector-auditor-developer) voor developers (minder strikte eisen)
 
 ---
 
@@ -31,7 +31,7 @@ Dit rapport is specifiek bedoeld voor **AFAS Partners** en bevat de strengste co
 
 ## Partnergegevens en administratie
 
-Voor uitleg over de secties **Partnergegevens** en **Jouw koppelingen** die bovenaan het rapport worden getoond, zie [Partnergegevens en koppelingen](./app-connector-auditor-partnergegevens).
+Voor uitleg over de secties **Partnergegevens** en **Jouw koppelingen** die bovenaan het rapport worden getoond, zie [Partnergegevens en koppelingen](./app-connector-auditor-partnerinfo).
 
 Deze sectie bevat kritieke informatie over:
 * Je partnerstatus en certificering
@@ -56,6 +56,7 @@ Je koppeling is alleen gecertificeerd zolang je aan alle onderstaande eisen vold
 * ✅ Je stuurt het juiste IntegrationId mee bij elke aanroep
 * ✅ Je hebt een geldig partnerabonnement
 * ✅ Je hebt minimaal 5 klanten die je koppeling actief gebruiken
+* ✅ Je hebt minimaal 2 contactpersonen als "Partner-/expertcommunicatie" geregistreerd bij AFAS
 
 ---
 
@@ -94,9 +95,32 @@ Deze sectie bevat partner-specifieke meldingen over de AppConnector zelf (niet d
 
 ## GetConnectoren – Overkoepelend
 
+### Autorisatie & Privacy
+
+#### <a id="AUT-17"></a>Er wordt filterautorisatie toegepast.
+
+
+**Niveau:** ⚠️ Waarschuwing  
+**Certificerings-impact:** Noem in je implementatiedocument welke autorisatiefilters van toepassing zijn. 
+
+**Waarom zie je dit?**  
+De integratie maakt gebruik van autorisatie. 
+
+**Wat betekent dit?**  
+Als autorisaties niet goed zijn ingericht, krijgt de integratie te veel of te weinig gegevens.
+
+**Actie**  
+* Noem in je implementatiedocument:
+  * Welke autorisatiefilters van toepassing zijn
+
+
+---
+
+
+
 ### Datamodel
 
-#### <a id="DATA-20"></a>`Dienstverbandnummer` en `Volgnummer dienstverband` worden beide gebruikt
+#### <a id="DATA-20"></a>`Dienstverbandnummer` en `Volgnummer dienstverband` worden beide gebruikt.
 
 **Niveau:** ❌ Fout  
 **Certificerings-impact:** **Blokkeert certificering**  
@@ -117,7 +141,7 @@ Een klein aantal tabellen gebruikt `Volgnummer dienstverband` in de primaire sle
 
 ### Performance & schaalbaarheid
 
-#### <a id="PERF-30"></a>Financiële mutaties zonder `Gewijzigde boekingsdagen`
+#### <a id="PERF-30"></a>Er worden Financiële mutaties opgehaald, maar `Gewijzigde boekingsdagen` wordt niet gebruikt.
 
 **Niveau:** ❌ Fout  
 **Certificerings-impact:** **Blokkeert certificering**  
@@ -133,7 +157,8 @@ Maak gebruik van een extra GetConnector, gebaseerd op de gegevensverzameling `Ge
 
 ---
 
-#### <a id="PERF-31"></a>Nacalculatie zonder `Gewijzigde boekingsdagen nacalculatie` 
+#### <a id="PERF-31"></a>Er wordt Nacalculatie opgehaald, maar `Gewijzigde boekingsdagen nacalculatie` wordt niet gebruikt.
+
 
 **Niveau:** ❌ Fout  
 **Certificerings-impact:** **Blokkeert certificering**  
@@ -153,7 +178,7 @@ Maak gebruik van een extra GetConnector, gebaseerd op de gegevensverzameling `Ge
 
 ### Connectorstructuur
 
-#### <a id="STRUCT-27"></a>Dit is een meegeleverde Profit GetConnector. Maak hier een eigen kopie van.
+#### <a id="STRUCT-27"></a>Dit is een meegeleverde Profit GetConnector.
 
 **Niveau:** ❌ Fout  
 **Certificerings-impact:** **Blokkeert certificering**  
@@ -180,7 +205,7 @@ Gebruik nooit `Profit` of `AFAS` in de naam; dat is voor de klant wel duidelijk.
 #### <a id="STRUCT-28"></a>Deze GetConnector heeft een naam die begint met `Profit_`.
 
 **Niveau:** ❌ Fout  
-**Certificerings-impact:** **Blokkeert certificering\*\*  
+**Certificerings-impact:** **Blokkeert certificering**  
 
 **Waarom zie je dit?**  
 Een GetConnector heeft een naam die begint met `Profit_`.
@@ -199,13 +224,13 @@ Gebruik nooit `Profit` of `AFAS` in de naam.
 
 ---
 
-#### <a id="STRUCT-29"></a>Deze GetConnector heeft 1 of meer velden met een punt in de naam.
+#### <a id="STRUCT-29"></a>Deze GetConnector heeft velden met een punt in de naam.
 
 **Niveau:** ❌ Fout  
 **Certificerings-impact:** **Blokkeert certificering**  
 
 **Waarom zie je dit?**  
-Deze GetConnector heeft 1 of meer velden met een punt in de naam.
+Deze GetConnector heeft velden met een punt in de naam. Het rapport toont welke dat zijn.
 
 **Risico / aandachtspunt**  
 Een veldnaam die een punt bevat kan onverwachte fouten geven bij het verwerken van je aanroep.
@@ -217,7 +242,9 @@ Pas de betreffende veldnamen aan en verwijder de punt.
 
 ### Datamodel
 
-#### <a id="DATA-21"></a>Deze GetConnector haalt velden uit Actuele gegevens per arbeidsverhouding
+#### <a id="DATA-21"></a>Deze GetConnector haalt velden uit `Actuele gegevens per arbeidsverhouding`, maar de integratie gebruikt gegevens per dienstverband.
+
+
 
 **Niveau:** ❌ Fout  
 **Certificerings-impact:** **Blokkeert certificering**  
@@ -233,29 +260,31 @@ Gebruik `Actuele gegevens per dienstverband` of vermijd actuele tabellen volledi
 
 ---
 
-#### <a id="DATA-23"></a>Deze GetConnector heeft 1 of meer onbekende velden
+#### <a id="DATA-23"></a>Deze GetConnector heeft onbekende velden.
 
 **Niveau:** ❌ Fout  
 **Certificerings-impact:** **Blokkeert certificering**  
 
 **Waarom zie je dit?**  
-Deze GetConnector heeft 1 of meer onbekende velden.
+Deze GetConnector heeft onbekende velden. Het rapport toont welke dat zijn.
 
 **Risico / aandachtspunt**  
 Onbekende velden zijn niet meer gekoppeld aan een veld in de database. In het resultaat geven ze een vaste waarde "(vervangen)".
 
 **Oplossing**  
-Verwijder de onbekende velden, of koppel ze aan een veld in de database.
+Verwijder de onbekende velden, of koppel ze aan een veld in de database. Als het vrije velden zijn, zorg er dan voor dat ze worden aangeboden als `.fie`-bestand en documenteer hoe klanten deze importeren.
 
 ---
 
-#### <a id="DATA-24"></a>Vrije velden gebruikt
+#### <a id="DATA-24"></a>Deze GetConnector heeft vrije velden.
+
+
 
 **Niveau:** ⚠️ Waarschuwing  
 **Certificerings-impact:** Moet opgelost of gedocumenteerd worden
 
 **Waarom zie je dit?**  
-De integratie maakt gebruik van vrije velden.
+De integratie maakt gebruik van vrije velden. Het rapport toont welke dat zijn.
 
 **Wat betekent dit?**  
 Vrije velden bestaan niet standaard in elke klantomgeving.
@@ -267,7 +296,9 @@ Vrije velden bestaan niet standaard in elke klantomgeving.
 
 ---
 
-#### <a id="DATA-25"></a>Verdichting toegepast
+#### <a id="DATA-25"></a>Deze GetConnector gebruikt verdichting.
+
+
 
 **Niveau:** ℹ️ Informatief  
 **Certificerings-impact:** Geen
@@ -283,10 +314,10 @@ Gebruik verdichting alleen bewust. Bij twijfel: overleg met AFAS.
 
 ---
 
-#### <a id="DATA-26"></a>Velden met speciaal formaat
+#### <a id="DATA-26"></a>Deze GetConnector heeft velden met een speciaal formaat.
 
 **Niveau:** ⚠️ Waarschuwing  
-**Certificerings-impact:** Moet opgelost worden
+**Certificerings-impact:** Moet opgelost of onderbouwd worden
 
 **Waarom zie je dit?**  
 Deze GetConnector heeft velden met een speciaal formaat. Op deze velden mag niet worden gefilterd of gesorteerd.
@@ -301,7 +332,8 @@ Gebruik deze velden alleen voor presentatie en filter/sorteer nooit op deze veld
 
 ### Performance
 
-#### <a id="PERF-32"></a>Cyclische verwijzing
+#### <a id="PERF-32"></a>Deze GetConnector heeft (mogelijk) een cyclische verwijzing.
+
 
 **Niveau:** ⚠️ Waarschuwing  
 **Certificerings-impact:** Moet opgelost of onderbouwd worden
@@ -318,7 +350,8 @@ Zo niet: vereenvoudig de GetConnector.
 
 ---
 
-#### <a id="PERF-33"></a>Mogelijke subselect
+#### <a id="PERF-33"></a>Deze GetConnector gebruikt mogelijk een subselect.
+
 
 **Niveau:** ⚠️ Waarschuwing  
 **Certificerings-impact:** Monitor performance
@@ -327,14 +360,55 @@ Zo niet: vereenvoudig de GetConnector.
 In de SQL-definitie komt meerdere keren `SELECT` voor.
 
 **Risico / aandachtspunt**  
-Subselects kunnen per rij worden uitgevoerd en zijn duur.
+Subselects kunnen per rij worden uitgevoerd en kunnen de performance negatief beïnvloeden.
 
 **Oplossing**  
 Alleen actie nodig bij performanceproblemen. Laat je adviseren door Systemintegrators.
 
 ---
 
+
+#### <a id="PERF-34"></a>Deze GetConnector haalt gegevens op uit meer dan 5 verschillende tabellen.
+
+
+**Niveau:** ⚠️ Waarschuwing  
+**Certificerings-impact:** Monitor en optimaliseer indien nodig
+
+**Waarom zie je dit?**
+De GetConnector haalt gegevens op uit meer dan 5 verschillende tabellen.
+
+**Risico / aandachtspunt**  
+Het gebruik van veel joins kan performanceproblemen veroorzaken, met name bij grote tabellen.
+
+
+**Oplossing**  
+Alleen actie nodig bij performanceproblemen. Maak in dat geval meerdere GetConnectoren aan die elk minder tabellen gebruiken. Laat je adviseren door Systemintegrators.
+
+
+
+---
+
+#### <a id="PERF-35"></a>Deze GetConnector haalt gegevens op uit een zeer grote tabel.
+
+
+**Niveau:** ⚠️ Waarschuwing  
+**Certificerings-impact:** Oplossen of onderbouwen
+
+**Waarom zie je dit?**
+De GetConnector haalt gegevens op uit één van de 10 grootste tabellen uit de database.
+
+**Risico / aandachtspunt**  
+Gegevens ophalen uit zeer grote tabellen kan performanceproblemen veroorzaken. 
+
+**Oplossing**  
+Zorg ervoor dat je filters en sortering optimaal gebruikmaken van indexen. Gebruik zo weinig mogelijk joins, anders gezegd: volg zo weinig mogelijk verwijzingen naar andere tabellen. Overleg bij twijfel met AFAS. 
+
+
+---
+
 #### <a id="PERF-36"></a>Deze GetConnector haalt velden uit een tabel die ook als alias beschikbaar is.
+
+
 
 **Niveau:** ⚠️ Waarschuwing  
 **Certificerings-impact:** Monitor en optimaliseer indien nodig
@@ -350,7 +424,26 @@ Controleer of je de alias-tabel kunt gebruiken in plaats van het langere pad. Di
 
 ---
 
-#### <a id="PERF-45"></a>Indexvelden ontbreken
+#### <a id="PERF-37"></a>Deze GetConnector haalt ook velden op vanuit een andere alias. 
+
+
+**Niveau:** ⚠️ Waarschuwing  
+**Certificerings-impact:** Monitor en optimaliseer indien nodig
+
+**Waarom zie je dit?**  
+De GetConnector haalt velden op uit een tabel die ook als alias (snelkoppeling) beschikbaar is. 
+
+**Risico / aandachtspunt**  
+Sommige aliassen bevatten een 1-op-n relatie, waardoor de regels uit de hoofdtabel meerdere keren kunnen voorkomen. De getoonde indexen zijn dan niet uniek.
+
+**Oplossing**  
+Test zelf, of overleg met AFAS, of de indexen uniek zijn. Zo niet: breid de sortering uit met extra velden zodat deze wel uniek wordt.
+
+
+---
+
+
+#### <a id="PERF-45"></a>Deze GetConnector mist velden die nodig zijn om de indexen optimaal te gebruiken voor sortering.
 
 **Niveau:** ⚠️ Waarschuwing  
 **Certificerings-impact:** Moet opgelost worden
@@ -366,7 +459,7 @@ Maak indexvelden zichtbaar en gebruik deze in sortering en filtering.
 
 ---
 
-#### <a id="PERF-46"></a>Aanbevolen indexgebruik
+#### <a id="PERF-46"></a>Unieke indexen op de hoofdtabel van deze GetConnector.
 
 **Niveau:** ℹ️ Informatief  
 **Certificerings-impact:** Best practice
@@ -375,13 +468,33 @@ Maak indexvelden zichtbaar en gebruik deze in sortering en filtering.
 De auditor toont aanbevolen indexen.
 
 **Wat kun je ermee?**  
-Gebruik deze indexen voor optimale performance.
+Gebruik deze indexen voor optimale performance. De velden in deze indexen identificeren unieke regels. Gebruik bij voorkeur de velden van index 1, maar index 2 of 3 kunnen ook gebruikt worden als index 1 niet alle benodigde velden bevat. Sorteer op de velden in de volgorde van de index.
+
+---
+
+#### <a id="PERF-52"></a>Deze GetConnector haalt gegevens op uit tabellen van meer dan 5 niveaus diep.
+
+**Niveau:** ⚠️ Waarschuwing  
+**Certificerings-impact:** Oplossen of onderbouwen
+
+**Waarom zie je dit?**
+De GetConnector haalt gegevens op uit tabellen die meer dan 5 niveaus diep genest zijn.
+
+**Risico / aandachtspunt**  
+Diepe joins kunnen performanceproblemen veroorzaken.
+
+**Oplossing**  
+Controleer of je de GetConnector kunt vereenvoudigen door minder diepe tabellen te gebruiken.
+
+
+
 
 ---
 
 ### Selectie & filtering
 
-#### <a id="FILT-47"></a>Langzaam filtertype gebruikt
+#### <a id="FILT-47"></a> filter maakt gebruik van 'bevat (niet)', 'begint (niet) met' of 'eindigt (niet) op'.
+
 
 **Niveau:** ❌ Fout  
 **Certificerings-impact:** **Blokkeert certificering**  
@@ -397,7 +510,7 @@ Gebruik gelijkheidsfilters (`=`, `>`, `<` etc.) op indexvelden.
 
 ---
 
-#### <a id="FILT-48"></a>Gebruikersfilter aanwezig
+#### <a id="FILT-48"></a>Deze GetConnector heeft een gebruikersfilter.
 
 **Niveau:** ⚠️ Waarschuwing  
 **Certificerings-impact:** Moet opgelost of gedocumenteerd worden
@@ -409,19 +522,22 @@ De GetConnector bevat een vast filter.
 Het filter is mogelijk niet geschikt voor alle klanten.
 
 **Oplossing**  
+Controleer of het filter voor alle klanten geschikt is.
+Zo niet:
 Maak filters dynamisch via URL-parameters of documenteer beperkingen.
 
 ---
 
 ## Autorisatie & Privacy
 
-#### <a id="AUT-16"></a>Geautoriseerde GetConnector
+#### <a id="AUT-16"></a>Deze GetConnector is geautoriseerd.
 
-**Niveau:** ℹ️ Informatief  
+
+**Niveau:** ⚠️ Waarschuwing  
 **Certificerings-impact:** Documenteren
 
 **Waarom zie je dit?**  
-De GetConnector respecteert filterautorisatie.
+De GetConnector respecteert filterautorisatie. Zie ook de [overkoepelende melding](./app-connector-auditor-partner#AUT-17).
 
 **Wat kun je ermee?**  
 Bij onverwachte resultaten ligt de oorzaak vaak bij autorisatie.
@@ -431,27 +547,8 @@ Documenteer gebruikte autorisaties in het implementatiedocument.
 
 ---
 
-#### <a id="AUT-17"></a>Autorisaties in implementatiedocument
+#### <a id="AUT-19"></a>Deze GetConnector heeft velden die zijn gemarkeerd als privacygevoelig.
 
-**Niveau:** ⚠️ Waarschuwing  
-**Certificerings-impact:** Moet opgelost of gedocumenteerd worden
-
-**Waarom zie je dit?**  
-De integratie maakt gebruik van filterautorisatie.
-
-**Risico / aandachtspunt**  
-Als autorisaties niet goed zijn ingericht, krijgt de integratie te veel of te weinig gegevens.
-
-**Oplossing**  
-Noem in je implementatiedocument:
-
-* Welke autorisatiefilters van toepassing zijn
-* Hoe klanten deze in hun omgeving moeten instellen
-* Welke rechten de token-gebruiker nodig heeft
-
----
-
-#### <a id="AUT-19"></a>Privacy-gevoelige velden
 
 **Niveau:** ⚠️ Waarschuwing  
 **Certificerings-impact:** Moet gedocumenteerd en onderbouwd worden
