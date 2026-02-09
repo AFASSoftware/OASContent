@@ -1,3 +1,7 @@
+---
+date: 2026-02-09
+---
+
 UpdateConnector voor het insturen van e-inkoopfacturen.
 
 ### XML
@@ -12,7 +16,7 @@ Vul FPdf in als het veld PDF is gevuld.
 
 ### Proc
 
-Optioneel, defaultwaarde false. Bepaalt of de e-inkoopfactuur automatisch verwerkt moet worden. Als deze waarde op true staat, zal de e-inkoopfactuur direct worden verwerkt. Als deze waarde op false staat, zal de gebruiker de e-inkoopfactuur handmatig moeten aanbieden aan de scanbox (Scan & Herken) om deze te laten herkennen.
+Optioneel, defaultwaarde false. Bepaalt of de e-inkoopfactuur automatisch verwerkt moet worden. Werkt alleen als er geen [UBL](#xml) is meegegeven. Als dit veld de waarde true heeft, zal de e-inkoopfactuur direct worden verwerkt. Als deze waarde op false staat, zal de gebruiker de e-inkoopfactuur handmatig moeten aanbieden aan de scanbox (Scan & Herken) om deze te laten herkennen.
 
 ### UnId
 

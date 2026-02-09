@@ -1,3 +1,7 @@
+---
+date: 2026-02-09
+---
+
 UpdateConnector for submitting electronic purchase invoices.
 
 ### XML
@@ -12,7 +16,7 @@ Fill in FPdf if the PDF field is filled.
 
 ### Proc
 
-Optional, default value false. Determines whether the electronic purchase invoice should be processed automatically. If this value is set to true, the electronic purchase invoice will be processed directly. If this value is set to false, the user will have to manually submit the electronic purchase invoice to the scanbox (Scan & Recognize) to have it recognized.
+Optional, default value false. Determines whether the electronic purchase invoice should be processed automatically. Only works if no [UBL](#xml) has been provided. If the value of this field is set to true, the electronic purchase invoice will be processed directly. If this value is set to false, the user will have to manually submit the electronic purchase invoice to the scanbox (Scan & Recognize) to have it recognized.
 
 ### UnId
 
