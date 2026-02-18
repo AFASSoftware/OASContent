@@ -8,7 +8,7 @@ date: 2026-02-18
 
 DELETE /connectors/FiEntries/FiEntryPar/UnId,JoCo/{Unit Id},{Journal code}/FiEntries/@EnNo/{Entry number}  
 
-To delete entry number 7001 in unit 1 and journal 73 you call `connectors/FiEntries/FiEntryPar/UnId,JoCo/1,73/FiEntries/@EnNo/7001`
+To delete entry number 70001 in unit 1 and journal 73 you call `connectors/FiEntries/FiEntryPar/UnId,JoCo/1,73/FiEntries/@EnNo/70001`
 
 ### 2. Delete by invoice number
 
