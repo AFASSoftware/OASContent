@@ -1,3 +1,7 @@
+---
+date: 2026-02-18
+---
+
 ## Required data
 
 Data from these endpoints is needed to successfully create a financial transaction:
@@ -35,4 +39,8 @@ We advise offering a maximum of 1,000 lines per journal entry. If you have more 
 - **Split the revenue lines.**
 - **Submit the lines at different times** The entry date and voucher date may differ. You supply these values in the 'EnDa' (entry date) and 'BpDa' (voucher date) fields.
 
-You supply the administration in the 'UnId' field. If not, the administration that the connector user last logged on to, will be used. 
+You supply the administration in the 'UnId' field. If not, the administration that the connector user last logged on to, will be used.
+
+## Matching invoices
+
+In a memorial journal you can match a debit and a credit invoice against each other. It is not possible to match a prepayment against a credit invoice, or a prepaid receipt against a debit invoice.
