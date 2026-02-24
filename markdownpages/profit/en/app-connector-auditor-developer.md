@@ -52,7 +52,7 @@ The levels are:
 
 ### Data model
 
-#### <a id="DATA-20"></a>DATA-20: `Employment number` and `Employment sequence number` are both used.
+#### <a id="DATA-20"></a>DATA-20: `Employment number` and `Sequence number of employment` are both used.
 
 **Level:** ❌ Error  
 
@@ -105,7 +105,7 @@ Remove the unknown fields, or link them to a field in the database. If they are 
 
 ---
 
-#### <a id="DATA-24"></a>DATA-24: This GetConnector has custom fields.
+#### <a id="DATA-24"></a>DATA-24: This GetConnector has free fields.
 
 **Niveau:** ℹ️ Informatief
 
@@ -121,7 +121,7 @@ If you want to use this GetConnector in another environment, these custom fields
 
 ---
 
-#### <a id="DATA-25"></a>DATA-25: This GetConnector uses compression.
+#### <a id="DATA-25"></a>DATA-25: This GetConnector uses aggregation.
 
 **Level:** ℹ️ Informational
 
@@ -154,7 +154,7 @@ Use these fields only for presentation and never filter/sort on these fields.
 ### Performance
 
 
-#### <a id="PERF-45"></a>PERF-45: This GetConnector lacks fields that are needed to optimally use the indexes for sorting.
+#### <a id="PERF-45"></a>PERF-45: This GetConnector is missing fields needed to optimally use the indexes for sorting.
 
 **Level:** ⚠️ Warning
 
@@ -265,7 +265,7 @@ Be sure the connector user received the correct access rights.
 
 ---
 
-#### <a id="AUT-19"></a>AUT-19: This GetConnector has fields that are marked as privacy-sensitive.
+#### <a id="AUT-19"></a>AUT-19: This GetConnector has fields marked as privacy-sensitive.
 
 **Level:** ⚠️ Warning
 

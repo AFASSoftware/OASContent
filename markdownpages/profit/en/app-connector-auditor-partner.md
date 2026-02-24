@@ -120,7 +120,7 @@ If authorizations are not properly configured, the integration gets too much or 
 
 ### Data model
 
-#### <a id="DATA-20"></a>DATA-20: `Employment number` and `Employment sequence number` are both used.
+#### <a id="DATA-20"></a>DATA-20: `Employment number` and `Sequence number of employment` are both used.
 
 **Level:** ❌ Error  
 **Certification impact:** **Blocks certification**  
@@ -141,7 +141,7 @@ A small number of tables use `Employment sequence number` in the primary key. In
 
 ### Performance & scalability
 
-#### <a id="PERF-30"></a>PERF-30: Financial transactions are retrieved, but `Changed booking days` is not used.
+#### <a id="PERF-30"></a>PERF-30: Financial mutations are being retrieved, but `Changed booking days` is not used.
 
 **Level:** ❌ Error  
 **Certification impact:** **Blocks certification**  
@@ -157,7 +157,7 @@ Use an additional GetConnector based on the data collection `Changed booking day
 
 ---
 
-#### <a id="PERF-31"></a>PERF-31: Post-calculation is retrieved, but `Changed booking days post-calculation` is not used.
+#### <a id="PERF-31"></a>PERF-31: Post-calculation is being retrieved, but `Changed booking days post-calculation` is not used.	
 
 
 **Level:** ❌ Error  
@@ -178,7 +178,7 @@ Use an additional GetConnector based on the data collection `Changed booking day
 
 ### Connector structure
 
-#### <a id="STRUCT-27"></a>STRUCT-27: This is a supplied Profit GetConnector. 
+#### <a id="STRUCT-27"></a>STRUCT-27: This is an included Profit GetConnector. Make your own copy of this.
 
 **Level:** ❌ Error  
 **Certification impact:** **Blocks certification**  
@@ -202,7 +202,7 @@ Never use `Profit` or `AFAS` in the name; that is clear to the customer anyway.
 
 ---
 
-#### <a id="STRUCT-28"></a>STRUCT-28: This GetConnector has a name that starts with `Profit_`.
+#### <a id="STRUCT-28"></a>STRUCT-28: TThis GetConnector has a name that starts with `Profit_`.
 
 **Level:** ❌ Error  
 **Certification impact:** **Blocks certification**  
@@ -224,7 +224,7 @@ Never use `Profit` or `AFAS` in the name.
 
 ---
 
-#### <a id="STRUCT-29"></a>STRUCT-29: This GetConnector has fields with a period in the name.
+#### <a id="STRUCT-29"></a>STRUCT-29: This GetConnector has fields with a dot in the name.
 
 **Level:** ❌ Error  
 **Certification impact:** **Blocks certification**  
@@ -276,7 +276,7 @@ Remove the unknown fields, or link them to a field in the database. If they are 
 
 ---
 
-#### <a id="DATA-24"></a>DATA-24: This GetConnector has custom fields.
+#### <a id="DATA-24"></a>DATA-24: This GetConnector has free fields.
 
 
 
@@ -296,7 +296,7 @@ Custom fields do not exist by default in every customer environment.
 
 ---
 
-#### <a id="DATA-25"></a>DATA-25: This GetConnector uses compression.
+#### <a id="DATA-25"></a>DATA-25: This GetConnector uses aggregation.
 
 
 
@@ -332,7 +332,7 @@ Use these fields only for presentation and never filter/sort on these fields.
 
 ### Performance
 
-#### <a id="PERF-32"></a>PERF-32: This GetConnector has (possibly) a cyclic reference.
+#### <a id="PERF-32"></a>PERF-32: This GetConnector (possibly) has a cyclic reference.
 
 
 **Level:** ⚠️ Warning  
@@ -350,7 +350,7 @@ If not: simplify the GetConnector.
 
 ---
 
-#### <a id="PERF-33"></a>PERF-33: This GetConnector possibly uses a subselect.
+#### <a id="PERF-33"></a>PERF-33: This GetConnector may use a subselect.
 
 
 **Level:** ⚠️ Warning  
@@ -443,7 +443,7 @@ Test yourself, or consult with AFAS, whether the indexes are unique. If not: exp
 ---
 
 
-#### <a id="PERF-45"></a>PERF-45: This GetConnector lacks fields that are needed to optimally use the indexes for sorting.
+#### <a id="PERF-45"></a>PERF-45: This GetConnector is missing fields needed to optimally use the indexes for sorting.
 
 **Level:** ⚠️ Warning  
 **Certification impact:** Must be resolved
@@ -547,7 +547,7 @@ State in your implementation document which authorization filters apply
 
 ---
 
-#### <a id="AUT-19"></a>AUT-19: This GetConnector has fields that are marked as privacy-sensitive.
+#### <a id="AUT-19"></a>AUT-19: This GetConnector has fields marked as privacy-sensitive.
 
 
 **Level:** ⚠️ Warning  
