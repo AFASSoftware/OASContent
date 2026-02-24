@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2026-02-04
+date: 2026-02-24
 index: true
 tags: AppConnector, Auditor, Developer, GetConnector, API, Integration
 title: AppConnector Auditor - Developer Report
@@ -52,7 +52,7 @@ The levels are:
 
 ### Data model
 
-#### <a id="DATA-20"></a>`Employment number` and `Employment sequence number` are both used.
+#### <a id="DATA-20"></a>DATA-20: `Employment number` and `Employment sequence number` are both used.
 
 **Level:** ❌ Error  
 
@@ -75,7 +75,7 @@ A small number of tables use `Employment sequence number` in the primary key. In
 
 ### Datamodel
 
-#### <a id="DATA-21"></a>This GetConnector retrieves fields from `Current data per employment relationship`, but the integration uses data per employment.
+#### <a id="DATA-21"></a>DATA-21: This GetConnector retrieves fields from `Current data per employment relationship`, but the integration uses data per employment.
 
 **Level:** ❌ Error
 
@@ -90,7 +90,7 @@ Use `Current data per employment` or avoid current tables entirely. Consult with
 
 ---
 
-#### <a id="DATA-23"></a>This GetConnector has unknown fields.
+#### <a id="DATA-23"></a>DATA-23: This GetConnector has unknown fields.
 
 **Level:** ❌ Error
 
@@ -105,7 +105,7 @@ Remove the unknown fields, or link them to a field in the database. If they are 
 
 ---
 
-#### <a id="DATA-24"></a>This GetConnector has custom fields.
+#### <a id="DATA-24"></a>DATA-24: This GetConnector has custom fields.
 
 **Niveau:** ℹ️ Informatief
 
@@ -121,7 +121,7 @@ If you want to use this GetConnector in another environment, these custom fields
 
 ---
 
-#### <a id="DATA-25"></a>This GetConnector uses compression.
+#### <a id="DATA-25"></a>DATA-25: This GetConnector uses compression.
 
 **Level:** ℹ️ Informational
 
@@ -136,7 +136,7 @@ Use compression only consciously. If in doubt: consult with AFAS.
 
 ---
 
-#### <a id="DATA-26"></a>This GetConnector has fields with a special format.
+#### <a id="DATA-26"></a>DATA-26: This GetConnector has fields with a special format.
 
 **Level:** ⚠️ Warning
 
@@ -154,7 +154,7 @@ Use these fields only for presentation and never filter/sort on these fields.
 ### Performance
 
 
-#### <a id="PERF-45"></a>This GetConnector lacks fields that are needed to optimally use the indexes for sorting.
+#### <a id="PERF-45"></a>PERF-45: This GetConnector lacks fields that are needed to optimally use the indexes for sorting.
 
 **Level:** ⚠️ Warning
 
@@ -169,7 +169,7 @@ Make index fields visible and use them in sorting and filtering.
 
 ---
 
-#### <a id="PERF-46"></a>Unique indexes on the main table of this GetConnector.
+#### <a id="PERF-46"></a>PERF-46: Unique indexes on the main table of this GetConnector.
 
 **Level:** ℹ️ Informational
 
@@ -181,7 +181,7 @@ Use these indexes for optimal performance. The fields in these indexes identify 
 
 ---
 
-#### <a id="PERF-52"></a>This GetConnector retrieves data from tables more than 5 levels deep.
+#### <a id="PERF-52"></a>PERF-52: This GetConnector retrieves data from tables more than 5 levels deep.
 
 **Level:** ⚠️ Warning
 
@@ -201,7 +201,7 @@ Check if you can simplify the GetConnector by using less deeply nested tables.
 
 ### Selection & filtering
 
-#### <a id="FILT-47"></a>The filter uses 'contains (not)', 'starts (not) with' or 'ends (not) with'.
+#### <a id="FILT-47"></a>FILT-47: The filter uses 'contains (not)', 'starts (not) with' or 'ends (not) with'.
 
 **Level:** ❌ Error
 
@@ -217,7 +217,7 @@ Use equality filters (`=`, `>`, `<` etc.) on index fields.
 ---
 
 
-#### <a id="PERF-34"></a>This GetConnector retrieves data from more than 5 different tables.
+#### <a id="PERF-34"></a>PERF-34: This GetConnector retrieves data from more than 5 different tables.
 
 **Level:** ⚠️ Warning
 
@@ -233,7 +233,7 @@ Only action needed if performance issues occur. In that case, create multiple Ge
 
 ---
 
-#### <a id="PERF-35"></a>This GetConnector retrieves data from a very large table.
+#### <a id="PERF-35"></a>PERF-35: This GetConnector retrieves data from a very large table.
 
 **Level:** ⚠️ Warning
 
@@ -250,7 +250,7 @@ Ensure that your filters and sorting make optimal use of indexes. Use as few joi
 
 ## Authorization & Privacy
 
-#### <a id="AUT-16"></a>This GetConnector is authorized.
+#### <a id="AUT-16"></a>AUT-16: This GetConnector is authorized.
 
 **Level:** ⚠️ Warning
 
@@ -265,7 +265,7 @@ Be sure the connector user received the correct access rights.
 
 ---
 
-#### <a id="AUT-19"></a>This GetConnector has fields that are marked as privacy-sensitive.
+#### <a id="AUT-19"></a>AUT-19: This GetConnector has fields that are marked as privacy-sensitive.
 
 **Level:** ⚠️ Warning
 
@@ -281,9 +281,21 @@ Only retrieve strictly necessary data
 
 ---
 
+## System Integrator support
+
+Need help as a developer? You can use support from AFAS System Integrators.
+
+⚠️ **Important:** Support for developers is paid.
+
+Submit a System Integrator Request via [https://klant.afas.nl/systemintegrators](https://klant.afas.nl/systemintegrators).
+
+System Integrators have strong knowledge of AFAS Profit and can therefore assess your GetConnectors quickly and effectively. They can also help add the correct fields when those are not directly available in your current setup.
+
+---
+
 ## Conclusion
 
-This help is intended as a **reference work and technical specification**, not as a replacement for personal consultation.
+This help is intended as a **reference work and technical specification**, not as a replacement for [System Integrator support](#system-integrator-support).
 
 This document is never finished. Do you see something that is incorrect, or do you have suggestions for improvement? Make a pull request on the [GitHub page of the documentation](https://github.com/AFASSoftware/OASContent/blob/main/markdownpages/profit/en/app-connector-auditor-developer.md).
 

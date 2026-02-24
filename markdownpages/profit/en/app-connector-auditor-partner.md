@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2026-02-04
+date: 2026-02-24
 index: true
 tags: AppConnector, Auditor, Partner, Certification, GetConnector, pentest
 title: AppConnector Auditor - Partner Report
@@ -25,7 +25,7 @@ This report is specifically designed for **AFAS Partners** and contains the stri
 * **Certification impact:** Every message affects your partner status
 * **Deadlines:** Hard deadlines apply for some messages
 
-> During the certification process, there is intensive contact with AFAS System Integrators. If you have doubts about a message or cannot resolve it independently, always contact us.
+> During the certification process, there is intensive contact with AFAS System Integrators. If you have doubts about a message or cannot resolve it independently, always [contact us](#let-s-talk).
 
 ---
 
@@ -97,7 +97,7 @@ This section contains partner-specific messages about the AppConnector itself (n
 
 ### Authorization & Privacy
 
-#### <a id="AUT-17"></a>Filter authorization is applied.
+#### <a id="AUT-17"></a>AUT-17: Filter authorization is applied.
 
 **Level:** ⚠️ Warning  
 **Certification impact:** Must be resolved or documented
@@ -120,7 +120,7 @@ If authorizations are not properly configured, the integration gets too much or 
 
 ### Data model
 
-#### <a id="DATA-20"></a>`Employment number` and `Employment sequence number` are both used.
+#### <a id="DATA-20"></a>DATA-20: `Employment number` and `Employment sequence number` are both used.
 
 **Level:** ❌ Error  
 **Certification impact:** **Blocks certification**  
@@ -141,7 +141,7 @@ A small number of tables use `Employment sequence number` in the primary key. In
 
 ### Performance & scalability
 
-#### <a id="PERF-30"></a>Financial transactions are retrieved, but `Changed booking days` is not used.
+#### <a id="PERF-30"></a>PERF-30: Financial transactions are retrieved, but `Changed booking days` is not used.
 
 **Level:** ❌ Error  
 **Certification impact:** **Blocks certification**  
@@ -157,7 +157,7 @@ Use an additional GetConnector based on the data collection `Changed booking day
 
 ---
 
-#### <a id="PERF-31"></a>Post-calculation is retrieved, but `Changed booking days post-calculation` is not used.
+#### <a id="PERF-31"></a>PERF-31: Post-calculation is retrieved, but `Changed booking days post-calculation` is not used.
 
 
 **Level:** ❌ Error  
@@ -178,7 +178,7 @@ Use an additional GetConnector based on the data collection `Changed booking day
 
 ### Connector structure
 
-#### <a id="STRUCT-27"></a>This is a supplied Profit GetConnector. 
+#### <a id="STRUCT-27"></a>STRUCT-27: This is a supplied Profit GetConnector. 
 
 **Level:** ❌ Error  
 **Certification impact:** **Blocks certification**  
@@ -202,7 +202,7 @@ Never use `Profit` or `AFAS` in the name; that is clear to the customer anyway.
 
 ---
 
-#### <a id="STRUCT-28"></a>This GetConnector has a name that starts with `Profit_`.
+#### <a id="STRUCT-28"></a>STRUCT-28: This GetConnector has a name that starts with `Profit_`.
 
 **Level:** ❌ Error  
 **Certification impact:** **Blocks certification**  
@@ -224,7 +224,7 @@ Never use `Profit` or `AFAS` in the name.
 
 ---
 
-#### <a id="STRUCT-29"></a>This GetConnector has fields with a period in the name.
+#### <a id="STRUCT-29"></a>STRUCT-29: This GetConnector has fields with a period in the name.
 
 **Level:** ❌ Error  
 **Certification impact:** **Blocks certification**  
@@ -242,7 +242,7 @@ Adjust the relevant field names and remove the period.
 
 ### Data model
 
-#### <a id="DATA-21"></a>This GetConnector retrieves fields from `Current data per employment relationship`, but the integration uses data per employment.
+#### <a id="DATA-21"></a>DATA-21: This GetConnector retrieves fields from `Current data per employment relationship`, but the integration uses data per employment.
 
 
 
@@ -256,11 +256,11 @@ This GetConnector retrieves fields from `Current data per employment relationshi
 With multiple simultaneous employments, incorrect or incomplete data is retrieved. These errors are very difficult to trace.
 
 **Solution**  
-Use `Current data per employment` or avoid current tables entirely. Consult with System Integrators if in doubt.
+Use `Current data per employment` or avoid current tables entirely. Consult with System Integrators via [let's talk](#let-s-talk) if in doubt.
 
 ---
 
-#### <a id="DATA-23"></a>This GetConnector has unknown fields.
+#### <a id="DATA-23"></a>DATA-23: This GetConnector has unknown fields.
 
 **Level:** ❌ Error  
 **Certification impact:** **Blocks certification**  
@@ -276,7 +276,7 @@ Remove the unknown fields, or link them to a field in the database. If they are 
 
 ---
 
-#### <a id="DATA-24"></a>This GetConnector has custom fields.
+#### <a id="DATA-24"></a>DATA-24: This GetConnector has custom fields.
 
 
 
@@ -296,7 +296,7 @@ Custom fields do not exist by default in every customer environment.
 
 ---
 
-#### <a id="DATA-25"></a>This GetConnector uses compression.
+#### <a id="DATA-25"></a>DATA-25: This GetConnector uses compression.
 
 
 
@@ -314,7 +314,7 @@ Use compression only consciously. If in doubt: consult with AFAS.
 
 ---
 
-#### <a id="DATA-26"></a>This GetConnector has fields with a special format.
+#### <a id="DATA-26"></a>DATA-26: This GetConnector has fields with a special format.
 
 **Level:** ⚠️ Warning  
 **Certification impact:** Must be resolved or justified
@@ -332,7 +332,7 @@ Use these fields only for presentation and never filter/sort on these fields.
 
 ### Performance
 
-#### <a id="PERF-32"></a>This GetConnector has (possibly) a cyclic reference.
+#### <a id="PERF-32"></a>PERF-32: This GetConnector has (possibly) a cyclic reference.
 
 
 **Level:** ⚠️ Warning  
@@ -350,7 +350,7 @@ If not: simplify the GetConnector.
 
 ---
 
-#### <a id="PERF-33"></a>This GetConnector possibly uses a subselect.
+#### <a id="PERF-33"></a>PERF-33: This GetConnector possibly uses a subselect.
 
 
 **Level:** ⚠️ Warning  
@@ -363,12 +363,12 @@ If not: simplify the GetConnector.
 Subselects can be executed per row and can negatively affect performance.
 
 **Solution**  
-Only action needed if performance issues occur. Get advice from System Integrators.
+Only action needed if performance issues occur. Get advice from System Integrators via [let's talk](#let-s-talk).
 
 ---
 
 
-#### <a id="PERF-34"></a>This GetConnector retrieves data from more than 5 different tables.
+#### <a id="PERF-34"></a>PERF-34: This GetConnector retrieves data from more than 5 different tables.
 
 
 **Level:** ⚠️ Warning  
@@ -382,13 +382,13 @@ Using many joins can cause performance problems, especially with large tables.
 
 
 **Solution**  
-Only action needed if performance issues occur. In that case, create multiple GetConnectors that each use fewer tables. Get advice from System Integrators.
+Only action needed if performance issues occur. In that case, create multiple GetConnectors that each use fewer tables. Get advice from System Integrators via [let's talk](#let-s-talk).
 
 
 
 ---
 
-#### <a id="PERF-35"></a>This GetConnector retrieves data from a very large table.
+#### <a id="PERF-35"></a>PERF-35: This GetConnector retrieves data from a very large table.
 
 
 **Level:** ⚠️ Warning  
@@ -406,7 +406,7 @@ Ensure that your filters and sorting make optimal use of indexes. Use as few joi
 
 ---
 
-#### <a id="PERF-36"></a>This GetConnector retrieves fields from a table that is also available as an alias.
+#### <a id="PERF-36"></a>PERF-36: This GetConnector retrieves fields from a table that is also available as an alias.
 
 
 
@@ -424,7 +424,7 @@ Check if you can use the alias table instead of the longer path. This gives bett
 
 ---
 
-#### <a id="PERF-37"></a>This GetConnector also retrieves fields from another alias. 
+#### <a id="PERF-37"></a>PERF-37: This GetConnector also retrieves fields from another alias. 
 
 
 **Level:** ⚠️ Warning  
@@ -443,7 +443,7 @@ Test yourself, or consult with AFAS, whether the indexes are unique. If not: exp
 ---
 
 
-#### <a id="PERF-45"></a>This GetConnector lacks fields that are needed to optimally use the indexes for sorting.
+#### <a id="PERF-45"></a>PERF-45: This GetConnector lacks fields that are needed to optimally use the indexes for sorting.
 
 **Level:** ⚠️ Warning  
 **Certification impact:** Must be resolved
@@ -459,7 +459,7 @@ Make index fields visible and use them in sorting and filtering.
 
 ---
 
-#### <a id="PERF-46"></a>Unique indexes on the main table of this GetConnector.
+#### <a id="PERF-46"></a>PERF-46: Unique indexes on the main table of this GetConnector.
 
 **Level:** ℹ️ Informational  
 **Certification impact:** Best practice
@@ -472,7 +472,7 @@ Use these indexes for optimal performance. The fields in these indexes identify 
 
 ---
 
-#### <a id="PERF-52"></a>This GetConnector retrieves data from tables more than 5 levels deep.
+#### <a id="PERF-52"></a>PERF-52: This GetConnector retrieves data from tables more than 5 levels deep.
 
 **Level:** ⚠️ Warning  
 **Certification impact:** Resolve or justify
@@ -493,7 +493,7 @@ Check if you can simplify the GetConnector by using less deeply nested tables.
 
 ### Selection & filtering
 
-#### <a id="FILT-47"></a>The filter uses 'contains (not)', 'starts (not) with' or 'ends (not) with'.
+#### <a id="FILT-47"></a>FILT-47: The filter uses 'contains (not)', 'starts (not) with' or 'ends (not) with'.
 
 
 **Level:** ❌ Error  
@@ -510,7 +510,7 @@ Use equality filters (`=`, `>`, `<` etc.) on index fields.
 
 ---
 
-#### <a id="FILT-48"></a>This GetConnector has a user filter.
+#### <a id="FILT-48"></a>FILT-48: This GetConnector has a user filter.
 
 **Level:** ⚠️ Warning  
 **Certification impact:** Must be resolved or documented
@@ -530,7 +530,7 @@ Make filters dynamic via URL parameters or document limitations.
 
 ## Authorization & Privacy
 
-#### <a id="AUT-16"></a>This GetConnector is authorized.
+#### <a id="AUT-16"></a>AUT-16: This GetConnector is authorized.
 
 
 **Level:** ⚠️ Warning  
@@ -547,7 +547,7 @@ State in your implementation document which authorization filters apply
 
 ---
 
-#### <a id="AUT-19"></a>This GetConnector has fields that are marked as privacy-sensitive.
+#### <a id="AUT-19"></a>AUT-19: This GetConnector has fields that are marked as privacy-sensitive.
 
 
 **Level:** ⚠️ Warning  
@@ -566,12 +566,24 @@ Possible GDPR risk.
 
 ---
 
+## Let's talk
+
+Do you have questions, remarks, bug reports, improvement suggestions, or complaints? Get in touch with us. The auditor is intended as a practical tool for you as a partner, for AFAS, and ultimately for the customer.
+
+Go to your own partner page at [https://partner.afas.nl/product-partner-portal](https://partner.afas.nl/product-partner-portal), sign in via the link at the top right, and choose the **Ask a question** tile.
+
+### No login yet?
+
+One or more of your colleagues are administrators on the customer portal and can add you as a contact person, so you can sign in yourself.
+
+---
+
 ## Conclusion
 
 This help is intended as a **reference work and technical specification**, not as a replacement for personal consultation.
 
 > Do you encounter a message that is not feasible for you, or do you have a well-justified reason to deviate from it?
-> Contact the System Integrators – deviations can be assessed and recorded together.
+> [Contact](#let-s-talk) the System Integrators – deviations can be assessed and recorded together.
 
 This document is never finished. Do you see something that is incorrect, or do you have suggestions for improvement? Make a pull request on the [GitHub page of the documentation](https://github.com/AFASSoftware/OASContent/blob/main/markdownpages/profit/en/app-connector-auditor-partner.md).
 
