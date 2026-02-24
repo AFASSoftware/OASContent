@@ -25,7 +25,7 @@ This report is specifically designed for **AFAS Partners** and contains the stri
 * **Certification impact:** Every message affects your partner status
 * **Deadlines:** Hard deadlines apply for some messages
 
-> During the certification process, there is intensive contact with AFAS System Integrators. If you have doubts about a message or cannot resolve it independently, always [contact us](#let-s-talk).
+> During the certification process, there is intensive contact with AFAS System Integrators. If you have doubts about a message or cannot resolve it independently, always [contact us](#lets-talk).
 
 ---
 
@@ -256,7 +256,7 @@ This GetConnector retrieves fields from `Current data per employment relationshi
 With multiple simultaneous employments, incorrect or incomplete data is retrieved. These errors are very difficult to trace.
 
 **Solution**  
-Use `Current data per employment` or avoid current tables entirely. Consult with System Integrators via [let's talk](#let-s-talk) if in doubt.
+Use `Current data per employment` or avoid current tables entirely. Consult with System Integrators via [let's talk](#lets-talk) if in doubt.
 
 ---
 
@@ -363,7 +363,7 @@ If not: simplify the GetConnector.
 Subselects can be executed per row and can negatively affect performance.
 
 **Solution**  
-Only action needed if performance issues occur. Get advice from System Integrators via [let's talk](#let-s-talk).
+Only action needed if performance issues occur. Get advice from System Integrators via [let's talk](#lets-talk).
 
 ---
 
@@ -382,7 +382,7 @@ Using many joins can cause performance problems, especially with large tables.
 
 
 **Solution**  
-Only action needed if performance issues occur. In that case, create multiple GetConnectors that each use fewer tables. Get advice from System Integrators via [let's talk](#let-s-talk).
+Only action needed if performance issues occur. In that case, create multiple GetConnectors that each use fewer tables. Get advice from System Integrators via [let's talk](#lets-talk).
 
 
 
@@ -583,7 +583,7 @@ One or more of your colleagues are administrators on the customer portal and can
 This help is intended as a **reference work and technical specification**, not as a replacement for personal consultation.
 
 > Do you encounter a message that is not feasible for you, or do you have a well-justified reason to deviate from it?
-> [Contact](#let-s-talk) the System Integrators – deviations can be assessed and recorded together.
+> [Contact](#lets-talk) the System Integrators – deviations can be assessed and recorded together.
 
 This document is never finished. Do you see something that is incorrect, or do you have suggestions for improvement? Make a pull request on the [GitHub page of the documentation](https://github.com/AFASSoftware/OASContent/blob/main/markdownpages/profit/en/app-connector-auditor-partner.md).
 

@@ -485,7 +485,7 @@ Controleer of je de GetConnector kunt vereenvoudigen door minder diepe tabellen 
 
 ### Selectie & filtering
 
-#### <a id="FILT-47"></a>FILT-47: filter maakt gebruik van 'bevat (niet)', 'begint (niet) met' of 'eindigt (niet) op'.
+#### <a id="FILT-47"></a>FILT-47: Filter maakt gebruik van 'bevat (niet)', 'begint (niet) met' of 'eindigt (niet) op'.
 
 
 **Niveau:** ❌ Fout  
