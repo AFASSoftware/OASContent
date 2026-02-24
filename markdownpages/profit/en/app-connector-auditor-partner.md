@@ -178,7 +178,7 @@ Use an additional GetConnector based on the data collection `Changed booking day
 
 ### Connector structure
 
-#### <a id="STRUCT-27"></a>STRUCT-27: This is an included Profit GetConnector. Make your own copy of this.
+#### <a id="STRUCT-27"></a>STRUCT-27: This is an included Profit GetConnector.
 
 **Level:** ❌ Error  
 **Certification impact:** **Blocks certification**  

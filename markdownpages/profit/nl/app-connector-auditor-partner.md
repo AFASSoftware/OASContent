@@ -170,7 +170,7 @@ Maak gebruik van een extra GetConnector, gebaseerd op de gegevensverzameling `Ge
 
 ### Connectorstructuur
 
-#### <a id="STRUCT-27"></a>STRUCT-27: Dit is een meegeleverde Profit GetConnector. Maak hier een eigen kopie van.
+#### <a id="STRUCT-27"></a>STRUCT-27: Dit is een meegeleverde Profit GetConnector. 
 
 **Niveau:** ❌ Fout  
 **Certificerings-impact:** **Blokkeert certificering**  
