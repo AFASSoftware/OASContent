@@ -2,45 +2,53 @@
 date: 2026-03-02
 ---
 
-Anta XML connector class for (verlofboekingen)
+Met deze connector maak je verlofboekingen aan.
 
 ### HrAbsence
 Vrije velden mogelijk: ja
 Meerdere records mogelijk: ja
 
 #### EmId
-Medewerker Id. Verplicht veld.
-Aanmaken verlofboeking is alleen mogelijk voor een medewerker waarop de gebruiker rechten heeft volgens het autorisatiefilter. Anders komt de melding "Kan de verlofboeking niet toevoegen omdat je geen rechten hebt op medewerker {1=medewerker}.".
+Verplicht veld.
 
 #### ViAt
+Verplicht veld.
+
 #### DaBe
-Begindatum en -tijd van de verlofboeking. 
+Verplicht veld.
 
 #### DaEn
-Einddatum en -tijd van de verlofboeking. De einddatum en -tijd moeten na de begindatum en -tijd liggen, anders komt de melding "De einddatum en -tijd moeten na de begin datum en -tijd liggen.".
+Verplicht veld.
 
 #### ViLr
+
 #### EnSe
+Verplicht veld.
+
 #### DuRa
-Duur van de verlofboeking in minuten. Wordt alleen overgenomen als de medewerker een niet-gespecifeerd rooster heeft, anders wordt de duur automatisch berekend op basis van het rooster van de medewerker en de opgegeven begin- en einddatum. De duur wordt altijd in hele minuten opgegeven.
+`DuRa` wordt alleen overgenomen als het rooster niet gespecificeerd is; anders wordt de duur bepaald vanuit de roosterlogica.
 
 #### EmRp
+
 #### Re
+
 #### LeDt
-Bepaalt of de verlofboeking afwijkt van hele dagen. Als dit veld op true staat, worden de begin- en eindtijd genegeerd en wordt de duur automatisch berekend als het aantal minuten tussen de begin- en einddatum. Als dit veld op false staat, worden de begin- en eindtijd gebruikt om de duur te berekenen.
+Verplicht veld. `LeDt` stuurt de verwerking van tijden en dagdelen en heeft invloed op velden zoals `DuBe`, `DuEn`, `PaTs` en `PaTe`.
 
 #### PaTs
-Begindatum en -tijd van de pauze. De pauze moet binnen de begin- en einddatum van de verlofboeking vallen. 
-Dit veld wordt alleen gelezen als er in de Hrm omgevingsinstelling "Pauze in verlofboekingen toestaan" is ingesteld op "Ja". Als deze omgevingsinstelling is ingesteld op "Nee", wordt dit veld genegeerd en kunnen pauzes niet worden toegevoegd aan verlofboekingen.
+Dit veld wordt alleen verwerkt als de omgevingsinstelling "AfasHrLeavePauseTime" dit toestaat; anders wordt bij niet-hele-dagen een standaard pauzewaarde gebruikt.
 
 #### PaTe
-Einddatum en -tijd van de pauze. De pauze moet binnen de begin- en einddatum van de verlofboeking vallen. Zie verder bij PaTs.
+Dit veld wordt alleen verwerkt als de omgevingsinstelling "AfasHrLeavePauseTime" dit toestaat; anders wordt bij niet-hele-dagen een standaard pauzewaarde gebruikt.
 
 #### DuBe
-Duur van het verlof op de eerste dag in minuten. Wordt alleen overgenomen als het veld `LeDt` de waarde true heeft. en de verlofboeking meerdere dagen beslaat, anders wordt de duur automatisch berekend op basis van het rooster van de medewerker en de opgegeven begin- en einddatum. De duur wordt altijd in hele minuten opgegeven.
-
+Alleen van toepassing als `LeDt` waar is.
 
 #### DuEn
+Alleen van toepassing als `LeDt` waar is en `DaBe` en `DaEn` op verschillende datums liggen.
+
 #### ReLe
+
 #### FaSn
+
 #### MuCh
