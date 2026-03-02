@@ -1,22 +1,33 @@
-# KnOrganisation
+---
+date: 2026-03-02
+---
 
-Aanmaken of aanpassen van een organisatie. Beschikbaar als losse UpdateConnector, maar ook als subobject bij onder andere KnSalesRelationOrg. De werking is in beide situaties nagenoeg identiek.
+Maakt een organisatie aan of koppelt op basis van MatchOga, en verwerkt daarna organisatievelden en subobjecten.
 
-De subobjecten van deze UpdateConnector ondersteunen geen van alle het aanleveren van meerdere regels. Dus bijvoorbeeld voor het toevoegen van meerdere bankrekeningen zullen er meerdere calls gedaan moeten worden.
+### KnOrganisation
+Vrije velden mogelijk: ja
+Meerdere records mogelijk: ja
 
-## KnBasicAddressAdr
+#### MatchOga
+Bepaalt de zoek-/aanmaakstrategie: "0" (BcCo), "1" (KvK), "2" (fiscaal nummer), "3" (naam), "4" (adres), "5" (postadres), "6" (altijd nieuw). Bij "4" of "5" zonder match volgt: "Er is geen organisatie/persoon gevonden via zoeken op adres."
 
-Een adres dat je invoert wordt gematcht op een eventueel al bestaand adres in Profit. Daardoor komt een adres altijd maar één keer voor in de database. 
+#### PadAdr
+Als `PadAdr` aan staat, wordt postadres afgeleid van het adres; bij adresregels wordt dan ook een PAD-regel met dezelfde ingangsdatum bijgewerkt.
 
-## KnBasicAddressPad
+#### FileName
+Verplicht als `FileStream` gevuld is; anders volgt: "Het veld 'FileName' is verplicht bij het toevoegen van een afbeelding."
 
-Postadres. Als het vinkje `PadAdr` de waarde `true` heeft, wordt dit subobject genegeerd.
-Een adres dat je invoert wordt gematcht op een eventueel al bestaand adres in Profit. Daardoor komt een adres altijd maar één keer voor in de database. 
+#### FileStream
+Een gevulde waarde laadt een afbeelding; een expliciet lege waarde verwijdert de bestaande afbeelding.
 
-## KnBankAccount
+#### KnBasicAddressAdr.ResZip
+Als `ResZip` aan staat, moeten `Rs` en `ZpCd` zijn meegegeven; anders volgt een foutmelding dat deze velden vereist zijn.
 
-Enkel POST (Insert) is toegestaan op dit subobject
+#### KnBasicAddressAdr.CoId
+Wanneer adresvelden gevuld zijn, moet `CoId` aanwezig zijn; zonder landcode wordt het adres afgekeurd.
 
-## KnPerson 
+#### KnBasicAddressAdr.BeginDate
+Bij de eerste adresregel wordt de meegegeven begindatum genegeerd en intern als eerste regel verwerkt.
 
-Zie de beschrijving bij [KnPerson](./knperson_post).
+#### KnBankAccount.Iban
+Als `Iban` gevuld is en `Bic` ontbreekt, wordt `Bic` automatisch bepaald. Met IBAN-controle gelden aanvullende landvalidaties op het IBAN-formaat.
