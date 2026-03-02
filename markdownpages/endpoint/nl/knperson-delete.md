@@ -2,55 +2,73 @@
 date: 2026-03-02
 ---
 
-Met deze connector verwijder je bestaande personen.
+Met deze connector verwijder je bestaande personen en gerelateerde verhuisregels via `Action="delete"`.
 
 ### KnPerson
 Vrije velden mogelijk: ja
 Meerdere records mogelijk: ja
 
+#### Action
+Verwijderen gebeurt op basis van `Action="delete"` op het element.
+
 #### MatchPer
-Bepaalt hoe de te verwijderen persoon wordt gezocht (`0` t/m `7` met dezelfde zoeklogica als bij POST).
+Stuurt hoe de persoon wordt gevonden. `7` forceert geen match (`AND 1=2`) en levert daarmee geen verwijdering op; `9` is niet geldig voor delete omdat die mode `Action="update"` vereist.
 
 #### SoSe
 Wordt als zoekwaarde gebruikt bij `MatchPer = 1`.
 
 #### LaNm
-Wordt als zoekwaarde gebruikt bij `MatchPer = 2` t/m `6`.
+Wordt als zoekwaarde gebruikt bij `MatchPer = 2`, `3`, `4`, `5` en `6`.
 
 #### In
-Wordt als zoekwaarde gebruikt bij `MatchPer = 2` t/m `6`.
+Wordt als zoekwaarde gebruikt bij `MatchPer = 2`, `3`, `4`, `5` en `6`.
 
 #### Is
-Wordt als zoekwaarde gebruikt bij `MatchPer = 2` t/m `6`.
+Wordt als zoekwaarde gebruikt bij `MatchPer = 2`, `3`, `4`, `5` en `6`.
 
 #### ViGe
-Wordt als zoekwaarde gebruikt bij `MatchPer = 2` t/m `6`; bij waarde `O` wordt geslacht niet in de match meegenomen.
+Wordt als zoekwaarde gebruikt bij `MatchPer = 2`, `3`, `4`, `5` en `6`; bij waarde `O` wordt geslacht niet in de match gebruikt.
 
 #### EmAd
-Wordt extra zoekvoorwaarde bij `MatchPer = 3`.
+Wordt extra zoekwaarde bij `MatchPer = 3`.
 
 #### MbNr
-Wordt extra zoekvoorwaarde bij `MatchPer = 4`.
+Wordt extra zoekwaarde bij `MatchPer = 4`.
 
 #### TeNr
-Wordt extra zoekvoorwaarde bij `MatchPer = 5`.
+Wordt extra zoekwaarde bij `MatchPer = 5`.
 
 #### DaBi
-Wordt extra zoekvoorwaarde bij `MatchPer = 6`.
+Wordt extra zoekwaarde bij `MatchPer = 6`.
 
 #### BcCo
 Wordt als zoeksleutel gebruikt bij `MatchPer = 0`.
+
+#### PadAdr
+Als `PadAdr` waar is en een ADR-verhuisregel wordt verwijderd, probeert de connector dezelfde verwijdering ook op PAD toe te passen.
 
 ### KnPerson.KnBasicAddressAdr
 Vrije velden mogelijk: nee
 Meerdere records mogelijk: nee
 
+#### Action
+Alleen regels met `Action="delete"` gaan de verwijderlogica in.
+
 #### BeginDate
-Bij verwijderen van een verhuisregel mag alleen een toekomstige regel zonder einddatum worden verwijderd; anders ontstaat "Alleen een verhuizing in de toekomst mag verwijderd worden." of "Alleen de verhuizing zonder einddatum mag verwijderd worden.".
+Verwijderen mag alleen voor een toekomstige verhuisregel; `BeginDate` op of voor systeemdatum geeft fout "Alleen een verhuizing in de toekomst mag verwijderd worden.".
+
+#### DaEn
+Alleen een verhuisregel zonder einddatum mag verwijderd worden; als `DaEn` gevuld is volgt fout "Alleen de verhuizing zonder einddatum mag verwijderd worden.".
 
 ### KnPerson.KnBasicAddressPad
 Vrije velden mogelijk: nee
 Meerdere records mogelijk: nee
 
+#### Action
+Alleen regels met `Action="delete"` gaan de verwijderlogica in.
+
 #### BeginDate
-Bij verwijderen van een postadres-verhuisregel gelden dezelfde beperkingen als bij `KnBasicAddressAdr`.
+Verwijderen mag alleen voor een toekomstige verhuisregel; `BeginDate` op of voor systeemdatum geeft fout "Alleen een verhuizing in de toekomst mag verwijderd worden.".
+
+#### DaEn
+Alleen een verhuisregel zonder einddatum mag verwijderd worden; als `DaEn` gevuld is volgt fout "Alleen de verhuizing zonder einddatum mag verwijderd worden.".

@@ -2,108 +2,152 @@
 date: 2026-03-02
 ---
 
-Met deze connector maak je personen aan en werk je bestaande personen bij via `Action="update"`.
+Met deze connector maak je personen aan en werk je bestaande personen bij via `Action="update"` binnen POST.
 
 ### KnPerson
 Vrije velden mogelijk: ja
 Meerdere records mogelijk: ja
 
+#### Action
+`insert`, `update` en `delete` worden op rijniveau verwerkt; bij `MatchPer = 9` is alleen `Action="update"` toegestaan.
+
 #### MatchPer
-Bepaalt de zoekstrategie voor bestaande personen: `0` = `BcCo`, `1` = `SoSe`, `2` = `LaNm`+`In`+`Is`+`ViGe`, `3` = vorige + `EmAd`, `4` = vorige + `MbNr`, `5` = vorige + `TeNr`, `6` = vorige + `DaBi`, `7` = altijd nieuw.
-Bij `Action="update"` zonder match ontstaat "Er is geen organisatie/persoon gevonden die voldoet aan de zoekcriteria.".
+Stuurt de zoekstrategie voor de persoon. `7` forceert altijd nieuw (query wordt `AND 1=2`), `9` forceert volgen van bron-`BcId` uit verkoop/inkoopcontext.
 
 #### SoSe
 Wordt als zoekwaarde gebruikt bij `MatchPer = 1`.
 
 #### LaNm
-Wordt als zoekwaarde gebruikt bij `MatchPer = 2` t/m `6`.
+Wordt als zoekwaarde gebruikt bij `MatchPer = 2`, `3`, `4`, `5` en `6`.
 
 #### In
-Wordt als zoekwaarde gebruikt bij `MatchPer = 2` t/m `6`.
+Wordt als zoekwaarde gebruikt bij `MatchPer = 2`, `3`, `4`, `5` en `6`.
 
 #### Is
-Wordt als zoekwaarde gebruikt bij `MatchPer = 2` t/m `6`.
+Wordt als zoekwaarde gebruikt bij `MatchPer = 2`, `3`, `4`, `5` en `6`.
 
 #### ViGe
-Wordt als zoekwaarde gebruikt bij `MatchPer = 2` t/m `6`; bij waarde `O` wordt geslacht niet in de match meegenomen.
+Wordt als zoekwaarde gebruikt bij `MatchPer = 2`, `3`, `4`, `5` en `6`; bij waarde `O` wordt geslacht expliciet niet meegenomen in de match.
 
 #### EmAd
-Wordt extra zoekvoorwaarde bij `MatchPer = 3`.
+Wordt extra zoekwaarde bij `MatchPer = 3`.
 
 #### MbNr
-Wordt extra zoekvoorwaarde bij `MatchPer = 4`.
+Wordt extra zoekwaarde bij `MatchPer = 4`.
 
 #### TeNr
-Wordt extra zoekvoorwaarde bij `MatchPer = 5`.
+Wordt extra zoekwaarde bij `MatchPer = 5`.
 
 #### DaBi
-Wordt extra zoekvoorwaarde bij `MatchPer = 6`.
+Wordt extra zoekwaarde bij `MatchPer = 6`.
 
 #### BcCo
-Bij `Action="update"` wordt `BcCo` niet aangepast.
+Bij `Action="update"` wordt `BcCo` niet overgenomen; bij `MatchPer = 9` mag `BcCo` niet meegestuurd worden.
 
 #### PadAdr
-Als `PadAdr` aangeeft dat postadres gelijk is aan adres, wordt `KnBasicAddressPad` niet verwerkt.
+Als `PadAdr` waar is, wordt geen apart `KnBasicAddressPad`-subobject toegevoegd en wordt ADR ook gespiegeld naar PAD in de BCA-verwerking.
 
 #### AddToPortal
-Portaalsynchronisatie wordt alleen uitgevoerd als `AddToPortal` of `EmailPortal` is meegegeven en de portalfunctie actief is.
+Als dit veld aanwezig is, wordt intern `AddToPortalChanged` gezet zodat na commit portalsynchronisatie kan draaien.
 
 #### EmailPortal
-Wordt als e-mailadres gebruikt voor portaalsynchronisatie wanneer `AddToPortal`/`EmailPortal` wijzigt.
+Als dit veld aanwezig is, wordt intern `AddToPortalChanged` gezet en de waarde wordt gebruikt in portalsynchronisatie.
 
 #### FileId
-Bij een waarde wordt een afbeelding uit file-opslag geladen; bij een lege waarde wordt de huidige afbeelding verwijderd.
+Bij gevulde waarde wordt afbeelding geladen uit AFM-opslag naar `Img`; daarna wordt het tijdelijke file-token verwijderd. Bij lege waarde wordt `Img` verwijderd.
 
 #### FileName
-Verplicht bij een gevulde `FileStream`; anders ontstaat "Het veld 'FileName' is verplicht bij het toevoegen van een afbeelding.". Ongeldige tekens geven "Filename bevat ongeldige karakters.".
+Verplicht bij gevulde `FileStream`; ongeldige bestandsnaam geeft "Filename bevat ongeldige karakters.".
 
 #### FileStream
-Een gevulde waarde laadt de afbeelding in, een lege waarde verwijdert de huidige afbeelding.
-
-### KnPerson.KnContactAutRole
-Vrije velden mogelijk: nee
-Meerdere records mogelijk: ja
-
-#### AutRoleDs
-Wordt vertaald naar de interne autorisatierol-id. Per regel wordt eerst een bestaande koppeling verwijderd; behalve bij `Action="delete"` wordt daarna opnieuw gekoppeld.
+Bij gevulde waarde wordt binary eerst tijdelijk opgeslagen en daarna in `Img` geladen; bij lege waarde wordt de huidige afbeelding verwijderd.
 
 ### KnPerson.KnBankAccount
 Vrije velden mogelijk: ja
 Meerdere records mogelijk: nee
 
 #### BaAc
-Dit subobject wordt alleen verwerkt als `BaAc` of `Iban` gevuld is.
+Subobject wordt alleen verwerkt als `BaAc` of `Iban` gevuld is.
 
 #### Iban
-Bij IBAN-controle wordt de waarde gevalideerd en kan `BaAc` hieruit worden afgeleid.
+Wordt genormaliseerd (spaties weg, uppercase); als `IbCk` ontbreekt wordt de IBAN-check automatisch berekend.
 
 #### Bic
-Bij een gevulde waarde wordt de combinatie met `Iban` gevalideerd; bij lege `Bic` kan AFAS deze op basis van `Iban` bepalen.
+Als `Bic` ontbreekt maar `Iban` en `CoId` aanwezig zijn, wordt `Bic` automatisch bepaald.
+
+### KnPerson.KnContactAutRole
+Vrije velden mogelijk: nee
+Meerdere records mogelijk: nee
+
+#### AutRoleDs
+Wordt vertaald naar interne `ArId`; bij update wordt bestaande koppeling verwijderd en opnieuw toegevoegd (bij delete-actie alleen verwijderen).
 
 ### KnPerson.KnBasicAddressAdr
 Vrije velden mogelijk: nee
 Meerdere records mogelijk: nee
 
-#### BeginDate
-Bij de eerste adresregel wordt `BeginDate` genegeerd en intern op een vaste startdatum gezet.
-Bij `Action="delete"` mag alleen een toekomstige regel zonder einddatum verwijderd worden; anders ontstaat "Alleen een verhuizing in de toekomst mag verwijderd worden." of "Alleen de verhuizing zonder einddatum mag verwijderd worden.".
+#### CoId
+Adresverwerking loopt alleen als `CoId` gevuld is; anders leidt een gedeeltelijk gevuld adres tot fout "Een onvolledig adres mag niet geimporteerd worden.".
 
 #### ResZip
-Als `ResZip` aan staat, moeten `Rs` en `ZpCd` aanwezig en gevuld zijn; anders ontstaat een foutmelding.
+Als `ResZip` waar is, moeten `Rs` en `ZpCd` aanwezig zijn; ontbrekende waarden geven een validatiefout.
 
-#### Ad
-Onvolledige adressen geven "Een onvolledig adres mag niet geïmporteerd worden.".
+#### ZpCd
+Bij `CoId = NL` wordt postcode genormaliseerd (bijv. `1234AB` naar `1234 AB`) voordat lookup plaatsvindt.
+
+#### Rs
+Bij `ResZip` wordt `Rs` gevuld/overschreven met resultaat van woonplaatslookup op `CoId` + `ZpCd`.
+
+#### BeginDate
+Bij de eerste adresregel wordt `BeginDate` genegeerd en op 1900-01-01 gezet; bij volgende regels bepaalt `BeginDate` of bestaande BCA-regel wordt bijgewerkt of toegevoegd.
+
+#### PadAdr
+Als bovenliggend `PadAdr` waar is, wordt voor hetzelfde adres ook een PAD-BCA-regel gemaakt/geupdate met dezelfde `BeginDate`.
 
 ### KnPerson.KnBasicAddressPad
 Vrije velden mogelijk: nee
 Meerdere records mogelijk: nee
 
-#### BeginDate
-Bij de eerste postadresregel wordt `BeginDate` genegeerd en intern op een vaste startdatum gezet.
-Bij `Action="delete"` mag alleen een toekomstige regel zonder einddatum verwijderd worden; anders ontstaat "Alleen een verhuizing in de toekomst mag verwijderd worden." of "Alleen de verhuizing zonder einddatum mag verwijderd worden.".
+#### CoId
+Adresverwerking loopt alleen als `CoId` gevuld is; anders leidt een gedeeltelijk gevuld adres tot fout "Een onvolledig adres mag niet geimporteerd worden.".
 
 #### ResZip
-Als `ResZip` aan staat, moeten `Rs` en `ZpCd` aanwezig en gevuld zijn; anders ontstaat een foutmelding.
+Als `ResZip` waar is, moeten `Rs` en `ZpCd` aanwezig zijn; ontbrekende waarden geven een validatiefout.
 
-#### Ad
-Onvolledige adressen geven "Een onvolledig adres mag niet geïmporteerd worden.".
+#### ZpCd
+Bij `CoId = NL` wordt postcode genormaliseerd (bijv. `1234AB` naar `1234 AB`) voordat lookup plaatsvindt.
+
+#### Rs
+Bij `ResZip` wordt `Rs` gevuld/overschreven met resultaat van woonplaatslookup op `CoId` + `ZpCd`.
+
+#### BeginDate
+Bij de eerste postadresregel wordt `BeginDate` genegeerd en op 1900-01-01 gezet; bij volgende regels bepaalt `BeginDate` of bestaande BCA-regel wordt bijgewerkt of toegevoegd.
+
+### KnPerson.KnContact
+Vrije velden mogelijk: ja
+Meerdere records mogelijk: nee
+
+#### ViKc
+Alleen `AFD`, `AFL` en `PRS` worden overgenomen; overgang van `AFD` naar `PRS` wordt expliciet geblokkeerd.
+
+#### CdId
+Bij updaten op `CdId` moet ook `ViKc` aanwezig zijn; alleen `CdId` zonder `ViKc` geeft fout.
+
+#### ExAd
+Kan als alternatieve zoeksleutel voor contact-update gebruikt worden; zonder `BcCoPer`/`CdId`/`ExAd` ontstaat fout.
+
+#### PadAdr
+Als `PadAdr` waar is, wordt ADR ook als PAD verwerkt in de BCA-logica.
+
+### KnPerson.KnContact.KnPerson
+Vrije velden mogelijk: ja
+Meerdere records mogelijk: nee
+
+#### MatchPer
+Volgt dezelfde matchlogica als het bovenliggende `KnPerson`.
+
+#### BcCo
+Bij `Action="update"` wordt `BcCo` niet overgenomen.
+
+#### PadAdr
+Als `PadAdr` waar is, wordt ADR ook als PAD verwerkt in de BCA-logica.
