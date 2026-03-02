@@ -1,6 +1,6 @@
-Anta XML connector class for (verlofboekingen)
+Anta XML connector class for (verlofboekingen) voor InSite
 
-### HrAbsence
+### HrAbsenceInSite
 Vrije velden mogelijk: ja
 Meerdere records mogelijk: ja
 
@@ -17,6 +17,8 @@ Einddatum en -tijd van de verlofboeking. De einddatum en -tijd moeten na de begi
 
 #### ViLr
 #### EnSe
+
+
 #### DuRa
 Duur van de verlofboeking in minuten. Wordt alleen overgenomen als de medewerker een niet-gespecifeerd rooster heeft, anders wordt de duur automatisch berekend op basis van het rooster van de medewerker en de opgegeven begin- en einddatum. De duur wordt altijd in hele minuten opgegeven.
 
@@ -40,3 +42,11 @@ Duur van het verlof op de eerste dag in minuten. Wordt alleen overgenomen als he
 #### ReLe
 #### FaSn
 #### MuCh
+
+### HrAbsenceInSite.HrAbsenceInSiteAttachment
+Vrije velden mogelijk: nee
+Meerdere records mogelijk: nee
+
+#### FileName
+#### FileId
+#### FileStream
