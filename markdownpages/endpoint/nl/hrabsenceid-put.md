@@ -1,31 +1,54 @@
-Gebruik bijvoorkeur dit endpoint om verlofboekingen aan te passen. Via een GetConnector vind je het AbsenceId.
-Stuur bij een PUT **alleen het veld `Id`** mee **en de velden die je wilt aanpassen**. De precieze werking van de connector hangt af van het type rooster dat de medewerker heeft.
+---
+date: 2026-03-02
+---
 
-### Verlof inkorten of verlengen
+Met deze endpoint wijzig je een bestaande verlofboeking op basis van `Id` (AbsenceId).
 
-#### Type rooster: werktijden
+### HrAbsenceID
+Vrije velden mogelijk: ja
+Meerdere records mogelijk: ja
 
-Bij dit type rooster werkt de medewerker volgens een vastgesteld rooster met begin- en eindtijd. Bij een verlofboeking zijn begin- en eindtijd gevuld.
+#### Id
+Verplicht veld. Wordt als zoeksleutel gebruikt om de bestaande boeking op te halen. Bij deze connector worden `EmId` en `EnSe` niet als zoeksleutel gebruikt.
 
-- `Id`: Dit is het AbsenceId 
-- `LeDt`: False als het verlof enkel uit gehele dagen bestaat. 
-- `DaBe`: Begindatum/-tijd. Het tijdsdeel wordt genegeerd als `LeDt` = False.
-- `DaEn`: Eindatum/-tijd. Het tijdsdeel wordt genegeerd als `LeDt` = False.
+#### Id
+Als geen boeking wordt gevonden, als meerdere wijzigbare boekingen worden gevonden, of als alleen gekoppelde samengestelde/correctieboekingen worden gevonden, wordt de update afgekeurd met een specifieke foutmelding.
 
-#### Type rooster: uren per dag of uren per werktijden
+#### EmId
+Dit veld staat in het schema maar wordt in de updateflow expliciet genegeerd.
 
-Bij dit type rooster is niet bekend wanneer de uren precies gemaakt worden. In de verlofboeking zijn begin- en eindtijd altijd gevuld met 00:00:00.
+#### DaBe
+Alleen bij `HrAbsenceID` is `DaBe` wijzigbaar. De waarde wordt omgezet naar `DateBegin` en (afhankelijk van `LeDt`/`Gespecificeerd`) naar `TimeBegin`, inclusief defaultverwerking via `FillDefaultDateBegin`.
 
-- `Id`: Dit is het AbsenceId
-- `LeDt`: False als het verlof enkel uit gehele dagen bestaat. 
-- `DaBe`: Begindatum/-tijd. Het tijdsdeel wordt genegeerd.
-- `DaEn`: Eindatum/-tijd. Het tijdsdeel wordt genegeerd.
-- `DuBe`: Verlof (in **minuten**) op begindatum. Dit veld wordt genegeerd als `LeDt` = False.
-- `DuEn`: Verlof (in **minuten**) op einddatum. Dit veld wordt genegeerd als `LeDt` = False.
+#### DaEn
+De waarde wordt omgezet naar `DateEnd` en (afhankelijk van `LeDt`/`Gespecificeerd`) naar `TimeEnd`, inclusief defaultverwerking via `FillDefaultTimeEnd`.
 
-### Known issue: verlof inkorten of verlengen waarbij `LeDt` = False
+#### LeDt
+Stuurt de verwerking van tijden en dagdelen en bepaalt gedrag van `DuBe`, `DuEn`, `PaTs` en `PaTe`.
 
-Als je een verlof wilt aanpassen dat enkel bestaat uit gehele dagen, dan zal `LeDt` op False staan. Wil je zo'n verlof bijvoorbeeld een paar uur inkorten, dan moet je twee aanroepen doen.
+#### DuRa
+Wordt alleen overgenomen als het rooster niet gespecificeerd is (`Gespecificeerd = false`).
 
-1. In de eerste aanroep zet je `LeDt` op True
-2. In de tweede aanroep geef je de afwijkende `DaBe`, `DaEn`, `DuBe` of `DuEn` aan.
+#### DuRa
+Bij `LeDt = true` en onderwijsrooster (`Gespecificeerd = true` en `IsEducation = true`) wordt bij aangeleverde `DuRa` extra logica uitgevoerd: `DateRoosterBeginTo` wordt opgehaald, `DaBe` daarop gezet en `TimeEnd` geforceerd op +9 uur.
+
+#### PaTs
+Wordt alleen verwerkt als omgevingsinstelling `AfasHrLeavePauseTime` aan staat; anders wordt bij niet-hele-dagen de standaard beginpauze (`DateBeginBreakTime`) gebruikt.
+
+#### PaTe
+Wordt alleen verwerkt als omgevingsinstelling `AfasHrLeavePauseTime` aan staat; anders wordt bij niet-hele-dagen de standaard eindpauze (`DateEndBreakTime`) gebruikt.
+
+#### DuBe
+Wordt alleen overgenomen als `LeDt = true`; anders wordt een bestaande waarde leeggemaakt.
+
+#### DuEn
+Wordt alleen overgenomen als `LeDt = true` én `DaBe` en `DaEn` op verschillende datums liggen; anders wordt een bestaande waarde leeggemaakt.
+
+#### ViAt
+Wordt alleen verwerkt als het veld aanwezig is in de payload (`IsPresent`) en via `ANTAValue` toegepast.
+
+#### ViLr
+Wordt alleen verwerkt als het veld aanwezig is in de payload (`IsPresent`) en via `ANTAValue` toegepast.
+
+#### ReLe
+Wordt alleen verwerkt als het veld aanwezig is in de payload (`IsPresent`) en via `ANTAValue` toegepast.
