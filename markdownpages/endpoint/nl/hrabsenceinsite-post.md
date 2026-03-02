@@ -2,55 +2,87 @@
 date: 2026-03-02
 ---
 
-Anta XML connector class for (verlofboekingen) voor InSite
+Met deze endpoint maak je verlofboekingen aan via de InSite-flow.
 
 ### HrAbsenceInSite
 Vrije velden mogelijk: ja
 Meerdere records mogelijk: ja
 
 #### EmId
-Medewerker Id. Verplicht veld.
-Aanmaken verlofboeking is alleen mogelijk voor een medewerker waarop de gebruiker rechten heeft volgens het autorisatiefilter. Anders komt de melding "Kan de verlofboeking niet toevoegen omdat je geen rechten hebt op medewerker {1=medewerker}.".
+Verplicht veld. Bij pocket-gebruik wordt autorisatie op medewerker vooraf gecontroleerd; zonder recht volgt: "Kan de verlofboeking niet toevoegen omdat je geen rechten hebt op medewerker {1=medewerker}.".
+
+#### EmId
+Na zetten van `EmId` wordt `FillDefaultDateBeginEmp` uitgevoerd om medewerkerafhankelijke defaults te laden.
+
+#### ProfileId
+Optioneel afwijkend instuurprofiel. Alleen bij geldig verlof-instuurprofiel (`AfasKnProfileType = 11` en `AfasKnProfileKind = 1`) wordt `PrId` aangepast; anders blijft de default staan.
+
+#### ProfileId
+Standaard wordt `PrId = -24` gezet (aanmaken verlofaanvraag). Bij geldig afwijkend profiel wordt daarnaast `Mode = 4` gezet (profielpagina-route).
 
 #### ViAt
+`ViAt` triggert de datum/tijd-initialisatie; hierbij worden `DaBe` en `DaEn` uit de payload gelezen en omgezet naar `DateBegin/DateEnd` en conditioneel `TimeBegin/TimeEnd`.
+
 #### DaBe
-Begindatum en -tijd van de verlofboeking. 
+`DaBe` wordt niet direct verwerkt in de eigen case, maar via `ViAt`-logica; zo wordt eerst `DateBegin` gevuld en defaultlogica (`FillDefaultDateBegin`) uitgevoerd.
 
 #### DaEn
-Einddatum en -tijd van de verlofboeking. De einddatum en -tijd moeten na de begindatum en -tijd liggen, anders komt de melding "De einddatum en -tijd moeten na de begin datum en -tijd liggen.".
+`DaEn` wordt niet direct verwerkt in de eigen case, maar via `ViAt`-logica; zo wordt eerst `DateEnd` gevuld en defaultlogica (`FillDefaultTimeEnd`) uitgevoerd.
 
-#### ViLr
-#### EnSe
+#### DaBe
+Als `Idub` actief is, wordt een meegegeven tijdscomponent verwijderd en alleen de datum bewaard.
 
+#### DaEn
+Als `Idue` actief is, wordt een meegegeven tijdscomponent verwijderd en alleen de datum bewaard.
+
+#### LeDt
+Stuurt de verwerking van tijden en dagdeelvelden en bepaalt gedrag van `DuBe`, `DuEn`, `PaTs` en `PaTe`.
 
 #### DuRa
-Duur van de verlofboeking in minuten. Wordt alleen overgenomen als de medewerker een niet-gespecifeerd rooster heeft, anders wordt de duur automatisch berekend op basis van het rooster van de medewerker en de opgegeven begin- en einddatum. De duur wordt altijd in hele minuten opgegeven.
+Wordt alleen overgenomen als het rooster niet gespecificeerd is (`Gespecificeerd = false`).
 
-#### EmRp
-#### Re
-#### LeDt
-Bepaalt of de verlofboeking afwijkt van hele dagen. Als dit veld op true staat, worden de begin- en eindtijd genegeerd en wordt de duur automatisch berekend als het aantal minuten tussen de begin- en einddatum. Als dit veld op false staat, worden de begin- en eindtijd gebruikt om de duur te berekenen.
+#### DuRa
+Bij `LeDt = true` en onderwijsrooster (`Gespecificeerd = true` en `IsEducation = true`) wordt bij aangeleverde `DuRa` extra logica uitgevoerd: `DateRoosterBeginTo` wordt opgehaald, `DaBe` daarop gezet en `TimeEnd` geforceerd op +9 uur.
 
 #### PaTs
-Begindatum en -tijd van de pauze. De pauze moet binnen de begin- en einddatum van de verlofboeking vallen. 
-Dit veld wordt alleen gelezen als er in de Hrm omgevingsinstelling "Pauze in verlofboekingen toestaan" is ingesteld op "Ja". Als deze omgevingsinstelling is ingesteld op "Nee", wordt dit veld genegeerd en kunnen pauzes niet worden toegevoegd aan verlofboekingen.
+Wordt alleen verwerkt als omgevingsinstelling `AfasHrLeavePauseTime` aan staat; anders wordt bij niet-hele-dagen de standaard beginpauze (`DateBeginBreakTime`) gebruikt.
 
 #### PaTe
-Einddatum en -tijd van de pauze. De pauze moet binnen de begin- en einddatum van de verlofboeking vallen. Zie verder bij PaTs.
+Wordt alleen verwerkt als omgevingsinstelling `AfasHrLeavePauseTime` aan staat; anders wordt bij niet-hele-dagen de standaard eindpauze (`DateEndBreakTime`) gebruikt.
 
 #### DuBe
-Duur van het verlof op de eerste dag in minuten. Wordt alleen overgenomen als het veld `LeDt` de waarde true heeft. en de verlofboeking meerdere dagen beslaat, anders wordt de duur automatisch berekend op basis van het rooster van de medewerker en de opgegeven begin- en einddatum. De duur wordt altijd in hele minuten opgegeven.
-
+Wordt alleen overgenomen als `LeDt = true`.
 
 #### DuEn
+Wordt alleen overgenomen als `LeDt = true` en `DaBe` en `DaEn` op verschillende datums liggen.
+
+#### ViLr
+Wordt via `ANTAValue` verwerkt (niet via directe `Value`-toewijzing).
+
 #### ReLe
-#### FaSn
-#### MuCh
+Wordt via `ANTAValue` verwerkt (niet via directe `Value`-toewijzing).
+
+#### FileName
+Wordt gebruikt als verplichte bestandsnaambron voor `FileStream`; leeg bij gevulde stream geeft: "Filename mag niet leeg zijn.||Vul het veld Filename in de XML, of maak het veld FileStream leeg.".
+
+#### FileName
+Bestandsnaam wordt gevalideerd; ongeldige tekens geven: "Filename bevat ongeldige karakters.".
+
+#### FileStream
+Bij gevulde stream + geldige `FileName` worden bestanden opgeslagen en wordt zowel `FiId` als `MultiFile` gevuld.
+
+#### FileStream
+Bij lege `FileName` wordt `FileStream` niet als bijlage opgeslagen en worden `MultiFile` en `FiId` leeggemaakt.
 
 ### HrAbsenceInSite.HrAbsenceInSiteAttachment
 Vrije velden mogelijk: nee
 Meerdere records mogelijk: nee
 
 #### FileName
+Bijlagen in dit subobject worden na veldmapping verwerkt via `HandleXmlAttachmentsForSubjectFile`.
+
 #### FileId
+Bijlagen in dit subobject worden na veldmapping verwerkt via `HandleXmlAttachmentsForSubjectFile`.
+
 #### FileStream
+Bijlagen in dit subobject worden na veldmapping verwerkt via `HandleXmlAttachmentsForSubjectFile`.
