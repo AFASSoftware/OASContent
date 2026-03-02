@@ -1,23 +1,97 @@
-# KnPerson
+---
+date: 2026-03-02
+---
 
-Aanmaken of aanpassen van een persoon. Beschikbaar als losse UpdateConnector, maar ook als subobject bij onder andere [KnOrganisation](./knorganisation_post) en KnEmployee. De werking is in alle situaties nagenoeg identiek.
+Met deze connector maak je personen aan of werk je bestaande personen bij op basis van `MatchPer`.
 
-De subobjecten van deze UpdateConnector ondersteunen geen van alle het aanleveren van meerdere regels. Dus bijvoorbeeld voor het toevoegen van meerdere bankrekeningen zullen er meerdere calls gedaan moeten worden.
+### KnPerson
+Vrije velden mogelijk: ja
+Meerdere records mogelijk: ja
 
-## KnBasicAddressAdr
+#### MatchPer
+Bepaalt de zoekstrategie voor bestaande personen: `0` = `BcCo`, `1` = `SoSe`, `2` = `LaNm`+`In`+`Is`+`ViGe`, `3` = vorige + `EmAd`, `4` = vorige + `MbNr`, `5` = vorige + `TeNr`, `6` = vorige + `DaBi`, `7` = altijd nieuw.
+Bij meerdere matches ontstaat "Er is meer dan 1 organisatie/persoon gevonden die voldoet aan het zoekprofiel.".
 
-Een adres dat je invoert wordt gematcht op een eventueel al bestaand adres in Profit. Daardoor komt een adres altijd maar één keer voor in de database. 
+#### BcId
+Wordt bij het kopieren van velden overgeslagen en niet gebruikt als invoerveld voor normale verwerking. Bij een nieuwe regel wordt `BcId` wel in de response teruggegeven.
 
-## KnBasicAddressPad
+#### BcCo
+Bij `Action="update"` wordt `BcCo` niet aangepast.
 
-Postadres. Als het vinkje `PadAdr` de waarde `true` heeft, wordt dit subobject genegeerd.
-Een adres dat je invoert wordt gematcht op een eventueel al bestaand adres in Profit. Daardoor komt een adres altijd maar één keer voor in de database. 
+#### PadAdr
+Als `PadAdr` waar is, wordt `KnBasicAddressPad` overgeslagen.
 
-## KnContactAutRole
+#### AddToPortal
+Wordt na commit gebruikt voor portalsynchronisatie als deze waarde is gewijzigd en portalfunctionaliteit actief is.
 
-Enkel POST (Insert) is toegestaan op dit subobject
+#### EmailPortal
+Wordt gebruikt als e-mailadres voor portalsynchronisatie wanneer `AddToPortal` wijzigt.
 
-## KnBankAccount
+#### FileId
+Laadt een bestaande afbeelding vanuit file-opslag in het persoonsrecord.
 
-Enkel POST (Insert) is toegestaan op dit subobject
+#### FileStream
+Een lege waarde verwijdert de huidige afbeelding. Een gevulde waarde verwacht een bestandsnaam in `FileName`.
 
+#### FileName
+Verplicht bij `FileStream`; anders ontstaat "Het veld 'FileName' is verplicht bij het toevoegen van een afbeelding.". Ongeldige tekens geven "Filename bevat ongeldige karakters.".
+
+### KnPerson.KnBankAccount
+Vrije velden mogelijk: ja
+Meerdere records mogelijk: nee
+
+#### BaAc
+Het subobject wordt alleen verwerkt als `BaAc` of `Iban` gevuld is.
+
+#### Iban
+Wordt opgeschoond (spaties verwijderd) en naar hoofdletters geconverteerd. Als `IbCk` niet is meegegeven, wordt deze controlewaarde automatisch bepaald.
+
+#### Bic
+Wordt automatisch bepaald vanuit `Iban` als `Bic` leeg is en `CoId` bekend is.
+
+### KnPerson.KnBasicAddressAdr
+Vrije velden mogelijk: nee
+Meerdere records mogelijk: nee
+
+#### BeginDate
+Bij de eerste adresregel wordt `BeginDate` genegeerd en op een vaste startdatum gezet.
+
+#### Ad
+Adressen worden eerst gematcht op bestaande adressen; bij een match wordt het bestaande adres hergebruikt. Onvolledige adressen geven "Een onvolledig adres mag niet geïmporteerd worden.".
+
+### KnPerson.KnBasicAddressPad
+Vrije velden mogelijk: nee
+Meerdere records mogelijk: nee
+
+#### BeginDate
+Bij de eerste postadresregel wordt `BeginDate` genegeerd en op een vaste startdatum gezet.
+
+### KnPerson.KnContactAutRole
+Vrije velden mogelijk: nee
+Meerdere records mogelijk: nee
+
+#### AutRoleDs
+Wordt vertaald naar de interne autorisatierol-id. Bij verwijderen wordt alleen de koppeling verwijderd; bij insert/update wordt eerst verwijderd en daarna opnieuw gekoppeld.
+
+### KnPerson.KnContact
+Vrije velden mogelijk: ja
+Meerdere records mogelijk: nee
+
+#### PadAdr
+Als `PadAdr` waar is, wordt `KnPerson.KnContact.KnBasicAddressPad` overgeslagen.
+
+#### ViKc
+Alleen waarden `AFD`, `AFL` en `PRS` worden overgenomen. Een overgang van `AFD` naar `PRS` wordt geblokkeerd als de context geen geldige persoonkoppeling bevat.
+
+### KnPerson.KnContact.KnPerson
+Vrije velden mogelijk: ja
+Meerdere records mogelijk: nee
+
+#### MatchPer
+Volgt dezelfde matchlogica als `KnPerson`.
+
+#### BcCo
+Bij update wordt `BcCo` niet aangepast.
+
+#### PadAdr
+Als `PadAdr` waar is, wordt `KnPerson.KnContact.KnPerson.KnBasicAddressPad` overgeslagen.
