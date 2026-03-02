@@ -1,17 +1,29 @@
 ---
-date: 2026-02-18
+date: 2026-03-02
 ---
 
-## Er zijn 2 mogelijkheden om financiële mutaties te verwijderen via de API
+Met deze connector verwijder je een bestaande financiele mutatie op basis van journaalpostnummer of factuurnummer.
 
-### 1. Verwijderen via journaalpostnummer  
+### FiEntryPar
+Vrije velden mogelijk: nee
+Meerdere records mogelijk: nee
 
-DELETE /connectors/FiEntries/FiEntryPar/UnId,JoCo/{Administratie},{Dagboek}/FiEntries/@EnNo/{Journaalpostnummer}  
+#### UnId
+Bij verwijderen op `InId` is `UnId` optioneel; bij verwijderen op `EnNo` wordt `UnId` gebruikt in de zoeksleutel.
 
-Om journaalpost 70001 in administratie 1 en dagboek 73 te verwijderen roep je aan `connectors/FiEntries/FiEntryPar/UnId,JoCo/1,73/FiEntries/@EnNo/70001`
+#### JoCo
+Wordt gebruikt in de zoeksleutel van de te verwijderen journaalpost.
 
-### 2. Verwijderen via factuurnummer
+### FiEntryPar.FiEntries
 
-DELETE /connectors/FiEntries/FiEntryPar/UnId,JoCo/{Administratie},{Dagboek}/FiEntries/InId/{Factuurnummer}  
+Vrije velden mogelijk: ja
+Meerdere records mogelijk: nee
 
-Om factuur IH003938 in administratie 1 en dagboek 10 te verwijderen roep je aan `connectors/FiEntries/FiEntryPar/UnId,JoCo/1,10/FiEntries/InId/IH003938`
+#### EnNo
+Als `EnNo` is gevuld verwijdert de connector de gevonden post op combinatie `EnNo + JoCo + UnId`; bij geen match volgt fout "Journaalpost niet aanwezig.".
+
+#### InId
+Als `EnNo` leeg is en `InId` gevuld, zoekt de connector op `InId + JoCo` (en optioneel `UnId`); bij geen match volgt foutcode `eErrFiEntryJournalNotFoundForGivenInvoiceId`.
+
+#### EnNo / InId
+Minimaal een van beide moet gevuld zijn; anders fout "Voor het verwijderen van een journaalpost is journaalpostnummer of factuurnummer verplicht.".

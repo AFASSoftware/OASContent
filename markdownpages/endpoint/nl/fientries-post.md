@@ -1,44 +1,98 @@
 ---
-date: 2026-02-18
+date: 2026-03-02
 ---
 
-## Vereiste data
+Met deze connector maak je financiele mutaties aan (journaalposten), inclusief verbijzonderingen, projectboekingen en transitorische regels.
 
-Data uit deze endpoints is nodig om succesvol een financiële mutatie aan te kunnen maken:
+### FiEntryPar
+Vrije velden mogelijk: nee
+Meerdere records mogelijk: nee
 
- 1. `/connectors/Profit_Administrations`
- 2. `/connectors/Profit_Journals`
- 3. `/connectors/Profit_Accounts`
- 4. `/connectors/Profit_VAT_code`
- 5. `/connectors/Profit_Creditor`
- 6. `/connectors/Profit_Debtor`
+#### Year
+Verplicht.
 
-## Validaties
-###### De ingevulde waarde bij 'Rekeningnummer' bestaat niet | Vul een waarde in bij 'Rekeningnummer'.
-Het veld `AcNr` is gevuld met een waarde die niet voorkomt in de omgeving van de klant. Gebruik `/connectors/Profit_Accounts`, `/connectors/Profit_Creditor` en `/connectors/Profit_Debtor` om te valideren of de waarde bestaat
+#### Peri
+Verplicht.
 
-###### Datum '1-11-2026' valt in een geblokkeerde periode | Voor deze administratie is periode 11 van jaar 2026 geblokkeerd. 
-De periode is geblokkeerd voor deze administratie. Dit voorkom je door te valideren of de periode geblokkeerd is met endpoint `/connectors/Profit_periods_per_administration`. Wanneer een periode gedeblokkeerd moet worden zal een gebruiker dit in de omgeving moeten doen.
+#### UnId
+Als `UnId` is gevuld werkt de connector in die administratie; zonder geldige administratie stopt verwerking met fout "No unit available".
 
-###### Code verbijzondering voor as 'Kostenplaats' moet gevuld worden voor rekening 8074 | Code verbijzondering voor as 'Kostendrager' moet gevuld worden voor rekening 8074
-Deze foutmelding komt voor wanneer een rekening vereist dat een verbijzondering wordt gevuld. Dit doe je in subobject `FiDimEntries`
-De verbijzonderingscodes en instellingen haal je op via endpoint `
-/connectors/Profit_Allocation_Assigments`
+#### PrTp
+Bij een onbekende waarde volgt warning "Unknown preparetype"; zonder waarde gebruikt de connector XMLConnector-preparetype.
 
-## Aanpassen factuur
+#### AdDc
+Bij waarde `true` wordt optie "Maak verbijzonderingscode" geactiveerd.
 
-Op basis van de aangemaakte financiële mutaties wordt er een financiële factuur aangemaakt. Gebruik endpoint `/connectors/FiInvoice` om de gegevens van de factuur aan te passen.
+#### AdDa
+Bij waarde `true` wordt optie "Maak verbijzonderingstoewijzing" geactiveerd.
 
-## Grote aantallen
+#### AuNu
+Bij waarde `true` wordt autonummering voor factuur geactiveerd.
 
-We adviseren maximaal 1.000 regels per journaalpost aan te bieden. Als je meer regels hebt, gebruik dan de volgende oplossingen:
+### FiEntryPar.FiEntries
 
-- **Verdicht regels tot één regel voordat je deze aanbiedt.** Bij omzetboekingen is het bijvoorbeeld niet altijd noodzakelijk om alle regels aan te bieden, je kunt deze ook verdichten per dag, per omzetrekening, per omzetrekening/btw-code, etc.
-- **Knip de omzetregels op.**
-- **Bied de regels op verschillende momenten van de dag aan.** De boekingsdatum en boekstukdatum kunnen van elkaar verschillen. Je levert deze aan in de velden 'EnDa' (boekingsdatum) en 'BpDa' (boekstukdatum).
+Vrije velden mogelijk: ja
+Meerdere records mogelijk: ja
 
-Je levert de administratie aan in het veld 'UnId'. Zo niet, dan wordt de administratie gebruikt waarop de connector-gebruiker voor het laatst heeft ingelogd.
+#### EnNo
+Mag bij POST niet gevuld zijn; anders fout "Bij toevoegen journaalpost mag het journaalpostnummer niet worden opgegeven.".
 
-## Afletteren van facturen
+#### InId
+In combinatie met `InI2` (onder instelling `AfasFiConversion` Selimar) volgt fout "Dit is niet mogelijk. Je kunt niet een intern en extern factuurnummer samen meegeven.".
 
-In een memoriaal dagboek kun je een debet- en een creditfactuur tegen elkaar afletteren. Het is niet mogelijk om een vooruitbetaling af te letteren tegen een creditfactuur, of een vooruitontvangst tegen een debetfactuur.
+#### AuPa
+Bij vullen van `AuPa` zet de connector intern ook `AuPaOV = true` (override).
+
+#### BankAccount
+Externe bankrekening/IBAN wordt opgezocht en vertaald naar `IdBa`; bij geen of meerdere matches volgt "Bankrekening {1=bankrekening} niet gevonden bij rekening {2=rekening}.". Als de combinatie rekeningtype niet is toegestaan volgt "Afwijkende betaalrekening is niet toegestaan.".
+
+#### DaEx
+Als `DaEx` leeg is wordt deze automatisch bepaald voor debiteur/crediteurregels in dagboeken `LoSale`, `LoPurc` en `LoBalance` op basis van `BpDa`, `PaCd` en debet/credit-richting.
+
+#### AmGa
+Wordt alleen overgenomen als `VaAs` debiteur/crediteur is en het bedrag niet 0 is.
+
+#### CoVc
+Wordt pas na standaard veldverwerking toegepast op de detailregel.
+
+### FiEntryPar.FiEntries.FiDimEntries
+
+Vrije velden mogelijk: ja
+Meerdere records mogelijk: nee
+
+#### DiC1 t/m DiC5
+Worden alleen verwerkt als de betreffende as actief is binnen het ingestelde aantal assen (`AfasFiAxisCount`).
+
+#### AmDe
+Als zowel `AmDe` als `AmCr` 0 zijn, volgt foutcode `eErrFiEntryNoAmountOnEntryLine` tenzij omgevingsinstelling `AfasFiAllowZeroAmount` dit toestaat.
+
+### FiEntryPar.FiEntries.FiPrjEntries
+
+Vrije velden mogelijk: ja
+Meerdere records mogelijk: ja
+
+#### VaIt
+Numerieke waarde wordt als interne itemtypewaarde verwerkt; niet-numerieke waarde als externe waarde.
+
+#### ItCd
+Wordt intern naar veld `BiId` geschreven.
+
+#### AmSe
+Wordt gevalideerd als basisvalutabedrag; als zowel `AmSe` als `AmFc` ontbreken wordt `AmSe` automatisch berekend uit `AmCo` en `DcPr`.
+
+#### AmFc
+Wordt gevalideerd als vreemdevalutabedrag; als zowel `AmSe` als `AmFc` ontbreken wordt `AmFc` automatisch berekend uit `AmSe`, `Rate` en valuta-afronding.
+
+#### DcPr
+Als `DcPr` ontbreekt, `Ch = true` en `AmFc` leeg is, wordt `DcPr` gevuld vanuit `PtPrjSaPc`.
+
+#### PrId
+Als voor de gebruikte grootboekrekening projectboeking verplicht is en geen projectgegevens zijn meegegeven, volgt fout "Projectboeking is verplicht voor grootboekrekening {1=grootboekrekening}.".
+
+### FiEntryPar.FiEntries.FiTransEntries
+
+Vrije velden mogelijk: nee
+Meerdere records mogelijk: nee
+
+#### YeSt
+Samen met `PeSt`, `YeEn` en `PeEn` bepaalt dit de selectie voor transitorische regels; als binnen die selectie een periode is geblokkeerd volgt fout "Binnen de gekozen selectie is periode {1=Periode} van jaar {2=Jaar} geblokkeerd.||De transitorische post kan hierdoor niet gegenereerd worden.".
