@@ -2,20 +2,20 @@
 date: 2026-03-02
 ---
 
-Verwijdert een organisatie (of onderliggende regels) op basis van MatchOga en bewaakt strikte voorwaarden voor adresverwijderingen.
+Verwijdert een organisatie (of onderliggende regels) op basis van `MatchOga` met extra constraints op adreshistorie.
 
 ### KnOrganisation
 Vrije velden mogelijk: ja
 Meerdere records mogelijk: ja
 
 #### MatchOga
-Wordt gebruikt om de te verwijderen organisatie te bepalen (zelfde zoekmodi als bij POST/PUT, inclusief adres-/postadresmatch).
+Bepaalt de te verwijderen organisatie met dezelfde zoekmodi als POST/PUT. Waarde `9` is niet bruikbaar voor delete, omdat deze mode `Action="update"` vereist.
 
 #### KnBasicAddressAdr.BeginDate
-Bij verwijderen van verhuisregels geldt: alleen een toekomstige verhuizing mag verwijderd worden. Anders volgt: "Alleen een verhuizing in de toekomst mag verwijderd worden."
+Bij verwijderen van verhuisregels geldt: alleen een toekomstige verhuisregel mag verwijderd worden.
 
 #### KnBasicAddressAdr.DaEn
-Alleen de verhuisregel zonder einddatum mag verwijderd worden. Anders volgt: "Alleen de verhuizing zonder einddatum mag verwijderd worden."
+Alleen verhuisregels zonder einddatum (`DaEn` leeg) mogen verwijderd worden.
 
 #### PadAdr
-Als `PadAdr` aan staat, wordt de verwijdering van een ADR-verhuisregel ook op de PAD-verhuisregel toegepast.
+Als `PadAdr` aan staat, wordt verwijdering van ADR-verhuisregel ook op PAD-verhuisregel toegepast (zelfde `BeginDate`-logica).
