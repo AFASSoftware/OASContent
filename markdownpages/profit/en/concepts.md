@@ -1,7 +1,8 @@
 ---
 author: CLN
-date: 2025-11-08
-tags: GetConnector, UpdateConnector, AppConnector, Configuration, Authentication, Authorization
+date: 2026-03-02
+tags: GetConnector, UpdateConnector, AppConnector, Configuration, Authentication,
+  Authorization
 title: Concepts
 ---
 

@@ -1,3 +1,7 @@
+---
+date: 2026-03-02
+---
+
 Anta XML connector class for (verlofboekingen) voor InSite
 
 ### HrAbsenceInSite
