@@ -5,47 +5,58 @@
                 "name": "Versie 7.3.0",
                 "path": "OpenApiSpecs/sb/nl/7-3-0.json",
                 "description": "Aankomende versie"
-            },            {
+            },
+            {
                 "name": "Versie 7.2.0",
                 "path": "OpenApiSpecs/sb/nl/7-2-0.json",
                 "description": "Huidige productieversie"
-            },            {
+            },
+            {
                 "name": "Versie 7.1.0",
                 "path": "OpenApiSpecs/sb/nl/7-1-0.json",
                 "description": "Vorige versie"
-            },            {
+            },
+            {
                 "name": "Versie 7.0.0",
                 "path": "OpenApiSpecs/sb/nl/7-0-0.json",
                 "description": "Oudere versie"
-            },            {
+            },
+            {
                 "name": "Versie 6.2.0",
                 "path": "OpenApiSpecs/sb/nl/6-2-0.json",
                 "description": "Oudere versie"
-            },            {
+            },
+            {
                 "name": "Versie 6.1.0",
                 "path": "OpenApiSpecs/sb/nl/6-1-0.json",
                 "description": "Oudere versie"
-            },            {
+            },
+            {
                 "name": "Versie 6.0.0",
                 "path": "OpenApiSpecs/sb/nl/6-0-0.json",
                 "description": "Oudere versie"
-            },            {
+            },
+            {
                 "name": "Versie 5.3.0",
                 "path": "OpenApiSpecs/sb/nl/5-3-0.json",
                 "description": "Oudere versie"
-            },            {
+            },
+            {
                 "name": "Versie 5.2.0",
                 "path": "OpenApiSpecs/sb/nl/5-2-0.json",
                 "description": "Oudere versie"
-            },            {
+            },
+            {
                 "name": "Versie 5.1.0",
                 "path": "OpenApiSpecs/sb/nl/5-1-0.json",
                 "description": "Oudere versie"
-            },            {
+            },
+            {
                 "name": "Versie 5.0.0",
                 "path": "OpenApiSpecs/sb/nl/5-0-0.json",
                 "description": "Oudere versie"
-            },            {
+            },
+            {
                 "name": "Versie 4.0.0",
                 "path": "OpenApiSpecs/sb/nl/4-0-0.json",
                 "description": "Oudere versie"
