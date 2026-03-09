@@ -16,7 +16,7 @@
             },            {
                 "name": "Versie 7.0.0",
                 "path": "OpenApiSpecs/sb/nl/7-0-0.json",
-                "description": "Vorige versie"
+                "description": "Oudere versie"
             },            {
                 "name": "Versie 6.2.0",
                 "path": "OpenApiSpecs/sb/nl/6-2-0.json",
