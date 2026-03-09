@@ -451,6 +451,22 @@
                       }
                     }
                   }
+                },
+                "examples": {
+                  "example": {
+                    "value": [
+                      {
+                        "Name": "Enyoi",
+                        "Url": "enyoi",
+                        "ScopeId": 1,
+                        "License": "2Gether",
+                        "AdministrationCount": 2,
+                        "ExtraAdministrationCount": 0,
+                        "UserCount": 0,
+                        "ExtraUserCount": 0
+                      }
+                    ]
+                  }
                 }
               }
             }
@@ -571,7 +587,21 @@
                     }
                   }
                 },
-                "examples": "{\r\n  \"OrganisationId\": \"8afb1a9a-1613-5e2b-ab19-20c0f4f3e216\",\r\n  \"Firstname\": \"Rosella\",\r\n  \"Initials\": \"III\",\r\n  \"Prefix\": \"Mr.\",\r\n  \"Lastname\": \"Predovic\",\r\n  \"EmailAddress\": \"Karli61@example.com\",\r\n  \"PhoneNumber\": \"223-385-8892\"\r\n}"
+                "examples": {
+                  "example": {
+                    "value": [
+                      {
+                        "AdministrationId": "d8497bdd-a324-5145-afd0-a78acc7e07a8",
+                        "Id": "6b39b98c-4fc0-4c51-9cc6-d9b6657b725a",
+                        "Description": "Januari 2024",
+                        "StartDate": "2024-01-01T00:00:00Z",
+                        "EndDate": "2024-01-31T00:00:00Z",
+                        "PeriodNumber": 1.0,
+                        "AccountingYear": "2024"
+                      }
+                    ]
+                  }
+                }
               }
             }
           },
@@ -688,6 +718,19 @@
                         "format": "uuid"
                       }
                     }
+                  }
+                },
+                "examples": {
+                  "example": {
+                    "value": [
+                      {
+                        "AdministrationId": "d8497bdd-a324-5145-afd0-a78acc7e07a8",
+                        "Id": "313e40a2-1d9d-4672-b852-209f9ea9e167",
+                        "Description": "2024",
+                        "StartDate": "2024-01-01T00:00:00Z",
+                        "EndDate": "2024-12-31T00:00:00Z"
+                      }
+                    ]
                   }
                 }
               }
@@ -824,6 +867,28 @@
                       }
                     }
                   }
+                },
+                "examples": {
+                  "example": {
+                    "value": {
+                      "TrackingToken": "202409230720571",
+                      "Result": [
+                        {
+                          "Id": "56528a1b-4bea-5699-abb8-f66155e9c497",
+                          "StreetName": "Reactorweg",
+                          "HouseNumber": "47",
+                          "HouseNumberAddition": null,
+                          "PostalZone": "3542 AD",
+                          "RelationId": "4fa13b8e-44dc-5cf7-b2ef-35e14be401e8",
+                          "IsPreferedInvoiceAddress": true,
+                          "IsPreferedSupplierAddress": true,
+                          "CityName": "Utrecht",
+                          "CountryName": "Nederland",
+                          "RelationType": "organisation"
+                        }
+                      ]
+                    }
+                  }
                 }
               }
             }
@@ -936,6 +1001,22 @@
                       }
                     }
                   }
+                },
+                "examples": {
+                  "example": {
+                    "value": [
+                      {
+                        "Id": "701b747b-eea2-5ed1-8518-973e5c670252",
+                        "Description": "EnYoi Holding B.V.",
+                        "InstanceId": "701b747b-eea2-5ed1-8518-973e5c670252"
+                      },
+                      {
+                        "Id": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+                        "Description": "EnYoi ICT Services B.V.",
+                        "InstanceId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911"
+                      }
+                    ]
+                  }
                 }
               }
             }
@@ -1047,6 +1128,22 @@
                         "format": "uuid"
                       }
                     }
+                  }
+                },
+                "examples": {
+                  "example": {
+                    "value": [
+                      {
+                        "Id": "701b747b-eea2-5ed1-8518-973e5c670252",
+                        "Description": "EnYoi Holding B.V.",
+                        "InstanceId": "701b747b-eea2-5ed1-8518-973e5c670252"
+                      },
+                      {
+                        "Id": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+                        "Description": "EnYoi ICT Services B.V.",
+                        "InstanceId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911"
+                      }
+                    ]
                   }
                 }
               }
@@ -1180,6 +1277,25 @@
                       }
                     }
                   }
+                },
+                "examples": {
+                  "bankaccounts": {
+                    "value": {
+                      "TrackingToken": "202406211216501",
+                      "Result": [
+                        {
+                          "Id": "0d83610b-e1fc-53a2-a951-00f9098e0154",
+                          "AccountNumber": "NL10INGB0675488052",
+                          "RelationId": "b323458f-5bae-542b-8294-9040c9801805"
+                        },
+                        {
+                          "Id": "dd6cbc4b-6ec6-59c0-95ca-020b5977b39a",
+                          "AccountNumber": "NL16RABO0300417497",
+                          "RelationId": "b24405d6-fee2-52f5-8f24-c1a0180e46f2"
+                        }
+                      ]
+                    }
+                  }
                 }
               }
             }
@@ -1293,6 +1409,22 @@
                         "format": "uuid"
                       }
                     }
+                  }
+                },
+                "examples": {
+                  "cashregisters": {
+                    "value": [
+                      {
+                        "InstanceId": "265424ab-253e-57d4-9d65-036c65ad05c8",
+                        "Description": "Kas",
+                        "AdministrationId": "d8497bdd-a324-5145-afd0-a78acc7e07a8"
+                      },
+                      {
+                        "InstanceId": "25e93133-ec28-543f-9f23-312ddb4e10a3",
+                        "Description": "Kas",
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e"
+                      }
+                    ]
                   }
                 }
               }
@@ -1437,6 +1569,54 @@
                       }
                     }
                   }
+                },
+                "examples": {
+                  "example": {
+                    "value": {
+                      "TrackingToken": "202403280856491",
+                      "Result": [
+                        {
+                          "Id": "0236d0dc-b5be-5b6e-b191-17f6b767aa5b",
+                          "IsArchived": false,
+                          "OrganisationId": "e97ecfe3-8bcb-5baf-82e4-4e46b2b02126",
+                          "OrganisatieIsArchived": false,
+                          "Name": "Peter de Jager",
+                          "FirstName": "Peter",
+                          "Initials": "P.",
+                          "Prefix": "de",
+                          "Lastname": "Jager",
+                          "ExternalId": null,
+                          "PersoonIsArchived": false
+                        },
+                        {
+                          "Id": "2c5b3f1d-1689-5257-9ab2-2ba634203b2c",
+                          "IsArchived": false,
+                          "OrganisationId": "c589e4b3-d131-5a1b-9eca-44dd2fc17600",
+                          "OrganisatieIsArchived": false,
+                          "Name": "Trudie Feenstra",
+                          "FirstName": "Trudie",
+                          "Initials": "T.",
+                          "Prefix": null,
+                          "Lastname": "Feenstra",
+                          "ExternalId": null,
+                          "PersoonIsArchived": false
+                        },
+                        {
+                          "Id": "416b5ea9-93bd-5cfc-af07-37f1681da00b",
+                          "IsArchived": false,
+                          "OrganisationId": "bb3fd8ef-5a0e-5919-8e67-77b396abf212",
+                          "OrganisatieIsArchived": false,
+                          "Name": "Yousef Martiqui",
+                          "FirstName": "Yousef",
+                          "Initials": "Y.",
+                          "Prefix": null,
+                          "Lastname": "Martiqui",
+                          "ExternalId": null,
+                          "PersoonIsArchived": false
+                        }
+                      ]
+                    }
+                  }
                 }
               }
             }
@@ -1543,6 +1723,25 @@
                       "CodeISOAlpha2": {
                         "type": "string"
                       }
+                    }
+                  }
+                },
+                "examples": {
+                  "countries": {
+                    "value": {
+                      "TrackingToken": "202406211218251",
+                      "Result": [
+                        {
+                          "Id": "afa50000-0000-0ab9-bf40-00958bc94cc8",
+                          "Description": "Tadzjikistan",
+                          "CodeISOAlpha2": "TJ"
+                        },
+                        {
+                          "Id": "afa50000-0000-0be2-8a70-01f36103d3cd",
+                          "Description": "Heard Eiland en McDonald Eilanden",
+                          "CodeISOAlpha2": "HM"
+                        }
+                      ]
                     }
                   }
                 }
@@ -1665,6 +1864,30 @@
                         "type": "number"
                       }
                     }
+                  }
+                },
+                "examples": {
+                  "example": {
+                    "value": [
+                      {
+                        "OutstandingAmount": 1586.31,
+                        "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "296a5ec3-0efb-528d-9afd-7ab3b3c914c1",
+                        "RelationName": "Stichting Mollie Payments",
+                        "InstanceId": "8b0ecc00-2b87-4eaa-bd19-3b9db7f297c4",
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "OutstandingAmount": 28597.14,
+                        "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "7b8e279b-b551-556e-a00a-a815392d0d38",
+                        "RelationName": "AFAS Software B.V.",
+                        "InstanceId": "072672c2-c859-4eef-a0be-7e760b57af6f",
+                        "RelationType": "organisation"
+                      }
+                    ]
                   }
                 }
               }
@@ -1815,6 +2038,66 @@
                       }
                     }
                   }
+                },
+                "examples": {
+                  "example": {
+                    "value": [
+                      {
+                        "OutstandingAmount": 1586.31,
+                        "PaidAmount": 0.0,
+                        "ProcessingAmount": 0.0,
+                        "TotalAmount": 1586.31,
+                        "DueDate": "2024-12-13T00:00:00Z",
+                        "InvoiceId": "1ae8da84-9dd1-427a-a636-25aa53162dbf",
+                        "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502",
+                        "InvoiceNumber": "123",
+                        "InvoiceDate": "2024-12-13T00:00:00Z",
+                        "CustomerReference": null,
+                        "InternalInvoiceNumber": "IF240003",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "296a5ec3-0efb-528d-9afd-7ab3b3c914c1",
+                        "RelationName": "Stichting Mollie Payments",
+                        "InstanceId": "9ea0e72a-b424-485d-82b1-09363aefcdce",
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "OutstandingAmount": 28341.83,
+                        "PaidAmount": 0.0,
+                        "ProcessingAmount": 0.0,
+                        "TotalAmount": 28341.83,
+                        "DueDate": "2024-12-27T00:00:00Z",
+                        "InvoiceId": "b3823933-d138-468a-a071-4e517feca9b9",
+                        "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502",
+                        "InvoiceNumber": "20241231",
+                        "InvoiceDate": "2024-12-13T00:00:00Z",
+                        "CustomerReference": null,
+                        "InternalInvoiceNumber": "IF240001",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "7b8e279b-b551-556e-a00a-a815392d0d38",
+                        "RelationName": "AFAS Software B.V.",
+                        "InstanceId": "b7e76bdf-1152-4d54-8224-ad6a421fc84f",
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "OutstandingAmount": 255.31,
+                        "PaidAmount": 0.0,
+                        "ProcessingAmount": 0.0,
+                        "TotalAmount": 255.31,
+                        "DueDate": "2025-01-14T00:00:00Z",
+                        "InvoiceId": "6a25941f-2c35-4736-b963-6c63be0e82b4",
+                        "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502",
+                        "InvoiceNumber": "20241232",
+                        "InvoiceDate": "2024-12-31T00:00:00Z",
+                        "CustomerReference": null,
+                        "InternalInvoiceNumber": "IF240002",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "7b8e279b-b551-556e-a00a-a815392d0d38",
+                        "RelationName": "AFAS Software B.V.",
+                        "InstanceId": "ac5f3b30-6296-4864-86c6-cecede47984d",
+                        "RelationType": "organisation"
+                      }
+                    ]
+                  }
                 }
               }
             }
@@ -1933,6 +2216,30 @@
                         "type": "number"
                       }
                     }
+                  }
+                },
+                "examples": {
+                  "example": {
+                    "value": [
+                      {
+                        "OutstandingAmount": 684.86,
+                        "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502",
+                        "RelationName": "AFAS Software B.V.",
+                        "RelationId": "7b8e279b-b551-556e-a00a-a815392d0d38",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "InstanceId": "9b9c7f38-d059-4a9c-b3a0-3e0562bd0115",
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "OutstandingAmount": 640.09,
+                        "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502",
+                        "RelationName": "Mollie B.V.",
+                        "RelationId": "3709fb45-c646-5cca-8de7-e6433404316a",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "InstanceId": "d33f3c36-d120-448c-92bd-0dbdeb2985bd",
+                        "RelationType": "organisation"
+                      }
+                    ]
                   }
                 }
               }
@@ -2076,6 +2383,60 @@
                         "type": "number"
                       }
                     }
+                  }
+                },
+                "examples": {
+                  "example": {
+                    "value": [
+                      {
+                        "OutstandingAmount": 123.42,
+                        "TotalAmount": 123.42,
+                        "PaidAmount": 0.0,
+                        "DueDate": "2024-12-27T00:00:00Z",
+                        "InvoiceId": "a9095b6f-990d-4f5a-bda3-737939ab5fda",
+                        "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502",
+                        "InvoiceDate": "2024-12-13T00:00:00Z",
+                        "InvoiceNumber": "VF240002",
+                        "CustomerReference": null,
+                        "RelationName": "AFAS Software B.V.",
+                        "RelationId": "7b8e279b-b551-556e-a00a-a815392d0d38",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "InstanceId": "206b831d-d5b1-43cd-a6d3-949bab3f45ee",
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "OutstandingAmount": 561.44,
+                        "TotalAmount": 561.44,
+                        "PaidAmount": 0.0,
+                        "DueDate": "2024-12-27T00:00:00Z",
+                        "InvoiceId": "157f441e-530d-4571-b6f7-e6681dc0ddac",
+                        "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502",
+                        "InvoiceDate": "2024-12-13T00:00:00Z",
+                        "InvoiceNumber": "VF240001",
+                        "CustomerReference": null,
+                        "RelationName": "AFAS Software B.V.",
+                        "RelationId": "7b8e279b-b551-556e-a00a-a815392d0d38",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "InstanceId": "3f5ac81a-89d5-423d-ad2c-dea22585dc36",
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "OutstandingAmount": 640.09,
+                        "TotalAmount": 640.09,
+                        "PaidAmount": 0.0,
+                        "DueDate": "2024-12-27T00:00:00Z",
+                        "InvoiceId": "5fa9bfee-7a07-4ea9-b438-f19b3cdda6ca",
+                        "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502",
+                        "InvoiceDate": "2024-12-13T00:00:00Z",
+                        "InvoiceNumber": "VF240003",
+                        "CustomerReference": null,
+                        "RelationName": "Mollie B.V.",
+                        "RelationId": "3709fb45-c646-5cca-8de7-e6433404316a",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "InstanceId": "961616ec-27db-436c-bd86-eb95a46bb141",
+                        "RelationType": "organisation"
+                      }
+                    ]
                   }
                 }
               }
@@ -2223,6 +2584,34 @@
                       }
                     }
                   }
+                },
+                "examples": {
+                  "example": {
+                    "value": [
+                      {
+                        "DueDate": "2024-02-16T00:00:00Z",
+                        "AdministationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+                        "InvoiceDate": "2024-02-02T00:00:00Z",
+                        "InvoiceId": "V01240018",
+                        "CustomerId": "c9e0fced-a61e-544e-b7ca-3e0428579f9f",
+                        "CustomerName": "Administratiekantoor Beers",
+                        "OrganisationId": "bb3fd8ef-5a0e-5919-8e67-77b396abf212",
+                        "AddressId": "9e009e67-42d5-508c-9939-eb09cadb8f81",
+                        "Address": "Postbus 779, 2700 AT, Zoetermeer, Nederland"
+                      },
+                      {
+                        "DueDate": "2024-02-02T00:00:00Z",
+                        "AdministationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+                        "InvoiceDate": "2024-01-19T00:00:00Z",
+                        "InvoiceId": "V01240012",
+                        "CustomerId": "c6734a65-7205-59e7-9777-ed5aef340c68",
+                        "CustomerName": "Bus Grondstoffen B.V.",
+                        "OrganisationId": "1ac6ea9d-9a7f-54f4-b9ef-fe161a55d9f6",
+                        "AddressId": "b6fc9651-1785-53f9-9862-d7a2c84d664b",
+                        "Address": "Eerste Tochtweg 2, 2913 LP, Capelle aan den IJssel, Nederland"
+                      }
+                    ]
+                  }
                 }
               }
             }
@@ -2344,6 +2733,28 @@
                         "type": "boolean"
                       }
                     }
+                  }
+                },
+                "examples": {
+                  "example": {
+                    "value": [
+                      {
+                        "AdministrationId": "d8497bdd-a324-5145-afd0-a78acc7e07a8",
+                        "LinesToBeInvoiced": false,
+                        "Projects": false,
+                        "Supplies": true,
+                        "Services": true,
+                        "FixedAssets": true
+                      },
+                      {
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                        "LinesToBeInvoiced": false,
+                        "Projects": false,
+                        "Supplies": true,
+                        "Services": true,
+                        "FixedAssets": true
+                      }
+                    ]
                   }
                 }
               }
@@ -2554,6 +2965,50 @@
                       }
                     }
                   }
+                },
+                "examples": {
+                  "journalentries": {
+                    "value": [
+                      {
+                        "LineId": "20a899d9-7a95-56f7-a54b-000b17fb8d24",
+                        "AmountDebit": 3932.17,
+                        "AmountCredit": 0.0,
+                        "AmountTotal": 3932.17,
+                        "VatPercentage": null,
+                        "VatSection": null,
+                        "VatAmount": null,
+                        "AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+                        "HeaderId": "938afbd9-f317-53af-bcde-b1c8e5d28472",
+                        "Number": "2477",
+                        "PostingDate": "2022-10-31T00:00:00Z",
+                        "DocumentDate": "2022-10-31T00:00:00Z",
+                        "AccountingPeriodId": "59aaf644-e6da-45eb-962f-bc37555d4262",
+                        "AccountingYearId": "f37fc13c-870f-45ae-96e1-a5fa70c861c1",
+                        "LedgerAccountId": "349016af-3fa7-5b11-b77d-454cc05a17ee",
+                        "Description": "Overige uitgave - NL77ABNA0441631347 - Salarisbetaling",
+                        "DocumentIdentification": null
+                      },
+                      {
+                        "LineId": "a34bf47d-ecab-5185-b4ac-002cdb062855",
+                        "AmountDebit": 88.94,
+                        "AmountCredit": 0.0,
+                        "AmountTotal": 88.94,
+                        "VatPercentage": null,
+                        "VatSection": null,
+                        "VatAmount": null,
+                        "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+                        "HeaderId": "c0c3b86b-a023-5838-9353-ceb1ab7198fa",
+                        "Number": "2112",
+                        "PostingDate": "2024-04-02T00:00:00Z",
+                        "DocumentDate": "2024-03-15T00:00:00Z",
+                        "AccountingPeriodId": "49a93c26-2f8c-44c3-9be2-552f3b6a8fce",
+                        "AccountingYearId": "cc0b784f-a591-4e37-8cb4-ba06374d18df",
+                        "LedgerAccountId": "78685f08-fb5c-593f-a7d8-b4ed2886ef9d",
+                        "Description": "Verkoopfactuur - Erbi Lara B.V.",
+                        "DocumentIdentification": "V01240034"
+                      }
+                    ]
+                  }
                 }
               }
             }
@@ -2691,6 +3146,30 @@
                         "type": "boolean"
                       }
                     }
+                  }
+                },
+                "examples": {
+                  "ledgeraccounts": {
+                    "value": [
+                      {
+                        "Id": "cfb59b79-b3ec-55ef-8cde-000499c3179e",
+                        "Description": "Omzet Algemeen",
+                        "LedgerAccountNumber": "8000",
+                        "TypeId": "aae9334f-0fa8-43cb-ad52-cff973b4c863",
+                        "InstanceId": "cfb59b79-b3ec-55ef-8cde-000499c3179e",
+                        "InvestInAsset": false,
+                        "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911"
+                      },
+                      {
+                        "Id": "68730415-2a59-50ce-9968-00303319780d",
+                        "Description": "Schepen",
+                        "LedgerAccountNumber": "0247",
+                        "TypeId": "980eb36a-8bec-45d9-97f6-06dd2c551818",
+                        "InstanceId": "68730415-2a59-50ce-9968-00303319780d",
+                        "InvestInAsset": true,
+                        "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911"
+                      }
+                    ]
                   }
                 }
               }
@@ -2854,6 +3333,107 @@
                         "type": "number"
                       }
                     }
+                  }
+                },
+                "examples": {
+                  "example": {
+                    "value": [
+                      {
+                        "Total": -210.0,
+                        "IsOpeningBalance": false,
+                        "AdministrationId": "4fef7d35-e93c-4cb2-b367-0deb692e5647",
+                        "AccountingYearId": "2ebff944-f3d0-4335-a3b7-ff637df54ca4",
+                        "AccountingYear": "2024",
+                        "AccountingYearStartDate": "2024-01-01T00:00:00Z",
+                        "AccountingYearEndDate": "2024-12-31T00:00:00Z",
+                        "AccountingPeriodId": "c2ebc6d5-c5af-4bb5-8fea-2e8a7e91399c",
+                        "AccountingPeriod": "Januari 2024",
+                        "AccountingPeriodStartDate": "2024-01-01T00:00:00Z",
+                        "AccountingPeriodEndDate": "2024-01-31T00:00:00Z",
+                        "LedgerAccountId": "90aee254-9eeb-56af-abe2-064fffbd1c00",
+                        "LedgerAccount": "Te betalen btw (1800)",
+                        "LedgerAccountNumber": "90aee254-9eeb-56af-abe2-064fffbd1c00",
+                        "RgsCode": "BSchBepBtw",
+                        "RgsDescription": "Te betalen Omzetbelasting",
+                        "InstanceId": "b0c63c7b-5b65-469a-bbdf-319579d649b4"
+                      },
+                      {
+                        "Total": -1000.0,
+                        "IsOpeningBalance": false,
+                        "AdministrationId": "4fef7d35-e93c-4cb2-b367-0deb692e5647",
+                        "AccountingYearId": "2ebff944-f3d0-4335-a3b7-ff637df54ca4",
+                        "AccountingYear": "2024",
+                        "AccountingYearStartDate": "2024-01-01T00:00:00Z",
+                        "AccountingYearEndDate": "2024-12-31T00:00:00Z",
+                        "AccountingPeriodId": "c2ebc6d5-c5af-4bb5-8fea-2e8a7e91399c",
+                        "AccountingPeriod": "Januari 2024",
+                        "AccountingPeriodStartDate": "2024-01-01T00:00:00Z",
+                        "AccountingPeriodEndDate": "2024-01-31T00:00:00Z",
+                        "LedgerAccountId": "8aa84f79-4892-5cae-b6d1-2e4f9365b892",
+                        "LedgerAccount": "Omzet groep 1 (8000)",
+                        "LedgerAccountNumber": "8aa84f79-4892-5cae-b6d1-2e4f9365b892",
+                        "RgsCode": "WOmzGrpGr1",
+                        "RgsDescription": "Netto-omzet groep 1",
+                        "InstanceId": "89bd2a01-d2e0-418d-9585-5c25f5b471e4"
+                      },
+                      {
+                        "Total": 1210.0,
+                        "IsOpeningBalance": false,
+                        "AdministrationId": "4fef7d35-e93c-4cb2-b367-0deb692e5647",
+                        "AccountingYearId": "2ebff944-f3d0-4335-a3b7-ff637df54ca4",
+                        "AccountingYear": "2024",
+                        "AccountingYearStartDate": "2024-01-01T00:00:00Z",
+                        "AccountingYearEndDate": "2024-12-31T00:00:00Z",
+                        "AccountingPeriodId": "c2ebc6d5-c5af-4bb5-8fea-2e8a7e91399c",
+                        "AccountingPeriod": "Januari 2024",
+                        "AccountingPeriodStartDate": "2024-01-01T00:00:00Z",
+                        "AccountingPeriodEndDate": "2024-01-31T00:00:00Z",
+                        "LedgerAccountId": "2fc1ada7-a66a-5b4b-9644-af29d46865c5",
+                        "LedgerAccount": "Debiteuren (1300)",
+                        "LedgerAccountNumber": "2fc1ada7-a66a-5b4b-9644-af29d46865c5",
+                        "RgsCode": "BVorDebHad",
+                        "RgsDescription": "Handelsdebiteuren nominaal",
+                        "InstanceId": "cf9671f4-96c3-40f6-8048-ebc86c1f2dc4"
+                      },
+                      {
+                        "Total": -1000.0,
+                        "IsOpeningBalance": false,
+                        "AdministrationId": "4fef7d35-e93c-4cb2-b367-0deb692e5647",
+                        "AccountingYearId": "2ebff944-f3d0-4335-a3b7-ff637df54ca4",
+                        "AccountingYear": "2024",
+                        "AccountingYearStartDate": "2024-01-01T00:00:00Z",
+                        "AccountingYearEndDate": "2024-12-31T00:00:00Z",
+                        "AccountingPeriodId": "c2ebc6d5-c5af-4bb5-8fea-2e8a7e91399c",
+                        "AccountingPeriod": "Januari 2024",
+                        "AccountingPeriodStartDate": "2024-01-01T00:00:00Z",
+                        "AccountingPeriodEndDate": "2024-01-31T00:00:00Z",
+                        "LedgerAccountId": "38b36a37-32a8-5775-8d3a-b118dd32f77a",
+                        "LedgerAccount": "Onverdeeld resultaat (0900)",
+                        "LedgerAccountNumber": "38b36a37-32a8-5775-8d3a-b118dd32f77a",
+                        "RgsCode": "BEivOreOvw",
+                        "RgsDescription": "Niet verdeelde winst",
+                        "InstanceId": "36bc8088-7d06-42b5-9ea1-06d47d4a4fd1"
+                      },
+                      {
+                        "Total": 1000.0,
+                        "IsOpeningBalance": false,
+                        "AdministrationId": "4fef7d35-e93c-4cb2-b367-0deb692e5647",
+                        "AccountingYearId": "2ebff944-f3d0-4335-a3b7-ff637df54ca4",
+                        "AccountingYear": "2024",
+                        "AccountingYearStartDate": "2024-01-01T00:00:00Z",
+                        "AccountingYearEndDate": "2024-12-31T00:00:00Z",
+                        "AccountingPeriodId": "c2ebc6d5-c5af-4bb5-8fea-2e8a7e91399c",
+                        "AccountingPeriod": "Januari 2024",
+                        "AccountingPeriodStartDate": "2024-01-01T00:00:00Z",
+                        "AccountingPeriodEndDate": "2024-01-31T00:00:00Z",
+                        "LedgerAccountId": "e8485631-976a-55f6-8c16-c031723460b1",
+                        "LedgerAccount": "Overboeking van het resultaat (9999)",
+                        "LedgerAccountNumber": "e8485631-976a-55f6-8c16-c031723460b1",
+                        "RgsCode": "ResultaatNiveau2",
+                        "RgsDescription": "Resultaat",
+                        "InstanceId": "4e7b8b7d-d577-4cdd-9748-20e4742b8880"
+                      }
+                    ]
                   }
                 }
               }
@@ -3121,6 +3701,42 @@
                       }
                     }
                   }
+                },
+                "examples": {
+                  "example": {
+                    "value": [
+                      {
+                        "InstanceId": "fcb31b25-8da1-4a90-ae33-a93d932184f0",
+                        "Ownorganization": {
+                          "Id": "73109da3-0fcf-4fbe-bd2c-209a399ae502",
+                          "ComponentId": "cbb9b7ef-ef04-4c84-9e80-4989bd526865"
+                        },
+                        "DatumGepland": "2024-12-04T00:00:00Z",
+                        "Klant": {
+                          "Id": "509e24de-67fb-4e02-b149-f8c615fef64c",
+                          "ComponentId": "8e352e23-04af-45b7-952a-0afc7575ea7a"
+                        },
+                        "ProjectKoppelen": true,
+                        "Project": {
+                          "Id": "e03c053d-3e72-400b-821d-c3398edf1ccc",
+                          "ComponentId": "497fc9c2-340d-4d18-b097-c6bbd06bbab7"
+                        },
+                        "Verkoopproduct": {
+                          "Id": "aaf04330-151c-44d9-9700-8793b1c0d4b4",
+                          "ComponentId": "230b4172-613e-4e1b-9ed5-93496c4eed6b"
+                        },
+                        "Description": "AFAS Software B.V. (000003) - 04-12-2024",
+                        "Aantal": 32.0,
+                        "Prijs": 539.7,
+                        "Bedrag": 17270.4,
+                        "MethodeBepalenPrijs": "52085b0b-a85a-418e-8e33-a00e48666512",
+                        "Status": "692a0b09-b83b-44cb-b75a-e431eb66302f",
+                        "KlantDescription": "AFAS Software B.V. (000003)",
+                        "ProjectDescription": "Implementation Exceptional",
+                        "VerkoopproductDescription": "Acer Laptop (3320, 000001)"
+                      }
+                    ]
+                  }
                 }
               }
             }
@@ -3178,16 +3794,111 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/requestBodies/linestobeinvoiced-1.0-Create-JsonSchema"
+              },
+              "examples": {
+                "new linestobeinvoiced": {
+                  "value": {
+                    "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502",
+                    "Date": "2024-12-04",
+                    "Description": "Dell Laptop",
+                    "RelationType": "organisation",
+                    "RelationId": "7b8e279b-b551-556e-a00a-a815392d0d38",
+                    "ItemId": "aaf04330-151c-44d9-9700-8793b1c0d4b4",
+                    "Quantity": 32,
+                    "ProjectId": "e03c053d-3e72-400b-821d-c3398edf1ccc"
+                  }
+                }
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "succes": {
+                    "value": {
+                      "result": "Succeeded",
+                      "traceId": "3614178a-f801-47b7-bae1-dad6439f2c54",
+                      "data": {
+                        "LinesToBeInvoiced": "fcb31b25-8da1-4a90-ae33-a93d932184f0"
+                      },
+                      "errors": []
+                    }
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "string"
+                    },
+                    "traceId": {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "LinesToBeInvoiced": {
+                          "type": "string",
+                          "format": "uuid"
+                        }
+                      }
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {}
+                    }
+                  }
+                }
+              }
+            }
           },
           "5XX": {
             "description": "Internal Server Error"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "not enabled": {
+                    "value": {
+                      "result": "Failed",
+                      "traceId": "339ee3cf-e6bb-4201-9fd0-577906f9f96a",
+                      "instances": [],
+                      "errors": [
+                        "FeatureToggle not enabled"
+                      ]
+                    }
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "string"
+                    },
+                    "traceId": {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "instances": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "version": "1.0",
@@ -3236,13 +3947,62 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/requestBodies/linestobeinvoiced-1.0-Delete-JsonSchema"
+              },
+              "examples": {
+                "minimal": {
+                  "value": {
+                    "AdministrationId": "e877fb82-b546-4d20-94cf-05c72765fc47",
+                    "Id": "e877fb82-b546-4d20-94cf-05c72765fc47"
+                  }
+                }
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "value": {
+                      "result": "Succeeded",
+                      "traceId": "3614178a-f801-47b7-bae1-dad6439f2c54",
+                      "data": {
+                        "LinesToBeInvoiced": "fcb31b25-8da1-4a90-ae33-a93d932184f0"
+                      },
+                      "errors": []
+                    }
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "string"
+                    },
+                    "traceId": {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "LinesToBeInvoiced": {
+                          "type": "string",
+                          "format": "uuid"
+                        }
+                      }
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {}
+                    }
+                  }
+                }
+              }
+            }
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -3294,13 +4054,68 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/requestBodies/linestobeinvoiced-1.0-Update-JsonSchema"
+              },
+              "examples": {
+                "example": {
+                  "value": {
+                    "LineToBeInvoicedId": "547a03a2-19c9-4058-bc77-452063b25d6d",
+                    "AdministrationId": "5c86c621-14fc-5d09-a387-772c599caa5d",
+                    "Date": "2024-11-04",
+                    "Description": "Dell Laptop",
+                    "RelationType": "organisation",
+                    "RelationId": "30bf2fcc-306d-5680-9e03-d99fbfe46bc2",
+                    "ItemId": "4689e028-02c7-5324-885a-556701bd1a9f",
+                    "Quantity": 50
+                  }
+                }
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "succes": {
+                    "value": {
+                      "result": "Succeeded",
+                      "traceId": "3614178a-f801-47b7-bae1-dad6439f2c54",
+                      "data": {
+                        "LinesToBeInvoiced": "fcb31b25-8da1-4a90-ae33-a93d932184f0"
+                      },
+                      "errors": []
+                    }
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "string"
+                    },
+                    "traceId": {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "LinesToBeInvoiced": {
+                          "type": "string",
+                          "format": "uuid"
+                        }
+                      }
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {}
+                    }
+                  }
+                }
+              }
+            }
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -3424,6 +4239,35 @@
                       }
                     }
                   }
+                },
+                "examples": {
+                  "example": {
+                    "value": {
+                      "TrackingToken": "202401291319301",
+                      "Result": [
+                        {
+                          "Id": "e36e77f0-9a1c-50d0-a3f3-004f1fee8720",
+                          "Name": "Erbi Lara B.V. (000019)",
+                          "CocNumber": null,
+                          "VatNumber": null,
+                          "RelationId": "000019",
+                          "ExternalId": null,
+                          "IsArchived": false,
+                          "EmailAddress": "info@erbilara.afas"
+                        },
+                        {
+                          "Id": "45aafd00-a21b-5440-bf57-0aa5fa6c2294",
+                          "Name": "Alsach Musik GmbH (000037)",
+                          "CocNumber": null,
+                          "VatNumber": "DE184475234",
+                          "RelationId": "000037",
+                          "ExternalId": null,
+                          "IsArchived": false,
+                          "EmailAddress": "info@alsachmusic.afasde"
+                        }
+                      ]
+                    }
+                  }
                 }
               }
             }
@@ -3539,6 +4383,82 @@
                         "type": "string"
                       }
                     }
+                  }
+                },
+                "examples": {
+                  "example": {
+                    "value": [
+                      {
+                        "Id": "9b5d768a-c71b-583e-b6ee-09d64aa935d4",
+                        "AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+                        "Description": "21 dagen"
+                      },
+                      {
+                        "Id": "b8ca9e8d-6fef-5ef6-95ba-0bd221aebc6f",
+                        "AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+                        "Description": "60 dagen"
+                      },
+                      {
+                        "Id": "a59bab3a-36bb-5974-bdad-276f6395d6b6",
+                        "AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+                        "Description": "14 dagen"
+                      },
+                      {
+                        "Id": "b98e24e9-a611-5a98-8cf9-40fed321dc6c",
+                        "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+                        "Description": "60 dagen"
+                      },
+                      {
+                        "Id": "c06d2eb9-1332-5e78-a8b3-58dd62dcee45",
+                        "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+                        "Description": "7 dagen"
+                      },
+                      {
+                        "Id": "0066f624-c140-5262-9fbb-5e3141d32876",
+                        "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+                        "Description": "14 dagen"
+                      },
+                      {
+                        "Id": "eb44c60d-06e4-564b-a90c-7715c78788a5",
+                        "AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+                        "Description": "45 dagen"
+                      },
+                      {
+                        "Id": "a629b70b-6a91-5906-9f9d-97f83dfd0c58",
+                        "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+                        "Description": "90 dagen"
+                      },
+                      {
+                        "Id": "ab8b0914-74a2-5db5-a948-ae34ea6b7f7e",
+                        "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+                        "Description": "30 dagen"
+                      },
+                      {
+                        "Id": "2d8304eb-1472-5fad-8fed-b1c30b2a1749",
+                        "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+                        "Description": "21 dagen"
+                      },
+                      {
+                        "Id": "3bed98d9-94d0-5147-9cb8-cad047a0b9bd",
+                        "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+                        "Description": "45 dagen"
+                      },
+                      {
+                        "Id": "6372c28d-7468-5c58-8826-cea9bf70758a",
+                        "AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+                        "Description": "90 dagen"
+                      },
+                      {
+                        "Id": "4a09121c-4f48-5a29-9cef-ecfb5bb74dcf",
+                        "AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+                        "Description": "7 dagen"
+                      },
+                      {
+                        "Id": "596a0343-fd85-597a-8918-ed3198de119d",
+                        "AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+                        "Description": "30 dagen"
+                      }
+                    ]
                   }
                 }
               }
@@ -3671,6 +4591,35 @@
                       "IsArchived": {
                         "type": "boolean"
                       }
+                    }
+                  }
+                },
+                "examples": {
+                  "example": {
+                    "value": {
+                      "TrackingToken": "202401291327471",
+                      "Result": [
+                        {
+                          "Id": "2aacc092-9c6c-5020-b1cf-0d8ecd6485dc",
+                          "Name": "Cas de Graaf",
+                          "FirstName": "Cas",
+                          "Initials": "C.",
+                          "Prefix": "de",
+                          "Lastname": "Graaf",
+                          "ExternalId": null,
+                          "IsArchived": false
+                        },
+                        {
+                          "Id": "1242493d-bd93-53b3-9852-1c82c83316aa",
+                          "Name": "Tarik el Erdol",
+                          "FirstName": "Tarik",
+                          "Initials": "T.",
+                          "Prefix": "el",
+                          "Lastname": "Erdol",
+                          "ExternalId": null,
+                          "IsArchived": false
+                        }
+                      ]
                     }
                   }
                 }
@@ -3907,6 +4856,493 @@
                       }
                     }
                   }
+                },
+                "examples": {
+                  "example": {
+                    "value": {
+                      "TrackingToken": "202504011910441",
+                      "Result": [
+                        {
+                          "Id": "c38525f4-845d-5dd8-9b3a-00eec99c34ab",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Description": "Vast actief (btw nul)",
+                          "InternalId": null,
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "d55d181a-4ab5-4d68-9296-4fbd534cc998",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "PriceExcludingVAT": 0.0,
+                          "ProductGroup": "Vaste activa",
+                          "ProductType": "unknown"
+                        },
+                        {
+                          "Id": "f469cfc6-1b8b-587f-9ac6-10a975e5edcd",
+                          "AdministrationId": "d8497bdd-a324-5145-afd0-a78acc7e07a8",
+                          "Description": "Vast actief (btw hoog)",
+                          "InternalId": null,
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "d55d181a-4ab5-4d68-9296-4fbd534cc998",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "PriceExcludingVAT": 0.0,
+                          "ProductGroup": "Vaste activa",
+                          "ProductType": "unknown"
+                        },
+                        {
+                          "Id": "c4617493-a611-59ea-9a0c-293391c3466e",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Description": "Bouwen (2002, 000017)",
+                          "InternalId": "000017",
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "99e4ea3b-9c45-4154-a7e0-84f9e4355b74",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "PriceExcludingVAT": 75.0,
+                          "ProductGroup": "Web Design",
+                          "ProductType": "supplies"
+                        },
+                        {
+                          "Id": "7f54afa4-dc32-5538-be15-4279863ca5e6",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Description": "Muis Logitech (5100, 000004)",
+                          "InternalId": "000004",
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "99e4ea3b-9c45-4154-a7e0-84f9e4355b74",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "PriceExcludingVAT": 9.98,
+                          "ProductGroup": "Randapparatuur",
+                          "ProductType": "supplies"
+                        },
+                        {
+                          "Id": "6d5a94f4-6911-5771-9517-4420b101439a",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Description": "Draadloos toestenbord + muis Lenovo (5003, 000011)",
+                          "InternalId": "000011",
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "99e4ea3b-9c45-4154-a7e0-84f9e4355b74",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "PriceExcludingVAT": 67.73,
+                          "ProductGroup": "Randapparatuur",
+                          "ProductType": "supplies"
+                        },
+                        {
+                          "Id": "411a8c24-5406-5bd6-9fd1-5425a67130c9",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Description": "Lenovo Monitor 24 inch (4201, 000012)",
+                          "InternalId": "000012",
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "99e4ea3b-9c45-4154-a7e0-84f9e4355b74",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "PriceExcludingVAT": 340.73,
+                          "ProductGroup": "Monitoren",
+                          "ProductType": "supplies"
+                        },
+                        {
+                          "Id": "5dbb40d7-52b5-51b6-809e-5a16dddeb650",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Description": "Draadloos toetsenbord + muis Logitech (5002, 000010)",
+                          "InternalId": "000010",
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "99e4ea3b-9c45-4154-a7e0-84f9e4355b74",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "PriceExcludingVAT": 29.93,
+                          "ProductGroup": "Randapparatuur",
+                          "ProductType": "supplies"
+                        },
+                        {
+                          "Id": "f871b91d-bb1e-5f52-a70c-5cddf2108929",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Description": "Acer Laptop (3320, 000008)",
+                          "InternalId": "000008",
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "99e4ea3b-9c45-4154-a7e0-84f9e4355b74",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "PriceExcludingVAT": 539.7,
+                          "ProductGroup": "Systemen",
+                          "ProductType": "supplies"
+                        },
+                        {
+                          "Id": "db17280f-6105-5d22-975b-6c4e49c8682f",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Description": "Klassiek (Qwerty) toetsenbord Logitech (5000, 000003)",
+                          "InternalId": "000003",
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "99e4ea3b-9c45-4154-a7e0-84f9e4355b74",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "PriceExcludingVAT": 13.65,
+                          "ProductGroup": "Randapparatuur",
+                          "ProductType": "supplies"
+                        },
+                        {
+                          "Id": "347d7d36-994b-5b4d-80a1-9a15532e6035",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Description": "Dell Monitor 24 inch (4003, 000009)",
+                          "InternalId": "000009",
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "99e4ea3b-9c45-4154-a7e0-84f9e4355b74",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "PriceExcludingVAT": 240.98,
+                          "ProductGroup": "Monitoren",
+                          "ProductType": "supplies"
+                        },
+                        {
+                          "Id": "d1247d55-a298-55ca-bb55-9ed75bdc7c34",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Description": "Ontwerpen (2001, 000019)",
+                          "InternalId": "000019",
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "99e4ea3b-9c45-4154-a7e0-84f9e4355b74",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "PriceExcludingVAT": 75.0,
+                          "ProductGroup": "Web Design",
+                          "ProductType": "supplies"
+                        },
+                        {
+                          "Id": "f4b51c75-1e2b-522a-aca2-a2dd8eab3a24",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Description": "Management Fee (MF, 000013)",
+                          "InternalId": "000013",
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "99e4ea3b-9c45-4154-a7e0-84f9e4355b74",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "PriceExcludingVAT": 8825.0,
+                          "ProductGroup": "Management Fee",
+                          "ProductType": "supplies"
+                        },
+                        {
+                          "Id": "f4b51c75-1e2b-522a-aca2-a2dd8eab3a24",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Description": "Management Fee (MF, 000013)",
+                          "InternalId": "000013",
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "99e4ea3b-9c45-4154-a7e0-84f9e4355b74",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "PriceExcludingVAT": 8000.0,
+                          "ProductGroup": "Management Fee",
+                          "ProductType": "supplies"
+                        },
+                        {
+                          "Id": "1be89d6d-9d74-53f4-af12-aa22bc76d896",
+                          "AdministrationId": "d8497bdd-a324-5145-afd0-a78acc7e07a8",
+                          "Description": "Vast actief (btw laag)",
+                          "InternalId": null,
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "d55d181a-4ab5-4d68-9296-4fbd534cc998",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "PriceExcludingVAT": 0.0,
+                          "ProductGroup": "Vaste activa",
+                          "ProductType": "unknown"
+                        },
+                        {
+                          "Id": "f84c1bb4-9de9-578f-989e-ae39a19e3cb7",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Description": "Vast actief (btw hoog)",
+                          "InternalId": null,
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "d55d181a-4ab5-4d68-9296-4fbd534cc998",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "PriceExcludingVAT": 0.0,
+                          "ProductGroup": "Vaste activa",
+                          "ProductType": "unknown"
+                        },
+                        {
+                          "Id": "e4a2db09-8534-55f1-8bfc-b30a40024f5e",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Description": "Microsoft Office 365 gebruikerstraining (1000, 000015)",
+                          "InternalId": "000015",
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "99e4ea3b-9c45-4154-a7e0-84f9e4355b74",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "PriceExcludingVAT": 995.0,
+                          "ProductGroup": "Cursussen",
+                          "ProductType": "supplies"
+                        },
+                        {
+                          "Id": "a48526d9-3bb2-57e0-b4c2-b43f0ab137b5",
+                          "AdministrationId": "d8497bdd-a324-5145-afd0-a78acc7e07a8",
+                          "Description": "Vast actief (btw nul)",
+                          "InternalId": null,
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "d55d181a-4ab5-4d68-9296-4fbd534cc998",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "PriceExcludingVAT": 0.0,
+                          "ProductGroup": "Vaste activa",
+                          "ProductType": "unknown"
+                        },
+                        {
+                          "Id": "171cc8aa-d9bd-5800-ad05-c1b38878d584",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Description": "Onderhoud (2003, 000018)",
+                          "InternalId": "000018",
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "99e4ea3b-9c45-4154-a7e0-84f9e4355b74",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "PriceExcludingVAT": 75.0,
+                          "ProductGroup": "Web Design",
+                          "ProductType": "supplies"
+                        },
+                        {
+                          "Id": "ea4fcede-5143-5860-ab4e-c763cfae25f0",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Description": "Projectleiding (2000, 000014)",
+                          "InternalId": "000014",
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "99e4ea3b-9c45-4154-a7e0-84f9e4355b74",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "PriceExcludingVAT": 95.0,
+                          "ProductGroup": "Web Design",
+                          "ProductType": "supplies"
+                        },
+                        {
+                          "Id": "aa760e86-92da-50d1-bdb7-c873a9443264",
+                          "AdministrationId": "d8497bdd-a324-5145-afd0-a78acc7e07a8",
+                          "Description": "Management Fee (MF, 000013)",
+                          "InternalId": "000013",
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "99e4ea3b-9c45-4154-a7e0-84f9e4355b74",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "PriceExcludingVAT": 8825.0,
+                          "ProductGroup": "Management Fee",
+                          "ProductType": "supplies"
+                        },
+                        {
+                          "Id": "aa760e86-92da-50d1-bdb7-c873a9443264",
+                          "AdministrationId": "d8497bdd-a324-5145-afd0-a78acc7e07a8",
+                          "Description": "Management Fee (MF, 000013)",
+                          "InternalId": "000013",
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "99e4ea3b-9c45-4154-a7e0-84f9e4355b74",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "PriceExcludingVAT": 8000.0,
+                          "ProductGroup": "Management Fee",
+                          "ProductType": "supplies"
+                        },
+                        {
+                          "Id": "f766cf32-c4a2-5123-bbe9-d69b9ce8b37b",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Description": "Diverse producten",
+                          "InternalId": null,
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "d55d181a-4ab5-4d68-9296-4fbd534cc998",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "ProductGroup": "Diverse producten",
+                          "ProductType": "unknown"
+                        },
+                        {
+                          "Id": "4ac33af1-ae7d-5923-9506-e1dedf7b7c14",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Description": "Lenovo Laptop (3330, 000002)",
+                          "InternalId": "000002",
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "99e4ea3b-9c45-4154-a7e0-84f9e4355b74",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "PriceExcludingVAT": 431.55,
+                          "ProductGroup": "Systemen",
+                          "ProductType": "supplies"
+                        },
+                        {
+                          "Id": "c35a780e-c4ba-504c-a54f-e1eee1d16dce",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Description": "Draadloos toestenbord + muis Dell (5102, 000006)",
+                          "InternalId": "000006",
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "99e4ea3b-9c45-4154-a7e0-84f9e4355b74",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "PriceExcludingVAT": 36.75,
+                          "ProductGroup": "Randapparatuur",
+                          "ProductType": "supplies"
+                        },
+                        {
+                          "Id": "1048caf1-d7bb-52e9-a638-e525d375e672",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Description": "Acer Monitor 24 inch (4104, 000001)",
+                          "InternalId": "000001",
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "99e4ea3b-9c45-4154-a7e0-84f9e4355b74",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "PriceExcludingVAT": 519.23,
+                          "ProductGroup": "Monitoren",
+                          "ProductType": "supplies"
+                        },
+                        {
+                          "Id": "b1b6cf37-3ec0-52b5-bde7-e5c34a0dbdb8",
+                          "AdministrationId": "d8497bdd-a324-5145-afd0-a78acc7e07a8",
+                          "Description": "Diverse producten",
+                          "InternalId": null,
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "d55d181a-4ab5-4d68-9296-4fbd534cc998",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "ProductGroup": "Diverse producten",
+                          "ProductType": "unknown"
+                        },
+                        {
+                          "Id": "dd306400-eb3c-594a-91bd-e7291250f90f",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Description": "Vast actief (btw laag)",
+                          "InternalId": null,
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "d55d181a-4ab5-4d68-9296-4fbd534cc998",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "PriceExcludingVAT": 0.0,
+                          "ProductGroup": "Vaste activa",
+                          "ProductType": "unknown"
+                        },
+                        {
+                          "Id": "e974bd03-fe5f-5d70-a3ef-ec6f4485143a",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Description": "Dell Laptop (3310, 000005)",
+                          "InternalId": "000005",
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "99e4ea3b-9c45-4154-a7e0-84f9e4355b74",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "PriceExcludingVAT": 205.28,
+                          "ProductGroup": "Systemen",
+                          "ProductType": "supplies"
+                        },
+                        {
+                          "Id": "01911013-b8ba-5dfd-a250-fa7f6f709220",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Description": "Samsung Monitor 32 inch (4203, 000007)",
+                          "InternalId": "000007",
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "99e4ea3b-9c45-4154-a7e0-84f9e4355b74",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "PriceExcludingVAT": 822.15,
+                          "ProductGroup": "Monitoren",
+                          "ProductType": "supplies"
+                        },
+                        {
+                          "Id": "ce109323-b122-5acd-bd3a-fbc9ff934f9a",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Description": "Microsoft Power Platform App maker (1001, 000016)",
+                          "InternalId": "000016",
+                          "Barcode": null,
+                          "Category": null,
+                          "ProductStyle": "99e4ea3b-9c45-4154-a7e0-84f9e4355b74",
+                          "IsArchived": false,
+                          "IsBlocked": false,
+                          "IsDisabled": false,
+                          "Blob": null,
+                          "PriceExcludingVAT": 250.0,
+                          "ProductGroup": "Cursussen",
+                          "ProductType": "supplies"
+                        }
+                      ]
+                    }
+                  }
                 }
               }
             }
@@ -4016,6 +5452,25 @@
                       "Omschrijving": {
                         "type": "string"
                       }
+                    }
+                  }
+                },
+                "examples": {
+                  "example": {
+                    "value": {
+                      "TrackingToken": "202412131017330",
+                      "Result": [
+                        {
+                          "InstanceId": "96d5ef01-0d3f-4a60-b5ee-8a915693f5c2",
+                          "Omschrijving": "Implementation Greenshop",
+                          "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502"
+                        },
+                        {
+                          "InstanceId": "e03c053d-3e72-400b-821d-c3398edf1ccc",
+                          "Omschrijving": "Implementation Exceptional",
+                          "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502"
+                        }
+                      ]
                     }
                   }
                 }
@@ -4309,6 +5764,175 @@
                       }
                     }
                   }
+                },
+                "examples": {
+                  "example": {
+                    "value": {
+                      "TrackingToken": "202601141348101",
+                      "Result": [
+                        {
+                          "InstanceId": "76ccd112-3faf-5243-8ee8-001638826d4c",
+                          "AmountExcludingVat": 225.0,
+                          "AmountVat": null,
+                          "AmountInvoiced": 225.0,
+                          "SalesInvoiceNumber": "V01250154",
+                          "IssueDate": "2025-12-05T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": [],
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationId": "c08e2474-976c-5c7c-94dc-eb02580009d0",
+                          "RelationNumber": "000039",
+                          "RelationDescription": "Administratiekantoor Beers",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "a25d4251-74f9-5406-8639-003be5b0a58e",
+                          "AmountExcludingVat": 1644.3,
+                          "AmountVat": null,
+                          "AmountInvoiced": 1644.3,
+                          "SalesInvoiceNumber": "V01250150",
+                          "IssueDate": "2025-12-05T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": [],
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationId": "2fdc272a-5da6-55b8-a352-928d3c1e79b6",
+                          "RelationNumber": "000024",
+                          "RelationDescription": "Schreurs Administratiekantoor B.V.",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "6645f89b-4d85-56d5-90a4-00701269aeec",
+                          "AmountExcludingVat": 95.0,
+                          "AmountVat": null,
+                          "AmountInvoiced": 95.0,
+                          "SalesInvoiceNumber": "V01240035",
+                          "IssueDate": "2024-03-15T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": null,
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationId": "9fc15edd-9431-5a98-b2e1-0d90f2064527",
+                          "RelationNumber": "000035",
+                          "RelationDescription": "Architectenbureau Brauw B.V.",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "bed4a8fe-745e-56ae-a39c-01056ea488af",
+                          "AmountExcludingVat": 150.0,
+                          "AmountVat": null,
+                          "AmountInvoiced": 150.0,
+                          "SalesInvoiceNumber": "V01250133",
+                          "IssueDate": "2025-10-17T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": [],
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationId": "200dae98-c4db-5da1-b8dd-018f934bcaa0",
+                          "RelationNumber": "000037",
+                          "RelationDescription": "Meepo Instituut B.V.",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "284454af-5f23-569b-8735-011f328b1f14",
+                          "AmountExcludingVat": 59.86,
+                          "AmountVat": null,
+                          "AmountInvoiced": 59.86,
+                          "SalesInvoiceNumber": "V01250137",
+                          "IssueDate": "2025-11-07T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": [],
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationId": "43ff15dd-50a5-5d24-9dba-5271c80e5a8f",
+                          "RelationNumber": "000016",
+                          "RelationDescription": "Beentjes & Zn. Dakbedekking B.V.",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "c5277238-d627-59ad-a7cd-017268ac23f1",
+                          "AmountExcludingVat": 1703.65,
+                          "AmountVat": null,
+                          "AmountInvoiced": 1703.65,
+                          "SalesInvoiceNumber": "V01240031",
+                          "IssueDate": "2024-03-01T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": null,
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationId": "c08e2474-976c-5c7c-94dc-eb02580009d0",
+                          "RelationNumber": "000039",
+                          "RelationDescription": "Administratiekantoor Beers",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "bad2f2a1-8522-5d64-a5ed-01b63853b141",
+                          "AmountExcludingVat": 81.9,
+                          "AmountVat": null,
+                          "AmountInvoiced": 81.9,
+                          "SalesInvoiceNumber": "V01250043",
+                          "IssueDate": "2025-04-04T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": [],
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationId": "7458b139-298f-5f53-aa52-0f9fbeb560b6",
+                          "RelationNumber": "000044",
+                          "RelationDescription": "Stukadoorsbedrijf Burgers B.V.",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "b5d6f5e1-9c7e-5e0d-8b31-01da69dc7a69",
+                          "AmountExcludingVat": 963.92,
+                          "AmountVat": null,
+                          "AmountInvoiced": 963.92,
+                          "SalesInvoiceNumber": "V01250029",
+                          "IssueDate": "2025-03-07T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": [],
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationId": "2fdc272a-5da6-55b8-a352-928d3c1e79b6",
+                          "RelationNumber": "000024",
+                          "RelationDescription": "Schreurs Administratiekantoor B.V.",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "c57d4396-e6d4-59d9-a7a6-01ed068afbac",
+                          "AmountExcludingVat": 149.65,
+                          "AmountVat": null,
+                          "AmountInvoiced": 149.65,
+                          "SalesInvoiceNumber": "V01250045",
+                          "IssueDate": "2025-04-11T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": [],
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationId": "889f3aac-684c-552e-b566-3de14d38c2c5",
+                          "RelationNumber": "000025",
+                          "RelationDescription": "Gebroeders Van Kooten B.V.",
+                          "RelationType": "organisation"
+                        },
+                        {
+                          "InstanceId": "325cca0c-7a2e-5880-aea5-0215220f301c",
+                          "AmountExcludingVat": 406.38,
+                          "AmountVat": null,
+                          "AmountInvoiced": 406.38,
+                          "SalesInvoiceNumber": "V01250064",
+                          "IssueDate": "2025-05-02T00:00:00Z",
+                          "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                          "Status": "DONE",
+                          "Blob": [],
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationId": "dd74709e-1fd0-5ab1-a8ab-2a40ad645217",
+                          "RelationNumber": "000041",
+                          "RelationDescription": "Van Kempen Afbouw b.v.",
+                          "RelationType": "organisation"
+                        }
+                      ]
+                    }
+                  }
                 }
               }
             }
@@ -4440,6 +6064,28 @@
                       }
                     }
                   }
+                },
+                "examples": {
+                  "example": {
+                    "value": {
+                      "TrackingToken": "202410211314120",
+                      "Result": [
+                        {
+                          "Id": "b4632ca6-2298-4139-8d67-2f5ca122d039",
+                          "PriceExcludingVAT": 1512.15,
+                          "StartDate": null,
+                          "EndDate": null,
+                          "ProductId": "4eb7c821-7e37-4132-b27d-95563f93687a",
+                          "ProductDescription": "Acer Laptop",
+                          "RelationDescription": "Architectenbureau Brauw B.V.",
+                          "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                          "RelationId": "3eff9a76-45d7-4595-a372-09e1e076c540",
+                          "InstanceId": "bcd2883b-0559-4337-aa87-9583d1860a51",
+                          "RelationType": "organisation"
+                        }
+                      ]
+                    }
+                  }
                 }
               }
             }
@@ -4561,6 +6207,282 @@
                       }
                     }
                   }
+                },
+                "examples": {
+                  "example": {
+                    "value": [
+                      {
+                        "AdministrationId": "d8497bdd-a324-5145-afd0-a78acc7e07a8",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "0bb78a38-dc5c-5a8f-9990-1f72e3a86b35",
+                        "RelationNumber": "000014",
+                        "RelationDescription": "EnYoi ICT Services B.V.",
+                        "VatNumber": null,
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "a73fa34f-528b-5e26-97af-496c2a33a607",
+                        "RelationNumber": "000019",
+                        "RelationDescription": "Euro Vacaturebank N.V.",
+                        "VatNumber": null,
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "38a4e8ff-e844-598d-aa15-9db683b606e0",
+                        "RelationNumber": "000033",
+                        "RelationDescription": "Alsach Musik GmbH",
+                        "VatNumber": "DE184475234",
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "f16d144f-fa67-5c04-9d9e-9e4c2f37d864",
+                        "RelationNumber": "000029",
+                        "RelationDescription": "Vlasblom Communicatie B.V.",
+                        "VatNumber": null,
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "a77a2b57-9164-5f2a-b54f-fb287f0e1133",
+                        "RelationNumber": "000042",
+                        "RelationDescription": "Tijhuis Market B.V.",
+                        "VatNumber": null,
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "43ff15dd-50a5-5d24-9dba-5271c80e5a8f",
+                        "RelationNumber": "000016",
+                        "RelationDescription": "Beentjes & Zn. Dakbedekking B.V.",
+                        "VatNumber": null,
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "4664e931-37ea-5520-b869-937740226db5",
+                        "RelationNumber": "000035",
+                        "RelationDescription": "Deventer Adviseurs B.V.",
+                        "VatNumber": null,
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "AdministrationId": "d8497bdd-a324-5145-afd0-a78acc7e07a8",
+                        "RelationTypeId": "d3315773-5c05-4e91-96f3-2e21b05c5a10",
+                        "RelationId": "adef5ea1-c4ec-557d-93a5-0ac82709ad8a",
+                        "RelationNumber": null,
+                        "RelationDescription": "Diverse debiteuren",
+                        "VatNumber": null,
+                        "RelationType": "unknown"
+                      },
+                      {
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "872618f9-9b1a-547c-beb8-6e07e42a0815",
+                        "RelationNumber": "000013",
+                        "RelationDescription": "Erbi Lara B.V.",
+                        "VatNumber": null,
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "c512e0c5-ec1d-5b0e-9924-581cb9209337",
+                        "RelationNumber": "000039",
+                        "RelationDescription": "Industrial Software Ltd",
+                        "VatNumber": "GB548321855485",
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "8983209d-a19a-5f81-bc84-66f3c52d00af",
+                        "RelationNumber": "000024",
+                        "RelationDescription": "Nilfisk Reisorganisatie B.V.",
+                        "VatNumber": null,
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                        "RelationTypeId": "d3315773-5c05-4e91-96f3-2e21b05c5a10",
+                        "RelationId": "adef5ea1-c4ec-557d-93a5-0ac82709ad8a",
+                        "RelationNumber": null,
+                        "RelationDescription": "Diverse debiteuren",
+                        "VatNumber": null,
+                        "RelationType": "unknown"
+                      },
+                      {
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "67d2a9cb-5d49-5fe0-a103-2cdadd2bcc75",
+                        "RelationNumber": "000022",
+                        "RelationDescription": "Van Ubbens Advies B.V.",
+                        "VatNumber": null,
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "41186c50-138c-5bc7-bd54-8dd8a3ee3e21",
+                        "RelationNumber": "000018",
+                        "RelationDescription": "Hafkamp Kappers B.V.",
+                        "VatNumber": null,
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "2fdc272a-5da6-55b8-a352-928d3c1e79b6",
+                        "RelationNumber": "000023",
+                        "RelationDescription": "Schreurs Administratiekantoor B.V.",
+                        "VatNumber": null,
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "dd74709e-1fd0-5ab1-a8ab-2a40ad645217",
+                        "RelationNumber": "000037",
+                        "RelationDescription": "Van Kempen Afbouw b.v.",
+                        "VatNumber": null,
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "63e6ad8e-5c78-586e-b35b-48d0a4566075",
+                        "RelationNumber": "000041",
+                        "RelationDescription": "Bus Grondstoffen B.V.",
+                        "VatNumber": null,
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "9fc15edd-9431-5a98-b2e1-0d90f2064527",
+                        "RelationNumber": "000031",
+                        "RelationDescription": "Architectenbureau Brauw B.V.",
+                        "VatNumber": null,
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "493b57bf-2ef7-5f92-a1dc-30e8be2dd8e7",
+                        "RelationNumber": "000040",
+                        "RelationDescription": "Talens Havenbedrijf B.V.",
+                        "VatNumber": null,
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "9fbf635d-5d9c-5f81-b879-48de533d6887",
+                        "RelationNumber": "000043",
+                        "RelationDescription": "Schouten Kunststofprofielen C.V.",
+                        "VatNumber": null,
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "4a9442b4-1126-5688-8636-7f19ee500ee8",
+                        "RelationNumber": "000021",
+                        "RelationDescription": "Hesta Touringcars B.V.",
+                        "VatNumber": null,
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "c08e2474-976c-5c7c-94dc-eb02580009d0",
+                        "RelationNumber": "000034",
+                        "RelationDescription": "Administratiekantoor Beers",
+                        "VatNumber": null,
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "3c3c8593-8de5-5c20-bccb-3afeb9dd4a82",
+                        "RelationNumber": "000030",
+                        "RelationDescription": "Oostendorp-Nederland Service B.V.",
+                        "VatNumber": null,
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "7458b139-298f-5f53-aa52-0f9fbeb560b6",
+                        "RelationNumber": "000032",
+                        "RelationDescription": "Stukadoorsbedrijf Burgers B.V.",
+                        "VatNumber": null,
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "39a415bc-43e8-5a6a-bbf9-808f807d4575",
+                        "RelationNumber": "000044",
+                        "RelationDescription": "Ingenieursbureau Zwijndrecht",
+                        "VatNumber": null,
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "0bb78a38-dc5c-5a8f-9990-1f72e3a86b35",
+                        "RelationNumber": "000014",
+                        "RelationDescription": "EnYoi ICT Services B.V.",
+                        "VatNumber": null,
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "685136cf-ce62-5352-a341-457e99a9bc63",
+                        "RelationNumber": "000028",
+                        "RelationDescription": "Kuiper Marketing N.V.",
+                        "VatNumber": null,
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "200dae98-c4db-5da1-b8dd-018f934bcaa0",
+                        "RelationNumber": "000036",
+                        "RelationDescription": "Meepo Instituut B.V.",
+                        "VatNumber": null,
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "889f3aac-684c-552e-b566-3de14d38c2c5",
+                        "RelationNumber": "000026",
+                        "RelationDescription": "Gebroeders Van Kooten B.V.",
+                        "VatNumber": null,
+                        "RelationType": "organisation"
+                      },
+                      {
+                        "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                        "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+                        "RelationId": "db59b6c9-0309-5d31-b0d8-5bf3993d4ad0",
+                        "RelationNumber": "000027",
+                        "RelationDescription": "Notariskantoor Verhoeven B.V.",
+                        "VatNumber": null,
+                        "RelationType": "organisation"
+                      }
+                    ]
+                  }
                 }
               }
             }
@@ -4675,6 +6597,27 @@
                       }
                     }
                   }
+                },
+                "examples": {
+                  "example response": {
+                    "value": {
+                      "TrackingToken": "202405021144501",
+                      "Result": [
+                        {
+                          "Id": "adef5ea1-c4ec-557d-93a5-0ac82709ad8a",
+                          "Name": "Diverse debiteuren",
+                          "IsBlocked": false,
+                          "SalesRelation": true
+                        },
+                        {
+                          "Id": "2438541d-5088-5d1d-8caa-94a87cb14dc2",
+                          "Name": "Diverse crediteuren",
+                          "IsBlocked": false,
+                          "PurchaseRelation": true
+                        }
+                      ]
+                    }
+                  }
                 }
               }
             }
@@ -4785,6 +6728,32 @@
                       }
                     }
                   }
+                },
+                "examples": {
+                  "example": {
+                    "value": [
+                      {
+                        "Id": "afa50000-0000-0b1e-8a4b-309cd658b570",
+                        "Description": "Nul"
+                      },
+                      {
+                        "Id": "afa50000-0000-07cf-8b24-5ef474ab1b2a",
+                        "Description": "Extra laag"
+                      },
+                      {
+                        "Id": "afa50000-0000-0246-9965-b18e164c600e",
+                        "Description": "Speciaal"
+                      },
+                      {
+                        "Id": "afa50000-0000-0465-aa85-e1a761ca3a33",
+                        "Description": "Laag"
+                      },
+                      {
+                        "Id": "afa50000-0000-0b41-9465-e9f88bcaef86",
+                        "Description": "Hoog"
+                      }
+                    ]
+                  }
                 }
               }
             }
@@ -4889,6 +6858,28 @@
                       }
                     }
                   }
+                },
+                "examples": {
+                  "example": {
+                    "value": [
+                      {
+                        "Id": "afa50000-0000-02bb-9338-0a6629f07fce",
+                        "Description": "Verlegd"
+                      },
+                      {
+                        "Id": "afa50000-0000-0d9c-9502-4fc953f3e012",
+                        "Description": "Vrijgesteld"
+                      },
+                      {
+                        "Id": "afa50000-0000-0b71-8790-807f97e85c54",
+                        "Description": "Belast"
+                      },
+                      {
+                        "Id": "afa50000-0000-0a2d-9cec-bd890979929c",
+                        "Description": "Geen btw"
+                      }
+                    ]
+                  }
                 }
               }
             }
@@ -4947,13 +6938,96 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/requestBodies/address-1.0-Create-JsonSchema"
+              },
+              "examples": {
+                "New addres for organisation": {
+                  "value": {
+                    "RelationType": "organisation",
+                    "RelationId": "8afb1a9a-1613-5e2b-ab19-20c0f4f3e216",
+                    "StreetName": "Voorthuizerstraat",
+                    "HouseNumber": 16,
+                    "HouseNumberAddition": "A",
+                    "PostalZone": "3881SH",
+                    "CityName": "Putten",
+                    "CountryCode": "NL"
+                  }
+                },
+                "New addres for person": {
+                  "value": {
+                    "RelationType": "person",
+                    "RelationId": "8afb1a9a-1613-5e2b-ab19-20c0f4f3e216",
+                    "StreetName": "Voorthuizerstraat",
+                    "HouseNumber": 16,
+                    "HouseNumberAddition": "A",
+                    "PostalZone": "3881SH",
+                    "CityName": "Putten",
+                    "CountryCode": "NL"
+                  }
+                },
+                "New address DE": {
+                  "value": {
+                    "RelationType": "organisation",
+                    "RelationId": "8afb1a9a-1613-5e2b-ab19-20c0f4f3e216",
+                    "StreetName": "Berliner Straße",
+                    "HouseNumber": 10,
+                    "HouseNumberAddition": "",
+                    "PostalZone": "10115",
+                    "CityName": "Berlijn",
+                    "CountryCode": "DE"
+                  }
+                }
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "value": {
+                      "result": "Succeeded",
+                      "instances": [
+                        {
+                          "Code": "Adres",
+                          "Id": "bea5e01e-e1a0-4b04-819a-3347ebca2ba4"
+                        }
+                      ],
+                      "errors": []
+                    }
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "string"
+                    },
+                    "instances": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Code": {
+                            "type": "string"
+                          },
+                          "Id": {
+                            "type": "string",
+                            "format": "uuid"
+                          }
+                        }
+                      }
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {}
+                    }
+                  }
+                }
+              }
+            }
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -5006,13 +7080,80 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/requestBodies/bankaccount-1.0-Create-JsonSchema"
+              },
+              "examples": {
+                "New bankaccount organisation": {
+                  "value": {
+                    "RelationType": "organisation",
+                    "RelationId": "8afb1a9a-1613-5e2b-ab19-20c0f4f3e216",
+                    "AccountNumber": "NL82BKCH0618141243",
+                    "BIC": "BKCHNL2R",
+                    "CountryCode": "NL",
+                    "AccountHolderName": "Balistreri"
+                  }
+                },
+                "New bankaccount person": {
+                  "value": {
+                    "RelationType": "person",
+                    "RelationId": "8afb1a9a-1613-5e2b-ab19-20c0f4f3e216",
+                    "AccountNumber": "NL82BKCH0618141243",
+                    "BIC": "BKCHNL2R",
+                    "CountryCode": "NL",
+                    "AccountHolderName": "Balistreri"
+                  }
+                }
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Success": {
+                    "value": {
+                      "result": "Succeeded",
+                      "instances": [
+                        {
+                          "Code": "Bankrekening",
+                          "Id": "4738e143-e582-4b38-a8af-9d1f1e12bfca"
+                        }
+                      ],
+                      "errors": []
+                    }
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "string"
+                    },
+                    "instances": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Code": {
+                            "type": "string"
+                          },
+                          "Id": {
+                            "type": "string",
+                            "format": "uuid"
+                          }
+                        }
+                      }
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {}
+                    }
+                  }
+                }
+              }
+            }
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -5065,13 +7206,121 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/requestBodies/cashmutation-3.0-Create-JsonSchema"
+              },
+              "examples": {
+                "Minimum cash mutuation": {
+                  "value": {
+                    "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+                    "Description": "Creates only a cashmutation without a reconciliation mutation.",
+                    "Date": "2024-03-15",
+                    "AmountIncludingVat": 400
+                  }
+                },
+                "purchase": {
+                  "value": {
+                    "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+                    "Description": "Aanschaf kleine machines en gereedschap",
+                    "Date": "2024-03-15",
+                    "LedgerAccountId": "c031b2e8-f8ac-5ab2-a428-93bf9789fc5e",
+                    "VatPercentage": 21,
+                    "VatTarive": "high",
+                    "AmountIncludingVat": -200
+                  }
+                },
+                "sales": {
+                  "value": {
+                    "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+                    "Description": "Omzet algemeen",
+                    "Date": "2024-03-15",
+                    "LedgerAccountId": "cfb59b79-b3ec-55ef-8cde-000499c3179e",
+                    "VatPercentage": 21,
+                    "VatTarive": "high",
+                    "AmountIncludingVat": 400
+                  }
+                },
+                "specificcashregister": {
+                  "value": {
+                    "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                    "Description": "Omzet algemeen",
+                    "Date": "2025-03-15",
+                    "LedgerAccountId": "0cc7471d-9973-5214-8106-a960bbaa348e",
+                    "VatTarive": "high",
+                    "CashregisterId": "25e93133-ec28-543f-9f23-312ddb4e10a3",
+                    "AmountIncludingVat": 800
+                  }
+                },
+                "with attachments": {
+                  "value": {
+                    "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+                    "Description": "Aanschaf kleine machines en gereedschap_387",
+                    "Date": "2024-03-15",
+                    "LedgerAccountId": "c031b2e8-f8ac-5ab2-a428-93bf9789fc5e",
+                    "VatPercentage": 21,
+                    "VatTarive": "high",
+                    "AmountIncludingVat": -200,
+                    "Attachments": [
+                      {
+                        "AttachmentId": "bcbee6a4-f3de-44c3-91c8-e8921bf15107"
+                      },
+                      {
+                        "AttachmentId": "6676ad1f-9fc3-4a4f-8a44-d88d8284c598"
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "normal response": {
+                    "value": {
+                      "result": "Succeeded",
+                      "traceId": "8f266c6b-f405-4107-92ff-32130bd13a6b",
+                      "data": {
+                        "CashMutationId": "1bff704a-d4a1-4d92-b276-79eece12bb87",
+                        "FinancialBookingId": "723e515f-c997-4d27-ae89-b922f3975a07"
+                      },
+                      "errors": []
+                    }
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "string"
+                    },
+                    "traceId": {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "CashMutationId": {
+                          "type": "string",
+                          "format": "uuid"
+                        },
+                        "FinancialBookingId": {
+                          "type": "string",
+                          "format": "uuid"
+                        }
+                      }
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {}
+                    }
+                  }
+                }
+              }
+            }
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -5125,13 +7374,83 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/requestBodies/contact-2.0-Create-JsonSchema"
+              },
+              "examples": {
+                "new contact": {
+                  "value": {
+                    "OrganisationId": "8afb1a9a-1613-5e2b-ab19-20c0f4f3e216",
+                    "Firstname": "Rosella",
+                    "Initials": "III",
+                    "Prefix": "Mr.",
+                    "Lastname": "Predovic",
+                    "EmailAddress": "Karli61@example.com",
+                    "PhoneNumber": "223-385-8892"
+                  }
+                }
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "value": {
+                      "result": "Succeeded",
+                      "instances": [
+                        {
+                          "Code": "Persoon",
+                          "Id": "3375a0f0-1cf0-5408-98f9-cd3599d96721"
+                        },
+                        {
+                          "Code": "Emailadres",
+                          "Id": "3f669df2-b5d2-41fd-bb7e-7d7030e9d8be"
+                        },
+                        {
+                          "Code": "Telefoonnummer",
+                          "Id": "2349ac50-64eb-4d05-b440-f8372dbd850f"
+                        },
+                        {
+                          "Code": "Contactpersoon",
+                          "Id": "ba9a935d-32ac-447d-9749-105a02079372"
+                        }
+                      ],
+                      "errors": []
+                    }
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "string"
+                    },
+                    "instances": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Code": {
+                            "type": "string"
+                          },
+                          "Id": {
+                            "type": "string",
+                            "format": "uuid"
+                          }
+                        }
+                      }
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {}
+                    }
+                  }
+                }
+              }
+            }
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -5184,13 +7503,74 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/requestBodies/emailaddress-2.0-Create-JsonSchema"
+              },
+              "examples": {
+                "new email for organisation": {
+                  "value": {
+                    "RelationType": "organisation",
+                    "RelationId": "dde06573-1190-5b31-a400-064588aa62e0",
+                    "EmailAddress": "user@example.com"
+                  }
+                },
+                "new email for person": {
+                  "value": {
+                    "RelationType": "person",
+                    "RelationId": "2aacc092-9c6c-5020-b1cf-0d8ecd6485dc",
+                    "EmailAddress": "user@example.com"
+                  }
+                }
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "value": {
+                      "result": "Succeeded",
+                      "instances": [
+                        {
+                          "Code": "Emailadres",
+                          "Id": "cb052971-6312-42cf-b3fd-de274f248a88"
+                        }
+                      ],
+                      "errors": []
+                    }
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "string"
+                    },
+                    "instances": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Code": {
+                            "type": "string"
+                          },
+                          "Id": {
+                            "type": "string",
+                            "format": "uuid"
+                          }
+                        }
+                      }
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {}
+                    }
+                  }
+                }
+              }
+            }
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -5243,13 +7623,103 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/requestBodies/financialjournalentry-1.0-Create-JsonSchema"
+              },
+              "examples": {
+                "new financialjournalentry periodallocation": {
+                  "value": {
+                    "AdministrationId": "95c0de1b-e269-4c74-ab6a-ece7fb15a4ff",
+                    "Description": "journaalpost_001",
+                    "EntryDate": "2024-01-22",
+                    "EntryLine": [
+                      {
+                        "Description": "Regel1",
+                        "LedgerAccountId": "5a663714-2c36-5d94-a009-3a210bc2ce52",
+                        "AmountDebit": 4000.65,
+                        "VatDirection": "Sales",
+                        "VatType": "High",
+                        "AmountCredit": 0,
+                        "PeriodAllocation": true,
+                        "PeriodAllocationBeginDate": "2024-01-01",
+                        "PeriodAllocationEndDate": "2024-12-31"
+                      },
+                      {
+                        "Description": "Regel2",
+                        "LedgerAccountId": "5a663714-2c36-5d94-a009-3a210bc2ce52",
+                        "AmountCredit": 4000.65,
+                        "AmountDebit": 0
+                      }
+                    ]
+                  }
+                },
+                "new financialjournalentry": {
+                  "value": {
+                    "AdministrationId": "73109da3-0fcf-4fbe-bd2c-209a399ae502",
+                    "Description": "journaalpost_002",
+                    "EntryDate": "2024-01-22",
+                    "EntryLine": [
+                      {
+                        "Description": "Regel1",
+                        "LedgerAccountId": "5a663714-2c36-5d94-a009-3a210bc2ce52",
+                        "AmountDebit": 4000.65,
+                        "VatDirection": "sales",
+                        "VatType": "high"
+                      },
+                      {
+                        "Description": "Regel2",
+                        "LedgerAccountId": "5a663714-2c36-5d94-a009-3a210bc2ce52",
+                        "AmountCredit": 4000.65
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "value": {
+                      "result": "Succeeded",
+                      "traceId": "39f2f0fc-58cc-4f7b-a26b-5aa93d77ba88",
+                      "data": {
+                        "FinancialJournalEntryId": "6f30c816-3a77-4c2b-9484-9a09cc5edd7f"
+                      },
+                      "errors": []
+                    }
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "string"
+                    },
+                    "traceId": {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "FinancialJournalEntryId": {
+                          "type": "string",
+                          "format": "uuid"
+                        }
+                      }
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {}
+                    }
+                  }
+                }
+              }
+            }
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -5301,13 +7771,62 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/requestBodies/financialjournalentry-1.0-Delete-JsonSchema"
+              },
+              "examples": {
+                "delete financialjournalentry": {
+                  "value": {
+                    "AdministrationId": "e877fb82-b546-4d20-94cf-05c72765fc47",
+                    "Id": "e877fb82-b546-4d20-94cf-05c72765fc47"
+                  }
+                }
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "value": {
+                      "result": "Succeeded",
+                      "traceId": "9b99528e-3bf0-4485-91f9-b9bba34550e0",
+                      "data": {
+                        "FinancialJournalEntryId": "6f30c816-3a77-4c2b-9484-9a09cc5edd7f"
+                      },
+                      "errors": []
+                    }
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "string"
+                    },
+                    "traceId": {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "FinancialJournalEntryId": {
+                          "type": "string",
+                          "format": "uuid"
+                        }
+                      }
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {}
+                    }
+                  }
+                }
+              }
+            }
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -5361,13 +7880,66 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/requestBodies/mandates-1.0-Create-JsonSchema"
+              },
+              "examples": {
+                "example": {
+                  "value": {
+                    "AdministrationId": "e5a3aaef-0cc7-46d0-9eb5-8d039c88109e",
+                    "RelationType": "organisation",
+                    "RelationId": "046800d6-8160-41a9-a422-ef3c04b8d373",
+                    "RelationBankAccountId": "27548bd4-45ad-4652-bdd2-f1615dc28245",
+                    "MandateReference": "Test31Con33tract3nr.FL-2322/2P",
+                    "DateOfSignature": "2024-12-31"
+                  }
+                }
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "response": {
+                    "value": {
+                      "result": "Succeeded",
+                      "traceId": "3511f4e3-869c-4ed6-9dde-e4a45acd8f04",
+                      "data": {
+                        "MandateId": "ef03c8a1-4254-498e-a819-343184ce9aad"
+                      },
+                      "errors": []
+                    }
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "string"
+                    },
+                    "traceId": {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "MandateId": {
+                          "type": "string",
+                          "format": "uuid"
+                        }
+                      }
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {}
+                    }
+                  }
+                }
+              }
+            }
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -5423,13 +7995,189 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/requestBodies/organisation-4.0-Create-JsonSchema"
+              },
+              "examples": {
+                "new organisation maximal": {
+                  "value": {
+                    "Name": "Nitzsche, Dickinson and Predovic",
+                    "CocNumber": "38012622",
+                    "VatNumber": "NL003276211B01",
+                    "Tradename": "Johns - Swaniawski",
+                    "EmailAddress": "Damion94@example.org",
+                    "Website": "https://astrid.info",
+                    "PhoneNumber": "738-407-2156",
+                    "ExternalId": "123456789",
+                    "Addresses": [
+                      {
+                        "StreetName": "inspiratielaan",
+                        "HouseNumber": 1,
+                        "HouseNumberAddition": "b",
+                        "Explanation": "Headquarters",
+                        "PostalZone": "3833AV",
+                        "State": "Utrecht",
+                        "CityName": "Leusden",
+                        "CountryCode": "NL",
+                        "PreferredSupplierAddress": true,
+                        "PreferredShippingAddress": false,
+                        "PreferredBillingAddress": true
+                      },
+                      {
+                        "StreetName": "inspiratielaan",
+                        "HouseNumber": 3,
+                        "HouseNumberAddition": "b",
+                        "Explanation": "Headquarters",
+                        "PostalZone": "3833AV",
+                        "State": "Utrecht",
+                        "CityName": "Leusden",
+                        "CountryCode": "NL",
+                        "PreferredSupplierAddress": false,
+                        "PreferredShippingAddress": true,
+                        "PreferredBillingAddress": false
+                      }
+                    ],
+                    "BankAccounts": [
+                      {
+                        "AccountNumber": "NL85CHAS0874238307",
+                        "BankId": "CHAS",
+                        "Bic": "CHASNL2X",
+                        "CountryCode": "NL",
+                        "AccountHolderName": "Kees Zandbergen",
+                        "PreferredOutgoingPayments": true,
+                        "PreferredIncommingPayments": true
+                      },
+                      {
+                        "AccountNumber": "NL44DNIB0736664289",
+                        "BankId": "DNIB",
+                        "Bic": "DNIBNL2G",
+                        "CountryCode": "NL",
+                        "AccountHolderName": "Jan Zandbergen",
+                        "PreferredOutgoingPayments": false,
+                        "PreferredIncommingPayments": false
+                      }
+                    ]
+                  }
+                },
+                "new organisation minimal": {
+                  "value": {
+                    "Name": "Larkin Inc"
+                  }
+                },
+                "new organisation": {
+                  "value": {
+                    "Name": "Terry - Powlowski",
+                    "CocNumber": "38012622",
+                    "VatNumber": "NL003276211B01",
+                    "EmailAddress": "Amelie_Bogisich@example.com",
+                    "PhoneNumber": "738-407-2156",
+                    "ExternalId": "801-331-6473",
+                    "Addresses": [
+                      {
+                        "StreetName": "Tillman Glen",
+                        "HouseNumber": 1,
+                        "HouseNumberAddition": "b",
+                        "Explanation": "Headquarters",
+                        "PostalZone": "3833AV",
+                        "State": "Utrecht",
+                        "CityName": "Leusden",
+                        "CountryCode": "NL"
+                      }
+                    ],
+                    "BankAccounts": [
+                      {
+                        "AccountNumber": "NL85CHAS0874238307",
+                        "BankId": "CHAS",
+                        "Bic": "CHASNL2X",
+                        "CountryCode": "NL",
+                        "AccountHolderName": "Kees Zandbergen"
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "minimum": {
+                    "value": {
+                      "result": "Succeeded",
+                      "data": {
+                        "RelationId": "9ef691ac-b12c-4e14-9368-8191e03b54c0",
+                        "Addresses": [
+                          {
+                            "AddressId": "a329ffce-7e6c-4e79-acb4-43ac57157dc9",
+                            "AddressDescription": "inspiratielaan 2 3833AV Leusden Nederland"
+                          }
+                        ],
+                        "BankAccounts": [
+                          {
+                            "AccountNumberId": "4395b94c-af56-429b-ab52-52bdc9986fb4",
+                            "AccountNumber": "NL68INGB0801705542"
+                          }
+                        ]
+                      },
+                      "errors": []
+                    }
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "RelationId": {
+                          "type": "string",
+                          "format": "uuid"
+                        },
+                        "Addresses": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "AddressId": {
+                                "type": "string",
+                                "format": "uuid"
+                              },
+                              "AddressDescription": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        },
+                        "BankAccounts": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "AccountNumberId": {
+                                "type": "string",
+                                "format": "uuid"
+                              },
+                              "AccountNumber": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {}
+                    }
+                  }
+                }
+              }
+            }
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -5483,13 +8231,83 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/requestBodies/organisation-4.0-Update-JsonSchema"
+              },
+              "examples": {
+                "update organisation": {
+                  "value": {
+                    "RelationId": "978638a5-394f-4ecc-a31f-21332f9f79e5",
+                    "Name": "AFAS Software",
+                    "CocNumber": "54041813",
+                    "ExternalId": "SWR23244",
+                    "Tradename": "AFAS Software BV",
+                    "EmailAddress": "info@afas.NL",
+                    "WebSite": "www.afas.nl",
+                    "phoneNumber": "+31334341800",
+                    "Addresses": [
+                      {
+                        "StreetName": "inspiratielaan",
+                        "HouseNumber": 5,
+                        "HouseNumberAddition": "b",
+                        "Explanation": "Headquarters",
+                        "PostalZone": "3833AV",
+                        "State": "Utrecht",
+                        "CityName": "Leusden",
+                        "CountryCode": "NL",
+                        "preferredSupplierAddress": true,
+                        "preferredShippingAddress": false,
+                        "preferredBillingAddress": true
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "response": {
+                    "value": {
+                      "result": "Succeeded",
+                      "traceId": "d8b6d497-cd52-46b1-a4c3-78dd7f9fb957",
+                      "data": {
+                        "RelationId": "978638a5-394f-4ecc-a31f-21332f9f79e5"
+                      },
+                      "errors": []
+                    }
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "string"
+                    },
+                    "traceId": {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "RelationId": {
+                          "type": "string",
+                          "format": "uuid"
+                        }
+                      }
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {}
+                    }
+                  }
+                }
+              }
+            }
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -5545,13 +8363,81 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/requestBodies/payrolljournalentry-1.0-Create-JsonSchema"
+              },
+              "examples": {
+                "Loonjournaalpost": {
+                  "value": {
+                    "AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+                    "Description": "Loonjournaalpost_001",
+                    "Date": "2024-01-22",
+                    "PayrollJournalEntryLine": [
+                      {
+                        "LedgerAccountNumber": "1700",
+                        "AmountDebit": 4000
+                      },
+                      {
+                        "LedgerAccountNumber": "1710",
+                        "AmountCredit": 1300
+                      },
+                      {
+                        "LedgerAccountNumber": "2300",
+                        "AmountCredit": 2700
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Success": {
+                    "value": {
+                      "result": "Succeeded",
+                      "instances": [
+                        {
+                          "Code": "Memoriaalboeking2",
+                          "Id": "a70c4e79-a04f-57cf-875b-150434c56e17"
+                        }
+                      ],
+                      "errors": []
+                    }
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "string"
+                    },
+                    "instances": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Code": {
+                            "type": "string"
+                          },
+                          "Id": {
+                            "type": "string",
+                            "format": "uuid"
+                          }
+                        }
+                      }
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {}
+                    }
+                  }
+                }
+              }
+            }
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -5604,13 +8490,239 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/requestBodies/person-4.0-Create-JsonSchema"
+              },
+              "examples": {
+                "create person with 2 addresses and 2 backaccounts": {
+                  "value": {
+                    "Firstname": "John",
+                    "Initials": "J",
+                    "Prefix": "Mr",
+                    "LastName": "Doe",
+                    "Emailaddress": "johndoe@gmail.com",
+                    "Phonenumber": "1-555-123-4567",
+                    "Addresses": [
+                      {
+                        "StreetName": "Main Street",
+                        "HouseNumber": 1234,
+                        "HouseNumberAddition": "",
+                        "Explanation": "",
+                        "PostalZone": "90210",
+                        "State": "California",
+                        "CityName": "Beverly Hills",
+                        "CountryCode": "US",
+                        "PreferredSupplierAddress": false,
+                        "PreferredShippingAddress": true,
+                        "PreferredBillingAddress": false
+                      },
+                      {
+                        "StreetName": "Park Avenue",
+                        "HouseNumber": 567,
+                        "HouseNumberAddition": "Apt 3B",
+                        "Explanation": "",
+                        "PostalZone": "10022",
+                        "State": "New York",
+                        "CityName": "New York",
+                        "CountryCode": "US",
+                        "PreferredSupplierAddress": true,
+                        "PreferredShippingAddress": false,
+                        "PreferredBillingAddress": true
+                      }
+                    ],
+                    "BankAccounts": [
+                      {
+                        "AccountNumber": "NL93LOYD0175300941",
+                        "BankId": "LOYD",
+                        "Bic": "LOYDNL2A",
+                        "CountryCode": "NL",
+                        "PreferredOutgoingPayments": true,
+                        "PreferredIncommingPayments": false
+                      },
+                      {
+                        "AccountNumber": "NL67VOWA0136875262",
+                        "BankId": "VOWA",
+                        "Bic": "VOWANL21",
+                        "CountryCode": "NL",
+                        "PreferredOutgoingPayments": false,
+                        "PreferredIncommingPayments": true
+                      }
+                    ]
+                  }
+                },
+                "create person with address and bankaccount": {
+                  "value": {
+                    "Firstname": "Julianne",
+                    "Initials": "J",
+                    "Prefix": "Mr",
+                    "LastName": "Pouros",
+                    "Emailaddress": "Alyce58@gmail.com",
+                    "Phonenumber": "1-555-123-4567",
+                    "Addresses": [
+                      {
+                        "StreetName": "Krommeweg",
+                        "HouseNumber": 18,
+                        "HouseNumberAddition": "",
+                        "Explanation": "",
+                        "PostalZone": "8071TE",
+                        "CityName": "Nunspeet",
+                        "CountryCode": "NL",
+                        "PreferredSupplierAddress": true,
+                        "PreferredShippingAddress": true,
+                        "PreferredBillingAddress": true
+                      }
+                    ],
+                    "BankAccounts": [
+                      {
+                        "AccountNumber": "NL93LOYD0175300941",
+                        "BankId": "LOYD",
+                        "Bic": "LOYDNL2A",
+                        "CountryCode": "NL",
+                        "PreferredOutgoingPayments": true,
+                        "PreferredIncommingPayments": true
+                      }
+                    ]
+                  }
+                },
+                "create person": {
+                  "value": {
+                    "Firstname": "John",
+                    "Initials": "J",
+                    "Prefix": "Mr",
+                    "LastName": "Doe",
+                    "Emailaddress": "johndoe@gmail.com",
+                    "Phonenumber": "1-555-123-4567",
+                    "Addresses": [
+                      {
+                        "StreetName": "Main Street",
+                        "HouseNumber": 1234,
+                        "HouseNumberAddition": "",
+                        "Explanation": "",
+                        "PostalZone": "90210",
+                        "State": "California",
+                        "CityName": "Beverly Hills",
+                        "CountryCode": "US",
+                        "PreferredSupplierAddress": false,
+                        "PreferredShippingAddress": true,
+                        "PreferredBillingAddress": false
+                      },
+                      {
+                        "StreetName": "Park Avenue",
+                        "HouseNumber": 567,
+                        "HouseNumberAddition": "Apt 3B",
+                        "Explanation": "",
+                        "PostalZone": "10022",
+                        "State": "New York",
+                        "CityName": "New York",
+                        "CountryCode": "US",
+                        "PreferredSupplierAddress": true,
+                        "PreferredShippingAddress": false,
+                        "PreferredBillingAddress": true
+                      }
+                    ],
+                    "BankAccounts": [
+                      {
+                        "AccountNumber": "NL93LOYD0175300941",
+                        "BankId": "LOYD",
+                        "Bic": "LOYDNL2A",
+                        "CountryCode": "NL",
+                        "PreferredOutgoingPayments": true,
+                        "PreferredIncommingPayments": false
+                      },
+                      {
+                        "AccountNumber": "NL67VOWA0136875262",
+                        "BankId": "VOWA",
+                        "Bic": "VOWANL21",
+                        "CountryCode": "NL",
+                        "PreferredOutgoingPayments": false,
+                        "PreferredIncommingPayments": true
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "minimum": {
+                    "value": {
+                      "result": "Succeeded",
+                      "data": {
+                        "RelationId": "9ef691ac-b12c-4e14-9368-8191e03b54c0",
+                        "Addresses": [
+                          {
+                            "AddressId": "a329ffce-7e6c-4e79-acb4-43ac57157dc9",
+                            "AddressDescription": "inspiratielaan 2 3833AV Leusden Nederland"
+                          }
+                        ],
+                        "BankAccounts": [
+                          {
+                            "AccountNumberId": "4395b94c-af56-429b-ab52-52bdc9986fb4",
+                            "AccountNumber": "NL68INGB0801705542"
+                          }
+                        ]
+                      },
+                      "errors": []
+                    }
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "RelationId": {
+                          "type": "string",
+                          "format": "uuid"
+                        },
+                        "Addresses": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "AddressId": {
+                                "type": "string",
+                                "format": "uuid"
+                              },
+                              "AddressDescription": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        },
+                        "BankAccounts": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "properties": {
+                              "AccountNumberId": {
+                                "type": "string",
+                                "format": "uuid"
+                              },
+                              "AccountNumber": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {}
+                    }
+                  }
+                }
+              }
+            }
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -5664,13 +8776,78 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/requestBodies/person-4.0-Update-JsonSchema"
+              },
+              "examples": {
+                "update person": {
+                  "value": {
+                    "RelationId": "69a7cab4-3a34-4fdf-8017-c6df8a9375df",
+                    "FirstName": "John",
+                    "LastName": "Doe",
+                    "Addresses": [
+                      {
+                        "StreetName": "inspiratielaan",
+                        "HouseNumber": 5,
+                        "HouseNumberAddition": "b",
+                        "Explanation": "Headquarters",
+                        "PostalZone": "3833AV",
+                        "State": "Utrecht",
+                        "CityName": "Leusden",
+                        "CountryCode": "NL",
+                        "preferredSupplierAddress": true,
+                        "preferredShippingAddress": true,
+                        "preferredBillingAddress": true
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "response": {
+                    "value": {
+                      "result": "Succeeded",
+                      "traceId": "f0dddf19-12a8-4bf2-b782-359d32679491",
+                      "data": {
+                        "RelationId": "7b97c9cc-d0ef-48bf-a896-657dfb494059"
+                      },
+                      "errors": []
+                    }
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "string"
+                    },
+                    "traceId": {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "RelationId": {
+                          "type": "string",
+                          "format": "uuid"
+                        }
+                      }
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {}
+                    }
+                  }
+                }
+              }
+            }
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -5726,13 +8903,74 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/requestBodies/phonenumber-1.0-Create-JsonSchema"
+              },
+              "examples": {
+                "Nieuw telefoonnummer voor organisatie": {
+                  "value": {
+                    "RelationType": "organisation",
+                    "RelationId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+                    "PhoneNumber": "033546786"
+                  }
+                },
+                "Nieuw telefoonnummer voor persoon": {
+                  "value": {
+                    "RelationType": "person",
+                    "RelationId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+                    "PhoneNumber": "033546786"
+                  }
+                }
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "response": {
+                    "value": {
+                      "result": "Succeeded",
+                      "instances": [
+                        {
+                          "Code": "Telefoonnummer",
+                          "Id": "0127112f-48ed-4e09-b981-914913cc1807"
+                        }
+                      ],
+                      "errors": []
+                    }
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "string"
+                    },
+                    "instances": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Code": {
+                            "type": "string"
+                          },
+                          "Id": {
+                            "type": "string",
+                            "format": "uuid"
+                          }
+                        }
+                      }
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {}
+                    }
+                  }
+                }
+              }
+            }
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -5785,13 +9023,92 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/requestBodies/purchasejournalentry-2.0-Create-JsonSchema"
+              },
+              "examples": {
+                "Inkoopjournaalpost": {
+                  "value": {
+                    "AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+                    "InvoiceNumber": "3gKm5gtrBcjWHNY3dwwjyza4AZYAyBW",
+                    "RelationType": "organisation",
+                    "RelationId": "863d895a-3782-5500-b933-dd487d736138",
+                    "InvoiceDate": "2024-01-22",
+                    "DueDate": "2024-02-28",
+                    "PaymentMethod": "creditcard",
+                    "Attachments": [
+                      {
+                        "AttachmentId": "039e63a5-5761-4a6e-a58b-d0fcda003e0c"
+                      }
+                    ],
+                    "InvoiceLine": [
+                      {
+                        "Description": "Inkopen btw hoog",
+                        "LedgerAccountId": "55eeb0a9-25d0-5c60-830b-07f515fc0c0c",
+                        "VatType": "high",
+                        "AmountExcludingVat": 22,
+                        "AmountVat": 4.62
+                      },
+                      {
+                        "Description": "Inkopen btw laag",
+                        "LedgerAccountId": "22edee70-753a-5f8c-a613-39fe661fffbe",
+                        "VatType": "low",
+                        "AmountExcludingVat": 100,
+                        "AmountVat": 9
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "response": {
+                    "value": {
+                      "result": "Succeeded",
+                      "traceId": "90666ba6-6211-4582-9a19-0c0429c84b4e",
+                      "data": {
+                        "PurchaseJournalEntryId": "a29631fe-cc81-40ba-bc6c-b813be75423c",
+                        "PurchaseInternalInvoiceNumber": "IF250002"
+                      },
+                      "errors": []
+                    }
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "string"
+                    },
+                    "traceId": {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "PurchaseJournalEntryId": {
+                          "type": "string",
+                          "format": "uuid"
+                        },
+                        "PurchaseInternalInvoiceNumber": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {}
+                    }
+                  }
+                }
+              }
+            }
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -5844,13 +9161,106 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/requestBodies/salesinvoice-2.0-Create-JsonSchema"
+              },
+              "examples": {
+                "example": {
+                  "value": {
+                    "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                    "IssueDate": "2025-05-16",
+                    "RelationType": "organisation",
+                    "SentInvoiceEmail": false,
+                    "RelationId": "7b8e279b-b551-556e-a00a-a815392d0d38",
+                    "PaymentMethod": "banktransfer",
+                    "InvoiceLine": [
+                      {
+                        "ItemId": "5dbb40d7-52b5-51b6-809e-5a16dddeb650",
+                        "Quantity": 2
+                      }
+                    ]
+                  }
+                },
+                "exampleAlternativeAllocation copy": {
+                  "value": {
+                    "AdministrationId": "3f73bc84-fb32-4d1d-83d9-5de1af8245b1",
+                    "IssueDate": "2024-05-16",
+                    "RelationType": "organisation",
+                    "SentInvoiceEmail": false,
+                    "ToBeInvoiced": true,
+                    "RelationId": "7b8e279b-b551-556e-a00a-a815392d0d38",
+                    "InvoiceLine": [
+                      {
+                        "ItemId": "7e94bf59-594c-5c28-9fe5-5e238f821b0d",
+                        "Price": 10,
+                        "Quantity": 2,
+                        "AlternativeAllocationDate": "2024-12-31"
+                      }
+                    ]
+                  }
+                },
+                "exampleToBeInvoiced": {
+                  "value": {
+                    "AdministrationId": "3f73bc84-fb32-4d1d-83d9-5de1af8245b1",
+                    "IssueDate": "2024-05-16",
+                    "RelationType": "organisation",
+                    "SentInvoiceEmail": false,
+                    "ToBeInvoiced": true,
+                    "RelationId": "7b8e279b-b551-556e-a00a-a815392d0d38",
+                    "InvoiceLine": [
+                      {
+                        "ItemId": "7e94bf59-594c-5c28-9fe5-5e238f821b0d",
+                        "Quantity": 2
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "result": "Succeeded",
+                      "traceId": "8ede5c56-1e84-4134-b243-007e8bac57cc",
+                      "data": {
+                        "SalesInvoiceId": "61296199-a131-4b4e-9511-54a599ae8541"
+                      },
+                      "errors": []
+                    }
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "string"
+                    },
+                    "traceId": {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "SalesInvoiceId": {
+                          "type": "string",
+                          "format": "uuid"
+                        }
+                      }
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {}
+                    }
+                  }
+                }
+              }
+            }
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -5902,16 +9312,105 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/requestBodies/salesinvoice-2.0-Delete-JsonSchema"
+              },
+              "examples": {
+                "example": {
+                  "value": {
+                    "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+                    "Id": "c7e0773e-7904-41b7-a09e-56643261b6f4"
+                  }
+                }
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "Example": {
+                    "value": {
+                      "result": "Succeeded",
+                      "traceId": "e491eb78-6969-45c2-ba20-f94d68364427",
+                      "data": {
+                        "salesinvoiceId": "c7e0773e-7904-41b7-a09e-56643261b6f4"
+                      },
+                      "errors": []
+                    }
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "string"
+                    },
+                    "traceId": {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "salesinvoiceId": {
+                          "type": "string",
+                          "format": "uuid"
+                        }
+                      }
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {}
+                    }
+                  }
+                }
+              }
+            }
           },
           "5XX": {
             "description": "Internal Server Error"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "ExampleAlreadySend": {
+                    "value": {
+                      "result": "Failed",
+                      "traceId": "93a3cfbe-f20b-4fd2-9ec3-5cdd930eebc7",
+                      "instances": [],
+                      "errors": [
+                        "SalesInvoice cannot be deleted because it is not a draft or it is already deleted"
+                      ]
+                    }
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "string"
+                    },
+                    "traceId": {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "instances": {
+                      "type": "array",
+                      "items": {}
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "version": "2.0",
@@ -5962,16 +9461,345 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/requestBodies/salesjournalentry-2.1-Create-JsonSchema"
+              },
+              "examples": {
+                "BTW binnen en buiten EU": {
+                  "value": {
+                    "InvoiceNumber": "a",
+                    "InvoiceDate": "2024-01-30",
+                    "Description": "Unbranded Fresh Pizza",
+                    "AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+                    "RelationType": "organisation",
+                    "RelationId": "c6f3b724-845c-5af2-8360-2fc751601115",
+                    "PaymentMethod": "banktransfer",
+                    "PaymentConditionId": "9b5d768a-c71b-583e-b6ee-09d64aa935d4",
+                    "InvoiceLine": [
+                      {
+                        "LedgerAccountId": "1a8042a9-576d-5fab-9e5f-75e6f7d5ab63",
+                        "VatType": "zero",
+                        "AmountExcludingVat": 100
+                      },
+                      {
+                        "LedgerAccountId": "1a8042a9-576d-5fab-9e5f-75e6f7d5ab63",
+                        "VatType": "zero",
+                        "AmountExcludingVat": 211
+                      }
+                    ]
+                  }
+                },
+                "BTW Verlegd binnen Nederland": {
+                  "value": {
+                    "InvoiceNumber": "d",
+                    "InvoiceDate": "2024-01-30",
+                    "Description": "Practical Plastic Chips",
+                    "AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+                    "RelationType": "organisation",
+                    "RelationId": "c6f3b724-845c-5af2-8360-2fc751601115",
+                    "PaymentMethod": "banktransfer",
+                    "PaymentConditionId": "9b5d768a-c71b-583e-b6ee-09d64aa935d4",
+                    "InvoiceLine": [
+                      {
+                        "LedgerAccountId": "1a8042a9-576d-5fab-9e5f-75e6f7d5ab63",
+                        "VatType": "high",
+                        "VatCalculation": "reversecharged",
+                        "AmountExcludingVat": 100
+                      },
+                      {
+                        "LedgerAccountId": "1a8042a9-576d-5fab-9e5f-75e6f7d5ab63",
+                        "VatType": "high",
+                        "VatCalculation": "reversecharged",
+                        "AmountExcludingVat": 396
+                      }
+                    ]
+                  }
+                },
+                "Sales with attachment": {
+                  "value": {
+                    "InvoiceNumber": "1",
+                    "InvoiceDate": "2024-02-01",
+                    "Description": "Ergonomic Rubber Bacon",
+                    "AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+                    "RelationType": "organisation",
+                    "RelationId": "a8cce7bd-ced8-5ca4-b3b8-f0584ffe5993",
+                    "PaymentMethod": "banktransfer",
+                    "PaymentConditionId": "9b5d768a-c71b-583e-b6ee-09d64aa935d4",
+                    "Attachments": [
+                      {
+                        "AttachmentId": "b031446a-b98e-4378-b7ee-8543e05f34c0"
+                      }
+                    ],
+                    "InvoiceLine": [
+                      {
+                        "LedgerAccountId": "1a8042a9-576d-5fab-9e5f-75e6f7d5ab63",
+                        "AmountVat": 21,
+                        "VatType": "high",
+                        "AmountExcludingVat": 100
+                      },
+                      {
+                        "LedgerAccountId": "1a8042a9-576d-5fab-9e5f-75e6f7d5ab63",
+                        "AmountExcludingVat": 427,
+                        "VatType": "zero",
+                        "VatCalculation": "exempt"
+                      }
+                    ]
+                  }
+                },
+                "verkoop 1 regel": {
+                  "value": {
+                    "InvoiceNumber": "7",
+                    "InvoiceDate": "2024-01-24",
+                    "Description": "Unbranded Steel Sausages",
+                    "AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+                    "RelationType": "organisation",
+                    "RelationId": "9bafbc7a-611b-5465-a584-5f0c88734b35",
+                    "PaymentMethod": "banktransfer",
+                    "PaymentConditionId": "eb44c60d-06e4-564b-a90c-7715c78788a5",
+                    "InvoiceLine": [
+                      {
+                        "LedgerAccountId": "ebf99e77-1d73-51f2-936d-b3185d8a84ad",
+                        "AmountVat": 183.54,
+                        "VatType": "high",
+                        "AmountExcludingVat": 874
+                      }
+                    ]
+                  }
+                },
+                "verkoop aan persoon": {
+                  "value": {
+                    "InvoiceNumber": "SAL341434345403",
+                    "InvoiceDate": "2024-01-24",
+                    "Description": "null",
+                    "AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+                    "RelationType": "person",
+                    "RelationId": "d36cb9bb-0e5f-5253-ab28-2331804d65ba",
+                    "PaymentMethod": "banktransfer",
+                    "PaymentConditionId": "eb44c60d-06e4-564b-a90c-7715c78788a5",
+                    "InvoiceLine": [
+                      {
+                        "LedgerAccountId": "ebf99e77-1d73-51f2-936d-b3185d8a84ad",
+                        "AmountVat": 21,
+                        "VatType": "high",
+                        "AmountExcludingVat": 100
+                      },
+                      {
+                        "LedgerAccountId": "ebf99e77-1d73-51f2-936d-b3185d8a84ad",
+                        "AmountVat": 450.55,
+                        "VatType": "low",
+                        "AmountExcludingVat": 40.55,
+                        "VatCalculation": "exempt"
+                      }
+                    ]
+                  }
+                },
+                "verkoop alle soorten btw": {
+                  "value": {
+                    "InvoiceNumber": "d",
+                    "InvoiceDate": "2024-01-23",
+                    "Description": "Sleek Metal Tuna",
+                    "AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+                    "RelationType": "organisation",
+                    "RelationId": "9bafbc7a-611b-5465-a584-5f0c88734b35",
+                    "PaymentMethod": "banktransfer",
+                    "PaymentConditionId": "eb44c60d-06e4-564b-a90c-7715c78788a5",
+                    "InvoiceLine": [
+                      {
+                        "LedgerAccountId": "ebf99e77-1d73-51f2-936d-b3185d8a84ad",
+                        "AmountVat": 21,
+                        "VatType": "high",
+                        "AmountExcludingVat": 100
+                      },
+                      {
+                        "LedgerAccountId": "ebf99e77-1d73-51f2-936d-b3185d8a84ad",
+                        "AmountVat": 40.55,
+                        "VatType": "low",
+                        "AmountExcludingVat": 40.55,
+                        "VatCalculation": "exempt"
+                      },
+                      {
+                        "LedgerAccountId": "ebf99e77-1d73-51f2-936d-b3185d8a84ad",
+                        "AmountVat": 0,
+                        "VatType": "zero",
+                        "AmountExcludingVat": 40.55
+                      },
+                      {
+                        "LedgerAccountId": "ebf99e77-1d73-51f2-936d-b3185d8a84ad",
+                        "AmountVat": 18,
+                        "VatType": "low",
+                        "AmountExcludingVat": 200
+                      },
+                      {
+                        "LedgerAccountId": "ebf99e77-1d73-51f2-936d-b3185d8a84ad",
+                        "AmountVat": 18,
+                        "VatType": "high",
+                        "AmountExcludingVat": 200,
+                        "VatCalculation": "reversecharged"
+                      }
+                    ]
+                  }
+                },
+                "verkoop meerdere btw soorten": {
+                  "value": {
+                    "InvoiceNumber": "t",
+                    "InvoiceDate": "2024-01-23",
+                    "Description": "Handmade Concrete Car",
+                    "AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+                    "RelationType": "organisation",
+                    "RelationId": "863d895a-3782-5500-b933-dd487d736138",
+                    "PaymentMethod": "banktransfer",
+                    "PaymentConditionId": "b98e24e9-a611-5a98-8cf9-40fed321dc6c",
+                    "InvoiceLine": [
+                      {
+                        "LedgerAccountId": "de3184b9-23f0-55e6-9bd0-ccb5c2b5b5ce",
+                        "AmountVat": 21,
+                        "VatType": "high",
+                        "AmountExcludingVat": 100
+                      },
+                      {
+                        "LedgerAccountId": "de3184b9-23f0-55e6-9bd0-ccb5c2b5b5ce",
+                        "AmountVat": 40.55,
+                        "VatType": "low",
+                        "AmountExcludingVat": 40.55,
+                        "VatCalculation": "exempt"
+                      },
+                      {
+                        "LedgerAccountId": "de3184b9-23f0-55e6-9bd0-ccb5c2b5b5ce",
+                        "AmountVat": 0,
+                        "VatType": "zero",
+                        "AmountExcludingVat": 40.55
+                      },
+                      {
+                        "LedgerAccountId": "de3184b9-23f0-55e6-9bd0-ccb5c2b5b5ce",
+                        "AmountVat": 18,
+                        "VatType": "low",
+                        "AmountExcludingVat": 200
+                      }
+                    ]
+                  }
+                }
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "value": {
+                      "result": "Succeeded",
+                      "traceId": "ab84df36-19aa-477c-9f71-c0c61cb542a1",
+                      "data": {
+                        "SalesJournalEntryId": "2fe9d143-52aa-4d9f-9eba-a97656f2741c"
+                      },
+                      "errors": []
+                    }
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "string"
+                    },
+                    "traceId": {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "SalesJournalEntryId": {
+                          "type": "string",
+                          "format": "uuid"
+                        }
+                      }
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {}
+                    }
+                  }
+                }
+              }
+            }
           },
           "5XX": {
             "description": "Internal Server Error"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "already exists": {
+                    "value": {
+                      "result": "Failed",
+                      "traceId": "3ca43e3a-00b6-460d-8bf1-be2f391f3f4c",
+                      "instances": [],
+                      "errors": [
+                        "SalesJournalEntry with invoicenumber SB_API_2204202410006 already exists"
+                      ]
+                    }
+                  },
+                  "error on date": {
+                    "value": {
+                      "result": "Failed",
+                      "traceId": "57f10a49-6720-4bb8-8826-8ef92387560f",
+                      "instances": [],
+                      "errors": [
+                        "Entity is made with one or more errors. Please correct this error in application or delete SalesJournalEntry with id: b32ee6e1-f807-4644-a6d5-d785d8bd7c61",
+                        "De factuurdatum ligt vóór de beginbalansdatum. Dit is niet toegestaan."
+                      ]
+                    }
+                  },
+                  "error on line": {
+                    "value": {
+                      "result": "Failed",
+                      "traceId": "010e0485-1e22-4f1a-8573-405090824d35",
+                      "instances": [],
+                      "errors": [
+                        "Entity is made with one or more errors in the lines. Please correct this error in application or delete SalesJournalEntry with id: eee53305-8851-4859-a53e-b4b18f14040e.",
+                        "Field 'Grootboekrekening' contains an invalid reference (a18e0f9a-c73d-58c4-ae80-64c2e4228de4)",
+                        "Field 'Grootboekrekening' contains an invalid reference (a18e0f9a-c73d-58c4-ae80-64c2e4228de4)"
+                      ]
+                    }
+                  },
+                  "error": {
+                    "value": {
+                      "result": "Failed",
+                      "traceId": "e193dbe5-8f65-4035-aa81-879bd9828f98",
+                      "instances": [],
+                      "errors": [
+                        "FeatureToggle not enabled"
+                      ]
+                    }
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "traceId": {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "result": {
+                      "type": "string"
+                    },
+                    "instances": {
+                      "type": "array",
+                      "items": {}
+                    }
+                  }
+                }
+              }
+            }
           }
         },
         "version": "2.1",
@@ -6020,13 +9848,62 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/requestBodies/salesjournalentry-2.1-Delete-JsonSchema"
+              },
+              "examples": {
+                "example": {
+                  "value": {
+                    "AdministrationId": "a15620b1-90bf-46d8-a155-15f59a3ed460",
+                    "Id": "8f8d5e92-bd85-4deb-8184-6abf57a5b24d"
+                  }
+                }
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "value": {
+                      "result": "Succeeded",
+                      "traceId": "ab84df36-19aa-477c-9f71-c0c61cb542a1",
+                      "data": {
+                        "SalesJournalEntryId": "2fe9d143-52aa-4d9f-9eba-a97656f2741c"
+                      },
+                      "errors": []
+                    }
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "string"
+                    },
+                    "traceId": {
+                      "type": "string",
+                      "format": "uuid"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "SalesJournalEntryId": {
+                          "type": "string",
+                          "format": "uuid"
+                        }
+                      }
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {}
+                    }
+                  }
+                }
+              }
+            }
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -6078,13 +9955,58 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/requestBodies/salesjournalentry-2.1-Update-JsonSchema"
+              },
+              "examples": {
+                "PaymentReference": {
+                  "value": {
+                    "AdministrationId": "f49f54a4-835d-532f-a117-79054e726808",
+                    "Id": "2857a5b4-777d-44cd-b10d-9721c0281d7d",
+                    "PaymentReference": "2024-10124"
+                  }
+                }
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "value": {
+                      "result": "Succeeded",
+                      "data": {
+                        "SalesJournalEntryId": "f365059e-5918-49ec-9a7c-d4f0a0c8beb4"
+                      },
+                      "errors": []
+                    }
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "string"
+                    },
+                    "data": {
+                      "type": "object",
+                      "properties": {
+                        "SalesJournalEntryId": {
+                          "type": "string",
+                          "format": "uuid"
+                        }
+                      }
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {}
+                    }
+                  }
+                }
+              }
+            }
           },
           "5XX": {
             "description": "Internal Server Error"
@@ -6138,13 +10060,121 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/requestBodies/supplier-1.0-Create-JsonSchema"
+              },
+              "examples": {
+                "New supplier organisation": {
+                  "value": {
+                    "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+                    "EmailAddress": "klant@afas.nl",
+                    "PhoneNumber": "0696856831",
+                    "BankAccountNumber": "NL29TRIO0110845005",
+                    "Bic": "TRIONL2U",
+                    "LedgerAccountId": "4a2014b0-dcdc-500d-add2-fcf73ac8f88d",
+                    "PaymentMethod": "banktransfer",
+                    "PaymentConditionId": "ee64c81b-56ff-506f-9dac-855d64bf193a",
+                    "Organisation": {
+                      "Name": "Jansen Haarden",
+                      "CompanyIdCoc": "80446353",
+                      "CompanyIdVat": "NL861674881B01",
+                      "TradeName": "Jansen Holding B.V."
+                    }
+                  }
+                },
+                "New supplier person": {
+                  "value": {
+                    "AdministrationId": "c59efe34-cb0e-5cb7-a1c7-b1286a699911",
+                    "EmailAddress": "Delfina2@example.net",
+                    "PhoneNumber": "30-702-386-4989",
+                    "BankAccountNumber": "NL29TRIO0110845005",
+                    "Bic": "TRIONL2U",
+                    "Person": {
+                      "Firstname": "Lacy",
+                      "Initials": "MD",
+                      "Prefix": "Ms.",
+                      "Lastname": "Harber"
+                    },
+                    "PaymentMethod": "null",
+                    "LedgerAccountId": "cfb59b79-b3ec-55ef-8cde-000499c3179e",
+                    "PaymentCondition": "b98e24e9-a611-5a98-8cf9-40fed321dc6c",
+                    "VatCalculation": "null"
+                  }
+                }
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "examples": {
+                  "success": {
+                    "value": {
+                      "result": "Succeeded",
+                      "instances": [
+                        {
+                          "Code": "Persoon",
+                          "Id": "e55f5d3b-780b-576b-9370-760b58e937ec"
+                        },
+                        {
+                          "Code": "Instelling",
+                          "Id": "20eb199e-c652-5513-b7eb-c39f927d1ef3"
+                        },
+                        {
+                          "Code": "Leverancier",
+                          "Id": "20eb199e-c652-5513-b7eb-c39f927d1ef3"
+                        },
+                        {
+                          "Code": "Begunstigde",
+                          "Id": "7afec8a8-c9f4-4ec7-aa68-8d9bc995468d"
+                        },
+                        {
+                          "Code": "Emailadres",
+                          "Id": "4fc10096-8bb4-4be8-8039-5239b4125757"
+                        },
+                        {
+                          "Code": "Telefoonnummer",
+                          "Id": "5e553026-0ad2-4f4c-bd2e-5dbdd6c0096f"
+                        },
+                        {
+                          "Code": "Bankrekening",
+                          "Id": "d18e1122-e014-4468-aa65-585b333359c1"
+                        }
+                      ],
+                      "errors": []
+                    }
+                  }
+                },
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "result": {
+                      "type": "string"
+                    },
+                    "instances": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Code": {
+                            "type": "string"
+                          },
+                          "Id": {
+                            "type": "string",
+                            "format": "uuid"
+                          }
+                        }
+                      }
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {}
+                    }
+                  }
+                }
+              }
+            }
           },
           "5XX": {
             "description": "Internal Server Error"
