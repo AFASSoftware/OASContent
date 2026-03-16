@@ -1,3 +1,7 @@
+---
+date: 2026-03-16
+---
+
 Gebruik bijvoorkeur dit endpoint om verlofboekingen aan te passen. Via een GetConnector vind je het AbsenceId.
 Stuur bij een PUT **alleen het veld `Id`** mee **en de velden die je wilt aanpassen**. De precieze werking van de connector hangt af van het type rooster dat de medewerker heeft.
 

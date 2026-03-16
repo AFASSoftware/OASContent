@@ -1,3 +1,7 @@
+---
+date: 2026-03-16
+---
+
 Preferably use this endpoint to modify leave bookings. You can find the AbsenceId via a GetConnector.
 When making a PUT request, **only include the field `Id`** and **the fields you want to update**. The precise behavior of the connector depends on the type of schedule the employee has.
 
@@ -40,4 +44,3 @@ If you want to shorten such leave by a few hours, for example, you need to make 
 
 1. In the first request, set `LeDt` to True.
 2. In the second request, specify the changed `DaBe`, `DaEn`, `DuBe`, or `DuEn`.
-
