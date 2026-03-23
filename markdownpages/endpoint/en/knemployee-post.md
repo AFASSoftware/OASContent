@@ -1,3 +1,7 @@
+---
+date: 2026-03-23
+---
+
 ### Hiring notification
 
 If you want to report employment of an  employee, you also need to provide the fields in the following sub-objects:
