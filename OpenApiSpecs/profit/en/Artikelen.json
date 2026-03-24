@@ -48,6 +48,719 @@
     }
   ],
   "paths": {
+    "/MetaInfo": {
+      "get": {
+        "summary": "Retrieve the meta info of the Profit environment and the available connectors",
+        "tags": [
+          "API Info"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "updateConnectors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "getConnectors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "customConnectors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "info": {
+                      "type": "object",
+                      "properties": {
+                        "envid": {
+                          "type": "string"
+                        },
+                        "appName": {
+                          "type": "string"
+                        },
+                        "group": {
+                          "type": "string"
+                        },
+                        "tokenExpiry": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "updateConnectors": [
+                        {
+                          "id": "HrCreateApplicant",
+                          "description": "Aanmaken sollicitatie"
+                        },
+                        {
+                          "id": "FbSubscription",
+                          "description": "Abonnement"
+                        },
+                        {
+                          "id": "KnAddress",
+                          "description": "Adres"
+                        }
+                      ],
+                      "getConnectors": [
+                        {
+                          "id": "Profit_Fin_ChangedEntrydate",
+                          "description": "Profit_Fin_ChangedEntrydate"
+                        },
+                        {
+                          "id": "Profit_Functions",
+                          "description": "Profit_Functions"
+                        }
+                      ],
+                      "customConnectors": [
+                        {
+                          "id": "AppConnectorReport",
+                          "description": "AppConnectorReport"
+                        },
+                        {
+                          "id": "AppConnectorSubject",
+                          "description": "AppConnectorSubject"
+                        }
+                      ],
+                      "info": {
+                        "envid": "A123456AC",
+                        "appName": "OpenAPI Spec Example",
+                        "group": "AuthorizationGroup 101 (12345.USER)",
+                        "tokenExpiry": "0"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_MetaInfo"
+      }
+    },
+    "/Metainfo/{Type}/{Endpoint}": {
+      "get": {
+        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
+        "tags": [
+          "API Info"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "fields": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "fieldId": {
+                            "type": "string"
+                          },
+                          "dataType": {
+                            "type": "string"
+                          },
+                          "label": {
+                            "type": "string"
+                          },
+                          "length": {
+                            "type": "integer"
+                          },
+                          "controlType": {
+                            "type": "integer"
+                          },
+                          "decimals": {
+                            "type": "integer"
+                          },
+                          "decimalsFieldId": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "name": "Profit_Administrations",
+                      "description": "Administraties (Profit)",
+                      "fields": [
+                        {
+                          "id": "AdminId",
+                          "fieldId": "U002",
+                          "dataType": "int",
+                          "label": "Administratie",
+                          "length": 3,
+                          "controlType": 5,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        },
+                        {
+                          "id": "AdminNm",
+                          "fieldId": "U001",
+                          "dataType": "string",
+                          "label": "Naam administratie",
+                          "length": 80,
+                          "controlType": 1,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        },
+                        {
+                          "id": "AdminCd",
+                          "fieldId": "UnCo",
+                          "dataType": "string",
+                          "label": "Administratie",
+                          "length": 10,
+                          "controlType": 1,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_MetaInfoPerConnector",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "get",
+                "update"
+              ],
+              "example": "update"
+            },
+            "in": "path",
+            "name": "Type",
+            "description": "Add the type of connector you want to get the meta info from",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "string",
+              "example": "KnEmployee"
+            },
+            "in": "path",
+            "name": "Endpoint",
+            "description": "Add the endpoint id of the connector you want to get the meta info from",
+            "required": true
+          },
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/{Endpoint}": {
+      "get": {
+        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
+        "tags": [
+          "GET"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "skip": {
+                      "type": "integer"
+                    },
+                    "take": {
+                      "type": "integer"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "EmployeeId": {
+                            "type": "string"
+                          },
+                          "EmploymentEndDate": {
+                            "type": "string"
+                          },
+                          "EmailForDigitalDocuments": {
+                            "type": "string",
+                            "nullable": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example response": {
+                    "value": {
+                      "skip": 0,
+                      "take": 100,
+                      "rows": [
+                        {
+                          "EmployeeId": "000001005",
+                          "EmploymentEndDate": "2025-11-22T00:00:00Z",
+                          "EmailForDigitalDocuments": null
+                        },
+                        {
+                          "EmployeeId": "000001006",
+                          "EmploymentEndDate": "2025-11-22T00:00:00Z",
+                          "EmailForDigitalDocuments": null
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_MetaInfoPerCustomConnector",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "example": "your_custom_endpoint_id"
+            },
+            "in": "path",
+            "name": "Endpoint",
+            "description": "Add the id of connector you want to get the meta info from",
+            "required": true
+          },
+          {
+            "name": "skip",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results skipped. Starts at 0",
+            "schema": {
+              "type": "number",
+              "example": 0
+            }
+          },
+          {
+            "name": "take",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results returned",
+            "schema": {
+              "type": "number",
+              "example": 100
+            }
+          },
+          {
+            "name": "orderbyfieldids",
+            "in": "query",
+            "required": false,
+            "description": "Must be used to prevent reordered results.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterfieldids",
+            "in": "query",
+            "required": false,
+            "description": "The fieldIds of the values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filtervalues",
+            "in": "query",
+            "required": false,
+            "description": "The values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "operatortypes",
+            "in": "query",
+            "required": false,
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
+            "schema": {
+              "type": "number",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "/ProfitVersion": {
+      "get": {
+        "summary": "Get the current Profit version",
+        "tags": [
+          "API Info"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "version": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "version": "7.7.10"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_ProfitVersion"
+      }
+    },
+    "/ImageConnector/{id}": {
+      "get": {
+        "summary": "Get an image in a specific format based on the image Id and format Id",
+        "tags": [
+          "GET"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "filedata": {
+                      "type": "string"
+                    },
+                    "mimetype": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "Example response": {
+                    "value": {
+                      "filedata": "iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAYAAAAxU7r0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAANRoSURBVHhe7L0HgGVHda67+uTQOUwezSjnBAgEQgQ=",
+                      "mimetype": "image/png"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_ImageConnector",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "description": "Id of the image"
+          },
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "0",
+                "1",
+                "2"
+              ],
+              "example": "0"
+            },
+            "in": "query",
+            "name": "format",
+            "required": true,
+            "description": "0 = original  1 = thumb  2 = medium"
+          }
+        ]
+      }
+    },
+    "/connectors/FbBatchNumber": {
+      "post": {
+        "summary": "Lot number",
+        "description": "\n\rAlleen beschikbaar onder conditie: Partijen (activering)\n\r https://help.afas.nl/help/NL/SE/137826.htm",
+        "operationId": "POST_FbBatchNumber",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FbBatchNumber_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Lot number"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Lot number",
+        "description": "\n\rAlleen beschikbaar onder conditie: Partijen (activering)\n\r https://help.afas.nl/help/NL/SE/137826.htm",
+        "operationId": "PUT_FbBatchNumber",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FbBatchNumber_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Lot number"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
     "/connectors/FbComposition": {
       "post": {
         "summary": "Assembled item",
@@ -2639,6 +3352,217 @@
         ]
       }
     },
+    "/connectors/FbSerialNumber": {
+      "post": {
+        "summary": "Serial number",
+        "description": "\n\rAlleen beschikbaar onder conditie: Serienummers (activering)\n\r https://help.afas.nl/help/NL/SE/137832.htm",
+        "operationId": "POST_FbSerialNumber",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FbSerialNumber_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Serial number"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Serial number",
+        "description": "\n\rAlleen beschikbaar onder conditie: Serienummers (activering)\n\r https://help.afas.nl/help/NL/SE/137832.htm",
+        "operationId": "PUT_FbSerialNumber",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FbSerialNumber_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Serial number"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/FbSSCC": {
+      "put": {
+        "summary": "SSCC labels update and delete",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/132962.htm",
+        "operationId": "PUT_FbSSCC",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FbSSCC_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "SSCC labels update and delete"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/FbSSCC/FbSSCCLabels/@BaCo/{BaCo}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "BaCo",
+          "in": "path",
+          "required": true,
+          "description": "Barcode"
+        }
+      ],
+      "delete": {
+        "summary": "SSCC labels update and delete",
+        "operationId": "DELETE_FbSSCC",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/132962.htm",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "SSCC labels update and delete"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
     "/connectors/FbUnitBasicItem": {
       "post": {
         "summary": "Unit per item",
@@ -3114,24 +4038,29 @@
         ]
       }
     },
-    "/ImageConnector/{id}": {
-      "get": {
-        "summary": "Get an image in a specific format based on the image Id and format Id",
-        "tags": [
-          "GET"
-        ],
+    "/connectors/PtPriceRevisionFormula": {
+      "post": {
+        "summary": "Price review formula",
+        "description": "\n\rAlleen beschikbaar onder conditie: Bouw België\n\r ",
+        "operationId": "POST_PtPriceRevisionFormula",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PtPriceRevisionFormula_POST"
+              }
+            }
+          }
+        },
         "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
+          "201": {
+            "description": "Created"
           },
           "401": {
             "$ref": "#/components/responses/401"
           },
           "403": {
             "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
           },
           "413": {
             "$ref": "#/components/responses/413"
@@ -3141,81 +4070,99 @@
           },
           "503": {
             "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Price review formula"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
           },
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "filedata": {
-                      "type": "string"
-                    },
-                    "mimetype": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "examples": {
-                  "Example response": {
-                    "value": {
-                      "filedata": "iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAYAAAAxU7r0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAANRoSURBVHhe7L0HgGVHda67+uTQOUwezSjnBAgEQgQ=",
-                      "mimetype": "image/png"
-                    }
-                  }
-                }
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Price review formula",
+        "description": "\n\rAlleen beschikbaar onder conditie: Bouw België\n\r ",
+        "operationId": "PUT_PtPriceRevisionFormula",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PtPriceRevisionFormula_PUT"
               }
             }
           }
         },
-        "operationId": "get_ImageConnector",
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Price review formula"
+        ],
         "parameters": [
           {
-            "schema": {
-              "type": "string"
-            },
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "description": "Id of the image"
+            "$ref": "#/components/parameters/Accept-Language"
           },
           {
-            "schema": {
-              "type": "string",
-              "enum": [
-                "0",
-                "1",
-                "2"
-              ],
-              "example": "0"
-            },
-            "in": "query",
-            "name": "format",
-            "required": true,
-            "description": "0 = original  1 = thumb  2 = medium"
+            "$ref": "#/components/parameters/Content-Type"
           }
         ]
       }
     },
-    "/MetaInfo": {
-      "get": {
-        "summary": "Retrieve the meta info of the Profit environment and the available connectors",
-        "tags": [
-          "API Info"
-        ],
+    "/connectors/PtPriceRevisionFormula/PtPriceRevisionFormulaLines": {
+      "post": {
+        "summary": "Price review formula",
+        "description": "Update main record in PtPriceRevisionFormula and insert subrecord into PtPriceRevisionFormulaLines. \n\rAlleen beschikbaar onder conditie: Bouw België\n\r ",
+        "operationId": "POSTSubRecordPtPriceRevisionFormulaPtPriceRevisionFormulaLines",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PtPriceRevisionFormula_POST"
+              }
+            }
+          }
+        },
         "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
+          "201": {
+            "description": "Created"
           },
           "401": {
             "$ref": "#/components/responses/401"
           },
           "403": {
             "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
           },
           "413": {
             "$ref": "#/components/responses/413"
@@ -3225,273 +4172,106 @@
           },
           "503": {
             "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "updateConnectors": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "string"
-                          },
-                          "description": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    },
-                    "getConnectors": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "string"
-                          },
-                          "description": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    },
-                    "info": {
-                      "type": "object",
-                      "properties": {
-                        "envid": {
-                          "type": "string"
-                        },
-                        "appName": {
-                          "type": "string"
-                        },
-                        "group": {
-                          "type": "string"
-                        },
-                        "tokenExpiry": {
-                          "type": "string"
-                        }
-                      }
-                    }
-                  }
-                },
-                "examples": {
-                  "Example Result": {
-                    "value": {
-                      "updateConnectors": [
-                        {
-                          "id": "HrCreateApplicant",
-                          "description": "Aanmaken sollicitatie"
-                        },
-                        {
-                          "id": "FbSubscription",
-                          "description": "Abonnement"
-                        },
-                        {
-                          "id": "KnAddress",
-                          "description": "Adres"
-                        }
-                      ],
-                      "getConnectors": [
-                        {
-                          "id": "Profit_Fin_ChangedEntrydate",
-                          "description": "Profit_Fin_ChangedEntrydate"
-                        },
-                        {
-                          "id": "Profit_Functions",
-                          "description": "Profit_Functions"
-                        }
-                      ],
-                      "info": {
-                        "envid": "A123456AC",
-                        "appName": "OpenAPI Spec Example",
-                        "group": "AuthorizationGroup 101 (12345.USER)",
-                        "tokenExpiry": "0"
-                      }
-                    }
-                  }
-                }
-              }
-            }
           }
         },
-        "operationId": "get_MetaInfo"
-      }
-    },
-    "/Metainfo/{Type}/{Endpoint}": {
-      "get": {
-        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
-        "tags": [
-          "API Info"
+        "security": [
+          {
+            "AfasToken": []
+          }
         ],
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "name": {
-                      "type": "string"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "fields": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "string"
-                          },
-                          "fieldId": {
-                            "type": "string"
-                          },
-                          "dataType": {
-                            "type": "string"
-                          },
-                          "label": {
-                            "type": "string"
-                          },
-                          "length": {
-                            "type": "integer"
-                          },
-                          "controlType": {
-                            "type": "integer"
-                          },
-                          "decimals": {
-                            "type": "integer"
-                          },
-                          "decimalsFieldId": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
-                "examples": {
-                  "Example Result": {
-                    "value": {
-                      "name": "Profit_Administrations",
-                      "description": "Administraties (Profit)",
-                      "fields": [
-                        {
-                          "id": "AdminId",
-                          "fieldId": "U002",
-                          "dataType": "int",
-                          "label": "Administratie",
-                          "length": 3,
-                          "controlType": 5,
-                          "decimals": 0,
-                          "decimalsFieldId": ""
-                        },
-                        {
-                          "id": "AdminNm",
-                          "fieldId": "U001",
-                          "dataType": "string",
-                          "label": "Naam administratie",
-                          "length": 80,
-                          "controlType": 1,
-                          "decimals": 0,
-                          "decimalsFieldId": ""
-                        },
-                        {
-                          "id": "AdminCd",
-                          "fieldId": "UnCo",
-                          "dataType": "string",
-                          "label": "Administratie",
-                          "length": 10,
-                          "controlType": 1,
-                          "decimals": 0,
-                          "decimalsFieldId": ""
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get_MetaInfoPerConnector",
+        "tags": [
+          "Price review formula"
+        ],
         "parameters": [
           {
-            "schema": {
-              "type": "string",
-              "enum": [
-                "get",
-                "update"
-              ],
-              "example": "update"
-            },
-            "in": "path",
-            "name": "Type",
-            "description": "Add the type of connector you want to get the meta info from",
-            "required": true
+            "$ref": "#/components/parameters/Accept-Language"
           },
           {
-            "schema": {
-              "type": "string",
-              "example": "KnEmployee"
-            },
-            "in": "path",
-            "name": "Endpoint",
-            "description": "Add the endpoint id of the connector you want to get the meta info from",
-            "required": true
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/PtPriceRevisionFormula/PtPriceRevisionFormula/@Id/{Id}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
           },
+          "name": "Id",
+          "in": "path",
+          "required": true,
+          "description": "Code"
+        }
+      ],
+      "delete": {
+        "summary": "Price review formula",
+        "operationId": "DELETE_PtPriceRevisionFormula",
+        "description": "\n\r ",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Price review formula"
+        ],
+        "parameters": [
           {
             "$ref": "#/components/parameters/Accept-Language"
           }
         ]
       }
     },
-    "/connectors/{Endpoint}": {
-      "get": {
-        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
-        "tags": [
-          "GET"
-        ],
+    "/connectors/PtPriceRevisionIndex": {
+      "post": {
+        "summary": "Price review index",
+        "description": "\n\rAlleen beschikbaar onder conditie: Bouw België\n\r ",
+        "operationId": "POST_PtPriceRevisionIndex",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PtPriceRevisionIndex_POST"
+              }
+            }
+          }
+        },
         "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
+          "201": {
+            "description": "Created"
           },
           "401": {
             "$ref": "#/components/responses/401"
           },
           "403": {
             "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
           },
           "413": {
             "$ref": "#/components/responses/413"
@@ -3501,148 +4281,22 @@
           },
           "503": {
             "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "skip": {
-                      "type": "integer"
-                    },
-                    "take": {
-                      "type": "integer"
-                    },
-                    "rows": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "EmployeeId": {
-                            "type": "string"
-                          },
-                          "EmploymentEndDate": {
-                            "type": "string"
-                          },
-                          "EmailForDigitalDocuments": {
-                            "type": "string",
-                            "nullable": true
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
-                "examples": {
-                  "Example response": {
-                    "value": {
-                      "skip": 0,
-                      "take": 100,
-                      "rows": [
-                        {
-                          "EmployeeId": "000001005",
-                          "EmploymentEndDate": "2020-11-22T00:00:00Z",
-                          "EmailForDigitalDocuments": null
-                        },
-                        {
-                          "EmployeeId": "000001006",
-                          "EmploymentEndDate": "2020-11-22T00:00:00Z",
-                          "EmailForDigitalDocuments": null
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
-            }
           }
         },
-        "operationId": "get_MetaInfoPerCustomConnector",
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Price review index"
+        ],
         "parameters": [
           {
-            "schema": {
-              "type": "string",
-              "example": "your_custom_endpoint_id"
-            },
-            "in": "path",
-            "name": "Endpoint",
-            "description": "Add the id of connector you want to get the meta info from",
-            "required": true
+            "$ref": "#/components/parameters/Accept-Language"
           },
           {
-            "name": "skip",
-            "in": "query",
-            "required": false,
-            "description": "Pagination: amount of results skipped. Starts at 0",
-            "schema": {
-              "type": "number",
-              "example": 0
-            }
-          },
-          {
-            "name": "take",
-            "in": "query",
-            "required": false,
-            "description": "Pagination: amount of results returned",
-            "schema": {
-              "type": "number",
-              "example": 100
-            }
-          },
-          {
-            "name": "orderbyfieldids",
-            "in": "query",
-            "required": false,
-            "description": "Must be used to prevent reordered results.",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filterfieldids",
-            "in": "query",
-            "required": false,
-            "description": "The fieldIds of the values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filtervalues",
-            "in": "query",
-            "required": false,
-            "description": "The values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "operatortypes",
-            "in": "query",
-            "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
-            "schema": {
-              "type": "number",
-              "enum": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                13,
-                14,
-                15
-              ]
-            }
+            "$ref": "#/components/parameters/Content-Type"
           }
         ]
       }
@@ -5054,584 +5708,6 @@
           "GET"
         ]
       }
-    },
-    "/ProfitVersion": {
-      "get": {
-        "summary": "Get the current Profit version",
-        "tags": [
-          "API Info"
-        ],
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "version": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "examples": {
-                  "Example Result": {
-                    "value": {
-                      "version": "22.22.5"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get_ProfitVersion"
-      }
-    },
-    "/connectors/FbBatchNumber": {
-      "post": {
-        "summary": "Lot number",
-        "description": "\n\rAlleen beschikbaar onder conditie: Partijen (activering)\n\r https://help.afas.nl/help/NL/SE/137826.htm",
-        "operationId": "POST_FbBatchNumber",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/FbBatchNumber_POST"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Lot number"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      },
-      "put": {
-        "summary": "Lot number",
-        "description": "\n\rAlleen beschikbaar onder conditie: Partijen (activering)\n\r https://help.afas.nl/help/NL/SE/137826.htm",
-        "operationId": "PUT_FbBatchNumber",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/FbBatchNumber_PUT"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Lot number"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      }
-    },
-    "/connectors/PtPriceRevisionFormula": {
-      "post": {
-        "summary": "Price review formula",
-        "description": "\n\rAlleen beschikbaar onder conditie: Bouw België\n\r ",
-        "operationId": "POST_PtPriceRevisionFormula",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PtPriceRevisionFormula_POST"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Price review formula"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      },
-      "put": {
-        "summary": "Price review formula",
-        "description": "\n\rAlleen beschikbaar onder conditie: Bouw België\n\r ",
-        "operationId": "PUT_PtPriceRevisionFormula",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PtPriceRevisionFormula_PUT"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Price review formula"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      }
-    },
-    "/connectors/PtPriceRevisionFormula/PtPriceRevisionFormulaLines": {
-      "post": {
-        "summary": "Price review formula",
-        "description": "Update main record in PtPriceRevisionFormula and insert subrecord into PtPriceRevisionFormulaLines. \n\rAlleen beschikbaar onder conditie: Bouw België\n\r ",
-        "operationId": "POSTSubRecordPtPriceRevisionFormulaPtPriceRevisionFormulaLines",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PtPriceRevisionFormula_POST"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Price review formula"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      }
-    },
-    "/connectors/PtPriceRevisionFormula/PtPriceRevisionFormula/@Id/{Id}": {
-      "parameters": [
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "Id",
-          "in": "path",
-          "required": true,
-          "description": "Code"
-        }
-      ],
-      "delete": {
-        "summary": "Price review formula",
-        "operationId": "DELETE_PtPriceRevisionFormula",
-        "description": "\n\r ",
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "$ref": "#/components/responses/200"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Price review formula"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          }
-        ]
-      }
-    },
-    "/connectors/FbSerialNumber": {
-      "post": {
-        "summary": "Serial number",
-        "description": "\n\rAlleen beschikbaar onder conditie: Serienummers (activering)\n\r https://help.afas.nl/help/NL/SE/137832.htm",
-        "operationId": "POST_FbSerialNumber",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/FbSerialNumber_POST"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Serial number"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      },
-      "put": {
-        "summary": "Serial number",
-        "description": "\n\rAlleen beschikbaar onder conditie: Serienummers (activering)\n\r https://help.afas.nl/help/NL/SE/137832.htm",
-        "operationId": "PUT_FbSerialNumber",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/FbSerialNumber_PUT"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Serial number"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      }
-    },
-    "/connectors/FbSSCC": {
-      "put": {
-        "summary": "SSCC labels update and delete",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/132962.htm",
-        "operationId": "PUT_FbSSCC",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/FbSSCC_PUT"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "SSCC labels update and delete"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      }
-    },
-    "/connectors/FbSSCC/FbSSCCLabels/@BaCo/{BaCo}": {
-      "parameters": [
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "BaCo",
-          "in": "path",
-          "required": true,
-          "description": "Barcode"
-        }
-      ],
-      "delete": {
-        "summary": "SSCC labels update and delete",
-        "operationId": "DELETE_FbSSCC",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/132962.htm",
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "$ref": "#/components/responses/200"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "SSCC labels update and delete"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          }
-        ]
-      }
     }
   },
   "tags": [
@@ -5642,6 +5718,10 @@
     {
       "name": "API Info",
       "description": "API Info"
+    },
+    {
+      "name": "Lot number",
+      "description": "Lot number"
     },
     {
       "name": "Assembled item",
@@ -5660,6 +5740,14 @@
       "description": "Article"
     },
     {
+      "name": "Serial number",
+      "description": "Serial number"
+    },
+    {
+      "name": "SSCC labels update and delete",
+      "description": "SSCC labels update and delete"
+    },
+    {
       "name": "Unit per item",
       "description": "Unit per item"
     },
@@ -5668,20 +5756,12 @@
       "description": "Item dimension per item"
     },
     {
-      "name": "Lot number",
-      "description": "Lot number"
-    },
-    {
       "name": "Price review formula",
       "description": "Price review formula"
     },
     {
-      "name": "Serial number",
-      "description": "Serial number"
-    },
-    {
-      "name": "SSCC labels update and delete",
-      "description": "SSCC labels update and delete"
+      "name": "Price review index",
+      "description": "Price review index"
     }
   ],
   "components": {
@@ -10867,6 +10947,62 @@
                         }
                       }
                     }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "PtPriceRevisionIndex_POST": {
+        "type": "object",
+        "properties": {
+          "PtPriceRevisionIndex": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "Indx": {
+                        "type": "number",
+                        "description": "Index",
+                        "format": "number"
+                      },
+                      "ViPr": {
+                        "type": "string",
+                        "enum": [
+                          "S"
+                        ],
+                        "maxLength": 20,
+                        "description": "Component\nS = Wages;",
+                        "format": ""
+                      },
+                      "PtId": {
+                        "type": "integer",
+                        "description": "Period table",
+                        "format": ""
+                      },
+                      "Ye": {
+                        "type": "integer",
+                        "description": "Year",
+                        "format": ""
+                      },
+                      "PeId": {
+                        "type": "integer",
+                        "description": "Period",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "Indx",
+                      "ViPr",
+                      "PtId",
+                      "Ye",
+                      "PeId"
+                    ]
                   }
                 }
               }

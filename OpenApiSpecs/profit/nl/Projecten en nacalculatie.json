@@ -48,6 +48,533 @@
     }
   ],
   "paths": {
+    "/MetaInfo": {
+      "get": {
+        "summary": "Retrieve the meta info of the Profit environment and the available connectors",
+        "tags": [
+          "API Info"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "updateConnectors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "getConnectors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "customConnectors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "info": {
+                      "type": "object",
+                      "properties": {
+                        "envid": {
+                          "type": "string"
+                        },
+                        "appName": {
+                          "type": "string"
+                        },
+                        "group": {
+                          "type": "string"
+                        },
+                        "tokenExpiry": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "updateConnectors": [
+                        {
+                          "id": "HrCreateApplicant",
+                          "description": "Aanmaken sollicitatie"
+                        },
+                        {
+                          "id": "FbSubscription",
+                          "description": "Abonnement"
+                        },
+                        {
+                          "id": "KnAddress",
+                          "description": "Adres"
+                        }
+                      ],
+                      "getConnectors": [
+                        {
+                          "id": "Profit_Fin_ChangedEntrydate",
+                          "description": "Profit_Fin_ChangedEntrydate"
+                        },
+                        {
+                          "id": "Profit_Functions",
+                          "description": "Profit_Functions"
+                        }
+                      ],
+                      "customConnectors": [
+                        {
+                          "id": "AppConnectorReport",
+                          "description": "AppConnectorReport"
+                        },
+                        {
+                          "id": "AppConnectorSubject",
+                          "description": "AppConnectorSubject"
+                        }
+                      ],
+                      "info": {
+                        "envid": "A123456AC",
+                        "appName": "OpenAPI Spec Example",
+                        "group": "AuthorizationGroup 101 (12345.USER)",
+                        "tokenExpiry": "0"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_MetaInfo"
+      }
+    },
+    "/Metainfo/{Type}/{Endpoint}": {
+      "get": {
+        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
+        "tags": [
+          "API Info"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "fields": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "fieldId": {
+                            "type": "string"
+                          },
+                          "dataType": {
+                            "type": "string"
+                          },
+                          "label": {
+                            "type": "string"
+                          },
+                          "length": {
+                            "type": "integer"
+                          },
+                          "controlType": {
+                            "type": "integer"
+                          },
+                          "decimals": {
+                            "type": "integer"
+                          },
+                          "decimalsFieldId": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "name": "Profit_Administrations",
+                      "description": "Administraties (Profit)",
+                      "fields": [
+                        {
+                          "id": "AdminId",
+                          "fieldId": "U002",
+                          "dataType": "int",
+                          "label": "Administratie",
+                          "length": 3,
+                          "controlType": 5,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        },
+                        {
+                          "id": "AdminNm",
+                          "fieldId": "U001",
+                          "dataType": "string",
+                          "label": "Naam administratie",
+                          "length": 80,
+                          "controlType": 1,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        },
+                        {
+                          "id": "AdminCd",
+                          "fieldId": "UnCo",
+                          "dataType": "string",
+                          "label": "Administratie",
+                          "length": 10,
+                          "controlType": 1,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_MetaInfoPerConnector",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "get",
+                "update"
+              ],
+              "example": "update"
+            },
+            "in": "path",
+            "name": "Type",
+            "description": "Add the type of connector you want to get the meta info from",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "string",
+              "example": "KnEmployee"
+            },
+            "in": "path",
+            "name": "Endpoint",
+            "description": "Add the endpoint id of the connector you want to get the meta info from",
+            "required": true
+          },
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/{Endpoint}": {
+      "get": {
+        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
+        "tags": [
+          "GET"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "skip": {
+                      "type": "integer"
+                    },
+                    "take": {
+                      "type": "integer"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "EmployeeId": {
+                            "type": "string"
+                          },
+                          "EmploymentEndDate": {
+                            "type": "string"
+                          },
+                          "EmailForDigitalDocuments": {
+                            "type": "string",
+                            "nullable": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example response": {
+                    "value": {
+                      "skip": 0,
+                      "take": 100,
+                      "rows": [
+                        {
+                          "EmployeeId": "000001005",
+                          "EmploymentEndDate": "2025-11-22T00:00:00Z",
+                          "EmailForDigitalDocuments": null
+                        },
+                        {
+                          "EmployeeId": "000001006",
+                          "EmploymentEndDate": "2025-11-22T00:00:00Z",
+                          "EmailForDigitalDocuments": null
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_MetaInfoPerCustomConnector",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "example": "your_custom_endpoint_id"
+            },
+            "in": "path",
+            "name": "Endpoint",
+            "description": "Add the id of connector you want to get the meta info from",
+            "required": true
+          },
+          {
+            "name": "skip",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results skipped. Starts at 0",
+            "schema": {
+              "type": "number",
+              "example": 0
+            }
+          },
+          {
+            "name": "take",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results returned",
+            "schema": {
+              "type": "number",
+              "example": 100
+            }
+          },
+          {
+            "name": "orderbyfieldids",
+            "in": "query",
+            "required": false,
+            "description": "Must be used to prevent reordered results.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterfieldids",
+            "in": "query",
+            "required": false,
+            "description": "The fieldIds of the values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filtervalues",
+            "in": "query",
+            "required": false,
+            "description": "The values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "operatortypes",
+            "in": "query",
+            "required": false,
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
+            "schema": {
+              "type": "number",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "/ProfitVersion": {
+      "get": {
+        "summary": "Get the current Profit version",
+        "tags": [
+          "API Info"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "version": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "version": "7.7.10"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_ProfitVersion"
+      }
+    },
     "/connectors/KnQuotation": {
       "post": {
         "summary": "Voorcalculatie",
@@ -1340,1873 +1867,6 @@
         ]
       }
     },
-    "/MetaInfo": {
-      "get": {
-        "summary": "Retrieve the meta info of the Profit environment and the available connectors",
-        "tags": [
-          "API Info"
-        ],
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "updateConnectors": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "string"
-                          },
-                          "description": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    },
-                    "getConnectors": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "string"
-                          },
-                          "description": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    },
-                    "info": {
-                      "type": "object",
-                      "properties": {
-                        "envid": {
-                          "type": "string"
-                        },
-                        "appName": {
-                          "type": "string"
-                        },
-                        "group": {
-                          "type": "string"
-                        },
-                        "tokenExpiry": {
-                          "type": "string"
-                        }
-                      }
-                    }
-                  }
-                },
-                "examples": {
-                  "Example Result": {
-                    "value": {
-                      "updateConnectors": [
-                        {
-                          "id": "HrCreateApplicant",
-                          "description": "Aanmaken sollicitatie"
-                        },
-                        {
-                          "id": "FbSubscription",
-                          "description": "Abonnement"
-                        },
-                        {
-                          "id": "KnAddress",
-                          "description": "Adres"
-                        }
-                      ],
-                      "getConnectors": [
-                        {
-                          "id": "Profit_Fin_ChangedEntrydate",
-                          "description": "Profit_Fin_ChangedEntrydate"
-                        },
-                        {
-                          "id": "Profit_Functions",
-                          "description": "Profit_Functions"
-                        }
-                      ],
-                      "info": {
-                        "envid": "A123456AC",
-                        "appName": "OpenAPI Spec Example",
-                        "group": "AuthorizationGroup 101 (12345.USER)",
-                        "tokenExpiry": "0"
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get_MetaInfo"
-      }
-    },
-    "/Metainfo/{Type}/{Endpoint}": {
-      "get": {
-        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
-        "tags": [
-          "API Info"
-        ],
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "name": {
-                      "type": "string"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "fields": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "string"
-                          },
-                          "fieldId": {
-                            "type": "string"
-                          },
-                          "dataType": {
-                            "type": "string"
-                          },
-                          "label": {
-                            "type": "string"
-                          },
-                          "length": {
-                            "type": "integer"
-                          },
-                          "controlType": {
-                            "type": "integer"
-                          },
-                          "decimals": {
-                            "type": "integer"
-                          },
-                          "decimalsFieldId": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
-                "examples": {
-                  "Example Result": {
-                    "value": {
-                      "name": "Profit_Administrations",
-                      "description": "Administraties (Profit)",
-                      "fields": [
-                        {
-                          "id": "AdminId",
-                          "fieldId": "U002",
-                          "dataType": "int",
-                          "label": "Administratie",
-                          "length": 3,
-                          "controlType": 5,
-                          "decimals": 0,
-                          "decimalsFieldId": ""
-                        },
-                        {
-                          "id": "AdminNm",
-                          "fieldId": "U001",
-                          "dataType": "string",
-                          "label": "Naam administratie",
-                          "length": 80,
-                          "controlType": 1,
-                          "decimals": 0,
-                          "decimalsFieldId": ""
-                        },
-                        {
-                          "id": "AdminCd",
-                          "fieldId": "UnCo",
-                          "dataType": "string",
-                          "label": "Administratie",
-                          "length": 10,
-                          "controlType": 1,
-                          "decimals": 0,
-                          "decimalsFieldId": ""
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get_MetaInfoPerConnector",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string",
-              "enum": [
-                "get",
-                "update"
-              ],
-              "example": "update"
-            },
-            "in": "path",
-            "name": "Type",
-            "description": "Add the type of connector you want to get the meta info from",
-            "required": true
-          },
-          {
-            "schema": {
-              "type": "string",
-              "example": "KnEmployee"
-            },
-            "in": "path",
-            "name": "Endpoint",
-            "description": "Add the endpoint id of the connector you want to get the meta info from",
-            "required": true
-          },
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          }
-        ]
-      }
-    },
-    "/connectors/{Endpoint}": {
-      "get": {
-        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
-        "tags": [
-          "GET"
-        ],
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "skip": {
-                      "type": "integer"
-                    },
-                    "take": {
-                      "type": "integer"
-                    },
-                    "rows": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "EmployeeId": {
-                            "type": "string"
-                          },
-                          "EmploymentEndDate": {
-                            "type": "string"
-                          },
-                          "EmailForDigitalDocuments": {
-                            "type": "string",
-                            "nullable": true
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
-                "examples": {
-                  "Example response": {
-                    "value": {
-                      "skip": 0,
-                      "take": 100,
-                      "rows": [
-                        {
-                          "EmployeeId": "000001005",
-                          "EmploymentEndDate": "2020-11-22T00:00:00Z",
-                          "EmailForDigitalDocuments": null
-                        },
-                        {
-                          "EmployeeId": "000001006",
-                          "EmploymentEndDate": "2020-11-22T00:00:00Z",
-                          "EmailForDigitalDocuments": null
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get_MetaInfoPerCustomConnector",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string",
-              "example": "your_custom_endpoint_id"
-            },
-            "in": "path",
-            "name": "Endpoint",
-            "description": "Add the id of connector you want to get the meta info from",
-            "required": true
-          },
-          {
-            "name": "skip",
-            "in": "query",
-            "required": false,
-            "description": "Pagination: amount of results skipped. Starts at 0",
-            "schema": {
-              "type": "number",
-              "example": 0
-            }
-          },
-          {
-            "name": "take",
-            "in": "query",
-            "required": false,
-            "description": "Pagination: amount of results returned",
-            "schema": {
-              "type": "number",
-              "example": 100
-            }
-          },
-          {
-            "name": "orderbyfieldids",
-            "in": "query",
-            "required": false,
-            "description": "Must be used to prevent reordered results.",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filterfieldids",
-            "in": "query",
-            "required": false,
-            "description": "The fieldIds of the values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filtervalues",
-            "in": "query",
-            "required": false,
-            "description": "The values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "operatortypes",
-            "in": "query",
-            "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
-            "schema": {
-              "type": "number",
-              "enum": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                13,
-                14,
-                15
-              ]
-            }
-          }
-        ]
-      }
-    },
-    "/connectors/Profit_Hourtype": {
-      "get": {
-        "summary": "Uursoorten",
-        "operationId": "Get_Profit_Hourtype",
-        "description": " ",
-        "parameters": [
-          {
-            "name": "skip",
-            "in": "query",
-            "required": false,
-            "description": "Pagination: amount of results skipped. Starts at 0",
-            "schema": {
-              "type": "number",
-              "example": 0
-            }
-          },
-          {
-            "name": "take",
-            "in": "query",
-            "required": false,
-            "description": "Pagination: amount of results returned",
-            "schema": {
-              "type": "number",
-              "example": 100
-            }
-          },
-          {
-            "name": "orderbyfieldids",
-            "in": "query",
-            "required": false,
-            "description": "Must be used to prevent reordered results",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filterfieldids",
-            "in": "query",
-            "required": false,
-            "description": "The fieldIds of the values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filtervalues",
-            "in": "query",
-            "required": false,
-            "description": "The values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "operatortypes",
-            "in": "query",
-            "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
-            "schema": {
-              "type": "number",
-              "enum": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                13,
-                14,
-                15
-              ]
-            }
-          },
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "skip": {
-                      "type": "integer"
-                    },
-                    "take": {
-                      "type": "integer"
-                    },
-                    "rows": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "TimeCode": {
-                            "type": "string",
-                            "description": "Urensoort"
-                          },
-                          "Description": {
-                            "type": "string",
-                            "description": "Omschrijving"
-                          },
-                          "TimeType": {
-                            "type": "string",
-                            "description": "Uurtype"
-                          },
-                          "CreateDate": {
-                            "type": "string",
-                            "description": "Aangemaakt op"
-                          },
-                          "ModifiedDate": {
-                            "type": "string",
-                            "description": "Gewijzigd op"
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "GET"
-        ]
-      }
-    },
-    "/connectors/Profit_Projectgroups": {
-      "get": {
-        "summary": "Projectgroepen",
-        "operationId": "Get_Profit_Projectgroups",
-        "description": " ",
-        "parameters": [
-          {
-            "name": "skip",
-            "in": "query",
-            "required": false,
-            "description": "Pagination: amount of results skipped. Starts at 0",
-            "schema": {
-              "type": "number",
-              "example": 0
-            }
-          },
-          {
-            "name": "take",
-            "in": "query",
-            "required": false,
-            "description": "Pagination: amount of results returned",
-            "schema": {
-              "type": "number",
-              "example": 100
-            }
-          },
-          {
-            "name": "orderbyfieldids",
-            "in": "query",
-            "required": false,
-            "description": "Must be used to prevent reordered results",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filterfieldids",
-            "in": "query",
-            "required": false,
-            "description": "The fieldIds of the values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filtervalues",
-            "in": "query",
-            "required": false,
-            "description": "The values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "operatortypes",
-            "in": "query",
-            "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
-            "schema": {
-              "type": "number",
-              "enum": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                13,
-                14,
-                15
-              ]
-            }
-          },
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "skip": {
-                      "type": "integer"
-                    },
-                    "take": {
-                      "type": "integer"
-                    },
-                    "rows": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "ProjectGroupId": {
-                            "type": "string",
-                            "description": "Projectgroep"
-                          },
-                          "Description": {
-                            "type": "string",
-                            "description": "Omschrijving"
-                          },
-                          "UnitId": {
-                            "type": "integer",
-                            "description": "Administratie"
-                          },
-                          "CreateDate": {
-                            "type": "string",
-                            "description": "Aangemaakt op"
-                          },
-                          "ModifiedDate": {
-                            "type": "string",
-                            "description": "Gewijzigd op"
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "GET"
-        ]
-      }
-    },
-    "/connectors/Profit_Projects": {
-      "get": {
-        "summary": "Projecten",
-        "operationId": "Get_Profit_Projects",
-        "description": " ",
-        "parameters": [
-          {
-            "name": "skip",
-            "in": "query",
-            "required": false,
-            "description": "Pagination: amount of results skipped. Starts at 0",
-            "schema": {
-              "type": "number",
-              "example": 0
-            }
-          },
-          {
-            "name": "take",
-            "in": "query",
-            "required": false,
-            "description": "Pagination: amount of results returned",
-            "schema": {
-              "type": "number",
-              "example": 100
-            }
-          },
-          {
-            "name": "orderbyfieldids",
-            "in": "query",
-            "required": false,
-            "description": "Must be used to prevent reordered results",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filterfieldids",
-            "in": "query",
-            "required": false,
-            "description": "The fieldIds of the values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filtervalues",
-            "in": "query",
-            "required": false,
-            "description": "The values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "operatortypes",
-            "in": "query",
-            "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
-            "schema": {
-              "type": "number",
-              "enum": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                13,
-                14,
-                15
-              ]
-            }
-          },
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "skip": {
-                      "type": "integer"
-                    },
-                    "take": {
-                      "type": "integer"
-                    },
-                    "rows": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "ProjectId": {
-                            "type": "string",
-                            "description": "Projectnummer"
-                          },
-                          "Description": {
-                            "type": "string",
-                            "description": "Projectomschrijving"
-                          },
-                          "UnitId": {
-                            "type": "integer",
-                            "description": "Projectadministratie"
-                          },
-                          "ProjectGroup": {
-                            "type": "string",
-                            "description": "Projectgroep"
-                          },
-                          "CheckedOut": {
-                            "type": "boolean",
-                            "description": "Afgemeld"
-                          },
-                          "BcCo": {
-                            "type": "string",
-                            "description": "Organisatie/persoon"
-                          },
-                          "DebtorId": {
-                            "type": "string",
-                            "description": "Verkooprelatie"
-                          },
-                          "DateStart": {
-                            "type": "string",
-                            "description": "Begindatum"
-                          },
-                          "DateReady": {
-                            "type": "string",
-                            "description": "Werkelijke datum gereed"
-                          },
-                          "Chargeable": {
-                            "type": "boolean",
-                            "description": "Doorbelasten"
-                          },
-                          "CreateDate": {
-                            "type": "string",
-                            "description": "Aangemaakt op"
-                          },
-                          "ModifiedDate": {
-                            "type": "string",
-                            "description": "Gewijzigd op"
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "GET"
-        ]
-      }
-    },
-    "/connectors/Profit_Projectstage": {
-      "get": {
-        "summary": "Projectfases",
-        "operationId": "Get_Profit_Projectstage",
-        "description": " ",
-        "parameters": [
-          {
-            "name": "skip",
-            "in": "query",
-            "required": false,
-            "description": "Pagination: amount of results skipped. Starts at 0",
-            "schema": {
-              "type": "number",
-              "example": 0
-            }
-          },
-          {
-            "name": "take",
-            "in": "query",
-            "required": false,
-            "description": "Pagination: amount of results returned",
-            "schema": {
-              "type": "number",
-              "example": 100
-            }
-          },
-          {
-            "name": "orderbyfieldids",
-            "in": "query",
-            "required": false,
-            "description": "Must be used to prevent reordered results",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filterfieldids",
-            "in": "query",
-            "required": false,
-            "description": "The fieldIds of the values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filtervalues",
-            "in": "query",
-            "required": false,
-            "description": "The values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "operatortypes",
-            "in": "query",
-            "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
-            "schema": {
-              "type": "number",
-              "enum": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                13,
-                14,
-                15
-              ]
-            }
-          },
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "skip": {
-                      "type": "integer"
-                    },
-                    "take": {
-                      "type": "integer"
-                    },
-                    "rows": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "ProjectId": {
-                            "type": "string",
-                            "description": "Project"
-                          },
-                          "ProjectStage": {
-                            "type": "string",
-                            "description": "Projectfase"
-                          },
-                          "Description": {
-                            "type": "string",
-                            "description": "Omschrijving"
-                          },
-                          "InstalmentId": {
-                            "type": "integer",
-                            "description": "Factuurtermijn"
-                          },
-                          "DateReadyPlan": {
-                            "type": "string",
-                            "description": "Datum gereed planning"
-                          },
-                          "DateReady": {
-                            "type": "string",
-                            "description": "Werkelijke datum gereed"
-                          },
-                          "CheckedOut": {
-                            "type": "boolean",
-                            "description": "Gereed"
-                          },
-                          "CreateDate": {
-                            "type": "string",
-                            "description": "Aangemaakt op"
-                          },
-                          "ModifiedDate": {
-                            "type": "string",
-                            "description": "Gewijzigd op"
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "GET"
-        ]
-      }
-    },
-    "/connectors/Profit_Quotation": {
-      "get": {
-        "summary": "Voorcalculatieregels",
-        "operationId": "Get_Profit_Quotation",
-        "description": " ",
-        "parameters": [
-          {
-            "name": "skip",
-            "in": "query",
-            "required": false,
-            "description": "Pagination: amount of results skipped. Starts at 0",
-            "schema": {
-              "type": "number",
-              "example": 0
-            }
-          },
-          {
-            "name": "take",
-            "in": "query",
-            "required": false,
-            "description": "Pagination: amount of results returned",
-            "schema": {
-              "type": "number",
-              "example": 100
-            }
-          },
-          {
-            "name": "orderbyfieldids",
-            "in": "query",
-            "required": false,
-            "description": "Must be used to prevent reordered results",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filterfieldids",
-            "in": "query",
-            "required": false,
-            "description": "The fieldIds of the values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filtervalues",
-            "in": "query",
-            "required": false,
-            "description": "The values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "operatortypes",
-            "in": "query",
-            "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
-            "schema": {
-              "type": "number",
-              "enum": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                13,
-                14,
-                15
-              ]
-            }
-          },
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "skip": {
-                      "type": "integer"
-                    },
-                    "take": {
-                      "type": "integer"
-                    },
-                    "rows": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "ProjectId": {
-                            "type": "string",
-                            "description": "Project"
-                          },
-                          "DebtorId": {
-                            "type": "string",
-                            "description": "Verkooprelatie"
-                          },
-                          "QuotationDate": {
-                            "type": "string",
-                            "description": "Datum"
-                          },
-                          "QuotationId": {
-                            "type": "string",
-                            "description": "Nummer offerte"
-                          },
-                          "Description": {
-                            "type": "string",
-                            "description": "Omschrijving"
-                          },
-                          "SeqNo": {
-                            "type": "integer",
-                            "description": "Volgnummer"
-                          },
-                          "ItemType": {
-                            "type": "string",
-                            "description": "Type item code"
-                          },
-                          "ItemCodeId": {
-                            "type": "string",
-                            "description": "Itemcode"
-                          },
-                          "UnitId": {
-                            "type": "string",
-                            "description": "Eenheid"
-                          },
-                          "TimeCodeId": {
-                            "type": "string",
-                            "description": "Urensoort"
-                          },
-                          "SalesAmoutFc": {
-                            "type": "number",
-                            "description": "Regelbedrag"
-                          },
-                          "PlanningDate": {
-                            "type": "string",
-                            "description": "Datum planning"
-                          },
-                          "DateCreated": {
-                            "type": "string",
-                            "description": "Aangemaakt op"
-                          },
-                          "DateModified": {
-                            "type": "string",
-                            "description": "Gewijzigd op"
-                          },
-                          "QuotationStatus": {
-                            "type": "string",
-                            "description": "Code status offerte"
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "GET"
-        ]
-      }
-    },
-    "/connectors/Profit_Rea_ChangedEntryDate": {
-      "get": {
-        "summary": "Gewijzigde boekingsdagen nacalculatie",
-        "operationId": "Get_Profit_Rea_ChangedEntryDate",
-        "description": " ",
-        "parameters": [
-          {
-            "name": "skip",
-            "in": "query",
-            "required": false,
-            "description": "Pagination: amount of results skipped. Starts at 0",
-            "schema": {
-              "type": "number",
-              "example": 0
-            }
-          },
-          {
-            "name": "take",
-            "in": "query",
-            "required": false,
-            "description": "Pagination: amount of results returned",
-            "schema": {
-              "type": "number",
-              "example": 100
-            }
-          },
-          {
-            "name": "orderbyfieldids",
-            "in": "query",
-            "required": false,
-            "description": "Must be used to prevent reordered results",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filterfieldids",
-            "in": "query",
-            "required": false,
-            "description": "The fieldIds of the values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filtervalues",
-            "in": "query",
-            "required": false,
-            "description": "The values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "operatortypes",
-            "in": "query",
-            "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
-            "schema": {
-              "type": "number",
-              "enum": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                13,
-                14,
-                15
-              ]
-            }
-          },
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "skip": {
-                      "type": "integer"
-                    },
-                    "take": {
-                      "type": "integer"
-                    },
-                    "rows": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "EntryDate": {
-                            "type": "string",
-                            "description": "Datum boeking"
-                          },
-                          "Modified": {
-                            "type": "string",
-                            "description": "Datum gewijzigd"
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "GET"
-        ]
-      }
-    },
-    "/connectors/Profit_Realization": {
-      "get": {
-        "summary": "Nacalculatieoverzicht (incl. autorisatie)",
-        "operationId": "Get_Profit_Realization",
-        "description": " ",
-        "parameters": [
-          {
-            "name": "skip",
-            "in": "query",
-            "required": false,
-            "description": "Pagination: amount of results skipped. Starts at 0",
-            "schema": {
-              "type": "number",
-              "example": 0
-            }
-          },
-          {
-            "name": "take",
-            "in": "query",
-            "required": false,
-            "description": "Pagination: amount of results returned",
-            "schema": {
-              "type": "number",
-              "example": 100
-            }
-          },
-          {
-            "name": "orderbyfieldids",
-            "in": "query",
-            "required": false,
-            "description": "Must be used to prevent reordered results",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filterfieldids",
-            "in": "query",
-            "required": false,
-            "description": "The fieldIds of the values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filtervalues",
-            "in": "query",
-            "required": false,
-            "description": "The values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "operatortypes",
-            "in": "query",
-            "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
-            "schema": {
-              "type": "number",
-              "enum": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                13,
-                14,
-                15
-              ]
-            }
-          },
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "skip": {
-                      "type": "integer"
-                    },
-                    "take": {
-                      "type": "integer"
-                    },
-                    "rows": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "Identity": {
-                            "type": "integer",
-                            "description": "Regelnummer"
-                          },
-                          "Year": {
-                            "type": "integer",
-                            "description": "Boekjaar"
-                          },
-                          "PeriodId": {
-                            "type": "integer",
-                            "description": "Periode"
-                          },
-                          "DateTime": {
-                            "type": "string",
-                            "description": "Datum"
-                          },
-                          "EmployeeId": {
-                            "type": "string",
-                            "description": "Medewerker"
-                          },
-                          "ProjectId": {
-                            "type": "string",
-                            "description": "Projectnummer"
-                          },
-                          "Description": {
-                            "type": "string",
-                            "description": "Omschrijving"
-                          },
-                          "ItemType": {
-                            "type": "string",
-                            "description": "Type item"
-                          },
-                          "ItemCodeId": {
-                            "type": "string",
-                            "description": "Itemcode"
-                          },
-                          "InitId": {
-                            "type": "string",
-                            "description": "Eenheid"
-                          },
-                          "QuantityUnit": {
-                            "type": "number",
-                            "description": "Aantal eenheden"
-                          },
-                          "Chargeable": {
-                            "type": "boolean",
-                            "description": "Doorbelasten"
-                          },
-                          "Approved": {
-                            "type": "boolean",
-                            "description": "Geaccordeerd"
-                          },
-                          "Prepared": {
-                            "type": "boolean",
-                            "description": "Gereedgemeld"
-                          },
-                          "DateModified": {
-                            "type": "string",
-                            "description": "Regel laatst gewijzigd"
-                          },
-                          "SystemDate": {
-                            "type": "string",
-                            "description": "Datum toegevoegd"
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "GET"
-        ]
-      }
-    },
-    "/connectors/Profit_Worktype": {
-      "get": {
-        "summary": "Items",
-        "operationId": "Get_Profit_Worktype",
-        "description": " ",
-        "parameters": [
-          {
-            "name": "skip",
-            "in": "query",
-            "required": false,
-            "description": "Pagination: amount of results skipped. Starts at 0",
-            "schema": {
-              "type": "number",
-              "example": 0
-            }
-          },
-          {
-            "name": "take",
-            "in": "query",
-            "required": false,
-            "description": "Pagination: amount of results returned",
-            "schema": {
-              "type": "number",
-              "example": 100
-            }
-          },
-          {
-            "name": "orderbyfieldids",
-            "in": "query",
-            "required": false,
-            "description": "Must be used to prevent reordered results",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filterfieldids",
-            "in": "query",
-            "required": false,
-            "description": "The fieldIds of the values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filtervalues",
-            "in": "query",
-            "required": false,
-            "description": "The values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "operatortypes",
-            "in": "query",
-            "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
-            "schema": {
-              "type": "number",
-              "enum": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                13,
-                14,
-                15
-              ]
-            }
-          },
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "skip": {
-                      "type": "integer"
-                    },
-                    "take": {
-                      "type": "integer"
-                    },
-                    "rows": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "ItemCode": {
-                            "type": "string",
-                            "description": "Itemcode"
-                          },
-                          "Description": {
-                            "type": "string",
-                            "description": "Omschrijving"
-                          },
-                          "CreateDate": {
-                            "type": "string",
-                            "description": "Aangemaakt op"
-                          },
-                          "ModifiedDate": {
-                            "type": "string",
-                            "description": "Gewijzigd op"
-                          },
-                          "Group": {
-                            "type": "string",
-                            "description": "Integratiegroep"
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "GET"
-        ]
-      }
-    },
-    "/ProfitVersion": {
-      "get": {
-        "summary": "Get the current Profit version",
-        "tags": [
-          "API Info"
-        ],
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "version": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "examples": {
-                  "Example Result": {
-                    "value": {
-                      "version": "22.22.5"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get_ProfitVersion"
-      }
-    },
     "/connectors/PtLinesToBeInvoiced": {
       "post": {
         "summary": "Te factureren regel",
@@ -3414,6 +2074,165 @@
           },
           {
             "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/PtLinesToBeUnraveled": {
+      "post": {
+        "summary": "Te ontrafelen nacalculatieregels",
+        "description": "\n\rAlleen beschikbaar onder conditie: Urenontrafelaar (activering)\n\r ",
+        "operationId": "POST_PtLinesToBeUnraveled",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PtLinesToBeUnraveled_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Te ontrafelen nacalculatieregels"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Te ontrafelen nacalculatieregels",
+        "description": "\n\rAlleen beschikbaar onder conditie: Urenontrafelaar (activering)\n\r ",
+        "operationId": "PUT_PtLinesToBeUnraveled",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PtLinesToBeUnraveled_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Te ontrafelen nacalculatieregels"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/PtLinesToBeUnraveled/PtLinesToBeUnraveled/@Id/{Id}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "Id",
+          "in": "path",
+          "required": true,
+          "description": "Code"
+        }
+      ],
+      "delete": {
+        "summary": "Te ontrafelen nacalculatieregels",
+        "operationId": "DELETE_PtLinesToBeUnraveled",
+        "description": "\n\r ",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Te ontrafelen nacalculatieregels"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
           }
         ]
       }
@@ -8087,23 +6906,135 @@
         ]
       }
     },
-    "/connectors/PtLinesToBeUnraveled": {
-      "post": {
-        "summary": "Te ontrafelen nacalculatieregels",
-        "description": "\n\rAlleen beschikbaar onder conditie: Urenontrafelaar (speciale activering)\n\r ",
-        "operationId": "POST_PtLinesToBeUnraveled",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PtLinesToBeUnraveled_POST"
+    "/connectors/Profit_Hourtype": {
+      "get": {
+        "summary": "Uursoorten",
+        "operationId": "Get_Profit_Hourtype",
+        "description": " ",
+        "parameters": [
+          {
+            "name": "skip",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results skipped. Starts at 0",
+            "schema": {
+              "type": "number",
+              "example": 0
+            }
+          },
+          {
+            "name": "take",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results returned",
+            "schema": {
+              "type": "number",
+              "example": 100
+            }
+          },
+          {
+            "name": "orderbyfieldids",
+            "in": "query",
+            "required": false,
+            "description": "Must be used to prevent reordered results",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterfieldids",
+            "in": "query",
+            "required": false,
+            "description": "The fieldIds of the values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filtervalues",
+            "in": "query",
+            "required": false,
+            "description": "The values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "operatortypes",
+            "in": "query",
+            "required": false,
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
+            "schema": {
+              "type": "number",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            }
+          },
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "skip": {
+                      "type": "integer"
+                    },
+                    "take": {
+                      "type": "integer"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "TimeCode": {
+                            "type": "string",
+                            "description": "Urensoort"
+                          },
+                          "Description": {
+                            "type": "string",
+                            "description": "Omschrijving"
+                          },
+                          "TimeType": {
+                            "type": "string",
+                            "description": "Uurtype"
+                          },
+                          "CreateDate": {
+                            "type": "string",
+                            "description": "Aangemaakt op"
+                          },
+                          "ModifiedDate": {
+                            "type": "string",
+                            "description": "Gewijzigd op"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
               }
             }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
           },
           "401": {
             "$ref": "#/components/responses/401"
@@ -8127,96 +7058,145 @@
           }
         ],
         "tags": [
-          "Te ontrafelen nacalculatieregels"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      },
-      "put": {
-        "summary": "Te ontrafelen nacalculatieregels",
-        "description": "\n\rAlleen beschikbaar onder conditie: Urenontrafelaar (speciale activering)\n\r ",
-        "operationId": "PUT_PtLinesToBeUnraveled",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PtLinesToBeUnraveled_PUT"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Te ontrafelen nacalculatieregels"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
+          "GET"
         ]
       }
     },
-    "/connectors/PtLinesToBeUnraveled/PtLinesToBeUnraveled/@Id/{Id}": {
-      "parameters": [
-        {
-          "schema": {
-            "type": "string"
+    "/connectors/Profit_Projectgroups": {
+      "get": {
+        "summary": "Projectgroepen",
+        "operationId": "Get_Profit_Projectgroups",
+        "description": " ",
+        "parameters": [
+          {
+            "name": "skip",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results skipped. Starts at 0",
+            "schema": {
+              "type": "number",
+              "example": 0
+            }
           },
-          "name": "Id",
-          "in": "path",
-          "required": true,
-          "description": "Code"
-        }
-      ],
-      "delete": {
-        "summary": "Te ontrafelen nacalculatieregels",
-        "operationId": "DELETE_PtLinesToBeUnraveled",
-        "description": "\n\r ",
+          {
+            "name": "take",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results returned",
+            "schema": {
+              "type": "number",
+              "example": 100
+            }
+          },
+          {
+            "name": "orderbyfieldids",
+            "in": "query",
+            "required": false,
+            "description": "Must be used to prevent reordered results",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterfieldids",
+            "in": "query",
+            "required": false,
+            "description": "The fieldIds of the values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filtervalues",
+            "in": "query",
+            "required": false,
+            "description": "The values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "operatortypes",
+            "in": "query",
+            "required": false,
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
+            "schema": {
+              "type": "number",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            }
+          },
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ],
         "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "skip": {
+                      "type": "integer"
+                    },
+                    "take": {
+                      "type": "integer"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "ProjectGroupId": {
+                            "type": "string",
+                            "description": "Projectgroep"
+                          },
+                          "Description": {
+                            "type": "string",
+                            "description": "Omschrijving"
+                          },
+                          "UnitId": {
+                            "type": "integer",
+                            "description": "Administratie"
+                          },
+                          "CreateDate": {
+                            "type": "string",
+                            "description": "Aangemaakt op"
+                          },
+                          "ModifiedDate": {
+                            "type": "string",
+                            "description": "Gewijzigd op"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           },
           "401": {
             "$ref": "#/components/responses/401"
           },
           "403": {
             "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
           },
           "413": {
             "$ref": "#/components/responses/413"
@@ -8226,9 +7206,6 @@
           },
           "503": {
             "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "$ref": "#/components/responses/200"
           }
         },
         "security": [
@@ -8237,12 +7214,1059 @@
           }
         ],
         "tags": [
-          "Te ontrafelen nacalculatieregels"
-        ],
+          "GET"
+        ]
+      }
+    },
+    "/connectors/Profit_Projects": {
+      "get": {
+        "summary": "Projecten",
+        "operationId": "Get_Profit_Projects",
+        "description": " ",
         "parameters": [
+          {
+            "name": "skip",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results skipped. Starts at 0",
+            "schema": {
+              "type": "number",
+              "example": 0
+            }
+          },
+          {
+            "name": "take",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results returned",
+            "schema": {
+              "type": "number",
+              "example": 100
+            }
+          },
+          {
+            "name": "orderbyfieldids",
+            "in": "query",
+            "required": false,
+            "description": "Must be used to prevent reordered results",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterfieldids",
+            "in": "query",
+            "required": false,
+            "description": "The fieldIds of the values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filtervalues",
+            "in": "query",
+            "required": false,
+            "description": "The values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "operatortypes",
+            "in": "query",
+            "required": false,
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
+            "schema": {
+              "type": "number",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            }
+          },
           {
             "$ref": "#/components/parameters/Accept-Language"
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "skip": {
+                      "type": "integer"
+                    },
+                    "take": {
+                      "type": "integer"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "ProjectId": {
+                            "type": "string",
+                            "description": "Projectnummer"
+                          },
+                          "Description": {
+                            "type": "string",
+                            "description": "Projectomschrijving"
+                          },
+                          "UnitId": {
+                            "type": "integer",
+                            "description": "Projectadministratie"
+                          },
+                          "ProjectGroup": {
+                            "type": "string",
+                            "description": "Projectgroep"
+                          },
+                          "CheckedOut": {
+                            "type": "boolean",
+                            "description": "Afgemeld"
+                          },
+                          "BcCo": {
+                            "type": "string",
+                            "description": "Organisatie/persoon"
+                          },
+                          "DebtorId": {
+                            "type": "string",
+                            "description": "Verkooprelatie"
+                          },
+                          "DateStart": {
+                            "type": "string",
+                            "description": "Begindatum"
+                          },
+                          "DateReady": {
+                            "type": "string",
+                            "description": "Werkelijke datum gereed"
+                          },
+                          "Chargeable": {
+                            "type": "boolean",
+                            "description": "Doorbelasten"
+                          },
+                          "CreateDate": {
+                            "type": "string",
+                            "description": "Aangemaakt op"
+                          },
+                          "ModifiedDate": {
+                            "type": "string",
+                            "description": "Gewijzigd op"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "GET"
+        ]
+      }
+    },
+    "/connectors/Profit_Projectstage": {
+      "get": {
+        "summary": "Projectfases",
+        "operationId": "Get_Profit_Projectstage",
+        "description": " ",
+        "parameters": [
+          {
+            "name": "skip",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results skipped. Starts at 0",
+            "schema": {
+              "type": "number",
+              "example": 0
+            }
+          },
+          {
+            "name": "take",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results returned",
+            "schema": {
+              "type": "number",
+              "example": 100
+            }
+          },
+          {
+            "name": "orderbyfieldids",
+            "in": "query",
+            "required": false,
+            "description": "Must be used to prevent reordered results",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterfieldids",
+            "in": "query",
+            "required": false,
+            "description": "The fieldIds of the values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filtervalues",
+            "in": "query",
+            "required": false,
+            "description": "The values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "operatortypes",
+            "in": "query",
+            "required": false,
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
+            "schema": {
+              "type": "number",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            }
+          },
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "skip": {
+                      "type": "integer"
+                    },
+                    "take": {
+                      "type": "integer"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "ProjectId": {
+                            "type": "string",
+                            "description": "Project"
+                          },
+                          "ProjectStage": {
+                            "type": "string",
+                            "description": "Projectfase"
+                          },
+                          "Description": {
+                            "type": "string",
+                            "description": "Omschrijving"
+                          },
+                          "InstalmentId": {
+                            "type": "integer",
+                            "description": "Factuurtermijn"
+                          },
+                          "DateReadyPlan": {
+                            "type": "string",
+                            "description": "Datum gereed planning"
+                          },
+                          "DateReady": {
+                            "type": "string",
+                            "description": "Werkelijke datum gereed"
+                          },
+                          "CheckedOut": {
+                            "type": "boolean",
+                            "description": "Gereed"
+                          },
+                          "CreateDate": {
+                            "type": "string",
+                            "description": "Aangemaakt op"
+                          },
+                          "ModifiedDate": {
+                            "type": "string",
+                            "description": "Gewijzigd op"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "GET"
+        ]
+      }
+    },
+    "/connectors/Profit_Quotation": {
+      "get": {
+        "summary": "Voorcalculatieregels",
+        "operationId": "Get_Profit_Quotation",
+        "description": " ",
+        "parameters": [
+          {
+            "name": "skip",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results skipped. Starts at 0",
+            "schema": {
+              "type": "number",
+              "example": 0
+            }
+          },
+          {
+            "name": "take",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results returned",
+            "schema": {
+              "type": "number",
+              "example": 100
+            }
+          },
+          {
+            "name": "orderbyfieldids",
+            "in": "query",
+            "required": false,
+            "description": "Must be used to prevent reordered results",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterfieldids",
+            "in": "query",
+            "required": false,
+            "description": "The fieldIds of the values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filtervalues",
+            "in": "query",
+            "required": false,
+            "description": "The values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "operatortypes",
+            "in": "query",
+            "required": false,
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
+            "schema": {
+              "type": "number",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            }
+          },
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "skip": {
+                      "type": "integer"
+                    },
+                    "take": {
+                      "type": "integer"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "ProjectId": {
+                            "type": "string",
+                            "description": "Project"
+                          },
+                          "DebtorId": {
+                            "type": "string",
+                            "description": "Verkooprelatie"
+                          },
+                          "QuotationDate": {
+                            "type": "string",
+                            "description": "Datum"
+                          },
+                          "QuotationId": {
+                            "type": "string",
+                            "description": "Nummer offerte"
+                          },
+                          "Description": {
+                            "type": "string",
+                            "description": "Omschrijving"
+                          },
+                          "SeqNo": {
+                            "type": "integer",
+                            "description": "Volgnummer"
+                          },
+                          "ItemType": {
+                            "type": "string",
+                            "description": "Type item code"
+                          },
+                          "ItemCodeId": {
+                            "type": "string",
+                            "description": "Itemcode"
+                          },
+                          "UnitId": {
+                            "type": "string",
+                            "description": "Eenheid"
+                          },
+                          "TimeCodeId": {
+                            "type": "string",
+                            "description": "Urensoort"
+                          },
+                          "SalesAmoutFc": {
+                            "type": "number",
+                            "description": "Regelbedrag"
+                          },
+                          "PlanningDate": {
+                            "type": "string",
+                            "description": "Datum planning"
+                          },
+                          "DateCreated": {
+                            "type": "string",
+                            "description": "Aangemaakt op"
+                          },
+                          "DateModified": {
+                            "type": "string",
+                            "description": "Gewijzigd op"
+                          },
+                          "QuotationStatus": {
+                            "type": "string",
+                            "description": "Code status offerte"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "GET"
+        ]
+      }
+    },
+    "/connectors/Profit_Rea_ChangedEntryDate": {
+      "get": {
+        "summary": "Gewijzigde boekingsdagen nacalculatie",
+        "operationId": "Get_Profit_Rea_ChangedEntryDate",
+        "description": " ",
+        "parameters": [
+          {
+            "name": "skip",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results skipped. Starts at 0",
+            "schema": {
+              "type": "number",
+              "example": 0
+            }
+          },
+          {
+            "name": "take",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results returned",
+            "schema": {
+              "type": "number",
+              "example": 100
+            }
+          },
+          {
+            "name": "orderbyfieldids",
+            "in": "query",
+            "required": false,
+            "description": "Must be used to prevent reordered results",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterfieldids",
+            "in": "query",
+            "required": false,
+            "description": "The fieldIds of the values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filtervalues",
+            "in": "query",
+            "required": false,
+            "description": "The values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "operatortypes",
+            "in": "query",
+            "required": false,
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
+            "schema": {
+              "type": "number",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            }
+          },
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "skip": {
+                      "type": "integer"
+                    },
+                    "take": {
+                      "type": "integer"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "EntryDate": {
+                            "type": "string",
+                            "description": "Datum boeking"
+                          },
+                          "Modified": {
+                            "type": "string",
+                            "description": "Datum gewijzigd"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "GET"
+        ]
+      }
+    },
+    "/connectors/Profit_Realization": {
+      "get": {
+        "summary": "Nacalculatieoverzicht (incl. autorisatie)",
+        "operationId": "Get_Profit_Realization",
+        "description": " ",
+        "parameters": [
+          {
+            "name": "skip",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results skipped. Starts at 0",
+            "schema": {
+              "type": "number",
+              "example": 0
+            }
+          },
+          {
+            "name": "take",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results returned",
+            "schema": {
+              "type": "number",
+              "example": 100
+            }
+          },
+          {
+            "name": "orderbyfieldids",
+            "in": "query",
+            "required": false,
+            "description": "Must be used to prevent reordered results",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterfieldids",
+            "in": "query",
+            "required": false,
+            "description": "The fieldIds of the values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filtervalues",
+            "in": "query",
+            "required": false,
+            "description": "The values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "operatortypes",
+            "in": "query",
+            "required": false,
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
+            "schema": {
+              "type": "number",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            }
+          },
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "skip": {
+                      "type": "integer"
+                    },
+                    "take": {
+                      "type": "integer"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "Identity": {
+                            "type": "integer",
+                            "description": "Regelnummer"
+                          },
+                          "Year": {
+                            "type": "integer",
+                            "description": "Boekjaar"
+                          },
+                          "PeriodId": {
+                            "type": "integer",
+                            "description": "Periode"
+                          },
+                          "DateTime": {
+                            "type": "string",
+                            "description": "Datum"
+                          },
+                          "EmployeeId": {
+                            "type": "string",
+                            "description": "Medewerker"
+                          },
+                          "ProjectId": {
+                            "type": "string",
+                            "description": "Projectnummer"
+                          },
+                          "Description": {
+                            "type": "string",
+                            "description": "Omschrijving"
+                          },
+                          "ItemType": {
+                            "type": "string",
+                            "description": "Type item"
+                          },
+                          "ItemCodeId": {
+                            "type": "string",
+                            "description": "Itemcode"
+                          },
+                          "InitId": {
+                            "type": "string",
+                            "description": "Eenheid"
+                          },
+                          "QuantityUnit": {
+                            "type": "number",
+                            "description": "Aantal eenheden"
+                          },
+                          "Chargeable": {
+                            "type": "boolean",
+                            "description": "Doorbelasten"
+                          },
+                          "Approved": {
+                            "type": "boolean",
+                            "description": "Geaccordeerd"
+                          },
+                          "Prepared": {
+                            "type": "boolean",
+                            "description": "Gereedgemeld"
+                          },
+                          "DateModified": {
+                            "type": "string",
+                            "description": "Regel laatst gewijzigd"
+                          },
+                          "SystemDate": {
+                            "type": "string",
+                            "description": "Datum toegevoegd"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "GET"
+        ]
+      }
+    },
+    "/connectors/Profit_Worktype": {
+      "get": {
+        "summary": "Items",
+        "operationId": "Get_Profit_Worktype",
+        "description": " ",
+        "parameters": [
+          {
+            "name": "skip",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results skipped. Starts at 0",
+            "schema": {
+              "type": "number",
+              "example": 0
+            }
+          },
+          {
+            "name": "take",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results returned",
+            "schema": {
+              "type": "number",
+              "example": 100
+            }
+          },
+          {
+            "name": "orderbyfieldids",
+            "in": "query",
+            "required": false,
+            "description": "Must be used to prevent reordered results",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterfieldids",
+            "in": "query",
+            "required": false,
+            "description": "The fieldIds of the values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filtervalues",
+            "in": "query",
+            "required": false,
+            "description": "The values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "operatortypes",
+            "in": "query",
+            "required": false,
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
+            "schema": {
+              "type": "number",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            }
+          },
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "skip": {
+                      "type": "integer"
+                    },
+                    "take": {
+                      "type": "integer"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "ItemCode": {
+                            "type": "string",
+                            "description": "Itemcode"
+                          },
+                          "Description": {
+                            "type": "string",
+                            "description": "Omschrijving"
+                          },
+                          "CreateDate": {
+                            "type": "string",
+                            "description": "Aangemaakt op"
+                          },
+                          "ModifiedDate": {
+                            "type": "string",
+                            "description": "Gewijzigd op"
+                          },
+                          "Group": {
+                            "type": "string",
+                            "description": "Integratiegroep"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "GET"
         ]
       }
     }
@@ -8267,6 +8291,10 @@
     {
       "name": "Te factureren regel",
       "description": "Te factureren regel"
+    },
+    {
+      "name": "Te ontrafelen nacalculatieregels",
+      "description": "Te ontrafelen nacalculatieregels"
     },
     {
       "name": "Projectvoortgang",
@@ -8303,10 +8331,6 @@
     {
       "name": "Geldigheidscombinatie",
       "description": "Geldigheidscombinatie"
-    },
-    {
-      "name": "Te ontrafelen nacalculatieregels",
-      "description": "Te ontrafelen nacalculatieregels"
     }
   ],
   "components": {
@@ -10418,6 +10442,11 @@
                   "Fields": {
                     "type": "object",
                     "properties": {
+                      "ApprovWorkflow": {
+                        "type": "boolean",
+                        "description": "Declaratie goedkeuren via workflow",
+                        "format": ""
+                      },
                       "Id": {
                         "type": "integer",
                         "description": "Code",
@@ -10670,6 +10699,12 @@
                         "description": "Factuurreferentie",
                         "format": ""
                       },
+                      "StId": {
+                        "type": "string",
+                        "maxLength": 5,
+                        "description": "Urensoort",
+                        "format": ""
+                      },
                       "DsIn": {
                         "type": "string",
                         "maxLength": 255,
@@ -10703,7 +10738,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Vervoermiddel\n11 = Auto’s benzine;\n12 = Auto’s diesel;\n13 = Auto’s die behoren tot de (plug in) hybrides;\n14 = Auto’s 100% elektrisch;\n15 = Auto’s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
+                        "description": "Vervoermiddel voor WPM rapportage\n11 = Auto’s benzine;\n12 = Auto’s diesel;\n13 = Auto’s die behoren tot de (plug in) hybrides;\n14 = Auto’s 100% elektrisch;\n15 = Auto’s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
                         "format": ""
                       },
                       "ViTv": {
@@ -10736,7 +10771,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Vervoermiddel voor reiskosten\n11 = Auto benzine;\n12 = Auto diesel;\n13 = Auto (plug in) hybride;\n14 = Auto 100% elektrisch;\n15 = Auto andere brandstoffen;\n21 = Motorfiets benzine;\n22 = Motorfiets elektrisch;\n29 = Motorfiets diesel;\n31 = Bromfiets/scooter benzine;\n32 = Bromfiets/scooter 100% elektrisch;\n38 = Bromfiets/scooter diesel;\n39 = Speed-pedelec;\n41 = (Elektrische) fiets;\n49 = Te voet;\n51 = Openbaar vervoer ;",
+                        "description": "Vervoermiddel voor urenontrafelaar\n11 = Auto benzine;\n12 = Auto diesel;\n13 = Auto (plug in) hybride;\n14 = Auto 100% elektrisch;\n15 = Auto andere brandstoffen;\n21 = Motorfiets benzine;\n22 = Motorfiets elektrisch;\n29 = Motorfiets diesel;\n31 = Bromfiets/scooter benzine;\n32 = Bromfiets/scooter 100% elektrisch;\n38 = Bromfiets/scooter diesel;\n39 = Speed-pedelec;\n41 = (Elektrische) fiets;\n49 = Te voet;\n51 = Openbaar vervoer ;",
                         "format": ""
                       },
                       "FileId": {
@@ -10755,6 +10790,12 @@
                         "type": "string",
                         "description": "File as byte-array",
                         "format": "byte"
+                      },
+                      "DcCo": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Declaration code",
+                        "format": ""
                       }
                     },
                     "required": [
@@ -10782,6 +10823,11 @@
                   "Fields": {
                     "type": "object",
                     "properties": {
+                      "ApprovWorkflow": {
+                        "type": "boolean",
+                        "description": "Declaratie goedkeuren via workflow",
+                        "format": ""
+                      },
                       "Id": {
                         "type": "integer",
                         "description": "Code",
@@ -11041,6 +11087,12 @@
                         "description": "Factuurreferentie",
                         "format": ""
                       },
+                      "StId": {
+                        "type": "string",
+                        "maxLength": 5,
+                        "description": "Urensoort",
+                        "format": ""
+                      },
                       "DsIn": {
                         "type": "string",
                         "maxLength": 255,
@@ -11074,7 +11126,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Vervoermiddel\n11 = Auto’s benzine;\n12 = Auto’s diesel;\n13 = Auto’s die behoren tot de (plug in) hybrides;\n14 = Auto’s 100% elektrisch;\n15 = Auto’s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
+                        "description": "Vervoermiddel voor WPM rapportage\n11 = Auto’s benzine;\n12 = Auto’s diesel;\n13 = Auto’s die behoren tot de (plug in) hybrides;\n14 = Auto’s 100% elektrisch;\n15 = Auto’s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
                         "format": ""
                       },
                       "ViTv": {
@@ -11107,7 +11159,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Vervoermiddel voor reiskosten\n11 = Auto benzine;\n12 = Auto diesel;\n13 = Auto (plug in) hybride;\n14 = Auto 100% elektrisch;\n15 = Auto andere brandstoffen;\n21 = Motorfiets benzine;\n22 = Motorfiets elektrisch;\n29 = Motorfiets diesel;\n31 = Bromfiets/scooter benzine;\n32 = Bromfiets/scooter 100% elektrisch;\n38 = Bromfiets/scooter diesel;\n39 = Speed-pedelec;\n41 = (Elektrische) fiets;\n49 = Te voet;\n51 = Openbaar vervoer ;",
+                        "description": "Vervoermiddel voor urenontrafelaar\n11 = Auto benzine;\n12 = Auto diesel;\n13 = Auto (plug in) hybride;\n14 = Auto 100% elektrisch;\n15 = Auto andere brandstoffen;\n21 = Motorfiets benzine;\n22 = Motorfiets elektrisch;\n29 = Motorfiets diesel;\n31 = Bromfiets/scooter benzine;\n32 = Bromfiets/scooter 100% elektrisch;\n38 = Bromfiets/scooter diesel;\n39 = Speed-pedelec;\n41 = (Elektrische) fiets;\n49 = Te voet;\n51 = Openbaar vervoer ;",
                         "format": ""
                       },
                       "FileId": {
@@ -11126,6 +11178,12 @@
                         "type": "string",
                         "description": "File as byte-array",
                         "format": "byte"
+                      },
+                      "DcCo": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Declaration code",
+                        "format": ""
                       }
                     },
                     "required": [
@@ -15270,7 +15328,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Vervoermiddel\n11 = Auto’s benzine;\n12 = Auto’s diesel;\n13 = Auto’s die behoren tot de (plug in) hybrides;\n14 = Auto’s 100% elektrisch;\n15 = Auto’s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
+                        "description": "Vervoermiddel voor WPM rapportage\n11 = Auto’s benzine;\n12 = Auto’s diesel;\n13 = Auto’s die behoren tot de (plug in) hybrides;\n14 = Auto’s 100% elektrisch;\n15 = Auto’s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
                         "format": ""
                       },
                       "ViTv": {
@@ -15904,7 +15962,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Vervoermiddel\n11 = Auto’s benzine;\n12 = Auto’s diesel;\n13 = Auto’s die behoren tot de (plug in) hybrides;\n14 = Auto’s 100% elektrisch;\n15 = Auto’s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
+                        "description": "Vervoermiddel voor WPM rapportage\n11 = Auto’s benzine;\n12 = Auto’s diesel;\n13 = Auto’s die behoren tot de (plug in) hybrides;\n14 = Auto’s 100% elektrisch;\n15 = Auto’s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
                         "format": ""
                       },
                       "ViTv": {

@@ -48,6 +48,533 @@
     }
   ],
   "paths": {
+    "/MetaInfo": {
+      "get": {
+        "summary": "Retrieve the meta info of the Profit environment and the available connectors",
+        "tags": [
+          "API Info"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "updateConnectors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "getConnectors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "customConnectors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "info": {
+                      "type": "object",
+                      "properties": {
+                        "envid": {
+                          "type": "string"
+                        },
+                        "appName": {
+                          "type": "string"
+                        },
+                        "group": {
+                          "type": "string"
+                        },
+                        "tokenExpiry": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "updateConnectors": [
+                        {
+                          "id": "HrCreateApplicant",
+                          "description": "Aanmaken sollicitatie"
+                        },
+                        {
+                          "id": "FbSubscription",
+                          "description": "Abonnement"
+                        },
+                        {
+                          "id": "KnAddress",
+                          "description": "Adres"
+                        }
+                      ],
+                      "getConnectors": [
+                        {
+                          "id": "Profit_Fin_ChangedEntrydate",
+                          "description": "Profit_Fin_ChangedEntrydate"
+                        },
+                        {
+                          "id": "Profit_Functions",
+                          "description": "Profit_Functions"
+                        }
+                      ],
+                      "customConnectors": [
+                        {
+                          "id": "AppConnectorReport",
+                          "description": "AppConnectorReport"
+                        },
+                        {
+                          "id": "AppConnectorSubject",
+                          "description": "AppConnectorSubject"
+                        }
+                      ],
+                      "info": {
+                        "envid": "A123456AC",
+                        "appName": "OpenAPI Spec Example",
+                        "group": "AuthorizationGroup 101 (12345.USER)",
+                        "tokenExpiry": "0"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_MetaInfo"
+      }
+    },
+    "/Metainfo/{Type}/{Endpoint}": {
+      "get": {
+        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
+        "tags": [
+          "API Info"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "fields": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "fieldId": {
+                            "type": "string"
+                          },
+                          "dataType": {
+                            "type": "string"
+                          },
+                          "label": {
+                            "type": "string"
+                          },
+                          "length": {
+                            "type": "integer"
+                          },
+                          "controlType": {
+                            "type": "integer"
+                          },
+                          "decimals": {
+                            "type": "integer"
+                          },
+                          "decimalsFieldId": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "name": "Profit_Administrations",
+                      "description": "Administraties (Profit)",
+                      "fields": [
+                        {
+                          "id": "AdminId",
+                          "fieldId": "U002",
+                          "dataType": "int",
+                          "label": "Administratie",
+                          "length": 3,
+                          "controlType": 5,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        },
+                        {
+                          "id": "AdminNm",
+                          "fieldId": "U001",
+                          "dataType": "string",
+                          "label": "Naam administratie",
+                          "length": 80,
+                          "controlType": 1,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        },
+                        {
+                          "id": "AdminCd",
+                          "fieldId": "UnCo",
+                          "dataType": "string",
+                          "label": "Administratie",
+                          "length": 10,
+                          "controlType": 1,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_MetaInfoPerConnector",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "get",
+                "update"
+              ],
+              "example": "update"
+            },
+            "in": "path",
+            "name": "Type",
+            "description": "Add the type of connector you want to get the meta info from",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "string",
+              "example": "KnEmployee"
+            },
+            "in": "path",
+            "name": "Endpoint",
+            "description": "Add the endpoint id of the connector you want to get the meta info from",
+            "required": true
+          },
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/{Endpoint}": {
+      "get": {
+        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
+        "tags": [
+          "GET"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "skip": {
+                      "type": "integer"
+                    },
+                    "take": {
+                      "type": "integer"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "EmployeeId": {
+                            "type": "string"
+                          },
+                          "EmploymentEndDate": {
+                            "type": "string"
+                          },
+                          "EmailForDigitalDocuments": {
+                            "type": "string",
+                            "nullable": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example response": {
+                    "value": {
+                      "skip": 0,
+                      "take": 100,
+                      "rows": [
+                        {
+                          "EmployeeId": "000001005",
+                          "EmploymentEndDate": "2025-11-22T00:00:00Z",
+                          "EmailForDigitalDocuments": null
+                        },
+                        {
+                          "EmployeeId": "000001006",
+                          "EmploymentEndDate": "2025-11-22T00:00:00Z",
+                          "EmailForDigitalDocuments": null
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_MetaInfoPerCustomConnector",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "example": "your_custom_endpoint_id"
+            },
+            "in": "path",
+            "name": "Endpoint",
+            "description": "Add the id of connector you want to get the meta info from",
+            "required": true
+          },
+          {
+            "name": "skip",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results skipped. Starts at 0",
+            "schema": {
+              "type": "number",
+              "example": 0
+            }
+          },
+          {
+            "name": "take",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results returned",
+            "schema": {
+              "type": "number",
+              "example": 100
+            }
+          },
+          {
+            "name": "orderbyfieldids",
+            "in": "query",
+            "required": false,
+            "description": "Must be used to prevent reordered results.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterfieldids",
+            "in": "query",
+            "required": false,
+            "description": "The fieldIds of the values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filtervalues",
+            "in": "query",
+            "required": false,
+            "description": "The values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "operatortypes",
+            "in": "query",
+            "required": false,
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
+            "schema": {
+              "type": "number",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "/ProfitVersion": {
+      "get": {
+        "summary": "Get the current Profit version",
+        "tags": [
+          "API Info"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "version": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "version": "7.7.10"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_ProfitVersion"
+      }
+    },
     "/connectors/FbBitVatTarifGroup": {
       "post": {
         "summary": "Btw-tariefgroep per item",
@@ -7249,509 +7776,6 @@
           }
         ]
       }
-    },
-    "/MetaInfo": {
-      "get": {
-        "summary": "Retrieve the meta info of the Profit environment and the available connectors",
-        "tags": [
-          "API Info"
-        ],
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "updateConnectors": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "string"
-                          },
-                          "description": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    },
-                    "getConnectors": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "string"
-                          },
-                          "description": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    },
-                    "info": {
-                      "type": "object",
-                      "properties": {
-                        "envid": {
-                          "type": "string"
-                        },
-                        "appName": {
-                          "type": "string"
-                        },
-                        "group": {
-                          "type": "string"
-                        },
-                        "tokenExpiry": {
-                          "type": "string"
-                        }
-                      }
-                    }
-                  }
-                },
-                "examples": {
-                  "Example Result": {
-                    "value": {
-                      "updateConnectors": [
-                        {
-                          "id": "HrCreateApplicant",
-                          "description": "Aanmaken sollicitatie"
-                        },
-                        {
-                          "id": "FbSubscription",
-                          "description": "Abonnement"
-                        },
-                        {
-                          "id": "KnAddress",
-                          "description": "Adres"
-                        }
-                      ],
-                      "getConnectors": [
-                        {
-                          "id": "Profit_Fin_ChangedEntrydate",
-                          "description": "Profit_Fin_ChangedEntrydate"
-                        },
-                        {
-                          "id": "Profit_Functions",
-                          "description": "Profit_Functions"
-                        }
-                      ],
-                      "info": {
-                        "envid": "A123456AC",
-                        "appName": "OpenAPI Spec Example",
-                        "group": "AuthorizationGroup 101 (12345.USER)",
-                        "tokenExpiry": "0"
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get_MetaInfo"
-      }
-    },
-    "/Metainfo/{Type}/{Endpoint}": {
-      "get": {
-        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
-        "tags": [
-          "API Info"
-        ],
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "name": {
-                      "type": "string"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "fields": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "string"
-                          },
-                          "fieldId": {
-                            "type": "string"
-                          },
-                          "dataType": {
-                            "type": "string"
-                          },
-                          "label": {
-                            "type": "string"
-                          },
-                          "length": {
-                            "type": "integer"
-                          },
-                          "controlType": {
-                            "type": "integer"
-                          },
-                          "decimals": {
-                            "type": "integer"
-                          },
-                          "decimalsFieldId": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
-                "examples": {
-                  "Example Result": {
-                    "value": {
-                      "name": "Profit_Administrations",
-                      "description": "Administraties (Profit)",
-                      "fields": [
-                        {
-                          "id": "AdminId",
-                          "fieldId": "U002",
-                          "dataType": "int",
-                          "label": "Administratie",
-                          "length": 3,
-                          "controlType": 5,
-                          "decimals": 0,
-                          "decimalsFieldId": ""
-                        },
-                        {
-                          "id": "AdminNm",
-                          "fieldId": "U001",
-                          "dataType": "string",
-                          "label": "Naam administratie",
-                          "length": 80,
-                          "controlType": 1,
-                          "decimals": 0,
-                          "decimalsFieldId": ""
-                        },
-                        {
-                          "id": "AdminCd",
-                          "fieldId": "UnCo",
-                          "dataType": "string",
-                          "label": "Administratie",
-                          "length": 10,
-                          "controlType": 1,
-                          "decimals": 0,
-                          "decimalsFieldId": ""
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get_MetaInfoPerConnector",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string",
-              "enum": [
-                "get",
-                "update"
-              ],
-              "example": "update"
-            },
-            "in": "path",
-            "name": "Type",
-            "description": "Add the type of connector you want to get the meta info from",
-            "required": true
-          },
-          {
-            "schema": {
-              "type": "string",
-              "example": "KnEmployee"
-            },
-            "in": "path",
-            "name": "Endpoint",
-            "description": "Add the endpoint id of the connector you want to get the meta info from",
-            "required": true
-          },
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          }
-        ]
-      }
-    },
-    "/connectors/{Endpoint}": {
-      "get": {
-        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
-        "tags": [
-          "GET"
-        ],
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "skip": {
-                      "type": "integer"
-                    },
-                    "take": {
-                      "type": "integer"
-                    },
-                    "rows": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "EmployeeId": {
-                            "type": "string"
-                          },
-                          "EmploymentEndDate": {
-                            "type": "string"
-                          },
-                          "EmailForDigitalDocuments": {
-                            "type": "string",
-                            "nullable": true
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
-                "examples": {
-                  "Example response": {
-                    "value": {
-                      "skip": 0,
-                      "take": 100,
-                      "rows": [
-                        {
-                          "EmployeeId": "000001005",
-                          "EmploymentEndDate": "2020-11-22T00:00:00Z",
-                          "EmailForDigitalDocuments": null
-                        },
-                        {
-                          "EmployeeId": "000001006",
-                          "EmploymentEndDate": "2020-11-22T00:00:00Z",
-                          "EmailForDigitalDocuments": null
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get_MetaInfoPerCustomConnector",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string",
-              "example": "your_custom_endpoint_id"
-            },
-            "in": "path",
-            "name": "Endpoint",
-            "description": "Add the id of connector you want to get the meta info from",
-            "required": true
-          },
-          {
-            "name": "skip",
-            "in": "query",
-            "required": false,
-            "description": "Pagination: amount of results skipped. Starts at 0",
-            "schema": {
-              "type": "number",
-              "example": 0
-            }
-          },
-          {
-            "name": "take",
-            "in": "query",
-            "required": false,
-            "description": "Pagination: amount of results returned",
-            "schema": {
-              "type": "number",
-              "example": 100
-            }
-          },
-          {
-            "name": "orderbyfieldids",
-            "in": "query",
-            "required": false,
-            "description": "Must be used to prevent reordered results.",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filterfieldids",
-            "in": "query",
-            "required": false,
-            "description": "The fieldIds of the values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filtervalues",
-            "in": "query",
-            "required": false,
-            "description": "The values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "operatortypes",
-            "in": "query",
-            "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
-            "schema": {
-              "type": "number",
-              "enum": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                13,
-                14,
-                15
-              ]
-            }
-          }
-        ]
-      }
-    },
-    "/ProfitVersion": {
-      "get": {
-        "summary": "Get the current Profit version",
-        "tags": [
-          "API Info"
-        ],
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "version": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "examples": {
-                  "Example Result": {
-                    "value": {
-                      "version": "22.22.5"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get_ProfitVersion"
-      }
     }
   },
   "tags": [
@@ -14419,10 +14443,11 @@
                           "U",
                           "V",
                           "X",
-                          "Y"
+                          "Y",
+                          "Z"
                         ],
                         "maxLength": 20,
-                        "description": "Voorkeur verstrekkingswijze\nA = Afdrukken;\nB = Afdrukken + e-mail PDF;\nC = Facturen Peppol + overige rapporten e-mail PDF;\nD = E-mail PDF + E-factuur (DICO);\nE = E-mail PDF;\nF = eVerbinding (UBL);\nM = XML-order;\nO = Portal + e-mail;\nP = Afdrukken + versturen via EDI;\nQ = Factuur en DICO in dossier plaatsen;\nR = Factuur en UBL in dossier plaatsen;\nS = In dossier zetten;\nU = E-mail PDF + E-factuur (UBL);\nV = Versturen via EDI;\nX = Reeds verstrekt, niet opnieuw verstrekken;\nY = Niet verstrekken;",
+                        "description": "Voorkeur verstrekkingswijze\nA = Afdrukken;\nB = Afdrukken + e-mail PDF;\nC = Facturen Peppol + overige rapporten e-mail PDF;\nD = E-mail PDF + E-factuur (DICO);\nE = E-mail PDF;\nF = eVerbinding (UBL);\nM = XML-order;\nO = Portal + e-mail;\nP = Afdrukken + versturen via EDI;\nQ = Factuur en DICO in dossier plaatsen;\nR = Factuur en UBL in dossier plaatsen;\nS = In dossier zetten;\nU = E-mail PDF + E-factuur (UBL);\nV = Versturen via EDI;\nX = Reeds verstrekt, niet opnieuw verstrekken;\nY = Niet verstrekken;\nZ = MijnOverheid Berichtenbox;",
                         "format": ""
                       },
                       "SpIV": {
@@ -16116,7 +16141,7 @@
                                                                           "LT",
                                                                           "MAR",
                                                                           "BUR",
-                                                                          "SWA",
+                                                                          "NAM",
                                                                           "GRF",
                                                                           "499",
                                                                           "AL",
@@ -16157,7 +16182,7 @@
                                                                           "PSE"
                                                                         ],
                                                                         "maxLength": 20,
-                                                                        "description": "Nationaliteit\n000 = Onbekend;\nNL = Nederlandse;\nDZ = Algerijnse;\nAN = Angolese;\nRU = Burundese;\nRB = Botswaanse;\nBU = Burkinese;\nRCA = Centraal-Afrikaanse;\nKM = Comorese;\nRCB = Kongolese;\nDY = Beninse;\nET = Egyptische;\nEQ = Equatoriaalguinese;\nETH = Ethiopische;\nDJI = Djiboutiaanse;\nGA = Gabonese;\nWAG = Gambiaanse;\nGH = Ghanese;\nGN = Guinese;\nCI = Ivoriaanse;\nCV = Kaapverdische;\nTC = Kameroense;\nEAK = Kenyaanse;\nCD = Zaïrese;\nLS = Lesothaanse;\nLB = Liberiaanse;\nLAR = Libische;\nRM = Malagassische;\nMW = Malawische;\nRMM = Malinese;\nMA = Marokkaanse;\nRIM = Mauritaanse;\nMS = Mauritiaanse;\nMOC = Mozambikaanse;\nRN = Nigerese;\nWAN = Nigeriaanse;\nEAU = Ugandese;\nGW = Guinee-Bissause;\nZA = Zuid-Afrikaanse;\nSD = Eswatinische;\nZW = Zimbabwaanse;\nRWA = Rwandese;\nST = Burger van São Tomé en Principe;\nSN = Senegalese;\nWAL = Sierra Leoonse;\nSUD = Soedanese;\nSP = Somalische;\nEAT = Tanzaniaanse;\nTG = Togolese;\nTS = Tsjadische;\nTN = Tunesische;\nZ = Zambiaanse;\nSS = Zuid-Soedanese;\nBS = Bahamaanse;\nBH = Belizaanse;\nCDN = Canadese;\nCR = Costa Ricaanse;\nC = Cubaanse;\nDOM = Dominicaanse;\nEL = Salvadoraanse;\nGCA = Guatemalaanse;\nRH = Haïtiaanse;\nHON = Hondurese;\nJA = Jamaicaanse;\nMEX = Mexicaanse;\nNIC = Nicaraguaanse;\nPA = Panamese;\nTT = Burger van Trinidad en Tobago;\nUSA = Amerikaans burger;\nRA = Argentijnse;\nBDS = Barbadaanse;\nBOL = Boliviaanse;\nBR = Braziliaanse;\nRCH = Chileense;\nCO = Colombiaanse;\nEC = Ecuadoraanse;\nGUY = Guyaanse;\nPY = Paraguayaanse;\nPE = Peruaanse;\nSME = Surinaamse;\nROU = Uruguayaanse;\nYV = Venezolaanse;\nWG = Grenadaanse;\nKN = Burger van Saint Kitts-Nevis;\nSK = Slowaakse;\nCZ = Tsjechische;\nBA = Burger van Bosnië-Herzegovina;\nGE = Georgische;\nAFG = Afghaanse;\nBRN = Bahreinse;\nBT = Bhutaanse;\nBM = Burmaanse;\nBRU = Bruneise;\nK = Cambodjaanse;\nCL = Sri Lankaanse;\nCN = Chinese;\nCY = Cyprische;\nRP = Filipijnse;\nTMN = Turkmeense;\nRC = Taiwanese;\nIND = Indiase;\nRI = Indonesische;\nIRQ = Iraakse;\nIR = Iraanse;\nIL = Israëlische;\nJ = Japanse;\nHKJ = Jordaanse;\nTAD = Tadzjiekse;\nKWT = Koeweitse;\nLAO = Laotiaanse;\nRL = Libanese;\nMV = Maldivische;\nMAL = Maleisische;\nMON = Mongolische;\nOMA = Omaanse;\nNPL = Nepalese;\nKO = Noord-Koreaanse;\nOEZ = Oezbeekse;\nPK = Pakistaanse;\nQA = Qatarese;\nAS = Saoedi-Arabische;\nSGP = Singaporese;\nSYR = Syrische;\nT = Thaise;\nAE = Burger van de Ver. Arabische Emiraten;\nTR = Turkse;\nUA = Oekraïense;\nROK = Zuid-Koreaanse;\nVN = Vietnamese;\nBD = Bengalese;\nKG = Kirgizische;\nMD = Moldavische;\nKZ = Kazachse;\nBY = Belarussische;\nAZ = Azerbeidzjaanse;\nAM = Armeense;\nAUS = Australische;\nPNG = Papoea-Nieuw-Guinese;\nNZ = Nieuw-Zeelandse;\nWSM = West-Samoaanse;\nWS = Samoaanse;\nRUS = Russische;\nSLO = Sloveense;\nAG = Burger van Antigua en Barbuda;\nVU = Vanuatuaanse;\nFJI = Fijische;\nGB4 = Burger van Britse afhankelijke gebieden;\nHR = Kroatische;\nTO = Tongaanse;\nNR = Nauruaanse;\nPLW = Palause;\nUSA2 = Amerikaans onderdaan;\nLV = Letse;\nSB = Salomonseilandse;\nMIC = Micronesische;\nSY = Seychelse;\nKIR = Kiribatische;\nTV = Tuvaluaanse;\nWL = Saint Luciaanse;\nWD = Burger van Dominica;\nWV = Burger van Saint Vincent en de Grenadines;\nEE = Estische;\nIOT = British National (overseas);\nZRE = Burger van Democratische Republiek Congo;\nTLS = Burger van Timor Leste;\nSCG = Burger van Servië en Montenegro;\nSRB = Servische;\nMNE = Montenegrijnse;\nLT = Litouwse;\nMAR = Marshalleilandse;\nBUR = Myanmarese;\nSWA = Namibische;\nGRF = Vluchteling;\n499 = Staatloos;\nAL = Albanese;\nAND = Andorrese;\nB = Belgische;\nBG = Bulgaarse;\nDK = Deense;\nD = Duitse;\nFIN = Finse;\nF = Franse;\nYMN = Jemenitische;\nGR = Griekse;\nGB = Brits burger;\nH = Hongaarse;\nIRL = Ierse;\nIS = IJslandse;\nI = Italiaanse;\nYU = Joegoslavische;\nFL = Liechtensteinse;\nL = Luxemburgse;\nM = Maltese;\nMC = Monegaskische;\nN = Noorse;\nA = Oostenrijkse;\nPL = Poolse;\nP = Portugese;\nRO = Roemeense;\nRSM = San Marinese;\nE = Spaanse;\nVAT = Vaticaanse;\nS = Zweedse;\nCH = Zwitserse;\nGB2 = Brits onderdaan;\nERI = Eritrese;\nGB3 = Staatsburger van de Britse overzeese gebiedsdelen;\nXK = Kosovaarse;\nMK = Burger van de Republiek Noord-Macedonië;\nPSE = Palestijn;",
+                                                                        "description": "Nationaliteit\n000 = Onbekend;\nNL = Nederlandse;\nDZ = Algerijnse;\nAN = Angolese;\nRU = Burundese;\nRB = Botswaanse;\nBU = Burkinese;\nRCA = Centraal-Afrikaanse;\nKM = Comorese;\nRCB = Kongolese;\nDY = Beninse;\nET = Egyptische;\nEQ = Equatoriaalguinese;\nETH = Ethiopische;\nDJI = Djiboutiaanse;\nGA = Gabonese;\nWAG = Gambiaanse;\nGH = Ghanese;\nGN = Guinese;\nCI = Ivoriaanse;\nCV = Kaapverdische;\nTC = Kameroense;\nEAK = Kenyaanse;\nCD = Zaïrese;\nLS = Lesothaanse;\nLB = Liberiaanse;\nLAR = Libische;\nRM = Malagassische;\nMW = Malawische;\nRMM = Malinese;\nMA = Marokkaanse;\nRIM = Mauritaanse;\nMS = Mauritiaanse;\nMOC = Mozambikaanse;\nRN = Nigerese;\nWAN = Nigeriaanse;\nEAU = Ugandese;\nGW = Guinee-Bissause;\nZA = Zuid-Afrikaanse;\nSD = Eswatinische;\nZW = Zimbabwaanse;\nRWA = Rwandese;\nST = Burger van São Tomé en Principe;\nSN = Senegalese;\nWAL = Sierra Leoonse;\nSUD = Soedanese;\nSP = Somalische;\nEAT = Tanzaniaanse;\nTG = Togolese;\nTS = Tsjadische;\nTN = Tunesische;\nZ = Zambiaanse;\nSS = Zuid-Soedanese;\nBS = Bahamaanse;\nBH = Belizaanse;\nCDN = Canadese;\nCR = Costa Ricaanse;\nC = Cubaanse;\nDOM = Dominicaanse;\nEL = Salvadoraanse;\nGCA = Guatemalaanse;\nRH = Haïtiaanse;\nHON = Hondurese;\nJA = Jamaicaanse;\nMEX = Mexicaanse;\nNIC = Nicaraguaanse;\nPA = Panamese;\nTT = Burger van Trinidad en Tobago;\nUSA = Amerikaans burger;\nRA = Argentijnse;\nBDS = Barbadaanse;\nBOL = Boliviaanse;\nBR = Braziliaanse;\nRCH = Chileense;\nCO = Colombiaanse;\nEC = Ecuadoraanse;\nGUY = Guyaanse;\nPY = Paraguayaanse;\nPE = Peruaanse;\nSME = Surinaamse;\nROU = Uruguayaanse;\nYV = Venezolaanse;\nWG = Grenadaanse;\nKN = Burger van Saint Kitts-Nevis;\nSK = Slowaakse;\nCZ = Tsjechische;\nBA = Burger van Bosnië-Herzegovina;\nGE = Georgische;\nAFG = Afghaanse;\nBRN = Bahreinse;\nBT = Bhutaanse;\nBM = Burmaanse;\nBRU = Bruneise;\nK = Cambodjaanse;\nCL = Sri Lankaanse;\nCN = Chinese;\nCY = Cyprische;\nRP = Filipijnse;\nTMN = Turkmeense;\nRC = Taiwanese;\nIND = Indiase;\nRI = Indonesische;\nIRQ = Iraakse;\nIR = Iraanse;\nIL = Israëlische;\nJ = Japanse;\nHKJ = Jordaanse;\nTAD = Tadzjiekse;\nKWT = Koeweitse;\nLAO = Laotiaanse;\nRL = Libanese;\nMV = Maldivische;\nMAL = Maleisische;\nMON = Mongolische;\nOMA = Omaanse;\nNPL = Nepalese;\nKO = Noord-Koreaanse;\nOEZ = Oezbeekse;\nPK = Pakistaanse;\nQA = Qatarese;\nAS = Saoedi-Arabische;\nSGP = Singaporese;\nSYR = Syrische;\nT = Thaise;\nAE = Burger van de Ver. Arabische Emiraten;\nTR = Turkse;\nUA = Oekraïense;\nROK = Zuid-Koreaanse;\nVN = Vietnamese;\nBD = Bengalese;\nKG = Kirgizische;\nMD = Moldavische;\nKZ = Kazachse;\nBY = Belarussische;\nAZ = Azerbeidzjaanse;\nAM = Armeense;\nAUS = Australische;\nPNG = Papoea-Nieuw-Guinese;\nNZ = Nieuw-Zeelandse;\nWSM = West-Samoaanse;\nWS = Samoaanse;\nRUS = Russische;\nSLO = Sloveense;\nAG = Burger van Antigua en Barbuda;\nVU = Vanuatuaanse;\nFJI = Fijische;\nGB4 = Burger van Britse afhankelijke gebieden;\nHR = Kroatische;\nTO = Tongaanse;\nNR = Nauruaanse;\nPLW = Palause;\nUSA2 = Amerikaans onderdaan;\nLV = Letse;\nSB = Salomonseilandse;\nMIC = Micronesische;\nSY = Seychelse;\nKIR = Kiribatische;\nTV = Tuvaluaanse;\nWL = Saint Luciaanse;\nWD = Burger van Dominica;\nWV = Burger van Saint Vincent en de Grenadines;\nEE = Estische;\nIOT = British National (overseas);\nZRE = Burger van Democratische Republiek Congo;\nTLS = Burger van Timor Leste;\nSCG = Burger van Servië en Montenegro;\nSRB = Servische;\nMNE = Montenegrijnse;\nLT = Litouwse;\nMAR = Marshalleilandse;\nBUR = Myanmarese;\nNAM = Namibische;\nGRF = Vluchteling;\n499 = Staatloos;\nAL = Albanese;\nAND = Andorrese;\nB = Belgische;\nBG = Bulgaarse;\nDK = Deense;\nD = Duitse;\nFIN = Finse;\nF = Franse;\nYMN = Jemenitische;\nGR = Griekse;\nGB = Brits burger;\nH = Hongaarse;\nIRL = Ierse;\nIS = IJslandse;\nI = Italiaanse;\nYU = Joegoslavische;\nFL = Liechtensteinse;\nL = Luxemburgse;\nM = Maltese;\nMC = Monegaskische;\nN = Noorse;\nA = Oostenrijkse;\nPL = Poolse;\nP = Portugese;\nRO = Roemeense;\nRSM = San Marinese;\nE = Spaanse;\nVAT = Vaticaanse;\nS = Zweedse;\nCH = Zwitserse;\nGB2 = Brits onderdaan;\nERI = Eritrese;\nGB3 = Staatsburger van de Britse overzeese gebiedsdelen;\nXK = Kosovaarse;\nMK = Burger van de Republiek Noord-Macedonië;\nPSE = Palestijn;",
                                                                         "format": ""
                                                                       },
                                                                       "DaBi": {
@@ -16977,10 +17002,11 @@
                           "U",
                           "V",
                           "X",
-                          "Y"
+                          "Y",
+                          "Z"
                         ],
                         "maxLength": 20,
-                        "description": "Voorkeur verstrekkingswijze\nA = Afdrukken;\nB = Afdrukken + e-mail PDF;\nC = Facturen Peppol + overige rapporten e-mail PDF;\nD = E-mail PDF + E-factuur (DICO);\nE = E-mail PDF;\nF = eVerbinding (UBL);\nM = XML-order;\nO = Portal + e-mail;\nP = Afdrukken + versturen via EDI;\nQ = Factuur en DICO in dossier plaatsen;\nR = Factuur en UBL in dossier plaatsen;\nS = In dossier zetten;\nU = E-mail PDF + E-factuur (UBL);\nV = Versturen via EDI;\nX = Reeds verstrekt, niet opnieuw verstrekken;\nY = Niet verstrekken;",
+                        "description": "Voorkeur verstrekkingswijze\nA = Afdrukken;\nB = Afdrukken + e-mail PDF;\nC = Facturen Peppol + overige rapporten e-mail PDF;\nD = E-mail PDF + E-factuur (DICO);\nE = E-mail PDF;\nF = eVerbinding (UBL);\nM = XML-order;\nO = Portal + e-mail;\nP = Afdrukken + versturen via EDI;\nQ = Factuur en DICO in dossier plaatsen;\nR = Factuur en UBL in dossier plaatsen;\nS = In dossier zetten;\nU = E-mail PDF + E-factuur (UBL);\nV = Versturen via EDI;\nX = Reeds verstrekt, niet opnieuw verstrekken;\nY = Niet verstrekken;\nZ = MijnOverheid Berichtenbox;",
                         "format": ""
                       },
                       "SpIV": {
@@ -18640,7 +18666,7 @@
                                                                           "LT",
                                                                           "MAR",
                                                                           "BUR",
-                                                                          "SWA",
+                                                                          "NAM",
                                                                           "GRF",
                                                                           "499",
                                                                           "AL",
@@ -18681,7 +18707,7 @@
                                                                           "PSE"
                                                                         ],
                                                                         "maxLength": 20,
-                                                                        "description": "Nationaliteit\n000 = Onbekend;\nNL = Nederlandse;\nDZ = Algerijnse;\nAN = Angolese;\nRU = Burundese;\nRB = Botswaanse;\nBU = Burkinese;\nRCA = Centraal-Afrikaanse;\nKM = Comorese;\nRCB = Kongolese;\nDY = Beninse;\nET = Egyptische;\nEQ = Equatoriaalguinese;\nETH = Ethiopische;\nDJI = Djiboutiaanse;\nGA = Gabonese;\nWAG = Gambiaanse;\nGH = Ghanese;\nGN = Guinese;\nCI = Ivoriaanse;\nCV = Kaapverdische;\nTC = Kameroense;\nEAK = Kenyaanse;\nCD = Zaïrese;\nLS = Lesothaanse;\nLB = Liberiaanse;\nLAR = Libische;\nRM = Malagassische;\nMW = Malawische;\nRMM = Malinese;\nMA = Marokkaanse;\nRIM = Mauritaanse;\nMS = Mauritiaanse;\nMOC = Mozambikaanse;\nRN = Nigerese;\nWAN = Nigeriaanse;\nEAU = Ugandese;\nGW = Guinee-Bissause;\nZA = Zuid-Afrikaanse;\nSD = Eswatinische;\nZW = Zimbabwaanse;\nRWA = Rwandese;\nST = Burger van São Tomé en Principe;\nSN = Senegalese;\nWAL = Sierra Leoonse;\nSUD = Soedanese;\nSP = Somalische;\nEAT = Tanzaniaanse;\nTG = Togolese;\nTS = Tsjadische;\nTN = Tunesische;\nZ = Zambiaanse;\nSS = Zuid-Soedanese;\nBS = Bahamaanse;\nBH = Belizaanse;\nCDN = Canadese;\nCR = Costa Ricaanse;\nC = Cubaanse;\nDOM = Dominicaanse;\nEL = Salvadoraanse;\nGCA = Guatemalaanse;\nRH = Haïtiaanse;\nHON = Hondurese;\nJA = Jamaicaanse;\nMEX = Mexicaanse;\nNIC = Nicaraguaanse;\nPA = Panamese;\nTT = Burger van Trinidad en Tobago;\nUSA = Amerikaans burger;\nRA = Argentijnse;\nBDS = Barbadaanse;\nBOL = Boliviaanse;\nBR = Braziliaanse;\nRCH = Chileense;\nCO = Colombiaanse;\nEC = Ecuadoraanse;\nGUY = Guyaanse;\nPY = Paraguayaanse;\nPE = Peruaanse;\nSME = Surinaamse;\nROU = Uruguayaanse;\nYV = Venezolaanse;\nWG = Grenadaanse;\nKN = Burger van Saint Kitts-Nevis;\nSK = Slowaakse;\nCZ = Tsjechische;\nBA = Burger van Bosnië-Herzegovina;\nGE = Georgische;\nAFG = Afghaanse;\nBRN = Bahreinse;\nBT = Bhutaanse;\nBM = Burmaanse;\nBRU = Bruneise;\nK = Cambodjaanse;\nCL = Sri Lankaanse;\nCN = Chinese;\nCY = Cyprische;\nRP = Filipijnse;\nTMN = Turkmeense;\nRC = Taiwanese;\nIND = Indiase;\nRI = Indonesische;\nIRQ = Iraakse;\nIR = Iraanse;\nIL = Israëlische;\nJ = Japanse;\nHKJ = Jordaanse;\nTAD = Tadzjiekse;\nKWT = Koeweitse;\nLAO = Laotiaanse;\nRL = Libanese;\nMV = Maldivische;\nMAL = Maleisische;\nMON = Mongolische;\nOMA = Omaanse;\nNPL = Nepalese;\nKO = Noord-Koreaanse;\nOEZ = Oezbeekse;\nPK = Pakistaanse;\nQA = Qatarese;\nAS = Saoedi-Arabische;\nSGP = Singaporese;\nSYR = Syrische;\nT = Thaise;\nAE = Burger van de Ver. Arabische Emiraten;\nTR = Turkse;\nUA = Oekraïense;\nROK = Zuid-Koreaanse;\nVN = Vietnamese;\nBD = Bengalese;\nKG = Kirgizische;\nMD = Moldavische;\nKZ = Kazachse;\nBY = Belarussische;\nAZ = Azerbeidzjaanse;\nAM = Armeense;\nAUS = Australische;\nPNG = Papoea-Nieuw-Guinese;\nNZ = Nieuw-Zeelandse;\nWSM = West-Samoaanse;\nWS = Samoaanse;\nRUS = Russische;\nSLO = Sloveense;\nAG = Burger van Antigua en Barbuda;\nVU = Vanuatuaanse;\nFJI = Fijische;\nGB4 = Burger van Britse afhankelijke gebieden;\nHR = Kroatische;\nTO = Tongaanse;\nNR = Nauruaanse;\nPLW = Palause;\nUSA2 = Amerikaans onderdaan;\nLV = Letse;\nSB = Salomonseilandse;\nMIC = Micronesische;\nSY = Seychelse;\nKIR = Kiribatische;\nTV = Tuvaluaanse;\nWL = Saint Luciaanse;\nWD = Burger van Dominica;\nWV = Burger van Saint Vincent en de Grenadines;\nEE = Estische;\nIOT = British National (overseas);\nZRE = Burger van Democratische Republiek Congo;\nTLS = Burger van Timor Leste;\nSCG = Burger van Servië en Montenegro;\nSRB = Servische;\nMNE = Montenegrijnse;\nLT = Litouwse;\nMAR = Marshalleilandse;\nBUR = Myanmarese;\nSWA = Namibische;\nGRF = Vluchteling;\n499 = Staatloos;\nAL = Albanese;\nAND = Andorrese;\nB = Belgische;\nBG = Bulgaarse;\nDK = Deense;\nD = Duitse;\nFIN = Finse;\nF = Franse;\nYMN = Jemenitische;\nGR = Griekse;\nGB = Brits burger;\nH = Hongaarse;\nIRL = Ierse;\nIS = IJslandse;\nI = Italiaanse;\nYU = Joegoslavische;\nFL = Liechtensteinse;\nL = Luxemburgse;\nM = Maltese;\nMC = Monegaskische;\nN = Noorse;\nA = Oostenrijkse;\nPL = Poolse;\nP = Portugese;\nRO = Roemeense;\nRSM = San Marinese;\nE = Spaanse;\nVAT = Vaticaanse;\nS = Zweedse;\nCH = Zwitserse;\nGB2 = Brits onderdaan;\nERI = Eritrese;\nGB3 = Staatsburger van de Britse overzeese gebiedsdelen;\nXK = Kosovaarse;\nMK = Burger van de Republiek Noord-Macedonië;\nPSE = Palestijn;",
+                                                                        "description": "Nationaliteit\n000 = Onbekend;\nNL = Nederlandse;\nDZ = Algerijnse;\nAN = Angolese;\nRU = Burundese;\nRB = Botswaanse;\nBU = Burkinese;\nRCA = Centraal-Afrikaanse;\nKM = Comorese;\nRCB = Kongolese;\nDY = Beninse;\nET = Egyptische;\nEQ = Equatoriaalguinese;\nETH = Ethiopische;\nDJI = Djiboutiaanse;\nGA = Gabonese;\nWAG = Gambiaanse;\nGH = Ghanese;\nGN = Guinese;\nCI = Ivoriaanse;\nCV = Kaapverdische;\nTC = Kameroense;\nEAK = Kenyaanse;\nCD = Zaïrese;\nLS = Lesothaanse;\nLB = Liberiaanse;\nLAR = Libische;\nRM = Malagassische;\nMW = Malawische;\nRMM = Malinese;\nMA = Marokkaanse;\nRIM = Mauritaanse;\nMS = Mauritiaanse;\nMOC = Mozambikaanse;\nRN = Nigerese;\nWAN = Nigeriaanse;\nEAU = Ugandese;\nGW = Guinee-Bissause;\nZA = Zuid-Afrikaanse;\nSD = Eswatinische;\nZW = Zimbabwaanse;\nRWA = Rwandese;\nST = Burger van São Tomé en Principe;\nSN = Senegalese;\nWAL = Sierra Leoonse;\nSUD = Soedanese;\nSP = Somalische;\nEAT = Tanzaniaanse;\nTG = Togolese;\nTS = Tsjadische;\nTN = Tunesische;\nZ = Zambiaanse;\nSS = Zuid-Soedanese;\nBS = Bahamaanse;\nBH = Belizaanse;\nCDN = Canadese;\nCR = Costa Ricaanse;\nC = Cubaanse;\nDOM = Dominicaanse;\nEL = Salvadoraanse;\nGCA = Guatemalaanse;\nRH = Haïtiaanse;\nHON = Hondurese;\nJA = Jamaicaanse;\nMEX = Mexicaanse;\nNIC = Nicaraguaanse;\nPA = Panamese;\nTT = Burger van Trinidad en Tobago;\nUSA = Amerikaans burger;\nRA = Argentijnse;\nBDS = Barbadaanse;\nBOL = Boliviaanse;\nBR = Braziliaanse;\nRCH = Chileense;\nCO = Colombiaanse;\nEC = Ecuadoraanse;\nGUY = Guyaanse;\nPY = Paraguayaanse;\nPE = Peruaanse;\nSME = Surinaamse;\nROU = Uruguayaanse;\nYV = Venezolaanse;\nWG = Grenadaanse;\nKN = Burger van Saint Kitts-Nevis;\nSK = Slowaakse;\nCZ = Tsjechische;\nBA = Burger van Bosnië-Herzegovina;\nGE = Georgische;\nAFG = Afghaanse;\nBRN = Bahreinse;\nBT = Bhutaanse;\nBM = Burmaanse;\nBRU = Bruneise;\nK = Cambodjaanse;\nCL = Sri Lankaanse;\nCN = Chinese;\nCY = Cyprische;\nRP = Filipijnse;\nTMN = Turkmeense;\nRC = Taiwanese;\nIND = Indiase;\nRI = Indonesische;\nIRQ = Iraakse;\nIR = Iraanse;\nIL = Israëlische;\nJ = Japanse;\nHKJ = Jordaanse;\nTAD = Tadzjiekse;\nKWT = Koeweitse;\nLAO = Laotiaanse;\nRL = Libanese;\nMV = Maldivische;\nMAL = Maleisische;\nMON = Mongolische;\nOMA = Omaanse;\nNPL = Nepalese;\nKO = Noord-Koreaanse;\nOEZ = Oezbeekse;\nPK = Pakistaanse;\nQA = Qatarese;\nAS = Saoedi-Arabische;\nSGP = Singaporese;\nSYR = Syrische;\nT = Thaise;\nAE = Burger van de Ver. Arabische Emiraten;\nTR = Turkse;\nUA = Oekraïense;\nROK = Zuid-Koreaanse;\nVN = Vietnamese;\nBD = Bengalese;\nKG = Kirgizische;\nMD = Moldavische;\nKZ = Kazachse;\nBY = Belarussische;\nAZ = Azerbeidzjaanse;\nAM = Armeense;\nAUS = Australische;\nPNG = Papoea-Nieuw-Guinese;\nNZ = Nieuw-Zeelandse;\nWSM = West-Samoaanse;\nWS = Samoaanse;\nRUS = Russische;\nSLO = Sloveense;\nAG = Burger van Antigua en Barbuda;\nVU = Vanuatuaanse;\nFJI = Fijische;\nGB4 = Burger van Britse afhankelijke gebieden;\nHR = Kroatische;\nTO = Tongaanse;\nNR = Nauruaanse;\nPLW = Palause;\nUSA2 = Amerikaans onderdaan;\nLV = Letse;\nSB = Salomonseilandse;\nMIC = Micronesische;\nSY = Seychelse;\nKIR = Kiribatische;\nTV = Tuvaluaanse;\nWL = Saint Luciaanse;\nWD = Burger van Dominica;\nWV = Burger van Saint Vincent en de Grenadines;\nEE = Estische;\nIOT = British National (overseas);\nZRE = Burger van Democratische Republiek Congo;\nTLS = Burger van Timor Leste;\nSCG = Burger van Servië en Montenegro;\nSRB = Servische;\nMNE = Montenegrijnse;\nLT = Litouwse;\nMAR = Marshalleilandse;\nBUR = Myanmarese;\nNAM = Namibische;\nGRF = Vluchteling;\n499 = Staatloos;\nAL = Albanese;\nAND = Andorrese;\nB = Belgische;\nBG = Bulgaarse;\nDK = Deense;\nD = Duitse;\nFIN = Finse;\nF = Franse;\nYMN = Jemenitische;\nGR = Griekse;\nGB = Brits burger;\nH = Hongaarse;\nIRL = Ierse;\nIS = IJslandse;\nI = Italiaanse;\nYU = Joegoslavische;\nFL = Liechtensteinse;\nL = Luxemburgse;\nM = Maltese;\nMC = Monegaskische;\nN = Noorse;\nA = Oostenrijkse;\nPL = Poolse;\nP = Portugese;\nRO = Roemeense;\nRSM = San Marinese;\nE = Spaanse;\nVAT = Vaticaanse;\nS = Zweedse;\nCH = Zwitserse;\nGB2 = Brits onderdaan;\nERI = Eritrese;\nGB3 = Staatsburger van de Britse overzeese gebiedsdelen;\nXK = Kosovaarse;\nMK = Burger van de Republiek Noord-Macedonië;\nPSE = Palestijn;",
                                                                         "format": ""
                                                                       },
                                                                       "DaBi": {
@@ -19488,10 +19514,11 @@
                           "U",
                           "V",
                           "X",
-                          "Y"
+                          "Y",
+                          "Z"
                         ],
                         "maxLength": 20,
-                        "description": "Voorkeur verstrekkingswijze\nA = Afdrukken;\nB = Afdrukken + e-mail PDF;\nC = Facturen Peppol + overige rapporten e-mail PDF;\nD = E-mail PDF + E-factuur (DICO);\nE = E-mail PDF;\nF = eVerbinding (UBL);\nM = XML-order;\nO = Portal + e-mail;\nP = Afdrukken + versturen via EDI;\nQ = Factuur en DICO in dossier plaatsen;\nR = Factuur en UBL in dossier plaatsen;\nS = In dossier zetten;\nU = E-mail PDF + E-factuur (UBL);\nV = Versturen via EDI;\nX = Reeds verstrekt, niet opnieuw verstrekken;\nY = Niet verstrekken;",
+                        "description": "Voorkeur verstrekkingswijze\nA = Afdrukken;\nB = Afdrukken + e-mail PDF;\nC = Facturen Peppol + overige rapporten e-mail PDF;\nD = E-mail PDF + E-factuur (DICO);\nE = E-mail PDF;\nF = eVerbinding (UBL);\nM = XML-order;\nO = Portal + e-mail;\nP = Afdrukken + versturen via EDI;\nQ = Factuur en DICO in dossier plaatsen;\nR = Factuur en UBL in dossier plaatsen;\nS = In dossier zetten;\nU = E-mail PDF + E-factuur (UBL);\nV = Versturen via EDI;\nX = Reeds verstrekt, niet opnieuw verstrekken;\nY = Niet verstrekken;\nZ = MijnOverheid Berichtenbox;",
                         "format": ""
                       },
                       "SpIV": {
@@ -20023,7 +20050,7 @@
                                           "LT",
                                           "MAR",
                                           "BUR",
-                                          "SWA",
+                                          "NAM",
                                           "GRF",
                                           "499",
                                           "AL",
@@ -20064,7 +20091,7 @@
                                           "PSE"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Nationaliteit\n000 = Onbekend;\nNL = Nederlandse;\nDZ = Algerijnse;\nAN = Angolese;\nRU = Burundese;\nRB = Botswaanse;\nBU = Burkinese;\nRCA = Centraal-Afrikaanse;\nKM = Comorese;\nRCB = Kongolese;\nDY = Beninse;\nET = Egyptische;\nEQ = Equatoriaalguinese;\nETH = Ethiopische;\nDJI = Djiboutiaanse;\nGA = Gabonese;\nWAG = Gambiaanse;\nGH = Ghanese;\nGN = Guinese;\nCI = Ivoriaanse;\nCV = Kaapverdische;\nTC = Kameroense;\nEAK = Kenyaanse;\nCD = Zaïrese;\nLS = Lesothaanse;\nLB = Liberiaanse;\nLAR = Libische;\nRM = Malagassische;\nMW = Malawische;\nRMM = Malinese;\nMA = Marokkaanse;\nRIM = Mauritaanse;\nMS = Mauritiaanse;\nMOC = Mozambikaanse;\nRN = Nigerese;\nWAN = Nigeriaanse;\nEAU = Ugandese;\nGW = Guinee-Bissause;\nZA = Zuid-Afrikaanse;\nSD = Eswatinische;\nZW = Zimbabwaanse;\nRWA = Rwandese;\nST = Burger van São Tomé en Principe;\nSN = Senegalese;\nWAL = Sierra Leoonse;\nSUD = Soedanese;\nSP = Somalische;\nEAT = Tanzaniaanse;\nTG = Togolese;\nTS = Tsjadische;\nTN = Tunesische;\nZ = Zambiaanse;\nSS = Zuid-Soedanese;\nBS = Bahamaanse;\nBH = Belizaanse;\nCDN = Canadese;\nCR = Costa Ricaanse;\nC = Cubaanse;\nDOM = Dominicaanse;\nEL = Salvadoraanse;\nGCA = Guatemalaanse;\nRH = Haïtiaanse;\nHON = Hondurese;\nJA = Jamaicaanse;\nMEX = Mexicaanse;\nNIC = Nicaraguaanse;\nPA = Panamese;\nTT = Burger van Trinidad en Tobago;\nUSA = Amerikaans burger;\nRA = Argentijnse;\nBDS = Barbadaanse;\nBOL = Boliviaanse;\nBR = Braziliaanse;\nRCH = Chileense;\nCO = Colombiaanse;\nEC = Ecuadoraanse;\nGUY = Guyaanse;\nPY = Paraguayaanse;\nPE = Peruaanse;\nSME = Surinaamse;\nROU = Uruguayaanse;\nYV = Venezolaanse;\nWG = Grenadaanse;\nKN = Burger van Saint Kitts-Nevis;\nSK = Slowaakse;\nCZ = Tsjechische;\nBA = Burger van Bosnië-Herzegovina;\nGE = Georgische;\nAFG = Afghaanse;\nBRN = Bahreinse;\nBT = Bhutaanse;\nBM = Burmaanse;\nBRU = Bruneise;\nK = Cambodjaanse;\nCL = Sri Lankaanse;\nCN = Chinese;\nCY = Cyprische;\nRP = Filipijnse;\nTMN = Turkmeense;\nRC = Taiwanese;\nIND = Indiase;\nRI = Indonesische;\nIRQ = Iraakse;\nIR = Iraanse;\nIL = Israëlische;\nJ = Japanse;\nHKJ = Jordaanse;\nTAD = Tadzjiekse;\nKWT = Koeweitse;\nLAO = Laotiaanse;\nRL = Libanese;\nMV = Maldivische;\nMAL = Maleisische;\nMON = Mongolische;\nOMA = Omaanse;\nNPL = Nepalese;\nKO = Noord-Koreaanse;\nOEZ = Oezbeekse;\nPK = Pakistaanse;\nQA = Qatarese;\nAS = Saoedi-Arabische;\nSGP = Singaporese;\nSYR = Syrische;\nT = Thaise;\nAE = Burger van de Ver. Arabische Emiraten;\nTR = Turkse;\nUA = Oekraïense;\nROK = Zuid-Koreaanse;\nVN = Vietnamese;\nBD = Bengalese;\nKG = Kirgizische;\nMD = Moldavische;\nKZ = Kazachse;\nBY = Belarussische;\nAZ = Azerbeidzjaanse;\nAM = Armeense;\nAUS = Australische;\nPNG = Papoea-Nieuw-Guinese;\nNZ = Nieuw-Zeelandse;\nWSM = West-Samoaanse;\nWS = Samoaanse;\nRUS = Russische;\nSLO = Sloveense;\nAG = Burger van Antigua en Barbuda;\nVU = Vanuatuaanse;\nFJI = Fijische;\nGB4 = Burger van Britse afhankelijke gebieden;\nHR = Kroatische;\nTO = Tongaanse;\nNR = Nauruaanse;\nPLW = Palause;\nUSA2 = Amerikaans onderdaan;\nLV = Letse;\nSB = Salomonseilandse;\nMIC = Micronesische;\nSY = Seychelse;\nKIR = Kiribatische;\nTV = Tuvaluaanse;\nWL = Saint Luciaanse;\nWD = Burger van Dominica;\nWV = Burger van Saint Vincent en de Grenadines;\nEE = Estische;\nIOT = British National (overseas);\nZRE = Burger van Democratische Republiek Congo;\nTLS = Burger van Timor Leste;\nSCG = Burger van Servië en Montenegro;\nSRB = Servische;\nMNE = Montenegrijnse;\nLT = Litouwse;\nMAR = Marshalleilandse;\nBUR = Myanmarese;\nSWA = Namibische;\nGRF = Vluchteling;\n499 = Staatloos;\nAL = Albanese;\nAND = Andorrese;\nB = Belgische;\nBG = Bulgaarse;\nDK = Deense;\nD = Duitse;\nFIN = Finse;\nF = Franse;\nYMN = Jemenitische;\nGR = Griekse;\nGB = Brits burger;\nH = Hongaarse;\nIRL = Ierse;\nIS = IJslandse;\nI = Italiaanse;\nYU = Joegoslavische;\nFL = Liechtensteinse;\nL = Luxemburgse;\nM = Maltese;\nMC = Monegaskische;\nN = Noorse;\nA = Oostenrijkse;\nPL = Poolse;\nP = Portugese;\nRO = Roemeense;\nRSM = San Marinese;\nE = Spaanse;\nVAT = Vaticaanse;\nS = Zweedse;\nCH = Zwitserse;\nGB2 = Brits onderdaan;\nERI = Eritrese;\nGB3 = Staatsburger van de Britse overzeese gebiedsdelen;\nXK = Kosovaarse;\nMK = Burger van de Republiek Noord-Macedonië;\nPSE = Palestijn;",
+                                        "description": "Nationaliteit\n000 = Onbekend;\nNL = Nederlandse;\nDZ = Algerijnse;\nAN = Angolese;\nRU = Burundese;\nRB = Botswaanse;\nBU = Burkinese;\nRCA = Centraal-Afrikaanse;\nKM = Comorese;\nRCB = Kongolese;\nDY = Beninse;\nET = Egyptische;\nEQ = Equatoriaalguinese;\nETH = Ethiopische;\nDJI = Djiboutiaanse;\nGA = Gabonese;\nWAG = Gambiaanse;\nGH = Ghanese;\nGN = Guinese;\nCI = Ivoriaanse;\nCV = Kaapverdische;\nTC = Kameroense;\nEAK = Kenyaanse;\nCD = Zaïrese;\nLS = Lesothaanse;\nLB = Liberiaanse;\nLAR = Libische;\nRM = Malagassische;\nMW = Malawische;\nRMM = Malinese;\nMA = Marokkaanse;\nRIM = Mauritaanse;\nMS = Mauritiaanse;\nMOC = Mozambikaanse;\nRN = Nigerese;\nWAN = Nigeriaanse;\nEAU = Ugandese;\nGW = Guinee-Bissause;\nZA = Zuid-Afrikaanse;\nSD = Eswatinische;\nZW = Zimbabwaanse;\nRWA = Rwandese;\nST = Burger van São Tomé en Principe;\nSN = Senegalese;\nWAL = Sierra Leoonse;\nSUD = Soedanese;\nSP = Somalische;\nEAT = Tanzaniaanse;\nTG = Togolese;\nTS = Tsjadische;\nTN = Tunesische;\nZ = Zambiaanse;\nSS = Zuid-Soedanese;\nBS = Bahamaanse;\nBH = Belizaanse;\nCDN = Canadese;\nCR = Costa Ricaanse;\nC = Cubaanse;\nDOM = Dominicaanse;\nEL = Salvadoraanse;\nGCA = Guatemalaanse;\nRH = Haïtiaanse;\nHON = Hondurese;\nJA = Jamaicaanse;\nMEX = Mexicaanse;\nNIC = Nicaraguaanse;\nPA = Panamese;\nTT = Burger van Trinidad en Tobago;\nUSA = Amerikaans burger;\nRA = Argentijnse;\nBDS = Barbadaanse;\nBOL = Boliviaanse;\nBR = Braziliaanse;\nRCH = Chileense;\nCO = Colombiaanse;\nEC = Ecuadoraanse;\nGUY = Guyaanse;\nPY = Paraguayaanse;\nPE = Peruaanse;\nSME = Surinaamse;\nROU = Uruguayaanse;\nYV = Venezolaanse;\nWG = Grenadaanse;\nKN = Burger van Saint Kitts-Nevis;\nSK = Slowaakse;\nCZ = Tsjechische;\nBA = Burger van Bosnië-Herzegovina;\nGE = Georgische;\nAFG = Afghaanse;\nBRN = Bahreinse;\nBT = Bhutaanse;\nBM = Burmaanse;\nBRU = Bruneise;\nK = Cambodjaanse;\nCL = Sri Lankaanse;\nCN = Chinese;\nCY = Cyprische;\nRP = Filipijnse;\nTMN = Turkmeense;\nRC = Taiwanese;\nIND = Indiase;\nRI = Indonesische;\nIRQ = Iraakse;\nIR = Iraanse;\nIL = Israëlische;\nJ = Japanse;\nHKJ = Jordaanse;\nTAD = Tadzjiekse;\nKWT = Koeweitse;\nLAO = Laotiaanse;\nRL = Libanese;\nMV = Maldivische;\nMAL = Maleisische;\nMON = Mongolische;\nOMA = Omaanse;\nNPL = Nepalese;\nKO = Noord-Koreaanse;\nOEZ = Oezbeekse;\nPK = Pakistaanse;\nQA = Qatarese;\nAS = Saoedi-Arabische;\nSGP = Singaporese;\nSYR = Syrische;\nT = Thaise;\nAE = Burger van de Ver. Arabische Emiraten;\nTR = Turkse;\nUA = Oekraïense;\nROK = Zuid-Koreaanse;\nVN = Vietnamese;\nBD = Bengalese;\nKG = Kirgizische;\nMD = Moldavische;\nKZ = Kazachse;\nBY = Belarussische;\nAZ = Azerbeidzjaanse;\nAM = Armeense;\nAUS = Australische;\nPNG = Papoea-Nieuw-Guinese;\nNZ = Nieuw-Zeelandse;\nWSM = West-Samoaanse;\nWS = Samoaanse;\nRUS = Russische;\nSLO = Sloveense;\nAG = Burger van Antigua en Barbuda;\nVU = Vanuatuaanse;\nFJI = Fijische;\nGB4 = Burger van Britse afhankelijke gebieden;\nHR = Kroatische;\nTO = Tongaanse;\nNR = Nauruaanse;\nPLW = Palause;\nUSA2 = Amerikaans onderdaan;\nLV = Letse;\nSB = Salomonseilandse;\nMIC = Micronesische;\nSY = Seychelse;\nKIR = Kiribatische;\nTV = Tuvaluaanse;\nWL = Saint Luciaanse;\nWD = Burger van Dominica;\nWV = Burger van Saint Vincent en de Grenadines;\nEE = Estische;\nIOT = British National (overseas);\nZRE = Burger van Democratische Republiek Congo;\nTLS = Burger van Timor Leste;\nSCG = Burger van Servië en Montenegro;\nSRB = Servische;\nMNE = Montenegrijnse;\nLT = Litouwse;\nMAR = Marshalleilandse;\nBUR = Myanmarese;\nNAM = Namibische;\nGRF = Vluchteling;\n499 = Staatloos;\nAL = Albanese;\nAND = Andorrese;\nB = Belgische;\nBG = Bulgaarse;\nDK = Deense;\nD = Duitse;\nFIN = Finse;\nF = Franse;\nYMN = Jemenitische;\nGR = Griekse;\nGB = Brits burger;\nH = Hongaarse;\nIRL = Ierse;\nIS = IJslandse;\nI = Italiaanse;\nYU = Joegoslavische;\nFL = Liechtensteinse;\nL = Luxemburgse;\nM = Maltese;\nMC = Monegaskische;\nN = Noorse;\nA = Oostenrijkse;\nPL = Poolse;\nP = Portugese;\nRO = Roemeense;\nRSM = San Marinese;\nE = Spaanse;\nVAT = Vaticaanse;\nS = Zweedse;\nCH = Zwitserse;\nGB2 = Brits onderdaan;\nERI = Eritrese;\nGB3 = Staatsburger van de Britse overzeese gebiedsdelen;\nXK = Kosovaarse;\nMK = Burger van de Republiek Noord-Macedonië;\nPSE = Palestijn;",
                                         "format": ""
                                       },
                                       "DaBi": {
@@ -21267,10 +21294,11 @@
                           "U",
                           "V",
                           "X",
-                          "Y"
+                          "Y",
+                          "Z"
                         ],
                         "maxLength": 20,
-                        "description": "Voorkeur verstrekkingswijze\nA = Afdrukken;\nB = Afdrukken + e-mail PDF;\nC = Facturen Peppol + overige rapporten e-mail PDF;\nD = E-mail PDF + E-factuur (DICO);\nE = E-mail PDF;\nF = eVerbinding (UBL);\nM = XML-order;\nO = Portal + e-mail;\nP = Afdrukken + versturen via EDI;\nQ = Factuur en DICO in dossier plaatsen;\nR = Factuur en UBL in dossier plaatsen;\nS = In dossier zetten;\nU = E-mail PDF + E-factuur (UBL);\nV = Versturen via EDI;\nX = Reeds verstrekt, niet opnieuw verstrekken;\nY = Niet verstrekken;",
+                        "description": "Voorkeur verstrekkingswijze\nA = Afdrukken;\nB = Afdrukken + e-mail PDF;\nC = Facturen Peppol + overige rapporten e-mail PDF;\nD = E-mail PDF + E-factuur (DICO);\nE = E-mail PDF;\nF = eVerbinding (UBL);\nM = XML-order;\nO = Portal + e-mail;\nP = Afdrukken + versturen via EDI;\nQ = Factuur en DICO in dossier plaatsen;\nR = Factuur en UBL in dossier plaatsen;\nS = In dossier zetten;\nU = E-mail PDF + E-factuur (UBL);\nV = Versturen via EDI;\nX = Reeds verstrekt, niet opnieuw verstrekken;\nY = Niet verstrekken;\nZ = MijnOverheid Berichtenbox;",
                         "format": ""
                       },
                       "SpIV": {
@@ -21803,7 +21831,7 @@
                                           "LT",
                                           "MAR",
                                           "BUR",
-                                          "SWA",
+                                          "NAM",
                                           "GRF",
                                           "499",
                                           "AL",
@@ -21844,7 +21872,7 @@
                                           "PSE"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Nationaliteit\n000 = Onbekend;\nNL = Nederlandse;\nDZ = Algerijnse;\nAN = Angolese;\nRU = Burundese;\nRB = Botswaanse;\nBU = Burkinese;\nRCA = Centraal-Afrikaanse;\nKM = Comorese;\nRCB = Kongolese;\nDY = Beninse;\nET = Egyptische;\nEQ = Equatoriaalguinese;\nETH = Ethiopische;\nDJI = Djiboutiaanse;\nGA = Gabonese;\nWAG = Gambiaanse;\nGH = Ghanese;\nGN = Guinese;\nCI = Ivoriaanse;\nCV = Kaapverdische;\nTC = Kameroense;\nEAK = Kenyaanse;\nCD = Zaïrese;\nLS = Lesothaanse;\nLB = Liberiaanse;\nLAR = Libische;\nRM = Malagassische;\nMW = Malawische;\nRMM = Malinese;\nMA = Marokkaanse;\nRIM = Mauritaanse;\nMS = Mauritiaanse;\nMOC = Mozambikaanse;\nRN = Nigerese;\nWAN = Nigeriaanse;\nEAU = Ugandese;\nGW = Guinee-Bissause;\nZA = Zuid-Afrikaanse;\nSD = Eswatinische;\nZW = Zimbabwaanse;\nRWA = Rwandese;\nST = Burger van São Tomé en Principe;\nSN = Senegalese;\nWAL = Sierra Leoonse;\nSUD = Soedanese;\nSP = Somalische;\nEAT = Tanzaniaanse;\nTG = Togolese;\nTS = Tsjadische;\nTN = Tunesische;\nZ = Zambiaanse;\nSS = Zuid-Soedanese;\nBS = Bahamaanse;\nBH = Belizaanse;\nCDN = Canadese;\nCR = Costa Ricaanse;\nC = Cubaanse;\nDOM = Dominicaanse;\nEL = Salvadoraanse;\nGCA = Guatemalaanse;\nRH = Haïtiaanse;\nHON = Hondurese;\nJA = Jamaicaanse;\nMEX = Mexicaanse;\nNIC = Nicaraguaanse;\nPA = Panamese;\nTT = Burger van Trinidad en Tobago;\nUSA = Amerikaans burger;\nRA = Argentijnse;\nBDS = Barbadaanse;\nBOL = Boliviaanse;\nBR = Braziliaanse;\nRCH = Chileense;\nCO = Colombiaanse;\nEC = Ecuadoraanse;\nGUY = Guyaanse;\nPY = Paraguayaanse;\nPE = Peruaanse;\nSME = Surinaamse;\nROU = Uruguayaanse;\nYV = Venezolaanse;\nWG = Grenadaanse;\nKN = Burger van Saint Kitts-Nevis;\nSK = Slowaakse;\nCZ = Tsjechische;\nBA = Burger van Bosnië-Herzegovina;\nGE = Georgische;\nAFG = Afghaanse;\nBRN = Bahreinse;\nBT = Bhutaanse;\nBM = Burmaanse;\nBRU = Bruneise;\nK = Cambodjaanse;\nCL = Sri Lankaanse;\nCN = Chinese;\nCY = Cyprische;\nRP = Filipijnse;\nTMN = Turkmeense;\nRC = Taiwanese;\nIND = Indiase;\nRI = Indonesische;\nIRQ = Iraakse;\nIR = Iraanse;\nIL = Israëlische;\nJ = Japanse;\nHKJ = Jordaanse;\nTAD = Tadzjiekse;\nKWT = Koeweitse;\nLAO = Laotiaanse;\nRL = Libanese;\nMV = Maldivische;\nMAL = Maleisische;\nMON = Mongolische;\nOMA = Omaanse;\nNPL = Nepalese;\nKO = Noord-Koreaanse;\nOEZ = Oezbeekse;\nPK = Pakistaanse;\nQA = Qatarese;\nAS = Saoedi-Arabische;\nSGP = Singaporese;\nSYR = Syrische;\nT = Thaise;\nAE = Burger van de Ver. Arabische Emiraten;\nTR = Turkse;\nUA = Oekraïense;\nROK = Zuid-Koreaanse;\nVN = Vietnamese;\nBD = Bengalese;\nKG = Kirgizische;\nMD = Moldavische;\nKZ = Kazachse;\nBY = Belarussische;\nAZ = Azerbeidzjaanse;\nAM = Armeense;\nAUS = Australische;\nPNG = Papoea-Nieuw-Guinese;\nNZ = Nieuw-Zeelandse;\nWSM = West-Samoaanse;\nWS = Samoaanse;\nRUS = Russische;\nSLO = Sloveense;\nAG = Burger van Antigua en Barbuda;\nVU = Vanuatuaanse;\nFJI = Fijische;\nGB4 = Burger van Britse afhankelijke gebieden;\nHR = Kroatische;\nTO = Tongaanse;\nNR = Nauruaanse;\nPLW = Palause;\nUSA2 = Amerikaans onderdaan;\nLV = Letse;\nSB = Salomonseilandse;\nMIC = Micronesische;\nSY = Seychelse;\nKIR = Kiribatische;\nTV = Tuvaluaanse;\nWL = Saint Luciaanse;\nWD = Burger van Dominica;\nWV = Burger van Saint Vincent en de Grenadines;\nEE = Estische;\nIOT = British National (overseas);\nZRE = Burger van Democratische Republiek Congo;\nTLS = Burger van Timor Leste;\nSCG = Burger van Servië en Montenegro;\nSRB = Servische;\nMNE = Montenegrijnse;\nLT = Litouwse;\nMAR = Marshalleilandse;\nBUR = Myanmarese;\nSWA = Namibische;\nGRF = Vluchteling;\n499 = Staatloos;\nAL = Albanese;\nAND = Andorrese;\nB = Belgische;\nBG = Bulgaarse;\nDK = Deense;\nD = Duitse;\nFIN = Finse;\nF = Franse;\nYMN = Jemenitische;\nGR = Griekse;\nGB = Brits burger;\nH = Hongaarse;\nIRL = Ierse;\nIS = IJslandse;\nI = Italiaanse;\nYU = Joegoslavische;\nFL = Liechtensteinse;\nL = Luxemburgse;\nM = Maltese;\nMC = Monegaskische;\nN = Noorse;\nA = Oostenrijkse;\nPL = Poolse;\nP = Portugese;\nRO = Roemeense;\nRSM = San Marinese;\nE = Spaanse;\nVAT = Vaticaanse;\nS = Zweedse;\nCH = Zwitserse;\nGB2 = Brits onderdaan;\nERI = Eritrese;\nGB3 = Staatsburger van de Britse overzeese gebiedsdelen;\nXK = Kosovaarse;\nMK = Burger van de Republiek Noord-Macedonië;\nPSE = Palestijn;",
+                                        "description": "Nationaliteit\n000 = Onbekend;\nNL = Nederlandse;\nDZ = Algerijnse;\nAN = Angolese;\nRU = Burundese;\nRB = Botswaanse;\nBU = Burkinese;\nRCA = Centraal-Afrikaanse;\nKM = Comorese;\nRCB = Kongolese;\nDY = Beninse;\nET = Egyptische;\nEQ = Equatoriaalguinese;\nETH = Ethiopische;\nDJI = Djiboutiaanse;\nGA = Gabonese;\nWAG = Gambiaanse;\nGH = Ghanese;\nGN = Guinese;\nCI = Ivoriaanse;\nCV = Kaapverdische;\nTC = Kameroense;\nEAK = Kenyaanse;\nCD = Zaïrese;\nLS = Lesothaanse;\nLB = Liberiaanse;\nLAR = Libische;\nRM = Malagassische;\nMW = Malawische;\nRMM = Malinese;\nMA = Marokkaanse;\nRIM = Mauritaanse;\nMS = Mauritiaanse;\nMOC = Mozambikaanse;\nRN = Nigerese;\nWAN = Nigeriaanse;\nEAU = Ugandese;\nGW = Guinee-Bissause;\nZA = Zuid-Afrikaanse;\nSD = Eswatinische;\nZW = Zimbabwaanse;\nRWA = Rwandese;\nST = Burger van São Tomé en Principe;\nSN = Senegalese;\nWAL = Sierra Leoonse;\nSUD = Soedanese;\nSP = Somalische;\nEAT = Tanzaniaanse;\nTG = Togolese;\nTS = Tsjadische;\nTN = Tunesische;\nZ = Zambiaanse;\nSS = Zuid-Soedanese;\nBS = Bahamaanse;\nBH = Belizaanse;\nCDN = Canadese;\nCR = Costa Ricaanse;\nC = Cubaanse;\nDOM = Dominicaanse;\nEL = Salvadoraanse;\nGCA = Guatemalaanse;\nRH = Haïtiaanse;\nHON = Hondurese;\nJA = Jamaicaanse;\nMEX = Mexicaanse;\nNIC = Nicaraguaanse;\nPA = Panamese;\nTT = Burger van Trinidad en Tobago;\nUSA = Amerikaans burger;\nRA = Argentijnse;\nBDS = Barbadaanse;\nBOL = Boliviaanse;\nBR = Braziliaanse;\nRCH = Chileense;\nCO = Colombiaanse;\nEC = Ecuadoraanse;\nGUY = Guyaanse;\nPY = Paraguayaanse;\nPE = Peruaanse;\nSME = Surinaamse;\nROU = Uruguayaanse;\nYV = Venezolaanse;\nWG = Grenadaanse;\nKN = Burger van Saint Kitts-Nevis;\nSK = Slowaakse;\nCZ = Tsjechische;\nBA = Burger van Bosnië-Herzegovina;\nGE = Georgische;\nAFG = Afghaanse;\nBRN = Bahreinse;\nBT = Bhutaanse;\nBM = Burmaanse;\nBRU = Bruneise;\nK = Cambodjaanse;\nCL = Sri Lankaanse;\nCN = Chinese;\nCY = Cyprische;\nRP = Filipijnse;\nTMN = Turkmeense;\nRC = Taiwanese;\nIND = Indiase;\nRI = Indonesische;\nIRQ = Iraakse;\nIR = Iraanse;\nIL = Israëlische;\nJ = Japanse;\nHKJ = Jordaanse;\nTAD = Tadzjiekse;\nKWT = Koeweitse;\nLAO = Laotiaanse;\nRL = Libanese;\nMV = Maldivische;\nMAL = Maleisische;\nMON = Mongolische;\nOMA = Omaanse;\nNPL = Nepalese;\nKO = Noord-Koreaanse;\nOEZ = Oezbeekse;\nPK = Pakistaanse;\nQA = Qatarese;\nAS = Saoedi-Arabische;\nSGP = Singaporese;\nSYR = Syrische;\nT = Thaise;\nAE = Burger van de Ver. Arabische Emiraten;\nTR = Turkse;\nUA = Oekraïense;\nROK = Zuid-Koreaanse;\nVN = Vietnamese;\nBD = Bengalese;\nKG = Kirgizische;\nMD = Moldavische;\nKZ = Kazachse;\nBY = Belarussische;\nAZ = Azerbeidzjaanse;\nAM = Armeense;\nAUS = Australische;\nPNG = Papoea-Nieuw-Guinese;\nNZ = Nieuw-Zeelandse;\nWSM = West-Samoaanse;\nWS = Samoaanse;\nRUS = Russische;\nSLO = Sloveense;\nAG = Burger van Antigua en Barbuda;\nVU = Vanuatuaanse;\nFJI = Fijische;\nGB4 = Burger van Britse afhankelijke gebieden;\nHR = Kroatische;\nTO = Tongaanse;\nNR = Nauruaanse;\nPLW = Palause;\nUSA2 = Amerikaans onderdaan;\nLV = Letse;\nSB = Salomonseilandse;\nMIC = Micronesische;\nSY = Seychelse;\nKIR = Kiribatische;\nTV = Tuvaluaanse;\nWL = Saint Luciaanse;\nWD = Burger van Dominica;\nWV = Burger van Saint Vincent en de Grenadines;\nEE = Estische;\nIOT = British National (overseas);\nZRE = Burger van Democratische Republiek Congo;\nTLS = Burger van Timor Leste;\nSCG = Burger van Servië en Montenegro;\nSRB = Servische;\nMNE = Montenegrijnse;\nLT = Litouwse;\nMAR = Marshalleilandse;\nBUR = Myanmarese;\nNAM = Namibische;\nGRF = Vluchteling;\n499 = Staatloos;\nAL = Albanese;\nAND = Andorrese;\nB = Belgische;\nBG = Bulgaarse;\nDK = Deense;\nD = Duitse;\nFIN = Finse;\nF = Franse;\nYMN = Jemenitische;\nGR = Griekse;\nGB = Brits burger;\nH = Hongaarse;\nIRL = Ierse;\nIS = IJslandse;\nI = Italiaanse;\nYU = Joegoslavische;\nFL = Liechtensteinse;\nL = Luxemburgse;\nM = Maltese;\nMC = Monegaskische;\nN = Noorse;\nA = Oostenrijkse;\nPL = Poolse;\nP = Portugese;\nRO = Roemeense;\nRSM = San Marinese;\nE = Spaanse;\nVAT = Vaticaanse;\nS = Zweedse;\nCH = Zwitserse;\nGB2 = Brits onderdaan;\nERI = Eritrese;\nGB3 = Staatsburger van de Britse overzeese gebiedsdelen;\nXK = Kosovaarse;\nMK = Burger van de Republiek Noord-Macedonië;\nPSE = Palestijn;",
                                         "format": ""
                                       },
                                       "DaBi": {
