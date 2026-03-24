@@ -111,6 +111,20 @@
                         }
                       }
                     },
+                    "customConnectors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
                     "info": {
                       "type": "object",
                       "properties": {
@@ -155,6 +169,16 @@
                         {
                           "id": "Profit_Functions",
                           "description": "Profit_Functions"
+                        }
+                      ],
+                      "customConnectors": [
+                        {
+                          "id": "AppConnectorReport",
+                          "description": "AppConnectorReport"
+                        },
+                        {
+                          "id": "AppConnectorSubject",
+                          "description": "AppConnectorSubject"
                         }
                       ],
                       "info": {
@@ -393,12 +417,12 @@
                       "rows": [
                         {
                           "EmployeeId": "000001005",
-                          "EmploymentEndDate": "2020-11-22T00:00:00Z",
+                          "EmploymentEndDate": "2025-11-22T00:00:00Z",
                           "EmailForDigitalDocuments": null
                         },
                         {
                           "EmployeeId": "000001006",
-                          "EmploymentEndDate": "2020-11-22T00:00:00Z",
+                          "EmploymentEndDate": "2025-11-22T00:00:00Z",
                           "EmailForDigitalDocuments": null
                         }
                       ]
@@ -540,7 +564,7 @@
                 "examples": {
                   "Example Result": {
                     "value": {
-                      "version": "22.22.5"
+                      "version": "7.7.10"
                     }
                   }
                 }

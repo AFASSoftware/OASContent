@@ -48,6 +48,905 @@
     }
   ],
   "paths": {
+    "/MetaInfo": {
+      "get": {
+        "summary": "Retrieve the meta info of the Profit environment and the available connectors",
+        "tags": [
+          "API Info"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "updateConnectors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "getConnectors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "customConnectors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "info": {
+                      "type": "object",
+                      "properties": {
+                        "envid": {
+                          "type": "string"
+                        },
+                        "appName": {
+                          "type": "string"
+                        },
+                        "group": {
+                          "type": "string"
+                        },
+                        "tokenExpiry": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "updateConnectors": [
+                        {
+                          "id": "HrCreateApplicant",
+                          "description": "Aanmaken sollicitatie"
+                        },
+                        {
+                          "id": "FbSubscription",
+                          "description": "Abonnement"
+                        },
+                        {
+                          "id": "KnAddress",
+                          "description": "Adres"
+                        }
+                      ],
+                      "getConnectors": [
+                        {
+                          "id": "Profit_Fin_ChangedEntrydate",
+                          "description": "Profit_Fin_ChangedEntrydate"
+                        },
+                        {
+                          "id": "Profit_Functions",
+                          "description": "Profit_Functions"
+                        }
+                      ],
+                      "customConnectors": [
+                        {
+                          "id": "AppConnectorReport",
+                          "description": "AppConnectorReport"
+                        },
+                        {
+                          "id": "AppConnectorSubject",
+                          "description": "AppConnectorSubject"
+                        }
+                      ],
+                      "info": {
+                        "envid": "A123456AC",
+                        "appName": "OpenAPI Spec Example",
+                        "group": "AuthorizationGroup 101 (12345.USER)",
+                        "tokenExpiry": "0"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_MetaInfo"
+      }
+    },
+    "/Metainfo/{Type}/{Endpoint}": {
+      "get": {
+        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
+        "tags": [
+          "API Info"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "fields": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "fieldId": {
+                            "type": "string"
+                          },
+                          "dataType": {
+                            "type": "string"
+                          },
+                          "label": {
+                            "type": "string"
+                          },
+                          "length": {
+                            "type": "integer"
+                          },
+                          "controlType": {
+                            "type": "integer"
+                          },
+                          "decimals": {
+                            "type": "integer"
+                          },
+                          "decimalsFieldId": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "name": "Profit_Administrations",
+                      "description": "Administraties (Profit)",
+                      "fields": [
+                        {
+                          "id": "AdminId",
+                          "fieldId": "U002",
+                          "dataType": "int",
+                          "label": "Administratie",
+                          "length": 3,
+                          "controlType": 5,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        },
+                        {
+                          "id": "AdminNm",
+                          "fieldId": "U001",
+                          "dataType": "string",
+                          "label": "Naam administratie",
+                          "length": 80,
+                          "controlType": 1,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        },
+                        {
+                          "id": "AdminCd",
+                          "fieldId": "UnCo",
+                          "dataType": "string",
+                          "label": "Administratie",
+                          "length": 10,
+                          "controlType": 1,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_MetaInfoPerConnector",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "get",
+                "update"
+              ],
+              "example": "update"
+            },
+            "in": "path",
+            "name": "Type",
+            "description": "Add the type of connector you want to get the meta info from",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "string",
+              "example": "KnEmployee"
+            },
+            "in": "path",
+            "name": "Endpoint",
+            "description": "Add the endpoint id of the connector you want to get the meta info from",
+            "required": true
+          },
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/{Endpoint}": {
+      "get": {
+        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
+        "tags": [
+          "GET"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "skip": {
+                      "type": "integer"
+                    },
+                    "take": {
+                      "type": "integer"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "EmployeeId": {
+                            "type": "string"
+                          },
+                          "EmploymentEndDate": {
+                            "type": "string"
+                          },
+                          "EmailForDigitalDocuments": {
+                            "type": "string",
+                            "nullable": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example response": {
+                    "value": {
+                      "skip": 0,
+                      "take": 100,
+                      "rows": [
+                        {
+                          "EmployeeId": "000001005",
+                          "EmploymentEndDate": "2025-11-22T00:00:00Z",
+                          "EmailForDigitalDocuments": null
+                        },
+                        {
+                          "EmployeeId": "000001006",
+                          "EmploymentEndDate": "2025-11-22T00:00:00Z",
+                          "EmailForDigitalDocuments": null
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_MetaInfoPerCustomConnector",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "example": "your_custom_endpoint_id"
+            },
+            "in": "path",
+            "name": "Endpoint",
+            "description": "Add the id of connector you want to get the meta info from",
+            "required": true
+          },
+          {
+            "name": "skip",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results skipped. Starts at 0",
+            "schema": {
+              "type": "number",
+              "example": 0
+            }
+          },
+          {
+            "name": "take",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results returned",
+            "schema": {
+              "type": "number",
+              "example": 100
+            }
+          },
+          {
+            "name": "orderbyfieldids",
+            "in": "query",
+            "required": false,
+            "description": "Must be used to prevent reordered results.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterfieldids",
+            "in": "query",
+            "required": false,
+            "description": "The fieldIds of the values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filtervalues",
+            "in": "query",
+            "required": false,
+            "description": "The values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "operatortypes",
+            "in": "query",
+            "required": false,
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
+            "schema": {
+              "type": "number",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "/ProfitVersion": {
+      "get": {
+        "summary": "Get the current Profit version",
+        "tags": [
+          "API Info"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "version": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "version": "7.7.10"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_ProfitVersion"
+      }
+    },
+    "/connectors/FbDeliveryNoteFast": {
+      "post": {
+        "summary": "Te genereren balie-/directfacturen",
+        "description": "\n\rAlleen beschikbaar onder conditie: Genereren balie-/directfacturen (speciale activering)\n\r ",
+        "operationId": "POST_FbDeliveryNoteFast",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FbDeliveryNoteFast_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Te genereren balie-/directfacturen"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/FbDeliveryNoteFast/FbDeliveryNoteFast/@Ye/{Ye}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "Ye",
+          "in": "path",
+          "required": true,
+          "description": "Jaar"
+        }
+      ],
+      "delete": {
+        "summary": "Te genereren balie-/directfacturen",
+        "operationId": "DELETE_FbDeliveryNoteFast",
+        "description": " \n\r Let op: Bij dit endpoint zijn de parameters om een item te verwijderen nog niet gedocumenteerd. De path parameters kunnen hierdoor afwijken\n\r ",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Te genereren balie-/directfacturen"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/FbGoodsReceivedPocket": {
+      "post": {
+        "summary": "Ontvangst (Pocket)",
+        "description": "\n\rAlleen beschikbaar onder conditie: Bouw (activering)\n\r ",
+        "operationId": "POST_FbGoodsReceivedPocket",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FbGoodsReceivedPocket_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Ontvangst (Pocket)"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Ontvangst (Pocket)",
+        "description": "\n\rAlleen beschikbaar onder conditie: Bouw (activering)\n\r ",
+        "operationId": "PUT_FbGoodsReceivedPocket",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FbGoodsReceivedPocket_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Ontvangst (Pocket)"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/FbGoodsReceivedPocket/FbGoodsReceivedLines": {
+      "post": {
+        "summary": "Ontvangst (Pocket)",
+        "description": "Update main record in FbGoodsReceivedPocket and insert subrecord into FbGoodsReceivedLines. \n\rAlleen beschikbaar onder conditie: Bouw (activering)\n\r ",
+        "operationId": "POSTSubRecordFbGoodsReceivedPocketFbGoodsReceivedLines",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FbGoodsReceivedPocket_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Ontvangst (Pocket)"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/FbGoodsReceivedPocket/FbGoodsReceivedSubject": {
+      "post": {
+        "summary": "Ontvangst (Pocket)",
+        "description": "Update main record in FbGoodsReceivedPocket and insert subrecord into FbGoodsReceivedSubject. \n\rAlleen beschikbaar onder conditie: Bouw (activering)\n\r ",
+        "operationId": "POSTSubRecordFbGoodsReceivedPocketFbGoodsReceivedSubject",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FbGoodsReceivedPocket_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Ontvangst (Pocket)"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/FbGoodsReceivedPocket/FbGoodsReceived/@OrNu/{OrNu}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "OrNu",
+          "in": "path",
+          "required": true,
+          "description": "Nummer"
+        }
+      ],
+      "delete": {
+        "summary": "Ontvangst (Pocket)",
+        "operationId": "DELETE_FbGoodsReceivedPocket",
+        "description": "\n\r ",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Ontvangst (Pocket)"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
     "/connectors/HrCareerBreak": {
       "post": {
         "summary": "Medewerker/schorsing",
@@ -461,367 +1360,6 @@
         ],
         "tags": [
           "Medewerker/schorsing"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          }
-        ]
-      }
-    },
-    "/connectors/KnDayContract": {
-      "post": {
-        "summary": "Dagcontract",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_KnDayContract.htm",
-        "operationId": "POST_KnDayContract",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/KnDayContract_POST"
-              },
-              "examples": {
-                "insert": {
-                  "value": {
-                    "KnDayContract": {
-                      "Element": {
-                        "@EmId": "DVE5",
-                        "Fields": {
-                          "ViSe": "I",
-                          "Bl": "0",
-                          "LwOb": "0",
-                          "LwTg": "0"
-                        },
-                        "Objects": {
-                          "KnPerson": {
-                            "Element": {
-                              "Fields": {
-                                "PadAdr": "1",
-                                "AutoNum": "1",
-                                "MatchPer": "7",
-                                "SeNm": "ZOEKNAAM",
-                                "FiNm": "Jan",
-                                "In": "J.A.",
-                                "LaNm": "Jansen",
-                                "SpNm": "1",
-                                "NmBi": "Jansen",
-                                "ViUs": "0",
-                                "ViGe": "M",
-                                "DaBi": "1980-05-10",
-                                "TtId": "ALG",
-                                "CoLw": "BE"
-                              },
-                              "Objects": {
-                                "KnBasicAddressAdr": {
-                                  "Element": {
-                                    "Fields": {
-                                      "CoId": "NL",
-                                      "PbAd": "0",
-                                      "Ad": "Boerenerf",
-                                      "HmNr": "105",
-                                      "ZpCd": "3833LC",
-                                      "Rs": "Leusden",
-                                      "BeginDate": "2008-03-01"
-                                    }
-                                  }
-                                },
-                                "KnBasicAddressPad": {
-                                  "Element": {
-                                    "Fields": {
-                                      "CoId": "NL",
-                                      "PbAd": "0",
-                                      "Ad": "Boerenerf",
-                                      "HmNr": "105",
-                                      "ZpCd": "3833LC",
-                                      "Rs": "Leusden",
-                                      "BeginDate": "2008-03-01"
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          },
-                          "AfasContract": {
-                            "Element": {
-                              "@DaBe": "2016-03-01",
-                              "Fields": {
-                                "ClId": "1",
-                                "WcId": "1",
-                                "ApCo": "O",
-                                "CmId": "01",
-                                "EmMt": "1",
-                                "ViEt": "F",
-                                "ViTo": "NM",
-                                "RtDa": "0"
-                              }
-                            }
-                          },
-                          "AfasOrgunitFunction": {
-                            "Element": {
-                              "@DaBe": "2016-03-01",
-                              "Fields": {
-                                "DpId": "001202",
-                                "FuId": "202",
-                                "CcId": "Profit"
-                              }
-                            }
-                          },
-                          "AfasTimeTable": {
-                            "Element": {
-                              "@DaBg": "2016-03-01",
-                              "Fields": {
-                                "SeNo": "51647801"
-                              }
-                            }
-                          },
-                          "AfasSalary": {
-                            "Element": {
-                              "@DaBe": "2016-03-01",
-                              "Fields": {
-                                "SaPe": "V",
-                                "EmSa": "3000.00",
-                                "NtSa": "0",
-                                "PtId": "5",
-                                "SaYe": "0",
-                                "ApSc": "0"
-                              }
-                            }
-                          },
-                          "AfasBankInfo": {
-                            "Element": {
-                              "@AcId": "BE04377062952431",
-                              "@NoBk": "0",
-                              "Fields": {
-                                "SaAc": "1",
-                                "BkTp": "56000"
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Dagcontract"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      },
-      "put": {
-        "summary": "Dagcontract",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_KnDayContract.htm",
-        "operationId": "PUT_KnDayContract",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/KnDayContract_PUT"
-              },
-              "examples": {
-                "update": {
-                  "value": {
-                    "KnDayContract": {
-                      "Element": {
-                        "@EmId": "DVE4",
-                        "Fields": {
-                          "ViSe": "I",
-                          "Bl": "0",
-                          "LwOb": "0",
-                          "LwTg": "0",
-                          "ViPa": "P",
-                          "BlPa": "false",
-                          "PsPv": "A",
-                          "YsPv": "A",
-                          "SeAt": "false",
-                          "BeVo": "false"
-                        },
-                        "Objects": [
-                          {
-                            "AfasContract": {
-                              "Element": {
-                                "@DaBe": "2016-03-01",
-                                "Fields": {
-                                  "ClId": "1",
-                                  "WcId": "1",
-                                  "ApCo": "O",
-                                  "CmId": "01",
-                                  "EmMt": "1",
-                                  "ViEt": "F",
-                                  "ViTo": "NM",
-                                  "RtDa": "0"
-                                }
-                              }
-                            }
-                          },
-                          {
-                            "AfasOrgunitFunction": {
-                              "Element": {
-                                "@DaBe": "2016-03-01",
-                                "Fields": {
-                                  "DpId": "001202",
-                                  "FuId": "202",
-                                  "CcId": "Profit"
-                                }
-                              }
-                            }
-                          },
-                          {
-                            "AfasTimeTable": {
-                              "Element": {
-                                "@DaBg": "2016-03-01",
-                                "Fields": {
-                                  "SeNo": "51647801"
-                                }
-                              }
-                            }
-                          },
-                          {
-                            "AfasSalary": {
-                              "Element": {
-                                "@DaBe": "2016-03-01",
-                                "Fields": {
-                                  "SaPe": "V",
-                                  "EmSa": "3000.00",
-                                  "NtSa": "0",
-                                  "PtId": "5",
-                                  "SaYe": "0",
-                                  "ApSc": "0"
-                                }
-                              }
-                            }
-                          }
-                        ]
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Dagcontract"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      }
-    },
-    "/connectors/KnDayContract/KnDayContract/@EmId/{EmId}": {
-      "parameters": [
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "EmId",
-          "in": "path",
-          "required": true,
-          "description": "Medewerker"
-        }
-      ],
-      "delete": {
-        "summary": "Dagcontract",
-        "operationId": "DELETE_KnDayContract",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_KnDayContract.htm",
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "$ref": "#/components/responses/200"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Dagcontract"
         ],
         "parameters": [
           {
@@ -1518,58 +2056,6 @@
         ]
       }
     },
-    "/connectors/HrEmpWorkLocation": {
-      "post": {
-        "summary": "Roosterkalender",
-        "description": "\n\rAlleen beschikbaar onder conditie: Werklocaties bij medewerker vastleggen (activering)\n\r ",
-        "operationId": "POST_HrEmpWorkLocation",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/HrEmpWorkLocation_POST"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Roosterkalender"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      }
-    },
     "/connectors/HrEmpMutInSite": {
       "post": {
         "summary": "Medewerker mutatie InSite",
@@ -1611,6 +2097,58 @@
         ],
         "tags": [
           "Medewerker mutatie InSite"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/HrEmpWorkLocation": {
+      "post": {
+        "summary": "Roosterkalender",
+        "description": "\n\rAlleen beschikbaar onder conditie: Werklocaties bij medewerker vastleggen (activering)\n\r ",
+        "operationId": "POST_HrEmpWorkLocation",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HrEmpWorkLocation_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Roosterkalender"
         ],
         "parameters": [
           {
@@ -3836,519 +4374,139 @@
         ]
       }
     },
-    "/MetaInfo": {
-      "get": {
-        "summary": "Retrieve the meta info of the Profit environment and the available connectors",
-        "tags": [
-          "API Info"
-        ],
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "updateConnectors": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "string"
-                          },
-                          "description": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    },
-                    "getConnectors": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "string"
-                          },
-                          "description": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    },
-                    "info": {
-                      "type": "object",
-                      "properties": {
-                        "envid": {
-                          "type": "string"
-                        },
-                        "appName": {
-                          "type": "string"
-                        },
-                        "group": {
-                          "type": "string"
-                        },
-                        "tokenExpiry": {
-                          "type": "string"
-                        }
-                      }
-                    }
-                  }
-                },
-                "examples": {
-                  "Example Result": {
-                    "value": {
-                      "updateConnectors": [
-                        {
-                          "id": "HrCreateApplicant",
-                          "description": "Aanmaken sollicitatie"
-                        },
-                        {
-                          "id": "FbSubscription",
-                          "description": "Abonnement"
-                        },
-                        {
-                          "id": "KnAddress",
-                          "description": "Adres"
-                        }
-                      ],
-                      "getConnectors": [
-                        {
-                          "id": "Profit_Fin_ChangedEntrydate",
-                          "description": "Profit_Fin_ChangedEntrydate"
-                        },
-                        {
-                          "id": "Profit_Functions",
-                          "description": "Profit_Functions"
-                        }
-                      ],
-                      "info": {
-                        "envid": "A123456AC",
-                        "appName": "OpenAPI Spec Example",
-                        "group": "AuthorizationGroup 101 (12345.USER)",
-                        "tokenExpiry": "0"
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get_MetaInfo"
-      }
-    },
-    "/Metainfo/{Type}/{Endpoint}": {
-      "get": {
-        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
-        "tags": [
-          "API Info"
-        ],
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "name": {
-                      "type": "string"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "fields": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "string"
-                          },
-                          "fieldId": {
-                            "type": "string"
-                          },
-                          "dataType": {
-                            "type": "string"
-                          },
-                          "label": {
-                            "type": "string"
-                          },
-                          "length": {
-                            "type": "integer"
-                          },
-                          "controlType": {
-                            "type": "integer"
-                          },
-                          "decimals": {
-                            "type": "integer"
-                          },
-                          "decimalsFieldId": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
-                "examples": {
-                  "Example Result": {
-                    "value": {
-                      "name": "Profit_Administrations",
-                      "description": "Administraties (Profit)",
-                      "fields": [
-                        {
-                          "id": "AdminId",
-                          "fieldId": "U002",
-                          "dataType": "int",
-                          "label": "Administratie",
-                          "length": 3,
-                          "controlType": 5,
-                          "decimals": 0,
-                          "decimalsFieldId": ""
-                        },
-                        {
-                          "id": "AdminNm",
-                          "fieldId": "U001",
-                          "dataType": "string",
-                          "label": "Naam administratie",
-                          "length": 80,
-                          "controlType": 1,
-                          "decimals": 0,
-                          "decimalsFieldId": ""
-                        },
-                        {
-                          "id": "AdminCd",
-                          "fieldId": "UnCo",
-                          "dataType": "string",
-                          "label": "Administratie",
-                          "length": 10,
-                          "controlType": 1,
-                          "decimals": 0,
-                          "decimalsFieldId": ""
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get_MetaInfoPerConnector",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string",
-              "enum": [
-                "get",
-                "update"
-              ],
-              "example": "update"
-            },
-            "in": "path",
-            "name": "Type",
-            "description": "Add the type of connector you want to get the meta info from",
-            "required": true
-          },
-          {
-            "schema": {
-              "type": "string",
-              "example": "KnEmployee"
-            },
-            "in": "path",
-            "name": "Endpoint",
-            "description": "Add the endpoint id of the connector you want to get the meta info from",
-            "required": true
-          },
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          }
-        ]
-      }
-    },
-    "/connectors/{Endpoint}": {
-      "get": {
-        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
-        "tags": [
-          "GET"
-        ],
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "skip": {
-                      "type": "integer"
-                    },
-                    "take": {
-                      "type": "integer"
-                    },
-                    "rows": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "EmployeeId": {
-                            "type": "string"
-                          },
-                          "EmploymentEndDate": {
-                            "type": "string"
-                          },
-                          "EmailForDigitalDocuments": {
-                            "type": "string",
-                            "nullable": true
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
-                "examples": {
-                  "Example response": {
-                    "value": {
-                      "skip": 0,
-                      "take": 100,
-                      "rows": [
-                        {
-                          "EmployeeId": "000001005",
-                          "EmploymentEndDate": "2020-11-22T00:00:00Z",
-                          "EmailForDigitalDocuments": null
-                        },
-                        {
-                          "EmployeeId": "000001006",
-                          "EmploymentEndDate": "2020-11-22T00:00:00Z",
-                          "EmailForDigitalDocuments": null
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get_MetaInfoPerCustomConnector",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string",
-              "example": "your_custom_endpoint_id"
-            },
-            "in": "path",
-            "name": "Endpoint",
-            "description": "Add the id of connector you want to get the meta info from",
-            "required": true
-          },
-          {
-            "name": "skip",
-            "in": "query",
-            "required": false,
-            "description": "Pagination: amount of results skipped. Starts at 0",
-            "schema": {
-              "type": "number",
-              "example": 0
-            }
-          },
-          {
-            "name": "take",
-            "in": "query",
-            "required": false,
-            "description": "Pagination: amount of results returned",
-            "schema": {
-              "type": "number",
-              "example": 100
-            }
-          },
-          {
-            "name": "orderbyfieldids",
-            "in": "query",
-            "required": false,
-            "description": "Must be used to prevent reordered results.",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filterfieldids",
-            "in": "query",
-            "required": false,
-            "description": "The fieldIds of the values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filtervalues",
-            "in": "query",
-            "required": false,
-            "description": "The values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "operatortypes",
-            "in": "query",
-            "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
-            "schema": {
-              "type": "number",
-              "enum": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                13,
-                14,
-                15
-              ]
-            }
-          }
-        ]
-      }
-    },
-    "/ProfitVersion": {
-      "get": {
-        "summary": "Get the current Profit version",
-        "tags": [
-          "API Info"
-        ],
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "version": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "examples": {
-                  "Example Result": {
-                    "value": {
-                      "version": "22.22.5"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get_ProfitVersion"
-      }
-    },
-    "/connectors/FbGoodsReceivedPocket": {
+    "/connectors/KnDayContract": {
       "post": {
-        "summary": "Ontvangst (Pocket)",
-        "description": "\n\rAlleen beschikbaar onder conditie: Bouw (activering)\n\r ",
-        "operationId": "POST_FbGoodsReceivedPocket",
+        "summary": "Dagcontract",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_KnDayContract.htm",
+        "operationId": "POST_KnDayContract",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/FbGoodsReceivedPocket_POST"
+                "$ref": "#/components/schemas/KnDayContract_POST"
+              },
+              "examples": {
+                "insert": {
+                  "value": {
+                    "KnDayContract": {
+                      "Element": {
+                        "@EmId": "DVE5",
+                        "Fields": {
+                          "ViSe": "I",
+                          "Bl": "0",
+                          "LwOb": "0",
+                          "LwTg": "0"
+                        },
+                        "Objects": {
+                          "KnPerson": {
+                            "Element": {
+                              "Fields": {
+                                "PadAdr": "1",
+                                "AutoNum": "1",
+                                "MatchPer": "7",
+                                "SeNm": "ZOEKNAAM",
+                                "FiNm": "Jan",
+                                "In": "J.A.",
+                                "LaNm": "Jansen",
+                                "SpNm": "1",
+                                "NmBi": "Jansen",
+                                "ViUs": "0",
+                                "ViGe": "M",
+                                "DaBi": "1980-05-10",
+                                "TtId": "ALG",
+                                "CoLw": "BE"
+                              },
+                              "Objects": {
+                                "KnBasicAddressAdr": {
+                                  "Element": {
+                                    "Fields": {
+                                      "CoId": "NL",
+                                      "PbAd": "0",
+                                      "Ad": "Boerenerf",
+                                      "HmNr": "105",
+                                      "ZpCd": "3833LC",
+                                      "Rs": "Leusden",
+                                      "BeginDate": "2008-03-01"
+                                    }
+                                  }
+                                },
+                                "KnBasicAddressPad": {
+                                  "Element": {
+                                    "Fields": {
+                                      "CoId": "NL",
+                                      "PbAd": "0",
+                                      "Ad": "Boerenerf",
+                                      "HmNr": "105",
+                                      "ZpCd": "3833LC",
+                                      "Rs": "Leusden",
+                                      "BeginDate": "2008-03-01"
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          },
+                          "AfasContract": {
+                            "Element": {
+                              "@DaBe": "2016-03-01",
+                              "Fields": {
+                                "ClId": "1",
+                                "WcId": "1",
+                                "ApCo": "O",
+                                "CmId": "01",
+                                "EmMt": "1",
+                                "ViEt": "F",
+                                "ViTo": "NM",
+                                "RtDa": "0"
+                              }
+                            }
+                          },
+                          "AfasOrgunitFunction": {
+                            "Element": {
+                              "@DaBe": "2016-03-01",
+                              "Fields": {
+                                "DpId": "001202",
+                                "FuId": "202",
+                                "CcId": "Profit"
+                              }
+                            }
+                          },
+                          "AfasTimeTable": {
+                            "Element": {
+                              "@DaBg": "2016-03-01",
+                              "Fields": {
+                                "SeNo": "51647801"
+                              }
+                            }
+                          },
+                          "AfasSalary": {
+                            "Element": {
+                              "@DaBe": "2016-03-01",
+                              "Fields": {
+                                "SaPe": "V",
+                                "EmSa": "3000.00",
+                                "NtSa": "0",
+                                "PtId": "5",
+                                "SaYe": "0",
+                                "ApSc": "0"
+                              }
+                            }
+                          },
+                          "AfasBankInfo": {
+                            "Element": {
+                              "@AcId": "BE04377062952431",
+                              "@NoBk": "0",
+                              "Fields": {
+                                "SaAc": "1",
+                                "BkTp": "56000"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
               }
             }
           }
@@ -4379,7 +4537,7 @@
           }
         ],
         "tags": [
-          "Ontvangst (Pocket)"
+          "Dagcontract"
         ],
         "parameters": [
           {
@@ -4391,14 +4549,93 @@
         ]
       },
       "put": {
-        "summary": "Ontvangst (Pocket)",
-        "description": "\n\rAlleen beschikbaar onder conditie: Bouw (activering)\n\r ",
-        "operationId": "PUT_FbGoodsReceivedPocket",
+        "summary": "Dagcontract",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_KnDayContract.htm",
+        "operationId": "PUT_KnDayContract",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/FbGoodsReceivedPocket_PUT"
+                "$ref": "#/components/schemas/KnDayContract_PUT"
+              },
+              "examples": {
+                "update": {
+                  "value": {
+                    "KnDayContract": {
+                      "Element": {
+                        "@EmId": "DVE4",
+                        "Fields": {
+                          "ViSe": "I",
+                          "Bl": "0",
+                          "LwOb": "0",
+                          "LwTg": "0",
+                          "ViPa": "P",
+                          "BlPa": "false",
+                          "PsPv": "A",
+                          "YsPv": "A",
+                          "SeAt": "false",
+                          "BeVo": "false"
+                        },
+                        "Objects": [
+                          {
+                            "AfasContract": {
+                              "Element": {
+                                "@DaBe": "2016-03-01",
+                                "Fields": {
+                                  "ClId": "1",
+                                  "WcId": "1",
+                                  "ApCo": "O",
+                                  "CmId": "01",
+                                  "EmMt": "1",
+                                  "ViEt": "F",
+                                  "ViTo": "NM",
+                                  "RtDa": "0"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "AfasOrgunitFunction": {
+                              "Element": {
+                                "@DaBe": "2016-03-01",
+                                "Fields": {
+                                  "DpId": "001202",
+                                  "FuId": "202",
+                                  "CcId": "Profit"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "AfasTimeTable": {
+                              "Element": {
+                                "@DaBg": "2016-03-01",
+                                "Fields": {
+                                  "SeNo": "51647801"
+                                }
+                              }
+                            }
+                          },
+                          {
+                            "AfasSalary": {
+                              "Element": {
+                                "@DaBe": "2016-03-01",
+                                "Fields": {
+                                  "SaPe": "V",
+                                  "EmSa": "3000.00",
+                                  "NtSa": "0",
+                                  "PtId": "5",
+                                  "SaYe": "0",
+                                  "ApSc": "0"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
               }
             }
           }
@@ -4429,7 +4666,7 @@
           }
         ],
         "tags": [
-          "Ontvangst (Pocket)"
+          "Dagcontract"
         ],
         "parameters": [
           {
@@ -4441,126 +4678,22 @@
         ]
       }
     },
-    "/connectors/FbGoodsReceivedPocket/FbGoodsReceivedLines": {
-      "post": {
-        "summary": "Ontvangst (Pocket)",
-        "description": "Update main record in FbGoodsReceivedPocket and insert subrecord into FbGoodsReceivedLines. \n\rAlleen beschikbaar onder conditie: Bouw (activering)\n\r ",
-        "operationId": "POSTSubRecordFbGoodsReceivedPocketFbGoodsReceivedLines",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/FbGoodsReceivedPocket_POST"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Ontvangst (Pocket)"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      }
-    },
-    "/connectors/FbGoodsReceivedPocket/FbGoodsReceivedSubject": {
-      "post": {
-        "summary": "Ontvangst (Pocket)",
-        "description": "Update main record in FbGoodsReceivedPocket and insert subrecord into FbGoodsReceivedSubject. \n\rAlleen beschikbaar onder conditie: Bouw (activering)\n\r ",
-        "operationId": "POSTSubRecordFbGoodsReceivedPocketFbGoodsReceivedSubject",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/FbGoodsReceivedPocket_POST"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Ontvangst (Pocket)"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      }
-    },
-    "/connectors/FbGoodsReceivedPocket/FbGoodsReceived/@OrNu/{OrNu}": {
+    "/connectors/KnDayContract/KnDayContract/@EmId/{EmId}": {
       "parameters": [
         {
           "schema": {
             "type": "string"
           },
-          "name": "OrNu",
+          "name": "EmId",
           "in": "path",
           "required": true,
-          "description": "Nummer"
+          "description": "Medewerker"
         }
       ],
       "delete": {
-        "summary": "Ontvangst (Pocket)",
-        "operationId": "DELETE_FbGoodsReceivedPocket",
-        "description": "\n\r ",
+        "summary": "Dagcontract",
+        "operationId": "DELETE_KnDayContract",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_KnDayContract.htm",
         "responses": {
           "400": {
             "$ref": "#/components/responses/400"
@@ -4593,7 +4726,7 @@
           }
         ],
         "tags": [
-          "Ontvangst (Pocket)"
+          "Dagcontract"
         ],
         "parameters": [
           {
@@ -4653,115 +4786,6 @@
           }
         ]
       }
-    },
-    "/connectors/FbDeliveryNoteFast": {
-      "post": {
-        "summary": "Te genereren balie-/directfacturen",
-        "description": "\n\rAlleen beschikbaar onder conditie: Genereren balie-/directfacturen (speciale activering)\n\r ",
-        "operationId": "POST_FbDeliveryNoteFast",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/FbDeliveryNoteFast_POST"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Te genereren balie-/directfacturen"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      }
-    },
-    "/connectors/FbDeliveryNoteFast/FbDeliveryNoteFast/@Ye/{Ye}": {
-      "parameters": [
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "Ye",
-          "in": "path",
-          "required": true,
-          "description": "Jaar"
-        }
-      ],
-      "delete": {
-        "summary": "Te genereren balie-/directfacturen",
-        "operationId": "DELETE_FbDeliveryNoteFast",
-        "description": " \n\r Let op: Bij dit endpoint zijn de parameters om een item te verwijderen nog niet gedocumenteerd. De path parameters kunnen hierdoor afwijken\n\r ",
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "$ref": "#/components/responses/200"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Te genereren balie-/directfacturen"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          }
-        ]
-      }
     }
   },
   "tags": [
@@ -4774,12 +4798,16 @@
       "description": "API Info"
     },
     {
-      "name": "Medewerker/schorsing",
-      "description": "Medewerker/schorsing"
+      "name": "Te genereren balie-/directfacturen",
+      "description": "Te genereren balie-/directfacturen"
     },
     {
-      "name": "Dagcontract",
-      "description": "Dagcontract"
+      "name": "Ontvangst (Pocket)",
+      "description": "Ontvangst (Pocket)"
+    },
+    {
+      "name": "Medewerker/schorsing",
+      "description": "Medewerker/schorsing"
     },
     {
       "name": "Declaratie InSite",
@@ -4810,12 +4838,12 @@
       "description": "Medewerker werkweektransitie"
     },
     {
-      "name": "Roosterkalender",
-      "description": "Roosterkalender"
-    },
-    {
       "name": "Medewerker mutatie InSite",
       "description": "Medewerker mutatie InSite"
+    },
+    {
+      "name": "Roosterkalender",
+      "description": "Roosterkalender"
     },
     {
       "name": "Favoriete reis",
@@ -4842,16 +4870,12 @@
       "description": "Tijdregistratieregel Sociaal secretariaat"
     },
     {
-      "name": "Ontvangst (Pocket)",
-      "description": "Ontvangst (Pocket)"
+      "name": "Dagcontract",
+      "description": "Dagcontract"
     },
     {
       "name": "Pocket-notificatiestatus",
       "description": "Pocket-notificatiestatus"
-    },
-    {
-      "name": "Te genereren balie-/directfacturen",
-      "description": "Te genereren balie-/directfacturen"
     }
   ],
   "components": {
@@ -7008,12 +7032,13 @@
                           "004",
                           "005",
                           "006",
+                          "007",
                           "008",
                           "011",
                           "012"
                         ],
                         "maxLength": 20,
-                        "description": "Soort schorsing\n001 = Tijdskrediet;\n002 = Langdurig ziek;\n003 = Militaire dienst;\n004 = Ouderschapsverlof met RVA-uitkering;\n005 = Ouderschapsverlof zonder RVA-uitkering;\n006 = Palliatief verlof, verzorging zwaar ziek familielid;\n008 = Gedeeltelijke werkhervatting;\n011 = Werkloosheid door collectieve sluiting jaarlijkse vakantie;\n012 = Werkloosheid door collectieve sluiting cao - verlof;",
+                        "description": "Soort schorsing\n001 = Tijdskrediet;\n002 = Langdurig ziek;\n003 = Militaire dienst;\n004 = Ouderschapsverlof met RVA-uitkering;\n005 = Ouderschapsverlof zonder RVA-uitkering;\n006 = Palliatief verlof, verzorging zwaar ziek familielid;\n007 = Z-beroep loopbaanonderbreking;\n008 = Gedeeltelijke werkhervatting;\n011 = Werkloosheid door collectieve sluiting jaarlijkse vakantie;\n012 = Werkloosheid door collectieve sluiting cao - verlof;",
                         "format": ""
                       },
                       "CoIt": {
@@ -7246,12 +7271,13 @@
                           "004",
                           "005",
                           "006",
+                          "007",
                           "008",
                           "011",
                           "012"
                         ],
                         "maxLength": 20,
-                        "description": "Soort schorsing\n001 = Tijdskrediet;\n002 = Langdurig ziek;\n003 = Militaire dienst;\n004 = Ouderschapsverlof met RVA-uitkering;\n005 = Ouderschapsverlof zonder RVA-uitkering;\n006 = Palliatief verlof, verzorging zwaar ziek familielid;\n008 = Gedeeltelijke werkhervatting;\n011 = Werkloosheid door collectieve sluiting jaarlijkse vakantie;\n012 = Werkloosheid door collectieve sluiting cao - verlof;",
+                        "description": "Soort schorsing\n001 = Tijdskrediet;\n002 = Langdurig ziek;\n003 = Militaire dienst;\n004 = Ouderschapsverlof met RVA-uitkering;\n005 = Ouderschapsverlof zonder RVA-uitkering;\n006 = Palliatief verlof, verzorging zwaar ziek familielid;\n007 = Z-beroep loopbaanonderbreking;\n008 = Gedeeltelijke werkhervatting;\n011 = Werkloosheid door collectieve sluiting jaarlijkse vakantie;\n012 = Werkloosheid door collectieve sluiting cao - verlof;",
                         "format": ""
                       },
                       "CoIt": {
@@ -7622,7 +7648,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Vervoermiddel\n11 = Auto’s benzine;\n12 = Auto’s diesel;\n13 = Auto’s die behoren tot de (plug in) hybrides;\n14 = Auto’s 100% elektrisch;\n15 = Auto’s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
+                        "description": "Vervoermiddel voor WPM rapportage\n11 = Auto’s benzine;\n12 = Auto’s diesel;\n13 = Auto’s die behoren tot de (plug in) hybrides;\n14 = Auto’s 100% elektrisch;\n15 = Auto’s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
                         "format": ""
                       },
                       "ViTv": {
@@ -9325,7 +9351,7 @@
                           "LT",
                           "MAR",
                           "BUR",
-                          "SWA",
+                          "NAM",
                           "GRF",
                           "499",
                           "AL",
@@ -9366,7 +9392,7 @@
                           "PSE"
                         ],
                         "maxLength": 20,
-                        "description": "Nationaliteit\n000 = Onbekend;\nNL = Nederlandse;\nDZ = Algerijnse;\nAN = Angolese;\nRU = Burundese;\nRB = Botswaanse;\nBU = Burkinese;\nRCA = Centraal-Afrikaanse;\nKM = Comorese;\nRCB = Kongolese;\nDY = Beninse;\nET = Egyptische;\nEQ = Equatoriaalguinese;\nETH = Ethiopische;\nDJI = Djiboutiaanse;\nGA = Gabonese;\nWAG = Gambiaanse;\nGH = Ghanese;\nGN = Guinese;\nCI = Ivoriaanse;\nCV = Kaapverdische;\nTC = Kameroense;\nEAK = Kenyaanse;\nCD = Zaïrese;\nLS = Lesothaanse;\nLB = Liberiaanse;\nLAR = Libische;\nRM = Malagassische;\nMW = Malawische;\nRMM = Malinese;\nMA = Marokkaanse;\nRIM = Mauritaanse;\nMS = Mauritiaanse;\nMOC = Mozambikaanse;\nRN = Nigerese;\nWAN = Nigeriaanse;\nEAU = Ugandese;\nGW = Guinee-Bissause;\nZA = Zuid-Afrikaanse;\nSD = Eswatinische;\nZW = Zimbabwaanse;\nRWA = Rwandese;\nST = Burger van São Tomé en Principe;\nSN = Senegalese;\nWAL = Sierra Leoonse;\nSUD = Soedanese;\nSP = Somalische;\nEAT = Tanzaniaanse;\nTG = Togolese;\nTS = Tsjadische;\nTN = Tunesische;\nZ = Zambiaanse;\nSS = Zuid-Soedanese;\nBS = Bahamaanse;\nBH = Belizaanse;\nCDN = Canadese;\nCR = Costa Ricaanse;\nC = Cubaanse;\nDOM = Dominicaanse;\nEL = Salvadoraanse;\nGCA = Guatemalaanse;\nRH = Haïtiaanse;\nHON = Hondurese;\nJA = Jamaicaanse;\nMEX = Mexicaanse;\nNIC = Nicaraguaanse;\nPA = Panamese;\nTT = Burger van Trinidad en Tobago;\nUSA = Amerikaans burger;\nRA = Argentijnse;\nBDS = Barbadaanse;\nBOL = Boliviaanse;\nBR = Braziliaanse;\nRCH = Chileense;\nCO = Colombiaanse;\nEC = Ecuadoraanse;\nGUY = Guyaanse;\nPY = Paraguayaanse;\nPE = Peruaanse;\nSME = Surinaamse;\nROU = Uruguayaanse;\nYV = Venezolaanse;\nWG = Grenadaanse;\nKN = Burger van Saint Kitts-Nevis;\nSK = Slowaakse;\nCZ = Tsjechische;\nBA = Burger van Bosnië-Herzegovina;\nGE = Georgische;\nAFG = Afghaanse;\nBRN = Bahreinse;\nBT = Bhutaanse;\nBM = Burmaanse;\nBRU = Bruneise;\nK = Cambodjaanse;\nCL = Sri Lankaanse;\nCN = Chinese;\nCY = Cyprische;\nRP = Filipijnse;\nTMN = Turkmeense;\nRC = Taiwanese;\nIND = Indiase;\nRI = Indonesische;\nIRQ = Iraakse;\nIR = Iraanse;\nIL = Israëlische;\nJ = Japanse;\nHKJ = Jordaanse;\nTAD = Tadzjiekse;\nKWT = Koeweitse;\nLAO = Laotiaanse;\nRL = Libanese;\nMV = Maldivische;\nMAL = Maleisische;\nMON = Mongolische;\nOMA = Omaanse;\nNPL = Nepalese;\nKO = Noord-Koreaanse;\nOEZ = Oezbeekse;\nPK = Pakistaanse;\nQA = Qatarese;\nAS = Saoedi-Arabische;\nSGP = Singaporese;\nSYR = Syrische;\nT = Thaise;\nAE = Burger van de Ver. Arabische Emiraten;\nTR = Turkse;\nUA = Oekraïense;\nROK = Zuid-Koreaanse;\nVN = Vietnamese;\nBD = Bengalese;\nKG = Kirgizische;\nMD = Moldavische;\nKZ = Kazachse;\nBY = Belarussische;\nAZ = Azerbeidzjaanse;\nAM = Armeense;\nAUS = Australische;\nPNG = Papoea-Nieuw-Guinese;\nNZ = Nieuw-Zeelandse;\nWSM = West-Samoaanse;\nWS = Samoaanse;\nRUS = Russische;\nSLO = Sloveense;\nAG = Burger van Antigua en Barbuda;\nVU = Vanuatuaanse;\nFJI = Fijische;\nGB4 = Burger van Britse afhankelijke gebieden;\nHR = Kroatische;\nTO = Tongaanse;\nNR = Nauruaanse;\nPLW = Palause;\nUSA2 = Amerikaans onderdaan;\nLV = Letse;\nSB = Salomonseilandse;\nMIC = Micronesische;\nSY = Seychelse;\nKIR = Kiribatische;\nTV = Tuvaluaanse;\nWL = Saint Luciaanse;\nWD = Burger van Dominica;\nWV = Burger van Saint Vincent en de Grenadines;\nEE = Estische;\nIOT = British National (overseas);\nZRE = Burger van Democratische Republiek Congo;\nTLS = Burger van Timor Leste;\nSCG = Burger van Servië en Montenegro;\nSRB = Servische;\nMNE = Montenegrijnse;\nLT = Litouwse;\nMAR = Marshalleilandse;\nBUR = Myanmarese;\nSWA = Namibische;\nGRF = Vluchteling;\n499 = Staatloos;\nAL = Albanese;\nAND = Andorrese;\nB = Belgische;\nBG = Bulgaarse;\nDK = Deense;\nD = Duitse;\nFIN = Finse;\nF = Franse;\nYMN = Jemenitische;\nGR = Griekse;\nGB = Brits burger;\nH = Hongaarse;\nIRL = Ierse;\nIS = IJslandse;\nI = Italiaanse;\nYU = Joegoslavische;\nFL = Liechtensteinse;\nL = Luxemburgse;\nM = Maltese;\nMC = Monegaskische;\nN = Noorse;\nA = Oostenrijkse;\nPL = Poolse;\nP = Portugese;\nRO = Roemeense;\nRSM = San Marinese;\nE = Spaanse;\nVAT = Vaticaanse;\nS = Zweedse;\nCH = Zwitserse;\nGB2 = Brits onderdaan;\nERI = Eritrese;\nGB3 = Staatsburger van de Britse overzeese gebiedsdelen;\nXK = Kosovaarse;\nMK = Burger van de Republiek Noord-Macedonië;\nPSE = Palestijn;",
+                        "description": "Nationaliteit\n000 = Onbekend;\nNL = Nederlandse;\nDZ = Algerijnse;\nAN = Angolese;\nRU = Burundese;\nRB = Botswaanse;\nBU = Burkinese;\nRCA = Centraal-Afrikaanse;\nKM = Comorese;\nRCB = Kongolese;\nDY = Beninse;\nET = Egyptische;\nEQ = Equatoriaalguinese;\nETH = Ethiopische;\nDJI = Djiboutiaanse;\nGA = Gabonese;\nWAG = Gambiaanse;\nGH = Ghanese;\nGN = Guinese;\nCI = Ivoriaanse;\nCV = Kaapverdische;\nTC = Kameroense;\nEAK = Kenyaanse;\nCD = Zaïrese;\nLS = Lesothaanse;\nLB = Liberiaanse;\nLAR = Libische;\nRM = Malagassische;\nMW = Malawische;\nRMM = Malinese;\nMA = Marokkaanse;\nRIM = Mauritaanse;\nMS = Mauritiaanse;\nMOC = Mozambikaanse;\nRN = Nigerese;\nWAN = Nigeriaanse;\nEAU = Ugandese;\nGW = Guinee-Bissause;\nZA = Zuid-Afrikaanse;\nSD = Eswatinische;\nZW = Zimbabwaanse;\nRWA = Rwandese;\nST = Burger van São Tomé en Principe;\nSN = Senegalese;\nWAL = Sierra Leoonse;\nSUD = Soedanese;\nSP = Somalische;\nEAT = Tanzaniaanse;\nTG = Togolese;\nTS = Tsjadische;\nTN = Tunesische;\nZ = Zambiaanse;\nSS = Zuid-Soedanese;\nBS = Bahamaanse;\nBH = Belizaanse;\nCDN = Canadese;\nCR = Costa Ricaanse;\nC = Cubaanse;\nDOM = Dominicaanse;\nEL = Salvadoraanse;\nGCA = Guatemalaanse;\nRH = Haïtiaanse;\nHON = Hondurese;\nJA = Jamaicaanse;\nMEX = Mexicaanse;\nNIC = Nicaraguaanse;\nPA = Panamese;\nTT = Burger van Trinidad en Tobago;\nUSA = Amerikaans burger;\nRA = Argentijnse;\nBDS = Barbadaanse;\nBOL = Boliviaanse;\nBR = Braziliaanse;\nRCH = Chileense;\nCO = Colombiaanse;\nEC = Ecuadoraanse;\nGUY = Guyaanse;\nPY = Paraguayaanse;\nPE = Peruaanse;\nSME = Surinaamse;\nROU = Uruguayaanse;\nYV = Venezolaanse;\nWG = Grenadaanse;\nKN = Burger van Saint Kitts-Nevis;\nSK = Slowaakse;\nCZ = Tsjechische;\nBA = Burger van Bosnië-Herzegovina;\nGE = Georgische;\nAFG = Afghaanse;\nBRN = Bahreinse;\nBT = Bhutaanse;\nBM = Burmaanse;\nBRU = Bruneise;\nK = Cambodjaanse;\nCL = Sri Lankaanse;\nCN = Chinese;\nCY = Cyprische;\nRP = Filipijnse;\nTMN = Turkmeense;\nRC = Taiwanese;\nIND = Indiase;\nRI = Indonesische;\nIRQ = Iraakse;\nIR = Iraanse;\nIL = Israëlische;\nJ = Japanse;\nHKJ = Jordaanse;\nTAD = Tadzjiekse;\nKWT = Koeweitse;\nLAO = Laotiaanse;\nRL = Libanese;\nMV = Maldivische;\nMAL = Maleisische;\nMON = Mongolische;\nOMA = Omaanse;\nNPL = Nepalese;\nKO = Noord-Koreaanse;\nOEZ = Oezbeekse;\nPK = Pakistaanse;\nQA = Qatarese;\nAS = Saoedi-Arabische;\nSGP = Singaporese;\nSYR = Syrische;\nT = Thaise;\nAE = Burger van de Ver. Arabische Emiraten;\nTR = Turkse;\nUA = Oekraïense;\nROK = Zuid-Koreaanse;\nVN = Vietnamese;\nBD = Bengalese;\nKG = Kirgizische;\nMD = Moldavische;\nKZ = Kazachse;\nBY = Belarussische;\nAZ = Azerbeidzjaanse;\nAM = Armeense;\nAUS = Australische;\nPNG = Papoea-Nieuw-Guinese;\nNZ = Nieuw-Zeelandse;\nWSM = West-Samoaanse;\nWS = Samoaanse;\nRUS = Russische;\nSLO = Sloveense;\nAG = Burger van Antigua en Barbuda;\nVU = Vanuatuaanse;\nFJI = Fijische;\nGB4 = Burger van Britse afhankelijke gebieden;\nHR = Kroatische;\nTO = Tongaanse;\nNR = Nauruaanse;\nPLW = Palause;\nUSA2 = Amerikaans onderdaan;\nLV = Letse;\nSB = Salomonseilandse;\nMIC = Micronesische;\nSY = Seychelse;\nKIR = Kiribatische;\nTV = Tuvaluaanse;\nWL = Saint Luciaanse;\nWD = Burger van Dominica;\nWV = Burger van Saint Vincent en de Grenadines;\nEE = Estische;\nIOT = British National (overseas);\nZRE = Burger van Democratische Republiek Congo;\nTLS = Burger van Timor Leste;\nSCG = Burger van Servië en Montenegro;\nSRB = Servische;\nMNE = Montenegrijnse;\nLT = Litouwse;\nMAR = Marshalleilandse;\nBUR = Myanmarese;\nNAM = Namibische;\nGRF = Vluchteling;\n499 = Staatloos;\nAL = Albanese;\nAND = Andorrese;\nB = Belgische;\nBG = Bulgaarse;\nDK = Deense;\nD = Duitse;\nFIN = Finse;\nF = Franse;\nYMN = Jemenitische;\nGR = Griekse;\nGB = Brits burger;\nH = Hongaarse;\nIRL = Ierse;\nIS = IJslandse;\nI = Italiaanse;\nYU = Joegoslavische;\nFL = Liechtensteinse;\nL = Luxemburgse;\nM = Maltese;\nMC = Monegaskische;\nN = Noorse;\nA = Oostenrijkse;\nPL = Poolse;\nP = Portugese;\nRO = Roemeense;\nRSM = San Marinese;\nE = Spaanse;\nVAT = Vaticaanse;\nS = Zweedse;\nCH = Zwitserse;\nGB2 = Brits onderdaan;\nERI = Eritrese;\nGB3 = Staatsburger van de Britse overzeese gebiedsdelen;\nXK = Kosovaarse;\nMK = Burger van de Republiek Noord-Macedonië;\nPSE = Palestijn;",
                         "format": ""
                       },
                       "ViCs": {
@@ -13081,7 +13107,7 @@
                                           "LT",
                                           "MAR",
                                           "BUR",
-                                          "SWA",
+                                          "NAM",
                                           "GRF",
                                           "499",
                                           "AL",
@@ -13122,7 +13148,7 @@
                                           "PSE"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Nationaliteit\n000 = Onbekend;\nNL = Nederlandse;\nDZ = Algerijnse;\nAN = Angolese;\nRU = Burundese;\nRB = Botswaanse;\nBU = Burkinese;\nRCA = Centraal-Afrikaanse;\nKM = Comorese;\nRCB = Kongolese;\nDY = Beninse;\nET = Egyptische;\nEQ = Equatoriaalguinese;\nETH = Ethiopische;\nDJI = Djiboutiaanse;\nGA = Gabonese;\nWAG = Gambiaanse;\nGH = Ghanese;\nGN = Guinese;\nCI = Ivoriaanse;\nCV = Kaapverdische;\nTC = Kameroense;\nEAK = Kenyaanse;\nCD = Zaïrese;\nLS = Lesothaanse;\nLB = Liberiaanse;\nLAR = Libische;\nRM = Malagassische;\nMW = Malawische;\nRMM = Malinese;\nMA = Marokkaanse;\nRIM = Mauritaanse;\nMS = Mauritiaanse;\nMOC = Mozambikaanse;\nRN = Nigerese;\nWAN = Nigeriaanse;\nEAU = Ugandese;\nGW = Guinee-Bissause;\nZA = Zuid-Afrikaanse;\nSD = Eswatinische;\nZW = Zimbabwaanse;\nRWA = Rwandese;\nST = Burger van São Tomé en Principe;\nSN = Senegalese;\nWAL = Sierra Leoonse;\nSUD = Soedanese;\nSP = Somalische;\nEAT = Tanzaniaanse;\nTG = Togolese;\nTS = Tsjadische;\nTN = Tunesische;\nZ = Zambiaanse;\nSS = Zuid-Soedanese;\nBS = Bahamaanse;\nBH = Belizaanse;\nCDN = Canadese;\nCR = Costa Ricaanse;\nC = Cubaanse;\nDOM = Dominicaanse;\nEL = Salvadoraanse;\nGCA = Guatemalaanse;\nRH = Haïtiaanse;\nHON = Hondurese;\nJA = Jamaicaanse;\nMEX = Mexicaanse;\nNIC = Nicaraguaanse;\nPA = Panamese;\nTT = Burger van Trinidad en Tobago;\nUSA = Amerikaans burger;\nRA = Argentijnse;\nBDS = Barbadaanse;\nBOL = Boliviaanse;\nBR = Braziliaanse;\nRCH = Chileense;\nCO = Colombiaanse;\nEC = Ecuadoraanse;\nGUY = Guyaanse;\nPY = Paraguayaanse;\nPE = Peruaanse;\nSME = Surinaamse;\nROU = Uruguayaanse;\nYV = Venezolaanse;\nWG = Grenadaanse;\nKN = Burger van Saint Kitts-Nevis;\nSK = Slowaakse;\nCZ = Tsjechische;\nBA = Burger van Bosnië-Herzegovina;\nGE = Georgische;\nAFG = Afghaanse;\nBRN = Bahreinse;\nBT = Bhutaanse;\nBM = Burmaanse;\nBRU = Bruneise;\nK = Cambodjaanse;\nCL = Sri Lankaanse;\nCN = Chinese;\nCY = Cyprische;\nRP = Filipijnse;\nTMN = Turkmeense;\nRC = Taiwanese;\nIND = Indiase;\nRI = Indonesische;\nIRQ = Iraakse;\nIR = Iraanse;\nIL = Israëlische;\nJ = Japanse;\nHKJ = Jordaanse;\nTAD = Tadzjiekse;\nKWT = Koeweitse;\nLAO = Laotiaanse;\nRL = Libanese;\nMV = Maldivische;\nMAL = Maleisische;\nMON = Mongolische;\nOMA = Omaanse;\nNPL = Nepalese;\nKO = Noord-Koreaanse;\nOEZ = Oezbeekse;\nPK = Pakistaanse;\nQA = Qatarese;\nAS = Saoedi-Arabische;\nSGP = Singaporese;\nSYR = Syrische;\nT = Thaise;\nAE = Burger van de Ver. Arabische Emiraten;\nTR = Turkse;\nUA = Oekraïense;\nROK = Zuid-Koreaanse;\nVN = Vietnamese;\nBD = Bengalese;\nKG = Kirgizische;\nMD = Moldavische;\nKZ = Kazachse;\nBY = Belarussische;\nAZ = Azerbeidzjaanse;\nAM = Armeense;\nAUS = Australische;\nPNG = Papoea-Nieuw-Guinese;\nNZ = Nieuw-Zeelandse;\nWSM = West-Samoaanse;\nWS = Samoaanse;\nRUS = Russische;\nSLO = Sloveense;\nAG = Burger van Antigua en Barbuda;\nVU = Vanuatuaanse;\nFJI = Fijische;\nGB4 = Burger van Britse afhankelijke gebieden;\nHR = Kroatische;\nTO = Tongaanse;\nNR = Nauruaanse;\nPLW = Palause;\nUSA2 = Amerikaans onderdaan;\nLV = Letse;\nSB = Salomonseilandse;\nMIC = Micronesische;\nSY = Seychelse;\nKIR = Kiribatische;\nTV = Tuvaluaanse;\nWL = Saint Luciaanse;\nWD = Burger van Dominica;\nWV = Burger van Saint Vincent en de Grenadines;\nEE = Estische;\nIOT = British National (overseas);\nZRE = Burger van Democratische Republiek Congo;\nTLS = Burger van Timor Leste;\nSCG = Burger van Servië en Montenegro;\nSRB = Servische;\nMNE = Montenegrijnse;\nLT = Litouwse;\nMAR = Marshalleilandse;\nBUR = Myanmarese;\nSWA = Namibische;\nGRF = Vluchteling;\n499 = Staatloos;\nAL = Albanese;\nAND = Andorrese;\nB = Belgische;\nBG = Bulgaarse;\nDK = Deense;\nD = Duitse;\nFIN = Finse;\nF = Franse;\nYMN = Jemenitische;\nGR = Griekse;\nGB = Brits burger;\nH = Hongaarse;\nIRL = Ierse;\nIS = IJslandse;\nI = Italiaanse;\nYU = Joegoslavische;\nFL = Liechtensteinse;\nL = Luxemburgse;\nM = Maltese;\nMC = Monegaskische;\nN = Noorse;\nA = Oostenrijkse;\nPL = Poolse;\nP = Portugese;\nRO = Roemeense;\nRSM = San Marinese;\nE = Spaanse;\nVAT = Vaticaanse;\nS = Zweedse;\nCH = Zwitserse;\nGB2 = Brits onderdaan;\nERI = Eritrese;\nGB3 = Staatsburger van de Britse overzeese gebiedsdelen;\nXK = Kosovaarse;\nMK = Burger van de Republiek Noord-Macedonië;\nPSE = Palestijn;",
+                                        "description": "Nationaliteit\n000 = Onbekend;\nNL = Nederlandse;\nDZ = Algerijnse;\nAN = Angolese;\nRU = Burundese;\nRB = Botswaanse;\nBU = Burkinese;\nRCA = Centraal-Afrikaanse;\nKM = Comorese;\nRCB = Kongolese;\nDY = Beninse;\nET = Egyptische;\nEQ = Equatoriaalguinese;\nETH = Ethiopische;\nDJI = Djiboutiaanse;\nGA = Gabonese;\nWAG = Gambiaanse;\nGH = Ghanese;\nGN = Guinese;\nCI = Ivoriaanse;\nCV = Kaapverdische;\nTC = Kameroense;\nEAK = Kenyaanse;\nCD = Zaïrese;\nLS = Lesothaanse;\nLB = Liberiaanse;\nLAR = Libische;\nRM = Malagassische;\nMW = Malawische;\nRMM = Malinese;\nMA = Marokkaanse;\nRIM = Mauritaanse;\nMS = Mauritiaanse;\nMOC = Mozambikaanse;\nRN = Nigerese;\nWAN = Nigeriaanse;\nEAU = Ugandese;\nGW = Guinee-Bissause;\nZA = Zuid-Afrikaanse;\nSD = Eswatinische;\nZW = Zimbabwaanse;\nRWA = Rwandese;\nST = Burger van São Tomé en Principe;\nSN = Senegalese;\nWAL = Sierra Leoonse;\nSUD = Soedanese;\nSP = Somalische;\nEAT = Tanzaniaanse;\nTG = Togolese;\nTS = Tsjadische;\nTN = Tunesische;\nZ = Zambiaanse;\nSS = Zuid-Soedanese;\nBS = Bahamaanse;\nBH = Belizaanse;\nCDN = Canadese;\nCR = Costa Ricaanse;\nC = Cubaanse;\nDOM = Dominicaanse;\nEL = Salvadoraanse;\nGCA = Guatemalaanse;\nRH = Haïtiaanse;\nHON = Hondurese;\nJA = Jamaicaanse;\nMEX = Mexicaanse;\nNIC = Nicaraguaanse;\nPA = Panamese;\nTT = Burger van Trinidad en Tobago;\nUSA = Amerikaans burger;\nRA = Argentijnse;\nBDS = Barbadaanse;\nBOL = Boliviaanse;\nBR = Braziliaanse;\nRCH = Chileense;\nCO = Colombiaanse;\nEC = Ecuadoraanse;\nGUY = Guyaanse;\nPY = Paraguayaanse;\nPE = Peruaanse;\nSME = Surinaamse;\nROU = Uruguayaanse;\nYV = Venezolaanse;\nWG = Grenadaanse;\nKN = Burger van Saint Kitts-Nevis;\nSK = Slowaakse;\nCZ = Tsjechische;\nBA = Burger van Bosnië-Herzegovina;\nGE = Georgische;\nAFG = Afghaanse;\nBRN = Bahreinse;\nBT = Bhutaanse;\nBM = Burmaanse;\nBRU = Bruneise;\nK = Cambodjaanse;\nCL = Sri Lankaanse;\nCN = Chinese;\nCY = Cyprische;\nRP = Filipijnse;\nTMN = Turkmeense;\nRC = Taiwanese;\nIND = Indiase;\nRI = Indonesische;\nIRQ = Iraakse;\nIR = Iraanse;\nIL = Israëlische;\nJ = Japanse;\nHKJ = Jordaanse;\nTAD = Tadzjiekse;\nKWT = Koeweitse;\nLAO = Laotiaanse;\nRL = Libanese;\nMV = Maldivische;\nMAL = Maleisische;\nMON = Mongolische;\nOMA = Omaanse;\nNPL = Nepalese;\nKO = Noord-Koreaanse;\nOEZ = Oezbeekse;\nPK = Pakistaanse;\nQA = Qatarese;\nAS = Saoedi-Arabische;\nSGP = Singaporese;\nSYR = Syrische;\nT = Thaise;\nAE = Burger van de Ver. Arabische Emiraten;\nTR = Turkse;\nUA = Oekraïense;\nROK = Zuid-Koreaanse;\nVN = Vietnamese;\nBD = Bengalese;\nKG = Kirgizische;\nMD = Moldavische;\nKZ = Kazachse;\nBY = Belarussische;\nAZ = Azerbeidzjaanse;\nAM = Armeense;\nAUS = Australische;\nPNG = Papoea-Nieuw-Guinese;\nNZ = Nieuw-Zeelandse;\nWSM = West-Samoaanse;\nWS = Samoaanse;\nRUS = Russische;\nSLO = Sloveense;\nAG = Burger van Antigua en Barbuda;\nVU = Vanuatuaanse;\nFJI = Fijische;\nGB4 = Burger van Britse afhankelijke gebieden;\nHR = Kroatische;\nTO = Tongaanse;\nNR = Nauruaanse;\nPLW = Palause;\nUSA2 = Amerikaans onderdaan;\nLV = Letse;\nSB = Salomonseilandse;\nMIC = Micronesische;\nSY = Seychelse;\nKIR = Kiribatische;\nTV = Tuvaluaanse;\nWL = Saint Luciaanse;\nWD = Burger van Dominica;\nWV = Burger van Saint Vincent en de Grenadines;\nEE = Estische;\nIOT = British National (overseas);\nZRE = Burger van Democratische Republiek Congo;\nTLS = Burger van Timor Leste;\nSCG = Burger van Servië en Montenegro;\nSRB = Servische;\nMNE = Montenegrijnse;\nLT = Litouwse;\nMAR = Marshalleilandse;\nBUR = Myanmarese;\nNAM = Namibische;\nGRF = Vluchteling;\n499 = Staatloos;\nAL = Albanese;\nAND = Andorrese;\nB = Belgische;\nBG = Bulgaarse;\nDK = Deense;\nD = Duitse;\nFIN = Finse;\nF = Franse;\nYMN = Jemenitische;\nGR = Griekse;\nGB = Brits burger;\nH = Hongaarse;\nIRL = Ierse;\nIS = IJslandse;\nI = Italiaanse;\nYU = Joegoslavische;\nFL = Liechtensteinse;\nL = Luxemburgse;\nM = Maltese;\nMC = Monegaskische;\nN = Noorse;\nA = Oostenrijkse;\nPL = Poolse;\nP = Portugese;\nRO = Roemeense;\nRSM = San Marinese;\nE = Spaanse;\nVAT = Vaticaanse;\nS = Zweedse;\nCH = Zwitserse;\nGB2 = Brits onderdaan;\nERI = Eritrese;\nGB3 = Staatsburger van de Britse overzeese gebiedsdelen;\nXK = Kosovaarse;\nMK = Burger van de Republiek Noord-Macedonië;\nPSE = Palestijn;",
                                         "format": ""
                                       },
                                       "DaBi": {
@@ -15294,7 +15320,7 @@
                                       },
                                       "DvbStAn": {
                                         "type": "string",
-                                        "description": "Startdatum anciënniteit",
+                                        "description": "Startdatum anci?nniteit",
                                         "format": "date"
                                       },
                                       "DvbSeAc": {
@@ -15409,13 +15435,13 @@
                                       "DvbViRe": {
                                         "type": "string",
                                         "maxLength": 10,
-                                        "description": "Reden einde dienstverband België",
+                                        "description": "Reden einde dienstverband Belgi?",
                                         "format": ""
                                       },
                                       "DvbViMa": {
                                         "type": "string",
                                         "maxLength": 10,
-                                        "description": "Wijze einde dienstverband België",
+                                        "description": "Wijze einde dienstverband Belgi?",
                                         "format": ""
                                       },
                                       "ArvStPn": {
@@ -15442,6 +15468,76 @@
                                       "B2Pp": {
                                         "type": "boolean",
                                         "description": "Bijdrage 2e pensioenpijler",
+                                        "format": ""
+                                      },
+                                      "RSZE": {
+                                        "type": "string",
+                                        "enum": [
+                                          "1",
+                                          "2",
+                                          "3",
+                                          "4",
+                                          "5",
+                                          "6",
+                                          "7",
+                                          "8",
+                                          "9",
+                                          "A",
+                                          "B",
+                                          "C",
+                                          "D",
+                                          "E"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Vrijstelling RSZ\n1 = Tewerkgestelde werkloze in een VZW;\n2 = Beroepsopleiding / Stage;\n3 = Betaalt RSZ in het buitenland;\n4 = RSZ als zelfstandige;\n5 = Overzeese sociale zekerheid;\n6 = Tewerkstelling van korte duur;\n7 = Binnenschippers;\n8 = Werkstudent;\n9 = Begeleid leerlingenvervoer of middagtoezichter;\nA = Huispersoneel max. 8u/week;\nB = Instapstage;\nC = Beroepsinlevingsovereenkomst;\nD = Brugproject;\nE = VDAB stage (onbezoldigd);",
+                                        "format": ""
+                                      },
+                                      "LeAg": {
+                                        "type": "string",
+                                        "enum": [
+                                          "1",
+                                          "10",
+                                          "11",
+                                          "12",
+                                          "13",
+                                          "14",
+                                          "15",
+                                          "16",
+                                          "17",
+                                          "18",
+                                          "19",
+                                          "2",
+                                          "20",
+                                          "21",
+                                          "22",
+                                          "23",
+                                          "24",
+                                          "25",
+                                          "26",
+                                          "27",
+                                          "28",
+                                          "29",
+                                          "3",
+                                          "30",
+                                          "31",
+                                          "32",
+                                          "33",
+                                          "34",
+                                          "35",
+                                          "36",
+                                          "37",
+                                          "38",
+                                          "39",
+                                          "4",
+                                          "40",
+                                          "5",
+                                          "6",
+                                          "7",
+                                          "8",
+                                          "9"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Arbeidsovereenkomst\n1 = Arbeider;\n10 = Betaalde sportbeoefenaar;\n11 = Student;\n12 = Tewerkgestelde werkloze;\n13 = -;\n14 = Derde arbeidscircuit;\n15 = Werknemer met beperkte RSZ-onderwerping (leerplicht);\n16 = Deeltijdse stage (schoolplichtig);\n17 = Beroepsopleiding RVA;\n18 = Stage (KB 230) / Startbaanovereenkomst;\n19 = Tijdelijke arbeid (interim);\n2 = Arbeider bezoldigd met fooien;\n20 = Openbare dienst;\n21 = Leerling / stage geen dimona;\n22 = Bestuurder;\n23 = Gepensioneerde;\n24 = Bruggepensioneerde;\n25 = Beroepsjournalist;\n26 = Tewerkgestelde onder volmachtsbesluiten;\n27 = Arbeider met fooien bezoldigd onder volmachtsbesluiten;\n28 = Werknemer met tegemoetkoming werkgever;\n29 = Werknemer met tegemoetkoming werkgever (fooien);\n3 = Alternerend leren-werken / ond.opl.;\n30 = Binnenschipper;\n31 = DOSZ;\n32 = Vliegend personeel;\n33 = Zaakvoerder;\n34 = Expatriates;\n35 = TCN;\n36 = Expatriates;\n37 = On assignments;\n38 = Detachering;\n39 = Aanvullende vergoeding bij werkloosheidsuitkering (canada dry);\n4 = Industrieel leercontract / socioprofessioneel contract;\n40 = Aanvullende vergoeding bij onderbrekingsuitkering bij tijdskrediet;\n5 = Leerovereenkomst mindervalide;\n6 = Thuisarbeider;\n7 = Dienstbode;\n8 = Bediende;\n9 = Handelsvertegenwoordiger;",
                                         "format": ""
                                       }
                                     },
@@ -16132,9 +16228,9 @@
                                         "format": ""
                                       },
                                       "RePe": {
-                                        "type": "integer",
+                                        "type": "number",
                                         "description": "Percentage onderzoek",
-                                        "format": ""
+                                        "format": "number"
                                       },
                                       "SoSe": {
                                         "type": "string",
@@ -16913,6 +17009,11 @@
                                         "maxLength": 20,
                                         "description": "Titel\n1 = Zonder titel;\n10 = Directeur Generaal;\n3 = Afdelingshoofd;\n4 = Diensthoofd;\n5 = Procuratiehouder;\n6 = Adjunct-directeur;\n7 = Directeur;\n9 = Adjunct Directeur Generaal;",
                                         "format": ""
+                                      },
+                                      "PaGm": {
+                                        "type": "boolean",
+                                        "description": "Gepensioneerde medewerker",
+                                        "format": ""
                                       }
                                     },
                                     "required": [
@@ -17501,6 +17602,28 @@
                                         ],
                                         "maxLength": 20,
                                         "description": "Type voltijds\n0 = Niet betrokken;\n1 = Tijdelijk voltijds;\n2 = Vrijwillige deelt. werkn.;\n3 = Met behoud van rechten;",
+                                        "format": ""
+                                      },
+                                      "Rgim": {
+                                        "type": "string",
+                                        "enum": [
+                                          "5",
+                                          "6"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Stelsel\n5 = Vijfdagenstelsel;\n6 = Zesdagenstelsel;",
+                                        "format": ""
+                                      },
+                                      "SDCW": {
+                                        "type": "string",
+                                        "enum": [
+                                          "A",
+                                          "B",
+                                          "C",
+                                          "D"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Werkschema code\nA = Vast wekelijks werkschema;\nB = Vast werkschema, niet wekelijks of wisselende dagen/uren;\nC = Variabel werkschema;\nD = Weekendoverbruggingsploeg;",
                                         "format": ""
                                       }
                                     },
@@ -25342,6 +25465,11 @@
                                         "maxLength": 20,
                                         "description": "Onderworpen aan voorheffing\n0 = Niet onderworpen;\n1 = Onderworpen;\n2 = Niet verblijfhouder in België;\n3 = Vrijstell.stort.BV nacht of ploeg;\n4 = Niet verblijfhouder sportbeoef./ -30 dagen;\n5 = Niet verblijfh./vrijst.nacht of ploeg;\n6 = Onderworpen (+werk.beroepskosten);",
                                         "format": ""
+                                      },
+                                      "MaTl": {
+                                        "type": "number",
+                                        "description": "Mantelzorg 65+ ten laste",
+                                        "format": "number"
                                       }
                                     },
                                     "required": [
@@ -25562,6 +25690,11 @@
                                         "maxLength": 20,
                                         "description": "Loonstrook\n2 = Loonbrief in taal medewerker;\nB = Loonbrief in taal medewerker + Engelse vertaling;\nK = Loonbrief in het Duits;\nP = Loonbrief in taal medewerker + Duitse vertaling;\nS = Loonbrief in taal medewerker + Ned. of Franse vertaling;",
                                         "format": ""
+                                      },
+                                      "MaTl": {
+                                        "type": "number",
+                                        "description": "Mantelzorg 65+ ten laste",
+                                        "format": "number"
                                       }
                                     },
                                     "required": [
@@ -25862,6 +25995,11 @@
                                         "type": "boolean",
                                         "description": "Mindervalide partner",
                                         "format": ""
+                                      },
+                                      "MaTl": {
+                                        "type": "number",
+                                        "description": "Mantelzorg 65+ ten laste",
+                                        "format": "number"
                                       }
                                     },
                                     "required": [
@@ -26269,6 +26407,11 @@
                                         "maxLength": 20,
                                         "description": "Onderwerping BV\n01 = Met bedrijfsvoorheffing;\n02 = Bedrijfsvoorheffing ten laste van de werkgever;\n03 = Zonder bedrijfsvoorheffing;\n04 = Zonder bedrijfsvoorheffing (jaarl werken uitgesloten);\n05 = Loonfiche 281.30 (325.30);\n06 = Totale neutralisatie van belastbaar;\n07 = Neutralisatie van belastbaar met netto;\n08 = Fiscale fiche 281.20 voor aan de RSZ onderworpen zelfstandigen;",
                                         "format": ""
+                                      },
+                                      "MaTl": {
+                                        "type": "number",
+                                        "description": "Mantelzorg 65+ ten laste",
+                                        "format": "number"
                                       }
                                     },
                                     "required": [
@@ -27129,7 +27272,7 @@
                                           "LT",
                                           "MAR",
                                           "BUR",
-                                          "SWA",
+                                          "NAM",
                                           "GRF",
                                           "499",
                                           "AL",
@@ -27170,7 +27313,7 @@
                                           "PSE"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Nationaliteit\n000 = Onbekend;\nNL = Nederlandse;\nDZ = Algerijnse;\nAN = Angolese;\nRU = Burundese;\nRB = Botswaanse;\nBU = Burkinese;\nRCA = Centraal-Afrikaanse;\nKM = Comorese;\nRCB = Kongolese;\nDY = Beninse;\nET = Egyptische;\nEQ = Equatoriaalguinese;\nETH = Ethiopische;\nDJI = Djiboutiaanse;\nGA = Gabonese;\nWAG = Gambiaanse;\nGH = Ghanese;\nGN = Guinese;\nCI = Ivoriaanse;\nCV = Kaapverdische;\nTC = Kameroense;\nEAK = Kenyaanse;\nCD = Zaïrese;\nLS = Lesothaanse;\nLB = Liberiaanse;\nLAR = Libische;\nRM = Malagassische;\nMW = Malawische;\nRMM = Malinese;\nMA = Marokkaanse;\nRIM = Mauritaanse;\nMS = Mauritiaanse;\nMOC = Mozambikaanse;\nRN = Nigerese;\nWAN = Nigeriaanse;\nEAU = Ugandese;\nGW = Guinee-Bissause;\nZA = Zuid-Afrikaanse;\nSD = Eswatinische;\nZW = Zimbabwaanse;\nRWA = Rwandese;\nST = Burger van São Tomé en Principe;\nSN = Senegalese;\nWAL = Sierra Leoonse;\nSUD = Soedanese;\nSP = Somalische;\nEAT = Tanzaniaanse;\nTG = Togolese;\nTS = Tsjadische;\nTN = Tunesische;\nZ = Zambiaanse;\nSS = Zuid-Soedanese;\nBS = Bahamaanse;\nBH = Belizaanse;\nCDN = Canadese;\nCR = Costa Ricaanse;\nC = Cubaanse;\nDOM = Dominicaanse;\nEL = Salvadoraanse;\nGCA = Guatemalaanse;\nRH = Haïtiaanse;\nHON = Hondurese;\nJA = Jamaicaanse;\nMEX = Mexicaanse;\nNIC = Nicaraguaanse;\nPA = Panamese;\nTT = Burger van Trinidad en Tobago;\nUSA = Amerikaans burger;\nRA = Argentijnse;\nBDS = Barbadaanse;\nBOL = Boliviaanse;\nBR = Braziliaanse;\nRCH = Chileense;\nCO = Colombiaanse;\nEC = Ecuadoraanse;\nGUY = Guyaanse;\nPY = Paraguayaanse;\nPE = Peruaanse;\nSME = Surinaamse;\nROU = Uruguayaanse;\nYV = Venezolaanse;\nWG = Grenadaanse;\nKN = Burger van Saint Kitts-Nevis;\nSK = Slowaakse;\nCZ = Tsjechische;\nBA = Burger van Bosnië-Herzegovina;\nGE = Georgische;\nAFG = Afghaanse;\nBRN = Bahreinse;\nBT = Bhutaanse;\nBM = Burmaanse;\nBRU = Bruneise;\nK = Cambodjaanse;\nCL = Sri Lankaanse;\nCN = Chinese;\nCY = Cyprische;\nRP = Filipijnse;\nTMN = Turkmeense;\nRC = Taiwanese;\nIND = Indiase;\nRI = Indonesische;\nIRQ = Iraakse;\nIR = Iraanse;\nIL = Israëlische;\nJ = Japanse;\nHKJ = Jordaanse;\nTAD = Tadzjiekse;\nKWT = Koeweitse;\nLAO = Laotiaanse;\nRL = Libanese;\nMV = Maldivische;\nMAL = Maleisische;\nMON = Mongolische;\nOMA = Omaanse;\nNPL = Nepalese;\nKO = Noord-Koreaanse;\nOEZ = Oezbeekse;\nPK = Pakistaanse;\nQA = Qatarese;\nAS = Saoedi-Arabische;\nSGP = Singaporese;\nSYR = Syrische;\nT = Thaise;\nAE = Burger van de Ver. Arabische Emiraten;\nTR = Turkse;\nUA = Oekraïense;\nROK = Zuid-Koreaanse;\nVN = Vietnamese;\nBD = Bengalese;\nKG = Kirgizische;\nMD = Moldavische;\nKZ = Kazachse;\nBY = Belarussische;\nAZ = Azerbeidzjaanse;\nAM = Armeense;\nAUS = Australische;\nPNG = Papoea-Nieuw-Guinese;\nNZ = Nieuw-Zeelandse;\nWSM = West-Samoaanse;\nWS = Samoaanse;\nRUS = Russische;\nSLO = Sloveense;\nAG = Burger van Antigua en Barbuda;\nVU = Vanuatuaanse;\nFJI = Fijische;\nGB4 = Burger van Britse afhankelijke gebieden;\nHR = Kroatische;\nTO = Tongaanse;\nNR = Nauruaanse;\nPLW = Palause;\nUSA2 = Amerikaans onderdaan;\nLV = Letse;\nSB = Salomonseilandse;\nMIC = Micronesische;\nSY = Seychelse;\nKIR = Kiribatische;\nTV = Tuvaluaanse;\nWL = Saint Luciaanse;\nWD = Burger van Dominica;\nWV = Burger van Saint Vincent en de Grenadines;\nEE = Estische;\nIOT = British National (overseas);\nZRE = Burger van Democratische Republiek Congo;\nTLS = Burger van Timor Leste;\nSCG = Burger van Servië en Montenegro;\nSRB = Servische;\nMNE = Montenegrijnse;\nLT = Litouwse;\nMAR = Marshalleilandse;\nBUR = Myanmarese;\nSWA = Namibische;\nGRF = Vluchteling;\n499 = Staatloos;\nAL = Albanese;\nAND = Andorrese;\nB = Belgische;\nBG = Bulgaarse;\nDK = Deense;\nD = Duitse;\nFIN = Finse;\nF = Franse;\nYMN = Jemenitische;\nGR = Griekse;\nGB = Brits burger;\nH = Hongaarse;\nIRL = Ierse;\nIS = IJslandse;\nI = Italiaanse;\nYU = Joegoslavische;\nFL = Liechtensteinse;\nL = Luxemburgse;\nM = Maltese;\nMC = Monegaskische;\nN = Noorse;\nA = Oostenrijkse;\nPL = Poolse;\nP = Portugese;\nRO = Roemeense;\nRSM = San Marinese;\nE = Spaanse;\nVAT = Vaticaanse;\nS = Zweedse;\nCH = Zwitserse;\nGB2 = Brits onderdaan;\nERI = Eritrese;\nGB3 = Staatsburger van de Britse overzeese gebiedsdelen;\nXK = Kosovaarse;\nMK = Burger van de Republiek Noord-Macedonië;\nPSE = Palestijn;",
+                                        "description": "Nationaliteit\n000 = Onbekend;\nNL = Nederlandse;\nDZ = Algerijnse;\nAN = Angolese;\nRU = Burundese;\nRB = Botswaanse;\nBU = Burkinese;\nRCA = Centraal-Afrikaanse;\nKM = Comorese;\nRCB = Kongolese;\nDY = Beninse;\nET = Egyptische;\nEQ = Equatoriaalguinese;\nETH = Ethiopische;\nDJI = Djiboutiaanse;\nGA = Gabonese;\nWAG = Gambiaanse;\nGH = Ghanese;\nGN = Guinese;\nCI = Ivoriaanse;\nCV = Kaapverdische;\nTC = Kameroense;\nEAK = Kenyaanse;\nCD = Zaïrese;\nLS = Lesothaanse;\nLB = Liberiaanse;\nLAR = Libische;\nRM = Malagassische;\nMW = Malawische;\nRMM = Malinese;\nMA = Marokkaanse;\nRIM = Mauritaanse;\nMS = Mauritiaanse;\nMOC = Mozambikaanse;\nRN = Nigerese;\nWAN = Nigeriaanse;\nEAU = Ugandese;\nGW = Guinee-Bissause;\nZA = Zuid-Afrikaanse;\nSD = Eswatinische;\nZW = Zimbabwaanse;\nRWA = Rwandese;\nST = Burger van São Tomé en Principe;\nSN = Senegalese;\nWAL = Sierra Leoonse;\nSUD = Soedanese;\nSP = Somalische;\nEAT = Tanzaniaanse;\nTG = Togolese;\nTS = Tsjadische;\nTN = Tunesische;\nZ = Zambiaanse;\nSS = Zuid-Soedanese;\nBS = Bahamaanse;\nBH = Belizaanse;\nCDN = Canadese;\nCR = Costa Ricaanse;\nC = Cubaanse;\nDOM = Dominicaanse;\nEL = Salvadoraanse;\nGCA = Guatemalaanse;\nRH = Haïtiaanse;\nHON = Hondurese;\nJA = Jamaicaanse;\nMEX = Mexicaanse;\nNIC = Nicaraguaanse;\nPA = Panamese;\nTT = Burger van Trinidad en Tobago;\nUSA = Amerikaans burger;\nRA = Argentijnse;\nBDS = Barbadaanse;\nBOL = Boliviaanse;\nBR = Braziliaanse;\nRCH = Chileense;\nCO = Colombiaanse;\nEC = Ecuadoraanse;\nGUY = Guyaanse;\nPY = Paraguayaanse;\nPE = Peruaanse;\nSME = Surinaamse;\nROU = Uruguayaanse;\nYV = Venezolaanse;\nWG = Grenadaanse;\nKN = Burger van Saint Kitts-Nevis;\nSK = Slowaakse;\nCZ = Tsjechische;\nBA = Burger van Bosnië-Herzegovina;\nGE = Georgische;\nAFG = Afghaanse;\nBRN = Bahreinse;\nBT = Bhutaanse;\nBM = Burmaanse;\nBRU = Bruneise;\nK = Cambodjaanse;\nCL = Sri Lankaanse;\nCN = Chinese;\nCY = Cyprische;\nRP = Filipijnse;\nTMN = Turkmeense;\nRC = Taiwanese;\nIND = Indiase;\nRI = Indonesische;\nIRQ = Iraakse;\nIR = Iraanse;\nIL = Israëlische;\nJ = Japanse;\nHKJ = Jordaanse;\nTAD = Tadzjiekse;\nKWT = Koeweitse;\nLAO = Laotiaanse;\nRL = Libanese;\nMV = Maldivische;\nMAL = Maleisische;\nMON = Mongolische;\nOMA = Omaanse;\nNPL = Nepalese;\nKO = Noord-Koreaanse;\nOEZ = Oezbeekse;\nPK = Pakistaanse;\nQA = Qatarese;\nAS = Saoedi-Arabische;\nSGP = Singaporese;\nSYR = Syrische;\nT = Thaise;\nAE = Burger van de Ver. Arabische Emiraten;\nTR = Turkse;\nUA = Oekraïense;\nROK = Zuid-Koreaanse;\nVN = Vietnamese;\nBD = Bengalese;\nKG = Kirgizische;\nMD = Moldavische;\nKZ = Kazachse;\nBY = Belarussische;\nAZ = Azerbeidzjaanse;\nAM = Armeense;\nAUS = Australische;\nPNG = Papoea-Nieuw-Guinese;\nNZ = Nieuw-Zeelandse;\nWSM = West-Samoaanse;\nWS = Samoaanse;\nRUS = Russische;\nSLO = Sloveense;\nAG = Burger van Antigua en Barbuda;\nVU = Vanuatuaanse;\nFJI = Fijische;\nGB4 = Burger van Britse afhankelijke gebieden;\nHR = Kroatische;\nTO = Tongaanse;\nNR = Nauruaanse;\nPLW = Palause;\nUSA2 = Amerikaans onderdaan;\nLV = Letse;\nSB = Salomonseilandse;\nMIC = Micronesische;\nSY = Seychelse;\nKIR = Kiribatische;\nTV = Tuvaluaanse;\nWL = Saint Luciaanse;\nWD = Burger van Dominica;\nWV = Burger van Saint Vincent en de Grenadines;\nEE = Estische;\nIOT = British National (overseas);\nZRE = Burger van Democratische Republiek Congo;\nTLS = Burger van Timor Leste;\nSCG = Burger van Servië en Montenegro;\nSRB = Servische;\nMNE = Montenegrijnse;\nLT = Litouwse;\nMAR = Marshalleilandse;\nBUR = Myanmarese;\nNAM = Namibische;\nGRF = Vluchteling;\n499 = Staatloos;\nAL = Albanese;\nAND = Andorrese;\nB = Belgische;\nBG = Bulgaarse;\nDK = Deense;\nD = Duitse;\nFIN = Finse;\nF = Franse;\nYMN = Jemenitische;\nGR = Griekse;\nGB = Brits burger;\nH = Hongaarse;\nIRL = Ierse;\nIS = IJslandse;\nI = Italiaanse;\nYU = Joegoslavische;\nFL = Liechtensteinse;\nL = Luxemburgse;\nM = Maltese;\nMC = Monegaskische;\nN = Noorse;\nA = Oostenrijkse;\nPL = Poolse;\nP = Portugese;\nRO = Roemeense;\nRSM = San Marinese;\nE = Spaanse;\nVAT = Vaticaanse;\nS = Zweedse;\nCH = Zwitserse;\nGB2 = Brits onderdaan;\nERI = Eritrese;\nGB3 = Staatsburger van de Britse overzeese gebiedsdelen;\nXK = Kosovaarse;\nMK = Burger van de Republiek Noord-Macedonië;\nPSE = Palestijn;",
                                         "format": ""
                                       },
                                       "DaBi": {
@@ -29328,7 +29471,7 @@
                                       },
                                       "DvbStAn": {
                                         "type": "string",
-                                        "description": "Startdatum anciënniteit",
+                                        "description": "Startdatum anci?nniteit",
                                         "format": "date"
                                       },
                                       "DvbSeAc": {
@@ -29443,13 +29586,13 @@
                                       "DvbViRe": {
                                         "type": "string",
                                         "maxLength": 10,
-                                        "description": "Reden einde dienstverband België",
+                                        "description": "Reden einde dienstverband Belgi?",
                                         "format": ""
                                       },
                                       "DvbViMa": {
                                         "type": "string",
                                         "maxLength": 10,
-                                        "description": "Wijze einde dienstverband België",
+                                        "description": "Wijze einde dienstverband Belgi?",
                                         "format": ""
                                       },
                                       "ArvStPn": {
@@ -29476,6 +29619,76 @@
                                       "B2Pp": {
                                         "type": "boolean",
                                         "description": "Bijdrage 2e pensioenpijler",
+                                        "format": ""
+                                      },
+                                      "RSZE": {
+                                        "type": "string",
+                                        "enum": [
+                                          "1",
+                                          "2",
+                                          "3",
+                                          "4",
+                                          "5",
+                                          "6",
+                                          "7",
+                                          "8",
+                                          "9",
+                                          "A",
+                                          "B",
+                                          "C",
+                                          "D",
+                                          "E"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Vrijstelling RSZ\n1 = Tewerkgestelde werkloze in een VZW;\n2 = Beroepsopleiding / Stage;\n3 = Betaalt RSZ in het buitenland;\n4 = RSZ als zelfstandige;\n5 = Overzeese sociale zekerheid;\n6 = Tewerkstelling van korte duur;\n7 = Binnenschippers;\n8 = Werkstudent;\n9 = Begeleid leerlingenvervoer of middagtoezichter;\nA = Huispersoneel max. 8u/week;\nB = Instapstage;\nC = Beroepsinlevingsovereenkomst;\nD = Brugproject;\nE = VDAB stage (onbezoldigd);",
+                                        "format": ""
+                                      },
+                                      "LeAg": {
+                                        "type": "string",
+                                        "enum": [
+                                          "1",
+                                          "10",
+                                          "11",
+                                          "12",
+                                          "13",
+                                          "14",
+                                          "15",
+                                          "16",
+                                          "17",
+                                          "18",
+                                          "19",
+                                          "2",
+                                          "20",
+                                          "21",
+                                          "22",
+                                          "23",
+                                          "24",
+                                          "25",
+                                          "26",
+                                          "27",
+                                          "28",
+                                          "29",
+                                          "3",
+                                          "30",
+                                          "31",
+                                          "32",
+                                          "33",
+                                          "34",
+                                          "35",
+                                          "36",
+                                          "37",
+                                          "38",
+                                          "39",
+                                          "4",
+                                          "40",
+                                          "5",
+                                          "6",
+                                          "7",
+                                          "8",
+                                          "9"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Arbeidsovereenkomst\n1 = Arbeider;\n10 = Betaalde sportbeoefenaar;\n11 = Student;\n12 = Tewerkgestelde werkloze;\n13 = -;\n14 = Derde arbeidscircuit;\n15 = Werknemer met beperkte RSZ-onderwerping (leerplicht);\n16 = Deeltijdse stage (schoolplichtig);\n17 = Beroepsopleiding RVA;\n18 = Stage (KB 230) / Startbaanovereenkomst;\n19 = Tijdelijke arbeid (interim);\n2 = Arbeider bezoldigd met fooien;\n20 = Openbare dienst;\n21 = Leerling / stage geen dimona;\n22 = Bestuurder;\n23 = Gepensioneerde;\n24 = Bruggepensioneerde;\n25 = Beroepsjournalist;\n26 = Tewerkgestelde onder volmachtsbesluiten;\n27 = Arbeider met fooien bezoldigd onder volmachtsbesluiten;\n28 = Werknemer met tegemoetkoming werkgever;\n29 = Werknemer met tegemoetkoming werkgever (fooien);\n3 = Alternerend leren-werken / ond.opl.;\n30 = Binnenschipper;\n31 = DOSZ;\n32 = Vliegend personeel;\n33 = Zaakvoerder;\n34 = Expatriates;\n35 = TCN;\n36 = Expatriates;\n37 = On assignments;\n38 = Detachering;\n39 = Aanvullende vergoeding bij werkloosheidsuitkering (canada dry);\n4 = Industrieel leercontract / socioprofessioneel contract;\n40 = Aanvullende vergoeding bij onderbrekingsuitkering bij tijdskrediet;\n5 = Leerovereenkomst mindervalide;\n6 = Thuisarbeider;\n7 = Dienstbode;\n8 = Bediende;\n9 = Handelsvertegenwoordiger;",
                                         "format": ""
                                       }
                                     },
@@ -30151,9 +30364,10 @@
                                         "format": ""
                                       },
                                       "RePe": {
-                                        "type": "integer",
+                                        "type": "number",
+                                        "multipleOf": 0.01,
                                         "description": "Percentage onderzoek",
-                                        "format": ""
+                                        "format": "float"
                                       },
                                       "SoSe": {
                                         "type": "string",
@@ -30932,6 +31146,11 @@
                                         "maxLength": 20,
                                         "description": "Titel\n1 = Zonder titel;\n10 = Directeur Generaal;\n3 = Afdelingshoofd;\n4 = Diensthoofd;\n5 = Procuratiehouder;\n6 = Adjunct-directeur;\n7 = Directeur;\n9 = Adjunct Directeur Generaal;",
                                         "format": ""
+                                      },
+                                      "PaGm": {
+                                        "type": "boolean",
+                                        "description": "Gepensioneerde medewerker",
+                                        "format": ""
                                       }
                                     },
                                     "required": [
@@ -31529,6 +31748,28 @@
                                         ],
                                         "maxLength": 20,
                                         "description": "Type voltijds\n0 = Niet betrokken;\n1 = Tijdelijk voltijds;\n2 = Vrijwillige deelt. werkn.;\n3 = Met behoud van rechten;",
+                                        "format": ""
+                                      },
+                                      "Rgim": {
+                                        "type": "string",
+                                        "enum": [
+                                          "5",
+                                          "6"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Stelsel\n5 = Vijfdagenstelsel;\n6 = Zesdagenstelsel;",
+                                        "format": ""
+                                      },
+                                      "SDCW": {
+                                        "type": "string",
+                                        "enum": [
+                                          "A",
+                                          "B",
+                                          "C",
+                                          "D"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Werkschema code\nA = Vast wekelijks werkschema;\nB = Vast werkschema, niet wekelijks of wisselende dagen/uren;\nC = Variabel werkschema;\nD = Weekendoverbruggingsploeg;",
                                         "format": ""
                                       }
                                     },
@@ -39357,6 +39598,11 @@
                                         "maxLength": 20,
                                         "description": "Onderworpen aan voorheffing\n0 = Niet onderworpen;\n1 = Onderworpen;\n2 = Niet verblijfhouder in België;\n3 = Vrijstell.stort.BV nacht of ploeg;\n4 = Niet verblijfhouder sportbeoef./ -30 dagen;\n5 = Niet verblijfh./vrijst.nacht of ploeg;\n6 = Onderworpen (+werk.beroepskosten);",
                                         "format": ""
+                                      },
+                                      "MaTl": {
+                                        "type": "number",
+                                        "description": "Mantelzorg 65+ ten laste",
+                                        "format": "number"
                                       }
                                     },
                                     "required": [
@@ -39577,6 +39823,11 @@
                                         "maxLength": 20,
                                         "description": "Loonstrook\n2 = Loonbrief in taal medewerker;\nB = Loonbrief in taal medewerker + Engelse vertaling;\nK = Loonbrief in het Duits;\nP = Loonbrief in taal medewerker + Duitse vertaling;\nS = Loonbrief in taal medewerker + Ned. of Franse vertaling;",
                                         "format": ""
+                                      },
+                                      "MaTl": {
+                                        "type": "number",
+                                        "description": "Mantelzorg 65+ ten laste",
+                                        "format": "number"
                                       }
                                     },
                                     "required": [
@@ -39877,6 +40128,11 @@
                                         "type": "boolean",
                                         "description": "Mindervalide partner",
                                         "format": ""
+                                      },
+                                      "MaTl": {
+                                        "type": "number",
+                                        "description": "Mantelzorg 65+ ten laste",
+                                        "format": "number"
                                       }
                                     },
                                     "required": [
@@ -40285,6 +40541,11 @@
                                         "maxLength": 20,
                                         "description": "Onderwerping BV\n01 = Met bedrijfsvoorheffing;\n02 = Bedrijfsvoorheffing ten laste van de werkgever;\n03 = Zonder bedrijfsvoorheffing;\n04 = Zonder bedrijfsvoorheffing (jaarl werken uitgesloten);\n05 = Loonfiche 281.30 (325.30);\n06 = Totale neutralisatie van belastbaar;\n07 = Neutralisatie van belastbaar met netto;\n08 = Fiscale fiche 281.20 voor aan de RSZ onderworpen zelfstandigen;",
                                         "format": ""
+                                      },
+                                      "MaTl": {
+                                        "type": "number",
+                                        "description": "Mantelzorg 65+ ten laste",
+                                        "format": "number"
                                       }
                                     },
                                     "required": [
