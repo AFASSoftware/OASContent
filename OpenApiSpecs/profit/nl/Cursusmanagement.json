@@ -1760,7 +1760,7 @@
   "tags": [
     {
       "name": "GET",
-      "description": "GET"
+      "description": "#GET endpoints for custom connectors.  \nThe endpoint id's can be found in the metainfo request result."
     },
     {
       "name": "API Info",
