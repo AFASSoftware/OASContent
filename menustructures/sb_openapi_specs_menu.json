@@ -4,11 +4,11 @@
             {
                 "name": "Versie 7.3.0",
                 "path": "OpenApiSpecs/sb/nl/7-3-0.json",
-                "description": "Aankomende versie"
+                "description": "Huidige versie"
             },            {
                 "name": "Versie 7.2.0",
                 "path": "OpenApiSpecs/sb/nl/7-2-0.json",
-                "description": "Huidige productieversie"
+                "description": "Vorige versie"
             },            {
                 "name": "Versie 7.1.0",
                 "path": "OpenApiSpecs/sb/nl/7-1-0.json",

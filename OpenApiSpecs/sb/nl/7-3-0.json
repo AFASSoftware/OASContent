@@ -9779,18 +9779,18 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "errors": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      }
+                    "result": {
+                      "type": "string"
                     },
                     "traceId": {
                       "type": "string",
                       "format": "uuid"
                     },
-                    "result": {
-                      "type": "string"
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
                     },
                     "instances": {
                       "type": "array",

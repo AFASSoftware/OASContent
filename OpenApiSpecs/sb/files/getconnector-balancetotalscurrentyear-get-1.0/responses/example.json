@@ -1,0 +1,302 @@
+[
+  {
+    "AdministrationId": "2c32f1ce-6660-5db3-a163-0cdf83c70b49",
+    "LedgerAccountId": "9e24a672-ee34-5429-8936-0ef2e7b0b498",
+    "LedgerAccount": "Reservering vakantiegeld (1750)",
+    "LedgerAccountNumber": "1750",
+    "RgsCode": "BSchSalTvg",
+    "RgsDescription": "Te betalen vakantiegeld",
+    "Total": -4724.9000000000,
+    "InstanceId": "a1ad4d2b-3659-4b04-94dc-1c24e39a7f56"
+  },
+  {
+    "AdministrationId": "2c32f1ce-6660-5db3-a163-0cdf83c70b49",
+    "LedgerAccountId": "ef3fdcea-7739-507d-b36f-1184ece8b47d",
+    "LedgerAccount": "Rekening courant Holding (1350)",
+    "LedgerAccountNumber": "1350",
+    "RgsCode": "BVorVopVr1",
+    "RgsDescription": "Rekening-courant participant en op maatschappij waarin wordt deelgenomen 1 (kortlopend)",
+    "Total": 25479.6600000000,
+    "InstanceId": "838e0eb3-d200-4702-ac09-99c1409b7856"
+  },
+  {
+    "AdministrationId": "2c32f1ce-6660-5db3-a163-0cdf83c70b49",
+    "LedgerAccountId": "69c7bc36-b185-5c53-95e3-2a1ac885a89d",
+    "LedgerAccount": "Bank rekening courant (1100)",
+    "LedgerAccountNumber": "1100",
+    "RgsCode": "BLimBanRba",
+    "RgsDescription": "Rekening-courant bank",
+    "Total": 149715.3900000000,
+    "InstanceId": "1d1d74b5-4779-4081-9bd8-14521ddd08ac"
+  },
+  {
+    "AdministrationId": "2c32f1ce-6660-5db3-a163-0cdf83c70b49",
+    "LedgerAccountId": "c500f1af-65e5-5691-9921-387a68e6125a",
+    "LedgerAccount": "Te betalen loonheffing (1710)",
+    "LedgerAccountNumber": "1710",
+    "RgsCode": "BSchBepLhe",
+    "RgsDescription": "Te betalen Loonheffing",
+    "Total": -162.1200000000,
+    "InstanceId": "8ed241ed-7158-4c65-bd58-fb2ee4306ae1"
+  },
+  {
+    "AdministrationId": "2c32f1ce-6660-5db3-a163-0cdf83c70b49",
+    "LedgerAccountId": "d040aa8b-213f-5d2a-8b87-3a408a77f689",
+    "LedgerAccount": "Kruisposten (2300)",
+    "LedgerAccountNumber": "2300",
+    "RgsCode": "BLimKruSto",
+    "RgsDescription": "Stortingen onderweg",
+    "Total": -5000.0000000000,
+    "InstanceId": "3dd94556-d75e-4c5a-a05f-f31491fe3f10"
+  },
+  {
+    "AdministrationId": "2c32f1ce-6660-5db3-a163-0cdf83c70b49",
+    "LedgerAccountId": "7426cb28-2b1f-5984-ba90-4243140d1483",
+    "LedgerAccount": "Debiteuren (1300)",
+    "LedgerAccountNumber": "1300",
+    "RgsCode": "BVorDebHad",
+    "RgsDescription": "Handelsdebiteuren nominaal",
+    "Total": 29179.6300000000,
+    "InstanceId": "d9f5a038-b94d-4524-bf69-7393646c77b2"
+  },
+  {
+    "AdministrationId": "2c32f1ce-6660-5db3-a163-0cdf83c70b49",
+    "LedgerAccountId": "dde87670-e2b8-5f67-a380-51ebc58f4654",
+    "LedgerAccount": "Vooruitbetalingen aan crediteuren (1618)",
+    "LedgerAccountNumber": "1618",
+    "RgsCode": "BVorOvrVrb",
+    "RgsDescription": "Vooruitbetalingen",
+    "Total": 745.3600000000,
+    "InstanceId": "5e05e35a-a7f8-4a7d-8004-0f5cf5fdd11b"
+  },
+  {
+    "AdministrationId": "2c32f1ce-6660-5db3-a163-0cdf83c70b49",
+    "LedgerAccountId": "d2ccb3c1-c855-53fd-a23e-5c6f370f2e9a",
+    "LedgerAccount": "Reservering vakantiedagen (1751)",
+    "LedgerAccountNumber": "1751",
+    "RgsCode": "BSchSalTbv",
+    "RgsDescription": "Reservering vakantiedagen",
+    "Total": -4038.5700000000,
+    "InstanceId": "8497d6d3-f9c1-4539-a6c5-55c72a047420"
+  },
+  {
+    "AdministrationId": "2c32f1ce-6660-5db3-a163-0cdf83c70b49",
+    "LedgerAccountId": "4cca9db9-463e-5085-9255-6ebf5c976d91",
+    "LedgerAccount": "Onverdeeld resultaat (0900)",
+    "LedgerAccountNumber": "0900",
+    "RgsCode": "BEivOreOvw",
+    "RgsDescription": "Niet verdeelde winst",
+    "Total": -440737.7600000000,
+    "InstanceId": "9aed74cc-c93f-47f4-b9b2-1c9793a6a958"
+  },
+  {
+    "AdministrationId": "2c32f1ce-6660-5db3-a163-0cdf83c70b49",
+    "LedgerAccountId": "997986ad-db19-5813-8138-7522be4424e5",
+    "LedgerAccount": "Bank spaarrekening (1101)",
+    "LedgerAccountNumber": "1101",
+    "RgsCode": "BLimBanRba",
+    "RgsDescription": "Rekening-courant bank",
+    "Total": 323000.0000000000,
+    "InstanceId": "4e706153-9cb4-47b1-87c7-4962cf46bb12"
+  },
+  {
+    "AdministrationId": "2c32f1ce-6660-5db3-a163-0cdf83c70b49",
+    "LedgerAccountId": "905bd442-24d7-50a0-a7a1-97b03e145caf",
+    "LedgerAccount": "Nog te leveren goederen en diensten (1615)",
+    "LedgerAccountNumber": "1615",
+    "RgsCode": "BSchOpaOop",
+    "RgsDescription": "Overige overlopende passiva",
+    "Total": -1.3000000000,
+    "InstanceId": "f1368cf9-a2e3-44e2-8198-f972505a4f72"
+  },
+  {
+    "AdministrationId": "2c32f1ce-6660-5db3-a163-0cdf83c70b49",
+    "LedgerAccountId": "4c13c6f4-b378-5683-87a1-98f7b08ad2ae",
+    "LedgerAccount": "Te betalen netto lonen en salarissen (1700)",
+    "LedgerAccountNumber": "1700",
+    "RgsCode": "BSchSalNet",
+    "RgsDescription": "Netto lonen",
+    "Total": -9933.6000000000,
+    "InstanceId": "0af65bbb-bf63-4ba9-8aa9-96f383b50844"
+  },
+  {
+    "AdministrationId": "2c32f1ce-6660-5db3-a163-0cdf83c70b49",
+    "LedgerAccountId": "a21a8669-8ac3-5c0f-8c31-9cef62920dc6",
+    "LedgerAccount": "Inventaris en inrichting (> € 450) (0230)",
+    "LedgerAccountNumber": "0230",
+    "RgsCode": "BMvaBeiVvp",
+    "RgsDescription": "Verkrijgings- of vervaardigingsprijs",
+    "Total": 21886.4500000000,
+    "InstanceId": "611c2e87-f2bb-4971-834e-d21971edb042"
+  },
+  {
+    "AdministrationId": "2c32f1ce-6660-5db3-a163-0cdf83c70b49",
+    "LedgerAccountId": "e41c8413-ad18-5dba-8ed2-b3fb5f0a260d",
+    "LedgerAccount": "Afschrijving inventaris en inrichting (0235)",
+    "LedgerAccountNumber": "0235",
+    "RgsCode": "BMvaBeiCae",
+    "RgsDescription": "Cumulatieve afschrijvingen en waardeverminderingen",
+    "Total": -9427.3800000000,
+    "InstanceId": "e17df5ec-d6b9-43f2-8e22-db51d770a167"
+  },
+  {
+    "AdministrationId": "2c32f1ce-6660-5db3-a163-0cdf83c70b49",
+    "LedgerAccountId": "e216c2fb-7041-53b7-bcc0-b62624a41e24",
+    "LedgerAccount": "Betalingen onderweg (crediteur) (1605)",
+    "LedgerAccountNumber": "1605",
+    "RgsCode": "BSchCreTus",
+    "RgsDescription": "Tussenrekening betalingen crediteuren (betalingen onderweg)",
+    "Total": -58670.8000000000,
+    "InstanceId": "cdde21f6-65b0-4af8-acdd-af2fbd998f06"
+  },
+  {
+    "AdministrationId": "2c32f1ce-6660-5db3-a163-0cdf83c70b49",
+    "LedgerAccountId": "99d9e227-c3f8-52c1-b401-b7d87f72e12e",
+    "LedgerAccount": "Crediteuren (1600)",
+    "LedgerAccountNumber": "1600",
+    "RgsCode": "BSchCreHac",
+    "RgsDescription": "Handelscrediteuren nominaal",
+    "Total": -17034.9200000000,
+    "InstanceId": "3f75c458-591d-46ee-855a-2f48d09f818f"
+  },
+  {
+    "AdministrationId": "2c32f1ce-6660-5db3-a163-0cdf83c70b49",
+    "LedgerAccountId": "0f1a9eea-a0e9-5ba7-8a75-f0eb41dfa0ce",
+    "LedgerAccount": "Btw (1800)",
+    "LedgerAccountNumber": "1800",
+    "RgsCode": "BSchBepBtw",
+    "RgsDescription": "Te betalen Omzetbelasting",
+    "Total": -275.1400000000,
+    "InstanceId": "90944025-2bed-42c5-8714-9d3ff87d236c"
+  },
+  {
+    "AdministrationId": "f89230e2-8953-59d0-866a-ee08e08d4875",
+    "LedgerAccountId": "47661976-6998-5be2-8bee-0fa2e0d03a36",
+    "LedgerAccount": "Te betalen loonheffing (1710)",
+    "LedgerAccountNumber": "1710",
+    "RgsCode": "BSchBepLhe",
+    "RgsDescription": "Te betalen Loonheffing",
+    "Total": -64.8300000000,
+    "InstanceId": "84919864-74b1-4298-bf32-5c552e4e2114"
+  },
+  {
+    "AdministrationId": "f89230e2-8953-59d0-866a-ee08e08d4875",
+    "LedgerAccountId": "24b17b57-5c49-5295-9fc1-11fd86024986",
+    "LedgerAccount": "Onverdeeld resultaat (0900)",
+    "LedgerAccountNumber": "0900",
+    "RgsCode": "BEivOreOvw",
+    "RgsDescription": "Niet verdeelde winst",
+    "Total": -38055.0500000000,
+    "InstanceId": "b1636906-5391-4e44-8613-e3b49565c920"
+  },
+  {
+    "AdministrationId": "f89230e2-8953-59d0-866a-ee08e08d4875",
+    "LedgerAccountId": "ff16b9a1-a3a6-5966-aab6-2cbb0f3db04d",
+    "LedgerAccount": "Reservering verlof in geld (1754)",
+    "LedgerAccountNumber": "1754",
+    "RgsCode": "BSchSalOrn",
+    "RgsDescription": "Overige reserveringen",
+    "Total": -5539.1900000000,
+    "InstanceId": "468d4c87-5733-4745-b06e-157b21118e07"
+  },
+  {
+    "AdministrationId": "f89230e2-8953-59d0-866a-ee08e08d4875",
+    "LedgerAccountId": "6cef9a54-6578-5f9c-a87e-3de7670c4a85",
+    "LedgerAccount": "Reservering vakantiegeld (1750)",
+    "LedgerAccountNumber": "1750",
+    "RgsCode": "BSchSalTvg",
+    "RgsDescription": "Te betalen vakantiegeld",
+    "Total": -1061.3400000000,
+    "InstanceId": "35e05fc1-44b3-48c9-8ffc-425ca4a1664e"
+  },
+  {
+    "AdministrationId": "f89230e2-8953-59d0-866a-ee08e08d4875",
+    "LedgerAccountId": "ed216772-2170-52aa-8ee8-452bc3c2e7a2",
+    "LedgerAccount": "Afschrijving auto's en andere vervoermiddelen (0265)",
+    "LedgerAccountNumber": "0265",
+    "RgsCode": "BMvaTevCae",
+    "RgsDescription": "Cumulatieve afschrijvingen en waardeverminderingen",
+    "Total": -33143.7000000000,
+    "InstanceId": "d58903e5-67b2-46b2-a47e-bafd017f3815"
+  },
+  {
+    "AdministrationId": "f89230e2-8953-59d0-866a-ee08e08d4875",
+    "LedgerAccountId": "3a4ff161-fb0f-543e-b73b-62970ac684b4",
+    "LedgerAccount": "Rekening courant Services (1350)",
+    "LedgerAccountNumber": "1350",
+    "RgsCode": "BVorVopVr1",
+    "RgsDescription": "Rekening-courant participant en op maatschappij waarin wordt deelgenomen 1 (kortlopend)",
+    "Total": -25479.6600000000,
+    "InstanceId": "60f63b7b-fea3-4de2-84de-9cda0ae38b71"
+  },
+  {
+    "AdministrationId": "f89230e2-8953-59d0-866a-ee08e08d4875",
+    "LedgerAccountId": "41205a02-3695-5d9a-aff2-6d9f9fc8501d",
+    "LedgerAccount": "Crediteuren (1600)",
+    "LedgerAccountNumber": "1600",
+    "RgsCode": "BSchCreHac",
+    "RgsDescription": "Handelscrediteuren nominaal",
+    "Total": -2524.0000000000,
+    "InstanceId": "1a1d5f8d-e9aa-46e8-b468-959a2c168830"
+  },
+  {
+    "AdministrationId": "f89230e2-8953-59d0-866a-ee08e08d4875",
+    "LedgerAccountId": "7b87e785-7cf3-5507-9087-8837254dad1b",
+    "LedgerAccount": "Incasso onderweg (2350)",
+    "LedgerAccountNumber": "2350",
+    "RgsCode": "BSchTusTov",
+    "RgsDescription": "Tussenrekeningen overig",
+    "Total": 2402.0000000000,
+    "InstanceId": "eced9d97-83fc-4c14-9f58-1e5a52fec4a5"
+  },
+  {
+    "AdministrationId": "f89230e2-8953-59d0-866a-ee08e08d4875",
+    "LedgerAccountId": "f220deca-1cf7-54fd-bf2a-907092148904",
+    "LedgerAccount": "Btw (1800)",
+    "LedgerAccountNumber": "1800",
+    "RgsCode": "BSchBepBtw",
+    "RgsDescription": "Te betalen Omzetbelasting",
+    "Total": -7413.0000000000,
+    "InstanceId": "54c5b5eb-d85c-4339-8925-c2366c8253c4"
+  },
+  {
+    "AdministrationId": "f89230e2-8953-59d0-866a-ee08e08d4875",
+    "LedgerAccountId": "2bf5283a-eaf4-5a7d-b7fd-b590941b98e2",
+    "LedgerAccount": "Bank spaarrekening (1101)",
+    "LedgerAccountNumber": "1101",
+    "RgsCode": "BLimBanRba",
+    "RgsDescription": "Rekening-courant bank",
+    "Total": 73500.0000000000,
+    "InstanceId": "23c4bcdd-827b-4e54-b78b-0965bba9c2f9"
+  },
+  {
+    "AdministrationId": "f89230e2-8953-59d0-866a-ee08e08d4875",
+    "LedgerAccountId": "9c6f024c-527f-5cfb-b36c-c4714a31fc34",
+    "LedgerAccount": "Auto's en andere vervoermiddelen (0260)",
+    "LedgerAccountNumber": "0260",
+    "RgsCode": "BMvaTevVvp",
+    "RgsDescription": "Verkrijgings- of vervaardigingsprijs",
+    "Total": 41305.7900000000,
+    "InstanceId": "e8b19f11-8eb1-485f-83ce-10fc77d34866"
+  },
+  {
+    "AdministrationId": "f89230e2-8953-59d0-866a-ee08e08d4875",
+    "LedgerAccountId": "dc2ec452-94a8-50e0-ab10-e44c0a350c05",
+    "LedgerAccount": "Bank rekening courant (1100)",
+    "LedgerAccountNumber": "1100",
+    "RgsCode": "BLimBanRba",
+    "RgsDescription": "Rekening-courant bank",
+    "Total": 4206.9100000000,
+    "InstanceId": "4a0a3a6b-dfeb-47b7-8a94-4b3596646f16"
+  },
+  {
+    "AdministrationId": "f89230e2-8953-59d0-866a-ee08e08d4875",
+    "LedgerAccountId": "458fe3de-c216-597c-b8a5-f34f6dfc53b3",
+    "LedgerAccount": "Te betalen netto lonen en salarissen (1700)",
+    "LedgerAccountNumber": "1700",
+    "RgsCode": "BSchSalNet",
+    "RgsDescription": "Netto lonen",
+    "Total": -8133.9300000000,
+    "InstanceId": "63224b9f-8ab8-435a-a394-927e3de3f607"
+  }
+]
