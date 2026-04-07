@@ -379,7 +379,7 @@
       "get": {
         "description": "Retrieve license information for all scopes in the environment. This endpoint requires admin rights, and should be called from the 'admin' scope (e.g. yourdomain.afasfocus.nl/admin/api/adminlicenseinformation).",
         "summary": "/api/adminlicenseinformation",
-        "operationId": "getconnector-adminlicenseinformation-get-1.0",
+        "operationId": "getconnector-adminlicenseinformation",
         "parameters": [
           {
             "in": "header",
@@ -1078,6 +1078,128 @@
           "Verkoopfactuur",
           "Publiek: Externe facturatie",
           "Verkoopjournaalpost"
+        ]
+      }
+    },
+    "/api/balancetotalscurrentyear": {
+      "get": {
+        "description": "Retrieve cumulative ledger account totals for balance sheet reporting of the current year",
+        "summary": "balancetotalscurrentyear 1.0",
+        "operationId": "getconnector-balancetotalscurrentyear-get-1.0",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Accept",
+            "schema": {
+              "type": "string",
+              "example": "application/xml"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Accept-Version",
+            "schema": {
+              "type": "string",
+              "example": "1.0"
+            }
+          },
+          {
+            "in": "header",
+            "name": "AccessToken",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "Skip",
+            "schema": {
+              "type": "integer",
+              "example": "0"
+            }
+          },
+          {
+            "in": "query",
+            "name": "Take",
+            "schema": {
+              "type": "integer",
+              "example": "50"
+            }
+          },
+          {
+            "in": "query",
+            "name": "Sort",
+            "schema": {
+              "type": "string",
+              "format": "sort",
+              "example": "AdministrationId Ascending"
+            },
+            "description": "FieldName Ascending|Descending"
+          },
+          {
+            "in": "query",
+            "name": "Filter",
+            "schema": {
+              "type": "string",
+              "format": "filter"
+            },
+            "required": false,
+            "description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "AdministrationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "LedgerAccountId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "LedgerAccount": {
+                        "type": "string"
+                      },
+                      "RgsCode": {
+                        "type": "string"
+                      },
+                      "RgsDescription": {
+                        "type": "string"
+                      },
+                      "LedgerAccountNumber": {
+                        "type": "string"
+                      },
+                      "Total": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "5XX": {
+            "description": "Internal Server Error"
+          }
+        },
+        "version": "1.0",
+        "deprecated": false,
+        "tags": [
+          "Publiek: Financiële dashboarding",
+          "Publiek: Financiële rapportage",
+          "Financiele rapportage"
         ]
       }
     },
@@ -3928,6 +4050,128 @@
         ]
       }
     },
+    "/api/profitlosstotalscurrentyear": {
+      "get": {
+        "description": "Retrieve cumulative ledger account totals for profit & loss reporting of the current year",
+        "summary": "profitlosstotalscurrentyear 1.0",
+        "operationId": "getconnector-profitlosstotalscurrentyear-get-1.0",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Accept",
+            "schema": {
+              "type": "string",
+              "example": "application/xml"
+            }
+          },
+          {
+            "in": "header",
+            "name": "Accept-Version",
+            "schema": {
+              "type": "string",
+              "example": "1.0"
+            }
+          },
+          {
+            "in": "header",
+            "name": "AccessToken",
+            "schema": {
+              "type": "string"
+            },
+            "required": false
+          },
+          {
+            "in": "query",
+            "name": "Skip",
+            "schema": {
+              "type": "integer",
+              "example": "0"
+            }
+          },
+          {
+            "in": "query",
+            "name": "Take",
+            "schema": {
+              "type": "integer",
+              "example": "50"
+            }
+          },
+          {
+            "in": "query",
+            "name": "Sort",
+            "schema": {
+              "type": "string",
+              "format": "sort",
+              "example": "AdministrationId Ascending"
+            },
+            "description": "FieldName Ascending|Descending"
+          },
+          {
+            "in": "query",
+            "name": "Filter",
+            "schema": {
+              "type": "string",
+              "format": "filter"
+            },
+            "required": false,
+            "description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "AdministrationId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "LedgerAccountId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
+                      "LedgerAccount": {
+                        "type": "string"
+                      },
+                      "RgsCode": {
+                        "type": "string"
+                      },
+                      "RgsDescription": {
+                        "type": "string"
+                      },
+                      "LedgerAccountNumber": {
+                        "type": "string"
+                      },
+                      "Total": {
+                        "type": "number"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "5XX": {
+            "description": "Internal Server Error"
+          }
+        },
+        "version": "1.0",
+        "deprecated": false,
+        "tags": [
+          "Publiek: Financiële dashboarding",
+          "Publiek: Financiële rapportage",
+          "Financiele rapportage"
+        ]
+      }
+    },
     "/api/projects": {
       "get": {
         "description": "Retrieve project information for time tracking and billing",
@@ -4040,8 +4284,8 @@
     "/api/salesinvoices": {
       "get": {
         "description": "Retrieve sales invoices and billing information",
-        "summary": "salesinvoices 1.1",
-        "operationId": "getconnector-salesinvoices-get-1.1",
+        "summary": "salesinvoices 1.2",
+        "operationId": "getconnector-salesinvoices-get-1.2",
         "parameters": [
           {
             "in": "query",
@@ -4063,7 +4307,7 @@
             "name": "Accept-Version",
             "schema": {
               "type": "string",
-              "example": "1.1"
+              "example": "1.2"
             }
           },
           {
@@ -4298,6 +4542,10 @@
                           }
                         }
                       },
+                      "SalesInvoiceId": {
+                        "type": "string",
+                        "format": "uuid"
+                      },
                       "AmountExcludingVat": {
                         "type": "number"
                       },
@@ -4320,7 +4568,7 @@
             "description": "Internal Server Error"
           }
         },
-        "version": "1.1",
+        "version": "1.2",
         "deprecated": false,
         "tags": [
           "Publiek: Facturatie",
