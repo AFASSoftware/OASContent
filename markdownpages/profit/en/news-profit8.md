@@ -13,6 +13,9 @@ Starting with Profit 8, several changes have been implemented in the AFAS Profit
 
 > How to read this? Profit has an extensive API with many different components. The API specifications are divided into related sections. Changes are indicated per section.  
 
+> In the release notes of Profit 7, a number of changes have already been implemented. These changes also apply to Profit 8. [Click here](./news-profit7) for the release notes of Profit 7.
+
+
 ## **Breaking changes**
 
 

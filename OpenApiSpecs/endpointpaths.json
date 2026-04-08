@@ -1,4 +1,30 @@
 {
+  "ProfitVersion": {
+    "get": {
+      "descriptionNl": "",
+      "url": "Artikelen#get-/connectors/ProfitVersion",
+      "descriptionEn": ""
+    }
+  },
+  "ImageConnector": {
+    "get": {
+      "descriptionNl": "",
+      "url": "Artikelen#get-/connectors/ImageConnector",
+      "descriptionEn": ""
+    }
+  },
+  "FbBatchNumber": {
+    "post": {
+      "descriptionNl": "Partijnummer",
+      "url": "Artikelen#post-/connectors/FbBatchNumber",
+      "descriptionEn": "Lot number"
+    },
+    "put": {
+      "descriptionNl": "Partijnummer",
+      "url": "Artikelen#put-/connectors/FbBatchNumber",
+      "descriptionEn": "Lot number"
+    }
+  },
   "FbComposition": {
     "post": {
       "descriptionNl": "Samenstelling",
@@ -47,6 +73,30 @@
       "descriptionEn": "Article"
     }
   },
+  "FbSerialNumber": {
+    "post": {
+      "descriptionNl": "Serienummer",
+      "url": "Artikelen#post-/connectors/FbSerialNumber",
+      "descriptionEn": "Serial number"
+    },
+    "put": {
+      "descriptionNl": "Serienummer",
+      "url": "Artikelen#put-/connectors/FbSerialNumber",
+      "descriptionEn": "Serial number"
+    }
+  },
+  "FbSSCC": {
+    "put": {
+      "descriptionNl": "SSCC-labels update en delete",
+      "url": "Artikelen#put-/connectors/FbSSCC",
+      "descriptionEn": "SSCC labels update and delete"
+    },
+    "delete": {
+      "descriptionNl": "SSCC-labels update en delete",
+      "url": "Artikelen#delete-/connectors/FbSSCC/FbSSCCLabels/@BaCo/-BaCo-",
+      "descriptionEn": "SSCC labels update and delete"
+    }
+  },
   "FbUnitBasicItem": {
     "post": {
       "descriptionNl": "Eenheid per item",
@@ -71,11 +121,28 @@
       "descriptionEn": "Item dimension per item"
     }
   },
-  "ImageConnector": {
-    "get": {
-      "descriptionNl": "",
-      "url": "Artikelen#get-/connectors/ImageConnector",
-      "descriptionEn": ""
+  "PtPriceRevisionFormula": {
+    "post": {
+      "descriptionNl": "Prijsherzieningsformule",
+      "url": "Artikelen#post-/connectors/PtPriceRevisionFormula",
+      "descriptionEn": "Price review formula"
+    },
+    "put": {
+      "descriptionNl": "Prijsherzieningsformule",
+      "url": "Artikelen#put-/connectors/PtPriceRevisionFormula",
+      "descriptionEn": "Price review formula"
+    },
+    "delete": {
+      "descriptionNl": "Prijsherzieningsformule",
+      "url": "Artikelen#delete-/connectors/PtPriceRevisionFormula/PtPriceRevisionFormula/@Id/-Id-",
+      "descriptionEn": "Price review formula"
+    }
+  },
+  "PtPriceRevisionIndex": {
+    "post": {
+      "descriptionNl": "Index prijsherziening",
+      "url": "Artikelen#post-/connectors/PtPriceRevisionIndex",
+      "descriptionEn": "Price review index"
     }
   },
   "Profit_Article": {
@@ -132,66 +199,6 @@
       "descriptionNl": "Eenheid per item",
       "url": "Artikelen#get-/connectors/Profit_Unit_per_Item",
       "descriptionEn": "Unit per item"
-    }
-  },
-  "ProfitVersion": {
-    "get": {
-      "descriptionNl": "",
-      "url": "Artikelen#get-/connectors/ProfitVersion",
-      "descriptionEn": ""
-    }
-  },
-  "FbBatchNumber": {
-    "post": {
-      "descriptionNl": "Partijnummer",
-      "url": "Artikelen#post-/connectors/FbBatchNumber",
-      "descriptionEn": "Lot number"
-    },
-    "put": {
-      "descriptionNl": "Partijnummer",
-      "url": "Artikelen#put-/connectors/FbBatchNumber",
-      "descriptionEn": "Lot number"
-    }
-  },
-  "PtPriceRevisionFormula": {
-    "post": {
-      "descriptionNl": "Prijsherzieningsformule",
-      "url": "Artikelen#post-/connectors/PtPriceRevisionFormula",
-      "descriptionEn": "Price review formula"
-    },
-    "put": {
-      "descriptionNl": "Prijsherzieningsformule",
-      "url": "Artikelen#put-/connectors/PtPriceRevisionFormula",
-      "descriptionEn": "Price review formula"
-    },
-    "delete": {
-      "descriptionNl": "Prijsherzieningsformule",
-      "url": "Artikelen#delete-/connectors/PtPriceRevisionFormula/PtPriceRevisionFormula/@Id/-Id-",
-      "descriptionEn": "Price review formula"
-    }
-  },
-  "FbSerialNumber": {
-    "post": {
-      "descriptionNl": "Serienummer",
-      "url": "Artikelen#post-/connectors/FbSerialNumber",
-      "descriptionEn": "Serial number"
-    },
-    "put": {
-      "descriptionNl": "Serienummer",
-      "url": "Artikelen#put-/connectors/FbSerialNumber",
-      "descriptionEn": "Serial number"
-    }
-  },
-  "FbSSCC": {
-    "put": {
-      "descriptionNl": "SSCC-labels update en delete",
-      "url": "Artikelen#put-/connectors/FbSSCC",
-      "descriptionEn": "SSCC labels update and delete"
-    },
-    "delete": {
-      "descriptionNl": "SSCC-labels update en delete",
-      "url": "Artikelen#delete-/connectors/FbSSCC/FbSSCCLabels/@BaCo/-BaCo-",
-      "descriptionEn": "SSCC labels update and delete"
     }
   },
   "FbArticleExtension": {
@@ -326,6 +333,13 @@
       "descriptionEn": "Budget"
     }
   },
+  "FiBudgetRequest": {
+    "post": {
+      "descriptionNl": "Budgetaanvraag",
+      "url": "Budgetten en activa#post-/connectors/FiBudgetRequest",
+      "descriptionEn": "Budget request"
+    }
+  },
   "FiCommitment": {
     "post": {
       "descriptionNl": "Verplichting",
@@ -403,13 +417,6 @@
       "descriptionEn": "Reserve financial"
     }
   },
-  "FiBudgetRequest": {
-    "post": {
-      "descriptionNl": "Budgetaanvraag",
-      "url": "Budgetten en activa#post-/connectors/FiBudgetRequest",
-      "descriptionEn": "Budget request"
-    }
-  },
   "KnCourseEvent": {
     "post": {
       "descriptionNl": "Evenement",
@@ -463,25 +470,11 @@
       "descriptionEn": "Presence"
     }
   },
-  "Profit_FeatureCombination": {
+  "SubjectConnector": {
     "get": {
-      "descriptionNl": "Kenmerkcombinaties",
-      "url": "Dossiers en bijlagen en workflows#get-/connectors/Profit_FeatureCombination",
-      "descriptionEn": "Feature combinations"
-    }
-  },
-  "Profit_Features": {
-    "get": {
-      "descriptionNl": "Kenmerken",
-      "url": "Dossiers en bijlagen en workflows#get-/connectors/Profit_Features",
-      "descriptionEn": "Features"
-    }
-  },
-  "Profit_FeatureValue": {
-    "get": {
-      "descriptionNl": "Waarde kenmerk",
-      "url": "Dossiers en bijlagen en workflows#get-/connectors/Profit_FeatureValue",
-      "descriptionEn": "Feature value"
+      "descriptionNl": "",
+      "url": "Dossiers en bijlagen en workflows#get-/connectors/SubjectConnector",
+      "descriptionEn": ""
     }
   },
   "FileConnector": {
@@ -508,6 +501,23 @@
       "descriptionEn": "Dossier"
     }
   },
+  "KnSubjectDynamic": {
+    "post": {
+      "descriptionNl": "Dossieritem dynamische update",
+      "url": "Dossiers en bijlagen en workflows#post-/connectors/KnSubjectDynamic",
+      "descriptionEn": "Dossier item from dynamic update"
+    },
+    "put": {
+      "descriptionNl": "Dossieritem dynamische update",
+      "url": "Dossiers en bijlagen en workflows#put-/connectors/KnSubjectDynamic",
+      "descriptionEn": "Dossier item from dynamic update"
+    },
+    "delete": {
+      "descriptionNl": "Dossieritem dynamische update",
+      "url": "Dossiers en bijlagen en workflows#delete-/connectors/KnSubjectDynamic/KnSubjectDynamic/@SbId/-SbId-",
+      "descriptionEn": "Dossier item from dynamic update"
+    }
+  },
   "KnSubjectReaction": {
     "post": {
       "descriptionNl": "Reactie bij dossieritem",
@@ -525,6 +535,27 @@
       "descriptionNl": "Workflow reactie",
       "url": "Dossiers en bijlagen en workflows#post-/connectors/KnSubjectWorkflowReaction",
       "descriptionEn": "Workflow response"
+    }
+  },
+  "Profit_FeatureCombination": {
+    "get": {
+      "descriptionNl": "Kenmerkcombinaties",
+      "url": "Dossiers en bijlagen en workflows#get-/connectors/Profit_FeatureCombination",
+      "descriptionEn": "Feature combinations"
+    }
+  },
+  "Profit_Features": {
+    "get": {
+      "descriptionNl": "Kenmerken",
+      "url": "Dossiers en bijlagen en workflows#get-/connectors/Profit_Features",
+      "descriptionEn": "Features"
+    }
+  },
+  "Profit_FeatureValue": {
+    "get": {
+      "descriptionNl": "Waarde kenmerk",
+      "url": "Dossiers en bijlagen en workflows#get-/connectors/Profit_FeatureValue",
+      "descriptionEn": "Feature value"
     }
   },
   "Profit_Subject_Attachments": {
@@ -597,30 +628,6 @@
       "descriptionEn": "File items (with authorisation)"
     }
   },
-  "SubjectConnector": {
-    "get": {
-      "descriptionNl": "",
-      "url": "Dossiers en bijlagen en workflows#get-/connectors/SubjectConnector",
-      "descriptionEn": ""
-    }
-  },
-  "KnSubjectDynamic": {
-    "post": {
-      "descriptionNl": "Dossieritem dynamische update",
-      "url": "Dossiers en bijlagen en workflows#post-/connectors/KnSubjectDynamic",
-      "descriptionEn": "Dossier item from dynamic update"
-    },
-    "put": {
-      "descriptionNl": "Dossieritem dynamische update",
-      "url": "Dossiers en bijlagen en workflows#put-/connectors/KnSubjectDynamic",
-      "descriptionEn": "Dossier item from dynamic update"
-    },
-    "delete": {
-      "descriptionNl": "Dossieritem dynamische update",
-      "url": "Dossiers en bijlagen en workflows#delete-/connectors/KnSubjectDynamic/KnSubjectDynamic/@SbId/-SbId-",
-      "descriptionEn": "Dossier item from dynamic update"
-    }
-  },
   "FiIVY": {
     "post": {
       "descriptionNl": "Iv3-indeling per jaar",
@@ -689,11 +696,11 @@
       "descriptionEn": "Allocation code"
     }
   },
-  "Profit_CommercialSpecs": {
-    "get": {
-      "descriptionNl": "Commerciele specificaties",
-      "url": "Fiscaal#get-/connectors/Profit_CommercialSpecs",
-      "descriptionEn": "Commercial specifications"
+  "TxCFVpb2021": {
+    "post": {
+      "descriptionNl": "CF Vpb 2021",
+      "url": "Fiscaal#post-/connectors/TxCFVpb2021",
+      "descriptionEn": "CF Vpb 2021"
     }
   },
   "TxCFVpb2022": {
@@ -717,6 +724,20 @@
       "descriptionEn": "CF Vpb 2024"
     }
   },
+  "TxCFVpb2025": {
+    "post": {
+      "descriptionNl": "TxCFVpb2025",
+      "url": "Fiscaal#post-/connectors/TxCFVpb2025",
+      "descriptionEn": "TxCFVpb2025"
+    }
+  },
+  "TxClientIB2021": {
+    "post": {
+      "descriptionNl": "Client IB 2021",
+      "url": "Fiscaal#post-/connectors/TxClientIB2021",
+      "descriptionEn": "Client IB 2021"
+    }
+  },
   "TxClientIB2022": {
     "post": {
       "descriptionNl": "Client IB 2022",
@@ -736,6 +757,20 @@
       "descriptionNl": "Cli\u00EBnt IB 2024",
       "url": "Fiscaal#post-/connectors/TxClientIB2024",
       "descriptionEn": "Cli\u00EBnt IB 2024"
+    }
+  },
+  "TxClientIB2025": {
+    "post": {
+      "descriptionNl": "TxClientIB2025",
+      "url": "Fiscaal#post-/connectors/TxClientIB2025",
+      "descriptionEn": "TxClientIB2025"
+    }
+  },
+  "TxClientVpb2021": {
+    "post": {
+      "descriptionNl": "Client Vpb 2021",
+      "url": "Fiscaal#post-/connectors/TxClientVpb2021",
+      "descriptionEn": "Client Vpb 2021"
     }
   },
   "TxClientVpb2022": {
@@ -759,6 +794,13 @@
       "descriptionEn": "Cli\u00EBnt Vpb 2024"
     }
   },
+  "TxClientVpb2025": {
+    "post": {
+      "descriptionNl": "TxClientVpb2025",
+      "url": "Fiscaal#post-/connectors/TxClientVpb2025",
+      "descriptionEn": "TxClientVpb2025"
+    }
+  },
   "TxKlaarzettenAangifte": {
     "post": {
       "descriptionNl": "Klaarzetten aangifte",
@@ -773,21 +815,11 @@
       "descriptionEn": "Mandate"
     }
   },
-  "PtTariff": {
-    "post": {
-      "descriptionNl": "Tarief",
-      "url": "Flex#post-/connectors/PtTariff",
-      "descriptionEn": "Rate"
-    },
-    "put": {
-      "descriptionNl": "Tarief",
-      "url": "Flex#put-/connectors/PtTariff",
-      "descriptionEn": "Rate"
-    },
-    "delete": {
-      "descriptionNl": "Tarief",
-      "url": "Flex#delete-/connectors/PtTariff/PtTariff/@Id/-Id-",
-      "descriptionEn": "Rate"
+  "Profit_CommercialSpecs": {
+    "get": {
+      "descriptionNl": "Commerciele specificaties",
+      "url": "Fiscaal#get-/connectors/Profit_CommercialSpecs",
+      "descriptionEn": "Commercial specifications"
     }
   },
   "HrReservation": {
@@ -812,13 +844,6 @@
       "descriptionNl": "Kostenplaats per verkooprelatie",
       "url": "Flex#delete-/connectors/KnSreCostCentre/KnSreCostCentre/@DbId/-DbId-",
       "descriptionEn": "Cost centre per sales contact"
-    }
-  },
-  "Profit_Debtor": {
-    "get": {
-      "descriptionNl": "Debiteuren",
-      "url": "Flex#get-/connectors/Profit_Debtor",
-      "descriptionEn": "Debtors"
     }
   },
   "PtConceptPlacementContract": {
@@ -983,6 +1008,30 @@
       "descriptionEn": "Price agreement"
     }
   },
+  "PtTariff": {
+    "post": {
+      "descriptionNl": "Tarief",
+      "url": "Flex#post-/connectors/PtTariff",
+      "descriptionEn": "Rate"
+    },
+    "put": {
+      "descriptionNl": "Tarief",
+      "url": "Flex#put-/connectors/PtTariff",
+      "descriptionEn": "Rate"
+    },
+    "delete": {
+      "descriptionNl": "Tarief",
+      "url": "Flex#delete-/connectors/PtTariff/PtTariff/@Id/-Id-",
+      "descriptionEn": "Rate"
+    }
+  },
+  "Profit_Debtor": {
+    "get": {
+      "descriptionNl": "Debiteuren",
+      "url": "Flex#get-/connectors/Profit_Debtor",
+      "descriptionEn": "Debtors"
+    }
+  },
   "FbBitVatTarifGroup": {
     "post": {
       "descriptionNl": "Btw-tariefgroep per item",
@@ -1113,11 +1162,6 @@
       "descriptionNl": "Inkooprelatie organisatie",
       "url": "Inkoop#put-/connectors/KnPurchaseRelationOrg",
       "descriptionEn": "Purchase contact - organisation"
-    },
-    "delete": {
-      "descriptionNl": "Inkooprelatie organisatie",
-      "url": "Inkoop#delete-/connectors/KnPurchaseRelationOrg/KnPurchaseRelationOrg/@CrId/-CrId-",
-      "descriptionEn": "Purchase contact - organisation"
     }
   },
   "KnPurchaseRelationPer": {
@@ -1130,11 +1174,27 @@
       "descriptionNl": "Inkooprelatie persoon",
       "url": "Inkoop#put-/connectors/KnPurchaseRelationPer",
       "descriptionEn": "Purchase contact - person"
-    },
-    "delete": {
-      "descriptionNl": "Inkooprelatie persoon",
-      "url": "Inkoop#delete-/connectors/KnPurchaseRelationPer/KnPurchaseRelationPer/@CrId/-CrId-",
-      "descriptionEn": "Purchase contact - person"
+    }
+  },
+  "ReportConnector": {
+    "get": {
+      "descriptionNl": "",
+      "url": "Inrichting#get-/connectors/ReportConnector",
+      "descriptionEn": ""
+    }
+  },
+  "OtpRequest": {
+    "get": {
+      "descriptionNl": "",
+      "url": "Inrichting#get-/connectors/OtpRequest",
+      "descriptionEn": ""
+    }
+  },
+  "OtpValidation": {
+    "get": {
+      "descriptionNl": "",
+      "url": "Inrichting#get-/connectors/OtpValidation",
+      "descriptionEn": ""
     }
   },
   "KnCSRLine": {
@@ -1188,41 +1248,6 @@
       "descriptionEn": "Custom contact file 01"
     }
   },
-  "OtpRequest": {
-    "get": {
-      "descriptionNl": "",
-      "url": "Inrichting#get-/connectors/OtpRequest",
-      "descriptionEn": ""
-    }
-  },
-  "OtpValidation": {
-    "get": {
-      "descriptionNl": "",
-      "url": "Inrichting#get-/connectors/OtpValidation",
-      "descriptionEn": ""
-    }
-  },
-  "ProfitCodeTableValue": {
-    "get": {
-      "descriptionNl": "Vrije tabellen",
-      "url": "Inrichting#get-/connectors/ProfitCodeTableValue",
-      "descriptionEn": "Custom tables"
-    }
-  },
-  "ProfitGetConnectoren": {
-    "get": {
-      "descriptionNl": "GetConnector",
-      "url": "Inrichting#get-/connectors/ProfitGetConnectoren",
-      "descriptionEn": "GetConnector"
-    }
-  },
-  "ReportConnector": {
-    "get": {
-      "descriptionNl": "",
-      "url": "Inrichting#get-/connectors/ReportConnector",
-      "descriptionEn": ""
-    }
-  },
   "KnKpiRow": {
     "post": {
       "descriptionNl": "KPI-regel",
@@ -1240,11 +1265,18 @@
       "descriptionEn": "KPI line"
     }
   },
-  "KnPeppol": {
-    "post": {
-      "descriptionNl": "PeppolCallback",
-      "url": "Inrichting#post-/connectors/KnPeppol",
-      "descriptionEn": "PeppolCallback"
+  "ProfitCodeTableValue": {
+    "get": {
+      "descriptionNl": "Vrije tabellen",
+      "url": "Inrichting#get-/connectors/ProfitCodeTableValue",
+      "descriptionEn": "Custom tables"
+    }
+  },
+  "ProfitGetConnectoren": {
+    "get": {
+      "descriptionNl": "GetConnector",
+      "url": "Inrichting#get-/connectors/ProfitGetConnectoren",
+      "descriptionEn": "GetConnector"
     }
   },
   "HrCalculationplan": {
@@ -1387,22 +1419,8 @@
     },
     "delete": {
       "descriptionNl": "Itemcode magazijn",
-      "url": "Magazijn#put-/connectors/FbItemCodeWarehouse/FbItemCodeWarehouse/@VaIt,@War/-VaIt-,-War-",
+      "url": "Magazijn#delete-/connectors/FbItemCodeWarehouse/FbItemCodeWarehouse/@VaIt,@War/-VaIt-,-War-",
       "descriptionEn": "Item code warehouse"
-    }
-  },
-  "FbStockMutation": {
-    "post": {
-      "descriptionNl": "Voorraadmutatie",
-      "url": "Magazijn#post-/connectors/FbStockMutation",
-      "descriptionEn": "Stock entry"
-    }
-  },
-  "FbUpdateStocktaking": {
-    "post": {
-      "descriptionNl": "Inventarisatie",
-      "url": "Magazijn#post-/connectors/FbUpdateStocktaking",
-      "descriptionEn": "Stocktaking"
     }
   },
   "FbPurchaseSales": {
@@ -1420,6 +1438,20 @@
       "descriptionNl": "Toewijzing",
       "url": "Magazijn#delete-/connectors/FbPurchaseSales/FbPurchaseSales/@GuLP,@GuLS/-GuLP-,-GuLS-",
       "descriptionEn": "Allocation"
+    }
+  },
+  "FbStockMutation": {
+    "post": {
+      "descriptionNl": "Voorraadmutatie",
+      "url": "Magazijn#post-/connectors/FbStockMutation",
+      "descriptionEn": "Stock entry"
+    }
+  },
+  "FbUpdateStocktaking": {
+    "post": {
+      "descriptionNl": "Inventarisatie",
+      "url": "Magazijn#post-/connectors/FbUpdateStocktaking",
+      "descriptionEn": "Stocktaking"
     }
   },
   "FbWarTransferIn": {
@@ -1489,6 +1521,32 @@
       "descriptionEn": "Deviating agency data"
     }
   },
+  "HrEmployeeMobilityRegistrationMut": {
+    "put": {
+      "descriptionNl": "Kilometerregistratiemutatie InSite",
+      "url": "Medewerker en contract#put-/connectors/HrEmployeeMobilityRegistrationMut",
+      "descriptionEn": "Change in mileage registration InSite"
+    }
+  },
+  "HrEmpPayDoc": {
+    "post": {
+      "descriptionNl": "Payrolldocumenten",
+      "url": "Medewerker en contract#post-/connectors/HrEmpPayDoc",
+      "descriptionEn": "Payroll documents"
+    }
+  },
+  "HrEmpTravelDistance": {
+    "post": {
+      "descriptionNl": "Reisafstanden",
+      "url": "Medewerker en contract#post-/connectors/HrEmpTravelDistance",
+      "descriptionEn": "Travel distances"
+    },
+    "put": {
+      "descriptionNl": "Reisafstanden",
+      "url": "Medewerker en contract#put-/connectors/HrEmpTravelDistance",
+      "descriptionEn": "Travel distances"
+    }
+  },
   "KnEmployee": {
     "post": {
       "descriptionNl": "Medewerker",
@@ -1540,13 +1598,6 @@
       "descriptionEn": "Employee job"
     }
   },
-  "Profit_Rooster_Ouderverlof": {
-    "get": {
-      "descriptionNl": "Medewerker/rooster en verlofboekingen ouderverlof",
-      "url": "Medewerker en contract#get-/connectors/Profit_Rooster_Ouderverlof",
-      "descriptionEn": "Employee/roster and leave bookings parental leave"
-    }
-  },
   "Profit_Employees": {
     "get": {
       "descriptionNl": "Medewerkergegevens",
@@ -1582,6 +1633,13 @@
       "descriptionEn": "Organisation chart (Current details)"
     }
   },
+  "Profit_Rooster_Ouderverlof": {
+    "get": {
+      "descriptionNl": "Medewerker/rooster en verlofboekingen ouderverlof",
+      "url": "Medewerker en contract#get-/connectors/Profit_Rooster_Ouderverlof",
+      "descriptionEn": "Employee/roster and leave bookings parental leave"
+    }
+  },
   "Profit_Timetable": {
     "get": {
       "descriptionNl": "Medewerker/roosters",
@@ -1594,32 +1652,6 @@
       "descriptionNl": "Adressen bij contacten (incl. historie)",
       "url": "Medewerker en contract#get-/connectors/ProfitEmployeeAdres",
       "descriptionEn": "Addresses with contacts (incl. history)"
-    }
-  },
-  "HrEmployeeMobilityRegistrationMut": {
-    "put": {
-      "descriptionNl": "Kilometerregistratiemutatie InSite",
-      "url": "Medewerker en contract#put-/connectors/HrEmployeeMobilityRegistrationMut",
-      "descriptionEn": "Change in mileage registration InSite"
-    }
-  },
-  "HrEmpPayDoc": {
-    "post": {
-      "descriptionNl": "Payrolldocumenten",
-      "url": "Medewerker en contract#post-/connectors/HrEmpPayDoc",
-      "descriptionEn": "Payroll documents"
-    }
-  },
-  "HrEmpTravelDistance": {
-    "post": {
-      "descriptionNl": "Reisafstanden",
-      "url": "Medewerker en contract#post-/connectors/HrEmpTravelDistance",
-      "descriptionEn": "Travel distances"
-    },
-    "put": {
-      "descriptionNl": "Reisafstanden",
-      "url": "Medewerker en contract#put-/connectors/HrEmpTravelDistance",
-      "descriptionEn": "Travel distances"
     }
   },
   "FbConfrontation": {
@@ -1677,6 +1709,18 @@
       "descriptionNl": "Financi\u00EBle factuur",
       "url": "Mutaties#put-/connectors/FiInvoice",
       "descriptionEn": "Financial invoice"
+    }
+  },
+  "FiLoan": {
+    "post": {
+      "descriptionNl": "Lening",
+      "url": "Mutaties#post-/connectors/FiLoan",
+      "descriptionEn": "Loan"
+    },
+    "put": {
+      "descriptionNl": "Lening",
+      "url": "Mutaties#put-/connectors/FiLoan",
+      "descriptionEn": "Loan"
     }
   },
   "FiSepaDirectDebit": {
@@ -1820,18 +1864,6 @@
       "descriptionNl": "Btw-code",
       "url": "Mutaties#get-/connectors/Profit_VAT_code",
       "descriptionEn": "VAT code"
-    }
-  },
-  "FiLoan": {
-    "post": {
-      "descriptionNl": "Lening",
-      "url": "Mutaties#post-/connectors/FiLoan",
-      "descriptionEn": "Loan"
-    },
-    "put": {
-      "descriptionNl": "Lening",
-      "url": "Mutaties#put-/connectors/FiLoan",
-      "descriptionEn": "Loan"
     }
   },
   "KnAddress": {
@@ -2098,6 +2130,35 @@
       "descriptionEn": "Titles"
     }
   },
+  "FbDeliveryNoteFast": {
+    "post": {
+      "descriptionNl": "Te genereren balie-/directfacturen",
+      "url": "Overige#post-/connectors/FbDeliveryNoteFast",
+      "descriptionEn": "Generate counter/direct invoices"
+    },
+    "delete": {
+      "descriptionNl": "Te genereren balie-/directfacturen",
+      "url": "Overige#delete-/connectors/FbDeliveryNoteFast/FbDeliveryNoteFast/@Ye/-Ye-",
+      "descriptionEn": "Generate counter/direct invoices"
+    }
+  },
+  "FbGoodsReceivedPocket": {
+    "post": {
+      "descriptionNl": "Ontvangst (Pocket)",
+      "url": "Overige#post-/connectors/FbGoodsReceivedPocket",
+      "descriptionEn": "Receipt (Pocket)"
+    },
+    "put": {
+      "descriptionNl": "Ontvangst (Pocket)",
+      "url": "Overige#put-/connectors/FbGoodsReceivedPocket",
+      "descriptionEn": "Receipt (Pocket)"
+    },
+    "delete": {
+      "descriptionNl": "Ontvangst (Pocket)",
+      "url": "Overige#delete-/connectors/FbGoodsReceivedPocket/FbGoodsReceived/@OrNu/-OrNu-",
+      "descriptionEn": "Receipt (Pocket)"
+    }
+  },
   "HrCareerBreak": {
     "post": {
       "descriptionNl": "Medewerker/schorsing",
@@ -2113,23 +2174,6 @@
       "descriptionNl": "Medewerker/schorsing",
       "url": "Overige#delete-/connectors/HrCareerBreak/HrCareerBreak/@Id/-Id-",
       "descriptionEn": "Employee/suspension"
-    }
-  },
-  "KnDayContract": {
-    "post": {
-      "descriptionNl": "Dagcontract",
-      "url": "Overige#post-/connectors/KnDayContract",
-      "descriptionEn": "Day contract"
-    },
-    "put": {
-      "descriptionNl": "Dagcontract",
-      "url": "Overige#put-/connectors/KnDayContract",
-      "descriptionEn": "Day contract"
-    },
-    "delete": {
-      "descriptionNl": "Dagcontract",
-      "url": "Overige#delete-/connectors/KnDayContract/KnDayContract/@EmId/-EmId-",
-      "descriptionEn": "Day contract"
     }
   },
   "HrDeclarationInSite": {
@@ -2191,18 +2235,18 @@
       "descriptionEn": "Employee working week transition"
     }
   },
-  "HrEmpWorkLocation": {
-    "post": {
-      "descriptionNl": "Roosterkalender",
-      "url": "Overige#post-/connectors/HrEmpWorkLocation",
-      "descriptionEn": "Timetable calendar"
-    }
-  },
   "HrEmpMutInSite": {
     "post": {
       "descriptionNl": "Medewerker mutatie InSite",
       "url": "Overige#post-/connectors/HrEmpMutInSite",
       "descriptionEn": "Employee change (InSite)"
+    }
+  },
+  "HrEmpWorkLocation": {
+    "post": {
+      "descriptionNl": "Roosterkalender",
+      "url": "Overige#post-/connectors/HrEmpWorkLocation",
+      "descriptionEn": "Timetable calendar"
     }
   },
   "HrFavTravelDeclarations": {
@@ -2287,21 +2331,21 @@
       "descriptionEn": "Time recording line Social Secretariat"
     }
   },
-  "FbGoodsReceivedPocket": {
+  "KnDayContract": {
     "post": {
-      "descriptionNl": "Ontvangst (Pocket)",
-      "url": "Overige#post-/connectors/FbGoodsReceivedPocket",
-      "descriptionEn": "Receipt (Pocket)"
+      "descriptionNl": "Dagcontract",
+      "url": "Overige#post-/connectors/KnDayContract",
+      "descriptionEn": "Day contract"
     },
     "put": {
-      "descriptionNl": "Ontvangst (Pocket)",
-      "url": "Overige#put-/connectors/FbGoodsReceivedPocket",
-      "descriptionEn": "Receipt (Pocket)"
+      "descriptionNl": "Dagcontract",
+      "url": "Overige#put-/connectors/KnDayContract",
+      "descriptionEn": "Day contract"
     },
     "delete": {
-      "descriptionNl": "Ontvangst (Pocket)",
-      "url": "Overige#delete-/connectors/FbGoodsReceivedPocket/FbGoodsReceived/@OrNu/-OrNu-",
-      "descriptionEn": "Receipt (Pocket)"
+      "descriptionNl": "Dagcontract",
+      "url": "Overige#delete-/connectors/KnDayContract/KnDayContract/@EmId/-EmId-",
+      "descriptionEn": "Day contract"
     }
   },
   "KnPocketNotStatus": {
@@ -2309,18 +2353,6 @@
       "descriptionNl": "Pocket-notificatiestatus",
       "url": "Overige#put-/connectors/KnPocketNotStatus",
       "descriptionEn": "Pocket notification status"
-    }
-  },
-  "FbDeliveryNoteFast": {
-    "post": {
-      "descriptionNl": "Te genereren balie-/directfacturen",
-      "url": "Overige#post-/connectors/FbDeliveryNoteFast",
-      "descriptionEn": "Generate counter/direct invoices"
-    },
-    "delete": {
-      "descriptionNl": "Te genereren balie-/directfacturen",
-      "url": "Overige#delete-/connectors/FbDeliveryNoteFast/FbDeliveryNoteFast/@Ye/-Ye-",
-      "descriptionEn": "Generate counter/direct invoices"
     }
   },
   "KnQuotation": {
@@ -2357,67 +2389,28 @@
       "descriptionEn": "Team member"
     }
   },
-  "Profit_Hourtype": {
-    "get": {
-      "descriptionNl": "Uursoorten",
-      "url": "Projecten en nacalculatie#get-/connectors/Profit_Hourtype",
-      "descriptionEn": "Hour types"
-    }
-  },
-  "Profit_Projectgroups": {
-    "get": {
-      "descriptionNl": "Projectgroepen",
-      "url": "Projecten en nacalculatie#get-/connectors/Profit_Projectgroups",
-      "descriptionEn": "Project groups"
-    }
-  },
-  "Profit_Projects": {
-    "get": {
-      "descriptionNl": "Projecten",
-      "url": "Projecten en nacalculatie#get-/connectors/Profit_Projects",
-      "descriptionEn": "Projects"
-    }
-  },
-  "Profit_Projectstage": {
-    "get": {
-      "descriptionNl": "Projectfases",
-      "url": "Projecten en nacalculatie#get-/connectors/Profit_Projectstage",
-      "descriptionEn": "Project phases"
-    }
-  },
-  "Profit_Quotation": {
-    "get": {
-      "descriptionNl": "Voorcalculatieregels",
-      "url": "Projecten en nacalculatie#get-/connectors/Profit_Quotation",
-      "descriptionEn": "Cost estimate lines"
-    }
-  },
-  "Profit_Rea_ChangedEntryDate": {
-    "get": {
-      "descriptionNl": "Gewijzigde boekingsdagen nacalculatie",
-      "url": "Projecten en nacalculatie#get-/connectors/Profit_Rea_ChangedEntryDate",
-      "descriptionEn": "Changed actual costing entry days"
-    }
-  },
-  "Profit_Realization": {
-    "get": {
-      "descriptionNl": "Nacalculatieoverzicht (incl. autorisatie)",
-      "url": "Projecten en nacalculatie#get-/connectors/Profit_Realization",
-      "descriptionEn": "Actual costing overview (incl. authorisation)"
-    }
-  },
-  "Profit_Worktype": {
-    "get": {
-      "descriptionNl": "Items",
-      "url": "Projecten en nacalculatie#get-/connectors/Profit_Worktype",
-      "descriptionEn": "Items"
-    }
-  },
   "PtLinesToBeInvoiced": {
     "post": {
       "descriptionNl": "Te factureren regel",
       "url": "Projecten en nacalculatie#post-/connectors/PtLinesToBeInvoiced",
       "descriptionEn": "Line to be invoiced"
+    }
+  },
+  "PtLinesToBeUnraveled": {
+    "post": {
+      "descriptionNl": "Te ontrafelen nacalculatieregels",
+      "url": "Projecten en nacalculatie#post-/connectors/PtLinesToBeUnraveled",
+      "descriptionEn": "Actual costing lines to be unravelled"
+    },
+    "put": {
+      "descriptionNl": "Te ontrafelen nacalculatieregels",
+      "url": "Projecten en nacalculatie#put-/connectors/PtLinesToBeUnraveled",
+      "descriptionEn": "Actual costing lines to be unravelled"
+    },
+    "delete": {
+      "descriptionNl": "Te ontrafelen nacalculatieregels",
+      "url": "Projecten en nacalculatie#delete-/connectors/PtLinesToBeUnraveled/PtLinesToBeUnraveled/@Id/-Id-",
+      "descriptionEn": "Actual costing lines to be unravelled"
     }
   },
   "PtPrognosisProject": {
@@ -2556,21 +2549,60 @@
       "descriptionEn": "Validity combination"
     }
   },
-  "PtLinesToBeUnraveled": {
-    "post": {
-      "descriptionNl": "Te ontrafelen nacalculatieregels",
-      "url": "Projecten en nacalculatie#post-/connectors/PtLinesToBeUnraveled",
-      "descriptionEn": "Actual costing lines to be unravelled"
-    },
-    "put": {
-      "descriptionNl": "Te ontrafelen nacalculatieregels",
-      "url": "Projecten en nacalculatie#put-/connectors/PtLinesToBeUnraveled",
-      "descriptionEn": "Actual costing lines to be unravelled"
-    },
-    "delete": {
-      "descriptionNl": "Te ontrafelen nacalculatieregels",
-      "url": "Projecten en nacalculatie#delete-/connectors/PtLinesToBeUnraveled/PtLinesToBeUnraveled/@Id/-Id-",
-      "descriptionEn": "Actual costing lines to be unravelled"
+  "Profit_Hourtype": {
+    "get": {
+      "descriptionNl": "Uursoorten",
+      "url": "Projecten en nacalculatie#get-/connectors/Profit_Hourtype",
+      "descriptionEn": "Hour types"
+    }
+  },
+  "Profit_Projectgroups": {
+    "get": {
+      "descriptionNl": "Projectgroepen",
+      "url": "Projecten en nacalculatie#get-/connectors/Profit_Projectgroups",
+      "descriptionEn": "Project groups"
+    }
+  },
+  "Profit_Projects": {
+    "get": {
+      "descriptionNl": "Projecten",
+      "url": "Projecten en nacalculatie#get-/connectors/Profit_Projects",
+      "descriptionEn": "Projects"
+    }
+  },
+  "Profit_Projectstage": {
+    "get": {
+      "descriptionNl": "Projectfases",
+      "url": "Projecten en nacalculatie#get-/connectors/Profit_Projectstage",
+      "descriptionEn": "Project phases"
+    }
+  },
+  "Profit_Quotation": {
+    "get": {
+      "descriptionNl": "Voorcalculatieregels",
+      "url": "Projecten en nacalculatie#get-/connectors/Profit_Quotation",
+      "descriptionEn": "Cost estimate lines"
+    }
+  },
+  "Profit_Rea_ChangedEntryDate": {
+    "get": {
+      "descriptionNl": "Gewijzigde boekingsdagen nacalculatie",
+      "url": "Projecten en nacalculatie#get-/connectors/Profit_Rea_ChangedEntryDate",
+      "descriptionEn": "Changed actual costing entry days"
+    }
+  },
+  "Profit_Realization": {
+    "get": {
+      "descriptionNl": "Nacalculatieoverzicht (incl. autorisatie)",
+      "url": "Projecten en nacalculatie#get-/connectors/Profit_Realization",
+      "descriptionEn": "Actual costing overview (incl. authorisation)"
+    }
+  },
+  "Profit_Worktype": {
+    "get": {
+      "descriptionNl": "Items",
+      "url": "Projecten en nacalculatie#get-/connectors/Profit_Worktype",
+      "descriptionEn": "Items"
     }
   },
   "CmForecast": {
@@ -3021,6 +3053,13 @@
       "descriptionEn": "Cost centre"
     }
   },
+  "HrEmployerDeclarationInSite": {
+    "post": {
+      "descriptionNl": "Werkgeversverklaring InSite",
+      "url": "Werkgever#post-/connectors/HrEmployerDeclarationInSite",
+      "descriptionEn": "Employer\u0027s statement InSite"
+    }
+  },
   "HrSalTable": {
     "post": {
       "descriptionNl": "Loonschaal",
@@ -3043,13 +3082,6 @@
       "descriptionNl": "Organisatorische eenheid",
       "url": "Werkgever#delete-/connectors/KnOrgUnit/KnOrgunit/@OuId/-OuId-",
       "descriptionEn": "Organisational unit"
-    }
-  },
-  "HrEmployerDeclarationInSite": {
-    "post": {
-      "descriptionNl": "Werkgeversverklaring InSite",
-      "url": "Werkgever#post-/connectors/HrEmployerDeclarationInSite",
-      "descriptionEn": "Employer\u0027s statement InSite"
     }
   },
   "HrApplicant": {
@@ -3078,18 +3110,6 @@
       "descriptionEn": "Onboarding"
     }
   },
-  "HrVacancyJobalert": {
-    "post": {
-      "descriptionNl": "Vacature/Job alert",
-      "url": "Werving en selectie#post-/connectors/HrVacancyJobalert",
-      "descriptionEn": "Vacancy/Job alert"
-    },
-    "delete": {
-      "descriptionNl": "Vacature/Job alert",
-      "url": "Werving en selectie#delete-/connectors/HrVacancyJobalert/HrVacancyJobalert/@Id/-Id-",
-      "descriptionEn": "Vacancy/Job alert"
-    }
-  },
   "HrVacancy": {
     "post": {
       "descriptionNl": "Vacature",
@@ -3105,6 +3125,18 @@
       "descriptionNl": "Vacature",
       "url": "Werving en selectie#delete-/connectors/HrVacancy/HrVacancy/@VcSn,@CmId/-VcSn-,-CmId-",
       "descriptionEn": "Vacancy"
+    }
+  },
+  "HrVacancyJobalert": {
+    "post": {
+      "descriptionNl": "Vacature/Job alert",
+      "url": "Werving en selectie#post-/connectors/HrVacancyJobalert",
+      "descriptionEn": "Vacancy/Job alert"
+    },
+    "delete": {
+      "descriptionNl": "Vacature/Job alert",
+      "url": "Werving en selectie#delete-/connectors/HrVacancyJobalert/HrVacancyJobalert/@Id/-Id-",
+      "descriptionEn": "Vacancy/Job alert"
     }
   }
 }

@@ -48,170 +48,12 @@
     }
   ],
   "paths": {
-    "/connectors/PtTariff": {
-      "post": {
-        "summary": "Rate",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/130373.htm",
-        "operationId": "POST_PtTariff",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PtTariff_POST"
-              },
-              "examples": {
-                "Create new tariff": {
-                  "value": {
-                    "PtTariff": {
-                      "Element": {
-                        "Fields": {
-                          "BaV1": "MissionRole",
-                          "BaV2": "Astronaut",
-                          "BaV3": "ResearchGroup",
-                          "BaV4": "MissionTeam",
-                          "BaS1": "SpacecraftFunction",
-                          "BaS2": "SpacePartnership",
-                          "BaI1": "InterstellarCrewMember",
-                          "BaI2": "InterstellarMission",
-                          "StId": "NormalHours",
-                          "DaBe": "2024-01-01",
-                          "CuId": "EUR",
-                          "AmCo": "45,00",
-                          "AmSe": "90,00",
-                          "AmIC": "50,00"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
+    "/MetaInfo": {
+      "get": {
+        "summary": "Retrieve the meta info of the Profit environment and the available connectors",
         "tags": [
-          "Rate"
+          "API Info"
         ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      },
-      "put": {
-        "summary": "Rate",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/130373.htm",
-        "operationId": "PUT_PtTariff",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/PtTariff_PUT"
-              },
-              "examples": {
-                "change tariff": {
-                  "value": {
-                    "PtTariff": {
-                      "Element": {
-                        "@Id": 1,
-                        "Fields": {
-                          "StId": "2",
-                          "DaBe": "2024-01-01",
-                          "DaEn": "2025-01-01",
-                          "CuId": "EUR",
-                          "AmCo": "50,00",
-                          "AmSe": "100,00",
-                          "AmIC": "60,00"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Rate"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      }
-    },
-    "/connectors/PtTariff/PtTariff/@Id/{Id}": {
-      "parameters": [
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "Id",
-          "in": "path",
-          "required": true,
-          "description": "Line number"
-        }
-      ],
-      "delete": {
-        "summary": "Rate",
-        "operationId": "DELETE_PtTariff",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/130373.htm",
         "responses": {
           "400": {
             "$ref": "#/components/responses/400"
@@ -235,22 +77,502 @@
             "$ref": "#/components/responses/503"
           },
           "200": {
-            "$ref": "#/components/responses/200"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "updateConnectors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "getConnectors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "customConnectors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "info": {
+                      "type": "object",
+                      "properties": {
+                        "envid": {
+                          "type": "string"
+                        },
+                        "appName": {
+                          "type": "string"
+                        },
+                        "group": {
+                          "type": "string"
+                        },
+                        "tokenExpiry": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "updateConnectors": [
+                        {
+                          "id": "HrCreateApplicant",
+                          "description": "Aanmaken sollicitatie"
+                        },
+                        {
+                          "id": "FbSubscription",
+                          "description": "Abonnement"
+                        },
+                        {
+                          "id": "KnAddress",
+                          "description": "Adres"
+                        }
+                      ],
+                      "getConnectors": [
+                        {
+                          "id": "Profit_Fin_ChangedEntrydate",
+                          "description": "Profit_Fin_ChangedEntrydate"
+                        },
+                        {
+                          "id": "Profit_Functions",
+                          "description": "Profit_Functions"
+                        }
+                      ],
+                      "customConnectors": [
+                        {
+                          "id": "AppConnectorReport",
+                          "description": "AppConnectorReport"
+                        },
+                        {
+                          "id": "AppConnectorSubject",
+                          "description": "AppConnectorSubject"
+                        }
+                      ],
+                      "info": {
+                        "envid": "A123456AC",
+                        "appName": "OpenAPI Spec Example",
+                        "group": "AuthorizationGroup 101 (12345.USER)",
+                        "tokenExpiry": "0"
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
+        "operationId": "get_MetaInfo"
+      }
+    },
+    "/Metainfo/{Type}/{Endpoint}": {
+      "get": {
+        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
         "tags": [
-          "Rate"
+          "API Info"
         ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "fields": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "fieldId": {
+                            "type": "string"
+                          },
+                          "dataType": {
+                            "type": "string"
+                          },
+                          "label": {
+                            "type": "string"
+                          },
+                          "length": {
+                            "type": "integer"
+                          },
+                          "controlType": {
+                            "type": "integer"
+                          },
+                          "decimals": {
+                            "type": "integer"
+                          },
+                          "decimalsFieldId": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "name": "Profit_Administrations",
+                      "description": "Administraties (Profit)",
+                      "fields": [
+                        {
+                          "id": "AdminId",
+                          "fieldId": "U002",
+                          "dataType": "int",
+                          "label": "Administratie",
+                          "length": 3,
+                          "controlType": 5,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        },
+                        {
+                          "id": "AdminNm",
+                          "fieldId": "U001",
+                          "dataType": "string",
+                          "label": "Naam administratie",
+                          "length": 80,
+                          "controlType": 1,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        },
+                        {
+                          "id": "AdminCd",
+                          "fieldId": "UnCo",
+                          "dataType": "string",
+                          "label": "Administratie",
+                          "length": 10,
+                          "controlType": 1,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_MetaInfoPerConnector",
         "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "get",
+                "update"
+              ],
+              "example": "update"
+            },
+            "in": "path",
+            "name": "Type",
+            "description": "Add the type of connector you want to get the meta info from",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "string",
+              "example": "KnEmployee"
+            },
+            "in": "path",
+            "name": "Endpoint",
+            "description": "Add the endpoint id of the connector you want to get the meta info from",
+            "required": true
+          },
           {
             "$ref": "#/components/parameters/Accept-Language"
           }
         ]
+      }
+    },
+    "/connectors/{Endpoint}": {
+      "get": {
+        "summary": "Retieve the data of a custom getconnector based on the endpoint id.",
+        "tags": [
+          "GET"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "skip": {
+                      "type": "integer"
+                    },
+                    "take": {
+                      "type": "integer"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "EmployeeId": {
+                            "type": "string"
+                          },
+                          "EmploymentEndDate": {
+                            "type": "string"
+                          },
+                          "EmailForDigitalDocuments": {
+                            "type": "string",
+                            "nullable": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example response": {
+                    "value": {
+                      "skip": 0,
+                      "take": 100,
+                      "rows": [
+                        {
+                          "EmployeeId": "000001005",
+                          "EmploymentEndDate": "2025-11-22T00:00:00Z",
+                          "EmailForDigitalDocuments": null
+                        },
+                        {
+                          "EmployeeId": "000001006",
+                          "EmploymentEndDate": "2025-11-22T00:00:00Z",
+                          "EmailForDigitalDocuments": null
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_MetaInfoPerCustomConnector",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "example": "your_custom_endpoint_id"
+            },
+            "in": "path",
+            "name": "Endpoint",
+            "description": "Add the id of the connector you want to get the data from",
+            "required": true
+          },
+          {
+            "name": "skip",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results skipped. Starts at 0",
+            "schema": {
+              "type": "number",
+              "example": 0
+            }
+          },
+          {
+            "name": "take",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results returned",
+            "schema": {
+              "type": "number",
+              "example": 100
+            }
+          },
+          {
+            "name": "orderbyfieldids",
+            "in": "query",
+            "required": false,
+            "description": "Must be used to prevent unexpectedly ordered results",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterfieldids",
+            "in": "query",
+            "required": false,
+            "description": "The fieldIds of the values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filtervalues",
+            "in": "query",
+            "required": false,
+            "description": "The values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "operatortypes",
+            "in": "query",
+            "required": false,
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
+            "schema": {
+              "type": "number",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "/ProfitVersion": {
+      "get": {
+        "summary": "Get the current Profit version",
+        "tags": [
+          "API Info"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "version": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "version": "7.7.10"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_ProfitVersion"
       }
     },
     "/connectors/HrReservation": {
@@ -917,729 +1239,6 @@
           {
             "$ref": "#/components/parameters/Accept-Language"
           }
-        ]
-      }
-    },
-    "/MetaInfo": {
-      "get": {
-        "summary": "Retrieve the meta info of the Profit environment and the available connectors",
-        "tags": [
-          "API Info"
-        ],
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "updateConnectors": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "string"
-                          },
-                          "description": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    },
-                    "getConnectors": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "string"
-                          },
-                          "description": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    },
-                    "info": {
-                      "type": "object",
-                      "properties": {
-                        "envid": {
-                          "type": "string"
-                        },
-                        "appName": {
-                          "type": "string"
-                        },
-                        "group": {
-                          "type": "string"
-                        },
-                        "tokenExpiry": {
-                          "type": "string"
-                        }
-                      }
-                    }
-                  }
-                },
-                "examples": {
-                  "Example Result": {
-                    "value": {
-                      "updateConnectors": [
-                        {
-                          "id": "HrCreateApplicant",
-                          "description": "Aanmaken sollicitatie"
-                        },
-                        {
-                          "id": "FbSubscription",
-                          "description": "Abonnement"
-                        },
-                        {
-                          "id": "KnAddress",
-                          "description": "Adres"
-                        }
-                      ],
-                      "getConnectors": [
-                        {
-                          "id": "Profit_Fin_ChangedEntrydate",
-                          "description": "Profit_Fin_ChangedEntrydate"
-                        },
-                        {
-                          "id": "Profit_Functions",
-                          "description": "Profit_Functions"
-                        }
-                      ],
-                      "info": {
-                        "envid": "A123456AC",
-                        "appName": "OpenAPI Spec Example",
-                        "group": "AuthorizationGroup 101 (12345.USER)",
-                        "tokenExpiry": "0"
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get_MetaInfo"
-      }
-    },
-    "/Metainfo/{Type}/{Endpoint}": {
-      "get": {
-        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
-        "tags": [
-          "API Info"
-        ],
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "name": {
-                      "type": "string"
-                    },
-                    "description": {
-                      "type": "string"
-                    },
-                    "fields": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "string"
-                          },
-                          "fieldId": {
-                            "type": "string"
-                          },
-                          "dataType": {
-                            "type": "string"
-                          },
-                          "label": {
-                            "type": "string"
-                          },
-                          "length": {
-                            "type": "integer"
-                          },
-                          "controlType": {
-                            "type": "integer"
-                          },
-                          "decimals": {
-                            "type": "integer"
-                          },
-                          "decimalsFieldId": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
-                "examples": {
-                  "Example Result": {
-                    "value": {
-                      "name": "Profit_Administrations",
-                      "description": "Administraties (Profit)",
-                      "fields": [
-                        {
-                          "id": "AdminId",
-                          "fieldId": "U002",
-                          "dataType": "int",
-                          "label": "Administratie",
-                          "length": 3,
-                          "controlType": 5,
-                          "decimals": 0,
-                          "decimalsFieldId": ""
-                        },
-                        {
-                          "id": "AdminNm",
-                          "fieldId": "U001",
-                          "dataType": "string",
-                          "label": "Naam administratie",
-                          "length": 80,
-                          "controlType": 1,
-                          "decimals": 0,
-                          "decimalsFieldId": ""
-                        },
-                        {
-                          "id": "AdminCd",
-                          "fieldId": "UnCo",
-                          "dataType": "string",
-                          "label": "Administratie",
-                          "length": 10,
-                          "controlType": 1,
-                          "decimals": 0,
-                          "decimalsFieldId": ""
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get_MetaInfoPerConnector",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string",
-              "enum": [
-                "get",
-                "update"
-              ],
-              "example": "update"
-            },
-            "in": "path",
-            "name": "Type",
-            "description": "Add the type of connector you want to get the meta info from",
-            "required": true
-          },
-          {
-            "schema": {
-              "type": "string",
-              "example": "KnEmployee"
-            },
-            "in": "path",
-            "name": "Endpoint",
-            "description": "Add the endpoint id of the connector you want to get the meta info from",
-            "required": true
-          },
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          }
-        ]
-      }
-    },
-    "/connectors/{Endpoint}": {
-      "get": {
-        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
-        "tags": [
-          "GET"
-        ],
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "skip": {
-                      "type": "integer"
-                    },
-                    "take": {
-                      "type": "integer"
-                    },
-                    "rows": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "EmployeeId": {
-                            "type": "string"
-                          },
-                          "EmploymentEndDate": {
-                            "type": "string"
-                          },
-                          "EmailForDigitalDocuments": {
-                            "type": "string",
-                            "nullable": true
-                          }
-                        }
-                      }
-                    }
-                  }
-                },
-                "examples": {
-                  "Example response": {
-                    "value": {
-                      "skip": 0,
-                      "take": 100,
-                      "rows": [
-                        {
-                          "EmployeeId": "000001005",
-                          "EmploymentEndDate": "2020-11-22T00:00:00Z",
-                          "EmailForDigitalDocuments": null
-                        },
-                        {
-                          "EmployeeId": "000001006",
-                          "EmploymentEndDate": "2020-11-22T00:00:00Z",
-                          "EmailForDigitalDocuments": null
-                        }
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get_MetaInfoPerCustomConnector",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string",
-              "example": "your_custom_endpoint_id"
-            },
-            "in": "path",
-            "name": "Endpoint",
-            "description": "Add the id of connector you want to get the meta info from",
-            "required": true
-          },
-          {
-            "name": "skip",
-            "in": "query",
-            "required": false,
-            "description": "Pagination: amount of results skipped. Starts at 0",
-            "schema": {
-              "type": "number",
-              "example": 0
-            }
-          },
-          {
-            "name": "take",
-            "in": "query",
-            "required": false,
-            "description": "Pagination: amount of results returned",
-            "schema": {
-              "type": "number",
-              "example": 100
-            }
-          },
-          {
-            "name": "orderbyfieldids",
-            "in": "query",
-            "required": false,
-            "description": "Must be used to prevent reordered results.",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filterfieldids",
-            "in": "query",
-            "required": false,
-            "description": "The fieldIds of the values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filtervalues",
-            "in": "query",
-            "required": false,
-            "description": "The values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "operatortypes",
-            "in": "query",
-            "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
-            "schema": {
-              "type": "number",
-              "enum": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                13,
-                14,
-                15
-              ]
-            }
-          }
-        ]
-      }
-    },
-    "/ProfitVersion": {
-      "get": {
-        "summary": "Get the current Profit version",
-        "tags": [
-          "API Info"
-        ],
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "version": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "examples": {
-                  "Example Result": {
-                    "value": {
-                      "version": "22.22.5"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get_ProfitVersion"
-      }
-    },
-    "/connectors/Profit_Debtor": {
-      "get": {
-        "summary": "Debtors",
-        "operationId": "Get_Profit_Debtor",
-        "description": " ",
-        "parameters": [
-          {
-            "name": "skip",
-            "in": "query",
-            "required": false,
-            "description": "Pagination: amount of results skipped. Starts at 0",
-            "schema": {
-              "type": "number",
-              "example": 0
-            }
-          },
-          {
-            "name": "take",
-            "in": "query",
-            "required": false,
-            "description": "Pagination: amount of results returned",
-            "schema": {
-              "type": "number",
-              "example": 100
-            }
-          },
-          {
-            "name": "orderbyfieldids",
-            "in": "query",
-            "required": false,
-            "description": "Must be used to prevent reordered results",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filterfieldids",
-            "in": "query",
-            "required": false,
-            "description": "The fieldIds of the values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filtervalues",
-            "in": "query",
-            "required": false,
-            "description": "The values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "operatortypes",
-            "in": "query",
-            "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
-            "schema": {
-              "type": "number",
-              "enum": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                13,
-                14,
-                15
-              ]
-            }
-          },
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "skip": {
-                      "type": "integer"
-                    },
-                    "take": {
-                      "type": "integer"
-                    },
-                    "rows": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "DebtorId": {
-                            "type": "string",
-                            "description": "Debtor number"
-                          },
-                          "DebtorName": {
-                            "type": "string",
-                            "description": "Debtor name"
-                          },
-                          "BcCo": {
-                            "type": "string",
-                            "description": "Org/pers number"
-                          },
-                          "SearchName": {
-                            "type": "string",
-                            "description": "Search name"
-                          },
-                          "AdressLine1": {
-                            "type": "string",
-                            "description": "Address line 1 (street - house number)"
-                          },
-                          "AdressLine3": {
-                            "type": "string",
-                            "description": "Address line 3 (postcode - city)"
-                          },
-                          "AdressLine4": {
-                            "type": "string",
-                            "description": "Address line 4 (country)"
-                          },
-                          "TelNr": {
-                            "type": "string",
-                            "description": "Work phone no."
-                          },
-                          "Email": {
-                            "type": "string",
-                            "description": "Work e-mail"
-                          },
-                          "IBAN": {
-                            "type": "string",
-                            "description": "IBAN number"
-                          },
-                          "VatNr": {
-                            "type": "string",
-                            "description": "VAT identification number"
-                          },
-                          "ChOfCommNr": {
-                            "type": "string",
-                            "description": "COC number"
-                          },
-                          "CollectAccount": {
-                            "type": "string",
-                            "description": "Summary account"
-                          },
-                          "PayCon": {
-                            "type": "string",
-                            "description": "Payment condition"
-                          },
-                          "VatDuty": {
-                            "type": "string",
-                            "description": "VAT duty"
-                          },
-                          "Blocked": {
-                            "type": "boolean",
-                            "description": "Blocked for delivery"
-                          },
-                          "CreditLimit": {
-                            "type": "number",
-                            "description": "Credit limit"
-                          },
-                          "CurrencyId": {
-                            "type": "string",
-                            "description": "Currency"
-                          },
-                          "AutoPayment": {
-                            "type": "boolean",
-                            "description": "Automatically collect"
-                          },
-                          "CreateDate": {
-                            "type": "string",
-                            "description": "Created on"
-                          },
-                          "ModifiedDate": {
-                            "type": "string",
-                            "description": "Changed on"
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "GET"
         ]
       }
     },
@@ -5039,7 +4638,7 @@
           "name": "PtItpDaBe",
           "in": "path",
           "required": true,
-          "description": "Begindatum\n            CBS cao-code"
+          "description": "Begindatum CBS cao-code"
         }
       ],
       "delete": {
@@ -6717,6 +6316,431 @@
           }
         ]
       }
+    },
+    "/connectors/PtTariff": {
+      "post": {
+        "summary": "Rate",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/130373.htm",
+        "operationId": "POST_PtTariff",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PtTariff_POST"
+              },
+              "examples": {
+                "Create new tariff": {
+                  "value": {
+                    "PtTariff": {
+                      "Element": {
+                        "Fields": {
+                          "BaV1": "MissionRole",
+                          "BaV2": "Astronaut",
+                          "BaV3": "ResearchGroup",
+                          "BaV4": "MissionTeam",
+                          "BaS1": "SpacecraftFunction",
+                          "BaS2": "SpacePartnership",
+                          "BaI1": "InterstellarCrewMember",
+                          "BaI2": "InterstellarMission",
+                          "StId": "NormalHours",
+                          "DaBe": "2024-01-01",
+                          "CuId": "EUR",
+                          "AmCo": "45,00",
+                          "AmSe": "90,00",
+                          "AmIC": "50,00"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Rate"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Rate",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/130373.htm",
+        "operationId": "PUT_PtTariff",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PtTariff_PUT"
+              },
+              "examples": {
+                "change tariff": {
+                  "value": {
+                    "PtTariff": {
+                      "Element": {
+                        "@Id": 1,
+                        "Fields": {
+                          "StId": "2",
+                          "DaBe": "2024-01-01",
+                          "DaEn": "2025-01-01",
+                          "CuId": "EUR",
+                          "AmCo": "50,00",
+                          "AmSe": "100,00",
+                          "AmIC": "60,00"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Rate"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/PtTariff/PtTariff/@Id/{Id}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "Id",
+          "in": "path",
+          "required": true,
+          "description": "Line number"
+        }
+      ],
+      "delete": {
+        "summary": "Rate",
+        "operationId": "DELETE_PtTariff",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/130373.htm",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Rate"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/Profit_Debtor": {
+      "get": {
+        "summary": "Debtors",
+        "operationId": "Get_Profit_Debtor",
+        "description": " ",
+        "parameters": [
+          {
+            "name": "skip",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results skipped. Starts at 0",
+            "schema": {
+              "type": "number",
+              "example": 0
+            }
+          },
+          {
+            "name": "take",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results returned",
+            "schema": {
+              "type": "number",
+              "example": 100
+            }
+          },
+          {
+            "name": "orderbyfieldids",
+            "in": "query",
+            "required": false,
+            "description": "Must be used to prevent reordered results",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterfieldids",
+            "in": "query",
+            "required": false,
+            "description": "The fieldIds of the values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filtervalues",
+            "in": "query",
+            "required": false,
+            "description": "The values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "operatortypes",
+            "in": "query",
+            "required": false,
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
+            "schema": {
+              "type": "number",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            }
+          },
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "skip": {
+                      "type": "integer"
+                    },
+                    "take": {
+                      "type": "integer"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "DebtorId": {
+                            "type": "string",
+                            "description": "Debtor number"
+                          },
+                          "DebtorName": {
+                            "type": "string",
+                            "description": "Debtor name"
+                          },
+                          "BcCo": {
+                            "type": "string",
+                            "description": "Org/pers number"
+                          },
+                          "SearchName": {
+                            "type": "string",
+                            "description": "Search name"
+                          },
+                          "AdressLine1": {
+                            "type": "string",
+                            "description": "Address line 1 (street - house number)"
+                          },
+                          "AdressLine3": {
+                            "type": "string",
+                            "description": "Address line 3 (postcode - city)"
+                          },
+                          "AdressLine4": {
+                            "type": "string",
+                            "description": "Address line 4 (country)"
+                          },
+                          "TelNr": {
+                            "type": "string",
+                            "description": "Work phone no."
+                          },
+                          "Email": {
+                            "type": "string",
+                            "description": "Work e-mail"
+                          },
+                          "IBAN": {
+                            "type": "string",
+                            "description": "IBAN number"
+                          },
+                          "VatNr": {
+                            "type": "string",
+                            "description": "VAT identification number"
+                          },
+                          "ChOfCommNr": {
+                            "type": "string",
+                            "description": "COC number"
+                          },
+                          "CollectAccount": {
+                            "type": "string",
+                            "description": "Summary account"
+                          },
+                          "PayCon": {
+                            "type": "string",
+                            "description": "Payment condition"
+                          },
+                          "VatDuty": {
+                            "type": "string",
+                            "description": "VAT duty"
+                          },
+                          "Blocked": {
+                            "type": "boolean",
+                            "description": "Blocked for delivery"
+                          },
+                          "CreditLimit": {
+                            "type": "number",
+                            "description": "Credit limit"
+                          },
+                          "CurrencyId": {
+                            "type": "string",
+                            "description": "Currency"
+                          },
+                          "AutoPayment": {
+                            "type": "boolean",
+                            "description": "Automatically collect"
+                          },
+                          "CreateDate": {
+                            "type": "string",
+                            "description": "Created on"
+                          },
+                          "ModifiedDate": {
+                            "type": "string",
+                            "description": "Changed on"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "GET"
+        ]
+      }
     }
   },
   "tags": [
@@ -6727,10 +6751,6 @@
     {
       "name": "API Info",
       "description": "API Info"
-    },
-    {
-      "name": "Rate",
-      "description": "Rate"
     },
     {
       "name": "Reserve HRM",
@@ -6783,6 +6803,10 @@
     {
       "name": "Price agreement",
       "description": "Price agreement"
+    },
+    {
+      "name": "Rate",
+      "description": "Rate"
     }
   ],
   "components": {
@@ -9267,12 +9291,12 @@
                     "properties": {
                       "PtItpDaBe": {
                         "type": "string",
-                        "description": "Begindatum\n            CBS cao-code",
+                        "description": "Begindatum CBS cao-code",
                         "format": "date"
                       },
                       "PtItpTyEj": {
                         "type": "string",
-                        "description": "Soort\n            eindejaarsuitkering",
+                        "description": "Soort eindejaarsuitkering",
                         "format": ""
                       },
                       "PtItpPaDa": {
@@ -9297,7 +9321,7 @@
                       },
                       "PtItpNoPe": {
                         "type": "integer",
-                        "description": "Aantal periodes bij\n            verkooprelatie",
+                        "description": "Aantal periodes bij verkooprelatie",
                         "format": ""
                       },
                       "PtItpPeUn": {
@@ -9320,7 +9344,7 @@
                       "PtItpViTp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Soort periodieke\n            verhoging",
+                        "description": "Soort periodieke verhoging",
                         "format": ""
                       },
                       "PtItpDmon": {
@@ -9355,13 +9379,13 @@
                       },
                       "PtItpPFrA": {
                         "type": "integer",
-                        "description": "Periodieke verhoging\n            vanaf leeftijd",
+                        "description": "Periodieke verhoging vanaf leeftijd",
                         "format": ""
                       },
                       "PtItpViEx": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Extra voorwaarde\n            periodiek",
+                        "description": "Extra voorwaarde periodiek",
                         "format": ""
                       },
                       "PtItpReDa": {
@@ -9393,35 +9417,35 @@
                       },
                       "PtItpWeAg": {
                         "type": "integer",
-                        "description": "Werkervaring opbouwen\n            vanaf leeftijd",
+                        "description": "Werkervaring opbouwen vanaf leeftijd",
                         "format": ""
                       },
                       "PtItpVaIp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Telling\n            onderbrekingsperiode",
+                        "description": "Telling onderbrekingsperiode",
                         "format": ""
                       },
                       "PtItpMoCo": {
                         "type": "integer",
-                        "description": "Maanden opnieuw tellen\n            als onderbrekingsperiode",
+                        "description": "Maanden opnieuw tellen als onderbrekingsperiode",
                         "format": ""
                       },
                       "PtItpVaIe": {
                         "type": "string",
                         "maxLength": 4,
-                        "description": "Onderbrekingsperiode\n            eenheid",
+                        "description": "Onderbrekingsperiode eenheid",
                         "format": ""
                       },
                       "PtItpAcHi": {
                         "type": "boolean",
-                        "description": "Beoordeling inlener\n            benodigd",
+                        "description": "Beoordeling inlener benodigd",
                         "format": ""
                       },
                       "PtItpVaCo": {
                         "type": "string",
                         "maxLength": 4,
-                        "description": "Uitvoeren periodieke\n            verhoging",
+                        "description": "Uitvoeren periodieke verhoging",
                         "format": ""
                       },
                       "PtItpMeMo": {
@@ -9432,28 +9456,28 @@
                       "PtItpMeVp": {
                         "type": "string",
                         "maxLength": 20,
-                        "description": "Opmerking",
+                        "description": "Methode opbouw vakantiegeld",
                         "format": ""
                       },
                       "PtItpPdVp": {
                         "type": "integer",
-                        "description": "Opmerking",
+                        "description": "Peildag vakantiegeld",
                         "format": ""
                       },
                       "PtItpPmVp": {
                         "type": "integer",
-                        "description": "Opmerking",
+                        "description": "Peilmaand vakantiegeld",
                         "format": ""
                       },
                       "PtItpBwVp": {
                         "type": "integer",
-                        "description": "Opmerking",
+                        "description": "Opbouw vanaf week",
                         "format": ""
                       },
                       "PtItpMeMv": {
                         "type": "string",
                         "maxLength": 20,
-                        "description": "Opmerking",
+                        "description": "Methode minimum vakantiegeld",
                         "format": ""
                       },
                       "IsId": {
@@ -9777,12 +9801,12 @@
                     "properties": {
                       "PtItpDaBe": {
                         "type": "string",
-                        "description": "Begindatum\n            CBS cao-code",
+                        "description": "Begindatum CBS cao-code",
                         "format": "date"
                       },
                       "PtItpTyEj": {
                         "type": "string",
-                        "description": "Soort\n            eindejaarsuitkering",
+                        "description": "Soort eindejaarsuitkering",
                         "format": ""
                       },
                       "PtItpPaDa": {
@@ -9807,7 +9831,7 @@
                       },
                       "PtItpNoPe": {
                         "type": "integer",
-                        "description": "Aantal periodes bij\n            verkooprelatie",
+                        "description": "Aantal periodes bij verkooprelatie",
                         "format": ""
                       },
                       "PtItpPeUn": {
@@ -9830,7 +9854,7 @@
                       "PtItpViTp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Soort periodieke\n            verhoging",
+                        "description": "Soort periodieke verhoging",
                         "format": ""
                       },
                       "PtItpDmon": {
@@ -9865,13 +9889,13 @@
                       },
                       "PtItpPFrA": {
                         "type": "integer",
-                        "description": "Periodieke verhoging\n            vanaf leeftijd",
+                        "description": "Periodieke verhoging vanaf leeftijd",
                         "format": ""
                       },
                       "PtItpViEx": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Extra voorwaarde\n            periodiek",
+                        "description": "Extra voorwaarde periodiek",
                         "format": ""
                       },
                       "PtItpReDa": {
@@ -9903,35 +9927,35 @@
                       },
                       "PtItpWeAg": {
                         "type": "integer",
-                        "description": "Werkervaring opbouwen\n            vanaf leeftijd",
+                        "description": "Werkervaring opbouwen vanaf leeftijd",
                         "format": ""
                       },
                       "PtItpVaIp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Telling\n            onderbrekingsperiode",
+                        "description": "Telling onderbrekingsperiode",
                         "format": ""
                       },
                       "PtItpMoCo": {
                         "type": "integer",
-                        "description": "Maanden opnieuw tellen\n            als onderbrekingsperiode",
+                        "description": "Maanden opnieuw tellen als onderbrekingsperiode",
                         "format": ""
                       },
                       "PtItpVaIe": {
                         "type": "string",
                         "maxLength": 4,
-                        "description": "Onderbrekingsperiode\n            eenheid",
+                        "description": "Onderbrekingsperiode eenheid",
                         "format": ""
                       },
                       "PtItpAcHi": {
                         "type": "boolean",
-                        "description": "Beoordeling inlener\n            benodigd",
+                        "description": "Beoordeling inlener benodigd",
                         "format": ""
                       },
                       "PtItpVaCo": {
                         "type": "string",
                         "maxLength": 4,
-                        "description": "Uitvoeren periodieke\n            verhoging",
+                        "description": "Uitvoeren periodieke verhoging",
                         "format": ""
                       },
                       "PtItpMeMo": {
@@ -9942,28 +9966,28 @@
                       "PtItpMeVp": {
                         "type": "string",
                         "maxLength": 20,
-                        "description": "Opmerking",
+                        "description": "Methode opbouw vakantiegeld",
                         "format": ""
                       },
                       "PtItpPdVp": {
                         "type": "integer",
-                        "description": "Opmerking",
+                        "description": "Peildag vakantiegeld",
                         "format": ""
                       },
                       "PtItpPmVp": {
                         "type": "integer",
-                        "description": "Opmerking",
+                        "description": "Peilmaand vakantiegeld",
                         "format": ""
                       },
                       "PtItpBwVp": {
                         "type": "integer",
-                        "description": "Opmerking",
+                        "description": "Opbouw vanaf week",
                         "format": ""
                       },
                       "PtItpMeMv": {
                         "type": "string",
                         "maxLength": 20,
-                        "description": "Opmerking",
+                        "description": "Methode minimum vakantiegeld",
                         "format": ""
                       },
                       "IsId": {
@@ -10842,7 +10866,7 @@
                                           "51"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Automatic travel expenses vehicle\n11 = Petrol vehicle;\n12 = Diesel vehicle;\n13 = Auto (Plug in) Hybrid;\n14 = 100% electric vehicle;\n15 = Other fuel car;\n21 = Motorbike petrol;\n22 = Electric motorcycle;\n29 = Motorbike diesel;\n31 = Petrol moped/scooter;\n32 = Moped/scooter 100% electric;\n38 = Moped/scooter diesel;\n39 = Speed-pedelec;\n41 = (Electric) bicycle;\n49 = By foot;\n51 = Public transport ;",
+                                        "description": "Voorkeurwaarde vervoermiddel voor reiskosten\n11 = Petrol vehicle;\n12 = Diesel vehicle;\n13 = Auto (Plug in) Hybrid;\n14 = 100% electric vehicle;\n15 = Other fuel car;\n21 = Motorbike petrol;\n22 = Electric motorcycle;\n29 = Motorbike diesel;\n31 = Petrol moped/scooter;\n32 = Moped/scooter 100% electric;\n38 = Moped/scooter diesel;\n39 = Speed-pedelec;\n41 = (Electric) bicycle;\n49 = By foot;\n51 = Public transport ;",
                                         "format": ""
                                       }
                                     },
@@ -11423,7 +11447,7 @@
                                           "51"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Automatic travel expenses vehicle\n11 = Petrol vehicle;\n12 = Diesel vehicle;\n13 = Auto (Plug in) Hybrid;\n14 = 100% electric vehicle;\n15 = Other fuel car;\n21 = Motorbike petrol;\n22 = Electric motorcycle;\n29 = Motorbike diesel;\n31 = Petrol moped/scooter;\n32 = Moped/scooter 100% electric;\n38 = Moped/scooter diesel;\n39 = Speed-pedelec;\n41 = (Electric) bicycle;\n49 = By foot;\n51 = Public transport ;",
+                                        "description": "Voorkeurwaarde vervoermiddel voor reiskosten\n11 = Petrol vehicle;\n12 = Diesel vehicle;\n13 = Auto (Plug in) Hybrid;\n14 = 100% electric vehicle;\n15 = Other fuel car;\n21 = Motorbike petrol;\n22 = Electric motorcycle;\n29 = Motorbike diesel;\n31 = Petrol moped/scooter;\n32 = Moped/scooter 100% electric;\n38 = Moped/scooter diesel;\n39 = Speed-pedelec;\n41 = (Electric) bicycle;\n49 = By foot;\n51 = Public transport ;",
                                         "format": ""
                                       }
                                     }
