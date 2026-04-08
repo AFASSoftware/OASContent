@@ -350,7 +350,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
+        "summary": "Retieve the data of a custom getconnector based on the endpoint id.",
         "tags": [
           "GET"
         ],
@@ -442,7 +442,7 @@
             },
             "in": "path",
             "name": "Endpoint",
-            "description": "Add the id of connector you want to get the meta info from",
+            "description": "Add the id of the connector you want to get the data from",
             "required": true
           },
           {
@@ -469,7 +469,7 @@
             "name": "orderbyfieldids",
             "in": "query",
             "required": false,
-            "description": "Must be used to prevent reordered results.",
+            "description": "Must be used to prevent unexpectedly ordered results",
             "schema": {
               "type": "string"
             }
@@ -7035,63 +7035,6 @@
         ]
       }
     },
-    "/connectors/KnPurchaseRelationOrg/KnPurchaseRelationOrg/@CrId/{CrId}": {
-      "parameters": [
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "CrId",
-          "in": "path",
-          "required": true,
-          "description": "Nummer crediteur"
-        }
-      ],
-      "delete": {
-        "summary": "Inkooprelatie organisatie",
-        "operationId": "DELETE_KnPurchaseRelationOrg",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_050.htm",
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "$ref": "#/components/responses/200"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Inkooprelatie organisatie"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          }
-        ]
-      }
-    },
     "/connectors/KnPurchaseRelationPer": {
       "post": {
         "summary": "Inkooprelatie persoon",
@@ -7716,63 +7659,6 @@
           },
           {
             "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      }
-    },
-    "/connectors/KnPurchaseRelationPer/KnPurchaseRelationPer/@CrId/{CrId}": {
-      "parameters": [
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "CrId",
-          "in": "path",
-          "required": true,
-          "description": "Nummer crediteur"
-        }
-      ],
-      "delete": {
-        "summary": "Inkooprelatie persoon",
-        "operationId": "DELETE_KnPurchaseRelationPer",
-        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_050.htm",
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "$ref": "#/components/responses/200"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "Inkooprelatie persoon"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
           }
         ]
       }
