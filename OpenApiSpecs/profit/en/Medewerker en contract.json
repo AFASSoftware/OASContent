@@ -350,7 +350,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
+        "summary": "Retieve the data of a custom getconnector based on the endpoint id.",
         "tags": [
           "GET"
         ],
@@ -442,7 +442,7 @@
             },
             "in": "path",
             "name": "Endpoint",
-            "description": "Add the id of connector you want to get the meta info from",
+            "description": "Add the id of the connector you want to get the data from",
             "required": true
           },
           {
@@ -469,7 +469,7 @@
             "name": "orderbyfieldids",
             "in": "query",
             "required": false,
-            "description": "Must be used to prevent reordered results.",
+            "description": "Must be used to prevent unexpectedly ordered results",
             "schema": {
               "type": "string"
             }
@@ -57562,6 +57562,11 @@
                                         "description": "Account outside SEPA area",
                                         "format": ""
                                       },
+                                      "DsTp": {
+                                        "type": "boolean",
+                                        "description": "Payment reference incl. payment text",
+                                        "format": ""
+                                      },
                                       "IbCk": {
                                         "type": "boolean",
                                         "description": "IBAN controle",
@@ -75928,6 +75933,11 @@
                                       "FoPa": {
                                         "type": "boolean",
                                         "description": "Account outside SEPA area",
+                                        "format": ""
+                                      },
+                                      "DsTp": {
+                                        "type": "boolean",
+                                        "description": "Payment reference incl. payment text",
                                         "format": ""
                                       },
                                       "IbCk": {

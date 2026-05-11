@@ -470,6 +470,20 @@
       "descriptionEn": "Presence"
     }
   },
+  "SubjectConnector": {
+    "get": {
+      "descriptionNl": "",
+      "url": "Dossiers en bijlagen en workflows#get-/connectors/SubjectConnector",
+      "descriptionEn": ""
+    }
+  },
+  "FileConnector": {
+    "get": {
+      "descriptionNl": "",
+      "url": "Dossiers en bijlagen en workflows#get-/connectors/FileConnector",
+      "descriptionEn": ""
+    }
+  },
   "KnSubject": {
     "post": {
       "descriptionNl": "Dossier",
@@ -521,13 +535,6 @@
       "descriptionNl": "Workflow reactie",
       "url": "Dossiers en bijlagen en workflows#post-/connectors/KnSubjectWorkflowReaction",
       "descriptionEn": "Workflow response"
-    }
-  },
-  "FileConnector": {
-    "get": {
-      "descriptionNl": "",
-      "url": "Dossiers en bijlagen en workflows#get-/connectors/FileConnector",
-      "descriptionEn": ""
     }
   },
   "Profit_FeatureCombination": {
@@ -619,13 +626,6 @@
       "descriptionNl": "Dossieritems (incl. autorisatie)",
       "url": "Dossiers en bijlagen en workflows#get-/connectors/ProfitSubjectsAuthorized",
       "descriptionEn": "File items (with authorisation)"
-    }
-  },
-  "SubjectConnector": {
-    "get": {
-      "descriptionNl": "",
-      "url": "Dossiers en bijlagen en workflows#get-/connectors/SubjectConnector",
-      "descriptionEn": ""
     }
   },
   "FiIVY": {
@@ -1162,11 +1162,6 @@
       "descriptionNl": "Inkooprelatie organisatie",
       "url": "Inkoop#put-/connectors/KnPurchaseRelationOrg",
       "descriptionEn": "Purchase contact - organisation"
-    },
-    "delete": {
-      "descriptionNl": "Inkooprelatie organisatie",
-      "url": "Inkoop#delete-/connectors/KnPurchaseRelationOrg/KnPurchaseRelationOrg/@CrId/-CrId-",
-      "descriptionEn": "Purchase contact - organisation"
     }
   },
   "KnPurchaseRelationPer": {
@@ -1179,11 +1174,27 @@
       "descriptionNl": "Inkooprelatie persoon",
       "url": "Inkoop#put-/connectors/KnPurchaseRelationPer",
       "descriptionEn": "Purchase contact - person"
-    },
-    "delete": {
-      "descriptionNl": "Inkooprelatie persoon",
-      "url": "Inkoop#delete-/connectors/KnPurchaseRelationPer/KnPurchaseRelationPer/@CrId/-CrId-",
-      "descriptionEn": "Purchase contact - person"
+    }
+  },
+  "ReportConnector": {
+    "get": {
+      "descriptionNl": "",
+      "url": "Inrichting#get-/connectors/ReportConnector",
+      "descriptionEn": ""
+    }
+  },
+  "OtpRequest": {
+    "get": {
+      "descriptionNl": "",
+      "url": "Inrichting#get-/connectors/OtpRequest",
+      "descriptionEn": ""
+    }
+  },
+  "OtpValidation": {
+    "get": {
+      "descriptionNl": "",
+      "url": "Inrichting#get-/connectors/OtpValidation",
+      "descriptionEn": ""
     }
   },
   "KnCSRLine": {
@@ -1254,27 +1265,6 @@
       "descriptionEn": "KPI line"
     }
   },
-  "KnPeppol": {
-    "post": {
-      "descriptionNl": "PeppolCallback",
-      "url": "Inrichting#post-/connectors/KnPeppol",
-      "descriptionEn": "PeppolCallback"
-    }
-  },
-  "OtpRequest": {
-    "get": {
-      "descriptionNl": "",
-      "url": "Inrichting#get-/connectors/OtpRequest",
-      "descriptionEn": ""
-    }
-  },
-  "OtpValidation": {
-    "get": {
-      "descriptionNl": "",
-      "url": "Inrichting#get-/connectors/OtpValidation",
-      "descriptionEn": ""
-    }
-  },
   "ProfitCodeTableValue": {
     "get": {
       "descriptionNl": "Vrije tabellen",
@@ -1287,13 +1277,6 @@
       "descriptionNl": "GetConnector",
       "url": "Inrichting#get-/connectors/ProfitGetConnectoren",
       "descriptionEn": "GetConnector"
-    }
-  },
-  "ReportConnector": {
-    "get": {
-      "descriptionNl": "",
-      "url": "Inrichting#get-/connectors/ReportConnector",
-      "descriptionEn": ""
     }
   },
   "HrCalculationplan": {
@@ -1432,6 +1415,11 @@
     "put": {
       "descriptionNl": "Itemcode magazijn",
       "url": "Magazijn#put-/connectors/FbItemCodeWarehouse",
+      "descriptionEn": "Item code warehouse"
+    },
+    "delete": {
+      "descriptionNl": "Itemcode magazijn",
+      "url": "Magazijn#delete-/connectors/FbItemCodeWarehouse/FbItemCodeWarehouse/@VaIt,@War/-VaIt-,-War-",
       "descriptionEn": "Item code warehouse"
     }
   },

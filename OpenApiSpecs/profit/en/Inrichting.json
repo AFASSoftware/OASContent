@@ -350,7 +350,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
+        "summary": "Retieve the data of a custom getconnector based on the endpoint id.",
         "tags": [
           "GET"
         ],
@@ -442,7 +442,7 @@
             },
             "in": "path",
             "name": "Endpoint",
-            "description": "Add the id of connector you want to get the meta info from",
+            "description": "Add the id of the connector you want to get the data from",
             "required": true
           },
           {
@@ -469,7 +469,7 @@
             "name": "orderbyfieldids",
             "in": "query",
             "required": false,
-            "description": "Must be used to prevent reordered results.",
+            "description": "Must be used to prevent unexpectedly ordered results",
             "schema": {
               "type": "string"
             }
@@ -573,6 +573,327 @@
           }
         },
         "operationId": "get_ProfitVersion"
+      }
+    },
+    "/ReportConnector/{id}": {
+      "get": {
+        "summary": "Get a report in a specific format based on the report Id and format Id",
+        "tags": [
+          "GET"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "filedata": {
+                      "type": "string"
+                    },
+                    "mimetype": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "Example response": {
+                    "value": {
+                      "filedata": "iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAYAAAAxU7r0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAANRoSURBVHhe7L0HgGVHda67+uTQOUwezSjnBAgEQgQ=",
+                      "mimetype": "application/pdf"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_reportConnector",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "example": "CF761B2F7099455B8C5227639C447689"
+            },
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "Id of the report"
+          },
+          {
+            "name": "filterfieldids",
+            "in": "query",
+            "required": false,
+            "description": "The fieldIds of the values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filtervalues",
+            "in": "query",
+            "required": false,
+            "description": "The values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "operatortypes",
+            "in": "query",
+            "required": false,
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
+            "schema": {
+              "type": "number",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "/OtpRequest": {
+      "post": {
+        "summary": "Request and validate One Time Password (OTP) for authorization.",
+        "tags": [
+          "OTP Authorization"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK; request is successfully executed.",
+            "headers": {
+              "Cache-Control": {
+                "description": "no-store, no-cache",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Type": {
+                "description": "application/xml; charset=utf-8",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Strict-Transport-Security": {
+                "description": "max-age=31536000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Stats": {
+                "description": "init(0ms), before response(0ms), complete(418ms)",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Version": {
+                "description": "4.3.0.0",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "nosniff",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Frame-Options": {
+                "description": "deny",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "description": "*",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Headers": {
+                "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Methods": {
+                "description": "GET, POST, PUT, DELETE, OPTIONS",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Max-Age": {
+                "description": "1728000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Date": {
+                "description": "Thu, 23 Nov 2023 12:11:06 GMT",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Length": {
+                "description": "0",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "post_OtpRequest",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "apiKey": {
+                    "type": "string",
+                    "description": "The API key of the App Connector (API-Sleutel)"
+                  },
+                  "apiToken": {
+                    "type": "string",
+                    "description": "The API secret of the App Connector (Omgevingssleutel)"
+                  },
+                  "userId": {
+                    "type": "string",
+                    "description": "The emailladdress or userid (12345.user)"
+                  }
+                },
+                "required": [
+                  "apiKey",
+                  "userId",
+                  "apiToken"
+                ]
+              },
+              "examples": {
+                "OTP Example": {
+                  "value": {
+                    "apiKey": "8B4406A0041C4A319D6594224186383F",
+                    "userid": "work@exampleemail.com",
+                    "apiToken": "941C8D1742366C922BFF7B81946526EE"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/OtpValidation": {
+      "post": {
+        "summary": "Request and validate One Time Password (OTP) for authorization.",
+        "tags": [
+          "OTP Authorization"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK; request is successfully executed.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "token": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "Example response": {
+                    "value": {
+                      "token": "<token><version>1</version><data>979D703A5D92417998F36ECE577E10CD2822304B4E687A46AAB4598889FA5804</data></token>\r\n"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "post_OtpValidation",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "apiKey": {
+                    "type": "string",
+                    "description": "The API key of the App Connector (API-Sleutel)"
+                  },
+                  "apiToken": {
+                    "type": "string",
+                    "description": "The API secret of the App Connector (Omgevingssleutel)"
+                  },
+                  "userId": {
+                    "type": "string",
+                    "description": "The emailladdress or userid (12345.user)"
+                  },
+                  "otp": {
+                    "type": "string",
+                    "description": "The OTP value as received in the email."
+                  }
+                },
+                "required": [
+                  "apiKey",
+                  "userId",
+                  "apiToken",
+                  "otp"
+                ]
+              },
+              "examples": {
+                "OTP Example": {
+                  "value": {
+                    "apiKey": "8B4406A0041C4A319D6594224186383F",
+                    "userid": "work@exampleemail.com",
+                    "apiToken": "941C8D1742366C922BFF7B81946526EE",
+                    "otp": "34264813"
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     },
     "/connectors/KnCSRLine": {
@@ -2026,265 +2347,6 @@
         ]
       }
     },
-    "/connectors/KnPeppol": {
-      "post": {
-        "summary": "PeppolCallback",
-        "description": "\n\r ",
-        "operationId": "POST_KnPeppol",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/KnPeppol_POST"
-              }
-            }
-          }
-        },
-        "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          }
-        },
-        "security": [
-          {
-            "AfasToken": []
-          }
-        ],
-        "tags": [
-          "PeppolCallback"
-        ],
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/Accept-Language"
-          },
-          {
-            "$ref": "#/components/parameters/Content-Type"
-          }
-        ]
-      }
-    },
-    "/OtpRequest": {
-      "post": {
-        "summary": "Request and validate One Time Password (OTP) for authorization.",
-        "tags": [
-          "OTP Authorization"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK; request is successfully executed.",
-            "headers": {
-              "Cache-Control": {
-                "description": "no-store, no-cache",
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "Content-Type": {
-                "description": "application/xml; charset=utf-8",
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "Strict-Transport-Security": {
-                "description": "max-age=31536000",
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "X-AFAS-Proxy-Stats": {
-                "description": "init(0ms), before response(0ms), complete(418ms)",
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "X-AFAS-Proxy-Version": {
-                "description": "4.3.0.0",
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "X-Content-Type-Options": {
-                "description": "nosniff",
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "X-Frame-Options": {
-                "description": "deny",
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "Access-Control-Allow-Origin": {
-                "description": "*",
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "Access-Control-Allow-Headers": {
-                "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "Access-Control-Allow-Methods": {
-                "description": "GET, POST, PUT, DELETE, OPTIONS",
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "Access-Control-Max-Age": {
-                "description": "1728000",
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "Date": {
-                "description": "Thu, 23 Nov 2023 12:11:06 GMT",
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "Content-Length": {
-                "description": "0",
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        },
-        "operationId": "post_OtpRequest",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "apiKey": {
-                    "type": "string",
-                    "description": "The API key of the App Connector (API-Sleutel)"
-                  },
-                  "apiToken": {
-                    "type": "string",
-                    "description": "The API secret of the App Connector (Omgevingssleutel)"
-                  },
-                  "userId": {
-                    "type": "string",
-                    "description": "The emailladdress or userid (12345.user)"
-                  }
-                },
-                "required": [
-                  "apiKey",
-                  "userId",
-                  "apiToken"
-                ]
-              },
-              "examples": {
-                "OTP Example": {
-                  "value": {
-                    "apiKey": "8B4406A0041C4A319D6594224186383F",
-                    "userid": "work@exampleemail.com",
-                    "apiToken": "941C8D1742366C922BFF7B81946526EE"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/OtpValidation": {
-      "post": {
-        "summary": "Request and validate One Time Password (OTP) for authorization.",
-        "tags": [
-          "OTP Authorization"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK; request is successfully executed.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "token": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "examples": {
-                  "Example response": {
-                    "value": {
-                      "token": "<token><version>1</version><data>979D703A5D92417998F36ECE577E10CD2822304B4E687A46AAB4598889FA5804</data></token>\r\n"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "operationId": "post_OtpValidation",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "apiKey": {
-                    "type": "string",
-                    "description": "The API key of the App Connector (API-Sleutel)"
-                  },
-                  "apiToken": {
-                    "type": "string",
-                    "description": "The API secret of the App Connector (Omgevingssleutel)"
-                  },
-                  "userId": {
-                    "type": "string",
-                    "description": "The emailladdress or userid (12345.user)"
-                  },
-                  "otp": {
-                    "type": "string",
-                    "description": "The OTP value as received in the email."
-                  }
-                },
-                "required": [
-                  "apiKey",
-                  "userId",
-                  "apiToken",
-                  "otp"
-                ]
-              },
-              "examples": {
-                "OTP Example": {
-                  "value": {
-                    "apiKey": "8B4406A0041C4A319D6594224186383F",
-                    "userid": "work@exampleemail.com",
-                    "apiToken": "941C8D1742366C922BFF7B81946526EE",
-                    "otp": "34264813"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/connectors/ProfitCodeTableValue": {
       "get": {
         "summary": "Custom tables",
@@ -2592,120 +2654,6 @@
           "GET"
         ]
       }
-    },
-    "/ReportConnector/{id}": {
-      "get": {
-        "summary": "Get a report in a specific format based on the report Id and format Id",
-        "tags": [
-          "GET"
-        ],
-        "responses": {
-          "400": {
-            "$ref": "#/components/responses/400"
-          },
-          "401": {
-            "$ref": "#/components/responses/401"
-          },
-          "403": {
-            "$ref": "#/components/responses/403"
-          },
-          "404": {
-            "$ref": "#/components/responses/404"
-          },
-          "413": {
-            "$ref": "#/components/responses/413"
-          },
-          "500": {
-            "$ref": "#/components/responses/500"
-          },
-          "503": {
-            "$ref": "#/components/responses/503"
-          },
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "filedata": {
-                      "type": "string"
-                    },
-                    "mimetype": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "examples": {
-                  "Example response": {
-                    "value": {
-                      "filedata": "iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAYAAAAxU7r0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAANRoSURBVHhe7L0HgGVHda67+uTQOUwezSjnBAgEQgQ=",
-                      "mimetype": "application/pdf"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get_reportConnector",
-        "parameters": [
-          {
-            "schema": {
-              "type": "string",
-              "example": "CF761B2F7099455B8C5227639C447689"
-            },
-            "in": "path",
-            "name": "id",
-            "required": true,
-            "description": "Id of the report"
-          },
-          {
-            "name": "filterfieldids",
-            "in": "query",
-            "required": false,
-            "description": "The fieldIds of the values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "filtervalues",
-            "in": "query",
-            "required": false,
-            "description": "The values to filter on",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "operatortypes",
-            "in": "query",
-            "required": false,
-            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
-            "schema": {
-              "type": "number",
-              "enum": [
-                1,
-                2,
-                3,
-                4,
-                5,
-                6,
-                7,
-                8,
-                9,
-                10,
-                11,
-                12,
-                13,
-                14,
-                15
-              ]
-            }
-          }
-        ]
-      }
     }
   },
   "tags": [
@@ -2732,10 +2680,6 @@
     {
       "name": "KPI line",
       "description": "KPI line"
-    },
-    {
-      "name": "PeppolCallback",
-      "description": "PeppolCallback"
     }
   ],
   "components": {
