@@ -21,5 +21,13 @@ Starting with Profit 8, several changes have been implemented in the AFAS Profit
 
 ## Important changes
 
+#### mTLS support on connectors
+
+Starting with Profit 8, it is possible to use mTLS (mutual TLS) on connectors. mTLS is a security protocol in which both the client and the server must authenticate themselves with a certificate. This provides an extra layer of security, because only authorized clients can connect to the server.
+
+### Webhooks!
+
+A long-cherished wish has come true: Webhooks! At the AFAS Open you will hear more.
+
 
 ## Other changes

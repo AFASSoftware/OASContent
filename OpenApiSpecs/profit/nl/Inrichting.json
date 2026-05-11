@@ -577,7 +577,7 @@
     },
     "/ReportConnector/{id}": {
       "get": {
-        "summary": "Get a report in a specific format based on the report Id and format Id",
+        "summary": "Generate and retrieve a report based on the report Id and optional filters.",
         "tags": [
           "GET"
         ],
@@ -797,7 +797,7 @@
                   },
                   "userId": {
                     "type": "string",
-                    "description": "The emailladdress or userid (12345.user)"
+                    "description": "The email address or userId (12345.user)"
                   }
                 },
                 "required": [
@@ -810,7 +810,7 @@
                 "OTP Example": {
                   "value": {
                     "apiKey": "8B4406A0041C4A319D6594224186383F",
-                    "userid": "work@exampleemail.com",
+                    "userId": "work@exampleemail.com",
                     "apiToken": "941C8D1742366C922BFF7B81946526EE"
                   }
                 }
@@ -867,7 +867,7 @@
                   },
                   "userId": {
                     "type": "string",
-                    "description": "The emailladdress or userid (12345.user)"
+                    "description": "The email address or userId (12345.user)"
                   },
                   "otp": {
                     "type": "string",
@@ -885,7 +885,7 @@
                 "OTP Example": {
                   "value": {
                     "apiKey": "8B4406A0041C4A319D6594224186383F",
-                    "userid": "work@exampleemail.com",
+                    "userId": "work@exampleemail.com",
                     "apiToken": "941C8D1742366C922BFF7B81946526EE",
                     "otp": "34264813"
                   }
@@ -2660,6 +2660,10 @@
     {
       "name": "GET",
       "description": "GET"
+    },
+    {
+      "name": "OTP Authorization",
+      "description": "OTP Autorisatie"
     },
     {
       "name": "API Info",

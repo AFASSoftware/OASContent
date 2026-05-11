@@ -1178,23 +1178,23 @@
   },
   "ReportConnector": {
     "get": {
-      "descriptionNl": "",
+      "descriptionNl": "Rapport genereren en ophalen",
       "url": "Inrichting#get-/connectors/ReportConnector",
-      "descriptionEn": ""
+      "descriptionEn": "Create and retrieve report"
     }
   },
   "OtpRequest": {
-    "get": {
-      "descriptionNl": "",
-      "url": "Inrichting#get-/connectors/OtpRequest",
-      "descriptionEn": ""
+    "post": {
+      "descriptionNl": "OTP aanvragen",
+      "url": "Inrichting#post-/connectors/OtpRequest",
+      "descriptionEn": "Request OTP (one-time password)"
     }
   },
   "OtpValidation": {
-    "get": {
-      "descriptionNl": "",
-      "url": "Inrichting#get-/connectors/OtpValidation",
-      "descriptionEn": ""
+    "post": {
+      "descriptionNl": "OTP valideren",
+      "url": "Inrichting#post-/connectors/OtpValidation",
+      "descriptionEn": "Validate OTP (one-time password)"
     }
   },
   "KnCSRLine": {

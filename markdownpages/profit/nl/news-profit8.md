@@ -21,5 +21,13 @@ Vanaf Profit 8 is er een aantal wijzigingen in de AFAS Profit API doorgevoerd. H
 
 ## Belangrijke wijzigingen
 
+#### mTLS ondersteuning op de connectoren
+
+Vanaf Profit 8 is het mogelijk om mTLS (mutual TLS) te gebruiken op de connectoren. mTLS is een beveiligingsprotocol waarbij zowel de client als de server zich moeten authenticeren met een certificaat. Dit zorgt voor een extra laag beveiliging, omdat alleen geautoriseerde clients verbinding kunnen maken met de server. 
+
+### Webhooks!
+
+Een langgekoesterde wens is in vervulling gegaan: Webhooks! Op de AFAS Open hoor je meer.
 
 ## Overige wijzigingen
+
