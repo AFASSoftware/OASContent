@@ -144,16 +144,46 @@
             "name": "Blob-Upload-Type",
             "schema": {
               "type": "string",
-              "example": "Blob/Image"
+              "enum": ["Blob", "Image"],
+              "example": "Blob"
             },
-            "required": true
+            "required": true,
+            "examples": {
+              "Blob": {
+                "summary": "For non-image files (e.g. PDF, Word)",
+                "value": "Blob"
+              },
+              "Image": {
+                "summary": "For image files (e.g. JPEG, PNG)",
+                "value": "Image"
+              }
+            }
           },
           {
             "in": "header",
             "name": "Blob-Format",
             "schema": {
               "type": "string",
-              "example": "Default/Thumb/Small/Medium"
+              "enum": ["Default", "Thumb", "Small", "Medium"],
+              "example": "Default"
+            },
+            "examples": {
+              "Default": {
+                "summary": "Original file (default)",
+                "value": "Default"
+              },
+              "Thumb": {
+                "summary": "Thumbnail image",
+                "value": "Thumb"
+              },
+              "Small": {
+                "summary": "Small image",
+                "value": "Small"
+              },
+              "Medium": {
+                "summary": "Medium image",
+                "value": "Medium"
+              }
             }
           },
           {
