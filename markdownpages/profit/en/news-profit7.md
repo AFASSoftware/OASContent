@@ -5,6 +5,8 @@ tags: Profit7, GetConnector, UpdateConnector, Integration, Configuration
 title: New in Profit 7
 ---
 
+> This article was last updated on April 8, 2026. Several patches in Profit 7 have resulted in changes to the API specifications. Make sure you are aware of the latest changes. The most important changes are the new Fiscal connectors.
+
 Starting with Profit 7, several changes have been implemented in the AFAS Profit API. Below are the changes compared to Profit 6. Curious about our roadmap? [Click here](https://www.afas.nl/roadmap)  
 
 > How to read this? Profit has an extensive API with many different components. The API specifications are divided into related sections. Changes are indicated per section.  
@@ -63,9 +65,14 @@ This applies to the following requests:
 - The result now comes in one long line without extra line breaks
 - These changes may impact custom string processing of raw JSON
 
-With a `metainfo` request, you can easily query which endpoints are available. With `metainfo/get`, you get insight into the available fields in a GetConnector. With `metainfo/update`, you can see which fields you can populate in an UpdateConnector.
+With a `metainfo` request, you can easily query which endpoints are available. With `metainfo/get`, you get insight into the available fields in a GetConnector. With `metainfo/update`, you can see which fields you can fill in for an UpdateConnector.
 
 ## Other changes
+
+### New data collection: Tax return data
+
+**This data collection was made available in Profit 7 through a patch.**  
+In Profit, you can now also retrieve personal income tax return data. This data collection contains data such as Client, Tax return type and Year. Most importantly, it includes the `JSON tax return` field, containing a JSON string with the full personal income tax return.
 
 ### Custom Connectors now also in metainfo request (REST)
 
@@ -87,6 +94,13 @@ In Profit, you can now also retrieve employee/absence history, including the ass
 
 Every call that successfully reaches our application layer now receives a response header `X-Trace-Identifier`. This header contains a unique identifier for the specific API call. This can be useful for tracing and debugging requests in collaboration with AFAS System Integrators. This header is available for both REST and SOAP API calls.  
 Please note that the layout of the identifier may change in the future, depending on the web server technology used.  
+
+## API specifications (OAS3)
+
+> Please note: **these specifications were updated after several Profit 7 patches**. Make sure you are aware of the latest changes.
+
+> Please note 2: The `Nationalities` table was updated: the code for "Namibia" changed from `SWA` to `NAM`. Check whether your own system also takes this into account.  
+This change causes quite a few breaking changes in the API specifications, but in practice it will rarely cause issues.
 
 ## Artikelen Specification
 
@@ -199,9 +213,9 @@ No changes for this release.
 
 | Description | Connector | Operation |
 | --- | --- | --- |
-| api path removed without deprecation | KnPurchaseRelationOrg | DELETE |
+| api path removed without deprecation | KnPurchaseRelationOrg | [DELETE](https://docs.afas.help/apidoc/nl/Inkoop#delete-/connectors/KnPurchaseRelationOrg/KnPurchaseRelationOrg/@CrId/-CrId-) |
 | removed the enum value 'SWA' of the request property 'KnPurchaseRelationOrg/Element/Objects/KnOrganisation/Element/Objects/KnContact/Element/Objects/KnPerson/Element/Fields/PsNa' | KnPurchaseRelationOrg | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/KnPurchaseRelationOrg), [PUT](https://docs.afas.help/apidoc/nl/Inkoop#put-/connectors/KnPurchaseRelationOrg) |
-| api path removed without deprecation | KnPurchaseRelationPer | DELETE |
+| api path removed without deprecation | KnPurchaseRelationPer | [DELETE](https://docs.afas.help/apidoc/nl/Inkoop#delete-/connectors/KnPurchaseRelationPer/KnPurchaseRelationPer/@CrId/-CrId-) |
 | removed the enum value 'SWA' of the request property 'KnPurchaseRelationPer/Element/Objects/KnPerson/Element/Fields/PsNa' | KnPurchaseRelationPer | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/KnPurchaseRelationPer), [PUT](https://docs.afas.help/apidoc/nl/Inkoop#put-/connectors/KnPurchaseRelationPer) |
 
 ### Changelog
@@ -214,18 +228,63 @@ No changes for this release.
 | the request property 'FbBitVatTarifGroup/Element/Fields/ItCd' became optional | FbBitVatTarifGroup | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/FbBitVatTarifGroup) |
 | the request property 'FbBitVatTarifGroup/Element/Fields/VaIt' became optional | FbBitVatTarifGroup | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/FbBitVatTarifGroup) |
 | added the new 'DPU' enum value to the request property 'FbGoodsReceived/Element/Fields/Inco' | FbGoodsReceived | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/FbGoodsReceived), [PUT](https://docs.afas.help/apidoc/nl/Inkoop#put-/connectors/FbGoodsReceived) |
-| api path removed without deprecation | KnPurchaseRelationOrg | DELETE |
+| api path removed without deprecation | KnPurchaseRelationOrg | [DELETE](https://docs.afas.help/apidoc/nl/Inkoop#delete-/connectors/KnPurchaseRelationOrg/KnPurchaseRelationOrg/@CrId/-CrId-) |
 | added the new 'Z' enum value to the request property 'KnPurchaseRelationOrg/Element/Fields/InPv' | KnPurchaseRelationOrg | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/KnPurchaseRelationOrg), [PUT](https://docs.afas.help/apidoc/nl/Inkoop#put-/connectors/KnPurchaseRelationOrg) |
 | added the new 'NAM' enum value to the request property 'KnPurchaseRelationOrg/Element/Objects/KnOrganisation/Element/Objects/KnContact/Element/Objects/KnPerson/Element/Fields/PsNa' | KnPurchaseRelationOrg | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/KnPurchaseRelationOrg), [PUT](https://docs.afas.help/apidoc/nl/Inkoop#put-/connectors/KnPurchaseRelationOrg) |
 | removed the enum value 'SWA' of the request property 'KnPurchaseRelationOrg/Element/Objects/KnOrganisation/Element/Objects/KnContact/Element/Objects/KnPerson/Element/Fields/PsNa' | KnPurchaseRelationOrg | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/KnPurchaseRelationOrg), [PUT](https://docs.afas.help/apidoc/nl/Inkoop#put-/connectors/KnPurchaseRelationOrg) |
-| api path removed without deprecation | KnPurchaseRelationPer | DELETE |
+| api path removed without deprecation | KnPurchaseRelationPer | [DELETE](https://docs.afas.help/apidoc/nl/Inkoop#delete-/connectors/KnPurchaseRelationPer/KnPurchaseRelationPer/@CrId/-CrId-) |
 | added the new 'Z' enum value to the request property 'KnPurchaseRelationPer/Element/Fields/InPv' | KnPurchaseRelationPer | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/KnPurchaseRelationPer), [PUT](https://docs.afas.help/apidoc/nl/Inkoop#put-/connectors/KnPurchaseRelationPer) |
 | added the new 'NAM' enum value to the request property 'KnPurchaseRelationPer/Element/Objects/KnPerson/Element/Fields/PsNa' | KnPurchaseRelationPer | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/KnPurchaseRelationPer), [PUT](https://docs.afas.help/apidoc/nl/Inkoop#put-/connectors/KnPurchaseRelationPer) |
 | removed the enum value 'SWA' of the request property 'KnPurchaseRelationPer/Element/Objects/KnPerson/Element/Fields/PsNa' | KnPurchaseRelationPer | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/KnPurchaseRelationPer), [PUT](https://docs.afas.help/apidoc/nl/Inkoop#put-/connectors/KnPurchaseRelationPer) |
 
 ## Inrichting Specification
 
-No changes for this release.
+### Breaking Changes
+
+| Description | Connector | Operation |
+| --- | --- | --- |
+| api path removed without deprecation | KnCustomK02 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK02), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK02), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK02/KnCustomK02/@SqNo/-SqNo-) |
+| api path removed without deprecation | KnCustomK03 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK03), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK03), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK03/KnCustomK03/@SqNo/-SqNo-) |
+| api path removed without deprecation | KnCustomK04 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK04), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK04), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK04/KnCustomK04/@SqNo/-SqNo-) |
+| api path removed without deprecation | KnCustomK05 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK05), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK05), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK05/KnCustomK05/@SqNo/-SqNo-) |
+| api path removed without deprecation | KnCustomK06 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK06), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK06), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK06/KnCustomK06/@SqNo/-SqNo-) |
+| api path removed without deprecation | KnCustomK07 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK07), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK07), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK07/KnCustomK07/@SqNo/-SqNo-) |
+| api path removed without deprecation | KnCustomK08 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK08), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK08), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK08/KnCustomK08/@SqNo/-SqNo-) |
+| api path removed without deprecation | KnCustomK09 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK09), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK09), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK09/KnCustomK09/@SqNo/-SqNo-) |
+| api path removed without deprecation | KnCustomK10 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK10), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK10), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK10/KnCustomK10/@SqNo/-SqNo-) |
+
+### Changelog
+
+| Description | Connector | Operation |
+| --- | --- | --- |
+| removed the schema 'KnCustomK02_POST' |  |  |
+| removed the schema 'KnCustomK02_PUT' |  |  |
+| removed the schema 'KnCustomK03_POST' |  |  |
+| removed the schema 'KnCustomK03_PUT' |  |  |
+| removed the schema 'KnCustomK04_POST' |  |  |
+| removed the schema 'KnCustomK04_PUT' |  |  |
+| removed the schema 'KnCustomK05_POST' |  |  |
+| removed the schema 'KnCustomK05_PUT' |  |  |
+| removed the schema 'KnCustomK06_POST' |  |  |
+| removed the schema 'KnCustomK06_PUT' |  |  |
+| removed the schema 'KnCustomK07_POST' |  |  |
+| removed the schema 'KnCustomK07_PUT' |  |  |
+| removed the schema 'KnCustomK08_POST' |  |  |
+| removed the schema 'KnCustomK08_PUT' |  |  |
+| removed the schema 'KnCustomK09_POST' |  |  |
+| removed the schema 'KnCustomK09_PUT' |  |  |
+| removed the schema 'KnCustomK10_POST' |  |  |
+| removed the schema 'KnCustomK10_PUT' |  |  |
+| api path removed without deprecation | KnCustomK02 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK02), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK02), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK02/KnCustomK02/@SqNo/-SqNo-) |
+| api path removed without deprecation | KnCustomK03 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK03), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK03), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK03/KnCustomK03/@SqNo/-SqNo-) |
+| api path removed without deprecation | KnCustomK04 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK04), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK04), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK04/KnCustomK04/@SqNo/-SqNo-) |
+| api path removed without deprecation | KnCustomK05 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK05), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK05), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK05/KnCustomK05/@SqNo/-SqNo-) |
+| api path removed without deprecation | KnCustomK06 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK06), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK06), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK06/KnCustomK06/@SqNo/-SqNo-) |
+| api path removed without deprecation | KnCustomK07 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK07), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK07), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK07/KnCustomK07/@SqNo/-SqNo-) |
+| api path removed without deprecation | KnCustomK08 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK08), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK08), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK08/KnCustomK08/@SqNo/-SqNo-) |
+| api path removed without deprecation | KnCustomK09 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK09), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK09), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK09/KnCustomK09/@SqNo/-SqNo-) |
+| api path removed without deprecation | KnCustomK10 | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnCustomK10), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnCustomK10), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnCustomK10/KnCustomK10/@SqNo/-SqNo-) |
+| endpoint added | KnKpiRow | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnKpiRow), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnKpiRow), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnKpiRow/KnKpiRow/@KpId/-KpId-) |
 
 ## Loonadministratie Specification
 
@@ -786,11 +845,11 @@ No changes for this release.
 | removed the enum value 'SWA' of the request property 'KnOrganisation/Element/Objects/KnContact/Element/Objects/KnPerson/Element/Fields/PsNa' | KnOrganisation | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnOrganisation), [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnOrganisation) |
 | removed the enum value 'SWA' of the request property 'KnPerson/Element/Fields/PsNa' | KnPerson | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnPerson), [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnPerson) |
 | removed the enum value 'SWA' of the request property 'KnPerson/Element/Objects/KnContact/Element/Objects/KnPerson/Element/Fields/PsNa' | KnPerson | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnPerson), [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnPerson) |
-| api path removed without deprecation | KnProfile | DELETE |
-| api removed without deprecation | KnProfile | POST |
-| api path removed without deprecation | KnPurchaseRelationOrg | DELETE |
+| api path removed without deprecation | KnProfile | [DELETE](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#delete-/connectors/KnProfile/KnProfile/@PrId/-PrId-) |
+| api removed without deprecation | KnProfile | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnProfile) |
+| api path removed without deprecation | KnPurchaseRelationOrg | [DELETE](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#delete-/connectors/KnPurchaseRelationOrg/KnPurchaseRelationOrg/@CrId/-CrId-) |
 | removed the enum value 'SWA' of the request property 'KnPurchaseRelationOrg/Element/Objects/KnOrganisation/Element/Objects/KnContact/Element/Objects/KnPerson/Element/Fields/PsNa' | KnPurchaseRelationOrg | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnPurchaseRelationOrg), [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnPurchaseRelationOrg) |
-| api path removed without deprecation | KnPurchaseRelationPer | DELETE |
+| api path removed without deprecation | KnPurchaseRelationPer | [DELETE](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#delete-/connectors/KnPurchaseRelationPer/KnPurchaseRelationPer/@CrId/-CrId-) |
 | removed the enum value 'SWA' of the request property 'KnPurchaseRelationPer/Element/Objects/KnPerson/Element/Fields/PsNa' | KnPurchaseRelationPer | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnPurchaseRelationPer), [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnPurchaseRelationPer) |
 | removed the enum value 'SWA' of the request property 'KnSalesRelationOrg/Element/Objects/KnOrganisation/Element/Objects/KnContact/Element/Objects/KnPerson/Element/Fields/PsNa' | KnSalesRelationOrg | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnSalesRelationOrg), [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnSalesRelationOrg) |
 | removed the enum value 'SWA' of the request property 'KnSalesRelationPer/Element/Objects/KnPerson/Element/Fields/PsNa' | KnSalesRelationPer | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnSalesRelationPer), [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnSalesRelationPer) |
@@ -817,14 +876,14 @@ No changes for this release.
 | removed the enum value 'SWA' of the request property 'KnPerson/Element/Fields/PsNa' | KnPerson | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnPerson), [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnPerson) |
 | added the new 'NAM' enum value to the request property 'KnPerson/Element/Objects/KnContact/Element/Objects/KnPerson/Element/Fields/PsNa' | KnPerson | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnPerson), [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnPerson) |
 | removed the enum value 'SWA' of the request property 'KnPerson/Element/Objects/KnContact/Element/Objects/KnPerson/Element/Fields/PsNa' | KnPerson | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnPerson), [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnPerson) |
-| api path removed without deprecation | KnProfile | DELETE |
-| api removed without deprecation | KnProfile | POST |
+| api path removed without deprecation | KnProfile | [DELETE](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#delete-/connectors/KnProfile/KnProfile/@PrId/-PrId-) |
+| api removed without deprecation | KnProfile | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnProfile) |
 | added the new 'Z' enum value to the request property 'KnProvApplication/Element/Fields/VaPt' | KnProvApplication | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnProvApplication), [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnProvApplication) |
-| api path removed without deprecation | KnPurchaseRelationOrg | DELETE |
+| api path removed without deprecation | KnPurchaseRelationOrg | [DELETE](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#delete-/connectors/KnPurchaseRelationOrg/KnPurchaseRelationOrg/@CrId/-CrId-) |
 | added the new 'Z' enum value to the request property 'KnPurchaseRelationOrg/Element/Fields/InPv' | KnPurchaseRelationOrg | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnPurchaseRelationOrg), [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnPurchaseRelationOrg) |
 | added the new 'NAM' enum value to the request property 'KnPurchaseRelationOrg/Element/Objects/KnOrganisation/Element/Objects/KnContact/Element/Objects/KnPerson/Element/Fields/PsNa' | KnPurchaseRelationOrg | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnPurchaseRelationOrg), [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnPurchaseRelationOrg) |
 | removed the enum value 'SWA' of the request property 'KnPurchaseRelationOrg/Element/Objects/KnOrganisation/Element/Objects/KnContact/Element/Objects/KnPerson/Element/Fields/PsNa' | KnPurchaseRelationOrg | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnPurchaseRelationOrg), [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnPurchaseRelationOrg) |
-| api path removed without deprecation | KnPurchaseRelationPer | DELETE |
+| api path removed without deprecation | KnPurchaseRelationPer | [DELETE](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#delete-/connectors/KnPurchaseRelationPer/KnPurchaseRelationPer/@CrId/-CrId-) |
 | added the new 'Z' enum value to the request property 'KnPurchaseRelationPer/Element/Fields/InPv' | KnPurchaseRelationPer | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnPurchaseRelationPer), [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnPurchaseRelationPer) |
 | added the new 'NAM' enum value to the request property 'KnPurchaseRelationPer/Element/Objects/KnPerson/Element/Fields/PsNa' | KnPurchaseRelationPer | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnPurchaseRelationPer), [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnPurchaseRelationPer) |
 | removed the enum value 'SWA' of the request property 'KnPurchaseRelationPer/Element/Objects/KnPerson/Element/Fields/PsNa' | KnPurchaseRelationPer | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnPurchaseRelationPer), [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnPurchaseRelationPer) |
@@ -843,10 +902,10 @@ No changes for this release.
 | Description | Connector | Operation |
 | --- | --- | --- |
 | removed the enum value 'SWA' of the request property 'HrEmpMutInsite/Element/Fields/PsNa' | HrEmpMutInSite | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/HrEmpMutInSite) |
-| api path removed without deprecation | HrPopFormAppointment | POST |
+| api path removed without deprecation | HrPopFormAppointment | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/HrPopFormAppointment) |
 | removed the enum value 'SWA' of the request property 'KnDayContract/Element/Objects/KnPerson/Element/Fields/PsNa' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| api path removed without deprecation | KnEmpCompetenceScores | POST |
-| api path removed without deprecation | KnEmployeeCompetence | POST, PUT |
+| api path removed without deprecation | KnEmpCompetenceScores | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnEmpCompetenceScores) |
+| api path removed without deprecation | KnEmployeeCompetence | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnEmployeeCompetence), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnEmployeeCompetence) |
 
 ### Changelog
 
@@ -862,7 +921,7 @@ No changes for this release.
 | added the new 'NAM' enum value to the request property 'HrEmpMutInsite/Element/Fields/PsNa' | HrEmpMutInSite | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/HrEmpMutInSite) |
 | removed the enum value 'SWA' of the request property 'HrEmpMutInsite/Element/Fields/PsNa' | HrEmpMutInSite | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/HrEmpMutInSite) |
 | endpoint added | HrEmpWorkLocation | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/HrEmpWorkLocation) |
-| api path removed without deprecation | HrPopFormAppointment | POST |
+| api path removed without deprecation | HrPopFormAppointment | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/HrPopFormAppointment) |
 | the 'KnDayContract/Element/Objects/AfasOrgunitFunction/Element/Fields/RePe' request property type/format was generalized from 'integer'/'' to 'number'/'float' | KnDayContract | [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
 | the 'KnDayContract/Element/Objects/AfasOrgunitFunction/Element/Fields/RePe' request property type/format was generalized from 'integer'/'' to 'number'/'number' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract) |
 | added the new '6' enum value to the request property 'KnDayContract/Element/Objects/AfasAgencyAcerta/Element/Fields/ExFi' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
@@ -932,8 +991,8 @@ No changes for this release.
 | added the new optional request property 'KnDayContract/Element/Objects/AfasTimeTable/Element/Fields/SDCW' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
 | added the new 'NAM' enum value to the request property 'KnDayContract/Element/Objects/KnPerson/Element/Fields/PsNa' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
 | removed the enum value 'SWA' of the request property 'KnDayContract/Element/Objects/KnPerson/Element/Fields/PsNa' | KnDayContract | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
-| api path removed without deprecation | KnEmpCompetenceScores | POST |
-| api path removed without deprecation | KnEmployeeCompetence | POST, PUT |
+| api path removed without deprecation | KnEmpCompetenceScores | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnEmpCompetenceScores) |
+| api path removed without deprecation | KnEmployeeCompetence | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnEmployeeCompetence), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnEmployeeCompetence) |
 | endpoint added | KnPocketNotStatus | [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnPocketNotStatus) |
 
 ## Projecten en nacalculatie Specification
@@ -1209,3 +1268,4 @@ No changes for this release.
 | added the new optional request property 'AfasPerson/Element/Objects/AfasTimeTable/Element/Fields/PsBi' | HrOnboarding | [POST](https://docs.afas.help/apidoc/nl/Werving%20en%20selectie#post-/connectors/HrOnboarding) |
 | added the new optional request property 'AfasPerson/Element/Objects/AfasTimeTable/Element/Objects' | HrOnboarding | [POST](https://docs.afas.help/apidoc/nl/Werving%20en%20selectie#post-/connectors/HrOnboarding) |
 | endpoint added | HrVacancy | [POST](https://docs.afas.help/apidoc/nl/Werving%20en%20selectie#post-/connectors/HrVacancy), [PUT](https://docs.afas.help/apidoc/nl/Werving%20en%20selectie#put-/connectors/HrVacancy), [DELETE](https://docs.afas.help/apidoc/nl/Werving%20en%20selectie#delete-/connectors/HrVacancy/HrVacancy/@VcSn,@CmId/-VcSn-,-CmId-) |
+

@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.2",
   "info": {
-    "version": "7.4",
+    "version": "7.3",
     "title": "AFAS SB API",
     "description": "AFAS SB API for integrating with the accounting software for accountants and entrepreneurs."
   },
@@ -144,46 +144,16 @@
             "name": "Blob-Upload-Type",
             "schema": {
               "type": "string",
-              "enum": ["Blob", "Image"],
-              "example": "Blob"
+              "example": "Blob/Image"
             },
-            "required": true,
-            "examples": {
-              "Blob": {
-                "summary": "For non-image files (e.g. PDF, Word)",
-                "value": "Blob"
-              },
-              "Image": {
-                "summary": "For image files (e.g. JPEG, PNG)",
-                "value": "Image"
-              }
-            }
+            "required": true
           },
           {
             "in": "header",
             "name": "Blob-Format",
             "schema": {
               "type": "string",
-              "enum": ["Default", "Thumb", "Small", "Medium"],
-              "example": "Default"
-            },
-            "examples": {
-              "Default": {
-                "summary": "Original file (default)",
-                "value": "Default"
-              },
-              "Thumb": {
-                "summary": "Thumbnail image",
-                "value": "Thumb"
-              },
-              "Small": {
-                "summary": "Small image",
-                "value": "Small"
-              },
-              "Medium": {
-                "summary": "Medium image",
-                "value": "Medium"
-              }
+              "example": "Default/Thumb/Small/Medium"
             }
           },
           {
@@ -6376,65 +6346,6 @@
         ]
       }
     },
-    "/api/salesjournalentrywof": {
-      "post": {
-        "description": "Write off a sales journal entry by creating an alternative event",
-        "summary": "salesjournalentrywof 1.0",
-        "operationId": "updateconnector-salesjournalentrywof-Post-1.0",
-        "parameters": [
-          {
-            "in": "header",
-            "name": "Accept",
-            "schema": {
-              "type": "string",
-              "example": "application/xml"
-            }
-          },
-          {
-            "in": "header",
-            "name": "Accept-Version",
-            "schema": {
-              "type": "string",
-              "example": "1.0"
-            }
-          },
-          {
-            "in": "header",
-            "name": "Tracking-Identifier",
-            "schema": {
-              "type": "uuid",
-              "example": "8522fea1-a067-4851-9b8e-a7b7080ac3af"
-            },
-            "required": false,
-            "description": "Add your own uuid to the request and ensure that the request only gets processed once. The uuid must be unique for each request. The response will be the same as the first response."
-          }
-        ],
-        "requestBody": {
-          "description": "salesjournalentrywof 1.0",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/requestBodies/salesjournalentrywof-1.0-Create-JsonSchema"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "5XX": {
-            "description": "Internal Server Error"
-          }
-        },
-        "version": "1.0",
-        "deprecated": false,
-        "tags": [
-          "Verkoopjournaalpost"
-        ]
-      }
-    },
     "/api/supplier": {
       "post": {
         "description": "Create new supplier relationships and vendor setup",
@@ -7703,14 +7614,6 @@
               "2025-12-31"
             ]
           },
-          "MandateKind": {
-            "type": "string",
-            "description": "Can contain one of the enums.",
-            "enum": [
-              "standard",
-              "business"
-            ]
-          },
           "Attachments": {
             "type": "array",
             "default": [],
@@ -7768,7 +7671,6 @@
             "AdministrationBankAccountId": "a7b566cf-e03b-45f0-a294-d8ba1f1c8a52",
             "MandateReference": "Contractnr.FL-23904/P",
             "DateOfSignature": "2024-12-31",
-            "MandateKind": "standard",
             "Attachments": [
               {
                 "AttachmentId": "72b17471-140e-413d-b4ff-f11c37fefccb"
@@ -13383,48 +13285,6 @@
             "AdministrationId": "63fff54b-a110-53fe-92ed-44de73f0fb61",
             "Id": "a7b566cf-e03b-45f0-a294-d8ba1f1c8a52",
             "PaymentReference": "tr_FLtHQ7oSDG"
-          }
-        ]
-      },
-      "salesjournalentrywof-1.0-Create-JsonSchema": {
-        "$schema": "https://json-schema.org/draft/2019-09/schema",
-        "type": "object",
-        "description": "Write off a sales journal entry.",
-        "required": [
-          "AdministrationId",
-          "Id"
-        ],
-        "properties": {
-          "AdministrationId": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Must contain the Administration guid of the target Administration",
-            "examples": [
-              "63fff54b-a110-53fe-92ed-44de73f0fb61"
-            ]
-          },
-          "Id": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Must contain the guid of the salesjournalentry.",
-            "examples": [
-              "a7b566cf-e03b-45f0-a294-d8ba1f1c8a52"
-            ]
-          },
-          "Description": {
-            "type": "string",
-            "description": "Can contain the description of the write off. Default is 'Write off'.",
-            "maxLength": 255,
-            "examples": [
-              "Write off"
-            ]
-          }
-        },
-        "examples": [
-          {
-            "AdministrationId": "63fff54b-a110-53fe-92ed-44de73f0fb61",
-            "Id": "a7b566cf-e03b-45f0-a294-d8ba1f1c8a52",
-            "Description": "Write off"
           }
         ]
       },

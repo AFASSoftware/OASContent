@@ -577,7 +577,7 @@
     },
     "/ReportConnector/{id}": {
       "get": {
-        "summary": "Generate and retrieve a report based on the report Id and optional filters.",
+        "summary": "Get a report in a specific format based on the report Id and format Id",
         "tags": [
           "GET"
         ],

@@ -579,7 +579,7 @@
       "get": {
         "summary": "Get a subject attachment based on the subject Id and file Id",
         "tags": [
-          "Dossier"
+          "Bestanden"
         ],
         "responses": {
           "400": {

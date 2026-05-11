@@ -1,7 +1,8 @@
 ---
 author: CLN
-date: 2025-11-08
-tags: GetConnector, UpdateConnector, AppConnector, Configuration, Authentication, Authorization
+date: 2026-03-02
+tags: GetConnector, UpdateConnector, AppConnector, Configuration, Authentication,
+  Authorization
 title: Concepts
 ---
 
@@ -23,7 +24,7 @@ You invoke the endpoint using the http GET method. To receive new data, you make
 
 ## UpdateConnector
 
-An external application can add, modify or delete records in the Profit database via an UpdateConnector (the possibilities vary per endpoint). For each UpdateConnector, a `[metainfo](../../apidoc/en/Inrichting#get-/Metainfo/-Type-/-Endpoint-)` request is available. This provides all available fields, including [custom fields / free fields](./custom-fields) request. Custom fields are available in this meta information.
+An external application can add, modify or delete records in the Profit database via an UpdateConnector (the possibilities vary per endpoint). For each UpdateConnector, a [metainfo](../../apidoc/en/Inrichting#get-/Metainfo/-Type-/-Endpoint-) request is available. This provides all available fields, including available [custom fields / free fields](./custom-fields).
 
 [Detailed documentation about UpdateConnectors](https://help.afas.nl/help/NL/SE/App_Cnr_Rest_Update.htm)
 

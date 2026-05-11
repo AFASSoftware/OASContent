@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2026-02-04
+date: 2026-02-24
 index: true
 tags: AppConnector, Auditor, Developer, GetConnector, API, Integration
 title: AppConnector Auditor - Ontwikkelaarsrapport
@@ -52,7 +52,7 @@ De niveaus zijn:
 
 ### Datamodel
 
-#### <a id="DATA-20"></a>`Dienstverbandnummer` en `Volgnummer dienstverband` worden beide gebruikt.
+#### <a id="DATA-20"></a>DATA-20: `Dienstverbandnummer` en `Volgnummer dienstverband` worden beide gebruikt.
 
 **Niveau:** ❌ Fout  
 
@@ -75,7 +75,7 @@ Een klein aantal tabellen gebruikt `Volgnummer dienstverband` in de primaire sle
 
 ### Datamodel
 
-#### <a id="DATA-21"></a>Deze GetConnector haalt velden uit `Actuele gegevens per arbeidsverhouding`, maar de integratie gebruikt gegevens per dienstverband.
+#### <a id="DATA-21"></a>DATA-21: Deze GetConnector haalt velden uit `Actuele gegevens per arbeidsverhouding`, maar de integratie gebruikt gegevens per dienstverband.
 
 **Niveau:** ❌ Fout
 
@@ -90,7 +90,7 @@ Gebruik `Actuele gegevens per dienstverband` of vermijd actuele tabellen volledi
 
 ---
 
-#### <a id="DATA-23"></a>Deze GetConnector heeft onbekende velden.
+#### <a id="DATA-23"></a>DATA-23: Deze GetConnector heeft onbekende velden.
 
 **Niveau:** ❌ Fout
 
@@ -105,7 +105,7 @@ Verwijder de onbekende velden, of koppel ze aan een veld in de database. Mogelij
 
 ---
 
-#### <a id="DATA-24"></a>Deze GetConnector heeft vrije velden.
+#### <a id="DATA-24"></a>DATA-24: Deze GetConnector heeft vrije velden.
 
 **Niveau:** ℹ️ Informatief
 
@@ -121,7 +121,7 @@ Als je deze GetConnector ook in een andere omgeving wilt gebruiken, moet je deze
 
 ---
 
-#### <a id="DATA-25"></a>Deze GetConnector gebruikt verdichting.
+#### <a id="DATA-25"></a>DATA-25: Deze GetConnector gebruikt verdichting.
 
 **Niveau:** ℹ️ Informatief
 
@@ -137,7 +137,7 @@ Gebruik verdichting alleen bewust. Bij twijfel: overleg met AFAS.
 
 ---
 
-#### <a id="DATA-26"></a>Deze GetConnector heeft velden met een speciaal formaat.
+#### <a id="DATA-26"></a>DATA-26: Deze GetConnector heeft velden met een speciaal formaat.
 
 **Niveau:** ⚠️ Waarschuwing
 
@@ -155,7 +155,7 @@ Gebruik deze velden alleen voor presentatie en filter/sorteer nooit op deze veld
 ### Performance
 
 
-#### <a id="PERF-45"></a>Deze GetConnector mist velden die nodig zijn om de indexen optimaal te gebruiken voor sortering.
+#### <a id="PERF-45"></a>PERF-45: Deze GetConnector mist velden die nodig zijn om de indexen optimaal te gebruiken voor sortering.
 
 **Niveau:** ⚠️ Waarschuwing
 
@@ -170,7 +170,7 @@ Maak indexvelden zichtbaar en gebruik deze in sortering en filtering.
 
 ---
 
-#### <a id="PERF-46"></a>Unieke indexen op de hoofdtabel van deze GetConnector.
+#### <a id="PERF-46"></a>PERF-46: Unieke indexen op de hoofdtabel van deze GetConnector.
 
 **Niveau:** ℹ️ Informatief
 
@@ -182,7 +182,7 @@ Gebruik deze indexen voor optimale performance. De velden in deze indexen identi
 
 ---
 
-#### <a id="PERF-52"></a>Deze GetConnector haalt gegevens op uit tabellen van meer dan 5 niveaus diep.
+#### <a id="PERF-52"></a>PERF-52: Deze GetConnector haalt gegevens op uit tabellen van meer dan 5 niveaus diep.
 
 **Niveau:** ⚠️ Waarschuwing
 
@@ -202,7 +202,7 @@ Controleer of je de GetConnector kunt vereenvoudigen door minder diepe tabellen 
 
 ### Selectie & filtering
 
-#### <a id="FILT-47"></a>Het filter maakt gebruik van 'bevat (niet)', 'begint (niet) met' of 'eindigt (niet) op'.
+#### <a id="FILT-47"></a>FILT-47: Het filter maakt gebruik van 'bevat (niet)', 'begint (niet) met' of 'eindigt (niet) op'.
 
 **Niveau:** ❌ Fout
 
@@ -218,7 +218,7 @@ Gebruik gelijkheidsfilters (`=`, `>`, `<` etc.) op indexvelden.
 ---
 
 
-#### <a id="PERF-34"></a>Deze GetConnector haalt gegevens op uit meer dan 5 verschillende tabellen.
+#### <a id="PERF-34"></a>PERF-34: Deze GetConnector haalt gegevens op uit meer dan 5 verschillende tabellen.
 
 **Niveau:** ⚠️ Waarschuwing
 
@@ -234,7 +234,7 @@ Alleen actie nodig bij performanceproblemen. Maak in dat geval meerdere GetConne
 
 ---
 
-#### <a id="PERF-35"></a>Deze GetConnector haalt gegevens op uit een zeer grote tabel.
+#### <a id="PERF-35"></a>PERF-35: Deze GetConnector haalt gegevens op uit een zeer grote tabel.
 
 **Niveau:** ⚠️ Waarschuwing
 
@@ -251,7 +251,7 @@ Zorg ervoor dat je filters en sortering optimaal gebruikmaken van indexen. Gebru
 
 ## Autorisatie & Privacy
 
-#### <a id="AUT-16"></a>Deze GetConnector is geautoriseerd.
+#### <a id="AUT-16"></a>AUT-16: Deze GetConnector is geautoriseerd.
 
 **Niveau:** ⚠️ Waarschuwing
 
@@ -266,7 +266,7 @@ Zorg ervoor dat de connectorgebruiker de juiste autorisaties heeft.
 
 ---
 
-#### <a id="AUT-19"></a>Deze GetConnector heeft velden die zijn gemarkeerd als privacygevoelig.
+#### <a id="AUT-19"></a>AUT-19: Deze GetConnector heeft velden die zijn gemarkeerd als privacygevoelig.
 
 **Niveau:** ⚠️ Waarschuwing
 
@@ -282,9 +282,21 @@ Haal alleen strikt noodzakelijke gegevens op
 
 ---
 
+## Ondersteuning door Systemintegrators
+
+Hulp nodig als developer? Dan kun je ondersteuning inzetten van AFAS Systemintegrators.
+
+⚠️ **Belangrijk:** Deze ondersteuning is betaald.
+
+Dien een Aanvraag Systemintegrator in via [https://klant.afas.nl/systemintegrators](https://klant.afas.nl/systemintegrators).
+
+Systemintegrators hebben veel kennis van AFAS Profit en kunnen daardoor je GetConnectoren snel en effectief beoordelen. Ook kunnen ze helpen met het toevoegen van de juiste velden als die in jouw huidige inrichting niet direct beschikbaar zijn.
+
+---
+
 ## Tot slot
 
-Deze help is bedoeld als **naslagwerk en technische specificatie**, niet als vervanging van persoonlijk overleg.
+Deze help is bedoeld als **naslagwerk en technische specificatie**, niet als vervanging van [ondersteuning door Systemintegrators](#ondersteuning-door-systemintegrators).
 
 Dit document is nooit af. Zie je iets dat niet klopt, of heb je suggesties voor verbetering? Maak een pull request aan op de [GitHub-pagina van de documentatie](https://github.com/AFASSoftware/OASContent/blob/main/markdownpages/profit/nl/app-connector-auditor-developer.md).
 

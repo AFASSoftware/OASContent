@@ -1,3 +1,7 @@
+---
+date: 2026-03-16
+---
+
 Gebruik bijvoorkeur dit endpoint om verlofboekingen aan te passen. Via een GetConnector vind je het AbsenceId.
 Stuur bij een PUT **alleen het veld `Id`** mee **en de velden die je wilt aanpassen**. De precieze werking van de connector hangt af van het type rooster dat de medewerker heeft.
 
@@ -12,16 +16,26 @@ Bij dit type rooster werkt de medewerker volgens een vastgesteld rooster met beg
 - `DaBe`: Begindatum/-tijd. Het tijdsdeel wordt genegeerd als `LeDt` = False.
 - `DaEn`: Eindatum/-tijd. Het tijdsdeel wordt genegeerd als `LeDt` = False.
 
-#### Type rooster: uren per dag of uren per werktijden
+#### Type rooster: uren per dag 
 
-Bij dit type rooster is niet bekend wanneer de uren precies gemaakt worden. In de verlofboeking zijn begin- en eindtijd altijd gevuld met 00:00:00.
+Bij dit type rooster is wel bekend op welke dagen er gewerkt wordt, maar er is niet bekend wanneer de uren gemaakt worden. In de verlofboeking zijn begin- en eindtijd altijd gevuld met 00:00:00.
 
 - `Id`: Dit is het AbsenceId
 - `LeDt`: False als het verlof enkel uit gehele dagen bestaat. 
 - `DaBe`: Begindatum/-tijd. Het tijdsdeel wordt genegeerd.
 - `DaEn`: Eindatum/-tijd. Het tijdsdeel wordt genegeerd.
-- `DuBe`: Verlof (in **minuten**) op begindatum. Dit veld wordt genegeerd als `LeDt` = False.
-- `DuEn`: Verlof (in **minuten**) op einddatum. Dit veld wordt genegeerd als `LeDt` = False.
+- `DuBe`: Verlofduur (in **minuten**) op begindatum. Dit veld wordt genegeerd als `LeDt` = False.
+- `DuEn`: Verlofduur (in **minuten**) op einddatum. Dit veld wordt genegeerd als `LeDt` = False.
+
+#### Type rooster: uren per week
+
+Bij dit type rooster is niet bekend op welke dagen er gewerkt wordt, en er is ook niet bekend wanneer de uren gemaakt worden. Je moet precies aangeven hoeveel verlof er wordt opgenomen. In de verlofboeking zijn begin- en eindtijd altijd gevuld met 00:00:00.
+
+- `Id`: Dit is het AbsenceId
+- `LeDt`: False als het verlof enkel uit gehele dagen bestaat.
+- `DaBe`: Begindatum/-tijd. Het tijdsdeel wordt genegeerd.
+- `DaEn`: Eindatum/-tijd. Het tijdsdeel wordt genegeerd.
+- `DuRa`: Verlofduur (in **minuten**). Dit veld wordt genegeerd als `LeDt` = False.
 
 ### Known issue: verlof inkorten of verlengen waarbij `LeDt` = False
 

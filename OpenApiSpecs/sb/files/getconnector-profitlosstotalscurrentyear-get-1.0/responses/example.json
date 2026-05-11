@@ -1,0 +1,42 @@
+[
+  {
+    "AdministrationId": "2c32f1ce-6660-5db3-a163-0cdf83c70b49",
+    "LedgerAccountId": "04b8def8-f72a-5c3e-bf06-002544b96b33",
+    "LedgerAccount": "Management fees (4051)",
+    "LedgerAccountNumber": "4051",
+    "RgsCode": "WBedOvpMaf",
+    "RgsDescription": "Management fee",
+    "Total": 3744.8500000000,
+    "InstanceId": "aaac9284-6d05-473d-90cf-21428e2fd92a"
+  },
+  {
+    "AdministrationId": "2c32f1ce-6660-5db3-a163-0cdf83c70b49",
+    "LedgerAccountId": "0c5f88e7-12d7-59d5-92e2-074e5fe656fc",
+    "LedgerAccount": "Omzet Randapparatuur (8008)",
+    "LedgerAccountNumber": "8008",
+    "RgsCode": "WOmzGrpGr1",
+    "RgsDescription": "Netto-omzet groep 1",
+    "Total": -764.4000000000,
+    "InstanceId": "e890c5a8-2fa5-4d0e-bb7e-422d043fdaab"
+  },
+  {
+    "AdministrationId": "2c32f1ce-6660-5db3-a163-0cdf83c70b49",
+    "LedgerAccountId": "6d4058b2-58a6-5d25-a8dc-687c05c31692",
+    "LedgerAccount": "Boekresultaat oprichtingskosten (4900)",
+    "LedgerAccountNumber": "4900",
+    "RgsCode": "WAfsRviOek",
+    "RgsDescription": "Boekresultaat kosten van oprichting en van uitgifte van aandelen",
+    "Total": 300.0000000000,
+    "InstanceId": "8fe4ec36-d4e2-46e2-a5b7-0456e8901bfb"
+  },
+  {
+    "AdministrationId": "2c32f1ce-6660-5db3-a163-0cdf83c70b49",
+    "LedgerAccountId": "dbd01aa1-7746-5cd4-b5e4-7481e22807fc",
+    "LedgerAccount": "Overboeking van het resultaat (9999)",
+    "LedgerAccountNumber": "9999",
+    "RgsCode": "ResultaatNiveau2",
+    "RgsDescription": "Resultaat",
+    "Total": -3280.4500000000,
+    "InstanceId": "372c0af3-1a38-4ab5-be47-6ba738cccb27"
+  }
+]

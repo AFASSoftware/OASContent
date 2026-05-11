@@ -1,7 +1,8 @@
 ---
 author: CLN
-date: 2025-11-10
-tags: GetConnector, UpdateConnector, AppConnector, Configuration, Authentication, Crm
+date: 2026-03-02
+tags: GetConnector, UpdateConnector, AppConnector, Configuration, Authentication,
+  Crm
 title: Concepten
 ---
 
@@ -21,7 +22,7 @@ Het endpoint roep je aan via de http GET methode. Om nieuwe data te ontvangen do
 
 ## UpdateConnector
 
-Een externe applicatie kan records in de Profit-database toevoegen, wijzigen of verwijderen via een UpdateConnector (de mogelijkheden verschillen per endpoint). Voor elke UpdateConnector is een `[metainfo](../../apidoc/nl/Inrichting#get-/Metainfo/-Type-/-Endpoint-)` request beschikbaar. Deze geeft alle beschikbare velden inclusief [custom fields / vrije velden](./custom-fields) request beschikbaar. Vrije velden zijn beschikbaar in deze meta informatie.
+Een externe applicatie kan records in de Profit-database toevoegen, wijzigen of verwijderen via een UpdateConnector (de mogelijkheden verschillen per endpoint). Voor elke UpdateConnector is een [metainfo](../../apidoc/nl/Inrichting#get-/Metainfo/-Type-/-Endpoint-) request beschikbaar. Deze geeft alle beschikbare velden inclusief beschikbare [custom fields / vrije velden](./custom-fields).  
 
 [Uitgebreide documentatie over UpdateConnectoren](https://help.afas.nl/help/NL/SE/App_Cnr_Rest_Update.htm)
 
