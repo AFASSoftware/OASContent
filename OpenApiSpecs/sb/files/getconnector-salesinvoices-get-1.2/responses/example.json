@@ -1,0 +1,56 @@
+{
+    "TrackingToken": "202601141348101",
+    "Result": [
+        {
+            "SalesInvoiceId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+            "InstanceId": "76ccd112-3faf-5243-8ee8-001638826d4c",
+            "AmountExcludingVat": 225.0000000000,
+            "AmountVat": null,
+            "AmountInvoiced": 225.0000000000,
+            "SalesInvoiceNumber": "V01250154",
+            "IssueDate": "2025-12-05T00:00:00Z",
+            "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+            "Status": "DONE",
+            "Blob": [],
+            "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+            "RelationId": "c08e2474-976c-5c7c-94dc-eb02580009d0",
+            "RelationNumber": "000039",
+            "RelationDescription": "Administratiekantoor Beers",
+            "RelationType": "organisation"
+        },
+        {
+            "SalesInvoiceId": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+            "InstanceId": "a25d4251-74f9-5406-8639-003be5b0a58e",
+            "AmountExcludingVat": 1644.3000000000,
+            "AmountVat": null,
+            "AmountInvoiced": 1644.3000000000,
+            "SalesInvoiceNumber": "V01250150",
+            "IssueDate": "2025-12-05T00:00:00Z",
+            "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+            "Status": "DONE",
+            "Blob": [],
+            "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+            "RelationId": "2fdc272a-5da6-55b8-a352-928d3c1e79b6",
+            "RelationNumber": "000024",
+            "RelationDescription": "Schreurs Administratiekantoor B.V.",
+            "RelationType": "organisation"
+        },
+        {
+            "SalesInvoiceId": "c3d4e5f6-a7b8-9012-cdef-123456789012",
+            "InstanceId": "6645f89b-4d85-56d5-90a4-00701269aeec",
+            "AmountExcludingVat": 95.0000000000,
+            "AmountVat": null,
+            "AmountInvoiced": 95.0000000000,
+            "SalesInvoiceNumber": "V01240035",
+            "IssueDate": "2024-03-15T00:00:00Z",
+            "AdministrationId": "bb837613-26e7-52bd-bc56-f3721b90a42e",
+            "Status": "DONE",
+            "Blob": null,
+            "RelationTypeId": "1f0fbbf3-bb59-4ff1-8712-1e7087e09895",
+            "RelationId": "9fc15edd-9431-5a98-b2e1-0d90f2064527",
+            "RelationNumber": "000035",
+            "RelationDescription": "Architectenbureau Brauw B.V.",
+            "RelationType": "organisation"
+        }
+    ]
+}
