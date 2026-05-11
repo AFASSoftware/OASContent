@@ -1,6 +1,6 @@
 ---
 author: EZW
-date: 2026-04-08
+date: 2026-05-11
 tags: Profit7, GetConnector, UpdateConnector, Integration, Configuration
 title: New in Profit 7
 ---
@@ -1009,6 +1009,12 @@ No changes for this release.
 | added the new optional request property 'PtProject/Element/Fields/PtPrpPmVp' | PtProject | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
 
 ## Verkoop en Orders Specification
+
+### Breaking Changes
+
+| Description | Connector | Operation |
+| --- | --- | --- |
+| added the new required request property 'FbSubscription/Element/Fields/VaDu' | FbSubscription | [POST](https://docs.afas.help/apidoc/nl/Verkoop%20en%20Orders#post-/connectors/FbSubscription) |
 
 ### Changelog
 
