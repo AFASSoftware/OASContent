@@ -16,6 +16,7 @@ Een GetConnector is een endpoint waarmee een applicatie records kan ophalen uit 
 - Voeg de GetConnector toe aan de [app connector](https://help.afas.nl/help/NL/SE/App_Apps_Custom_Add.htm "Eigen app connector toevoegen") die gebruikt wordt voor de koppeling.
 
 Met Profit worden standaard-GetConnectoren meegeleverd, maar een beheerder kan zelf een GetConnector aanmaken. Hiermee bepaalt de beheerder zelf welke dataset van toepassing is en via filtering in Profit kan de beheerder de output van de GetConnector beperken. Met een goede GetConnector haal je de gegevens op die voor de koppeling nodig zijn, en niet meer dan dat.
+Het is altijd aan te raden om een nieuwe GetConnector aan te maken, zodat je een bewuste keuze maakt voor de velden die je in de GetConnector opneemt. De meegeleverde GetConnectoren bevatten natuurlijk ook veel velden die niet van belang zijn voor de koppeling die je wilt maken, dus deze velden leveren alleen extra load op. Daarnaast neemt je natuurlijk een filter op in de GetConnector en je neemt in de GetConnector-omschrijving de naam op van de koppeling.
 
 ### Developer van de koppeling
 
