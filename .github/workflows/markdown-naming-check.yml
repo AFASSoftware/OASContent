@@ -6,13 +6,15 @@ on:
       - main
       - develop
     paths:
-      - 'markdownpages/**.md'
+      - 'markdownpages/**/*.md'
+      - 'markdownpages/*.md'
   pull_request:
     branches:
       - main
       - develop
     paths:
-      - 'markdownpages/**.md'
+      - 'markdownpages/**/*.md'
+      - 'markdownpages/*.md'
   # Allow manual triggering
   workflow_dispatch:
 
@@ -28,16 +30,13 @@ jobs:
     
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          # Fetch full history for better file analysis
-          fetch-depth: 0  
+        uses: actions/checkout@v5
       
       # Set up Python environment
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.9'
+          python-version: '3.11'
           cache: 'pip'
       
       # Install dependencies
@@ -72,12 +71,12 @@ jobs:
           # Check which directory exists and run validation accordingly
           if [ -d "markdownpages" ]; then
             python scripts/markdown-naming-check.py --root-path markdownpages --json > validation-report.json
+            validation_exit_code=$?
           else
             echo '{"error": "No markdownpages directory found", "success": false, "total_files_checked": 0, "violations_found": 0, "violations": []}' > validation-report.json
             validation_exit_code=1
           fi
             
-          validation_exit_code=$?
           set -e  # Re-enable exit on error
             
           # Check if there are violations based on exit code
@@ -98,7 +97,7 @@ jobs:
       # Upload validation report as artifact
       - name: Upload validation report
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: markdown-naming-validation-report
           path: validation-report.json
@@ -131,7 +130,7 @@ jobs:
     
     steps:
       - name: Download validation report
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: markdown-naming-validation-report
       
