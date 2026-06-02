@@ -15,6 +15,7 @@ A GetConnector is an endpoint that allows an application to retrieve records fro
 - Add the GetConnector to the [app connector](https://help.afas.nl/help/EN/SE/App_Apps_Custom_Add.htm "Add custom app connector") used for the integration.
 
 Standard GetConnectors are included with Profit, but an administrator can create a GetConnector themselves. This allows the administrator to determine the applicable dataset, and by filtering in Profit, the administrator can limit the output of the GetConnector. With a good GetConnector, you retrieve the data required for the integration, and nothing more.
+It is always recommended to create a new GetConnector so that you make a deliberate choice about which fields you include in the GetConnector. The supplied GetConnectors naturally also contain many fields that are not relevant to the integration you want to create, so these fields only generate additional load. In addition, you should of course include a filter in the GetConnector, and include the name of the integration in the GetConnector description.
 
 ### Developer of the integration
 
