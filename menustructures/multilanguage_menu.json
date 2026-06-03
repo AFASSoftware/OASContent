@@ -263,7 +263,7 @@
               {
                 "name": "Btw-terugvordering via de API",
                 "path": "nl/howto-vat-reclaim.md",
-                "subtitle": "BTW terugvordering via API afhandelen",
+                "subtitle": "Btw terugvordering via API afhandelen",
                 "tags": ["btw", "terugvordering", "api"],
                 "featured": false,
                 "difficulty": "Intermediate",
