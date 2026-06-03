@@ -40,11 +40,14 @@ Starting with Profit 8, it is possible to use mTLS (mutual TLS) on connectors. m
 
 ### Webhooks!
 
-A long-cherished wish has come true: Webhooks! At the AFAS Open you will hear more.
+A long-cherished wish has come true: Webhooks! At the AFAS Open you will hear more about this.
 
 
 ## Other changes
 
+## Artikelen Specification
+
+### All changes
 
 ## Artikelen Specification
 
@@ -143,7 +146,7 @@ No changes for this release.
 
 | Connector | Description | Operation |
 | --- | --- | --- |
-| KnPeppol | endpoint added | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnPeppol), [PUT](https://docs.afas.help/apidoc/nl/Inrichting#put-/connectors/KnPeppol), [DELETE](https://docs.afas.help/apidoc/nl/Inrichting#delete-/connectors/KnPeppol/KnPeppol/@Data/-Data-) |
+| KnPeppol | endpoint added | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnPeppol) |
 
 ## Loonadministratie Specification
 
@@ -286,7 +289,7 @@ No changes for this release.
 
 | Connector | Description | Operation |
 | --- | --- | --- |
-| CmForecastContactMoment | endpoint added | [POST](https://docs.afas.help/apidoc/nl/Verkoop%20en%20Orders#post-/connectors/CmForecastContactMoment), [PUT](https://docs.afas.help/apidoc/nl/Verkoop%20en%20Orders#put-/connectors/CmForecastContactMoment), [DELETE](https://docs.afas.help/apidoc/nl/Verkoop%20en%20Orders#delete-/connectors/CmForecastContactMoment/CmForecastContactMoment/@MuId/-MuId-) |
+| CmForecastContactMoment | endpoint added | [POST](https://docs.afas.help/apidoc/nl/Verkoop%20en%20Orders#post-/connectors/CmForecastContactMoment), [PUT](https://docs.afas.help/apidoc/nl/Verkoop%20en%20Orders#put-/connectors/CmForecastContactMoment) |
 | FbAssembly | the `FbAssembly/Element/Fields/LgId` request property's maxLength was increased from `3` to `5` | [POST](https://docs.afas.help/apidoc/nl/Verkoop%20en%20Orders#post-/connectors/FbAssembly), [PUT](https://docs.afas.help/apidoc/nl/Verkoop%20en%20Orders#put-/connectors/FbAssembly) |
 | FbAssemblyPrep | the `FbAssemblyPrep/Element/Fields/LgId` request property's maxLength was increased from `3` to `5` | [POST](https://docs.afas.help/apidoc/nl/Verkoop%20en%20Orders#post-/connectors/FbAssemblyPrep), [PUT](https://docs.afas.help/apidoc/nl/Verkoop%20en%20Orders#put-/connectors/FbAssemblyPrep) |
 | FbDeliveryNote | the `FbDeliveryNote/Element/Fields/LgId` request property's maxLength was increased from `3` to `5` | [POST](https://docs.afas.help/apidoc/nl/Verkoop%20en%20Orders#post-/connectors/FbDeliveryNote), [PUT](https://docs.afas.help/apidoc/nl/Verkoop%20en%20Orders#put-/connectors/FbDeliveryNote) |

@@ -1,0 +1,1 @@
+Dit is een technisch endpoint dat door AFAS gebruikt wordt. Je kunt het niet zelf gebruiken. 
