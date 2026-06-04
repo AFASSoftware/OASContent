@@ -1,6 +1,6 @@
 ---
 author: EZW
-date: 2026-06-03
+date: 2026-06-04
 tags: Profit8, GetConnector, UpdateConnector, Integration, Configuration
 title: Nieuw in Profit 8
 ---
@@ -42,10 +42,6 @@ Vanaf Profit 8 is het mogelijk om mTLS (mutual TLS) te gebruiken op de connector
 Een langgekoesterde wens is in vervulling gegaan: Webhooks! Op de AFAS Open hoor je meer hierover.  
 
 ## Overige wijzigingen
-
-## Artikelen Specification
-
-### All changes
 
 ## Artikelen Specification
 
@@ -144,7 +140,7 @@ No changes for this release.
 
 | Connector | Description | Operation |
 | --- | --- | --- |
-| KnPeppol | endpoint added | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnPeppol) |
+| KnPeppol | technical endpoint added (not available for customer use) | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnPeppol) |
 
 ## Loonadministratie Specification
 
@@ -333,4 +329,3 @@ No changes for this release.
 | HrOnboarding | the `AfasPerson/Element/Objects/AfasEmployee/Element/Fields/LgId` request property's maxLength was increased from `3` to `5` | [POST](https://docs.afas.help/apidoc/nl/Werving%20en%20selectie#post-/connectors/HrOnboarding) |
 | HrVacancy | removed enum value(s) from the request property `HrVacancy/Element/Fields/WoXp`:  `00`, `01`, `02`, `03`, `04`, `05`, `06`, `07`, `08`, `09`, `10`, `11`, `12`, `13`, `14`, `15`, `16`, `17`, `18`, `19`, `20` | [POST](https://docs.afas.help/apidoc/nl/Werving%20en%20selectie#post-/connectors/HrVacancy), [PUT](https://docs.afas.help/apidoc/nl/Werving%20en%20selectie#put-/connectors/HrVacancy) |
 | HrVacancy | the `HrVacancy/Element/Fields/WoXp` request property type/format changed from `string` to `integer` | [POST](https://docs.afas.help/apidoc/nl/Werving%20en%20selectie#post-/connectors/HrVacancy), [PUT](https://docs.afas.help/apidoc/nl/Werving%20en%20selectie#put-/connectors/HrVacancy) |
-
