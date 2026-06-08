@@ -1,6 +1,6 @@
 ---
 author: EZW
-date: 2026-06-04
+date: 2026-06-08
 tags: Profit8, GetConnector, UpdateConnector, Integration, Configuration
 title: Nieuw in Profit 8
 ---
@@ -27,21 +27,55 @@ T/m Profit 7 kende Profit twee tabellen met taalcodes. Je onderhield de taalcode
 
 We hebben dit vereenvoudigd door onder `Algemeen / Inrichting / Landinstellingen / Taal` de volledige Microsoft-taaltabel beschikbaar te stellen. Hierdoor is het zelf toevoegen van talen niet meer nodig.  
  
-We streven ernaar dat Imports, Get- en UpdateConnectoren blijven werken. Het is echter sterk aan te raden zo snel mogelijk over te stappen op de nieuwe taalcodes.  
+We streven ernaar dat Imports, Get- en UpdateConnectoren blijven werken. **Het is echter sterk aan te raden zo snel mogelijk over te stappen op de nieuwe taalcodes.**  
 
 Deze aanpassing zie je ook terug in de Changelog van de UpdateConnectoren verderop.  
 
+
 ## Belangrijke wijzigingen
+
+### IP-restricties volgen nu de CIDR notatie
+
+Op een AppConnector kun je IP-restricties instellen. Wij adviseren om dat zoveel mogelijk toe te passen. De IP-restricties kon je voorheen vastleggen als IP-adres met een eventueel subnet-masker. Vanaf Profit 8 leg je meerdere IP-adressen vast met de CIDR notatie.    
 
 #### mTLS ondersteuning op de connectoren
 
-Vanaf Profit 8 is het mogelijk om mTLS (mutual TLS) te gebruiken op de connectoren. mTLS is een beveiligingsprotocol waarbij zowel de client als de server zich moeten authenticeren met een certificaat. Dit zorgt voor een extra laag beveiliging, omdat alleen geautoriseerde clients verbinding kunnen maken met de server. 
+Vanaf Profit 8 is het mogelijk om mTLS (mutual TLS) te gebruiken op de connectoren. mTLS is een beveiligingsprotocol waarbij zowel de client als de server zich moeten authenticeren met een certificaat. Dit zorgt voor een extra beveiligingslaag, omdat alleen geautoriseerde clients verbinding kunnen maken met de server.  
+Dit kun je vooralsnog niet testen op connect.afas.nl.     
 
 ### Webhooks!
 
 Een langgekoesterde wens is in vervulling gegaan: Webhooks! Op de AFAS Open hoor je meer hierover.  
 
+
 ## Overige wijzigingen
+
+### BI-modellen respecteren filterautorisatie op definitie
+
+Dit kan tot gevolg hebben dat een aanroep naar de OData-connector na de overgang naar Profit 8 geen resultaten meer oplevert. De filterautorisatie op definitie zorgt ervoor dat gebruikers alleen resultaten terugkrijgen waar ze toegang toe hebben. Controleer of de token-gebruiker de juiste autorisaties heeft om de gewenste resultaten te zien.  
+
+### BI-modellen: acties nieuw, importeren en exporteren apart te autoriseren
+
+De acties Nieuw, Importeren en Exporteren zijn nu autoriseerbaar. Dat kan tot gevolg hebben dat jijzelf of een klant deze acties niet meer ter beschikking heeft.
+
+### Extra talen beschikbaar
+
+Profit ondersteunt vanaf Profit 8 extra talen. Dat geldt zowel voor de User interface alsook voor de Connectoren.  
+Dit kun je vooralsnog niet testen op connect.afas.nl.   
+
+### GetConnector toont datum/tijd laatste aanroep
+
+Dit veld was altijd al beschikbaar op de definitie van een GetConnector, maar vanaf Profit 8 wordt het ook werkelijk gevuld. In enkele weergaves is het veld toegevoegd, zodat je bijvoorbeeld vanuit de AppConnector direct kan zien welke GetConnectoren actief aangeroepen worden.  
+
+### IP-restricties nu ook mogelijk op IPv6
+
+Omdat AFAS Online nu IPv6 ondersteunt, is het ook mogelijk om in een AppConnector IP-restricties te maken op IPv6-adressen. Voorheen zorgde een restrictie op een IPv6-adres ervoor dat alle verkeer werd geblokkeerd.  
+
+### Microsoft Entra ID koppeling is nu standaard functionaliteit
+
+Vanaf Profit 8 kun je direct vanuit Profit een koppeling leggen met Microsoft Entra. De koppeling richt je in door op een gebruikersgroep aan te geven welke Entra groep hieraan gekoppeld is. Gebruikers worden automatisch gesynchroniseerd naar Entra op basis van hun groepslidmaatschap.  
+Lever jij momenteel een koppeling met Microsoft Entra ID? Lees je dan goed in en bepaal waar jouw meerwaarde ligt ten opzichte van de nieuwe standaard functionaliteit.  
+
 
 ## Artikelen Specification
 
@@ -55,21 +89,26 @@ Een langgekoesterde wens is in vervulling gegaan: Webhooks! Op de AFAS Open hoor
 | FbItemArticle | added the new optional request property `FbItemArticle/Element/Fields/ABCXYZClass` | [POST](https://docs.afas.help/apidoc/nl/Artikelen#post-/connectors/FbItemArticle), [PUT](https://docs.afas.help/apidoc/nl/Artikelen#put-/connectors/FbItemArticle) |
 | FbItemArticle | added the new optional request property `FbItemArticle/Element/Fields/PreC` | [POST](https://docs.afas.help/apidoc/nl/Artikelen#post-/connectors/FbItemArticle), [PUT](https://docs.afas.help/apidoc/nl/Artikelen#put-/connectors/FbItemArticle) |
 
+
 ## Bakkerijen Specification
 
 No changes for this release.
+
 
 ## Bouw Specification
 
 No changes for this release.
 
+
 ## Budgetten en activa Specification
 
 No changes for this release.
 
+
 ## Cursusmanagement Specification
 
 No changes for this release.
+
 
 ## Dossiers en bijlagen en workflows Specification
 
@@ -80,9 +119,11 @@ No changes for this release.
 | KnSubject | added the new optional request property `KnSubject/Element/Fields/SubjectHandler` | [POST](https://docs.afas.help/apidoc/nl/Dossiers%20en%20bijlagen%20en%20workflows#post-/connectors/KnSubject), [PUT](https://docs.afas.help/apidoc/nl/Dossiers%20en%20bijlagen%20en%20workflows#put-/connectors/KnSubject) |
 | KnSubjectDynamic | added the new optional request property `KnSubjectDynamic/Element/Fields/ProfileId` | [POST](https://docs.afas.help/apidoc/nl/Dossiers%20en%20bijlagen%20en%20workflows#post-/connectors/KnSubjectDynamic), [PUT](https://docs.afas.help/apidoc/nl/Dossiers%20en%20bijlagen%20en%20workflows#put-/connectors/KnSubjectDynamic) |
 
+
 ## Financiële Inrichting Specification
 
 No changes for this release.
+
 
 ## Fiscaal Specification
 
@@ -111,6 +152,7 @@ No changes for this release.
 | TxClientVpb2025 | the `TxClientVpb2025/Element/Objects/KnOrganisation/Element/Fields/LgId` request property's maxLength was increased from `3` to `5` | [POST](https://docs.afas.help/apidoc/nl/Fiscaal#post-/connectors/TxClientVpb2025) |
 | TxClientVpb2025 | the `TxClientVpb2025/Element/Objects/KnOrganisation/Element/Objects/KnContact/Element/Objects/KnPerson/Element/Fields/LgId` request property's maxLength was increased from `3` to `5` | [POST](https://docs.afas.help/apidoc/nl/Fiscaal#post-/connectors/TxClientVpb2025) |
 
+
 ## Flex Specification
 
 ### All changes
@@ -118,6 +160,7 @@ No changes for this release.
 | Connector | Description | Operation |
 | --- | --- | --- |
 | PtDeclarationCorrection | added the new optional request property `PtDeclarationCorrection/Element/Fields/RsCr` | [POST](https://docs.afas.help/apidoc/nl/Flex#post-/connectors/PtDeclarationCorrection), [PUT](https://docs.afas.help/apidoc/nl/Flex#put-/connectors/PtDeclarationCorrection) |
+
 
 ## Inkoop Specification
 
@@ -134,17 +177,20 @@ No changes for this release.
 | KnPurchaseRelationPer | added the new optional request property `KnPurchaseRelationPer/Element/Fields/PoCo` | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/KnPurchaseRelationPer), [PUT](https://docs.afas.help/apidoc/nl/Inkoop#put-/connectors/KnPurchaseRelationPer) |
 | KnPurchaseRelationPer | the `KnPurchaseRelationPer/Element/Fields/LgId` request property's maxLength was increased from `3` to `5` | [POST](https://docs.afas.help/apidoc/nl/Inkoop#post-/connectors/KnPurchaseRelationPer), [PUT](https://docs.afas.help/apidoc/nl/Inkoop#put-/connectors/KnPurchaseRelationPer) |
 
+
 ## Inrichting Specification
 
 ### All changes
 
 | Connector | Description | Operation |
 | --- | --- | --- |
-| KnPeppol | technical endpoint added (not available for customer use) | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnPeppol) |
+| KnPeppol | endpoint added | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnPeppol) |
+
 
 ## Loonadministratie Specification
 
 No changes for this release.
+
 
 ## Magazijn Specification
 
@@ -156,6 +202,7 @@ No changes for this release.
 | FbWarTransferIn | the `FbWarTransferIn/Element/Fields/LgId` request property's maxLength was increased from `3` to `5` | [POST](https://docs.afas.help/apidoc/nl/Magazijn#post-/connectors/FbWarTransferIn), [PUT](https://docs.afas.help/apidoc/nl/Magazijn#put-/connectors/FbWarTransferIn) |
 | FbWarTransferOut | the `FbWarTransferOut/Element/Fields/LgId` request property's maxLength was increased from `3` to `5` | [POST](https://docs.afas.help/apidoc/nl/Magazijn#post-/connectors/FbWarTransferOut), [PUT](https://docs.afas.help/apidoc/nl/Magazijn#put-/connectors/FbWarTransferOut) |
 | FbWarTransferPrep | the `FbWarTransferPrep/Element/Fields/LgId` request property's maxLength was increased from `3` to `5` | [POST](https://docs.afas.help/apidoc/nl/Magazijn#post-/connectors/FbWarTransferPrep), [PUT](https://docs.afas.help/apidoc/nl/Magazijn#put-/connectors/FbWarTransferPrep) |
+
 
 ## Medewerker en contract Specification
 
@@ -215,6 +262,7 @@ No changes for this release.
 | KnEmployeeGUID | the `AfasEmployee/Element/Objects/KnPerson/Element/Fields/LgId` request property's maxLength was increased from `3` to `5` | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID), [PUT](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployeeGUID) |
 | KnEmployeeGUID | removed the request property `AfasEmployee/Element/Objects/AfasResidenceDocument/Element/Objects/AfasResidenceAttachment` | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID), [PUT](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployeeGUID) |
 
+
 ## Mutaties Specification
 
 ### Breaking changes
@@ -232,6 +280,7 @@ No changes for this release.
 | FiInvoice | added the new optional request property `FiInvoice/Element/Fields/PoCo` | [PUT](https://docs.afas.help/apidoc/nl/Mutaties#put-/connectors/FiInvoice) |
 | FiInvoice | added new enum value(s) to the request property `FiInvoice/Element/Fields/DeDu`:  `RSZ/RSVZ` | [PUT](https://docs.afas.help/apidoc/nl/Mutaties#put-/connectors/FiInvoice) |
 | FiInvoice | removed enum value(s) from the request property `FiInvoice/Element/Fields/DeDu`:  `RSZ` | [PUT](https://docs.afas.help/apidoc/nl/Mutaties#put-/connectors/FiInvoice) |
+
 
 ## Organisaties en personen Specification
 
@@ -253,6 +302,7 @@ No changes for this release.
 | KnSalesRelationPer | the `KnSalesRelationPer/Element/Fields/LgId` request property's maxLength was increased from `3` to `5` | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnSalesRelationPer), [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnSalesRelationPer) |
 | KnSalesRelationPer | the `KnSalesRelationPer/Element/Objects/KnPerson/Element/Fields/LgId` request property's maxLength was increased from `3` to `5` | [POST](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#post-/connectors/KnSalesRelationPer), [PUT](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#put-/connectors/KnSalesRelationPer) |
 
+
 ## Overige Specification
 
 ### All changes
@@ -266,6 +316,7 @@ No changes for this release.
 | HrEmpMutInSite | the `HrEmpMutInsite/Element/Objects/AfasEmployee/Element/Fields/LgId` request property's maxLength was increased from `3` to `5` | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/HrEmpMutInSite) |
 | KnDayContract | added the new optional request property `KnDayContract/Element/Objects/AfasTimeTable/Element/Fields/WsTC` | [POST](https://docs.afas.help/apidoc/nl/Overige#post-/connectors/KnDayContract), [PUT](https://docs.afas.help/apidoc/nl/Overige#put-/connectors/KnDayContract) |
 
+
 ## Projecten en nacalculatie Specification
 
 ### All changes
@@ -276,6 +327,7 @@ No changes for this release.
 | PtProject | added the new optional request property `PtProject/Element/Fields/CoVC` | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
 | PtProject | added the new optional request property `PtProject/Element/Fields/RePr` | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
 | PtProject | added new enum value(s) to the request property `PtProject/Element/Fields/MeOw`:  `8` | [POST](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#post-/connectors/PtProject), [PUT](https://docs.afas.help/apidoc/nl/Projecten%20en%20nacalculatie#put-/connectors/PtProject) |
+
 
 ## Verkoop en Orders Specification
 
@@ -291,13 +343,16 @@ No changes for this release.
 | FbSales | the `FbSales/Element/Fields/LgId` request property's maxLength was increased from `3` to `5` | [POST](https://docs.afas.help/apidoc/nl/Verkoop%20en%20Orders#post-/connectors/FbSales), [PUT](https://docs.afas.help/apidoc/nl/Verkoop%20en%20Orders#put-/connectors/FbSales) |
 | FbSalesQuotation | the `FbSalesQuotation/Element/Fields/LgId` request property's maxLength was increased from `3` to `5` | [POST](https://docs.afas.help/apidoc/nl/Verkoop%20en%20Orders#post-/connectors/FbSalesQuotation), [PUT](https://docs.afas.help/apidoc/nl/Verkoop%20en%20Orders#put-/connectors/FbSalesQuotation) |
 
+
 ## Verlof en Ziekte Specification
 
 No changes for this release.
 
+
 ## Werkgever Specification
 
 No changes for this release.
+
 
 ## Werving en selectie Specification
 
