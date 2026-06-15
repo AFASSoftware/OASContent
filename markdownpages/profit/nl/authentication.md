@@ -17,6 +17,7 @@ Welke methode er gebruikt wordt, hangt af van de instellingen van de [App Connec
 
 
 ## Classic token
+**Let op! Deze functionaliteit komt per 01-09-2027 te vervallen. Zorg ervoor dat je vóór die datum overstapt op OAuth.**
 
 Deze methode maakt gebruik van statische tokens die je meegeeft in de HTTP-authenticatieheader van al je requests. Een token is uniek voor één omgeving en gekoppeld aan een gebruiker. De rechten van deze gebruiker hebben invloed op de rechten van het token.
 
