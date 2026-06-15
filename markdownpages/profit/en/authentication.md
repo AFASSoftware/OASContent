@@ -17,6 +17,7 @@ Which method is used depends on the settings of the [App Connector](https://docs
 
 
 ## Classic token
+**Please note! This functionality will be discontinued on 01-09-2027. Make sure to switch to OAuth before that date.**
 
 This method uses static tokens which you include in the HTTP Authorization header of all your requests. A token is unique to a single environment and is linked to a user. The permissions of that user affect the rights of the token.
 
