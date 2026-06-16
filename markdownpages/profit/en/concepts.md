@@ -17,8 +17,6 @@ With GetConnectors, you can create and customize standard endpoints by yourself.
 
 You invoke the endpoint using the http GET method. To receive new data, you make a new request (polling).
 
->There are no webhooks available. To receive the latest changes use the `modified_date` fields in endpoints to receive the latest changes.
-
 [Detailed documentation about GetConnectors](https://help.afas.nl/help/NL/SE/App_Cnnctr_Get.htm)
 
 ## UpdateConnector
