@@ -16,8 +16,6 @@ Met GetConnectoren kun je standaard zelf endpoints aanmaken en aanpassen. Deze e
 
 Het endpoint roep je aan via de http GET methode. Om nieuwe data te ontvangen doe je een nieuwe request (polling).
 
->Er zijn geen webhooks beschikbaar.  
-
 [Uitgebreide documentatie over GetConnectoren](https://help.afas.nl/help/NL/SE/App_Cnnctr_Get.htm)
 
 ## UpdateConnector

@@ -43,6 +43,10 @@
           {
             "name": "BI-models",
             "path": "en/bi-models.md"
+          },
+          {
+            "name": "Webhooks",
+            "path": "en/webhooks.md"
           }
         ],
         "nl": [
@@ -73,6 +77,10 @@
           {
             "name": "BI-modellen",
             "path": "nl/bi-modellen.md"
+          },
+          {
+            "name": "Webhooks",
+            "path": "nl/webhooks.md"
           }
         ]
       },
