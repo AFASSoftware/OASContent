@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2026-02-03
+date: 2026-06-22
 index: true
 tags: Partner, IntegrationId, Certification, Integration, Configuration
 title: Certificeringsstappen voor partners
@@ -10,7 +10,7 @@ title: Certificeringsstappen voor partners
 
 ## Inleiding
 
-Welkom bij het certificeringstraject voor partners! In dit document nemen we je stap voor stap mee op weg naar een succesvolle, gecertificeerde koppeling met AFAS. Volg de stappen in de aanbevolen volgorde en ontdek hoe eenvoudig, leerzaam en waardevol het proces kan zijn. Zet vandaag nog de eerste stap richting certificering en maak van jouw integratie een succesverhaal!
+Welkom bij het certificeringstraject voor partners! In dit document nemen we je stap voor stap mee op weg naar een succesvolle, gecertificeerde koppeling met AFAS. Op de [Product partner portal](https://partner.afas.nl/product-partner-portal) staat een onderdeel `Mijn onboarding` waar alle stappen staan die je nog af moet handelen. Ontdek hoe eenvoudig, leerzaam en waardevol het proces kan zijn. Zet vandaag nog de eerste stap richting certificering en maak van jouw integratie een succesverhaal!
 
 
 ---
