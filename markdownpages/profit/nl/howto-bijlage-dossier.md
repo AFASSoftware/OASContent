@@ -1,13 +1,15 @@
 ---
 author: CLN
-date: 2025-11-08
-tags: Tutorial, GetConnector, UpdateConnector, AppConnector, Authentication, Hr
+date: 2026-06-22
+tags: Tutorial, GetConnector, UpdateConnector, AppConnector, Authentication
 title: Ophalen van bijlagen uit AFAS Profit
 ---
 
 ## Inleiding
 
 Via de dossier functionaliteit is het mogelijk om bestanden als bijlage op een dossier van een medewerker/persoon/organisatie vast te leggen. Hiermee zorg je ervoor dat je alle gegevens bij elkaar hebt staan en makkelijk terug kan vinden. Soms komt het voor dat je deze bestanden uit de omgeving wilt halen. In deze How-To lees je precies hoe je dit doet.
+
+> Dit artikel gaat over hoe je dit zelf kan doen, als je voldoende programmeerkennis hebt. Heb je afgesproken dat het team Systemintegrators van AFAS dit voor je doet? [Lees dan hier welke acties er van jou verwacht worden](./howto-export-subject-attachments).
 
 ## Wat heb je nodig
 
