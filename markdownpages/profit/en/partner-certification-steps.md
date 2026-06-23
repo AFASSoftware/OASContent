@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2026-02-04
+date: 2026-06-22
 index: true
 tags: Partner, IntegrationId, Certification, Integration, Configuration
 title: Certification steps for Partners
@@ -10,7 +10,7 @@ title: Certification steps for Partners
 
 ## Introduction
 
-Welcome to the partner certification journey! In this document, we guide you step by step towards a successful, certified integration with AFAS. Follow the steps in the recommended order and discover how straightforward, educational, and rewarding the process can be. Take your first step towards certification today and turn your integration into a success story!
+Welcome to the partner certification journey! In this document we take you step by step on the path to a successful, certified integration with AFAS. On the [Product partner portal](https://partner.afas.nl/product-partner-portal) there is a section called `My onboarding` where all the steps you still need to complete are listed. Discover how easy, educational and valuable the process can be. Take your first step towards certification today and turn your integration into a success story!
 
 
 ---
@@ -60,7 +60,7 @@ Go to https://klant.afas.nl/supportplus and activate it!
 
 ---
 
-### Specialization course: Connectors
+### Take a course
 
 Register for a course where you will learn everything about calling our API. There is a lot of focus on creating your own [GetConnectors](#supply-getconnectors).
 This course is free for 1 colleague. Check https://klant.afas.nl/opleiding/specialisatiecursus-connector for information and dates.
@@ -94,7 +94,7 @@ Keep in mind that it is easier to disable unused fields in the GetConnector or i
 
 Creating your own GetConnector is not difficult ([read this help article](https://help.afas.nl/help/NL/SE/App_Cnr_XML_Get_Build.htm)), but finding the right fields can be a real challenge. AFAS Profit contains almost 4,000 tables with almost 200,000 fields. And that number grows every year!
 - Are you working with a *launching customer* or someone experienced in building GetConnectors? Take advantage of that knowledge!
-- In the [pro training](#specialization-course-connectors) extensive attention is paid to building GetConnectors. Especially if you're building a data-intensive integration, it is absolutely necessary to follow that training.
+- In the [pro training](#take-a-course) extensive attention is paid to building GetConnectors. Especially if you're building a data-intensive integration, it is absolutely necessary to follow that training.
 - Do you only need a few GetConnectors for your integration or are you stuck? We are happy to help you build. Often an hour is enough, in which we together create the right GetConnectors in your environment ([thanks to Support+](#activate-support)) in a Teams session. [Submit a request](#contact) if you want our help.
 
 
