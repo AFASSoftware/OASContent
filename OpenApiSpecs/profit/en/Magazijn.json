@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "7.7.10",
+    "version": "8.8.11",
     "title": "AFAS Magazijn API",
     "description": "This API describes the endpoints related to Magazijn. Use this API with the functional description of the API."
   },
@@ -199,7 +199,7 @@
     },
     "/Metainfo/{Type}/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
+        "summary": "Retrieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
         "tags": [
           "API Info"
         ],
@@ -350,7 +350,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the data of a custom getconnector based on the endpoint id.",
+        "summary": "Retrieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -442,7 +442,7 @@
             },
             "in": "path",
             "name": "Endpoint",
-            "description": "Add the id of the connector you want to get the data from",
+            "description": "Add the id of connector you want to get the meta info from",
             "required": true
           },
           {
@@ -2700,7 +2700,7 @@
           "name": "GuLP",
           "in": "path",
           "required": true,
-          "description": "Purchase line 'GUID'"
+          "description": "GUID purchase line"
         },
         {
           "schema": {
@@ -2709,7 +2709,7 @@
           "name": "GuLS",
           "in": "path",
           "required": true,
-          "description": "Sales line 'GUID'"
+          "description": "GUID sales line"
         }
       ],
       "delete": {
@@ -7646,7 +7646,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -8138,27 +8138,27 @@
                                       },
                                       "Di01": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di02": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di03": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di04": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di05": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "MoId": {
@@ -8566,7 +8566,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -9069,27 +9069,27 @@
                                       },
                                       "Di01": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di02": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di03": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di04": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di05": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "MoId": {
@@ -9625,7 +9625,7 @@
                       "GuLP": {
                         "type": "string",
                         "maxLength": 38,
-                        "description": "Purchase line 'GUID'",
+                        "description": "GUID purchase line",
                         "format": ""
                       },
                       "VaOS": {
@@ -9648,7 +9648,7 @@
                       "GuLS": {
                         "type": "string",
                         "maxLength": 38,
-                        "description": "Sales line 'GUID'",
+                        "description": "GUID sales line",
                         "format": ""
                       },
                       "SuES": {
@@ -9709,7 +9709,7 @@
                       "GuLP": {
                         "type": "string",
                         "maxLength": 38,
-                        "description": "Purchase line 'GUID'",
+                        "description": "GUID purchase line",
                         "format": ""
                       },
                       "VaOS": {
@@ -9732,7 +9732,7 @@
                       "GuLS": {
                         "type": "string",
                         "maxLength": 38,
-                        "description": "Sales line 'GUID'",
+                        "description": "GUID sales line",
                         "format": ""
                       },
                       "SuES": {
@@ -10224,7 +10224,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -10325,7 +10325,7 @@
                                       "GuLi": {
                                         "type": "string",
                                         "maxLength": 38,
-                                        "description": "Line GUID",
+                                        "description": "GUID line",
                                         "format": "uuid"
                                       },
                                       "Ds": {
@@ -10606,7 +10606,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -10710,7 +10710,7 @@
                                       "GuLi": {
                                         "type": "string",
                                         "maxLength": 38,
-                                        "description": "Line GUID",
+                                        "description": "GUID line",
                                         "format": "uuid"
                                       },
                                       "Ds": {
@@ -11000,7 +11000,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -11106,7 +11106,7 @@
                                       "GuLi": {
                                         "type": "string",
                                         "maxLength": 38,
-                                        "description": "Line GUID",
+                                        "description": "GUID line",
                                         "format": "uuid"
                                       },
                                       "Ds": {
@@ -11160,7 +11160,7 @@
                                       "SoGu": {
                                         "type": "string",
                                         "maxLength": 38,
-                                        "description": "Source line GUID",
+                                        "description": "GUID source line",
                                         "format": "uuid"
                                       },
                                       "Re": {
@@ -11535,7 +11535,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -11644,7 +11644,7 @@
                                       "GuLi": {
                                         "type": "string",
                                         "maxLength": 38,
-                                        "description": "Line GUID",
+                                        "description": "GUID line",
                                         "format": "uuid"
                                       },
                                       "Ds": {
@@ -11704,7 +11704,7 @@
                                       "SoGu": {
                                         "type": "string",
                                         "maxLength": 38,
-                                        "description": "Source line GUID",
+                                        "description": "GUID source line",
                                         "format": "uuid"
                                       },
                                       "Re": {
@@ -12070,7 +12070,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -12165,7 +12165,7 @@
                                       "GuLi": {
                                         "type": "string",
                                         "maxLength": 38,
-                                        "description": "Line GUID",
+                                        "description": "GUID line",
                                         "format": "uuid"
                                       },
                                       "Ds": {
@@ -12467,7 +12467,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -12565,7 +12565,7 @@
                                       "GuLi": {
                                         "type": "string",
                                         "maxLength": 38,
-                                        "description": "Line GUID",
+                                        "description": "GUID line",
                                         "format": "uuid"
                                       },
                                       "Ds": {

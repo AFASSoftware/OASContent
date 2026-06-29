@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "7.7.10",
+    "version": "8.8.11",
     "title": "AFAS Verlof en Ziekte API",
     "description": "Deze API beschrijft de endpoints gerelateerd aan Verlof en Ziekte. Gebruik deze API met de functionele beschrijving van de API."
   },
@@ -199,7 +199,7 @@
     },
     "/Metainfo/{Type}/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
+        "summary": "Retrieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
         "tags": [
           "API Info"
         ],
@@ -350,7 +350,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the data of a custom getconnector based on the endpoint id.",
+        "summary": "Retrieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -442,7 +442,7 @@
             },
             "in": "path",
             "name": "Endpoint",
-            "description": "Add the id of the connector you want to get the data from",
+            "description": "Add the id of connector you want to get the meta info from",
             "required": true
           },
           {

@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "7.7.10",
+    "version": "8.8.11",
     "title": "AFAS Mutaties API",
     "description": "This API describes the endpoints related to Mutaties. Use this API with the functional description of the API."
   },
@@ -199,7 +199,7 @@
     },
     "/Metainfo/{Type}/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
+        "summary": "Retrieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
         "tags": [
           "API Info"
         ],
@@ -350,7 +350,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the data of a custom getconnector based on the endpoint id.",
+        "summary": "Retrieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -442,7 +442,7 @@
             },
             "in": "path",
             "name": "Endpoint",
-            "description": "Add the id of the connector you want to get the data from",
+            "description": "Add the id of connector you want to get the meta info from",
             "required": true
           },
           {
@@ -3523,10 +3523,10 @@
                   "Response example": {
                     "value": {
                       "results": {
-                        "FiEntries": {
-                          "EnNo": "PrimaryKeyValue",
-                          "UnId": "PrimaryKeyValue",
-                          "InID": "PrimaryKeyValue"
+                        "FiEntryPar": {
+                          "UnId": "1",
+                          "EnNo": "48227",
+                          "InId": "V008001"
                         }
                       }
                     }
@@ -5661,7 +5661,7 @@
                           },
                           "ChOfCommNr": {
                             "type": "string",
-                            "description": "COC number"
+                            "description": "CoC number"
                           },
                           "PaymentCondition": {
                             "type": "string",
@@ -6213,7 +6213,7 @@
                           },
                           "ChOfCommNr": {
                             "type": "string",
-                            "description": "COC number"
+                            "description": "CoC number"
                           },
                           "CollectAccount": {
                             "type": "string",
@@ -8179,32 +8179,32 @@
                                       "VaDu": {
                                         "type": "string",
                                         "maxLength": 3,
-                                        "description": "Deviating VAT duty",
+                                        "description": "Divergent VAT liability",
                                         "format": ""
                                       },
                                       "Di01": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di02": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di03": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di04": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di05": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "MoId": {
@@ -8382,32 +8382,32 @@
                                       "VaDu": {
                                         "type": "string",
                                         "maxLength": 3,
-                                        "description": "Deviating VAT duty",
+                                        "description": "Divergent VAT liability",
                                         "format": ""
                                       },
                                       "Di01": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di02": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di03": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di04": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di05": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "MoId": {
@@ -8682,6 +8682,12 @@
                                         "description": "Invoice number",
                                         "format": ""
                                       },
+                                      "InI2": {
+                                        "type": "string",
+                                        "maxLength": 12,
+                                        "description": "Internal invoice number",
+                                        "format": ""
+                                      },
                                       "Ds": {
                                         "type": "string",
                                         "maxLength": 255,
@@ -8816,6 +8822,12 @@
                                         "type": "string",
                                         "maxLength": 15,
                                         "description": "Project",
+                                        "format": ""
+                                      },
+                                      "PoCo": {
+                                        "type": "string",
+                                        "maxLength": 50,
+                                        "description": "POP code",
                                         "format": ""
                                       },
                                       "BankAccount": {
@@ -9024,7 +9036,7 @@
                                                       },
                                                       "DcPr": {
                                                         "type": "number",
-                                                        "description": "Allowance %",
+                                                        "description": "Surcharge (%)",
                                                         "format": "number"
                                                       },
                                                       "AmSe": {
@@ -9050,27 +9062,27 @@
                                                       },
                                                       "Di01": {
                                                         "type": "integer",
-                                                        "description": "(not used)",
+                                                        "description": "(Not used)",
                                                         "format": ""
                                                       },
                                                       "Di02": {
                                                         "type": "integer",
-                                                        "description": "(not used)",
+                                                        "description": "(Not used)",
                                                         "format": ""
                                                       },
                                                       "Di03": {
                                                         "type": "integer",
-                                                        "description": "(not used)",
+                                                        "description": "(Not used)",
                                                         "format": ""
                                                       },
                                                       "Di04": {
                                                         "type": "integer",
-                                                        "description": "(not used)",
+                                                        "description": "(Not used)",
                                                         "format": ""
                                                       },
                                                       "Di05": {
                                                         "type": "integer",
-                                                        "description": "(not used)",
+                                                        "description": "(Not used)",
                                                         "format": ""
                                                       },
                                                       "Qu": {
@@ -9347,10 +9359,10 @@
                         "enum": [
                           "ALL",
                           "FOD",
-                          "RSZ"
+                          "RSZ/RSVZ"
                         ],
                         "maxLength": 20,
-                        "description": "Obligation to withhold\nALL = FOD Financiën en Rijksdienst voor Sociale Zekerheid;\nFOD = FOD Financiën;\nRSZ = Rijksdienst voor Sociale Zekerheid;",
+                        "description": "Obligation to withhold\nALL = FOD Financiën en Rijksdienst voor Sociale Zekerheid / Sociale Verzekeringen;\nFOD = FOD Financiën;\nRSZ/RSVZ = Rijksdienst voor Sociale Zekerheid / Sociale Verzekeringen;",
                         "format": ""
                       },
                       "AmFO": {
@@ -9362,13 +9374,13 @@
                       "AmRS": {
                         "type": "number",
                         "multipleOf": 1E-10,
-                        "description": "RSZ amount",
+                        "description": "RSZ/RSVZ amount",
                         "format": "float"
                       },
                       "PaRS": {
                         "type": "string",
                         "maxLength": 35,
-                        "description": "RSZ payment reference",
+                        "description": "Payment reference RSZ/RSVZ",
                         "format": ""
                       },
                       "InAm": {
@@ -9382,6 +9394,12 @@
                         "multipleOf": 1E-10,
                         "description": "Interest amount (currency)",
                         "format": "float"
+                      },
+                      "PoCo": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "POP code",
+                        "format": ""
                       },
                       "BankAccount": {
                         "type": "string",

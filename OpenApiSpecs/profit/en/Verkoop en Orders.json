@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "7.7.10",
+    "version": "8.8.11",
     "title": "AFAS Verkoop en Orders API",
     "description": "This API describes the endpoints related to Verkoop en Orders. Use this API with the functional description of the API."
   },
@@ -199,7 +199,7 @@
     },
     "/Metainfo/{Type}/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
+        "summary": "Retrieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
         "tags": [
           "API Info"
         ],
@@ -350,7 +350,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the data of a custom getconnector based on the endpoint id.",
+        "summary": "Retrieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -442,7 +442,7 @@
             },
             "in": "path",
             "name": "Endpoint",
-            "description": "Add the id of the connector you want to get the data from",
+            "description": "Add the id of connector you want to get the meta info from",
             "required": true
           },
           {
@@ -981,6 +981,160 @@
         "parameters": [
           {
             "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/CmForecastContactMoment": {
+      "post": {
+        "summary": "Forecast contact moment",
+        "description": "\n\r https://help.afas.nl/content/NL/SE/116439.htm",
+        "operationId": "POST_CmForecastContactMoment",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CmForecastContactMoment_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Forecast contact moment"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Forecast contact moment",
+        "description": "\n\r https://help.afas.nl/content/NL/SE/116439.htm",
+        "operationId": "PUT_CmForecastContactMoment",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CmForecastContactMoment_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Forecast contact moment"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/CmForecastContactMoment/AfasCmForecast": {
+      "post": {
+        "summary": "Forecast contact moment",
+        "description": "Update main record in CmForecastContactMoment and insert subrecord into AfasCmForecast. \n\r https://help.afas.nl/content/NL/SE/116439.htm",
+        "operationId": "POSTSubRecordCmForecastContactMomentAfasCmForecast",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CmForecastContactMoment_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Forecast contact moment"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
           }
         ]
       }
@@ -12984,7 +13138,7 @@
                         "properties": {
                           "Type_order": {
                             "type": "string",
-                            "description": "Order type"
+                            "description": "Type of order"
                           },
                           "Nummer_pakbon": {
                             "type": "string",
@@ -13991,6 +14145,10 @@
       "description": "Forecast"
     },
     {
+      "name": "Forecast contact moment",
+      "description": "Forecast contact moment"
+    },
+    {
       "name": "Production",
       "description": "Production"
     },
@@ -14057,6 +14215,559 @@
   ],
   "components": {
     "schemas": {
+      "CmForecastContactMoment_POST": {
+        "type": "object",
+        "properties": {
+          "CmForecastContactMoment": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "PrId": {
+                        "type": "integer",
+                        "description": "Profile number",
+                        "format": ""
+                      },
+                      "DbId": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Sales contact",
+                        "format": ""
+                      },
+                      "FcNo": {
+                        "type": "integer",
+                        "description": "Number forecast",
+                        "format": ""
+                      },
+                      "MuId": {
+                        "type": "string",
+                        "maxLength": 32,
+                        "description": "Entry ID",
+                        "format": ""
+                      },
+                      "DaTi": {
+                        "type": "string",
+                        "description": "Date",
+                        "format": "date"
+                      },
+                      "EmId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Resp. person",
+                        "format": ""
+                      },
+                      "Acti": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "2",
+                          "3",
+                          "4"
+                        ],
+                        "maxLength": 20,
+                        "description": "Action\n1 = Contact called;\n2 = Contact emailed;\n3 = Appointment scheduled;\n4 = Contact spoken;",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 80,
+                        "description": "Description",
+                        "format": ""
+                      },
+                      "Dat2": {
+                        "type": "string",
+                        "description": "Following contact moment",
+                        "format": "date"
+                      },
+                      "CdId": {
+                        "type": "integer",
+                        "description": "Contact person",
+                        "format": ""
+                      },
+                      "Re": {
+                        "type": "string",
+                        "description": "Comment",
+                        "format": "byte"
+                      },
+                      "FiId": {
+                        "type": "string",
+                        "maxLength": 32,
+                        "description": "Attachment",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "DaTi",
+                      "EmId",
+                      "Ds"
+                    ]
+                  },
+                  "Objects": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "AfasCmForecast": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "FoId": {
+                                        "type": "integer",
+                                        "description": "Forecast ID",
+                                        "format": ""
+                                      },
+                                      "Ds": {
+                                        "type": "string",
+                                        "maxLength": 100,
+                                        "description": "Description",
+                                        "format": ""
+                                      },
+                                      "CtPe": {
+                                        "type": "integer",
+                                        "description": "Contact person",
+                                        "format": ""
+                                      },
+                                      "EmId": {
+                                        "type": "string",
+                                        "maxLength": 15,
+                                        "description": "Resp. person",
+                                        "format": ""
+                                      },
+                                      "DaSt": {
+                                        "type": "string",
+                                        "description": "Start date",
+                                        "format": "date"
+                                      },
+                                      "DaEn": {
+                                        "type": "string",
+                                        "description": "Expected end date",
+                                        "format": "date"
+                                      },
+                                      "ViGr": {
+                                        "type": "string",
+                                        "maxLength": 20,
+                                        "description": "Forecast group",
+                                        "format": ""
+                                      },
+                                      "SbHi": {
+                                        "type": "integer",
+                                        "description": "Cause",
+                                        "format": ""
+                                      },
+                                      "ScId": {
+                                        "type": "string",
+                                        "maxLength": 5,
+                                        "description": "Source",
+                                        "format": ""
+                                      },
+                                      "CaId": {
+                                        "type": "integer",
+                                        "description": "Campaign",
+                                        "format": ""
+                                      },
+                                      "PjId": {
+                                        "type": "string",
+                                        "maxLength": 15,
+                                        "description": "Project",
+                                        "format": ""
+                                      },
+                                      "ViSt": {
+                                        "type": "string",
+                                        "maxLength": 10,
+                                        "description": "Progress",
+                                        "format": ""
+                                      },
+                                      "Pc": {
+                                        "type": "number",
+                                        "description": "Chance to score",
+                                        "format": "number"
+                                      },
+                                      "Am": {
+                                        "type": "number",
+                                        "description": "Expected amount in basic currency",
+                                        "format": "number"
+                                      },
+                                      "AmF": {
+                                        "type": "number",
+                                        "description": "Expected amount",
+                                        "format": "number"
+                                      },
+                                      "CaQB": {
+                                        "type": "boolean",
+                                        "description": "Calculate exp. amount based on quot and cost est.",
+                                        "format": ""
+                                      },
+                                      "ViOp": {
+                                        "type": "string",
+                                        "enum": [
+                                          "C",
+                                          "N",
+                                          "O"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Result\nC = Closed and scored;\nN = Closed and not scored;\nO = Open;",
+                                        "format": ""
+                                      },
+                                      "ViRe": {
+                                        "type": "string",
+                                        "enum": [
+                                          "PR",
+                                          "FU",
+                                          "SE",
+                                          "PKW",
+                                          "ORG",
+                                          "VI",
+                                          "ERV",
+                                          "REF"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Reason\nPR = Prijs;\nFU = Functionaliteit;\nSE = Serviceverlening;\nPKW = Productkwaliteit;\nORG = Organisatie;\nVI = Visie;\nERV = Ervaring;\nREF = Referentie;",
+                                        "format": ""
+                                      },
+                                      "ViFo": {
+                                        "type": "string",
+                                        "maxLength": 20,
+                                        "description": "Lost to",
+                                        "format": ""
+                                      },
+                                      "DaSc": {
+                                        "type": "string",
+                                        "description": "End date",
+                                        "format": "date"
+                                      },
+                                      "OrAm": {
+                                        "type": "number",
+                                        "description": "Order amount in basic currency",
+                                        "format": "number"
+                                      },
+                                      "OrAF": {
+                                        "type": "number",
+                                        "description": "Order amount",
+                                        "format": "number"
+                                      },
+                                      "CuId": {
+                                        "type": "string",
+                                        "maxLength": 3,
+                                        "description": "Currency",
+                                        "format": ""
+                                      },
+                                      "Rate": {
+                                        "type": "number",
+                                        "description": "Exchange rate",
+                                        "format": "number"
+                                      },
+                                      "Re": {
+                                        "type": "string",
+                                        "description": "Remark",
+                                        "format": "byte"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "CmForecastContactMoment_PUT": {
+        "type": "object",
+        "properties": {
+          "CmForecastContactMoment": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "PrId": {
+                        "type": "integer",
+                        "description": "Profile number",
+                        "format": ""
+                      },
+                      "DbId": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Sales contact",
+                        "format": ""
+                      },
+                      "FcNo": {
+                        "type": "integer",
+                        "description": "Number forecast",
+                        "format": ""
+                      },
+                      "MuId": {
+                        "type": "string",
+                        "maxLength": 32,
+                        "description": "Entry ID",
+                        "format": ""
+                      },
+                      "DaTi": {
+                        "type": "string",
+                        "description": "Date",
+                        "format": "date"
+                      },
+                      "EmId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Resp. person",
+                        "format": ""
+                      },
+                      "Acti": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "2",
+                          "3",
+                          "4"
+                        ],
+                        "maxLength": 20,
+                        "description": "Action\n1 = Contact called;\n2 = Contact emailed;\n3 = Appointment scheduled;\n4 = Contact spoken;",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 80,
+                        "description": "Description",
+                        "format": ""
+                      },
+                      "Dat2": {
+                        "type": "string",
+                        "description": "Following contact moment",
+                        "format": "date"
+                      },
+                      "CdId": {
+                        "type": "integer",
+                        "description": "Contact person",
+                        "format": ""
+                      },
+                      "Re": {
+                        "type": "string",
+                        "description": "Comment",
+                        "format": "byte"
+                      },
+                      "FiId": {
+                        "type": "string",
+                        "maxLength": 32,
+                        "description": "Attachment",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "MuId"
+                    ]
+                  },
+                  "Objects": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "AfasCmForecast": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "FoId": {
+                                        "type": "integer",
+                                        "description": "Forecast ID",
+                                        "format": ""
+                                      },
+                                      "Ds": {
+                                        "type": "string",
+                                        "maxLength": 100,
+                                        "description": "Description",
+                                        "format": ""
+                                      },
+                                      "CtPe": {
+                                        "type": "integer",
+                                        "description": "Contact person",
+                                        "format": ""
+                                      },
+                                      "EmId": {
+                                        "type": "string",
+                                        "maxLength": 15,
+                                        "description": "Resp. person",
+                                        "format": ""
+                                      },
+                                      "DaSt": {
+                                        "type": "string",
+                                        "description": "Start date",
+                                        "format": "date"
+                                      },
+                                      "DaEn": {
+                                        "type": "string",
+                                        "description": "Expected end date",
+                                        "format": "date"
+                                      },
+                                      "ViGr": {
+                                        "type": "string",
+                                        "maxLength": 20,
+                                        "description": "Forecast group",
+                                        "format": ""
+                                      },
+                                      "SbHi": {
+                                        "type": "integer",
+                                        "description": "Cause",
+                                        "format": ""
+                                      },
+                                      "ScId": {
+                                        "type": "string",
+                                        "maxLength": 5,
+                                        "description": "Source",
+                                        "format": ""
+                                      },
+                                      "CaId": {
+                                        "type": "integer",
+                                        "description": "Campaign",
+                                        "format": ""
+                                      },
+                                      "PjId": {
+                                        "type": "string",
+                                        "maxLength": 15,
+                                        "description": "Project",
+                                        "format": ""
+                                      },
+                                      "ViSt": {
+                                        "type": "string",
+                                        "maxLength": 10,
+                                        "description": "Progress",
+                                        "format": ""
+                                      },
+                                      "Pc": {
+                                        "type": "number",
+                                        "multipleOf": 0.01,
+                                        "description": "Chance to score",
+                                        "format": "float"
+                                      },
+                                      "Am": {
+                                        "type": "number",
+                                        "multipleOf": 1E-10,
+                                        "description": "Expected amount in basic currency",
+                                        "format": "float"
+                                      },
+                                      "AmF": {
+                                        "type": "number",
+                                        "multipleOf": 1E-10,
+                                        "description": "Expected amount",
+                                        "format": "float"
+                                      },
+                                      "CaQB": {
+                                        "type": "boolean",
+                                        "description": "Calculate exp. amount based on quot and cost est.",
+                                        "format": ""
+                                      },
+                                      "ViOp": {
+                                        "type": "string",
+                                        "enum": [
+                                          "C",
+                                          "N",
+                                          "O"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Result\nC = Closed and scored;\nN = Closed and not scored;\nO = Open;",
+                                        "format": ""
+                                      },
+                                      "ViRe": {
+                                        "type": "string",
+                                        "enum": [
+                                          "PR",
+                                          "FU",
+                                          "SE",
+                                          "PKW",
+                                          "ORG",
+                                          "VI",
+                                          "ERV",
+                                          "REF"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Reason\nPR = Prijs;\nFU = Functionaliteit;\nSE = Serviceverlening;\nPKW = Productkwaliteit;\nORG = Organisatie;\nVI = Visie;\nERV = Ervaring;\nREF = Referentie;",
+                                        "format": ""
+                                      },
+                                      "ViFo": {
+                                        "type": "string",
+                                        "maxLength": 20,
+                                        "description": "Lost to",
+                                        "format": ""
+                                      },
+                                      "DaSc": {
+                                        "type": "string",
+                                        "description": "End date",
+                                        "format": "date"
+                                      },
+                                      "OrAm": {
+                                        "type": "number",
+                                        "multipleOf": 1E-10,
+                                        "description": "Order amount in basic currency",
+                                        "format": "float"
+                                      },
+                                      "OrAF": {
+                                        "type": "number",
+                                        "multipleOf": 1E-10,
+                                        "description": "Order amount",
+                                        "format": "float"
+                                      },
+                                      "CuId": {
+                                        "type": "string",
+                                        "maxLength": 3,
+                                        "description": "Currency",
+                                        "format": ""
+                                      },
+                                      "Rate": {
+                                        "type": "number",
+                                        "multipleOf": 1E-10,
+                                        "description": "Exchange rate",
+                                        "format": "float"
+                                      },
+                                      "Re": {
+                                        "type": "string",
+                                        "description": "Remark",
+                                        "format": "byte"
+                                      }
+                                    },
+                                    "required": [
+                                      "FoId"
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "CmForecast_POST": {
         "type": "object",
         "properties": {
@@ -14447,12 +15158,12 @@
                       },
                       "DaDe": {
                         "type": "string",
-                        "description": "Required production date",
+                        "description": "Required date added",
                         "format": "date"
                       },
                       "DaPr": {
                         "type": "string",
-                        "description": "Promised creation date",
+                        "description": "Promised date confirmed.",
                         "format": "date"
                       },
                       "CuId": {
@@ -14490,7 +15201,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -14591,7 +15302,7 @@
                                       "GuLi": {
                                         "type": "string",
                                         "maxLength": 38,
-                                        "description": "Line GUID",
+                                        "description": "GUID line",
                                         "format": "uuid"
                                       },
                                       "Ds": {
@@ -14887,7 +15598,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Part item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
+                                                        "description": "Item type component\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -15202,12 +15913,12 @@
                       },
                       "DaDe": {
                         "type": "string",
-                        "description": "Required production date",
+                        "description": "Required date added",
                         "format": "date"
                       },
                       "DaPr": {
                         "type": "string",
-                        "description": "Promised creation date",
+                        "description": "Promised date confirmed.",
                         "format": "date"
                       },
                       "CuId": {
@@ -15246,7 +15957,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -15350,7 +16061,7 @@
                                       "GuLi": {
                                         "type": "string",
                                         "maxLength": 38,
-                                        "description": "Line GUID",
+                                        "description": "GUID line",
                                         "format": "uuid"
                                       },
                                       "Ds": {
@@ -15648,7 +16359,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Part item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
+                                                        "description": "Item type component\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -15971,12 +16682,12 @@
                       },
                       "DaDe": {
                         "type": "string",
-                        "description": "Required production date",
+                        "description": "Required date added",
                         "format": "date"
                       },
                       "DaPr": {
                         "type": "string",
-                        "description": "Promised creation date",
+                        "description": "Promised date confirmed.",
                         "format": "date"
                       },
                       "CuId": {
@@ -16019,7 +16730,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -16120,7 +16831,7 @@
                                       "GuLi": {
                                         "type": "string",
                                         "maxLength": 38,
-                                        "description": "Line GUID",
+                                        "description": "GUID line",
                                         "format": "uuid"
                                       },
                                       "SoOr": {
@@ -16132,7 +16843,7 @@
                                       "SoGu": {
                                         "type": "string",
                                         "maxLength": 38,
-                                        "description": "Source line GUID",
+                                        "description": "GUID source line",
                                         "format": "uuid"
                                       },
                                       "Ds": {
@@ -16510,7 +17221,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Part item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
+                                                        "description": "Item type component\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -16969,12 +17680,12 @@
                       },
                       "DaDe": {
                         "type": "string",
-                        "description": "Required production date",
+                        "description": "Required date added",
                         "format": "date"
                       },
                       "DaPr": {
                         "type": "string",
-                        "description": "Promised creation date",
+                        "description": "Promised date confirmed.",
                         "format": "date"
                       },
                       "CuId": {
@@ -17018,7 +17729,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -17122,7 +17833,7 @@
                                       "GuLi": {
                                         "type": "string",
                                         "maxLength": 38,
-                                        "description": "Line GUID",
+                                        "description": "GUID line",
                                         "format": "uuid"
                                       },
                                       "SoOr": {
@@ -17134,7 +17845,7 @@
                                       "SoGu": {
                                         "type": "string",
                                         "maxLength": 38,
-                                        "description": "Source line GUID",
+                                        "description": "GUID source line",
                                         "format": "uuid"
                                       },
                                       "Ds": {
@@ -17508,7 +18219,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Part item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
+                                                        "description": "Item type component\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -18082,7 +18793,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -18218,7 +18929,7 @@
                       },
                       "PaPc": {
                         "type": "number",
-                        "description": "% Payment discount",
+                        "description": "Payment discount (%)",
                         "format": "number"
                       },
                       "VaPa": {
@@ -18553,7 +19264,7 @@
                                       },
                                       "PRDc": {
                                         "type": "number",
-                                        "description": "Percentage line discount",
+                                        "description": "% Line discount",
                                         "format": "number"
                                       },
                                       "ARDc": {
@@ -18581,7 +19292,7 @@
                                       "SoGu": {
                                         "type": "string",
                                         "maxLength": 38,
-                                        "description": "Source line GUID",
+                                        "description": "GUID source line",
                                         "format": "uuid"
                                       },
                                       "Re": {
@@ -18592,7 +19303,7 @@
                                       "GuLi": {
                                         "type": "string",
                                         "maxLength": 38,
-                                        "description": "Line GUID",
+                                        "description": "GUID line",
                                         "format": "uuid"
                                       },
                                       "StL1": {
@@ -18615,56 +19326,56 @@
                                       "V1Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 1",
+                                        "description": "Exception axis code 1",
                                         "format": ""
                                       },
                                       "V2Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 2",
+                                        "description": "Exception axis code 2",
                                         "format": ""
                                       },
                                       "V3Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 3",
+                                        "description": "Exception axis code 3",
                                         "format": ""
                                       },
                                       "V4Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 4",
+                                        "description": "Exception axis code 4",
                                         "format": ""
                                       },
                                       "V5Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 5",
+                                        "description": "Exception axis code 5",
                                         "format": ""
                                       },
                                       "Di01": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di02": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di03": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di04": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di05": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "MoId": {
@@ -18988,7 +19699,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Part item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
+                                                        "description": "Item type component\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -19542,7 +20253,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -19681,7 +20392,7 @@
                       "PaPc": {
                         "type": "number",
                         "multipleOf": 0.01,
-                        "description": "% Payment discount",
+                        "description": "Payment discount (%)",
                         "format": "float"
                       },
                       "VaPa": {
@@ -20027,7 +20738,7 @@
                                       "PRDc": {
                                         "type": "number",
                                         "multipleOf": 0.01,
-                                        "description": "Percentage line discount",
+                                        "description": "% Line discount",
                                         "format": "float"
                                       },
                                       "ARDc": {
@@ -20056,7 +20767,7 @@
                                       "SoGu": {
                                         "type": "string",
                                         "maxLength": 38,
-                                        "description": "Source line GUID",
+                                        "description": "GUID source line",
                                         "format": "uuid"
                                       },
                                       "Re": {
@@ -20067,7 +20778,7 @@
                                       "GuLi": {
                                         "type": "string",
                                         "maxLength": 38,
-                                        "description": "Line GUID",
+                                        "description": "GUID line",
                                         "format": "uuid"
                                       },
                                       "StL1": {
@@ -20090,56 +20801,56 @@
                                       "V1Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 1",
+                                        "description": "Exception axis code 1",
                                         "format": ""
                                       },
                                       "V2Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 2",
+                                        "description": "Exception axis code 2",
                                         "format": ""
                                       },
                                       "V3Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 3",
+                                        "description": "Exception axis code 3",
                                         "format": ""
                                       },
                                       "V4Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 4",
+                                        "description": "Exception axis code 4",
                                         "format": ""
                                       },
                                       "V5Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 5",
+                                        "description": "Exception axis code 5",
                                         "format": ""
                                       },
                                       "Di01": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di02": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di03": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di04": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di05": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "MoId": {
@@ -20449,7 +21160,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Part item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
+                                                        "description": "Item type component\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -20987,7 +21698,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -21103,7 +21814,7 @@
                       },
                       "PaPc": {
                         "type": "number",
-                        "description": "% Payment discount",
+                        "description": "Payment discount (%)",
                         "format": "number"
                       },
                       "VaPa": {
@@ -21362,7 +22073,7 @@
                                       },
                                       "PRDc": {
                                         "type": "number",
-                                        "description": "Percentage line discount",
+                                        "description": "% Line discount",
                                         "format": "number"
                                       },
                                       "ARDc": {
@@ -21383,7 +22094,7 @@
                                       "GuLi": {
                                         "type": "string",
                                         "maxLength": 38,
-                                        "description": "Line GUID",
+                                        "description": "GUID line",
                                         "format": "uuid"
                                       },
                                       "StL1": {
@@ -21400,57 +22111,57 @@
                                       },
                                       "Di01": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di02": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di03": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di04": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di05": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "V1Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 1",
+                                        "description": "Exception axis code 1",
                                         "format": ""
                                       },
                                       "V2Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 2",
+                                        "description": "Exception axis code 2",
                                         "format": ""
                                       },
                                       "V3Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 3",
+                                        "description": "Exception axis code 3",
                                         "format": ""
                                       },
                                       "V4Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 4",
+                                        "description": "Exception axis code 4",
                                         "format": ""
                                       },
                                       "V5Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 5",
+                                        "description": "Exception axis code 5",
                                         "format": ""
                                       },
                                       "MoId": {
@@ -21774,7 +22485,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Part item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
+                                                        "description": "Item type component\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -22322,7 +23033,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -22441,7 +23152,7 @@
                       "PaPc": {
                         "type": "number",
                         "multipleOf": 0.01,
-                        "description": "% Payment discount",
+                        "description": "Payment discount (%)",
                         "format": "float"
                       },
                       "VaPa": {
@@ -22710,7 +23421,7 @@
                                       "PRDc": {
                                         "type": "number",
                                         "multipleOf": 0.01,
-                                        "description": "Percentage line discount",
+                                        "description": "% Line discount",
                                         "format": "float"
                                       },
                                       "ARDc": {
@@ -22732,7 +23443,7 @@
                                       "GuLi": {
                                         "type": "string",
                                         "maxLength": 38,
-                                        "description": "Line GUID",
+                                        "description": "GUID line",
                                         "format": "uuid"
                                       },
                                       "StL1": {
@@ -22749,57 +23460,57 @@
                                       },
                                       "Di01": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di02": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di03": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di04": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di05": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "V1Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 1",
+                                        "description": "Exception axis code 1",
                                         "format": ""
                                       },
                                       "V2Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 2",
+                                        "description": "Exception axis code 2",
                                         "format": ""
                                       },
                                       "V3Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 3",
+                                        "description": "Exception axis code 3",
                                         "format": ""
                                       },
                                       "V4Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 4",
+                                        "description": "Exception axis code 4",
                                         "format": ""
                                       },
                                       "V5Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 5",
+                                        "description": "Exception axis code 5",
                                         "format": ""
                                       },
                                       "MoId": {
@@ -23109,7 +23820,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Part item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
+                                                        "description": "Item type component\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -24801,7 +25512,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -24917,7 +25628,7 @@
                       },
                       "PaPc": {
                         "type": "number",
-                        "description": "% Payment discount",
+                        "description": "Payment discount (%)",
                         "format": "number"
                       },
                       "VaPa": {
@@ -25055,7 +25766,7 @@
                       },
                       "FcNo": {
                         "type": "integer",
-                        "description": "Forecast number",
+                        "description": "Number forecast",
                         "format": ""
                       },
                       "SbAt": {
@@ -25249,7 +25960,7 @@
                                       },
                                       "PRDc": {
                                         "type": "number",
-                                        "description": "Percentage line discount",
+                                        "description": "% Line discount",
                                         "format": "number"
                                       },
                                       "ARDc": {
@@ -25270,7 +25981,7 @@
                                       "GuLi": {
                                         "type": "string",
                                         "maxLength": 38,
-                                        "description": "Line GUID",
+                                        "description": "GUID line",
                                         "format": "uuid"
                                       },
                                       "StL1": {
@@ -25293,56 +26004,56 @@
                                       "V1Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 1",
+                                        "description": "Exception axis code 1",
                                         "format": ""
                                       },
                                       "V2Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 2",
+                                        "description": "Exception axis code 2",
                                         "format": ""
                                       },
                                       "V3Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 3",
+                                        "description": "Exception axis code 3",
                                         "format": ""
                                       },
                                       "V4Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 4",
+                                        "description": "Exception axis code 4",
                                         "format": ""
                                       },
                                       "V5Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 5",
+                                        "description": "Exception axis code 5",
                                         "format": ""
                                       },
                                       "Di01": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di02": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di03": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di04": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di05": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "MoId": {
@@ -25404,7 +26115,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Part item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
+                                                        "description": "Item type component\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -25671,7 +26382,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -25790,7 +26501,7 @@
                       "PaPc": {
                         "type": "number",
                         "multipleOf": 0.01,
-                        "description": "% Payment discount",
+                        "description": "Payment discount (%)",
                         "format": "float"
                       },
                       "VaPa": {
@@ -25929,7 +26640,7 @@
                       },
                       "FcNo": {
                         "type": "integer",
-                        "description": "Forecast number",
+                        "description": "Number forecast",
                         "format": ""
                       },
                       "SbAt": {
@@ -26133,7 +26844,7 @@
                                       "PRDc": {
                                         "type": "number",
                                         "multipleOf": 0.01,
-                                        "description": "Percentage line discount",
+                                        "description": "% Line discount",
                                         "format": "float"
                                       },
                                       "ARDc": {
@@ -26155,7 +26866,7 @@
                                       "GuLi": {
                                         "type": "string",
                                         "maxLength": 38,
-                                        "description": "Line GUID",
+                                        "description": "GUID line",
                                         "format": "uuid"
                                       },
                                       "StL1": {
@@ -26178,56 +26889,56 @@
                                       "V1Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 1",
+                                        "description": "Exception axis code 1",
                                         "format": ""
                                       },
                                       "V2Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 2",
+                                        "description": "Exception axis code 2",
                                         "format": ""
                                       },
                                       "V3Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 3",
+                                        "description": "Exception axis code 3",
                                         "format": ""
                                       },
                                       "V4Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 4",
+                                        "description": "Exception axis code 4",
                                         "format": ""
                                       },
                                       "V5Cd": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Axis allocation code 5",
+                                        "description": "Exception axis code 5",
                                         "format": ""
                                       },
                                       "Di01": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di02": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di03": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di04": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di05": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "MoId": {
@@ -26283,7 +26994,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Part item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
+                                                        "description": "Item type component\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -26559,7 +27270,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -26675,7 +27386,7 @@
                       },
                       "PaPc": {
                         "type": "number",
-                        "description": "% Payment discount",
+                        "description": "Payment discount (%)",
                         "format": "number"
                       },
                       "VaPa": {
@@ -26879,7 +27590,7 @@
                       "CoDs": {
                         "type": "string",
                         "maxLength": 8,
-                        "description": "Discount/supplement scale",
+                        "description": "Discount/surcharge scale",
                         "format": ""
                       },
                       "FxBl": {
@@ -27144,27 +27855,27 @@
                                       },
                                       "Di01": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di02": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di03": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di04": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di05": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "MoId": {
@@ -27363,7 +28074,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Part item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
+                                                        "description": "Item type component\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -27811,7 +28522,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -27930,7 +28641,7 @@
                       "PaPc": {
                         "type": "number",
                         "multipleOf": 0.01,
-                        "description": "% Payment discount",
+                        "description": "Payment discount (%)",
                         "format": "float"
                       },
                       "VaPa": {
@@ -28136,7 +28847,7 @@
                       "CoDs": {
                         "type": "string",
                         "maxLength": 8,
-                        "description": "Discount/supplement scale",
+                        "description": "Discount/surcharge scale",
                         "format": ""
                       },
                       "FxBl": {
@@ -28415,27 +29126,27 @@
                                       },
                                       "Di01": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di02": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di03": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di04": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di05": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "MoId": {
@@ -28627,7 +29338,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Part item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
+                                                        "description": "Item type component\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {

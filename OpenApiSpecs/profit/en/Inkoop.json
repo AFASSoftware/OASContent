@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "7.7.10",
+    "version": "8.8.11",
     "title": "AFAS Inkoop API",
     "description": "This API describes the endpoints related to Inkoop. Use this API with the functional description of the API."
   },
@@ -199,7 +199,7 @@
     },
     "/Metainfo/{Type}/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
+        "summary": "Retrieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
         "tags": [
           "API Info"
         ],
@@ -350,7 +350,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the data of a custom getconnector based on the endpoint id.",
+        "summary": "Retrieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -442,7 +442,7 @@
             },
             "in": "path",
             "name": "Endpoint",
-            "description": "Add the id of the connector you want to get the data from",
+            "description": "Add the id of connector you want to get the meta info from",
             "required": true
           },
           {
@@ -8004,7 +8004,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -8496,27 +8496,27 @@
                                       },
                                       "Di01": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di02": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di03": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di04": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di05": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "MoId": {
@@ -8924,7 +8924,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -9427,27 +9427,27 @@
                                       },
                                       "Di01": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di02": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di03": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di04": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di05": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "MoId": {
@@ -10153,7 +10153,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -10258,7 +10258,7 @@
                       },
                       "PaPc": {
                         "type": "number",
-                        "description": "% Payment discount",
+                        "description": "Payment discount (%)",
                         "format": "number"
                       },
                       "VaPa": {
@@ -10601,27 +10601,27 @@
                                       },
                                       "Di01": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di02": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di03": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di04": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di05": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "MoId": {
@@ -10802,7 +10802,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -10909,7 +10909,7 @@
                       "PaPc": {
                         "type": "number",
                         "multipleOf": 0.01,
-                        "description": "% Payment discount",
+                        "description": "Payment discount (%)",
                         "format": "float"
                       },
                       "VaPa": {
@@ -11263,27 +11263,27 @@
                                       },
                                       "Di01": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di02": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di03": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di04": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di05": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "MoId": {
@@ -11457,7 +11457,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -11742,10 +11742,11 @@
                           "0",
                           "1",
                           "2",
-                          "3"
+                          "3",
+                          "4"
                         ],
                         "maxLength": 20,
-                        "description": "Cumulative purchasing method\n0 = Purchasing relation;\n1 = By employee;\n2 = Per project;\n3 = Per project/employee;",
+                        "description": "Cumulative purchasing method\n0 = Purchasing relation;\n1 = By employee;\n2 = Per project;\n3 = Per project/employee;\n4 = Per project phase;",
                         "format": ""
                       },
                       "Freq": {
@@ -11997,27 +11998,27 @@
                                       },
                                       "Di01": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di02": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di03": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di04": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di05": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "MoId": {
@@ -12356,7 +12357,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -12643,10 +12644,11 @@
                           "0",
                           "1",
                           "2",
-                          "3"
+                          "3",
+                          "4"
                         ],
                         "maxLength": 20,
-                        "description": "Cumulative purchasing method\n0 = Purchasing relation;\n1 = By employee;\n2 = Per project;\n3 = Per project/employee;",
+                        "description": "Cumulative purchasing method\n0 = Purchasing relation;\n1 = By employee;\n2 = Per project;\n3 = Per project/employee;\n4 = Per project phase;",
                         "format": ""
                       },
                       "Freq": {
@@ -12910,27 +12912,27 @@
                                       },
                                       "Di01": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di02": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di03": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di04": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di05": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "MoId": {
@@ -13320,7 +13322,7 @@
                       },
                       "DaBg": {
                         "type": "string",
-                        "description": "Cycle start date",
+                        "description": "Start date invoice cycle",
                         "format": "date"
                       },
                       "PCoC": {
@@ -13480,27 +13482,27 @@
                                       },
                                       "Di01": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di02": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di03": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di04": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di05": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "DaDe": {
@@ -14127,7 +14129,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -14841,6 +14843,12 @@
                         "description": "Number of Sunday delivery days",
                         "format": ""
                       },
+                      "PoCo": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "POP code",
+                        "format": ""
+                      },
                       "VaTp": {
                         "type": "string",
                         "maxLength": 20,
@@ -14975,7 +14983,7 @@
                                       "CcNr": {
                                         "type": "string",
                                         "maxLength": 30,
-                                        "description": "COC number",
+                                        "description": "CoC number",
                                         "format": ""
                                       },
                                       "CcDa": {
@@ -16682,7 +16690,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -17401,6 +17409,12 @@
                         "description": "Number of Sunday delivery days",
                         "format": ""
                       },
+                      "PoCo": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "POP code",
+                        "format": ""
+                      },
                       "VaTp": {
                         "type": "string",
                         "maxLength": 20,
@@ -17535,7 +17549,7 @@
                                       "CcNr": {
                                         "type": "string",
                                         "maxLength": 30,
-                                        "description": "COC number",
+                                        "description": "CoC number",
                                         "format": ""
                                       },
                                       "CcDa": {
@@ -19198,7 +19212,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -19606,6 +19620,12 @@
                       "DDe7": {
                         "type": "integer",
                         "description": "Number of Sunday delivery days",
+                        "format": ""
+                      },
+                      "PoCo": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "POP code",
                         "format": ""
                       },
                       "VaTp": {
@@ -20167,7 +20187,7 @@
                                       "CcNr": {
                                         "type": "string",
                                         "maxLength": 30,
-                                        "description": "COC number",
+                                        "description": "CoC number",
                                         "format": ""
                                       },
                                       "CcDa": {
@@ -20974,7 +20994,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Language",
                         "format": ""
                       },
@@ -21387,6 +21407,12 @@
                       "DDe7": {
                         "type": "integer",
                         "description": "Number of Sunday delivery days",
+                        "format": ""
+                      },
+                      "PoCo": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "POP code",
                         "format": ""
                       },
                       "VaTp": {
@@ -21948,7 +21974,7 @@
                                       "CcNr": {
                                         "type": "string",
                                         "maxLength": 30,
-                                        "description": "COC number",
+                                        "description": "CoC number",
                                         "format": ""
                                       },
                                       "CcDa": {

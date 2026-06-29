@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "7.7.10",
+    "version": "8.8.11",
     "title": "AFAS Fiscaal API",
     "description": "Deze API beschrijft de endpoints gerelateerd aan Fiscaal. Gebruik deze API met de functionele beschrijving van de API."
   },
@@ -199,7 +199,7 @@
     },
     "/Metainfo/{Type}/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
+        "summary": "Retrieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
         "tags": [
           "API Info"
         ],
@@ -350,7 +350,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the data of a custom getconnector based on the endpoint id.",
+        "summary": "Retrieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -442,7 +442,7 @@
             },
             "in": "path",
             "name": "Endpoint",
-            "description": "Add the id of the connector you want to get the data from",
+            "description": "Add the id of connector you want to get the meta info from",
             "required": true
           },
           {
@@ -6324,7 +6324,7 @@
                                       },
                                       "LgId": {
                                         "type": "string",
-                                        "maxLength": 3,
+                                        "maxLength": 5,
                                         "description": "Taal",
                                         "format": ""
                                       },
@@ -7555,7 +7555,7 @@
                                                                       },
                                                                       "LgId": {
                                                                         "type": "string",
-                                                                        "maxLength": 3,
+                                                                        "maxLength": 5,
                                                                         "description": "Taal",
                                                                         "format": ""
                                                                       },
@@ -31977,7 +31977,7 @@
                                       },
                                       "LgId": {
                                         "type": "string",
-                                        "maxLength": 3,
+                                        "maxLength": 5,
                                         "description": "Taal",
                                         "format": ""
                                       },
@@ -33208,7 +33208,7 @@
                                                                       },
                                                                       "LgId": {
                                                                         "type": "string",
-                                                                        "maxLength": 3,
+                                                                        "maxLength": 5,
                                                                         "description": "Taal",
                                                                         "format": ""
                                                                       },
@@ -58628,7 +58628,7 @@
                                       },
                                       "LgId": {
                                         "type": "string",
-                                        "maxLength": 3,
+                                        "maxLength": 5,
                                         "description": "Taal",
                                         "format": ""
                                       },
@@ -59859,7 +59859,7 @@
                                                                       },
                                                                       "LgId": {
                                                                         "type": "string",
-                                                                        "maxLength": 3,
+                                                                        "maxLength": 5,
                                                                         "description": "Taal",
                                                                         "format": ""
                                                                       },
@@ -86426,7 +86426,7 @@
                                       },
                                       "LgId": {
                                         "type": "string",
-                                        "maxLength": 3,
+                                        "maxLength": 5,
                                         "description": "Taal",
                                         "format": ""
                                       },
@@ -87657,7 +87657,7 @@
                                                                       },
                                                                       "LgId": {
                                                                         "type": "string",
-                                                                        "maxLength": 3,
+                                                                        "maxLength": 5,
                                                                         "description": "Taal",
                                                                         "format": ""
                                                                       },
@@ -113588,7 +113588,7 @@
                                       },
                                       "LgId": {
                                         "type": "string",
-                                        "maxLength": 3,
+                                        "maxLength": 5,
                                         "description": "Taal",
                                         "format": ""
                                       },
@@ -113601,12 +113601,12 @@
                                       "CcNr": {
                                         "type": "string",
                                         "maxLength": 30,
-                                        "description": "KvK-nummer",
+                                        "description": "KVK-nummer",
                                         "format": ""
                                       },
                                       "CcDa": {
                                         "type": "string",
-                                        "description": "Datum KvK",
+                                        "description": "Datum KVK",
                                         "format": "date"
                                       },
                                       "BrNr": {
@@ -114868,7 +114868,7 @@
                                                                       },
                                                                       "LgId": {
                                                                         "type": "string",
-                                                                        "maxLength": 3,
+                                                                        "maxLength": 5,
                                                                         "description": "Taal",
                                                                         "format": ""
                                                                       },
@@ -130308,7 +130308,7 @@
                                                       },
                                                       "F017": {
                                                         "type": "number",
-                                                        "description": "Privé-gebruik auto",
+                                                        "description": "Privé onttrekkingen (auto)",
                                                         "format": "number"
                                                       },
                                                       "F018": {
@@ -130328,7 +130328,7 @@
                                                       },
                                                       "F021": {
                                                         "type": "number",
-                                                        "description": "Huurwaarde bedrijfswoning",
+                                                        "description": "Privé onttrekkingen (bedrijfswoning)",
                                                         "format": "number"
                                                       },
                                                       "F023": {
@@ -130439,7 +130439,7 @@
                                                       },
                                                       "F074": {
                                                         "type": "boolean",
-                                                        "description": "Schadeloosstelingen  buiten winst gehouden?",
+                                                        "description": "Schadeloosstellingen buiten winst gehouden?",
                                                         "format": ""
                                                       },
                                                       "F075": {
@@ -130559,7 +130559,7 @@
                                                       },
                                                       "F108": {
                                                         "type": "number",
-                                                        "description": "Privé-gebruik auto (bijzonder)",
+                                                        "description": "Privé onttrekkingen (bijzondere situaties auto)",
                                                         "format": "number"
                                                       },
                                                       "F109": {
@@ -130614,7 +130614,7 @@
                                                       },
                                                       "F143": {
                                                         "type": "boolean",
-                                                        "description": "Agrarische onderrnemening?",
+                                                        "description": "Agrarische ondernemening?",
                                                         "format": ""
                                                       },
                                                       "F144": {
@@ -131145,7 +131145,7 @@
                                                       },
                                                       "F350": {
                                                         "type": "number",
-                                                        "description": "Overig resultaat ",
+                                                        "description": "Overig resultaat",
                                                         "format": "number"
                                                       },
                                                       "F351": {
@@ -133695,7 +133695,7 @@
                                                       },
                                                       "F016": {
                                                         "type": "number",
-                                                        "description": "Saldo ink.eigen woning",
+                                                        "description": "Saldo ink. eigen woning",
                                                         "format": "number"
                                                       },
                                                       "F017": {
@@ -133720,7 +133720,7 @@
                                                       },
                                                       "F021": {
                                                         "type": "boolean",
-                                                        "description": "Woning is tijdelijk geen hoofdverblijf?",
+                                                        "description": "Woning is tijdelijk geen hoofdverblijf (forfait 1%",
                                                         "format": ""
                                                       },
                                                       "F022": {
@@ -135172,7 +135172,7 @@
                                                       },
                                                       "F010": {
                                                         "type": "number",
-                                                        "description": "Inkomen uit AB ",
+                                                        "description": "Inkomen uit AB",
                                                         "format": "number"
                                                       },
                                                       "F012": {
@@ -135197,7 +135197,7 @@
                                                       },
                                                       "F016": {
                                                         "type": "number",
-                                                        "description": "Reguliere voordelen AB ",
+                                                        "description": "Reguliere voordelen AB",
                                                         "format": "number"
                                                       },
                                                       "F017": {
@@ -135262,7 +135262,7 @@
                                                       },
                                                       "F136": {
                                                         "type": "number",
-                                                        "description": "Bij: toegerekende schulden verbonden personen aan",
+                                                        "description": "Bij: toegerekende schulden verbonden personen aan ",
                                                         "format": "number"
                                                       },
                                                       "F137": {
@@ -142081,12 +142081,12 @@
                                       "CcNr": {
                                         "type": "string",
                                         "maxLength": 30,
-                                        "description": "KvK-nummer",
+                                        "description": "KVK-nummer",
                                         "format": ""
                                       },
                                       "CcDa": {
                                         "type": "string",
-                                        "description": "Datum KvK",
+                                        "description": "Datum KVK",
                                         "format": "date"
                                       },
                                       "BrNr": {
@@ -142242,7 +142242,7 @@
                                       },
                                       "LgId": {
                                         "type": "string",
-                                        "maxLength": 3,
+                                        "maxLength": 5,
                                         "description": "Taal",
                                         "format": ""
                                       },
@@ -143447,7 +143447,7 @@
                                                                       },
                                                                       "LgId": {
                                                                         "type": "string",
-                                                                        "maxLength": 3,
+                                                                        "maxLength": 5,
                                                                         "description": "Taal",
                                                                         "format": ""
                                                                       },
@@ -149797,12 +149797,12 @@
                                       "CcNr": {
                                         "type": "string",
                                         "maxLength": 30,
-                                        "description": "KvK-nummer",
+                                        "description": "KVK-nummer",
                                         "format": ""
                                       },
                                       "CcDa": {
                                         "type": "string",
-                                        "description": "Datum KvK",
+                                        "description": "Datum KVK",
                                         "format": "date"
                                       },
                                       "BrNr": {
@@ -149958,7 +149958,7 @@
                                       },
                                       "LgId": {
                                         "type": "string",
-                                        "maxLength": 3,
+                                        "maxLength": 5,
                                         "description": "Taal",
                                         "format": ""
                                       },
@@ -151163,7 +151163,7 @@
                                                                       },
                                                                       "LgId": {
                                                                         "type": "string",
-                                                                        "maxLength": 3,
+                                                                        "maxLength": 5,
                                                                         "description": "Taal",
                                                                         "format": ""
                                                                       },
@@ -157651,12 +157651,12 @@
                                       "CcNr": {
                                         "type": "string",
                                         "maxLength": 30,
-                                        "description": "KvK-nummer",
+                                        "description": "KVK-nummer",
                                         "format": ""
                                       },
                                       "CcDa": {
                                         "type": "string",
-                                        "description": "Datum KvK",
+                                        "description": "Datum KVK",
                                         "format": "date"
                                       },
                                       "BrNr": {
@@ -157812,7 +157812,7 @@
                                       },
                                       "LgId": {
                                         "type": "string",
-                                        "maxLength": 3,
+                                        "maxLength": 5,
                                         "description": "Taal",
                                         "format": ""
                                       },
@@ -159017,7 +159017,7 @@
                                                                       },
                                                                       "LgId": {
                                                                         "type": "string",
-                                                                        "maxLength": 3,
+                                                                        "maxLength": 5,
                                                                         "description": "Taal",
                                                                         "format": ""
                                                                       },
@@ -165526,12 +165526,12 @@
                                       "CcNr": {
                                         "type": "string",
                                         "maxLength": 30,
-                                        "description": "KvK-nummer",
+                                        "description": "KVK-nummer",
                                         "format": ""
                                       },
                                       "CcDa": {
                                         "type": "string",
-                                        "description": "Datum KvK",
+                                        "description": "Datum KVK",
                                         "format": "date"
                                       },
                                       "BrNr": {
@@ -165687,7 +165687,7 @@
                                       },
                                       "LgId": {
                                         "type": "string",
-                                        "maxLength": 3,
+                                        "maxLength": 5,
                                         "description": "Taal",
                                         "format": ""
                                       },
@@ -166892,7 +166892,7 @@
                                                                       },
                                                                       "LgId": {
                                                                         "type": "string",
-                                                                        "maxLength": 3,
+                                                                        "maxLength": 5,
                                                                         "description": "Taal",
                                                                         "format": ""
                                                                       },
@@ -173534,12 +173534,12 @@
                                       "CcNr": {
                                         "type": "string",
                                         "maxLength": 30,
-                                        "description": "KvK-nummer",
+                                        "description": "KVK-nummer",
                                         "format": ""
                                       },
                                       "CcDa": {
                                         "type": "string",
-                                        "description": "Datum KvK",
+                                        "description": "Datum KVK",
                                         "format": "date"
                                       },
                                       "BrNr": {
@@ -173695,7 +173695,7 @@
                                       },
                                       "LgId": {
                                         "type": "string",
-                                        "maxLength": 3,
+                                        "maxLength": 5,
                                         "description": "Taal",
                                         "format": ""
                                       },
@@ -174900,7 +174900,7 @@
                                                                       },
                                                                       "LgId": {
                                                                         "type": "string",
-                                                                        "maxLength": 3,
+                                                                        "maxLength": 5,
                                                                         "description": "Taal",
                                                                         "format": ""
                                                                       },

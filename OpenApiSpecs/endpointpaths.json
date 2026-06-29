@@ -470,20 +470,6 @@
       "descriptionEn": "Presence"
     }
   },
-  "SubjectConnector": {
-    "get": {
-      "descriptionNl": "",
-      "url": "Dossiers en bijlagen en workflows#get-/connectors/SubjectConnector",
-      "descriptionEn": ""
-    }
-  },
-  "FileConnector": {
-    "get": {
-      "descriptionNl": "",
-      "url": "Dossiers en bijlagen en workflows#get-/connectors/FileConnector",
-      "descriptionEn": ""
-    }
-  },
   "KnSubject": {
     "post": {
       "descriptionNl": "Dossier",
@@ -535,6 +521,13 @@
       "descriptionNl": "Workflow reactie",
       "url": "Dossiers en bijlagen en workflows#post-/connectors/KnSubjectWorkflowReaction",
       "descriptionEn": "Workflow response"
+    }
+  },
+  "FileConnector": {
+    "get": {
+      "descriptionNl": "",
+      "url": "Dossiers en bijlagen en workflows#get-/connectors/FileConnector",
+      "descriptionEn": ""
     }
   },
   "Profit_FeatureCombination": {
@@ -626,6 +619,13 @@
       "descriptionNl": "Dossieritems (incl. autorisatie)",
       "url": "Dossiers en bijlagen en workflows#get-/connectors/ProfitSubjectsAuthorized",
       "descriptionEn": "File items (with authorisation)"
+    }
+  },
+  "SubjectConnector": {
+    "get": {
+      "descriptionNl": "",
+      "url": "Dossiers en bijlagen en workflows#get-/connectors/SubjectConnector",
+      "descriptionEn": ""
     }
   },
   "FiIVY": {
@@ -1176,27 +1176,6 @@
       "descriptionEn": "Purchase contact - person"
     }
   },
-  "ReportConnector": {
-    "get": {
-      "descriptionNl": "Rapport genereren en ophalen",
-      "url": "Inrichting#get-/connectors/ReportConnector",
-      "descriptionEn": "Create and retrieve report"
-    }
-  },
-  "OtpRequest": {
-    "post": {
-      "descriptionNl": "OTP aanvragen",
-      "url": "Inrichting#post-/connectors/OtpRequest",
-      "descriptionEn": "Request OTP (one-time password)"
-    }
-  },
-  "OtpValidation": {
-    "post": {
-      "descriptionNl": "OTP valideren",
-      "url": "Inrichting#post-/connectors/OtpValidation",
-      "descriptionEn": "Validate OTP (one-time password)"
-    }
-  },
   "KnCSRLine": {
     "post": {
       "descriptionNl": "CSR",
@@ -1231,21 +1210,157 @@
       "descriptionEn": "Custom file 01"
     }
   },
-  "KnCustomLinkC01": {
+  "KnCustomK02": {
     "post": {
-      "descriptionNl": "Vrij contactbestand 01",
-      "url": "Inrichting#post-/connectors/KnCustomLinkC01",
-      "descriptionEn": "Custom contact file 01"
+      "descriptionNl": "Vrij bestand 02",
+      "url": "Inrichting#post-/connectors/KnCustomK02",
+      "descriptionEn": "Custom file 02"
     },
     "put": {
-      "descriptionNl": "Vrij contactbestand 01",
-      "url": "Inrichting#put-/connectors/KnCustomLinkC01",
-      "descriptionEn": "Custom contact file 01"
+      "descriptionNl": "Vrij bestand 02",
+      "url": "Inrichting#put-/connectors/KnCustomK02",
+      "descriptionEn": "Custom file 02"
     },
     "delete": {
-      "descriptionNl": "Vrij contactbestand 01",
-      "url": "Inrichting#delete-/connectors/KnCustomLinkC01/KnCustomLinkC01/@SqNo/-SqNo-",
-      "descriptionEn": "Custom contact file 01"
+      "descriptionNl": "Vrij bestand 02",
+      "url": "Inrichting#delete-/connectors/KnCustomK02/KnCustomK02/@SqNo/-SqNo-",
+      "descriptionEn": "Custom file 02"
+    }
+  },
+  "KnCustomK03": {
+    "post": {
+      "descriptionNl": "Vrij bestand 03",
+      "url": "Inrichting#post-/connectors/KnCustomK03",
+      "descriptionEn": "Custom file 03"
+    },
+    "put": {
+      "descriptionNl": "Vrij bestand 03",
+      "url": "Inrichting#put-/connectors/KnCustomK03",
+      "descriptionEn": "Custom file 03"
+    },
+    "delete": {
+      "descriptionNl": "Vrij bestand 03",
+      "url": "Inrichting#delete-/connectors/KnCustomK03/KnCustomK03/@SqNo/-SqNo-",
+      "descriptionEn": "Custom file 03"
+    }
+  },
+  "KnCustomK04": {
+    "post": {
+      "descriptionNl": "Vrij bestand 04",
+      "url": "Inrichting#post-/connectors/KnCustomK04",
+      "descriptionEn": "Custom file 04"
+    },
+    "put": {
+      "descriptionNl": "Vrij bestand 04",
+      "url": "Inrichting#put-/connectors/KnCustomK04",
+      "descriptionEn": "Custom file 04"
+    },
+    "delete": {
+      "descriptionNl": "Vrij bestand 04",
+      "url": "Inrichting#delete-/connectors/KnCustomK04/KnCustomK04/@SqNo/-SqNo-",
+      "descriptionEn": "Custom file 04"
+    }
+  },
+  "KnCustomK05": {
+    "post": {
+      "descriptionNl": "Vrij bestand 05",
+      "url": "Inrichting#post-/connectors/KnCustomK05",
+      "descriptionEn": "Custom file 05"
+    },
+    "put": {
+      "descriptionNl": "Vrij bestand 05",
+      "url": "Inrichting#put-/connectors/KnCustomK05",
+      "descriptionEn": "Custom file 05"
+    },
+    "delete": {
+      "descriptionNl": "Vrij bestand 05",
+      "url": "Inrichting#delete-/connectors/KnCustomK05/KnCustomK05/@SqNo/-SqNo-",
+      "descriptionEn": "Custom file 05"
+    }
+  },
+  "KnCustomK06": {
+    "post": {
+      "descriptionNl": "Vrij bestand 06",
+      "url": "Inrichting#post-/connectors/KnCustomK06",
+      "descriptionEn": "Custom file 06"
+    },
+    "put": {
+      "descriptionNl": "Vrij bestand 06",
+      "url": "Inrichting#put-/connectors/KnCustomK06",
+      "descriptionEn": "Custom file 06"
+    },
+    "delete": {
+      "descriptionNl": "Vrij bestand 06",
+      "url": "Inrichting#delete-/connectors/KnCustomK06/KnCustomK06/@SqNo/-SqNo-",
+      "descriptionEn": "Custom file 06"
+    }
+  },
+  "KnCustomK07": {
+    "post": {
+      "descriptionNl": "Vrij bestand 07",
+      "url": "Inrichting#post-/connectors/KnCustomK07",
+      "descriptionEn": "Custom file 07"
+    },
+    "put": {
+      "descriptionNl": "Vrij bestand 07",
+      "url": "Inrichting#put-/connectors/KnCustomK07",
+      "descriptionEn": "Custom file 07"
+    },
+    "delete": {
+      "descriptionNl": "Vrij bestand 07",
+      "url": "Inrichting#delete-/connectors/KnCustomK07/KnCustomK07/@SqNo/-SqNo-",
+      "descriptionEn": "Custom file 07"
+    }
+  },
+  "KnCustomK08": {
+    "post": {
+      "descriptionNl": "Vrij bestand 08",
+      "url": "Inrichting#post-/connectors/KnCustomK08",
+      "descriptionEn": "Custom file 08"
+    },
+    "put": {
+      "descriptionNl": "Vrij bestand 08",
+      "url": "Inrichting#put-/connectors/KnCustomK08",
+      "descriptionEn": "Custom file 08"
+    },
+    "delete": {
+      "descriptionNl": "Vrij bestand 08",
+      "url": "Inrichting#delete-/connectors/KnCustomK08/KnCustomK08/@SqNo/-SqNo-",
+      "descriptionEn": "Custom file 08"
+    }
+  },
+  "KnCustomK09": {
+    "post": {
+      "descriptionNl": "Vrij bestand 09",
+      "url": "Inrichting#post-/connectors/KnCustomK09",
+      "descriptionEn": "Custom file 09"
+    },
+    "put": {
+      "descriptionNl": "Vrij bestand 09",
+      "url": "Inrichting#put-/connectors/KnCustomK09",
+      "descriptionEn": "Custom file 09"
+    },
+    "delete": {
+      "descriptionNl": "Vrij bestand 09",
+      "url": "Inrichting#delete-/connectors/KnCustomK09/KnCustomK09/@SqNo/-SqNo-",
+      "descriptionEn": "Custom file 09"
+    }
+  },
+  "KnCustomK10": {
+    "post": {
+      "descriptionNl": "Vrij bestand 10",
+      "url": "Inrichting#post-/connectors/KnCustomK10",
+      "descriptionEn": "Custom file 10"
+    },
+    "put": {
+      "descriptionNl": "Vrij bestand 10",
+      "url": "Inrichting#put-/connectors/KnCustomK10",
+      "descriptionEn": "Custom file 10"
+    },
+    "delete": {
+      "descriptionNl": "Vrij bestand 10",
+      "url": "Inrichting#delete-/connectors/KnCustomK10/KnCustomK10/@SqNo/-SqNo-",
+      "descriptionEn": "Custom file 10"
     }
   },
   "KnKpiRow": {
@@ -1265,6 +1380,27 @@
       "descriptionEn": "KPI line"
     }
   },
+  "KnPeppol": {
+    "post": {
+      "descriptionNl": "PeppolCallback",
+      "url": "Inrichting#post-/connectors/KnPeppol",
+      "descriptionEn": "PeppolCallback"
+    }
+  },
+  "OtpRequest": {
+    "post": {
+      "descriptionNl": "",
+      "url": "Inrichting#post-/connectors/OtpRequest",
+      "descriptionEn": ""
+    }
+  },
+  "OtpValidation": {
+    "post": {
+      "descriptionNl": "",
+      "url": "Inrichting#post-/connectors/OtpValidation",
+      "descriptionEn": ""
+    }
+  },
   "ProfitCodeTableValue": {
     "get": {
       "descriptionNl": "Vrije tabellen",
@@ -1277,6 +1413,13 @@
       "descriptionNl": "GetConnector",
       "url": "Inrichting#get-/connectors/ProfitGetConnectoren",
       "descriptionEn": "GetConnector"
+    }
+  },
+  "ReportConnector": {
+    "get": {
+      "descriptionNl": "",
+      "url": "Inrichting#get-/connectors/ReportConnector",
+      "descriptionEn": ""
     }
   },
   "HrCalculationplan": {
@@ -1914,6 +2057,329 @@
       "descriptionEn": "Exchange rate update"
     }
   },
+  "KnCustomLinkC01": {
+    "post": {
+      "descriptionNl": "Vrij contactbestand 01",
+      "url": "Organisaties en personen#post-/connectors/KnCustomLinkC01",
+      "descriptionEn": "Custom contact file 01"
+    },
+    "put": {
+      "descriptionNl": "Vrij contactbestand 01",
+      "url": "Organisaties en personen#put-/connectors/KnCustomLinkC01",
+      "descriptionEn": "Custom contact file 01"
+    },
+    "delete": {
+      "descriptionNl": "Vrij contactbestand 01",
+      "url": "Organisaties en personen#delete-/connectors/KnCustomLinkC01/KnCustomLinkC01/@SqNo/-SqNo-",
+      "descriptionEn": "Custom contact file 01"
+    }
+  },
+  "KnCustomLinkC03": {
+    "post": {
+      "descriptionNl": "Vrij contactbestand 03",
+      "url": "Organisaties en personen#post-/connectors/KnCustomLinkC03",
+      "descriptionEn": "Custom contact file 03"
+    },
+    "put": {
+      "descriptionNl": "Vrij contactbestand 03",
+      "url": "Organisaties en personen#put-/connectors/KnCustomLinkC03",
+      "descriptionEn": "Custom contact file 03"
+    },
+    "delete": {
+      "descriptionNl": "Vrij contactbestand 03",
+      "url": "Organisaties en personen#delete-/connectors/KnCustomLinkC03/KnCustomLinkC03/@SqNo/-SqNo-",
+      "descriptionEn": "Custom contact file 03"
+    }
+  },
+  "KnCustomLinkC04": {
+    "post": {
+      "descriptionNl": "Vrij contactbestand 04",
+      "url": "Organisaties en personen#post-/connectors/KnCustomLinkC04",
+      "descriptionEn": "Custom contact file 04"
+    },
+    "put": {
+      "descriptionNl": "Vrij contactbestand 04",
+      "url": "Organisaties en personen#put-/connectors/KnCustomLinkC04",
+      "descriptionEn": "Custom contact file 04"
+    },
+    "delete": {
+      "descriptionNl": "Vrij contactbestand 04",
+      "url": "Organisaties en personen#delete-/connectors/KnCustomLinkC04/KnCustomLinkC04/@SqNo/-SqNo-",
+      "descriptionEn": "Custom contact file 04"
+    }
+  },
+  "KnCustomLinkC05": {
+    "post": {
+      "descriptionNl": "Vrij contactbestand 05",
+      "url": "Organisaties en personen#post-/connectors/KnCustomLinkC05",
+      "descriptionEn": "Custom contact file 05"
+    },
+    "put": {
+      "descriptionNl": "Vrij contactbestand 05",
+      "url": "Organisaties en personen#put-/connectors/KnCustomLinkC05",
+      "descriptionEn": "Custom contact file 05"
+    },
+    "delete": {
+      "descriptionNl": "Vrij contactbestand 05",
+      "url": "Organisaties en personen#delete-/connectors/KnCustomLinkC05/KnCustomLinkC05/@SqNo/-SqNo-",
+      "descriptionEn": "Custom contact file 05"
+    }
+  },
+  "KnCustomLinkC06": {
+    "post": {
+      "descriptionNl": "Vrij contactbestand 06",
+      "url": "Organisaties en personen#post-/connectors/KnCustomLinkC06",
+      "descriptionEn": "Custom contact file 06"
+    },
+    "put": {
+      "descriptionNl": "Vrij contactbestand 06",
+      "url": "Organisaties en personen#put-/connectors/KnCustomLinkC06",
+      "descriptionEn": "Custom contact file 06"
+    },
+    "delete": {
+      "descriptionNl": "Vrij contactbestand 06",
+      "url": "Organisaties en personen#delete-/connectors/KnCustomLinkC06/KnCustomLinkC06/@SqNo/-SqNo-",
+      "descriptionEn": "Custom contact file 06"
+    }
+  },
+  "KnCustomLinkC07": {
+    "post": {
+      "descriptionNl": "Vrij contactbestand 07",
+      "url": "Organisaties en personen#post-/connectors/KnCustomLinkC07",
+      "descriptionEn": "Custom contact file 07"
+    },
+    "put": {
+      "descriptionNl": "Vrij contactbestand 07",
+      "url": "Organisaties en personen#put-/connectors/KnCustomLinkC07",
+      "descriptionEn": "Custom contact file 07"
+    },
+    "delete": {
+      "descriptionNl": "Vrij contactbestand 07",
+      "url": "Organisaties en personen#delete-/connectors/KnCustomLinkC07/KnCustomLinkC07/@SqNo/-SqNo-",
+      "descriptionEn": "Custom contact file 07"
+    }
+  },
+  "KnCustomLinkC08": {
+    "post": {
+      "descriptionNl": "Vrij contactbestand 08",
+      "url": "Organisaties en personen#post-/connectors/KnCustomLinkC08",
+      "descriptionEn": "Custom contact file 08"
+    },
+    "put": {
+      "descriptionNl": "Vrij contactbestand 08",
+      "url": "Organisaties en personen#put-/connectors/KnCustomLinkC08",
+      "descriptionEn": "Custom contact file 08"
+    },
+    "delete": {
+      "descriptionNl": "Vrij contactbestand 08",
+      "url": "Organisaties en personen#delete-/connectors/KnCustomLinkC08/KnCustomLinkC08/@SqNo/-SqNo-",
+      "descriptionEn": "Custom contact file 08"
+    }
+  },
+  "KnCustomLinkC09": {
+    "post": {
+      "descriptionNl": "Vrij contactbestand 09",
+      "url": "Organisaties en personen#post-/connectors/KnCustomLinkC09",
+      "descriptionEn": "Custom contact file 09"
+    },
+    "put": {
+      "descriptionNl": "Vrij contactbestand 09",
+      "url": "Organisaties en personen#put-/connectors/KnCustomLinkC09",
+      "descriptionEn": "Custom contact file 09"
+    },
+    "delete": {
+      "descriptionNl": "Vrij contactbestand 09",
+      "url": "Organisaties en personen#delete-/connectors/KnCustomLinkC09/KnCustomLinkC09/@SqNo/-SqNo-",
+      "descriptionEn": "Custom contact file 09"
+    }
+  },
+  "KnCustomLinkC10": {
+    "post": {
+      "descriptionNl": "Vrij contactbestand 10",
+      "url": "Organisaties en personen#post-/connectors/KnCustomLinkC10",
+      "descriptionEn": "Custom contact file 10"
+    },
+    "put": {
+      "descriptionNl": "Vrij contactbestand 10",
+      "url": "Organisaties en personen#put-/connectors/KnCustomLinkC10",
+      "descriptionEn": "Custom contact file 10"
+    },
+    "delete": {
+      "descriptionNl": "Vrij contactbestand 10",
+      "url": "Organisaties en personen#delete-/connectors/KnCustomLinkC10/KnCustomLinkC10/@SqNo/-SqNo-",
+      "descriptionEn": "Custom contact file 10"
+    }
+  },
+  "KnCustomLinkC11": {
+    "post": {
+      "descriptionNl": "Vrij contactbestand 11",
+      "url": "Organisaties en personen#post-/connectors/KnCustomLinkC11",
+      "descriptionEn": "Custom contact file 11"
+    },
+    "put": {
+      "descriptionNl": "Vrij contactbestand 11",
+      "url": "Organisaties en personen#put-/connectors/KnCustomLinkC11",
+      "descriptionEn": "Custom contact file 11"
+    },
+    "delete": {
+      "descriptionNl": "Vrij contactbestand 11",
+      "url": "Organisaties en personen#delete-/connectors/KnCustomLinkC11/KnCustomLinkC11/@SqNo/-SqNo-",
+      "descriptionEn": "Custom contact file 11"
+    }
+  },
+  "KnCustomLinkC12": {
+    "post": {
+      "descriptionNl": "Vrij contactbestand 12",
+      "url": "Organisaties en personen#post-/connectors/KnCustomLinkC12",
+      "descriptionEn": "Custom contact file 12"
+    },
+    "put": {
+      "descriptionNl": "Vrij contactbestand 12",
+      "url": "Organisaties en personen#put-/connectors/KnCustomLinkC12",
+      "descriptionEn": "Custom contact file 12"
+    },
+    "delete": {
+      "descriptionNl": "Vrij contactbestand 12",
+      "url": "Organisaties en personen#delete-/connectors/KnCustomLinkC12/KnCustomLinkC12/@SqNo/-SqNo-",
+      "descriptionEn": "Custom contact file 12"
+    }
+  },
+  "KnCustomLinkC13": {
+    "post": {
+      "descriptionNl": "Vrij contactbestand 13",
+      "url": "Organisaties en personen#post-/connectors/KnCustomLinkC13",
+      "descriptionEn": "Custom contact file 13"
+    },
+    "put": {
+      "descriptionNl": "Vrij contactbestand 13",
+      "url": "Organisaties en personen#put-/connectors/KnCustomLinkC13",
+      "descriptionEn": "Custom contact file 13"
+    },
+    "delete": {
+      "descriptionNl": "Vrij contactbestand 13",
+      "url": "Organisaties en personen#delete-/connectors/KnCustomLinkC13/KnCustomLinkC13/@SqNo/-SqNo-",
+      "descriptionEn": "Custom contact file 13"
+    }
+  },
+  "KnCustomLinkC14": {
+    "post": {
+      "descriptionNl": "Vrij contactbestand 14",
+      "url": "Organisaties en personen#post-/connectors/KnCustomLinkC14",
+      "descriptionEn": "Custom contact file 14"
+    },
+    "put": {
+      "descriptionNl": "Vrij contactbestand 14",
+      "url": "Organisaties en personen#put-/connectors/KnCustomLinkC14",
+      "descriptionEn": "Custom contact file 14"
+    },
+    "delete": {
+      "descriptionNl": "Vrij contactbestand 14",
+      "url": "Organisaties en personen#delete-/connectors/KnCustomLinkC14/KnCustomLinkC14/@SqNo/-SqNo-",
+      "descriptionEn": "Custom contact file 14"
+    }
+  },
+  "KnCustomLinkC15": {
+    "post": {
+      "descriptionNl": "Vrij contactbestand 15",
+      "url": "Organisaties en personen#post-/connectors/KnCustomLinkC15",
+      "descriptionEn": "Custom contact file 15"
+    },
+    "put": {
+      "descriptionNl": "Vrij contactbestand 15",
+      "url": "Organisaties en personen#put-/connectors/KnCustomLinkC15",
+      "descriptionEn": "Custom contact file 15"
+    },
+    "delete": {
+      "descriptionNl": "Vrij contactbestand 15",
+      "url": "Organisaties en personen#delete-/connectors/KnCustomLinkC15/KnCustomLinkC15/@SqNo/-SqNo-",
+      "descriptionEn": "Custom contact file 15"
+    }
+  },
+  "KnCustomLinkC16": {
+    "post": {
+      "descriptionNl": "Vrij contactbestand 16",
+      "url": "Organisaties en personen#post-/connectors/KnCustomLinkC16",
+      "descriptionEn": "Custom contact file 16"
+    },
+    "put": {
+      "descriptionNl": "Vrij contactbestand 16",
+      "url": "Organisaties en personen#put-/connectors/KnCustomLinkC16",
+      "descriptionEn": "Custom contact file 16"
+    },
+    "delete": {
+      "descriptionNl": "Vrij contactbestand 16",
+      "url": "Organisaties en personen#delete-/connectors/KnCustomLinkC16/KnCustomLinkC16/@SqNo/-SqNo-",
+      "descriptionEn": "Custom contact file 16"
+    }
+  },
+  "KnCustomLinkC17": {
+    "post": {
+      "descriptionNl": "Vrij contactbestand 17",
+      "url": "Organisaties en personen#post-/connectors/KnCustomLinkC17",
+      "descriptionEn": "Custom contact file 17"
+    },
+    "put": {
+      "descriptionNl": "Vrij contactbestand 17",
+      "url": "Organisaties en personen#put-/connectors/KnCustomLinkC17",
+      "descriptionEn": "Custom contact file 17"
+    },
+    "delete": {
+      "descriptionNl": "Vrij contactbestand 17",
+      "url": "Organisaties en personen#delete-/connectors/KnCustomLinkC17/KnCustomLinkC17/@SqNo/-SqNo-",
+      "descriptionEn": "Custom contact file 17"
+    }
+  },
+  "KnCustomLinkC18": {
+    "post": {
+      "descriptionNl": "Vrij contactbestand 18",
+      "url": "Organisaties en personen#post-/connectors/KnCustomLinkC18",
+      "descriptionEn": "Custom contact file 18"
+    },
+    "put": {
+      "descriptionNl": "Vrij contactbestand 18",
+      "url": "Organisaties en personen#put-/connectors/KnCustomLinkC18",
+      "descriptionEn": "Custom contact file 18"
+    },
+    "delete": {
+      "descriptionNl": "Vrij contactbestand 18",
+      "url": "Organisaties en personen#delete-/connectors/KnCustomLinkC18/KnCustomLinkC18/@SqNo/-SqNo-",
+      "descriptionEn": "Custom contact file 18"
+    }
+  },
+  "KnCustomLinkC19": {
+    "post": {
+      "descriptionNl": "Vrij contactbestand 19",
+      "url": "Organisaties en personen#post-/connectors/KnCustomLinkC19",
+      "descriptionEn": "Custom contact file 19"
+    },
+    "put": {
+      "descriptionNl": "Vrij contactbestand 19",
+      "url": "Organisaties en personen#put-/connectors/KnCustomLinkC19",
+      "descriptionEn": "Custom contact file 19"
+    },
+    "delete": {
+      "descriptionNl": "Vrij contactbestand 19",
+      "url": "Organisaties en personen#delete-/connectors/KnCustomLinkC19/KnCustomLinkC19/@SqNo/-SqNo-",
+      "descriptionEn": "Custom contact file 19"
+    }
+  },
+  "KnCustomLinkC20": {
+    "post": {
+      "descriptionNl": "Vrij contactbestand 20",
+      "url": "Organisaties en personen#post-/connectors/KnCustomLinkC20",
+      "descriptionEn": "Custom contact file 20"
+    },
+    "put": {
+      "descriptionNl": "Vrij contactbestand 20",
+      "url": "Organisaties en personen#put-/connectors/KnCustomLinkC20",
+      "descriptionEn": "Custom contact file 20"
+    },
+    "delete": {
+      "descriptionNl": "Vrij contactbestand 20",
+      "url": "Organisaties en personen#delete-/connectors/KnCustomLinkC20/KnCustomLinkC20/@SqNo/-SqNo-",
+      "descriptionEn": "Custom contact file 20"
+    }
+  },
   "KnOrganisation": {
     "post": {
       "descriptionNl": "Organisatie",
@@ -2349,9 +2815,9 @@
     }
   },
   "KnPocketNotStatus": {
-    "put": {
+    "post": {
       "descriptionNl": "Pocket-notificatiestatus",
-      "url": "Overige#put-/connectors/KnPocketNotStatus",
+      "url": "Overige#post-/connectors/KnPocketNotStatus",
       "descriptionEn": "Pocket notification status"
     }
   },
@@ -2620,6 +3086,18 @@
       "descriptionNl": "Forecast",
       "url": "Verkoop en Orders#delete-/connectors/CmForecast/CmForecast/@PrId,@SqNo/-PrId-,-SqNo-",
       "descriptionEn": "Forecast"
+    }
+  },
+  "CmForecastContactMoment": {
+    "post": {
+      "descriptionNl": "Contactmoment forecast",
+      "url": "Verkoop en Orders#post-/connectors/CmForecastContactMoment",
+      "descriptionEn": "Forecast contact moment"
+    },
+    "put": {
+      "descriptionNl": "Contactmoment forecast",
+      "url": "Verkoop en Orders#put-/connectors/CmForecastContactMoment",
+      "descriptionEn": "Forecast contact moment"
     }
   },
   "FbAssembly": {

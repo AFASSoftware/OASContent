@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "7.7.10",
+    "version": "8.8.11",
     "title": "AFAS Flex API",
     "description": "This API describes the endpoints related to Flex. Use this API with the functional description of the API."
   },
@@ -199,7 +199,7 @@
     },
     "/Metainfo/{Type}/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
+        "summary": "Retrieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
         "tags": [
           "API Info"
         ],
@@ -350,7 +350,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the data of a custom getconnector based on the endpoint id.",
+        "summary": "Retrieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -442,7 +442,7 @@
             },
             "in": "path",
             "name": "Endpoint",
-            "description": "Add the id of the connector you want to get the data from",
+            "description": "Add the id of connector you want to get the meta info from",
             "required": true
           },
           {
@@ -4638,7 +4638,7 @@
           "name": "PtItpDaBe",
           "in": "path",
           "required": true,
-          "description": "Begindatum CBS cao-code"
+          "description": "Begindatum\n            CBS cao-code"
         }
       ],
       "delete": {
@@ -6670,7 +6670,7 @@
                           },
                           "ChOfCommNr": {
                             "type": "string",
-                            "description": "COC number"
+                            "description": "CoC number"
                           },
                           "CollectAccount": {
                             "type": "string",
@@ -7636,7 +7636,7 @@
                                           "K"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Phase\nO = Unknown or N.A.;\n1 = Phase 1 with temporary employment clause (up to 2019);\n12 = Phase 1-2 with temporary employment clause;\n13 = Phase 1-2 without temporary employment clause;\n14 = Phase 1-2 without temp. employment clause with exclusion of the cont. payment of wages obligation;\nAU = Phase A with transmission request;\nB = Phase B;\nC = Phase C;\n2 = Phase 2 with temporary employment clause (up to 2019);\n3 = Phase 3;\nAZU = Phase A without temporary employment clause, with exclusion of obligation for continued payment;\n4 = Phase 4;\nAZ = Phase A without transmission condition;\n41 = Phase 1 without temporary employment clause (up to 2019);\n42 = Phase 2 without temporary employment clause (up to 2019);\n43 = Phase 1 without temporary employment clause with exclusion of the continued payment of wages obligat;\n44 = Phase 2 without temporary employment clause with exclusion of the continued payment of wages obligat;\nW = Legal regime;\nK = Chain system;",
+                                        "description": "Phase\nO = Unknown or N.A.;\n1 = Phase 1 with temporary employment clause (up to 2019);\n12 = Phase 1-2 with temporary employment clause;\n13 = Phase 1-2 without temporary employment clause;\n14 = Phase 1-2 without temp. employment clause with exclusion of the cont. payment of wages obligation;\nAU = Phase A with transmission request;\nB = Phase B;\nC = Phase C;\n2 = Phase 2 with temporary employment clause (up to 2019);\n3 = Phase 3;\nAZU = Phase A without temporary employment clause, with exclusion of obligation for continued payment;\n4 = Phase 4;\nAZ = Phase A without transmission condition;\n41 = Phase 1 without temporary employment clause (up to 2019);\n42 = Phase 2 without temporary employment clause (up to 2019);\n43 = Phase 1 without temp. employm. clause with exclus. of  contd. payment of wages obligat. (up to 2019);\n44 = Phase 2 without temp. employm. clause with exclus. of contind. paymnt of wages obligat. (up to 2019);\nW = Legal regime;\nK = Chain system;",
                                         "format": ""
                                       },
                                       "ViSe": {
@@ -7891,7 +7891,7 @@
                                           "K"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Phase\nO = Unknown or N.A.;\n1 = Phase 1 with temporary employment clause (up to 2019);\n12 = Phase 1-2 with temporary employment clause;\n13 = Phase 1-2 without temporary employment clause;\n14 = Phase 1-2 without temp. employment clause with exclusion of the cont. payment of wages obligation;\nAU = Phase A with transmission request;\nB = Phase B;\nC = Phase C;\n2 = Phase 2 with temporary employment clause (up to 2019);\n3 = Phase 3;\nAZU = Phase A without temporary employment clause, with exclusion of obligation for continued payment;\n4 = Phase 4;\nAZ = Phase A without transmission condition;\n41 = Phase 1 without temporary employment clause (up to 2019);\n42 = Phase 2 without temporary employment clause (up to 2019);\n43 = Phase 1 without temporary employment clause with exclusion of the continued payment of wages obligat;\n44 = Phase 2 without temporary employment clause with exclusion of the continued payment of wages obligat;\nW = Legal regime;\nK = Chain system;",
+                                        "description": "Phase\nO = Unknown or N.A.;\n1 = Phase 1 with temporary employment clause (up to 2019);\n12 = Phase 1-2 with temporary employment clause;\n13 = Phase 1-2 without temporary employment clause;\n14 = Phase 1-2 without temp. employment clause with exclusion of the cont. payment of wages obligation;\nAU = Phase A with transmission request;\nB = Phase B;\nC = Phase C;\n2 = Phase 2 with temporary employment clause (up to 2019);\n3 = Phase 3;\nAZU = Phase A without temporary employment clause, with exclusion of obligation for continued payment;\n4 = Phase 4;\nAZ = Phase A without transmission condition;\n41 = Phase 1 without temporary employment clause (up to 2019);\n42 = Phase 2 without temporary employment clause (up to 2019);\n43 = Phase 1 without temp. employm. clause with exclus. of  contd. payment of wages obligat. (up to 2019);\n44 = Phase 2 without temp. employm. clause with exclus. of contind. paymnt of wages obligat. (up to 2019);\nW = Legal regime;\nK = Chain system;",
                                         "format": ""
                                       },
                                       "ViSe": {
@@ -8185,7 +8185,7 @@
                                                           "K"
                                                         ],
                                                         "maxLength": 20,
-                                                        "description": "Phase\nO = Unknown or N.A.;\n1 = Phase 1 with temporary employment clause (up to 2019);\n12 = Phase 1-2 with temporary employment clause;\n13 = Phase 1-2 without temporary employment clause;\n14 = Phase 1-2 without temp. employment clause with exclusion of the cont. payment of wages obligation;\nAU = Phase A with transmission request;\nB = Phase B;\nC = Phase C;\n2 = Phase 2 with temporary employment clause (up to 2019);\n3 = Phase 3;\nAZU = Phase A without temporary employment clause, with exclusion of obligation for continued payment;\n4 = Phase 4;\nAZ = Phase A without transmission condition;\n41 = Phase 1 without temporary employment clause (up to 2019);\n42 = Phase 2 without temporary employment clause (up to 2019);\n43 = Phase 1 without temporary employment clause with exclusion of the continued payment of wages obligat;\n44 = Phase 2 without temporary employment clause with exclusion of the continued payment of wages obligat;\nW = Legal regime;\nK = Chain system;",
+                                                        "description": "Phase\nO = Unknown or N.A.;\n1 = Phase 1 with temporary employment clause (up to 2019);\n12 = Phase 1-2 with temporary employment clause;\n13 = Phase 1-2 without temporary employment clause;\n14 = Phase 1-2 without temp. employment clause with exclusion of the cont. payment of wages obligation;\nAU = Phase A with transmission request;\nB = Phase B;\nC = Phase C;\n2 = Phase 2 with temporary employment clause (up to 2019);\n3 = Phase 3;\nAZU = Phase A without temporary employment clause, with exclusion of obligation for continued payment;\n4 = Phase 4;\nAZ = Phase A without transmission condition;\n41 = Phase 1 without temporary employment clause (up to 2019);\n42 = Phase 2 without temporary employment clause (up to 2019);\n43 = Phase 1 without temp. employm. clause with exclus. of  contd. payment of wages obligat. (up to 2019);\n44 = Phase 2 without temp. employm. clause with exclus. of contind. paymnt of wages obligat. (up to 2019);\nW = Legal regime;\nK = Chain system;",
                                                         "format": ""
                                                       },
                                                       "Fact": {
@@ -8417,7 +8417,7 @@
                                                           "K"
                                                         ],
                                                         "maxLength": 20,
-                                                        "description": "Phase\nO = Unknown or N.A.;\n1 = Phase 1 with temporary employment clause (up to 2019);\n12 = Phase 1-2 with temporary employment clause;\n13 = Phase 1-2 without temporary employment clause;\n14 = Phase 1-2 without temp. employment clause with exclusion of the cont. payment of wages obligation;\nAU = Phase A with transmission request;\nB = Phase B;\nC = Phase C;\n2 = Phase 2 with temporary employment clause (up to 2019);\n3 = Phase 3;\nAZU = Phase A without temporary employment clause, with exclusion of obligation for continued payment;\n4 = Phase 4;\nAZ = Phase A without transmission condition;\n41 = Phase 1 without temporary employment clause (up to 2019);\n42 = Phase 2 without temporary employment clause (up to 2019);\n43 = Phase 1 without temporary employment clause with exclusion of the continued payment of wages obligat;\n44 = Phase 2 without temporary employment clause with exclusion of the continued payment of wages obligat;\nW = Legal regime;\nK = Chain system;",
+                                                        "description": "Phase\nO = Unknown or N.A.;\n1 = Phase 1 with temporary employment clause (up to 2019);\n12 = Phase 1-2 with temporary employment clause;\n13 = Phase 1-2 without temporary employment clause;\n14 = Phase 1-2 without temp. employment clause with exclusion of the cont. payment of wages obligation;\nAU = Phase A with transmission request;\nB = Phase B;\nC = Phase C;\n2 = Phase 2 with temporary employment clause (up to 2019);\n3 = Phase 3;\nAZU = Phase A without temporary employment clause, with exclusion of obligation for continued payment;\n4 = Phase 4;\nAZ = Phase A without transmission condition;\n41 = Phase 1 without temporary employment clause (up to 2019);\n42 = Phase 2 without temporary employment clause (up to 2019);\n43 = Phase 1 without temp. employm. clause with exclus. of  contd. payment of wages obligat. (up to 2019);\n44 = Phase 2 without temp. employm. clause with exclus. of contind. paymnt of wages obligat. (up to 2019);\nW = Legal regime;\nK = Chain system;",
                                                         "format": ""
                                                       },
                                                       "Fact": {
@@ -8499,6 +8499,11 @@
                         "maxLength": 16,
                         "description": "Claim number",
                         "format": ""
+                      },
+                      "RsCr": {
+                        "type": "string",
+                        "description": "Correction reason",
+                        "format": "byte"
                       }
                     }
                   },
@@ -8668,6 +8673,11 @@
                         "maxLength": 16,
                         "description": "Claim number",
                         "format": ""
+                      },
+                      "RsCr": {
+                        "type": "string",
+                        "description": "Correction reason",
+                        "format": "byte"
                       }
                     }
                   },
@@ -9291,12 +9301,12 @@
                     "properties": {
                       "PtItpDaBe": {
                         "type": "string",
-                        "description": "Begindatum CBS cao-code",
+                        "description": "Begindatum\n            CBS cao-code",
                         "format": "date"
                       },
                       "PtItpTyEj": {
                         "type": "string",
-                        "description": "Soort eindejaarsuitkering",
+                        "description": "Soort\n            eindejaarsuitkering",
                         "format": ""
                       },
                       "PtItpPaDa": {
@@ -9321,7 +9331,7 @@
                       },
                       "PtItpNoPe": {
                         "type": "integer",
-                        "description": "Aantal periodes bij verkooprelatie",
+                        "description": "Aantal periodes bij\n            verkooprelatie",
                         "format": ""
                       },
                       "PtItpPeUn": {
@@ -9344,7 +9354,7 @@
                       "PtItpViTp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Soort periodieke verhoging",
+                        "description": "Soort periodieke\n            verhoging",
                         "format": ""
                       },
                       "PtItpDmon": {
@@ -9379,13 +9389,13 @@
                       },
                       "PtItpPFrA": {
                         "type": "integer",
-                        "description": "Periodieke verhoging vanaf leeftijd",
+                        "description": "Periodieke verhoging\n            vanaf leeftijd",
                         "format": ""
                       },
                       "PtItpViEx": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Extra voorwaarde periodiek",
+                        "description": "Extra voorwaarde\n            periodiek",
                         "format": ""
                       },
                       "PtItpReDa": {
@@ -9417,35 +9427,35 @@
                       },
                       "PtItpWeAg": {
                         "type": "integer",
-                        "description": "Werkervaring opbouwen vanaf leeftijd",
+                        "description": "Werkervaring opbouwen\n            vanaf leeftijd",
                         "format": ""
                       },
                       "PtItpVaIp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Telling onderbrekingsperiode",
+                        "description": "Telling\n            onderbrekingsperiode",
                         "format": ""
                       },
                       "PtItpMoCo": {
                         "type": "integer",
-                        "description": "Maanden opnieuw tellen als onderbrekingsperiode",
+                        "description": "Maanden opnieuw tellen\n            als onderbrekingsperiode",
                         "format": ""
                       },
                       "PtItpVaIe": {
                         "type": "string",
                         "maxLength": 4,
-                        "description": "Onderbrekingsperiode eenheid",
+                        "description": "Onderbrekingsperiode\n            eenheid",
                         "format": ""
                       },
                       "PtItpAcHi": {
                         "type": "boolean",
-                        "description": "Beoordeling inlener benodigd",
+                        "description": "Beoordeling inlener\n            benodigd",
                         "format": ""
                       },
                       "PtItpVaCo": {
                         "type": "string",
                         "maxLength": 4,
-                        "description": "Uitvoeren periodieke verhoging",
+                        "description": "Uitvoeren periodieke\n            verhoging",
                         "format": ""
                       },
                       "PtItpMeMo": {
@@ -9801,12 +9811,12 @@
                     "properties": {
                       "PtItpDaBe": {
                         "type": "string",
-                        "description": "Begindatum CBS cao-code",
+                        "description": "Begindatum\n            CBS cao-code",
                         "format": "date"
                       },
                       "PtItpTyEj": {
                         "type": "string",
-                        "description": "Soort eindejaarsuitkering",
+                        "description": "Soort\n            eindejaarsuitkering",
                         "format": ""
                       },
                       "PtItpPaDa": {
@@ -9831,7 +9841,7 @@
                       },
                       "PtItpNoPe": {
                         "type": "integer",
-                        "description": "Aantal periodes bij verkooprelatie",
+                        "description": "Aantal periodes bij\n            verkooprelatie",
                         "format": ""
                       },
                       "PtItpPeUn": {
@@ -9854,7 +9864,7 @@
                       "PtItpViTp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Soort periodieke verhoging",
+                        "description": "Soort periodieke\n            verhoging",
                         "format": ""
                       },
                       "PtItpDmon": {
@@ -9889,13 +9899,13 @@
                       },
                       "PtItpPFrA": {
                         "type": "integer",
-                        "description": "Periodieke verhoging vanaf leeftijd",
+                        "description": "Periodieke verhoging\n            vanaf leeftijd",
                         "format": ""
                       },
                       "PtItpViEx": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Extra voorwaarde periodiek",
+                        "description": "Extra voorwaarde\n            periodiek",
                         "format": ""
                       },
                       "PtItpReDa": {
@@ -9927,35 +9937,35 @@
                       },
                       "PtItpWeAg": {
                         "type": "integer",
-                        "description": "Werkervaring opbouwen vanaf leeftijd",
+                        "description": "Werkervaring opbouwen\n            vanaf leeftijd",
                         "format": ""
                       },
                       "PtItpVaIp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Telling onderbrekingsperiode",
+                        "description": "Telling\n            onderbrekingsperiode",
                         "format": ""
                       },
                       "PtItpMoCo": {
                         "type": "integer",
-                        "description": "Maanden opnieuw tellen als onderbrekingsperiode",
+                        "description": "Maanden opnieuw tellen\n            als onderbrekingsperiode",
                         "format": ""
                       },
                       "PtItpVaIe": {
                         "type": "string",
                         "maxLength": 4,
-                        "description": "Onderbrekingsperiode eenheid",
+                        "description": "Onderbrekingsperiode\n            eenheid",
                         "format": ""
                       },
                       "PtItpAcHi": {
                         "type": "boolean",
-                        "description": "Beoordeling inlener benodigd",
+                        "description": "Beoordeling inlener\n            benodigd",
                         "format": ""
                       },
                       "PtItpVaCo": {
                         "type": "string",
                         "maxLength": 4,
-                        "description": "Uitvoeren periodieke verhoging",
+                        "description": "Uitvoeren periodieke\n            verhoging",
                         "format": ""
                       },
                       "PtItpMeMo": {
@@ -10422,7 +10432,7 @@
                           "K"
                         ],
                         "maxLength": 20,
-                        "description": "Flex and Security phase classification\nO = Unknown or N.A.;\n1 = Phase 1 with temporary employment clause (up to 2019);\n12 = Phase 1-2 with temporary employment clause;\n13 = Phase 1-2 without temporary employment clause;\n14 = Phase 1-2 without temp. employment clause with exclusion of the cont. payment of wages obligation;\nAU = Phase A with transmission request;\nB = Phase B;\nC = Phase C;\n2 = Phase 2 with temporary employment clause (up to 2019);\n3 = Phase 3;\nAZU = Phase A without temporary employment clause, with exclusion of obligation for continued payment;\n4 = Phase 4;\nAZ = Phase A without transmission condition;\n41 = Phase 1 without temporary employment clause (up to 2019);\n42 = Phase 2 without temporary employment clause (up to 2019);\n43 = Phase 1 without temporary employment clause with exclusion of the continued payment of wages obligat;\n44 = Phase 2 without temporary employment clause with exclusion of the continued payment of wages obligat;\nW = Legal regime;\nK = Chain system;",
+                        "description": "Flex and Security phase classification\nO = Unknown or N.A.;\n1 = Phase 1 with temporary employment clause (up to 2019);\n12 = Phase 1-2 with temporary employment clause;\n13 = Phase 1-2 without temporary employment clause;\n14 = Phase 1-2 without temp. employment clause with exclusion of the cont. payment of wages obligation;\nAU = Phase A with transmission request;\nB = Phase B;\nC = Phase C;\n2 = Phase 2 with temporary employment clause (up to 2019);\n3 = Phase 3;\nAZU = Phase A without temporary employment clause, with exclusion of obligation for continued payment;\n4 = Phase 4;\nAZ = Phase A without transmission condition;\n41 = Phase 1 without temporary employment clause (up to 2019);\n42 = Phase 2 without temporary employment clause (up to 2019);\n43 = Phase 1 without temp. employm. clause with exclus. of  contd. payment of wages obligat. (up to 2019);\n44 = Phase 2 without temp. employm. clause with exclus. of contind. paymnt of wages obligat. (up to 2019);\nW = Legal regime;\nK = Chain system;",
                         "format": ""
                       },
                       "DaBc": {
@@ -10866,7 +10876,7 @@
                                           "51"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Voorkeurwaarde vervoermiddel voor reiskosten\n11 = Petrol vehicle;\n12 = Diesel vehicle;\n13 = Auto (Plug in) Hybrid;\n14 = 100% electric vehicle;\n15 = Other fuel car;\n21 = Motorbike petrol;\n22 = Electric motorcycle;\n29 = Motorbike diesel;\n31 = Petrol moped/scooter;\n32 = Moped/scooter 100% electric;\n38 = Moped/scooter diesel;\n39 = Speed-pedelec;\n41 = (Electric) bicycle;\n49 = By foot;\n51 = Public transport ;",
+                                        "description": "Pref. value means of transp. for travel expenses\n11 = Petrol vehicle;\n12 = Diesel vehicle;\n13 = Auto (Plug in) Hybrid;\n14 = 100% electric vehicle;\n15 = Other fuel car;\n21 = Motorbike petrol;\n22 = Electric motorcycle;\n29 = Motorbike diesel;\n31 = Petrol moped/scooter;\n32 = Moped/scooter 100% electric;\n38 = Moped/scooter diesel;\n39 = Speed-pedelec;\n41 = (Electric) bicycle;\n49 = By foot;\n51 = Public transport ;",
                                         "format": ""
                                       }
                                     },
@@ -10998,7 +11008,7 @@
                           "K"
                         ],
                         "maxLength": 20,
-                        "description": "Flex and Security phase classification\nO = Unknown or N.A.;\n1 = Phase 1 with temporary employment clause (up to 2019);\n12 = Phase 1-2 with temporary employment clause;\n13 = Phase 1-2 without temporary employment clause;\n14 = Phase 1-2 without temp. employment clause with exclusion of the cont. payment of wages obligation;\nAU = Phase A with transmission request;\nB = Phase B;\nC = Phase C;\n2 = Phase 2 with temporary employment clause (up to 2019);\n3 = Phase 3;\nAZU = Phase A without temporary employment clause, with exclusion of obligation for continued payment;\n4 = Phase 4;\nAZ = Phase A without transmission condition;\n41 = Phase 1 without temporary employment clause (up to 2019);\n42 = Phase 2 without temporary employment clause (up to 2019);\n43 = Phase 1 without temporary employment clause with exclusion of the continued payment of wages obligat;\n44 = Phase 2 without temporary employment clause with exclusion of the continued payment of wages obligat;\nW = Legal regime;\nK = Chain system;",
+                        "description": "Flex and Security phase classification\nO = Unknown or N.A.;\n1 = Phase 1 with temporary employment clause (up to 2019);\n12 = Phase 1-2 with temporary employment clause;\n13 = Phase 1-2 without temporary employment clause;\n14 = Phase 1-2 without temp. employment clause with exclusion of the cont. payment of wages obligation;\nAU = Phase A with transmission request;\nB = Phase B;\nC = Phase C;\n2 = Phase 2 with temporary employment clause (up to 2019);\n3 = Phase 3;\nAZU = Phase A without temporary employment clause, with exclusion of obligation for continued payment;\n4 = Phase 4;\nAZ = Phase A without transmission condition;\n41 = Phase 1 without temporary employment clause (up to 2019);\n42 = Phase 2 without temporary employment clause (up to 2019);\n43 = Phase 1 without temp. employm. clause with exclus. of  contd. payment of wages obligat. (up to 2019);\n44 = Phase 2 without temp. employm. clause with exclus. of contind. paymnt of wages obligat. (up to 2019);\nW = Legal regime;\nK = Chain system;",
                         "format": ""
                       },
                       "DaBc": {
@@ -11447,7 +11457,7 @@
                                           "51"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Voorkeurwaarde vervoermiddel voor reiskosten\n11 = Petrol vehicle;\n12 = Diesel vehicle;\n13 = Auto (Plug in) Hybrid;\n14 = 100% electric vehicle;\n15 = Other fuel car;\n21 = Motorbike petrol;\n22 = Electric motorcycle;\n29 = Motorbike diesel;\n31 = Petrol moped/scooter;\n32 = Moped/scooter 100% electric;\n38 = Moped/scooter diesel;\n39 = Speed-pedelec;\n41 = (Electric) bicycle;\n49 = By foot;\n51 = Public transport ;",
+                                        "description": "Pref. value means of transp. for travel expenses\n11 = Petrol vehicle;\n12 = Diesel vehicle;\n13 = Auto (Plug in) Hybrid;\n14 = 100% electric vehicle;\n15 = Other fuel car;\n21 = Motorbike petrol;\n22 = Electric motorcycle;\n29 = Motorbike diesel;\n31 = Petrol moped/scooter;\n32 = Moped/scooter 100% electric;\n38 = Moped/scooter diesel;\n39 = Speed-pedelec;\n41 = (Electric) bicycle;\n49 = By foot;\n51 = Public transport ;",
                                         "format": ""
                                       }
                                     }
@@ -11558,7 +11568,7 @@
                           "K"
                         ],
                         "maxLength": 20,
-                        "description": "Phase\nO = Unknown or N.A.;\n1 = Phase 1 with temporary employment clause (up to 2019);\n12 = Phase 1-2 with temporary employment clause;\n13 = Phase 1-2 without temporary employment clause;\n14 = Phase 1-2 without temp. employment clause with exclusion of the cont. payment of wages obligation;\nAU = Phase A with transmission request;\nB = Phase B;\nC = Phase C;\n2 = Phase 2 with temporary employment clause (up to 2019);\n3 = Phase 3;\nAZU = Phase A without temporary employment clause, with exclusion of obligation for continued payment;\n4 = Phase 4;\nAZ = Phase A without transmission condition;\n41 = Phase 1 without temporary employment clause (up to 2019);\n42 = Phase 2 without temporary employment clause (up to 2019);\n43 = Phase 1 without temporary employment clause with exclusion of the continued payment of wages obligat;\n44 = Phase 2 without temporary employment clause with exclusion of the continued payment of wages obligat;\nW = Legal regime;\nK = Chain system;",
+                        "description": "Phase\nO = Unknown or N.A.;\n1 = Phase 1 with temporary employment clause (up to 2019);\n12 = Phase 1-2 with temporary employment clause;\n13 = Phase 1-2 without temporary employment clause;\n14 = Phase 1-2 without temp. employment clause with exclusion of the cont. payment of wages obligation;\nAU = Phase A with transmission request;\nB = Phase B;\nC = Phase C;\n2 = Phase 2 with temporary employment clause (up to 2019);\n3 = Phase 3;\nAZU = Phase A without temporary employment clause, with exclusion of obligation for continued payment;\n4 = Phase 4;\nAZ = Phase A without transmission condition;\n41 = Phase 1 without temporary employment clause (up to 2019);\n42 = Phase 2 without temporary employment clause (up to 2019);\n43 = Phase 1 without temp. employm. clause with exclus. of  contd. payment of wages obligat. (up to 2019);\n44 = Phase 2 without temp. employm. clause with exclus. of contind. paymnt of wages obligat. (up to 2019);\nW = Legal regime;\nK = Chain system;",
                         "format": ""
                       },
                       "ViSe": {
@@ -11943,7 +11953,7 @@
                           "K"
                         ],
                         "maxLength": 20,
-                        "description": "Phase\nO = Unknown or N.A.;\n1 = Phase 1 with temporary employment clause (up to 2019);\n12 = Phase 1-2 with temporary employment clause;\n13 = Phase 1-2 without temporary employment clause;\n14 = Phase 1-2 without temp. employment clause with exclusion of the cont. payment of wages obligation;\nAU = Phase A with transmission request;\nB = Phase B;\nC = Phase C;\n2 = Phase 2 with temporary employment clause (up to 2019);\n3 = Phase 3;\nAZU = Phase A without temporary employment clause, with exclusion of obligation for continued payment;\n4 = Phase 4;\nAZ = Phase A without transmission condition;\n41 = Phase 1 without temporary employment clause (up to 2019);\n42 = Phase 2 without temporary employment clause (up to 2019);\n43 = Phase 1 without temporary employment clause with exclusion of the continued payment of wages obligat;\n44 = Phase 2 without temporary employment clause with exclusion of the continued payment of wages obligat;\nW = Legal regime;\nK = Chain system;",
+                        "description": "Phase\nO = Unknown or N.A.;\n1 = Phase 1 with temporary employment clause (up to 2019);\n12 = Phase 1-2 with temporary employment clause;\n13 = Phase 1-2 without temporary employment clause;\n14 = Phase 1-2 without temp. employment clause with exclusion of the cont. payment of wages obligation;\nAU = Phase A with transmission request;\nB = Phase B;\nC = Phase C;\n2 = Phase 2 with temporary employment clause (up to 2019);\n3 = Phase 3;\nAZU = Phase A without temporary employment clause, with exclusion of obligation for continued payment;\n4 = Phase 4;\nAZ = Phase A without transmission condition;\n41 = Phase 1 without temporary employment clause (up to 2019);\n42 = Phase 2 without temporary employment clause (up to 2019);\n43 = Phase 1 without temp. employm. clause with exclus. of  contd. payment of wages obligat. (up to 2019);\n44 = Phase 2 without temp. employm. clause with exclus. of contind. paymnt of wages obligat. (up to 2019);\nW = Legal regime;\nK = Chain system;",
                         "format": ""
                       },
                       "ViSe": {

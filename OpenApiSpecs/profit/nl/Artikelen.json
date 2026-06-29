@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "7.7.10",
+    "version": "8.8.11",
     "title": "AFAS Artikelen API",
     "description": "Deze API beschrijft de endpoints gerelateerd aan Artikelen. Gebruik deze API met de functionele beschrijving van de API."
   },
@@ -350,7 +350,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retrieve the data of a custom getconnector based on the endpoint id.",
+        "summary": "Retrieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -442,7 +442,7 @@
             },
             "in": "path",
             "name": "Endpoint",
-            "description": "Add the id of the connector you want to get the data from",
+            "description": "Add the id of connector you want to get the meta info from",
             "required": true
           },
           {
@@ -469,7 +469,7 @@
             "name": "orderbyfieldids",
             "in": "query",
             "required": false,
-            "description": "Use this to prevent unexpected reordering of results",
+            "description": "Must be used to prevent unexpectedly ordered results",
             "schema": {
               "type": "string"
             }
@@ -6591,6 +6591,26 @@
                         "description": "Noord-Ierland (ICP-aangifte)",
                         "format": ""
                       },
+                      "PreC": {
+                        "type": "string",
+                        "enum": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4",
+                          "5"
+                        ],
+                        "maxLength": 20,
+                        "description": "Voorspelmodel\n0 = Niet voorspellen;\n1 = SMA: Simple Moving Average;\n2 = ARIMA: AutoRegressive Integrated Moving Average;\n3 = SARIMA: Seasonal ARIMA;\n4 = Exponential Smoothing: Recente periodes meer gewicht dan oudere data;\n5 = Holt Winters: Exponential Smoothing inclusief trend en seizoenspatronen;",
+                        "format": ""
+                      },
+                      "ABCXYZClass": {
+                        "type": "string",
+                        "maxLength": 2,
+                        "description": "ABC-XYZ klasse",
+                        "format": ""
+                      },
                       "Head": {
                         "type": "boolean",
                         "description": "Met kopregel",
@@ -6619,12 +6639,12 @@
                       },
                       "CaSp": {
                         "type": "boolean",
-                        "description": "Verekenprijs automatisch bepalen",
+                        "description": "Verrekenprijs automatisch bepalen",
                         "format": ""
                       },
                       "SpCo": {
                         "type": "boolean",
-                        "description": "Verekenprijs o.b.v. kostprijzen",
+                        "description": "Verrekenprijs o.b.v. kostprijzen",
                         "format": ""
                       },
                       "StAM": {
@@ -6683,6 +6703,11 @@
                       "ESOb": {
                         "type": "boolean",
                         "description": "Serviceobject",
+                        "format": ""
+                      },
+                      "CCls": {
+                        "type": "boolean",
+                        "description": "Stuklijst aanmaken",
                         "format": ""
                       },
                       "StPrice": {
@@ -7582,6 +7607,26 @@
                         "description": "Noord-Ierland (ICP-aangifte)",
                         "format": ""
                       },
+                      "PreC": {
+                        "type": "string",
+                        "enum": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4",
+                          "5"
+                        ],
+                        "maxLength": 20,
+                        "description": "Voorspelmodel\n0 = Niet voorspellen;\n1 = SMA: Simple Moving Average;\n2 = ARIMA: AutoRegressive Integrated Moving Average;\n3 = SARIMA: Seasonal ARIMA;\n4 = Exponential Smoothing: Recente periodes meer gewicht dan oudere data;\n5 = Holt Winters: Exponential Smoothing inclusief trend en seizoenspatronen;",
+                        "format": ""
+                      },
+                      "ABCXYZClass": {
+                        "type": "string",
+                        "maxLength": 2,
+                        "description": "ABC-XYZ klasse",
+                        "format": ""
+                      },
                       "Head": {
                         "type": "boolean",
                         "description": "Met kopregel",
@@ -7610,12 +7655,12 @@
                       },
                       "CaSp": {
                         "type": "boolean",
-                        "description": "Verekenprijs automatisch bepalen",
+                        "description": "Verrekenprijs automatisch bepalen",
                         "format": ""
                       },
                       "SpCo": {
                         "type": "boolean",
-                        "description": "Verekenprijs o.b.v. kostprijzen",
+                        "description": "Verrekenprijs o.b.v. kostprijzen",
                         "format": ""
                       },
                       "StAM": {
@@ -7674,6 +7719,11 @@
                       "ESOb": {
                         "type": "boolean",
                         "description": "Serviceobject",
+                        "format": ""
+                      },
+                      "CCls": {
+                        "type": "boolean",
+                        "description": "Stuklijst aanmaken",
                         "format": ""
                       },
                       "StPrice": {
@@ -8864,6 +8914,26 @@
                         "description": "Vervangen t/m",
                         "format": "date"
                       },
+                      "PreC": {
+                        "type": "string",
+                        "enum": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4",
+                          "5"
+                        ],
+                        "maxLength": 20,
+                        "description": "Voorspelmodel\n0 = Niet voorspellen;\n1 = SMA: Simple Moving Average;\n2 = ARIMA: AutoRegressive Integrated Moving Average;\n3 = SARIMA: Seasonal ARIMA;\n4 = Exponential Smoothing: Recente periodes meer gewicht dan oudere data;\n5 = Holt Winters: Exponential Smoothing inclusief trend en seizoenspatronen;",
+                        "format": ""
+                      },
+                      "ABCXYZClass": {
+                        "type": "string",
+                        "maxLength": 2,
+                        "description": "ABC-XYZ klasse",
+                        "format": ""
+                      },
                       "UpdateComDs": {
                         "type": "boolean",
                         "description": "Omschrijving doorvoeren naar samenstellingsonderdelen",
@@ -9645,6 +9715,26 @@
                         "type": "string",
                         "description": "Vervangen t/m",
                         "format": "date"
+                      },
+                      "PreC": {
+                        "type": "string",
+                        "enum": [
+                          "0",
+                          "1",
+                          "2",
+                          "3",
+                          "4",
+                          "5"
+                        ],
+                        "maxLength": 20,
+                        "description": "Voorspelmodel\n0 = Niet voorspellen;\n1 = SMA: Simple Moving Average;\n2 = ARIMA: AutoRegressive Integrated Moving Average;\n3 = SARIMA: Seasonal ARIMA;\n4 = Exponential Smoothing: Recente periodes meer gewicht dan oudere data;\n5 = Holt Winters: Exponential Smoothing inclusief trend en seizoenspatronen;",
+                        "format": ""
+                      },
+                      "ABCXYZClass": {
+                        "type": "string",
+                        "maxLength": 2,
+                        "description": "ABC-XYZ klasse",
+                        "format": ""
                       },
                       "UpdateComDs": {
                         "type": "boolean",

@@ -1,16 +1,9 @@
 ---
 author: EZW
-date: 2026-06-08
+date: 2026-06-29
 tags: Profit8, GetConnector, UpdateConnector, Integration, Configuration
 title: New in Profit 8
 ---
-
-**Profit 8 will only be released from June 2026. This document is therefore still in beta and is continuously being updated.**
-
-> Please be advised that the specifications are still based on Profit 7. The specifications will be updated to Profit 8 as soon as the Accept environments have switched to Profit 8.
-
----
-
 
 Starting with Profit 8, several changes have been implemented in the AFAS Profit API. Below are the changes compared to Profit 7. Curious about our roadmap? [Click here](https://www.afas.nl/roadmap)  
 
@@ -45,7 +38,7 @@ For now, you cannot test this on connect.afas.nl.
 
 ### Webhooks!
 
-A long-cherished wish has come true: Webhooks! At the AFAS Open you will hear more about this.
+A long-cherished wish has come true: Webhooks! [Read more about Webhooks in Profit](https://help.afas.nl/help/NL/SE/140869.htm).
 
 
 ## Other changes
@@ -182,9 +175,7 @@ No changes for this release.
 
 ### All changes
 
-| Connector | Description | Operation |
-| --- | --- | --- |
-| KnPeppol | technical endpoint added (not available for customer use) | [POST](https://docs.afas.help/apidoc/nl/Inrichting#post-/connectors/KnPeppol) |
+No changes for this release.
 
 
 ## Loonadministratie Specification
@@ -261,6 +252,7 @@ No changes for this release.
 | KnEmployeeGUID | the `AfasEmployee/Element/Fields/LgId` request property's maxLength was increased from `3` to `5` | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID), [PUT](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployeeGUID) |
 | KnEmployeeGUID | the `AfasEmployee/Element/Objects/KnPerson/Element/Fields/LgId` request property's maxLength was increased from `3` to `5` | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID), [PUT](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployeeGUID) |
 | KnEmployeeGUID | removed the request property `AfasEmployee/Element/Objects/AfasResidenceDocument/Element/Objects/AfasResidenceAttachment` | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnEmployeeGUID), [PUT](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnEmployeeGUID) |
+| KnOrgEmrFun | added the new optional request property `KnOrgEmrFun/Element/Fields/FcId` | [POST](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#post-/connectors/KnOrgEmrFun), [PUT](https://docs.afas.help/apidoc/nl/Medewerker%20en%20contract#put-/connectors/KnOrgEmrFun) |
 
 
 ## Mutaties Specification
@@ -351,7 +343,11 @@ No changes for this release.
 
 ## Werkgever Specification
 
-No changes for this release.
+### All changes
+
+| Connector | Description | Operation |
+| --- | --- | --- |
+| KnOrgEmrFun | added the new optional request property `KnOrgEmrFun/Element/Fields/FcId` | [POST](https://docs.afas.help/apidoc/nl/Werkgever#post-/connectors/KnOrgEmrFun), [PUT](https://docs.afas.help/apidoc/nl/Werkgever#put-/connectors/KnOrgEmrFun) |
 
 
 ## Werving en selectie Specification

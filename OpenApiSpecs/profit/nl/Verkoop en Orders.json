@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "7.7.10",
+    "version": "8.8.11",
     "title": "AFAS Verkoop en Orders API",
     "description": "Deze API beschrijft de endpoints gerelateerd aan Verkoop en Orders. Gebruik deze API met de functionele beschrijving van de API."
   },
@@ -199,7 +199,7 @@
     },
     "/Metainfo/{Type}/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
+        "summary": "Retrieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
         "tags": [
           "API Info"
         ],
@@ -350,7 +350,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the data of a custom getconnector based on the endpoint id.",
+        "summary": "Retrieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -442,7 +442,7 @@
             },
             "in": "path",
             "name": "Endpoint",
-            "description": "Add the id of the connector you want to get the data from",
+            "description": "Add the id of connector you want to get the meta info from",
             "required": true
           },
           {
@@ -981,6 +981,160 @@
         "parameters": [
           {
             "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/CmForecastContactMoment": {
+      "post": {
+        "summary": "Contactmoment forecast",
+        "description": "\n\r https://help.afas.nl/content/NL/SE/116439.htm",
+        "operationId": "POST_CmForecastContactMoment",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CmForecastContactMoment_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Contactmoment forecast"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Contactmoment forecast",
+        "description": "\n\r https://help.afas.nl/content/NL/SE/116439.htm",
+        "operationId": "PUT_CmForecastContactMoment",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CmForecastContactMoment_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Contactmoment forecast"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/CmForecastContactMoment/AfasCmForecast": {
+      "post": {
+        "summary": "Contactmoment forecast",
+        "description": "Update main record in CmForecastContactMoment and insert subrecord into AfasCmForecast. \n\r https://help.afas.nl/content/NL/SE/116439.htm",
+        "operationId": "POSTSubRecordCmForecastContactMomentAfasCmForecast",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CmForecastContactMoment_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Contactmoment forecast"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
           }
         ]
       }
@@ -13864,7 +14018,7 @@
                         "properties": {
                           "SubscriptionNr": {
                             "type": "integer",
-                            "description": "Abonnementsnummer"
+                            "description": "Nummer abonnement"
                           },
                           "DebtorId": {
                             "type": "string",
@@ -13991,6 +14145,10 @@
       "description": "Forecast"
     },
     {
+      "name": "Contactmoment forecast",
+      "description": "Contactmoment forecast"
+    },
+    {
       "name": "Productie",
       "description": "Productie"
     },
@@ -14057,6 +14215,559 @@
   ],
   "components": {
     "schemas": {
+      "CmForecastContactMoment_POST": {
+        "type": "object",
+        "properties": {
+          "CmForecastContactMoment": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "PrId": {
+                        "type": "integer",
+                        "description": "Profielnummer",
+                        "format": ""
+                      },
+                      "DbId": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Verkooprelatie",
+                        "format": ""
+                      },
+                      "FcNo": {
+                        "type": "integer",
+                        "description": "Nummer forecast",
+                        "format": ""
+                      },
+                      "MuId": {
+                        "type": "string",
+                        "maxLength": 32,
+                        "description": "Mutatie-Id",
+                        "format": ""
+                      },
+                      "DaTi": {
+                        "type": "string",
+                        "description": "Datum",
+                        "format": "date"
+                      },
+                      "EmId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Verantwoordelijke",
+                        "format": ""
+                      },
+                      "Acti": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "2",
+                          "3",
+                          "4"
+                        ],
+                        "maxLength": 20,
+                        "description": "Actie\n1 = Contactpersoon gebeld;\n2 = Contactpersoon gemaild;\n3 = Afspraak ingepland;\n4 = Contactpersoon gesproken;",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 80,
+                        "description": "Omschrijving",
+                        "format": ""
+                      },
+                      "Dat2": {
+                        "type": "string",
+                        "description": "Volgend contactmoment",
+                        "format": "date"
+                      },
+                      "CdId": {
+                        "type": "integer",
+                        "description": "Contactpersoon",
+                        "format": ""
+                      },
+                      "Re": {
+                        "type": "string",
+                        "description": "Toelichting",
+                        "format": "byte"
+                      },
+                      "FiId": {
+                        "type": "string",
+                        "maxLength": 32,
+                        "description": "Bijlage",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "DaTi",
+                      "EmId",
+                      "Ds"
+                    ]
+                  },
+                  "Objects": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "AfasCmForecast": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "FoId": {
+                                        "type": "integer",
+                                        "description": "ForecastId",
+                                        "format": ""
+                                      },
+                                      "Ds": {
+                                        "type": "string",
+                                        "maxLength": 100,
+                                        "description": "Omschrijving",
+                                        "format": ""
+                                      },
+                                      "CtPe": {
+                                        "type": "integer",
+                                        "description": "Contactpersoon",
+                                        "format": ""
+                                      },
+                                      "EmId": {
+                                        "type": "string",
+                                        "maxLength": 15,
+                                        "description": "Verantwoordelijke",
+                                        "format": ""
+                                      },
+                                      "DaSt": {
+                                        "type": "string",
+                                        "description": "Begindatum",
+                                        "format": "date"
+                                      },
+                                      "DaEn": {
+                                        "type": "string",
+                                        "description": "Verwachte einddatum",
+                                        "format": "date"
+                                      },
+                                      "ViGr": {
+                                        "type": "string",
+                                        "maxLength": 20,
+                                        "description": "Forecastgroep",
+                                        "format": ""
+                                      },
+                                      "SbHi": {
+                                        "type": "integer",
+                                        "description": "Aanleiding",
+                                        "format": ""
+                                      },
+                                      "ScId": {
+                                        "type": "string",
+                                        "maxLength": 5,
+                                        "description": "Bron",
+                                        "format": ""
+                                      },
+                                      "CaId": {
+                                        "type": "integer",
+                                        "description": "Campagne",
+                                        "format": ""
+                                      },
+                                      "PjId": {
+                                        "type": "string",
+                                        "maxLength": 15,
+                                        "description": "Project",
+                                        "format": ""
+                                      },
+                                      "ViSt": {
+                                        "type": "string",
+                                        "maxLength": 10,
+                                        "description": "Voortgang",
+                                        "format": ""
+                                      },
+                                      "Pc": {
+                                        "type": "number",
+                                        "description": "Scoringskans",
+                                        "format": "number"
+                                      },
+                                      "Am": {
+                                        "type": "number",
+                                        "description": "Verwacht bedrag basisvaluta",
+                                        "format": "number"
+                                      },
+                                      "AmF": {
+                                        "type": "number",
+                                        "description": "Verwacht bedrag",
+                                        "format": "number"
+                                      },
+                                      "CaQB": {
+                                        "type": "boolean",
+                                        "description": "Verwacht bedrag berekenen obv offertes en voorcalc",
+                                        "format": ""
+                                      },
+                                      "ViOp": {
+                                        "type": "string",
+                                        "enum": [
+                                          "G",
+                                          "N",
+                                          "O"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Resultaat\nG = Gesloten en gescoord;\nN = Gesloten en niet gescoord;\nO = Open;",
+                                        "format": ""
+                                      },
+                                      "ViRe": {
+                                        "type": "string",
+                                        "enum": [
+                                          "PR",
+                                          "FU",
+                                          "SE",
+                                          "PKW",
+                                          "ORG",
+                                          "VI",
+                                          "ERV",
+                                          "REF"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Reden\nPR = Prijs;\nFU = Functionaliteit;\nSE = Serviceverlening;\nPKW = Productkwaliteit;\nORG = Organisatie;\nVI = Visie;\nERV = Ervaring;\nREF = Referentie;",
+                                        "format": ""
+                                      },
+                                      "ViFo": {
+                                        "type": "string",
+                                        "maxLength": 20,
+                                        "description": "Verloren aan",
+                                        "format": ""
+                                      },
+                                      "DaSc": {
+                                        "type": "string",
+                                        "description": "Einddatum",
+                                        "format": "date"
+                                      },
+                                      "OrAm": {
+                                        "type": "number",
+                                        "description": "Orderbedrag basisvaluta",
+                                        "format": "number"
+                                      },
+                                      "OrAF": {
+                                        "type": "number",
+                                        "description": "Orderbedrag",
+                                        "format": "number"
+                                      },
+                                      "CuId": {
+                                        "type": "string",
+                                        "maxLength": 3,
+                                        "description": "Valuta",
+                                        "format": ""
+                                      },
+                                      "Rate": {
+                                        "type": "number",
+                                        "description": "Valutakoers",
+                                        "format": "number"
+                                      },
+                                      "Re": {
+                                        "type": "string",
+                                        "description": "Opmerking",
+                                        "format": "byte"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "CmForecastContactMoment_PUT": {
+        "type": "object",
+        "properties": {
+          "CmForecastContactMoment": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "PrId": {
+                        "type": "integer",
+                        "description": "Profielnummer",
+                        "format": ""
+                      },
+                      "DbId": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Verkooprelatie",
+                        "format": ""
+                      },
+                      "FcNo": {
+                        "type": "integer",
+                        "description": "Nummer forecast",
+                        "format": ""
+                      },
+                      "MuId": {
+                        "type": "string",
+                        "maxLength": 32,
+                        "description": "Mutatie-Id",
+                        "format": ""
+                      },
+                      "DaTi": {
+                        "type": "string",
+                        "description": "Datum",
+                        "format": "date"
+                      },
+                      "EmId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Verantwoordelijke",
+                        "format": ""
+                      },
+                      "Acti": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "2",
+                          "3",
+                          "4"
+                        ],
+                        "maxLength": 20,
+                        "description": "Actie\n1 = Contactpersoon gebeld;\n2 = Contactpersoon gemaild;\n3 = Afspraak ingepland;\n4 = Contactpersoon gesproken;",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 80,
+                        "description": "Omschrijving",
+                        "format": ""
+                      },
+                      "Dat2": {
+                        "type": "string",
+                        "description": "Volgend contactmoment",
+                        "format": "date"
+                      },
+                      "CdId": {
+                        "type": "integer",
+                        "description": "Contactpersoon",
+                        "format": ""
+                      },
+                      "Re": {
+                        "type": "string",
+                        "description": "Toelichting",
+                        "format": "byte"
+                      },
+                      "FiId": {
+                        "type": "string",
+                        "maxLength": 32,
+                        "description": "Bijlage",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "MuId"
+                    ]
+                  },
+                  "Objects": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "AfasCmForecast": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "FoId": {
+                                        "type": "integer",
+                                        "description": "ForecastId",
+                                        "format": ""
+                                      },
+                                      "Ds": {
+                                        "type": "string",
+                                        "maxLength": 100,
+                                        "description": "Omschrijving",
+                                        "format": ""
+                                      },
+                                      "CtPe": {
+                                        "type": "integer",
+                                        "description": "Contactpersoon",
+                                        "format": ""
+                                      },
+                                      "EmId": {
+                                        "type": "string",
+                                        "maxLength": 15,
+                                        "description": "Verantwoordelijke",
+                                        "format": ""
+                                      },
+                                      "DaSt": {
+                                        "type": "string",
+                                        "description": "Begindatum",
+                                        "format": "date"
+                                      },
+                                      "DaEn": {
+                                        "type": "string",
+                                        "description": "Verwachte einddatum",
+                                        "format": "date"
+                                      },
+                                      "ViGr": {
+                                        "type": "string",
+                                        "maxLength": 20,
+                                        "description": "Forecastgroep",
+                                        "format": ""
+                                      },
+                                      "SbHi": {
+                                        "type": "integer",
+                                        "description": "Aanleiding",
+                                        "format": ""
+                                      },
+                                      "ScId": {
+                                        "type": "string",
+                                        "maxLength": 5,
+                                        "description": "Bron",
+                                        "format": ""
+                                      },
+                                      "CaId": {
+                                        "type": "integer",
+                                        "description": "Campagne",
+                                        "format": ""
+                                      },
+                                      "PjId": {
+                                        "type": "string",
+                                        "maxLength": 15,
+                                        "description": "Project",
+                                        "format": ""
+                                      },
+                                      "ViSt": {
+                                        "type": "string",
+                                        "maxLength": 10,
+                                        "description": "Voortgang",
+                                        "format": ""
+                                      },
+                                      "Pc": {
+                                        "type": "number",
+                                        "multipleOf": 0.01,
+                                        "description": "Scoringskans",
+                                        "format": "float"
+                                      },
+                                      "Am": {
+                                        "type": "number",
+                                        "multipleOf": 1E-10,
+                                        "description": "Verwacht bedrag basisvaluta",
+                                        "format": "float"
+                                      },
+                                      "AmF": {
+                                        "type": "number",
+                                        "multipleOf": 1E-10,
+                                        "description": "Verwacht bedrag",
+                                        "format": "float"
+                                      },
+                                      "CaQB": {
+                                        "type": "boolean",
+                                        "description": "Verwacht bedrag berekenen obv offertes en voorcalc",
+                                        "format": ""
+                                      },
+                                      "ViOp": {
+                                        "type": "string",
+                                        "enum": [
+                                          "G",
+                                          "N",
+                                          "O"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Resultaat\nG = Gesloten en gescoord;\nN = Gesloten en niet gescoord;\nO = Open;",
+                                        "format": ""
+                                      },
+                                      "ViRe": {
+                                        "type": "string",
+                                        "enum": [
+                                          "PR",
+                                          "FU",
+                                          "SE",
+                                          "PKW",
+                                          "ORG",
+                                          "VI",
+                                          "ERV",
+                                          "REF"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Reden\nPR = Prijs;\nFU = Functionaliteit;\nSE = Serviceverlening;\nPKW = Productkwaliteit;\nORG = Organisatie;\nVI = Visie;\nERV = Ervaring;\nREF = Referentie;",
+                                        "format": ""
+                                      },
+                                      "ViFo": {
+                                        "type": "string",
+                                        "maxLength": 20,
+                                        "description": "Verloren aan",
+                                        "format": ""
+                                      },
+                                      "DaSc": {
+                                        "type": "string",
+                                        "description": "Einddatum",
+                                        "format": "date"
+                                      },
+                                      "OrAm": {
+                                        "type": "number",
+                                        "multipleOf": 1E-10,
+                                        "description": "Orderbedrag basisvaluta",
+                                        "format": "float"
+                                      },
+                                      "OrAF": {
+                                        "type": "number",
+                                        "multipleOf": 1E-10,
+                                        "description": "Orderbedrag",
+                                        "format": "float"
+                                      },
+                                      "CuId": {
+                                        "type": "string",
+                                        "maxLength": 3,
+                                        "description": "Valuta",
+                                        "format": ""
+                                      },
+                                      "Rate": {
+                                        "type": "number",
+                                        "multipleOf": 1E-10,
+                                        "description": "Valutakoers",
+                                        "format": "float"
+                                      },
+                                      "Re": {
+                                        "type": "string",
+                                        "description": "Opmerking",
+                                        "format": "byte"
+                                      }
+                                    },
+                                    "required": [
+                                      "FoId"
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "CmForecast_POST": {
         "type": "object",
         "properties": {
@@ -14490,7 +15201,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Taal",
                         "format": ""
                       },
@@ -15246,7 +15957,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Taal",
                         "format": ""
                       },
@@ -16019,7 +16730,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Taal",
                         "format": ""
                       },
@@ -17018,7 +17729,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Taal",
                         "format": ""
                       },
@@ -18021,7 +18732,7 @@
                       "PaCd": {
                         "type": "string",
                         "maxLength": 5,
-                        "description": "Betalingsvoorwaarde",
+                        "description": "Betaalvoorwaarde",
                         "format": ""
                       },
                       "PaTp": {
@@ -18082,7 +18793,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Taal",
                         "format": ""
                       },
@@ -19481,7 +20192,7 @@
                       "PaCd": {
                         "type": "string",
                         "maxLength": 5,
-                        "description": "Betalingsvoorwaarde",
+                        "description": "Betaalvoorwaarde",
                         "format": ""
                       },
                       "PaTp": {
@@ -19542,7 +20253,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Taal",
                         "format": ""
                       },
@@ -20926,7 +21637,7 @@
                       "PaCd": {
                         "type": "string",
                         "maxLength": 5,
-                        "description": "Betalingsvoorwaarde",
+                        "description": "Betaalvoorwaarde",
                         "format": ""
                       },
                       "PaTp": {
@@ -20987,7 +21698,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Taal",
                         "format": ""
                       },
@@ -22261,7 +22972,7 @@
                       "PaCd": {
                         "type": "string",
                         "maxLength": 5,
-                        "description": "Betalingsvoorwaarde",
+                        "description": "Betaalvoorwaarde",
                         "format": ""
                       },
                       "PaTp": {
@@ -22322,7 +23033,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Taal",
                         "format": ""
                       },
@@ -24740,7 +25451,7 @@
                       "PaCd": {
                         "type": "string",
                         "maxLength": 5,
-                        "description": "Betalingsvoorwaarde",
+                        "description": "Betaalvoorwaarde",
                         "format": ""
                       },
                       "PaTp": {
@@ -24801,7 +25512,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Taal",
                         "format": ""
                       },
@@ -25610,7 +26321,7 @@
                       "PaCd": {
                         "type": "string",
                         "maxLength": 5,
-                        "description": "Betalingsvoorwaarde",
+                        "description": "Betaalvoorwaarde",
                         "format": ""
                       },
                       "PaTp": {
@@ -25671,7 +26382,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Taal",
                         "format": ""
                       },
@@ -26498,7 +27209,7 @@
                       "PaCd": {
                         "type": "string",
                         "maxLength": 5,
-                        "description": "Betalingsvoorwaarde",
+                        "description": "Betaalvoorwaarde",
                         "format": ""
                       },
                       "PaTp": {
@@ -26559,7 +27270,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Taal",
                         "format": ""
                       },
@@ -27750,7 +28461,7 @@
                       "PaCd": {
                         "type": "string",
                         "maxLength": 5,
-                        "description": "Betalingsvoorwaarde",
+                        "description": "Betaalvoorwaarde",
                         "format": ""
                       },
                       "PaTp": {
@@ -27811,7 +28522,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Taal",
                         "format": ""
                       },
