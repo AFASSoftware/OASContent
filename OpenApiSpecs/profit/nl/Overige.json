@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "7.7.10",
+    "version": "8.8.11",
     "title": "AFAS Overige API",
     "description": "Deze API beschrijft de endpoints gerelateerd aan Overige. Gebruik deze API met de functionele beschrijving van de API."
   },
@@ -199,7 +199,7 @@
     },
     "/Metainfo/{Type}/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
+        "summary": "Retrieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
         "tags": [
           "API Info"
         ],
@@ -350,7 +350,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the data of a custom getconnector based on the endpoint id.",
+        "summary": "Retrieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -442,7 +442,7 @@
             },
             "in": "path",
             "name": "Endpoint",
-            "description": "Add the id of the connector you want to get the data from",
+            "description": "Add the id of connector you want to get the meta info from",
             "required": true
           },
           {
@@ -4374,6 +4374,1894 @@
         ]
       }
     },
+    "/connectors/KnCustomK01": {
+      "post": {
+        "summary": "Vrij bestand 01",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "operationId": "POST_KnCustomK01",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnCustomK01_POST"
+              },
+              "examples": {
+                "insert": {
+                  "value": {
+                    "KnCustomK01": {
+                      "Element": {
+                        "Fields": {
+                          "AuNu": true,
+                          "U001": "2023-01-01",
+                          "U002": "Veld Extra",
+                          "U003": "ALLARDJ",
+                          "U004": "1",
+                          "U005": "Geen bijzonderheden",
+                          "U006": "B"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                },
+                "examples": {
+                  "Response example": {
+                    "value": {
+                      "results": {
+                        "KnCustomK01": [
+                          {
+                            "SqNo": "4"
+                          },
+                          {
+                            "SqNo": "5"
+                          },
+                          {
+                            "SqNo": "6"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Cache-Control": {
+                "description": "no-store, no-cache",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Transfer-Encoding": {
+                "description": "chunked",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Type": {
+                "description": "application/json; charset=utf-8",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Encoding": {
+                "description": "gzip",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Strict-Transport-Security": {
+                "description": "max-age=31536000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Version": {
+                "description": "4.3.0.0",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "nosniff",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Frame-Options": {
+                "description": "deny",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Stats": {
+                "description": "init(0ms), before response(10ms), after response(609ms), after compressing(610ms), complete(610ms)",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "description": "*",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Headers": {
+                "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Methods": {
+                "description": "GET, POST, PUT, DELETE, OPTIONS",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Max-Age": {
+                "description": "1728000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Date": {
+                "description": "Wed, 07 Feb 2024 10:39:26 GMT",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 01"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Vrij bestand 01",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "operationId": "PUT_KnCustomK01",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnCustomK01_PUT"
+              },
+              "examples": {
+                "update": {
+                  "value": {
+                    "KnCustomK01": {
+                      "Element": {
+                        "Fields": {
+                          "SqNo": "2921",
+                          "U005": "Geen bijzonderheden",
+                          "U006": "B"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                },
+                "examples": {
+                  "Response example": {
+                    "value": {
+                      "results": {
+                        "KnCustomK01": [
+                          {
+                            "SqNo": "4"
+                          },
+                          {
+                            "SqNo": "5"
+                          },
+                          {
+                            "SqNo": "6"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "headers": {
+              "Cache-Control": {
+                "description": "no-store, no-cache",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Transfer-Encoding": {
+                "description": "chunked",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Type": {
+                "description": "application/json; charset=utf-8",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Content-Encoding": {
+                "description": "gzip",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Strict-Transport-Security": {
+                "description": "max-age=31536000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Version": {
+                "description": "4.3.0.0",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Content-Type-Options": {
+                "description": "nosniff",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-Frame-Options": {
+                "description": "deny",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "X-AFAS-Proxy-Stats": {
+                "description": "init(0ms), before response(10ms), after response(609ms), after compressing(610ms), complete(610ms)",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Origin": {
+                "description": "*",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Headers": {
+                "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Allow-Methods": {
+                "description": "GET, POST, PUT, DELETE, OPTIONS",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Access-Control-Max-Age": {
+                "description": "1728000",
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "Date": {
+                "description": "Wed, 07 Feb 2024 10:39:26 GMT",
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 01"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnCustomK01/KnCustomK01/@SqNo/{SqNo}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "SqNo",
+          "in": "path",
+          "required": true,
+          "description": "Volgnummer"
+        }
+      ],
+      "delete": {
+        "summary": "Vrij bestand 01",
+        "operationId": "DELETE_KnCustomK01",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 01"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/KnCustomK02": {
+      "post": {
+        "summary": "Vrij bestand 02",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "operationId": "POST_KnCustomK02",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnCustomK02_POST"
+              },
+              "examples": {
+                "massa 100": {
+                  "value": {
+                    "KnCustomK02": {
+                      "Element": [
+                        {
+                          "Fields": {
+                            "AuNu": true,
+                            "Da": "2023-01-15",
+                            "Ds": "Omschrijving 100",
+                            "U977E29AD43062ADCD6C1F9999DEEF079": "Poging 5",
+                            "UA76EA82042ADD8F52A8861B9510C5214": "Veld 2",
+                            "U7DB2B6D349C3B6B1374D6691CB33B72E": "FLOORA"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "AuNu": true,
+                            "Da": "2023-01-15",
+                            "Ds": "Omschrijving 101",
+                            "U977E29AD43062ADCD6C1F9999DEEF079": "Poging 5",
+                            "UA76EA82042ADD8F52A8861B9510C5214": "Veld 2",
+                            "U7DB2B6D349C3B6B1374D6691CB33B72E": "FLOORA"
+                          }
+                        },
+                        {
+                          "Fields": {
+                            "AuNu": true,
+                            "Da": "2023-01-15",
+                            "Ds": "Omschrijving 102",
+                            "U977E29AD43062ADCD6C1F9999DEEF079": "Poging 5",
+                            "UA76EA82042ADD8F52A8861B9510C5214": "Veld 2",
+                            "U7DB2B6D349C3B6B1374D6691CB33B72E": "FLOORA"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 02"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Vrij bestand 02",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "operationId": "PUT_KnCustomK02",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnCustomK02_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 02"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnCustomK02/KnCustomK02/@SqNo/{SqNo}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "SqNo",
+          "in": "path",
+          "required": true,
+          "description": "Volgnummer"
+        }
+      ],
+      "delete": {
+        "summary": "Vrij bestand 02",
+        "operationId": "DELETE_KnCustomK02",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 02"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/KnCustomK03": {
+      "post": {
+        "summary": "Vrij bestand 03",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "operationId": "POST_KnCustomK03",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnCustomK03_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 03"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Vrij bestand 03",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "operationId": "PUT_KnCustomK03",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnCustomK03_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 03"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnCustomK03/KnCustomK03/@SqNo/{SqNo}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "SqNo",
+          "in": "path",
+          "required": true,
+          "description": "Volgnummer"
+        }
+      ],
+      "delete": {
+        "summary": "Vrij bestand 03",
+        "operationId": "DELETE_KnCustomK03",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 03"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/KnCustomK04": {
+      "post": {
+        "summary": "Vrij bestand 04",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "operationId": "POST_KnCustomK04",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnCustomK04_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 04"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Vrij bestand 04",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "operationId": "PUT_KnCustomK04",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnCustomK04_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 04"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnCustomK04/KnCustomK04/@SqNo/{SqNo}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "SqNo",
+          "in": "path",
+          "required": true,
+          "description": "Volgnummer"
+        }
+      ],
+      "delete": {
+        "summary": "Vrij bestand 04",
+        "operationId": "DELETE_KnCustomK04",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 04"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/KnCustomK05": {
+      "post": {
+        "summary": "Vrij bestand 05",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "operationId": "POST_KnCustomK05",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnCustomK05_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 05"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Vrij bestand 05",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "operationId": "PUT_KnCustomK05",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnCustomK05_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 05"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnCustomK05/KnCustomK05/@SqNo/{SqNo}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "SqNo",
+          "in": "path",
+          "required": true,
+          "description": "Volgnummer"
+        }
+      ],
+      "delete": {
+        "summary": "Vrij bestand 05",
+        "operationId": "DELETE_KnCustomK05",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 05"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/KnCustomK06": {
+      "post": {
+        "summary": "Vrij bestand 06",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "operationId": "POST_KnCustomK06",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnCustomK06_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 06"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Vrij bestand 06",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "operationId": "PUT_KnCustomK06",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnCustomK06_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 06"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnCustomK06/KnCustomK06/@SqNo/{SqNo}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "SqNo",
+          "in": "path",
+          "required": true,
+          "description": "Volgnummer"
+        }
+      ],
+      "delete": {
+        "summary": "Vrij bestand 06",
+        "operationId": "DELETE_KnCustomK06",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 06"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/KnCustomK07": {
+      "post": {
+        "summary": "Vrij bestand 07",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "operationId": "POST_KnCustomK07",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnCustomK07_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 07"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Vrij bestand 07",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "operationId": "PUT_KnCustomK07",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnCustomK07_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 07"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnCustomK07/KnCustomK07/@SqNo/{SqNo}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "SqNo",
+          "in": "path",
+          "required": true,
+          "description": "Volgnummer"
+        }
+      ],
+      "delete": {
+        "summary": "Vrij bestand 07",
+        "operationId": "DELETE_KnCustomK07",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 07"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/KnCustomK08": {
+      "post": {
+        "summary": "Vrij bestand 08",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "operationId": "POST_KnCustomK08",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnCustomK08_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 08"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Vrij bestand 08",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "operationId": "PUT_KnCustomK08",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnCustomK08_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 08"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnCustomK08/KnCustomK08/@SqNo/{SqNo}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "SqNo",
+          "in": "path",
+          "required": true,
+          "description": "Volgnummer"
+        }
+      ],
+      "delete": {
+        "summary": "Vrij bestand 08",
+        "operationId": "DELETE_KnCustomK08",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 08"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/KnCustomK09": {
+      "post": {
+        "summary": "Vrij bestand 09",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "operationId": "POST_KnCustomK09",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnCustomK09_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 09"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Vrij bestand 09",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "operationId": "PUT_KnCustomK09",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnCustomK09_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 09"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnCustomK09/KnCustomK09/@SqNo/{SqNo}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "SqNo",
+          "in": "path",
+          "required": true,
+          "description": "Volgnummer"
+        }
+      ],
+      "delete": {
+        "summary": "Vrij bestand 09",
+        "operationId": "DELETE_KnCustomK09",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 09"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/KnCustomK10": {
+      "post": {
+        "summary": "Vrij bestand 10",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "operationId": "POST_KnCustomK10",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnCustomK10_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 10"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Vrij bestand 10",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "operationId": "PUT_KnCustomK10",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnCustomK10_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 10"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnCustomK10/KnCustomK10/@SqNo/{SqNo}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "SqNo",
+          "in": "path",
+          "required": true,
+          "description": "Volgnummer"
+        }
+      ],
+      "delete": {
+        "summary": "Vrij bestand 10",
+        "operationId": "DELETE_KnCustomK10",
+        "description": "\n\r https://help.afas.nl/help/NL/SE/App_Conect_UpdDsc_160.htm",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vrij bestand 10"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
     "/connectors/KnDayContract": {
       "post": {
         "summary": "Dagcontract",
@@ -4736,15 +6624,15 @@
       }
     },
     "/connectors/KnPocketNotStatus": {
-      "put": {
+      "post": {
         "summary": "Pocket-notificatiestatus",
         "description": "\n\r ",
-        "operationId": "PUT_KnPocketNotStatus",
+        "operationId": "POST_KnPocketNotStatus",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/KnPocketNotStatus_PUT"
+                "$ref": "#/components/schemas/KnPocketNotStatus_POST"
               }
             }
           }
@@ -4868,6 +6756,46 @@
     {
       "name": "Tijdregistratieregel Sociaal secretariaat",
       "description": "Tijdregistratieregel Sociaal secretariaat"
+    },
+    {
+      "name": "Vrij bestand 01",
+      "description": "Vrij bestand 01"
+    },
+    {
+      "name": "Vrij bestand 02",
+      "description": "Vrij bestand 02"
+    },
+    {
+      "name": "Vrij bestand 03",
+      "description": "Vrij bestand 03"
+    },
+    {
+      "name": "Vrij bestand 04",
+      "description": "Vrij bestand 04"
+    },
+    {
+      "name": "Vrij bestand 05",
+      "description": "Vrij bestand 05"
+    },
+    {
+      "name": "Vrij bestand 06",
+      "description": "Vrij bestand 06"
+    },
+    {
+      "name": "Vrij bestand 07",
+      "description": "Vrij bestand 07"
+    },
+    {
+      "name": "Vrij bestand 08",
+      "description": "Vrij bestand 08"
+    },
+    {
+      "name": "Vrij bestand 09",
+      "description": "Vrij bestand 09"
+    },
+    {
+      "name": "Vrij bestand 10",
+      "description": "Vrij bestand 10"
     },
     {
       "name": "Dagcontract",
@@ -5141,7 +7069,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Taal",
                         "format": ""
                       },
@@ -6121,7 +8049,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Taal",
                         "format": ""
                       },
@@ -7648,7 +9576,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Vervoermiddel voor WPM rapportage\n11 = Auto’s benzine;\n12 = Auto’s diesel;\n13 = Auto’s die behoren tot de (plug in) hybrides;\n14 = Auto’s 100% elektrisch;\n15 = Auto’s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
+                        "description": "Vervoermiddel voor WPM-rapportage\n11 = Auto’s benzine;\n12 = Auto’s diesel;\n13 = Auto’s die behoren tot de (plug in) hybrides;\n14 = Auto’s 100% elektrisch;\n15 = Auto’s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
                         "format": ""
                       },
                       "ViTv": {
@@ -7665,6 +9593,16 @@
                         "type": "integer",
                         "description": "Aantal passagiers",
                         "format": ""
+                      },
+                      "DeWW": {
+                        "type": "boolean",
+                        "description": "Woon-werkkilometers in mindering brengen",
+                        "format": ""
+                      },
+                      "WWKm": {
+                        "type": "number",
+                        "description": "Woon-werkkilometers",
+                        "format": "number"
                       },
                       "FileId": {
                         "type": "string",
@@ -9521,7 +11459,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Taal",
                         "format": ""
                       },
@@ -9640,7 +11578,7 @@
                                       },
                                       "LgId": {
                                         "type": "string",
-                                        "maxLength": 3,
+                                        "maxLength": 5,
                                         "description": "Afwijkende taal t.o.v. werkgever",
                                         "format": ""
                                       },
@@ -12557,6 +14495,856 @@
           }
         }
       },
+      "KnCustomK01_POST": {
+        "type": "object",
+        "properties": {
+          "KnCustomK01": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "AuNu": {
+                        "type": "boolean",
+                        "description": "Autonummering gebruiken",
+                        "format": ""
+                      },
+                      "SqNo": {
+                        "type": "integer",
+                        "description": "Volgnummer",
+                        "format": ""
+                      },
+                      "Da": {
+                        "type": "string",
+                        "description": "Datum",
+                        "format": "date"
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving",
+                        "format": ""
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnCustomK01_PUT": {
+        "type": "object",
+        "properties": {
+          "KnCustomK01": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "AuNu": {
+                        "type": "boolean",
+                        "description": "Autonummering gebruiken",
+                        "format": ""
+                      },
+                      "SqNo": {
+                        "type": "integer",
+                        "description": "Volgnummer",
+                        "format": ""
+                      },
+                      "Da": {
+                        "type": "string",
+                        "description": "Datum",
+                        "format": "date"
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "SqNo"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnCustomK02_POST": {
+        "type": "object",
+        "properties": {
+          "KnCustomK02": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "AuNu": {
+                        "type": "boolean",
+                        "description": "Autonummering gebruiken",
+                        "format": ""
+                      },
+                      "SqNo": {
+                        "type": "integer",
+                        "description": "Volgnummer",
+                        "format": ""
+                      },
+                      "Da": {
+                        "type": "string",
+                        "description": "Datum",
+                        "format": "date"
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving",
+                        "format": ""
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnCustomK02_PUT": {
+        "type": "object",
+        "properties": {
+          "KnCustomK02": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "AuNu": {
+                        "type": "boolean",
+                        "description": "Autonummering gebruiken",
+                        "format": ""
+                      },
+                      "SqNo": {
+                        "type": "integer",
+                        "description": "Volgnummer",
+                        "format": ""
+                      },
+                      "Da": {
+                        "type": "string",
+                        "description": "Datum",
+                        "format": "date"
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "SqNo"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnCustomK03_POST": {
+        "type": "object",
+        "properties": {
+          "KnCustomK03": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "AuNu": {
+                        "type": "boolean",
+                        "description": "Autonummering gebruiken",
+                        "format": ""
+                      },
+                      "SqNo": {
+                        "type": "integer",
+                        "description": "Volgnummer",
+                        "format": ""
+                      },
+                      "Da": {
+                        "type": "string",
+                        "description": "Datum",
+                        "format": "date"
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving",
+                        "format": ""
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnCustomK03_PUT": {
+        "type": "object",
+        "properties": {
+          "KnCustomK03": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "AuNu": {
+                        "type": "boolean",
+                        "description": "Autonummering gebruiken",
+                        "format": ""
+                      },
+                      "SqNo": {
+                        "type": "integer",
+                        "description": "Volgnummer",
+                        "format": ""
+                      },
+                      "Da": {
+                        "type": "string",
+                        "description": "Datum",
+                        "format": "date"
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "SqNo"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnCustomK04_POST": {
+        "type": "object",
+        "properties": {
+          "KnCustomK04": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "AuNu": {
+                        "type": "boolean",
+                        "description": "Autonummering gebruiken",
+                        "format": ""
+                      },
+                      "SqNo": {
+                        "type": "integer",
+                        "description": "Volgnummer",
+                        "format": ""
+                      },
+                      "Da": {
+                        "type": "string",
+                        "description": "Datum",
+                        "format": "date"
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving",
+                        "format": ""
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnCustomK04_PUT": {
+        "type": "object",
+        "properties": {
+          "KnCustomK04": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "AuNu": {
+                        "type": "boolean",
+                        "description": "Autonummering gebruiken",
+                        "format": ""
+                      },
+                      "SqNo": {
+                        "type": "integer",
+                        "description": "Volgnummer",
+                        "format": ""
+                      },
+                      "Da": {
+                        "type": "string",
+                        "description": "Datum",
+                        "format": "date"
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "SqNo"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnCustomK05_POST": {
+        "type": "object",
+        "properties": {
+          "KnCustomK05": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "AuNu": {
+                        "type": "boolean",
+                        "description": "Autonummering gebruiken",
+                        "format": ""
+                      },
+                      "SqNo": {
+                        "type": "integer",
+                        "description": "Volgnummer",
+                        "format": ""
+                      },
+                      "Da": {
+                        "type": "string",
+                        "description": "Datum",
+                        "format": "date"
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving",
+                        "format": ""
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnCustomK05_PUT": {
+        "type": "object",
+        "properties": {
+          "KnCustomK05": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "AuNu": {
+                        "type": "boolean",
+                        "description": "Autonummering gebruiken",
+                        "format": ""
+                      },
+                      "SqNo": {
+                        "type": "integer",
+                        "description": "Volgnummer",
+                        "format": ""
+                      },
+                      "Da": {
+                        "type": "string",
+                        "description": "Datum",
+                        "format": "date"
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "SqNo"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnCustomK06_POST": {
+        "type": "object",
+        "properties": {
+          "KnCustomK06": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "AuNu": {
+                        "type": "boolean",
+                        "description": "Autonummering gebruiken",
+                        "format": ""
+                      },
+                      "SqNo": {
+                        "type": "integer",
+                        "description": "Volgnummer",
+                        "format": ""
+                      },
+                      "Da": {
+                        "type": "string",
+                        "description": "Datum",
+                        "format": "date"
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving",
+                        "format": ""
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnCustomK06_PUT": {
+        "type": "object",
+        "properties": {
+          "KnCustomK06": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "AuNu": {
+                        "type": "boolean",
+                        "description": "Autonummering gebruiken",
+                        "format": ""
+                      },
+                      "SqNo": {
+                        "type": "integer",
+                        "description": "Volgnummer",
+                        "format": ""
+                      },
+                      "Da": {
+                        "type": "string",
+                        "description": "Datum",
+                        "format": "date"
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "SqNo"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnCustomK07_POST": {
+        "type": "object",
+        "properties": {
+          "KnCustomK07": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "AuNu": {
+                        "type": "boolean",
+                        "description": "Autonummering gebruiken",
+                        "format": ""
+                      },
+                      "SqNo": {
+                        "type": "integer",
+                        "description": "Volgnummer",
+                        "format": ""
+                      },
+                      "Da": {
+                        "type": "string",
+                        "description": "Datum",
+                        "format": "date"
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving",
+                        "format": ""
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnCustomK07_PUT": {
+        "type": "object",
+        "properties": {
+          "KnCustomK07": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "AuNu": {
+                        "type": "boolean",
+                        "description": "Autonummering gebruiken",
+                        "format": ""
+                      },
+                      "SqNo": {
+                        "type": "integer",
+                        "description": "Volgnummer",
+                        "format": ""
+                      },
+                      "Da": {
+                        "type": "string",
+                        "description": "Datum",
+                        "format": "date"
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "SqNo"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnCustomK08_POST": {
+        "type": "object",
+        "properties": {
+          "KnCustomK08": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "AuNu": {
+                        "type": "boolean",
+                        "description": "Autonummering gebruiken",
+                        "format": ""
+                      },
+                      "SqNo": {
+                        "type": "integer",
+                        "description": "Volgnummer",
+                        "format": ""
+                      },
+                      "Da": {
+                        "type": "string",
+                        "description": "Datum",
+                        "format": "date"
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving",
+                        "format": ""
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnCustomK08_PUT": {
+        "type": "object",
+        "properties": {
+          "KnCustomK08": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "AuNu": {
+                        "type": "boolean",
+                        "description": "Autonummering gebruiken",
+                        "format": ""
+                      },
+                      "SqNo": {
+                        "type": "integer",
+                        "description": "Volgnummer",
+                        "format": ""
+                      },
+                      "Da": {
+                        "type": "string",
+                        "description": "Datum",
+                        "format": "date"
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "SqNo"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnCustomK09_POST": {
+        "type": "object",
+        "properties": {
+          "KnCustomK09": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "AuNu": {
+                        "type": "boolean",
+                        "description": "Autonummering gebruiken",
+                        "format": ""
+                      },
+                      "SqNo": {
+                        "type": "integer",
+                        "description": "Volgnummer",
+                        "format": ""
+                      },
+                      "Da": {
+                        "type": "string",
+                        "description": "Datum",
+                        "format": "date"
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving",
+                        "format": ""
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnCustomK09_PUT": {
+        "type": "object",
+        "properties": {
+          "KnCustomK09": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "AuNu": {
+                        "type": "boolean",
+                        "description": "Autonummering gebruiken",
+                        "format": ""
+                      },
+                      "SqNo": {
+                        "type": "integer",
+                        "description": "Volgnummer",
+                        "format": ""
+                      },
+                      "Da": {
+                        "type": "string",
+                        "description": "Datum",
+                        "format": "date"
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "SqNo"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnCustomK10_POST": {
+        "type": "object",
+        "properties": {
+          "KnCustomK10": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "AuNu": {
+                        "type": "boolean",
+                        "description": "Autonummering gebruiken",
+                        "format": ""
+                      },
+                      "SqNo": {
+                        "type": "integer",
+                        "description": "Volgnummer",
+                        "format": ""
+                      },
+                      "Da": {
+                        "type": "string",
+                        "description": "Datum",
+                        "format": "date"
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving",
+                        "format": ""
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnCustomK10_PUT": {
+        "type": "object",
+        "properties": {
+          "KnCustomK10": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "AuNu": {
+                        "type": "boolean",
+                        "description": "Autonummering gebruiken",
+                        "format": ""
+                      },
+                      "SqNo": {
+                        "type": "integer",
+                        "description": "Volgnummer",
+                        "format": ""
+                      },
+                      "Da": {
+                        "type": "string",
+                        "description": "Datum",
+                        "format": "date"
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "SqNo"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "KnDayContract_POST": {
         "type": "object",
         "properties": {
@@ -15320,7 +18108,7 @@
                                       },
                                       "DvbStAn": {
                                         "type": "string",
-                                        "description": "Startdatum anci?nniteit",
+                                        "description": "Startdatum anciënniteit",
                                         "format": "date"
                                       },
                                       "DvbSeAc": {
@@ -15435,13 +18223,13 @@
                                       "DvbViRe": {
                                         "type": "string",
                                         "maxLength": 10,
-                                        "description": "Reden einde dienstverband Belgi?",
+                                        "description": "Reden einde dienstverband België",
                                         "format": ""
                                       },
                                       "DvbViMa": {
                                         "type": "string",
                                         "maxLength": 10,
-                                        "description": "Wijze einde dienstverband Belgi?",
+                                        "description": "Wijze einde dienstverband België",
                                         "format": ""
                                       },
                                       "ArvStPn": {
@@ -17519,6 +20307,19 @@
                                         "description": "Code werkschema\nVAR = Variabel werkschema;\nVST = Vast werkschema van 1 week;\nWIS = Deeltijds werkschema voor vast mndloon met mnd zonder prest. of met sterk wisselende prest.;\nWMW = Vast werkschema van meerdere weken;",
                                         "format": ""
                                       },
+                                      "WsTC": {
+                                        "type": "string",
+                                        "enum": [
+                                          "1",
+                                          "2",
+                                          "3",
+                                          "4",
+                                          "5"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Type werkschema\n1 = Volgens een vast werkschema;\n2 = Volgens een variabel werkschema;\n3 = Geen werkschema;\n4 = Vast (met tijdsregistratie);\n5 = Variabel (met tijdsregistratie);",
+                                        "format": ""
+                                      },
                                       "CDoc": {
                                         "type": "string",
                                         "enum": [
@@ -17551,7 +20352,7 @@
                                           "1"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Ploeg-/nachtvermindering\n1 = Werknemer in ploeg- en/of nachtarbeid;",
+                                        "description": "Ploeg/nachtvermindering\n1 = Werknemer in ploeg- en/of nachtarbeid;",
                                         "format": ""
                                       },
                                       "WrNu": {
@@ -29471,7 +32272,7 @@
                                       },
                                       "DvbStAn": {
                                         "type": "string",
-                                        "description": "Startdatum anci?nniteit",
+                                        "description": "Startdatum anciënniteit",
                                         "format": "date"
                                       },
                                       "DvbSeAc": {
@@ -29586,13 +32387,13 @@
                                       "DvbViRe": {
                                         "type": "string",
                                         "maxLength": 10,
-                                        "description": "Reden einde dienstverband Belgi?",
+                                        "description": "Reden einde dienstverband België",
                                         "format": ""
                                       },
                                       "DvbViMa": {
                                         "type": "string",
                                         "maxLength": 10,
-                                        "description": "Wijze einde dienstverband Belgi?",
+                                        "description": "Wijze einde dienstverband België",
                                         "format": ""
                                       },
                                       "ArvStPn": {
@@ -31662,6 +34463,19 @@
                                         "description": "Code werkschema\nVAR = Variabel werkschema;\nVST = Vast werkschema van 1 week;\nWIS = Deeltijds werkschema voor vast mndloon met mnd zonder prest. of met sterk wisselende prest.;\nWMW = Vast werkschema van meerdere weken;",
                                         "format": ""
                                       },
+                                      "WsTC": {
+                                        "type": "string",
+                                        "enum": [
+                                          "1",
+                                          "2",
+                                          "3",
+                                          "4",
+                                          "5"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Type werkschema\n1 = Volgens een vast werkschema;\n2 = Volgens een variabel werkschema;\n3 = Geen werkschema;\n4 = Vast (met tijdsregistratie);\n5 = Variabel (met tijdsregistratie);",
+                                        "format": ""
+                                      },
                                       "CDoc": {
                                         "type": "string",
                                         "enum": [
@@ -31694,7 +34508,7 @@
                                           "1"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Ploeg-/nachtvermindering\n1 = Werknemer in ploeg- en/of nachtarbeid;",
+                                        "description": "Ploeg/nachtvermindering\n1 = Werknemer in ploeg- en/of nachtarbeid;",
                                         "format": ""
                                       },
                                       "WrNu": {
@@ -40859,7 +43673,7 @@
           }
         }
       },
-      "KnPocketNotStatus_PUT": {
+      "KnPocketNotStatus_POST": {
         "type": "object",
         "properties": {
           "AfasKnMessage": {
@@ -40890,7 +43704,11 @@
                         "description": "Status AFAS Pocket\n100 = Te verzenden;\n200 = Verzonden;\n300 = Fout bij verzenden;\n400 = Ontvangen;\n500 = Niet van toepassing;",
                         "format": ""
                       }
-                    }
+                    },
+                    "required": [
+                      "PoId",
+                      "ViPo"
+                    ]
                   }
                 }
               }

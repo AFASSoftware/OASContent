@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "7.7.10",
+    "version": "8.8.11",
     "title": "AFAS Budgetten en activa API",
     "description": "This API describes the endpoints related to Budgetten en activa. Use this API with the functional description of the API."
   },
@@ -199,7 +199,7 @@
     },
     "/Metainfo/{Type}/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
+        "summary": "Retrieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
         "tags": [
           "API Info"
         ],
@@ -350,7 +350,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the data of a custom getconnector based on the endpoint id.",
+        "summary": "Retrieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -442,7 +442,7 @@
             },
             "in": "path",
             "name": "Endpoint",
-            "description": "Add the id of the connector you want to get the data from",
+            "description": "Add the id of connector you want to get the meta info from",
             "required": true
           },
           {
@@ -6079,27 +6079,27 @@
                       },
                       "Di01": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Di02": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Di03": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Di04": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Di05": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Judg": {
@@ -6350,27 +6350,27 @@
                       },
                       "Di01": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Di02": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Di03": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Di04": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Di05": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Judg": {
@@ -6727,7 +6727,7 @@
                                           "6"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Generate obligation\n0 = Do not generate obligation;\n1 = Per year as from the start date period;\n2 = Per year, distribute proportionally;\n3 = Per month, distribute proportionally;\n4 = Per month, distribute proportionally;\n5 = Per period (4 weeks), distribute proportionally;\n6 = Per period (4 weeks), distribute proportionally;",
+                                        "description": "Generate obligation\n0 = Do not generate obligation;\n1 = Per year as from the start date period;\n2 = Per year, distribute proportionally;\n3 = Per month, distribute proportionally;\n4 = Per month, distribute pro rata;\n5 = Per period (4 weeks), distribute proportionally;\n6 = Per period (4 weeks), distribute proportionally;",
                                         "format": ""
                                       },
                                       "AcNr": {
@@ -7165,7 +7165,7 @@
                                           "6"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Generate obligation\n0 = Do not generate obligation;\n1 = Per year as from the start date period;\n2 = Per year, distribute proportionally;\n3 = Per month, distribute proportionally;\n4 = Per month, distribute proportionally;\n5 = Per period (4 weeks), distribute proportionally;\n6 = Per period (4 weeks), distribute proportionally;",
+                                        "description": "Generate obligation\n0 = Do not generate obligation;\n1 = Per year as from the start date period;\n2 = Per year, distribute proportionally;\n3 = Per month, distribute proportionally;\n4 = Per month, distribute pro rata;\n5 = Per period (4 weeks), distribute proportionally;\n6 = Per period (4 weeks), distribute proportionally;",
                                         "format": ""
                                       },
                                       "AcNr": {

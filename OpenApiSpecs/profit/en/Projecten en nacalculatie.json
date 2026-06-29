@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "7.7.10",
+    "version": "8.8.11",
     "title": "AFAS Projecten en nacalculatie API",
     "description": "This API describes the endpoints related to Projecten en nacalculatie. Use this API with the functional description of the API."
   },
@@ -199,7 +199,7 @@
     },
     "/Metainfo/{Type}/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
+        "summary": "Retrieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
         "tags": [
           "API Info"
         ],
@@ -350,7 +350,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the data of a custom getconnector based on the endpoint id.",
+        "summary": "Retrieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -442,7 +442,7 @@
             },
             "in": "path",
             "name": "Endpoint",
-            "description": "Add the id of the connector you want to get the data from",
+            "description": "Add the id of connector you want to get the meta info from",
             "required": true
           },
           {
@@ -8408,13 +8408,13 @@
                       },
                       "FcNo": {
                         "type": "integer",
-                        "description": "Forecast number",
+                        "description": "Number forecast",
                         "format": ""
                       },
                       "ViOr": {
                         "type": "string",
                         "maxLength": 10,
-                        "description": "Quotation type",
+                        "description": "Soort offerte",
                         "format": ""
                       },
                       "VaDa": {
@@ -8447,25 +8447,25 @@
                       "V2Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Allocation axis code 2",
+                        "description": "Exception axis code 2",
                         "format": ""
                       },
                       "V3Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Allocation axis code 3",
+                        "description": "Exception axis code 3",
                         "format": ""
                       },
                       "V4Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Allocation axis code 4",
+                        "description": "Exception axis code 4",
                         "format": ""
                       },
                       "V5Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Allocation axis code 5",
+                        "description": "Exception axis code 5",
                         "format": ""
                       },
                       "InPc": {
@@ -8475,7 +8475,7 @@
                       },
                       "PaPc": {
                         "type": "number",
-                        "description": "% Payment discount",
+                        "description": "Payment discount (%)",
                         "format": "number"
                       },
                       "PaCd": {
@@ -8770,27 +8770,27 @@
                                       },
                                       "Di01": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di02": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di03": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di04": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di05": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Year": {
@@ -9034,7 +9034,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Part item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
+                                                        "description": "Item type component\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -9202,13 +9202,13 @@
                       },
                       "FcNo": {
                         "type": "integer",
-                        "description": "Forecast number",
+                        "description": "Number forecast",
                         "format": ""
                       },
                       "ViOr": {
                         "type": "string",
                         "maxLength": 10,
-                        "description": "Quotation type",
+                        "description": "Soort offerte",
                         "format": ""
                       },
                       "VaDa": {
@@ -9241,25 +9241,25 @@
                       "V2Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Allocation axis code 2",
+                        "description": "Exception axis code 2",
                         "format": ""
                       },
                       "V3Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Allocation axis code 3",
+                        "description": "Exception axis code 3",
                         "format": ""
                       },
                       "V4Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Allocation axis code 4",
+                        "description": "Exception axis code 4",
                         "format": ""
                       },
                       "V5Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Allocation axis code 5",
+                        "description": "Exception axis code 5",
                         "format": ""
                       },
                       "InPc": {
@@ -9271,7 +9271,7 @@
                       "PaPc": {
                         "type": "number",
                         "multipleOf": 0.01,
-                        "description": "% Payment discount",
+                        "description": "Payment discount (%)",
                         "format": "float"
                       },
                       "PaCd": {
@@ -9581,27 +9581,27 @@
                                       },
                                       "Di01": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di02": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di03": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di04": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Di05": {
                                         "type": "integer",
-                                        "description": "(not used)",
+                                        "description": "(Not used)",
                                         "format": ""
                                       },
                                       "Year": {
@@ -9841,7 +9841,7 @@
                                                           "8"
                                                         ],
                                                         "maxLength": 10,
-                                                        "description": "Part item type\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
+                                                        "description": "Item type component\n1 = Work type;\n10 = Production indicator;\n11 = Dough;\n14 = Item dimension total;\n2 = Article;\n3 = Text;\n4 = Sub-total;\n5 = Allowance;\n6 = Costs;\n7 = Assembled item;\n8 = Course;",
                                                         "format": ""
                                                       },
                                                       "ItCd": {
@@ -10246,27 +10246,27 @@
                       },
                       "Di01": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Di02": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Di03": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Di04": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Di05": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "War": {
@@ -10596,27 +10596,27 @@
                       },
                       "Di01": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Di02": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Di03": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Di04": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Di05": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "ErId": {
@@ -10657,7 +10657,7 @@
                       "VbCo": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Code verbijzondering",
+                        "description": "Allocation code",
                         "format": ""
                       },
                       "UpFc": {
@@ -10738,7 +10738,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Vervoermiddel voor WPM rapportage\n11 = Petrol vehicles;\n12 = Diesel vehicle;\n13 = Cars belonging to (plug-in) hybrids;\n14 = Cars 100% electric;\n15 = Other fuel cars;\n21 = Petrol/diesel motorcycle ;\n22 = Electric motorcycle;\n31 = Petrol or diesel moped/scooter;\n32 = Electric moped/scooter (including speed-pedelec);\n41 = (Electric) bicycle (not being a speed-pedelec) or walking;\n51 = Public transportation;",
+                        "description": "Transport means for WPM reporting\n11 = Petrol vehicles;\n12 = Diesel vehicle;\n13 = Cars belonging to (plug-in) hybrids;\n14 = Cars 100% electric;\n15 = Other fuel cars;\n21 = Petrol/diesel motorcycle ;\n22 = Electric motorcycle;\n31 = Petrol or diesel moped/scooter;\n32 = Electric moped/scooter (including speed-pedelec);\n41 = (Electric) bicycle (not being a speed-pedelec) or walking;\n51 = Public transportation;",
                         "format": ""
                       },
                       "ViTv": {
@@ -10771,7 +10771,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Vervoermiddel voor urenontrafelaar\n11 = Petrol vehicle;\n12 = Diesel vehicle;\n13 = Auto (Plug in) Hybrid;\n14 = 100% electric vehicle;\n15 = Other fuel car;\n21 = Motorbike petrol;\n22 = Electric motorcycle;\n29 = Motorbike diesel;\n31 = Petrol moped/scooter;\n32 = Moped/scooter 100% electric;\n38 = Moped/scooter diesel;\n39 = Speed-pedelec;\n41 = (Electric) bicycle;\n49 = By foot;\n51 = Public transport ;",
+                        "description": "Transport means for hour unraveling\n11 = Petrol vehicle;\n12 = Diesel vehicle;\n13 = Auto (Plug in) Hybrid;\n14 = 100% electric vehicle;\n15 = Other fuel car;\n21 = Motorbike petrol;\n22 = Electric motorcycle;\n29 = Motorbike diesel;\n31 = Petrol moped/scooter;\n32 = Moped/scooter 100% electric;\n38 = Moped/scooter diesel;\n39 = Speed-pedelec;\n41 = (Electric) bicycle;\n49 = By foot;\n51 = Public transport ;",
                         "format": ""
                       },
                       "FileId": {
@@ -10981,27 +10981,27 @@
                       },
                       "Di01": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Di02": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Di03": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Di04": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Di05": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "ErId": {
@@ -11042,7 +11042,7 @@
                       "VbCo": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Code verbijzondering",
+                        "description": "Allocation code",
                         "format": ""
                       },
                       "UpFc": {
@@ -11126,7 +11126,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Vervoermiddel voor WPM rapportage\n11 = Petrol vehicles;\n12 = Diesel vehicle;\n13 = Cars belonging to (plug-in) hybrids;\n14 = Cars 100% electric;\n15 = Other fuel cars;\n21 = Petrol/diesel motorcycle ;\n22 = Electric motorcycle;\n31 = Petrol or diesel moped/scooter;\n32 = Electric moped/scooter (including speed-pedelec);\n41 = (Electric) bicycle (not being a speed-pedelec) or walking;\n51 = Public transportation;",
+                        "description": "Transport means for WPM reporting\n11 = Petrol vehicles;\n12 = Diesel vehicle;\n13 = Cars belonging to (plug-in) hybrids;\n14 = Cars 100% electric;\n15 = Other fuel cars;\n21 = Petrol/diesel motorcycle ;\n22 = Electric motorcycle;\n31 = Petrol or diesel moped/scooter;\n32 = Electric moped/scooter (including speed-pedelec);\n41 = (Electric) bicycle (not being a speed-pedelec) or walking;\n51 = Public transportation;",
                         "format": ""
                       },
                       "ViTv": {
@@ -11159,7 +11159,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Vervoermiddel voor urenontrafelaar\n11 = Petrol vehicle;\n12 = Diesel vehicle;\n13 = Auto (Plug in) Hybrid;\n14 = 100% electric vehicle;\n15 = Other fuel car;\n21 = Motorbike petrol;\n22 = Electric motorcycle;\n29 = Motorbike diesel;\n31 = Petrol moped/scooter;\n32 = Moped/scooter 100% electric;\n38 = Moped/scooter diesel;\n39 = Speed-pedelec;\n41 = (Electric) bicycle;\n49 = By foot;\n51 = Public transport ;",
+                        "description": "Transport means for hour unraveling\n11 = Petrol vehicle;\n12 = Diesel vehicle;\n13 = Auto (Plug in) Hybrid;\n14 = 100% electric vehicle;\n15 = Other fuel car;\n21 = Motorbike petrol;\n22 = Electric motorcycle;\n29 = Motorbike diesel;\n31 = Petrol moped/scooter;\n32 = Moped/scooter 100% electric;\n38 = Moped/scooter diesel;\n39 = Speed-pedelec;\n41 = (Electric) bicycle;\n49 = By foot;\n51 = Public transport ;",
                         "format": ""
                       },
                       "FileId": {
@@ -11966,6 +11966,17 @@
                         "description": "Preferred VAT code (purchasing)",
                         "format": ""
                       },
+                      "ADCd": {
+                        "type": "boolean",
+                        "description": "In accordance with the allocation setting",
+                        "format": ""
+                      },
+                      "CoVC": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "VAT reclaim",
+                        "format": ""
+                      },
                       "PrMa": {
                         "type": "string",
                         "maxLength": 15,
@@ -11975,7 +11986,7 @@
                       "VbCo": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Code verbijzondering",
+                        "description": "Allocation code",
                         "format": ""
                       },
                       "VaCo": {
@@ -12234,10 +12245,11 @@
                           "4",
                           "5",
                           "6",
-                          "7"
+                          "7",
+                          "8"
                         ],
                         "maxLength": 20,
-                        "description": "Work in progress method\n0 = No work in progress;\n1 = Result based on a ready project (CC);\n2 = Result based on actual costing (NTF);\n3 = Result based on progress (POC);\n4 = Costs based on hourly wage, allowance and surcharge;\n5 = Revenue allocation based on actual costing;\n6 = Revenue allocation based on project time progress;\n7 = Revenue allocation based on hours of work progress;",
+                        "description": "Financial integration method\n0 = No financial project integration;\n1 = Result based on a ready project (CC);\n2 = Result based on actual costing (NTF);\n3 = Result based on progress (POC);\n4 = Costs based on hourly wage, allowance and surcharge;\n5 = Revenue allocation based on actual costing;\n6 = Revenue allocation based on project time progress;\n7 = Revenue allocation based on hours of work progress;\n8 = Journalise project mutations without financial source;",
                         "format": ""
                       },
                       "RBMt": {
@@ -12353,6 +12365,11 @@
                         "description": "Invoicing invoice period via invoice proposal",
                         "format": ""
                       },
+                      "RePr": {
+                        "type": "boolean",
+                        "description": "Invoice post-calculation via invoice proposal",
+                        "format": ""
+                      },
                       "StTm": {
                         "type": "string",
                         "description": "Start time",
@@ -12435,18 +12452,18 @@
                       "Bankaccount": {
                         "type": "string",
                         "maxLength": 40,
-                        "description": "Banknummer\n            afwijkend",
+                        "description": "Banknummer afwijkend",
                         "format": ""
                       },
                       "FileName": {
                         "type": "string",
                         "maxLength": 255,
-                        "description": "\n            Filename",
+                        "description": "Filename",
                         "format": ""
                       },
                       "FileStream": {
                         "type": "string",
-                        "description": "File\n            as byte-array",
+                        "description": "File as byte-array",
                         "format": "byte"
                       },
                       "CdI1": {
@@ -12457,18 +12474,18 @@
                       "SignatureFileId1": {
                         "type": "string",
                         "maxLength": 32,
-                        "description": "Handtekening1\n            bestand",
+                        "description": "Handtekening1 bestand",
                         "format": ""
                       },
                       "SignatureFileName1": {
                         "type": "string",
                         "maxLength": 255,
-                        "description": "Handtekening1\n            naam bestand",
+                        "description": "Handtekening1 naam bestand",
                         "format": ""
                       },
                       "SignatureFileStream1": {
                         "type": "string",
-                        "description": "Handtekening1\n            afbeelding",
+                        "description": "Handtekening1 afbeelding",
                         "format": "byte"
                       },
                       "CdI2": {
@@ -12479,18 +12496,18 @@
                       "SignatureFileId2": {
                         "type": "string",
                         "maxLength": 32,
-                        "description": "Handtekening2\n            bestand",
+                        "description": "Handtekening2 bestand",
                         "format": ""
                       },
                       "SignatureFileName2": {
                         "type": "string",
                         "maxLength": 255,
-                        "description": "Handtekening2\n            naam bestand",
+                        "description": "Handtekening2 naam bestand",
                         "format": ""
                       },
                       "SignatureFileStream2": {
                         "type": "string",
-                        "description": "Handtekening2\n            afbeelding",
+                        "description": "Handtekening2 afbeelding",
                         "format": "byte"
                       },
                       "CdIp": {
@@ -12516,12 +12533,12 @@
                       },
                       "PtPrpDaBe": {
                         "type": "string",
-                        "description": "Begindatum\n            cao inlener",
+                        "description": "Begindatum cao inlener",
                         "format": "date"
                       },
                       "PtPrpTyEj": {
                         "type": "string",
-                        "description": "Soort\n            eindejaarsuitkering",
+                        "description": "Soort eindejaarsuitkering",
                         "format": ""
                       },
                       "PtPrpPaDa": {
@@ -12546,7 +12563,7 @@
                       },
                       "PtPrpNoPe": {
                         "type": "integer",
-                        "description": "Aantal periodes bij\n            verkooprelatie",
+                        "description": "Aantal periodes bij verkooprelatie",
                         "format": ""
                       },
                       "PtPrpPeUn": {
@@ -12563,13 +12580,13 @@
                       "PtPrpViTa": {
                         "type": "string",
                         "maxLength": 4,
-                        "description": "Afwijkende CBS\n            cao-code",
+                        "description": "Afwijkende CBS cao-code",
                         "format": ""
                       },
                       "PtPrpViTp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Soort periodieke\n            verhoging",
+                        "description": "Soort periodieke verhoging",
                         "format": ""
                       },
                       "PtPrpDmon": {
@@ -12604,13 +12621,13 @@
                       },
                       "PtPrpPFrA": {
                         "type": "integer",
-                        "description": "Periodieke verhoging\n            vanaf leeftijd",
+                        "description": "Periodieke verhoging vanaf leeftijd",
                         "format": ""
                       },
                       "PtPrpViEx": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Extra voorwaarde\n            periodiek",
+                        "description": "Extra voorwaarde periodiek",
                         "format": ""
                       },
                       "PtPrpReDa": {
@@ -12642,35 +12659,35 @@
                       },
                       "PtPrpWeAg": {
                         "type": "integer",
-                        "description": "Werkervaring opbouwen\n            vanaf leeftijd",
+                        "description": "Werkervaring opbouwen vanaf leeftijd",
                         "format": ""
                       },
                       "PtPrpVaIp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Telling\n            onderbrekingsperiode",
+                        "description": "Telling onderbrekingsperiode",
                         "format": ""
                       },
                       "PtPrpMoCo": {
                         "type": "integer",
-                        "description": "Kalenderdagen opnieuw\n            tellen als onderbr.per.",
+                        "description": "Kalenderdagen opnieuw tellen als onderbr.per.",
                         "format": ""
                       },
                       "PtPrpVaIe": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Onderbrekingsperiode\n            eenheid",
+                        "description": "Onderbrekingsperiode eenheid",
                         "format": ""
                       },
                       "PtPrpAcHi": {
                         "type": "boolean",
-                        "description": "Beoordeling inlener\n            benodigd",
+                        "description": "Beoordeling inlener benodigd",
                         "format": ""
                       },
                       "PtPrpVaCo": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Uitvoeren periodieke\n            verhoging",
+                        "description": "Uitvoeren periodieke verhoging",
                         "format": ""
                       },
                       "PtPrpMeVp": {
@@ -13231,6 +13248,17 @@
                         "description": "Preferred VAT code (purchasing)",
                         "format": ""
                       },
+                      "ADCd": {
+                        "type": "boolean",
+                        "description": "In accordance with the allocation setting",
+                        "format": ""
+                      },
+                      "CoVC": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "VAT reclaim",
+                        "format": ""
+                      },
                       "PrMa": {
                         "type": "string",
                         "maxLength": 15,
@@ -13240,7 +13268,7 @@
                       "VbCo": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Code verbijzondering",
+                        "description": "Allocation code",
                         "format": ""
                       },
                       "VaCo": {
@@ -13500,10 +13528,11 @@
                           "4",
                           "5",
                           "6",
-                          "7"
+                          "7",
+                          "8"
                         ],
                         "maxLength": 20,
-                        "description": "Work in progress method\n0 = No work in progress;\n1 = Result based on a ready project (CC);\n2 = Result based on actual costing (NTF);\n3 = Result based on progress (POC);\n4 = Costs based on hourly wage, allowance and surcharge;\n5 = Revenue allocation based on actual costing;\n6 = Revenue allocation based on project time progress;\n7 = Revenue allocation based on hours of work progress;",
+                        "description": "Financial integration method\n0 = No financial project integration;\n1 = Result based on a ready project (CC);\n2 = Result based on actual costing (NTF);\n3 = Result based on progress (POC);\n4 = Costs based on hourly wage, allowance and surcharge;\n5 = Revenue allocation based on actual costing;\n6 = Revenue allocation based on project time progress;\n7 = Revenue allocation based on hours of work progress;\n8 = Journalise project mutations without financial source;",
                         "format": ""
                       },
                       "RBMt": {
@@ -13620,6 +13649,11 @@
                         "description": "Invoicing invoice period via invoice proposal",
                         "format": ""
                       },
+                      "RePr": {
+                        "type": "boolean",
+                        "description": "Invoice post-calculation via invoice proposal",
+                        "format": ""
+                      },
                       "StTm": {
                         "type": "string",
                         "description": "Start time",
@@ -13703,18 +13737,18 @@
                       "Bankaccount": {
                         "type": "string",
                         "maxLength": 40,
-                        "description": "Banknummer\n            afwijkend",
+                        "description": "Banknummer afwijkend",
                         "format": ""
                       },
                       "FileName": {
                         "type": "string",
                         "maxLength": 255,
-                        "description": "\n            Filename",
+                        "description": "Filename",
                         "format": ""
                       },
                       "FileStream": {
                         "type": "string",
-                        "description": "File\n            as byte-array",
+                        "description": "File as byte-array",
                         "format": "byte"
                       },
                       "CdI1": {
@@ -13725,18 +13759,18 @@
                       "SignatureFileId1": {
                         "type": "string",
                         "maxLength": 32,
-                        "description": "Handtekening1\n            bestand",
+                        "description": "Handtekening1 bestand",
                         "format": ""
                       },
                       "SignatureFileName1": {
                         "type": "string",
                         "maxLength": 255,
-                        "description": "Handtekening1\n            naam bestand",
+                        "description": "Handtekening1 naam bestand",
                         "format": ""
                       },
                       "SignatureFileStream1": {
                         "type": "string",
-                        "description": "Handtekening1\n            afbeelding",
+                        "description": "Handtekening1 afbeelding",
                         "format": "byte"
                       },
                       "CdI2": {
@@ -13747,18 +13781,18 @@
                       "SignatureFileId2": {
                         "type": "string",
                         "maxLength": 32,
-                        "description": "Handtekening2\n            bestand",
+                        "description": "Handtekening2 bestand",
                         "format": ""
                       },
                       "SignatureFileName2": {
                         "type": "string",
                         "maxLength": 255,
-                        "description": "Handtekening2\n            naam bestand",
+                        "description": "Handtekening2 naam bestand",
                         "format": ""
                       },
                       "SignatureFileStream2": {
                         "type": "string",
-                        "description": "Handtekening2\n            afbeelding",
+                        "description": "Handtekening2 afbeelding",
                         "format": "byte"
                       },
                       "CdIp": {
@@ -13784,12 +13818,12 @@
                       },
                       "PtPrpDaBe": {
                         "type": "string",
-                        "description": "Begindatum\n            cao inlener",
+                        "description": "Begindatum cao inlener",
                         "format": "date"
                       },
                       "PtPrpTyEj": {
                         "type": "string",
-                        "description": "Soort\n            eindejaarsuitkering",
+                        "description": "Soort eindejaarsuitkering",
                         "format": ""
                       },
                       "PtPrpPaDa": {
@@ -13814,7 +13848,7 @@
                       },
                       "PtPrpNoPe": {
                         "type": "integer",
-                        "description": "Aantal periodes bij\n            verkooprelatie",
+                        "description": "Aantal periodes bij verkooprelatie",
                         "format": ""
                       },
                       "PtPrpPeUn": {
@@ -13831,13 +13865,13 @@
                       "PtPrpViTa": {
                         "type": "string",
                         "maxLength": 4,
-                        "description": "Afwijkende CBS\n            cao-code",
+                        "description": "Afwijkende CBS cao-code",
                         "format": ""
                       },
                       "PtPrpViTp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Soort periodieke\n            verhoging",
+                        "description": "Soort periodieke verhoging",
                         "format": ""
                       },
                       "PtPrpDmon": {
@@ -13872,13 +13906,13 @@
                       },
                       "PtPrpPFrA": {
                         "type": "integer",
-                        "description": "Periodieke verhoging\n            vanaf leeftijd",
+                        "description": "Periodieke verhoging vanaf leeftijd",
                         "format": ""
                       },
                       "PtPrpViEx": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Extra voorwaarde\n            periodiek",
+                        "description": "Extra voorwaarde periodiek",
                         "format": ""
                       },
                       "PtPrpReDa": {
@@ -13910,35 +13944,35 @@
                       },
                       "PtPrpWeAg": {
                         "type": "integer",
-                        "description": "Werkervaring opbouwen\n            vanaf leeftijd",
+                        "description": "Werkervaring opbouwen vanaf leeftijd",
                         "format": ""
                       },
                       "PtPrpVaIp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Telling\n            onderbrekingsperiode",
+                        "description": "Telling onderbrekingsperiode",
                         "format": ""
                       },
                       "PtPrpMoCo": {
                         "type": "integer",
-                        "description": "Kalenderdagen opnieuw\n            tellen als onderbr.per.",
+                        "description": "Kalenderdagen opnieuw tellen als onderbr.per.",
                         "format": ""
                       },
                       "PtPrpVaIe": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Onderbrekingsperiode\n            eenheid",
+                        "description": "Onderbrekingsperiode eenheid",
                         "format": ""
                       },
                       "PtPrpAcHi": {
                         "type": "boolean",
-                        "description": "Beoordeling inlener\n            benodigd",
+                        "description": "Beoordeling inlener benodigd",
                         "format": ""
                       },
                       "PtPrpVaCo": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Uitvoeren periodieke\n            verhoging",
+                        "description": "Uitvoeren periodieke verhoging",
                         "format": ""
                       },
                       "PtPrpMeVp": {
@@ -14965,27 +14999,27 @@
                       },
                       "Di01": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Di02": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Di03": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Di04": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Di05": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "War": {
@@ -15328,7 +15362,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Vervoermiddel voor WPM rapportage\n11 = Petrol vehicles;\n12 = Diesel vehicle;\n13 = Cars belonging to (plug-in) hybrids;\n14 = Cars 100% electric;\n15 = Other fuel cars;\n21 = Petrol/diesel motorcycle ;\n22 = Electric motorcycle;\n31 = Petrol or diesel moped/scooter;\n32 = Electric moped/scooter (including speed-pedelec);\n41 = (Electric) bicycle (not being a speed-pedelec) or walking;\n51 = Public transportation;",
+                        "description": "Transport means for WPM reporting\n11 = Petrol vehicles;\n12 = Diesel vehicle;\n13 = Cars belonging to (plug-in) hybrids;\n14 = Cars 100% electric;\n15 = Other fuel cars;\n21 = Petrol/diesel motorcycle ;\n22 = Electric motorcycle;\n31 = Petrol or diesel moped/scooter;\n32 = Electric moped/scooter (including speed-pedelec);\n41 = (Electric) bicycle (not being a speed-pedelec) or walking;\n51 = Public transportation;",
                         "format": ""
                       },
                       "ViTv": {
@@ -15580,27 +15614,27 @@
                       },
                       "Di01": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Di02": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Di03": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Di04": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "Di05": {
                         "type": "integer",
-                        "description": "(not used)",
+                        "description": "(Not used)",
                         "format": ""
                       },
                       "War": {
@@ -15962,7 +15996,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Vervoermiddel voor WPM rapportage\n11 = Petrol vehicles;\n12 = Diesel vehicle;\n13 = Cars belonging to (plug-in) hybrids;\n14 = Cars 100% electric;\n15 = Other fuel cars;\n21 = Petrol/diesel motorcycle ;\n22 = Electric motorcycle;\n31 = Petrol or diesel moped/scooter;\n32 = Electric moped/scooter (including speed-pedelec);\n41 = (Electric) bicycle (not being a speed-pedelec) or walking;\n51 = Public transportation;",
+                        "description": "Transport means for WPM reporting\n11 = Petrol vehicles;\n12 = Diesel vehicle;\n13 = Cars belonging to (plug-in) hybrids;\n14 = Cars 100% electric;\n15 = Other fuel cars;\n21 = Petrol/diesel motorcycle ;\n22 = Electric motorcycle;\n31 = Petrol or diesel moped/scooter;\n32 = Electric moped/scooter (including speed-pedelec);\n41 = (Electric) bicycle (not being a speed-pedelec) or walking;\n51 = Public transportation;",
                         "format": ""
                       },
                       "ViTv": {

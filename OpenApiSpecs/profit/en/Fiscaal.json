@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "7.7.10",
+    "version": "8.8.11",
     "title": "AFAS Fiscaal API",
     "description": "This API describes the endpoints related to Fiscaal. Use this API with the functional description of the API."
   },
@@ -199,7 +199,7 @@
     },
     "/Metainfo/{Type}/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
+        "summary": "Retrieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
         "tags": [
           "API Info"
         ],
@@ -350,7 +350,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the data of a custom getconnector based on the endpoint id.",
+        "summary": "Retrieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -442,7 +442,7 @@
             },
             "in": "path",
             "name": "Endpoint",
-            "description": "Add the id of the connector you want to get the data from",
+            "description": "Add the id of connector you want to get the meta info from",
             "required": true
           },
           {
@@ -6324,7 +6324,7 @@
                                       },
                                       "LgId": {
                                         "type": "string",
-                                        "maxLength": 3,
+                                        "maxLength": 5,
                                         "description": "Language",
                                         "format": ""
                                       },
@@ -7555,7 +7555,7 @@
                                                                       },
                                                                       "LgId": {
                                                                         "type": "string",
-                                                                        "maxLength": 3,
+                                                                        "maxLength": 5,
                                                                         "description": "Language",
                                                                         "format": ""
                                                                       },
@@ -25261,7 +25261,7 @@
                                                                       },
                                                                       "AmEp": {
                                                                         "type": "number",
-                                                                        "description": "End value",
+                                                                        "description": "Eindwaarde",
                                                                         "format": "number"
                                                                       },
                                                                       "AnDe": {
@@ -25293,7 +25293,7 @@
                                                                       "BkAc": {
                                                                         "type": "string",
                                                                         "maxLength": 34,
-                                                                        "description": "Account number",
+                                                                        "description": "Rekeningnummer",
                                                                         "format": ""
                                                                       },
                                                                       "CiEx": {
@@ -25305,7 +25305,7 @@
                                                                       "CiId": {
                                                                         "type": "string",
                                                                         "maxLength": 3,
-                                                                        "description": "Country code",
+                                                                        "description": "Code land",
                                                                         "format": ""
                                                                       },
                                                                       "CoDs": {
@@ -25342,47 +25342,47 @@
                                                                       "Ds": {
                                                                         "type": "string",
                                                                         "maxLength": 60,
-                                                                        "description": "Description",
+                                                                        "description": "Omschrijving",
                                                                         "format": ""
                                                                       },
                                                                       "EnDa": {
                                                                         "type": "string",
-                                                                        "description": "End date",
+                                                                        "description": "Einddatum",
                                                                         "format": "date"
                                                                       },
                                                                       "FiId": {
                                                                         "type": "string",
                                                                         "maxLength": 7,
-                                                                        "description": "Field",
+                                                                        "description": "Veld",
                                                                         "format": ""
                                                                       },
                                                                       "FiNr": {
                                                                         "type": "string",
                                                                         "maxLength": 9,
-                                                                        "description": "Social security number ('BSN')",
+                                                                        "description": "Burgerservicenummer",
                                                                         "format": ""
                                                                       },
                                                                       "HmAd": {
                                                                         "type": "string",
                                                                         "maxLength": 9,
-                                                                        "description": "House number addition",
+                                                                        "description": "Toevoeging huisnummer",
                                                                         "format": ""
                                                                       },
                                                                       "HoAd": {
                                                                         "type": "string",
                                                                         "maxLength": 80,
-                                                                        "description": "Street",
+                                                                        "description": "Straatnaam",
                                                                         "format": ""
                                                                       },
                                                                       "HoEn": {
                                                                         "type": "string",
-                                                                        "description": "Period up to and incl.",
+                                                                        "description": "Periode t/m",
                                                                         "format": "date"
                                                                       },
                                                                       "HoNu": {
                                                                         "type": "string",
                                                                         "maxLength": 9,
-                                                                        "description": "House number",
+                                                                        "description": "Huisnummer",
                                                                         "format": ""
                                                                       },
                                                                       "HoOb": {
@@ -25394,7 +25394,7 @@
                                                                       "HoPl": {
                                                                         "type": "string",
                                                                         "maxLength": 80,
-                                                                        "description": "City",
+                                                                        "description": "Woonplaats",
                                                                         "format": ""
                                                                       },
                                                                       "HoQu": {
@@ -25411,7 +25411,7 @@
                                                                       },
                                                                       "HoSt": {
                                                                         "type": "string",
-                                                                        "description": "Period from",
+                                                                        "description": "Periode van",
                                                                         "format": "date"
                                                                       },
                                                                       "HoVa": {
@@ -25421,7 +25421,7 @@
                                                                       },
                                                                       "InAm": {
                                                                         "type": "number",
-                                                                        "description": "Interest amount",
+                                                                        "description": "Bedrag rente",
                                                                         "format": "number"
                                                                       },
                                                                       "InC2": {
@@ -25473,7 +25473,7 @@
                                                                       },
                                                                       "LoEn": {
                                                                         "type": "string",
-                                                                        "description": "Scheduled end date",
+                                                                        "description": "Geplande einddatum",
                                                                         "format": "date"
                                                                       },
                                                                       "LoSt": {
@@ -25503,7 +25503,7 @@
                                                                       },
                                                                       "PeMo": {
                                                                         "type": "integer",
-                                                                        "description": "Term",
+                                                                        "description": "Looptijd",
                                                                         "format": ""
                                                                       },
                                                                       "PrId": {
@@ -25548,7 +25548,7 @@
                                                                       "SaDa": {
                                                                         "type": "string",
                                                                         "maxLength": 4,
-                                                                        "description": "Sale date",
+                                                                        "description": "Datum verkoop",
                                                                         "format": ""
                                                                       },
                                                                       "SeVo": {
@@ -25563,7 +25563,7 @@
                                                                       },
                                                                       "StDa": {
                                                                         "type": "string",
-                                                                        "description": "Start date",
+                                                                        "description": "Begindatum",
                                                                         "format": "date"
                                                                       },
                                                                       "ToAm": {
@@ -25574,7 +25574,7 @@
                                                                       "Valu": {
                                                                         "type": "string",
                                                                         "maxLength": 3,
-                                                                        "description": "Currency",
+                                                                        "description": "Valuta",
                                                                         "format": ""
                                                                       },
                                                                       "WOZo": {
@@ -25586,7 +25586,7 @@
                                                                       "ZpCd": {
                                                                         "type": "string",
                                                                         "maxLength": 9,
-                                                                        "description": "Postal code",
+                                                                        "description": "Postcode",
                                                                         "format": ""
                                                                       }
                                                                     },
@@ -27437,7 +27437,7 @@
                                                       },
                                                       "AmEp": {
                                                         "type": "number",
-                                                        "description": "End value",
+                                                        "description": "Eindwaarde",
                                                         "format": "number"
                                                       },
                                                       "AnDe": {
@@ -27469,7 +27469,7 @@
                                                       "BkAc": {
                                                         "type": "string",
                                                         "maxLength": 34,
-                                                        "description": "Account number",
+                                                        "description": "Rekeningnummer",
                                                         "format": ""
                                                       },
                                                       "CiEx": {
@@ -27481,7 +27481,7 @@
                                                       "CiId": {
                                                         "type": "string",
                                                         "maxLength": 3,
-                                                        "description": "Country code",
+                                                        "description": "Code land",
                                                         "format": ""
                                                       },
                                                       "CoDs": {
@@ -27518,47 +27518,47 @@
                                                       "Ds": {
                                                         "type": "string",
                                                         "maxLength": 60,
-                                                        "description": "Description",
+                                                        "description": "Omschrijving",
                                                         "format": ""
                                                       },
                                                       "EnDa": {
                                                         "type": "string",
-                                                        "description": "End date",
+                                                        "description": "Einddatum",
                                                         "format": "date"
                                                       },
                                                       "FiId": {
                                                         "type": "string",
                                                         "maxLength": 7,
-                                                        "description": "Field",
+                                                        "description": "Veld",
                                                         "format": ""
                                                       },
                                                       "FiNr": {
                                                         "type": "string",
                                                         "maxLength": 9,
-                                                        "description": "Social security number ('BSN')",
+                                                        "description": "Burgerservicenummer",
                                                         "format": ""
                                                       },
                                                       "HmAd": {
                                                         "type": "string",
                                                         "maxLength": 9,
-                                                        "description": "House number addition",
+                                                        "description": "Toevoeging huisnummer",
                                                         "format": ""
                                                       },
                                                       "HoAd": {
                                                         "type": "string",
                                                         "maxLength": 80,
-                                                        "description": "Street",
+                                                        "description": "Straatnaam",
                                                         "format": ""
                                                       },
                                                       "HoEn": {
                                                         "type": "string",
-                                                        "description": "Period up to and incl.",
+                                                        "description": "Periode t/m",
                                                         "format": "date"
                                                       },
                                                       "HoNu": {
                                                         "type": "string",
                                                         "maxLength": 9,
-                                                        "description": "House number",
+                                                        "description": "Huisnummer",
                                                         "format": ""
                                                       },
                                                       "HoOb": {
@@ -27570,7 +27570,7 @@
                                                       "HoPl": {
                                                         "type": "string",
                                                         "maxLength": 80,
-                                                        "description": "City",
+                                                        "description": "Woonplaats",
                                                         "format": ""
                                                       },
                                                       "HoQu": {
@@ -27587,7 +27587,7 @@
                                                       },
                                                       "HoSt": {
                                                         "type": "string",
-                                                        "description": "Period from",
+                                                        "description": "Periode van",
                                                         "format": "date"
                                                       },
                                                       "HoVa": {
@@ -27597,7 +27597,7 @@
                                                       },
                                                       "InAm": {
                                                         "type": "number",
-                                                        "description": "Interest amount",
+                                                        "description": "Bedrag rente",
                                                         "format": "number"
                                                       },
                                                       "InC2": {
@@ -27649,7 +27649,7 @@
                                                       },
                                                       "LoEn": {
                                                         "type": "string",
-                                                        "description": "Scheduled end date",
+                                                        "description": "Geplande einddatum",
                                                         "format": "date"
                                                       },
                                                       "LoSt": {
@@ -27679,7 +27679,7 @@
                                                       },
                                                       "PeMo": {
                                                         "type": "integer",
-                                                        "description": "Term",
+                                                        "description": "Looptijd",
                                                         "format": ""
                                                       },
                                                       "PrId": {
@@ -27724,7 +27724,7 @@
                                                       "SaDa": {
                                                         "type": "string",
                                                         "maxLength": 4,
-                                                        "description": "Sale date",
+                                                        "description": "Datum verkoop",
                                                         "format": ""
                                                       },
                                                       "SeVo": {
@@ -27739,7 +27739,7 @@
                                                       },
                                                       "StDa": {
                                                         "type": "string",
-                                                        "description": "Start date",
+                                                        "description": "Begindatum",
                                                         "format": "date"
                                                       },
                                                       "ToAm": {
@@ -27750,7 +27750,7 @@
                                                       "Valu": {
                                                         "type": "string",
                                                         "maxLength": 3,
-                                                        "description": "Currency",
+                                                        "description": "Valuta",
                                                         "format": ""
                                                       },
                                                       "WOZo": {
@@ -27762,7 +27762,7 @@
                                                       "ZpCd": {
                                                         "type": "string",
                                                         "maxLength": 9,
-                                                        "description": "Postal code",
+                                                        "description": "Postcode",
                                                         "format": ""
                                                       }
                                                     },
@@ -28216,7 +28216,7 @@
                                                       },
                                                       "AmEn": {
                                                         "type": "number",
-                                                        "description": "End value",
+                                                        "description": "Eindwaarde",
                                                         "format": "number"
                                                       },
                                                       "BeBe": {
@@ -28237,7 +28237,7 @@
                                                       "CiId": {
                                                         "type": "string",
                                                         "maxLength": 3,
-                                                        "description": "Country code",
+                                                        "description": "Code land",
                                                         "format": ""
                                                       },
                                                       "DeTy": {
@@ -28248,13 +28248,13 @@
                                                       "Ds": {
                                                         "type": "string",
                                                         "maxLength": 60,
-                                                        "description": "Description",
+                                                        "description": "Omschrijving",
                                                         "format": ""
                                                       },
                                                       "FiId": {
                                                         "type": "string",
                                                         "maxLength": 7,
-                                                        "description": "Field",
+                                                        "description": "Veld",
                                                         "format": ""
                                                       },
                                                       "ScBe": {
@@ -28483,7 +28483,7 @@
                                                       },
                                                       "AmCo": {
                                                         "type": "number",
-                                                        "description": "Costs",
+                                                        "description": "Kosten",
                                                         "format": "number"
                                                       },
                                                       "AmDe": {
@@ -28498,7 +28498,7 @@
                                                       },
                                                       "AmVa": {
                                                         "type": "number",
-                                                        "description": "Value",
+                                                        "description": "Waarde",
                                                         "format": "number"
                                                       },
                                                       "BaPr": {
@@ -28521,7 +28521,7 @@
                                                       "Co": {
                                                         "type": "string",
                                                         "maxLength": 40,
-                                                        "description": "Country",
+                                                        "description": "Land",
                                                         "format": ""
                                                       },
                                                       "CoNw": {
@@ -28532,12 +28532,12 @@
                                                       },
                                                       "DaFr": {
                                                         "type": "string",
-                                                        "description": "Time frame start date",
+                                                        "description": "Begindatum tijdvak",
                                                         "format": "date"
                                                       },
                                                       "DaTo": {
                                                         "type": "string",
-                                                        "description": "Time frame end date",
+                                                        "description": "Einddatum tijdvak",
                                                         "format": "date"
                                                       },
                                                       "DeTy": {
@@ -28548,18 +28548,18 @@
                                                       "Ds": {
                                                         "type": "string",
                                                         "maxLength": 60,
-                                                        "description": "Description",
+                                                        "description": "Omschrijving",
                                                         "format": ""
                                                       },
                                                       "FiId": {
                                                         "type": "string",
                                                         "maxLength": 7,
-                                                        "description": "Field",
+                                                        "description": "Veld",
                                                         "format": ""
                                                       },
                                                       "FiOB": {
                                                         "type": "integer",
-                                                        "description": "Year ",
+                                                        "description": "Jaar ",
                                                         "format": ""
                                                       },
                                                       "PeId": {
@@ -31977,7 +31977,7 @@
                                       },
                                       "LgId": {
                                         "type": "string",
-                                        "maxLength": 3,
+                                        "maxLength": 5,
                                         "description": "Language",
                                         "format": ""
                                       },
@@ -33208,7 +33208,7 @@
                                                                       },
                                                                       "LgId": {
                                                                         "type": "string",
-                                                                        "maxLength": 3,
+                                                                        "maxLength": 5,
                                                                         "description": "Language",
                                                                         "format": ""
                                                                       },
@@ -51741,7 +51741,7 @@
                                                                       },
                                                                       "AmEp": {
                                                                         "type": "number",
-                                                                        "description": "End value",
+                                                                        "description": "Eindwaarde",
                                                                         "format": "number"
                                                                       },
                                                                       "AnDe": {
@@ -51773,7 +51773,7 @@
                                                                       "BkAc": {
                                                                         "type": "string",
                                                                         "maxLength": 34,
-                                                                        "description": "Account number",
+                                                                        "description": "Rekeningnummer",
                                                                         "format": ""
                                                                       },
                                                                       "CiEx": {
@@ -51785,7 +51785,7 @@
                                                                       "CiId": {
                                                                         "type": "string",
                                                                         "maxLength": 3,
-                                                                        "description": "Country code",
+                                                                        "description": "Code land",
                                                                         "format": ""
                                                                       },
                                                                       "CoDs": {
@@ -51827,47 +51827,47 @@
                                                                       "Ds": {
                                                                         "type": "string",
                                                                         "maxLength": 60,
-                                                                        "description": "Description",
+                                                                        "description": "Omschrijving",
                                                                         "format": ""
                                                                       },
                                                                       "EnDa": {
                                                                         "type": "string",
-                                                                        "description": "End date",
+                                                                        "description": "Einddatum",
                                                                         "format": "date"
                                                                       },
                                                                       "FiId": {
                                                                         "type": "string",
                                                                         "maxLength": 7,
-                                                                        "description": "Field",
+                                                                        "description": "Veld",
                                                                         "format": ""
                                                                       },
                                                                       "FiNr": {
                                                                         "type": "string",
                                                                         "maxLength": 9,
-                                                                        "description": "Social security number ('BSN')",
+                                                                        "description": "Burgerservicenummer",
                                                                         "format": ""
                                                                       },
                                                                       "HmAd": {
                                                                         "type": "string",
                                                                         "maxLength": 9,
-                                                                        "description": "House number addition",
+                                                                        "description": "Toevoeging huisnummer",
                                                                         "format": ""
                                                                       },
                                                                       "HoAd": {
                                                                         "type": "string",
                                                                         "maxLength": 80,
-                                                                        "description": "Street",
+                                                                        "description": "Straatnaam",
                                                                         "format": ""
                                                                       },
                                                                       "HoEn": {
                                                                         "type": "string",
-                                                                        "description": "Period up to and incl.",
+                                                                        "description": "Periode t/m",
                                                                         "format": "date"
                                                                       },
                                                                       "HoNu": {
                                                                         "type": "string",
                                                                         "maxLength": 9,
-                                                                        "description": "House number",
+                                                                        "description": "Huisnummer",
                                                                         "format": ""
                                                                       },
                                                                       "HoOb": {
@@ -51879,7 +51879,7 @@
                                                                       "HoPl": {
                                                                         "type": "string",
                                                                         "maxLength": 80,
-                                                                        "description": "City",
+                                                                        "description": "Woonplaats",
                                                                         "format": ""
                                                                       },
                                                                       "HoQu": {
@@ -51896,7 +51896,7 @@
                                                                       },
                                                                       "HoSt": {
                                                                         "type": "string",
-                                                                        "description": "Period from",
+                                                                        "description": "Periode van",
                                                                         "format": "date"
                                                                       },
                                                                       "HoVa": {
@@ -51906,7 +51906,7 @@
                                                                       },
                                                                       "InAm": {
                                                                         "type": "number",
-                                                                        "description": "Interest amount",
+                                                                        "description": "Bedrag rente",
                                                                         "format": "number"
                                                                       },
                                                                       "InC2": {
@@ -51958,7 +51958,7 @@
                                                                       },
                                                                       "LoEn": {
                                                                         "type": "string",
-                                                                        "description": "Scheduled end date",
+                                                                        "description": "Geplande einddatum",
                                                                         "format": "date"
                                                                       },
                                                                       "LoSt": {
@@ -51988,7 +51988,7 @@
                                                                       },
                                                                       "PeMo": {
                                                                         "type": "integer",
-                                                                        "description": "Term",
+                                                                        "description": "Looptijd",
                                                                         "format": ""
                                                                       },
                                                                       "PrId": {
@@ -52038,7 +52038,7 @@
                                                                       "SaDa": {
                                                                         "type": "string",
                                                                         "maxLength": 4,
-                                                                        "description": "Sale date",
+                                                                        "description": "Datum verkoop",
                                                                         "format": ""
                                                                       },
                                                                       "SeVo": {
@@ -52053,7 +52053,7 @@
                                                                       },
                                                                       "StDa": {
                                                                         "type": "string",
-                                                                        "description": "Start date",
+                                                                        "description": "Begindatum",
                                                                         "format": "date"
                                                                       },
                                                                       "ToAm": {
@@ -52069,7 +52069,7 @@
                                                                       "Valu": {
                                                                         "type": "string",
                                                                         "maxLength": 3,
-                                                                        "description": "Currency",
+                                                                        "description": "Valuta",
                                                                         "format": ""
                                                                       },
                                                                       "WOZo": {
@@ -52081,7 +52081,7 @@
                                                                       "ZpCd": {
                                                                         "type": "string",
                                                                         "maxLength": 9,
-                                                                        "description": "Postal code",
+                                                                        "description": "Postcode",
                                                                         "format": ""
                                                                       }
                                                                     },
@@ -53937,7 +53937,7 @@
                                                       },
                                                       "AmEp": {
                                                         "type": "number",
-                                                        "description": "End value",
+                                                        "description": "Eindwaarde",
                                                         "format": "number"
                                                       },
                                                       "AnDe": {
@@ -53969,7 +53969,7 @@
                                                       "BkAc": {
                                                         "type": "string",
                                                         "maxLength": 34,
-                                                        "description": "Account number",
+                                                        "description": "Rekeningnummer",
                                                         "format": ""
                                                       },
                                                       "CiEx": {
@@ -53981,7 +53981,7 @@
                                                       "CiId": {
                                                         "type": "string",
                                                         "maxLength": 3,
-                                                        "description": "Country code",
+                                                        "description": "Code land",
                                                         "format": ""
                                                       },
                                                       "CoDs": {
@@ -54023,47 +54023,47 @@
                                                       "Ds": {
                                                         "type": "string",
                                                         "maxLength": 60,
-                                                        "description": "Description",
+                                                        "description": "Omschrijving",
                                                         "format": ""
                                                       },
                                                       "EnDa": {
                                                         "type": "string",
-                                                        "description": "End date",
+                                                        "description": "Einddatum",
                                                         "format": "date"
                                                       },
                                                       "FiId": {
                                                         "type": "string",
                                                         "maxLength": 7,
-                                                        "description": "Field",
+                                                        "description": "Veld",
                                                         "format": ""
                                                       },
                                                       "FiNr": {
                                                         "type": "string",
                                                         "maxLength": 9,
-                                                        "description": "Social security number ('BSN')",
+                                                        "description": "Burgerservicenummer",
                                                         "format": ""
                                                       },
                                                       "HmAd": {
                                                         "type": "string",
                                                         "maxLength": 9,
-                                                        "description": "House number addition",
+                                                        "description": "Toevoeging huisnummer",
                                                         "format": ""
                                                       },
                                                       "HoAd": {
                                                         "type": "string",
                                                         "maxLength": 80,
-                                                        "description": "Street",
+                                                        "description": "Straatnaam",
                                                         "format": ""
                                                       },
                                                       "HoEn": {
                                                         "type": "string",
-                                                        "description": "Period up to and incl.",
+                                                        "description": "Periode t/m",
                                                         "format": "date"
                                                       },
                                                       "HoNu": {
                                                         "type": "string",
                                                         "maxLength": 9,
-                                                        "description": "House number",
+                                                        "description": "Huisnummer",
                                                         "format": ""
                                                       },
                                                       "HoOb": {
@@ -54075,7 +54075,7 @@
                                                       "HoPl": {
                                                         "type": "string",
                                                         "maxLength": 80,
-                                                        "description": "City",
+                                                        "description": "Woonplaats",
                                                         "format": ""
                                                       },
                                                       "HoQu": {
@@ -54092,7 +54092,7 @@
                                                       },
                                                       "HoSt": {
                                                         "type": "string",
-                                                        "description": "Period from",
+                                                        "description": "Periode van",
                                                         "format": "date"
                                                       },
                                                       "HoVa": {
@@ -54102,7 +54102,7 @@
                                                       },
                                                       "InAm": {
                                                         "type": "number",
-                                                        "description": "Interest amount",
+                                                        "description": "Bedrag rente",
                                                         "format": "number"
                                                       },
                                                       "InC2": {
@@ -54154,7 +54154,7 @@
                                                       },
                                                       "LoEn": {
                                                         "type": "string",
-                                                        "description": "Scheduled end date",
+                                                        "description": "Geplande einddatum",
                                                         "format": "date"
                                                       },
                                                       "LoSt": {
@@ -54184,7 +54184,7 @@
                                                       },
                                                       "PeMo": {
                                                         "type": "integer",
-                                                        "description": "Term",
+                                                        "description": "Looptijd",
                                                         "format": ""
                                                       },
                                                       "PrId": {
@@ -54234,7 +54234,7 @@
                                                       "SaDa": {
                                                         "type": "string",
                                                         "maxLength": 4,
-                                                        "description": "Sale date",
+                                                        "description": "Datum verkoop",
                                                         "format": ""
                                                       },
                                                       "SeVo": {
@@ -54249,7 +54249,7 @@
                                                       },
                                                       "StDa": {
                                                         "type": "string",
-                                                        "description": "Start date",
+                                                        "description": "Begindatum",
                                                         "format": "date"
                                                       },
                                                       "ToAm": {
@@ -54265,7 +54265,7 @@
                                                       "Valu": {
                                                         "type": "string",
                                                         "maxLength": 3,
-                                                        "description": "Currency",
+                                                        "description": "Valuta",
                                                         "format": ""
                                                       },
                                                       "WOZo": {
@@ -54277,7 +54277,7 @@
                                                       "ZpCd": {
                                                         "type": "string",
                                                         "maxLength": 9,
-                                                        "description": "Postal code",
+                                                        "description": "Postcode",
                                                         "format": ""
                                                       }
                                                     },
@@ -54731,7 +54731,7 @@
                                                       },
                                                       "AmEn": {
                                                         "type": "number",
-                                                        "description": "End value",
+                                                        "description": "Eindwaarde",
                                                         "format": "number"
                                                       },
                                                       "BeBe": {
@@ -54752,7 +54752,7 @@
                                                       "CiId": {
                                                         "type": "string",
                                                         "maxLength": 3,
-                                                        "description": "Country code",
+                                                        "description": "Code land",
                                                         "format": ""
                                                       },
                                                       "DeTy": {
@@ -54763,13 +54763,13 @@
                                                       "Ds": {
                                                         "type": "string",
                                                         "maxLength": 60,
-                                                        "description": "Description",
+                                                        "description": "Omschrijving",
                                                         "format": ""
                                                       },
                                                       "FiId": {
                                                         "type": "string",
                                                         "maxLength": 7,
-                                                        "description": "Field",
+                                                        "description": "Veld",
                                                         "format": ""
                                                       },
                                                       "ScBe": {
@@ -54998,7 +54998,7 @@
                                                       },
                                                       "AmCo": {
                                                         "type": "number",
-                                                        "description": "Costs",
+                                                        "description": "Kosten",
                                                         "format": "number"
                                                       },
                                                       "AmDe": {
@@ -55013,7 +55013,7 @@
                                                       },
                                                       "AmVa": {
                                                         "type": "number",
-                                                        "description": "Value",
+                                                        "description": "Waarde",
                                                         "format": "number"
                                                       },
                                                       "BaPr": {
@@ -55036,7 +55036,7 @@
                                                       "Co": {
                                                         "type": "string",
                                                         "maxLength": 40,
-                                                        "description": "Country",
+                                                        "description": "Land",
                                                         "format": ""
                                                       },
                                                       "CoNw": {
@@ -55047,12 +55047,12 @@
                                                       },
                                                       "DaFr": {
                                                         "type": "string",
-                                                        "description": "Time frame start date",
+                                                        "description": "Begindatum tijdvak",
                                                         "format": "date"
                                                       },
                                                       "DaTo": {
                                                         "type": "string",
-                                                        "description": "Time frame end date",
+                                                        "description": "Einddatum tijdvak",
                                                         "format": "date"
                                                       },
                                                       "DeTy": {
@@ -55063,18 +55063,18 @@
                                                       "Ds": {
                                                         "type": "string",
                                                         "maxLength": 60,
-                                                        "description": "Description",
+                                                        "description": "Omschrijving",
                                                         "format": ""
                                                       },
                                                       "FiId": {
                                                         "type": "string",
                                                         "maxLength": 7,
-                                                        "description": "Field",
+                                                        "description": "Veld",
                                                         "format": ""
                                                       },
                                                       "FiOB": {
                                                         "type": "integer",
-                                                        "description": "Year ",
+                                                        "description": "Jaar ",
                                                         "format": ""
                                                       },
                                                       "PeId": {
@@ -58628,7 +58628,7 @@
                                       },
                                       "LgId": {
                                         "type": "string",
-                                        "maxLength": 3,
+                                        "maxLength": 5,
                                         "description": "Language",
                                         "format": ""
                                       },
@@ -59859,7 +59859,7 @@
                                                                       },
                                                                       "LgId": {
                                                                         "type": "string",
-                                                                        "maxLength": 3,
+                                                                        "maxLength": 5,
                                                                         "description": "Language",
                                                                         "format": ""
                                                                       },
@@ -79132,7 +79132,7 @@
                                                                       },
                                                                       "AmEp": {
                                                                         "type": "number",
-                                                                        "description": "End value",
+                                                                        "description": "Eindwaarde",
                                                                         "format": "number"
                                                                       },
                                                                       "AnDe": {
@@ -79164,7 +79164,7 @@
                                                                       "BkAc": {
                                                                         "type": "string",
                                                                         "maxLength": 34,
-                                                                        "description": "Account number",
+                                                                        "description": "Rekeningnummer",
                                                                         "format": ""
                                                                       },
                                                                       "CiEx": {
@@ -79176,7 +79176,7 @@
                                                                       "CiId": {
                                                                         "type": "string",
                                                                         "maxLength": 3,
-                                                                        "description": "Country code",
+                                                                        "description": "Code land",
                                                                         "format": ""
                                                                       },
                                                                       "CoDs": {
@@ -79218,47 +79218,47 @@
                                                                       "Ds": {
                                                                         "type": "string",
                                                                         "maxLength": 60,
-                                                                        "description": "Description",
+                                                                        "description": "Omschrijving",
                                                                         "format": ""
                                                                       },
                                                                       "EnDa": {
                                                                         "type": "string",
-                                                                        "description": "End date",
+                                                                        "description": "Einddatum",
                                                                         "format": "date"
                                                                       },
                                                                       "FiId": {
                                                                         "type": "string",
                                                                         "maxLength": 7,
-                                                                        "description": "Field",
+                                                                        "description": "Veld",
                                                                         "format": ""
                                                                       },
                                                                       "FiNr": {
                                                                         "type": "string",
                                                                         "maxLength": 9,
-                                                                        "description": "Social security number ('BSN')",
+                                                                        "description": "Burgerservicenummer",
                                                                         "format": ""
                                                                       },
                                                                       "HmAd": {
                                                                         "type": "string",
                                                                         "maxLength": 9,
-                                                                        "description": "House number addition",
+                                                                        "description": "Toevoeging huisnummer",
                                                                         "format": ""
                                                                       },
                                                                       "HoAd": {
                                                                         "type": "string",
                                                                         "maxLength": 80,
-                                                                        "description": "Street",
+                                                                        "description": "Straatnaam",
                                                                         "format": ""
                                                                       },
                                                                       "HoEn": {
                                                                         "type": "string",
-                                                                        "description": "Period up to and incl.",
+                                                                        "description": "Periode t/m",
                                                                         "format": "date"
                                                                       },
                                                                       "HoNu": {
                                                                         "type": "string",
                                                                         "maxLength": 9,
-                                                                        "description": "House number",
+                                                                        "description": "Huisnummer",
                                                                         "format": ""
                                                                       },
                                                                       "HoOb": {
@@ -79270,7 +79270,7 @@
                                                                       "HoPl": {
                                                                         "type": "string",
                                                                         "maxLength": 80,
-                                                                        "description": "City",
+                                                                        "description": "Woonplaats",
                                                                         "format": ""
                                                                       },
                                                                       "HoQu": {
@@ -79287,7 +79287,7 @@
                                                                       },
                                                                       "HoSt": {
                                                                         "type": "string",
-                                                                        "description": "Period from",
+                                                                        "description": "Periode van",
                                                                         "format": "date"
                                                                       },
                                                                       "HoVa": {
@@ -79297,7 +79297,7 @@
                                                                       },
                                                                       "InAm": {
                                                                         "type": "number",
-                                                                        "description": "Interest amount",
+                                                                        "description": "Bedrag rente",
                                                                         "format": "number"
                                                                       },
                                                                       "InC2": {
@@ -79349,7 +79349,7 @@
                                                                       },
                                                                       "LoEn": {
                                                                         "type": "string",
-                                                                        "description": "Scheduled end date",
+                                                                        "description": "Geplande einddatum",
                                                                         "format": "date"
                                                                       },
                                                                       "LoSt": {
@@ -79379,7 +79379,7 @@
                                                                       },
                                                                       "PeMo": {
                                                                         "type": "integer",
-                                                                        "description": "Term",
+                                                                        "description": "Looptijd",
                                                                         "format": ""
                                                                       },
                                                                       "PrId": {
@@ -79434,7 +79434,7 @@
                                                                       "SaDa": {
                                                                         "type": "string",
                                                                         "maxLength": 4,
-                                                                        "description": "Sale date",
+                                                                        "description": "Datum verkoop",
                                                                         "format": ""
                                                                       },
                                                                       "SeVo": {
@@ -79449,7 +79449,7 @@
                                                                       },
                                                                       "StDa": {
                                                                         "type": "string",
-                                                                        "description": "Start date",
+                                                                        "description": "Begindatum",
                                                                         "format": "date"
                                                                       },
                                                                       "ToAm": {
@@ -79465,7 +79465,7 @@
                                                                       "Valu": {
                                                                         "type": "string",
                                                                         "maxLength": 3,
-                                                                        "description": "Currency",
+                                                                        "description": "Valuta",
                                                                         "format": ""
                                                                       },
                                                                       "WOZo": {
@@ -79477,7 +79477,7 @@
                                                                       "ZpCd": {
                                                                         "type": "string",
                                                                         "maxLength": 9,
-                                                                        "description": "Postal code",
+                                                                        "description": "Postcode",
                                                                         "format": ""
                                                                       }
                                                                     },
@@ -81551,7 +81551,7 @@
                                                       },
                                                       "AmEp": {
                                                         "type": "number",
-                                                        "description": "End value",
+                                                        "description": "Eindwaarde",
                                                         "format": "number"
                                                       },
                                                       "AnDe": {
@@ -81583,7 +81583,7 @@
                                                       "BkAc": {
                                                         "type": "string",
                                                         "maxLength": 34,
-                                                        "description": "Account number",
+                                                        "description": "Rekeningnummer",
                                                         "format": ""
                                                       },
                                                       "CiEx": {
@@ -81595,7 +81595,7 @@
                                                       "CiId": {
                                                         "type": "string",
                                                         "maxLength": 3,
-                                                        "description": "Country code",
+                                                        "description": "Code land",
                                                         "format": ""
                                                       },
                                                       "CoDs": {
@@ -81637,47 +81637,47 @@
                                                       "Ds": {
                                                         "type": "string",
                                                         "maxLength": 60,
-                                                        "description": "Description",
+                                                        "description": "Omschrijving",
                                                         "format": ""
                                                       },
                                                       "EnDa": {
                                                         "type": "string",
-                                                        "description": "End date",
+                                                        "description": "Einddatum",
                                                         "format": "date"
                                                       },
                                                       "FiId": {
                                                         "type": "string",
                                                         "maxLength": 7,
-                                                        "description": "Field",
+                                                        "description": "Veld",
                                                         "format": ""
                                                       },
                                                       "FiNr": {
                                                         "type": "string",
                                                         "maxLength": 9,
-                                                        "description": "Social security number ('BSN')",
+                                                        "description": "Burgerservicenummer",
                                                         "format": ""
                                                       },
                                                       "HmAd": {
                                                         "type": "string",
                                                         "maxLength": 9,
-                                                        "description": "House number addition",
+                                                        "description": "Toevoeging huisnummer",
                                                         "format": ""
                                                       },
                                                       "HoAd": {
                                                         "type": "string",
                                                         "maxLength": 80,
-                                                        "description": "Street",
+                                                        "description": "Straatnaam",
                                                         "format": ""
                                                       },
                                                       "HoEn": {
                                                         "type": "string",
-                                                        "description": "Period up to and incl.",
+                                                        "description": "Periode t/m",
                                                         "format": "date"
                                                       },
                                                       "HoNu": {
                                                         "type": "string",
                                                         "maxLength": 9,
-                                                        "description": "House number",
+                                                        "description": "Huisnummer",
                                                         "format": ""
                                                       },
                                                       "HoOb": {
@@ -81689,7 +81689,7 @@
                                                       "HoPl": {
                                                         "type": "string",
                                                         "maxLength": 80,
-                                                        "description": "City",
+                                                        "description": "Woonplaats",
                                                         "format": ""
                                                       },
                                                       "HoQu": {
@@ -81706,7 +81706,7 @@
                                                       },
                                                       "HoSt": {
                                                         "type": "string",
-                                                        "description": "Period from",
+                                                        "description": "Periode van",
                                                         "format": "date"
                                                       },
                                                       "HoVa": {
@@ -81716,7 +81716,7 @@
                                                       },
                                                       "InAm": {
                                                         "type": "number",
-                                                        "description": "Interest amount",
+                                                        "description": "Bedrag rente",
                                                         "format": "number"
                                                       },
                                                       "InC2": {
@@ -81768,7 +81768,7 @@
                                                       },
                                                       "LoEn": {
                                                         "type": "string",
-                                                        "description": "Scheduled end date",
+                                                        "description": "Geplande einddatum",
                                                         "format": "date"
                                                       },
                                                       "LoSt": {
@@ -81798,7 +81798,7 @@
                                                       },
                                                       "PeMo": {
                                                         "type": "integer",
-                                                        "description": "Term",
+                                                        "description": "Looptijd",
                                                         "format": ""
                                                       },
                                                       "PrId": {
@@ -81853,7 +81853,7 @@
                                                       "SaDa": {
                                                         "type": "string",
                                                         "maxLength": 4,
-                                                        "description": "Sale date",
+                                                        "description": "Datum verkoop",
                                                         "format": ""
                                                       },
                                                       "SeVo": {
@@ -81868,7 +81868,7 @@
                                                       },
                                                       "StDa": {
                                                         "type": "string",
-                                                        "description": "Start date",
+                                                        "description": "Begindatum",
                                                         "format": "date"
                                                       },
                                                       "ToAm": {
@@ -81884,7 +81884,7 @@
                                                       "Valu": {
                                                         "type": "string",
                                                         "maxLength": 3,
-                                                        "description": "Currency",
+                                                        "description": "Valuta",
                                                         "format": ""
                                                       },
                                                       "WOZo": {
@@ -81896,7 +81896,7 @@
                                                       "ZpCd": {
                                                         "type": "string",
                                                         "maxLength": 9,
-                                                        "description": "Postal code",
+                                                        "description": "Postcode",
                                                         "format": ""
                                                       }
                                                     },
@@ -82350,7 +82350,7 @@
                                                       },
                                                       "AmEn": {
                                                         "type": "number",
-                                                        "description": "End value",
+                                                        "description": "Eindwaarde",
                                                         "format": "number"
                                                       },
                                                       "BeBe": {
@@ -82371,7 +82371,7 @@
                                                       "CiId": {
                                                         "type": "string",
                                                         "maxLength": 3,
-                                                        "description": "Country code",
+                                                        "description": "Code land",
                                                         "format": ""
                                                       },
                                                       "DeTy": {
@@ -82382,13 +82382,13 @@
                                                       "Ds": {
                                                         "type": "string",
                                                         "maxLength": 60,
-                                                        "description": "Description",
+                                                        "description": "Omschrijving",
                                                         "format": ""
                                                       },
                                                       "FiId": {
                                                         "type": "string",
                                                         "maxLength": 7,
-                                                        "description": "Field",
+                                                        "description": "Veld",
                                                         "format": ""
                                                       },
                                                       "ScBe": {
@@ -82617,7 +82617,7 @@
                                                       },
                                                       "AmCo": {
                                                         "type": "number",
-                                                        "description": "Costs",
+                                                        "description": "Kosten",
                                                         "format": "number"
                                                       },
                                                       "AmDe": {
@@ -82632,7 +82632,7 @@
                                                       },
                                                       "AmVa": {
                                                         "type": "number",
-                                                        "description": "Value",
+                                                        "description": "Waarde",
                                                         "format": "number"
                                                       },
                                                       "BaPr": {
@@ -82655,7 +82655,7 @@
                                                       "Co": {
                                                         "type": "string",
                                                         "maxLength": 40,
-                                                        "description": "Country",
+                                                        "description": "Land",
                                                         "format": ""
                                                       },
                                                       "CoNw": {
@@ -82666,12 +82666,12 @@
                                                       },
                                                       "DaFr": {
                                                         "type": "string",
-                                                        "description": "Time frame start date",
+                                                        "description": "Begindatum tijdvak",
                                                         "format": "date"
                                                       },
                                                       "DaTo": {
                                                         "type": "string",
-                                                        "description": "Time frame end date",
+                                                        "description": "Einddatum tijdvak",
                                                         "format": "date"
                                                       },
                                                       "DeTy": {
@@ -82682,18 +82682,18 @@
                                                       "Ds": {
                                                         "type": "string",
                                                         "maxLength": 60,
-                                                        "description": "Description",
+                                                        "description": "Omschrijving",
                                                         "format": ""
                                                       },
                                                       "FiId": {
                                                         "type": "string",
                                                         "maxLength": 7,
-                                                        "description": "Field",
+                                                        "description": "Veld",
                                                         "format": ""
                                                       },
                                                       "FiOB": {
                                                         "type": "integer",
-                                                        "description": "Year ",
+                                                        "description": "Jaar ",
                                                         "format": ""
                                                       },
                                                       "PeId": {
@@ -86426,7 +86426,7 @@
                                       },
                                       "LgId": {
                                         "type": "string",
-                                        "maxLength": 3,
+                                        "maxLength": 5,
                                         "description": "Language",
                                         "format": ""
                                       },
@@ -87657,7 +87657,7 @@
                                                                       },
                                                                       "LgId": {
                                                                         "type": "string",
-                                                                        "maxLength": 3,
+                                                                        "maxLength": 5,
                                                                         "description": "Language",
                                                                         "format": ""
                                                                       },
@@ -106289,7 +106289,7 @@
                                                                       },
                                                                       "AmEp": {
                                                                         "type": "number",
-                                                                        "description": "End value",
+                                                                        "description": "Eindwaarde",
                                                                         "format": "number"
                                                                       },
                                                                       "AnDe": {
@@ -106321,7 +106321,7 @@
                                                                       "BkAc": {
                                                                         "type": "string",
                                                                         "maxLength": 34,
-                                                                        "description": "Account number",
+                                                                        "description": "Rekeningnummer",
                                                                         "format": ""
                                                                       },
                                                                       "CiEx": {
@@ -106333,7 +106333,7 @@
                                                                       "CiId": {
                                                                         "type": "string",
                                                                         "maxLength": 3,
-                                                                        "description": "Country code",
+                                                                        "description": "Code land",
                                                                         "format": ""
                                                                       },
                                                                       "CoDs": {
@@ -106375,47 +106375,47 @@
                                                                       "Ds": {
                                                                         "type": "string",
                                                                         "maxLength": 60,
-                                                                        "description": "Description",
+                                                                        "description": "Omschrijving",
                                                                         "format": ""
                                                                       },
                                                                       "EnDa": {
                                                                         "type": "string",
-                                                                        "description": "End date",
+                                                                        "description": "Einddatum",
                                                                         "format": "date"
                                                                       },
                                                                       "FiId": {
                                                                         "type": "string",
                                                                         "maxLength": 7,
-                                                                        "description": "Field",
+                                                                        "description": "Veld",
                                                                         "format": ""
                                                                       },
                                                                       "FiNr": {
                                                                         "type": "string",
                                                                         "maxLength": 9,
-                                                                        "description": "Social security number ('BSN')",
+                                                                        "description": "Burgerservicenummer",
                                                                         "format": ""
                                                                       },
                                                                       "HmAd": {
                                                                         "type": "string",
                                                                         "maxLength": 9,
-                                                                        "description": "House number addition",
+                                                                        "description": "Toevoeging huisnummer",
                                                                         "format": ""
                                                                       },
                                                                       "HoAd": {
                                                                         "type": "string",
                                                                         "maxLength": 80,
-                                                                        "description": "Street",
+                                                                        "description": "Straatnaam",
                                                                         "format": ""
                                                                       },
                                                                       "HoEn": {
                                                                         "type": "string",
-                                                                        "description": "Period up to and incl.",
+                                                                        "description": "Periode t/m",
                                                                         "format": "date"
                                                                       },
                                                                       "HoNu": {
                                                                         "type": "string",
                                                                         "maxLength": 9,
-                                                                        "description": "House number",
+                                                                        "description": "Huisnummer",
                                                                         "format": ""
                                                                       },
                                                                       "HoOb": {
@@ -106427,7 +106427,7 @@
                                                                       "HoPl": {
                                                                         "type": "string",
                                                                         "maxLength": 80,
-                                                                        "description": "City",
+                                                                        "description": "Woonplaats",
                                                                         "format": ""
                                                                       },
                                                                       "HoQu": {
@@ -106444,7 +106444,7 @@
                                                                       },
                                                                       "HoSt": {
                                                                         "type": "string",
-                                                                        "description": "Period from",
+                                                                        "description": "Periode van",
                                                                         "format": "date"
                                                                       },
                                                                       "HoVa": {
@@ -106454,7 +106454,7 @@
                                                                       },
                                                                       "InAm": {
                                                                         "type": "number",
-                                                                        "description": "Interest amount",
+                                                                        "description": "Bedrag rente",
                                                                         "format": "number"
                                                                       },
                                                                       "InC2": {
@@ -106506,7 +106506,7 @@
                                                                       },
                                                                       "LoEn": {
                                                                         "type": "string",
-                                                                        "description": "Scheduled end date",
+                                                                        "description": "Geplande einddatum",
                                                                         "format": "date"
                                                                       },
                                                                       "LoSt": {
@@ -106536,7 +106536,7 @@
                                                                       },
                                                                       "PeMo": {
                                                                         "type": "integer",
-                                                                        "description": "Term",
+                                                                        "description": "Looptijd",
                                                                         "format": ""
                                                                       },
                                                                       "PrId": {
@@ -106591,7 +106591,7 @@
                                                                       "SaDa": {
                                                                         "type": "string",
                                                                         "maxLength": 4,
-                                                                        "description": "Sale date",
+                                                                        "description": "Datum verkoop",
                                                                         "format": ""
                                                                       },
                                                                       "SeVo": {
@@ -106606,7 +106606,7 @@
                                                                       },
                                                                       "StDa": {
                                                                         "type": "string",
-                                                                        "description": "Start date",
+                                                                        "description": "Begindatum",
                                                                         "format": "date"
                                                                       },
                                                                       "ToAm": {
@@ -106622,7 +106622,7 @@
                                                                       "Valu": {
                                                                         "type": "string",
                                                                         "maxLength": 3,
-                                                                        "description": "Currency",
+                                                                        "description": "Valuta",
                                                                         "format": ""
                                                                       },
                                                                       "WOZo": {
@@ -106634,7 +106634,7 @@
                                                                       "ZpCd": {
                                                                         "type": "string",
                                                                         "maxLength": 9,
-                                                                        "description": "Postal code",
+                                                                        "description": "Postcode",
                                                                         "format": ""
                                                                       }
                                                                     },
@@ -108708,7 +108708,7 @@
                                                       },
                                                       "AmEp": {
                                                         "type": "number",
-                                                        "description": "End value",
+                                                        "description": "Eindwaarde",
                                                         "format": "number"
                                                       },
                                                       "AnDe": {
@@ -108740,7 +108740,7 @@
                                                       "BkAc": {
                                                         "type": "string",
                                                         "maxLength": 34,
-                                                        "description": "Account number",
+                                                        "description": "Rekeningnummer",
                                                         "format": ""
                                                       },
                                                       "CiEx": {
@@ -108752,7 +108752,7 @@
                                                       "CiId": {
                                                         "type": "string",
                                                         "maxLength": 3,
-                                                        "description": "Country code",
+                                                        "description": "Code land",
                                                         "format": ""
                                                       },
                                                       "CoDs": {
@@ -108794,47 +108794,47 @@
                                                       "Ds": {
                                                         "type": "string",
                                                         "maxLength": 60,
-                                                        "description": "Description",
+                                                        "description": "Omschrijving",
                                                         "format": ""
                                                       },
                                                       "EnDa": {
                                                         "type": "string",
-                                                        "description": "End date",
+                                                        "description": "Einddatum",
                                                         "format": "date"
                                                       },
                                                       "FiId": {
                                                         "type": "string",
                                                         "maxLength": 7,
-                                                        "description": "Field",
+                                                        "description": "Veld",
                                                         "format": ""
                                                       },
                                                       "FiNr": {
                                                         "type": "string",
                                                         "maxLength": 9,
-                                                        "description": "Social security number ('BSN')",
+                                                        "description": "Burgerservicenummer",
                                                         "format": ""
                                                       },
                                                       "HmAd": {
                                                         "type": "string",
                                                         "maxLength": 9,
-                                                        "description": "House number addition",
+                                                        "description": "Toevoeging huisnummer",
                                                         "format": ""
                                                       },
                                                       "HoAd": {
                                                         "type": "string",
                                                         "maxLength": 80,
-                                                        "description": "Street",
+                                                        "description": "Straatnaam",
                                                         "format": ""
                                                       },
                                                       "HoEn": {
                                                         "type": "string",
-                                                        "description": "Period up to and incl.",
+                                                        "description": "Periode t/m",
                                                         "format": "date"
                                                       },
                                                       "HoNu": {
                                                         "type": "string",
                                                         "maxLength": 9,
-                                                        "description": "House number",
+                                                        "description": "Huisnummer",
                                                         "format": ""
                                                       },
                                                       "HoOb": {
@@ -108846,7 +108846,7 @@
                                                       "HoPl": {
                                                         "type": "string",
                                                         "maxLength": 80,
-                                                        "description": "City",
+                                                        "description": "Woonplaats",
                                                         "format": ""
                                                       },
                                                       "HoQu": {
@@ -108863,7 +108863,7 @@
                                                       },
                                                       "HoSt": {
                                                         "type": "string",
-                                                        "description": "Period from",
+                                                        "description": "Periode van",
                                                         "format": "date"
                                                       },
                                                       "HoVa": {
@@ -108873,7 +108873,7 @@
                                                       },
                                                       "InAm": {
                                                         "type": "number",
-                                                        "description": "Interest amount",
+                                                        "description": "Bedrag rente",
                                                         "format": "number"
                                                       },
                                                       "InC2": {
@@ -108925,7 +108925,7 @@
                                                       },
                                                       "LoEn": {
                                                         "type": "string",
-                                                        "description": "Scheduled end date",
+                                                        "description": "Geplande einddatum",
                                                         "format": "date"
                                                       },
                                                       "LoSt": {
@@ -108955,7 +108955,7 @@
                                                       },
                                                       "PeMo": {
                                                         "type": "integer",
-                                                        "description": "Term",
+                                                        "description": "Looptijd",
                                                         "format": ""
                                                       },
                                                       "PrId": {
@@ -109010,7 +109010,7 @@
                                                       "SaDa": {
                                                         "type": "string",
                                                         "maxLength": 4,
-                                                        "description": "Sale date",
+                                                        "description": "Datum verkoop",
                                                         "format": ""
                                                       },
                                                       "SeVo": {
@@ -109025,7 +109025,7 @@
                                                       },
                                                       "StDa": {
                                                         "type": "string",
-                                                        "description": "Start date",
+                                                        "description": "Begindatum",
                                                         "format": "date"
                                                       },
                                                       "ToAm": {
@@ -109041,7 +109041,7 @@
                                                       "Valu": {
                                                         "type": "string",
                                                         "maxLength": 3,
-                                                        "description": "Currency",
+                                                        "description": "Valuta",
                                                         "format": ""
                                                       },
                                                       "WOZo": {
@@ -109053,7 +109053,7 @@
                                                       "ZpCd": {
                                                         "type": "string",
                                                         "maxLength": 9,
-                                                        "description": "Postal code",
+                                                        "description": "Postcode",
                                                         "format": ""
                                                       }
                                                     },
@@ -109507,7 +109507,7 @@
                                                       },
                                                       "AmEn": {
                                                         "type": "number",
-                                                        "description": "End value",
+                                                        "description": "Eindwaarde",
                                                         "format": "number"
                                                       },
                                                       "BeBe": {
@@ -109528,7 +109528,7 @@
                                                       "CiId": {
                                                         "type": "string",
                                                         "maxLength": 3,
-                                                        "description": "Country code",
+                                                        "description": "Code land",
                                                         "format": ""
                                                       },
                                                       "DeTy": {
@@ -109539,13 +109539,13 @@
                                                       "Ds": {
                                                         "type": "string",
                                                         "maxLength": 60,
-                                                        "description": "Description",
+                                                        "description": "Omschrijving",
                                                         "format": ""
                                                       },
                                                       "FiId": {
                                                         "type": "string",
                                                         "maxLength": 7,
-                                                        "description": "Field",
+                                                        "description": "Veld",
                                                         "format": ""
                                                       },
                                                       "ScBe": {
@@ -109774,7 +109774,7 @@
                                                       },
                                                       "AmCo": {
                                                         "type": "number",
-                                                        "description": "Costs",
+                                                        "description": "Kosten",
                                                         "format": "number"
                                                       },
                                                       "AmDe": {
@@ -109789,7 +109789,7 @@
                                                       },
                                                       "AmVa": {
                                                         "type": "number",
-                                                        "description": "Value",
+                                                        "description": "Waarde",
                                                         "format": "number"
                                                       },
                                                       "BaPr": {
@@ -109812,7 +109812,7 @@
                                                       "Co": {
                                                         "type": "string",
                                                         "maxLength": 40,
-                                                        "description": "Country",
+                                                        "description": "Land",
                                                         "format": ""
                                                       },
                                                       "CoNw": {
@@ -109823,12 +109823,12 @@
                                                       },
                                                       "DaFr": {
                                                         "type": "string",
-                                                        "description": "Time frame start date",
+                                                        "description": "Begindatum tijdvak",
                                                         "format": "date"
                                                       },
                                                       "DaTo": {
                                                         "type": "string",
-                                                        "description": "Time frame end date",
+                                                        "description": "Einddatum tijdvak",
                                                         "format": "date"
                                                       },
                                                       "DeTy": {
@@ -109839,18 +109839,18 @@
                                                       "Ds": {
                                                         "type": "string",
                                                         "maxLength": 60,
-                                                        "description": "Description",
+                                                        "description": "Omschrijving",
                                                         "format": ""
                                                       },
                                                       "FiId": {
                                                         "type": "string",
                                                         "maxLength": 7,
-                                                        "description": "Field",
+                                                        "description": "Veld",
                                                         "format": ""
                                                       },
                                                       "FiOB": {
                                                         "type": "integer",
-                                                        "description": "Year ",
+                                                        "description": "Jaar ",
                                                         "format": ""
                                                       },
                                                       "PeId": {
@@ -113588,7 +113588,7 @@
                                       },
                                       "LgId": {
                                         "type": "string",
-                                        "maxLength": 3,
+                                        "maxLength": 5,
                                         "description": "Language",
                                         "format": ""
                                       },
@@ -113601,7 +113601,7 @@
                                       "CcNr": {
                                         "type": "string",
                                         "maxLength": 30,
-                                        "description": "COC number",
+                                        "description": "CoC number",
                                         "format": ""
                                       },
                                       "CcDa": {
@@ -114868,7 +114868,7 @@
                                                                       },
                                                                       "LgId": {
                                                                         "type": "string",
-                                                                        "maxLength": 3,
+                                                                        "maxLength": 5,
                                                                         "description": "Language",
                                                                         "format": ""
                                                                       },
@@ -130241,7 +130241,7 @@
                                                       "F001": {
                                                         "type": "string",
                                                         "maxLength": 80,
-                                                        "description": "Company name",
+                                                        "description": "Naam onderneming",
                                                         "format": ""
                                                       },
                                                       "F002": {
@@ -130252,12 +130252,12 @@
                                                       },
                                                       "F003": {
                                                         "type": "string",
-                                                        "description": "Financial year from",
+                                                        "description": "Boekjaar van",
                                                         "format": "date"
                                                       },
                                                       "F004": {
                                                         "type": "string",
-                                                        "description": "Financial year up to incl.",
+                                                        "description": "Boekjaar t/m",
                                                         "format": "date"
                                                       },
                                                       "F005": {
@@ -130267,7 +130267,7 @@
                                                       },
                                                       "F006": {
                                                         "type": "number",
-                                                        "description": "Investment tax credit",
+                                                        "description": "Investeringsaftrek",
                                                         "format": "number"
                                                       },
                                                       "F007": {
@@ -130308,7 +130308,7 @@
                                                       },
                                                       "F017": {
                                                         "type": "number",
-                                                        "description": "Privé-gebruik auto",
+                                                        "description": "Privé onttrekkingen (auto)",
                                                         "format": "number"
                                                       },
                                                       "F018": {
@@ -130328,7 +130328,7 @@
                                                       },
                                                       "F021": {
                                                         "type": "number",
-                                                        "description": "Huurwaarde bedrijfswoning",
+                                                        "description": "Privé onttrekkingen (bedrijfswoning)",
                                                         "format": "number"
                                                       },
                                                       "F023": {
@@ -130383,7 +130383,7 @@
                                                       },
                                                       "F040": {
                                                         "type": "boolean",
-                                                        "description": "Approved",
+                                                        "description": "Akkoord",
                                                         "format": ""
                                                       },
                                                       "F057": {
@@ -130439,7 +130439,7 @@
                                                       },
                                                       "F074": {
                                                         "type": "boolean",
-                                                        "description": "Schadeloosstelingen  buiten winst gehouden?",
+                                                        "description": "Schadeloosstellingen buiten winst gehouden?",
                                                         "format": ""
                                                       },
                                                       "F075": {
@@ -130559,7 +130559,7 @@
                                                       },
                                                       "F108": {
                                                         "type": "number",
-                                                        "description": "Privé-gebruik auto (bijzonder)",
+                                                        "description": "Privé onttrekkingen (bijzondere situaties auto)",
                                                         "format": "number"
                                                       },
                                                       "F109": {
@@ -130614,7 +130614,7 @@
                                                       },
                                                       "F143": {
                                                         "type": "boolean",
-                                                        "description": "Agrarische onderrnemening?",
+                                                        "description": "Agrarische ondernemening?",
                                                         "format": ""
                                                       },
                                                       "F144": {
@@ -131145,7 +131145,7 @@
                                                       },
                                                       "F350": {
                                                         "type": "number",
-                                                        "description": "Overig resultaat ",
+                                                        "description": "Overig resultaat",
                                                         "format": "number"
                                                       },
                                                       "F351": {
@@ -133629,13 +133629,13 @@
                                                       "F003": {
                                                         "type": "string",
                                                         "maxLength": 4,
-                                                        "description": "Period from",
+                                                        "description": "Periode van",
                                                         "format": ""
                                                       },
                                                       "F004": {
                                                         "type": "string",
                                                         "maxLength": 4,
-                                                        "description": "Period up to and incl",
+                                                        "description": "Periode t/m",
                                                         "format": ""
                                                       },
                                                       "F005": {
@@ -133695,7 +133695,7 @@
                                                       },
                                                       "F016": {
                                                         "type": "number",
-                                                        "description": "Saldo ink.eigen woning",
+                                                        "description": "Saldo ink. eigen woning",
                                                         "format": "number"
                                                       },
                                                       "F017": {
@@ -133705,7 +133705,7 @@
                                                       },
                                                       "F018": {
                                                         "type": "boolean",
-                                                        "description": "Approved",
+                                                        "description": "Akkoord",
                                                         "format": ""
                                                       },
                                                       "F019": {
@@ -133720,25 +133720,25 @@
                                                       },
                                                       "F021": {
                                                         "type": "boolean",
-                                                        "description": "Woning is tijdelijk geen hoofdverblijf?",
+                                                        "description": "Woning is tijdelijk geen hoofdverblijf (forfait 1%",
                                                         "format": ""
                                                       },
                                                       "F022": {
                                                         "type": "string",
                                                         "maxLength": 10,
-                                                        "description": "Postal code",
+                                                        "description": "Postcode",
                                                         "format": ""
                                                       },
                                                       "F023": {
                                                         "type": "string",
                                                         "maxLength": 80,
-                                                        "description": "City",
+                                                        "description": "Woonplaats",
                                                         "format": ""
                                                       },
                                                       "F024": {
                                                         "type": "string",
                                                         "maxLength": 3,
-                                                        "description": "Country",
+                                                        "description": "Land",
                                                         "format": ""
                                                       },
                                                       "F025": {
@@ -133856,7 +133856,7 @@
                                                       },
                                                       "F111": {
                                                         "type": "number",
-                                                        "description": "Financing costs",
+                                                        "description": "Financieringskosten",
                                                         "format": "number"
                                                       },
                                                       "F112": {
@@ -134362,7 +134362,7 @@
                                                                       },
                                                                       "AmEp": {
                                                                         "type": "number",
-                                                                        "description": "End value",
+                                                                        "description": "Eindwaarde",
                                                                         "format": "number"
                                                                       },
                                                                       "AnDe": {
@@ -134399,7 +134399,7 @@
                                                                       "BkAc": {
                                                                         "type": "string",
                                                                         "maxLength": 34,
-                                                                        "description": "Account number",
+                                                                        "description": "Rekeningnummer",
                                                                         "format": ""
                                                                       },
                                                                       "BuDd": {
@@ -134421,7 +134421,7 @@
                                                                       "CiId": {
                                                                         "type": "string",
                                                                         "maxLength": 3,
-                                                                        "description": "Country code",
+                                                                        "description": "Code land",
                                                                         "format": ""
                                                                       },
                                                                       "CoDs": {
@@ -134463,7 +134463,7 @@
                                                                       "Ds": {
                                                                         "type": "string",
                                                                         "maxLength": 60,
-                                                                        "description": "Description",
+                                                                        "description": "Omschrijving",
                                                                         "format": ""
                                                                       },
                                                                       "DsH1": {
@@ -134498,42 +134498,42 @@
                                                                       },
                                                                       "EnDa": {
                                                                         "type": "string",
-                                                                        "description": "End date",
+                                                                        "description": "Einddatum",
                                                                         "format": "date"
                                                                       },
                                                                       "FiId": {
                                                                         "type": "string",
                                                                         "maxLength": 7,
-                                                                        "description": "Field",
+                                                                        "description": "Veld",
                                                                         "format": ""
                                                                       },
                                                                       "FiNr": {
                                                                         "type": "string",
                                                                         "maxLength": 9,
-                                                                        "description": "Social security number ('BSN')",
+                                                                        "description": "Burgerservicenummer",
                                                                         "format": ""
                                                                       },
                                                                       "HmAd": {
                                                                         "type": "string",
                                                                         "maxLength": 9,
-                                                                        "description": "House number addition",
+                                                                        "description": "Toevoeging huisnummer",
                                                                         "format": ""
                                                                       },
                                                                       "HoAd": {
                                                                         "type": "string",
                                                                         "maxLength": 80,
-                                                                        "description": "Street",
+                                                                        "description": "Straatnaam",
                                                                         "format": ""
                                                                       },
                                                                       "HoEn": {
                                                                         "type": "string",
-                                                                        "description": "Period up to and incl.",
+                                                                        "description": "Periode t/m",
                                                                         "format": "date"
                                                                       },
                                                                       "HoNu": {
                                                                         "type": "string",
                                                                         "maxLength": 9,
-                                                                        "description": "House number",
+                                                                        "description": "Huisnummer",
                                                                         "format": ""
                                                                       },
                                                                       "HoOb": {
@@ -134545,7 +134545,7 @@
                                                                       "HoPl": {
                                                                         "type": "string",
                                                                         "maxLength": 80,
-                                                                        "description": "City",
+                                                                        "description": "Woonplaats",
                                                                         "format": ""
                                                                       },
                                                                       "HoQu": {
@@ -134562,7 +134562,7 @@
                                                                       },
                                                                       "HoSt": {
                                                                         "type": "string",
-                                                                        "description": "Period from",
+                                                                        "description": "Periode van",
                                                                         "format": "date"
                                                                       },
                                                                       "HoVa": {
@@ -134662,7 +134662,7 @@
                                                                       },
                                                                       "InAm": {
                                                                         "type": "number",
-                                                                        "description": "Interest amount",
+                                                                        "description": "Bedrag rente",
                                                                         "format": "number"
                                                                       },
                                                                       "InC2": {
@@ -134799,7 +134799,7 @@
                                                                       },
                                                                       "LoEn": {
                                                                         "type": "string",
-                                                                        "description": "Scheduled end date",
+                                                                        "description": "Geplande einddatum",
                                                                         "format": "date"
                                                                       },
                                                                       "LoSt": {
@@ -134829,7 +134829,7 @@
                                                                       },
                                                                       "PeMo": {
                                                                         "type": "integer",
-                                                                        "description": "Term",
+                                                                        "description": "Looptijd",
                                                                         "format": ""
                                                                       },
                                                                       "PlD1": {
@@ -135014,7 +135014,7 @@
                                                                       "SaDa": {
                                                                         "type": "string",
                                                                         "maxLength": 4,
-                                                                        "description": "Sale date",
+                                                                        "description": "Datum verkoop",
                                                                         "format": ""
                                                                       },
                                                                       "SeDd": {
@@ -135039,7 +135039,7 @@
                                                                       },
                                                                       "StDa": {
                                                                         "type": "string",
-                                                                        "description": "Start date",
+                                                                        "description": "Begindatum",
                                                                         "format": "date"
                                                                       },
                                                                       "ToAm": {
@@ -135055,7 +135055,7 @@
                                                                       "Valu": {
                                                                         "type": "string",
                                                                         "maxLength": 3,
-                                                                        "description": "Currency",
+                                                                        "description": "Valuta",
                                                                         "format": ""
                                                                       },
                                                                       "WOZo": {
@@ -135067,7 +135067,7 @@
                                                                       "ZpCd": {
                                                                         "type": "string",
                                                                         "maxLength": 9,
-                                                                        "description": "Postal code",
+                                                                        "description": "Postcode",
                                                                         "format": ""
                                                                       }
                                                                     },
@@ -135157,7 +135157,7 @@
                                                       },
                                                       "F007": {
                                                         "type": "boolean",
-                                                        "description": "Approved",
+                                                        "description": "Akkoord",
                                                         "format": ""
                                                       },
                                                       "F008": {
@@ -135167,12 +135167,12 @@
                                                       },
                                                       "F009": {
                                                         "type": "number",
-                                                        "description": "Sub-total",
+                                                        "description": "Subtotaal",
                                                         "format": "number"
                                                       },
                                                       "F010": {
                                                         "type": "number",
-                                                        "description": "Inkomen uit AB ",
+                                                        "description": "Inkomen uit AB",
                                                         "format": "number"
                                                       },
                                                       "F012": {
@@ -135197,7 +135197,7 @@
                                                       },
                                                       "F016": {
                                                         "type": "number",
-                                                        "description": "Reguliere voordelen AB ",
+                                                        "description": "Reguliere voordelen AB",
                                                         "format": "number"
                                                       },
                                                       "F017": {
@@ -135262,7 +135262,7 @@
                                                       },
                                                       "F136": {
                                                         "type": "number",
-                                                        "description": "Bij: toegerekende schulden verbonden personen aan",
+                                                        "description": "Bij: toegerekende schulden verbonden personen aan ",
                                                         "format": "number"
                                                       },
                                                       "F137": {
@@ -137234,7 +137234,7 @@
                                                       },
                                                       "AmEp": {
                                                         "type": "number",
-                                                        "description": "End value",
+                                                        "description": "Eindwaarde",
                                                         "format": "number"
                                                       },
                                                       "AnDe": {
@@ -137271,7 +137271,7 @@
                                                       "BkAc": {
                                                         "type": "string",
                                                         "maxLength": 34,
-                                                        "description": "Account number",
+                                                        "description": "Rekeningnummer",
                                                         "format": ""
                                                       },
                                                       "BuDd": {
@@ -137293,7 +137293,7 @@
                                                       "CiId": {
                                                         "type": "string",
                                                         "maxLength": 3,
-                                                        "description": "Country code",
+                                                        "description": "Code land",
                                                         "format": ""
                                                       },
                                                       "CoDs": {
@@ -137335,7 +137335,7 @@
                                                       "Ds": {
                                                         "type": "string",
                                                         "maxLength": 60,
-                                                        "description": "Description",
+                                                        "description": "Omschrijving",
                                                         "format": ""
                                                       },
                                                       "DsH1": {
@@ -137370,42 +137370,42 @@
                                                       },
                                                       "EnDa": {
                                                         "type": "string",
-                                                        "description": "End date",
+                                                        "description": "Einddatum",
                                                         "format": "date"
                                                       },
                                                       "FiId": {
                                                         "type": "string",
                                                         "maxLength": 7,
-                                                        "description": "Field",
+                                                        "description": "Veld",
                                                         "format": ""
                                                       },
                                                       "FiNr": {
                                                         "type": "string",
                                                         "maxLength": 9,
-                                                        "description": "Social security number ('BSN')",
+                                                        "description": "Burgerservicenummer",
                                                         "format": ""
                                                       },
                                                       "HmAd": {
                                                         "type": "string",
                                                         "maxLength": 9,
-                                                        "description": "House number addition",
+                                                        "description": "Toevoeging huisnummer",
                                                         "format": ""
                                                       },
                                                       "HoAd": {
                                                         "type": "string",
                                                         "maxLength": 80,
-                                                        "description": "Street",
+                                                        "description": "Straatnaam",
                                                         "format": ""
                                                       },
                                                       "HoEn": {
                                                         "type": "string",
-                                                        "description": "Period up to and incl.",
+                                                        "description": "Periode t/m",
                                                         "format": "date"
                                                       },
                                                       "HoNu": {
                                                         "type": "string",
                                                         "maxLength": 9,
-                                                        "description": "House number",
+                                                        "description": "Huisnummer",
                                                         "format": ""
                                                       },
                                                       "HoOb": {
@@ -137417,7 +137417,7 @@
                                                       "HoPl": {
                                                         "type": "string",
                                                         "maxLength": 80,
-                                                        "description": "City",
+                                                        "description": "Woonplaats",
                                                         "format": ""
                                                       },
                                                       "HoQu": {
@@ -137434,7 +137434,7 @@
                                                       },
                                                       "HoSt": {
                                                         "type": "string",
-                                                        "description": "Period from",
+                                                        "description": "Periode van",
                                                         "format": "date"
                                                       },
                                                       "HoVa": {
@@ -137534,7 +137534,7 @@
                                                       },
                                                       "InAm": {
                                                         "type": "number",
-                                                        "description": "Interest amount",
+                                                        "description": "Bedrag rente",
                                                         "format": "number"
                                                       },
                                                       "InC2": {
@@ -137671,7 +137671,7 @@
                                                       },
                                                       "LoEn": {
                                                         "type": "string",
-                                                        "description": "Scheduled end date",
+                                                        "description": "Geplande einddatum",
                                                         "format": "date"
                                                       },
                                                       "LoSt": {
@@ -137701,7 +137701,7 @@
                                                       },
                                                       "PeMo": {
                                                         "type": "integer",
-                                                        "description": "Term",
+                                                        "description": "Looptijd",
                                                         "format": ""
                                                       },
                                                       "PlD1": {
@@ -137886,7 +137886,7 @@
                                                       "SaDa": {
                                                         "type": "string",
                                                         "maxLength": 4,
-                                                        "description": "Sale date",
+                                                        "description": "Datum verkoop",
                                                         "format": ""
                                                       },
                                                       "SeDd": {
@@ -137911,7 +137911,7 @@
                                                       },
                                                       "StDa": {
                                                         "type": "string",
-                                                        "description": "Start date",
+                                                        "description": "Begindatum",
                                                         "format": "date"
                                                       },
                                                       "ToAm": {
@@ -137927,7 +137927,7 @@
                                                       "Valu": {
                                                         "type": "string",
                                                         "maxLength": 3,
-                                                        "description": "Currency",
+                                                        "description": "Valuta",
                                                         "format": ""
                                                       },
                                                       "WOZo": {
@@ -137939,7 +137939,7 @@
                                                       "ZpCd": {
                                                         "type": "string",
                                                         "maxLength": 9,
-                                                        "description": "Postal code",
+                                                        "description": "Postcode",
                                                         "format": ""
                                                       }
                                                     },
@@ -138419,7 +138419,7 @@
                                                       },
                                                       "AmEn": {
                                                         "type": "number",
-                                                        "description": "End value",
+                                                        "description": "Eindwaarde",
                                                         "format": "number"
                                                       },
                                                       "AmSh": {
@@ -138445,7 +138445,7 @@
                                                       "CiId": {
                                                         "type": "string",
                                                         "maxLength": 3,
-                                                        "description": "Country code",
+                                                        "description": "Code land",
                                                         "format": ""
                                                       },
                                                       "DeTy": {
@@ -138456,13 +138456,13 @@
                                                       "Ds": {
                                                         "type": "string",
                                                         "maxLength": 60,
-                                                        "description": "Description",
+                                                        "description": "Omschrijving",
                                                         "format": ""
                                                       },
                                                       "FiId": {
                                                         "type": "string",
                                                         "maxLength": 7,
-                                                        "description": "Field",
+                                                        "description": "Veld",
                                                         "format": ""
                                                       },
                                                       "IsRs": {
@@ -138702,7 +138702,7 @@
                                                       },
                                                       "AmCo": {
                                                         "type": "number",
-                                                        "description": "Costs",
+                                                        "description": "Kosten",
                                                         "format": "number"
                                                       },
                                                       "AmDe": {
@@ -138717,7 +138717,7 @@
                                                       },
                                                       "AmVa": {
                                                         "type": "number",
-                                                        "description": "Value",
+                                                        "description": "Waarde",
                                                         "format": "number"
                                                       },
                                                       "BaPr": {
@@ -138740,7 +138740,7 @@
                                                       "Co": {
                                                         "type": "string",
                                                         "maxLength": 40,
-                                                        "description": "Country",
+                                                        "description": "Land",
                                                         "format": ""
                                                       },
                                                       "CoNw": {
@@ -138751,12 +138751,12 @@
                                                       },
                                                       "DaFr": {
                                                         "type": "string",
-                                                        "description": "Time frame start date",
+                                                        "description": "Begindatum tijdvak",
                                                         "format": "date"
                                                       },
                                                       "DaTo": {
                                                         "type": "string",
-                                                        "description": "Time frame end date",
+                                                        "description": "Einddatum tijdvak",
                                                         "format": "date"
                                                       },
                                                       "DeTy": {
@@ -138767,18 +138767,18 @@
                                                       "Ds": {
                                                         "type": "string",
                                                         "maxLength": 60,
-                                                        "description": "Description",
+                                                        "description": "Omschrijving",
                                                         "format": ""
                                                       },
                                                       "FiId": {
                                                         "type": "string",
                                                         "maxLength": 7,
-                                                        "description": "Field",
+                                                        "description": "Veld",
                                                         "format": ""
                                                       },
                                                       "FiOB": {
                                                         "type": "integer",
-                                                        "description": "Year ",
+                                                        "description": "Jaar ",
                                                         "format": ""
                                                       },
                                                       "PeId": {
@@ -142081,7 +142081,7 @@
                                       "CcNr": {
                                         "type": "string",
                                         "maxLength": 30,
-                                        "description": "COC number",
+                                        "description": "CoC number",
                                         "format": ""
                                       },
                                       "CcDa": {
@@ -142242,7 +142242,7 @@
                                       },
                                       "LgId": {
                                         "type": "string",
-                                        "maxLength": 3,
+                                        "maxLength": 5,
                                         "description": "Language",
                                         "format": ""
                                       },
@@ -143447,7 +143447,7 @@
                                                                       },
                                                                       "LgId": {
                                                                         "type": "string",
-                                                                        "maxLength": 3,
+                                                                        "maxLength": 5,
                                                                         "description": "Language",
                                                                         "format": ""
                                                                       },
@@ -149797,7 +149797,7 @@
                                       "CcNr": {
                                         "type": "string",
                                         "maxLength": 30,
-                                        "description": "COC number",
+                                        "description": "CoC number",
                                         "format": ""
                                       },
                                       "CcDa": {
@@ -149958,7 +149958,7 @@
                                       },
                                       "LgId": {
                                         "type": "string",
-                                        "maxLength": 3,
+                                        "maxLength": 5,
                                         "description": "Language",
                                         "format": ""
                                       },
@@ -151163,7 +151163,7 @@
                                                                       },
                                                                       "LgId": {
                                                                         "type": "string",
-                                                                        "maxLength": 3,
+                                                                        "maxLength": 5,
                                                                         "description": "Language",
                                                                         "format": ""
                                                                       },
@@ -157651,7 +157651,7 @@
                                       "CcNr": {
                                         "type": "string",
                                         "maxLength": 30,
-                                        "description": "COC number",
+                                        "description": "CoC number",
                                         "format": ""
                                       },
                                       "CcDa": {
@@ -157812,7 +157812,7 @@
                                       },
                                       "LgId": {
                                         "type": "string",
-                                        "maxLength": 3,
+                                        "maxLength": 5,
                                         "description": "Language",
                                         "format": ""
                                       },
@@ -159017,7 +159017,7 @@
                                                                       },
                                                                       "LgId": {
                                                                         "type": "string",
-                                                                        "maxLength": 3,
+                                                                        "maxLength": 5,
                                                                         "description": "Language",
                                                                         "format": ""
                                                                       },
@@ -165526,7 +165526,7 @@
                                       "CcNr": {
                                         "type": "string",
                                         "maxLength": 30,
-                                        "description": "COC number",
+                                        "description": "CoC number",
                                         "format": ""
                                       },
                                       "CcDa": {
@@ -165687,7 +165687,7 @@
                                       },
                                       "LgId": {
                                         "type": "string",
-                                        "maxLength": 3,
+                                        "maxLength": 5,
                                         "description": "Language",
                                         "format": ""
                                       },
@@ -166892,7 +166892,7 @@
                                                                       },
                                                                       "LgId": {
                                                                         "type": "string",
-                                                                        "maxLength": 3,
+                                                                        "maxLength": 5,
                                                                         "description": "Language",
                                                                         "format": ""
                                                                       },
@@ -173534,7 +173534,7 @@
                                       "CcNr": {
                                         "type": "string",
                                         "maxLength": 30,
-                                        "description": "COC number",
+                                        "description": "CoC number",
                                         "format": ""
                                       },
                                       "CcDa": {
@@ -173695,7 +173695,7 @@
                                       },
                                       "LgId": {
                                         "type": "string",
-                                        "maxLength": 3,
+                                        "maxLength": 5,
                                         "description": "Language",
                                         "format": ""
                                       },
@@ -174900,7 +174900,7 @@
                                                                       },
                                                                       "LgId": {
                                                                         "type": "string",
-                                                                        "maxLength": 3,
+                                                                        "maxLength": 5,
                                                                         "description": "Language",
                                                                         "format": ""
                                                                       },

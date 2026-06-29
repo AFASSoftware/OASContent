@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "7.7.10",
+    "version": "8.8.11",
     "title": "AFAS Loonadministratie API",
     "description": "This API describes the endpoints related to Loonadministratie. Use this API with the functional description of the API."
   },
@@ -199,7 +199,7 @@
     },
     "/Metainfo/{Type}/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
+        "summary": "Retrieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
         "tags": [
           "API Info"
         ],
@@ -350,7 +350,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the data of a custom getconnector based on the endpoint id.",
+        "summary": "Retrieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -442,7 +442,7 @@
             },
             "in": "path",
             "name": "Endpoint",
-            "description": "Add the id of the connector you want to get the data from",
+            "description": "Add the id of connector you want to get the meta info from",
             "required": true
           },
           {
@@ -4194,7 +4194,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Vervoermiddel voor WPM rapportage\n11 = Petrol vehicles;\n12 = Diesel vehicle;\n13 = Cars belonging to (plug-in) hybrids;\n14 = Cars 100% electric;\n15 = Other fuel cars;\n21 = Petrol/diesel motorcycle ;\n22 = Electric motorcycle;\n31 = Petrol or diesel moped/scooter;\n32 = Electric moped/scooter (including speed-pedelec);\n41 = (Electric) bicycle (not being a speed-pedelec) or walking;\n51 = Public transportation;",
+                        "description": "Transport means for WPM reporting\n11 = Petrol vehicles;\n12 = Diesel vehicle;\n13 = Cars belonging to (plug-in) hybrids;\n14 = Cars 100% electric;\n15 = Other fuel cars;\n21 = Petrol/diesel motorcycle ;\n22 = Electric motorcycle;\n31 = Petrol or diesel moped/scooter;\n32 = Electric moped/scooter (including speed-pedelec);\n41 = (Electric) bicycle (not being a speed-pedelec) or walking;\n51 = Public transportation;",
                         "format": ""
                       },
                       "ViTv": {
@@ -4355,7 +4355,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Vervoermiddel voor WPM rapportage\n11 = Petrol vehicles;\n12 = Diesel vehicle;\n13 = Cars belonging to (plug-in) hybrids;\n14 = Cars 100% electric;\n15 = Other fuel cars;\n21 = Petrol/diesel motorcycle ;\n22 = Electric motorcycle;\n31 = Petrol or diesel moped/scooter;\n32 = Electric moped/scooter (including speed-pedelec);\n41 = (Electric) bicycle (not being a speed-pedelec) or walking;\n51 = Public transportation;",
+                        "description": "Transport means for WPM reporting\n11 = Petrol vehicles;\n12 = Diesel vehicle;\n13 = Cars belonging to (plug-in) hybrids;\n14 = Cars 100% electric;\n15 = Other fuel cars;\n21 = Petrol/diesel motorcycle ;\n22 = Electric motorcycle;\n31 = Petrol or diesel moped/scooter;\n32 = Electric moped/scooter (including speed-pedelec);\n41 = (Electric) bicycle (not being a speed-pedelec) or walking;\n51 = Public transportation;",
                         "format": ""
                       },
                       "ViTv": {
@@ -4505,7 +4505,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Vervoermiddel voor WPM rapportage\n11 = Petrol vehicles;\n12 = Diesel vehicle;\n13 = Cars belonging to (plug-in) hybrids;\n14 = Cars 100% electric;\n15 = Other fuel cars;\n21 = Petrol/diesel motorcycle ;\n22 = Electric motorcycle;\n31 = Petrol or diesel moped/scooter;\n32 = Electric moped/scooter (including speed-pedelec);\n41 = (Electric) bicycle (not being a speed-pedelec) or walking;\n51 = Public transportation;",
+                        "description": "Transport means for WPM reporting\n11 = Petrol vehicles;\n12 = Diesel vehicle;\n13 = Cars belonging to (plug-in) hybrids;\n14 = Cars 100% electric;\n15 = Other fuel cars;\n21 = Petrol/diesel motorcycle ;\n22 = Electric motorcycle;\n31 = Petrol or diesel moped/scooter;\n32 = Electric moped/scooter (including speed-pedelec);\n41 = (Electric) bicycle (not being a speed-pedelec) or walking;\n51 = Public transportation;",
                         "format": ""
                       },
                       "ViTv": {
@@ -4665,7 +4665,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Vervoermiddel voor WPM rapportage\n11 = Petrol vehicles;\n12 = Diesel vehicle;\n13 = Cars belonging to (plug-in) hybrids;\n14 = Cars 100% electric;\n15 = Other fuel cars;\n21 = Petrol/diesel motorcycle ;\n22 = Electric motorcycle;\n31 = Petrol or diesel moped/scooter;\n32 = Electric moped/scooter (including speed-pedelec);\n41 = (Electric) bicycle (not being a speed-pedelec) or walking;\n51 = Public transportation;",
+                        "description": "Transport means for WPM reporting\n11 = Petrol vehicles;\n12 = Diesel vehicle;\n13 = Cars belonging to (plug-in) hybrids;\n14 = Cars 100% electric;\n15 = Other fuel cars;\n21 = Petrol/diesel motorcycle ;\n22 = Electric motorcycle;\n31 = Petrol or diesel moped/scooter;\n32 = Electric moped/scooter (including speed-pedelec);\n41 = (Electric) bicycle (not being a speed-pedelec) or walking;\n51 = Public transportation;",
                         "format": ""
                       },
                       "ViTv": {

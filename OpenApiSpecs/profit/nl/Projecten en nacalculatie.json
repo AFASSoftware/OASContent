@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "7.7.10",
+    "version": "8.8.11",
     "title": "AFAS Projecten en nacalculatie API",
     "description": "Deze API beschrijft de endpoints gerelateerd aan Projecten en nacalculatie. Gebruik deze API met de functionele beschrijving van de API."
   },
@@ -199,7 +199,7 @@
     },
     "/Metainfo/{Type}/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
+        "summary": "Retrieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
         "tags": [
           "API Info"
         ],
@@ -350,7 +350,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the data of a custom getconnector based on the endpoint id.",
+        "summary": "Retrieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -442,7 +442,7 @@
             },
             "in": "path",
             "name": "Endpoint",
-            "description": "Add the id of the connector you want to get the data from",
+            "description": "Add the id of connector you want to get the meta info from",
             "required": true
           },
           {
@@ -8481,7 +8481,7 @@
                       "PaCd": {
                         "type": "string",
                         "maxLength": 5,
-                        "description": "Betalingsvoorwaarde",
+                        "description": "Betaalvoorwaarde",
                         "format": ""
                       },
                       "PaTp": {
@@ -9277,7 +9277,7 @@
                       "PaCd": {
                         "type": "string",
                         "maxLength": 5,
-                        "description": "Betalingsvoorwaarde",
+                        "description": "Betaalvoorwaarde",
                         "format": ""
                       },
                       "PaTp": {
@@ -10738,7 +10738,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Vervoermiddel voor WPM rapportage\n11 = Auto’s benzine;\n12 = Auto’s diesel;\n13 = Auto’s die behoren tot de (plug in) hybrides;\n14 = Auto’s 100% elektrisch;\n15 = Auto’s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
+                        "description": "Vervoermiddel voor WPM-rapportage\n11 = Auto’s benzine;\n12 = Auto’s diesel;\n13 = Auto’s die behoren tot de (plug in) hybrides;\n14 = Auto’s 100% elektrisch;\n15 = Auto’s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
                         "format": ""
                       },
                       "ViTv": {
@@ -11126,7 +11126,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Vervoermiddel voor WPM rapportage\n11 = Auto’s benzine;\n12 = Auto’s diesel;\n13 = Auto’s die behoren tot de (plug in) hybrides;\n14 = Auto’s 100% elektrisch;\n15 = Auto’s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
+                        "description": "Vervoermiddel voor WPM-rapportage\n11 = Auto’s benzine;\n12 = Auto’s diesel;\n13 = Auto’s die behoren tot de (plug in) hybrides;\n14 = Auto’s 100% elektrisch;\n15 = Auto’s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
                         "format": ""
                       },
                       "ViTv": {
@@ -11966,6 +11966,17 @@
                         "description": "Voorkeur btw-code (inkoop)",
                         "format": ""
                       },
+                      "ADCd": {
+                        "type": "boolean",
+                        "description": "Volgens instelling verbijzondering",
+                        "format": ""
+                      },
+                      "CoVC": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Btw-terugvordering",
+                        "format": ""
+                      },
                       "PrMa": {
                         "type": "string",
                         "maxLength": 15,
@@ -12234,10 +12245,11 @@
                           "4",
                           "5",
                           "6",
-                          "7"
+                          "7",
+                          "8"
                         ],
                         "maxLength": 20,
-                        "description": "Methode onderhanden werk\n0 = Geen onderhanden werk;\n1 = Resultaat o.b.v. gereed project (CC);\n2 = Resultaat o.b.v. nacalculatie (NTF);\n3 = Resultaat o.b.v. voortgang (POC);\n4 = Kosten o.b.v. uurloon, toeslag en opslag;\n5 = Omzettoekenning o.b.v. nacalculatie;\n6 = Omzettoekenning o.b.v. urenvoortgang project;\n7 = Omzettoekenning o.b.v. urenvoortgang werksoort;",
+                        "description": "Methode financiële integratie\n0 = Geen financiële projectintegratie;\n1 = Resultaat o.b.v. gereed project (CC);\n2 = Resultaat o.b.v. nacalculatie (NTF);\n3 = Resultaat o.b.v. voortgang (POC);\n4 = Kosten o.b.v. uurloon, toeslag en opslag;\n5 = Omzettoekenning o.b.v. nacalculatie;\n6 = Omzettoekenning o.b.v. urenvoortgang project;\n7 = Omzettoekenning o.b.v. urenvoortgang werksoort;\n8 = Journaliseren projectmutaties zonder financiële bron;",
                         "format": ""
                       },
                       "RBMt": {
@@ -12259,7 +12271,7 @@
                       "PaCd": {
                         "type": "string",
                         "maxLength": 5,
-                        "description": "Betalingsvoorwaarde",
+                        "description": "Betaalvoorwaarde",
                         "format": ""
                       },
                       "MePp": {
@@ -12353,6 +12365,11 @@
                         "description": "Factuurtermijn factureren via factuurvoorstel",
                         "format": ""
                       },
+                      "RePr": {
+                        "type": "boolean",
+                        "description": "Nacalculatie factureren via factuurvoorstel",
+                        "format": ""
+                      },
                       "StTm": {
                         "type": "string",
                         "description": "Begintijd",
@@ -12435,18 +12452,18 @@
                       "Bankaccount": {
                         "type": "string",
                         "maxLength": 40,
-                        "description": "Banknummer\n            afwijkend",
+                        "description": "Banknummer afwijkend",
                         "format": ""
                       },
                       "FileName": {
                         "type": "string",
                         "maxLength": 255,
-                        "description": "\n            Filename",
+                        "description": "Filename",
                         "format": ""
                       },
                       "FileStream": {
                         "type": "string",
-                        "description": "File\n            as byte-array",
+                        "description": "File as byte-array",
                         "format": "byte"
                       },
                       "CdI1": {
@@ -12457,18 +12474,18 @@
                       "SignatureFileId1": {
                         "type": "string",
                         "maxLength": 32,
-                        "description": "Handtekening1\n            bestand",
+                        "description": "Handtekening1 bestand",
                         "format": ""
                       },
                       "SignatureFileName1": {
                         "type": "string",
                         "maxLength": 255,
-                        "description": "Handtekening1\n            naam bestand",
+                        "description": "Handtekening1 naam bestand",
                         "format": ""
                       },
                       "SignatureFileStream1": {
                         "type": "string",
-                        "description": "Handtekening1\n            afbeelding",
+                        "description": "Handtekening1 afbeelding",
                         "format": "byte"
                       },
                       "CdI2": {
@@ -12479,18 +12496,18 @@
                       "SignatureFileId2": {
                         "type": "string",
                         "maxLength": 32,
-                        "description": "Handtekening2\n            bestand",
+                        "description": "Handtekening2 bestand",
                         "format": ""
                       },
                       "SignatureFileName2": {
                         "type": "string",
                         "maxLength": 255,
-                        "description": "Handtekening2\n            naam bestand",
+                        "description": "Handtekening2 naam bestand",
                         "format": ""
                       },
                       "SignatureFileStream2": {
                         "type": "string",
-                        "description": "Handtekening2\n            afbeelding",
+                        "description": "Handtekening2 afbeelding",
                         "format": "byte"
                       },
                       "CdIp": {
@@ -12516,12 +12533,12 @@
                       },
                       "PtPrpDaBe": {
                         "type": "string",
-                        "description": "Begindatum\n            cao inlener",
+                        "description": "Begindatum cao inlener",
                         "format": "date"
                       },
                       "PtPrpTyEj": {
                         "type": "string",
-                        "description": "Soort\n            eindejaarsuitkering",
+                        "description": "Soort eindejaarsuitkering",
                         "format": ""
                       },
                       "PtPrpPaDa": {
@@ -12546,7 +12563,7 @@
                       },
                       "PtPrpNoPe": {
                         "type": "integer",
-                        "description": "Aantal periodes bij\n            verkooprelatie",
+                        "description": "Aantal periodes bij verkooprelatie",
                         "format": ""
                       },
                       "PtPrpPeUn": {
@@ -12563,13 +12580,13 @@
                       "PtPrpViTa": {
                         "type": "string",
                         "maxLength": 4,
-                        "description": "Afwijkende CBS\n            cao-code",
+                        "description": "Afwijkende CBS cao-code",
                         "format": ""
                       },
                       "PtPrpViTp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Soort periodieke\n            verhoging",
+                        "description": "Soort periodieke verhoging",
                         "format": ""
                       },
                       "PtPrpDmon": {
@@ -12604,13 +12621,13 @@
                       },
                       "PtPrpPFrA": {
                         "type": "integer",
-                        "description": "Periodieke verhoging\n            vanaf leeftijd",
+                        "description": "Periodieke verhoging vanaf leeftijd",
                         "format": ""
                       },
                       "PtPrpViEx": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Extra voorwaarde\n            periodiek",
+                        "description": "Extra voorwaarde periodiek",
                         "format": ""
                       },
                       "PtPrpReDa": {
@@ -12642,35 +12659,35 @@
                       },
                       "PtPrpWeAg": {
                         "type": "integer",
-                        "description": "Werkervaring opbouwen\n            vanaf leeftijd",
+                        "description": "Werkervaring opbouwen vanaf leeftijd",
                         "format": ""
                       },
                       "PtPrpVaIp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Telling\n            onderbrekingsperiode",
+                        "description": "Telling onderbrekingsperiode",
                         "format": ""
                       },
                       "PtPrpMoCo": {
                         "type": "integer",
-                        "description": "Kalenderdagen opnieuw\n            tellen als onderbr.per.",
+                        "description": "Kalenderdagen opnieuw tellen als onderbr.per.",
                         "format": ""
                       },
                       "PtPrpVaIe": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Onderbrekingsperiode\n            eenheid",
+                        "description": "Onderbrekingsperiode eenheid",
                         "format": ""
                       },
                       "PtPrpAcHi": {
                         "type": "boolean",
-                        "description": "Beoordeling inlener\n            benodigd",
+                        "description": "Beoordeling inlener benodigd",
                         "format": ""
                       },
                       "PtPrpVaCo": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Uitvoeren periodieke\n            verhoging",
+                        "description": "Uitvoeren periodieke verhoging",
                         "format": ""
                       },
                       "PtPrpMeVp": {
@@ -13231,6 +13248,17 @@
                         "description": "Voorkeur btw-code (inkoop)",
                         "format": ""
                       },
+                      "ADCd": {
+                        "type": "boolean",
+                        "description": "Volgens instelling verbijzondering",
+                        "format": ""
+                      },
+                      "CoVC": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Btw-terugvordering",
+                        "format": ""
+                      },
                       "PrMa": {
                         "type": "string",
                         "maxLength": 15,
@@ -13500,10 +13528,11 @@
                           "4",
                           "5",
                           "6",
-                          "7"
+                          "7",
+                          "8"
                         ],
                         "maxLength": 20,
-                        "description": "Methode onderhanden werk\n0 = Geen onderhanden werk;\n1 = Resultaat o.b.v. gereed project (CC);\n2 = Resultaat o.b.v. nacalculatie (NTF);\n3 = Resultaat o.b.v. voortgang (POC);\n4 = Kosten o.b.v. uurloon, toeslag en opslag;\n5 = Omzettoekenning o.b.v. nacalculatie;\n6 = Omzettoekenning o.b.v. urenvoortgang project;\n7 = Omzettoekenning o.b.v. urenvoortgang werksoort;",
+                        "description": "Methode financiële integratie\n0 = Geen financiële projectintegratie;\n1 = Resultaat o.b.v. gereed project (CC);\n2 = Resultaat o.b.v. nacalculatie (NTF);\n3 = Resultaat o.b.v. voortgang (POC);\n4 = Kosten o.b.v. uurloon, toeslag en opslag;\n5 = Omzettoekenning o.b.v. nacalculatie;\n6 = Omzettoekenning o.b.v. urenvoortgang project;\n7 = Omzettoekenning o.b.v. urenvoortgang werksoort;\n8 = Journaliseren projectmutaties zonder financiële bron;",
                         "format": ""
                       },
                       "RBMt": {
@@ -13525,7 +13554,7 @@
                       "PaCd": {
                         "type": "string",
                         "maxLength": 5,
-                        "description": "Betalingsvoorwaarde",
+                        "description": "Betaalvoorwaarde",
                         "format": ""
                       },
                       "MePp": {
@@ -13620,6 +13649,11 @@
                         "description": "Factuurtermijn factureren via factuurvoorstel",
                         "format": ""
                       },
+                      "RePr": {
+                        "type": "boolean",
+                        "description": "Nacalculatie factureren via factuurvoorstel",
+                        "format": ""
+                      },
                       "StTm": {
                         "type": "string",
                         "description": "Begintijd",
@@ -13703,18 +13737,18 @@
                       "Bankaccount": {
                         "type": "string",
                         "maxLength": 40,
-                        "description": "Banknummer\n            afwijkend",
+                        "description": "Banknummer afwijkend",
                         "format": ""
                       },
                       "FileName": {
                         "type": "string",
                         "maxLength": 255,
-                        "description": "\n            Filename",
+                        "description": "Filename",
                         "format": ""
                       },
                       "FileStream": {
                         "type": "string",
-                        "description": "File\n            as byte-array",
+                        "description": "File as byte-array",
                         "format": "byte"
                       },
                       "CdI1": {
@@ -13725,18 +13759,18 @@
                       "SignatureFileId1": {
                         "type": "string",
                         "maxLength": 32,
-                        "description": "Handtekening1\n            bestand",
+                        "description": "Handtekening1 bestand",
                         "format": ""
                       },
                       "SignatureFileName1": {
                         "type": "string",
                         "maxLength": 255,
-                        "description": "Handtekening1\n            naam bestand",
+                        "description": "Handtekening1 naam bestand",
                         "format": ""
                       },
                       "SignatureFileStream1": {
                         "type": "string",
-                        "description": "Handtekening1\n            afbeelding",
+                        "description": "Handtekening1 afbeelding",
                         "format": "byte"
                       },
                       "CdI2": {
@@ -13747,18 +13781,18 @@
                       "SignatureFileId2": {
                         "type": "string",
                         "maxLength": 32,
-                        "description": "Handtekening2\n            bestand",
+                        "description": "Handtekening2 bestand",
                         "format": ""
                       },
                       "SignatureFileName2": {
                         "type": "string",
                         "maxLength": 255,
-                        "description": "Handtekening2\n            naam bestand",
+                        "description": "Handtekening2 naam bestand",
                         "format": ""
                       },
                       "SignatureFileStream2": {
                         "type": "string",
-                        "description": "Handtekening2\n            afbeelding",
+                        "description": "Handtekening2 afbeelding",
                         "format": "byte"
                       },
                       "CdIp": {
@@ -13784,12 +13818,12 @@
                       },
                       "PtPrpDaBe": {
                         "type": "string",
-                        "description": "Begindatum\n            cao inlener",
+                        "description": "Begindatum cao inlener",
                         "format": "date"
                       },
                       "PtPrpTyEj": {
                         "type": "string",
-                        "description": "Soort\n            eindejaarsuitkering",
+                        "description": "Soort eindejaarsuitkering",
                         "format": ""
                       },
                       "PtPrpPaDa": {
@@ -13814,7 +13848,7 @@
                       },
                       "PtPrpNoPe": {
                         "type": "integer",
-                        "description": "Aantal periodes bij\n            verkooprelatie",
+                        "description": "Aantal periodes bij verkooprelatie",
                         "format": ""
                       },
                       "PtPrpPeUn": {
@@ -13831,13 +13865,13 @@
                       "PtPrpViTa": {
                         "type": "string",
                         "maxLength": 4,
-                        "description": "Afwijkende CBS\n            cao-code",
+                        "description": "Afwijkende CBS cao-code",
                         "format": ""
                       },
                       "PtPrpViTp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Soort periodieke\n            verhoging",
+                        "description": "Soort periodieke verhoging",
                         "format": ""
                       },
                       "PtPrpDmon": {
@@ -13872,13 +13906,13 @@
                       },
                       "PtPrpPFrA": {
                         "type": "integer",
-                        "description": "Periodieke verhoging\n            vanaf leeftijd",
+                        "description": "Periodieke verhoging vanaf leeftijd",
                         "format": ""
                       },
                       "PtPrpViEx": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Extra voorwaarde\n            periodiek",
+                        "description": "Extra voorwaarde periodiek",
                         "format": ""
                       },
                       "PtPrpReDa": {
@@ -13910,35 +13944,35 @@
                       },
                       "PtPrpWeAg": {
                         "type": "integer",
-                        "description": "Werkervaring opbouwen\n            vanaf leeftijd",
+                        "description": "Werkervaring opbouwen vanaf leeftijd",
                         "format": ""
                       },
                       "PtPrpVaIp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Telling\n            onderbrekingsperiode",
+                        "description": "Telling onderbrekingsperiode",
                         "format": ""
                       },
                       "PtPrpMoCo": {
                         "type": "integer",
-                        "description": "Kalenderdagen opnieuw\n            tellen als onderbr.per.",
+                        "description": "Kalenderdagen opnieuw tellen als onderbr.per.",
                         "format": ""
                       },
                       "PtPrpVaIe": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Onderbrekingsperiode\n            eenheid",
+                        "description": "Onderbrekingsperiode eenheid",
                         "format": ""
                       },
                       "PtPrpAcHi": {
                         "type": "boolean",
-                        "description": "Beoordeling inlener\n            benodigd",
+                        "description": "Beoordeling inlener benodigd",
                         "format": ""
                       },
                       "PtPrpVaCo": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Uitvoeren periodieke\n            verhoging",
+                        "description": "Uitvoeren periodieke verhoging",
                         "format": ""
                       },
                       "PtPrpMeVp": {
@@ -15328,7 +15362,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Vervoermiddel voor WPM rapportage\n11 = Auto’s benzine;\n12 = Auto’s diesel;\n13 = Auto’s die behoren tot de (plug in) hybrides;\n14 = Auto’s 100% elektrisch;\n15 = Auto’s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
+                        "description": "Vervoermiddel voor WPM-rapportage\n11 = Auto’s benzine;\n12 = Auto’s diesel;\n13 = Auto’s die behoren tot de (plug in) hybrides;\n14 = Auto’s 100% elektrisch;\n15 = Auto’s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
                         "format": ""
                       },
                       "ViTv": {
@@ -15962,7 +15996,7 @@
                           "51"
                         ],
                         "maxLength": 20,
-                        "description": "Vervoermiddel voor WPM rapportage\n11 = Auto’s benzine;\n12 = Auto’s diesel;\n13 = Auto’s die behoren tot de (plug in) hybrides;\n14 = Auto’s 100% elektrisch;\n15 = Auto’s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
+                        "description": "Vervoermiddel voor WPM-rapportage\n11 = Auto’s benzine;\n12 = Auto’s diesel;\n13 = Auto’s die behoren tot de (plug in) hybrides;\n14 = Auto’s 100% elektrisch;\n15 = Auto’s andere brandstoffen;\n21 = Motorfiets benzine/ diesel ;\n22 = Motorfiets elektrisch;\n31 = Bromfiets/scooter benzine of diesel;\n32 = Bromfiets/scooter 100% elektrisch (incl. pedelec);\n41 = (Elektrische) fiets (niet zijnde speed-pedelec) of lopen;\n51 = Openbaar vervoer;",
                         "format": ""
                       },
                       "ViTv": {

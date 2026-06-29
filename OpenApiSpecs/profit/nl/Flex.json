@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "7.7.10",
+    "version": "8.8.11",
     "title": "AFAS Flex API",
     "description": "Deze API beschrijft de endpoints gerelateerd aan Flex. Gebruik deze API met de functionele beschrijving van de API."
   },
@@ -199,7 +199,7 @@
     },
     "/Metainfo/{Type}/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
+        "summary": "Retrieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
         "tags": [
           "API Info"
         ],
@@ -350,7 +350,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the data of a custom getconnector based on the endpoint id.",
+        "summary": "Retrieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -442,7 +442,7 @@
             },
             "in": "path",
             "name": "Endpoint",
-            "description": "Add the id of the connector you want to get the data from",
+            "description": "Add the id of connector you want to get the meta info from",
             "required": true
           },
           {
@@ -4638,7 +4638,7 @@
           "name": "PtItpDaBe",
           "in": "path",
           "required": true,
-          "description": "Begindatum CBS cao-code"
+          "description": "Begindatum\n            CBS cao-code"
         }
       ],
       "delete": {
@@ -6670,7 +6670,7 @@
                           },
                           "ChOfCommNr": {
                             "type": "string",
-                            "description": "KvK-nummer"
+                            "description": "KVK-nummer"
                           },
                           "CollectAccount": {
                             "type": "string",
@@ -6678,7 +6678,7 @@
                           },
                           "PayCon": {
                             "type": "string",
-                            "description": "Betalingsvoorwaarde"
+                            "description": "Betaalvoorwaarde"
                           },
                           "VatDuty": {
                             "type": "string",
@@ -8499,6 +8499,11 @@
                         "maxLength": 16,
                         "description": "Declaratienummer",
                         "format": ""
+                      },
+                      "RsCr": {
+                        "type": "string",
+                        "description": "Reden correctie",
+                        "format": "byte"
                       }
                     }
                   },
@@ -8668,6 +8673,11 @@
                         "maxLength": 16,
                         "description": "Declaratienummer",
                         "format": ""
+                      },
+                      "RsCr": {
+                        "type": "string",
+                        "description": "Reden correctie",
+                        "format": "byte"
                       }
                     }
                   },
@@ -9291,12 +9301,12 @@
                     "properties": {
                       "PtItpDaBe": {
                         "type": "string",
-                        "description": "Begindatum CBS cao-code",
+                        "description": "Begindatum\n            CBS cao-code",
                         "format": "date"
                       },
                       "PtItpTyEj": {
                         "type": "string",
-                        "description": "Soort eindejaarsuitkering",
+                        "description": "Soort\n            eindejaarsuitkering",
                         "format": ""
                       },
                       "PtItpPaDa": {
@@ -9321,7 +9331,7 @@
                       },
                       "PtItpNoPe": {
                         "type": "integer",
-                        "description": "Aantal periodes bij verkooprelatie",
+                        "description": "Aantal periodes bij\n            verkooprelatie",
                         "format": ""
                       },
                       "PtItpPeUn": {
@@ -9344,7 +9354,7 @@
                       "PtItpViTp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Soort periodieke verhoging",
+                        "description": "Soort periodieke\n            verhoging",
                         "format": ""
                       },
                       "PtItpDmon": {
@@ -9379,13 +9389,13 @@
                       },
                       "PtItpPFrA": {
                         "type": "integer",
-                        "description": "Periodieke verhoging vanaf leeftijd",
+                        "description": "Periodieke verhoging\n            vanaf leeftijd",
                         "format": ""
                       },
                       "PtItpViEx": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Extra voorwaarde periodiek",
+                        "description": "Extra voorwaarde\n            periodiek",
                         "format": ""
                       },
                       "PtItpReDa": {
@@ -9417,35 +9427,35 @@
                       },
                       "PtItpWeAg": {
                         "type": "integer",
-                        "description": "Werkervaring opbouwen vanaf leeftijd",
+                        "description": "Werkervaring opbouwen\n            vanaf leeftijd",
                         "format": ""
                       },
                       "PtItpVaIp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Telling onderbrekingsperiode",
+                        "description": "Telling\n            onderbrekingsperiode",
                         "format": ""
                       },
                       "PtItpMoCo": {
                         "type": "integer",
-                        "description": "Maanden opnieuw tellen als onderbrekingsperiode",
+                        "description": "Maanden opnieuw tellen\n            als onderbrekingsperiode",
                         "format": ""
                       },
                       "PtItpVaIe": {
                         "type": "string",
                         "maxLength": 4,
-                        "description": "Onderbrekingsperiode eenheid",
+                        "description": "Onderbrekingsperiode\n            eenheid",
                         "format": ""
                       },
                       "PtItpAcHi": {
                         "type": "boolean",
-                        "description": "Beoordeling inlener benodigd",
+                        "description": "Beoordeling inlener\n            benodigd",
                         "format": ""
                       },
                       "PtItpVaCo": {
                         "type": "string",
                         "maxLength": 4,
-                        "description": "Uitvoeren periodieke verhoging",
+                        "description": "Uitvoeren periodieke\n            verhoging",
                         "format": ""
                       },
                       "PtItpMeMo": {
@@ -9801,12 +9811,12 @@
                     "properties": {
                       "PtItpDaBe": {
                         "type": "string",
-                        "description": "Begindatum CBS cao-code",
+                        "description": "Begindatum\n            CBS cao-code",
                         "format": "date"
                       },
                       "PtItpTyEj": {
                         "type": "string",
-                        "description": "Soort eindejaarsuitkering",
+                        "description": "Soort\n            eindejaarsuitkering",
                         "format": ""
                       },
                       "PtItpPaDa": {
@@ -9831,7 +9841,7 @@
                       },
                       "PtItpNoPe": {
                         "type": "integer",
-                        "description": "Aantal periodes bij verkooprelatie",
+                        "description": "Aantal periodes bij\n            verkooprelatie",
                         "format": ""
                       },
                       "PtItpPeUn": {
@@ -9854,7 +9864,7 @@
                       "PtItpViTp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Soort periodieke verhoging",
+                        "description": "Soort periodieke\n            verhoging",
                         "format": ""
                       },
                       "PtItpDmon": {
@@ -9889,13 +9899,13 @@
                       },
                       "PtItpPFrA": {
                         "type": "integer",
-                        "description": "Periodieke verhoging vanaf leeftijd",
+                        "description": "Periodieke verhoging\n            vanaf leeftijd",
                         "format": ""
                       },
                       "PtItpViEx": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Extra voorwaarde periodiek",
+                        "description": "Extra voorwaarde\n            periodiek",
                         "format": ""
                       },
                       "PtItpReDa": {
@@ -9927,35 +9937,35 @@
                       },
                       "PtItpWeAg": {
                         "type": "integer",
-                        "description": "Werkervaring opbouwen vanaf leeftijd",
+                        "description": "Werkervaring opbouwen\n            vanaf leeftijd",
                         "format": ""
                       },
                       "PtItpVaIp": {
                         "type": "string",
                         "maxLength": 2,
-                        "description": "Telling onderbrekingsperiode",
+                        "description": "Telling\n            onderbrekingsperiode",
                         "format": ""
                       },
                       "PtItpMoCo": {
                         "type": "integer",
-                        "description": "Maanden opnieuw tellen als onderbrekingsperiode",
+                        "description": "Maanden opnieuw tellen\n            als onderbrekingsperiode",
                         "format": ""
                       },
                       "PtItpVaIe": {
                         "type": "string",
                         "maxLength": 4,
-                        "description": "Onderbrekingsperiode eenheid",
+                        "description": "Onderbrekingsperiode\n            eenheid",
                         "format": ""
                       },
                       "PtItpAcHi": {
                         "type": "boolean",
-                        "description": "Beoordeling inlener benodigd",
+                        "description": "Beoordeling inlener\n            benodigd",
                         "format": ""
                       },
                       "PtItpVaCo": {
                         "type": "string",
                         "maxLength": 4,
-                        "description": "Uitvoeren periodieke verhoging",
+                        "description": "Uitvoeren periodieke\n            verhoging",
                         "format": ""
                       },
                       "PtItpMeMo": {

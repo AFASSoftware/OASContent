@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "7.7.10",
+    "version": "8.8.11",
     "title": "AFAS Werving en selectie API",
     "description": "Deze API beschrijft de endpoints gerelateerd aan Werving en selectie. Gebruik deze API met de functionele beschrijving van de API."
   },
@@ -199,7 +199,7 @@
     },
     "/Metainfo/{Type}/{Endpoint}": {
       "get": {
-        "summary": "Retieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
+        "summary": "Retrieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
         "tags": [
           "API Info"
         ],
@@ -350,7 +350,7 @@
     },
     "/connectors/{Endpoint}": {
       "get": {
-        "summary": "Retieve the data of a custom getconnector based on the endpoint id.",
+        "summary": "Retrieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
         "tags": [
           "GET"
         ],
@@ -442,7 +442,7 @@
             },
             "in": "path",
             "name": "Endpoint",
-            "description": "Add the id of the connector you want to get the data from",
+            "description": "Add the id of connector you want to get the meta info from",
             "required": true
           },
           {
@@ -5213,31 +5213,8 @@
                       },
                       "WoXp": {
                         "type": "string",
-                        "enum": [
-                          "00",
-                          "01",
-                          "02",
-                          "03",
-                          "04",
-                          "05",
-                          "06",
-                          "07",
-                          "08",
-                          "09",
-                          "10",
-                          "11",
-                          "12",
-                          "13",
-                          "14",
-                          "15",
-                          "16",
-                          "17",
-                          "18",
-                          "19",
-                          "20"
-                        ],
-                        "maxLength": 20,
-                        "description": "Werkervaring\n00 = 0-1 jaar;\n01 = 1-2 jaar;\n02 = 2-3 jaar;\n03 = 3-4 jaar;\n04 = 4-5 jaar;\n05 = 5-6 jaar;\n06 = 6-7 jaar;\n07 = 7-8 jaar;\n08 = 8-9 jaar;\n09 = 9-10 jaar;\n10 = 10-11 jaar;\n11 = 11-12 jaar;\n12 = 12-13 jaar;\n13 = 13-14 jaar;\n14 = 14-15 jaar;\n15 = 15-16 jaar;\n16 = 16-17 jaar;\n17 = 17-18 jaar;\n18 = 18-19 jaar;\n19 = 19-20 jaar;\n20 = Meer dan 20 jaar;",
+                        "maxLength": 3,
+                        "description": "Werkervaring",
                         "format": ""
                       },
                       "ViSo": {
@@ -5287,7 +5264,7 @@
                       },
                       "LgId": {
                         "type": "string",
-                        "maxLength": 3,
+                        "maxLength": 5,
                         "description": "Taal",
                         "format": ""
                       }
@@ -5857,7 +5834,7 @@
                                       },
                                       "LgId": {
                                         "type": "string",
-                                        "maxLength": 3,
+                                        "maxLength": 5,
                                         "description": "Afwijkende taal t.o.v. werkgever",
                                         "format": ""
                                       },
@@ -7284,10 +7261,14 @@
                                         "enum": [
                                           "01",
                                           "02",
-                                          "03"
+                                          "03",
+                                          "04",
+                                          "05",
+                                          "06",
+                                          "07"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Beroepscategorie\n01 = Directielid;\n02 = Bediende;\n03 = Arbeider;",
+                                        "description": "Beroepscategorie\n01 = Directielid;\n02 = Bediende;\n03 = Arbeider;\n04 = Bediende kader;\n05 = Bediende leidinggevend;\n06 = Arbeider kader;\n07 = Arbeider leidinggevende;",
                                         "format": ""
                                       },
                                       "PaGr": {
@@ -10161,7 +10142,7 @@
                                           "1"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Ploeg/nachtvermindering\n1 = Werknemer in ploeg- en/of nachtarbeid;",
+                                        "description": "Ploeg-/nachtvermindering\n1 = Werknemer in ploeg- en/of nachtarbeid;",
                                         "format": ""
                                       },
                                       "WrNu": {
@@ -20648,54 +20629,8 @@
                                       },
                                       "ViTt": {
                                         "type": "string",
-                                        "enum": [
-                                          "ABS",
-                                          "AGB",
-                                          "BIG",
-                                          "Bestuurderskaart",
-                                          "Chauffeurskaart",
-                                          "DTO",
-                                          "EU",
-                                          "FGzPT",
-                                          "FM",
-                                          "GD",
-                                          "GHV",
-                                          "Geneesk. verklaring",
-                                          "Hepatitis B register",
-                                          "ID",
-                                          "Kenncn. Kraamz toev.",
-                                          "KNMG",
-                                          "KNMG-specialisten",
-                                          "Kwal.reg. paramedici",
-                                          "Logo verklaring",
-                                          "LHV",
-                                          "NVO/NIP",
-                                          "OO",
-                                          "OV",
-                                          "P",
-                                          "POH-register",
-                                          "RBW",
-                                          "RGS",
-                                          "Reg. gev. apothekers",
-                                          "Registerplein",
-                                          "SKJ",
-                                          "SO",
-                                          "ST",
-                                          "T",
-                                          "V1",
-                                          "V2",
-                                          "V3",
-                                          "V4",
-                                          "V5",
-                                          "VCA",
-                                          "VI",
-                                          "VK",
-                                          "Vaktherapie",
-                                          "VOG",
-                                          "VVN"
-                                        ],
-                                        "maxLength": 20,
-                                        "description": "Type persoonsdocument\nABS = Ambtseed;\nAGB = AGB;\nBIG = BIG;\nBestuurderskaart = Bestuurderskaart;\nChauffeurskaart = Chauffeurskaart;\nDTO = Diensttijdoverzicht;\nEU = Verblijfsdocument EU/EER;\nFGzPT = FGzPT;\nFM = Verblijfsdocument familielid EU/EER;\nGD = Geprivilegieerdendocument;\nGHV = Geheimhoudingsverklaring;\nGeneesk. verklaring = Geneeskundige verklaring;\nHepatitis B register = Hepatitis B register;\nID = Identiteitskaart;\nKenncn. Kraamz toev. = Kenniscentrum Kraamzorg toevoegen;\nKNMG = KNMG;\nKNMG-specialisten = KNMG-specialisten;\nKwal.reg. paramedici = Kwaliteitsregister paramedici;\nLogo verklaring = Logo verklaring;\nLHV = Loonheffingsverklaring;\nNVO/NIP = NVO/NIP;\nOO = Ontheemden Oekraïne document;\nOV = Overige verblijfsdocumenten;\nP = Paspoort;\nPOH-register = POH-register;\nRBW = Rijbewijs;\nRGS = RGS;\nReg. gev. apothekers = Register van gevestigde apothekers;\nRegisterplein = Registerplein;\nSKJ = SKJ;\nSO = Verblijfsaantekening regeling ontheemden Oekraïne;\nST = Verblijfsaantekening regulier;\nT = Tewerkstellingsvergunning;\nV1 = Verblijfsvergunning regulier bepaalde tijd;\nV2 = Verblijfsvergunning regulier onbepaalde tijd;\nV3 = Verblijfsvergunning asiel bepaalde tijd;\nV4 = Verblijfsvergunning EU langdurig ingezetene;\nV5 = Verblijfsvergunning asiel onbepaalde tijd;\nVCA = VCA;\nVI = Vreemdelingen identiteitsbewijs;\nVK = Verblijfsdocument voor VK-onderdanen en familieleden;\nVaktherapie = Vaktherapie;\nVOG = VOG;\nVVN = V&VN;",
+                                        "maxLength": 3,
+                                        "description": "Type persoonsdocument",
                                         "format": ""
                                       },
                                       "ViNa": {
@@ -21210,54 +21145,8 @@
                                       },
                                       "ViTt": {
                                         "type": "string",
-                                        "enum": [
-                                          "ABS",
-                                          "AGB",
-                                          "BIG",
-                                          "Bestuurderskaart",
-                                          "Chauffeurskaart",
-                                          "DTO",
-                                          "EU",
-                                          "FGzPT",
-                                          "FM",
-                                          "GD",
-                                          "GHV",
-                                          "Geneesk. verklaring",
-                                          "Hepatitis B register",
-                                          "ID",
-                                          "Kenncn. Kraamz toev.",
-                                          "KNMG",
-                                          "KNMG-specialisten",
-                                          "Kwal.reg. paramedici",
-                                          "Logo verklaring",
-                                          "LHV",
-                                          "NVO/NIP",
-                                          "OO",
-                                          "OV",
-                                          "P",
-                                          "POH-register",
-                                          "RBW",
-                                          "RGS",
-                                          "Reg. gev. apothekers",
-                                          "Registerplein",
-                                          "SKJ",
-                                          "SO",
-                                          "ST",
-                                          "T",
-                                          "V1",
-                                          "V2",
-                                          "V3",
-                                          "V4",
-                                          "V5",
-                                          "VCA",
-                                          "VI",
-                                          "VK",
-                                          "Vaktherapie",
-                                          "VOG",
-                                          "VVN"
-                                        ],
-                                        "maxLength": 20,
-                                        "description": "Type persoonsdocument\nABS = Ambtseed;\nAGB = AGB;\nBIG = BIG;\nBestuurderskaart = Bestuurderskaart;\nChauffeurskaart = Chauffeurskaart;\nDTO = Diensttijdoverzicht;\nEU = Verblijfsdocument EU/EER;\nFGzPT = FGzPT;\nFM = Verblijfsdocument familielid EU/EER;\nGD = Geprivilegieerdendocument;\nGHV = Geheimhoudingsverklaring;\nGeneesk. verklaring = Geneeskundige verklaring;\nHepatitis B register = Hepatitis B register;\nID = Identiteitskaart;\nKenncn. Kraamz toev. = Kenniscentrum Kraamzorg toevoegen;\nKNMG = KNMG;\nKNMG-specialisten = KNMG-specialisten;\nKwal.reg. paramedici = Kwaliteitsregister paramedici;\nLogo verklaring = Logo verklaring;\nLHV = Loonheffingsverklaring;\nNVO/NIP = NVO/NIP;\nOO = Ontheemden Oekraïne document;\nOV = Overige verblijfsdocumenten;\nP = Paspoort;\nPOH-register = POH-register;\nRBW = Rijbewijs;\nRGS = RGS;\nReg. gev. apothekers = Register van gevestigde apothekers;\nRegisterplein = Registerplein;\nSKJ = SKJ;\nSO = Verblijfsaantekening regeling ontheemden Oekraïne;\nST = Verblijfsaantekening regulier;\nT = Tewerkstellingsvergunning;\nV1 = Verblijfsvergunning regulier bepaalde tijd;\nV2 = Verblijfsvergunning regulier onbepaalde tijd;\nV3 = Verblijfsvergunning asiel bepaalde tijd;\nV4 = Verblijfsvergunning EU langdurig ingezetene;\nV5 = Verblijfsvergunning asiel onbepaalde tijd;\nVCA = VCA;\nVI = Vreemdelingen identiteitsbewijs;\nVK = Verblijfsdocument voor VK-onderdanen en familieleden;\nVaktherapie = Vaktherapie;\nVOG = VOG;\nVVN = V&VN;",
+                                        "maxLength": 3,
+                                        "description": "Type persoonsdocument",
                                         "format": ""
                                       },
                                       "RtWo": {
@@ -21364,7 +21253,7 @@
                                       "EmNe": {
                                         "type": "string",
                                         "maxLength": 255,
-                                        "description": "Nieuw e-mailadres portaltoegang",
+                                        "description": "Nieuw e-mailadres applicatietoegang",
                                         "format": "email"
                                       },
                                       "ViAo": {
@@ -21637,32 +21526,8 @@
                         "format": ""
                       },
                       "WoXp": {
-                        "type": "string",
-                        "enum": [
-                          "00",
-                          "01",
-                          "02",
-                          "03",
-                          "04",
-                          "05",
-                          "06",
-                          "07",
-                          "08",
-                          "09",
-                          "10",
-                          "11",
-                          "12",
-                          "13",
-                          "14",
-                          "15",
-                          "16",
-                          "17",
-                          "18",
-                          "19",
-                          "20"
-                        ],
-                        "maxLength": 20,
-                        "description": "Werkervaring\n00 = 0-1 jaar;\n01 = 1-2 jaar;\n02 = 2-3 jaar;\n03 = 3-4 jaar;\n04 = 4-5 jaar;\n05 = 5-6 jaar;\n06 = 6-7 jaar;\n07 = 7-8 jaar;\n08 = 8-9 jaar;\n09 = 9-10 jaar;\n10 = 10-11 jaar;\n11 = 11-12 jaar;\n12 = 12-13 jaar;\n13 = 13-14 jaar;\n14 = 14-15 jaar;\n15 = 15-16 jaar;\n16 = 16-17 jaar;\n17 = 17-18 jaar;\n18 = 18-19 jaar;\n19 = 19-20 jaar;\n20 = Meer dan 20 jaar;",
+                        "type": "integer",
+                        "description": "Werkervaring",
                         "format": ""
                       },
                       "EdLv": {
@@ -21889,7 +21754,7 @@
                       },
                       "PrI2": {
                         "type": "integer",
-                        "description": "Onboarden profiel",
+                        "description": "Onboarden-profiel",
                         "format": ""
                       }
                     },
@@ -22010,32 +21875,8 @@
                         "format": ""
                       },
                       "WoXp": {
-                        "type": "string",
-                        "enum": [
-                          "00",
-                          "01",
-                          "02",
-                          "03",
-                          "04",
-                          "05",
-                          "06",
-                          "07",
-                          "08",
-                          "09",
-                          "10",
-                          "11",
-                          "12",
-                          "13",
-                          "14",
-                          "15",
-                          "16",
-                          "17",
-                          "18",
-                          "19",
-                          "20"
-                        ],
-                        "maxLength": 20,
-                        "description": "Werkervaring\n00 = 0-1 jaar;\n01 = 1-2 jaar;\n02 = 2-3 jaar;\n03 = 3-4 jaar;\n04 = 4-5 jaar;\n05 = 5-6 jaar;\n06 = 6-7 jaar;\n07 = 7-8 jaar;\n08 = 8-9 jaar;\n09 = 9-10 jaar;\n10 = 10-11 jaar;\n11 = 11-12 jaar;\n12 = 12-13 jaar;\n13 = 13-14 jaar;\n14 = 14-15 jaar;\n15 = 15-16 jaar;\n16 = 16-17 jaar;\n17 = 17-18 jaar;\n18 = 18-19 jaar;\n19 = 19-20 jaar;\n20 = Meer dan 20 jaar;",
+                        "type": "integer",
+                        "description": "Werkervaring",
                         "format": ""
                       },
                       "EdLv": {
@@ -22267,7 +22108,7 @@
                       },
                       "PrI2": {
                         "type": "integer",
-                        "description": "Onboarden profiel",
+                        "description": "Onboarden-profiel",
                         "format": ""
                       }
                     },
