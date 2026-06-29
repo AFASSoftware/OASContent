@@ -282,7 +282,7 @@
       "news": {
           "en": [
             {
-                    "name": "Profit 8 Releasenotes (Bèta)",
+                    "name": "Profit 8 Releasenotes",
                     "path": "en/news-profit8.md"
                 },
             {
@@ -305,7 +305,7 @@
           ],
           "nl": [
             {
-                    "name": "Profit 8 Releasenotes (Bèta)",
+                    "name": "Profit 8 Releasenotes",
                     "path": "nl/news-profit8.md"
                 },
             {
