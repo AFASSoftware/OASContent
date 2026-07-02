@@ -38,7 +38,7 @@ For now, you cannot test this on connect.afas.nl.
 
 ### Webhooks!
 
-A long-cherished wish has come true: Webhooks! [Read more about Webhooks in Profit](https://help.afas.nl/help/NL/SE/140869.htm).
+A long-cherished wish has come true: Webhooks! [Read more about Webhooks in Profit](./webhooks).
 
 
 ## Other changes
