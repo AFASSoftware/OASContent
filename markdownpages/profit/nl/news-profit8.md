@@ -38,7 +38,7 @@ Dit kun je vooralsnog niet testen op connect.afas.nl.
 
 ### Webhooks!
 
-Een langgekoesterde wens is in vervulling gegaan: Webhooks! [Lees hier meer over Webhooks in Profit](https://docs.afas.help/apidoc/nl/Webhooks).  
+Een langgekoesterde wens is in vervulling gegaan: Webhooks! [Lees hier meer over Webhooks in Profit](https://help.afas.nl/help/NL/SE/140869.htm).  
 
 
 ## Overige wijzigingen
