@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2026-02-24
+date: 2026-07-09
 index: true
 tags: AppConnector, Auditor, Developer, GetConnector, API, Integration
 title: AppConnector Auditor - Ontwikkelaarsrapport
@@ -13,6 +13,16 @@ title: AppConnector Auditor - Ontwikkelaarsrapport
 > * [Partnerrapport](./app-connector-auditor-partner) voor AFAS Partners (striktere eisen voor certificering)
 
 ---
+
+## Gebruik van de auditor
+
+1. Ga in het menu naar `Algemeen > Beheer > App connector` 
+2. Open de eigenschappen van de AppConnector die je wilt analyseren
+3. Klik naast het rijtje tabbladen aan de linkerkant op `Acties`
+4. Klik op de actie `Auditor (voor ontwikkelaars)`
+5. Na een paar seconden is de auditor klaar
+6. Kies hoe je het bestand wilt opslaan. Pdf is het makkelijkst te openen, html is sneller klaar en leest fijner.
+
 
 ## Introductie
 

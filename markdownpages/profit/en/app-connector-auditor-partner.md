@@ -14,6 +14,16 @@ title: AppConnector Auditor - Partner Report
 
 ---
 
+## Using the auditor
+
+1. In the menu, go to `General > Management > App connector`
+2. Open the properties of the AppConnector you want to analyze
+3. Next to the row of tabs on the left, click `Actions`
+4. Click the action `Auditor (for partners)`
+5. After a few seconds, the auditor is ready
+6. Choose how you want to save the file. PDF is easiest to open, HTML is generated faster and reads more smoothly.
+
+
 ## Introduction for partners
 
 This report is specifically designed for **AFAS Partners** and contains the strictest checks. Messages in this report are directly linked to your **certification status**.

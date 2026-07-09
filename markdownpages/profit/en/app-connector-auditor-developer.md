@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2026-02-24
+date: 2026-07-09
 index: true
 tags: AppConnector, Auditor, Developer, GetConnector, API, Integration
 title: AppConnector Auditor - Developer Report
@@ -13,6 +13,16 @@ title: AppConnector Auditor - Developer Report
 > * [Partner Report](./app-connector-auditor-partner) for AFAS Partners (stricter requirements for certification)
 
 ---
+
+## Using the auditor
+
+1. In the menu, go to `General > Management > App connector`
+2. Open the properties of the AppConnector you want to analyze
+3. Next to the row of tabs on the left, click `Actions`
+4. Click the action `Auditor (for developers)`
+5. After a few seconds, the auditor is ready
+6. Choose how you want to save the file. PDF is easiest to open, HTML is generated faster and reads more smoothly.
+
 
 ## Introduction
 

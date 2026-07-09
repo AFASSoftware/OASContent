@@ -14,6 +14,16 @@ title: AppConnector Auditor - Partnerrapport
 
 ---
 
+## Gebruik van de auditor
+
+1. Ga in het menu naar `Algemeen > Beheer > App connector` 
+2. Open de eigenschappen van de AppConnector die je wilt analyseren
+3. Klik naast het rijtje tabbladen aan de linkerkant op `Acties`
+4. Klik op de actie `Auditor (voor partners)`
+5. Na een paar seconden is de auditor klaar
+6. Kies hoe je het bestand wilt opslaan. Pdf is het makkelijkst te openen, html is sneller klaar en leest fijner.
+
+
 ## Introductie voor partners
 
 Dit rapport is specifiek bedoeld voor **AFAS Partners** en bevat de strengste controles. Meldingen in dit rapport zijn direct gekoppeld aan je **certificeringsstatus**.
