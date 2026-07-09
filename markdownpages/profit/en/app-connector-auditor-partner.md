@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2026-02-24
+date: 2026-07-09
 index: true
 tags: AppConnector, Auditor, Partner, Certification, GetConnector, pentest
 title: AppConnector Auditor - Partner Report
@@ -445,8 +445,8 @@ Test yourself, or consult with AFAS, whether the indexes are unique. If not: exp
 
 #### <a id="PERF-45"></a>PERF-45: This GetConnector is missing fields needed to optimally use the indexes for sorting.
 
-**Level:** ⚠️ Warning  
-**Certification impact:** Must be resolved
+**Level:** ❌ Error  
+**Certification impact:** **Blocks certification**  
 
 **Why do you see this?**  
 Not all index fields are visible in the GetConnector.

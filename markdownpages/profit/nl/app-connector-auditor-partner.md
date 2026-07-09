@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2026-02-24
+date: 2026-07-09
 index: true
 tags: AppConnector, Auditor, Partner, Certificering, GetConnector, pentest
 title: AppConnector Auditor - Partnerrapport
@@ -437,8 +437,8 @@ Test zelf, of overleg met AFAS, of de indexen uniek zijn. Zo niet: breid de sort
 
 #### <a id="PERF-45"></a>PERF-45: Deze GetConnector mist velden die nodig zijn om de indexen optimaal te gebruiken voor sortering.
 
-**Niveau:** ⚠️ Waarschuwing  
-**Certificerings-impact:** Moet opgelost worden
+**Niveau:** ❌ Fout  
+**Certificerings-impact:** **Blokkeert certificering**  
 
 **Waarom zie je dit?**  
 Niet alle indexvelden zijn zichtbaar in de GetConnector.
