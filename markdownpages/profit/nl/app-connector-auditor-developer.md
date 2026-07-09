@@ -14,6 +14,16 @@ title: AppConnector Auditor - Ontwikkelaarsrapport
 
 ---
 
+## Gebruik van de auditor
+
+1. Ga in het menu naar `Algemeen > Beheer > App connector` 
+2. Open de eigenschappen van de AppConnector die je wilt analyseren
+3. Klik naast het rijtje tabbladen aan de linkerkant op `Acties`
+4. Klik op de actie `Auditor (voor ontwikkelaars)`
+5. Na een paar seconden is de auditor klaar
+6. Kies hoe je het bestand wilt opslaan. Pdf is het makkelijkst te openen, html is sneller klaar en leest fijner.
+
+
 ## Introductie
 
 Deze documentatie helpt ontwikkelaars bij het interpreteren en oplossen van meldingen uit de AppConnector Auditor. Of je nu als partner integreert of als in-house developer een koppeling bouwt: hier vind je technische uitleg en concrete oplossingen.

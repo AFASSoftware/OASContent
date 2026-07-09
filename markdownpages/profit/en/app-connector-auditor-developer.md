@@ -14,6 +14,16 @@ title: AppConnector Auditor - Developer Report
 
 ---
 
+## Using the auditor
+
+1. In the menu, go to `General > Management > App connector`
+2. Open the properties of the AppConnector you want to analyze
+3. Next to the row of tabs on the left, click `Actions`
+4. Click the action `Auditor (for developers)`
+5. After a few seconds, the auditor is ready
+6. Choose how you want to save the file. PDF is easiest to open, HTML is generated faster and reads more smoothly.
+
+
 ## Introduction
 
 This documentation helps developers interpret and resolve messages from the AppConnector Auditor. Whether you're integrating as a partner or building a connection as an in-house developer: here you'll find technical explanations and concrete solutions.
