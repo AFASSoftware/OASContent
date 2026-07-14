@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1000" viewBox="0 0 1700 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Bepaling rekening artikelgroep verbijzondering</title>
+  <desc id="desc">Beslisboom voor welke rekening wordt gebruikt en dat bij voorraadhoudend altijd naar rekening inkoop en rekening kostprijs wordt gekeken.</desc>
+  <defs>
+    <style>
+      text {
+        font-family: "Segoe UI", Arial, sans-serif;
+        fill: #1f2937;
+      }
+      .title {
+        font-size: 36px;
+        font-weight: 700;
+        fill: #0053a1;
+      }
+      .node {
+        fill: #ffffff;
+        stroke: #1f2937;
+        stroke-width: 2;
+      }
+      .line {
+        stroke: #1f2937;
+        stroke-width: 2.5;
+        fill: none;
+      }
+      .edge {
+        font-size: 22px;
+        font-weight: 600;
+      }
+      .decision {
+        font-size: 22px;
+        font-weight: 600;
+      }
+      .boxtext {
+        font-size: 22px;
+      }
+      .outcome {
+        font-size: 18px;
+        font-weight: 600;
+      }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#1f2937" />
+    </marker>
+  </defs>
+
+  <text class="title" x="30" y="56">Bepaling rekening artikelgroep verbijzondering</text>
+
+  <rect class="node" x="70" y="96" width="210" height="76" rx="12" ry="12" />
+  <text class="boxtext" x="175" y="143" text-anchor="middle">Bepaal rekening</text>
+
+  <polygon class="node" points="175,190 300,290 175,390 50,290" />
+  <text class="decision" x="175" y="270" text-anchor="middle">
+    <tspan x="175" dy="0">Activering</tspan>
+    <tspan x="175" dy="30">Journaliseren</tspan>
+    <tspan x="175" dy="30">Ontvangst</tspan>
+  </text>
+
+  <polygon class="node" points="175,420 300,520 175,620 50,520" />
+  <text class="decision" x="175" y="500" text-anchor="middle">
+    <tspan x="175" dy="0">Activering</tspan>
+    <tspan x="175" dy="30">Journaliseren</tspan>
+    <tspan x="175" dy="30">Voorraad</tspan>
+  </text>
+
+  <polygon class="node" points="935,420 1060,520 935,620 810,520" />
+  <text class="decision" x="935" y="500" text-anchor="middle">
+    <tspan x="935" dy="0">Activering</tspan>
+    <tspan x="935" dy="30">Journaliseren</tspan>
+    <tspan x="935" dy="30">Voorraad</tspan>
+  </text>
+
+  <polygon class="node" points="175,660 265,740 175,820 85,740" />
+  <text class="decision" x="175" y="746" text-anchor="middle">Voorraadhoudend</text>
+
+  <polygon class="node" points="555,660 645,740 555,820 465,740" />
+  <text class="decision" x="555" y="746" text-anchor="middle">Voorraadhoudend</text>
+
+  <polygon class="node" points="935,660 1025,740 935,820 845,740" />
+  <text class="decision" x="935" y="746" text-anchor="middle">Voorraadhoudend</text>
+
+  <polygon class="node" points="1315,660 1405,740 1315,820 1225,740" />
+  <text class="decision" x="1315" y="746" text-anchor="middle">Voorraadhoudend</text>
+
+  <rect class="node" x="85" y="900" width="180" height="82" rx="12" ry="12" />
+  <text class="outcome" x="175" y="930" text-anchor="middle">
+    <tspan x="175" dy="0">Rekening Inkoop</tspan>
+    <tspan x="175" dy="23">en Rekening</tspan>
+    <tspan x="175" dy="23">Kostprijs</tspan>
+  </text>
+
+  <rect class="node" x="275" y="900" width="180" height="82" rx="12" ry="12" />
+  <text class="outcome" x="365" y="947" text-anchor="middle">Rekening Kostprijs</text>
+
+  <rect class="node" x="465" y="900" width="180" height="82" rx="12" ry="12" />
+  <text class="outcome" x="555" y="930" text-anchor="middle">
+    <tspan x="555" dy="0">Rekening Inkoop</tspan>
+    <tspan x="555" dy="23">en Rekening</tspan>
+    <tspan x="555" dy="23">Kostprijs</tspan>
+  </text>
+
+  <rect class="node" x="655" y="900" width="180" height="82" rx="12" ry="12" />
+  <text class="outcome" x="745" y="947" text-anchor="middle">Rekening Inkoop</text>
+
+  <rect class="node" x="845" y="900" width="180" height="82" rx="12" ry="12" />
+  <text class="outcome" x="935" y="930" text-anchor="middle">
+    <tspan x="935" dy="0">Rekening Inkoop</tspan>
+    <tspan x="935" dy="23">en Rekening</tspan>
+    <tspan x="935" dy="23">Kostprijs</tspan>
+  </text>
+
+  <rect class="node" x="1035" y="900" width="180" height="82" rx="12" ry="12" />
+  <text class="outcome" x="1125" y="947" text-anchor="middle">Rekening Inkoop</text>
+
+  <rect class="node" x="1225" y="900" width="180" height="82" rx="12" ry="12" />
+  <text class="outcome" x="1315" y="930" text-anchor="middle">
+    <tspan x="1315" dy="0">Rekening Inkoop</tspan>
+    <tspan x="1315" dy="23">en Rekening</tspan>
+    <tspan x="1315" dy="23">Kostprijs</tspan>
+  </text>
+
+  <rect class="node" x="1415" y="900" width="180" height="82" rx="12" ry="12" />
+  <text class="outcome" x="1505" y="947" text-anchor="middle">Rekening Inkoop</text>
+
+  <path class="line" d="M175 172 L175 190" marker-end="url(#arrow)" />
+
+  <path class="line" d="M175 390 L175 420" marker-end="url(#arrow)" />
+  <text class="edge" x="138" y="410">Ja</text>
+
+  <path class="line" d="M300 290 L935 290 L935 420" marker-end="url(#arrow)" />
+  <text class="edge" x="510" y="278">Nee</text>
+
+  <path class="line" d="M175 620 L175 660" marker-end="url(#arrow)" />
+  <text class="edge" x="138" y="642">Ja</text>
+
+  <path class="line" d="M300 520 L555 520 L555 660" marker-end="url(#arrow)" />
+  <text class="edge" x="360" y="510">Nee</text>
+
+  <path class="line" d="M935 620 L935 660" marker-end="url(#arrow)" />
+  <text class="edge" x="898" y="642">Ja</text>
+
+  <path class="line" d="M1060 520 L1315 520 L1315 660" marker-end="url(#arrow)" />
+  <text class="edge" x="1120" y="510">Nee</text>
+
+  <path class="line" d="M175 820 L175 900" marker-end="url(#arrow)" />
+  <text class="edge" x="138" y="858">Ja</text>
+
+  <path class="line" d="M265 740 L365 740 L365 900" marker-end="url(#arrow)" />
+  <text class="edge" x="295" y="728">Nee</text>
+
+  <path class="line" d="M555 820 L555 900" marker-end="url(#arrow)" />
+  <text class="edge" x="518" y="858">Ja</text>
+
+  <path class="line" d="M645 740 L745 740 L745 900" marker-end="url(#arrow)" />
+  <text class="edge" x="675" y="728">Nee</text>
+
+  <path class="line" d="M935 820 L935 900" marker-end="url(#arrow)" />
+  <text class="edge" x="898" y="858">Ja</text>
+
+  <path class="line" d="M1025 740 L1125 740 L1125 900" marker-end="url(#arrow)" />
+  <text class="edge" x="1055" y="728">Nee</text>
+
+  <path class="line" d="M1315 820 L1315 900" marker-end="url(#arrow)" />
+  <text class="edge" x="1278" y="858">Ja</text>
+
+  <path class="line" d="M1405 740 L1505 740 L1505 900" marker-end="url(#arrow)" />
+  <text class="edge" x="1435" y="728">Nee</text>
+</svg>

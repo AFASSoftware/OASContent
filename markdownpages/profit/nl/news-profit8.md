@@ -1,6 +1,6 @@
 ---
 author: EZW
-date: 2026-06-29
+date: 2026-07-14
 tags: Profit8, GetConnector, UpdateConnector, Integration, Configuration
 title: Nieuw in Profit 8
 ---
@@ -13,6 +13,14 @@ Vanaf Profit 8 is er een aantal wijzigingen in de AFAS Profit API doorgevoerd. H
 
 
 ## ***Breaking* wijzigingen**
+
+### FbPurRequisition stelt hogere eisen aan de verbijzonderingscodes
+
+(toegevoegd 14-07-2026)
+Voorheen kon je bij een inkoopaanvraag alle verbijzonderingscodes die er bestaan kiezen. Nu moet de verbijzonderingscode voorkomen in een verbijzonderingstoewijzing van rekening inkoop of rekening kostprijs van de artikelgroep. Zie onderstaand schema. Dit zal in de meeste gevallen geen problemen opleveren, omdat dezelfde verbijzonderingstoewijzing verderop in het proces al aanwezig zou moeten zijn.  
+
+![Schema bepaling rekening artikelgroep](../../../media/profit8-verbijzondering-rekeningen.svg)
+
 
 ### Taalcodes vereenvoudigd
 
