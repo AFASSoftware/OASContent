@@ -8,6 +8,7 @@ title: Certificeringsstappen voor partners
 
 [*For English click here*](../en/partner-certification-steps)
 
+
 ## Inleiding
 
 Welkom bij het certificeringstraject voor partners! In dit document nemen we je stap voor stap mee op weg naar een succesvolle, gecertificeerde koppeling met AFAS. Op de [Product partner portal](https://partner.afas.nl/product-partner-portal) staat een onderdeel `Mijn onboarding` waar alle stappen staan die je nog af moet handelen. Ontdek hoe eenvoudig, leerzaam en waardevol het proces kan zijn. Zet vandaag nog de eerste stap richting certificering en maak van jouw integratie een succesverhaal!
@@ -51,7 +52,7 @@ Ga naar https://klant.afas.nl/supportplus en activeer het!
 
 - Hoe werkt onze API: https://help.afas.nl/help/NL/SE/api.htm.
 
-- Maak in AFAS Profit een AppConnector met token: https://help.afas.nl/help/NL/SE/120718.htm.
+- Maak in AFAS Profit een AppConnector met token: https://help.afas.nl/help/NL/SE/120718.htm. Let op, in de uiteindelijke integratie moet de klant zelf een AppConnector aanmaken en moet de authenticatie via OAuth2 verlopen. In de testfase mag je een classic token gebruiken.  
 
 - Voeg bijvoorbeeld de GetConnector [ProfitCountries](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#get-/connectors/ProfitCountries) toe.
 

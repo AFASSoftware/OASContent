@@ -6,11 +6,12 @@ tags: Partner, IntegrationId, Certification, Integration, Configuration
 title: Certification steps for Partners
 ---
 
-*[Voor Nederlands klik hier](../nl/partner-certification-steps)*
+[*Voor Nederlands klik hier*](../nl/partner-certification-steps)
+
 
 ## Introduction
 
-Welcome to the partner certification journey! In this document we take you step by step on the path to a successful, certified integration with AFAS. On the [Product partner portal](https://partner.afas.nl/product-partner-portal) there is a section called `My onboarding` where all the steps you still need to complete are listed. Discover how easy, educational and valuable the process can be. Take your first step towards certification today and turn your integration into a success story!
+Welcome to the partner certification journey! In this document, we guide you step by step on the path to a successful, certified integration with AFAS. On the [Product partner portal](https://partner.afas.nl/product-partner-portal), there is a section called `My onboarding` where you can find all steps that still need to be completed. Discover how simple, educational, and valuable the process can be. Take your first step toward certification today and turn your integration into a success story!
 
 
 ---
@@ -19,7 +20,8 @@ Welcome to the partner certification journey! In this document we take you step 
 
 ### Security check
 
-Safety first! A pentest is an absolutely essential part of the certification. At the start of the certification process, a pentest must have been performed, or a concrete date must be scheduled. Make sure the pentest is preferably performed by a [CCV-certified party](https://hetccv.nl/certificaat-schema/pentesten).
+Safety first! A pentest is an absolutely essential part of certification. At the start of the certification process, a pentest must already have been performed, or a concrete date must be scheduled. Preferably, make sure the pentest is carried out by a [CCV-certified party](https://hetccv.nl/certificaat-schema/pentesten).
+
 Questions about this? Check https://partner.afas.nl/portal-landingspagina/faq#Security.
 Instead of a pentest, you can also have a Security Quickscan performed by Defion. [Read more in this article.](https://partner.afas.nl/portal-partnerportal/security-quickscan)
 Of course, we handle the results of the pentest or Security Quickscan confidentially. All our employees are bound by a confidentiality agreement and have a Certificate of Good Conduct.  
@@ -29,7 +31,7 @@ Of course, we handle the results of the pentest or Security Quickscan confidenti
 
 ### Add contacts
 
-Log in to the [customer portal](https://klant.afas.nl/contactpersonen-prs/overzicht) and make sure every colleague involved in this trajectory is added as a contact. This allows them to ask questions and perform actions on the AFAS portals themselves.
+Log in to the [customer portal](https://klant.afas.nl/contactpersonen-prs/overzicht) and make sure every colleague involved in this process is added as a contact person. This enables them to ask questions and perform actions on the AFAS portals themselves.
 
 Should the newly added contact be able to view and handle steps? Your AFAS contact person must arrange this.
 
@@ -38,7 +40,7 @@ Should the newly added contact be able to view and handle steps? Your AFAS conta
 
 ### Activate Support+
 
-By activating Support+ free of charge, you automatically give the System Integrators access to your test environment when you submit a question. This allows us to help you faster.  
+By activating Support+ free of charge, you give the System Integrators access to your test environment when you submit a question. This allows us to help you faster.  
 Go to https://klant.afas.nl/supportplus and activate it!
 
 ---
@@ -49,7 +51,7 @@ Go to https://klant.afas.nl/supportplus and activate it!
 ### Start building
 
 - How our API works: https://help.afas.nl/help/NL/SE/api.htm.
-- Create an AppConnector with token in AFAS Profit: https://help.afas.nl/help/NL/SE/120718.htm.
+- Create an AppConnector with token in AFAS Profit: https://help.afas.nl/help/NL/SE/120718.htm. Please note: in the final integration, the customer must create their own AppConnector and authentication must be done via OAuth2. During the test phase, you may use a static token.
 - For example, add the GetConnector [ProfitCountries](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#get-/connectors/ProfitCountries).
 - Go to [AFAS Connect](https://connect.afas.nl/tools/restget) and test the GetConnector by filling in fields and clicking Execute.
 - There you will see the URL you need to call and you can test with filters and sorting.
@@ -62,7 +64,7 @@ Go to https://klant.afas.nl/supportplus and activate it!
 
 ### Take a course
 
-Register for a course where you will learn everything about calling our API. There is a lot of focus on creating your own [GetConnectors](#supply-getconnectors).
+Register for a course where you will learn everything about calling our API. There is a strong focus on creating your own [GetConnectors](#supply-getconnectors).
 This course is free for 1 colleague. Check https://klant.afas.nl/opleiding/specialisatiecursus-connector for information and dates.
 
 **Making integrations for other partners?** In that case, at least 1 colleague in your company must have completed the expert test "Integrations" with a score of at least 7. Please contact the System Integrator if this applies to you.
@@ -72,7 +74,7 @@ This course is free for 1 colleague. Check https://klant.afas.nl/opleiding/speci
 
 ### Send IntegrationId
 
-Send a special HTTP header with all calls to the AFAS API. This header identifies the calls from your integration and is always the same.
+Send a special HTTP header with all calls to the AFAS API. This header identifies calls from your integration and is therefore always the same.
 
 [This article](./integrationid) describes in detail what it is, what we use it for, and how to implement it.
 
@@ -86,7 +88,7 @@ To retrieve data from Profit, you need GetConnectors. Many GetConnectors are sup
 
 #### Determine which data you need
 
-The integration with AFAS should be as standard as possible, otherwise certification is not possible. Ensure that your customers need to deviate no more than 10% from the certified GetConnectors.  
+The integration with AFAS should be as standard as possible, otherwise certification is not possible. Ensure that your customers need to deviate by no more than 10% from the certified GetConnectors.  
 Keep in mind that it is easier to disable unused fields in the GetConnector or ignore them in the result set. Adding new fields takes much more time and effort. Moreover, you risk introducing errors.  
 
 
@@ -94,7 +96,7 @@ Keep in mind that it is easier to disable unused fields in the GetConnector or i
 
 Creating your own GetConnector is not difficult ([read this help article](https://help.afas.nl/help/NL/SE/App_Cnr_XML_Get_Build.htm)), but finding the right fields can be a real challenge. AFAS Profit contains almost 4,000 tables with almost 200,000 fields. And that number grows every year!
 - Are you working with a *launching customer* or someone experienced in building GetConnectors? Take advantage of that knowledge!
-- In the [pro training](#take-a-course) extensive attention is paid to building GetConnectors. Especially if you're building a data-intensive integration, it is absolutely necessary to follow that training.
+- In the [pro training](#take-a-course), extensive attention is paid to building GetConnectors. Especially if you are building a data-intensive integration, it is absolutely necessary to follow that training.
 - Do you only need a few GetConnectors for your integration or are you stuck? We are happy to help you build. Often an hour is enough, in which we together create the right GetConnectors in your environment ([thanks to Support+](#activate-support)) in a Teams session. [Submit a request](#contact) if you want our help.
 
 
@@ -138,7 +140,7 @@ Submit the document as an attachment in a reply to the task. Or even better: mak
 
 ### Give a demo
 
-See the demo as a delivery moment, in which we put a bow on the integration. So first handle all the above points!  
+See the demo as a delivery moment where we put the finishing touch on the integration. So first complete all the points above!  
 Ready? Then we are very curious about the result and would like to see a demo! Schedule the demo yourself at a suitable time [via this link](https://calendly.com/d/ck6s-mh5-v98). At https://partner.afas.nl/portal-landingspagina/faq you can read what we expect from the demo.
 
 If the demo is approved, you can move on to the next part.
@@ -154,14 +156,14 @@ Then go to https://partner.afas.nl/mijn-paginas and follow the instructions so t
 
 **Tip**: In the Website field, refer to a landing page on your own site, where the integration with AFAS is described in more detail.
 
-From now on you may also use the AFAS name and logo on your website. At [www.afas.nl/huisstijl](www.afas.nl/huisstijl) you can read how it works and what to watch out for. You can also download the correct logos there.
+From now on, you may also use the AFAS name and logo on your website. At [www.afas.nl/huisstijl](www.afas.nl/huisstijl), you can read how this works and what to watch out for. You can also download the correct logos there.
 
 
 ---
 
 ### Provide 5 references
 
-An integration without customers is not an integration. To give our mutual customers confidence that the integration has been well tested and runs smoothly, your certification is only complete when you serve 5 or more mutual customers with your integration. We check this based on the IntegrationId ([see above](#sending-integrationid)).
+An integration without customers is not an integration. To give our mutual customers confidence that the integration has been well tested and runs smoothly, your certification is only complete when you serve 5 or more mutual customers with your integration. We check this based on the IntegrationId ([see above](#send-integrationid)).
 
 Proud of your customers? Then submit references from customers where the integration runs to their satisfaction. You can do this at https://partner.afas.nl/aanmaken-aanvraag-partnerportal/referentie.
 
@@ -169,11 +171,11 @@ Proud of your customers? Then submit references from customers where the integra
 
 ## Contact
 
-We are ready to ensure your integration runs smoothly and retrieves the right data. We are also happy to help with other questions. Do not send an email, but submit a request via the portal! That's easy:
+We are ready to ensure your integration runs smoothly and retrieves the right data. We are also happy to help with other questions. Do not send an email, but submit a request via the portal. It is easy:
 1. Go to [https://partner.afas.nl/product-partner-portal](https://partner.afas.nl/product-partner-portal),
 2. Log in via the link at the top right,
 3. Find the tile "Ask a question".
 
-One of the System Integrators will handle your request. We answer a short question directly; if more information is needed we will let you know and in many cases you will get a link with which you can schedule a Teams appointment.
+One of the System Integrators will handle your request. We answer short questions directly; if more information is needed, we will let you know, and in many cases you will receive a link to schedule a Teams appointment.
 
-*Our support is free during the first 12 months of the certification process, and once you are a certified partner. In other cases we charge €200 per hour.*
+*Our support is free during the first 12 months of the certification process and once you are a certified partner. In other cases, we charge €200 per hour.*
