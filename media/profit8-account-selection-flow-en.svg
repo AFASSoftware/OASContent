@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1000" viewBox="0 0 1700 1000" role="img" aria-labelledby="title desc">
   <title id="title">Account selection for article group allocation</title>
-  <desc id="desc">Decision tree showing which account is used and that stock items always check both purchase account and cost price account.</desc>
+  <desc id="desc">Decision tree showing which account is used based on the activation, journalization, and stock-item settings.</desc>
   <defs>
     <style>
       text {
@@ -79,24 +79,16 @@
   <text class="decision" x="1315" y="746" text-anchor="middle">Stock item</text>
 
   <rect class="node" x="85" y="900" width="180" height="82" rx="12" ry="12" />
-  <text class="outcome" x="175" y="930" text-anchor="middle">
-    <tspan x="175" dy="0">Purchase account</tspan>
-    <tspan x="175" dy="23">and cost price</tspan>
-    <tspan x="175" dy="23">account</tspan>
-  </text>
+  <text class="outcome" x="175" y="947" text-anchor="middle">Purchase account</text>
 
   <rect class="node" x="275" y="900" width="180" height="82" rx="12" ry="12" />
   <text class="outcome" x="365" y="947" text-anchor="middle">Cost price account</text>
 
   <rect class="node" x="465" y="900" width="180" height="82" rx="12" ry="12" />
-  <text class="outcome" x="555" y="930" text-anchor="middle">
-    <tspan x="555" dy="0">Purchase account</tspan>
-    <tspan x="555" dy="23">and cost price</tspan>
-    <tspan x="555" dy="23">account</tspan>
-  </text>
+  <text class="outcome" x="555" y="947" text-anchor="middle">Cost price account</text>
 
   <rect class="node" x="655" y="900" width="180" height="82" rx="12" ry="12" />
-  <text class="outcome" x="745" y="947" text-anchor="middle">Purchase account</text>
+  <text class="outcome" x="745" y="947" text-anchor="middle">Cost price account</text>
 
   <rect class="node" x="845" y="900" width="180" height="82" rx="12" ry="12" />
   <text class="outcome" x="935" y="930" text-anchor="middle">

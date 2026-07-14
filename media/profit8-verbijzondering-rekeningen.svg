@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1000" viewBox="0 0 1700 1000" role="img" aria-labelledby="title desc">
   <title id="title">Bepaling rekening artikelgroep verbijzondering</title>
-  <desc id="desc">Beslisboom voor welke rekening wordt gebruikt en dat bij voorraadhoudend altijd naar rekening inkoop en rekening kostprijs wordt gekeken.</desc>
+  <desc id="desc">Beslisboom voor welke rekening wordt gebruikt op basis van de instellingen voor activering, journaliseren en voorraadhoudend.</desc>
   <defs>
     <style>
       text {
@@ -82,24 +82,16 @@
   <text class="decision" x="1315" y="746" text-anchor="middle">Voorraadhoudend</text>
 
   <rect class="node" x="85" y="900" width="180" height="82" rx="12" ry="12" />
-  <text class="outcome" x="175" y="930" text-anchor="middle">
-    <tspan x="175" dy="0">Rekening Inkoop</tspan>
-    <tspan x="175" dy="23">en Rekening</tspan>
-    <tspan x="175" dy="23">Kostprijs</tspan>
-  </text>
+  <text class="outcome" x="175" y="947" text-anchor="middle">Rekening Inkoop</text>
 
   <rect class="node" x="275" y="900" width="180" height="82" rx="12" ry="12" />
   <text class="outcome" x="365" y="947" text-anchor="middle">Rekening Kostprijs</text>
 
   <rect class="node" x="465" y="900" width="180" height="82" rx="12" ry="12" />
-  <text class="outcome" x="555" y="930" text-anchor="middle">
-    <tspan x="555" dy="0">Rekening Inkoop</tspan>
-    <tspan x="555" dy="23">en Rekening</tspan>
-    <tspan x="555" dy="23">Kostprijs</tspan>
-  </text>
+  <text class="outcome" x="555" y="947" text-anchor="middle">Rekening Kostprijs</text>
 
   <rect class="node" x="655" y="900" width="180" height="82" rx="12" ry="12" />
-  <text class="outcome" x="745" y="947" text-anchor="middle">Rekening Inkoop</text>
+  <text class="outcome" x="745" y="947" text-anchor="middle">Rekening Kostprijs</text>
 
   <rect class="node" x="845" y="900" width="180" height="82" rx="12" ry="12" />
   <text class="outcome" x="935" y="930" text-anchor="middle">
