@@ -1,6 +1,6 @@
 ---
 author: EZW
-date: 2026-06-29
+date: 2026-07-14
 tags: Profit8, GetConnector, UpdateConnector, Integration, Configuration
 title: New in Profit 8
 ---
@@ -13,6 +13,14 @@ Starting with Profit 8, several changes have been implemented in the AFAS Profit
 
 
 ## **Breaking changes**
+
+### FbPurRequisition enforces stricter allocation-code requirements
+
+(added 2026-07-14)
+Previously, when creating a purchase requisition, you could choose any allocation code that existed. Now, the allocation code must exist in an allocation assignment of the purchase account or cost price account of the item group. See the diagram below. In most cases, this will cause no problems, because the same allocation assignment should already exist further in the process.  
+
+![Account selection diagram for item-group allocation](../../../media/profit8-account-selection-flow-en.svg)
+
 
 ### Language Codes Simplified
 
