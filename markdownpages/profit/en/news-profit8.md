@@ -19,7 +19,7 @@ Starting with Profit 8, several changes have been implemented in the AFAS Profit
 (added 2026-07-14)
 Previously, when creating a purchase requisition, you could choose any allocation code that existed. Now, the allocation code must exist in an allocation assignment of the purchase account or cost price account of the item group. See the diagram below. In most cases, this will cause no problems, because the same allocation assignment should already exist further in the process.  
 
-![Account selection diagram for item-group allocation](../../../media/profit8-account-selection-flow-en.svg)
+<img src="../../../media/profit8-account-selection-flow-en.svg" alt="Account selection diagram for item-group allocation" />
 
 
 ### Language Codes Simplified

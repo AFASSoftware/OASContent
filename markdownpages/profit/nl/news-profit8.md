@@ -19,7 +19,7 @@ Vanaf Profit 8 is er een aantal wijzigingen in de AFAS Profit API doorgevoerd. H
 (toegevoegd 14-07-2026)
 Voorheen kon je bij een inkoopaanvraag alle verbijzonderingscodes die er bestaan kiezen. Nu moet de verbijzonderingscode voorkomen in een verbijzonderingstoewijzing van rekening inkoop of rekening kostprijs van de artikelgroep. Zie onderstaand schema. Dit zal in de meeste gevallen geen problemen opleveren, omdat dezelfde verbijzonderingstoewijzing verderop in het proces al aanwezig zou moeten zijn.  
 
-![Schema bepaling rekening artikelgroep](../../../media/profit8-verbijzondering-rekeningen.svg)
+<img src="../../../media/profit8-verbijzondering-rekeningen.svg" alt="Schema bepaling rekening artikelgroep" />
 
 
 ### Taalcodes vereenvoudigd
