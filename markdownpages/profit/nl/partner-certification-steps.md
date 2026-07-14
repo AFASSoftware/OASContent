@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2026-06-22
+date: 2026-07-14
 index: true
 tags: Partner, IntegrationId, Certification, Integration, Configuration
 title: Certificeringsstappen voor partners
