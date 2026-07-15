@@ -1,12 +1,13 @@
 ---
 author: Eric Zwaal
-date: 2026-06-22
+date: 2026-07-15
 index: true
 tags: Partner, IntegrationId, Certification, Integration, Configuration
 title: Certificeringsstappen voor partners
 ---
 
 [*For English click here*](../en/partner-certification-steps)
+
 
 ## Inleiding
 
@@ -49,17 +50,17 @@ Ga naar https://klant.afas.nl/supportplus en activeer het!
 
 ### Begin met bouwen
 
-- Hoe werkt onze API: https://help.afas.nl/help/NL/SE/api.htm.
+- Hoe werkt onze API: https://help.afas.nl/help/NL/SE/api.htm
 
-- Maak in AFAS Profit een AppConnector met token: https://help.afas.nl/help/NL/SE/120718.htm.
+- Maak in AFAS Profit een AppConnector met token: https://help.afas.nl/help/NL/SE/120718.htm. Let op, in de uiteindelijke integratie moet de klant zelf een AppConnector aanmaken en moet de authenticatie via OAuth verlopen. In de testfase mag je een classic token gebruiken  
 
-- Voeg bijvoorbeeld de GetConnector [ProfitCountries](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#get-/connectors/ProfitCountries) toe.
+- Voeg bijvoorbeeld de GetConnector [ProfitCountries](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#get-/connectors/ProfitCountries) toe
 
-- Ga naar [AFAS Connect](https://connect.afas.nl/tools/restget) en test de GetConnector door velden in te vullen en op Uitvoeren te klikken.
+- Ga naar [AFAS Connect](https://connect.afas.nl/tools/restget) en test de GetConnector door velden in te vullen en op Uitvoeren te klikken
 
-- Je ziet daar de URL die je moet aanroepen en je kunt testen met filters en sortering.
+- Je ziet daar de URL die je moet aanroepen en je kunt testen met filters en sortering
 
-- Nu je de basis weet, lees je https://help.afas.nl/help/NL/SE/App_Cnr_Rest_Api.htm voor alle nitty-gritty details.
+- Nu je de basis weet, lees je https://help.afas.nl/help/NL/SE/App_Cnr_Rest_Api.htm voor alle nitty-gritty details
 
 *Happy coding*!
 
@@ -145,7 +146,7 @@ Lever het document in als bijlage bij een reactie op de taak. Of nog beter: maak
 ### Demo geven
 
 Zie de demo als een oplevermoment, waarin we een strik om de integratie doen. Handel dus eerst alle bovenstaande punten af!  
-Ben je zover? Dan zijn wij heel benieuwd naar het resultaat en krijgen graag een demo! Plan de demo zelf in op een geschikt moment [via deze link](https://calendly.com/d/ck6s-mh5-v98). Op https://partner.afas.nl/portal-landingspagina/faq lees je wat wij van de demo verwachten.
+Ben je zover? Dan zijn wij heel benieuwd naar het resultaat en krijgen graag een demo! [Plan de demo zelf in op een geschikt moment](https://calendly.com/d/ck6s-mh5-v98). Op https://partner.afas.nl/portal-landingspagina/faq lees je wat wij van de demo verwachten.
 
 Als de demo akkoord is kun je door naar het volgende onderdeel.
 
@@ -160,7 +161,7 @@ Ga dan naar https://partner.afas.nl/mijn-paginas en volg de instructies zodat jo
 
 **Tip**: verwijs in het veld Website naar een landingspagina op jouw eigen site, waar direct de koppeling met AFAS verder beschreven wordt.
 
-Je mag vanaf nu ook naam en logo van AFAS op jouw website gebruiken. Op [www.afas.nl/huisstijl](www.afas.nl/huisstijl) lees je hoe dat werkt en waar je op moet letten. Ook kun je daar de juiste logo's downloaden.
+Je mag vanaf nu ook naam en logo van AFAS op jouw website gebruiken. Op https://www.afas.nl/huisstijl lees je hoe dat werkt en waar je op moet letten. Ook kun je daar de juiste logo's downloaden.
 
 
 ---
@@ -177,8 +178,8 @@ Ben je trots op je klanten? Stuur dan referenties in van de klanten waar de kopp
 ## Contact
 
 Wij staan voor je klaar om ervoor te zorgen dat jouw koppeling soepel loopt en de juiste gegevens ophaalt. Ook bij andere vragen helpen we je graag. Stuur geen mail, maar maak een aanvraag via de portal! Dat werkt eenvoudig:  
-1. Ga naar [https://partner.afas.nl/product-partner-portal](https://partner.afas.nl/product-partner-portal), 
-2. Log in via de link rechtsboven,
+1. Ga naar https://partner.afas.nl/product-partner-portal 
+2. Log in via de link rechtsboven
 3. Zoek de tegel "Stel een vraag".
 
 Eén van de Systemintegrators zal de aanvraag oppakken. Een korte vraag beantwoorden we direct; als er meer informatie nodig is laten we dat wten en in veel gevallen krijg je een linkje waarmee je een Teams-afspraak kan inplannen.
