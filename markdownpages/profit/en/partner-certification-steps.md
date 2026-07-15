@@ -50,12 +50,12 @@ Go to https://klant.afas.nl/supportplus and activate it!
 
 ### Start building
 
-- How our API works: https://help.afas.nl/help/NL/SE/api.htm.
-- Create an AppConnector with token in AFAS Profit: https://help.afas.nl/help/NL/SE/120718.htm. Please note: in the final integration, the customer must create their own AppConnector and authentication must be done via OAuth2. During the test phase, you may use a static token.
-- For example, add the GetConnector [ProfitCountries](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#get-/connectors/ProfitCountries).
-- Go to [AFAS Connect](https://connect.afas.nl/tools/restget) and test the GetConnector by filling in fields and clicking Execute.
+- How our API works: https://help.afas.nl/help/NL/SE/api.htm
+- Create an AppConnector with token in AFAS Profit: https://help.afas.nl/help/NL/SE/120718.htm. Please note: in the final integration, the customer must create their own AppConnector and authentication must be done via OAuth. During the test phase, you may use a classic token
+- For example, add the GetConnector [ProfitCountries](https://docs.afas.help/apidoc/nl/Organisaties%20en%20personen#get-/connectors/ProfitCountries)
+- Go to [AFAS Connect](https://connect.afas.nl/tools/restget) and test the GetConnector by filling in fields and clicking Execute
 - There you will see the URL you need to call and you can test with filters and sorting.
-- Now that you know the basics, read https://help.afas.nl/help/NL/SE/App_Cnr_Rest_Api.htm for all the nitty-gritty details.
+- Now that you know the basics, read https://help.afas.nl/help/NL/SE/App_Cnr_Rest_Api.htm for all the nitty-gritty details
 
 *Happy coding*!
 
@@ -152,11 +152,11 @@ If the demo is approved, you can move on to the next part.
 
 Is the [demo](#give-a-demo) approved?
 
-Then go to https://partner.afas.nl/mijn-paginas and follow the instructions so that your integration is displayed on our partner page. By using Markdown for formatting, you can make it an attractive page.
+Then go to https://partner.afas.nl/product-partner-portal and follow the instructions so that your integration is displayed on our partner page. By using Markdown for formatting, you can make it an attractive page.
 
 **Tip**: In the Website field, refer to a landing page on your own site, where the integration with AFAS is described in more detail.
 
-From now on, you may also use the AFAS name and logo on your website. At [www.afas.nl/huisstijl](www.afas.nl/huisstijl), you can read how this works and what to watch out for. You can also download the correct logos there.
+From now on, you may also use the AFAS name and logo on your website. At https://www.afas.nl/huisstijl, you can read how this works and what to watch out for. You can also download the correct logos there.
 
 
 ---
@@ -172,7 +172,7 @@ Proud of your customers? Then submit references from customers where the integra
 ## Contact
 
 We are ready to ensure your integration runs smoothly and retrieves the right data. We are also happy to help with other questions. Do not send an email, but submit a request via the portal. It is easy:
-1. Go to [https://partner.afas.nl/product-partner-portal](https://partner.afas.nl/product-partner-portal),
+1. Go to https://partner.afas.nl/product-partner-portal,
 2. Log in via the link at the top right,
 3. Find the tile "Ask a question".
 
