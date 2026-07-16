@@ -42,7 +42,7 @@ Op een AppConnector kun je IP-restricties instellen. Wij adviseren om dat zoveel
 #### mTLS ondersteuning op de connectoren
 
 *(toegevoegd 16-07-2026)*  
-> Dit zal pas beschikbaar komen vanaf september 2026. De UI is er op voorbereid, maar de infrastructuur is nu nog niet beschikbaar.
+> Dit zal pas beschikbaar komen vanaf september 2026. De UI is erop voorbereid, maar de infrastructuur is nu nog niet beschikbaar.
 
 Vanaf Profit 8 is het mogelijk om mTLS (mutual TLS) te gebruiken op de connectoren. mTLS is een beveiligingsprotocol waarbij zowel de client als de server zich moeten authenticeren met een certificaat. Dit zorgt voor een extra beveiligingslaag, omdat alleen geautoriseerde clients verbinding kunnen maken met de server.  
 Dit kun je vooralsnog niet testen op connect.afas.nl.     
