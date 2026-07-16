@@ -52,7 +52,7 @@ Heb je een werkend voorbeeld van een integratie? Een slimme oplossing voor een v
 3. Houd je aan de [markdown naming conventions](scripts/README.md) (kebab-case)
 4. Open een pull request
 5. We kijken ernaar en geven feedback
-6. Let op: alleen in de map `markdownpages` mag je aanpassingen maken
+6. Let op: voor aanpassingen aan documentatiepagina’s accepteren we wijzigingen alleen in `markdownpages/` (voor `OpenApiSpecs/`, `menustructures/`, `media/` of `scripts/`: open eerst een issue).
 
 **Tip**: Begin klein. Een typo fix, een verduidelijking, een extra voorbeeld – het maakt allemaal verschil.
 
