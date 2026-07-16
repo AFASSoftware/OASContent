@@ -4,11 +4,11 @@ Dit is de content repository van [docs.afas.help](https://docs.afas.help) – de
 
 ## Waarom is dit publiek?
 
-We maken de documentatie openbaar zodat je actief kunt bijdragen. Zie je een fout? Mis je een voorbeeld? Kan een uitleg duidelijker? Dan kun je dat hier direct aanpassen. Daarnaast kun je deze content gebruiken om bijvoorbeeld je eigen LLM te voeden met accurate AFAS API kennis.
+We maken de documentatie openbaar zodat jij actief kunt bijdragen. Zie je een fout? Mis je een voorbeeld? Kan een uitleg duidelijker? Dan kun je dat hier direct aanpassen. Daarnaast kun je deze content gebruiken om bijvoorbeeld je eigen LLM te voeden met accurate AFAS API kennis.
 
 **Let op**: Dit is alleen de content. Wil je de documentatie lezen en gebruiken? Ga naar [docs.afas.help](https://docs.afas.help).
 
-## Wat zit in deze repository?
+## Wat zit er in deze repository?
 
 ### 📚 Documentatie (`markdownpages/`)
 Alle markdown-bestanden met conceptuele uitleg, how-to's en releasenotes voor:
