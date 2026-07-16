@@ -1,0 +1,3 @@
+# autoreviewer
+.github/instructions/codereview.instructions.md @AFASSoftware/development-experience
+.github/workflows/copilot-autoapprove.yml @AFASSoftware/development-experience

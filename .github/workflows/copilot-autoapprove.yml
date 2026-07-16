@@ -1,0 +1,135 @@
+name: Auto-approve PR na Copilot review
+
+# Keurt de PR automatisch goed wanneer Copilot een inline comment plaatst
+# met "✅ PR automatisch goedgekeurd" (dit gebeurt alleen bij "review nodig: nee").
+#
+# Vereisten:
+#   1. Copilot als automatische reviewer inschakelen in repo-instellingen
+#      (Settings > Copilot > Code review > Automatic)
+#   2. .github/instructions/codereview.instructions.md bevat de review-richtlijnen
+#   3. De GitHub App (AFASACTION) heeft pull-request write-rechten
+
+on:
+  pull_request_review:
+    types: [submitted, edited]
+
+jobs:
+  auto-approve:
+    name: Auto-approve if Copilot review is clean
+    runs-on: ubuntu-latest
+    # Alleen reageren op een review van een bot-account waarvan de login met
+    # "copilot" begint. `type == 'Bot'` sluit menselijke accounts volledig uit
+    # (een mens kan nooit type Bot zijn), dus dit is een veel strengere gate dan
+    # een substring-match op de login.
+    if: >
+      github.event.review.user.type == 'Bot' &&
+      startsWith(github.event.review.user.login, 'copilot')
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+
+    steps:
+      - name: Generate GitHub App Token
+        id: app-token
+        uses: actions/create-github-app-token@v3.1.1
+        with:
+          app-id: ${{ vars.AFASPublicRepos_APPID }}
+          private-key: ${{ secrets.AFASPublicRepos_PKEY }}
+
+      - name: Auto-approve PR
+        uses: actions/github-script@v9
+        with:
+          github-token: ${{ steps.app-token.outputs.token }}
+          script: |
+            const owner = context.repo.owner;
+            const repo  = context.repo.repo;
+            const pull_number = context.payload.pull_request.number;
+            const reviewBody = context.payload.review.body || '';
+
+            // === Parse labels uit de review body (altijd) ===
+            const labels = [];
+            const labelsMatch = reviewBody.match(/\*\*labels:\s*(.+?)\*\*/i);
+            if (labelsMatch) {
+              const parsed = labelsMatch[1].split(',').map(l => l.trim()).filter(Boolean);
+              labels.push(...parsed.map(l => `review - ${l}`));
+            }
+
+            // === Auto-approve logica (alleen bij "review nodig: nee") ===
+            const isAutoApproved = /\*\*review nodig:\s*nee\*\*/i.test(reviewBody);
+
+            if (isAutoApproved) {
+              const { data: pr } = await github.rest.pulls.get({ owner, repo, pull_number });
+              const prCreator = pr.user.login.toLowerCase();
+              if (prCreator.includes('copilot')) {
+                core.info(`PR is aangemaakt door ${prCreator} — overslaan`);
+                return;
+              }
+
+              // === Auteur moet schrijfrechten hebben (anti prompt-injection) ===
+              // De auto-approve wordt gestuurd door vrije tekst in de review-body.
+              // Een externe bijdrager zou de Copilot-reviewer via de diff kunnen
+              // prompt-injecten om "review nodig: nee" te laten schrijven. Daarom
+              // keuren we alleen PR's goed van auteurs die zelf al schrijfrechten
+              // op de repo hebben.
+              const { data: perm } = await github.rest.repos.getCollaboratorPermissionLevel({
+                owner, repo, username: pr.user.login,
+              });
+              if (!['write', 'maintain', 'admin'].includes(perm.permission)) {
+                core.info(`PR-auteur ${pr.user.login} heeft onvoldoende rechten (${perm.permission}) — overslaan`);
+                return;
+              }
+
+              // Check of al goedgekeurd
+              const { data: reviews } = await github.rest.pulls.listReviews({ owner, repo, pull_number });
+              const alreadyApproved = reviews.some(r =>
+                r.state === 'APPROVED' && r.body?.includes('Automatisch goedgekeurd')
+              );
+              if (alreadyApproved) {
+                core.info('PR is al automatisch goedgekeurd — overslaan');
+                return;
+              }
+
+              // === Approve!
+              await github.rest.pulls.createReview({
+               owner, repo, pull_number,
+               event: 'APPROVE',
+               body: [
+                 '### ✅ Automatisch goedgekeurd',
+                 '',
+                 'Deze PR is automatisch goedgekeurd omdat Copilot heeft aangegeven:',
+                 '`review nodig: nee`',
+               ].join('\n'),
+              });
+
+              core.info('PR automatisch goedgekeurd');
+              labels.push('review - AI-Approved');
+            }
+
+            // === Labels toevoegen ===
+            if (labels.length === 0) {
+              core.info('Geen labels om toe te voegen');
+              return;
+            }
+
+            // Zorg dat labels bestaan
+            for (const label of labels) {
+              try {
+                await github.rest.issues.getLabel({ owner, repo, name: label });
+              } catch (e) {
+                if (e.status === 404) {
+                  await github.rest.issues.createLabel({ owner, repo, name: label, color: '6f42c1' });
+                  core.info(`Label "${label}" aangemaakt`);
+                }
+              }
+            }
+
+            try {
+              await github.rest.issues.addLabels({
+                owner, repo, issue_number: pull_number,
+                labels,
+              });
+              core.info(`Labels toegevoegd: ${labels.join(', ')}`);
+            } catch (labelError) {
+              core.warning(`Kon labels niet toevoegen: ${labelError.message}`);
+            }
