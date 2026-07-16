@@ -16,7 +16,7 @@ Starting with Profit 8, several changes have been implemented in the AFAS Profit
 
 ### FbPurRequisition enforces stricter allocation-code requirements
 
-(added 2026-07-14)
+*(added 2026-07-14)*  
 Previously, when creating a purchase requisition, you could choose any allocation code that existed. Now, the allocation code must exist in an allocation assignment of the purchase account or cost price account of the item group. See the diagram below. In most cases, this will cause no problems, because the same allocation assignment should already exist further in the process.  
 
 <img src="../../../media/profit8-account-selection-flow-en.svg" alt="Account selection diagram for item-group allocation" />
@@ -40,6 +40,9 @@ You will also see this change reflected in the Update Connectors changelog furth
 You can set IP restrictions on an AppConnector. We strongly recommend applying this as much as possible. Previously, IP restrictions could be defined as an IP address with an optional subnet mask. Starting with Profit 8, you define multiple IP addresses using CIDR notation.
 
 #### mTLS support on connectors
+
+*(added 2026-07-16)*  
+> This will not be available until September 2026. The UI is prepared for it, but the infrastructure is not yet available.
 
 Starting with Profit 8, it is possible to use mTLS (mutual TLS) on connectors. mTLS is a security protocol in which both the client and the server must authenticate themselves with a certificate. This provides an extra layer of security, because only authorized clients can connect to the server.
 For now, you cannot test this on connect.afas.nl.

@@ -16,7 +16,7 @@ Vanaf Profit 8 is er een aantal wijzigingen in de AFAS Profit API doorgevoerd. H
 
 ### FbPurRequisition stelt hogere eisen aan de verbijzonderingscodes
 
-(toegevoegd 14-07-2026)
+*(toegevoegd 14-07-2026)*  
 Voorheen kon je bij een inkoopaanvraag alle verbijzonderingscodes die er bestaan kiezen. Nu moet de verbijzonderingscode voorkomen in een verbijzonderingstoewijzing van rekening inkoop of rekening kostprijs van de artikelgroep. Zie onderstaand schema. Dit zal in de meeste gevallen geen problemen opleveren, omdat dezelfde verbijzonderingstoewijzing verderop in het proces al aanwezig zou moeten zijn.  
 
 <img src="../../../media/profit8-verbijzondering-rekeningen.svg" alt="Schema bepaling rekening artikelgroep" />
@@ -40,6 +40,9 @@ Deze aanpassing zie je ook terug in de Changelog van de UpdateConnectoren verder
 Op een AppConnector kun je IP-restricties instellen. Wij adviseren om dat zoveel mogelijk toe te passen. De IP-restricties kon je voorheen vastleggen als IP-adres met een eventueel subnet-masker. Vanaf Profit 8 leg je meerdere IP-adressen vast met de CIDR notatie.    
 
 #### mTLS ondersteuning op de connectoren
+
+*(toegevoegd 16-07-2026)*  
+> Dit zal pas beschikbaar komen vanaf september 2026. De UI is er op voorbereid, maar de infrastructuur is nu nog niet beschikbaar.
 
 Vanaf Profit 8 is het mogelijk om mTLS (mutual TLS) te gebruiken op de connectoren. mTLS is een beveiligingsprotocol waarbij zowel de client als de server zich moeten authenticeren met een certificaat. Dit zorgt voor een extra beveiligingslaag, omdat alleen geautoriseerde clients verbinding kunnen maken met de server.  
 Dit kun je vooralsnog niet testen op connect.afas.nl.     
