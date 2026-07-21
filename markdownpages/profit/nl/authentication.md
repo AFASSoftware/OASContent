@@ -1,6 +1,6 @@
 ---
 author: CLN
-date: 2025-11-08
+date: 2026-21-07
 tags: GetConnector, AppConnector, Integration, Configuration, Authentication, Authorization
 title: Authenticatie
 ---
