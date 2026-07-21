@@ -35,8 +35,8 @@ jobs:
             HEAD="${{ github.sha }}"
           fi
 
-          TODAY="$(date -u +%Y-%m-%d)"
-          echo "Today (UTC): $TODAY"
+          TODAY="$(TZ=UTC0 git show -s --date=format:%Y-%m-%d --format=%cd "$HEAD")"
+          echo "Expected date (UTC): $TODAY"
 
           CHANGED_FILES=$(git diff --name-only "$BASE" "$HEAD" -- 'markdownpages/**' || true)
 
