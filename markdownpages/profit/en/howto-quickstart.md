@@ -1,21 +1,23 @@
 ---
 author: CLN
-date: 2025-11-08
-tags: Partner, Tutorial, GetConnector, Integration, Configuration, Authentication
-title: Quickstart - setup for your first request
+date: 2026-21-07
+tags: Partner, Tutorial, GetConnector, Integration, Authentication, Authorization
+title: Quickstart - Make your first request
 ---
 
-This How-To provides you with everything you need to get started with using the AFAS Profit REST API. We guide you through generating your token, finding the request URL, and making your first API call.
+This How-To gives you everything you need to get started with the AFAS Profit REST API.
 
 ## Get credentials
 
-The easiest way to make an API request is if you receive an [environment number, type](./concepts#request-url-structure) and [token](./authentication) from an AFAS administrator. The AFAS Administrator needs to know which endpoints you want to use and then grant you rights, and they can follow [these steps](https://help.afas.nl/help/NL/SE/120718.htm).
+The easiest way to make an API request is if you receive an [environment number, environment type](./concepts#request-url-structure) and [client ID and client secret](./authentication) from an AFAS administrator. The AFAS administrator needs to know which endpoints you want to use and then grant you the required rights according to [these steps](https://help.afas.nl/help/NL/SE/120718.htm).
 
-> *Tip*: Ask the AFAS Administrator to make the GetConnector [ProfitCountries](../../apidoc/en/OOrganisaties%20en%20personen#get-/connectors/ProfitCountries) available for testing.
+> *Tip*: Ask the AFAS administrator to make the GetConnector [ProfitCountries](../../apidoc/en/Organisaties%20en%20personen#get-/connectors/ProfitCountries) available for testing. It always contains data and is lightweight.
 
 ### Developer environment
 
-Do you want to create an integration independently of a customer? Then request a partner account and a developer license via the [AFAS Partner Portal](https://partner.afas.nl/aanmelden). After this, you have to go through the steps of the AFAS Administrator yourself to create your token.
+Do you want to create an integration independently of a customer? Then request a partner account and a developer license via the [AFAS Partner Portal](https://partner.afas.nl/aanmelden). After this, you have to go through the AFAS administrator steps yourself to create your client ID and client secret.
+
+A partner account is not free and it is not just a formality.
 
 ## First request
 
@@ -23,15 +25,15 @@ Do you want to create an integration independently of a customer? Then request a
 
 You now have this data:
 
-1. AFAS Environment number in the range 10000 - 99999
-2. AFAS Environment type: production | test | accept
-3. AFAS XML token: `<token><version>1</version><data>ADE370BE8DAF40D0A17FFB914E42675E9998C2D546A2F4FA3E4F3ABFA867B96F</data></token>`
+1. AFAS environment number in the range 10000 - 99999
+2. AFAS environment type: production | test | accept
+3. AFAS client ID and client secret, for example `client ID: 5103d46e-b572-4018-a031-50618dd46d6c & client secret: 84DFF7CA297DA9F150F1FFB0AF52EACCB44079CF36F5345814DA197402EFB0F5`
 
 ### Test on connect.afas.nl
 
-1. Go to [AFAS-Connect / REST / GET](https://connect.afas.nl/rest/get)
+1. Go to [AFAS Connect / REST / GET](https://connect.afas.nl/rest/get)
 2. Fill in the data
-3. Click *Login with token*
+3. Click *Connect*
 
 Now the complete request URL is constructed. At the same time, a [metainfo](../../apidoc/en/Articles#get-/MetaInfo) request is executed. This retrieves the authorized GetConnectors. Select one of these GetConnectors and click *Execute*.
 
@@ -60,32 +62,129 @@ If all went well, the data is now retrieved and you see JSON in this format:
 
 ### Own application
 
-Now that you know the token is valid and the URL is constructed correctly, you can take over this request to your own application. For this, the token must be [encoded to Base64](./authentication#format-and-conversion). Execute a test request and validate that you get the same data as response as in AFAS-Connect.
+Now that you know the AFAS Profit side is configured correctly, you can build this in your own application. This starts with choosing the OAuth flow you need. Use this rule of thumb to determine which flow to choose:
 
-Use the [XMLtoken to Base64 converter](../base64-encoder) to create the auth header.
+1. Choose **Client credentials flow** if your application works server-to-server and no user needs to log in.
+2. Choose **Authorization code flow with PKCE** if you are retrieving or changing data on behalf of a logged-in user.
 
-## C# Request Code Sample
+Ask yourself this question: "Is a user session needed during the API call?" If yes, choose Authorization code flow with PKCE. If no, choose Client credentials flow.
+
+The tokens you receive through both flows have a limited validity period. The validity of the access token is shown in both flows in the `expires_in` field (in seconds) in the response from the token endpoint. The mechanism for refreshing your access token differs per flow:
+
+1. **Client credentials flow**: you do not receive a refresh token. When the access token expires, request a new access token via the token endpoint with `grant_type=client_credentials`.
+2. **Authorization code flow with PKCE**: you receive a refresh token in addition to an access token. When the access token expires, request a new access token via the token endpoint with `grant_type=refresh_token` and the refresh token.
+
+You then include the access token in the Authorization header of your requests to the AFAS Profit API. Use Bearer as the prefix. If you have implemented this, make the same request you tested earlier via connect.afas.nl. If you get the same response, you are good to go.
+
+The examples below work the same for both OAuth flows: you use an access token with `Bearer` as the prefix in the Authorization header. The only difference is how you obtain and refresh that access token.
+
+## C# Example
+
+### Retrieve the token per flow
+
+The examples below show how to retrieve the access token. Using that access token in the Authorization header is the same for both flows.
+
+#### Client credentials flow
 
 ```csharp
-using System;
-using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Threading.Tasks;
+using System.Collections.Generic;
+
+class Program
+{
+    static async Task Main(string[] args)
+    {
+        string tokenUrl = "https://12345.rest.afas.online/ProfitRestServices/oauth/token";
+
+        using (var client = new HttpClient())
+        {
+            var body = new Dictionary<string, string>
+            {
+                { "grant_type", "client_credentials" },
+                { "client_id", "<fill in client id>" },
+                { "client_secret", "<fill in client secret>" }
+            };
+
+            var response = await client.PostAsync(tokenUrl, new FormUrlEncodedContent(body));
+            var responseBody = await response.Content.ReadAsStringAsync();
+
+            Console.WriteLine(responseBody);
+        }
+    }
+}
+```
+
+#### Authorization code flow with PKCE
+
+```csharp
+using System.Net.Http.Headers;
+using System.Collections.Generic;
+
+class Program
+{
+    static async Task Main(string[] args)
+    {
+        string authorizationEndpoint = "https://12345.rest.afas.online/ProfitRestServices/oauth/authorize";
+        string clientId = "<fill in client id>";
+        string redirectUri = "<fill in redirect URI>";
+        string scope = "<fill in desired scopes>";
+        string state = "<optional unique value>";
+        string codeChallenge = "<fill in code challenge>";
+        string codeChallengeMethod = "<fill in code challenge method>";
+
+        string authorizationUrl = $"{authorizationEndpoint}?response_type=code&client_id={clientId}&redirect_uri={redirectUri}&scope={scope}&state={state}&code_challenge={codeChallenge}&code_challenge_method={codeChallengeMethod}";
+        string tokenUrl = "https://12345.rest.afas.online/ProfitRestServices/oauth/token";
+        // Step 1c: read the code from the redirect URI query string.
+        string authorizationCode = "<code from the query string of your redirect URI>";
+
+        Console.WriteLine("Step 1: build the authorization URL with these values:");
+        Console.WriteLine($"- client_id: {clientId}");
+        Console.WriteLine($"- redirect_uri: {redirectUri}");
+        Console.WriteLine($"- scope: {scope}");
+        Console.WriteLine($"- state: {state}");
+        Console.WriteLine($"- code_challenge: {codeChallenge}");
+        Console.WriteLine($"- code_challenge_method: {codeChallengeMethod}");
+        Console.WriteLine();
+        Console.WriteLine("Step 1a: then open this URL in the user's browser:");
+        Console.WriteLine(authorizationUrl);
+        Console.WriteLine("After login and consent, AFAS sends the authorization code back to the redirect URI in the query string as parameter 'code'.");
+
+        using (var client = new HttpClient())
+        {
+            var body = new Dictionary<string, string>
+            {
+                { "grant_type", "authorization_code" },
+                { "code", authorizationCode },
+                { "redirect_uri", "<fill in redirect URI>" },
+                { "client_id", "<fill in client id>" },
+                { "client_secret", "<fill in client secret>" },
+                { "code_verifier", "<fill in code verifier>" }
+            };
+
+            var response = await client.PostAsync(tokenUrl, new FormUrlEncodedContent(body));
+            var responseBody = await response.Content.ReadAsStringAsync();
+
+            Console.WriteLine(responseBody);
+        }
+    }
+}
+```
+### Calling the AFAS Profit API
+```csharp
+using System.Net.Http.Headers;
 
 class Program
 {
     static async Task Main(string[] args)
     {
         string apiUrl = "https://12345.rest.afas.online/ProfitRestServices/connectors/ProfitCountries?skip=0&take=100";
-        string token = "PHRva2VuPjx2ZXJzaW9uPjE8L3Zlb24+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg==";
+        string accessToken = "<obtained access token via the chosen OAuth flow>";
 
         using (var client = new HttpClient())
         {
-            client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            client.DefaultRequestHeaders.AcceptLanguage.Clear();
             client.DefaultRequestHeaders.AcceptLanguage.Add(new StringWithQualityHeaderValue("nl-nl"));
-            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("AfasToken", token);
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
 
             HttpResponseMessage response = await client.GetAsync(apiUrl);
 
@@ -103,162 +202,9 @@ class Program
 }
 ```
 
-## Python Request Code Sample
-
-```python
-import requests
-
-url = "https://12345.rest.afas.online/ProfitRestServices/connectors/ProfitCountries"
-params = {
-    "skip": 0,
-    "take": 100
-}
-headers = {
-    "Accept": "application/json",
-    "Accept-Language": "nl-nl",
-    "Authorization": "AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg=="
-}
-
-response = requests.get(url, params=params, headers=headers)
-
-if response.status_code == 200:
-    data = response.json()
-    print(data)
-else:
-    print(f"Request failed with status code {response.status_code}")
-```
-
-## Visual Basic Request Code Sample
-
-```vb
-Imports System.Net
-Imports System.IO
-Imports System.Text
-
-Module Module1
-    Sub Main()
-        ' Set the API endpoint URL
-        Dim apiUrl As String = "https://12345.rest.afas.online/ProfitRestServices/connectors/ProfitCountries?skip=0&take=100"
-
-        ' Create a new WebRequest
-        Dim request As WebRequest = WebRequest.Create(apiUrl)
-
-        ' Set the request method to GET
-        request.Method = "GET"
-
-        ' Set the request headers
-        request.Headers.Add("Accept", "application/json")
-        request.Headers.Add("Accept-Language", "nl-nl")
-        request.Headers.Add("Authorization", "AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg==")
-
-        ' Send the request and get the response
-        Dim response As WebResponse = request.GetResponse()
-
-        ' Get the response stream
-        Dim responseStream As Stream = response.GetResponseStream()
-
-        ' Create a StreamReader to read the response
-        Dim reader As New StreamReader(responseStream, Encoding.UTF8)
-
-        ' Read the response content
-        Dim responseContent As String = reader.ReadToEnd()
-
-        ' Print the response content
-        Console.WriteLine(responseContent)
-
-        ' Close the response and reader
-        response.Close()
-        reader.Close()
-    End Sub
-End Module
-```
-
-## PHP Request Code Sample
-
-```php
-<?php
-
-$curl = curl_init();
-
-curl_setopt_array($curl, array(
-    CURLOPT_URL => "https://12345.rest.afas.online/ProfitRestServices/connectors/ProfitCountries?skip=0&take=100",
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_ENCODING => "",
-    CURLOPT_MAXREDIRS => 10,
-    CURLOPT_TIMEOUT => 30,
-    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-    CURLOPT_CUSTOMREQUEST => "GET",
-    CURLOPT_HTTPHEADER => array(
-        "Accept: application/json",
-        "Accept-Language: nl-nl",
-        "Authorization: AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg=="
-    ),
-));
-
-$response = curl_exec($curl);
-$err = curl_error($curl);
-
-curl_close($curl);
-
-if ($err) {
-    echo "cURL Error #:" . $err;
-} else {
-    echo $response;
-}
-```
-
-## GO Request Code Sample
-
-```go
-package main
-
-import (
-    "encoding/json"
-    "fmt"
-    "io/ioutil"
-    "net/http"
-)
-
-func main() {
-    url := "https://12345.rest.afas.online/ProfitRestServices/connectors/ProfitCountries?skip=0&take=100"
-
-    client := &http.Client{}
-    req, err := http.NewRequest("GET", url, nil)
-    if err != nil {
-        fmt.Println("Error creating request:", err)
-        return
-    }
-
-    req.Header.Add("Accept", "application/json")
-    req.Header.Add("Accept-Language", "nl-nl")
-    req.Header.Add("Authorization", "AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg==")
-
-    resp, err := client.Do(req)
-    if err != nil {
-        fmt.Println("Error making request:", err)
-        return
-    }
-    defer resp.Body.Close()
-
-    body, err := ioutil.ReadAll(resp.Body)
-    if err != nil {
-        fmt.Println("Error reading response body:", err)
-        return
-    }
-
-    var data interface{}
-    err = json.Unmarshal(body, &data)
-    if err != nil {
-        fmt.Println("Error parsing JSON:", err)
-        return
-    }
-
-    fmt.Println("Response:", data)
-}
-```
 
 ## Next step
 
-Now that you can successfully authenticate and retrieve data, you are ready to integrate a complete process. Start, for example, with one of these How-To's:
+Now that you can authenticate successfully and retrieve data, you are ready to integrate your full process. Start for example with one of these How-To's:
 
 - [Employee AD Sync](./howto-medewerker-ad)

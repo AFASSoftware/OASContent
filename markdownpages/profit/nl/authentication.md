@@ -1,6 +1,6 @@
 ---
 author: CLN
-date: 2025-11-08
+date: 2026-21-07
 tags: GetConnector, AppConnector, Integration, Configuration, Authentication, Authorization
 title: Authenticatie
 ---
@@ -8,22 +8,21 @@ title: Authenticatie
 ## Introductie
 
 De AFAS Profit REST API ondersteunt twee manieren van authenticatie:
-1.	Classic token 
+1.	Classic token (vervalt per 31 augustus 2027)
 2.	OAuth
     1.	Client credentials flow
-    2.	Autorization code flow with PKCE
+    2.	Authorization code flow with PKCE
 
 Welke methode er gebruikt wordt, hangt af van de instellingen van de [App Connector](https://docs.afas.help/profit/nl/concepts#app-connector) waarvan gebruikgemaakt wordt.
 
+Gebruik minimaal TLS 1.2 voor alle requests.
 
 ## Classic token
-**Let op! Deze functionaliteit komt per 01-09-2027 te vervallen. Zorg ervoor dat je vóór die datum overstapt op OAuth.**
+**Let op! Deze functionaliteit komt per 31 augustus 2027 te vervallen. Zorg ervoor dat je vóór die datum overstapt op OAuth.**
 
 Deze methode maakt gebruik van statische tokens die je meegeeft in de HTTP-authenticatieheader van al je requests. Een token is uniek voor één omgeving en gekoppeld aan een gebruiker. De rechten van deze gebruiker hebben invloed op de rechten van het token.
 
-Het aanmaken van het token doet de AFAS-beheerder, of als je toegang hebt tot AFAS Profit, kun je dit zelf doen. Hiervoor volg je de stappen in [Eigen app connector inrichten in vogelvlucht](https://help.afas.nl/help/NL/SE/120718.htm). 
-
-Voor alle requests is TLS 1.2 verplicht.
+Het aanmaken van het token doet de AFAS-beheerder, of als je toegang hebt tot AFAS Profit, kun je dit zelf doen. Hiervoor volg je de stappen in [Eigen app connector inrichten in vogelvlucht (Classic token)](https://help.afas.nl/help/NL/SE/142488.htm). 
 
 
 ### Formaat en conversie
@@ -72,7 +71,9 @@ Binnen het OAuth protocol ondersteunen we twee typen flows:
 
 De Client Credentials Flow wordt voornamelijk gebruikt voor server-to-server communicatie, waarbij er geen directe betrokkenheid van een eindgebruiker is. Dit type flow is ideaal voor applicaties die namens zichzelf toegang willen tot resources in plaats van namens een gebruiker. Het is geschikt voor situaties waarin een applicatie toegang nodig heeft tot API's om bijvoorbeeld achtergrondprocessen uit te voeren, zoals het synchroniseren van gegevens of het uitvoeren van batchverwerkingen.
 
-Wanneer een app connector gebruikmaakt van de Client Credentials Flow, worden er een 'OAuth client id' en een 'OAuth client secret' aangemaakt. De OAuth client secret wordt eenmalig verstrekt tijdens het aanmaken en kan daarna niet meer worden opgevraagd.
+Wanneer een app connector gebruikmaakt van de Client Credentials Flow, worden er een 'OAuth client id' en een 'OAuth client secret' aangemaakt. Hiervoor volg je de stappen in [Eigen app connector inrichten in vogelvlucht (OAuth-token)](https://help.afas.nl/help/NL/SE/120718.htm). 
+De OAuth client secret wordt eenmalig verstrekt tijdens het aanmaken en kan daarna niet meer worden opgevraagd.
+
 
 #### Stappen voor toegang tot de API
 
@@ -124,6 +125,10 @@ Om toegang te krijgen tot de API via de Authorization Code Flow, volg je de volg
     4.	expires_in: geldigheid van het access token in seconden.
 3.	Access Token Gebruiken
     1.	Kopieer de access token, zet er 'Bearer' voor, en voeg hem toe in je Authorization header.
+
+### OAuth & SOAP API
+Bovenstaande beschrijving voor beide flows geldt ook wanneer je gebruikmaakt van de SOAP API. Het is belangrijk dat je het Bearer-token meegeeft in de header en niet in de body.
+
 
 ### Token endpoint
 Productie: https://`<omgevingsnummer>`.rest.afas.online/ProfitRestServices/oauth/token

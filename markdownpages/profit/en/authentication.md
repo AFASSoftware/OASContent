@@ -1,29 +1,29 @@
 ---
 author: CLN
-date: 2025-11-08
-tags: Tutorial, GetConnector, UpdateConnector, AppConnector, Integration, Configuration
+date: 2026-21-07
+tags: GetConnector, AppConnector, Integration, Configuration, Authentication, Authorization
 title: Authentication
 ---
 
 ## Introduction
 
 The AFAS Profit REST API supports two authentication methods:
-1. Classic token
+1. Classic token (discontinued as of 31 August 2027)
 2. OAuth
     1. Client credentials flow
     2. Authorization code flow with PKCE
 
 Which method is used depends on the settings of the [App Connector](https://docs.afas.help/profit/en/concepts#app-connector) that is being used.
 
+Use TLS 1.2 at minimum for all requests.
+
 
 ## Classic token
-**Please note! This functionality will be discontinued on 01-09-2027. Make sure to switch to OAuth before that date.**
+**Please note! This functionality will be discontinued on 31 August 2027. Make sure to switch to OAuth before that date.**
 
 This method uses static tokens which you include in the HTTP Authorization header of all your requests. A token is unique to a single environment and is linked to a user. The permissions of that user affect the rights of the token.
 
-The AFAS administrator creates the token, or if you have access to AFAS Profit you can create it yourself. Follow the steps in [Eigen app connector inrichten in vogelvlucht](https://help.afas.nl/help/NL/SE/120718.htm).
-
-TLS 1.2 is required for all requests.
+The AFAS administrator creates the token, or if you have access to AFAS Profit you can create it yourself. Follow the steps in [Configure your own app connector at a glance (Classic token)](https://help.afas.nl/help/NL/SE/142488.htm).
 
 
 ### Format and conversion
@@ -73,7 +73,8 @@ Within the OAuth protocol we support two flow types:
 
 The Client Credentials Flow is primarily used for server-to-server communication where there is no direct involvement of an end user. This flow is ideal for applications that need access to resources on their own behalf rather than on behalf of a user. It is suitable for situations where an application requires access to APIs to perform background tasks, such as syncing data or running batch jobs.
 
-When an app connector uses the Client Credentials Flow, an 'OAuth client id' and an 'OAuth client secret' are created. The OAuth client secret is provided once during creation and cannot be retrieved afterwards.
+When an app connector uses the Client Credentials Flow, an 'OAuth client id' and an 'OAuth client secret' are created. Follow the steps in [Configure your own app connector at a glance (OAuth token)](https://help.afas.nl/help/NL/SE/120718.htm).
+The OAuth client secret is provided once during creation and cannot be retrieved afterwards.
 
 #### Steps to access the API
 
@@ -101,7 +102,7 @@ The Authorization Code Flow with PKCE is ideal for web applications that need to
 
 To access the API via the Authorization Code Flow, follow these steps:
 1. Obtain an authorization code
-    1. Redirect the user to the [authorization endpoint](#authorization-endpoint) with the following parameters:
+    1. Redirect the user to the [authorization endpoint](#authorization-endpoint) (GET) with the following parameters:
         1. response_type: code
         2. client_id: `<fill in client id>`
         3. redirect_uri: `<fill in redirect URI>`
@@ -125,6 +126,9 @@ To access the API via the Authorization Code Flow, follow these steps:
     4. expires_in: validity of the access token in seconds.
 3. Use the access token
     1. Copy the access token, prefix it with 'Bearer', and add it to your Authorization header.
+
+### OAuth & SOAP API
+The description above for both flows also applies when using the SOAP API. It is important to include the Bearer token in the header and not in the body.
 
 ### Token endpoint
 Production: https://`<omgevingsnummer>`.rest.afas.online/ProfitRestServices/oauth/token
