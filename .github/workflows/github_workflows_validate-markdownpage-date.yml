@@ -1,0 +1,84 @@
+name: Validate markdownpages frontmatter date
+
+on:
+  pull_request:
+    paths:
+      - 'markdownpages/**'
+  push:
+    branches: [ main ]
+    paths:
+      - 'markdownpages/**'
+
+jobs:
+  validate-date:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate frontmatter date is today
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          # Determine base/head for changed files
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            BASE="${{ github.event.pull_request.base.sha }}"
+            HEAD="${{ github.event.pull_request.head.sha }}"
+          else
+            BASE="${{ github.event.before }}"
+            HEAD="${{ github.sha }}"
+          fi
+
+          TODAY="$(date -u +%Y-%m-%d)"
+          echo "Today (UTC): $TODAY"
+
+          CHANGED_FILES=$(git diff --name-only "$BASE" "$HEAD" -- 'markdownpages/**' || true)
+
+          if [[ -z "$CHANGED_FILES" ]]; then
+            echo "No changed files in markdownpages."
+            exit 0
+          fi
+
+          FAIL=0
+
+          while IFS= read -r file; do
+            [[ -f "$file" ]] || continue
+
+            # Extract frontmatter (between first two --- lines) and read date
+            FRONTMATTER=$(awk '
+              NR==1 && $0=="---" {infm=1; next}
+              infm && $0=="---" {exit}
+              infm {print}
+            ' "$file")
+
+            if [[ -z "$FRONTMATTER" ]]; then
+              echo "::error file=$file::No frontmatter found."
+              FAIL=1
+              continue
+            fi
+
+            FILE_DATE=$(printf "%s\n" "$FRONTMATTER" | sed -nE 's/^date:[[:space:]]*"?([0-9]{4}-[0-9]{2}-[0-9]{2})"?$/\1/p' | head -n1)
+
+            if [[ -z "$FILE_DATE" ]]; then
+              echo "::error file=$file::No valid date: YYYY-MM-DD in frontmatter."
+              FAIL=1
+              continue
+            fi
+
+            if [[ "$FILE_DATE" != "$TODAY" ]]; then
+              echo "::error file=$file::Frontmatter date '$FILE_DATE' must be '$TODAY'."
+              FAIL=1
+            else
+              echo "OK: $file date is $FILE_DATE"
+            fi
+          done <<< "$CHANGED_FILES"
+
+          if [[ "$FAIL" -ne 0 ]]; then
+            echo "Validation failed."
+            exit 1
+          fi
+
+          echo "All changed markdownpages files have today's date."
