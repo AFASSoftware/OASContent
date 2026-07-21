@@ -15,7 +15,7 @@ The easiest way to make an API request is if you receive an [environment number,
 
 ### Developer environment
 
-Do you want to create an integration independently of a customer? Then request a partner account and a developer license via the [AFAS Partner Portal](https://partner.afas.nl/aanmelden). After this, you have to go through the AFAS administrator steps yourself to create your token.
+Do you want to create an integration independently of a customer? Then request a partner account and a developer license via the [AFAS Partner Portal](https://partner.afas.nl/aanmelden). After this, you have to go through the AFAS administrator steps yourself to create your client ID and client secret.
 
 A partner account is not free and it is not just a formality.
 
