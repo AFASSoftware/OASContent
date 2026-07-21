@@ -38,7 +38,10 @@ jobs:
           TODAY="$(TZ=UTC0 git show -s --date=format:%Y-%m-%d --format=%cd "$HEAD")"
           echo "Expected date (UTC): $TODAY"
 
-          CHANGED_FILES=$(git diff --name-only "$BASE" "$HEAD" -- 'markdownpages/**' || true)
+          if ! CHANGED_FILES=$(git diff --name-only "$BASE" "$HEAD" -- 'markdownpages/**/*.md' 'markdownpages/*.md'); then
+            echo "::error::Failed to determine changed markdownpages files between $BASE and $HEAD"
+            exit 1
+          fi
 
           if [[ -z "$CHANGED_FILES" ]]; then
             echo "No changed files in markdownpages."
