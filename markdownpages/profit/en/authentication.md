@@ -8,7 +8,7 @@ title: Authentication
 ## Introduction
 
 The AFAS Profit REST API supports two authentication methods:
-1. Classic token
+1. Classic token (discontinued as of 31 August 2027)
 2. OAuth
     1. Client credentials flow
     2. Authorization code flow with PKCE
@@ -19,7 +19,7 @@ Use TLS 1.2 at minimum for all requests.
 
 
 ## Classic token
-**Please note! This functionality will be discontinued on 01-09-2027. Make sure to switch to OAuth before that date.**
+**Please note! This functionality will be discontinued on 31 August 2027. Make sure to switch to OAuth before that date.**
 
 This method uses static tokens which you include in the HTTP Authorization header of all your requests. A token is unique to a single environment and is linked to a user. The permissions of that user affect the rights of the token.
 
@@ -126,6 +126,9 @@ To access the API via the Authorization Code Flow, follow these steps:
     4. expires_in: validity of the access token in seconds.
 3. Use the access token
     1. Copy the access token, prefix it with 'Bearer', and add it to your Authorization header.
+
+### OAuth & SOAP API
+The description above for both flows also applies when using the SOAP API. It is important to include the Bearer token in the header and not in the body.
 
 ### Token endpoint
 Production: https://`<omgevingsnummer>`.rest.afas.online/ProfitRestServices/oauth/token
