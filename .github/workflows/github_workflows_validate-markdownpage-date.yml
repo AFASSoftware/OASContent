@@ -9,6 +9,9 @@ on:
     paths:
       - 'markdownpages/**'
 
+permissions:
+  contents: read
+
 jobs:
   validate-date:
     runs-on: ubuntu-latest
