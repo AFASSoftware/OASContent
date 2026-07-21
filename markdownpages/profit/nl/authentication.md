@@ -11,7 +11,7 @@ De AFAS Profit REST API ondersteunt twee manieren van authenticatie:
 1.	Classic token (vervalt per 31 augustus 2027)
 2.	OAuth
     1.	Client credentials flow
-    2.	Autorization code flow with PKCE
+    2.	Authorization code flow with PKCE
 
 Welke methode er gebruikt wordt, hangt af van de instellingen van de [App Connector](https://docs.afas.help/profit/nl/concepts#app-connector) waarvan gebruikgemaakt wordt.
 
