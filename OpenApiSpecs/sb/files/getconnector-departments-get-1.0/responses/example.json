@@ -1,0 +1,17 @@
+[
+    {
+        "AdministrationId": "7d9f5416-5957-4dd4-a3a8-c49fbdf891fe",
+        "InstanceId": "9d2ea1b9-1ac5-4791-a20b-25518d9c280c",
+        "Omschrijving": "PD Profit"
+    },
+    {
+        "AdministrationId": "7d9f5416-5957-4dd4-a3a8-c49fbdf891fe",
+        "InstanceId": "3ddc484c-dcbe-42ba-b621-599acb04648d",
+        "Omschrijving": "PD Focus"
+    },
+    {
+        "AdministrationId": "7d9f5416-5957-4dd4-a3a8-c49fbdf891fe",
+        "InstanceId": "43d4aa9d-0219-44b8-a8cb-878a61a61638",
+        "Omschrijving": "Directie"
+    }
+]
