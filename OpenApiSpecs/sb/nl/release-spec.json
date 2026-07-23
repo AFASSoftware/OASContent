@@ -13011,7 +13011,7 @@
           },
           "ToBeInvoiced": {
             "type": "boolean",
-            "description": "Make a invoice that is not yet completed or sent to the relation."
+            "description": "Make an invoice that is not yet completed or sent to the relation."
           },
           "Attachments": {
             "type": "array",
