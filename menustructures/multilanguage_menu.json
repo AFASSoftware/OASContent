@@ -371,6 +371,10 @@
               {
                   "name": "Troubleshooting",
                   "path": "en/troubleshooting.md"
+              },
+              {
+                  "name": "API releasenotes",
+                  "path": "en/api-releasenotes.md"
               }
           ],
           "nl": [
@@ -401,6 +405,10 @@
               {
                   "name": "Fouten verhelpen",
                   "path": "nl/troubleshooting.md"
+              },
+              {
+                  "name": "API releasenotes",
+                  "path": "nl/api-releasenotes.md"
               }
           ]
       },

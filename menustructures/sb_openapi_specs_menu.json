@@ -2,9 +2,13 @@
     "sb": {
         "nl": [
             {
+                "name": "Versie 8.0.0",
+                "path": "OpenApiSpecs/sb/nl/8-0-0.json",
+                "description": "Huidige versie"
+            },            {
                 "name": "Versie 7.4.0",
                 "path": "OpenApiSpecs/sb/nl/7-4-0.json",
-                "description": "Huidige versie"
+                "description": "Vorige versie"
             },            {
                 "name": "Versie 7.3.0",
                 "path": "OpenApiSpecs/sb/nl/7-3-0.json",
@@ -57,9 +61,14 @@
         ],
         "en": [
             {
+                "name": "Version 8.0.0",
+                "path": "OpenApiSpecs/sb/en/8-0-0.json",
+                "description": "Current version"
+            },
+            {
                 "name": "Version 7.4.0",
                 "path": "OpenApiSpecs/sb/en/7-4-0.json",
-                "description": "Current version"
+                "description": "Previous version"
             },
             {
                 "name": "Version 7.3.0",
