@@ -1,0 +1,9 @@
+{
+    "result": "Succeeded",
+    "traceId": "3d4d7bda-fecd-411a-91fd-38859c13fe06",
+    "data": {
+        "PurchaseJournalEntryId": "49bc40d8-d914-416b-9b11-e34945123e52",
+        "PurchaseInternalInvoiceNumber": "IF250078"
+    },
+    "errors": []
+}

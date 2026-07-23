@@ -1,0 +1,16 @@
+{
+    "AdministrationId": "3f73bc84-fb32-4d1d-83d9-5de1af8245b1",
+    "IssueDate": "2024-05-16",
+    "RelationType": "organisation",
+    "SentInvoiceEmail": false,
+    "ToBeInvoiced": true,
+    "RelationId": "7b8e279b-b551-556e-a00a-a815392d0d38",
+    "InvoiceLine": [
+        {
+            "ItemId": "7e94bf59-594c-5c28-9fe5-5e238f821b0d",
+            "Price": 10,
+            "Quantity": 2,
+            "AlternativeAllocationDate":"2024-12-31"
+        }
+    ]
+}

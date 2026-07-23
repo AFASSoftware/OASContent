@@ -1,0 +1,28 @@
+{
+    "AdministrationId": "7d9f5416-5957-4dd4-a3a8-c49fbdf891fe",
+    "InvoiceNumber": "PUR-80-157760",
+    "Reference": "docs-sample-8.0",
+    "RelationType": "organisation",
+    "RelationId": "e50b10e6-26bb-5c61-a9c5-00472919b90f",
+    "InvoiceDate": "2025-01-15",
+    "DueDate": "2025-02-14",
+    "PaymentMethod": "banktransfer",
+    "InvoiceLine": [
+        {
+            "Description": "Huisvestingskosten vestiging Inspiratielaan",
+            "LedgerAccountId": "407ae398-e8c5-5ec6-a10d-00e51c299f81",
+            "VatType": "high",
+            "AmountExcludingVat": 100,
+            "AmountVat": 21,
+            "LocationId": "01ae3b98-8320-44e1-8eb4-c66635dde0b4"
+        },
+        {
+            "Description": "Overige vergoedingen afdeling Directie",
+            "LedgerAccountId": "5cc1901a-fd0f-5a28-9302-030425092631",
+            "VatType": "low",
+            "AmountExcludingVat": 200,
+            "AmountVat": 18,
+            "DepartmentId": "43d4aa9d-0219-44b8-a8cb-878a61a61638"
+        }
+    ]
+}
