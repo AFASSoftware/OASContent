@@ -1,7 +1,7 @@
 ---
 title: API release notes
 author: AFAS API team
-date: 2026-07-22
+date: 2026-07-23
 tags: releasenotes, update, 8.0
 ---
 
