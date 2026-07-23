@@ -13066,7 +13066,7 @@
                 },
                 "VatType": {
                   "type": "string",
-                  "description": "Vat tarive. Falls back to product default when empty.",
+                  "description": "VAT tariff. Falls back to product default when empty.",
                   "enum": [
                     "high",
                     "low",
