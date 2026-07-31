@@ -1,0 +1,36 @@
+[
+    {
+        "Id": "7659d7d8-7f0b-59d2-8ac7-000735359064",
+        "Description": "Onderhoud inventaris",
+        "LedgerAccountNumber": "4135",
+        "TypeId": "61fb169c-b210-44db-b02b-b7260efa817c",
+        "InstanceId": "7659d7d8-7f0b-59d2-8ac7-000735359064",
+        "InvestInAsset": false,
+        "VatAllowed": true,
+        "MethodKeepingQuantitiesId": null,
+        "Unit1Id": null,
+        "Unit2Id": null,
+        "AdministrationId": "08abf1cf-6953-4708-9ecb-f07c0c93b7fd",
+        "Type": "Kosten",
+        "MethodKeepingQuantities": "",
+        "Unit1": "",
+        "Unit2": ""
+    },
+    {
+        "Id": "7ae81359-94a3-5927-9912-0086d10a6e61",
+        "Description": "Latente belastingvorderingen (kortlopend)",
+        "LedgerAccountNumber": "0906",
+        "TypeId": "980eb36a-8bec-45d9-97f6-06dd2c551818",
+        "InstanceId": "7ae81359-94a3-5927-9912-0086d10a6e61",
+        "InvestInAsset": false,
+        "VatAllowed": false,
+        "MethodKeepingQuantitiesId": null,
+        "Unit1Id": null,
+        "Unit2Id": null,
+        "AdministrationId": "0f4d4e71-4f68-45d9-a722-8699c13c37c4",
+        "Type": "Activa",
+        "MethodKeepingQuantities": "",
+        "Unit1": "",
+        "Unit2": ""
+    }
+]

@@ -1,0 +1,10 @@
+{
+    "result": "Failed",
+    "traceId": "010e0485-1e22-4f1a-8573-405090824d35",
+    "instances": [],
+    "errors": [
+        "Entity is made with one or more errors in the lines. Please correct this error in application or delete SalesJournalEntry with id: eee53305-8851-4859-a53e-b4b18f14040e.",
+        "Field 'Grootboekrekening' contains an invalid reference (a18e0f9a-c73d-58c4-ae80-64c2e4228de4)",
+        "Field 'Grootboekrekening' contains an invalid reference (a18e0f9a-c73d-58c4-ae80-64c2e4228de4)"
+    ]
+}

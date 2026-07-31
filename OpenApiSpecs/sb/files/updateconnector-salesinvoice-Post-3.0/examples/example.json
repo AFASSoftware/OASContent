@@ -1,0 +1,24 @@
+{
+    "AdministrationId": "7d9f5416-5957-4dd4-a3a8-c49fbdf891fe",
+    "IssueDate": "2025-01-15",
+    "Reference": "docs-sample-8.0",
+    "RelationType": "organisation",
+    "RelationId": "666af0be-5fbe-5345-8315-18b5bc17215a",
+    "PaymentMethod": "banktransfer",
+    "SentInvoiceEmail": false,
+    "ToBeInvoiced": true,
+    "InvoiceLine": [
+        {
+            "ItemId": "34b3098e-6a4b-5684-9ab7-31f81cdbc47c",
+            "Quantity": 2,
+            "Description": "PC behuizing Miditower Antec - vestiging Inspiratielaan",
+            "LocationId": "01ae3b98-8320-44e1-8eb4-c66635dde0b4"
+        },
+        {
+            "ItemId": "4a26930c-b08f-59fa-8449-5b8295ae5ee1",
+            "Quantity": 1,
+            "Description": "Geluidskaart Creative Audigy - afdeling Directie",
+            "DepartmentId": "43d4aa9d-0219-44b8-a8cb-878a61a61638"
+        }
+    ]
+}
