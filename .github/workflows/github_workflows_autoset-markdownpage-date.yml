@@ -1,0 +1,117 @@
+name: Auto-set markdownpages frontmatter date
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - 'markdownpages/**'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  set-date:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+
+      - name: Update frontmatter date to today
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          BASE="${{ github.event.pull_request.base.sha }}"
+          HEAD="${{ github.event.pull_request.head.sha }}"
+          TODAY="$(date -u +%Y-%m-%d)"   # Change to local TZ if needed
+
+          echo "Using date: $TODAY"
+
+          if ! CHANGED_FILES=$(git diff --name-only "$BASE" "$HEAD" -- 'markdownpages/**/*.md' 'markdownpages/*.md'); then
+            echo "::error::Failed to determine changed markdownpages files between $BASE and $HEAD"
+            exit 1
+          fi
+          if [[ -z "$CHANGED_FILES" ]]; then
+            echo "No changed markdownpages files."
+            exit 0
+          fi
+
+          changed_any=0
+
+          while IFS= read -r file; do
+            [[ -f "$file" ]] || continue
+
+            # Ensure file starts with frontmatter
+            if ! head -n1 "$file" | grep -qx '---'; then
+              echo "Skipping $file (no frontmatter at top)"
+              continue
+            fi
+
+            # If date exists in frontmatter, replace first occurrence.
+            # Otherwise insert date line right before closing frontmatter.
+            if awk '
+              NR==1 && $0=="---" {infm=1; next}
+              infm && $0=="---" {exit}
+              infm && $0 ~ /^date:[[:space:]]*/ {found=1}
+              END {exit(found?0:1)}
+            ' "$file"; then
+              awk -v today="$TODAY" '
+                BEGIN {infm=0; done=0}
+                NR==1 && $0=="---" {infm=1; print; next}
+                infm && $0=="---" {
+                  infm=0
+                  print
+                  next
+                }
+                infm && !done && $0 ~ /^date:[[:space:]]*/ {
+                  print "date: " today
+                  done=1
+                  next
+                }
+                {print}
+              ' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
+              echo "Updated date in $file"
+              changed_any=1
+            else
+              awk -v today="$TODAY" '
+                BEGIN {infm=0; inserted=0}
+                NR==1 && $0=="---" {infm=1; print; next}
+                infm && $0=="---" && !inserted {
+                  print "date: " today
+                  inserted=1
+                  print
+                  infm=0
+                  next
+                }
+                {print}
+              ' "$file" > "$file.tmp" && mv "$file.tmp" "$file"
+              echo "Inserted date in $file"
+              changed_any=1
+            fi
+          done <<< "$CHANGED_FILES"
+
+          if [[ "$changed_any" -eq 0 ]]; then
+            echo "No files changed by updater."
+            exit 0
+          fi
+
+      - name: Commit and push if changed
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet; then
+            echo "No git changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add markdownpages
+          git commit -m "chore: auto-update markdownpages frontmatter date to today"
+          git push

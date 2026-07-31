@@ -1,0 +1,29 @@
+{
+	"InvoiceNumber": "1",
+	"InvoiceDate": "2024-02-01",
+	"Description": "Ergonomic Rubber Bacon",
+	"AdministrationId": "701b747b-eea2-5ed1-8518-973e5c670252",
+	"RelationType": "organisation",
+	"RelationId": "a8cce7bd-ced8-5ca4-b3b8-f0584ffe5993",
+	"PaymentMethod": "banktransfer",
+	"PaymentConditionId": "9b5d768a-c71b-583e-b6ee-09d64aa935d4",
+	"Attachments": [
+		{
+			"AttachmentId": "b031446a-b98e-4378-b7ee-8543e05f34c0"
+		}
+	],
+	"InvoiceLine": [
+		{
+			"LedgerAccountId": "1a8042a9-576d-5fab-9e5f-75e6f7d5ab63",
+			"AmountVat": 21,
+			"VatType": "high",
+			"AmountExcludingVat": 100
+		},
+		{
+			"LedgerAccountId": "1a8042a9-576d-5fab-9e5f-75e6f7d5ab63",
+			"AmountExcludingVat": 427,
+			"VatType": "zero",
+			"VatCalculation": "exempt"
+		}
+	]
+}
