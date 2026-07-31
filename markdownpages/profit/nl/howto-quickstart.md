@@ -1,6 +1,6 @@
 ---
 author: CLN
-date: 2026-07-31
+date: 2026-07-21
 tags: Partner, Tutorial, GetConnector, Integration, Authentication, Authorization
 title: Quickstart - Maak je eerste request
 ---
