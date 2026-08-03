@@ -1,0 +1,15 @@
+{
+  "PtLinesToBeUnraveled": {
+    "Element": {
+      "Fields": {
+        "DaTi": "2026-08-01",
+        "EmId": "NICOZ",
+        "VaIt": "1",
+        "ItCd": "100",
+        "StTi": "08:00:00",
+        "EnTi": "16:30:00",
+        "PaTi": "00:30:00"
+      }
+    }
+  }
+}
