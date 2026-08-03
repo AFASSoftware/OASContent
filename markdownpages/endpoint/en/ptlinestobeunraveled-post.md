@@ -1,1 +1,5 @@
+---
+date: 2026-08-03
+---
+
 For each employee, simply provide the hours worked with a start and end time. Profit automatically splits the hours into hour types based on an unraveling profile.
