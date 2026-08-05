@@ -2,17 +2,18 @@
 date: 2026-08-05
 ---
 
-Geef per medewerker simpelweg de gewerkte uren met begin- en eindtijd. De uren worden door Profit automatisch uitgesplitst naar de juiste urensoorten op basis van een [ontrafelschema](https://help.afas.nl/help/NL/SE/137781.htm).
+Pas de Te ontrafelen regel aan door de gewerkte uren met begin- en eindtijd op te geven. Profit splitst de uren automatisch uit naar de juiste urensoorten op basis van een [ontrafelschema](https://help.afas.nl/help/NL/SE/137781.htm).
+Stuur bij een PUT request altijd het Id van de regel mee die aangepast moet worden. Daarnaast stuur je alleen de velden mee die je wilt aanpassen. Velden die je niet meestuurt, worden niet aangepast. 
 
 ### PtLinesToBeUnraveled
 Vrije velden mogelijk: vrije velden worden overgenomen van de tabel Nacalculatie.
 Meerdere records mogelijk: ja
 
 #### Id
-Alleen vullen als er een bestaande regel wordt aangepast. Dit veld is dus niet van toepassing bij een POST request. Het Id van de regel wordt automatisch gegenereerd bij het aanmaken van een nieuwe regel.
+Het Id van de regel die aangepast moet worden. Dit veld krijg je als response terug bij het aanmaken van een regel. Dit veld is verplicht bij een PUT request.
 
 #### EmId
-Medewerker Id. Verplicht veld.
+Medewerker Id. 
 
 #### DaTi
 Begindatum van de gewerkte uren.
@@ -22,14 +23,14 @@ Begindatum van de gewerkte uren.
 Itemcode van de te verwerken regel. In het ontrafelschema wordt bepaald welke werksoort als input wordt gebruikt voor de ontrafeling. De werksoort wordt bepaald door de combinatie van de itemcode en de medewerker.
 
 #### Ds
-Omschrijving, wordt overgenomen naar de nacalculatie regel. Dit veld is niet verplicht, maar wordt wel aangeraden om in te vullen.
+Omschrijving, wordt overgenomen naar de nacalculatie regel. 
 
 #### V1Cd
 #### V2Cd
 #### V3Cd
 #### V4Cd
 #### V5Cd
-Verbijzonderingscodes, worden overgenomen naar de nacalculatie regel. Of deze velden verplicht zijn, hangt af van de instellingen van de omgeving.
+Verbijzonderingscodes, worden overgenomen naar de nacalculatie regel. 
 
 #### StTi
 Begintijd. Het veld heeft veldtype datum/tijd, maar alleen het tijdstip wordt gebruikt.
@@ -45,7 +46,7 @@ Pauzeduur. Het veld heeft veldtype datum/tijd, maar alleen het tijdstip wordt ge
 #### Di03
 #### Di04
 #### Di05
-Vrije dimensie 1 t/m 5. Deze velden worden overgenomen naar de nacalculatie regel. Wat de velden betekenen, hangt af van de instellingen van de omgeving. Of de velden verplicht zijn, hangt af van de instellingen van de omgeving.
+Vrije dimensie 1 t/m 5. Deze velden worden overgenomen naar de nacalculatie regel. Wat de velden betekenen, hangt af van de instellingen van de omgeving. 
 
 ### FileId
 Bijlage. Dit veld geef je alleen mee als je via de FileConnector in een eerdere call al een bijlage hebt geüpload. Als je direct een bijlage wilt meesturen, gebruik dan de FileName en FileStream velden.
