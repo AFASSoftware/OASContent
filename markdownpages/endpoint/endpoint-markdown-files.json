@@ -23,6 +23,7 @@
     "knsubject-post.md",
     "profit-debtor-invoices-get.md",
     "ptlinestobeunraveled-post.md",
+    "ptlinestobeunraveled-put.md",
     "ptpriceagreement-post.md",
     "purchaseinvoice_1.0_create-post.md",
     "purchasejournalentry_1.1_create-post.md",
