@@ -1,5 +1,5 @@
 ---
-date: 2026-08-03
+date: 2026-08-05
 ---
 
 Geef per medewerker simpelweg de gewerkte uren met begin- en eindtijd. De uren worden door Profit automatisch uitgesplitst naar de juiste urensoorten op basis van een [ontrafelschema](https://help.afas.nl/help/NL/SE/137781.htm).
@@ -57,4 +57,3 @@ Als je een bijlage wilt meesturen, moet je zowel FileName als FileStream invulle
 #### FileStream
 Base64-gecodeerde inhoud van de bijlage.
 Als je een bijlage wilt meesturen, moet je zowel FileName als FileStream invullen.
-

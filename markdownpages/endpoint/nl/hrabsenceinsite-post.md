@@ -1,5 +1,5 @@
 ---
-date: 2026-03-02
+date: 2026-08-05
 ---
 
 Deze UpdateConnector stuurt verlofboekingen in en maakt een goedkeuringsflow in InSite.

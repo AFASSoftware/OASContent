@@ -1,5 +1,5 @@
 ---
-date: 2026-08-03
+date: 2026-08-05
 ---
 
 For each employee, simply provide the hours worked with a start and end time. Profit automatically splits the hours into the correct hour types based on an [unraveling profile](https://help.afas.nl/help/NL/SE/137781.htm).
