@@ -1,5 +1,5 @@
 ---
-date: 2026-02-18
+date: 2026-08-05
 ---
 
 ## Vereiste data
@@ -42,3 +42,12 @@ Je levert de administratie aan in het veld 'UnId'. Zo niet, dan wordt de adminis
 ## Afletteren van facturen
 
 In een memoriaal dagboek kun je een debet- en een creditfactuur tegen elkaar afletteren. Het is niet mogelijk om een vooruitbetaling af te letteren tegen een creditfactuur, of een vooruitontvangst tegen een debetfactuur.
+
+### FiEntries
+
+##### BpDa
+De boekstukdatum van de journaalpost. Deze datum mag afwijken van de boekingsdatum (`EnDa`).
+
+Profit gebruikt de boekstukdatum om te bepalen in welke periode de journaalpost wordt geboekt. Daarom moet de boekstukdatum binnen een open periode van de administratie vallen.
+
+Daarnaast bepaalt de boekstukdatum welke factuurnummering wordt toegepast, omdat de nummeringsregels in Profit datumafhankelijk zijn.
