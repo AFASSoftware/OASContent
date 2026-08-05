@@ -44,3 +44,12 @@ You supply the administration in the 'UnId' field. If not, the administration th
 ## Matching invoices
 
 In a memorial journal you can match a debit and a credit invoice against each other. It is not possible to match a prepayment against a credit invoice, or a prepaid receipt against a debit invoice.
+
+### FiEntries
+
+##### BpDa
+The voucher date of the journal entry. This date may differ from the entry date (`EnDa`).
+
+Profit uses the voucher date to determine the period in which the journal entry is posted. Therefore, the voucher date must fall within an open period for the administration.
+
+The voucher date also determines which invoice numbering is applied, because the numbering rules in Profit are date-dependent.
