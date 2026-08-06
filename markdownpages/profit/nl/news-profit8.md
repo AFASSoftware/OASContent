@@ -24,10 +24,13 @@ Voorheen kon je bij een inkoopaanvraag alle verbijzonderingscodes die er bestaan
 
 ### Taalcodes vereenvoudigd
 
+*(aangepast 06-08-2026)*
 T/m Profit 7 kende Profit twee tabellen met taalcodes. Je onderhield de taalcodes die je in Profit gebruikt via `Algemeen / Inrichting / Landinstellingen / Taal`. Per taalcode kon je een ISO-taalcode selecteren. De ISO-taalcodes kon je onderhouden via `Algemeen / Inrichting / Vrije tabel, tabel ISO-taalcode`.  
 
-We hebben dit vereenvoudigd door onder `Algemeen / Inrichting / Landinstellingen / Taal` de volledige Microsoft-taaltabel beschikbaar te stellen. Hierdoor is het zelf toevoegen van talen niet meer nodig.  
- 
+We hebben dit vereenvoudigd door onder `Algemeen / Inrichting / Landinstellingen / Taal` de volledige Microsoft-taaltabel beschikbaar te stellen. Hierdoor is het zelf toevoegen van talen niet meer nodig. ISO-taalcodes worden niet meer gebruikt.  
+
+Bij bestaande taalcodes wordt de ISO-taalcode automatisch overgenomen in conversie naar Profit 8. Bij alle andere taalcodes is het veld ISO-taalcode niet meer beschikbaar. **Ben je afhankelijk van de ISO-taalcodes in je integraties? Dan is het belangrijk dat je zo snel mogelijk overstapt op de nieuwe taalcodes.**
+
 We streven ernaar dat Imports, Get- en UpdateConnectoren blijven werken. **Het is echter sterk aan te raden zo snel mogelijk over te stappen op de nieuwe taalcodes.**  
 
 Deze aanpassing zie je ook terug in de Changelog van de UpdateConnectoren verderop.  
@@ -39,7 +42,7 @@ Deze aanpassing zie je ook terug in de Changelog van de UpdateConnectoren verder
 
 Op een AppConnector kun je IP-restricties instellen. Wij adviseren om dat zoveel mogelijk toe te passen. De IP-restricties kon je voorheen vastleggen als IP-adres met een eventueel subnet-masker. Vanaf Profit 8 leg je meerdere IP-adressen vast met de CIDR notatie.    
 
-#### mTLS ondersteuning op de connectoren
+### mTLS ondersteuning op de connectoren
 
 *(toegevoegd 16-07-2026)*  
 > Dit zal pas beschikbaar komen vanaf september 2026. De UI is erop voorbereid, maar de infrastructuur is nu nog niet beschikbaar.
