@@ -1,6 +1,6 @@
 ---
 author: EZW
-date: 2026-07-16
+date: 2026-08-06
 tags: Profit8, GetConnector, UpdateConnector, Integration, Configuration
 title: New in Profit 8
 ---
@@ -24,11 +24,14 @@ Previously, when creating a purchase requisition, you could choose any allocatio
 
 ### Language Codes Simplified
 
+*(updated 2026-08-06)*  
 Up to and including Profit 7, Profit used two tables for language codes. You maintained the language codes used in Profit via `General / Configuration / Country Settings / Language`. For each language code, you could select an ISO language code. The ISO language codes themselves could be maintained via `General / Configuration / Free Table, ISO Language Code Table`.
 
-We have simplified this by making the complete Microsoft language table available under `General / Configuration / Country Settings / Language`. As a result, it is no longer necessary to add languages manually.
+We have simplified this by making the complete Microsoft language table available under `General / Configuration / Country Settings / Language`. As a result, it is no longer necessary to add languages manually. ISO language codes are no longer used.  
 
-We aim to ensure that Imports, Get Connectors, and Update Connectors continue to function. **However, it is strongly recommended that you switch to the new language codes as soon as possible.**
+For existing language codes, the ISO language code is automatically carried over during conversion to Profit 8. For all other language codes, the ISO language code field is no longer available. **Are you relying on ISO language codes in your integrations? Then it is important that you switch to the new language codes as soon as possible.**
+
+We aim to ensure that Imports, Get Connectors, and Update Connectors continue to function. **However, it is strongly recommended that you switch to the new language codes as soon as possible.**  
 
 You will also see this change reflected in the Update Connectors changelog further on.
 
@@ -39,7 +42,7 @@ You will also see this change reflected in the Update Connectors changelog furth
 
 You can set IP restrictions on an AppConnector. We strongly recommend applying this as much as possible. Previously, IP restrictions could be defined as an IP address with an optional subnet mask. Starting with Profit 8, you define multiple IP addresses using CIDR notation.
 
-#### mTLS support on connectors
+### mTLS support on connectors
 
 *(added 2026-07-16)*  
 > This will not be available until September 2026. The UI is prepared for it, but the infrastructure is not yet available.
