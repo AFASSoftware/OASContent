@@ -24,7 +24,8 @@ Voorheen kon je bij een inkoopaanvraag alle verbijzonderingscodes die er bestaan
 
 ### Taalcodes vereenvoudigd
 
-*(aangepast 06-08-2026)*
+*(aangepast 06-08-2026)*  
+
 T/m Profit 7 kende Profit twee tabellen met taalcodes. Je onderhield de taalcodes die je in Profit gebruikt via `Algemeen / Inrichting / Landinstellingen / Taal`. Per taalcode kon je een ISO-taalcode selecteren. De ISO-taalcodes kon je onderhouden via `Algemeen / Inrichting / Vrije tabel, tabel ISO-taalcode`.  
 
 We hebben dit vereenvoudigd door onder `Algemeen / Inrichting / Landinstellingen / Taal` de volledige Microsoft-taaltabel beschikbaar te stellen. Hierdoor is het zelf toevoegen van talen niet meer nodig. ISO-taalcodes worden niet meer gebruikt.  
