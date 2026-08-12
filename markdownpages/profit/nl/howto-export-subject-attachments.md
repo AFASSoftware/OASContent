@@ -42,7 +42,7 @@ De inhoud van het csv bestand en de bijlagen worden samen in een zip-bestand aan
 
 #### 1.2.1 Mappenstructuur
 
-De bijlagen worden in een zip-bestand aangeleverd. In dit zip-bestand zit een mappenstructuur die bepaald wordt door de eerste (bovenste) velden van de GetConnector. In <a href="../../../media/Dossierexport.gcn" download>deze voorbeeld GetConnector</a> zijn dat de velden `Type dossieritem (omschrijving)` en `Medewerkercode`, dus wordt de mappenstructuur `Type dossieritem (omschrijving) > Medewerkercode`. Bijvoorbeeld: `\Loonstrook (Profit)\EZW`.  
+De bijlagen worden in een zip-bestand aangeleverd. In dit zip-bestand zit een mappenstructuur die bepaald wordt door de eerste (bovenste) velden van de GetConnector. In <a href="../../../media/Dossierexport.gcn" download>deze voorbeeld GetConnector</a> zijn dat de velden `Type dossieritem (omschrijving)` en `Medewerkercode`, dus wordt de mappenstructuur `Type dossieritem (omschrijving) > Medewerkercode`. Bijvoorbeeld: `Loonstrook (Profit)\EZW`.  
 
 #### 1.2.2 DossieritemId
 
