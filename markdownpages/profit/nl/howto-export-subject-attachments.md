@@ -7,9 +7,9 @@ title: Dossierbijlagen uit AFAS Profit laten exporteren door Systemintegrators
 
 ## Inleiding
 
-Via de dossierfunctionaliteit is het mogelijk om bestanden als bijlage op een dossier van een medewerker/persoon/organisatie vast te leggen. Hiermee zorg je ervoor dat je alle gegevens bij elkaar hebt staan en makkelijk terug kan vinden. Soms komt het voor dat je deze bestanden uit de omgeving wilt halen. 
+Via de dossierfunctionaliteit is het mogelijk om bestanden als bijlage op een dossier van een medewerker/persoon/organisatie vast te leggen. Hiermee zorg je ervoor dat je alle gegevens bij elkaar hebt staan en makkelijk terug kan vinden. Soms komt het voor dat je deze bestanden uit de omgeving wilt halen.
 
-> In deze How-To lees je precies welke acties er van jou verwacht worden als je hebt afgesproken dat het team Systemintegrators van AFAS dit voor je doet. Heb je voldoende programmeerkennis, dan kun je dit ook zelf doen. In dat geval kun je beter de How-To <a href="./howto-bijlage-dossier">Ophalen van bijlagen uit AFAS Profit</a> volgen.
+> In deze How-To lees je precies welke acties er van jou verwacht worden als je hebt afgesproken dat het team Systemintegrators van AFAS dit voor je doet. Heb je voldoende programmeerkennis, dan kun je dit ook zelf doen. In dat geval kun je beter de How-To [Ophalen van bijlagen uit AFAS Profit](./howto-bijlage-dossier) volgen.
 
 
 ## Wat heb je nodig
