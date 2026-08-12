@@ -7,7 +7,9 @@ title: Exporting dossier attachments from AFAS Profit via Systemintegrators
 
 ## Introduction
 
-Using dossier functionality, you can save files as attachments on the dossier of an employee/person/organization. This ensures all data is kept together and easy to find. Sometimes you may want to retrieve these files from your environment. In this How-To, you can read exactly which actions are expected from you when you have agreed that the AFAS Systemintegrators team will do this for you.
+Using dossier functionality, you can save files as attachments on the dossier of an employee/person/organization. This ensures all data is kept together and easy to find. Sometimes you may want to retrieve these files from your environment.
+
+> In this How-To, you can read exactly which actions are expected from you when you have agreed that the AFAS Systemintegrators team will do this for you. If you have sufficient programming knowledge, you can also do this yourself. In that case, it is better to follow the How-To <a href="./howto-bijlage-dossier">Retrieving attachments from AFAS Profit</a>.
 
 
 ## What you need
