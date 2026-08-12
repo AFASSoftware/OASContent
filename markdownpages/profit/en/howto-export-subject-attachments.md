@@ -42,7 +42,7 @@ The content of the csv file and the attachments are delivered together in a zip 
 
 #### 1.2.1 Folder structure
 
-The attachments are delivered in a zip file. This zip file contains a folder structure that is determined by the first (top) fields of the GetConnector. In <a href="../../../media/Dossierexport.gcn" download>this example GetConnector</a>, these are the fields `Subject type (description)` and `Employee code`, so the folder structure becomes `Subject type (description) > Employee code`. For example: `\Payslip (Profit)\EZW`.  
+The attachments are delivered in a zip file. This zip file contains a folder structure that is determined by the first (top) fields of the GetConnector. In <a href="../../../media/Dossierexport.gcn" download>this example GetConnector</a>, these are the fields `Subject type (description)` and `Employee code`, so the folder structure becomes `Subject type (description) > Employee code`. For example: `Payslip (Profit)\EZW`.  
 
 #### 1.2.2 DossieritemId
 
