@@ -96,4 +96,4 @@ This skill applies to all pull requests in the AFASSoftware/OASContent repositor
 
 ## See Also
 
-- [.github/instructions/codereview.instructions.md](../../../instructions/codereview.instructions.md) — Full review guidelines
+- [.github/instructions/codereview.instructions.md](../../instructions/codereview.instructions.md) — Full review guidelines
