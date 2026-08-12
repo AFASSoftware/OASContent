@@ -38,7 +38,7 @@ The GetConnector must contain the following fields:
 - **Content of the csv file**
 
 _In other words_: the GetConnector must always contain a field named `DossieritemId`. All fields before it (the top fields) determine the folder structure of the end result. All fields after it are included in a csv file.
-The folder structure and the content of the csv file are delivered together in a zip file.
+The content of the csv file and the attachments in the folder structure are delivered together in a zip file.
 
 #### 1.2.1 Folder structure
 
@@ -110,9 +110,9 @@ Create a token and grant the following rights in the authorization tool:
 - Rights to the correct dossier items via `CRM > Dossier > Dossier items > Filters`.
 
 
-## 4. Provide the token to the Systemintegrators team
+## 4. Provide the environment name and token to the Systemintegrators team
 
-Preferably do this in a secure way, for example through the request in the customer portal, or via a secure email. The Systemintegrators team can then use this token to execute the GetConnectors and export the attachments.
+Preferably do this in a secure way, for example through the request in the customer portal, or via a secure email. The Systemintegrators team can then use the environment name and token to execute the GetConnectors and export the attachments.
 
 
 ## 5. Receive the zip file with attachments

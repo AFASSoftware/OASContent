@@ -38,7 +38,7 @@ De GetConnector moet de volgende velden bevatten:
 - **Inhoud van het csv bestand**
 
 _Anders gezegd_: de GetConnector moet altijd een veld `DossieritemId` bevatten. Alle velden die ervóór staan (de bovenste velden) bepalen de mappenstructuur van het eindresultaat. Alle velden die erna komen worden opgenomen in een csv bestand.  
-De mappenstructuur en de inhoud van het csv bestand worden samen in een zip-bestand aangeleverd.
+De inhoud van het csv bestand en de bijlagen in de mappenstructuur worden samen in een zip-bestand aangeleverd.
 
 #### 1.2.1 Mappenstructuur
 
@@ -110,9 +110,9 @@ Maak een token aan, waarbij de volgende rechten zijn toegekend in de autorisatie
 - Rechten op de juiste dossieritems via `CRM > Dossier > Dossieritems > Filters`.
 
 
-## 4. Geef het token aan het team Systemintegrators
+## 4. Geef de omgevingsnaam en het token aan het team Systemintegrators
 
-Dat kun je het beste doen via een beveiligde manier, bijvoorbeeld via de aanvraag in de klantportal, of via een beveiligde e-mail. Het team Systemintegrators kan dan met dit token de GetConnectoren uitvoeren en de bijlagen exporteren.
+Dat kun je het beste doen via een beveiligde manier, bijvoorbeeld via de aanvraag in de klantportal, of via een beveiligde e-mail. Het team Systemintegrators kan dan met de omgevingsnaam en het token de GetConnectoren uitvoeren en de bijlagen exporteren.  
 
 
 ## 5. Ontvang het zip-bestand met de bijlagen
