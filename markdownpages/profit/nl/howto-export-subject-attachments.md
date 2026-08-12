@@ -1,6 +1,6 @@
 ---
 author: EZW
-date: 2026-06-22
+date: 2026-08-12
 tags: GetConnector, UpdateConnector, AppConnector, Authentication
 title: Dossierbijlagen uit AFAS Profit laten exporteren door Systemintegrators
 ---
@@ -117,4 +117,4 @@ Dat kun je het beste doen via een beveiligde manier, bijvoorbeeld via de aanvraa
 
 ## 5. Ontvang het zip-bestand met de bijlagen
 
-Het zip-bestand zal beschikbaar zijn via een beveiligde link die eenmalig te gebruiken is en een beperkte geldigheid heeft. Het team Systemintegrators zal deze link aanbieden via de aanvraag in de klantportal.  
+Het zip-bestand zal beschikbaar zijn via een beveiligde link die eenmalig te gebruiken is en een beperkte geldigheid heeft. Het team Systemintegrators zal deze link aanbieden via de aanvraag in de klantportal.
