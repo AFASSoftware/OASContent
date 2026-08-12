@@ -1,6 +1,6 @@
 ---
 author: EZW
-date: 2026-06-22
+date: 2026-08-12
 tags: GetConnector, UpdateConnector, AppConnector, Authentication
 title: Exporting dossier attachments from AFAS Profit via Systemintegrators
 ---
@@ -117,4 +117,4 @@ Preferably do this in a secure way, for example through the request in the custo
 
 ## 5. Receive the zip file with attachments
 
-The zip file will be available through a secure link that can be used once and has limited validity. The Systemintegrators team will provide this link through the request in the customer portal.  
+The zip file will be available through a secure link that can be used once and has limited validity. The Systemintegrators team will provide this link through the request in the customer portal.
