@@ -20,6 +20,9 @@ import re
 from datetime import datetime
 import frontmatter
 
+# Default markdownpages folder, resolved relative to this script rather than the cwd
+DEFAULT_ROOT_PATH = Path(__file__).resolve().parent.parent / "markdownpages"
+
 # Set UTF-8 encoding for Windows console to handle emojis
 if sys.platform == 'win32':
     try:
@@ -47,6 +50,8 @@ class MarkdownNamingValidator:
             fix_dates: If True, automatically update dates in frontmatter
         """
         self.root_path = Path(root_path).resolve()
+        if not self.root_path.is_dir():
+            raise FileNotFoundError(f"Root path does not exist or is not a directory: {self.root_path}")
         self.exclusions = exclusions or []
         self.json_output = json_output
         self.git_mode = git_mode
@@ -522,8 +527,8 @@ Examples:
     
     parser.add_argument(
         "--root-path",
-        default="markdownpages",
-        help="Root directory to start scanning from (default: markdownpages)"
+        default=str(DEFAULT_ROOT_PATH),
+        help=f"Root directory to start scanning from (default: {DEFAULT_ROOT_PATH})"
     )
     
     parser.add_argument(
@@ -560,13 +565,20 @@ Examples:
     args = parser.parse_args()
     
     # Create validator instance
-    validator = MarkdownNamingValidator(
-        root_path=args.root_path,
-        exclusions=args.exclude,
-        json_output=args.json,
-        git_mode=args.git,
-        fix_dates=args.fix_dates
-    )
+    try:
+        validator = MarkdownNamingValidator(
+            root_path=args.root_path,
+            exclusions=args.exclude,
+            json_output=args.json,
+            git_mode=args.git,
+            fix_dates=args.fix_dates
+        )
+    except FileNotFoundError as e:
+        if args.json:
+            print(json.dumps({"error": str(e), "success": False}, indent=2))
+        else:
+            print(f"Error: {e}", file=sys.stderr)
+        sys.exit(1)
     
     # Run validation
     success = validator.validate()
