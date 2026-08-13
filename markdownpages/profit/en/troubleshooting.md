@@ -1,6 +1,6 @@
 ---
 author: CLN
-date: 2025-11-08
+date: 2026-08-13
 tags: Tutorial, GetConnector, UpdateConnector, AppConnector, Integration, Authentication
 title: Troubleshooting
 ---
