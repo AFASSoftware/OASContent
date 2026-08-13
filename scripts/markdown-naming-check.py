@@ -506,22 +506,22 @@ This script validates that markdown files follow kebab-case naming convention.
 
 Examples:
   # Check all files in markdownpages
-  python markdown-naming-check.py
+    python scripts/markdown-naming-check.py
   
   # Check only new/modified files in git
-  python markdown-naming-check.py --git
+    python scripts/markdown-naming-check.py --git
   
   # Check and automatically fix dates in changed files
-  python markdown-naming-check.py --git --fix-dates
+    python scripts/markdown-naming-check.py --git --fix-dates
   
   # Check specific directory
-  python markdown-naming-check.py --root-path ./docs
+    python scripts/markdown-naming-check.py --root-path ./docs
   
   # JSON output for CI/CD
-  python markdown-naming-check.py --git --json
+    python scripts/markdown-naming-check.py --git --json
   
   # Exclude specific patterns
-  python markdown-naming-check.py --exclude "temp/*" "draft_*.md"
+    python scripts/markdown-naming-check.py --exclude "temp/*" "draft_*.md"
         """
     )
     

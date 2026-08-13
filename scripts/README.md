@@ -60,25 +60,25 @@ date: 2025-11-11
 python scripts/markdown-naming-check.py
 
 # Check only changed files in git (naming + date validation)
-python markdown-naming-check.py --git
+python scripts/markdown-naming-check.py --git
 ```
 
 ### Advanced Usage
 ```bash
 # Specify a different root directory
-python markdown-naming-check.py --root-path ./docs
+python scripts/markdown-naming-check.py --root-path ./docs
 
 # Focus on specific content folders with git mode
-python markdown-naming-check.py --git --root-path markdownpages
+python scripts/markdown-naming-check.py --git --root-path markdownpages
 
 # Exclude specific patterns (if needed)
-python markdown-naming-check.py --exclude ".github/*" "temp/*" "draft_*.md"
+python scripts/markdown-naming-check.py --exclude ".github/*" "temp/*" "draft_*.md"
 
 # Get JSON output for integration
-python markdown-naming-check.py --git --json
+python scripts/markdown-naming-check.py --git --json
 
 # Show help
-python markdown-naming-check.py --help
+python scripts/markdown-naming-check.py --help
 ```
 
 ## Validation Modes
@@ -225,8 +225,7 @@ If you need to update dates in frontmatter for changed files:
 
 ```bash
 # Use the --fix-dates flag to updates dates
-cd scripts
-python markdown-naming-check.py --fix-dates
+python scripts/markdown-naming-check.py --fix-dates
 ```
 
 This will:
