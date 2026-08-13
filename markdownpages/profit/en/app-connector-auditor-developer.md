@@ -163,6 +163,8 @@ Use these fields only for presentation and never filter/sort on these fields.
 
 ### Performance
 
+As a guideline, investigate calls that take more than 10 times as long as comparable calls under comparable conditions. This is an indication, not a strict limit.
+
 
 #### <a id="PERF-45"></a>PERF-45: This GetConnector is missing fields needed to optimally use the indexes for sorting.
 

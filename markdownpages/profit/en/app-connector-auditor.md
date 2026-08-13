@@ -76,6 +76,8 @@ Because the Post-calculation table can become very large, you must handle retrie
 
 Each point is only visible if it applies to your environment. If you experience performance issues with the integration, discuss these points with your integration supplier or with AFAS System Integrators.
 
+As a guideline, investigate calls that take more than 10 times as long as comparable calls under comparable conditions. This is an indication, not a strict limit.
+
 ##### One or more of the 10 largest tables in the environment is queried
 
 This check specifically looks at the largest tables in your environment, with more than 1,000,000 rows. By using indexes and filters smartly, retrieval from large tables can be optimized.

@@ -342,6 +342,8 @@ Use these fields only for presentation and never filter/sort on these fields.
 
 ### Performance
 
+As a guideline, investigate calls that take more than 10 times as long as comparable calls under comparable conditions. This is an indication, not a strict limit.
+
 #### <a id="PERF-32"></a>PERF-32: This GetConnector (possibly) has a cyclic reference.
 
 
@@ -373,7 +375,7 @@ If not: simplify the GetConnector.
 Subselects can be executed per row and can negatively affect performance.
 
 **Solution**  
-Only action needed if performance issues occur. Get advice from System Integrators via [let's talk](#lets-talk).
+Only action needed if noticeable performance issues occur. Get advice from System Integrators via [let's talk](#lets-talk).
 
 ---
 
@@ -392,7 +394,7 @@ Using many joins can cause performance problems, especially with large tables.
 
 
 **Solution**  
-Only action needed if performance issues occur. In that case, create multiple GetConnectors that each use fewer tables. Get advice from System Integrators via [let's talk](#lets-talk).
+Only action needed if noticeable performance issues occur. In that case, create multiple GetConnectors that each use fewer tables. Get advice from System Integrators via [let's talk](#lets-talk).
 
 
 

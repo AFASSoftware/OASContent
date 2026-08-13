@@ -77,6 +77,8 @@ Dit punt is met name van belang bij BI-integraties.
 
 Elk punt is alleen zichtbaar als het van toepassing is op jouw omgeving. Als je problemen ervaart met de performance van de koppeling, overleg dan deze punten met de leverancier van je koppeling, of met de AFAS Systemintegrators.  
 
+Als richtlijn kun je aanroepen verder onderzoeken die onder vergelijkbare omstandigheden meer dan 10 keer zo lang duren als vergelijkbare aanroepen. Dit is een indicatie en geen harde grens.
+
 ##### Eén of meer van de 10 grootste tabellen in de omgeving wordt uitgevraagd
 
 Deze controle kijkt specifiek naar de grootste tabellen in jouw omgeving, met meer dan 1.000.000 regels. Door slim gebruik te maken van indexen en filters kan het ophalen uit grote tabellen geoptimaliseerd worden.
