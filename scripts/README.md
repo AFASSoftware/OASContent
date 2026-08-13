@@ -56,8 +56,8 @@ date: 2025-11-11
 
 ### Basic Usage
 ```bash
-# Check all files in markdownpages (naming only)
-python markdown-naming-check.py
+# Check all files in markdownpages (naming only, from repo root)
+python scripts/markdown-naming-check.py
 
 # Check only changed files in git (naming + date validation)
 python markdown-naming-check.py --git
