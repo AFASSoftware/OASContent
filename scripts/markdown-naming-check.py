@@ -500,7 +500,7 @@ def main():
 This script validates that markdown files follow kebab-case naming convention.
 
 Examples:
-  # Check all files
+  # Check all files in markdownpages
   python markdown-naming-check.py
   
   # Check only new/modified files in git
@@ -522,8 +522,8 @@ Examples:
     
     parser.add_argument(
         "--root-path",
-        default=".",
-        help="Root directory to start scanning from (default: current directory)"
+        default="markdownpages",
+        help="Root directory to start scanning from (default: markdownpages)"
     )
     
     parser.add_argument(
