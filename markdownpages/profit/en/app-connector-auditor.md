@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2025-11-11
+date: 2026-08-13
 index: true
 tags: GetConnector, UpdateConnector, AppConnector, Integration, Configuration
 title: AppConnector Auditor
@@ -75,6 +75,8 @@ Because the Post-calculation table can become very large, you must handle retrie
 #### Checklist with possible performance optimizations
 
 Each point is only visible if it applies to your environment. If you experience performance issues with the integration, discuss these points with your integration supplier or with AFAS System Integrators.
+
+As a guideline, investigate calls that take more than 10 times as long as comparable calls under comparable conditions. This is an indication, not a strict limit.
 
 ##### One or more of the 10 largest tables in the environment is queried
 

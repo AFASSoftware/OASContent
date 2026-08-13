@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2026-07-09
+date: 2026-08-13
 index: true
 tags: AppConnector, Auditor, Developer, GetConnector, API, Integration
 title: AppConnector Auditor - Ontwikkelaarsrapport
@@ -163,6 +163,8 @@ Gebruik deze velden alleen voor presentatie en filter/sorteer nooit op deze veld
 ---
 
 ### Performance
+
+Als richtlijn kun je aanroepen verder onderzoeken die onder vergelijkbare omstandigheden meer dan 10 keer zo lang duren als vergelijkbare aanroepen. Dit is een indicatie en geen harde grens.
 
 
 #### <a id="PERF-45"></a>PERF-45: Deze GetConnector mist velden die nodig zijn om de indexen optimaal te gebruiken voor sortering.

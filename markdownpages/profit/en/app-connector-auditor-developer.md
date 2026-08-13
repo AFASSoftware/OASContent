@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2026-07-09
+date: 2026-08-13
 index: true
 tags: AppConnector, Auditor, Developer, GetConnector, API, Integration
 title: AppConnector Auditor - Developer Report
@@ -162,6 +162,8 @@ Use these fields only for presentation and never filter/sort on these fields.
 ---
 
 ### Performance
+
+As a guideline, investigate calls that take more than 10 times as long as comparable calls under comparable conditions. This is an indication, not a strict limit.
 
 
 #### <a id="PERF-45"></a>PERF-45: This GetConnector is missing fields needed to optimally use the indexes for sorting.

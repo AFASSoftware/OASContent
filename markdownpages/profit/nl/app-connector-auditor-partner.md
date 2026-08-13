@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2026-07-09
+date: 2026-08-13
 index: true
 tags: AppConnector, Auditor, Partner, Certificering, GetConnector, pentest
 title: AppConnector Auditor - Partnerrapport
@@ -334,6 +334,8 @@ Gebruik deze velden alleen voor presentatie en filter/sorteer nooit op deze veld
 
 ### Performance
 
+Als richtlijn kun je aanroepen verder onderzoeken die onder vergelijkbare omstandigheden meer dan 10 keer zo lang duren als vergelijkbare aanroepen. Dit is een indicatie en geen harde grens.
+
 #### <a id="PERF-32"></a>PERF-32: Deze GetConnector heeft (mogelijk) een cyclische verwijzing.
 
 
@@ -365,7 +367,7 @@ In de SQL-definitie komt meerdere keren `SELECT` voor.
 Subselects kunnen per rij worden uitgevoerd en kunnen de performance negatief beïnvloeden.
 
 **Oplossing**  
-Alleen actie nodig bij performanceproblemen. Laat je adviseren door Systemintegrators via [kom in gesprek](#kom-in-gesprek).
+Alleen actie nodig bij merkbare performanceproblemen. Laat je adviseren door Systemintegrators via [kom in gesprek](#kom-in-gesprek).
 
 ---
 
@@ -384,7 +386,7 @@ Het gebruik van veel joins kan performanceproblemen veroorzaken, met name bij gr
 
 
 **Oplossing**  
-Alleen actie nodig bij performanceproblemen. Maak in dat geval meerdere GetConnectoren aan die elk minder tabellen gebruiken. Laat je adviseren door Systemintegrators via [kom in gesprek](#kom-in-gesprek).
+Alleen actie nodig bij merkbare performanceproblemen. Maak in dat geval meerdere GetConnectoren aan die elk minder tabellen gebruiken. Laat je adviseren door Systemintegrators via [kom in gesprek](#kom-in-gesprek).
 
 
 
