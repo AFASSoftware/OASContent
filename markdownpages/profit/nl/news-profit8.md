@@ -16,7 +16,8 @@ Vanaf Profit 8 is er een aantal wijzigingen in de AFAS Profit API doorgevoerd. H
 
 ### FbPurRequisition stelt hogere eisen aan de verbijzonderingscodes
 
-*(toegevoegd 14-07-2026)*  
+*(toegevoegd 14-07-2026)*
+
 Voorheen kon je bij een inkoopaanvraag alle verbijzonderingscodes die er bestaan kiezen. Nu moet de verbijzonderingscode voorkomen in een verbijzonderingstoewijzing van rekening inkoop of rekening kostprijs van de artikelgroep. Zie onderstaand schema. Dit zal in de meeste gevallen geen problemen opleveren, omdat dezelfde verbijzonderingstoewijzing verderop in het proces al aanwezig zou moeten zijn.  
 
 <img src="../../../media/profit8-verbijzondering-rekeningen.svg" alt="Schema bepaling rekening artikelgroep" />
@@ -24,7 +25,7 @@ Voorheen kon je bij een inkoopaanvraag alle verbijzonderingscodes die er bestaan
 
 ### Taalcodes vereenvoudigd
 
-*(aangepast 06-08-2026)*  
+*(aangepast 06-08-2026)*
 
 T/m Profit 7 kende Profit twee tabellen met taalcodes. Je onderhield de taalcodes die je in Profit gebruikt via `Algemeen / Inrichting / Landinstellingen / Taal`. Per taalcode kon je een ISO-taalcode selecteren. De ISO-taalcodes kon je onderhouden via `Algemeen / Inrichting / Vrije tabel, tabel ISO-taalcode`.  
 
@@ -45,7 +46,8 @@ Op een AppConnector kun je IP-restricties instellen. Wij adviseren om dat zoveel
 
 ### mTLS ondersteuning op de connectoren
 
-*(toegevoegd 16-07-2026)*  
+*(toegevoegd 16-07-2026)*
+
 > Dit zal pas beschikbaar komen vanaf september 2026. De UI is erop voorbereid, maar de infrastructuur is nu nog niet beschikbaar.
 
 Vanaf Profit 8 is het mogelijk om mTLS (mutual TLS) te gebruiken op de connectoren. mTLS is een beveiligingsprotocol waarbij zowel de client als de server zich moeten authenticeren met een certificaat. Dit zorgt voor een extra beveiligingslaag, omdat alleen geautoriseerde clients verbinding kunnen maken met de server.  
@@ -54,6 +56,12 @@ Dit kun je vooralsnog niet testen op connect.afas.nl.
 ### Webhooks!
 
 Een langgekoesterde wens is in vervulling gegaan: Webhooks! [Lees hier meer over Webhooks in Profit](./webhooks).  
+
+### Afletteren van facturen en vooruitbetalingen via FiEntries
+
+*(toegevoegd 13-08-2026)*
+
+Vanaf nu is het mogelijk om facturen en vooruitbetalingen tegen elkaar af te letteren via de UpdateConnector Financiële mutaties (FiEntries). Hiervoor is het veld **Factuurnr. (intern)** met id **InI2** toegevoegd aan de UpdateConnector. Daarnaast is dit veld beschikbaar in Profit in alle gegevensverzamelingen die verwijzen naar de tabel financiële mutaties. Dit is handig als je werkt met een financieel proces waar vele vooruitbetalingen binnenkomen en de financiële mutaties achteraf massaal afgeletterd moeten worden.  
 
 
 ## Overige wijzigingen
