@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2026-07-09
+date: 2026-08-13
 index: true
 tags: AppConnector, Auditor, Developer, GetConnector, API, Integration
 title: AppConnector Auditor - Ontwikkelaarsrapport

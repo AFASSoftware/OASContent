@@ -1,6 +1,6 @@
 ---
 author: Eric Zwaal
-date: 2025-11-11
+date: 2026-08-13
 index: true
 tags: GetConnector, UpdateConnector, AppConnector, Integration, Configuration
 title: AppConnector Auditor
