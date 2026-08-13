@@ -84,7 +84,8 @@ Bij een HTTP 503 error kan er een response body worden meegestuurd. Deze respons
 ## Timeout
 
 Time-outs komen zelden voor in AFAS API`s. De meeste time-out melden komen uit de client applicatie. Dit betekent dat de request op dat moment op de AFAS Server nog verwerkt wordt. Zorg dat je time-out zorgvuldig geconfigureerd is en gebruik een back-off strategie wanneer je een time-out tegenkomt. De AFAS server is vermoedelijk je vorige request nog aan het verwerken.
-De AFAS API heeft een time-out van 900 seconden (15 minuten). Na verstrijken van deze tijd geeft de API een foutcode 500 met melding "De maximale tijdsduur voor het uitvoeren van de opdracht is verstreken." of "The maximum duration for performing the assignment has been exceeded.".
+De AFAS API heeft een time-out van 900 seconden (15 minuten). Na verstrijken van deze tijd geeft de API een foutcode 500 met melding "Command timeout expired.".
+Duurt het je te lang of twijfel je of de request nog verwerkt wordt? Wacht dan in elk geval de 15 minuten af voordat je een retry doet. Doe je dit niet, dan kan het zijn dat de vorige request nog verwerkt wordt. Opnieuw uitvoeren van de request kan dan leiden tot overbelasting van de database. Dat heeft een negatief effect op de performance van de database en kan leiden tot time-outs bij andere requests, maar ook tot vertraagde werking van Profit zelf.
 
 ## Verbindingsfouten
 
