@@ -1,13 +1,15 @@
 ---
 author: EZW
-date: 2026-06-22
+date: 2026-08-12
 tags: GetConnector, UpdateConnector, AppConnector, Authentication
 title: Dossierbijlagen uit AFAS Profit laten exporteren door Systemintegrators
 ---
 
 ## Inleiding
 
-Via de dossierfunctionaliteit is het mogelijk om bestanden als bijlage op een dossier van een medewerker/persoon/organisatie vast te leggen. Hiermee zorg je ervoor dat je alle gegevens bij elkaar hebt staan en makkelijk terug kan vinden. Soms komt het voor dat je deze bestanden uit de omgeving wilt halen. In deze How-To lees je precies welke acties er van jou verwacht worden als je hebt afgesproken dat het team Systemintegrators van AFAS dit voor je doet.
+Via de dossierfunctionaliteit is het mogelijk om bestanden als bijlage op een dossier van een medewerker/persoon/organisatie vast te leggen. Hiermee zorg je ervoor dat je alle gegevens bij elkaar hebt staan en makkelijk terug kan vinden. Soms komt het voor dat je deze bestanden uit de omgeving wilt halen.
+
+> In deze How-To lees je precies welke acties er van jou verwacht worden als je hebt afgesproken dat het team Systemintegrators van AFAS dit voor je doet. Heb je voldoende programmeerkennis, dan kun je dit ook zelf doen. In dat geval kun je beter de How-To [Ophalen van bijlagen uit AFAS Profit](./howto-bijlage-dossier) volgen.
 
 
 ## Wat heb je nodig
@@ -38,7 +40,7 @@ De GetConnector moet de volgende velden bevatten:
 - **Inhoud van het csv bestand**
 
 _Anders gezegd_: de GetConnector moet altijd een veld `DossieritemId` bevatten. Alle velden die ervóór staan (de bovenste velden) bepalen de mappenstructuur van het eindresultaat. Alle velden die erna komen worden opgenomen in een csv bestand.  
-De mappenstructuur en de inhoud van het csv bestand worden samen in een zip-bestand aangeleverd.
+De inhoud van het csv bestand en de bijlagen in de mappenstructuur worden samen in een zip-bestand aangeleverd.
 
 #### 1.2.1 Mappenstructuur
 
@@ -110,11 +112,11 @@ Maak een token aan, waarbij de volgende rechten zijn toegekend in de autorisatie
 - Rechten op de juiste dossieritems via `CRM > Dossier > Dossieritems > Filters`.
 
 
-## 4. Geef het token aan het team Systemintegrators
+## 4. Geef de omgevingsnaam en het token aan het team Systemintegrators
 
-Dat kun je het beste doen via een beveiligde manier, bijvoorbeeld via de aanvraag in de klantportal, of via een beveiligde e-mail. Het team Systemintegrators kan dan met dit token de GetConnectoren uitvoeren en de bijlagen exporteren.
+Dat kun je het beste doen via een beveiligde manier, bijvoorbeeld via de aanvraag in de klantportal, of via een beveiligde e-mail. Het team Systemintegrators kan dan met de omgevingsnaam en het token de GetConnectoren uitvoeren en de bijlagen exporteren.  
 
 
 ## 5. Ontvang het zip-bestand met de bijlagen
 
-Het zip-bestand zal beschikbaar zijn via een beveiligde link die eenmalig te gebruiken is en een beperkte geldigheid heeft. Het team Systemintegrators zal deze link aanbieden via de aanvraag in de klantportal.  
+Het zip-bestand zal beschikbaar zijn via een beveiligde link die eenmalig te gebruiken is en een beperkte geldigheid heeft. Het team Systemintegrators zal deze link aanbieden via de aanvraag in de klantportal.
