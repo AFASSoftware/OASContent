@@ -61,7 +61,7 @@ Een langgekoesterde wens is in vervulling gegaan: Webhooks! [Lees hier meer over
 
 *(toegevoegd 13-08-2026)*
 
-Vanaf nu is het mogelijk om facturen en vooruitbetalingen tegen elkaar af te letteren via de UpdateConnector Financiële mutaties (FiEntries). Hiervoor is het veld **Factuurnr. (intern)** met id **InI2** toegevoegd aan de UpdateConnector. Daarnaast is dit veld beschikbaar in Profit in alle gegevensverzamelingen die verwijzen naar de tabel financiële mutaties. Dit is handig als je werkt met een financieel proces waar vele vooruitbetalingen binnenkomen en de financiële mutaties achteraf massaal afgeletterd moeten worden.  
+Vanaf nu is het mogelijk om facturen en vooruitbetalingen tegen elkaar af te letteren via de UpdateConnector Financiële mutaties (FiEntries). Hiervoor is het veld **Factuurnr. (intern)** met id `InI2` toegevoegd aan de UpdateConnector. Daarnaast is dit veld beschikbaar in Profit in alle gegevensverzamelingen die verwijzen naar de tabel financiële mutaties. Dit is handig als je werkt met een financieel proces waar vele vooruitbetalingen binnenkomen en de financiële mutaties achteraf massaal afgeletterd moeten worden.  
 
 
 ## Overige wijzigingen
