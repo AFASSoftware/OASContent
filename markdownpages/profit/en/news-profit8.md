@@ -61,7 +61,7 @@ A long-cherished wish has come true: Webhooks! [Read more about Webhooks in Prof
 
 *(added 2026-08-13)*
 
-From now on it is possible to match invoices and prepayments against each other via the UpdateConnector Financial entries (FiEntries). For this purpose the field **Invoice no. (internal)** with id **InI2** has been added to the UpdateConnector. In addition, this field is available in Profit in all data collections that refer to the financial entries table. This is useful if you work with a financial process in which many prepayments come in and the financial entries have to be matched in bulk afterwards.
+From now on it is possible to match invoices and prepayments against each other via the UpdateConnector Financial entries (FiEntries). For this purpose the field **Invoice no. (internal)** with id `InI2` has been added to the UpdateConnector. In addition, this field is available in Profit in all data collections that refer to the financial entries table. This is useful if you work with a financial process in which many prepayments come in and the financial entries have to be matched in bulk afterwards.
 
 
 ## Other changes
