@@ -1,6 +1,6 @@
 ---
 author: EZW
-date: 2026-08-06
+date: 2026-08-13
 tags: Profit8, GetConnector, UpdateConnector, Integration, Configuration
 title: New in Profit 8
 ---
@@ -16,7 +16,8 @@ Starting with Profit 8, several changes have been implemented in the AFAS Profit
 
 ### FbPurRequisition enforces stricter allocation-code requirements
 
-*(added 2026-07-14)*  
+*(added 2026-07-14)*
+
 Previously, when creating a purchase requisition, you could choose any allocation code that existed. Now, the allocation code must exist in an allocation assignment of the purchase account or cost price account of the item group. See the diagram below. In most cases, this will cause no problems, because the same allocation assignment should already exist further in the process.  
 
 <img src="../../../media/profit8-account-selection-flow-en.svg" alt="Account selection diagram for item-group allocation" />
@@ -24,7 +25,8 @@ Previously, when creating a purchase requisition, you could choose any allocatio
 
 ### Language Codes Simplified
 
-*(updated 2026-08-06)*  
+*(updated 2026-08-06)*
+
 Up to and including Profit 7, Profit used two tables for language codes. You maintained the language codes used in Profit via `General / Configuration / Country Settings / Language`. For each language code, you could select an ISO language code. The ISO language codes themselves could be maintained via `General / Configuration / Free Table, ISO Language Code Table`.
 
 We have simplified this by making the complete Microsoft language table available under `General / Configuration / Country Settings / Language`. As a result, it is no longer necessary to add languages manually. ISO language codes are no longer used.  
@@ -44,7 +46,8 @@ You can set IP restrictions on an AppConnector. We strongly recommend applying t
 
 ### mTLS support on connectors
 
-*(added 2026-07-16)*  
+*(added 2026-07-16)*
+
 > This will not be available until September 2026. The UI is prepared for it, but the infrastructure is not yet available.
 
 Starting with Profit 8, it is possible to use mTLS (mutual TLS) on connectors. mTLS is a security protocol in which both the client and the server must authenticate themselves with a certificate. This provides an extra layer of security, because only authorized clients can connect to the server.
@@ -53,6 +56,12 @@ For now, you cannot test this on connect.afas.nl.
 ### Webhooks!
 
 A long-cherished wish has come true: Webhooks! [Read more about Webhooks in Profit](./webhooks).
+
+### Matching invoices and prepayments via FiEntries
+
+*(added 2026-08-13)*
+
+From now on it is possible to match invoices and prepayments against each other via the UpdateConnector Financial entries (FiEntries). For this purpose the field **Invoice no. (internal)** with id `InI2` has been added to the UpdateConnector. In addition, this field is available in Profit in all data collections that refer to the financial entries table. This is useful if you work with a financial process in which many prepayments come in and the financial entries have to be matched in bulk afterwards.
 
 
 ## Other changes
