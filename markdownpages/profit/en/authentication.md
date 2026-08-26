@@ -115,22 +115,28 @@ curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oau
 
 **API call with token:**
 \`\`\`bash
-curl -X GET https://<environmentnumber>.rest.afas.online/ProfitRestServices/REST/V1/Employees \
-  -H "Authorization: Bearer <ACCESS_TOKEN>"
+curl -X GET "https://<environmentnumber>.rest.afas.online/ProfitRestServices/connectors/Profit_Address?skip=0&take=100" \
+  -H "Authorization: Bearer <ACCESS_TOKEN>" \
+  -H "Accept: application/json"
 \`\`\`
 
 **Response example:**
 \`\`\`json
 {
   "skip": 0,
-  "take": 10,
-  "count": 150,
+  "take": 2,
   "rows": [
     {
-      "ID": 1,
-      "Firstname": "John",
-      "Lastname": "Doe",
-      "Email": "john.doe@example.com"
+      "AddressId": 1,
+      "AddressLine": "Stadsring 69, 3811 HN  AMERSFOORT",
+      "PoBox": false,
+      "Address": "Stadsring",
+      "Number": 69,
+      "ZipCode": "3811 HN",
+      "Recidence": "Amersfoort",
+      "Country": "NL",
+      "CreateDate": "2012-11-22T09:49:49Z",
+      "ModifiedDate": "2015-01-26T16:57:43Z"
     }
   ]
 }
@@ -201,22 +207,28 @@ curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oau
 
 **Step 3: API call with token:**
 \`\`\`bash
-curl -X GET https://<environmentnumber>.rest.afas.online/ProfitRestServices/REST/V1/Employees \
-  -H "Authorization: Bearer <ACCESS_TOKEN>"
+curl -X GET "https://<environmentnumber>.rest.afas.online/ProfitRestServices/connectors/Profit_Address?skip=0&take=100" \
+  -H "Authorization: Bearer <ACCESS_TOKEN>" \
+  -H "Accept: application/json"
 \`\`\`
 
 **Response example:**
 \`\`\`json
 {
   "skip": 0,
-  "take": 10,
-  "count": 150,
+  "take": 2,
   "rows": [
     {
-      "ID": 1,
-      "Firstname": "John",
-      "Lastname": "Doe",
-      "Email": "john.doe@example.com"
+      "AddressId": 1,
+      "AddressLine": "Stadsring 69, 3811 HN  AMERSFOORT",
+      "PoBox": false,
+      "Address": "Stadsring",
+      "Number": 69,
+      "ZipCode": "3811 HN",
+      "Recidence": "Amersfoort",
+      "Country": "NL",
+      "CreateDate": "2012-11-22T09:49:49Z",
+      "ModifiedDate": "2015-01-26T16:57:43Z"
     }
   ]
 }
