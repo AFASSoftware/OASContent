@@ -178,7 +178,8 @@ To access the API via the Authorization Code Flow, follow these steps:
 
 **Step 1: Redirect user to authorization endpoint:**
 ```bash
-curl -X GET "https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/authorize?response_type=code&client_id=<CLIENT_ID>&redirect_uri=<REDIRECT_URI>&scope=<SCOPE>&state=<STATE>&code_challenge=<CODE_CHALLENGE>&code_challenge_method=S256"
+# Open this URL in a browser:
+https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/authorize?response_type=code&client_id=<CLIENT_ID>&redirect_uri=<REDIRECT_URI>&scope=<SCOPE>&state=<STATE>&code_challenge=<CODE_CHALLENGE>&code_challenge_method=S256
 ```
 
 **Step 2: Retrieve token with authorization code:**
