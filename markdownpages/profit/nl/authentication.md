@@ -115,15 +115,15 @@ curl -X POST https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/oauth
 **API aanroep met token:**
 ```bash
 curl -X GET "https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/connectors/Profit_Address?skip=0&take=100" \
-  -H "Authorization: Bearer <ACCESS_TOKEN>" \
-  -H "Accept: application/json"
+  -H "Accept: application/json" \
+  -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
 **Response voorbeeld:**
 ```json
 {
   "skip": 0,
-  "take": 2,
+  "take": 100,
   "rows": [
     {
       "AddressId": 1,
@@ -133,9 +133,7 @@ curl -X GET "https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/conne
       "Number": 69,
       "ZipCode": "3811 HN",
       "Recidence": "Amersfoort",
-      "Country": "NL",
-      "CreateDate": "2012-11-22T09:49:49Z",
-      "ModifiedDate": "2015-01-26T16:57:43Z"
+      "Country": "NL"
     }
   ]
 }
@@ -207,15 +205,15 @@ curl -X POST https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/oauth
 **Stap 3: API aanroep met token:**
 ```bash
 curl -X GET "https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/connectors/Profit_Address?skip=0&take=100" \
-  -H "Authorization: Bearer <ACCESS_TOKEN>" \
-  -H "Accept: application/json"
+  -H "Accept: application/json" \
+  -H "Authorization: Bearer <ACCESS_TOKEN>"
 ```
 
 **Response voorbeeld:**
 ```json
 {
   "skip": 0,
-  "take": 2,
+  "take": 100,
   "rows": [
     {
       "AddressId": 1,
@@ -225,9 +223,7 @@ curl -X GET "https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/conne
       "Number": 69,
       "ZipCode": "3811 HN",
       "Recidence": "Amersfoort",
-      "Country": "NL",
-      "CreateDate": "2012-11-22T09:49:49Z",
-      "ModifiedDate": "2015-01-26T16:57:43Z"
+      "Country": "NL"
     }
   ]
 }
@@ -238,18 +234,22 @@ Bovenstaande beschrijving voor beide flows geldt ook wanneer je gebruikmaakt van
 
 
 ### Token endpoint
-Productie: https://`<omgevingsnummer>`.rest.afas.online/ProfitRestServices/oauth/token
+Deze endpoints gelden zowel voor REST als voor SOAP.
 
-Accept: : https://`<omgevingsnummer>`.restaccept.afas.online/ProfitRestServices/oauth/token
+**Productie**: https://`<omgevingsnummer>`.rest.afas.online/ProfitRestServices/oauth/token
 
-Test: https://`<omgevingsnummer>`.resttest.afas.online/ProfitRestServices/oauth/token
+**Accept**: : https://`<omgevingsnummer>`.restaccept.afas.online/ProfitRestServices/oauth/token
+
+**Test**: https://`<omgevingsnummer>`.resttest.afas.online/ProfitRestServices/oauth/token
 
 ### Authorization endpoint
-Productie: https://`<omgevingsnummer>`.rest.afas.online/ProfitRestServices/oauth/authorize
+Deze endpoints gelden zowel voor REST als voor SOAP.
 
-Accept: https://`<omgevingsnummer>`.restaccept.afas.online/ProfitRestServices/oauth/authorize
+**Productie**: https://`<omgevingsnummer>`.rest.afas.online/ProfitRestServices/oauth/authorize
 
-Test: https://`<omgevingsnummer>`.resttest.afas.online/ProfitRestServices/oauth/authorize
+**Accept**: https://`<omgevingsnummer>`.restaccept.afas.online/ProfitRestServices/oauth/authorize
+
+**Test**: https://`<omgevingsnummer>`.resttest.afas.online/ProfitRestServices/oauth/authorize
 
 
 

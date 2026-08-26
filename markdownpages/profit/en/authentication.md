@@ -95,36 +95,36 @@ To access the API, follow these steps:
 #### cURL examples
 
 **Retrieve token:**
-\`\`\`bash
+```bash
 curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/token \
   -H "Content-Type: application/x-www-form-urlencoded" \
   -d "grant_type=client_credentials" \
   -d "client_id=<CLIENT_ID>" \
   -d "client_secret=<CLIENT_SECRET>"
-\`\`\`
+```
 
 **Response example:**
-\`\`\`json
+```json
 {
   "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...",
   "token_type": "Bearer",
   "expires_in": 3600,
   "refresh_token": null
 }
-\`\`\`
+```
 
 **API call with token:**
-\`\`\`bash
+```bash
 curl -X GET "https://<environmentnumber>.rest.afas.online/ProfitRestServices/connectors/Profit_Address?skip=0&take=100" \
-  -H "Authorization: Bearer <ACCESS_TOKEN>" \
-  -H "Accept: application/json"
-\`\`\`
+  -H "Accept: application/json" \
+  -H "Authorization: Bearer <ACCESS_TOKEN>"
+```
 
 **Response example:**
-\`\`\`json
+```json
 {
   "skip": 0,
-  "take": 2,
+  "take": 100,
   "rows": [
     {
       "AddressId": 1,
@@ -134,13 +134,11 @@ curl -X GET "https://<environmentnumber>.rest.afas.online/ProfitRestServices/con
       "Number": 69,
       "ZipCode": "3811 HN",
       "Recidence": "Amersfoort",
-      "Country": "NL",
-      "CreateDate": "2012-11-22T09:49:49Z",
-      "ModifiedDate": "2015-01-26T16:57:43Z"
+      "Country": "NL"
     }
   ]
 }
-\`\`\`
+```
 
 ### Authorization code flow with PKCE
 
@@ -179,12 +177,12 @@ To access the API via the Authorization Code Flow, follow these steps:
 #### cURL examples
 
 **Step 1: Redirect user to authorization endpoint:**
-\`\`\`bash
+```bash
 curl -X GET "https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/authorize?response_type=code&client_id=<CLIENT_ID>&redirect_uri=<REDIRECT_URI>&scope=<SCOPE>&state=<STATE>&code_challenge=<CODE_CHALLENGE>&code_challenge_method=S256"
-\`\`\`
+```
 
 **Step 2: Retrieve token with authorization code:**
-\`\`\`bash
+```bash
 curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/token \
   -H "Content-Type: application/x-www-form-urlencoded" \
   -d "grant_type=authorization_code" \
@@ -193,30 +191,30 @@ curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oau
   -d "client_id=<CLIENT_ID>" \
   -d "client_secret=<CLIENT_SECRET>" \
   -d "code_verifier=<CODE_VERIFIER>"
-\`\`\`
+```
 
 **Response example:**
-\`\`\`json
+```json
 {
   "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...",
   "token_type": "Bearer",
   "expires_in": 3600,
   "refresh_token": "50c90d85-a7aa-4e8a-a9b8-..."
 }
-\`\`\`
+```
 
 **Step 3: API call with token:**
-\`\`\`bash
+```bash
 curl -X GET "https://<environmentnumber>.rest.afas.online/ProfitRestServices/connectors/Profit_Address?skip=0&take=100" \
-  -H "Authorization: Bearer <ACCESS_TOKEN>" \
-  -H "Accept: application/json"
-\`\`\`
+  -H "Accept: application/json" \
+  -H "Authorization: Bearer <ACCESS_TOKEN>"
+```
 
 **Response example:**
-\`\`\`json
+```json
 {
   "skip": 0,
-  "take": 2,
+  "take": 100,
   "rows": [
     {
       "AddressId": 1,
@@ -226,30 +224,32 @@ curl -X GET "https://<environmentnumber>.rest.afas.online/ProfitRestServices/con
       "Number": 69,
       "ZipCode": "3811 HN",
       "Recidence": "Amersfoort",
-      "Country": "NL",
-      "CreateDate": "2012-11-22T09:49:49Z",
-      "ModifiedDate": "2015-01-26T16:57:43Z"
+      "Country": "NL"
     }
   ]
 }
-\`\`\`
+```
 
 ### OAuth & SOAP API
 The description above for both flows also applies when using the SOAP API. It is important to include the Bearer token in the header and not in the body.
 
 ### Token endpoint
-Production: https://`<omgevingsnummer>`.rest.afas.online/ProfitRestServices/oauth/token
+These endpoints apply to both REST and SOAP.
 
-Accept: : https://`<omgevingsnummer>`.restaccept.afas.online/ProfitRestServices/oauth/token
+**Production**: https://`<environmentnumber>`.rest.afas.online/ProfitRestServices/oauth/token
 
-Test: https://`<omgevingsnummer>`.resttest.afas.online/ProfitRestServices/oauth/token
+**Accept**: https://`<environmentnumber>`.restaccept.afas.online/ProfitRestServices/oauth/token
+
+**Test**: https://`<environmentnumber>`.resttest.afas.online/ProfitRestServices/oauth/token
 
 ### Authorization endpoint
-Production: https://`<omgevingsnummer>`.rest.afas.online/ProfitRestServices/oauth/authorize
+These endpoints apply to both REST and SOAP.
 
-Accept: https://`<omgevingsnummer>`.restaccept.afas.online/ProfitRestServices/oauth/authorize
+**Production**: https://`<environmentnumber>`.rest.afas.online/ProfitRestServices/oauth/authorize
 
-Test: https://`<omgevingsnummer>`.resttest.afas.online/ProfitRestServices/oauth/authorize
+**Accept**: https://`<environmentnumber>`.restaccept.afas.online/ProfitRestServices/oauth/authorize
+
+**Test**: https://`<environmentnumber>`.resttest.afas.online/ProfitRestServices/oauth/authorize
 
 ### Read more
 
