@@ -238,7 +238,7 @@ Deze endpoints gelden zowel voor REST als voor SOAP.
 
 **Productie**: https://`<omgevingsnummer>`.rest.afas.online/ProfitRestServices/oauth/token
 
-**Accept**: : https://`<omgevingsnummer>`.restaccept.afas.online/ProfitRestServices/oauth/token
+**Accept**: https://`<omgevingsnummer>`.restaccept.afas.online/ProfitRestServices/oauth/token
 
 **Test**: https://`<omgevingsnummer>`.resttest.afas.online/ProfitRestServices/oauth/token
 
