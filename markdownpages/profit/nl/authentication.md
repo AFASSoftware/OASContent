@@ -149,9 +149,9 @@ Om toegang te krijgen tot de API via de Authorization Code Flow, volg je de volg
         2. 	client_id: `<CLIENT_ID>`
         3.	redirect_uri: `<REDIRECT_URI>`
         4.	scope: `<SCOPE>`
-        5.	state: `<STATE>`
-        6.  code_challenge: `<CODE_CHALLENGE>`
-        7.  code_challenge_method: `S256`
+        5.	state: `<optionele unieke waarde ter bescherming tegen CSRF>`
+        6.  code_challenge: `<vul codeChallenge in>`
+        7.  code_challenge_method: `<vul codeChallenge methode in>`
     2.	De gebruiker logt in en geeft toestemming. Na toestemming wordt de gebruiker teruggeleid naar de opgegeven redirect_uri met een autorisatiecode.
 2.	Wissel de Autorisatiecode in voor een Access Token
     1.	Roep het [token endpoint](#token-endpoint) (POST) aan met de volgende informatie in de body:
@@ -160,7 +160,7 @@ Om toegang te krijgen tot de API via de Authorization Code Flow, volg je de volg
         3.	redirect_uri: `<REDIRECT_URI>`
         4.	client_id: `<CLIENT_ID>`
         5.	client_secret: `<CLIENT_SECRET>`
-        6.  code_verifier: `<CODE_VERIFIER>`
+        6.  code_verifier: `<vul code verifier in>`
 3.	In de response van deze aanroep vind je de volgende velden:
     1.	access_token: de access token die je in de Authorization header moet toevoegen.
     2.	refresh_token: een token dat kan worden gebruikt om een nieuw access token te verkrijgen.
