@@ -81,8 +81,8 @@ Om toegang te krijgen tot de API, volg je de volgende stappen:
 1.	Access token ophalen
     1. Roep het [token endpoint](#token-endpoint) (POST) aan met de volgende informatie in de body:
         1.	grant_type: client_credentials
-        2. 	client_id: `<vul client id in>`
-        3.	client_secret: `<vul client secret in>`
+        2. 	client_id: `<CLIENT_ID>`
+        3.	client_secret: `<CLIENT_SECRET>`
     2.	In de response van deze aanroep vind je de volgende velden:
         1. 	access_token: de access token die je in de Authorization header moet toevoegen.
         2.  refresh_token: is bij de client credentials flow altijd "null".
@@ -91,6 +91,49 @@ Om toegang te krijgen tot de API, volg je de volgende stappen:
     3.	Access token gebruiken
         1.	Kopieer de access token, zet er 'Bearer' voor, en voeg hem toe in je Authorization header.
 
+#### cURL voorbeelden
+
+**Token ophalen:**
+```bash
+curl -X POST https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/oauth/token \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "grant_type=client_credentials" \
+  -d "client_id=<CLIENT_ID>" \
+  -d "client_secret=<CLIENT_SECRET>"
+```
+
+**Response voorbeeld:**
+```json
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "token_type": "Bearer",
+  "expires_in": 3600,
+  "refresh_token": null
+}
+```
+
+**API aanroep met token:**
+```bash
+curl -X GET https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/REST/V1/Employees \
+  -H "Authorization: Bearer <ACCESS_TOKEN>"
+```
+
+**Response voorbeeld:**
+```json
+{
+  "skip": 0,
+  "take": 10,
+  "count": 150,
+  "rows": [
+    {
+      "ID": 1,
+      "Firstname": "Jan",
+      "Lastname": "Jansen",
+      "Email": "jan.jansen@example.com"
+    }
+  ]
+}
+```
 
 ### Authorization code flow with PKCE
 
@@ -103,21 +146,21 @@ Om toegang te krijgen tot de API via de Authorization Code Flow, volg je de volg
 1.	Verkrijg een Autorisatiecode
     1.	Leid de gebruiker naar het [autorisatie endpoint](#authorization-endpoint) (GET) met de volgende parameters:
         1.	response_type: code
-        2. 	client_id: `<vul client id in>`
-        3.	redirect_uri: `<vul redirect URI in>`
-        4.	scope: `<vul gewenste scopes in>`
-        5.	state: `<optionele unieke waarde ter bescherming tegen CSRF>`
-        6.  code_challenge: `<vul codeChallenge in>`
-        7.  code_challenge_method: `<vul codeChallenge methode in>`
+        2. 	client_id: `<CLIENT_ID>`
+        3.	redirect_uri: `<REDIRECT_URI>`
+        4.	scope: `<SCOPE>`
+        5.	state: `<STATE>`
+        6.  code_challenge: `<CODE_CHALLENGE>`
+        7.  code_challenge_method: `S256`
     2.	De gebruiker logt in en geeft toestemming. Na toestemming wordt de gebruiker teruggeleid naar de opgegeven redirect_uri met een autorisatiecode.
 2.	Wissel de Autorisatiecode in voor een Access Token
     1.	Roep het [token endpoint](#token-endpoint) (POST) aan met de volgende informatie in de body:
         1.	grant_type: authorization_code
-        2.	code: `<vervang met verkregen autorisatiecode>`
-        3.	redirect_uri: `<vul redirect URI in>`
-        4.	client_id: `<vul client id in>`
-        5.	client_secret: `<vul client secret in>`
-        6.  code_verifier: `<vul code verifier in>`
+        2.	code: `<AUTHORIZATION_CODE>`
+        3.	redirect_uri: `<REDIRECT_URI>`
+        4.	client_id: `<CLIENT_ID>`
+        5.	client_secret: `<CLIENT_SECRET>`
+        6.  code_verifier: `<CODE_VERIFIER>`
 3.	In de response van deze aanroep vind je de volgende velden:
     1.	access_token: de access token die je in de Authorization header moet toevoegen.
     2.	refresh_token: een token dat kan worden gebruikt om een nieuw access token te verkrijgen.
@@ -125,6 +168,58 @@ Om toegang te krijgen tot de API via de Authorization Code Flow, volg je de volg
     4.	expires_in: geldigheid van het access token in seconden.
 3.	Access Token Gebruiken
     1.	Kopieer de access token, zet er 'Bearer' voor, en voeg hem toe in je Authorization header.
+
+#### cURL voorbeelden
+
+**Stap 1: Gebruiker redirecten naar autorisatie endpoint:**
+```bash
+curl -X GET "https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/oauth/authorize?response_type=code&client_id=<CLIENT_ID>&redirect_uri=<REDIRECT_URI>&scope=<SCOPE>&state=<STATE>&code_challenge=<CODE_CHALLENGE>&code_challenge_method=S256"
+```
+
+**Stap 2: Token ophalen met autorisatiecode:**
+```bash
+curl -X POST https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/oauth/token \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "grant_type=authorization_code" \
+  -d "code=<AUTHORIZATION_CODE>" \
+  -d "redirect_uri=<REDIRECT_URI>" \
+  -d "client_id=<CLIENT_ID>" \
+  -d "client_secret=<CLIENT_SECRET>" \
+  -d "code_verifier=<CODE_VERIFIER>"
+```
+
+**Response voorbeeld:**
+```json
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "token_type": "Bearer",
+  "expires_in": 3600,
+  "refresh_token": "50c90d85-a7aa-4e8a-a9b8-..."
+}
+```
+
+**Stap 3: API aanroep met token:**
+```bash
+curl -X GET https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/REST/V1/Employees \
+  -H "Authorization: Bearer <ACCESS_TOKEN>"
+```
+
+**Response voorbeeld:**
+```json
+{
+  "skip": 0,
+  "take": 10,
+  "count": 150,
+  "rows": [
+    {
+      "ID": 1,
+      "Firstname": "Jan",
+      "Lastname": "Jansen",
+      "Email": "jan.jansen@example.com"
+    }
+  ]
+}
+```
 
 ### OAuth & SOAP API
 Bovenstaande beschrijving voor beide flows geldt ook wanneer je gebruikmaakt van de SOAP API. Het is belangrijk dat je het Bearer-token meegeeft in de header en niet in de body.
