@@ -82,8 +82,8 @@ To access the API, follow these steps:
 1. Obtain an access token
     1. Call the [token endpoint](#token-endpoint) (POST) with the following information in the body:
         1. grant_type: client_credentials
-        2. client_id: `<fill in client id>`
-        3. client_secret: `<fill in client secret>`
+        2. client_id: `<CLIENT_ID>`
+        3. client_secret: `<CLIENT_SECRET>`
     2. In the response of this call you will find the following fields:
         1. access_token: the access token you must add to the Authorization header.
         2. refresh_token: for the client credentials flow this is always "null".
@@ -92,6 +92,49 @@ To access the API, follow these steps:
     3. Use the access token
         1. Copy the access token, prefix it with 'Bearer', and add it to your Authorization header.
 
+#### cURL examples
+
+**Retrieve token:**
+\`\`\`bash
+curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/token \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "grant_type=client_credentials" \
+  -d "client_id=<CLIENT_ID>" \
+  -d "client_secret=<CLIENT_SECRET>"
+\`\`\`
+
+**Response example:**
+\`\`\`json
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "token_type": "Bearer",
+  "expires_in": 3600,
+  "refresh_token": null
+}
+\`\`\`
+
+**API call with token:**
+\`\`\`bash
+curl -X GET https://<environmentnumber>.rest.afas.online/ProfitRestServices/REST/V1/Employees \
+  -H "Authorization: Bearer <ACCESS_TOKEN>"
+\`\`\`
+
+**Response example:**
+\`\`\`json
+{
+  "skip": 0,
+  "take": 10,
+  "count": 150,
+  "rows": [
+    {
+      "ID": 1,
+      "Firstname": "John",
+      "Lastname": "Doe",
+      "Email": "john.doe@example.com"
+    }
+  ]
+}
+\`\`\`
 
 ### Authorization code flow with PKCE
 
@@ -104,9 +147,9 @@ To access the API via the Authorization Code Flow, follow these steps:
 1. Obtain an authorization code
     1. Redirect the user to the [authorization endpoint](#authorization-endpoint) (GET) with the following parameters:
         1. response_type: code
-        2. client_id: `<fill in client id>`
-        3. redirect_uri: `<fill in redirect URI>`
-        4. scope: `<fill in desired scopes>`
+        2. client_id: `<CLIENT_ID>`
+        3. redirect_uri: `<REDIRECT_URI>`
+        4. scope: `<SCOPE>`
         5. state: `<optional unique value to protect against CSRF>`
         6. code_challenge: `<fill in codeChallenge>`
         7. code_challenge_method: `<fill in codeChallenge method>`
@@ -114,10 +157,10 @@ To access the API via the Authorization Code Flow, follow these steps:
 2. Exchange the authorization code for an access token
     1. Call the [token endpoint](#token-endpoint) (POST) with the following information in the body:
         1. grant_type: authorization_code
-        2. code: `<replace with obtained authorization code>`
-        3. redirect_uri: `<fill in redirect URI>`
-        4. client_id: `<fill in client id>`
-        5. client_secret: `<fill in client secret>`
+        2. code: `<AUTHORIZATION_CODE>`
+        3. redirect_uri: `<REDIRECT_URI>`
+        4. client_id: `<CLIENT_ID>`
+        5. client_secret: `<CLIENT_SECRET>`
         6. code_verifier: `<fill in code verifier>`
 3. In the response of this call you will find the following fields:
     1. access_token: the access token you must add to the Authorization header.
@@ -126,6 +169,58 @@ To access the API via the Authorization Code Flow, follow these steps:
     4. expires_in: validity of the access token in seconds.
 3. Use the access token
     1. Copy the access token, prefix it with 'Bearer', and add it to your Authorization header.
+
+#### cURL examples
+
+**Step 1: Redirect user to authorization endpoint:**
+\`\`\`bash
+curl -X GET "https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/authorize?response_type=code&client_id=<CLIENT_ID>&redirect_uri=<REDIRECT_URI>&scope=<SCOPE>&state=<STATE>&code_challenge=<CODE_CHALLENGE>&code_challenge_method=S256"
+\`\`\`
+
+**Step 2: Retrieve token with authorization code:**
+\`\`\`bash
+curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/token \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "grant_type=authorization_code" \
+  -d "code=<AUTHORIZATION_CODE>" \
+  -d "redirect_uri=<REDIRECT_URI>" \
+  -d "client_id=<CLIENT_ID>" \
+  -d "client_secret=<CLIENT_SECRET>" \
+  -d "code_verifier=<CODE_VERIFIER>"
+\`\`\`
+
+**Response example:**
+\`\`\`json
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "token_type": "Bearer",
+  "expires_in": 3600,
+  "refresh_token": "50c90d85-a7aa-4e8a-a9b8-..."
+}
+\`\`\`
+
+**Step 3: API call with token:**
+\`\`\`bash
+curl -X GET https://<environmentnumber>.rest.afas.online/ProfitRestServices/REST/V1/Employees \
+  -H "Authorization: Bearer <ACCESS_TOKEN>"
+\`\`\`
+
+**Response example:**
+\`\`\`json
+{
+  "skip": 0,
+  "take": 10,
+  "count": 150,
+  "rows": [
+    {
+      "ID": 1,
+      "Firstname": "John",
+      "Lastname": "Doe",
+      "Email": "john.doe@example.com"
+    }
+  ]
+}
+\`\`\`
 
 ### OAuth & SOAP API
 The description above for both flows also applies when using the SOAP API. It is important to include the Bearer token in the header and not in the body.
