@@ -177,7 +177,8 @@ Om toegang te krijgen tot de API via de Authorization Code Flow, volg je de volg
 
 **Stap 1: Gebruiker redirecten naar autorisatie endpoint:**
 ```bash
-curl -X GET "https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/oauth/authorize?response_type=code&client_id=<CLIENT_ID>&redirect_uri=<REDIRECT_URI>&scope=<SCOPE>&state=<STATE>&code_challenge=<CODE_CHALLENGE>&code_challenge_method=S256"
+# Open deze URL in een browser:
+https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/oauth/authorize?response_type=code&client_id=<CLIENT_ID>&redirect_uri=<REDIRECT_URI>&scope=<SCOPE>&state=<STATE>&code_challenge=<CODE_CHALLENGE>&code_challenge_method=S256
 ```
 
 **Stap 2: Token ophalen met autorisatiecode:**
