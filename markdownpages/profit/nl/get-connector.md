@@ -192,8 +192,8 @@ headers.append("Authorization", "AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb04+P
 
 > Een goede request wordt binnen 1000ms afgehandeld
 
-Wanneer je teveel data opvraagt, krijg je een http 500 response met error message: "Er is een onverwachte fout opgetreden". In het omgevingslogboek wordt de foutmelding gespecificeerd als "Insufficient memory to continue the execution of the program." of "Cannot allocate a buffer of size 2147487574.". Ook als er geen foutmelding komt, leg je met het opvragen van teveel data een grote druk op de AFAS-servers. Dit kan leiden tot langere wachttijden en problemen bij andere koppelingen.
-Zorg daarom dat je de `skip` en `take` parameters op een robuuste manier implementeert. Hiermee voorkom je dat je te veel data opvraagt en vermijd je teveel requests.
+Wanneer je te veel data opvraagt, krijg je een http 500 response met error message: "Er is een onverwachte fout opgetreden." In het omgevingslogboek wordt de foutmelding gespecificeerd als "Insufficient memory to continue the execution of the program." of "Cannot allocate a buffer of size 2147487574.". Ook als er geen foutmelding komt, leg je met het opvragen van te veel data een grote druk op de AFAS-servers. Dit kan leiden tot langere wachttijden en problemen bij andere koppelingen.
+Zorg daarom dat je de `skip` en `take` parameters op een robuuste manier implementeert. Hiermee voorkom je dat je te veel data opvraagt en vermijd je te veel requests.
 
 > **Let op:**  Het is verplicht de op te halen records te sorteren met de Query parameter `orderbyfieldids` in de request als je `skip` en `take` gebruikt. Je kunt er anders namelijk niet vanuit gaan dat de data bij elke call op dezelfde manier gesorteerd wordt. Dat kan tot gevolg hebben dat er regels missen of juist dubbel voorkomen. Zie verderop voor meer informatie over sorteren.
 
