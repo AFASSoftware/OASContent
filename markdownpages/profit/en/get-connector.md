@@ -191,8 +191,8 @@ headers.append("Authorization", "AfasToken token_value_here");
 
 > A good request will be handled within 1000ms
 
-When requesting too much data, you will receive an HTTP 500 response with the error message: "An unexpected error has occurred". In the environment log, the error message is specified as "Insufficient memory to continue the execution of the program." or "Cannot allocate a buffer of size 2147487574.". Even if no error occurs, requesting too much data puts a heavy load on the AFAS servers. This can lead to longer wait times and issues for other connections.
-Therefore, make sure to implement the `Skip` and `Take` parameters in a robust way. By doing this, you prevent requesting too much data and avoid excessive requests.
+When requesting too much data, you will receive an HTTP 500 response with the error message: "An unexpected error has occurred." In the environment log, the error message is specified as "Insufficient memory to continue the execution of the program." or "Cannot allocate a buffer of size 2147487574.". Even if no error occurs, requesting too much data puts a heavy load on the AFAS servers. This can lead to longer wait times and issues for other connections.
+Therefore, make sure to implement the `skip` and `take` parameters in a robust way. By doing this, you prevent requesting too much data and avoid excessive requests.
 
 > **Note:** It is mandatory to sort the retrieved records with the Query parameter `orderbyfieldids` in the request when using `skip` and `take`. By omitting this, the order of the records between calls is not guaranteed. You may end up with records missing and other records being received twice. See below for more information on sorting data.
 
