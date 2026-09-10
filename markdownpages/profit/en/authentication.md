@@ -1,6 +1,6 @@
 ---
 author: CLN
-date: 2026-08-26
+date: 2026-09-10
 tags: GetConnector, AppConnector, Integration, Configuration, Authentication, Authorization
 title: Authentication
 ---
@@ -153,10 +153,9 @@ To access the API via the Authorization Code Flow, follow these steps:
         1. response_type: code
         2. client_id: `<CLIENT_ID>`
         3. redirect_uri: `<REDIRECT_URI>`
-        4. scope: `<SCOPE>`
-        5. state: `<optional unique value to protect against CSRF>`
-        6. code_challenge: `<fill in codeChallenge>`
-        7. code_challenge_method: `<fill in codeChallenge method>`
+        4. state: `<optional unique value to protect against CSRF>`
+        5. code_challenge: `<fill in codeChallenge>`
+        6. code_challenge_method: `<fill in codeChallenge method>`
     2. The user logs in and grants permission. After granting permission the user is redirected back to the provided redirect_uri with an authorization code.
 2. Exchange the authorization code for an access token
     1. Call the [token endpoint](#token-endpoint) (POST) with the following information in the body:
@@ -171,15 +170,22 @@ To access the API via the Authorization Code Flow, follow these steps:
     2. refresh_token: a token that can be used to obtain a new access token.
     3. token_type: Bearer
     4. expires_in: validity of the access token in seconds.
-3. Use the access token
+4. Use the access token
     1. Copy the access token, prefix it with 'Bearer', and add it to your Authorization header.
+5. Obtain a new access token using the refresh token
+    1. Call the [token endpoint](#token-endpoint) (POST) with the following information in the body:
+        1. grant_type: refresh_token
+        2. refresh_token: `<REFRESH_TOKEN>`
+        3. client_id: `<CLIENT_ID>`
+        4. client_secret: `<CLIENT_SECRET>`
+    2. In the response of this call you will find the same fields as in step 3.
 
 #### cURL examples
 
 **Step 1: Redirect user to authorization endpoint:**
 ```bash
 # Open this URL in a browser:
-https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/authorize?response_type=code&client_id=<CLIENT_ID>&redirect_uri=<REDIRECT_URI>&scope=<SCOPE>&state=<STATE>&code_challenge=<CODE_CHALLENGE>&code_challenge_method=S256
+https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/authorize?response_type=code&client_id=<CLIENT_ID>&redirect_uri=<REDIRECT_URI>&state=<STATE>&code_challenge=<CODE_CHALLENGE>&code_challenge_method=S256
 ```
 
 **Step 2: Retrieve token with authorization code:**
