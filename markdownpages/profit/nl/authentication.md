@@ -152,10 +152,9 @@ Om toegang te krijgen tot de API via de Authorization Code Flow, volg je de volg
         1.	response_type: code
         2. 	client_id: `<CLIENT_ID>`
         3.	redirect_uri: `<REDIRECT_URI>`
-        4.	scope: `<SCOPE>`
-        5.	state: `<optionele unieke waarde ter bescherming tegen CSRF>`
-        6.  code_challenge: `<vul codeChallenge in>`
-        7.  code_challenge_method: `<vul codeChallenge methode in>`
+        4.	state: `<optionele unieke waarde ter bescherming tegen CSRF>`
+        5.  code_challenge: `<vul codeChallenge in>`
+        6.  code_challenge_method: `<vul codeChallenge methode in>`
     2.	De gebruiker logt in en geeft toestemming. Na toestemming wordt de gebruiker teruggeleid naar de opgegeven redirect_uri met een autorisatiecode.
 2.	Wissel de Autorisatiecode in voor een Access Token
     1.	Roep het [token endpoint](#token-endpoint) (POST) aan met de volgende informatie in de body:
@@ -170,15 +169,22 @@ Om toegang te krijgen tot de API via de Authorization Code Flow, volg je de volg
     2.	refresh_token: een token dat kan worden gebruikt om een nieuw access token te verkrijgen.
     3.	token_type: Bearer
     4.	expires_in: geldigheid van het access token in seconden.
-3.	Access Token Gebruiken
+4.	Access Token gebruiken
     1.	Kopieer de access token, zet er 'Bearer' voor, en voeg hem toe in je Authorization header.
+5.  Een nieuw access token en refresh token ophalen
+    1. Roep het [token endpoint](#token-endpoint) (POST) aan met de volgende informatie in de body:
+        1. grant_type: refresh_token
+        2. refresh_token: `<REFRESH_TOKEN>`
+        3. client_id: `<CLIENT_ID>`
+        4. client_secret: `<CLIENT_SECRET>`
+    2. In de response van deze aanroep vind je dezelfde velden als bij stap 3.
 
 #### cURL voorbeelden
 
 **Stap 1: Gebruiker redirecten naar autorisatie endpoint:**
 ```bash
 # Open deze URL in een browser:
-https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/oauth/authorize?response_type=code&client_id=<CLIENT_ID>&redirect_uri=<REDIRECT_URI>&scope=<SCOPE>&state=<STATE>&code_challenge=<CODE_CHALLENGE>&code_challenge_method=S256
+https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/oauth/authorize?response_type=code&client_id=<CLIENT_ID>&redirect_uri=<REDIRECT_URI>&state=<STATE>&code_challenge=<CODE_CHALLENGE>&code_challenge_method=S256
 ```
 
 **Stap 2: Token ophalen met autorisatiecode:**
