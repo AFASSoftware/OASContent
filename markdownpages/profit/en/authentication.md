@@ -168,7 +168,7 @@ To access the API via the Authorization Code Flow, follow these steps:
 3. In the response of this call you will find the following fields:
     1. access_token: the access token you must add to the Authorization header.
     2. refresh_token: a token that can be used to obtain a new access token.
-    3. token_type: Bearer
+    3. token_type: Bearer<br>    4. expires_in: validity of the access token in seconds.
     4. expires_in: validity of the access token in seconds.
 4. Use the access token
     1. Copy the access token, prefix it with 'Bearer', and add it to your Authorization header.
