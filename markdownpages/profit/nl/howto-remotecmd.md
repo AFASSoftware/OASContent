@@ -39,7 +39,7 @@ Verdere uitleg over de verschillende onderdelen van de opdrachtregel vind je [in
 
 ### Importbestand
 
-De import ondersteunt verschillende soorten bestanden, zoals CSV en fixed-width bestanden. Het importbestand wordt aangeleverd als base-64 gecodeerd bestand in het `<attachementArchive>`-element.
+De import ondersteunt verschillende soorten bestanden, zoals CSV en fixed-width bestanden. Het importbestand wordt aangeleverd als een base64-gecodeerde ZIP in het `<attachementArchive>`-element.
 
 ### Token
 
@@ -126,7 +126,7 @@ Als de import nog niet is opgepakt of nog niet is voltooid, is het element `<Get
 
 #### Import voltooid
 
-Als de import is voltooid, bevat het element `<GetStateResult>` het bestand met het importlog.
+Als de import is voltooid, bevat het element `<GetStateResult>` een base64-gecodeerde ZIP met het importlog.
 
 > Het importlog wordt slechts één keer beschikbaar gesteld. 
 

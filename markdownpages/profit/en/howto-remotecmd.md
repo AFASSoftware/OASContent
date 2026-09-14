@@ -39,7 +39,7 @@ For more information about the different parts of the command line, see [the Hel
 
 ### Import file
 
-The import supports different types of files, such as CSV and fixed-width files. Provide the import file as a base64-encoded file in the `<attachementArchive>` element.
+The import supports different types of files, such as CSV and fixed-width files. The import file is provided as a base64-encoded ZIP in the `<attachementArchive>` element.
 
 ### Token
 
@@ -126,9 +126,9 @@ If the import has not been picked up or completed yet, the `<GetStateResult>` el
 
 #### Import completed
 
-When the import is completed, the `<GetStateResult>` element contains the import log file.
+When the import is completed, the `<GetStateResult>` element contains a base64-encoded ZIP with the import log.
 
-> The import log is only made available once.
+> The import log is only available once.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
