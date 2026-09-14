@@ -132,6 +132,15 @@
                   "estimated_time": 30
               },
               {
+                  "name": "AFAS Remote via the API",
+                  "path": "en/howto-remotecmd.md",
+                  "subtitle": "Execute imports through AFAS Remote",
+                  "tags": ["api", "remote", "import"],
+                  "featured": false,
+                  "difficulty": "Advanced",
+                  "estimated_time": 20
+              },
+              {
                   "name": "Flex Customer agreement",
                   "path": "en/howto-flex.md",
                   "subtitle": "Set up flexible customer agreements",
@@ -186,6 +195,15 @@
                   "featured": false,
                   "difficulty": "Advanced",
                   "estimated_time": 30
+              },
+              {
+                  "name": "AFAS Remote via de API",
+                  "path": "nl/howto-remotecmd.md",
+                  "subtitle": "Imports uitvoeren via AFAS Remote",
+                  "tags": ["api", "remote", "import"],
+                  "featured": false,
+                  "difficulty": "Advanced",
+                  "estimated_time": 20
               },
               {
                   "name": "ATS integratie",
