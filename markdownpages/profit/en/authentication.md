@@ -1,6 +1,6 @@
 ---
 author: CLN
-date: 2026-09-10
+date: 2026-09-21
 tags: GetConnector, AppConnector, Integration, Configuration, Authentication, Authorization
 title: Authentication
 ---
@@ -107,9 +107,9 @@ curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oau
 ```json
 {
   "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "refresh_token": null,
   "token_type": "Bearer",
-  "expires_in": 3600,
-  "refresh_token": null
+  "expires_in": 3600
 }
 ```
 
@@ -117,7 +117,7 @@ curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oau
 ```bash
 curl -X GET "https://<environmentnumber>.rest.afas.online/ProfitRestServices/connectors/Profit_Address?skip=0&take=100" \
   -H "Accept: application/json" \
-  -H "Authorization: Bearer <ACCESS_TOKEN>"
+  -H "Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..."
 ```
 
 **Response example:**
@@ -143,6 +143,8 @@ curl -X GET "https://<environmentnumber>.rest.afas.online/ProfitRestServices/con
 ### Authorization code flow with PKCE
 
 The Authorization Code Flow with PKCE is ideal for web applications that need to obtain access to resources on behalf of a user. The process starts with user authentication and authorization, where the user logs in and grants permission. An authorization code is then issued, which can be exchanged for an access token. This flow provides a secure way to access data from external services because it requires the user's involvement before access is granted.
+
+> The redirect_uri must match one of the redirect URLs registered in the App Connector. To test on AFAS Connect, you must register https://connect.afas.nl/oauth/callback. After creating an App Connector, you can register multiple redirect URLs.
 
 
 #### Steps to access the API
@@ -214,7 +216,7 @@ curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oau
 ```bash
 curl -X GET "https://<environmentnumber>.rest.afas.online/ProfitRestServices/connectors/Profit_Address?skip=0&take=100" \
   -H "Accept: application/json" \
-  -H "Authorization: Bearer <ACCESS_TOKEN>"
+  -H "Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..."
 ```
 
 **Response example:**
@@ -238,7 +240,7 @@ curl -X GET "https://<environmentnumber>.rest.afas.online/ProfitRestServices/con
 ```
 
 ### OAuth & SOAP API
-The description above for both flows also applies when using the SOAP API. It is important to include the Bearer token in the header and not in the body.
+The description above for both flows **also applies when using the SOAP API**. It is important to include the Bearer token in the header and not in the body.
 
 ### Token endpoint
 These endpoints apply to both REST and SOAP.

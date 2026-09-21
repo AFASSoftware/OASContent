@@ -1,6 +1,6 @@
 ---
 author: CLN
-date: 2026-09-10
+date: 2026-09-21
 tags: GetConnector, AppConnector, Integration, Configuration, Authentication, Authorization
 title: Authenticatie
 ---
@@ -106,9 +106,9 @@ curl -X POST https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/oauth
 ```json
 {
   "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "refresh_token": null,
   "token_type": "Bearer",
-  "expires_in": 3600,
-  "refresh_token": null
+  "expires_in": 3600
 }
 ```
 
@@ -116,7 +116,7 @@ curl -X POST https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/oauth
 ```bash
 curl -X GET "https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/connectors/Profit_Address?skip=0&take=100" \
   -H "Accept: application/json" \
-  -H "Authorization: Bearer <ACCESS_TOKEN>"
+  -H "Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..."
 ```
 
 **Response voorbeeld:**
@@ -142,6 +142,8 @@ curl -X GET "https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/conne
 ### Authorization code flow with PKCE
 
 De Authorization Code Flow with PKCE is ideaal voor webapplicaties die namens een gebruiker toegang tot resources moeten verkrijgen. Dit proces begint met gebruikersauthenticatie en autorisatie, waarbij de gebruiker inlogt en toestemming geeft. Vervolgens wordt een autorisatiecode verstrekt, die kan worden ingewisseld voor een access token. Deze flow biedt een veilige manier om toegang te krijgen tot gegevens bij externe services, doordat het de betrokkenheid van de gebruiker vereist voordat toegang wordt verleend.
+
+> De redirect_uri moet overeenkomen met één van de redirect url's die je hebt geregistreerd in de AppConnector. Om te testen op AFAS Connect moet je https://connect.afas.nl/oauth/callback hebben geregistreerd. Na aanmaken van een AppConnector kun je meerdere redirect url's registreren.
 
 
 #### Stappen voor Toegang tot de API
@@ -213,7 +215,7 @@ curl -X POST https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/oauth
 ```bash
 curl -X GET "https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/connectors/Profit_Address?skip=0&take=100" \
   -H "Accept: application/json" \
-  -H "Authorization: Bearer <ACCESS_TOKEN>"
+  -H "Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..."
 ```
 
 **Response voorbeeld:**
@@ -237,7 +239,7 @@ curl -X GET "https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/conne
 ```
 
 ### OAuth & SOAP API
-Bovenstaande beschrijving voor beide flows geldt ook wanneer je gebruikmaakt van de SOAP API. Het is belangrijk dat je het Bearer-token meegeeft in de header en niet in de body.
+Bovenstaande beschrijving voor beide flows geldt **ook wanneer je gebruikmaakt van de SOAP API**. Het is belangrijk dat je het Bearer-token meegeeft in de header en niet in de body.
 
 
 ### Token endpoint
