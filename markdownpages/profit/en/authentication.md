@@ -1,100 +1,307 @@
 ---
-author: CLN
-date: 2026-09-21
+author: TOKL
+date: 2026-09-23
 tags: GetConnector, AppConnector, Integration, Configuration, Authentication, Authorization
 title: Authentication
 ---
 
-## Introduction
+# Authentication for the Profit API
 
-The AFAS Profit REST API supports two authentication methods:
-1. Classic token (discontinued as of 31 August 2027)
-2. OAuth
-    1. Client credentials flow
-    2. Authorization code flow with PKCE
+To call the Profit API, an external application must authenticate itself. Profit supports two methods:
 
-Which method is used depends on the settings of the [App Connector](https://docs.afas.help/profit/en/concepts#app-connector) that is being used.
+| Method | Description | Status |
+|---|---|---|
+| **OAuth** | The application first requests a temporary *access token* and uses it for each call. Based on the open OAuth 2.1 standard. | **Recommended**, default for all new integrations |
+| **Classic token** | The application includes the same static key in every call. | **Being phased out**, stops working after 31 August 2027 |
 
-Use TLS 1.2 at minimum for all requests.
+> ⚠️ **Classic tokens are being phased out**
+>
+> - Existing classic tokens expire on **15 February 2027**.
+> - After **31 August 2027**, app connectors using a classic token will no longer work.
+>
+> For all new integrations, always use OAuth and migrate existing integrations as quickly as possible. See [Classic tokens](#classic-tokens-being-phased-out) for the complete timeline and migration guidance.
 
+This article explains OAuth in terms of:
 
-## Classic token
-**Please note! This functionality will be discontinued on 31 August 2027. Make sure to switch to OAuth before that date.**
+- which client types exist (**confidential** and **public**);
+- which flows can be used per client type;
+- how a confidential client authenticates itself (**client secret** or **private key JWT**);
+- how to protect a public client's access token using **DPoP**.
 
-This method uses static tokens which you include in the HTTP Authorization header of all your requests. A token is unique to a single environment and is linked to a user. The permissions of that user affect the rights of the token.
+> **Note:** part of the OAuth functionality is new in **Profit 9**. This is indicated throughout the text with the label **(Profit 9)**.
 
-The AFAS administrator creates the token, or if you have access to AFAS Profit you can create it yourself. Follow the steps in [Configure your own app connector at a glance (Classic token)](https://help.afas.nl/help/NL/SE/142488.htm).
+---
 
+## Contents
 
-### Format and conversion
+1. [Classic tokens (being phased out)](#classic-tokens-being-phased-out)
+2. [OAuth: overview](#oauth-overview)
+3. [Terminology: confidential client and public client](#terminology-confidential-client-and-public-client)
+4. [Endpoints](#endpoints)
+5. [Client authentication for a confidential client](#client-authentication-for-a-confidential-client)
+   1. [Method 1: client secret](#method-1-client-secret)
+   2. [Method 2: private key JWT (Profit 9)](#method-2-private-key-jwt-profit-9)
+6. [Confidential client: Client credentials flow](#confidential-client-client-credentials-flow)
+7. [Confidential client: Authorization code flow with PKCE](#confidential-client-authorization-code-flow-with-pkce)
+8. [Public client: Authorization code flow with PKCE and DPoP (Profit 9)](#public-client-authorization-code-flow-with-pkce-and-dpop-profit-9)
+9. [Calling a connector with the access token](#calling-a-connector-with-the-access-token)
+10. [Which combination should I choose?](#which-combination-should-i-choose)
+11. [Frequently asked questions](#frequently-asked-questions)
 
-A classic token as generated in AFAS Profit looks like this:
+---
 
-``` xml
+## Classic tokens (being phased out)
+
+> **Note:** authentication with a classic token is being phased out. For all new integrations, always use OAuth and migrate existing integrations as quickly as possible.
+
+With a classic token, the integrating application uses the same fixed key for every request. That key often remains valid for years. If the key leaks, an attacker can gain long-term access to the environment. With OAuth, only a short-lived access token is sent with each request. The fixed values, such as the client secret or private key, are used only when requesting a token.
+
+### Timeline
+
+| Date | What changes? |
+|---|---|
+| September 2026 | Existing classic tokens receive an expiration date of 15 February 2027. |
+| 15 February 2027 | Existing classic tokens expire. Integrations that depend on them stop working. You can still create new classic tokens with a limited validity period. |
+| 31 August 2027 | Final day on which app connectors with a classic token work. |
+
+### Migrating to OAuth (Profit 9)
+
+From Profit 9, you do not need to create a new app connector to migrate. In the existing app connector, change the authentication type from **Classic token** to **Hybrid** or **OAuth**, and then complete the OAuth setup. The existing configuration, such as linked connectors and IP restrictions, remains unchanged.
+
+- **Hybrid**: classic token and OAuth work alongside each other temporarily so the vendor can convert and test the integration without interruption.
+- **OAuth**: only OAuth still works; the classic token is no longer accepted.
+
+Discuss with your integration partner which OAuth method and client authentication you want to use. The options are listed below in [OAuth: overview](#oauth-overview). A decision aid can be found under [Which combination should I choose?](#which-combination-should-i-choose).
+
+### Using a classic token
+
+A classic token generated by Profit looks like this:
+
+```xml
 <token><version>1</version><data>949C1A9CD9AE4797950D94F55A7A4D056770472D4963CB9A8D3800BEE0CCE6A2</data></token>
 ```
 
-To use this token in requests you must convert it to Base64. After conversion the token looks for example like this:
+To use the token in a call, convert the full XML string to **Base64**:
 
-``` xml
-PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg==
+```text
+PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+OTQ5QzFBOUNEOUFFNDc5Nzk1MEQ5NEY1NUE3QTREMDU2NzcwNDcyRDQ5NjNDQjlBOEQzODAwQkVFMENDRTZBMjwvZGF0YT48L3Rva2VuPg==
 ```
 
+Use this value in the `Authorization` header with the `AfasToken` prefix:
 
-### Applying the token
-
-Use the token in the HTTP request header with an `AfasToken` prefix. Use the `Authorization` header with the token value:
-
-``` xml
-AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg==
+```bash
+curl -X GET "https://<environmentnumber>.rest.afas.online/ProfitRestServices/connectors/Profit_Address?skip=0&take=100" \
+  -H "Accept: application/json" \
+  -H "Authorization: AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb24+PGRhdGE+OTQ5QzFBOUNEOUFFNDc5Nzk1MEQ5NEY1NUE3QTREMDU2NzcwNDcyRDQ5NjNDQjlBOEQzODAwQkVFMENDRTZBMjwvZGF0YT48L3Rva2VuPg=="
 ```
-**Note**: Handle the token carefully as it provides access to sensitive data. Follow best practices when storing and managing the token and consider having your integration reviewed by an external security expert to address potential vulnerabilities.
 
+Handle a classic token with care: it grants access to sensitive data. After it is created, you can no longer view the token in Profit. If you lose it, delete it and create a new one.
 
-### Generating a token for a user via OTP
+---
 
-AFAS provides the option to use a One Time Password (OTP) to obtain a token. This is useful in scenarios where users must register themselves in an application.
+## OAuth: overview
 
+| Client type | Flow | Client authentication | Token protection | Available from |
+|---|---|---|---|---|
+| Confidential | Client credentials | Client secret | Bearer | Current version |
+| Confidential | Client credentials | Private key JWT | Bearer | **Profit 9** |
+| Confidential | Authorization code + PKCE | Client secret | Bearer | Current version |
+| Confidential | Authorization code + PKCE | Private key JWT | Bearer | **Profit 9** |
+| Public | Authorization code + PKCE | None (client has no secret) | **DPoP** | **Profit 9** |
 
-### Unauthorized
+From **Profit 9** onward, client secrets also have a **validity period** and must be renewed periodically. See [Client secret validity period](#client-secret-validity-period-profit-9).
 
-If the token is invalid or not applied correctly you will receive an HTTP 401 response. Request a new token or validate that you convert the token correctly. Use the tooling on [connect.afas.nl](https://connect.afas.nl) to validate that you are making the request correctly.
+---
 
+## Terminology: confidential client and public client
 
+OAuth distinguishes between two client types. The difference comes down to one question: **can the application keep a secret safe?**
 
-## OAuth
+### Confidential client
 
-Within the OAuth protocol we support two flow types:
-1. Client credentials flow
-2. Authorization code flow with PKCE
+A confidential client runs in an environment managed by you and not accessible to end users, for example a web server, a back-end service, or a scheduled task on a server. Such an application can safely store a secret (a client secret or private key).
 
+Because the application has a secret, Profit can verify, for each token request, **which application** is requesting the token. This is called **client authentication**.
 
-### Client credentials flow
+Examples:
+- an integration between Profit and a payroll package or webshop running on a server;
+- a web application with its own back-end that retrieves or updates Profit data on behalf of a user.
 
-The Client Credentials Flow is primarily used for server-to-server communication where there is no direct involvement of an end user. This flow is ideal for applications that need access to resources on their own behalf rather than on behalf of a user. It is suitable for situations where an application requires access to APIs to perform background tasks, such as syncing data or running batch jobs.
+### Public client (Profit 9)
 
-When an app connector uses the Client Credentials Flow, an 'OAuth client id' and an 'OAuth client secret' are created. Follow the steps in [Configure your own app connector at a glance (OAuth token)](https://help.afas.nl/help/NL/SE/120718.htm).
-The OAuth client secret is provided once during creation and cannot be retrieved afterwards.
+A public client runs on a user device or in an end-user environment. The code and configuration of the application are visible there, so a secret embedded in it is no longer a secret.
 
-#### Steps to access the API
+Examples:
+- a single-page application (SPA) that runs entirely in the browser;
+- a mobile app;
+- a desktop application or command-line tool installed on the user's computer.
 
-To access the API, follow these steps:
-1. Obtain an access token
-    1. Call the [token endpoint](#token-endpoint) (POST) with the following information in the body:
-        1. grant_type: client_credentials
-        2. client_id: `<CLIENT_ID>`
-        3. client_secret: `<CLIENT_SECRET>`
-    2. In the response of this call you will find the following fields:
-        1. access_token: the access token you must add to the Authorization header.
-        2. refresh_token: for the client credentials flow this is always "null".
-        3. token_type: Bearer
-        4. expires_in: validity of the access token in seconds.
-    3. Use the access token
-        1. Copy the access token, prefix it with 'Bearer', and add it to your Authorization header.
+A public client **has no client secret** and therefore performs no client authentication. Instead, three measures protect it:
 
-#### cURL examples
+- the user logs in to Profit themselves (Authorization code flow);
+- **PKCE** prevents an intercepted authorization code from being exchanged by someone else;
+- **DPoP** binds the access token to a key that only the application has, so a stolen token becomes unusable.
 
-**Retrieve token:**
+> **Rule of thumb:** in doubt? If a user can inspect or download the application code, it is a public client. Never place a client secret or private key in a browser application, mobile app, or desktop app.
+
+---
+
+## Endpoints
+
+| Environment | Endpoint | URL |
+|---|---|---|
+| Production | Authorize | `https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/authorize` |
+| Production | Token | `https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/token` |
+| Test | Authorize | `https://<environmentnumber>.resttest.afas.online/ProfitRestServices/oauth/authorize` |
+| Test | Token | `https://<environmentnumber>.resttest.afas.online/ProfitRestServices/oauth/token` |
+| Accept | Authorize | `https://<environmentnumber>.restaccept.afas.online/ProfitRestServices/oauth/authorize` |
+| Accept | Token | `https://<environmentnumber>.restaccept.afas.online/ProfitRestServices/oauth/token` |
+
+Replace `<environmentnumber>` with the number of the Profit environment, for example `12345`.
+
+---
+
+## Client authentication for a confidential client
+
+A confidential client proves, for each request to the token endpoint, who it is. Profit supports **two methods** for this. You choose one method per app connector.
+
+| | Client secret | Private key JWT (Profit 9) |
+|---|---|---|
+| What do you share with Profit? | A shared secret (the secret) | Only your **public** key |
+| What do you send when requesting a token? | The secret itself | A short-lived, signed JWT |
+| Risk if intercepted | The secret can be reused until it expires or is revoked | The JWT is short-lived and valid for a single use |
+| Management | Renew secrets periodically (Profit 9) | Manage key pairs and rotate them in time |
+
+Both methods work with both the Client credentials flow and the Authorization code flow. The flow determines **how** you receive a token; the client authentication method determines **how you prove which application** you are.
+
+### Method 1: client secret
+
+When you configure the app connector in Profit, you receive a `client_id` and a `client_secret`. You send both in the body of the token request:
+
+```http
+client_id=<CLIENT_ID>
+client_secret=<CLIENT_SECRET>
+```
+
+Store the client secret like a password: in a secret store or key vault, never in source code, version control, or logs.
+
+#### Client secret validity period (Profit 9)
+
+From Profit 9, every client secret has a **validity period**. After the expiry date, Profit rejects token requests that use that secret. You must therefore **renew the secret periodically**.
+
+- The validity period is configurable. The default value is 180 days.
+- You can find the expiry date in the app connector settings screen in Profit.
+
+**How to renew a secret without interruption:**
+
+1. Generate a new secret for the app connector in Profit.
+2. Add the new secret to the configuration of the integrating application.
+3. Verify that the application can request tokens using the new secret.
+4. Revoke the old secret.
+
+> **Tip:** plan the renewal well before the expiry date, for example as a recurring task in your maintenance calendar. An expired secret means the integration stops working.
+
+Do you not want to exchange secrets periodically? Use [private key JWT](#method-2-private-key-jwt-profit-9) instead.
+
+### Method 2: private key JWT (Profit 9)
+
+With private key JWT, you use an **asymmetric key pair**:
+
+- the **private key** remains with you and never leaves your server;
+- the **public key** is registered in the app connector in Profit.
+
+Instead of a secret, you send a short-lived JWT for each token request (a *client assertion*) that you sign with your private key. Profit verifies the signature with the public key. No reusable secret therefore goes over the line. This method is based on [RFC 7523](https://www.rfc-editor.org/rfc/rfc7523) and the `private_key_jwt` method from OpenID Connect.
+
+#### Step 1: create a key pair and register the public key
+
+Create a key pair, for example with OpenSSL:
+
+```bash
+# RSA key pair (2048 bits or more)
+openssl genpkey -algorithm RSA -pkeyopt rsa_keygen_bits:2048 -out private_key.pem
+openssl rsa -in private_key.pem -pubout -out public_key.pem
+```
+
+Register the public key (`public_key.pem`) in the app connector in Profit.
+
+#### Step 2: create the client assertion
+
+The JWT contains the following data:
+
+**Header**
+
+```json
+{
+  "alg": "RS256",
+  "typ": "JWT",
+  "kid": "<KEY_ID>"
+}
+```
+
+**Payload**
+
+| Claim | Value |
+|---|---|
+| `iss` | Your `client_id` |
+| `sub` | Your `client_id` |
+| `aud` | The URL of the token endpoint, for example `https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/token` |
+| `jti` | A unique, random value per JWT (for example, a GUID) |
+| `iat` | Time of creation (Unix timestamp) |
+| `exp` | Expiration time (Unix timestamp). Keep this short, for example 5 minutes after `iat` |
+
+```json
+{
+  "iss": "<CLIENT_ID>",
+  "sub": "<CLIENT_ID>",
+  "aud": "https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/token",
+  "jti": "5f1d3b2a-8c4e-4b8e-9a61-2f0d7c3e9b14",
+  "iat": 1790000000,
+  "exp": 1790000300
+}
+```
+
+Sign the JWT with your private key.
+
+#### Step 3: send the client assertion
+
+In the token request, replace `client_secret` with:
+
+```http
+client_id=<CLIENT_ID>
+client_assertion_type=urn:ietf:params:oauth:client-assertion-type:jwt-bearer
+client_assertion=<SIGNED_JWT>
+```
+
+Create a new JWT for **every** token request.
+
+#### Rotating keys
+
+You also rotate key pairs periodically. Procedure:
+
+1. Create a new key pair and register the new public key in Profit.
+2. Configure your application to sign JWTs with the new private key (with the matching `kid`).
+3. Remove the old public key from Profit.
+
+---
+
+## Confidential client: Client credentials flow
+
+Use this flow for **automatic integrations between two systems**. No user logs in: the application requests a token itself and runs under the user configured on the app connector. For most integrations, this is the correct choice.
+
+```
+Application                                  Profit
+    |                                            |
+    |-- POST /oauth/token -------------------->  |
+    |   grant_type=client_credentials            |
+    |   + client authentication                  |
+    |                                            |
+    |<-- access_token -------------------------- |
+    |                                            |
+    |-- GET /connectors/... (Bearer token) --->  |
+```
+
+### Requesting a token with a client secret
+
 ```bash
 curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/token \
   -H "Content-Type: application/x-www-form-urlencoded" \
@@ -103,7 +310,19 @@ curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oau
   -d "client_secret=<CLIENT_SECRET>"
 ```
 
-**Response example:**
+### Requesting a token with private key JWT (Profit 9)
+
+```bash
+curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/token \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "grant_type=client_credentials" \
+  -d "client_id=<CLIENT_ID>" \
+  -d "client_assertion_type=urn:ietf:params:oauth:client-assertion-type:jwt-bearer" \
+  -d "client_assertion=<SIGNED_JWT>"
+```
+
+### Response
+
 ```json
 {
   "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...",
@@ -113,113 +332,312 @@ curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oau
 }
 ```
 
-**API call with token:**
-```bash
-curl -X GET "https://<environmentnumber>.rest.afas.online/ProfitRestServices/connectors/Profit_Address?skip=0&take=100" \
-  -H "Accept: application/json" \
-  -H "Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..."
+The access token is valid for `expires_in` seconds. In this flow, you receive no refresh token. After it expires, simply request a new token in the same way. Reuse the token while it is valid instead of requesting a new one for every call.
+
+---
+
+## Confidential client: Authorization code flow with PKCE
+
+Use this flow when an application with its own back-end retrieves or updates Profit data **on behalf of a user**. The user logs in to Profit and Profit checks whether the user is a member of the authorization group linked to the app connector.
+
+Profit requires **PKCE** (Proof Key for Code Exchange, [RFC 7636](https://www.rfc-editor.org/rfc/rfc7636)) in this flow. PKCE ensures that only the application that started the login can exchange the authorization code for a token.
+
+```
+User      Application (back-end)                 Profit
+    |                  |                                 |
+    |  1. Login -->    |                                 |
+    |                  | 2. code_verifier + challenge    |
+    |<-- 3. redirect to /oauth/authorize ------------->|
+    |------------------ 4. user logs in ----------->|
+    |<-- 5. redirect to redirect_uri with code ---------|
+    |----------------> |                                 |
+    |                  | 6. POST /oauth/token            |
+    |                  |    code + code_verifier         |
+    |                  |    + client authentication ---->|
+    |                  |<-- 7. access_token -------------|
 ```
 
-**Response example:**
-```json
-{
-  "skip": 0,
-  "take": 100,
-  "rows": [
-    {
-      "AddressId": 1,
-      "AddressLine": "Stadsring 69, 3811 HN  AMERSFOORT",
-      "PoBox": false,
-      "Address": "Stadsring",
-      "Number": 69,
-      "ZipCode": "3811 HN",
-      "Recidence": "Amersfoort",
-      "Country": "NL"
-    }
-  ]
-}
+### Step 1: create a code verifier and code challenge
+
+- **`code_verifier`**: a random string of 43 to 128 characters (letters, digits, and `-._~`). Store it temporarily on the server, linked to the user's session.
+- **`code_challenge`**: the SHA-256 hash of the `code_verifier`, Base64URL-encoded without the `=` padding.
+
+```text
+code_challenge = BASE64URL( SHA256( code_verifier ) )
 ```
 
-### Authorization code flow with PKCE
+Also create a random **`state`**. You use this in step 3 to verify that the response belongs to the request you started yourself. This protects against CSRF.
 
-The Authorization Code Flow with PKCE is ideal for web applications that need to obtain access to resources on behalf of a user. The process starts with user authentication and authorization, where the user logs in and grants permission. An authorization code is then issued, which can be exchanged for an access token. This flow provides a secure way to access data from external services because it requires the user's involvement before access is granted.
+### Step 2: redirect the user to Profit
 
-> The redirect_uri must match one of the redirect URLs registered in the App Connector. To test on AFAS Connect, you must register https://connect.afas.nl/oauth/callback. After creating an App Connector, you can register multiple redirect URLs.
+Send the user's browser to the authorize endpoint:
 
-
-#### Steps to access the API
-
-To access the API via the Authorization Code Flow, follow these steps:
-1. Obtain an authorization code
-    1. Redirect the user to the [authorization endpoint](#authorization-endpoint) (GET) with the following parameters:
-        1. response_type: code
-        2. client_id: `<CLIENT_ID>`
-        3. redirect_uri: `<REDIRECT_URI>`
-        4. state: `<optional unique value to protect against CSRF>`
-        5. code_challenge: `<fill in codeChallenge>`
-        6. code_challenge_method: `<fill in codeChallenge method>`
-    2. The user logs in and grants permission. After granting permission the user is redirected back to the provided redirect_uri with an authorization code.
-2. Exchange the authorization code for an access token
-    1. Call the [token endpoint](#token-endpoint) (POST) with the following information in the body:
-        1. grant_type: authorization_code
-        2. code: `<AUTHORIZATION_CODE>`
-        3. redirect_uri: `<REDIRECT_URI>`
-        4. client_id: `<CLIENT_ID>`
-        5. client_secret: `<CLIENT_SECRET>`
-        6. code_verifier: `<fill in code verifier>`
-3. In the response of this call you will find the following fields:
-    1. access_token: the access token you must add to the Authorization header.
-    2. refresh_token: a token that can be used to obtain a new access token.
-    3. token_type: Bearer
-    4. expires_in: validity of the access token in seconds.
-4. Use the access token
-    1. Copy the access token, prefix it with 'Bearer', and add it to your Authorization header.
-5. Obtain a new access token using the refresh token
-    1. Call the [token endpoint](#token-endpoint) (POST) with the following information in the body:
-        1. grant_type: refresh_token
-        2. refresh_token: `<REFRESH_TOKEN>`
-        3. client_id: `<CLIENT_ID>`
-        4. client_secret: `<CLIENT_SECRET>`
-    2. In the response of this call you will find the same fields as in step 3.
-
-#### cURL examples
-
-**Step 1: Redirect user to authorization endpoint:**
-```bash
-# Open this URL in a browser:
-https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/authorize?response_type=code&client_id=<CLIENT_ID>&redirect_uri=<REDIRECT_URI>&state=<STATE>&code_challenge=<CODE_CHALLENGE>&code_challenge_method=S256
+```text
+https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/authorize
+  ?response_type=code
+  &client_id=<CLIENT_ID>
+  &redirect_uri=<REDIRECT_URI>
+  &state=<STATE>
+  &code_challenge=<CODE_CHALLENGE>
+  &code_challenge_method=S256
 ```
 
-**Step 2: Retrieve token with authorization code:**
+| Parameter | Description |
+|---|---|
+| `response_type` | Always `code` |
+| `client_id` | The client ID of the app connector |
+| `redirect_uri` | The URL to which Profit sends the user back. It must exactly match the redirect URL configured in the app connector. |
+| `state` | Random value that you verify on return |
+| `code_challenge` | The code challenge from step 1 |
+| `code_challenge_method` | Always `S256` |
+
+### Step 3: receive the authorization code
+
+After logging in, Profit redirects the user back to your `redirect_uri`:
+
+```text
+<REDIRECT_URI>?code=<AUTHORIZATION_CODE>&state=<STATE>
+```
+
+Check that `state` matches the value from step 1. If it does not, abort the process. The authorization code is short-lived and can be used only once.
+
+### Step 4: exchange the code for a token
+
+Exchange the code via your **back-end**, using the `code_verifier` from step 1 and your client authentication.
+
+**With client secret:**
+
 ```bash
 curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/token \
   -H "Content-Type: application/x-www-form-urlencoded" \
   -d "grant_type=authorization_code" \
   -d "code=<AUTHORIZATION_CODE>" \
   -d "redirect_uri=<REDIRECT_URI>" \
+  -d "code_verifier=<CODE_VERIFIER>" \
   -d "client_id=<CLIENT_ID>" \
-  -d "client_secret=<CLIENT_SECRET>" \
-  -d "code_verifier=<CODE_VERIFIER>"
+  -d "client_secret=<CLIENT_SECRET>"
 ```
 
-**Response example:**
+**With private key JWT (Profit 9):**
+
+```bash
+curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/token \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "grant_type=authorization_code" \
+  -d "code=<AUTHORIZATION_CODE>" \
+  -d "redirect_uri=<REDIRECT_URI>" \
+  -d "code_verifier=<CODE_VERIFIER>" \
+  -d "client_id=<CLIENT_ID>" \
+  -d "client_assertion_type=urn:ietf:params:oauth:client-assertion-type:jwt-bearer" \
+  -d "client_assertion=<SIGNED_JWT>"
+```
+
+**Response:**
+
 ```json
 {
   "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "refresh_token": "<REFRESH_TOKEN>",
   "token_type": "Bearer",
-  "expires_in": 3600,
-  "refresh_token": "50c90d85-a7aa-4e8a-a9b8-..."
+  "expires_in": 3600
 }
 ```
 
-**Step 3: API call with token:**
+The refresh token can be used only **once**. Once you exchange it for a new access token, it becomes invalid and you receive a new refresh token in the response. Save that new refresh token immediately and use it for the next renewal. If you accidentally use an old refresh token, Profit rejects the request.
+
+Refresh tokens are valid for a maximum of **30 days total**, counted from the moment the **first** refresh token was issued. A new refresh token does not extend this period. After 30 days, the user must log in again via the Authorization code flow. Keep this in mind in your application: catch the error for an expired refresh token and send the user back to the authorize endpoint.
+
+### Step 5: renew the token with a refresh token
+
+```bash
+curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/token \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "grant_type=refresh_token" \
+  -d "refresh_token=<REFRESH_TOKEN>" \
+  -d "client_id=<CLIENT_ID>" \
+  -d "client_secret=<CLIENT_SECRET>"
+```
+
+If you use private key JWT, send `client_assertion_type` and `client_assertion` instead of `client_secret`.
+
+---
+
+## Public client: Authorization code flow with PKCE and DPoP (Profit 9)
+
+From Profit 9, you can configure an app connector as a **public client**. This is intended for browser applications (SPAs), mobile apps, and desktop applications that work with Profit on behalf of a user without their own back-end.
+
+A public client:
+
+- uses the **Authorization code flow with PKCE** (required);
+- sends **no** `client_secret` or `client_assertion`;
+- protects the access token with **DPoP** (required).
+
+### What is DPoP?
+
+A regular (*Bearer*) access token works like a pass: anyone who has it can use it. For a server, that is acceptable, but in a browser or on a user device the risk of token leakage is higher, for example via a vulnerability in the web page or malware.
+
+**DPoP** (Demonstrating Proof of Possession, [RFC 9449](https://www.rfc-editor.org/rfc/rfc9449)) binds the access token to a key pair created by the application itself:
+
+1. The application creates a key pair when it starts. The private key remains in the application (in the browser preferably as a *non-extractable* key via the Web Crypto API).
+2. For each request, the application sends a **DPoP proof**: a small JWT signed with the private key that belongs to that one request.
+3. Profit binds the issued access token to the application’s public key.
+4. For each API call, Profit verifies whether the DPoP proof was signed with the same key.
+
+The result: a stolen access token is unusable without the corresponding private key.
+
+### Step 1: create a key pair
+
+Create a key pair for the duration of the session. Example in the browser:
+
+```javascript
+const keyPair = await crypto.subtle.generateKey(
+  { name: "ECDSA", namedCurve: "P-256" },
+  false,               // private key not exportable
+  ["sign", "verify"]
+);
+```
+
+### Step 2: create the code verifier, code challenge, and state
+
+This works the same way as in the [confidential client](#step-1-create-a-code-verifier-and-code-challenge). Store the `code_verifier` and `state` in the application memory (for example `sessionStorage` in an SPA).
+
+### Step 3: redirect the user to Profit
+
+```text
+https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/authorize
+  ?response_type=code
+  &client_id=<CLIENT_ID>
+  &redirect_uri=<REDIRECT_URI>
+  &state=<STATE>
+  &code_challenge=<CODE_CHALLENGE>
+  &code_challenge_method=S256
+```
+
+### Step 4: create a DPoP proof for the token request
+
+A DPoP proof is a JWT with the following structure:
+
+**Header**
+
+```json
+{
+  "typ": "dpop+jwt",
+  "alg": "ES256",
+  "jwk": {
+    "kty": "EC",
+    "crv": "P-256",
+    "x": "<X>",
+    "y": "<Y>"
+  }
+}
+```
+
+The header contains the **public** key of the application (`jwk`).
+
+**Payload**
+
+| Claim | Value |
+|---|---|
+| `jti` | Unique random value per proof |
+| `htm` | HTTP method of the request, for example `POST` |
+| `htu` | URL of the request, without the query string |
+| `iat` | Time of creation (Unix timestamp) |
+| `nonce` | Only if Profit requests it (see [DPoP nonce](#dpop-nonce)) |
+
+```json
+{
+  "jti": "e1f3c9a2-4b7d-4c1e-8f2a-9d6b3e5a7c10",
+  "htm": "POST",
+  "htu": "https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/token",
+  "iat": 1790000000
+}
+```
+
+Sign the proof with the private key from step 1. Create a new proof for **every** request.
+
+### Step 5: exchange the code for a token
+
+```bash
+curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/token \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -H "DPoP: <DPOP_PROOF>" \
+  -d "grant_type=authorization_code" \
+  -d "code=<AUTHORIZATION_CODE>" \
+  -d "redirect_uri=<REDIRECT_URI>" \
+  -d "code_verifier=<CODE_VERIFIER>" \
+  -d "client_id=<CLIENT_ID>"
+```
+
+Note: there is **no** `client_secret` and **no** `client_assertion`.
+
+**Response:**
+
+```json
+{
+  "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "refresh_token": "<REFRESH_TOKEN>",
+  "token_type": "DPoP",
+  "expires_in": 3600
+}
+```
+
+The `token_type` is `DPoP` instead of `Bearer`. This token works only together with a valid DPoP proof.
+
+### Step 6: call a connector with a DPoP token
+
+For every API call, you send two headers:
+
+- `Authorization: DPoP <ACCESS_TOKEN>` (note: `DPoP` instead of `Bearer`);
+- `DPoP: <DPOP_PROOF>` with a new proof for that call.
+
+The proof for an API call contains, in addition to `jti`, `htm`, `htu`, and `iat`, the claim **`ath`**: the SHA-256 hash of the access token, Base64URL-encoded.
+
+```json
+{
+  "jti": "7a2c4e6f-1b3d-4f5a-9c8e-2d4f6a8b0c1e",
+  "htm": "GET",
+  "htu": "https://<environmentnumber>.rest.afas.online/ProfitRestServices/connectors/Profit_Address",
+  "iat": 1790000060,
+  "ath": "<BASE64URL(SHA256(ACCESS_TOKEN))>"
+}
+```
+
+```bash
+curl -X GET "https://<environmentnumber>.rest.afas.online/ProfitRestServices/connectors/Profit_Address?skip=0&take=100" \
+  -H "Accept: application/json" \
+  -H "Authorization: DPoP eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..." \
+  -H "DPoP: <DPOP_PROOF>"
+```
+
+### Step 7: renew the token
+
+You also send a DPoP proof when renewing the token, signed with **the same** key as the original token request.
+
+```bash
+curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/token \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -H "DPoP: <DPOP_PROOF>" \
+  -d "grant_type=refresh_token" \
+  -d "refresh_token=<REFRESH_TOKEN>" \
+  -d "client_id=<CLIENT_ID>"
+```
+
+### DPoP nonce
+
+Profit may ask you to include a server-defined value (*nonce*) in the DPoP proof. In that case, you receive the error `use_dpop_nonce` together with the header `DPoP-Nonce`. In that case, create a new proof with the claim `nonce` set to that value and repeat the request.
+
+---
+
+## Calling a connector with the access token
+
+For confidential clients (Bearer token):
+
 ```bash
 curl -X GET "https://<environmentnumber>.rest.afas.online/ProfitRestServices/connectors/Profit_Address?skip=0&take=100" \
   -H "Accept: application/json" \
   -H "Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9..."
 ```
 
-**Response example:**
 ```json
 {
   "skip": 0,
@@ -227,7 +645,7 @@ curl -X GET "https://<environmentnumber>.rest.afas.online/ProfitRestServices/con
   "rows": [
     {
       "AddressId": 1,
-      "AddressLine": "Stadsring 69, 3811 HN  AMERSFOORT",
+      "AddressLine": "Stadsring 69, 3811 HN AMERSFOORT",
       "PoBox": false,
       "Address": "Stadsring",
       "Number": 69,
@@ -239,28 +657,47 @@ curl -X GET "https://<environmentnumber>.rest.afas.online/ProfitRestServices/con
 }
 ```
 
-### OAuth & SOAP API
-The description above for both flows **also applies when using the SOAP API**. It is important to include the Bearer token in the header and not in the body.
+For public clients (DPoP token): see [Step 6](#step-6-call-a-connector-with-a-dpop-token).
 
-### Token endpoint
-These endpoints apply to both REST and SOAP.
+You can call only the Get- and UpdateConnector endpoints that are linked to the app connector.
 
-**Production**: https://`<environmentnumber>`.rest.afas.online/ProfitRestServices/oauth/token
+---
 
-**Accept**: https://`<environmentnumber>`.restaccept.afas.online/ProfitRestServices/oauth/token
+## Which combination should I choose?
 
-**Test**: https://`<environmentnumber>`.resttest.afas.online/ProfitRestServices/oauth/token
+1. **Does a user log in?**
+   - **No** → confidential client with the **Client credentials flow**.
+   - **Yes** → continue to question 2.
+2. **Does your application have its own server (back-end) where you can store a secret safely?**
+   - **Yes** → confidential client with the **Authorization code flow with PKCE**.
+   - **No** (SPA, mobile app, desktop application) → **public client** with the **Authorization code flow with PKCE and DPoP** (Profit 9).
+3. **Confidential client: which client authentication?**
+   - **Private key JWT** (Profit 9) is preferred: no reusable secret goes over the line and you do not need to exchange secrets with AFAS or your customer.
+   - **Client secret** is easier to implement, but from Profit 9 you must renew the secret periodically.
 
-### Authorization endpoint
-These endpoints apply to both REST and SOAP.
+---
 
-**Production**: https://`<environmentnumber>`.rest.afas.online/ProfitRestServices/oauth/authorize
+## Frequently asked questions
 
-**Accept**: https://`<environmentnumber>`.restaccept.afas.online/ProfitRestServices/oauth/authorize
+**Do I need to modify my existing integration for Profit 9?**
+If you use a client secret, it gets a validity period from Profit 9. Make sure you have a process to renew the secret in time, or move to private key JWT. Otherwise, the Client credentials flow and Authorization code flow with PKCE continue to work as before.
 
-**Test**: https://`<environmentnumber>`.resttest.afas.online/ProfitRestServices/oauth/authorize
+**I still use a classic token. What should I do?**
+Migrate to OAuth before 31 August 2027. Existing classic tokens already expire on 15 February 2027. From Profit 9, you can change the authentication type of your existing app connector. See [Migrating to OAuth](#migrating-to-oauth-profit-9).
+
+**Can I use a client secret in my mobile app or browser application?**
+No. A secret in an application running on the user side can be read. Configure the app connector as a public client from Profit 9 and use PKCE and DPoP.
+
+**What is the difference between PKCE and DPoP?**
+PKCE protects the **authorization code**: only the application that started the login can exchange the code. DPoP protects the **access token**: only the application that owns the private key can use the token. A public client needs both.
+
+**What is the difference between the flow and client authentication?**
+The flow (Client credentials or Authorization code) determines **how** you obtain a token, for example whether a user logs in. Client authentication (client secret or private key JWT) determines **how you prove which application** you are. A confidential client always combines one flow with one client authentication method.
+
+**My token request returns `invalid_client`. What now?**
+Check whether the `client_id` is correct, whether the client secret has expired or been revoked (Profit 9), or, in the case of private key JWT, whether the public key is registered correctly and the claims `iss`, `sub`, `aud`, and `exp` are correct.
 
 ### Read more
 
-- [Profit API GetConnectors](./get-connector)
+- [Profit API GetConnectoren](./get-connector)
 - [Error handling](./troubleshooting)
