@@ -103,10 +103,10 @@ Behandel een classic token met zorg: het geeft toegang tot gevoelige gegevens. N
 
 | Client type | Flow | Client authenticatie | Tokenbeveiliging | Beschikbaar vanaf |
 |---|---|---|---|---|
-| Confidential | Client credentials | Client secret | Bearer | Huidige versie |
-| Confidential | Client credentials | Private key JWT | Bearer | **Profit 9** |
-| Confidential | Authorization code + PKCE | Client secret | Bearer | Huidige versie |
-| Confidential | Authorization code + PKCE | Private key JWT | Bearer | **Profit 9** |
+| Confidential | Client credentials | Client secret | Bearer, optioneel DPoP | Huidige versie |
+| Confidential | Client credentials | Private key JWT | Bearer, optioneel DPoP | **Profit 9** |
+| Confidential | Authorization code + PKCE | Client secret | Bearer, optioneel DPoP | Huidige versie |
+| Confidential | Authorization code + PKCE | Private key JWT | Bearer, optioneel DPoP | **Profit 9** |
 | Public | Authorization code + PKCE | Geen (client heeft geen geheim) | **DPoP** | **Profit 9** |
 
 Vanaf **Profit 9** geldt bovendien dat client secrets een **geldigheidsduur** hebben en periodiek moeten worden vernieuwd. Zie [Geldigheidsduur van client secrets](#geldigheidsduur-van-client-secrets-profit-9).
@@ -167,7 +167,7 @@ Een confidential client bewijst bij elke aanvraag op het token-endpoint wie hij 
 
 | | Client secret | Private key JWT (Profit 9) |
 |---|---|---|
-| Wat deel je met Profit? | Een gedeeld geheim (de secret) | Alleen je **publieke** sleutel |
+| Wat deel je met Profit? | Een gedeeld geheim (de secret) | Een X.509-certificaat of de URL van je JWK Set |
 | Wat stuur je mee bij een tokenaanvraag? | De secret zelf | Een kortlevende, ondertekende JWT |
 | Risico bij onderschepping | De secret is herbruikbaar tot deze verloopt of wordt ingetrokken | De JWT is kort geldig en uniek per aanvraag |
 | Beheer | Secret periodiek vernieuwen (Profit 9) | Sleutelpaar beheren en tijdig roteren |
@@ -208,21 +208,29 @@ Wil je niet periodiek secrets uitwisselen? Gebruik dan [private key JWT](#method
 Bij private key JWT gebruik je een **asymmetrisch sleutelpaar**:
 
 - de **private key** blijft altijd bij jou en verlaat je server nooit;
-- de **publieke key** registreer je bij de app connector in Profit.
+- de publieke sleutel bied je aan via een X.509-certificaat in Profit of via een JWK Set op een eigen URL.
 
 In plaats van een secret stuur je bij elke tokenaanvraag een kortlevende JWT mee (een *client assertion*) die je ondertekent met je private key. Profit controleert de handtekening met de publieke key. Er gaat dus nooit een herbruikbaar geheim over de lijn. Deze methode is gebaseerd op [RFC 7523](https://www.rfc-editor.org/rfc/rfc7523) en de `private_key_jwt`-methode uit OpenID Connect.
 
-#### Stap 1: sleutelpaar aanmaken en publieke key registreren
+Profit ondersteunt `RS256`, `PS256` en `ES256`. Gebruik voor RSA minimaal 2048 bits. Gebruik voor EC de curve P-256. Deze eisen gelden voor beide sleutelbronnen.
 
-Maak een sleutelpaar aan, bijvoorbeeld met OpenSSL:
+#### Stap 1: sleutelpaar aanmaken en publieke sleutel aanbieden
+
+Maak bijvoorbeeld met OpenSSL een RSA-sleutelpaar en een X.509-certificaat aan:
 
 ```bash
 # RSA-sleutelpaar (2048 bits of meer)
 openssl genpkey -algorithm RSA -pkeyopt rsa_keygen_bits:2048 -out private_key.pem
 openssl rsa -in private_key.pem -pubout -out public_key.pem
+openssl req -new -x509 -key private_key.pem -out certificate.pem -days 3650 -subj "/CN=mijn-app"
 ```
 
-Registreer de publieke key (`public_key.pem`) bij de app connector in Profit.
+De private key (`private_key.pem`) blijft bij jou en gaat nooit naar Profit. Je kunt de publieke sleutel op twee manieren aan Profit aanbieden:
+
+1. **Bestand:** upload `certificate.pem` bij de app connector. Een losse publieke sleutel, zoals `public_key.pem`, is niet voldoende. Je kunt bij het certificaat optioneel een key ID invullen. Laat je dit veld leeg, dan gebruikt Profit de SHA-1-thumbprint van het certificaat als key ID.
+2. **JWKS-URL (`jwks_uri`):** publiceer een JWK Set op een HTTPS-URL en registreer deze URL bij de app connector. Profit haalt de publieke sleutel dan automatisch op. De URL mag niet redirecten en de response mag maximaal 64 KB zijn. Iedere gebruikte sleutel heeft `"use": "sig"`. Bevat de set meer dan één sleutel, dan is `kid` verplicht.
+
+Profit cachet een JWK Set standaard één uur en volgt de `Cache-Control`-header. Bij een onbekende `kid` haalt Profit de set direct opnieuw op, zodat een nieuwe sleutel vrijwel meteen bruikbaar is. Houd er bij verwijderen rekening mee dat een gecachte sleutel nog maximaal een uur kan worden geaccepteerd.
 
 #### Stap 2: client assertion opstellen
 
@@ -238,16 +246,22 @@ De JWT bevat de volgende gegevens:
 }
 ```
 
+De header `kid` is optioneel als je certificaten als bestand opslaat. Stuur je `kid` mee, dan moet deze exact overeenkomen met de key ID die bij het certificaat in Profit staat, of met de SHA-1-thumbprint als je dat veld leeg hebt gelaten. Een onbekende `kid` wordt afgewezen, ook als het certificaat verder geldig is. Zonder `kid` kun je `x5t#S256` meesturen of beide identificerende headers weglaten; Profit probeert dan alle geldige certificaten van de app connector. Een `kid` beperkt dit zoekwerk en kan daarom performancewinst opleveren.
+
+Bij een JWKS-URL komt `kid` uit de JWK Set. Als de set meer dan één sleutel bevat, moet de assertion een `kid` bevatten. Deze waarde moet exact overeenkomen met een sleutel in de set.
+
+> **Praktische kanttekening:** veel JWT-libraries vullen `kid` automatisch als de signing key een key ID heeft. Wil je de thumbprint niet als `kid` gebruiken, vul dan in Profit dezelfde key ID in als je library verstuurt, of maak de key ID in de library leeg.
+
 **Payload**
 
 | Claim | Waarde |
 |---|---|
 | `iss` | Je `client_id` |
 | `sub` | Je `client_id` |
-| `aud` | De URL van het token-endpoint, bijvoorbeeld `https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/oauth/token` |
-| `jti` | Een unieke, willekeurige waarde per JWT (bijvoorbeeld een GUID) |
+| `aud` | Bij `typ: JWT`: de URL van het token-endpoint of de basis-URL. Bij `typ: client-authentication+jwt`: de basis-URL, dus de token-URL zonder `/oauth/token`. |
+| `jti` | Een unieke, willekeurige waarde per JWT (bijvoorbeeld een GUID). Profit wijst hergebruik van een `jti` af. |
 | `iat` | Tijdstip van aanmaken (Unix timestamp) |
-| `exp` | Vervaltijdstip (Unix timestamp). Houd dit kort, bijvoorbeeld 5 minuten na `iat` |
+| `exp` | Vervaltijdstip (Unix timestamp). Gebruik bij voorkeur 60 seconden na `iat`. Het maximum is 5 minuten, met 60 seconden toegestane klokafwijking. |
 
 ```json
 {
@@ -274,13 +288,17 @@ client_assertion=<ONDERTEKENDE_JWT>
 
 Maak voor elke tokenaanvraag een nieuwe JWT aan.
 
+Stuur precies één client-authenticatiemethode mee. Een aanvraag met zowel `client_secret` als `client_assertion` wordt afgewezen.
+
+Mislukte client-authenticatie geeft HTTP-status `400` met `error: invalid_client`. Vanaf Profit 9 geldt dit ook voor een onjuist client secret.
+
 #### Sleutels roteren
 
 Ook sleutelparen vervang je periodiek. Werkwijze:
 
-1. Maak een nieuw sleutelpaar aan en registreer de nieuwe publieke key in Profit.
+1. Maak een nieuw sleutelpaar aan en registreer het nieuwe certificaat of voeg de nieuwe sleutel aan je JWK Set toe. Meerdere certificaten kunnen tegelijk actief zijn.
 2. Laat je applicatie JWT's ondertekenen met de nieuwe private key (met de bijbehorende `kid`).
-3. Verwijder de oude publieke key uit Profit.
+3. Controleer dat de nieuwe sleutel werkt en verwijder daarna het oude certificaat of de oude JWK. Zo roteer je zonder onderbreking.
 
 ---
 
@@ -328,7 +346,7 @@ curl -X POST https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/oauth
   "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...",
   "refresh_token": null,
   "token_type": "Bearer",
-  "expires_in": 3600
+  "expires_in": "3600"
 }
 ```
 
@@ -439,7 +457,7 @@ curl -X POST https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/oauth
   "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...",
   "refresh_token": "<REFRESH_TOKEN>",
   "token_type": "Bearer",
-  "expires_in": 3600
+  "expires_in": "3600"
 }
 ```
 
@@ -542,7 +560,7 @@ De header bevat de **publieke** key van de applicatie (`jwk`).
 | `htm` | De HTTP-methode van de aanvraag, bijvoorbeeld `POST` |
 | `htu` | De URL van de aanvraag, zonder querystring |
 | `iat` | Tijdstip van aanmaken (Unix timestamp) |
-| `nonce` | Alleen als Profit hierom vraagt (zie [DPoP nonce](#dpop-nonce)) |
+| `nonce` | De laatst ontvangen waarde uit de header `DPoP-Nonce` (zie [DPoP nonce](#dpop-nonce)) |
 
 ```json
 {
@@ -556,6 +574,8 @@ De header bevat de **publieke** key van de applicatie (`jwk`).
 Onderteken de proof met de private key uit stap 1. Maak voor elke aanvraag een nieuwe proof.
 
 ### Stap 5: code inwisselen voor een token
+
+Voer bij deze aanvraag eerst de verplichte nonce-uitwisseling uit zoals beschreven bij [DPoP nonce](#dpop-nonce). Daarna levert de herhaalde aanvraag het tokenantwoord op.
 
 ```bash
 curl -X POST https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/oauth/token \
@@ -577,7 +597,7 @@ Let op: er is **geen** `client_secret` en **geen** `client_assertion`.
   "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...",
   "refresh_token": "<REFRESH_TOKEN>",
   "token_type": "DPoP",
-  "expires_in": 3600
+  "expires_in": "3600"
 }
 ```
 
@@ -624,7 +644,42 @@ curl -X POST https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/oauth
 
 ### DPoP nonce
 
-Profit kan vragen om een door de server bepaalde waarde (*nonce*) in de DPoP proof op te nemen. In dat geval ontvang je een foutmelding `use_dpop_nonce` met de header `DPoP-Nonce`. Maak dan een nieuwe proof aan met de claim `nonce` gelijk aan die waarde en herhaal de aanvraag.
+Profit vereist altijd een door de server bepaalde waarde (*nonce*) in de DPoP proof. De eerste aanvraag doe je zonder nonce. Profit antwoordt daarop met `use_dpop_nonce` en de header `DPoP-Nonce`. Dit is een vaste stap in de flow, geen uitzonderingssituatie.
+
+```http
+HTTP/1.1 400 Bad Request
+DPoP-Nonce: <NONCE>
+Content-Type: application/json
+
+{
+  "error": "use_dpop_nonce"
+}
+```
+
+Maak daarna een volledig nieuwe DPoP proof met een nieuwe `jti`, neem de ontvangen nonce op en herhaal de oorspronkelijke aanvraag:
+
+```json
+{
+  "jti": "7c4b96d1-76d8-42ea-9508-f2c5944e50d8",
+  "htm": "POST",
+  "htu": "https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/oauth/token",
+  "iat": 1790000001,
+  "nonce": "<NONCE>"
+}
+```
+
+```bash
+curl -X POST https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/oauth/token \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -H "DPoP: <NIEUWE_DPOP_PROOF_MET_NONCE>" \
+  -d "grant_type=authorization_code" \
+  -d "code=<AUTHORIZATION_CODE>" \
+  -d "redirect_uri=<REDIRECT_URI>" \
+  -d "code_verifier=<CODE_VERIFIER>" \
+  -d "client_id=<CLIENT_ID>"
+```
+
+Profit kan bij iedere response een nieuwe `DPoP-Nonce` terugsturen, ook bij een geslaagde aanvraag met status `200`. Bewaar daarom na iedere response de meest recent ontvangen nonce en gebruik deze in de eerstvolgende DPoP proof.
 
 ---
 
@@ -695,7 +750,7 @@ PKCE beschermt de **authorization code**: alleen de applicatie die de inlog star
 De flow (Client credentials of Authorization code) bepaalt **hoe** je aan een token komt, bijvoorbeeld of er een gebruiker inlogt. De client authenticatie (client secret of private key JWT) bepaalt **hoe je aantoont welke applicatie** je bent. Bij een confidential client combineer je altijd één flow met één client authenticatiemethode.
 
 **Mijn tokenaanvraag geeft `invalid_client`. Wat nu?**
-Controleer of de `client_id` klopt, of het client secret niet is verlopen of ingetrokken (Profit 9), of bij private key JWT de publieke key correct is geregistreerd en de claims `iss`, `sub`, `aud` en `exp` kloppen.
+Controleer of de `client_id` klopt en of het client secret niet is verlopen of ingetrokken (Profit 9). Controleer bij private key JWT of het certificaat of de `jwks_uri` correct is geconfigureerd, of `kid` de bedoelde sleutel aanwijst en of de claims `iss`, `sub`, `aud` en `exp` kloppen.
 
 ### Lees verder
 

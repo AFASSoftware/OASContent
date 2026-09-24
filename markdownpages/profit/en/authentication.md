@@ -103,10 +103,10 @@ Handle a classic token with care: it grants access to sensitive data. After it i
 
 | Client type | Flow | Client authentication | Token protection | Available from |
 |---|---|---|---|---|
-| Confidential | Client credentials | Client secret | Bearer | Current version |
-| Confidential | Client credentials | Private key JWT | Bearer | **Profit 9** |
-| Confidential | Authorization code + PKCE | Client secret | Bearer | Current version |
-| Confidential | Authorization code + PKCE | Private key JWT | Bearer | **Profit 9** |
+| Confidential | Client credentials | Client secret | Bearer, optional DPoP | Current version |
+| Confidential | Client credentials | Private key JWT | Bearer, optional DPoP | **Profit 9** |
+| Confidential | Authorization code + PKCE | Client secret | Bearer, optional DPoP | Current version |
+| Confidential | Authorization code + PKCE | Private key JWT | Bearer, optional DPoP | **Profit 9** |
 | Public | Authorization code + PKCE | None (client has no secret) | **DPoP** | **Profit 9** |
 
 From **Profit 9** onward, client secrets also have a **validity period** and must be renewed periodically. See [Client secret validity period](#client-secret-validity-period-profit-9).
@@ -167,7 +167,7 @@ A confidential client proves, for each request to the token endpoint, who it is.
 
 | | Client secret | Private key JWT (Profit 9) |
 |---|---|---|
-| What do you share with Profit? | A shared secret (the secret) | Only your **public** key |
+| What do you share with Profit? | A shared secret (the secret) | An X.509 certificate or the URL of your JWK Set |
 | What do you send when requesting a token? | The secret itself | A short-lived, signed JWT |
 | Risk if intercepted | The secret can be reused until it expires or is revoked | The JWT is short-lived and valid for a single use |
 | Management | Renew secrets periodically (Profit 9) | Manage key pairs and rotate them in time |
@@ -208,21 +208,29 @@ Do you not want to exchange secrets periodically? Use [private key JWT](#method-
 With private key JWT, you use an **asymmetric key pair**:
 
 - the **private key** remains with you and never leaves your server;
-- the **public key** is registered in the app connector in Profit.
+- you provide the public key through an X.509 certificate in Profit or through a JWK Set at your own URL.
 
 Instead of a secret, you send a short-lived JWT for each token request (a *client assertion*) that you sign with your private key. Profit verifies the signature with the public key. No reusable secret therefore goes over the line. This method is based on [RFC 7523](https://www.rfc-editor.org/rfc/rfc7523) and the `private_key_jwt` method from OpenID Connect.
 
-#### Step 1: create a key pair and register the public key
+Profit supports `RS256`, `PS256`, and `ES256`. For RSA, use at least 2048 bits. For EC, use the P-256 curve. These requirements apply to both key sources.
 
-Create a key pair, for example with OpenSSL:
+#### Step 1: create a key pair and provide the public key
+
+For example, use OpenSSL to create an RSA key pair and an X.509 certificate:
 
 ```bash
 # RSA key pair (2048 bits or more)
 openssl genpkey -algorithm RSA -pkeyopt rsa_keygen_bits:2048 -out private_key.pem
 openssl rsa -in private_key.pem -pubout -out public_key.pem
+openssl req -new -x509 -key private_key.pem -out certificate.pem -days 3650 -subj "/CN=my-app"
 ```
 
-Register the public key (`public_key.pem`) in the app connector in Profit.
+The private key (`private_key.pem`) remains with you and is never sent to Profit. You can provide the public key to Profit in two ways:
+
+1. **File:** upload `certificate.pem` to the app connector. A standalone public key such as `public_key.pem` is not sufficient. You can optionally enter a key ID for the certificate. If you leave this field empty, Profit uses the certificate's SHA-1 thumbprint as the key ID.
+2. **JWKS URL (`jwks_uri`):** publish a JWK Set at an HTTPS URL and register this URL in the app connector. Profit then retrieves the public key automatically. The URL must not redirect and the response must not exceed 64 KB. Every key that is used has `"use": "sig"`. If the set contains more than one key, `kid` is required.
+
+Profit caches a JWK Set for one hour by default and honors the `Cache-Control` header. When it encounters an unknown `kid`, Profit immediately retrieves the set again, so a new key becomes available almost immediately. When removing a key, keep in mind that a cached key may still be accepted for up to one hour.
 
 #### Step 2: create the client assertion
 
@@ -238,16 +246,22 @@ The JWT contains the following data:
 }
 ```
 
+The `kid` header is optional when you store certificates as files. If you include `kid`, it must exactly match the key ID configured for the certificate in Profit, or the SHA-1 thumbprint if you left that field empty. An unknown `kid` is rejected even if the certificate is otherwise valid. Without `kid`, you can include `x5t#S256` or omit both identifying headers; Profit then tries all valid certificates for the app connector. Using a `kid` limits this search and can therefore improve performance.
+
+For a JWKS URL, `kid` comes from the JWK Set. If the set contains more than one key, the assertion must contain a `kid`. Its value must exactly match a key in the set.
+
+> **Practical note:** many JWT libraries populate `kid` automatically when the signing key has a key ID. If you do not want to use the thumbprint as `kid`, either configure the same key ID in Profit that your library sends, or clear the key ID in the library.
+
 **Payload**
 
 | Claim | Value |
 |---|---|
 | `iss` | Your `client_id` |
 | `sub` | Your `client_id` |
-| `aud` | The URL of the token endpoint, for example `https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/token` |
-| `jti` | A unique, random value per JWT (for example, a GUID) |
+| `aud` | With `typ: JWT`: the token endpoint URL or the base URL. With `typ: client-authentication+jwt`: the base URL, which is the token URL without `/oauth/token`. |
+| `jti` | A unique, random value per JWT (for example, a GUID). Profit rejects reuse of a `jti`. |
 | `iat` | Time of creation (Unix timestamp) |
-| `exp` | Expiration time (Unix timestamp). Keep this short, for example 5 minutes after `iat` |
+| `exp` | Expiration time (Unix timestamp). Prefer 60 seconds after `iat`. The maximum is 5 minutes, with 60 seconds of permitted clock skew. |
 
 ```json
 {
@@ -274,13 +288,17 @@ client_assertion=<SIGNED_JWT>
 
 Create a new JWT for **every** token request.
 
+Send exactly one client authentication method. A request containing both `client_secret` and `client_assertion` is rejected.
+
+Failed client authentication returns HTTP status `400` with `error: invalid_client`. From Profit 9, this also applies to an incorrect client secret.
+
 #### Rotating keys
 
 You also rotate key pairs periodically. Procedure:
 
-1. Create a new key pair and register the new public key in Profit.
+1. Create a new key pair and register the new certificate or add the new key to your JWK Set. Multiple certificates can be active at the same time.
 2. Configure your application to sign JWTs with the new private key (with the matching `kid`).
-3. Remove the old public key from Profit.
+3. Verify that the new key works, then remove the old certificate or JWK. This allows rotation without interruption.
 
 ---
 
@@ -328,7 +346,7 @@ curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oau
   "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...",
   "refresh_token": null,
   "token_type": "Bearer",
-  "expires_in": 3600
+  "expires_in": "3600"
 }
 ```
 
@@ -439,7 +457,7 @@ curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oau
   "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...",
   "refresh_token": "<REFRESH_TOKEN>",
   "token_type": "Bearer",
-  "expires_in": 3600
+  "expires_in": "3600"
 }
 ```
 
@@ -542,7 +560,7 @@ The header contains the **public** key of the application (`jwk`).
 | `htm` | HTTP method of the request, for example `POST` |
 | `htu` | URL of the request, without the query string |
 | `iat` | Time of creation (Unix timestamp) |
-| `nonce` | Only if Profit requests it (see [DPoP nonce](#dpop-nonce)) |
+| `nonce` | The most recently received value from the `DPoP-Nonce` header (see [DPoP nonce](#dpop-nonce)) |
 
 ```json
 {
@@ -556,6 +574,8 @@ The header contains the **public** key of the application (`jwk`).
 Sign the proof with the private key from step 1. Create a new proof for **every** request.
 
 ### Step 5: exchange the code for a token
+
+For this request, first complete the mandatory nonce exchange described under [DPoP nonce](#dpop-nonce). The repeated request then returns the token response.
 
 ```bash
 curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/token \
@@ -577,7 +597,7 @@ Note: there is **no** `client_secret` and **no** `client_assertion`.
   "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...",
   "refresh_token": "<REFRESH_TOKEN>",
   "token_type": "DPoP",
-  "expires_in": 3600
+  "expires_in": "3600"
 }
 ```
 
@@ -624,7 +644,42 @@ curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oau
 
 ### DPoP nonce
 
-Profit may ask you to include a server-defined value (*nonce*) in the DPoP proof. In that case, you receive the error `use_dpop_nonce` together with the header `DPoP-Nonce`. In that case, create a new proof with the claim `nonce` set to that value and repeat the request.
+Profit always requires a server-defined value (*nonce*) in the DPoP proof. Send the first request without a nonce. Profit responds with `use_dpop_nonce` and the `DPoP-Nonce` header. This is a standard step in the flow, not an exceptional condition.
+
+```http
+HTTP/1.1 400 Bad Request
+DPoP-Nonce: <NONCE>
+Content-Type: application/json
+
+{
+  "error": "use_dpop_nonce"
+}
+```
+
+Then create an entirely new DPoP proof with a new `jti`, include the received nonce, and repeat the original request:
+
+```json
+{
+  "jti": "7c4b96d1-76d8-42ea-9508-f2c5944e50d8",
+  "htm": "POST",
+  "htu": "https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/token",
+  "iat": 1790000001,
+  "nonce": "<NONCE>"
+}
+```
+
+```bash
+curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/token \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -H "DPoP: <NEW_DPOP_PROOF_WITH_NONCE>" \
+  -d "grant_type=authorization_code" \
+  -d "code=<AUTHORIZATION_CODE>" \
+  -d "redirect_uri=<REDIRECT_URI>" \
+  -d "code_verifier=<CODE_VERIFIER>" \
+  -d "client_id=<CLIENT_ID>"
+```
+
+Profit may return a new `DPoP-Nonce` with any response, including a successful response with status `200`. After every response, store the most recently received nonce and use it in the next DPoP proof.
 
 ---
 
@@ -695,7 +750,7 @@ PKCE protects the **authorization code**: only the application that started the 
 The flow (Client credentials or Authorization code) determines **how** you obtain a token, for example whether a user logs in. Client authentication (client secret or private key JWT) determines **how you prove which application** you are. A confidential client always combines one flow with one client authentication method.
 
 **My token request returns `invalid_client`. What now?**
-Check whether the `client_id` is correct, whether the client secret has expired or been revoked (Profit 9), or, in the case of private key JWT, whether the public key is registered correctly and the claims `iss`, `sub`, `aud`, and `exp` are correct.
+Check whether the `client_id` is correct and whether the client secret has expired or been revoked (Profit 9). For private key JWT, check whether the certificate or `jwks_uri` is configured correctly, whether `kid` identifies the intended key, and whether the claims `iss`, `sub`, `aud`, and `exp` are correct.
 
 ### Read more
 
