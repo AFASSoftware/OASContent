@@ -725,7 +725,13 @@ curl -X GET "https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/conne
 
 Voor public clients (DPoP-token): zie [Stap 6](#stap-6-connector-aanroepen-met-een-dpop-token).
 
-Vanaf **Profit 9** bevat iedere HTTP `401` van de resource server een `WWW-Authenticate`-header. Zonder credentials worden zowel `Bearer` als `DPoP` aangeboden, zonder foutcode. Wordt een token afgewezen, dan vermeldt de challenge van het gebruikte schema `error="invalid_token"`, bijvoorbeeld `WWW-Authenticate: Bearer error="invalid_token"` of `WWW-Authenticate: DPoP error="invalid_token"`. Ook een DPoP proof met een andere sleutel dan die waaraan het token is gebonden geeft `invalid_token` ([RFC 9449 §7.1](https://www.rfc-editor.org/rfc/rfc9449#section-7.1)). Een storing van de opslag voor replay-detectie geeft HTTP `503` in plaats van `401`; behandel dit als een tijdelijke serverstoring, niet als een ongeldig token.
+Vanaf **Profit 9** geeft de resource server bij HTTP `401` altijd een `WWW-Authenticate`-header mee. Wat daarin staat, hangt af van de aanvraag:
+
+- **Geen credentials meegestuurd:** Profit biedt zowel `Bearer` als `DPoP` aan, zonder foutcode. Dit betekent dat je een access token moet meesturen.
+- **Bearer-token afgewezen:** de header bevat `Bearer error="invalid_token"`. Vraag een nieuw token aan of controleer het meegestuurde token.
+- **DPoP-token afgewezen:** de header bevat `DPoP error="invalid_token"`. Dit geldt ook als de proof met een andere sleutel is ondertekend dan die waaraan het token is gebonden ([RFC 9449 §7.1](https://www.rfc-editor.org/rfc/rfc9449#section-7.1)). Controleer het token en de proof.
+
+Is de opslag voor replay-detectie tijdelijk niet beschikbaar, dan geeft Profit HTTP `503` in plaats van `401`. Dat is een serverstoring, geen aanwijzing dat je token ongeldig is.
 
 Je kunt alleen de Get- en UpdateConnectoren aanroepen die aan de app connector zijn gekoppeld.
 

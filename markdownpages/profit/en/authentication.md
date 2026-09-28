@@ -725,7 +725,13 @@ curl -X GET "https://<environmentnumber>.rest.afas.online/ProfitRestServices/con
 
 For public clients (DPoP token): see [Step 6](#step-6-call-a-connector-with-a-dpop-token).
 
-From **Profit 9**, every HTTP `401` from the resource server includes a `WWW-Authenticate` header. Without credentials, both `Bearer` and `DPoP` are offered, without an error code. If a token is rejected, the challenge for the scheme used includes `error="invalid_token"`, for example `WWW-Authenticate: Bearer error="invalid_token"` or `WWW-Authenticate: DPoP error="invalid_token"`. A DPoP proof signed with a different key than the one bound to the token also returns `invalid_token` ([RFC 9449 §7.1](https://www.rfc-editor.org/rfc/rfc9449#section-7.1)). A failure of the replay-detection store returns HTTP `503` instead of `401`; treat this as a temporary server failure, not an invalid token.
+From **Profit 9**, every HTTP `401` from the resource server includes a `WWW-Authenticate` header. Its contents depend on the request:
+
+- **No credentials sent:** Profit offers both `Bearer` and `DPoP`, without an error code. You need to send an access token.
+- **Bearer token rejected:** the header includes `Bearer error="invalid_token"`. Request a new token or check the token you sent.
+- **DPoP token rejected:** the header includes `DPoP error="invalid_token"`. This also applies if the proof is signed with a different key than the one bound to the token ([RFC 9449 §7.1](https://www.rfc-editor.org/rfc/rfc9449#section-7.1)). Check the token and proof.
+
+If the replay-detection store is temporarily unavailable, Profit returns HTTP `503` instead of `401`. This is a server failure, not an indication that your token is invalid.
 
 You can call only the Get- and UpdateConnector endpoints that are linked to the app connector.
 
