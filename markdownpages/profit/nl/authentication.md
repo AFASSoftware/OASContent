@@ -183,6 +183,8 @@ client_id=<CLIENT_ID>
 client_secret=<CLIENT_SECRET>
 ```
 
+Vanaf **Profit 9** kun je ook `client_secret_basic` gebruiken: stuur beide waarden in de header `Authorization: Basic <BASE64_WAARDE>` en laat `client_secret` weg uit de body. De waarde vóór Base64 is `FORM_URLENCODE(client_id):FORM_URLENCODE(client_secret)`: codeer **elke waarde afzonderlijk** als `application/x-www-form-urlencoded`, zoals in [RFC 6749 §2.3.1](https://www.rfc-editor.org/rfc/rfc6749#section-2.3.1). Gebruik dus niet zonder meer de ruwe waarden als deze bijvoorbeeld `:` of speciale tekens bevatten. Een `client_id` in de body is toegestaan als deze gelijk is aan die in de Basic-header; weglaten voorkomt verwarring.
+
 Bewaar een client secret zoals je een wachtwoord bewaart: in een secret store of key vault, nooit in broncode, versiebeheer of logbestanden.
 
 #### Geldigheidsduur van client secrets (Profit 9)
@@ -288,9 +290,9 @@ client_assertion=<ONDERTEKENDE_JWT>
 
 Maak voor elke tokenaanvraag een nieuwe JWT aan.
 
-Stuur precies één client-authenticatiemethode mee. Een aanvraag met zowel `client_secret` als `client_assertion` wordt afgewezen.
+Stuur precies één client-authenticatiemethode mee. Vanaf Profit 9 geeft een aanvraag met zowel `client_secret` als `client_assertion`, of met Basic-auth en een credential in de body, `invalid_request`. Dat geldt ook voor een `client_id` in de body die afwijkt van de Basic-header.
 
-Mislukte client-authenticatie geeft HTTP-status `400` met `error: invalid_client`. Vanaf Profit 9 geldt dit ook voor een onjuist client secret.
+Vanaf Profit 9 geeft een onbekende client of mislukte client-authenticatie `invalid_client`. Bij mislukte Basic-auth antwoordt Profit met HTTP `401` en `WWW-Authenticate: Basic`; bij de andere methoden is dit HTTP `400`. Ook een onjuist client secret wordt afgewezen.
 
 #### Sleutels roteren
 
@@ -299,6 +301,10 @@ Ook sleutelparen vervang je periodiek. Werkwijze:
 1. Maak een nieuw sleutelpaar aan en registreer het nieuwe certificaat of voeg de nieuwe sleutel aan je JWK Set toe. Meerdere certificaten kunnen tegelijk actief zijn.
 2. Laat je applicatie JWT's ondertekenen met de nieuwe private key (met de bijbehorende `kid`).
 3. Controleer dat de nieuwe sleutel werkt en verwijder daarna het oude certificaat of de oude JWK. Zo roteer je zonder onderbreking.
+
+### Fouten bij tokenaanvragen (Profit 9)
+
+Een ontbrekende `grant_type` geeft `invalid_request`. Bij het inwisselen van een authorization code geldt dat ook voor een ontbrekende `code`, `redirect_uri` of `code_verifier`. Herhaal geen parameters in de tokenaanvraag: meerdere waarden voor dezelfde parameter geven `invalid_request` in plaats van samengevoegde waarden. Profit laat `error_description` weg als er geen beschrijving is; verwacht dan geen veld met `null`.
 
 ---
 
@@ -339,18 +345,17 @@ curl -X POST https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/oauth
   -d "client_assertion=<ONDERTEKENDE_JWT>"
 ```
 
-### Antwoord
+### Antwoord (Profit 9)
 
 ```json
 {
   "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...",
-  "refresh_token": null,
   "token_type": "Bearer",
-  "expires_in": "3600"
+  "expires_in": 3600
 }
 ```
 
-Het access token is `expires_in` seconden geldig. Bij deze flow krijg je geen refresh token. Vraag na afloop van de geldigheid simpelweg opnieuw een token aan. Hergebruik het token zolang het geldig is, in plaats van voor elke aanroep een nieuw token op te halen.
+Het access token is `expires_in` seconden geldig. Bij deze flow krijg je geen refresh token; vanaf Profit 9 ontbreekt daarom het veld `refresh_token` in het antwoord. Vraag na afloop van de geldigheid simpelweg opnieuw een token aan. Hergebruik het token zolang het geldig is, in plaats van voor elke aanroep een nieuw token op te halen.
 
 ---
 
@@ -404,7 +409,7 @@ https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/oauth/authorize
 |---|---|
 | `response_type` | Altijd `code` |
 | `client_id` | De client ID van de app connector |
-| `redirect_uri` | De URL waarnaar Profit de gebruiker terugstuurt. Deze moet exact overeenkomen met de redirect URL die bij de app connector is ingesteld. |
+| `redirect_uri` | De URL waarnaar Profit de gebruiker terugstuurt. Deze moet overeenkomen met de redirect URL die bij de app connector is ingesteld. Vanaf Profit 9 vergelijkt Profit het scheme en de host zonder onderscheid tussen hoofd- en kleine letters; het pad, de query en de poort moeten exact overeenkomen. |
 | `state` | Willekeurige waarde die je zelf controleert bij de terugkeer |
 | `code_challenge` | De code challenge uit stap 1 |
 | `code_challenge_method` | Altijd `S256` |
@@ -418,6 +423,10 @@ Na het inloggen stuurt Profit de gebruiker terug naar je `redirect_uri`:
 ```
 
 Controleer dat `state` gelijk is aan de waarde uit stap 1. Als dat niet zo is, breek je het proces af. De authorization code is kort geldig en eenmalig te gebruiken.
+
+Vanaf **Profit 9** stuurt Profit fouten die optreden nadat de `redirect_uri` is gevalideerd, terug via een redirect naar die URL, inclusief een niet-lege meegegeven `state`. Zo geeft `response_type=token` de fout `unsupported_response_type` via de redirect terug. Ook een onverwachte fout, bijvoorbeeld bij de uitwisseling met de STS, komt als `error=server_error` via een redirect terug in plaats van als HTTP `500` op het authorize-endpoint. Controleer ook bij een foutredirect de `state` voordat je de fout verwerkt. Als de `redirect_uri` niet is gevalideerd, wordt er niet naar die URL doorgestuurd.
+
+Een lege `state` wordt niet in het antwoord opgenomen. Ook een lege `nonce` wordt niet als waarde in het antwoord opgenomen. Verstuur voor `state` altijd een niet-lege willekeurige waarde, zodat je een antwoord kunt koppelen aan de oorspronkelijke aanvraag.
 
 ### Stap 4: code inwisselen voor een token
 
@@ -450,14 +459,14 @@ curl -X POST https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/oauth
   -d "client_assertion=<ONDERTEKENDE_JWT>"
 ```
 
-**Antwoord:**
+**Antwoord (Profit 9):**
 
 ```json
 {
   "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...",
   "refresh_token": "<REFRESH_TOKEN>",
   "token_type": "Bearer",
-  "expires_in": "3600"
+  "expires_in": 3600
 }
 ```
 
@@ -590,14 +599,14 @@ curl -X POST https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/oauth
 
 Let op: er is **geen** `client_secret` en **geen** `client_assertion`.
 
-**Antwoord:**
+**Antwoord (Profit 9):**
 
 ```json
 {
   "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...",
   "refresh_token": "<REFRESH_TOKEN>",
   "token_type": "DPoP",
-  "expires_in": "3600"
+  "expires_in": 3600
 }
 ```
 
@@ -645,6 +654,8 @@ curl -X POST https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/oauth
 ### DPoP nonce
 
 Profit vereist altijd een door de server bepaalde waarde (*nonce*) in de DPoP proof. De eerste aanvraag doe je zonder nonce. Profit antwoordt daarop met `use_dpop_nonce` en de header `DPoP-Nonce`. Dit is een vaste stap in de flow, geen uitzonderingssituatie.
+
+Profit controleert de nonce voordat een eventuele client assertion wordt gevalideerd. Daardoor wordt een aanvraag met client assertion bij de nonce-challenge nog niet als gebruikt gemarkeerd en wordt de herhaalde aanvraag niet als replay afgewezen. De nonce-verplichting geldt voor de hele server; de challenge onthult dus niets over de betreffende client.
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -713,6 +724,8 @@ curl -X GET "https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/conne
 ```
 
 Voor public clients (DPoP-token): zie [Stap 6](#stap-6-connector-aanroepen-met-een-dpop-token).
+
+Vanaf **Profit 9** bevat iedere HTTP `401` van de resource server een `WWW-Authenticate`-header. Zonder credentials worden zowel `Bearer` als `DPoP` aangeboden, zonder foutcode. Wordt een token afgewezen, dan vermeldt de challenge van het gebruikte schema `error="invalid_token"`, bijvoorbeeld `WWW-Authenticate: Bearer error="invalid_token"` of `WWW-Authenticate: DPoP error="invalid_token"`. Ook een DPoP proof met een andere sleutel dan die waaraan het token is gebonden geeft `invalid_token` ([RFC 9449 §7.1](https://www.rfc-editor.org/rfc/rfc9449#section-7.1)). Een storing van de opslag voor replay-detectie geeft HTTP `503` in plaats van `401`; behandel dit als een tijdelijke serverstoring, niet als een ongeldig token.
 
 Je kunt alleen de Get- en UpdateConnectoren aanroepen die aan de app connector zijn gekoppeld.
 

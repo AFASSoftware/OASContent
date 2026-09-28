@@ -183,6 +183,8 @@ client_id=<CLIENT_ID>
 client_secret=<CLIENT_SECRET>
 ```
 
+From **Profit 9**, you can also use `client_secret_basic`: send both values in the `Authorization: Basic <BASE64_VALUE>` header and omit `client_secret` from the body. Before Base64 encoding, the value is `FORM_URLENCODE(client_id):FORM_URLENCODE(client_secret)`: encode **each value separately** as `application/x-www-form-urlencoded`, as specified in [RFC 6749 §2.3.1](https://www.rfc-editor.org/rfc/rfc6749#section-2.3.1). Do not use the raw values if they contain, for example, `:` or other special characters. You may include `client_id` in the body if it matches the one in the Basic header; omitting it avoids confusion.
+
 Store the client secret like a password: in a secret store or key vault, never in source code, version control, or logs.
 
 #### Client secret validity period (Profit 9)
@@ -288,9 +290,9 @@ client_assertion=<SIGNED_JWT>
 
 Create a new JWT for **every** token request.
 
-Send exactly one client authentication method. A request containing both `client_secret` and `client_assertion` is rejected.
+Send exactly one client authentication method. From Profit 9, a request containing both `client_secret` and `client_assertion`, or Basic authentication and a credential in the body, returns `invalid_request`. The same applies if a `client_id` in the body differs from the one in the Basic header.
 
-Failed client authentication returns HTTP status `400` with `error: invalid_client`. From Profit 9, this also applies to an incorrect client secret.
+From Profit 9, an unknown client or failed client authentication returns `invalid_client`. Failed Basic authentication returns HTTP `401` with `WWW-Authenticate: Basic`; other methods return HTTP `400`. An incorrect client secret is also rejected.
 
 #### Rotating keys
 
@@ -299,6 +301,10 @@ You also rotate key pairs periodically. Procedure:
 1. Create a new key pair and register the new certificate or add the new key to your JWK Set. Multiple certificates can be active at the same time.
 2. Configure your application to sign JWTs with the new private key (with the matching `kid`).
 3. Verify that the new key works, then remove the old certificate or JWK. This allows rotation without interruption.
+
+### Token request errors (Profit 9)
+
+A missing `grant_type` returns `invalid_request`. When exchanging an authorization code, a missing `code`, `redirect_uri`, or `code_verifier` also returns `invalid_request`. Do not repeat parameters in a token request: multiple values for the same parameter return `invalid_request` instead of being combined. Profit omits `error_description` if there is no description; do not expect a field with a `null` value.
 
 ---
 
@@ -339,18 +345,17 @@ curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oau
   -d "client_assertion=<SIGNED_JWT>"
 ```
 
-### Response
+### Response (Profit 9)
 
 ```json
 {
   "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...",
-  "refresh_token": null,
   "token_type": "Bearer",
-  "expires_in": "3600"
+  "expires_in": 3600
 }
 ```
 
-The access token is valid for `expires_in` seconds. In this flow, you receive no refresh token. After it expires, simply request a new token in the same way. Reuse the token while it is valid instead of requesting a new one for every call.
+The access token is valid for `expires_in` seconds. In this flow, you receive no refresh token; from Profit 9, the `refresh_token` field is therefore omitted from the response. After it expires, simply request a new token in the same way. Reuse the token while it is valid instead of requesting a new one for every call.
 
 ---
 
@@ -404,7 +409,7 @@ https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/authorize
 |---|---|
 | `response_type` | Always `code` |
 | `client_id` | The client ID of the app connector |
-| `redirect_uri` | The URL to which Profit sends the user back. It must exactly match the redirect URL configured in the app connector. |
+| `redirect_uri` | The URL to which Profit sends the user back. It must match the redirect URL configured in the app connector. From Profit 9, Profit compares the scheme and host case-insensitively; the path, query, and port must match exactly. |
 | `state` | Random value that you verify on return |
 | `code_challenge` | The code challenge from step 1 |
 | `code_challenge_method` | Always `S256` |
@@ -418,6 +423,10 @@ After logging in, Profit redirects the user back to your `redirect_uri`:
 ```
 
 Check that `state` matches the value from step 1. If it does not, abort the process. The authorization code is short-lived and can be used only once.
+
+From **Profit 9**, errors that occur after the `redirect_uri` has been validated are sent as redirects to that URL, including a non-empty supplied `state`. For example, `response_type=token` returns `unsupported_response_type` through the redirect. An unexpected error, such as one during the exchange with the STS, is also returned as an `error=server_error` redirect rather than a bare HTTP `500` from the authorize endpoint. Check `state` on error redirects too before processing the error. If the `redirect_uri` has not been validated, Profit does not redirect to it.
+
+An empty `state` is omitted from the response. An empty `nonce` is also not included as a value in the response. Always send a non-empty random `state` so you can match the response to the original request.
 
 ### Step 4: exchange the code for a token
 
@@ -450,14 +459,14 @@ curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oau
   -d "client_assertion=<SIGNED_JWT>"
 ```
 
-**Response:**
+**Response (Profit 9):**
 
 ```json
 {
   "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...",
   "refresh_token": "<REFRESH_TOKEN>",
   "token_type": "Bearer",
-  "expires_in": "3600"
+  "expires_in": 3600
 }
 ```
 
@@ -590,14 +599,14 @@ curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oau
 
 Note: there is **no** `client_secret` and **no** `client_assertion`.
 
-**Response:**
+**Response (Profit 9):**
 
 ```json
 {
   "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...",
   "refresh_token": "<REFRESH_TOKEN>",
   "token_type": "DPoP",
-  "expires_in": "3600"
+  "expires_in": 3600
 }
 ```
 
@@ -645,6 +654,8 @@ curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oau
 ### DPoP nonce
 
 Profit always requires a server-defined value (*nonce*) in the DPoP proof. Send the first request without a nonce. Profit responds with `use_dpop_nonce` and the `DPoP-Nonce` header. This is a standard step in the flow, not an exceptional condition.
+
+Profit checks the nonce before validating any client assertion. As a result, an assertion is not marked as used during the nonce challenge, and the repeated request is not rejected as a replay. The nonce requirement applies server-wide, so the challenge reveals nothing about the client.
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -713,6 +724,8 @@ curl -X GET "https://<environmentnumber>.rest.afas.online/ProfitRestServices/con
 ```
 
 For public clients (DPoP token): see [Step 6](#step-6-call-a-connector-with-a-dpop-token).
+
+From **Profit 9**, every HTTP `401` from the resource server includes a `WWW-Authenticate` header. Without credentials, both `Bearer` and `DPoP` are offered, without an error code. If a token is rejected, the challenge for the scheme used includes `error="invalid_token"`, for example `WWW-Authenticate: Bearer error="invalid_token"` or `WWW-Authenticate: DPoP error="invalid_token"`. A DPoP proof signed with a different key than the one bound to the token also returns `invalid_token` ([RFC 9449 §7.1](https://www.rfc-editor.org/rfc/rfc9449#section-7.1)). A failure of the replay-detection store returns HTTP `503` instead of `401`; treat this as a temporary server failure, not an invalid token.
 
 You can call only the Get- and UpdateConnector endpoints that are linked to the app connector.
 
