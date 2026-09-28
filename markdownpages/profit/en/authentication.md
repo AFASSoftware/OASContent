@@ -584,7 +584,7 @@ Sign the proof with the private key from step 1. Create a new proof for **every*
 
 ### Step 5: exchange the code for a token
 
-For this request, first complete the mandatory nonce exchange described under [DPoP nonce](#dpop-nonce). The repeated request then returns the token response.
+Include a previously received valid nonce in your DPoP proof. If you do not have one yet, complete the nonce exchange described under [DPoP nonce](#dpop-nonce) and repeat the request with a new proof.
 
 ```bash
 curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/token \
@@ -653,7 +653,7 @@ curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oau
 
 ### DPoP nonce
 
-Profit always requires a server-defined value (*nonce*) in the DPoP proof. Send the first request without a nonce. Profit responds with `use_dpop_nonce` and the `DPoP-Nonce` header. This is a standard step in the flow, not an exceptional condition.
+Profit requires a server-defined value (*nonce*) in the DPoP proof. If you have not yet received a valid nonce, send a request without one. Profit responds with `use_dpop_nonce` and the `DPoP-Nonce` header. If you have already stored a valid nonce, you can use it immediately.
 
 Profit checks the nonce before validating any client assertion. As a result, an assertion is not marked as used during the nonce challenge, and the repeated request is not rejected as a replay. The nonce requirement applies server-wide, so the challenge reveals nothing about the client.
 

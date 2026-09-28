@@ -584,7 +584,7 @@ Onderteken de proof met de private key uit stap 1. Maak voor elke aanvraag een n
 
 ### Stap 5: code inwisselen voor een token
 
-Voer bij deze aanvraag eerst de verplichte nonce-uitwisseling uit zoals beschreven bij [DPoP nonce](#dpop-nonce). Daarna levert de herhaalde aanvraag het tokenantwoord op.
+Gebruik een eerder ontvangen geldige nonce in je DPoP proof. Heb je die nog niet, voer dan eerst de nonce-uitwisseling uit zoals beschreven bij [DPoP nonce](#dpop-nonce) en herhaal de aanvraag met een nieuwe proof.
 
 ```bash
 curl -X POST https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/oauth/token \
@@ -653,7 +653,7 @@ curl -X POST https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/oauth
 
 ### DPoP nonce
 
-Profit vereist altijd een door de server bepaalde waarde (*nonce*) in de DPoP proof. De eerste aanvraag doe je zonder nonce. Profit antwoordt daarop met `use_dpop_nonce` en de header `DPoP-Nonce`. Dit is een vaste stap in de flow, geen uitzonderingssituatie.
+Profit vereist een door de server bepaalde waarde (*nonce*) in de DPoP proof. Heb je nog geen geldige nonce ontvangen, stuur dan een aanvraag zonder nonce. Profit antwoordt met `use_dpop_nonce` en de header `DPoP-Nonce`. Heb je al een geldige nonce bewaard, dan kun je die direct gebruiken.
 
 Profit controleert de nonce voordat een eventuele client assertion wordt gevalideerd. Daardoor wordt een aanvraag met client assertion bij de nonce-challenge nog niet als gebruikt gemarkeerd en wordt de herhaalde aanvraag niet als replay afgewezen. De nonce-verplichting geldt voor de hele server; de challenge onthult dus niets over de betreffende client.
 
