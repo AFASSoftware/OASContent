@@ -234,6 +234,14 @@ The private key (`private_key.pem`) remains with you and is never sent to Profit
 
 Profit caches a JWK Set for one hour by default and honors the `Cache-Control` header. When it encounters an unknown `kid`, Profit immediately retrieves the set again, so a new key becomes available almost immediately. When removing a key, keep in mind that a cached key may still be accepted for up to one hour.
 
+#### Best practices for partners managing multiple customers
+
+If you manage integrations for multiple customers, use a **separate key pair for each customer environment**. At a minimum, use separate keys for production and test or acceptance environments. Do not reuse one private key for all customers: if that key leaks, all app connectors that trust the corresponding public key may be at risk.
+
+The **private key** is secret and must be stored securely for each customer environment. You can share the certificate or public key with Profit; the private key must remain in the partner's secure environment. Also limit internal access to the private keys.
+
+If you use a JWKS URL, publish a separate JWK Set for each customer environment containing only that customer's public key(s), and register the corresponding URL in that customer's app connector. Do not use the same JWK Set for multiple customers if it contains all of their keys. This helps prevent a key intended for one customer from also being trusted for other customers.
+
 #### Step 2: create the client assertion
 
 The JWT contains the following data:
@@ -298,9 +306,11 @@ From Profit 9, an unknown client or failed client authentication returns `invali
 
 You also rotate key pairs periodically. Procedure:
 
-1. Create a new key pair and register the new certificate or add the new key to your JWK Set. Multiple certificates can be active at the same time.
+1. Create a new key pair for the customer environment and register the new certificate or add the new key to that customer's JWK Set. Multiple certificates can be active at the same time.
 2. Configure your application to sign JWTs with the new private key (with the matching `kid`).
 3. Verify that the new key works, then remove the old certificate or JWK. This allows rotation without interruption.
+
+During the transition, two keys are temporarily active for that customer environment. If you suspect that a private key has leaked, revoke the corresponding public key in Profit or remove it from the JWK Set, then replace the key immediately. Also check that the relevant app connectors and customer environments use separate keys.
 
 ### Token request errors (Profit 9)
 
