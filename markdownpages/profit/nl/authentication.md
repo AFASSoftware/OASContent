@@ -308,9 +308,10 @@ Ook sleutelparen vervang je periodiek. Werkwijze:
 
 1. Maak voor de betreffende klantomgeving een nieuw sleutelpaar aan en registreer het nieuwe certificaat of voeg de nieuwe sleutel aan de JWK Set van die klant toe. Meerdere certificaten kunnen tegelijk actief zijn.
 2. Laat je applicatie JWT's ondertekenen met de nieuwe private key (met de bijbehorende `kid`).
-3. Controleer dat de nieuwe sleutel werkt en verwijder daarna het oude certificaat of de oude JWK. Zo roteer je zonder onderbreking.
+3. Controleer dat de nieuwe sleutel werkt. Houd daarna het oude certificaat of de oude JWK nog een redelijke, afgesproken overlapperiode beschikbaar, zodat de overgang soepel verloopt. Bij een JWKS-URL blijft de oude sleutel gedurende die periode in de JWK Set staan. Houd rekening met de cacheduur: Profit cachet de set standaard één uur en volgt de `Cache-Control`-header.
+4. Verwijder na de overlapperiode het oude certificaat of de oude JWK.
 
-Tijdens de overstap zijn er dus tijdelijk twee sleutels actief voor die klantomgeving. Vermoed je dat een private key is uitgelekt, trek dan de bijbehorende publieke sleutel in Profit of uit de JWK Set in en vervang de sleutel direct. Controleer ook of de betreffende app connectoren en klantomgevingen afzonderlijke sleutels gebruiken.
+Tijdens de overstap en overlapperiode zijn er dus tijdelijk twee sleutels actief voor die klantomgeving. Dit sluit aan bij het [sleutelrotatieadvies in OpenID Connect Core](https://openid.net/specs/openid-connect-core-1_0.html#RotateSigKeys). Vermoed je dat een private key is uitgelekt, trek dan de bijbehorende publieke sleutel direct in Profit of uit de JWK Set in en vervang de sleutel; wacht in dat geval niet op het einde van de overlapperiode. Controleer ook of de betreffende app connectoren en klantomgevingen afzonderlijke sleutels gebruiken.
 
 ### Fouten bij tokenaanvragen (Profit 9)
 

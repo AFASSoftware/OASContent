@@ -308,9 +308,10 @@ You also rotate key pairs periodically. Procedure:
 
 1. Create a new key pair for the customer environment and register the new certificate or add the new key to that customer's JWK Set. Multiple certificates can be active at the same time.
 2. Configure your application to sign JWTs with the new private key (with the matching `kid`).
-3. Verify that the new key works, then remove the old certificate or JWK. This allows rotation without interruption.
+3. Verify that the new key works. Keep the old certificate or JWK available for a reasonable, agreed overlap period so the transition can complete smoothly. If you use a JWKS URL, leave the old key in the JWK Set during this period. Take the cache duration into account: Profit caches the set for one hour by default and honors the `Cache-Control` header.
+4. Remove the old certificate or JWK after the overlap period.
 
-During the transition, two keys are temporarily active for that customer environment. If you suspect that a private key has leaked, revoke the corresponding public key in Profit or remove it from the JWK Set, then replace the key immediately. Also check that the relevant app connectors and customer environments use separate keys.
+During the transition and overlap period, two keys are temporarily active for that customer environment. This follows the [key rotation guidance in OpenID Connect Core](https://openid.net/specs/openid-connect-core-1_0.html#RotateSigKeys). If you suspect that a private key has leaked, revoke the corresponding public key in Profit or remove it from the JWK Set immediately, then replace the key; do not wait for the overlap period to end. Also check that the relevant app connectors and customer environments use separate keys.
 
 ### Token request errors (Profit 9)
 
