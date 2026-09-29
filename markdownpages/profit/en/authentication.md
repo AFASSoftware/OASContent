@@ -83,12 +83,11 @@ To access the API, follow these steps:
     1. Call the [token endpoint](#token-endpoint) (POST) with the following information in the body:
         1. grant_type: client_credentials
         2. client_id: `<CLIENT_ID>`
-        3. client_secret: `<CLIENT_SECRET>`
-    2. In the response of this call you will find the following fields:
+        3. client_secret: `<CLIENT_SECRET>` (or send client_id and client_secret in a Basic header, see [Client authentication](#client-authentication))
+    2. In the response of this call you will find the following fields; this flow does not issue a refresh token:
         1. access_token: the access token you must add to the Authorization header.
-        2. refresh_token: for the client credentials flow this is always "null".
-        3. token_type: Bearer
-        4. expires_in: validity of the access token in seconds.
+        2. token_type: Bearer
+        3. expires_in: validity of the access token in seconds, as a number.
     3. Use the access token
         1. Copy the access token, prefix it with 'Bearer', and add it to your Authorization header.
 
@@ -107,10 +106,17 @@ curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oau
 ```json
 {
   "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...",
-  "refresh_token": null,
   "token_type": "Bearer",
   "expires_in": 3600
 }
+```
+
+**Get a token with a Basic header:**
+```bash
+curl -X POST https://<environmentnumber>.rest.afas.online/ProfitRestServices/oauth/token \
+  -u "<CLIENT_ID>:<CLIENT_SECRET>" \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "grant_type=client_credentials"
 ```
 
 **API call with token:**
@@ -144,7 +150,7 @@ curl -X GET "https://<environmentnumber>.rest.afas.online/ProfitRestServices/con
 
 The Authorization Code Flow with PKCE is ideal for web applications that need to obtain access to resources on behalf of a user. The process starts with user authentication and authorization, where the user logs in and grants permission. An authorization code is then issued, which can be exchanged for an access token. This flow provides a secure way to access data from external services because it requires the user's involvement before access is granted.
 
-> The redirect_uri must match one of the redirect URLs registered in the App Connector. To test on AFAS Connect, you must register https://connect.afas.nl/oauth/callback. After creating an App Connector, you can register multiple redirect URLs.
+> The redirect_uri must exactly match one of the redirect URLs registered in the App Connector. Only the scheme and host may differ in case; path, query and port must be identical. A redirect_uri with a fragment (`#`) is rejected. To test on AFAS Connect, you must register https://connect.afas.nl/oauth/callback. After creating an App Connector, you can register multiple redirect URLs.
 
 
 #### Steps to access the API
@@ -157,13 +163,13 @@ To access the API via the Authorization Code Flow, follow these steps:
         3. redirect_uri: `<REDIRECT_URI>`
         4. state: `<optional unique value to protect against CSRF>`
         5. code_challenge: `<fill in codeChallenge>`
-        6. code_challenge_method: `<fill in codeChallenge method>`
-    2. The user logs in and grants permission. After granting permission the user is redirected back to the provided redirect_uri with an authorization code.
+        6. code_challenge_method: `S256` (the only supported method)
+    2. The user logs in and grants permission. After granting permission the user is redirected back to the provided redirect_uri with the parameters `code` and, if you sent one, `state`. The login must be completed within 10 minutes. For errors, see [Authorization endpoint errors](#authorization-endpoint-errors).
 2. Exchange the authorization code for an access token
     1. Call the [token endpoint](#token-endpoint) (POST) with the following information in the body:
         1. grant_type: authorization_code
         2. code: `<AUTHORIZATION_CODE>`
-        3. redirect_uri: `<REDIRECT_URI>`
+        3. redirect_uri: `<REDIRECT_URI>` (exactly the same as in step 1)
         4. client_id: `<CLIENT_ID>`
         5. client_secret: `<CLIENT_SECRET>`
         6. code_verifier: `<fill in code verifier>`
@@ -171,7 +177,7 @@ To access the API via the Authorization Code Flow, follow these steps:
     1. access_token: the access token you must add to the Authorization header.
     2. refresh_token: a token that can be used to obtain a new access token.
     3. token_type: Bearer
-    4. expires_in: validity of the access token in seconds.
+    4. expires_in: validity of the access token in seconds, as a number.
 4. Use the access token
     1. Copy the access token, prefix it with 'Bearer', and add it to your Authorization header.
 5. Obtain a new access token using the refresh token
@@ -181,6 +187,12 @@ To access the API via the Authorization Code Flow, follow these steps:
         3. client_id: `<CLIENT_ID>`
         4. client_secret: `<CLIENT_SECRET>`
     2. In the response of this call you will find the same fields as in step 3.
+
+An authorization code can be used once. A wrong `redirect_uri` or `code_verifier` in step 2 invalidates the code; if either is missing, the code stays valid and you can correct the request.
+
+#### Authorization endpoint errors
+
+If something goes wrong after `client_id` and `redirect_uri` have been checked, the user is redirected to the redirect_uri with `error`, optionally `error_description`, and your `state`. For example `error=invalid_request` for a missing `code_challenge`, or `error=access_denied` when the user cannot log in. An unknown `client_id`, or a missing or unregistered `redirect_uri`, shows an error page without a redirect.
 
 #### cURL examples
 
@@ -238,6 +250,40 @@ curl -X GET "https://<environmentnumber>.rest.afas.online/ProfitRestServices/con
   ]
 }
 ```
+
+### Calling the token endpoint
+
+Always send a `POST` with `Content-Type: application/x-www-form-urlencoded` and the parameters in the body. A `GET`, or a JSON body, returns HTTP 400 with `"error": "invalid_request"` and `"error_description": "Invalid HTTP request for token endpoint"`. Include each parameter only once.
+
+#### Client authentication
+
+An app connector with a client secret authenticates in one of these two ways, not both at once:
+
+1. `client_id` and `client_secret` in the body, as in the examples above.
+2. A Basic header: `Authorization: Basic <base64 of client_id:client_secret>`. Encode client_id and client_secret with `application/x-www-form-urlencoded` first and join them with a colon (RFC 6749 §2.3.1). For the client IDs and secrets that Profit issues, this encoding changes nothing.
+
+#### Error responses
+
+An error response from the token endpoint has this form; `error_description` is omitted when there is no explanation:
+
+```json
+{
+  "error": "invalid_client",
+  "error_description": "Invalid client credentials"
+}
+```
+
+| Code | Meaning |
+|---|---|
+| `invalid_request` | A required parameter is missing, a parameter is included more than once, or the request is not a `POST` with a form body. |
+| `invalid_client` | The client is unknown or blocked, or authentication failed. With a Basic header this is HTTP 401 with a `WWW-Authenticate` header, otherwise HTTP 400. |
+| `invalid_grant` | The authorization code or refresh token is invalid, expired or already used, or the `redirect_uri` or `code_verifier` does not match. |
+| `unauthorized_client` | The app connector may not use this flow. |
+| `unsupported_grant_type` | The `grant_type` is not supported. |
+
+### Using an access token
+
+If an access token is expired or invalid, the API returns HTTP 401 with the header `WWW-Authenticate: Bearer error="invalid_token"`. Get a new access token.
 
 ### OAuth & SOAP API
 The description above for both flows **also applies when using the SOAP API**. It is important to include the Bearer token in the header and not in the body.
