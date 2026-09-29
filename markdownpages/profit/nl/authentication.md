@@ -82,12 +82,11 @@ Om toegang te krijgen tot de API, volg je de volgende stappen:
     1. Roep het [token endpoint](#token-endpoint) (POST) aan met de volgende informatie in de body:
         1.	grant_type: client_credentials
         2. 	client_id: `<CLIENT_ID>`
-        3.	client_secret: `<CLIENT_SECRET>`
-    2.	In de response van deze aanroep vind je de volgende velden:
+        3.	client_secret: `<CLIENT_SECRET>` (of stuur client_id en client_secret in een Basic-header, zie [Clientauthenticatie](#clientauthenticatie))
+    2.	In de response van deze aanroep vind je de volgende velden; een refresh token geeft deze flow niet:
         1. 	access_token: de access token die je in de Authorization header moet toevoegen.
-        2.  refresh_token: is bij de client credentials flow altijd "null".
-        3.	token_type: Bearer
-        4.	expires_in: geldigheid van het access token in seconden.
+        2.	token_type: Bearer
+        3.	expires_in: geldigheid van het access token in seconden, als getal.
     3.	Access token gebruiken
         1.	Kopieer de access token, zet er 'Bearer' voor, en voeg hem toe in je Authorization header.
 
@@ -106,10 +105,17 @@ curl -X POST https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/oauth
 ```json
 {
   "access_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...",
-  "refresh_token": null,
   "token_type": "Bearer",
   "expires_in": 3600
 }
+```
+
+**Token ophalen met een Basic-header:**
+```bash
+curl -X POST https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/oauth/token \
+  -u "<CLIENT_ID>:<CLIENT_SECRET>" \
+  -H "Content-Type: application/x-www-form-urlencoded" \
+  -d "grant_type=client_credentials"
 ```
 
 **API aanroep met token:**
@@ -143,7 +149,7 @@ curl -X GET "https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/conne
 
 De Authorization Code Flow with PKCE is ideaal voor webapplicaties die namens een gebruiker toegang tot resources moeten verkrijgen. Dit proces begint met gebruikersauthenticatie en autorisatie, waarbij de gebruiker inlogt en toestemming geeft. Vervolgens wordt een autorisatiecode verstrekt, die kan worden ingewisseld voor een access token. Deze flow biedt een veilige manier om toegang te krijgen tot gegevens bij externe services, doordat het de betrokkenheid van de gebruiker vereist voordat toegang wordt verleend.
 
-> De redirect_uri moet overeenkomen met één van de redirect url's die je hebt geregistreerd in de AppConnector. Om te testen op AFAS Connect moet je https://connect.afas.nl/oauth/callback hebben geregistreerd. Na aanmaken van een AppConnector kun je meerdere redirect url's registreren.
+> De redirect_uri moet exact overeenkomen met één van de redirect url's die je hebt geregistreerd in de AppConnector. Alleen in het schema en de host mogen hoofdletters afwijken; pad, query en poort moeten letterlijk gelijk zijn. Een redirect_uri met een fragment (`#`) wordt geweigerd. Om te testen op AFAS Connect moet je https://connect.afas.nl/oauth/callback hebben geregistreerd. Na aanmaken van een AppConnector kun je meerdere redirect url's registreren.
 
 
 #### Stappen voor Toegang tot de API
@@ -156,13 +162,13 @@ Om toegang te krijgen tot de API via de Authorization Code Flow, volg je de volg
         3.	redirect_uri: `<REDIRECT_URI>`
         4.	state: `<optionele unieke waarde ter bescherming tegen CSRF>`
         5.  code_challenge: `<vul codeChallenge in>`
-        6.  code_challenge_method: `<vul codeChallenge methode in>`
-    2.	De gebruiker logt in en geeft toestemming. Na toestemming wordt de gebruiker teruggeleid naar de opgegeven redirect_uri met een autorisatiecode.
+        6.  code_challenge_method: `S256` (de enige ondersteunde methode)
+    2.	De gebruiker logt in en geeft toestemming. Na toestemming wordt de gebruiker teruggeleid naar de opgegeven redirect_uri met de parameters `code` en, als je die meestuurde, `state`. De login moet binnen 10 minuten zijn afgerond. Bij een fout, zie [Fouten bij het autorisatie endpoint](#fouten-bij-het-autorisatie-endpoint).
 2.	Wissel de Autorisatiecode in voor een Access Token
     1.	Roep het [token endpoint](#token-endpoint) (POST) aan met de volgende informatie in de body:
         1.	grant_type: authorization_code
         2.	code: `<AUTHORIZATION_CODE>`
-        3.	redirect_uri: `<REDIRECT_URI>`
+        3.	redirect_uri: `<REDIRECT_URI>` (letterlijk dezelfde als bij stap 1)
         4.	client_id: `<CLIENT_ID>`
         5.	client_secret: `<CLIENT_SECRET>`
         6.  code_verifier: `<vul code verifier in>`
@@ -170,7 +176,7 @@ Om toegang te krijgen tot de API via de Authorization Code Flow, volg je de volg
     1.	access_token: de access token die je in de Authorization header moet toevoegen.
     2.	refresh_token: een token dat kan worden gebruikt om een nieuw access token te verkrijgen.
     3.	token_type: Bearer
-    4.	expires_in: geldigheid van het access token in seconden.
+    4.	expires_in: geldigheid van het access token in seconden, als getal.
 4.	Access Token gebruiken
     1.	Kopieer de access token, zet er 'Bearer' voor, en voeg hem toe in je Authorization header.
 5.  Een nieuw access token en refresh token ophalen
@@ -180,6 +186,12 @@ Om toegang te krijgen tot de API via de Authorization Code Flow, volg je de volg
         3. client_id: `<CLIENT_ID>`
         4. client_secret: `<CLIENT_SECRET>`
     2. In de response van deze aanroep vind je dezelfde velden als bij stap 3.
+
+Een autorisatiecode is eenmalig bruikbaar. Een verkeerde `redirect_uri` of `code_verifier` bij stap 2 maakt de code ongeldig; ontbreekt een van beide, dan blijft de code bruikbaar en kun je het verzoek herstellen.
+
+#### Fouten bij het autorisatie endpoint
+
+Gaat er iets mis nadat `client_id` en `redirect_uri` zijn gecontroleerd, dan wordt de gebruiker teruggeleid naar de redirect_uri met `error`, eventueel `error_description`, en je `state`. Bijvoorbeeld `error=invalid_request` bij een ontbrekende `code_challenge`, of `error=access_denied` als de gebruiker niet kan inloggen. Een onbekende `client_id`, of een ontbrekende of niet-geregistreerde `redirect_uri`, geeft een foutpagina zonder redirect.
 
 #### cURL voorbeelden
 
@@ -237,6 +249,40 @@ curl -X GET "https://<omgevingsnummer>.rest.afas.online/ProfitRestServices/conne
   ]
 }
 ```
+
+### Het token endpoint aanroepen
+
+Stuur altijd een `POST` met `Content-Type: application/x-www-form-urlencoded` en de parameters in de body. Een `GET`, of een body in JSON, geeft HTTP 400 met `"error": "invalid_request"` en `"error_description": "Invalid HTTP request for token endpoint"`. Neem elke parameter maar één keer op.
+
+#### Clientauthenticatie
+
+Een app connector met een client secret authenticeert op één van deze twee manieren, niet allebei tegelijk:
+
+1. `client_id` en `client_secret` in de body, zoals in de voorbeelden hierboven.
+2. Een Basic-header: `Authorization: Basic <base64 van client_id:client_secret>`. Codeer client_id en client_secret eerst volgens `application/x-www-form-urlencoded` en voeg ze dan samen met een dubbele punt (RFC 6749 §2.3.1). Voor de client id's en secrets die Profit uitgeeft, verandert dat coderen niets.
+
+#### Foutmeldingen
+
+Een foutmelding van het token endpoint heeft deze vorm; `error_description` ontbreekt als er geen toelichting is:
+
+```json
+{
+  "error": "invalid_client",
+  "error_description": "Invalid client credentials"
+}
+```
+
+| Code | Betekenis |
+|---|---|
+| `invalid_request` | Een verplichte parameter ontbreekt, een parameter staat er meer dan één keer in, of het verzoek is geen `POST` met een form-body. |
+| `invalid_client` | De client is onbekend of geblokkeerd, of de authenticatie is mislukt. Via een Basic-header is dit HTTP 401 met een `WWW-Authenticate`-header, anders HTTP 400. |
+| `invalid_grant` | De autorisatiecode of refresh token is ongeldig, verlopen of al gebruikt, of `redirect_uri` of `code_verifier` klopt niet. |
+| `unauthorized_client` | De app connector mag deze flow niet gebruiken. |
+| `unsupported_grant_type` | De `grant_type` wordt niet ondersteund. |
+
+### Een access token gebruiken
+
+Is een access token verlopen of ongeldig, dan geeft de API HTTP 401 met de header `WWW-Authenticate: Bearer error="invalid_token"`. Haal dan een nieuw access token op.
 
 ### OAuth & SOAP API
 Bovenstaande beschrijving voor beide flows geldt **ook wanneer je gebruikmaakt van de SOAP API**. Het is belangrijk dat je het Bearer-token meegeeft in de header en niet in de body.
