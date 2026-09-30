@@ -27,7 +27,7 @@ Vanaf Profit 9 is er een aantal wijzigingen in de AFAS Profit API doorgevoerd. H
 - De GetConnector geeft nog maar één regel per periode terug, ook als er meerdere salarisregels zijn.
 - De koppeling naar `Medewerker/salaris` blijft bestaan, maar levert nu slechts één regel per periode op. Dat zal altijd de laatste regel van de periode zijn.
 
-De GetConnector werkt door deze wijziging op dezelfde manier als een GetConnector die gebaseerd is op *Medewerker/berekenede looncomponenten*.
+De GetConnector werkt door deze wijziging op dezelfde manier als een GetConnector die gebaseerd is op *Medewerker/berekende looncomponenten*.
 
 ## Belangrijke wijzigingen
 
