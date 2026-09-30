@@ -786,5 +786,5 @@ Check whether the `client_id` is correct and whether the client secret has expir
 
 ### Read more
 
-- [Profit API GetConnectoren](./get-connector)
+- [Profit API GetConnectors](./get-connector)
 - [Error handling](./troubleshooting)
