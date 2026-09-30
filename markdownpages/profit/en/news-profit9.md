@@ -13,7 +13,6 @@ Starting with Profit 9, several changes have been implemented in the AFAS Profit
 
 > How to read this? Profit has an extensive API with many different components. The API specifications are divided into related sections. Changes are indicated per section.  
 
-> [Click here](./news-profit8) for the release notes of Profit 8.
 
 ## ***Breaking* changes**
 
