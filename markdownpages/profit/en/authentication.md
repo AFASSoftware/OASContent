@@ -638,8 +638,8 @@ The proof for an API call contains, in addition to `jti`, `htm`, `htu`, and `iat
   "htm": "GET",
   "htu": "https://<environmentnumber>.rest.afas.online/ProfitRestServices/connectors/Profit_Address",
   "iat": 1790000060,
-  "ath": "<BASE64URL(SHA256(ACCESS_TOKEN))>"
-}
+  "ath": "<BASE64URL(SHA256(ACCESS_TOKEN))>",
+  "nonce": "<MOST_RECENT_DPOP_NONCE>"
 ```
 
 ```bash
