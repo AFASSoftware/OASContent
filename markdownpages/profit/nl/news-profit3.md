@@ -5,6 +5,8 @@ tags: Tutorial, GetConnector, UpdateConnector, Profit4, Profit3, Configuration
 title: Nieuw in Profit 3
 ---
 
+[Volgende: Profit 4 →](./news-profit4)
+
 Vanaf Profit 3 is er een aantal wijzigingen in de AFAS Profit API doorgevoerd. Hieronder staan alle wijzigingen die er zijn. Benieuwd naar onze roadmap? [Klik hier](https://www.afas.nl/roadmap)
 
 > Hoe lees je dit? Profit heeft een omvangrijke API met veel verschillende onderdelen. De API specificaties zijn opgedeeld in onderdelen die bij elkaar horen. Per onderdeel zijn de wijzigingen aangegeven.

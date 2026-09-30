@@ -5,6 +5,8 @@ tags: Profit8, GetConnector, UpdateConnector, Integration, Configuration
 title: Nieuw in Profit 8
 ---
 
+[← Vorige: Profit 7](./news-profit7) | [Volgende: Profit 9 →](./news-profit9)
+
 Vanaf Profit 8 is er een aantal wijzigingen in de AFAS Profit API doorgevoerd. Hieronder staan de wijzigingen ten opzichte van Profit 7. Benieuwd naar onze roadmap? [Klik hier](https://www.afas.nl/roadmap)  
 
 > Hoe lees je dit? Profit heeft een omvangrijke API met veel verschillende onderdelen. De API specificaties zijn opgedeeld in onderdelen die bij elkaar horen. Per onderdeel zijn de wijzigingen aangegeven.  

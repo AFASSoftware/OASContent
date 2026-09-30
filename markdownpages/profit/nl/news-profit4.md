@@ -5,6 +5,8 @@ tags: UpdateConnector, Profit4, Profit3, Configuration, Hr, Payroll
 title: Nieuw in Profit 4
 ---
 
+[← Vorige: Profit 3](./news-profit3) | [Volgende: Profit 5 →](./news-profit5)
+
 Vanaf Profit 4 is er een aantal wijzigingen in de AFAS Profit API doorgevoerd. Hieronder staan wijzigingen ten opzichte van Profit 3. Benieuwd naar onze roadmap? [Klik hier](https://www.afas.nl/roadmap)
 
 > Hoe lees je dit? Profit heeft een omvangrijke API met veel verschillende onderdelen. De API specificaties zijn opgedeeld in onderdelen die bij elkaar horen. Per onderdeel zijn de wijzigingen aangegeven.

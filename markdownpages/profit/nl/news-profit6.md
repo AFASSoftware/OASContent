@@ -5,6 +5,8 @@ tags: Profit6, GetConnector, UpdateConnector, Configuration, Authentication
 title: Nieuw in Profit 6
 ---
 
+[← Vorige: Profit 5](./news-profit5) | [Volgende: Profit 7 →](./news-profit7)
+
 Vanaf Profit 6 is er een aantal wijzigingen in de AFAS Profit API doorgevoerd. Hieronder staan wijzigingen ten opzichte van Profit 5. Benieuwd naar onze roadmap? [Klik hier](https://www.afas.nl/roadmap)
 
 > Hoe lees je dit? Profit heeft een omvangrijke API met veel verschillende onderdelen. De API specificaties zijn opgedeeld in onderdelen die bij elkaar horen. Per onderdeel zijn de wijzigingen aangegeven.

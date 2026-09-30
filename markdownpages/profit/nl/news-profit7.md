@@ -5,6 +5,8 @@ tags: Profit7, GetConnector, UpdateConnector, Integration, Configuration
 title: Nieuw in Profit 7
 ---
 
+[← Vorige: Profit 6](./news-profit6) | [Volgende: Profit 8 →](./news-profit8)
+
 > Dit artikel is voor het laatst bijgewerkt op 8 april 2026. Enkele patches op Profit 7 hebben geleid tot aanpassingen in de API specificaties. Controleer dus goed of je op de hoogte bent van de laatste wijzigingen. Belangrijkste aanpassingen zijn de nieuwe Fiscaal connectoren.
 
 Vanaf Profit 7 is er een aantal wijzigingen in de AFAS Profit API doorgevoerd. Hieronder staan wijzigingen ten opzichte van Profit 6. Benieuwd naar onze roadmap? [Klik hier](https://www.afas.nl/roadmap)  
