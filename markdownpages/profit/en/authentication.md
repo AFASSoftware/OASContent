@@ -16,7 +16,7 @@ To call the Profit API, an external application must authenticate itself. Profit
 
 > ⚠️ **Classic tokens are being phased out**
 >
-> - Existing classic tokens expire on **15 February 2027**.
+> - Existing classic tokens expire on **1 May 2027**.
 > - After **31 August 2027**, app connectors using a classic token will no longer work.
 >
 > For all new integrations, always use OAuth and migrate existing integrations as quickly as possible. See [Classic tokens](#classic-tokens-being-phased-out) for the complete timeline and migration guidance.
@@ -60,8 +60,8 @@ With a classic token, the integrating application uses the same fixed key for ev
 
 | Date | What changes? |
 |---|---|
-| September 2026 | Existing classic tokens receive an expiration date of 15 February 2027. |
-| 15 February 2027 | Existing classic tokens expire. Integrations that depend on them stop working. You can still create new classic tokens with a limited validity period. |
+| September 2026 | Existing classic tokens receive an expiration date of 1 May 2027. |
+| 1 May 2027 | Existing classic tokens expire. Integrations that depend on them stop working. You can still create new classic tokens with a limited validity period. |
 | 31 August 2027 | Final day on which app connectors with a classic token work. |
 
 ### Migrating to OAuth (Profit 9)
@@ -768,7 +768,7 @@ You can call only the Get- and UpdateConnector endpoints that are linked to the 
 If you use a client secret, it gets a validity period from Profit 9. Make sure you have a process to renew the secret in time, or move to private key JWT. Otherwise, the Client credentials flow and Authorization code flow with PKCE continue to work as before.
 
 **I still use a classic token. What should I do?**
-Migrate to OAuth before 31 August 2027. Existing classic tokens already expire on 15 February 2027. From Profit 9, you can change the authentication type of your existing app connector. See [Migrating to OAuth](#migrating-to-oauth-profit-9).
+Migrate to OAuth before 31 August 2027. Existing classic tokens already expire on 1 May 2027. From Profit 9, you can change the authentication type of your existing app connector. See [Migrating to OAuth](#migrating-to-oauth-profit-9).
 
 **Can I use a client secret in my mobile app or browser application?**
 No. A secret in an application running on the user side can be read. Configure the app connector as a public client from Profit 9 and use PKCE and DPoP.

@@ -16,7 +16,7 @@ Om de Profit API aan te roepen, moet een externe applicatie zich authenticeren. 
 
 > ⚠️ **Classic tokens worden uitgefaseerd**
 >
-> - Bestaande classic tokens verlopen op **15 februari 2027**.
+> - Bestaande classic tokens verlopen op **1 mei 2027**.
 > - Na **31 augustus 2027** werken app connectoren met een classic token niet meer.
 >
 > Gebruik voor nieuwe koppelingen altijd OAuth en stap met bestaande koppelingen zo snel mogelijk over. Zie [Classic tokens](#classic-tokens-wordt-uitgefaseerd) voor de volledige tijdlijn en de overstap.
@@ -60,8 +60,8 @@ Bij een classic token gebruikt de koppelende applicatie bij elke aanroep dezelfd
 
 | Datum | Wat verandert er? |
 |---|---|
-| September 2026 | Bestaande classic tokens krijgen een einddatum van 15 februari 2027. |
-| 15 februari 2027 | Bestaande classic tokens verlopen. Koppelingen die hiervan afhankelijk zijn, werken niet meer. Je kunt nog wel nieuwe classic tokens met een beperkte geldigheidsduur aanmaken. |
+| September 2026 | Bestaande classic tokens krijgen een einddatum van 1 mei 2027. |
+| 1 mei 2027 | Bestaande classic tokens verlopen. Koppelingen die hiervan afhankelijk zijn, werken niet meer. Je kunt nog wel nieuwe classic tokens met een beperkte geldigheidsduur aanmaken. |
 | 31 augustus 2027 | Laatste dag waarop app connectoren met een classic token werken. |
 
 ### Overstappen naar OAuth (Profit 9)
@@ -768,7 +768,7 @@ Je kunt alleen de Get- en UpdateConnectoren aanroepen die aan de app connector z
 Gebruik je een client secret, dan krijgt deze vanaf Profit 9 een geldigheidsduur. Zorg dat je een proces hebt om de secret tijdig te vernieuwen, of stap over op private key JWT. Verder blijven de Client credentials flow en de Authorization code flow met PKCE werken zoals voorheen.
 
 **Ik gebruik nog een classic token. Wat moet ik doen?**
-Stap vóór 31 augustus 2027 over op OAuth. Bestaande classic tokens verlopen al op 15 februari 2027. Vanaf Profit 9 kun je hiervoor het authenticatietype van je bestaande app connector wijzigen. Zie [Overstappen naar OAuth](#overstappen-naar-oauth-profit-9).
+Stap vóór 31 augustus 2027 over op OAuth. Bestaande classic tokens verlopen al op 1 mei 2027. Vanaf Profit 9 kun je hiervoor het authenticatietype van je bestaande app connector wijzigen. Zie [Overstappen naar OAuth](#overstappen-naar-oauth-profit-9).
 
 **Kan ik een client secret gebruiken in mijn mobiele app of browserapplicatie?**
 Nee. Een geheim in een applicatie die bij de gebruiker draait, is uit te lezen. Richt de app connector vanaf Profit 9 in als public client en gebruik PKCE en DPoP.
