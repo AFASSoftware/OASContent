@@ -1,6 +1,6 @@
 ---
 author: EZW
-date: 2025-11-08
+date: 2026-09-30
 tags: UpdateConnector, Profit5, Profit4, Configuration, Hr, Payroll
 title: Nieuw in Profit 5
 ---

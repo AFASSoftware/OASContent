@@ -1,6 +1,6 @@
 ---
 author: EZW
-date: 2026-05-11
+date: 2026-09-30
 tags: Profit7, GetConnector, UpdateConnector, Integration, Configuration
 title: Nieuw in Profit 7
 ---
@@ -1270,4 +1270,3 @@ No changes for this release.
 | added the new optional request property 'AfasPerson/Element/Objects/AfasTimeTable/Element/Fields/PsBi' | HrOnboarding | [POST](https://docs.afas.help/apidoc/nl/Werving%20en%20selectie#post-/connectors/HrOnboarding) |
 | added the new optional request property 'AfasPerson/Element/Objects/AfasTimeTable/Element/Objects' | HrOnboarding | [POST](https://docs.afas.help/apidoc/nl/Werving%20en%20selectie#post-/connectors/HrOnboarding) |
 | endpoint added | HrVacancy | [POST](https://docs.afas.help/apidoc/nl/Werving%20en%20selectie#post-/connectors/HrVacancy), [PUT](https://docs.afas.help/apidoc/nl/Werving%20en%20selectie#put-/connectors/HrVacancy), [DELETE](https://docs.afas.help/apidoc/nl/Werving%20en%20selectie#delete-/connectors/HrVacancy/HrVacancy/@VcSn,@CmId/-VcSn-,-CmId-) |
-

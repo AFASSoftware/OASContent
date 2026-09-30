@@ -1,6 +1,6 @@
 ---
 author: CLN
-date: 2025-11-08
+date: 2026-09-30
 tags: Tutorial, GetConnector, UpdateConnector, Profit4, Profit3, Configuration
 title: Nieuw in Profit 3
 ---
