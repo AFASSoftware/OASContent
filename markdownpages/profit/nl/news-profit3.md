@@ -1,9 +1,11 @@
 ---
 author: CLN
-date: 2025-11-08
+date: 2026-09-30
 tags: Tutorial, GetConnector, UpdateConnector, Profit4, Profit3, Configuration
 title: Nieuw in Profit 3
 ---
+
+[Volgende: Profit 4 →](./news-profit4)
 
 Vanaf Profit 3 is er een aantal wijzigingen in de AFAS Profit API doorgevoerd. Hieronder staan alle wijzigingen die er zijn. Benieuwd naar onze roadmap? [Klik hier](https://www.afas.nl/roadmap)
 

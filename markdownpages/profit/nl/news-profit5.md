@@ -1,9 +1,11 @@
 ---
 author: EZW
-date: 2025-11-08
+date: 2026-09-30
 tags: UpdateConnector, Profit5, Profit4, Configuration, Hr, Payroll
 title: Nieuw in Profit 5
 ---
+
+[← Vorige: Profit 4](./news-profit4) | [Volgende: Profit 6 →](./news-profit6)
 
 Vanaf Profit 5 is er een aantal wijzigingen in de AFAS Profit API doorgevoerd. Hieronder staan wijzigingen ten opzichte van Profit 4. Benieuwd naar onze roadmap? [Klik hier](https://www.afas.nl/roadmap)
 

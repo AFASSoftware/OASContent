@@ -300,6 +300,10 @@
       "news": {
           "en": [
             {
+                    "name": "Profit 9 Releasenotes • Beta",
+                    "path": "en/news-profit9.md"
+                },
+            {
                     "name": "Profit 8 Releasenotes • updated 2026-08-13",
                     "path": "en/news-profit8.md"
                 },
@@ -310,18 +314,14 @@
             {
                 "name": "Profit 6 Releasenotes",
                 "path": "en/news-profit6.md"
-                },
-            {
-                "name": "Profit 5 Releasenotes",
-                "path": "en/news-profit5.md"
-                },
-            {
-                    "name": "Profit 4 Releasenotes",
-                    "path": "en/news-profit4.md"
                 }
               
           ],
           "nl": [
+            {
+                    "name": "Profit 9 Releasenotes • Bèta",
+                    "path": "nl/news-profit9.md"
+                },
             {
                     "name": "Profit 8 Releasenotes • bijgewerkt 13-08-2026",
                     "path": "nl/news-profit8.md"
@@ -333,14 +333,6 @@
             {
                     "name": "Profit 6 Releasenotes",
                     "path": "nl/news-profit6.md"
-                },
-            {
-                    "name": "Profit 5 Releasenotes",
-                    "path": "nl/news-profit5.md"
-                },
-            {
-                    "name": "Profit 4 Releasenotes",
-                    "path": "nl/news-profit4.md"
                 }
           ]
       }

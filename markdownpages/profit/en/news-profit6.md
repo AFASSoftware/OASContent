@@ -1,9 +1,11 @@
 ---
 author: EZW
-date: 2025-11-10
+date: 2026-09-30
 tags: Profit6, GetConnector, UpdateConnector, Configuration, Authentication
 title: New in Profit 6
 ---
+
+[← Previous: Profit 5](./news-profit5) | [Next: Profit 7 →](./news-profit7)
 
 Starting with Profit 6, a number of changes have been made to the AFAS Profit API. Below are the changes compared to Profit 5. Interested in our roadmap? [Klik hier](https://www.afas.nl/roadmap)
 

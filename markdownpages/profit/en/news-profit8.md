@@ -1,9 +1,11 @@
 ---
 author: EZW
-date: 2026-08-13
+date: 2026-09-30
 tags: Profit8, GetConnector, UpdateConnector, Integration, Configuration
 title: New in Profit 8
 ---
+
+[← Previous: Profit 7](./news-profit7) | [Next: Profit 9 →](./news-profit9)
 
 Starting with Profit 8, several changes have been implemented in the AFAS Profit API. Below are the changes compared to Profit 7. Curious about our roadmap? [Click here](https://www.afas.nl/roadmap)  
 
