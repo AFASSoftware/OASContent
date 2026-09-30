@@ -192,7 +192,7 @@ Bewaar een client secret zoals je een wachtwoord bewaart: in een secret store of
 Vanaf Profit 9 heeft elke client secret een **geldigheidsduur**. Na de vervaldatum weigert Profit tokenaanvragen met die secret. Je moet de secret dus **periodiek vernieuwen**.
 
 - De geldigheidsduur is instelbaar. De standaardwaarde is 180 dagen.
-- De vervaldatum vind je in het instellingen scherm van de app connector in Profit.
+- De vervaldatum vind je in het instellingenscherm van de app connector in Profit.
 
 **Zo vernieuw je een secret zonder onderbreking:**
 
