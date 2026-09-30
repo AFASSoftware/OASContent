@@ -525,7 +525,7 @@ The result: a stolen access token is unusable without the corresponding private 
 
 ### Step 1: create a key pair
 
-Create a key pair for the duration of the session. Example in the browser:
+Create one key pair and retain it for at least the lifetime of the associated refresh-token chain; it must survive the OAuth redirect and any reload or restart in which the refresh token remains available. In a browser, persist the non-extractable `CryptoKey` in IndexedDB (or use an equivalent protected platform key store). Example:
 
 ```javascript
 const keyPair = await crypto.subtle.generateKey(
