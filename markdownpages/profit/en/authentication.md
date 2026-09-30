@@ -746,6 +746,8 @@ If the replay-detection store is temporarily unavailable, Profit returns HTTP `5
 
 You can call only the Get- and UpdateConnector endpoints that are linked to the app connector.
 
+The OAuth flows above also apply to the SOAP API. Follow the selected token type's HTTP-header requirements; do not put the access token in the SOAP body.
+
 ---
 
 ## Which combination should I choose?
