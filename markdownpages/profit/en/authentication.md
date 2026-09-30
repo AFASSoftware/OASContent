@@ -11,7 +11,7 @@ To call the Profit API, an external application must authenticate itself. Profit
 
 | Method | Description | Status |
 |---|---|---|
-| **OAuth** | The application first requests a temporary *access token* and uses it for each call. Based on the open OAuth 2.1 standard. | **Recommended**, default for all new integrations |
+| **OAuth** | The application first requests a temporary *access token* and uses it for each call. Based on the OAuth 2.1 Internet-Draft. | **Recommended**, default for all new integrations |
 | **Classic token** | The application includes the same static key in every call. | **Being phased out**, stops working after 31 August 2027 |
 
 > ⚠️ **Classic tokens are being phased out**
