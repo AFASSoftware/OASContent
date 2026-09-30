@@ -746,6 +746,8 @@ Is de opslag voor replay-detectie tijdelijk niet beschikbaar, dan geeft Profit H
 
 Je kunt alleen de Get- en UpdateConnectoren aanroepen die aan de app connector zijn gekoppeld.
 
+De OAuth-flows hierboven gelden ook voor de SOAP API. Volg de HTTP-headervereisten van het gekozen tokentype; plaats het access token niet in de SOAP-body.
+
 ---
 
 ## Welke combinatie kies ik?
