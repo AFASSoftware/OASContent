@@ -11,7 +11,7 @@ Om de Profit API aan te roepen, moet een externe applicatie zich authenticeren. 
 
 | Methode | Omschrijving | Status |
 |---|---|---|
-| **OAuth** | De applicatie vraagt eerst een tijdelijk *access token* aan en gebruikt dat bij elke aanroep. Gebaseerd op de open standaard OAuth 2.1. | **Aanbevolen**, standaard voor alle nieuwe koppelingen |
+| **OAuth** | De applicatie vraagt eerst een tijdelijk *access token* aan en gebruikt dat bij elke aanroep. Gebaseerd op de OAuth 2.1 Internet-Draft. | **Aanbevolen**, standaard voor alle nieuwe koppelingen |
 | **Classic token** | De applicatie stuurt bij elke aanroep dezelfde vaste sleutel mee. | **Wordt uitgefaseerd**, werkt niet meer na 31 augustus 2027 |
 
 > ⚠️ **Classic tokens worden uitgefaseerd**
