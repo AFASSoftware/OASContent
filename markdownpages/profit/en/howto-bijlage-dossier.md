@@ -17,14 +17,14 @@ title: Retrieving attachments from AFAS Profit
 
 ## Introduction
 
-Through the dossier functionality, it is possible to save files as attachments to an employee/person/organization dossier. This ensures that you have all the data together and can easily find it again. Sometimes it is necessary to retrieve these files from the environment. In this How-To, you will learn exactly How-To do this.
+Through the dossier functionality, it is possible to save files as attachments to an employee/person/organization dossier. This ensures that you have all the data together and can easily find it again. 
+Sometimes it is necessary to retrieve these files from the environment. In this How-To, you will learn exactly How-To do this.
 
 > This article is about how to do this yourself, if you have sufficient programming knowledge. Have you agreed that the AFAS Systemintegrators team will do this for you? [Read here which actions are expected from you](./howto-export-subject-attachments).
 
 ## What you need
 
 - AFAS Environment
-- Token
 - Type of dossier item from which you want to retrieve the attachments
 - Rights to GetConnectors:
   - ProfitSubjects
