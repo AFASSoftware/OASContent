@@ -1,35 +1,18 @@
 ---
 author: CLN
-date: 2026-06-22
+date: 2026-10-05
+mermaidSource: "sequenceDiagram\n  participant A as AFAS Environment\n  participant
+  D as Dossier Item Type\n  participant C as SubjectConnector\n\n  A->>D: Get dossier
+  items of type\n\n  D->>D: Filter by type (e.g. SbTy = -2 for Payslips)\n  D-->>A:
+  Dossier items (SbId, metadata)\n\n  loop For each dossier item\n    A->>C: GET Profit_Subject_Attachments\n
+  \   C->>C: Filter by subject_id\n    C-->>A: attachment_id, subject_id, file_id,
+  file_name\n\n    A->>C: GET Profit_Subject_Reaction_Attachments\n    C->>C: Filter
+  by subject_id\n    C-->>A: attachment_id, reaction_id, subject_id, file_id, file_name,
+  file_size\n\n    loop For each attachment\n      A->>C: GET SubjectConnector\n      C->>C:
+  Use SubjectId and FileId as parameters\n      C-->>A: filename, mimetype, filedata\n
+  \   end\n  end\n"
 tags: Tutorial, GetConnector, UpdateConnector, AppConnector, Authentication, Authorization
 title: Retrieving attachments from AFAS Profit
-
-mermaidSource: |
-  sequenceDiagram
-    participant A as AFAS Environment
-    participant D as Dossier Item Type
-    participant C as SubjectConnector
-
-    A->>D: Get dossier items of type
-
-    D->>D: Filter by type (e.g. SbTy = -2 for Payslips)
-    D-->>A: Dossier items (SbId, metadata)
-
-    loop For each dossier item
-      A->>C: GET Profit_Subject_Attachments
-      C->>C: Filter by subject_id
-      C-->>A: attachment_id, subject_id, file_id, file_name
-
-      A->>C: GET Profit_Subject_Reaction_Attachments
-      C->>C: Filter by subject_id
-      C-->>A: attachment_id, reaction_id, subject_id, file_id, file_name, file_size
-
-      loop For each attachment
-        A->>C: GET SubjectConnector
-        C->>C: Use SubjectId and FileId as parameters
-        C-->>A: filename, mimetype, filedata
-      end
-    end
 ---
 
 ## Introduction

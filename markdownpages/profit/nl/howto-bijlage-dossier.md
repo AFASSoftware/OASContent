@@ -1,35 +1,18 @@
 ---
 author: CLN
-date: 2026-06-22
+date: 2026-10-05
+mermaidSource: "sequenceDiagram\n  participant A as AFAS Omgeving\n  participant D
+  as Dossieritem Type\n  participant C as SubjectConnector\n\n  A->>D: Get dossieritems
+  van type\n\n  D->>D: Filter op type (bijv. SbTy = -2 voor Loonstroken)\n  D-->>A:
+  Dossieritems (SbId, metadata)\n\n  loop Voor elk dossieritem\n    A->>C: GET Profit_Subject_Attachments\n
+  \   C->>C: Filter op subject_id\n    C-->>A: attachment_id, subject_id, file_id,
+  file_name\n\n    A->>C: GET Profit_Subject_Reaction_Attachments\n    C->>C: Filter
+  op subject_id\n    C-->>A: attachment_id, reaction_id, subject_id, file_id, file_name,
+  file_size\n\n    loop Voor elke bijlage\n      A->>C: GET SubjectConnector\n      C->>C:
+  Gebruik SubjectId en FileId als parameters\n      C-->>A: filename, mimetype, filedata\n
+  \   end\n  end\n"
 tags: Tutorial, GetConnector, UpdateConnector, AppConnector, Authentication
 title: Ophalen van bijlagen uit AFAS Profit
-
-mermaidSource: |
-  sequenceDiagram
-    participant A as AFAS Omgeving
-    participant D as Dossieritem Type
-    participant C as SubjectConnector
-
-    A->>D: Get dossieritems van type
-
-    D->>D: Filter op type (bijv. SbTy = -2 voor Loonstroken)
-    D-->>A: Dossieritems (SbId, metadata)
-
-    loop Voor elk dossieritem
-      A->>C: GET Profit_Subject_Attachments
-      C->>C: Filter op subject_id
-      C-->>A: attachment_id, subject_id, file_id, file_name
-
-      A->>C: GET Profit_Subject_Reaction_Attachments
-      C->>C: Filter op subject_id
-      C-->>A: attachment_id, reaction_id, subject_id, file_id, file_name, file_size
-
-      loop Voor elke bijlage
-        A->>C: GET SubjectConnector
-        C->>C: Gebruik SubjectId en FileId als parameters
-        C-->>A: filename, mimetype, filedata
-      end
-    end
 ---
 
 ## Inleiding
