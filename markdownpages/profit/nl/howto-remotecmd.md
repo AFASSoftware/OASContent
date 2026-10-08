@@ -1,7 +1,7 @@
 ---
 title: AFAS Remote via de API
 author: EZW
-date: 2026-09-14
+date: 2026-10-08
 tags: API, Remote, Import
 ---
 
