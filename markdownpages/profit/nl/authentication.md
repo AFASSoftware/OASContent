@@ -1,6 +1,6 @@
 ---
 author: TOKL
-date: 2026-09-30
+date: 2026-10-08
 tags: GetConnector, AppConnector, Integration, Configuration, Authentication, Authorization
 title: Authenticatie
 ---
