@@ -1,20 +1,30 @@
 ---
 author: CLN
-date: 2026-06-22
+date: 2026-10-05
+mermaidSource: "sequenceDiagram\n  participant A as AFAS Omgeving\n  participant D
+  as Dossieritem Type\n  participant C as SubjectConnector\n\n  A->>D: Get dossieritems
+  van type\n\n  D->>D: Filter op type (bijv. SbTy = -2 voor Loonstroken)\n  D-->>A:
+  Dossieritems (SbId, metadata)\n\n  loop Voor elk dossieritem\n    A->>C: GET Profit_Subject_Attachments\n
+  \   C->>C: Filter op subject_id\n    C-->>A: attachment_id, subject_id, file_id,
+  file_name\n\n    A->>C: GET Profit_Subject_Reaction_Attachments\n    C->>C: Filter
+  op subject_id\n    C-->>A: attachment_id, reaction_id, subject_id, file_id, file_name,
+  file_size\n\n    loop Voor elke bijlage\n      A->>C: GET SubjectConnector\n      C->>C:
+  Gebruik SubjectId en FileId als parameters\n      C-->>A: filename, mimetype, filedata\n
+  \   end\n  end\n"
 tags: Tutorial, GetConnector, UpdateConnector, AppConnector, Authentication
 title: Ophalen van bijlagen uit AFAS Profit
 ---
 
 ## Inleiding
 
-Via de dossier functionaliteit is het mogelijk om bestanden als bijlage op een dossier van een medewerker/persoon/organisatie vast te leggen. Hiermee zorg je ervoor dat je alle gegevens bij elkaar hebt staan en makkelijk terug kan vinden. Soms komt het voor dat je deze bestanden uit de omgeving wilt halen. In deze How-To lees je precies hoe je dit doet.
+Via de dossier functionaliteit is het mogelijk om bestanden als bijlage op een dossier van een medewerker/persoon/organisatie vast te leggen. Hiermee zorg je ervoor dat je alle gegevens bij elkaar hebt staan en makkelijk terug kan vinden. 
+Soms komt het voor dat je deze bestanden uit de omgeving wilt halen. In deze How-To lees je precies hoe je dit doet.
 
 > Dit artikel gaat over hoe je dit zelf kan doen, als je voldoende programmeerkennis hebt. Heb je afgesproken dat het team Systemintegrators van AFAS dit voor je doet? [Lees dan hier welke acties er van jou verwacht worden](./howto-export-subject-attachments).
 
 ## Wat heb je nodig
 
 - AFAS Omgeving
-- Token
 - Type dossieritem waarvan je de bijlagen wilt ophalen
 - GetConnectoren:
   - ProfitSubjects
@@ -25,7 +35,7 @@ Via de dossier functionaliteit is het mogelijk om bestanden als bijlage op een d
 
 ## Proces flow
 
-[![process flow](https://mermaid.ink/img/pako:eNqVk1Fr2zAQx7_KoacW3D7s0bCCiddS2NiYzZ4M5WJfHDW25EnnQFb63Xey7CRNoWNPPuv-d_r9pdOLqm1DKlWefo9kaso1tg77ygAM6FjXekDDkAF6yO6zAr73Le21aS8VZVCUdkfmMpOHTG691-Q0Uw_lYaBL0SqIinH9TDWvrDHysa6aemU3d3dlCtnIWzJSgEzLcp7CAzE0p-Ye9miApx2CKo-qe90xObDDlIIrum1vEyjW5QE-w80n2Fvr4Ku1xrMLHq5jrRRn6Tm7h6ti_dgk0BNjg4zXcZvOSutfoQl1u3OekIysK2H9UsIPZzean2arTxkz1ttejPkoXUXpCdjPSt0sgkiFx0pJJWeyBDa6o1NgsJ8P4yOQn4Q1a2v-iwjgQya39Pw34Bx6_efI-uZMCdb6ucOWYu6Nk_djEyUz-AOt3ah3i-yxATLBDUmEnQ9jKADizZ8Ko52AFOF6LQqZnIgZLj5qyUy3Ih-VqJ5cj7qR1_QSFislAytHr1IJDY3ssKtUZV5FiiPb4mBqlbIbKVHOju1WpRvhkb9xkB2Wp3hcpUaLuW_xvU7P9vUvQdpBIQ?type=png)](https://mermaid.live/edit#pako:eNqVk1Fr2zAQx7_KoacW3D7s0bCCiddS2NiYzZ4M5WJfHDW25EnnQFb63Xey7CRNoWNPPuv-d_r9pdOLqm1DKlWefo9kaso1tg77ygAM6FjXekDDkAF6yO6zAr73Le21aS8VZVCUdkfmMpOHTG691-Q0Uw_lYaBL0SqIinH9TDWvrDHysa6aemU3d3dlCtnIWzJSgEzLcp7CAzE0p-Ye9miApx2CKo-qe90xObDDlIIrum1vEyjW5QE-w80n2Fvr4Ku1xrMLHq5jrRRn6Tm7h6ti_dgk0BNjg4zXcZvOSutfoQl1u3OekIysK2H9UsIPZzean2arTxkz1ttejPkoXUXpCdjPSt0sgkiFx0pJJWeyBDa6o1NgsJ8P4yOQn4Q1a2v-iwjgQya39Pw34Bx6_efI-uZMCdb6ucOWYu6Nk_djEyUz-AOt3ah3i-yxATLBDUmEnQ9jKADizZ8Ko52AFOF6LQqZnIgZLj5qyUy3Ih-VqJ5cj7qR1_QSFislAytHr1IJDY3ssKtUZV5FiiPb4mBqlbIbKVHOju1WpRvhkb9xkB2Wp3hcpUaLuW_xvU7P9vUvQdpBIQ)
+![process flow](../../../media/dossier-download-nl.svg)
 
 ## Get van dossieritems
 

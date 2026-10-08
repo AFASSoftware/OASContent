@@ -1,20 +1,30 @@
 ---
 author: CLN
-date: 2026-06-22
+date: 2026-10-05
+mermaidSource: "sequenceDiagram\n  participant A as AFAS Environment\n  participant
+  D as Dossier Item Type\n  participant C as SubjectConnector\n\n  A->>D: Get dossier
+  items of type\n\n  D->>D: Filter by type (e.g. SbTy = -2 for Payslips)\n  D-->>A:
+  Dossier items (SbId, metadata)\n\n  loop For each dossier item\n    A->>C: GET Profit_Subject_Attachments\n
+  \   C->>C: Filter by subject_id\n    C-->>A: attachment_id, subject_id, file_id,
+  file_name\n\n    A->>C: GET Profit_Subject_Reaction_Attachments\n    C->>C: Filter
+  by subject_id\n    C-->>A: attachment_id, reaction_id, subject_id, file_id, file_name,
+  file_size\n\n    loop For each attachment\n      A->>C: GET SubjectConnector\n      C->>C:
+  Use SubjectId and FileId as parameters\n      C-->>A: filename, mimetype, filedata\n
+  \   end\n  end\n"
 tags: Tutorial, GetConnector, UpdateConnector, AppConnector, Authentication, Authorization
 title: Retrieving attachments from AFAS Profit
 ---
 
 ## Introduction
 
-Through the dossier functionality, it is possible to save files as attachments to an employee/person/organization dossier. This ensures that you have all the data together and can easily find it again. Sometimes it is necessary to retrieve these files from the environment. In this How-To, you will learn exactly How-To do this.
+Through the dossier functionality, it is possible to save files as attachments to an employee/person/organization dossier. This ensures that you have all the data together and can easily find it again. 
+Sometimes it is necessary to retrieve these files from the environment. In this How-To, you will learn exactly How-To do this.
 
 > This article is about how to do this yourself, if you have sufficient programming knowledge. Have you agreed that the AFAS Systemintegrators team will do this for you? [Read here which actions are expected from you](./howto-export-subject-attachments).
 
 ## What you need
 
 - AFAS Environment
-- Token
 - Type of dossier item from which you want to retrieve the attachments
 - Rights to GetConnectors:
   - ProfitSubjects
@@ -25,7 +35,7 @@ Through the dossier functionality, it is possible to save files as attachments t
 
 ## Proces flow
 
-[![process flow](https://mermaid.ink/img/pako:eNqVk1Fr2zAQx7_KoacW3D7s0bCCiddS2NiYzZ4M5WJfHDW25EnnQFb63Xey7CRNoWNPPuv-d_r9pdOLqm1DKlWefo9kaso1tg77ygAM6FjXekDDkAF6yO6zAr73Le21aS8VZVCUdkfmMpOHTG691-Q0Uw_lYaBL0SqIinH9TDWvrDHysa6aemU3d3dlCtnIWzJSgEzLcp7CAzE0p-Ye9miApx2CKo-qe90xObDDlIIrum1vEyjW5QE-w80n2Fvr4Ku1xrMLHq5jrRRn6Tm7h6ti_dgk0BNjg4zXcZvOSutfoQl1u3OekIysK2H9UsIPZzean2arTxkz1ttejPkoXUXpCdjPSt0sgkiFx0pJJWeyBDa6o1NgsJ8P4yOQn4Q1a2v-iwjgQya39Pw34Bx6_efI-uZMCdb6ucOWYu6Nk_djEyUz-AOt3ah3i-yxATLBDUmEnQ9jKADizZ8Ko52AFOF6LQqZnIgZLj5qyUy3Ih-VqJ5cj7qR1_QSFislAytHr1IJDY3ssKtUZV5FiiPb4mBqlbIbKVHOju1WpRvhkb9xkB2Wp3hcpUaLuW_xvU7P9vUvQdpBIQ?type=png)](https://mermaid.live/edit#pako:eNqVk1Fr2zAQx7_KoacW3D7s0bCCiddS2NiYzZ4M5WJfHDW25EnnQFb63Xey7CRNoWNPPuv-d_r9pdOLqm1DKlWefo9kaso1tg77ygAM6FjXekDDkAF6yO6zAr73Le21aS8VZVCUdkfmMpOHTG691-Q0Uw_lYaBL0SqIinH9TDWvrDHysa6aemU3d3dlCtnIWzJSgEzLcp7CAzE0p-Ye9miApx2CKo-qe90xObDDlIIrum1vEyjW5QE-w80n2Fvr4Ku1xrMLHq5jrRRn6Tm7h6ti_dgk0BNjg4zXcZvOSutfoQl1u3OekIysK2H9UsIPZzean2arTxkz1ttejPkoXUXpCdjPSt0sgkiFx0pJJWeyBDa6o1NgsJ8P4yOQn4Q1a2v-iwjgQya39Pw34Bx6_efI-uZMCdb6ucOWYu6Nk_djEyUz-AOt3ah3i-yxATLBDUmEnQ9jKADizZ8Ko52AFOF6LQqZnIgZLj5qyUy3Ih-VqJ5cj7qR1_QSFislAytHr1IJDY3ssKtUZV5FiiPb4mBqlbIbKVHOju1WpRvhkb9xkB2Wp3hcpUaLuW_xvU7P9vUvQdpBIQ)(#)
+![process flow](../../../media/dossier-download-en.svg)
 
 ## Get dossier items
 
