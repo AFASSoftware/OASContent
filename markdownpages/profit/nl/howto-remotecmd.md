@@ -1,7 +1,7 @@
 ---
 title: AFAS Remote via de API
 author: EZW
-date: 2026-09-14
+date: 2026-10-08
 tags: API, Remote, Import
 ---
 
@@ -77,6 +77,56 @@ In het response zie je de `commandId` terug die je nodig hebt om de status van d
     </soap:Body>
 </soap:Envelope>
 ```
+
+## GET-connector importeren
+
+Naast gegevens kun je via de cmdconnector ook de definitie van een GET-connector importeren. Dit werkt op dezelfde manier als een import, maar met een andere opdrachtregel en een ander bestand in het `<attachementArchive>`-element.
+
+### Opdrachtregel
+
+Gebruik de actie `DEFINITIEIMPORT` en geef de bestandsnaam van de GET-connector mee:
+
+```
+/O"O12345AA" DEFINITIEIMPORT /F"<GET connector naam>.gcn"
+```
+
+### Definitiebestand
+
+De definitie lever je aan als een base64-gecodeerde ZIP in het `<attachementArchive>`-element. De ZIP bevat:
+
+- het GET-connectorbestand (`<GET connector naam>.gcn`);
+- een `@#$MetaInfo.xml`-bestand met daarin de bestandsnaam van de GET-connector.
+
+Het `@#$MetaInfo.xml`-bestand heeft de volgende inhoud:
+
+```xml
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><InputFile_Name><GET connector naam>.gcn</InputFile_Name>
+```
+
+De bestandsnaam in de opdrachtregel moet overeenkomen met de naam van het `.gcn`-bestand in de ZIP.
+
+### Voorbeeld
+
+```bash
+curl -X POST "https://12345.soap.afas.online/profitservices/cmdconnector.asmx" \
+  -H "Authorization: Bearer ..." \
+  -H "Content-Type: text/xml; charset=utf-8" \
+  -H "SOAPAction: urn:Afas.Profit.Services/Execute" \
+  -d '<?xml version="1.0" encoding="utf-8"?>
+  <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+    <Body>
+      <Execute xmlns="urn:Afas.Profit.Services">
+        <token>nit</token>
+        <commandLine>/O"O12345AA" DEFINITIEIMPORT /F"SI_Verkooprelaties.gcn"</commandLine>
+        <attachementArchive>UEsDBBQACAAIAGJbSF0AAAAAAAAAAAAAAAAPACAAQCMkTWV0YUluZm8ueG1s...</attachementArchive>
+      </Execute>
+    </Body>
+  </Envelope>'
+```
+
+### Response
+
+Het response bevat, net als bij een import, de `commandId` waarmee je de status van de opdracht kunt opvragen. Zie [Status opvragen](#status-opvragen).
 
 ## Status opvragen
 
