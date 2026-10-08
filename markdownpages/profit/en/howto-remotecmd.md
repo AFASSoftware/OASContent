@@ -78,6 +78,56 @@ The response contains the `commandId` that you need to request the status of the
 </soap:Envelope>
 ```
 
+## Importing a GET connector
+
+Besides data, you can also use the command connector to import the definition of a GET connector. This works the same way as an import, but with a different command line and a different file in the `<attachementArchive>` element.
+
+### Command line
+
+Use the `DEFINITIEIMPORT` action and provide the file name of the GET connector:
+
+```
+/O"O12345AA" DEFINITIEIMPORT /F"<GET connector name>.gcn"
+```
+
+### Definition file
+
+Provide the definition as a base64-encoded ZIP in the `<attachementArchive>` element. The ZIP contains:
+
+- the GET connector file (`<GET connector name>.gcn`);
+- an `@#$MetaInfo.xml` file containing the file name of the GET connector.
+
+The `@#$MetaInfo.xml` file has the following content:
+
+```xml
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><InputFile_Name><GET connector name>.gcn</InputFile_Name>
+```
+
+The file name in the command line must match the name of the `.gcn` file in the ZIP.
+
+### Example
+
+```bash
+curl -X POST "https://12345.soap.afas.online/profitservices/cmdconnector.asmx" \
+  -H "Authorization: Bearer ..." \
+  -H "Content-Type: text/xml; charset=utf-8" \
+  -H "SOAPAction: urn:Afas.Profit.Services/Execute" \
+  -d '<?xml version="1.0" encoding="utf-8"?>
+  <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+    <Body>
+      <Execute xmlns="urn:Afas.Profit.Services">
+        <token>nit</token>
+        <commandLine>/O"O12345AA" DEFINITIEIMPORT /F"SI_Verkooprelaties.gcn"</commandLine>
+        <attachementArchive>UEsDBBQACAAIAGJbSF0AAAAAAAAAAAAAAAAPACAAQCMkTWV0YUluZm8ueG1s...</attachementArchive>
+      </Execute>
+    </Body>
+  </Envelope>'
+```
+
+### Response
+
+As with an import, the response contains the `commandId` that you can use to request the status of the command. See [Requesting the status](#requesting-the-status).
+
 ## Requesting the status
 
 To request the status of a previously executed command, use the `GetState` command. Provide the `commandId` that you received in the response to the `Execute` command.
