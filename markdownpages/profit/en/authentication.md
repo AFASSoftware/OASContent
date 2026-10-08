@@ -1,6 +1,6 @@
 ---
 author: TOKL
-date: 2026-09-30
+date: 2026-10-08
 tags: GetConnector, AppConnector, Integration, Configuration, Authentication, Authorization
 title: Authentication
 ---
@@ -26,7 +26,8 @@ This article explains OAuth in terms of:
 - which client types exist (**confidential** and **public**);
 - which flows can be used per client type;
 - how a confidential client authenticates itself (**client secret** or **private key JWT**);
-- how to protect a public client's access token using **DPoP**.
+- how to protect a public client's access token using **DPoP**;
+- what to consider when using integration platforms such as **Power Automate**.
 
 > **Note:** part of the OAuth functionality is new in **Profit 9**. This is indicated throughout the text with the label **(Profit 9)**.
 
@@ -46,7 +47,8 @@ This article explains OAuth in terms of:
 8. [Public client: Authorization code flow with PKCE and DPoP (Profit 9)](#public-client-authorization-code-flow-with-pkce-and-dpop-profit-9)
 9. [Calling a connector with the access token](#calling-a-connector-with-the-access-token)
 10. [Which combination should I choose?](#which-combination-should-i-choose)
-11. [Frequently asked questions](#frequently-asked-questions)
+11. [Platform support](#platform-support)
+12. [Frequently asked questions](#frequently-asked-questions)
 
 ---
 
@@ -761,6 +763,43 @@ The OAuth flows above also apply to the SOAP API. Follow the selected token type
 3. **Confidential client: which client authentication?**
    - **Private key JWT** (Profit 9) is preferred: no reusable secret goes over the line and you do not need to exchange secrets with AFAS or your customer.
    - **Client secret** is easier to implement, but from Profit 9 you must renew the secret periodically.
+
+---
+
+## Platform support
+
+Are you using an integration platform such as Microsoft Power Automate? Check whether the selected connector or authentication option supports Profit's OAuth flow and security requirements. Simply stating 'OAuth 2.0' support is not sufficient. For example, Profit always requires PKCE for the Authorization code flow.
+
+### Power Automate
+
+The standard OAuth 2.0 option for custom connectors in Power Automate does not support all the capabilities that Profit requires. The following workarounds have been tested for confidential clients using a client secret.
+
+> **Support:** Power Automate is a Microsoft product. AFAS does not provide support for its configuration.
+
+#### Client credentials flow
+
+The standard OAuth 2.0 option for custom connectors does not support the Client credentials flow. There are two common workarounds:
+
+1. **HTTP actions in the flow:** a first HTTP action requests an access token from the [token endpoint](#endpoints) using the client ID and client secret. A subsequent HTTP action calls the Profit API with that token in the header `Authorization: Bearer <ACCESS_TOKEN>`.
+2. **Custom connector with Basic authentication and custom code:** for reuse across multiple flows, you can create a custom connector whose connection stores the client credentials in encrypted form. A small piece of custom code requests an access token for each call and includes it in the request to the Profit API. Basic authentication is used here for the connection to the custom connector; the API call to Profit uses the access token.
+
+Both approaches require a **Power Automate Premium licence**.
+
+Do not store the client secret as plain text in the flow. Instead, use a service such as **Azure Key Vault**. Enable **Secure Inputs and Secure Outputs** for HTTP actions that process secrets or tokens, so these values are not visible in the run history. Also take the [validity period of client secrets](#client-secret-validity-period-profit-9) into account.
+
+#### Authorization code flow with PKCE
+
+The standard OAuth 2.0 option for custom connectors supports the Authorization code flow, but does not send PKCE parameters. Because Profit requires PKCE, the login fails with the error `code challenge required`.
+
+A workaround is the more advanced OAuth configuration used internally by Power Automate: `oauth2generic`. This lets you define the login request and token request as templates. The platform automatically supplies a `code_challenge` and `code_verifier`.
+
+This configuration is not available in the standard portal. Configure it by modifying the connector's `apiProperties.json` file and uploading it using Microsoft's development tools: **Power Platform CLI** or **`paconn`**.
+
+- Register the connector's redirect URL with the app connector in Profit.
+- Updating the custom connector clears the client secret. Set the secret again after every update, for example using `paconn update --secret`.
+- Take [refresh token rotation and logging in again after a maximum of 30 days](#step-5-renew-the-token-with-a-refresh-token) into account.
+
+> **Note:** Microsoft uses `oauth2generic` in its own certified connectors, but has not officially documented this configuration. Its behaviour is therefore not guaranteed and may change without notice.
 
 ---
 
