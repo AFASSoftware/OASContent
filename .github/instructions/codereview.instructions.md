@@ -35,7 +35,6 @@ or
 - More than 3 files are edited
 - There is at least one **high** or **medium** comment
 - There are more than 4 **low** comments
-- The PR is authored by Copilot (the Copilot coding agent) or another bot
 - The PR changes security-sensitive configuration: `.github/workflows/`, `.github/instructions/`, `.github/CODEOWNERS`, `.github/dependabot.yml`, `.github/aw/`, `.gitignore` or `.npmrc`
 - The PR adds or changes SQL files or inline queries
 - The changes are too complex or sizeable to be able to give a trustworthy automatic review
