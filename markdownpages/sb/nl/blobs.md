@@ -1,4 +1,4 @@
-﻿---
+---
 title: Blobs
 author: EDA
 date: 2026-10-19
