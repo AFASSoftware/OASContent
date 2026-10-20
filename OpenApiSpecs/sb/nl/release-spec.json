@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.2",
   "info": {
-    "version": "8.0",
+    "version": "8.1",
     "title": "AFAS SB API",
     "description": "AFAS SB API for integrating with the accounting software for accountants and entrepreneurs."
   },
@@ -34,7 +34,7 @@
   "paths": {
     "/api/blob/{uuid}": {
       "get": {
-        "description": "Retrieve a specific blob by UUI.",
+        "description": "Download a blob by its UUID. There are two ways to get access:\n\n- **With a ReadKey**: pass the `ReadKey` of the blob as query parameter (`?ReadKey=...`) or as `ReadKey` header. The ReadKey is returned in the `Blob` object of GET endpoints that return attachments. It works for any user as long as the key is valid, unless the key is bound to an account.\n- **Without a ReadKey**: only the user that uploaded the blob can download it, and only for about 2 days after the upload. After that the request fails with \"the preview window has expired\".\n\nA ReadKey is valid for at least about 3 hours and at most about 28 hours. Do not store it: get a fresh ReadKey from the GET endpoint and download directly. An expired ReadKey returns \"Expired read token\", a ReadKey for another blob, scope or account returns \"Invalid read token\". Prefer the `ReadKey` header: a truncated URL (for example by antivirus or VPN software) returns \"the read token was malformed\".\n\nThe blob can only be downloaded after the upload has been completed.",
         "summary": "/api/blob/{uuid}",
         "operationId": "getBlob",
         "parameters": [
@@ -63,6 +63,24 @@
             },
             "required": true,
             "description": "UUID of the blob"
+          },
+          {
+            "in": "query",
+            "name": "ReadKey",
+            "schema": {
+              "type": "string"
+            },
+            "required": false,
+            "description": "ReadKey of the blob, from the `Blob` object of a GET endpoint. Alternative to the `ReadKey` header."
+          },
+          {
+            "in": "header",
+            "name": "ReadKey",
+            "schema": {
+              "type": "string"
+            },
+            "required": false,
+            "description": "ReadKey of the blob, from the `Blob` object of a GET endpoint. Alternative to the `ReadKey` query parameter."
           }
         ],
         "responses": {
@@ -92,7 +110,7 @@
         "deprecated": false
       },
       "put": {
-        "description": "This operation consists of two requests. First call this endpoint with the Blob-* headers, without body to prepare the blob. Then call this endpoint without the Blob-* headers with a body to upload the file. The blob UUID must be generated client side.",
+        "description": "Upload a file. The blob UUID must be generated client side. An upload consists of these steps:\n\n1. **Prepare**: call this endpoint with the `Blob-*` headers and without body. The response contains the maximum chunk size: `{ \"BlobAccepted\": true, \"ChunkSize\": 5242880 }`.\n2. **Upload**: call this endpoint without the `Blob-*` headers, with the file content as body.\n   - File not larger than `ChunkSize`: send the whole file in one request without `Content-Range`. The upload is completed automatically, step 3 is not needed.\n   - File larger than `ChunkSize`: send the file in chunks, one request per chunk with a `Content-Range` header: `bytes {start}-{end}/{total}` (end is inclusive). Example for a file of 12582912 bytes: `bytes 0-5242879/12582912`, `bytes 5242880-10485759/12582912`, `bytes 10485760-12582911/12582912`. When `Content-Length` is sent, it must equal `end - start + 1`. Chunks may be sent in any order and in parallel.\n3. **Complete** (chunked upload only): call this endpoint without body and with the `x-blob-completed` header (empty value). Without this step the blob stays incomplete and cannot be used: \"Invalid blob state, the blob upload has not completed\".\n\nThe default maximum size of a blob is 100 MB.",
         "summary": "/api/blob/{uuid}",
         "operationId": "reserveBlobSpace",
         "parameters": [
@@ -144,16 +162,54 @@
             "name": "Blob-Upload-Type",
             "schema": {
               "type": "string",
-              "example": "Blob/Image"
+              "enum": [
+                "Blob",
+                "Image"
+              ],
+              "example": "Blob"
             },
-            "required": true
+            "required": true,
+            "examples": {
+              "Blob": {
+                "summary": "For non-image files (e.g. PDF, Word)",
+                "value": "Blob"
+              },
+              "Image": {
+                "summary": "For image files (e.g. JPEG, PNG)",
+                "value": "Image"
+              }
+            }
           },
           {
             "in": "header",
             "name": "Blob-Format",
             "schema": {
               "type": "string",
-              "example": "Default/Thumb/Small/Medium"
+              "enum": [
+                "Default",
+                "Thumb",
+                "Small",
+                "Medium"
+              ],
+              "example": "Default"
+            },
+            "examples": {
+              "Default": {
+                "summary": "Original file (default)",
+                "value": "Default"
+              },
+              "Thumb": {
+                "summary": "Thumbnail image",
+                "value": "Thumb"
+              },
+              "Small": {
+                "summary": "Small image",
+                "value": "Small"
+              },
+              "Medium": {
+                "summary": "Medium image",
+                "value": "Medium"
+              }
             }
           },
           {
@@ -163,15 +219,63 @@
               "type": "string"
             },
             "required": false
+          },
+          {
+            "in": "header",
+            "name": "Content-Range",
+            "schema": {
+              "type": "string",
+              "example": "bytes 0-5242879/12582912"
+            },
+            "required": false,
+            "description": "Only for chunked uploads (step 2): the byte range of this chunk, `bytes {start}-{end}/{total}`. The end is inclusive."
+          },
+          {
+            "in": "header",
+            "name": "x-blob-completed",
+            "schema": {
+              "type": "string",
+              "example": ""
+            },
+            "required": false,
+            "description": "Only for chunked uploads (step 3): send this header with an empty value and without body to complete the upload."
           }
         ],
         "requestBody": {
-          "description": "Binary content of the blob",
-          "required": true
+          "description": "Binary content of the file or chunk (step 2). No body for the prepare (step 1) and complete (step 3) requests.",
+          "required": false,
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
         },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK. The prepare request (step 1) returns the maximum chunk size in bytes.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "BlobAccepted": {
+                      "type": "boolean"
+                    },
+                    "ChunkSize": {
+                      "type": "integer",
+                      "description": "Maximum size of one chunk in bytes."
+                    }
+                  }
+                },
+                "example": {
+                  "BlobAccepted": true,
+                  "ChunkSize": 5242880
+                }
+              }
+            }
           },
           "400": {
             "$ref": "#/components/responses/400"
@@ -586,8 +690,8 @@
         "deprecated": false,
         "tags": [
           "Publiek: Financiële dashboarding",
-          "Publiek: Financiële rapportage",
-          "Financiele rapportage"
+          "Financiele rapportage",
+          "Publiek: Financiële rapportage"
         ]
       }
     },
@@ -704,8 +808,8 @@
         "deprecated": false,
         "tags": [
           "Publiek: Financiële dashboarding",
-          "Publiek: Financiële rapportage",
-          "Financiele rapportage"
+          "Financiele rapportage",
+          "Publiek: Financiële rapportage"
         ]
       }
     },
@@ -838,12 +942,12 @@
         "version": "1.0",
         "deprecated": false,
         "tags": [
-          "Publiek: Inkoopjournaalpost",
           "Inkoopjournaalpost",
+          "Publiek: Inkoopjournaalpost",
           "Publiek: Relatiemanagement",
           "Relaties",
-          "Publiek: Facturatie",
-          "Verkoopfactuur"
+          "Verkoopfactuur",
+          "Publiek: Facturatie"
         ]
       }
     },
@@ -953,8 +1057,8 @@
         "tags": [
           "Loonjournaalpost",
           "POS Transacties",
-          "Publiek: Inkoopjournaalpost",
           "Inkoopjournaalpost",
+          "Publiek: Inkoopjournaalpost",
           "Verkoopfactuur",
           "Verkoopjournaalpost"
         ]
@@ -1065,22 +1169,22 @@
         "deprecated": false,
         "tags": [
           "Publiek: Financiële dashboarding",
-          "Publiek: Financiële journaalpost",
           "Financiële journaalpost",
-          "Publiek: Financiële rapportage",
+          "Publiek: Financiële journaalpost",
           "Financiele rapportage",
-          "Publiek: Externe verkoopregels",
+          "Publiek: Financiële rapportage",
           "Verkoopregels",
+          "Publiek: Externe verkoopregels",
           "Loonjournaalpost",
-          "Publiek: POS Transacties",
           "POS Transacties",
-          "Publiek: Inkoopjournaalpost",
+          "Publiek: POS Transacties",
           "Inkoopjournaalpost",
+          "Publiek: Inkoopjournaalpost",
           "Publiek: Relatiemanagement",
-          "Publiek: Facturatie",
           "Verkoopfactuur",
-          "Publiek: Externe facturatie",
-          "Verkoopjournaalpost"
+          "Publiek: Facturatie",
+          "Verkoopjournaalpost",
+          "Publiek: Externe facturatie"
         ]
       }
     },
@@ -1201,8 +1305,8 @@
         "deprecated": false,
         "tags": [
           "Publiek: Financiële dashboarding",
-          "Publiek: Financiële rapportage",
-          "Financiele rapportage"
+          "Financiele rapportage",
+          "Publiek: Financiële rapportage"
         ]
       }
     },
@@ -1319,14 +1423,14 @@
         "version": "1.0",
         "deprecated": false,
         "tags": [
-          "Publiek: Inkoopjournaalpost",
           "Inkoopjournaalpost",
+          "Publiek: Inkoopjournaalpost",
           "Publiek: Relatiemanagement",
           "Relaties",
-          "Publiek: Facturatie",
           "Verkoopfactuur",
-          "Publiek: Externe facturatie",
-          "Verkoopjournaalpost"
+          "Publiek: Facturatie",
+          "Verkoopjournaalpost",
+          "Publiek: Externe facturatie"
         ]
       }
     },
@@ -1434,8 +1538,8 @@
         "version": "1.0",
         "deprecated": false,
         "tags": [
-          "Publiek: POS Transacties",
-          "POS Transacties"
+          "POS Transacties",
+          "Publiek: POS Transacties"
         ]
       }
     },
@@ -1685,8 +1789,8 @@
         "version": "1.0",
         "deprecated": false,
         "tags": [
-          "Publiek: Inkoopjournaalpost",
           "Inkoopjournaalpost",
+          "Publiek: Inkoopjournaalpost",
           "Publiek: Relatiemanagement",
           "Relaties"
         ]
@@ -2472,12 +2576,12 @@
         "version": "1.0",
         "deprecated": false,
         "tags": [
-          "Publiek: Inkoopjournaalpost",
           "Inkoopjournaalpost",
-          "Publiek: Facturatie",
+          "Publiek: Inkoopjournaalpost",
           "Verkoopfactuur",
-          "Publiek: Externe facturatie",
-          "Verkoopjournaalpost"
+          "Publiek: Facturatie",
+          "Verkoopjournaalpost",
+          "Publiek: Externe facturatie"
         ]
       }
     },
@@ -2808,8 +2912,8 @@
         "version": "1.1",
         "deprecated": false,
         "tags": [
-          "Publiek: Financiële rapportage",
-          "Financiele rapportage"
+          "Financiele rapportage",
+          "Publiek: Financiële rapportage"
         ]
       }
     },
@@ -2994,17 +3098,17 @@
         "deprecated": false,
         "tags": [
           "Publiek: Financiële dashboarding",
-          "Publiek: Financiële journaalpost",
           "Financiële journaalpost",
-          "Publiek: Financiële rapportage",
+          "Publiek: Financiële journaalpost",
           "Financiele rapportage",
+          "Publiek: Financiële rapportage",
           "Loonjournaalpost",
-          "Publiek: POS Transacties",
           "POS Transacties",
-          "Publiek: Inkoopjournaalpost",
+          "Publiek: POS Transacties",
           "Inkoopjournaalpost",
-          "Publiek: Externe facturatie",
-          "Verkoopjournaalpost"
+          "Publiek: Inkoopjournaalpost",
+          "Verkoopjournaalpost",
+          "Publiek: Externe facturatie"
         ]
       }
     },
@@ -3158,8 +3262,8 @@
         "deprecated": false,
         "tags": [
           "Publiek: Financiële dashboarding",
-          "Publiek: Financiële rapportage",
-          "Financiele rapportage"
+          "Financiele rapportage",
+          "Publiek: Financiële rapportage"
         ]
       }
     },
@@ -3423,8 +3527,8 @@
         "version": "1.0",
         "deprecated": false,
         "tags": [
-          "Publiek: Externe verkoopregels",
-          "Verkoopregels"
+          "Verkoopregels",
+          "Publiek: Externe verkoopregels"
         ]
       },
       "post": {
@@ -3481,8 +3585,8 @@
         "version": "1.0",
         "deprecated": false,
         "tags": [
-          "Publiek: Externe verkoopregels",
-          "Verkoopregels"
+          "Verkoopregels",
+          "Publiek: Externe verkoopregels"
         ]
       },
       "delete": {
@@ -3539,8 +3643,8 @@
         "version": "1.0",
         "deprecated": false,
         "tags": [
-          "Publiek: Externe verkoopregels",
-          "Verkoopregels"
+          "Verkoopregels",
+          "Publiek: Externe verkoopregels"
         ]
       },
       "put": {
@@ -3597,8 +3701,8 @@
         "version": "1.0",
         "deprecated": false,
         "tags": [
-          "Publiek: Externe verkoopregels",
-          "Verkoopregels"
+          "Verkoopregels",
+          "Publiek: Externe verkoopregels"
         ]
       }
     },
@@ -3706,12 +3810,12 @@
         "version": "1.0",
         "deprecated": false,
         "tags": [
-          "Publiek: Inkoopjournaalpost",
           "Inkoopjournaalpost",
-          "Publiek: Facturatie",
+          "Publiek: Inkoopjournaalpost",
           "Verkoopfactuur",
-          "Publiek: Externe facturatie",
-          "Verkoopjournaalpost"
+          "Publiek: Facturatie",
+          "Verkoopjournaalpost",
+          "Publiek: Externe facturatie"
         ]
       }
     },
@@ -3839,16 +3943,16 @@
         "version": "2.0",
         "deprecated": false,
         "tags": [
-          "Publiek: Externe verkoopregels",
           "Verkoopregels",
-          "Publiek: Inkoopjournaalpost",
+          "Publiek: Externe verkoopregels",
           "Inkoopjournaalpost",
+          "Publiek: Inkoopjournaalpost",
           "Publiek: Relatiemanagement",
           "Relaties",
-          "Publiek: Facturatie",
           "Verkoopfactuur",
-          "Publiek: Externe facturatie",
-          "Verkoopjournaalpost"
+          "Publiek: Facturatie",
+          "Verkoopjournaalpost",
+          "Publiek: Externe facturatie"
         ]
       }
     },
@@ -3956,13 +4060,13 @@
         "version": "1.0",
         "deprecated": false,
         "tags": [
-          "Publiek: Externe verkoopregels",
           "Verkoopregels",
-          "Publiek: Inkoopjournaalpost",
+          "Publiek: Externe verkoopregels",
           "Inkoopjournaalpost",
+          "Publiek: Inkoopjournaalpost",
           "Verkoopfactuur",
-          "Publiek: Externe facturatie",
-          "Verkoopjournaalpost"
+          "Verkoopjournaalpost",
+          "Publiek: Externe facturatie"
         ]
       }
     },
@@ -4090,16 +4194,16 @@
         "version": "2.0",
         "deprecated": false,
         "tags": [
-          "Publiek: Externe verkoopregels",
           "Verkoopregels",
-          "Publiek: Inkoopjournaalpost",
+          "Publiek: Externe verkoopregels",
           "Inkoopjournaalpost",
+          "Publiek: Inkoopjournaalpost",
           "Publiek: Relatiemanagement",
           "Relaties",
-          "Publiek: Facturatie",
           "Verkoopfactuur",
-          "Publiek: Externe facturatie",
-          "Verkoopjournaalpost"
+          "Publiek: Facturatie",
+          "Verkoopjournaalpost",
+          "Publiek: Externe facturatie"
         ]
       }
     },
@@ -4296,7 +4400,8 @@
                             "format": "uuid"
                           },
                           "ReadKey": {
-                            "type": "string"
+                            "type": "string",
+                            "description": "Key to download this blob with GET /api/blob/{uuid}. Valid for a limited time (at least about 3 hours): do not store it, get a fresh one when you want to download the blob."
                           },
                           "FileName": {
                             "type": "string"
@@ -4325,10 +4430,10 @@
         "version": "3.0",
         "deprecated": false,
         "tags": [
-          "Publiek: Externe verkoopregels",
           "Verkoopregels",
-          "Publiek: Facturatie",
-          "Verkoopfactuur"
+          "Publiek: Externe verkoopregels",
+          "Verkoopfactuur",
+          "Publiek: Facturatie"
         ]
       }
     },
@@ -4449,8 +4554,8 @@
         "deprecated": false,
         "tags": [
           "Publiek: Financiële dashboarding",
-          "Publiek: Financiële rapportage",
-          "Financiele rapportage"
+          "Financiele rapportage",
+          "Publiek: Financiële rapportage"
         ]
       }
     },
@@ -4558,14 +4663,14 @@
         "version": "1.0",
         "deprecated": false,
         "tags": [
-          "Publiek: Externe verkoopregels",
           "Verkoopregels",
-          "Publiek: Inkoopjournaalpost",
+          "Publiek: Externe verkoopregels",
           "Inkoopjournaalpost",
-          "Publiek: Facturatie",
+          "Publiek: Inkoopjournaalpost",
           "Verkoopfactuur",
-          "Publiek: Externe facturatie",
-          "Verkoopjournaalpost"
+          "Publiek: Facturatie",
+          "Verkoopjournaalpost",
+          "Publiek: Externe facturatie"
         ]
       }
     },
@@ -4816,7 +4921,8 @@
                               "format": "uuid"
                             },
                             "ReadKey": {
-                              "type": "string"
+                              "type": "string",
+                              "description": "Key to download this blob with GET /api/blob/{uuid}. Valid for a limited time (at least about 3 hours): do not store it, get a fresh one when you want to download the blob."
                             },
                             "FileName": {
                               "type": "string"
@@ -4859,8 +4965,8 @@
         "version": "1.2",
         "deprecated": false,
         "tags": [
-          "Publiek: Facturatie",
-          "Verkoopfactuur"
+          "Verkoopfactuur",
+          "Publiek: Facturatie"
         ]
       }
     },
@@ -4990,10 +5096,10 @@
         "version": "1.0",
         "deprecated": false,
         "tags": [
-          "Publiek: Externe verkoopregels",
           "Verkoopregels",
-          "Publiek: Facturatie",
-          "Verkoopfactuur"
+          "Publiek: Externe verkoopregels",
+          "Verkoopfactuur",
+          "Publiek: Facturatie"
         ]
       }
     },
@@ -5111,8 +5217,8 @@
         "version": "1.0",
         "deprecated": false,
         "tags": [
-          "Publiek: Externe verkoopregels",
-          "Verkoopregels"
+          "Verkoopregels",
+          "Publiek: Externe verkoopregels"
         ]
       }
     },
@@ -5225,14 +5331,14 @@
         "version": "1.0",
         "deprecated": false,
         "tags": [
-          "Publiek: Externe verkoopregels",
           "Verkoopregels",
-          "Publiek: Inkoopjournaalpost",
+          "Publiek: Externe verkoopregels",
           "Inkoopjournaalpost",
-          "Publiek: Facturatie",
+          "Publiek: Inkoopjournaalpost",
           "Verkoopfactuur",
-          "Publiek: Externe facturatie",
-          "Verkoopjournaalpost"
+          "Publiek: Facturatie",
+          "Verkoopjournaalpost",
+          "Publiek: Externe facturatie"
         ]
       }
     },
@@ -5336,8 +5442,8 @@
         "version": "1.0",
         "deprecated": false,
         "tags": [
-          "Publiek: Inkoopjournaalpost",
-          "Inkoopjournaalpost"
+          "Inkoopjournaalpost",
+          "Publiek: Inkoopjournaalpost"
         ]
       }
     },
@@ -5441,8 +5547,8 @@
         "version": "1.0",
         "deprecated": false,
         "tags": [
-          "Publiek: Inkoopjournaalpost",
-          "Inkoopjournaalpost"
+          "Inkoopjournaalpost",
+          "Publiek: Inkoopjournaalpost"
         ]
       }
     },
@@ -5619,8 +5725,8 @@
         "version": "3.0",
         "deprecated": false,
         "tags": [
-          "Publiek: POS Transacties",
-          "POS Transacties"
+          "POS Transacties",
+          "Publiek: POS Transacties"
         ]
       }
     },
@@ -5797,8 +5903,8 @@
         "version": "1.0",
         "deprecated": false,
         "tags": [
-          "Publiek: Financiële journaalpost",
-          "Financiële journaalpost"
+          "Financiële journaalpost",
+          "Publiek: Financiële journaalpost"
         ]
       },
       "delete": {
@@ -5855,8 +5961,8 @@
         "version": "1.0",
         "deprecated": false,
         "tags": [
-          "Publiek: Financiële journaalpost",
-          "Financiële journaalpost"
+          "Financiële journaalpost",
+          "Publiek: Financiële journaalpost"
         ]
       }
     },
@@ -5915,10 +6021,10 @@
         "version": "1.0",
         "deprecated": false,
         "tags": [
-          "Publiek: Facturatie",
           "Verkoopfactuur",
-          "Publiek: Externe facturatie",
-          "Verkoopjournaalpost"
+          "Publiek: Facturatie",
+          "Verkoopjournaalpost",
+          "Publiek: Externe facturatie"
         ]
       }
     },
@@ -5978,8 +6084,8 @@
         "deprecated": false,
         "tags": [
           "Publiek: Externe verkoopregels",
-          "Publiek: Inkoopjournaalpost",
           "Inkoopjournaalpost",
+          "Publiek: Inkoopjournaalpost",
           "Relaties",
           "Publiek: Externe facturatie"
         ]
@@ -6039,8 +6145,8 @@
         "deprecated": false,
         "tags": [
           "Publiek: Externe verkoopregels",
-          "Publiek: Inkoopjournaalpost",
           "Inkoopjournaalpost",
+          "Publiek: Inkoopjournaalpost",
           "Relaties",
           "Publiek: Externe facturatie"
         ]
@@ -6161,8 +6267,8 @@
         "deprecated": false,
         "tags": [
           "Publiek: Externe verkoopregels",
-          "Publiek: Inkoopjournaalpost",
           "Inkoopjournaalpost",
+          "Publiek: Inkoopjournaalpost",
           "Relaties",
           "Publiek: Externe facturatie"
         ]
@@ -6222,8 +6328,8 @@
         "deprecated": false,
         "tags": [
           "Publiek: Externe verkoopregels",
-          "Publiek: Inkoopjournaalpost",
           "Inkoopjournaalpost",
+          "Publiek: Inkoopjournaalpost",
           "Relaties",
           "Publiek: Externe facturatie"
         ]
@@ -6343,8 +6449,8 @@
         "version": "3.0",
         "deprecated": false,
         "tags": [
-          "Publiek: Inkoopjournaalpost",
-          "Inkoopjournaalpost"
+          "Inkoopjournaalpost",
+          "Publiek: Inkoopjournaalpost"
         ]
       }
     },
@@ -6403,8 +6509,8 @@
         "version": "2.0",
         "deprecated": false,
         "tags": [
-          "Publiek: Facturatie",
-          "Verkoopfactuur"
+          "Verkoopfactuur",
+          "Publiek: Facturatie"
         ]
       },
       "post": {
@@ -6461,8 +6567,8 @@
         "version": "3.0",
         "deprecated": false,
         "tags": [
-          "Publiek: Facturatie",
-          "Verkoopfactuur"
+          "Verkoopfactuur",
+          "Publiek: Facturatie"
         ]
       }
     },
@@ -6521,8 +6627,8 @@
         "version": "2.1",
         "deprecated": false,
         "tags": [
-          "Publiek: Externe facturatie",
-          "Verkoopjournaalpost"
+          "Verkoopjournaalpost",
+          "Publiek: Externe facturatie"
         ]
       },
       "put": {
@@ -6579,8 +6685,8 @@
         "version": "2.1",
         "deprecated": false,
         "tags": [
-          "Publiek: Externe facturatie",
-          "Verkoopjournaalpost"
+          "Verkoopjournaalpost",
+          "Publiek: Externe facturatie"
         ]
       },
       "post": {
@@ -6637,8 +6743,8 @@
         "version": "3.0",
         "deprecated": false,
         "tags": [
-          "Publiek: Externe facturatie",
-          "Verkoopjournaalpost"
+          "Verkoopjournaalpost",
+          "Publiek: Externe facturatie"
         ]
       }
     },
@@ -6756,8 +6862,8 @@
         "version": "1.0",
         "deprecated": false,
         "tags": [
-          "Publiek: Inkoopjournaalpost",
-          "Inkoopjournaalpost"
+          "Inkoopjournaalpost",
+          "Publiek: Inkoopjournaalpost"
         ]
       }
     }
@@ -6788,48 +6894,48 @@
       "description": "Financiële dashboarding voor publieke api"
     },
     {
-      "name": "Publiek: Financiële journaalpost",
-      "description": "Financiële journaalpost voor publieke api"
-    },
-    {
       "name": "Financiële journaalpost",
       "description": "Financiële journaalpost connectors"
     },
     {
-      "name": "Publiek: Financiële rapportage",
-      "description": "Financiële rapportage voor publieke api"
+      "name": "Publiek: Financiële journaalpost",
+      "description": "Financiële journaalpost voor publieke api"
     },
     {
       "name": "Financiele rapportage",
       "description": "Financiele rapportage connectoren"
     },
     {
-      "name": "Publiek: Externe verkoopregels",
-      "description": "Verkoopregels voor publieke api"
+      "name": "Publiek: Financiële rapportage",
+      "description": "Financiële rapportage voor publieke api"
     },
     {
       "name": "Verkoopregels",
       "description": "Verkoopregels connectors"
     },
     {
-      "name": "Loonjournaalpost",
-      "description": "Loonjournaalpost connectors"
+      "name": "Publiek: Externe verkoopregels",
+      "description": "Verkoopregels voor publieke api"
     },
     {
-      "name": "Publiek: POS Transacties",
-      "description": "POS transacties voor publieke api"
+      "name": "Loonjournaalpost",
+      "description": "Loonjournaalpost connectors"
     },
     {
       "name": "POS Transacties",
       "description": "POS transacties"
     },
     {
-      "name": "Publiek: Inkoopjournaalpost",
-      "description": "Inkoopjournaalpost connectors voor publieke api"
+      "name": "Publiek: POS Transacties",
+      "description": "POS transacties voor publieke api"
     },
     {
       "name": "Inkoopjournaalpost",
       "description": "Inkoopjournaalpost connectors"
+    },
+    {
+      "name": "Publiek: Inkoopjournaalpost",
+      "description": "Inkoopjournaalpost connectors voor publieke api"
     },
     {
       "name": "Publiek: Relatiemanagement",
@@ -6840,20 +6946,20 @@
       "description": "Relatie connectors"
     },
     {
-      "name": "Publiek: Facturatie",
-      "description": "Facturatie voor publieke api"
-    },
-    {
       "name": "Verkoopfactuur",
       "description": "Verkoopfactuur connectors"
     },
     {
-      "name": "Publiek: Externe facturatie",
-      "description": "Externe facturatie voor publieke api"
+      "name": "Publiek: Facturatie",
+      "description": "Facturatie voor publieke api"
     },
     {
       "name": "Verkoopjournaalpost",
       "description": "Verkoopjournaalpost connectors"
+    },
+    {
+      "name": "Publiek: Externe facturatie",
+      "description": "Externe facturatie voor publieke api"
     },
     {
       "name": "TechnischeInfo",
@@ -12827,7 +12933,7 @@
           },
           "ToBeInvoiced": {
             "type": "boolean",
-            "description": "Make a invoice that is not yet completed or sent to the relation."
+            "description": "Make an invoice that is not yet completed or sent to the relation."
           },
           "Attachments": {
             "type": "array",
@@ -12867,7 +12973,7 @@
                 },
                 "VatType": {
                   "type": "string",
-                  "description": "Vat tarive. Falls back to product default when empty.",
+                  "description": "VAT tariff. Falls back to product default when empty.",
                   "enum": [
                     "high",
                     "low",
