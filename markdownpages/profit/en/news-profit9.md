@@ -29,7 +29,7 @@ Starting with Profit 9, several changes have been implemented in the AFAS Profit
 
 Due to this change, the GetConnector now behaves the same way as a GetConnector based on *Employee/calculated wage components*.
 
-### UpdateConnector KnUser: Field InLn (preferred site) has been removed
+### UpdateConnector *KnUser*: Field InLn (preferred site) has been removed
 
 The field InLn (Preferred site) has been removed from the UpdateConnector KnUser. This field determined the language of the InSite that a user received in links in emails. It has been replaced by the preferred InSite. This directly points to an InSite instead of a language.
 
