@@ -29,5 +29,13 @@ Vanaf Profit 9 is er een aantal wijzigingen in de AFAS Profit API doorgevoerd. H
 
 De GetConnector werkt door deze wijziging op dezelfde manier als een GetConnector die gebaseerd is op *Medewerker/berekende looncomponenten*.
 
+### UpdateConnector KnUser: Veld InLn (voorkeur site) is vervallen
+
+Het veld InLn (Voorkeur site) is vervallen in de UpdateConnector KnUser. Dit veld legde de taal vast van de InSite die een gebruiker in links in e-mails kreeg. Daarvoor is de voorkeur-InSite in de plaats gekomen. Deze wijst direct een InSite aan in plaats van een taal.
+
+Stuur je het veld InLn mee in een aanroep van de UpdateConnector KnUser? Haal het dan uit je koppeling. **Een aanroep met dit veld geeft na de update een foutmelding.**
+
+De voorkeur-InSite kun je niet via de UpdateConnector vullen. Een gebruiker stelt die zelf in op de InSite-pagina Mijn gegevens. Bij de conversie naar Profit 9 krijgt elke gebruiker met een taalvoorkeur automatisch de InSite die bij Eigenschappen omgeving aan die taal gekoppeld was. Heeft een gebruiker geen voorkeur, of is die InSite niet beschikbaar, dan bevat de link de Hoofd-InSite.
+
 ## Belangrijke wijzigingen
 
