@@ -1,6 +1,6 @@
 ---
 author: EZW
-date: 2026-09-30
+date: 2026-10-28
 tags: Profit9, GetConnector, UpdateConnector, Integration, Configuration
 title: New in Profit 9
 ---
@@ -38,4 +38,3 @@ Do you send the InLn field in a call to the UpdateConnector KnUser? Remove it fr
 You cannot set the preferred InSite via the UpdateConnector. A user sets this themselves on the InSite page My data. After the update to Profit 9, every user with a language preference automatically receives the InSite that was linked to that language in Environment properties. If a user has no preference, or that InSite is not available, the link will contain the Main InSite.
 
 ## Important changes
-

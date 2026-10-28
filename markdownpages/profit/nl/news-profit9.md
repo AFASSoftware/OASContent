@@ -1,6 +1,6 @@
 ---
 author: EZW
-date: 2026-09-30
+date: 2026-10-28
 tags: Profit9, GetConnector, UpdateConnector, Integration, Configuration
 title: Nieuw in Profit 9
 ---
@@ -38,4 +38,3 @@ Stuur je het veld InLn mee in een aanroep van de UpdateConnector KnUser? Haal he
 De voorkeur-InSite kun je niet via de UpdateConnector vullen. Een gebruiker stelt die zelf in op de InSite-pagina Mijn gegevens. Bij de conversie naar Profit 9 krijgt elke gebruiker met een taalvoorkeur automatisch de InSite die bij Eigenschappen omgeving aan die taal gekoppeld was. Heeft een gebruiker geen voorkeur, of is die InSite niet beschikbaar, dan bevat de link de Hoofd-InSite.
 
 ## Belangrijke wijzigingen
-
