@@ -29,7 +29,7 @@ Starting with Profit 9, several changes have been implemented in the AFAS Profit
 
 Due to this change, the GetConnector now behaves the same way as a GetConnector based on *Employee/calculated wage components*.
 
-## Important changes
+### UpdateConnector *KnUser*: Field InLn (preferred site) has been removed
 
 ### UpdateConnector *KnUser*: Field InLn (preferred site) has been removed
 

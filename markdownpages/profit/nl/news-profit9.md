@@ -29,7 +29,7 @@ Vanaf Profit 9 is er een aantal wijzigingen in de AFAS Profit API doorgevoerd. H
 
 De GetConnector werkt door deze wijziging op dezelfde manier als een GetConnector die gebaseerd is op *Medewerker/berekende looncomponenten*.
 
-## Belangrijke wijzigingen
+### UpdateConnector *KnUser*: Veld InLn (voorkeur site) is vervallen
 
 ### UpdateConnector *KnUser*: Veld InLn (voorkeur site) is vervallen
 
