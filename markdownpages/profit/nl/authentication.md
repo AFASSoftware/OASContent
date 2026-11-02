@@ -1,6 +1,6 @@
 ---
 author: TOKL
-date: 2026-10-08
+date: 2026-11-02
 tags: GetConnector, AppConnector, Integration, Configuration, Authentication, Authorization
 title: Authenticatie
 ---
@@ -231,7 +231,7 @@ openssl req -new -x509 -key private_key.pem -out certificate.pem -days 3650 -sub
 
 De private key (`private_key.pem`) blijft bij jou en gaat nooit naar Profit. Je kunt de publieke sleutel op twee manieren aan Profit aanbieden:
 
-1. **Bestand:** upload `certificate.pem` bij de app connector. Een losse publieke sleutel, zoals `public_key.pem`, is niet voldoende. Je kunt bij het certificaat optioneel een key ID invullen. Laat je dit veld leeg, dan gebruikt Profit de SHA-1-thumbprint van het certificaat als key ID.
+1. **Bestand:** upload `certificate.pem` bij de app connector. Een losse publieke sleutel, zoals `public_key.pem`, is niet voldoende. Je kunt bij het certificaat optioneel een key ID invullen. Laat je dit veld leeg, dan gebruikt Profit de SHA-256 JWK-thumbprint van de publieke sleutel ([RFC 7638](https://www.rfc-editor.org/rfc/rfc7638), base64url-gecodeerd) als key ID, bijvoorbeeld `Kd_pIByDBnb9uyu9_rdcIzfy1nwL_PecqP7VaIHPNmQ`.
 2. **JWKS-URL (`jwks_uri`):** publiceer een JWK Set op een HTTPS-URL en registreer deze URL bij de app connector. Profit haalt de publieke sleutel dan automatisch op. De URL mag niet redirecten en de response mag maximaal 64 KB zijn. Iedere gebruikte sleutel heeft `"use": "sig"`. Bevat de set meer dan één sleutel, dan is `kid` verplicht.
 
 Profit cachet een JWK Set standaard één uur en volgt de `Cache-Control`-header. Bij een onbekende `kid` haalt Profit de set direct opnieuw op, zodat een nieuwe sleutel vrijwel meteen bruikbaar is. Houd er bij verwijderen rekening mee dat een gecachte sleutel nog maximaal een uur kan worden geaccepteerd.
@@ -258,7 +258,7 @@ De JWT bevat de volgende gegevens:
 }
 ```
 
-De header `kid` is optioneel als je certificaten als bestand opslaat. Stuur je `kid` mee, dan moet deze exact overeenkomen met de key ID die bij het certificaat in Profit staat, of met de SHA-1-thumbprint als je dat veld leeg hebt gelaten. Een onbekende `kid` wordt afgewezen, ook als het certificaat verder geldig is. Zonder `kid` kun je `x5t#S256` meesturen of beide identificerende headers weglaten; Profit probeert dan alle geldige certificaten van de app connector. Een `kid` beperkt dit zoekwerk en kan daarom performancewinst opleveren.
+De header `kid` is optioneel als je certificaten als bestand opslaat. Stuur je `kid` mee, dan moet deze exact overeenkomen met de key ID die bij het certificaat in Profit staat, of met de SHA-256 JWK-thumbprint als je dat veld leeg hebt gelaten. Een onbekende `kid` wordt afgewezen, ook als het certificaat verder geldig is. Zonder `kid` kun je `x5t#S256` meesturen of beide identificerende headers weglaten; Profit probeert dan alle geldige certificaten van de app connector. Een `kid` beperkt dit zoekwerk en kan daarom performancewinst opleveren.
 
 Bij een JWKS-URL komt `kid` uit de JWK Set. Als de set meer dan één sleutel bevat, moet de assertion een `kid` bevatten. Deze waarde moet exact overeenkomen met een sleutel in de set.
 
