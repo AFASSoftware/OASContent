@@ -1,6 +1,6 @@
 ---
 author: TOKL
-date: 2026-10-08
+date: 2026-11-02
 tags: GetConnector, AppConnector, Integration, Configuration, Authentication, Authorization
 title: Authentication
 ---
@@ -231,7 +231,7 @@ openssl req -new -x509 -key private_key.pem -out certificate.pem -days 3650 -sub
 
 The private key (`private_key.pem`) remains with you and is never sent to Profit. You can provide the public key to Profit in two ways:
 
-1. **File:** upload `certificate.pem` to the app connector. A standalone public key such as `public_key.pem` is not sufficient. You can optionally enter a key ID for the certificate. If you leave this field empty, Profit uses the certificate's SHA-1 thumbprint as the key ID.
+1. **File:** upload `certificate.pem` to the app connector. A standalone public key such as `public_key.pem` is not sufficient. You can optionally enter a key ID for the certificate. If you leave this field empty, Profit uses the SHA-256 JWK thumbprint of the public key ([RFC 7638](https://www.rfc-editor.org/rfc/rfc7638), base64url-encoded) as the key ID, for example `Kd_pIByDBnb9uyu9_rdcIzfy1nwL_PecqP7VaIHPNmQ`.
 2. **JWKS URL (`jwks_uri`):** publish a JWK Set at an HTTPS URL and register this URL in the app connector. Profit then retrieves the public key automatically. The URL must not redirect and the response must not exceed 64 KB. Every key that is used has `"use": "sig"`. If the set contains more than one key, `kid` is required.
 
 Profit caches a JWK Set for one hour by default and honors the `Cache-Control` header. When it encounters an unknown `kid`, Profit immediately retrieves the set again, so a new key becomes available almost immediately. When removing a key, keep in mind that a cached key may still be accepted for up to one hour.
@@ -258,7 +258,7 @@ The JWT contains the following data:
 }
 ```
 
-The `kid` header is optional when you store certificates as files. If you include `kid`, it must exactly match the key ID configured for the certificate in Profit, or the SHA-1 thumbprint if you left that field empty. An unknown `kid` is rejected even if the certificate is otherwise valid. Without `kid`, you can include `x5t#S256` or omit both identifying headers; Profit then tries all valid certificates for the app connector. Using a `kid` limits this search and can therefore improve performance.
+The `kid` header is optional when you store certificates as files. If you include `kid`, it must exactly match the key ID configured for the certificate in Profit, or the SHA-256 JWK thumbprint if you left that field empty. An unknown `kid` is rejected even if the certificate is otherwise valid. Without `kid`, you can include `x5t#S256` or omit both identifying headers; Profit then tries all valid certificates for the app connector. Using a `kid` limits this search and can therefore improve performance.
 
 For a JWKS URL, `kid` comes from the JWK Set. If the set contains more than one key, the assertion must contain a `kid`. Its value must exactly match a key in the set.
 
