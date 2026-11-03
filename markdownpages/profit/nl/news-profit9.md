@@ -142,11 +142,7 @@ No changes for this release.
 
 ## Inrichting Specification
 
-### All changes
-
-| Connector | Description | Operation |
-| --- | --- | --- |
-|  | removed the schema `KnCustomLinkC01_POST` |  |
+No changes for this release.
 
 ## Loonadministratie Specification
 
