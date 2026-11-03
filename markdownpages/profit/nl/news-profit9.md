@@ -1,6 +1,6 @@
 ---
 author: EZW
-date: 2026-11-02
+date: 2026-11-03
 tags: Profit9, GetConnector, UpdateConnector, Integration, Configuration
 title: Nieuw in Profit 9
 ---
@@ -142,11 +142,7 @@ No changes for this release.
 
 ## Inrichting Specification
 
-### All changes
-
-| Connector | Description | Operation |
-| --- | --- | --- |
-|  | removed the schema `KnCustomLinkC01_POST` |  |
+No changes for this release.
 
 ## Loonadministratie Specification
 
