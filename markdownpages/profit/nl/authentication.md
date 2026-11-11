@@ -1,6 +1,6 @@
 ---
 author: TOKL
-date: 2026-11-02
+date: 2026-11-11
 tags: GetConnector, AppConnector, Integration, Configuration, Authentication, Authorization
 title: Authenticatie
 ---
@@ -193,7 +193,12 @@ Bewaar een client secret zoals je een wachtwoord bewaart: in een secret store of
 
 Vanaf Profit 9 heeft elke client secret een **geldigheidsduur**. Na de vervaldatum weigert Profit tokenaanvragen met die secret. Je moet de secret dus **periodiek vernieuwen**.
 
-- De geldigheidsduur is instelbaar. De standaardwaarde is 180 dagen.
+- De geldigheidsduur is instelbaar. De standaardwaarde is 180 dagen. Je kiest uit de volgende opties:
+  - 1 week
+  - 30 dagen
+  - 180 dagen
+  - 1 jaar
+  - Gewijzigd: je stelt zelf de geldigheidsduur in, met een maximum van 2 jaar.
 - De vervaldatum vind je in het instellingenscherm van de app connector in Profit.
 
 **Zo vernieuw je een secret zonder onderbreking:**

@@ -1,6 +1,6 @@
 ---
 author: TOKL
-date: 2026-11-02
+date: 2026-11-11
 tags: GetConnector, AppConnector, Integration, Configuration, Authentication, Authorization
 title: Authentication
 ---
@@ -193,7 +193,12 @@ Store the client secret like a password: in a secret store or key vault, never i
 
 From Profit 9, every client secret has a **validity period**. After the expiry date, Profit rejects token requests that use that secret. You must therefore **renew the secret periodically**.
 
-- The validity period is configurable. The default value is 180 days.
+- The validity period is configurable. The default value is 180 days. You can choose from the following options:
+  - 1 week
+  - 30 days
+  - 180 days
+  - 1 year
+  - Custom: you set the validity period yourself, up to a maximum of 2 years.
 - You can find the expiry date in the app connector settings screen in Profit.
 
 **How to renew a secret without interruption:**
