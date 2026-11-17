@@ -84,7 +84,7 @@ Er zijn drie manieren om te bepalen welke bewerking Profit uitvoert. Ze lopen va
 | Manier | De bewerking geldt voor | Gebruik je als |
 |---|---|---|
 | 1. HTTP-methode op de connector | Het hele bericht | je alles toevoegt, bijwerkt of verwijdert |
-| 2. HTTP-methode op een subobject | Eén onderliggend object | je alleen een subobject van een bestaand record wilt toevoegen, bijwerken of verwijderen |
+| 2. `POST` op een subobject | Eén onderliggend object | je alleen een subobject wilt toevoegen aan een bestaand record |
 | 3. `@Action` per element | Elk afzonderlijk record | je verschillende bewerkingen in één bericht wilt combineren |
 
 ### 1. HTTP-methode op de connector
@@ -177,7 +177,7 @@ Je kunt ook een regel uit een subobject verwijderen. Neem daarvoor de volledige 
 
 ### 2. Een subobject direct aanspreken
 
-Je kunt een subobject direct aanspreken door de naam ervan aan de URL toe te voegen. De HTTP-methode geldt dan voor het subobject en niet voor het hoofdobject. Het hoofdobject wordt alleen gebruikt om te bepalen bij welk bestaand record het subobject hoort. Zo voeg je bijvoorbeeld een artikel toe aan een bestaande verkooporder.
+Je kunt een subobject direct aanspreken door de naam ervan aan de URL toe te voegen. Met een `POST` op die URL voeg je het subobject toe aan een bestaand record. Het hoofdobject wordt alleen gebruikt om te bepalen bij welk bestaand record het subobject hoort. Zo voeg je bijvoorbeeld een artikel toe aan een bestaande verkooporder.
 
 - URL hoofdobject: `../ProfitRestServices/connectors/KnOrganisation`
 - URL subobject: `../ProfitRestServices/connectors/KnOrganisation/KnBankAccount`
@@ -191,11 +191,11 @@ curl -X POST "https://{omgeving}.rest.afas.online/ProfitRestServices/connectors/
   -d @bankrekening.json
 ```
 
-Met `POST` voeg je zo een bankrekening toe aan een bestaande organisatie. Met `PUT` werk je een bestaande bankrekening bij en met `DELETE` verwijder je deze. Zie ook [Geneste regel verwijderen](#delete).
+Met `POST` voeg je zo een bankrekening toe aan een bestaande organisatie. Een subobject-URL ondersteunt alleen toevoegen. Wil je een bestaande bankrekening bijwerken, gebruik dan `PUT` op `/connectors/KnOrganisation` en neem de sleutelvelden van de organisatie en de bankrekening op. Verwijderen gaat via de `DELETE`-route met de sleutel in de URL (zie [DELETE](#delete)). Welke routes en sleutelvelden een endpoint heeft, staat in de OpenAPI-specificatie.
 
 Houd hierbij rekening met het volgende:
 
-- Je spreekt per aanroep één subobject aan. Heeft het hoofdobject meerdere subobjecten, dan kies je in de URL welk subobject je aanspreekt.
+- Je spreekt per aanroep één subobject aan. Heeft het hoofdobject meerdere subobjecten, dan kies je in de URL welk subobject je toevoegt.
 - Binnen dat subobject kun je wel meerdere records meesturen.
 - Je kunt ook dieper geneste objecten onder het subobject meesturen. Die worden dan ook aangemaakt.
 - Je kunt tegelijk het hoofdobject bijwerken, maar dat hoeft niet.

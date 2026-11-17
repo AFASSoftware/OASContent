@@ -84,7 +84,7 @@ There are three ways to determine which operation Profit performs. They range fr
 | Method | The operation applies to | Use it when |
 |---|---|---|
 | 1. HTTP method on the connector | The entire message | you add, update or delete everything |
-| 2. HTTP method on a subobject | One child object | you only want to add, update or delete a subobject of an existing record |
+| 2. `POST` on a subobject | One child object | you only want to add a subobject to an existing record |
 | 3. `@Action` per element | Each individual record | you want to combine different operations in one message |
 
 ### 1. HTTP method on the connector
@@ -177,7 +177,7 @@ You can also delete a line from a subobject. To do this, include the full key of
 
 ### 2. Addressing a subobject directly
 
-You can address a subobject directly by adding its name to the URL. The HTTP method then applies to the subobject and not to the main object. The main object is only used to determine which existing record the subobject belongs to. This lets you add an item to an existing sales order, for example.
+You can address a subobject directly by adding its name to the URL. With a `POST` on that URL, you add the subobject to an existing record. The main object is only used to determine which existing record the subobject belongs to. This lets you add an item to an existing sales order, for example.
 
 - Main object URL: `../ProfitRestServices/connectors/KnOrganisation`
 - Subobject URL: `../ProfitRestServices/connectors/KnOrganisation/KnBankAccount`
@@ -191,11 +191,11 @@ curl -X POST "https://{environment}.rest.afas.online/ProfitRestServices/connecto
   -d @bankaccount.json
 ```
 
-With `POST`, this adds a bank account to an existing organisation. With `PUT`, you update an existing bank account, and with `DELETE`, you delete it. See also [Deleting a nested line](#delete).
+With `POST`, this adds a bank account to an existing organisation. A subobject URL only supports adding. To update an existing bank account, use `PUT` on `/connectors/KnOrganisation` and include the key fields of the organisation and the bank account. Deleting is done through the `DELETE` route with the key in the URL (see [DELETE](#delete)). The OpenAPI specification shows which routes and key fields an endpoint has.
 
 Keep the following in mind:
 
-- You address one subobject per call. If the main object has multiple subobjects, you choose in the URL which subobject you address.
+- You address one subobject per call. If the main object has multiple subobjects, you choose in the URL which subobject you add.
 - Within that subobject, you can send multiple records.
 - You can also send more deeply nested objects under the subobject. These are then created as well.
 - You can update the main object at the same time, but you don't have to.
