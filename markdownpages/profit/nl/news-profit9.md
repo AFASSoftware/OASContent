@@ -1,6 +1,6 @@
 ---
 author: EZW
-date: 2026-11-03
+date: 2026-11-17
 tags: Profit9, GetConnector, UpdateConnector, Integration, Configuration
 title: Nieuw in Profit 9
 ---
