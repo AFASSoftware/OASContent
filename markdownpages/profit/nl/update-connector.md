@@ -197,7 +197,7 @@ Houd hierbij rekening met het volgende:
 
 - Je spreekt per aanroep één subobject aan. Heeft het hoofdobject meerdere subobjecten, dan kies je in de URL welk subobject je toevoegt.
 - Binnen dat subobject kun je wel meerdere records meesturen.
-- Je kunt ook dieper geneste objecten onder het subobject meesturen. Die worden dan ook aangemaakt.
+- Je kunt ook dieper geneste objecten onder het subobject meesturen. Of die worden aangemaakt, verschilt per connector. Geef ze `"@Action": "insert"` als ze zeker moeten worden aangemaakt (zie Elementen zonder `@Action` hieronder).
 - Je kunt tegelijk het hoofdobject bijwerken, maar dat hoeft niet.
 
 In het bericht neem je de sleutelvelden van het hoofdobject op, zodat Profit weet bij welk record het subobject hoort:
@@ -381,7 +381,15 @@ Een element zonder `@Action` krijgt de bewerking van de HTTP-methode. De bewerki
 
 **Voorbeeld:** je doet een `PUT` en geeft een persoon `"@Action": "insert"`. Een subobject van die persoon zonder eigen `@Action` wordt dan toch als update verwerkt.
 
-Roep je de connector aan met een subobject in de URL, bijvoorbeeld `/connectors/KnPerson/KnContact`? Dan krijgen alleen de objecten in dat pad de bewerking van de HTTP-methode. Alle andere elementen zonder `@Action`, ook het hoofdelement, worden als update verwerkt.
+Roep je de connector aan met een subobject in de URL, bijvoorbeeld `/connectors/FbAssembly/FbAssemblyLines`? Dan krijgen alleen de objecten waarvan de naam in de URL staat de bewerking van de HTTP-methode. Alle andere elementen zonder `@Action` krijgen de bewerking update mee. Dat geldt voor het hoofdelement en ook voor objecten die dieper onder het subobject hangen.
+
+Wat er daarna met die elementen gebeurt, verschilt per connector:
+
+- Het hoofdelement wordt bijgewerkt. Het moet dus een bestaand record aanwijzen.
+- Sommige connectoren maken dieper geneste objecten onder een nieuw element toch aan. Bij `FbAssembly` worden batch- en serieregels onder een nieuwe assemblageregel bijvoorbeeld altijd aangemaakt.
+- Wordt het bovenliggende element bijgewerkt, dan wordt een dieper genest object zonder `@Action` ook als update verwerkt.
+
+Wil je een dieper genest object aanmaken onder een element dat wordt bijgewerkt, geef het dan `"@Action": "insert"`. Dat zie je in het voorbeeld met `FbAssembly` hierboven: de nieuwe batchregel hangt onder een bestaande componentregel. Weet je niet zeker hoe een connector zich gedraagt, geef het object dan ook `"@Action": "insert"`.
 
 #### Valkuilen
 

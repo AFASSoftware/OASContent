@@ -197,7 +197,7 @@ Keep the following in mind:
 
 - You address one subobject per call. If the main object has multiple subobjects, you choose in the URL which subobject you add.
 - Within that subobject, you can send multiple records.
-- You can also send more deeply nested objects under the subobject. These are then created as well.
+- You can also send more deeply nested objects under the subobject. Whether these are created differs per connector. Give them `"@Action": "insert"` if they must be created (see Elements without `@Action` below).
 - You can update the main object at the same time, but you don't have to.
 
 In the message, include the key fields of the main object, so that Profit knows which record the subobject belongs to:
@@ -381,7 +381,15 @@ An element without `@Action` gets the operation of the HTTP method. The operatio
 
 **Example:** you send a `PUT` and give a person `"@Action": "insert"`. A subobject of that person without its own `@Action` is still processed as an update.
 
-Do you call the connector with a subobject in the URL, for example `/connectors/KnPerson/KnContact`? Then only the objects in that path get the operation of the HTTP method. All other elements without `@Action`, including the main element, are processed as an update.
+Do you call the connector with a subobject in the URL, for example `/connectors/FbAssembly/FbAssemblyLines`? Then only the objects whose name is in the URL get the operation of the HTTP method. All other elements without `@Action` get the update operation. This applies to the main element and also to objects nested more deeply under the subobject.
+
+What happens to those elements next differs per connector:
+
+- The main element is updated, so it must refer to an existing record.
+- Some connectors still create deeply nested objects under a new element. With `FbAssembly`, for example, batch and serial lines under a new assembly line are always created.
+- If the parent element is updated, a deeply nested object without `@Action` is also processed as an update.
+
+To create a deeply nested object under an element that is being updated, give it `"@Action": "insert"`. You can see this in the `FbAssembly` example above: the new batch line sits under an existing component line. If you are not sure how a connector behaves, give the object `"@Action": "insert"` as well.
 
 #### Pitfalls
 
