@@ -27,6 +27,15 @@ Vanaf Profit 9 is er een aantal wijzigingen in de AFAS Profit API doorgevoerd. H
 
 De GetConnector werkt door deze wijziging op dezelfde manier als een GetConnector die gebaseerd is op *Medewerker/berekende looncomponenten*.
 
+### OAuth geeft expires_in in ander formaat
+
+De response van het endpoint `/oauth/token` geeft `expires_in` nu als getal terug in plaats van tekst.
+
+### UpdateConnector *FbConfrontation*: Velden voor confrontatie op journaalpostregel zijn verplaatst
+
+De velden `EnNo` en `SeNo` zijn verplaatst van node `FbGoodsReceivedLines` naar node `FbConfrontation`. Deze velden zijn verplicht als je de functionaliteit **Confronteren op journaalpostnummer** hebt geactiveerd.
+
+
 ## Belangrijke wijzigingen
 
 ### UpdateConnector *KnUser*: Veld InLn (voorkeur site) is vervallen
