@@ -1,6 +1,6 @@
 ---
 author: EZW
-date: 2026-11-03
+date: 2026-11-17
 tags: Profit9, GetConnector, UpdateConnector, Integration, Configuration
 title: New in Profit 9
 ---
@@ -27,6 +27,14 @@ Starting with Profit 9, several changes have been implemented in the AFAS Profit
 - The link to `Employee/salary` still exists, but now yields only one line per period. This will always be the last line of the period.
 
 Due to this change, the GetConnector now behaves the same way as a GetConnector based on *Employee/calculated wage components*.
+
+### OAuth returns `expires_in` in a different format
+
+The response from the `/oauth/token` endpoint now returns `expires_in` as a number instead of text.
+
+### UpdateConnector *FbConfrontation*: Fields for journal entry line reconciliation have been moved
+
+The `EnNo` and `SeNo` fields have been moved from the `FbGoodsReceivedLines` node to the `FbConfrontation` node. These fields are mandatory if you have enabled the **Reconcile by journal entry number** functionality.
 
 ## Important changes
 
