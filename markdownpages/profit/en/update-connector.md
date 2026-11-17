@@ -305,7 +305,9 @@ In the following example, an existing assembly order, an order line and a compon
                       "Element": {
                         "Fields": {
                           "@Action": "insert",
-                          "BaNu": "10"
+                          "BaNu": "10",
+                          "BiUn": "STK",
+                          "QuUn": "-2"
                         }
                       }
                     }

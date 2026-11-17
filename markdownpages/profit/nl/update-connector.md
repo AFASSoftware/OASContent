@@ -305,7 +305,9 @@ In het volgende voorbeeld worden een bestaande assemblageorder, een orderregel e
                       "Element": {
                         "Fields": {
                           "@Action": "insert",
-                          "BaNu": "10"
+                          "BaNu": "10",
+                          "BiUn": "STK",
+                          "QuUn": "-2"
                         }
                       }
                     }
