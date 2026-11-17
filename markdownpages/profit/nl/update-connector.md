@@ -13,7 +13,7 @@ Een UpdateConnector-bericht is hiërarchisch opgebouwd. Elk niveau bestaat uit d
 
 | Onderdeel | Betekenis |
 |---|---|
-| Objectnaam (bijv. `FiEntryPar`) | Het object dat je aanspreekt. Op het hoogste niveau is dit de naam van de connector. |
+| Objectnaam (bijv. `FiEntryPar`) | Het object dat je aanspreekt. Op het hoogste niveau is dit het hoofdobject van de connector. De naam daarvan kan afwijken van de connectornaam in de URL: connector `FiEntries` heeft bijvoorbeeld hoofdobject `FiEntryPar`. |
 | `Element` | Eén record. Gebruik een array (`[ ... ]`) om meerdere records van hetzelfde type mee te sturen. |
 | `Fields` | De veldwaarden van het record. |
 | `Objects` | Onderliggende objecten (subobjecten) die bij dit record horen. Elk subobject heeft weer dezelfde opbouw. |
@@ -98,7 +98,7 @@ De HTTP-methode bepaalt de standaardbewerking voor het bericht:
 | `DELETE` | Record verwijderen |
 
 ```
-POST https://{omgeving}.rest.afas.online/ProfitRestServices/connectors/FiEntryPar
+POST https://{omgeving}.rest.afas.online/ProfitRestServices/connectors/FiEntries
 ```
 
 Welke methoden een endpoint ondersteunt, zie je in de OpenAPI-specificatie van dat endpoint.

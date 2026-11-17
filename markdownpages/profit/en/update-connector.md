@@ -13,7 +13,7 @@ An UpdateConnector message has a hierarchical structure. Each level consists of 
 
 | Part | Meaning |
 |---|---|
-| Object name (e.g. `FiEntryPar`) | The object you address. At the top level, this is the name of the connector. |
+| Object name (e.g. `FiEntryPar`) | The object you address. At the top level, this is the main object of the connector. Its name can differ from the connector name in the URL: connector `FiEntries`, for example, has main object `FiEntryPar`. |
 | `Element` | One record. Use an array (`[ ... ]`) to send multiple records of the same type. |
 | `Fields` | The field values of the record. |
 | `Objects` | Child objects (subobjects) that belong to this record. Each subobject has the same structure. |
@@ -98,7 +98,7 @@ The HTTP method determines the default operation for the message:
 | `DELETE` | Delete record |
 
 ```
-POST https://{environment}.rest.afas.online/ProfitRestServices/connectors/FiEntryPar
+POST https://{environment}.rest.afas.online/ProfitRestServices/connectors/FiEntries
 ```
 
 The OpenAPI specification of an endpoint shows which methods it supports.
