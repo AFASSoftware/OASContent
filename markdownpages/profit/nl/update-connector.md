@@ -298,8 +298,7 @@ In het volgende voorbeeld worden een bestaande assemblageorder, een orderregel e
                     "VaIt": "2",
                     "ItCd": "3101",
                     "QuUn": "-2",
-                    "UnCd": "STK",
-                    "FxQu": "true"
+                    "BiUn": "STK"
                   },
                   "Objects": {
                     "FbOrderBatchLines": {

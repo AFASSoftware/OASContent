@@ -298,8 +298,7 @@ In the following example, an existing assembly order, an order line and a compon
                     "VaIt": "2",
                     "ItCd": "3101",
                     "QuUn": "-2",
-                    "UnCd": "STK",
-                    "FxQu": "true"
+                    "BiUn": "STK"
                   },
                   "Objects": {
                     "FbOrderBatchLines": {
