@@ -1,29 +1,127 @@
 ---
 author: CLN
-date: 2025-11-08
+date: 2026-11-17
 tags: UpdateConnector, Authentication, Authorization, Finance, Hr, Order Management
 title: UpdateConnector
 ---
 
-An external application can add, change, or delete records in the Profit database with an UpdateConnector. Each endpoint has different options. In UpdateConnectors with subobjects, you can do a specific action on a subobject.
+With an UpdateConnector, you write data to Profit: you add, update or delete records. The available operations differ per endpoint. This page explains how a message is structured and how you determine which operation (add, update or delete) is performed.
 
-## POST
+## Message structure
 
-With HTTP POST method, you create new records in Profit with an UpdateConnector. Before the record is created, the data is checked. Examples of these checks are:
+An UpdateConnector message has a hierarchical structure. Each level consists of the same building blocks:
 
-- BSN: The BSN (Social Security Number) must pass the 11-test.
-- Address: The address must have a country code.
-- Financial entry: A financial entry must be balanced. This means debit and credit totals are equal.
+| Part | Meaning |
+|---|---|
+| Object name (e.g. `FiEntryPar`) | The object you address. At the top level, this is the main object of the connector. Its name can differ from the connector name in the URL: connector `FiEntries`, for example, has main object `FiEntryPar`. |
+| `Element` | One record. Use an array (`[ ... ]`) to send multiple records of the same type. |
+| `Fields` | The field values of the record. |
+| `Objects` | Child objects (subobjects) that belong to this record. Each subobject has the same structure. |
 
- > HTTP 500 response means that the request content cannot be checked successfully. See also [Troubleshooting](./troubleshooting).### Example POST request
+**Example:** a journal entry with three entry lines.
 
-``` javascript
+```json
+{
+  "FiEntryPar": {
+    "Element": {
+      "Fields": {
+        "Year": "2026",
+        "Peri": "1",
+        "UnId": "1",
+        "JoCo": "20",
+        "AuNu": "1"
+      },
+      "Objects": {
+        "FiEntries": {
+          "Element": [
+            {
+              "Fields": {
+                "VaAs": "2",
+                "AcNr": "10001",
+                "EnDa": "2026-01-01",
+                "BpDa": "2026-01-01",
+                "AmDe": "12100",
+                "AmCr": "0",
+                "DaEx": "2026-02-01"
+              }
+            },
+            {
+              "Fields": {
+                "VaAs": "1",
+                "AcNr": "8010",
+                "EnDa": "2026-01-01",
+                "BpDa": "2026-01-01",
+                "AmDe": "0",
+                "AmCr": "10000",
+                "VaId": "1"
+              }
+            },
+            {
+              "Fields": {
+                "VaAs": "1",
+                "AcNr": "1510",
+                "EnDa": "2026-01-01",
+                "BpDa": "2026-01-01",
+                "AmDe": "0",
+                "AmCr": "2100",
+                "VaId": "1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+```
+
+The header of the journal entry is in `FiEntryPar`. The entry lines are subobjects (`FiEntries`) and are sent as an array. The main record and the lines are added in one call.
+
+## Determining the operation
+
+There are three ways to determine which operation Profit performs. They range from simple to flexible.
+
+| Method | The operation applies to | Use it when |
+|---|---|---|
+| 1. HTTP method on the connector | The entire message | you add, update or delete everything |
+| 2. `POST` on a subobject | One child object | you only want to add a subobject to an existing record |
+| 3. `@Action` per element | Each individual record | you want to combine different operations in one message |
+
+### 1. HTTP method on the connector
+
+The HTTP method determines the default operation for the message:
+
+| Method | Operation |
+|---|---|
+| `POST` | Add record |
+| `PUT` | Update record |
+| `DELETE` | Delete record |
+
+```
+POST https://{environment}.rest.afas.online/ProfitRestServices/connectors/FiEntries
+```
+
+The OpenAPI specification of an endpoint shows which methods it supports.
+
+#### POST
+
+With `POST`, you create records in Profit. Before the record is created, the data is validated. Examples of these validations are:
+
+- BSN: the citizen service number (BSN) must pass the 11-test.
+- Address: the address must contain a country code.
+- Financial entry: the entry must be balanced. This means the debit and credit totals must be equal.
+
+> If you receive an HTTP 500 response, the content of the request did not pass validation. See also [Troubleshooting](./troubleshooting).
+
+**Example POST request**
+
+```javascript
 const url = "https://12345.rest.afas.online/ProfitRestServices/connectors/KnUser";
 
 const headers = new Headers();
 headers.append("Accept", "application/json");
 headers.append("Accept-Language", "nl-nl");
-headers.append("Authorization", "AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb04+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg==");
+headers.append("Authorization", "Bearer {token}");
 headers.append("Content-Type", "application/json");
 
 const data = JSON.stringify({
@@ -53,49 +151,190 @@ fetch(url, requestOptions)
   .catch(error => console.log('Error:', error));
 ```
 
-## Response
+#### PUT
 
-UpdateConnectors usually give an `HTTP 201 response` when they work successfully. You can find this response in the OpenAPI Specification of the endpoint. The `FieldId` in the response body is the `primary key` of the object where the POST was done.
+With `PUT`, you update existing records. In the JSON schema of the `PUT` method, only the key fields are required. These are usually the fields you get back in the response of a `POST`.
 
-Example:
+A `PUT` request updates all fields you send, and all subobjects whose key you send.
+
+**Clearing a field**
+
+You clear a field by sending an empty value. For example, if the field `Ds` contains `Example description`, you clear it with `"Ds": ""`.
+
+#### DELETE
+
+Not all endpoints support `DELETE`. A delete is **permanent**: afterwards, the record no longer exists in the database. You pass the key of the record as parameters in the URL.
+
+```
+DELETE https://12345.rest.afas.online/ProfitRestServices/connectors/KnAppointment/KnAppointment/ApId/123
+```
+
+This deletes the record whose `ApId` field has the value `123`.
+
+**Deleting a nested line**
+
+You can also delete a line from a subobject. To do this, include the full key of the main object and of the subobject in the request URL.
+
+### 2. Addressing a subobject directly
+
+You can address a subobject directly by adding its name to the URL. With a `POST` on that URL, you add the subobject to an existing record. The main object is only used to determine which existing record the subobject belongs to. This lets you add an item to an existing sales order, for example.
+
+- Main object URL: `../ProfitRestServices/connectors/KnOrganisation`
+- Subobject URL: `../ProfitRestServices/connectors/KnOrganisation/KnBankAccount`
+
+```bash
+curl -X POST "https://{environment}.rest.afas.online/ProfitRestServices/connectors/KnOrganisation/KnBankAccount" \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -H "Accept-language: nl-nl" \
+  -H "Authorization: Bearer {token}" \
+  -d @bankaccount.json
+```
+
+With `POST`, this adds a bank account to an existing organisation. A subobject URL only supports adding. To update an existing bank account, use `PUT` on `/connectors/KnOrganisation` and include the key fields of the organisation and the bank account. Deleting is done through the `DELETE` route with the key in the URL (see [DELETE](#delete)). The OpenAPI specification shows which routes and key fields an endpoint has.
+
+Keep the following in mind:
+
+- You address one subobject per call. If the main object has multiple subobjects, you choose in the URL which subobject you add.
+- Within that subobject, you can send multiple records.
+- You can also send more deeply nested objects under the subobject. Whether these are created differs per connector. Give them `"@Action": "insert"` if they must be created (see Elements without `@Action` below).
+- You can update the main object at the same time, but you don't have to.
+
+In the message, include the key fields of the main object, so that Profit knows which record the subobject belongs to:
 
 ```json
 {
-  "results": {
-    "KnSubject": {
-      "SbId": "999999"
+  "KnOrganisation": {
+    "Element": {
+      "Fields": {
+        "<organisation key field>": "<value>"
+      },
+      "Objects": {
+        "KnBankAccount": {
+          "Element": {
+            "Fields": {
+              "<field>": "<value>"
+            }
+          }
+        }
+      }
     }
   }
 }
 ```
 
-See also:
+**Example:** adding multiple mileage registrations to endpoint `HrMobility` with `POST ../connectors/HrMobility/HrEmployeeMobilityRegistration`.
 
-- [All response codes](./troubleshooting#http-codes)
+```json
+{
+  "HrMobility": {
+    "Element": {
+      "@CcSn": 123455,
+      "Objects": [
+        {
+          "HrEmployeeMobilityRegistration": {
+            "Element": [
+              {
+                "Fields": {
+                  "DaEn": "2023-12-01",
+                  "KmEn": 12400
+                }
+              },
+              {
+                "Fields": {
+                  "DaEn": "2023-12-14",
+                  "KmEn": 12910
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
+```
 
-## POST on SubObject
+### 3. Operation per element with `@Action`
 
-AFAS Profit can update the main object and add to the subobject for UpdateConnectors with a nested structure. This lets you add an item to an existing sales order, for example. There are two ways to do this:
+With the `@Action` attribute in `Fields`, you specify per record which operation must be performed. This overrides the default operation of the HTTP method for that element.
 
- 1. Use @Action tags in the request body.
- 2. Specify the subobject in the request URL.
+| Value | Operation |
+|---|---|
+| `insert` | Add record |
+| `update` | Update record |
+| `delete` | Delete record |
 
-**@action tag method**
-You add `@Action` in the JSON object within the Fields tag. It is an extra property of the "Fields" object. Using the `@Action` tag gives you flexibility when working with complex JSON structures. These can have multiple nested subjects that need different actions. The complete body is checked and then processed as one transaction. We often see this used in:
+The value is not case-sensitive: `Insert` also works.
 
-- Employee-related endpoints like `KnEmployee` and `KnEmployeeGuid`.
-- Order and production-related endpoints like `FbDeliveryNote`, `FbAssembly`, and `FbSales`.
+This lets you combine different operations in one message. The complete body is validated first and then processed as one transaction. You mainly use `@Action` with endpoints that have a deeply nested structure (sometimes up to six levels), for example:
 
-These are endpoints with a nested structure that can go up to 6 levels deep.
-Allowed values for `@Action`:
+- Employees: `KnEmployee` and `KnEmployeeGuid`.
+- Orders and production: `FbDeliveryNote`, `FbAssembly` and `FbSales`.
 
-- insert
-- update
-- delete
+In the following example, an existing assembly order, an order line and a component line are updated. A new batch line is added under the component line.
 
-Example: turn off one salary account and add a new salary account for an employee:
+```json
+{
+  "FbAssembly": {
+    "Element": {
+      "Fields": {
+        "@Action": "update",
+        "OrNu": "00011"
+      },
+      "Objects": {
+        "FbAssemblyLines": {
+          "Element": {
+            "Fields": {
+              "@Action": "update",
+              "VaIt": "7",
+              "ItCd": "S10000"
+            },
+            "Objects": {
+              "AfasFbOrderCompLines": {
+                "Element": {
+                  "Fields": {
+                    "@Action": "update",
+                    "VaIt": "2",
+                    "ItCd": "3101",
+                    "QuUn": "-2",
+                    "BiUn": "STK"
+                  },
+                  "Objects": {
+                    "FbOrderBatchLines": {
+                      "Element": {
+                        "Fields": {
+                          "@Action": "insert",
+                          "BaNu": "10",
+                          "BiUn": "STK",
+                          "QuUn": "-2"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
 
-``` json
+Schematically:
+
+```
+FbAssembly               update   assembly order 00011
+└ FbAssemblyLines        update   order line S10000
+  └ AfasFbOrderCompLines update   component line 3101
+    └ FbOrderBatchLines  insert   new batch line 10
+```
+
+**Example:** deactivating an employee's salary account and adding a new salary account in one request.
+
+```json
 {
   "AfasEmployee": {
     "Element": {
@@ -136,66 +375,70 @@ Example: turn off one salary account and add a new salary account for an employe
 }
 ```
 
-> The @ symbol shows which fields are special keys or actions.
+#### Elements without `@Action`
 
-**Subobject via URL method**
-You can create new subobjects with a POST request to the subobject URL. This can also update the main object. You can include deeper nested objects too.
+An element without `@Action` gets the operation of the HTTP method. The operation is not inherited from the parent element: each element is evaluated separately.
 
-In the URL, choose which subobject to create. If there are multiple subobjects, pick the one you want. You can include multiple items in the object.
+**Example:** you send a `PUT` and give a person `"@Action": "insert"`. A subobject of that person without its own `@Action` is still processed as an update.
 
-- Main object URL: `../ProfitRestServices/connectors/HrMobility`
-- Subobject URL: `../ProfitRestServices/connectors/HrMobility/HrEmployeeMobilityRegistration`
+Do you call the connector with a subobject in the URL, for example `/connectors/FbAssembly/FbAssemblyLines`? Then only the objects whose name is in the URL get the operation of the HTTP method. All other elements without `@Action` get the update operation. This applies to the main element and also to objects nested more deeply under the subobject.
 
-Example of multiple mileage registrations on the HrMobility endpoint:
+What happens to those elements next differs per connector:
 
-``` json
+- The main element is updated, so it must refer to an existing record.
+- Some connectors still create deeply nested objects under a new element. With `FbAssembly`, for example, batch and serial lines under a new assembly line are always created.
+- If the parent element is updated, a deeply nested object without `@Action` is also processed as an update.
+
+To create a deeply nested object under an element that is being updated, give it `"@Action": "insert"`. You can see this in the `FbAssembly` example above: the new batch line sits under an existing component line. If you are not sure how a connector behaves, give the object `"@Action": "insert"` as well.
+
+#### Pitfalls
+
+- **Put `@Action` in `Fields`, not on `Element`.**
+  In `"Element": { "@Action": "insert", "Fields": { ... } }`, `@Action` is ignored without an error message. The element then gets the operation of the HTTP method.
+- **Write `@Action` with a capital A.**
+  `"@action"` in lowercase is overridden by the operation of the HTTP method without an error message. Only the value is not case-sensitive.
+- **Put `@Action` first in `Fields`.**
+  Only the first attribute in `Fields` is read as the operation. If you put another `@` field before it, for example a key field as an attribute, you get the error `Invalid action '<value>'. Only 'insert', 'delete' and 'update' are supported.`
+- **Give each level of nested objects its own `@Action`.**
+  If a subobject needs a different operation than the HTTP method, give it its own `@Action`. An `@Action` on the parent element does not count.
+
+## Key fields
+
+When updating or deleting, Profit must be able to find the existing record. That is why you always include the key fields of the record, even if you don't change them. Which fields make up the key differs per object.
+
+## Response
+
+A successful call to an UpdateConnector usually returns an `HTTP 201` response. The exact response of an endpoint is listed in the OpenAPI specification of that endpoint. After a `POST`, the response body contains the primary key of the created record.
+
+Example:
+
+```json
 {
-  "HrMobility": {
-    "Element": {
-      "@CcSn": 123455,
-      "Objects": [
-        {
-          "HrEmployeeMobilityRegistration": {
-            "Element": [
-              {
-                "Fields": {
-                  "DaEn": "2023-12-01",
-                  "KmEn": 12400
-                }
-              },
-              {
-                "Fields": {
-                  "DaEn": "2023-12-14",
-                  "KmEn": 12910
-                }
-              }
-            ]
-          }
-        }
-      ]
+  "results": {
+    "KnSubject": {
+      "SbId": "999999"
     }
   }
 }
 ```
 
-## PUT
+See also:
 
-Each endpoint shows which actions you can use in the Open API specification. For `PUT` actions, only the key fields are required. This is usually the same as the `POST` action result. Use the JSON schema of the endpoint method for this.
+- [All response codes](./troubleshooting#http-codes)
 
-A `PUT` request always updates all fields in the request and all subobjects with their key included.
+## SOAP
 
-### Clearing a field
+With SOAP, you send the same message in XML format. There is no HTTP method, so you specify the operation with the `Action` attribute on `Fields`:
 
-To clear a field, give it an empty value. For example, if field `Ds` has `Example description`, you can clear it with `"Ds": ""`.
-
-## DELETE
-
-Some endpoints can use the `DELETE` method. This is a FINAL delete. After this, the data no longer exists in the database. You delete data by including the data key as URL parameters.
-
-Example URL with parameters: `https://12345.rest.afas.online/ProfitRestServices/connectors/KnAppointment/KnAppointment/ApId/123`
-
-In this case, the row with ID `123` is deleted based on the field `ApId`.
-
-### Deleting a nested row
-
-You can delete a row from a subelement. Do this by including the full key of the main element and the subelement in the request URL.
+```xml
+<FbAssembly>
+  <Element>
+    <Fields Action="update">
+      <OrNu>00011</OrNu>
+    </Fields>
+    <Objects>
+      ...
+    </Objects>
+  </Element>
+</FbAssembly>
+```

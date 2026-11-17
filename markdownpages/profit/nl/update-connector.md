@@ -1,31 +1,127 @@
 ---
 author: CLN
-date: 2025-11-08
+date: 2026-11-17
 tags: UpdateConnector, Authorization, Hr, Order Management
 title: UpdateConnector
 ---
 
-Een externe applicatie kan records in de Profit-database toevoegen, wijzigen of verwijderen via een UpdateConnector (de mogelijkheden verschillen per endpoint). In UpdateConnectoren met subobjecten is het mogelijk om een specifieke actie op een subobject mee te geven.
+Met een UpdateConnector schrijf je gegevens naar Profit: je voegt records toe, werkt ze bij of verwijdert ze. Welke bewerkingen mogelijk zijn, verschilt per endpoint. Op deze pagina lees je hoe een bericht is opgebouwd en hoe je bepaalt welke bewerking (toevoegen, bijwerken of verwijderen) wordt uitgevoerd.
 
-## POST
+## Opbouw van een bericht
 
-Via HTTP method POST maak je met een  UpdateConnector records aan in Profit. Voordat het record wordt aangemaakt wordt deze data gevalideerd. Voorbeelden van deze validaties zijn:
+Een UpdateConnector-bericht is hiërarchisch opgebouwd. Elk niveau bestaat uit dezelfde bouwstenen:
 
-- BSN: het BSN (Burgerservicenummer) moet aan de 11-proef voldoen.
+| Onderdeel | Betekenis |
+|---|---|
+| Objectnaam (bijv. `FiEntryPar`) | Het object dat je aanspreekt. Op het hoogste niveau is dit het hoofdobject van de connector. De naam daarvan kan afwijken van de connectornaam in de URL: connector `FiEntries` heeft bijvoorbeeld hoofdobject `FiEntryPar`. |
+| `Element` | Eén record. Gebruik een array (`[ ... ]`) om meerdere records van hetzelfde type mee te sturen. |
+| `Fields` | De veldwaarden van het record. |
+| `Objects` | Onderliggende objecten (subobjecten) die bij dit record horen. Elk subobject heeft weer dezelfde opbouw. |
+
+**Voorbeeld:** een journaalpost met drie boekingsregels.
+
+```json
+{
+  "FiEntryPar": {
+    "Element": {
+      "Fields": {
+        "Year": "2026",
+        "Peri": "1",
+        "UnId": "1",
+        "JoCo": "20",
+        "AuNu": "1"
+      },
+      "Objects": {
+        "FiEntries": {
+          "Element": [
+            {
+              "Fields": {
+                "VaAs": "2",
+                "AcNr": "10001",
+                "EnDa": "2026-01-01",
+                "BpDa": "2026-01-01",
+                "AmDe": "12100",
+                "AmCr": "0",
+                "DaEx": "2026-02-01"
+              }
+            },
+            {
+              "Fields": {
+                "VaAs": "1",
+                "AcNr": "8010",
+                "EnDa": "2026-01-01",
+                "BpDa": "2026-01-01",
+                "AmDe": "0",
+                "AmCr": "10000",
+                "VaId": "1"
+              }
+            },
+            {
+              "Fields": {
+                "VaAs": "1",
+                "AcNr": "1510",
+                "EnDa": "2026-01-01",
+                "BpDa": "2026-01-01",
+                "AmDe": "0",
+                "AmCr": "2100",
+                "VaId": "1"
+              }
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+```
+
+De kop van de journaalpost staat in `FiEntryPar`. De boekingsregels zijn subobjecten (`FiEntries`) en worden als array meegestuurd. Hoofdrecord en regels worden in één aanroep toegevoegd.
+
+## De bewerking bepalen
+
+Er zijn drie manieren om te bepalen welke bewerking Profit uitvoert. Ze lopen van eenvoudig naar flexibel.
+
+| Manier | De bewerking geldt voor | Gebruik je als |
+|---|---|---|
+| 1. HTTP-methode op de connector | Het hele bericht | je alles toevoegt, bijwerkt of verwijdert |
+| 2. `POST` op een subobject | Eén onderliggend object | je alleen een subobject wilt toevoegen aan een bestaand record |
+| 3. `@Action` per element | Elk afzonderlijk record | je verschillende bewerkingen in één bericht wilt combineren |
+
+### 1. HTTP-methode op de connector
+
+De HTTP-methode bepaalt de standaardbewerking voor het bericht:
+
+| Methode | Bewerking |
+|---|---|
+| `POST` | Record toevoegen |
+| `PUT` | Record bijwerken |
+| `DELETE` | Record verwijderen |
+
+```
+POST https://{omgeving}.rest.afas.online/ProfitRestServices/connectors/FiEntries
+```
+
+Welke methoden een endpoint ondersteunt, zie je in de OpenAPI-specificatie van dat endpoint.
+
+#### POST
+
+Met `POST` maak je records aan in Profit. Voordat het record wordt aangemaakt, worden de gegevens gevalideerd. Voorbeelden van deze validaties zijn:
+
+- BSN: het burgerservicenummer (BSN) moet aan de 11-proef voldoen.
 - Adres: het adres moet een landcode bevatten.
-- Financiële mutatie: een financiële mutatie moet in balans zijn. Dit betekent dat de debet- en credittotalen gelijk zijn.
+- Financiële mutatie: de mutatie moet in balans zijn. De debet- en credittotalen moeten dus gelijk zijn.
 
-> HTTP 500 response betekent dat de inhoud van de request niet succesvol gevalideerd kan worden. Zie ook [Fouten verhelpen](./troubleshooting).
+> Krijg je een HTTP 500-response, dan is de inhoud van de request niet door de validatie gekomen. Zie ook [Fouten verhelpen](./troubleshooting).
 
-### Voorbeeld POST-request
+**Voorbeeld POST-request**
 
-``` javascript
+```javascript
 const url = "https://12345.rest.afas.online/ProfitRestServices/connectors/KnUser";
 
 const headers = new Headers();
 headers.append("Accept", "application/json");
 headers.append("Accept-Language", "nl-nl");
-headers.append("Authorization", "AfasToken PHRva2VuPjx2ZXJzaW9uPjE8L3ZlcnNpb04+PGRhdGE+QURFMzcwQkU4REFGNDBEMEExN0ZGQjkxNEU0MjY3NUU5OTk4QzJENTQ2QTJGNEZBM0U0RjNBQkZBODY3Qjk2RjwvZGF0YT48L3Rva2VuPg==");
+headers.append("Authorization", "Bearer {token}");
 headers.append("Content-Type", "application/json");
 
 const data = JSON.stringify({
@@ -55,49 +151,190 @@ fetch(url, requestOptions)
   .catch(error => console.log('Error:', error));
 ```
 
-## Response
+#### PUT
 
-UpdateConnectoren geven meestal een `HTTP 201 response` als zij succesvol zijn uitgevoerd. Deze response vind je terug bij de OpenAPI Specificatie van het endpoint. Het `FieldId` dat in de response-body zit, is de `primary key` van het object waar de POST op uitgevoerd is.
+Met `PUT` werk je bestaande records bij. In het JSON-schema van de `PUT`-methode zijn alleen de sleutelvelden verplicht. Dat zijn meestal de velden die je terugkrijgt in de response van een `POST`.
 
-Voorbeeld:
+Een `PUT`-request werkt alle velden bij die je meestuurt, en alle subobjecten waarvan je de sleutel meestuurt.
 
-``` json
+**Veld leegmaken**
+
+Je maakt een veld leeg door een lege waarde mee te sturen. Is het veld `Ds` bijvoorbeeld gevuld met `Voorbeeld omschrijving`, dan maak je het leeg met `"Ds": ""`.
+
+#### DELETE
+
+Niet alle endpoints ondersteunen `DELETE`. Een delete is **definitief**: daarna bestaat het record niet meer in de database. Je geeft de sleutel van het record mee als parameters in de URL.
+
+```
+DELETE https://12345.rest.afas.online/ProfitRestServices/connectors/KnAppointment/KnAppointment/ApId/123
+```
+
+Hier wordt het record verwijderd waarvan het veld `ApId` de waarde `123` heeft.
+
+**Geneste regel verwijderen**
+
+Je kunt ook een regel uit een subobject verwijderen. Neem daarvoor de volledige sleutel van het hoofdobject en van het subobject op in de request-URL.
+
+### 2. Een subobject direct aanspreken
+
+Je kunt een subobject direct aanspreken door de naam ervan aan de URL toe te voegen. Met een `POST` op die URL voeg je het subobject toe aan een bestaand record. Het hoofdobject wordt alleen gebruikt om te bepalen bij welk bestaand record het subobject hoort. Zo voeg je bijvoorbeeld een artikel toe aan een bestaande verkooporder.
+
+- URL hoofdobject: `../ProfitRestServices/connectors/KnOrganisation`
+- URL subobject: `../ProfitRestServices/connectors/KnOrganisation/KnBankAccount`
+
+```bash
+curl -X POST "https://{omgeving}.rest.afas.online/ProfitRestServices/connectors/KnOrganisation/KnBankAccount" \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json" \
+  -H "Accept-language: nl-nl" \
+  -H "Authorization: Bearer {token}" \
+  -d @bankrekening.json
+```
+
+Met `POST` voeg je zo een bankrekening toe aan een bestaande organisatie. Een subobject-URL ondersteunt alleen toevoegen. Wil je een bestaande bankrekening bijwerken, gebruik dan `PUT` op `/connectors/KnOrganisation` en neem de sleutelvelden van de organisatie en de bankrekening op. Verwijderen gaat via de `DELETE`-route met de sleutel in de URL (zie [DELETE](#delete)). Welke routes en sleutelvelden een endpoint heeft, staat in de OpenAPI-specificatie.
+
+Houd hierbij rekening met het volgende:
+
+- Je spreekt per aanroep één subobject aan. Heeft het hoofdobject meerdere subobjecten, dan kies je in de URL welk subobject je toevoegt.
+- Binnen dat subobject kun je wel meerdere records meesturen.
+- Je kunt ook dieper geneste objecten onder het subobject meesturen. Of die worden aangemaakt, verschilt per connector. Geef ze `"@Action": "insert"` als ze zeker moeten worden aangemaakt (zie Elementen zonder `@Action` hieronder).
+- Je kunt tegelijk het hoofdobject bijwerken, maar dat hoeft niet.
+
+In het bericht neem je de sleutelvelden van het hoofdobject op, zodat Profit weet bij welk record het subobject hoort:
+
+```json
 {
-  "results": {
-    "KnSubject": {
-      "SbId": "999999"
+  "KnOrganisation": {
+    "Element": {
+      "Fields": {
+        "<sleutelveld organisatie>": "<waarde>"
+      },
+      "Objects": {
+        "KnBankAccount": {
+          "Element": {
+            "Fields": {
+              "<veld>": "<waarde>"
+            }
+          }
+        }
+      }
     }
   }
 }
 ```
 
-Zie ook:
+**Voorbeeld:** meerdere kilometerregistraties toevoegen bij endpoint `HrMobility` met `POST ../connectors/HrMobility/HrEmployeeMobilityRegistration`.
 
-- [Alle response-codes](./troubleshooting#http-codes)
+```json
+{
+  "HrMobility": {
+    "Element": {
+      "@CcSn": 123455,
+      "Objects": [
+        {
+          "HrEmployeeMobilityRegistration": {
+            "Element": [
+              {
+                "Fields": {
+                  "DaEn": "2023-12-01",
+                  "KmEn": 12400
+                }
+              },
+              {
+                "Fields": {
+                  "DaEn": "2023-12-14",
+                  "KmEn": 12910
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
+```
 
-## POST op SubObject
+### 3. Bewerking per element met `@Action`
 
-AFAS Profit biedt de mogelijkheid op UpdateConnectoren met een geneste structuur een update op het main object te doen en een insert op het subobject. Hiermee kan je bijvoorbeeld een artikel toevoegen aan een bestaande verkooporder. Hiervoor zijn twee methoden beschikbaar:
+Met het attribuut `@Action` in `Fields` geef je per record aan welke bewerking moet plaatsvinden. Daarmee overschrijf je voor dat element de standaardbewerking van de HTTP-methode.
 
- 1. @Action tags meegeven in de request body.
- 2. Het subobject specificeren in de request URL.
+| Waarde | Bewerking |
+|---|---|
+| `insert` | Record toevoegen |
+| `update` | Record bijwerken |
+| `delete` | Record verwijderen |
 
-**Methode @action tag**
-`@Action` geef je in het JSON-object mee binnen de Fields-tag. Het is een additionele property van het object "Fields". Het gebruik van de `@Action` tag geeft flexibiliteit in het werken met complexe JSON-structuren waarin meerdere subjecten genest zijn en verschillende acties nodig zijn. Ook wordt de volledige body gevalideerd en wordt daarna als één transactie verwerkt. In een aantal situaties zien we deze toepassing vaak terugkomen:
+Hoofdletters maken bij de waarde niet uit: `Insert` werkt ook.
 
-- Medewerker gerelateerde endpoints zoals `KnEmployee` en `KnEmployeeGuid`.
-- Order en productie gerelateerde endpoints zoals `FbDeliveryNote`, `FbAssembly` en `FbSales`.
+Zo combineer je verschillende bewerkingen in één bericht. De volledige body wordt eerst gevalideerd en daarna als één transactie verwerkt. Je gebruikt `@Action` vooral bij endpoints met een diep geneste structuur (soms tot zes niveaus), bijvoorbeeld:
 
-Dit zijn endpoints met een geneste structuur die soms tot 6 nesting-niveau's diep kan gaan.
-Toegestane waarden voor `@Action`:
+- Medewerkers: `KnEmployee` en `KnEmployeeGuid`.
+- Orders en productie: `FbDeliveryNote`, `FbAssembly` en `FbSales`.
 
-- insert
-- update
-- delete
+In het volgende voorbeeld worden een bestaande assemblageorder, een orderregel en een componentregel bijgewerkt. Onder de componentregel wordt een nieuwe batchregel toegevoegd.
 
-Voorbeeld deactiveren van salarisrekening en aanmaken nieuwe salarisrekening op een medewerker in 1 request:
+```json
+{
+  "FbAssembly": {
+    "Element": {
+      "Fields": {
+        "@Action": "update",
+        "OrNu": "00011"
+      },
+      "Objects": {
+        "FbAssemblyLines": {
+          "Element": {
+            "Fields": {
+              "@Action": "update",
+              "VaIt": "7",
+              "ItCd": "S10000"
+            },
+            "Objects": {
+              "AfasFbOrderCompLines": {
+                "Element": {
+                  "Fields": {
+                    "@Action": "update",
+                    "VaIt": "2",
+                    "ItCd": "3101",
+                    "QuUn": "-2",
+                    "BiUn": "STK"
+                  },
+                  "Objects": {
+                    "FbOrderBatchLines": {
+                      "Element": {
+                        "Fields": {
+                          "@Action": "insert",
+                          "BaNu": "10",
+                          "BiUn": "STK",
+                          "QuUn": "-2"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+```
 
-``` json
+Schematisch:
+
+```
+FbAssembly               update   assemblageorder 00011
+└ FbAssemblyLines        update   orderregel S10000
+  └ AfasFbOrderCompLines update   componentregel 3101
+    └ FbOrderBatchLines  insert   nieuwe batchregel 10
+```
+
+**Voorbeeld:** een salarisrekening van een medewerker deactiveren en een nieuwe salarisrekening aanmaken in één request.
+
+```json
 {
   "AfasEmployee": {
     "Element": {
@@ -138,66 +375,70 @@ Voorbeeld deactiveren van salarisrekening en aanmaken nieuwe salarisrekening op 
 }
 ```
 
-> Het @ symbool in geeft hier aan welke velden als actie op het object of als primarykey worden verwerkt.
+#### Elementen zonder `@Action`
 
-**Methode subobject via URL**
-Via een POST op een subobject maak je eenvoudig een nieuw subobject aan. Hierbij is het optioneel om het hoofdobject te updaten. Ook kun je dieper geneste objecten meegeven. Deze zullen aangemaakt worden.
+Een element zonder `@Action` krijgt de bewerking van de HTTP-methode. De bewerking wordt niet overgenomen van het bovenliggende element: elk element wordt los beoordeeld.
 
-In de URL specificeer je de actie op het subobject. Als er meerdere subobjecten beschikbaar zijn moet je hierin een keuze maken welk object je aanmaakt. Wel kan je meerdere items in het object meegeven.
+**Voorbeeld:** je doet een `PUT` en geeft een persoon `"@Action": "insert"`. Een subobject van die persoon zonder eigen `@Action` wordt dan toch als update verwerkt.
 
-- URL mainobject: ``` ../ProfitRestServices/connectors/HrMobility ```
-- URL subobject: ``` ../ProfitRestServices/connectors/HrMobility/HrEmployeeMobilityRegistration ```
+Roep je de connector aan met een subobject in de URL, bijvoorbeeld `/connectors/FbAssembly/FbAssemblyLines`? Dan krijgen alleen de objecten waarvan de naam in de URL staat de bewerking van de HTTP-methode. Alle andere elementen zonder `@Action` krijgen de bewerking update mee. Dat geldt voor het hoofdelement en ook voor objecten die dieper onder het subobject hangen.
 
-Voorbeeld meerdere kilometerregistraties op endpoint HrMobility:
+Wat er daarna met die elementen gebeurt, verschilt per connector:
 
-``` json
+- Het hoofdelement wordt bijgewerkt. Het moet dus een bestaand record aanwijzen.
+- Sommige connectoren maken dieper geneste objecten onder een nieuw element toch aan. Bij `FbAssembly` worden batch- en serieregels onder een nieuwe assemblageregel bijvoorbeeld altijd aangemaakt.
+- Wordt het bovenliggende element bijgewerkt, dan wordt een dieper genest object zonder `@Action` ook als update verwerkt.
+
+Wil je een dieper genest object aanmaken onder een element dat wordt bijgewerkt, geef het dan `"@Action": "insert"`. Dat zie je in het voorbeeld met `FbAssembly` hierboven: de nieuwe batchregel hangt onder een bestaande componentregel. Weet je niet zeker hoe een connector zich gedraagt, geef het object dan ook `"@Action": "insert"`.
+
+#### Valkuilen
+
+- **Zet `@Action` in `Fields`, niet op `Element`.**
+  In `"Element": { "@Action": "insert", "Fields": { ... } }` wordt `@Action` zonder foutmelding genegeerd. Het element krijgt dan de bewerking van de HTTP-methode.
+- **Schrijf `@Action` met een hoofdletter A.**
+  `"@action"` in kleine letters wordt zonder foutmelding overschreven door de bewerking van de HTTP-methode. Alleen bij de waarde maken hoofdletters niet uit.
+- **Zet `@Action` als eerste in `Fields`.**
+  Alleen het eerste attribuut in `Fields` wordt als bewerking gelezen. Zet je een ander `@`-veld ervoor, bijvoorbeeld een sleutelveld als attribuut, dan krijg je de fout `Invalid action '<waarde>'. Only 'insert', 'delete' and 'update' are supported.`
+- **Geef bij geneste objecten elke laag een eigen `@Action`.**
+  Moet een subobject een andere bewerking krijgen dan de HTTP-methode, geef het dan zelf een `@Action`. Een `@Action` op het bovenliggende element telt niet mee.
+
+## Sleutelvelden
+
+Bij bijwerken en verwijderen moet Profit het bestaande record kunnen vinden. Neem daarom altijd de sleutelvelden van het record op, ook als je die zelf niet wijzigt. Welke velden de sleutel vormen, verschilt per object.
+
+## Response
+
+Een geslaagde aanroep van een UpdateConnector geeft meestal een `HTTP 201`-response. Welke response een endpoint precies geeft, staat in de OpenAPI-specificatie van dat endpoint. Na een `POST` bevat de response-body de primary key van het aangemaakte record.
+
+Voorbeeld:
+
+```json
 {
-  "HrMobility": {
-    "Element": {
-      "@CcSn": 123455,
-      "Objects": [
-        {
-          "HrEmployeeMobilityRegistration": {
-            "Element": [
-              {
-                "Fields": {
-                  "DaEn": "2023-12-01",
-                  "KmEn": 12400
-                }
-              },
-              {
-                "Fields": {
-                  "DaEn": "2023-12-14",
-                  "KmEn": 12910
-                }
-              }
-            ]
-          }
-        }
-      ]
+  "results": {
+    "KnSubject": {
+      "SbId": "999999"
     }
   }
 }
 ```
 
-## PUT
+Zie ook:
 
-Per endpoint wordt aangegeven in de Open API specificatie welke acties zijn toegestaan. Bij het schema van de `PUT` actie op een endpoint zijn alleen de sleutelvelden verplichte velden. Dit is meestal hetzelfde als het resultaat van het `POST` actie. Gebruik hiervoor het JSON schema van de method van het endpoint.
+- [Alle response-codes](./troubleshooting#http-codes)
 
-Een `PUT` request update altijd alle velden die worden meegegeven in de request en alle subobjecten waarvan de sleutel meegegeven is.
+## SOAP
 
-### Veld leegmaken
+Via SOAP verstuur je hetzelfde bericht in XML-vorm. Er is geen HTTP-methode, dus de bewerking geef je aan met het attribuut `Action` op `Fields`:
 
-Door een lege waarde mee te geven wordt het veld leeg gemaakt. Bijvoorbeeld: als veld `Ds` gevuld is met `Voorbeeld omgeschrijving` maak je deze leeg met `"Ds": ""`.
-
-## DELETE
-
-Een deel van de endpoints heeft de mogelijkheid om method `DELETE` uit te voeren. Dit is een DEFINITIEVE delete waarna het gegeven niet meer in de database bestaat. De delete voer je uit door de sleutel van het gegeven mee te geven als URL parameters.
-
-Voorbeeld URL met parameters: `https://12345.rest.afas.online/ProfitRestServices/connectors/KnAppointment/KnAppointment/ApId/123`
-
-Hier wordt op basis het veld `ApId` regel met identifier `123` verwijderd.
-
-### Geneste regel verwijderen
-
-Het is mogelijk om een regel uit een subelement te verwijderen. Dit kan je doen door de volledige sleutel van het hoofd element en het subelement in de request URL op te nemen.
+```xml
+<FbAssembly>
+  <Element>
+    <Fields Action="update">
+      <OrNu>00011</OrNu>
+    </Fields>
+    <Objects>
+      ...
+    </Objects>
+  </Element>
+</FbAssembly>
+```
