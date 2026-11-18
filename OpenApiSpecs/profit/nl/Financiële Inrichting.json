@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "8.8.11",
+    "version": "9.9.12",
     "title": "AFAS Financiële Inrichting API",
     "description": "Deze API beschrijft de endpoints gerelateerd aan Financiële Inrichting. Gebruik deze API met de functionele beschrijving van de API."
   },
@@ -573,6 +573,165 @@
           }
         },
         "operationId": "get_ProfitVersion"
+      }
+    },
+    "/connectors/BankIndex": {
+      "post": {
+        "summary": "Registratie bankkoppeling",
+        "description": "\n\rAlleen beschikbaar onder conditie: Bank Integration Service (BIS)\n\r ",
+        "operationId": "POST_BankIndex",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BankIndex_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Registratie bankkoppeling"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Registratie bankkoppeling",
+        "description": "\n\rAlleen beschikbaar onder conditie: Bank Integration Service (BIS)\n\r ",
+        "operationId": "PUT_BankIndex",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BankIndex_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Registratie bankkoppeling"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/BankIndex/AfasKnBankIndex/@BankType/{BankType}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "BankType",
+          "in": "path",
+          "required": true,
+          "description": "BankType"
+        }
+      ],
+      "delete": {
+        "summary": "Registratie bankkoppeling",
+        "operationId": "DELETE_BankIndex",
+        "description": " \n\r Let op: Bij dit endpoint zijn de parameters om een item te verwijderen nog niet gedocumenteerd. De path parameters kunnen hierdoor afwijken\n\r ",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Registratie bankkoppeling"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
       }
     },
     "/connectors/FiIVY": {
@@ -1748,6 +1907,997 @@
           }
         ]
       }
+    },
+    "/connectors/KnDocSigning": {
+      "post": {
+        "summary": "AFAS Signing Service",
+        "description": "\n\rAlleen beschikbaar onder conditie: Bank Integration Service (BIS)\n\r ",
+        "operationId": "POST_KnDocSigning",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnDocSigning_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "AFAS Signing Service"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "AFAS Signing Service",
+        "description": "\n\rAlleen beschikbaar onder conditie: Bank Integration Service (BIS)\n\r ",
+        "operationId": "PUT_KnDocSigning",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnDocSigning_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "AFAS Signing Service"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnDocSigning/RegisterSignableFiles": {
+      "post": {
+        "summary": "AFAS Signing Service",
+        "description": "Update main record in KnDocSigning and insert subrecord into RegisterSignableFiles. \n\rAlleen beschikbaar onder conditie: Bank Integration Service (BIS)\n\r ",
+        "operationId": "POSTSubRecordKnDocSigningRegisterSignableFiles",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnDocSigning_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "AFAS Signing Service"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnDocSigning/RequestSignature": {
+      "post": {
+        "summary": "AFAS Signing Service",
+        "description": "Update main record in KnDocSigning and insert subrecord into RequestSignature. \n\rAlleen beschikbaar onder conditie: Bank Integration Service (BIS)\n\r ",
+        "operationId": "POSTSubRecordKnDocSigningRequestSignature",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnDocSigning_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "AFAS Signing Service"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnDocSigning/InitChunkedFileUpload": {
+      "post": {
+        "summary": "AFAS Signing Service",
+        "description": "Update main record in KnDocSigning and insert subrecord into InitChunkedFileUpload. \n\rAlleen beschikbaar onder conditie: Bank Integration Service (BIS)\n\r ",
+        "operationId": "POSTSubRecordKnDocSigningInitChunkedFileUpload",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnDocSigning_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "AFAS Signing Service"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnDocSigning/UploadChunk": {
+      "post": {
+        "summary": "AFAS Signing Service",
+        "description": "Update main record in KnDocSigning and insert subrecord into UploadChunk. \n\rAlleen beschikbaar onder conditie: Bank Integration Service (BIS)\n\r ",
+        "operationId": "POSTSubRecordKnDocSigningUploadChunk",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnDocSigning_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "AFAS Signing Service"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnDocSigning/FinishChunkedFileUpload": {
+      "post": {
+        "summary": "AFAS Signing Service",
+        "description": "Update main record in KnDocSigning and insert subrecord into FinishChunkedFileUpload. \n\rAlleen beschikbaar onder conditie: Bank Integration Service (BIS)\n\r ",
+        "operationId": "POSTSubRecordKnDocSigningFinishChunkedFileUpload",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnDocSigning_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "AFAS Signing Service"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnDocSigning/SendVerification": {
+      "post": {
+        "summary": "AFAS Signing Service",
+        "description": "Update main record in KnDocSigning and insert subrecord into SendVerification. \n\rAlleen beschikbaar onder conditie: Bank Integration Service (BIS)\n\r ",
+        "operationId": "POSTSubRecordKnDocSigningSendVerification",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnDocSigning_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "AFAS Signing Service"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnDocSigning/VerifyVerification": {
+      "post": {
+        "summary": "AFAS Signing Service",
+        "description": "Update main record in KnDocSigning and insert subrecord into VerifyVerification. \n\rAlleen beschikbaar onder conditie: Bank Integration Service (BIS)\n\r ",
+        "operationId": "POSTSubRecordKnDocSigningVerifyVerification",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnDocSigning_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "AFAS Signing Service"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnDocSigning/SignDocuments": {
+      "post": {
+        "summary": "AFAS Signing Service",
+        "description": "Update main record in KnDocSigning and insert subrecord into SignDocuments. \n\rAlleen beschikbaar onder conditie: Bank Integration Service (BIS)\n\r ",
+        "operationId": "POSTSubRecordKnDocSigningSignDocuments",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnDocSigning_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "AFAS Signing Service"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnDocSigning/SignDocumentsWithConfirm": {
+      "post": {
+        "summary": "AFAS Signing Service",
+        "description": "Update main record in KnDocSigning and insert subrecord into SignDocumentsWithConfirm. \n\rAlleen beschikbaar onder conditie: Bank Integration Service (BIS)\n\r ",
+        "operationId": "POSTSubRecordKnDocSigningSignDocumentsWithConfirm",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnDocSigning_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "AFAS Signing Service"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnDocSigning/GetSignResult": {
+      "post": {
+        "summary": "AFAS Signing Service",
+        "description": "Update main record in KnDocSigning and insert subrecord into GetSignResult. \n\rAlleen beschikbaar onder conditie: Bank Integration Service (BIS)\n\r ",
+        "operationId": "POSTSubRecordKnDocSigningGetSignResult",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnDocSigning_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "AFAS Signing Service"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnDocSigning/InitChunkedFileDownload": {
+      "post": {
+        "summary": "AFAS Signing Service",
+        "description": "Update main record in KnDocSigning and insert subrecord into InitChunkedFileDownload. \n\rAlleen beschikbaar onder conditie: Bank Integration Service (BIS)\n\r ",
+        "operationId": "POSTSubRecordKnDocSigningInitChunkedFileDownload",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnDocSigning_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "AFAS Signing Service"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnDocSigning/DownloadChunk": {
+      "post": {
+        "summary": "AFAS Signing Service",
+        "description": "Update main record in KnDocSigning and insert subrecord into DownloadChunk. \n\rAlleen beschikbaar onder conditie: Bank Integration Service (BIS)\n\r ",
+        "operationId": "POSTSubRecordKnDocSigningDownloadChunk",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnDocSigning_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "AFAS Signing Service"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnDocSigning/FinishChunkedDownload": {
+      "post": {
+        "summary": "AFAS Signing Service",
+        "description": "Update main record in KnDocSigning and insert subrecord into FinishChunkedDownload. \n\rAlleen beschikbaar onder conditie: Bank Integration Service (BIS)\n\r ",
+        "operationId": "POSTSubRecordKnDocSigningFinishChunkedDownload",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnDocSigning_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "AFAS Signing Service"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnDocSigning/DownloadSignLog": {
+      "post": {
+        "summary": "AFAS Signing Service",
+        "description": "Update main record in KnDocSigning and insert subrecord into DownloadSignLog. \n\rAlleen beschikbaar onder conditie: Bank Integration Service (BIS)\n\r ",
+        "operationId": "POSTSubRecordKnDocSigningDownloadSignLog",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnDocSigning_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "AFAS Signing Service"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnDocSigning/GetRegisterSignableFilesStatus": {
+      "post": {
+        "summary": "AFAS Signing Service",
+        "description": "Update main record in KnDocSigning and insert subrecord into GetRegisterSignableFilesStatus. \n\rAlleen beschikbaar onder conditie: Bank Integration Service (BIS)\n\r ",
+        "operationId": "POSTSubRecordKnDocSigningGetRegisterSignableFilesStatus",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnDocSigning_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "AFAS Signing Service"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnDocSigning/ConfirmSignedDocuments": {
+      "post": {
+        "summary": "AFAS Signing Service",
+        "description": "Update main record in KnDocSigning and insert subrecord into ConfirmSignedDocuments. \n\rAlleen beschikbaar onder conditie: Bank Integration Service (BIS)\n\r ",
+        "operationId": "POSTSubRecordKnDocSigningConfirmSignedDocuments",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnDocSigning_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "AFAS Signing Service"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnDocSigning/KnSignLog/@ClIp/{ClIp}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "ClIp",
+          "in": "path",
+          "required": true,
+          "description": "Cliënt IP-adres"
+        }
+      ],
+      "delete": {
+        "summary": "AFAS Signing Service",
+        "operationId": "DELETE_KnDocSigning",
+        "description": " \n\r Let op: Bij dit endpoint zijn de parameters om een item te verwijderen nog niet gedocumenteerd. De path parameters kunnen hierdoor afwijken\n\r ",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "AFAS Signing Service"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
     }
   },
   "tags": [
@@ -1758,6 +2908,10 @@
     {
       "name": "API Info",
       "description": "API Info"
+    },
+    {
+      "name": "Registratie bankkoppeling",
+      "description": "Registratie bankkoppeling"
     },
     {
       "name": "Iv3-indeling per jaar",
@@ -1774,10 +2928,80 @@
     {
       "name": "Code verbijzondering",
       "description": "Code verbijzondering"
+    },
+    {
+      "name": "AFAS Signing Service",
+      "description": "AFAS Signing Service"
     }
   ],
   "components": {
     "schemas": {
+      "BankIndex_POST": {
+        "type": "object",
+        "properties": {
+          "AfasKnBankIndex": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "BankType": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "BankType",
+                        "format": ""
+                      },
+                      "Data": {
+                        "type": "string",
+                        "description": "Data",
+                        "format": "byte"
+                      }
+                    },
+                    "required": [
+                      "BankType",
+                      "Data"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "BankIndex_PUT": {
+        "type": "object",
+        "properties": {
+          "AfasKnBankIndex": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "BankType": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "BankType",
+                        "format": ""
+                      },
+                      "Data": {
+                        "type": "string",
+                        "description": "Data",
+                        "format": "byte"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "FiIVY_POST": {
         "type": "object",
         "properties": {
@@ -3063,6 +4287,1170 @@
                       "AxId",
                       "VbCo"
                     ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnDocSigning_POST": {
+        "type": "object",
+        "properties": {
+          "KnSignLog": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "ClIp": {
+                        "type": "string",
+                        "maxLength": 40,
+                        "description": "Cliënt IP-adres",
+                        "format": ""
+                      },
+                      "PrUs": {
+                        "type": "string",
+                        "maxLength": 80,
+                        "description": "Profit gebruiker",
+                        "format": ""
+                      },
+                      "EnId": {
+                        "type": "string",
+                        "maxLength": 8,
+                        "description": "Profit-omgeving",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "ClIp",
+                      "PrUs",
+                      "EnId"
+                    ]
+                  },
+                  "Objects": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "RegisterSignableFiles": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "ChunkedFileId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "Chunked file Id",
+                                        "format": "uuid"
+                                      },
+                                      "ReturnLegacyResult": {
+                                        "type": "boolean",
+                                        "description": "PU6 en eerder resultaat teruggeven",
+                                        "format": ""
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "RequestSignature": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "SignableId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "Ondertekenbare bestanden Id",
+                                        "format": "uuid"
+                                      },
+                                      "LinkToSignableId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "Koppelen aan vorig onderteken verzoek",
+                                        "format": "uuid"
+                                      },
+                                      "SignersName": {
+                                        "type": "string",
+                                        "maxLength": 255,
+                                        "description": "Naam ondertekenaar",
+                                        "format": ""
+                                      },
+                                      "SignersLanguage": {
+                                        "type": "string",
+                                        "maxLength": 255,
+                                        "description": "Gebruikerstaal",
+                                        "format": ""
+                                      }
+                                    }
+                                  },
+                                  "Objects": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "Verification": {
+                                          "type": "object",
+                                          "properties": {
+                                            "Element": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "Fields": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "VaVt": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "1",
+                                                          "2"
+                                                        ],
+                                                        "maxLength": 20,
+                                                        "description": "Soort verificatie\n1 = SMS;\n2 = E-mail;",
+                                                        "format": ""
+                                                      },
+                                                      "Data": {
+                                                        "type": "string",
+                                                        "description": "Verificatie data",
+                                                        "format": "byte"
+                                                      }
+                                                    },
+                                                    "required": [
+                                                      "VaVt"
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "SignatureSettings": {
+                                          "type": "object",
+                                          "properties": {
+                                            "Element": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "Fields": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "SettingsVersion": {
+                                                        "type": "integer",
+                                                        "description": "Settings versie",
+                                                        "format": ""
+                                                      },
+                                                      "Page": {
+                                                        "type": "string",
+                                                        "maxLength": 1,
+                                                        "description": "Pagina",
+                                                        "format": ""
+                                                      },
+                                                      "RelateTo": {
+                                                        "type": "string",
+                                                        "maxLength": 1,
+                                                        "description": "Positie",
+                                                        "format": ""
+                                                      },
+                                                      "XPos": {
+                                                        "type": "number",
+                                                        "description": "Horizontable positie",
+                                                        "format": "number"
+                                                      },
+                                                      "YPos": {
+                                                        "type": "number",
+                                                        "description": "Verticale positie",
+                                                        "format": "number"
+                                                      }
+                                                    },
+                                                    "required": [
+                                                      "SettingsVersion",
+                                                      "Page",
+                                                      "RelateTo",
+                                                      "XPos",
+                                                      "YPos"
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "InitChunkedFileUpload": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "Filename": {
+                                        "type": "string",
+                                        "maxLength": 255,
+                                        "description": "Filename",
+                                        "format": ""
+                                      },
+                                      "ChunkCount": {
+                                        "type": "integer",
+                                        "description": "Number of chunks",
+                                        "format": ""
+                                      }
+                                    },
+                                    "required": [
+                                      "Filename",
+                                      "ChunkCount"
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "UploadChunk": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "ChunkedFileId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "Chunked file Id",
+                                        "format": "uuid"
+                                      },
+                                      "ChunkSeqNo": {
+                                        "type": "integer",
+                                        "description": "Chunk volgnummer",
+                                        "format": ""
+                                      },
+                                      "ChunkStream": {
+                                        "type": "string",
+                                        "description": "Chunk as base64",
+                                        "format": "byte"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "FinishChunkedFileUpload": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "ChunkedFileId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "Chunked file Id",
+                                        "format": "uuid"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "SendVerification": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "SignRequestId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "Ondertekenverzoek Id",
+                                        "format": "uuid"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "VerifyVerification": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "SignRequestId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "Ondertekenverzoek Id",
+                                        "format": "uuid"
+                                      },
+                                      "VerificationCode": {
+                                        "type": "string",
+                                        "maxLength": 100,
+                                        "description": "Code",
+                                        "format": ""
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "SignDocuments": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "SignRequestId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "Ondertekenverzoek Id",
+                                        "format": "uuid"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "SignDocumentsWithConfirm": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "SignRequestId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "Ondertekenverzoek Id",
+                                        "format": "uuid"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "GetSignResult": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "SignRequestId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "handle",
+                                        "format": "uuid"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "InitChunkedFileDownload": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "SignRequestId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "handle",
+                                        "format": "uuid"
+                                      },
+                                      "FileId": {
+                                        "type": "string",
+                                        "maxLength": 32,
+                                        "description": "Chunked file Id",
+                                        "format": ""
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "DownloadChunk": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "ChunkedFileId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "handle",
+                                        "format": "uuid"
+                                      },
+                                      "ChunkSeqNo": {
+                                        "type": "integer",
+                                        "description": "Chunk volgnummer",
+                                        "format": ""
+                                      }
+                                    },
+                                    "required": [
+                                      "ChunkSeqNo"
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "FinishChunkedDownload": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "ChunkedFileId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "handle",
+                                        "format": "uuid"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "DownloadSignLog": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "SignRequestId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "handle",
+                                        "format": "uuid"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "GetRegisterSignableFilesStatus": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "SignableId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "Ondertekenbare bestanden Id",
+                                        "format": "uuid"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "ConfirmSignedDocuments": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "SignRequestId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "Ondertekenverzoek Id",
+                                        "format": "uuid"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnDocSigning_PUT": {
+        "type": "object",
+        "properties": {
+          "KnSignLog": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "ClIp": {
+                        "type": "string",
+                        "maxLength": 40,
+                        "description": "Cliënt IP-adres",
+                        "format": ""
+                      },
+                      "PrUs": {
+                        "type": "string",
+                        "maxLength": 80,
+                        "description": "Profit gebruiker",
+                        "format": ""
+                      },
+                      "EnId": {
+                        "type": "string",
+                        "maxLength": 8,
+                        "description": "Profit-omgeving",
+                        "format": ""
+                      }
+                    }
+                  },
+                  "Objects": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "RegisterSignableFiles": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "ChunkedFileId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "Chunked file Id",
+                                        "format": "uuid"
+                                      },
+                                      "ReturnLegacyResult": {
+                                        "type": "boolean",
+                                        "description": "PU6 en eerder resultaat teruggeven",
+                                        "format": ""
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "RequestSignature": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "SignableId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "Ondertekenbare bestanden Id",
+                                        "format": "uuid"
+                                      },
+                                      "LinkToSignableId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "Koppelen aan vorig onderteken verzoek",
+                                        "format": "uuid"
+                                      },
+                                      "SignersName": {
+                                        "type": "string",
+                                        "maxLength": 255,
+                                        "description": "Naam ondertekenaar",
+                                        "format": ""
+                                      },
+                                      "SignersLanguage": {
+                                        "type": "string",
+                                        "maxLength": 255,
+                                        "description": "Gebruikerstaal",
+                                        "format": ""
+                                      }
+                                    }
+                                  },
+                                  "Objects": {
+                                    "type": "array",
+                                    "items": {
+                                      "type": "object",
+                                      "properties": {
+                                        "Verification": {
+                                          "type": "object",
+                                          "properties": {
+                                            "Element": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "Fields": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "VaVt": {
+                                                        "type": "string",
+                                                        "enum": [
+                                                          "1",
+                                                          "2"
+                                                        ],
+                                                        "maxLength": 20,
+                                                        "description": "Soort verificatie\n1 = SMS;\n2 = E-mail;",
+                                                        "format": ""
+                                                      },
+                                                      "Data": {
+                                                        "type": "string",
+                                                        "description": "Verificatie data",
+                                                        "format": "byte"
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        },
+                                        "SignatureSettings": {
+                                          "type": "object",
+                                          "properties": {
+                                            "Element": {
+                                              "type": "array",
+                                              "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                  "Fields": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                      "SettingsVersion": {
+                                                        "type": "integer",
+                                                        "description": "Settings versie",
+                                                        "format": ""
+                                                      },
+                                                      "Page": {
+                                                        "type": "string",
+                                                        "maxLength": 1,
+                                                        "description": "Pagina",
+                                                        "format": ""
+                                                      },
+                                                      "RelateTo": {
+                                                        "type": "string",
+                                                        "maxLength": 1,
+                                                        "description": "Positie",
+                                                        "format": ""
+                                                      },
+                                                      "XPos": {
+                                                        "type": "number",
+                                                        "description": "Horizontable positie",
+                                                        "format": "number"
+                                                      },
+                                                      "YPos": {
+                                                        "type": "number",
+                                                        "description": "Verticale positie",
+                                                        "format": "number"
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "InitChunkedFileUpload": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "Filename": {
+                                        "type": "string",
+                                        "maxLength": 255,
+                                        "description": "Filename",
+                                        "format": ""
+                                      },
+                                      "ChunkCount": {
+                                        "type": "integer",
+                                        "description": "Number of chunks",
+                                        "format": ""
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "UploadChunk": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "ChunkedFileId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "Chunked file Id",
+                                        "format": "uuid"
+                                      },
+                                      "ChunkSeqNo": {
+                                        "type": "integer",
+                                        "description": "Chunk volgnummer",
+                                        "format": ""
+                                      },
+                                      "ChunkStream": {
+                                        "type": "string",
+                                        "description": "Chunk as base64",
+                                        "format": "byte"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "FinishChunkedFileUpload": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "ChunkedFileId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "Chunked file Id",
+                                        "format": "uuid"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "SendVerification": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "SignRequestId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "Ondertekenverzoek Id",
+                                        "format": "uuid"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "VerifyVerification": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "SignRequestId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "Ondertekenverzoek Id",
+                                        "format": "uuid"
+                                      },
+                                      "VerificationCode": {
+                                        "type": "string",
+                                        "maxLength": 100,
+                                        "description": "Code",
+                                        "format": ""
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "SignDocuments": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "SignRequestId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "Ondertekenverzoek Id",
+                                        "format": "uuid"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "SignDocumentsWithConfirm": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "SignRequestId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "Ondertekenverzoek Id",
+                                        "format": "uuid"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "GetSignResult": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "SignRequestId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "handle",
+                                        "format": "uuid"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "InitChunkedFileDownload": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "SignRequestId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "handle",
+                                        "format": "uuid"
+                                      },
+                                      "FileId": {
+                                        "type": "string",
+                                        "maxLength": 32,
+                                        "description": "Chunked file Id",
+                                        "format": ""
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "DownloadChunk": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "ChunkedFileId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "handle",
+                                        "format": "uuid"
+                                      },
+                                      "ChunkSeqNo": {
+                                        "type": "integer",
+                                        "description": "Chunk volgnummer",
+                                        "format": ""
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "FinishChunkedDownload": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "ChunkedFileId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "handle",
+                                        "format": "uuid"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "DownloadSignLog": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "SignRequestId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "handle",
+                                        "format": "uuid"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "GetRegisterSignableFilesStatus": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "SignableId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "Ondertekenbare bestanden Id",
+                                        "format": "uuid"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "ConfirmSignedDocuments": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "SignRequestId": {
+                                        "type": "string",
+                                        "maxLength": 38,
+                                        "description": "Ondertekenverzoek Id",
+                                        "format": "uuid"
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
                   }
                 }
               }

@@ -1,0 +1,3214 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "9.9.12",
+    "title": "AFAS Woningcorporaties API",
+    "description": "This API describes the endpoints related to Woningcorporaties. Use this API with the functional description of the API."
+  },
+  "servers": [
+    {
+      "url": "https://{id}.rest.afas.online/ProfitRestServices",
+      "description": "Production environment",
+      "variables": {
+        "id": {
+          "description": "5 digit environment number",
+          "default": "12345"
+        }
+      }
+    },
+    {
+      "url": "https://{id}.resttest.afas.online/ProfitRestServices",
+      "description": "Test environment",
+      "variables": {
+        "id": {
+          "description": "5 digit environment number",
+          "default": "12345"
+        }
+      }
+    },
+    {
+      "url": "https://{id}.restaccept.afas.online/ProfitRestServices",
+      "description": "Accept environment",
+      "variables": {
+        "id": {
+          "description": "5 digit environment number",
+          "default": "12345"
+        }
+      }
+    },
+    {
+      "url": "https://{id}.restcursus.afas.online/ProfitRestServices",
+      "description": "Cursus environment",
+      "variables": {
+        "id": {
+          "description": "5 digit environment number",
+          "default": "12345"
+        }
+      }
+    }
+  ],
+  "paths": {
+    "/MetaInfo": {
+      "get": {
+        "summary": "Retrieve the meta info of the Profit environment and the available connectors",
+        "tags": [
+          "API Info"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "updateConnectors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "getConnectors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "customConnectors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "description": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "info": {
+                      "type": "object",
+                      "properties": {
+                        "envid": {
+                          "type": "string"
+                        },
+                        "appName": {
+                          "type": "string"
+                        },
+                        "group": {
+                          "type": "string"
+                        },
+                        "tokenExpiry": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "updateConnectors": [
+                        {
+                          "id": "HrCreateApplicant",
+                          "description": "Aanmaken sollicitatie"
+                        },
+                        {
+                          "id": "FbSubscription",
+                          "description": "Abonnement"
+                        },
+                        {
+                          "id": "KnAddress",
+                          "description": "Adres"
+                        }
+                      ],
+                      "getConnectors": [
+                        {
+                          "id": "Profit_Fin_ChangedEntrydate",
+                          "description": "Profit_Fin_ChangedEntrydate"
+                        },
+                        {
+                          "id": "Profit_Functions",
+                          "description": "Profit_Functions"
+                        }
+                      ],
+                      "customConnectors": [
+                        {
+                          "id": "AppConnectorReport",
+                          "description": "AppConnectorReport"
+                        },
+                        {
+                          "id": "AppConnectorSubject",
+                          "description": "AppConnectorSubject"
+                        }
+                      ],
+                      "info": {
+                        "envid": "A123456AC",
+                        "appName": "OpenAPI Spec Example",
+                        "group": "AuthorizationGroup 101 (12345.USER)",
+                        "tokenExpiry": "0"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_MetaInfo"
+      }
+    },
+    "/Metainfo/{Type}/{Endpoint}": {
+      "get": {
+        "summary": "Retrieve the metainfo of a specific connector based on the endpoint id. This includes the fields and their properties.",
+        "tags": [
+          "API Info"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "fields": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "fieldId": {
+                            "type": "string"
+                          },
+                          "dataType": {
+                            "type": "string"
+                          },
+                          "label": {
+                            "type": "string"
+                          },
+                          "length": {
+                            "type": "integer"
+                          },
+                          "controlType": {
+                            "type": "integer"
+                          },
+                          "decimals": {
+                            "type": "integer"
+                          },
+                          "decimalsFieldId": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "name": "Profit_Administrations",
+                      "description": "Administraties (Profit)",
+                      "fields": [
+                        {
+                          "id": "AdminId",
+                          "fieldId": "U002",
+                          "dataType": "int",
+                          "label": "Administratie",
+                          "length": 3,
+                          "controlType": 5,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        },
+                        {
+                          "id": "AdminNm",
+                          "fieldId": "U001",
+                          "dataType": "string",
+                          "label": "Naam administratie",
+                          "length": 80,
+                          "controlType": 1,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        },
+                        {
+                          "id": "AdminCd",
+                          "fieldId": "UnCo",
+                          "dataType": "string",
+                          "label": "Administratie",
+                          "length": 10,
+                          "controlType": 1,
+                          "decimals": 0,
+                          "decimalsFieldId": ""
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_MetaInfoPerConnector",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "enum": [
+                "get",
+                "update"
+              ],
+              "example": "update"
+            },
+            "in": "path",
+            "name": "Type",
+            "description": "Add the type of connector you want to get the meta info from",
+            "required": true
+          },
+          {
+            "schema": {
+              "type": "string",
+              "example": "KnEmployee"
+            },
+            "in": "path",
+            "name": "Endpoint",
+            "description": "Add the endpoint id of the connector you want to get the meta info from",
+            "required": true
+          },
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/{Endpoint}": {
+      "get": {
+        "summary": "Retrieve the metainfo of a custom getconnector based on the endpoint id. This includes the fields and their properties. These id's can be found in the metainfo request result.",
+        "tags": [
+          "GET"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "skip": {
+                      "type": "integer"
+                    },
+                    "take": {
+                      "type": "integer"
+                    },
+                    "rows": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "EmployeeId": {
+                            "type": "string"
+                          },
+                          "EmploymentEndDate": {
+                            "type": "string"
+                          },
+                          "EmailForDigitalDocuments": {
+                            "type": "string",
+                            "nullable": true
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "examples": {
+                  "Example response": {
+                    "value": {
+                      "skip": 0,
+                      "take": 100,
+                      "rows": [
+                        {
+                          "EmployeeId": "000001005",
+                          "EmploymentEndDate": "2025-11-22T00:00:00Z",
+                          "EmailForDigitalDocuments": null
+                        },
+                        {
+                          "EmployeeId": "000001006",
+                          "EmploymentEndDate": "2025-11-22T00:00:00Z",
+                          "EmailForDigitalDocuments": null
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_MetaInfoPerCustomConnector",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string",
+              "example": "your_custom_endpoint_id"
+            },
+            "in": "path",
+            "name": "Endpoint",
+            "description": "Add the id of connector you want to get the meta info from",
+            "required": true
+          },
+          {
+            "name": "skip",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results skipped. Starts at 0",
+            "schema": {
+              "type": "number",
+              "example": 0
+            }
+          },
+          {
+            "name": "take",
+            "in": "query",
+            "required": false,
+            "description": "Pagination: amount of results returned",
+            "schema": {
+              "type": "number",
+              "example": 100
+            }
+          },
+          {
+            "name": "orderbyfieldids",
+            "in": "query",
+            "required": false,
+            "description": "Must be used to prevent unexpectedly ordered results",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filterfieldids",
+            "in": "query",
+            "required": false,
+            "description": "The fieldIds of the values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filtervalues",
+            "in": "query",
+            "required": false,
+            "description": "The values to filter on",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "operatortypes",
+            "in": "query",
+            "required": false,
+            "description": "Operator for comparing filter values. Supported values include:\n\n* `1` - =  (is equal to)\n* `2` - >= (is greater or equal to)\n* `3` - <= (is less or equal to)\n* `4` - >  (is greater than)\n* `5` - <  (is less than)\n* `6` - *  (contains text)\n* `7` - != (is not equal to)\n* `8` - [] (is empty)\n* `9` - ![] (is not empty)\n* `10` - @   (starts with)\n* `11` - !* (does not contain text)\n* `12` - !@ (does not start with)\n* `13` - &  (ends with)\n* `14` - !& (does not end with)\n* `15` - Sf (quickfilter)\n",
+            "schema": {
+              "type": "number",
+              "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "/ProfitVersion": {
+      "get": {
+        "summary": "Get the current Profit version",
+        "tags": [
+          "API Info"
+        ],
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "version": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "examples": {
+                  "Example Result": {
+                    "value": {
+                      "version": "7.7.10"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get_ProfitVersion"
+      }
+    },
+    "/connectors/KnEnergyPerformance": {
+      "post": {
+        "summary": "Energy performance object",
+        "description": "\n\r ",
+        "operationId": "POST_KnEnergyPerformance",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnEnergyPerformance_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Energy performance object"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Energy performance object",
+        "description": "\n\r ",
+        "operationId": "PUT_KnEnergyPerformance",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnEnergyPerformance_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Energy performance object"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnEnergyPerformance/KnEnergyPerformance/@ObId,@EPT,@BeDt/{ObId},{EPT},{BeDt}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "ObId",
+          "in": "path",
+          "required": true,
+          "description": "Real estate property"
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "EPT",
+          "in": "path",
+          "required": true,
+          "description": "Energy performance type"
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "BeDt",
+          "in": "path",
+          "required": true,
+          "description": "Start date"
+        }
+      ],
+      "delete": {
+        "summary": "Energy performance object",
+        "operationId": "DELETE_KnEnergyPerformance",
+        "description": "\n\r ",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Energy performance object"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/KnObject": {
+      "post": {
+        "summary": "Object",
+        "description": "\n\r ",
+        "operationId": "POST_KnObject",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnObject_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Object"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Object",
+        "description": "\n\r ",
+        "operationId": "PUT_KnObject",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnObject_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Object"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnObject/KnObjectUsePurpose": {
+      "post": {
+        "summary": "Object",
+        "description": "Update main record in KnObject and insert subrecord into KnObjectUsePurpose. \n\r ",
+        "operationId": "POSTSubRecordKnObjectKnObjectUsePurpose",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnObject_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Object"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnObject/KnObject/@ObNr/{ObNr}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "ObNr",
+          "in": "path",
+          "required": true,
+          "description": "Number"
+        }
+      ],
+      "delete": {
+        "summary": "Object",
+        "operationId": "DELETE_KnObject",
+        "description": "\n\r ",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Object"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/KnRentalUnitInValCluster": {
+      "post": {
+        "summary": "Rental unit at valuation cluster",
+        "description": "\n\r ",
+        "operationId": "POST_KnRentalUnitInValCluster",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnRentalUnitInValCluster_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Rental unit at valuation cluster"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Rental unit at valuation cluster",
+        "description": "\n\r ",
+        "operationId": "PUT_KnRentalUnitInValCluster",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnRentalUnitInValCluster_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Rental unit at valuation cluster"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnRentalUnitInValCluster/KnRentalUnitInValCluster/@RvId/{RvId}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "RvId",
+          "in": "path",
+          "required": true,
+          "description": "Code"
+        }
+      ],
+      "delete": {
+        "summary": "Rental unit at valuation cluster",
+        "operationId": "DELETE_KnRentalUnitInValCluster",
+        "description": "\n\r ",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Rental unit at valuation cluster"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/KnValuationCluster": {
+      "post": {
+        "summary": "Valuation cluster",
+        "description": "\n\r ",
+        "operationId": "POST_KnValuationCluster",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnValuationCluster_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Valuation cluster"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Valuation cluster",
+        "description": "\n\r ",
+        "operationId": "PUT_KnValuationCluster",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnValuationCluster_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Valuation cluster"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnValuationCluster/KnRentalUnitInValCluster": {
+      "post": {
+        "summary": "Valuation cluster",
+        "description": "Update main record in KnValuationCluster and insert subrecord into KnRentalUnitInValCluster. \n\r ",
+        "operationId": "POSTSubRecordKnValuationClusterKnRentalUnitInValCluster",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnValuationCluster_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Valuation cluster"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnValuationCluster/KnValuationCluster/@Cd/{Cd}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "Cd",
+          "in": "path",
+          "required": true,
+          "description": "Code"
+        }
+      ],
+      "delete": {
+        "summary": "Valuation cluster",
+        "operationId": "DELETE_KnValuationCluster",
+        "description": "\n\r ",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Valuation cluster"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    },
+    "/connectors/KnWarranty": {
+      "post": {
+        "summary": "Guarantee",
+        "description": "\n\r ",
+        "operationId": "POST_KnWarranty",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnWarranty_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Guarantee"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Guarantee",
+        "description": "\n\r ",
+        "operationId": "PUT_KnWarranty",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnWarranty_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Guarantee"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/KnWarranty/KnWarranty/@GtId/{GtId}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "GtId",
+          "in": "path",
+          "required": true,
+          "description": "Guarantee"
+        }
+      ],
+      "delete": {
+        "summary": "Guarantee",
+        "operationId": "DELETE_KnWarranty",
+        "description": "\n\r ",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Guarantee"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          }
+        ]
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "GET",
+      "description": "GET"
+    },
+    {
+      "name": "API Info",
+      "description": "API Info"
+    },
+    {
+      "name": "Energy performance object",
+      "description": "Energy performance object"
+    },
+    {
+      "name": "Object",
+      "description": "Object"
+    },
+    {
+      "name": "Rental unit at valuation cluster",
+      "description": "Rental unit at valuation cluster"
+    },
+    {
+      "name": "Valuation cluster",
+      "description": "Valuation cluster"
+    },
+    {
+      "name": "Guarantee",
+      "description": "Guarantee"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "KnEnergyPerformance_POST": {
+        "type": "object",
+        "properties": {
+          "KnEnergyPerformance": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "ObId": {
+                        "type": "integer",
+                        "description": "Real estate property",
+                        "format": ""
+                      },
+                      "EPT": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Energy performance type",
+                        "format": ""
+                      },
+                      "BeDt": {
+                        "type": "string",
+                        "description": "Start date",
+                        "format": "date"
+                      },
+                      "ObNr": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Objectnummer",
+                        "format": ""
+                      },
+                      "SrtCd": {
+                        "type": "string",
+                        "maxLength": 3,
+                        "description": "Energieprestatiesoort (code)",
+                        "format": ""
+                      },
+                      "LbCd": {
+                        "type": "string",
+                        "maxLength": 5,
+                        "description": "Energielabel (code)",
+                        "format": ""
+                      },
+                      "EnDt": {
+                        "type": "string",
+                        "description": "End date",
+                        "format": "date"
+                      },
+                      "ESt": {
+                        "type": "string",
+                        "enum": [
+                          "DEF",
+                          "VOO"
+                        ],
+                        "maxLength": 20,
+                        "description": "Energy performance status\nDEF = Permanent;\nVOO = Provisional;",
+                        "format": ""
+                      },
+                      "EnVa": {
+                        "type": "number",
+                        "description": "Value",
+                        "format": "number"
+                      },
+                      "ECn": {
+                        "type": "string",
+                        "maxLength": 30,
+                        "description": "EP-online certificate number",
+                        "format": ""
+                      },
+                      "ESrc": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "2",
+                          "3",
+                          "4",
+                          "5"
+                        ],
+                        "maxLength": 20,
+                        "description": "Source\n1 = EP-Online (automatic);\n2 = EP-Online (manually imported);\n3 = Manual — no EP link;\n4 = Manually — overwritten;\n5 = Conversion;",
+                        "format": ""
+                      },
+                      "Expl": {
+                        "type": "string",
+                        "maxLength": 4000,
+                        "description": "Comment",
+                        "format": ""
+                      },
+                      "SupprImp": {
+                        "type": "boolean",
+                        "description": "Onderdrukken impactanalyse",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "BeDt"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnEnergyPerformance_PUT": {
+        "type": "object",
+        "properties": {
+          "KnEnergyPerformance": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "ObId": {
+                        "type": "integer",
+                        "description": "Real estate property",
+                        "format": ""
+                      },
+                      "EPT": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Energy performance type",
+                        "format": ""
+                      },
+                      "BeDt": {
+                        "type": "string",
+                        "description": "Start date",
+                        "format": "date"
+                      },
+                      "ObNr": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Objectnummer",
+                        "format": ""
+                      },
+                      "SrtCd": {
+                        "type": "string",
+                        "maxLength": 3,
+                        "description": "Energieprestatiesoort (code)",
+                        "format": ""
+                      },
+                      "LbCd": {
+                        "type": "string",
+                        "maxLength": 5,
+                        "description": "Energielabel (code)",
+                        "format": ""
+                      },
+                      "EnDt": {
+                        "type": "string",
+                        "description": "End date",
+                        "format": "date"
+                      },
+                      "ESt": {
+                        "type": "string",
+                        "enum": [
+                          "DEF",
+                          "VOO"
+                        ],
+                        "maxLength": 20,
+                        "description": "Energy performance status\nDEF = Permanent;\nVOO = Provisional;",
+                        "format": ""
+                      },
+                      "EnVa": {
+                        "type": "number",
+                        "multipleOf": 0.01,
+                        "description": "Value",
+                        "format": "float"
+                      },
+                      "ECn": {
+                        "type": "string",
+                        "maxLength": 30,
+                        "description": "EP-online certificate number",
+                        "format": ""
+                      },
+                      "ESrc": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "2",
+                          "3",
+                          "4",
+                          "5"
+                        ],
+                        "maxLength": 20,
+                        "description": "Source\n1 = EP-Online (automatic);\n2 = EP-Online (manually imported);\n3 = Manual — no EP link;\n4 = Manually — overwritten;\n5 = Conversion;",
+                        "format": ""
+                      },
+                      "Expl": {
+                        "type": "string",
+                        "maxLength": 4000,
+                        "description": "Comment",
+                        "format": ""
+                      },
+                      "SupprImp": {
+                        "type": "boolean",
+                        "description": "Onderdrukken impactanalyse",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "ObId",
+                      "EPT",
+                      "BeDt"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnObject_POST": {
+        "type": "object",
+        "properties": {
+          "KnObject": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "ObNr": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Number",
+                        "format": ""
+                      },
+                      "TpOb": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "2",
+                          "3",
+                          "4",
+                          "5",
+                          "6"
+                        ],
+                        "maxLength": 20,
+                        "description": "Type\n1 = Real estate (with address, NL);\n2 = Other;\n3 = Real estate (without address, NL);\n4 = Tangible (Basis);\n5 = Tangible (Extended);\n6 = Real estate (GRAR);",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Description",
+                        "format": ""
+                      },
+                      "Re": {
+                        "type": "string",
+                        "description": "Remark",
+                        "format": "byte"
+                      },
+                      "TpVg": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "2",
+                          "3",
+                          "4",
+                          "5",
+                          "6"
+                        ],
+                        "maxLength": 10,
+                        "description": "Type vastgoedobject\n1 = Verblijfsobject;\n2 = Standplaats;\n3 = Ligplaats;\n4 = Overig;\n5 = Parkeerplaats;\n6 = Gebouweenheid;",
+                        "format": ""
+                      },
+                      "BVbI": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "BAG verblijfsobject identificatienummer",
+                        "format": ""
+                      },
+                      "BStI": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "BAG standplaats identificatienummer",
+                        "format": ""
+                      },
+                      "BLiI": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "BAG ligplaats identificatienummer",
+                        "format": ""
+                      },
+                      "BNaI": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "BAG nummeraanduiding identificatienummer",
+                        "format": ""
+                      },
+                      "MtVh": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "2",
+                          "3"
+                        ],
+                        "maxLength": 10,
+                        "description": "Methode verhuren\n1 = Geheel;\n2 = In gedeelten;\n3 = Per ruimte;",
+                        "format": ""
+                      },
+                      "KdGm": {
+                        "type": "string",
+                        "maxLength": 5,
+                        "description": "Kadastrale gemeentecode",
+                        "format": ""
+                      },
+                      "KdSc": {
+                        "type": "string",
+                        "maxLength": 2,
+                        "description": "Kadastrale sectie",
+                        "format": ""
+                      },
+                      "KdPc": {
+                        "type": "integer",
+                        "description": "Kadastraal perceelnummer",
+                        "format": ""
+                      },
+                      "GrEi": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "GRAR gebouweenheid-id",
+                        "format": ""
+                      },
+                      "GrGe": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "GRAR gebouw-id",
+                        "format": ""
+                      },
+                      "GrAd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "GRAR adres-id",
+                        "format": ""
+                      },
+                      "GrES": {
+                        "type": "string",
+                        "maxLength": 25,
+                        "description": "GRAR gebouweenheid-status",
+                        "format": ""
+                      },
+                      "GrEF": {
+                        "type": "string",
+                        "maxLength": 40,
+                        "description": "GRAR gebouweenheid-functie",
+                        "format": ""
+                      },
+                      "GrGS": {
+                        "type": "string",
+                        "maxLength": 25,
+                        "description": "GRAR gebouw-status",
+                        "format": ""
+                      },
+                      "CaPa": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Perceelsleutel",
+                        "format": ""
+                      },
+                      "TfGdODs": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving gedeelte",
+                        "format": ""
+                      },
+                      "TfGdOPerc": {
+                        "type": "number",
+                        "description": "Percentage gedeelte",
+                        "format": "number"
+                      }
+                    },
+                    "required": [
+                      "ObNr",
+                      "TpOb"
+                    ]
+                  },
+                  "Objects": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "KnObjectUsePurpose": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "GbDl": {
+                                        "type": "string",
+                                        "enum": [
+                                          "BIJ",
+                                          "CEL",
+                                          "GEZ",
+                                          "IND",
+                                          "KAN",
+                                          "LOG",
+                                          "ONO",
+                                          "OVE",
+                                          "SPO",
+                                          "WIN",
+                                          "WOO"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Usage target\nBIJ = Meeting function;\nCEL = Cell function;\nGEZ = Health care job;\nIND = Industrial job;\nKAN = Office job;\nLOG = Accommodation job;\nONO = Education job;\nOVE = Other usage function;\nSPO = Sports job;\nWIN = Store job;\nWOO = Residential function;",
+                                        "format": ""
+                                      },
+                                      "Hfdl": {
+                                        "type": "boolean",
+                                        "description": "Main usage target",
+                                        "format": ""
+                                      }
+                                    },
+                                    "required": [
+                                      "GbDl"
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnObject_PUT": {
+        "type": "object",
+        "properties": {
+          "KnObject": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "ObNr": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Number",
+                        "format": ""
+                      },
+                      "TpOb": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "2",
+                          "3",
+                          "4",
+                          "5",
+                          "6"
+                        ],
+                        "maxLength": 20,
+                        "description": "Type\n1 = Real estate (with address, NL);\n2 = Other;\n3 = Real estate (without address, NL);\n4 = Tangible (Basis);\n5 = Tangible (Extended);\n6 = Real estate (GRAR);",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Description",
+                        "format": ""
+                      },
+                      "Re": {
+                        "type": "string",
+                        "description": "Remark",
+                        "format": "byte"
+                      },
+                      "TpVg": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "2",
+                          "3",
+                          "4",
+                          "5",
+                          "6"
+                        ],
+                        "maxLength": 10,
+                        "description": "Type vastgoedobject\n1 = Verblijfsobject;\n2 = Standplaats;\n3 = Ligplaats;\n4 = Overig;\n5 = Parkeerplaats;\n6 = Gebouweenheid;",
+                        "format": ""
+                      },
+                      "BVbI": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "BAG verblijfsobject identificatienummer",
+                        "format": ""
+                      },
+                      "BStI": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "BAG standplaats identificatienummer",
+                        "format": ""
+                      },
+                      "BLiI": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "BAG ligplaats identificatienummer",
+                        "format": ""
+                      },
+                      "BNaI": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "BAG nummeraanduiding identificatienummer",
+                        "format": ""
+                      },
+                      "MtVh": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "2",
+                          "3"
+                        ],
+                        "maxLength": 10,
+                        "description": "Methode verhuren\n1 = Geheel;\n2 = In gedeelten;\n3 = Per ruimte;",
+                        "format": ""
+                      },
+                      "KdGm": {
+                        "type": "string",
+                        "maxLength": 5,
+                        "description": "Kadastrale gemeentecode",
+                        "format": ""
+                      },
+                      "KdSc": {
+                        "type": "string",
+                        "maxLength": 2,
+                        "description": "Kadastrale sectie",
+                        "format": ""
+                      },
+                      "KdPc": {
+                        "type": "integer",
+                        "description": "Kadastraal perceelnummer",
+                        "format": ""
+                      },
+                      "GrEi": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "GRAR gebouweenheid-id",
+                        "format": ""
+                      },
+                      "GrGe": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "GRAR gebouw-id",
+                        "format": ""
+                      },
+                      "GrAd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "GRAR adres-id",
+                        "format": ""
+                      },
+                      "GrES": {
+                        "type": "string",
+                        "maxLength": 25,
+                        "description": "GRAR gebouweenheid-status",
+                        "format": ""
+                      },
+                      "GrEF": {
+                        "type": "string",
+                        "maxLength": 40,
+                        "description": "GRAR gebouweenheid-functie",
+                        "format": ""
+                      },
+                      "GrGS": {
+                        "type": "string",
+                        "maxLength": 25,
+                        "description": "GRAR gebouw-status",
+                        "format": ""
+                      },
+                      "CaPa": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Perceelsleutel",
+                        "format": ""
+                      },
+                      "TfGdODs": {
+                        "type": "string",
+                        "maxLength": 50,
+                        "description": "Omschrijving gedeelte",
+                        "format": ""
+                      },
+                      "TfGdOPerc": {
+                        "type": "number",
+                        "multipleOf": 0.01,
+                        "description": "Percentage gedeelte",
+                        "format": "float"
+                      }
+                    },
+                    "required": [
+                      "ObNr"
+                    ]
+                  },
+                  "Objects": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "KnObjectUsePurpose": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "GbDl": {
+                                        "type": "string",
+                                        "enum": [
+                                          "BIJ",
+                                          "CEL",
+                                          "GEZ",
+                                          "IND",
+                                          "KAN",
+                                          "LOG",
+                                          "ONO",
+                                          "OVE",
+                                          "SPO",
+                                          "WIN",
+                                          "WOO"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Usage target\nBIJ = Meeting function;\nCEL = Cell function;\nGEZ = Health care job;\nIND = Industrial job;\nKAN = Office job;\nLOG = Accommodation job;\nONO = Education job;\nOVE = Other usage function;\nSPO = Sports job;\nWIN = Store job;\nWOO = Residential function;",
+                                        "format": ""
+                                      },
+                                      "Hfdl": {
+                                        "type": "boolean",
+                                        "description": "Main usage target",
+                                        "format": ""
+                                      }
+                                    },
+                                    "required": [
+                                      "GbDl"
+                                    ]
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnRentalUnitInValCluster_POST": {
+        "type": "object",
+        "properties": {
+          "KnRentalUnitInValCluster": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "RvId": {
+                        "type": "integer",
+                        "description": "Code",
+                        "format": ""
+                      },
+                      "VcCd": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Code waarderingscluster",
+                        "format": ""
+                      },
+                      "RuNr": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Nummer verhuurbare eenheid",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "VcCd",
+                      "RuNr"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnRentalUnitInValCluster_PUT": {
+        "type": "object",
+        "properties": {
+          "KnRentalUnitInValCluster": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "RvId": {
+                        "type": "integer",
+                        "description": "Code",
+                        "format": ""
+                      },
+                      "VcCd": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Code waarderingscluster",
+                        "format": ""
+                      },
+                      "RuNr": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Nummer verhuurbare eenheid",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "RvId"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnValuationCluster_POST": {
+        "type": "object",
+        "properties": {
+          "KnValuationCluster": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "Cd": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Code",
+                        "format": ""
+                      },
+                      "BgDt": {
+                        "type": "string",
+                        "description": "Start date",
+                        "format": "date"
+                      },
+                      "EnDt": {
+                        "type": "string",
+                        "description": "End date",
+                        "format": "date"
+                      }
+                    },
+                    "required": [
+                      "Cd"
+                    ]
+                  },
+                  "Objects": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "KnRentalUnitInValCluster": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "RuId": {
+                                        "type": "integer",
+                                        "description": "Rental unit",
+                                        "format": ""
+                                      },
+                                      "TfRuNr": {
+                                        "type": "string",
+                                        "maxLength": 15,
+                                        "description": "Nummer verhuurbare eenheid",
+                                        "format": ""
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnValuationCluster_PUT": {
+        "type": "object",
+        "properties": {
+          "KnValuationCluster": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "Cd": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Code",
+                        "format": ""
+                      },
+                      "BgDt": {
+                        "type": "string",
+                        "description": "Start date",
+                        "format": "date"
+                      },
+                      "EnDt": {
+                        "type": "string",
+                        "description": "End date",
+                        "format": "date"
+                      }
+                    },
+                    "required": [
+                      "Cd"
+                    ]
+                  },
+                  "Objects": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "KnRentalUnitInValCluster": {
+                          "type": "object",
+                          "properties": {
+                            "Element": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "Fields": {
+                                    "type": "object",
+                                    "properties": {
+                                      "RuId": {
+                                        "type": "integer",
+                                        "description": "Rental unit",
+                                        "format": ""
+                                      },
+                                      "TfRuNr": {
+                                        "type": "string",
+                                        "maxLength": 15,
+                                        "description": "Nummer verhuurbare eenheid",
+                                        "format": ""
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnWarranty_POST": {
+        "type": "object",
+        "properties": {
+          "KnWarranty": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "GtId": {
+                        "type": "integer",
+                        "description": "Guarantee",
+                        "format": ""
+                      },
+                      "Cd": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Code",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 80,
+                        "description": "Description",
+                        "format": ""
+                      },
+                      "Ed": {
+                        "type": "string",
+                        "description": "End date",
+                        "format": "date"
+                      },
+                      "SpId": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Supplier",
+                        "format": ""
+                      },
+                      "ObId": {
+                        "type": "integer",
+                        "description": "Real estate property",
+                        "format": ""
+                      },
+                      "GdId": {
+                        "type": "integer",
+                        "description": "Part",
+                        "format": ""
+                      },
+                      "RuId": {
+                        "type": "integer",
+                        "description": "Room",
+                        "format": ""
+                      },
+                      "CrId": {
+                        "type": "integer",
+                        "description": "Shared room",
+                        "format": ""
+                      },
+                      "BeId": {
+                        "type": "integer",
+                        "description": "Construction element",
+                        "format": ""
+                      },
+                      "ObNr": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Vastgoedobject (objectnummer)",
+                        "format": ""
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "KnWarranty_PUT": {
+        "type": "object",
+        "properties": {
+          "KnWarranty": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "GtId": {
+                        "type": "integer",
+                        "description": "Guarantee",
+                        "format": ""
+                      },
+                      "Cd": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Code",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 80,
+                        "description": "Description",
+                        "format": ""
+                      },
+                      "Ed": {
+                        "type": "string",
+                        "description": "End date",
+                        "format": "date"
+                      },
+                      "SpId": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Supplier",
+                        "format": ""
+                      },
+                      "ObId": {
+                        "type": "integer",
+                        "description": "Real estate property",
+                        "format": ""
+                      },
+                      "GdId": {
+                        "type": "integer",
+                        "description": "Part",
+                        "format": ""
+                      },
+                      "RuId": {
+                        "type": "integer",
+                        "description": "Room",
+                        "format": ""
+                      },
+                      "CrId": {
+                        "type": "integer",
+                        "description": "Shared room",
+                        "format": ""
+                      },
+                      "BeId": {
+                        "type": "integer",
+                        "description": "Construction element",
+                        "format": ""
+                      },
+                      "ObNr": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Vastgoedobject (objectnummer)",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "GtId"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "AfasToken": {
+        "name": "Authorization",
+        "type": "apiKey",
+        "in": "header",
+        "description": "Convert the XML token to Base64 and add 'AfasToken ' in front of it."
+      }
+    },
+    "parameters": {
+      "Accept-Language": {
+        "name": "Accept-Language",
+        "in": "header",
+        "required": false,
+        "description": "Indicates the client's preferred language for the response. If not provided, the API defaults to the base environment language.",
+        "schema": {
+          "type": "string",
+          "enum": [
+            "en-us",
+            "nl-nl",
+            "nl-be",
+            "fr-fr",
+            "de-de"
+          ],
+          "example": "en-us"
+        }
+      },
+      "Content-Type": {
+        "name": "Content-Type",
+        "in": "header",
+        "required": false,
+        "description": "Specifies the media type and character encoding for the request body. Ensures proper decoding and interpretation of the transmitted data.",
+        "schema": {
+          "type": "string",
+          "example": "application/json;charset=utf-8"
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "OK; request is successfully executed.",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(0ms), complete(418ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Thu, 23 Nov 2023 12:11:06 GMT",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "0",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "400": {
+        "description": "Bad Request; invalid request"
+      },
+      "401": {
+        "description": "Unauthorized; valid token but no access to this endpoint.",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(0ms), complete(418ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Thu, 23 Nov 2023 12:11:06 GMT",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "0",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "403": {
+        "description": "Forbidden; Due to IP restrictions in AFAS environment.",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(0ms), complete(418ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Thu, 23 Nov 2023 12:11:06 GMT",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "0",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "404": {
+        "description": "Not Found; requested resource is not available on the server.",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(0ms), complete(101ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Thu, 23 Nov 2023 12:11:06 GMT",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "0",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "413": {
+        "description": "Payload Too Large.",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(0ms), complete(418ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Thu, 23 Nov 2023 12:11:06 GMT",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "0",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "500": {
+        "description": "Internal Server Error",
+        "headers": {
+          "Cache-Control": {
+            "description": "no-store, no-cache",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Strict-Transport-Security": {
+            "description": "max-age=31536000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Stats": {
+            "description": "init(0ms), before response(1ms), complete(2192ms)",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-AFAS-Proxy-Version": {
+            "description": "4.3.0.0",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Content-Type-Options": {
+            "description": "nosniff",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "X-Frame-Options": {
+            "description": "deny",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Origin": {
+            "description": "*",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Headers": {
+            "description": "Content-Type, Accept, Authorization, OnlineSessionId, Accept-Language",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Allow-Methods": {
+            "description": "GET, POST, PUT, DELETE, OPTIONS",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Access-Control-Max-Age": {
+            "description": "1728000",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Date": {
+            "description": "Tue, 30 Jan 2024 20:30:07 GMT",
+            "schema": {
+              "type": "string"
+            }
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "errorNumber": {
+                  "type": "integer",
+                  "example": {
+                    "example": 0
+                  }
+                },
+                "externalMessage": {
+                  "type": "string",
+                  "example": {
+                    "example": "string"
+                  }
+                },
+                "profitLogReference": {
+                  "type": "string",
+                  "example": {
+                    "example": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "503": {
+        "description": "Service unavailable; retry at a later time. Contains the number of seconds to wait before retrying the request",
+        "headers": {
+          "Content-Type": {
+            "description": "application/xml; charset=utf-8",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Content-Length": {
+            "description": "61",
+            "schema": {
+              "type": "string"
+            }
+          },
+          "Retry-After": {
+            "description": "7200",
+            "schema": {
+              "type": "string"
+            }
+          }
+        },
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "error": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "string",
+                      "example": {
+                        "example": "503"
+                      }
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": {
+                        "example": "Service temporarily unavailable due to scheduled maintenance. Please check afasstatus.nl for details."
+                      }
+                    }
+                  }
+                },
+                "retry_after": {
+                  "type": "integer",
+                  "example": 7200
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "AfasToken": []
+    }
+  ]
+}

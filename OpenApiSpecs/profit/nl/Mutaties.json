@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "8.8.11",
+    "version": "9.9.12",
     "title": "AFAS Mutaties API",
     "description": "Deze API beschrijft de endpoints gerelateerd aan Mutaties. Gebruik deze API met de functionele beschrijving van de API."
   },
@@ -4817,7 +4817,7 @@
                           },
                           "AdminCd": {
                             "type": "string",
-                            "description": "Administration"
+                            "description": "Administratie"
                           }
                         }
                       }
@@ -7041,7 +7041,7 @@
                         "properties": {
                           "Unit": {
                             "type": "integer",
-                            "description": "Admin. without admin. filter"
+                            "description": "Admin. zonder admin. filter"
                           },
                           "Year": {
                             "type": "integer",
@@ -7949,6 +7949,16 @@
                         "type": "boolean",
                         "description": "Confronteren in basisvaluta",
                         "format": ""
+                      },
+                      "EnNo": {
+                        "type": "integer",
+                        "description": "Bijbehorende journaalpostnummer",
+                        "format": ""
+                      },
+                      "SeNo": {
+                        "type": "integer",
+                        "description": "Bijbehorende journaalpostregel",
+                        "format": ""
                       }
                     },
                     "required": [
@@ -8023,16 +8033,6 @@
                                                         "type": "number",
                                                         "description": "Percentage confrontatiekorting",
                                                         "format": "number"
-                                                      },
-                                                      "EnNo": {
-                                                        "type": "integer",
-                                                        "description": "Bijbehorende journaalpostnummer",
-                                                        "format": ""
-                                                      },
-                                                      "SeNo": {
-                                                        "type": "integer",
-                                                        "description": "Bijbehorende journaalpostregel",
-                                                        "format": ""
                                                       },
                                                       "FuCo": {
                                                         "type": "boolean",

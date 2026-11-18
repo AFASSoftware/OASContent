@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "8.8.11",
+    "version": "9.9.12",
     "title": "AFAS Werkgever API",
     "description": "This API describes the endpoints related to Werkgever. Use this API with the functional description of the API."
   },
@@ -4295,7 +4295,7 @@
                           "3"
                         ],
                         "maxLength": 20,
-                        "description": "Periodic increase rounding\n1 = No rounding;\n2 = Upwards rounding;\n3 = Logisch afronden op gehele getallen;",
+                        "description": "Periodic increase rounding\n1 = No rounding;\n2 = Upwards rounding;\n3 = Logical rounding to integers;",
                         "format": ""
                       },
                       "MmTp": {
@@ -4512,6 +4512,33 @@
                         "description": "Working from home allowed",
                         "format": ""
                       },
+                      "NdSy": {
+                        "type": "boolean",
+                        "description": "Synchronise with Nedap Ons",
+                        "format": ""
+                      },
+                      "NdWk": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Weekly card profile",
+                        "format": ""
+                      },
+                      "NdDk": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Expertise",
+                        "format": ""
+                      },
+                      "NdSA": {
+                        "type": "boolean",
+                        "description": "Include address details",
+                        "format": ""
+                      },
+                      "NdHw": {
+                        "type": "boolean",
+                        "description": "Send hourly wage",
+                        "format": ""
+                      },
                       "FcId": {
                         "type": "string",
                         "maxLength": 10,
@@ -4664,6 +4691,33 @@
                       "WhAl": {
                         "type": "boolean",
                         "description": "Working from home allowed",
+                        "format": ""
+                      },
+                      "NdSy": {
+                        "type": "boolean",
+                        "description": "Synchronise with Nedap Ons",
+                        "format": ""
+                      },
+                      "NdWk": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Weekly card profile",
+                        "format": ""
+                      },
+                      "NdDk": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Expertise",
+                        "format": ""
+                      },
+                      "NdSA": {
+                        "type": "boolean",
+                        "description": "Include address details",
+                        "format": ""
+                      },
+                      "NdHw": {
+                        "type": "boolean",
+                        "description": "Send hourly wage",
                         "format": ""
                       },
                       "FcId": {

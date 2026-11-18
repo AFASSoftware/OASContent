@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "8.8.11",
+    "version": "9.9.12",
     "title": "AFAS Medewerker en contract API",
     "description": "Deze API beschrijft de endpoints gerelateerd aan Medewerker en contract. Gebruik deze API met de functionele beschrijving van de API."
   },
@@ -867,6 +867,165 @@
           },
           {
             "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/HrQuestionToHrInSite": {
+      "post": {
+        "summary": "Vraag aan HR InSite",
+        "description": "\n\r ",
+        "operationId": "POST_HrQuestionToHrInSite",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HrQuestionToHrInSite_POST"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vraag aan HR InSite"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      },
+      "put": {
+        "summary": "Vraag aan HR InSite",
+        "description": "\n\r ",
+        "operationId": "PUT_HrQuestionToHrInSite",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/HrQuestionToHrInSite_PUT"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vraag aan HR InSite"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/components/parameters/Content-Type"
+          }
+        ]
+      }
+    },
+    "/connectors/HrQuestionToHrInSite/HrQuestionToHrInSite/@EmId/{EmId}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "EmId",
+          "in": "path",
+          "required": true,
+          "description": "Medewerker"
+        }
+      ],
+      "delete": {
+        "summary": "Vraag aan HR InSite",
+        "operationId": "DELETE_HrQuestionToHrInSite",
+        "description": " \n\r Let op: Bij dit endpoint zijn de parameters om een item te verwijderen nog niet gedocumenteerd. De path parameters kunnen hierdoor afwijken\n\r ",
+        "responses": {
+          "400": {
+            "$ref": "#/components/responses/400"
+          },
+          "401": {
+            "$ref": "#/components/responses/401"
+          },
+          "403": {
+            "$ref": "#/components/responses/403"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
+          },
+          "413": {
+            "$ref": "#/components/responses/413"
+          },
+          "500": {
+            "$ref": "#/components/responses/500"
+          },
+          "503": {
+            "$ref": "#/components/responses/503"
+          },
+          "200": {
+            "$ref": "#/components/responses/200"
+          }
+        },
+        "security": [
+          {
+            "AfasToken": []
+          }
+        ],
+        "tags": [
+          "Vraag aan HR InSite"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Accept-Language"
           }
         ]
       }
@@ -10085,6 +10244,10 @@
       "description": "Reisafstanden"
     },
     {
+      "name": "Vraag aan HR InSite",
+      "description": "Vraag aan HR InSite"
+    },
+    {
       "name": "Medewerker",
       "description": "Medewerker"
     },
@@ -13801,6 +13964,93 @@
           }
         }
       },
+      "HrQuestionToHrInSite_POST": {
+        "type": "object",
+        "properties": {
+          "HrQuestionToHrInSite": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "EmId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Medewerker",
+                        "format": ""
+                      },
+                      "Ques": {
+                        "type": "string",
+                        "description": "Vraag",
+                        "format": "byte"
+                      },
+                      "ProfileId": {
+                        "type": "integer",
+                        "description": "Instuurprofiel",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Onderwerp",
+                        "format": ""
+                      }
+                    },
+                    "required": [
+                      "EmId"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "HrQuestionToHrInSite_PUT": {
+        "type": "object",
+        "properties": {
+          "HrQuestionToHrInSite": {
+            "type": "object",
+            "properties": {
+              "Element": {
+                "type": "object",
+                "properties": {
+                  "Fields": {
+                    "type": "object",
+                    "properties": {
+                      "EmId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Medewerker",
+                        "format": ""
+                      },
+                      "Ques": {
+                        "type": "string",
+                        "description": "Vraag",
+                        "format": "byte"
+                      },
+                      "ProfileId": {
+                        "type": "integer",
+                        "description": "Instuurprofiel",
+                        "format": ""
+                      },
+                      "Ds": {
+                        "type": "string",
+                        "maxLength": 255,
+                        "description": "Onderwerp",
+                        "format": ""
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
       "KnEmployeeGUID_POST": {
         "type": "object",
         "properties": {
@@ -15071,10 +15321,11 @@
                                           "S",
                                           "H",
                                           "V",
-                                          "U"
+                                          "U",
+                                          "VM"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Dienstbetrekking\nF = Fulltimer;\nP = Parttimer;\nO = Oproepkracht;\nS = Stagiair;\nH = Hulpkracht;\nV = Vakantiewerker;\nU = Uitzendkracht;",
+                                        "description": "Dienstbetrekking\nF = Fulltimer;\nP = Parttimer;\nO = Oproepkracht;\nS = Stagiair;\nH = Hulpkracht;\nV = Vakantiewerker;\nU = Uitzendkracht;\nVM = Vaste medewerker;",
                                         "format": ""
                                       },
                                       "ViRe": {
@@ -15488,6 +15739,7 @@
                                           "59",
                                           "6",
                                           "60",
+                                          "67",
                                           "7",
                                           "8",
                                           "9",
@@ -15495,7 +15747,7 @@
                                           "99"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Precisering contract\n1 = Gewone medewerker;\n10 = Interimair;\n11 = Leerling stagiair (>60 dagen);\n12 = Leerling stagiair;\n13 = \"Canada dry\" plan;\n14 = Niet verblijfhouder;\n15 = Brugpensioen oud stelsel;\n16 = Brugpensioen nieuw stelsel;\n17 = Buitenlandse bestuurder;\n18 = Gehandicapte medewerker;\n19 = Brugpensioen half-tijds;\n2 = Gepensioneerde medewerker;\n20 = Instapstage (TRI);\n21 = Beroepsvorming - RVA;\n22 = Gesubsidieerd contractueel;\n23 = Artiest of muzikant (specifieke categorie);\n24 = Industriële leerling;\n25 = Leerling ondernemingshoofd;\n26 = K.B. 498;\n27 = K.B. 495 (-18 jaar);\n28 = Programma Wet (# 1e aangeworven);\n29 = K.B. 483;\n3 = Stagair;\n30 = Werkende vennoot;\n31 = Statutair;\n32 = Begeleidingsplan werkloze;\n33 = Jonge werkloze <26 jaar 6m;\n34 = Jonge werkloze <26 jaar 9m;\n35 = Jonge werkloze K.B. 495;\n36 = Ingroei baan;\n37 = Jonge werkloze (betaald met fooien) <26 jaar 6m;\n38 = Jonge werkloze (betaald met fooien) <26 jaar 9m;\n39 = Werkloze > 1 jaar;\n4 = Student;\n40 = Werkloze > 2 jaar;\n41 = Werkloze fooi > 1 jaar;\n42 = Werkloze fooi > 2 jaar;\n43 = EWE; halftijds;\n44 = EWE ander dan halftijds;\n45 = EWE halftijds met fooien;\n46 = EWE andere / met fooien;\n48 = Sportlui wet 24/02/78;\n49 = Sportlui buiten wet 24/02/78;\n5 = Bestuurder;\n50 = Personeel met inkomsten 30;\n51 = Programme prime;\n52 = Leerling Socio-prof.Inpas.;\n53 = Werkloze in een VZW;\n55 = Leerling beroepsinlevingsovereenk.;\n56 = Beroepsvorming - AWIPH;\n57 = Sportomkadering;\n58 = Alternerende opleiding - Waals Gewest;\n59 = Alternerend leren - Franstalig België;\n6 = Thuiswerker;\n60 = Flexi-job;\n7 = Medewerker met fooien;\n8 = Gepensioneerde bedrijfsleider;\n9 = Vertegenwoordiger;\n98 = Werkloze - overmacht;\n99 = Niet bezoldigd;",
+                                        "description": "Precisering contract\n1 = Gewone medewerker;\n10 = Interimair;\n11 = Leerling stagiair (>60 dagen);\n12 = Leerling stagiair;\n13 = \"Canada dry\" plan;\n14 = Niet verblijfhouder;\n15 = Brugpensioen oud stelsel;\n16 = Brugpensioen nieuw stelsel;\n17 = Buitenlandse bestuurder;\n18 = Gehandicapte medewerker;\n19 = Brugpensioen half-tijds;\n2 = Gepensioneerde medewerker;\n20 = Instapstage (TRI);\n21 = Beroepsvorming - RVA;\n22 = Gesubsidieerd contractueel;\n23 = Artiest of muzikant (specifieke categorie);\n24 = Industriële leerling;\n25 = Leerling ondernemingshoofd;\n26 = K.B. 498;\n27 = K.B. 495 (-18 jaar);\n28 = Programma Wet (# 1e aangeworven);\n29 = K.B. 483;\n3 = Stagair;\n30 = Werkende vennoot;\n31 = Statutair;\n32 = Begeleidingsplan werkloze;\n33 = Jonge werkloze <26 jaar 6m;\n34 = Jonge werkloze <26 jaar 9m;\n35 = Jonge werkloze K.B. 495;\n36 = Ingroei baan;\n37 = Jonge werkloze (betaald met fooien) <26 jaar 6m;\n38 = Jonge werkloze (betaald met fooien) <26 jaar 9m;\n39 = Werkloze > 1 jaar;\n4 = Student;\n40 = Werkloze > 2 jaar;\n41 = Werkloze fooi > 1 jaar;\n42 = Werkloze fooi > 2 jaar;\n43 = EWE; halftijds;\n44 = EWE ander dan halftijds;\n45 = EWE halftijds met fooien;\n46 = EWE andere / met fooien;\n48 = Sportlui wet 24/02/78;\n49 = Sportlui buiten wet 24/02/78;\n5 = Bestuurder;\n50 = Personeel met inkomsten 30;\n51 = Programme prime;\n52 = Leerling Socio-prof.Inpas.;\n53 = Werkloze in een VZW;\n55 = Leerling beroepsinlevingsovereenk.;\n56 = Beroepsvorming - AWIPH;\n57 = Sportomkadering;\n58 = Alternerende opleiding - Waals Gewest;\n59 = Alternerend leren - Franstalig België;\n6 = Thuiswerker;\n60 = Flexi-job;\n67 = Beroepsinlevingsstage;\n7 = Medewerker met fooien;\n8 = Gepensioneerde bedrijfsleider;\n9 = Vertegenwoordiger;\n98 = Werkloze - overmacht;\n99 = Niet bezoldigd;",
                                         "format": ""
                                       },
                                       "Stat": {
@@ -17647,6 +17899,11 @@
                                         "description": "Verhoging met percentage",
                                         "format": "number"
                                       },
+                                      "SiFa": {
+                                        "type": "integer",
+                                        "description": "Tredeverhoging vanaf leeftijd",
+                                        "format": ""
+                                      },
                                       "PeNo": {
                                         "type": "integer",
                                         "description": "Periodenummer periodiek",
@@ -18552,6 +18809,28 @@
                                         "maxLength": 20,
                                         "description": "Land werkzaamheden\nB = België;\nD = Duitsland;\nF = Frankrijk;\nL = Luxemburg;\nNL = Nederland;\nOverig = Overig;",
                                         "format": ""
+                                      },
+                                      "NdAW": {
+                                        "type": "boolean",
+                                        "description": "Afwijkend weekkaartprofiel",
+                                        "format": ""
+                                      },
+                                      "NdWk": {
+                                        "type": "string",
+                                        "maxLength": 20,
+                                        "description": "Weekkaartprofiel",
+                                        "format": ""
+                                      },
+                                      "NdAD": {
+                                        "type": "boolean",
+                                        "description": "Afwijkende deskundigheid",
+                                        "format": ""
+                                      },
+                                      "NdDk": {
+                                        "type": "string",
+                                        "maxLength": 20,
+                                        "description": "Deskundigheid",
+                                        "format": ""
                                       }
                                     },
                                     "required": [
@@ -19193,7 +19472,7 @@
                                           "9"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Onvrijwillig deeltijds\n1 = Deeltijdse werkn. zonder uitkering inkomensgarantie;\n2 = Deeltijdse werkn. met uitkering inkomensgarantie;\n3 = Deeltijdse werknemer met bedrijfsplan;\n4 = DT-werkn. met uitkering inkomensgarantie (tijdelijk VT);\n9 = Geen onvrijwillig deeltijdsewerknemer;",
+                                        "description": "Onvrijwillig deeltijds\n1 = Deeltijdse werkn. zonder uitkering inkomensgarantie;\n2 = Deeltijdse werkn. met uitkering inkomensgarantie;\n3 = Deeltijdse werknemer met bedrijfsplan;\n4 = DT werkn met uitkering inkomensgarantie (tijdelijk VT);\n9 = Geen onvrijwillig deeltijdsewerknemer;",
                                         "format": ""
                                       },
                                       "CoWo": {
@@ -19426,6 +19705,48 @@
                                         ],
                                         "maxLength": 20,
                                         "description": "Stelsel\n5 = Vijfdagenstelsel;\n6 = Zesdagenstelsel;",
+                                        "format": ""
+                                      },
+                                      "SwAp": {
+                                        "type": "string",
+                                        "enum": [
+                                          "N",
+                                          "V",
+                                          "A"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Toepassing normdagen\nN = Niet van toepassing;\nV = Volgen uit uren per week;\nA = Afwijkend aantal;",
+                                        "format": ""
+                                      },
+                                      "SwAm": {
+                                        "type": "number",
+                                        "description": "Aantal normdagen",
+                                        "format": "number"
+                                      },
+                                      "SwPe": {
+                                        "type": "string",
+                                        "enum": [
+                                          "01",
+                                          "02",
+                                          "03",
+                                          "04"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Meetperiode normdagen\n01 = 1 week;\n02 = 2 weken;\n03 = 3 weken;\n04 = 4 weken;",
+                                        "format": ""
+                                      },
+                                      "SwFr": {
+                                        "type": "string",
+                                        "enum": [
+                                          "1",
+                                          "2",
+                                          "3",
+                                          "4",
+                                          "5",
+                                          "6"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Vaste vrije dag\n1 = Geen / maakt niet uit;\n2 = Maandag;\n3 = Dinsdag;\n4 = Woensdag;\n5 = Donderdag;\n6 = Vrijdag;",
                                         "format": ""
                                       }
                                     },
@@ -20690,7 +21011,7 @@
                                                           "F"
                                                         ],
                                                         "maxLength": 20,
-                                                        "description": "Soc. Maribel type\n001 = Logistiek assistent;\n002 = Ander personeel sociale maribel;\n003 = bijkomende tewerkstl soc.akk.ZH 2011;\nF = Fiscale maribel;",
+                                                        "description": "Soc. Maribel type\n001 = Logistiek assistent;\n002 = Andere personeel sociale maribel;\n003 = bijkomende tewerkstl soc.akk.ZH 2011;\nF = Fiscale maribel;",
                                                         "format": ""
                                                       },
                                                       "SmPe": {
@@ -30355,7 +30676,7 @@
                                           "WVA"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Verbijzondering\nWNE = Medewerker;\nWVO = Ombudsman;\nWWU = (B)WW uitkeringen (vanaf 2007), geen FLO, VUT of SUP;\nWLV = Medewerker met levensloopverlof (t/m 2021);\nWGP = Medewerker met gedeeltelijk politiek verlof;\nOPK = Oproepkracht;\nWOU = Ontslag- en (B)WW uitkeringen (tot 2007) en overgangsrecht, geen FLO, VUT of SUP;\nFLO = Functioneel leeftijdsontslag;\nVUT = Vervroegd uittreden of FPU op VUT voorwaarden;\nSUP = Voormalig medewerker met suppletie;\nWVP = Politieke functie;\nWVN = Functie bij EG, NAVO, VN e.d;\nWVM = Militaire functie;\nWVA = Functie op Nederlandse Antillen of Aruba;",
+                                        "description": "Verbijzondering\nWNE = Medewerker;\nWVO = Ombudsman (t/m 2026);\nWWU = (B)WW uitkeringen (vanaf 2007), geen FLO, VUT of SUP;\nWLV = Medewerker met levensloopverlof (t/m 2021);\nWGP = Medewerker met gedeeltelijk politiek verlof (t/m 2026);\nOPK = Oproepkracht;\nWOU = Ontslag- en (B)WW uitkeringen (tot 2007) en overgangsrecht, geen FLO, VUT of SUP;\nFLO = Functioneel leeftijdsontslag;\nVUT = Vervroegd uittreden of FPU op VUT voorwaarden (t/m 2026);\nSUP = Voormalig medewerker met suppletie (t/m 2026);\nWVP = Politieke functie (t/m 2013);\nWVN = Functie bij EG, NAVO, VN e.d (t/m 2026);\nWVM = Militaire functie (t/m 2026);\nWVA = Functie op Nederlandse Antillen of Aruba (t/m 2026);",
                                         "format": ""
                                       },
                                       "Vi4": {
@@ -30590,6 +30911,11 @@
                                         "type": "string",
                                         "maxLength": 20,
                                         "description": "Aansluiting",
+                                        "format": ""
+                                      },
+                                      "YnDp": {
+                                        "type": "boolean",
+                                        "description": "Deelnemer",
                                         "format": ""
                                       }
                                     },
@@ -33393,10 +33719,11 @@
                                           "S",
                                           "H",
                                           "V",
-                                          "U"
+                                          "U",
+                                          "VM"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Dienstbetrekking\nF = Fulltimer;\nP = Parttimer;\nO = Oproepkracht;\nS = Stagiair;\nH = Hulpkracht;\nV = Vakantiewerker;\nU = Uitzendkracht;",
+                                        "description": "Dienstbetrekking\nF = Fulltimer;\nP = Parttimer;\nO = Oproepkracht;\nS = Stagiair;\nH = Hulpkracht;\nV = Vakantiewerker;\nU = Uitzendkracht;\nVM = Vaste medewerker;",
                                         "format": ""
                                       },
                                       "ViRe": {
@@ -33813,6 +34140,7 @@
                                           "59",
                                           "6",
                                           "60",
+                                          "67",
                                           "7",
                                           "8",
                                           "9",
@@ -33820,7 +34148,7 @@
                                           "99"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Precisering contract\n1 = Gewone medewerker;\n10 = Interimair;\n11 = Leerling stagiair (>60 dagen);\n12 = Leerling stagiair;\n13 = \"Canada dry\" plan;\n14 = Niet verblijfhouder;\n15 = Brugpensioen oud stelsel;\n16 = Brugpensioen nieuw stelsel;\n17 = Buitenlandse bestuurder;\n18 = Gehandicapte medewerker;\n19 = Brugpensioen half-tijds;\n2 = Gepensioneerde medewerker;\n20 = Instapstage (TRI);\n21 = Beroepsvorming - RVA;\n22 = Gesubsidieerd contractueel;\n23 = Artiest of muzikant (specifieke categorie);\n24 = Industriële leerling;\n25 = Leerling ondernemingshoofd;\n26 = K.B. 498;\n27 = K.B. 495 (-18 jaar);\n28 = Programma Wet (# 1e aangeworven);\n29 = K.B. 483;\n3 = Stagair;\n30 = Werkende vennoot;\n31 = Statutair;\n32 = Begeleidingsplan werkloze;\n33 = Jonge werkloze <26 jaar 6m;\n34 = Jonge werkloze <26 jaar 9m;\n35 = Jonge werkloze K.B. 495;\n36 = Ingroei baan;\n37 = Jonge werkloze (betaald met fooien) <26 jaar 6m;\n38 = Jonge werkloze (betaald met fooien) <26 jaar 9m;\n39 = Werkloze > 1 jaar;\n4 = Student;\n40 = Werkloze > 2 jaar;\n41 = Werkloze fooi > 1 jaar;\n42 = Werkloze fooi > 2 jaar;\n43 = EWE; halftijds;\n44 = EWE ander dan halftijds;\n45 = EWE halftijds met fooien;\n46 = EWE andere / met fooien;\n48 = Sportlui wet 24/02/78;\n49 = Sportlui buiten wet 24/02/78;\n5 = Bestuurder;\n50 = Personeel met inkomsten 30;\n51 = Programme prime;\n52 = Leerling Socio-prof.Inpas.;\n53 = Werkloze in een VZW;\n55 = Leerling beroepsinlevingsovereenk.;\n56 = Beroepsvorming - AWIPH;\n57 = Sportomkadering;\n58 = Alternerende opleiding - Waals Gewest;\n59 = Alternerend leren - Franstalig België;\n6 = Thuiswerker;\n60 = Flexi-job;\n7 = Medewerker met fooien;\n8 = Gepensioneerde bedrijfsleider;\n9 = Vertegenwoordiger;\n98 = Werkloze - overmacht;\n99 = Niet bezoldigd;",
+                                        "description": "Precisering contract\n1 = Gewone medewerker;\n10 = Interimair;\n11 = Leerling stagiair (>60 dagen);\n12 = Leerling stagiair;\n13 = \"Canada dry\" plan;\n14 = Niet verblijfhouder;\n15 = Brugpensioen oud stelsel;\n16 = Brugpensioen nieuw stelsel;\n17 = Buitenlandse bestuurder;\n18 = Gehandicapte medewerker;\n19 = Brugpensioen half-tijds;\n2 = Gepensioneerde medewerker;\n20 = Instapstage (TRI);\n21 = Beroepsvorming - RVA;\n22 = Gesubsidieerd contractueel;\n23 = Artiest of muzikant (specifieke categorie);\n24 = Industriële leerling;\n25 = Leerling ondernemingshoofd;\n26 = K.B. 498;\n27 = K.B. 495 (-18 jaar);\n28 = Programma Wet (# 1e aangeworven);\n29 = K.B. 483;\n3 = Stagair;\n30 = Werkende vennoot;\n31 = Statutair;\n32 = Begeleidingsplan werkloze;\n33 = Jonge werkloze <26 jaar 6m;\n34 = Jonge werkloze <26 jaar 9m;\n35 = Jonge werkloze K.B. 495;\n36 = Ingroei baan;\n37 = Jonge werkloze (betaald met fooien) <26 jaar 6m;\n38 = Jonge werkloze (betaald met fooien) <26 jaar 9m;\n39 = Werkloze > 1 jaar;\n4 = Student;\n40 = Werkloze > 2 jaar;\n41 = Werkloze fooi > 1 jaar;\n42 = Werkloze fooi > 2 jaar;\n43 = EWE; halftijds;\n44 = EWE ander dan halftijds;\n45 = EWE halftijds met fooien;\n46 = EWE andere / met fooien;\n48 = Sportlui wet 24/02/78;\n49 = Sportlui buiten wet 24/02/78;\n5 = Bestuurder;\n50 = Personeel met inkomsten 30;\n51 = Programme prime;\n52 = Leerling Socio-prof.Inpas.;\n53 = Werkloze in een VZW;\n55 = Leerling beroepsinlevingsovereenk.;\n56 = Beroepsvorming - AWIPH;\n57 = Sportomkadering;\n58 = Alternerende opleiding - Waals Gewest;\n59 = Alternerend leren - Franstalig België;\n6 = Thuiswerker;\n60 = Flexi-job;\n67 = Beroepsinlevingsstage;\n7 = Medewerker met fooien;\n8 = Gepensioneerde bedrijfsleider;\n9 = Vertegenwoordiger;\n98 = Werkloze - overmacht;\n99 = Niet bezoldigd;",
                                         "format": ""
                                       },
                                       "Stat": {
@@ -35957,6 +36285,11 @@
                                         "description": "Verhoging met percentage",
                                         "format": "float"
                                       },
+                                      "SiFa": {
+                                        "type": "integer",
+                                        "description": "Tredeverhoging vanaf leeftijd",
+                                        "format": ""
+                                      },
                                       "PeNo": {
                                         "type": "integer",
                                         "description": "Periodenummer periodiek",
@@ -36863,6 +37196,28 @@
                                         "maxLength": 20,
                                         "description": "Land werkzaamheden\nB = België;\nD = Duitsland;\nF = Frankrijk;\nL = Luxemburg;\nNL = Nederland;\nOverig = Overig;",
                                         "format": ""
+                                      },
+                                      "NdAW": {
+                                        "type": "boolean",
+                                        "description": "Afwijkend weekkaartprofiel",
+                                        "format": ""
+                                      },
+                                      "NdWk": {
+                                        "type": "string",
+                                        "maxLength": 20,
+                                        "description": "Weekkaartprofiel",
+                                        "format": ""
+                                      },
+                                      "NdAD": {
+                                        "type": "boolean",
+                                        "description": "Afwijkende deskundigheid",
+                                        "format": ""
+                                      },
+                                      "NdDk": {
+                                        "type": "string",
+                                        "maxLength": 20,
+                                        "description": "Deskundigheid",
+                                        "format": ""
                                       }
                                     },
                                     "required": [
@@ -37518,7 +37873,7 @@
                                           "9"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Onvrijwillig deeltijds\n1 = Deeltijdse werkn. zonder uitkering inkomensgarantie;\n2 = Deeltijdse werkn. met uitkering inkomensgarantie;\n3 = Deeltijdse werknemer met bedrijfsplan;\n4 = DT-werkn. met uitkering inkomensgarantie (tijdelijk VT);\n9 = Geen onvrijwillig deeltijdsewerknemer;",
+                                        "description": "Onvrijwillig deeltijds\n1 = Deeltijdse werkn. zonder uitkering inkomensgarantie;\n2 = Deeltijdse werkn. met uitkering inkomensgarantie;\n3 = Deeltijdse werknemer met bedrijfsplan;\n4 = DT werkn met uitkering inkomensgarantie (tijdelijk VT);\n9 = Geen onvrijwillig deeltijdsewerknemer;",
                                         "format": ""
                                       },
                                       "CoWo": {
@@ -37771,6 +38126,48 @@
                                         ],
                                         "maxLength": 20,
                                         "description": "Stelsel\n5 = Vijfdagenstelsel;\n6 = Zesdagenstelsel;",
+                                        "format": ""
+                                      },
+                                      "SwAp": {
+                                        "type": "string",
+                                        "enum": [
+                                          "N",
+                                          "V",
+                                          "A"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Toepassing normdagen\nN = Niet van toepassing;\nV = Volgen uit uren per week;\nA = Afwijkend aantal;",
+                                        "format": ""
+                                      },
+                                      "SwAm": {
+                                        "type": "number",
+                                        "description": "Aantal normdagen",
+                                        "format": "number"
+                                      },
+                                      "SwPe": {
+                                        "type": "string",
+                                        "enum": [
+                                          "01",
+                                          "02",
+                                          "03",
+                                          "04"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Meetperiode normdagen\n01 = 1 week;\n02 = 2 weken;\n03 = 3 weken;\n04 = 4 weken;",
+                                        "format": ""
+                                      },
+                                      "SwFr": {
+                                        "type": "string",
+                                        "enum": [
+                                          "1",
+                                          "2",
+                                          "3",
+                                          "4",
+                                          "5",
+                                          "6"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Vaste vrije dag\n1 = Geen / maakt niet uit;\n2 = Maandag;\n3 = Dinsdag;\n4 = Woensdag;\n5 = Donderdag;\n6 = Vrijdag;",
                                         "format": ""
                                       }
                                     },
@@ -39071,7 +39468,7 @@
                                                           "F"
                                                         ],
                                                         "maxLength": 20,
-                                                        "description": "Soc. Maribel type\n001 = Logistiek assistent;\n002 = Ander personeel sociale maribel;\n003 = bijkomende tewerkstl soc.akk.ZH 2011;\nF = Fiscale maribel;",
+                                                        "description": "Soc. Maribel type\n001 = Logistiek assistent;\n002 = Andere personeel sociale maribel;\n003 = bijkomende tewerkstl soc.akk.ZH 2011;\nF = Fiscale maribel;",
                                                         "format": ""
                                                       },
                                                       "SmPe": {
@@ -48704,7 +49101,7 @@
                                           "WVA"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Verbijzondering\nWNE = Medewerker;\nWVO = Ombudsman;\nWWU = (B)WW uitkeringen (vanaf 2007), geen FLO, VUT of SUP;\nWLV = Medewerker met levensloopverlof (t/m 2021);\nWGP = Medewerker met gedeeltelijk politiek verlof;\nOPK = Oproepkracht;\nWOU = Ontslag- en (B)WW uitkeringen (tot 2007) en overgangsrecht, geen FLO, VUT of SUP;\nFLO = Functioneel leeftijdsontslag;\nVUT = Vervroegd uittreden of FPU op VUT voorwaarden;\nSUP = Voormalig medewerker met suppletie;\nWVP = Politieke functie;\nWVN = Functie bij EG, NAVO, VN e.d;\nWVM = Militaire functie;\nWVA = Functie op Nederlandse Antillen of Aruba;",
+                                        "description": "Verbijzondering\nWNE = Medewerker;\nWVO = Ombudsman (t/m 2026);\nWWU = (B)WW uitkeringen (vanaf 2007), geen FLO, VUT of SUP;\nWLV = Medewerker met levensloopverlof (t/m 2021);\nWGP = Medewerker met gedeeltelijk politiek verlof (t/m 2026);\nOPK = Oproepkracht;\nWOU = Ontslag- en (B)WW uitkeringen (tot 2007) en overgangsrecht, geen FLO, VUT of SUP;\nFLO = Functioneel leeftijdsontslag;\nVUT = Vervroegd uittreden of FPU op VUT voorwaarden (t/m 2026);\nSUP = Voormalig medewerker met suppletie (t/m 2026);\nWVP = Politieke functie (t/m 2013);\nWVN = Functie bij EG, NAVO, VN e.d (t/m 2026);\nWVM = Militaire functie (t/m 2026);\nWVA = Functie op Nederlandse Antillen of Aruba (t/m 2026);",
                                         "format": ""
                                       },
                                       "Vi4": {
@@ -48940,6 +49337,11 @@
                                         "type": "string",
                                         "maxLength": 20,
                                         "description": "Aansluiting",
+                                        "format": ""
+                                      },
+                                      "YnDp": {
+                                        "type": "boolean",
+                                        "description": "Deelnemer",
                                         "format": ""
                                       }
                                     },
@@ -51753,10 +52155,11 @@
                                           "S",
                                           "H",
                                           "V",
-                                          "U"
+                                          "U",
+                                          "VM"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Dienstbetrekking\nF = Fulltimer;\nP = Parttimer;\nO = Oproepkracht;\nS = Stagiair;\nH = Hulpkracht;\nV = Vakantiewerker;\nU = Uitzendkracht;",
+                                        "description": "Dienstbetrekking\nF = Fulltimer;\nP = Parttimer;\nO = Oproepkracht;\nS = Stagiair;\nH = Hulpkracht;\nV = Vakantiewerker;\nU = Uitzendkracht;\nVM = Vaste medewerker;",
                                         "format": ""
                                       },
                                       "ViRe": {
@@ -52170,6 +52573,7 @@
                                           "59",
                                           "6",
                                           "60",
+                                          "67",
                                           "7",
                                           "8",
                                           "9",
@@ -52177,7 +52581,7 @@
                                           "99"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Precisering contract\n1 = Gewone medewerker;\n10 = Interimair;\n11 = Leerling stagiair (>60 dagen);\n12 = Leerling stagiair;\n13 = \"Canada dry\" plan;\n14 = Niet verblijfhouder;\n15 = Brugpensioen oud stelsel;\n16 = Brugpensioen nieuw stelsel;\n17 = Buitenlandse bestuurder;\n18 = Gehandicapte medewerker;\n19 = Brugpensioen half-tijds;\n2 = Gepensioneerde medewerker;\n20 = Instapstage (TRI);\n21 = Beroepsvorming - RVA;\n22 = Gesubsidieerd contractueel;\n23 = Artiest of muzikant (specifieke categorie);\n24 = Industriële leerling;\n25 = Leerling ondernemingshoofd;\n26 = K.B. 498;\n27 = K.B. 495 (-18 jaar);\n28 = Programma Wet (# 1e aangeworven);\n29 = K.B. 483;\n3 = Stagair;\n30 = Werkende vennoot;\n31 = Statutair;\n32 = Begeleidingsplan werkloze;\n33 = Jonge werkloze <26 jaar 6m;\n34 = Jonge werkloze <26 jaar 9m;\n35 = Jonge werkloze K.B. 495;\n36 = Ingroei baan;\n37 = Jonge werkloze (betaald met fooien) <26 jaar 6m;\n38 = Jonge werkloze (betaald met fooien) <26 jaar 9m;\n39 = Werkloze > 1 jaar;\n4 = Student;\n40 = Werkloze > 2 jaar;\n41 = Werkloze fooi > 1 jaar;\n42 = Werkloze fooi > 2 jaar;\n43 = EWE; halftijds;\n44 = EWE ander dan halftijds;\n45 = EWE halftijds met fooien;\n46 = EWE andere / met fooien;\n48 = Sportlui wet 24/02/78;\n49 = Sportlui buiten wet 24/02/78;\n5 = Bestuurder;\n50 = Personeel met inkomsten 30;\n51 = Programme prime;\n52 = Leerling Socio-prof.Inpas.;\n53 = Werkloze in een VZW;\n55 = Leerling beroepsinlevingsovereenk.;\n56 = Beroepsvorming - AWIPH;\n57 = Sportomkadering;\n58 = Alternerende opleiding - Waals Gewest;\n59 = Alternerend leren - Franstalig België;\n6 = Thuiswerker;\n60 = Flexi-job;\n7 = Medewerker met fooien;\n8 = Gepensioneerde bedrijfsleider;\n9 = Vertegenwoordiger;\n98 = Werkloze - overmacht;\n99 = Niet bezoldigd;",
+                                        "description": "Precisering contract\n1 = Gewone medewerker;\n10 = Interimair;\n11 = Leerling stagiair (>60 dagen);\n12 = Leerling stagiair;\n13 = \"Canada dry\" plan;\n14 = Niet verblijfhouder;\n15 = Brugpensioen oud stelsel;\n16 = Brugpensioen nieuw stelsel;\n17 = Buitenlandse bestuurder;\n18 = Gehandicapte medewerker;\n19 = Brugpensioen half-tijds;\n2 = Gepensioneerde medewerker;\n20 = Instapstage (TRI);\n21 = Beroepsvorming - RVA;\n22 = Gesubsidieerd contractueel;\n23 = Artiest of muzikant (specifieke categorie);\n24 = Industriële leerling;\n25 = Leerling ondernemingshoofd;\n26 = K.B. 498;\n27 = K.B. 495 (-18 jaar);\n28 = Programma Wet (# 1e aangeworven);\n29 = K.B. 483;\n3 = Stagair;\n30 = Werkende vennoot;\n31 = Statutair;\n32 = Begeleidingsplan werkloze;\n33 = Jonge werkloze <26 jaar 6m;\n34 = Jonge werkloze <26 jaar 9m;\n35 = Jonge werkloze K.B. 495;\n36 = Ingroei baan;\n37 = Jonge werkloze (betaald met fooien) <26 jaar 6m;\n38 = Jonge werkloze (betaald met fooien) <26 jaar 9m;\n39 = Werkloze > 1 jaar;\n4 = Student;\n40 = Werkloze > 2 jaar;\n41 = Werkloze fooi > 1 jaar;\n42 = Werkloze fooi > 2 jaar;\n43 = EWE; halftijds;\n44 = EWE ander dan halftijds;\n45 = EWE halftijds met fooien;\n46 = EWE andere / met fooien;\n48 = Sportlui wet 24/02/78;\n49 = Sportlui buiten wet 24/02/78;\n5 = Bestuurder;\n50 = Personeel met inkomsten 30;\n51 = Programme prime;\n52 = Leerling Socio-prof.Inpas.;\n53 = Werkloze in een VZW;\n55 = Leerling beroepsinlevingsovereenk.;\n56 = Beroepsvorming - AWIPH;\n57 = Sportomkadering;\n58 = Alternerende opleiding - Waals Gewest;\n59 = Alternerend leren - Franstalig België;\n6 = Thuiswerker;\n60 = Flexi-job;\n67 = Beroepsinlevingsstage;\n7 = Medewerker met fooien;\n8 = Gepensioneerde bedrijfsleider;\n9 = Vertegenwoordiger;\n98 = Werkloze - overmacht;\n99 = Niet bezoldigd;",
                                         "format": ""
                                       },
                                       "Stat": {
@@ -54329,6 +54733,11 @@
                                         "description": "Verhoging met percentage",
                                         "format": "number"
                                       },
+                                      "SiFa": {
+                                        "type": "integer",
+                                        "description": "Tredeverhoging vanaf leeftijd",
+                                        "format": ""
+                                      },
                                       "PeNo": {
                                         "type": "integer",
                                         "description": "Periodenummer periodiek",
@@ -55228,6 +55637,28 @@
                                         "maxLength": 20,
                                         "description": "Land werkzaamheden\nB = België;\nD = Duitsland;\nF = Frankrijk;\nL = Luxemburg;\nNL = Nederland;\nOverig = Overig;",
                                         "format": ""
+                                      },
+                                      "NdAW": {
+                                        "type": "boolean",
+                                        "description": "Afwijkend weekkaartprofiel",
+                                        "format": ""
+                                      },
+                                      "NdWk": {
+                                        "type": "string",
+                                        "maxLength": 20,
+                                        "description": "Weekkaartprofiel",
+                                        "format": ""
+                                      },
+                                      "NdAD": {
+                                        "type": "boolean",
+                                        "description": "Afwijkende deskundigheid",
+                                        "format": ""
+                                      },
+                                      "NdDk": {
+                                        "type": "string",
+                                        "maxLength": 20,
+                                        "description": "Deskundigheid",
+                                        "format": ""
                                       }
                                     },
                                     "required": [
@@ -55857,7 +56288,7 @@
                                           "9"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Onvrijwillig deeltijds\n1 = Deeltijdse werkn. zonder uitkering inkomensgarantie;\n2 = Deeltijdse werkn. met uitkering inkomensgarantie;\n3 = Deeltijdse werknemer met bedrijfsplan;\n4 = DT-werkn. met uitkering inkomensgarantie (tijdelijk VT);\n9 = Geen onvrijwillig deeltijdsewerknemer;",
+                                        "description": "Onvrijwillig deeltijds\n1 = Deeltijdse werkn. zonder uitkering inkomensgarantie;\n2 = Deeltijdse werkn. met uitkering inkomensgarantie;\n3 = Deeltijdse werknemer met bedrijfsplan;\n4 = DT werkn met uitkering inkomensgarantie (tijdelijk VT);\n9 = Geen onvrijwillig deeltijdsewerknemer;",
                                         "format": ""
                                       },
                                       "CoWo": {
@@ -56090,6 +56521,48 @@
                                         ],
                                         "maxLength": 20,
                                         "description": "Stelsel\n5 = Vijfdagenstelsel;\n6 = Zesdagenstelsel;",
+                                        "format": ""
+                                      },
+                                      "SwAp": {
+                                        "type": "string",
+                                        "enum": [
+                                          "N",
+                                          "V",
+                                          "A"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Toepassing normdagen\nN = Niet van toepassing;\nV = Volgen uit uren per week;\nA = Afwijkend aantal;",
+                                        "format": ""
+                                      },
+                                      "SwAm": {
+                                        "type": "number",
+                                        "description": "Aantal normdagen",
+                                        "format": "number"
+                                      },
+                                      "SwPe": {
+                                        "type": "string",
+                                        "enum": [
+                                          "01",
+                                          "02",
+                                          "03",
+                                          "04"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Meetperiode normdagen\n01 = 1 week;\n02 = 2 weken;\n03 = 3 weken;\n04 = 4 weken;",
+                                        "format": ""
+                                      },
+                                      "SwFr": {
+                                        "type": "string",
+                                        "enum": [
+                                          "1",
+                                          "2",
+                                          "3",
+                                          "4",
+                                          "5",
+                                          "6"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Vaste vrije dag\n1 = Geen / maakt niet uit;\n2 = Maandag;\n3 = Dinsdag;\n4 = Woensdag;\n5 = Donderdag;\n6 = Vrijdag;",
                                         "format": ""
                                       }
                                     },
@@ -57348,7 +57821,7 @@
                                                           "F"
                                                         ],
                                                         "maxLength": 20,
-                                                        "description": "Soc. Maribel type\n001 = Logistiek assistent;\n002 = Ander personeel sociale maribel;\n003 = bijkomende tewerkstl soc.akk.ZH 2011;\nF = Fiscale maribel;",
+                                                        "description": "Soc. Maribel type\n001 = Logistiek assistent;\n002 = Andere personeel sociale maribel;\n003 = bijkomende tewerkstl soc.akk.ZH 2011;\nF = Fiscale maribel;",
                                                         "format": ""
                                                       },
                                                       "SmPe": {
@@ -67007,7 +67480,7 @@
                                           "WVA"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Verbijzondering\nWNE = Medewerker;\nWVO = Ombudsman;\nWWU = (B)WW uitkeringen (vanaf 2007), geen FLO, VUT of SUP;\nWLV = Medewerker met levensloopverlof (t/m 2021);\nWGP = Medewerker met gedeeltelijk politiek verlof;\nOPK = Oproepkracht;\nWOU = Ontslag- en (B)WW uitkeringen (tot 2007) en overgangsrecht, geen FLO, VUT of SUP;\nFLO = Functioneel leeftijdsontslag;\nVUT = Vervroegd uittreden of FPU op VUT voorwaarden;\nSUP = Voormalig medewerker met suppletie;\nWVP = Politieke functie;\nWVN = Functie bij EG, NAVO, VN e.d;\nWVM = Militaire functie;\nWVA = Functie op Nederlandse Antillen of Aruba;",
+                                        "description": "Verbijzondering\nWNE = Medewerker;\nWVO = Ombudsman (t/m 2026);\nWWU = (B)WW uitkeringen (vanaf 2007), geen FLO, VUT of SUP;\nWLV = Medewerker met levensloopverlof (t/m 2021);\nWGP = Medewerker met gedeeltelijk politiek verlof (t/m 2026);\nOPK = Oproepkracht;\nWOU = Ontslag- en (B)WW uitkeringen (tot 2007) en overgangsrecht, geen FLO, VUT of SUP;\nFLO = Functioneel leeftijdsontslag;\nVUT = Vervroegd uittreden of FPU op VUT voorwaarden (t/m 2026);\nSUP = Voormalig medewerker met suppletie (t/m 2026);\nWVP = Politieke functie (t/m 2013);\nWVN = Functie bij EG, NAVO, VN e.d (t/m 2026);\nWVM = Militaire functie (t/m 2026);\nWVA = Functie op Nederlandse Antillen of Aruba (t/m 2026);",
                                         "format": ""
                                       },
                                       "Vi4": {
@@ -67242,6 +67715,11 @@
                                         "type": "string",
                                         "maxLength": 20,
                                         "description": "Aansluiting",
+                                        "format": ""
+                                      },
+                                      "YnDp": {
+                                        "type": "boolean",
+                                        "description": "Deelnemer",
                                         "format": ""
                                       }
                                     },
@@ -70032,10 +70510,11 @@
                                           "S",
                                           "H",
                                           "V",
-                                          "U"
+                                          "U",
+                                          "VM"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Dienstbetrekking\nF = Fulltimer;\nP = Parttimer;\nO = Oproepkracht;\nS = Stagiair;\nH = Hulpkracht;\nV = Vakantiewerker;\nU = Uitzendkracht;",
+                                        "description": "Dienstbetrekking\nF = Fulltimer;\nP = Parttimer;\nO = Oproepkracht;\nS = Stagiair;\nH = Hulpkracht;\nV = Vakantiewerker;\nU = Uitzendkracht;\nVM = Vaste medewerker;",
                                         "format": ""
                                       },
                                       "ViRe": {
@@ -70452,6 +70931,7 @@
                                           "59",
                                           "6",
                                           "60",
+                                          "67",
                                           "7",
                                           "8",
                                           "9",
@@ -70459,7 +70939,7 @@
                                           "99"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Precisering contract\n1 = Gewone medewerker;\n10 = Interimair;\n11 = Leerling stagiair (>60 dagen);\n12 = Leerling stagiair;\n13 = \"Canada dry\" plan;\n14 = Niet verblijfhouder;\n15 = Brugpensioen oud stelsel;\n16 = Brugpensioen nieuw stelsel;\n17 = Buitenlandse bestuurder;\n18 = Gehandicapte medewerker;\n19 = Brugpensioen half-tijds;\n2 = Gepensioneerde medewerker;\n20 = Instapstage (TRI);\n21 = Beroepsvorming - RVA;\n22 = Gesubsidieerd contractueel;\n23 = Artiest of muzikant (specifieke categorie);\n24 = Industriële leerling;\n25 = Leerling ondernemingshoofd;\n26 = K.B. 498;\n27 = K.B. 495 (-18 jaar);\n28 = Programma Wet (# 1e aangeworven);\n29 = K.B. 483;\n3 = Stagair;\n30 = Werkende vennoot;\n31 = Statutair;\n32 = Begeleidingsplan werkloze;\n33 = Jonge werkloze <26 jaar 6m;\n34 = Jonge werkloze <26 jaar 9m;\n35 = Jonge werkloze K.B. 495;\n36 = Ingroei baan;\n37 = Jonge werkloze (betaald met fooien) <26 jaar 6m;\n38 = Jonge werkloze (betaald met fooien) <26 jaar 9m;\n39 = Werkloze > 1 jaar;\n4 = Student;\n40 = Werkloze > 2 jaar;\n41 = Werkloze fooi > 1 jaar;\n42 = Werkloze fooi > 2 jaar;\n43 = EWE; halftijds;\n44 = EWE ander dan halftijds;\n45 = EWE halftijds met fooien;\n46 = EWE andere / met fooien;\n48 = Sportlui wet 24/02/78;\n49 = Sportlui buiten wet 24/02/78;\n5 = Bestuurder;\n50 = Personeel met inkomsten 30;\n51 = Programme prime;\n52 = Leerling Socio-prof.Inpas.;\n53 = Werkloze in een VZW;\n55 = Leerling beroepsinlevingsovereenk.;\n56 = Beroepsvorming - AWIPH;\n57 = Sportomkadering;\n58 = Alternerende opleiding - Waals Gewest;\n59 = Alternerend leren - Franstalig België;\n6 = Thuiswerker;\n60 = Flexi-job;\n7 = Medewerker met fooien;\n8 = Gepensioneerde bedrijfsleider;\n9 = Vertegenwoordiger;\n98 = Werkloze - overmacht;\n99 = Niet bezoldigd;",
+                                        "description": "Precisering contract\n1 = Gewone medewerker;\n10 = Interimair;\n11 = Leerling stagiair (>60 dagen);\n12 = Leerling stagiair;\n13 = \"Canada dry\" plan;\n14 = Niet verblijfhouder;\n15 = Brugpensioen oud stelsel;\n16 = Brugpensioen nieuw stelsel;\n17 = Buitenlandse bestuurder;\n18 = Gehandicapte medewerker;\n19 = Brugpensioen half-tijds;\n2 = Gepensioneerde medewerker;\n20 = Instapstage (TRI);\n21 = Beroepsvorming - RVA;\n22 = Gesubsidieerd contractueel;\n23 = Artiest of muzikant (specifieke categorie);\n24 = Industriële leerling;\n25 = Leerling ondernemingshoofd;\n26 = K.B. 498;\n27 = K.B. 495 (-18 jaar);\n28 = Programma Wet (# 1e aangeworven);\n29 = K.B. 483;\n3 = Stagair;\n30 = Werkende vennoot;\n31 = Statutair;\n32 = Begeleidingsplan werkloze;\n33 = Jonge werkloze <26 jaar 6m;\n34 = Jonge werkloze <26 jaar 9m;\n35 = Jonge werkloze K.B. 495;\n36 = Ingroei baan;\n37 = Jonge werkloze (betaald met fooien) <26 jaar 6m;\n38 = Jonge werkloze (betaald met fooien) <26 jaar 9m;\n39 = Werkloze > 1 jaar;\n4 = Student;\n40 = Werkloze > 2 jaar;\n41 = Werkloze fooi > 1 jaar;\n42 = Werkloze fooi > 2 jaar;\n43 = EWE; halftijds;\n44 = EWE ander dan halftijds;\n45 = EWE halftijds met fooien;\n46 = EWE andere / met fooien;\n48 = Sportlui wet 24/02/78;\n49 = Sportlui buiten wet 24/02/78;\n5 = Bestuurder;\n50 = Personeel met inkomsten 30;\n51 = Programme prime;\n52 = Leerling Socio-prof.Inpas.;\n53 = Werkloze in een VZW;\n55 = Leerling beroepsinlevingsovereenk.;\n56 = Beroepsvorming - AWIPH;\n57 = Sportomkadering;\n58 = Alternerende opleiding - Waals Gewest;\n59 = Alternerend leren - Franstalig België;\n6 = Thuiswerker;\n60 = Flexi-job;\n67 = Beroepsinlevingsstage;\n7 = Medewerker met fooien;\n8 = Gepensioneerde bedrijfsleider;\n9 = Vertegenwoordiger;\n98 = Werkloze - overmacht;\n99 = Niet bezoldigd;",
                                         "format": ""
                                       },
                                       "Stat": {
@@ -72596,6 +73076,11 @@
                                         "description": "Verhoging met percentage",
                                         "format": "float"
                                       },
+                                      "SiFa": {
+                                        "type": "integer",
+                                        "description": "Tredeverhoging vanaf leeftijd",
+                                        "format": ""
+                                      },
                                       "PeNo": {
                                         "type": "integer",
                                         "description": "Periodenummer periodiek",
@@ -73496,6 +73981,28 @@
                                         "maxLength": 20,
                                         "description": "Land werkzaamheden\nB = België;\nD = Duitsland;\nF = Frankrijk;\nL = Luxemburg;\nNL = Nederland;\nOverig = Overig;",
                                         "format": ""
+                                      },
+                                      "NdAW": {
+                                        "type": "boolean",
+                                        "description": "Afwijkend weekkaartprofiel",
+                                        "format": ""
+                                      },
+                                      "NdWk": {
+                                        "type": "string",
+                                        "maxLength": 20,
+                                        "description": "Weekkaartprofiel",
+                                        "format": ""
+                                      },
+                                      "NdAD": {
+                                        "type": "boolean",
+                                        "description": "Afwijkende deskundigheid",
+                                        "format": ""
+                                      },
+                                      "NdDk": {
+                                        "type": "string",
+                                        "maxLength": 20,
+                                        "description": "Deskundigheid",
+                                        "format": ""
                                       }
                                     },
                                     "required": [
@@ -74138,7 +74645,7 @@
                                           "9"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Onvrijwillig deeltijds\n1 = Deeltijdse werkn. zonder uitkering inkomensgarantie;\n2 = Deeltijdse werkn. met uitkering inkomensgarantie;\n3 = Deeltijdse werknemer met bedrijfsplan;\n4 = DT-werkn. met uitkering inkomensgarantie (tijdelijk VT);\n9 = Geen onvrijwillig deeltijdsewerknemer;",
+                                        "description": "Onvrijwillig deeltijds\n1 = Deeltijdse werkn. zonder uitkering inkomensgarantie;\n2 = Deeltijdse werkn. met uitkering inkomensgarantie;\n3 = Deeltijdse werknemer met bedrijfsplan;\n4 = DT werkn met uitkering inkomensgarantie (tijdelijk VT);\n9 = Geen onvrijwillig deeltijdsewerknemer;",
                                         "format": ""
                                       },
                                       "CoWo": {
@@ -74391,6 +74898,48 @@
                                         ],
                                         "maxLength": 20,
                                         "description": "Stelsel\n5 = Vijfdagenstelsel;\n6 = Zesdagenstelsel;",
+                                        "format": ""
+                                      },
+                                      "SwAp": {
+                                        "type": "string",
+                                        "enum": [
+                                          "N",
+                                          "V",
+                                          "A"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Toepassing normdagen\nN = Niet van toepassing;\nV = Volgen uit uren per week;\nA = Afwijkend aantal;",
+                                        "format": ""
+                                      },
+                                      "SwAm": {
+                                        "type": "number",
+                                        "description": "Aantal normdagen",
+                                        "format": "number"
+                                      },
+                                      "SwPe": {
+                                        "type": "string",
+                                        "enum": [
+                                          "01",
+                                          "02",
+                                          "03",
+                                          "04"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Meetperiode normdagen\n01 = 1 week;\n02 = 2 weken;\n03 = 3 weken;\n04 = 4 weken;",
+                                        "format": ""
+                                      },
+                                      "SwFr": {
+                                        "type": "string",
+                                        "enum": [
+                                          "1",
+                                          "2",
+                                          "3",
+                                          "4",
+                                          "5",
+                                          "6"
+                                        ],
+                                        "maxLength": 20,
+                                        "description": "Vaste vrije dag\n1 = Geen / maakt niet uit;\n2 = Maandag;\n3 = Dinsdag;\n4 = Woensdag;\n5 = Donderdag;\n6 = Vrijdag;",
                                         "format": ""
                                       }
                                     },
@@ -75685,7 +76234,7 @@
                                                           "F"
                                                         ],
                                                         "maxLength": 20,
-                                                        "description": "Soc. Maribel type\n001 = Logistiek assistent;\n002 = Ander personeel sociale maribel;\n003 = bijkomende tewerkstl soc.akk.ZH 2011;\nF = Fiscale maribel;",
+                                                        "description": "Soc. Maribel type\n001 = Logistiek assistent;\n002 = Andere personeel sociale maribel;\n003 = bijkomende tewerkstl soc.akk.ZH 2011;\nF = Fiscale maribel;",
                                                         "format": ""
                                                       },
                                                       "SmPe": {
@@ -85313,7 +85862,7 @@
                                           "WVA"
                                         ],
                                         "maxLength": 20,
-                                        "description": "Verbijzondering\nWNE = Medewerker;\nWVO = Ombudsman;\nWWU = (B)WW uitkeringen (vanaf 2007), geen FLO, VUT of SUP;\nWLV = Medewerker met levensloopverlof (t/m 2021);\nWGP = Medewerker met gedeeltelijk politiek verlof;\nOPK = Oproepkracht;\nWOU = Ontslag- en (B)WW uitkeringen (tot 2007) en overgangsrecht, geen FLO, VUT of SUP;\nFLO = Functioneel leeftijdsontslag;\nVUT = Vervroegd uittreden of FPU op VUT voorwaarden;\nSUP = Voormalig medewerker met suppletie;\nWVP = Politieke functie;\nWVN = Functie bij EG, NAVO, VN e.d;\nWVM = Militaire functie;\nWVA = Functie op Nederlandse Antillen of Aruba;",
+                                        "description": "Verbijzondering\nWNE = Medewerker;\nWVO = Ombudsman (t/m 2026);\nWWU = (B)WW uitkeringen (vanaf 2007), geen FLO, VUT of SUP;\nWLV = Medewerker met levensloopverlof (t/m 2021);\nWGP = Medewerker met gedeeltelijk politiek verlof (t/m 2026);\nOPK = Oproepkracht;\nWOU = Ontslag- en (B)WW uitkeringen (tot 2007) en overgangsrecht, geen FLO, VUT of SUP;\nFLO = Functioneel leeftijdsontslag;\nVUT = Vervroegd uittreden of FPU op VUT voorwaarden (t/m 2026);\nSUP = Voormalig medewerker met suppletie (t/m 2026);\nWVP = Politieke functie (t/m 2013);\nWVN = Functie bij EG, NAVO, VN e.d (t/m 2026);\nWVM = Militaire functie (t/m 2026);\nWVA = Functie op Nederlandse Antillen of Aruba (t/m 2026);",
                                         "format": ""
                                       },
                                       "Vi4": {
@@ -85549,6 +86098,11 @@
                                         "type": "string",
                                         "maxLength": 20,
                                         "description": "Aansluiting",
+                                        "format": ""
+                                      },
+                                      "YnDp": {
+                                        "type": "boolean",
+                                        "description": "Deelnemer",
                                         "format": ""
                                       }
                                     },
@@ -87204,6 +87758,33 @@
                         "description": "Thuiswerken toegestaan",
                         "format": ""
                       },
+                      "NdSy": {
+                        "type": "boolean",
+                        "description": "Synchroniseren met Nedap Ons",
+                        "format": ""
+                      },
+                      "NdWk": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Weekkaartprofiel",
+                        "format": ""
+                      },
+                      "NdDk": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Deskundigheid",
+                        "format": ""
+                      },
+                      "NdSA": {
+                        "type": "boolean",
+                        "description": "Adresgegevens meesturen",
+                        "format": ""
+                      },
+                      "NdHw": {
+                        "type": "boolean",
+                        "description": "Uurloon verzenden",
+                        "format": ""
+                      },
                       "FcId": {
                         "type": "string",
                         "maxLength": 10,
@@ -87356,6 +87937,33 @@
                       "WhAl": {
                         "type": "boolean",
                         "description": "Thuiswerken toegestaan",
+                        "format": ""
+                      },
+                      "NdSy": {
+                        "type": "boolean",
+                        "description": "Synchroniseren met Nedap Ons",
+                        "format": ""
+                      },
+                      "NdWk": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Weekkaartprofiel",
+                        "format": ""
+                      },
+                      "NdDk": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Deskundigheid",
+                        "format": ""
+                      },
+                      "NdSA": {
+                        "type": "boolean",
+                        "description": "Adresgegevens meesturen",
+                        "format": ""
+                      },
+                      "NdHw": {
+                        "type": "boolean",
+                        "description": "Uurloon verzenden",
                         "format": ""
                       },
                       "FcId": {

@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "8.8.11",
+    "version": "9.9.12",
     "title": "AFAS Verkoop en Orders API",
     "description": "This API describes the endpoints related to Verkoop en Orders. Use this API with the functional description of the API."
   },
@@ -13838,7 +13838,7 @@
                           },
                           "Date": {
                             "type": "string",
-                            "description": "Reference date (Filter)"
+                            "description": "Reference date (filter)"
                           },
                           "Currency": {
                             "type": "string",
@@ -13846,7 +13846,7 @@
                           },
                           "Volume": {
                             "type": "boolean",
-                            "description": "Display scale (Filter)"
+                            "description": "Display scale (filter)"
                           },
                           "Level": {
                             "type": "string",
@@ -14283,6 +14283,12 @@
                         "description": "Following contact moment",
                         "format": "date"
                       },
+                      "Ds2": {
+                        "type": "string",
+                        "maxLength": 80,
+                        "description": "Next contact moment description",
+                        "format": ""
+                      },
                       "CdId": {
                         "type": "integer",
                         "description": "Contact person",
@@ -14293,11 +14299,10 @@
                         "description": "Comment",
                         "format": "byte"
                       },
-                      "FiId": {
+                      "MultiFile": {
                         "type": "string",
-                        "maxLength": 32,
-                        "description": "Attachment",
-                        "format": ""
+                        "description": "MultiFile",
+                        "format": "byte"
                       }
                     },
                     "required": [
@@ -14556,6 +14561,12 @@
                         "description": "Following contact moment",
                         "format": "date"
                       },
+                      "Ds2": {
+                        "type": "string",
+                        "maxLength": 80,
+                        "description": "Next contact moment description",
+                        "format": ""
+                      },
                       "CdId": {
                         "type": "integer",
                         "description": "Contact person",
@@ -14566,11 +14577,10 @@
                         "description": "Comment",
                         "format": "byte"
                       },
-                      "FiId": {
+                      "MultiFile": {
                         "type": "string",
-                        "maxLength": 32,
-                        "description": "Attachment",
-                        "format": ""
+                        "description": "MultiFile",
+                        "format": "byte"
                       }
                     },
                     "required": [
@@ -15667,6 +15677,11 @@
                                                         "description": "Number of parts",
                                                         "format": "number"
                                                       },
+                                                      "FxQu": {
+                                                        "type": "boolean",
+                                                        "description": "Fixed quantity",
+                                                        "format": ""
+                                                      },
                                                       "QuBo": {
                                                         "type": "number",
                                                         "description": "Pending order quantity (total)",
@@ -16432,6 +16447,11 @@
                                                         "multipleOf": 1E-05,
                                                         "description": "Number of parts",
                                                         "format": "float"
+                                                      },
+                                                      "FxQu": {
+                                                        "type": "boolean",
+                                                        "description": "Fixed quantity",
+                                                        "format": ""
                                                       },
                                                       "QuBo": {
                                                         "type": "number",
@@ -17289,6 +17309,11 @@
                                                         "type": "number",
                                                         "description": "Number of parts",
                                                         "format": "number"
+                                                      },
+                                                      "FxQu": {
+                                                        "type": "boolean",
+                                                        "description": "Fixed quantity",
+                                                        "format": ""
                                                       },
                                                       "War": {
                                                         "type": "string",
@@ -18292,6 +18317,11 @@
                                                         "multipleOf": 1E-05,
                                                         "description": "Number of parts",
                                                         "format": "float"
+                                                      },
+                                                      "FxQu": {
+                                                        "type": "boolean",
+                                                        "description": "Fixed quantity",
+                                                        "format": ""
                                                       },
                                                       "War": {
                                                         "type": "string",
@@ -29740,7 +29770,7 @@
                       },
                       "DaAm": {
                         "type": "integer",
-                        "description": "Number of days in advance",
+                        "description": "Number of days",
                         "format": ""
                       },
                       "SuEn": {
@@ -29826,8 +29856,11 @@
                       },
                       "VaRs": {
                         "type": "string",
+                        "enum": [
+                          "09"
+                        ],
                         "maxLength": 20,
-                        "description": "Reason of termination",
+                        "description": "Reason of termination\n09 = Geen interesse meer;",
                         "format": ""
                       },
                       "NoIn": {
@@ -30012,6 +30045,11 @@
                                         "description": "Afwijkende prijs vreemde valuta",
                                         "format": ""
                                       },
+                                      "TaSt": {
+                                        "type": "string",
+                                        "description": "Begindatum abonnementstarief",
+                                        "format": "date"
+                                      },
                                       "Disc": {
                                         "type": "number",
                                         "description": "Discount (BC)",
@@ -30097,8 +30135,11 @@
                                       },
                                       "VaRs": {
                                         "type": "string",
+                                        "enum": [
+                                          "09"
+                                        ],
                                         "maxLength": 20,
-                                        "description": "Reason of termination",
+                                        "description": "Reason of termination\n09 = Geen interesse meer;",
                                         "format": ""
                                       },
                                       "SuCr": {
@@ -30211,7 +30252,7 @@
                       },
                       "DaAm": {
                         "type": "integer",
-                        "description": "Number of days in advance",
+                        "description": "Number of days",
                         "format": ""
                       },
                       "SuEn": {
@@ -30298,8 +30339,11 @@
                       },
                       "VaRs": {
                         "type": "string",
+                        "enum": [
+                          "09"
+                        ],
                         "maxLength": 20,
-                        "description": "Reason of termination",
+                        "description": "Reason of termination\n09 = Geen interesse meer;",
                         "format": ""
                       },
                       "NoIn": {
@@ -30485,6 +30529,11 @@
                                         "description": "Afwijkende prijs vreemde valuta",
                                         "format": ""
                                       },
+                                      "TaSt": {
+                                        "type": "string",
+                                        "description": "Begindatum abonnementstarief",
+                                        "format": "date"
+                                      },
                                       "Disc": {
                                         "type": "number",
                                         "multipleOf": 1E-10,
@@ -30575,8 +30624,11 @@
                                       },
                                       "VaRs": {
                                         "type": "string",
+                                        "enum": [
+                                          "09"
+                                        ],
                                         "maxLength": 20,
-                                        "description": "Reason of termination",
+                                        "description": "Reason of termination\n09 = Geen interesse meer;",
                                         "format": ""
                                       },
                                       "SuCr": {
