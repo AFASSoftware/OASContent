@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "8.8.11",
+    "version": "9.9.12",
     "title": "AFAS Flex API",
     "description": "This API describes the endpoints related to Flex. Use this API with the functional description of the API."
   },
@@ -7231,6 +7231,12 @@
                         "type": "boolean",
                         "description": "Intercompany",
                         "format": ""
+                      },
+                      "FcId": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Deviating function category",
+                        "format": ""
                       }
                     },
                     "required": [
@@ -7316,7 +7322,37 @@
                                       "VbCo": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Cost centres (internally)",
+                                        "description": "Verbijzonderingscode standaard as",
+                                        "format": ""
+                                      },
+                                      "V1Cd": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "Kostenplaats (intern)",
+                                        "format": ""
+                                      },
+                                      "V2Cd": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "(not used)",
+                                        "format": ""
+                                      },
+                                      "V3Cd": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "(not used)",
+                                        "format": ""
+                                      },
+                                      "V4Cd": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "(not used)",
+                                        "format": ""
+                                      },
+                                      "V5Cd": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "(not used)",
                                         "format": ""
                                       },
                                       "WoLo": {
@@ -7432,6 +7468,16 @@
                                       "TaAm": {
                                         "type": "number",
                                         "description": "Intercompany rate",
+                                        "format": "number"
+                                      },
+                                      "PrAm": {
+                                        "type": "number",
+                                        "description": "Project allowance (amount)",
+                                        "format": "number"
+                                      },
+                                      "PrAh": {
+                                        "type": "number",
+                                        "description": "Project allowance per hour (amount)",
                                         "format": "number"
                                       }
                                     }
@@ -8569,6 +8615,21 @@
                                         "description": "Number of units",
                                         "format": "number"
                                       },
+                                      "StTi": {
+                                        "type": "string",
+                                        "description": "Start time",
+                                        "format": "date-time"
+                                      },
+                                      "EnTi": {
+                                        "type": "string",
+                                        "description": "End time",
+                                        "format": "date-time"
+                                      },
+                                      "PaTi": {
+                                        "type": "string",
+                                        "description": "Break time",
+                                        "format": "date-time"
+                                      },
                                       "Ch": {
                                         "type": "boolean",
                                         "description": "Charge",
@@ -8743,6 +8804,21 @@
                                         "multipleOf": 1E-05,
                                         "description": "Number of units",
                                         "format": "float"
+                                      },
+                                      "StTi": {
+                                        "type": "string",
+                                        "description": "Start time",
+                                        "format": "date-time"
+                                      },
+                                      "EnTi": {
+                                        "type": "string",
+                                        "description": "End time",
+                                        "format": "date-time"
+                                      },
+                                      "PaTi": {
+                                        "type": "string",
+                                        "description": "Break time",
+                                        "format": "date-time"
                                       },
                                       "Ch": {
                                         "type": "boolean",
@@ -9049,6 +9125,12 @@
                         "maxLength": 20,
                         "description": "Position type\n***** = Not applicable;\nA = Administratief;\nT = Technical;",
                         "format": ""
+                      },
+                      "FcId": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Function category",
+                        "format": ""
                       }
                     },
                     "required": [
@@ -9127,6 +9209,12 @@
                         ],
                         "maxLength": 20,
                         "description": "Position type\n***** = Not applicable;\nA = Administratief;\nT = Technical;",
+                        "format": ""
+                      },
+                      "FcId": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Function category",
                         "format": ""
                       }
                     },
@@ -9384,7 +9472,7 @@
                       },
                       "PtItpMon": {
                         "type": "integer",
-                        "description": "Maanden",
+                        "description": "Kalenderdagen",
                         "format": ""
                       },
                       "PtItpPFrA": {
@@ -9438,7 +9526,7 @@
                       },
                       "PtItpMoCo": {
                         "type": "integer",
-                        "description": "Maanden opnieuw tellen\n            als onderbrekingsperiode",
+                        "description": "Kalenderdagen opnieuw tellen\n            als onderbrekingsperiode groter is dan",
                         "format": ""
                       },
                       "PtItpVaIe": {
@@ -9894,7 +9982,7 @@
                       },
                       "PtItpMon": {
                         "type": "integer",
-                        "description": "Maanden",
+                        "description": "Kalenderdagen",
                         "format": ""
                       },
                       "PtItpPFrA": {
@@ -9948,7 +10036,7 @@
                       },
                       "PtItpMoCo": {
                         "type": "integer",
-                        "description": "Maanden opnieuw tellen\n            als onderbrekingsperiode",
+                        "description": "Kalenderdagen opnieuw tellen\n            als onderbrekingsperiode groter is dan",
                         "format": ""
                       },
                       "PtItpVaIe": {
@@ -10581,6 +10669,12 @@
                         "type": "boolean",
                         "description": "Intercompany",
                         "format": ""
+                      },
+                      "FcId": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Deviating function category",
+                        "format": ""
                       }
                     },
                     "required": [
@@ -10681,7 +10775,37 @@
                                       "VbCo": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Cost centres (internally)",
+                                        "description": "Verbijzonderingscode standaard as",
+                                        "format": ""
+                                      },
+                                      "V1Cd": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "Kostenplaats (intern)",
+                                        "format": ""
+                                      },
+                                      "V2Cd": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "(not used)",
+                                        "format": ""
+                                      },
+                                      "V3Cd": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "(not used)",
+                                        "format": ""
+                                      },
+                                      "V4Cd": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "(not used)",
+                                        "format": ""
+                                      },
+                                      "V5Cd": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "(not used)",
                                         "format": ""
                                       },
                                       "WoLo": {
@@ -10878,6 +11002,16 @@
                                         "maxLength": 20,
                                         "description": "Pref. value means of transp. for travel expenses\n11 = Petrol vehicle;\n12 = Diesel vehicle;\n13 = Auto (Plug in) Hybrid;\n14 = 100% electric vehicle;\n15 = Other fuel car;\n21 = Motorbike petrol;\n22 = Electric motorcycle;\n29 = Motorbike diesel;\n31 = Petrol moped/scooter;\n32 = Moped/scooter 100% electric;\n38 = Moped/scooter diesel;\n39 = Speed-pedelec;\n41 = (Electric) bicycle;\n49 = By foot;\n51 = Public transport ;",
                                         "format": ""
+                                      },
+                                      "PrAm": {
+                                        "type": "number",
+                                        "description": "Project allowance (amount)",
+                                        "format": "number"
+                                      },
+                                      "PrAh": {
+                                        "type": "number",
+                                        "description": "Project allowance per hour (amount)",
+                                        "format": "number"
                                       }
                                     },
                                     "required": [
@@ -11157,6 +11291,12 @@
                         "type": "boolean",
                         "description": "Intercompany",
                         "format": ""
+                      },
+                      "FcId": {
+                        "type": "string",
+                        "maxLength": 10,
+                        "description": "Deviating function category",
+                        "format": ""
                       }
                     },
                     "required": [
@@ -11253,7 +11393,37 @@
                                       "VbCo": {
                                         "type": "string",
                                         "maxLength": 16,
-                                        "description": "Cost centres (internally)",
+                                        "description": "Verbijzonderingscode standaard as",
+                                        "format": ""
+                                      },
+                                      "V1Cd": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "Kostenplaats (intern)",
+                                        "format": ""
+                                      },
+                                      "V2Cd": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "(not used)",
+                                        "format": ""
+                                      },
+                                      "V3Cd": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "(not used)",
+                                        "format": ""
+                                      },
+                                      "V4Cd": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "(not used)",
+                                        "format": ""
+                                      },
+                                      "V5Cd": {
+                                        "type": "string",
+                                        "maxLength": 16,
+                                        "description": "(not used)",
                                         "format": ""
                                       },
                                       "WoLo": {
@@ -11459,6 +11629,18 @@
                                         "maxLength": 20,
                                         "description": "Pref. value means of transp. for travel expenses\n11 = Petrol vehicle;\n12 = Diesel vehicle;\n13 = Auto (Plug in) Hybrid;\n14 = 100% electric vehicle;\n15 = Other fuel car;\n21 = Motorbike petrol;\n22 = Electric motorcycle;\n29 = Motorbike diesel;\n31 = Petrol moped/scooter;\n32 = Moped/scooter 100% electric;\n38 = Moped/scooter diesel;\n39 = Speed-pedelec;\n41 = (Electric) bicycle;\n49 = By foot;\n51 = Public transport ;",
                                         "format": ""
+                                      },
+                                      "PrAm": {
+                                        "type": "number",
+                                        "multipleOf": 1E-10,
+                                        "description": "Project allowance (amount)",
+                                        "format": "float"
+                                      },
+                                      "PrAh": {
+                                        "type": "number",
+                                        "multipleOf": 1E-10,
+                                        "description": "Project allowance per hour (amount)",
+                                        "format": "float"
                                       }
                                     }
                                   }

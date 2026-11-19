@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "8.8.11",
+    "version": "9.9.12",
     "title": "AFAS Budgetten en activa API",
     "description": "This API describes the endpoints related to Budgetten en activa. Use this API with the functional description of the API."
   },
@@ -5455,7 +5455,8 @@
                     "required": [
                       "Prof",
                       "CkBn",
-                      "UnId"
+                      "UnId",
+                      "ScId"
                     ]
                   },
                   "Objects": {
@@ -6563,6 +6564,20 @@
                         "description": "Contract type\n01 = Insurance;\n02 = Maintenance;\n03 = Subscription;\n04 = Rental and lease contracts;\n05 = Certificate;\n06 = Sponsoring;\n07 = Framework contract;",
                         "format": ""
                       },
+                      "ViIn": {
+                        "type": "string",
+                        "enum": [
+                          "ALG",
+                          "FAC",
+                          "GEB",
+                          "ICT",
+                          "INH",
+                          "OVE"
+                        ],
+                        "maxLength": 20,
+                        "description": "Category\nALG = General;\nFAC = Facilitation;\nGEB = Building management;\nICT = ICP;\nINH = Hiring of staff;\nOVE = Other;",
+                        "format": ""
+                      },
                       "SiCo": {
                         "type": "boolean",
                         "description": "One-time contract",
@@ -6613,7 +6628,7 @@
                           "M9"
                         ],
                         "maxLength": 20,
-                        "description": "Renewal duration\nJ1 = 1 year;\nJ10 = 10 jaar;\nJ2 = 2 year;\nJ3 = 3 year;\nJ4 = 4 year;\nJ5 = 5 year;\nJ6 = 6 jaar;\nJ7 = 7 jaar;\nJ8 = 8 jaar;\nJ9 = 9 jaar;\nM1 = 1 month;\nM3 = 3 maand;\nM6 = 6 maand;\nM9 = 9 maand;",
+                        "description": "Renewal duration\nJ1 = 1 year;\nJ10 = 10 years;\nJ2 = 2 years;\nJ3 = 3 years;\nJ4 = 4 years;\nJ5 = 5 years;\nJ6 = 6 years;\nJ7 = 7 years;\nJ8 = 8 years;\nJ9 = 9 years;\nM1 = 1 month;\nM3 = 3 months;\nM6 = 6 months;\nM9 = 9 months;",
                         "format": ""
                       },
                       "LoId": {
@@ -6997,6 +7012,20 @@
                         "description": "Contract type\n01 = Insurance;\n02 = Maintenance;\n03 = Subscription;\n04 = Rental and lease contracts;\n05 = Certificate;\n06 = Sponsoring;\n07 = Framework contract;",
                         "format": ""
                       },
+                      "ViIn": {
+                        "type": "string",
+                        "enum": [
+                          "ALG",
+                          "FAC",
+                          "GEB",
+                          "ICT",
+                          "INH",
+                          "OVE"
+                        ],
+                        "maxLength": 20,
+                        "description": "Category\nALG = General;\nFAC = Facilitation;\nGEB = Building management;\nICT = ICP;\nINH = Hiring of staff;\nOVE = Other;",
+                        "format": ""
+                      },
                       "SiCo": {
                         "type": "boolean",
                         "description": "One-time contract",
@@ -7049,7 +7078,7 @@
                           "M9"
                         ],
                         "maxLength": 20,
-                        "description": "Renewal duration\nJ1 = 1 year;\nJ10 = 10 jaar;\nJ2 = 2 year;\nJ3 = 3 year;\nJ4 = 4 year;\nJ5 = 5 year;\nJ6 = 6 jaar;\nJ7 = 7 jaar;\nJ8 = 8 jaar;\nJ9 = 9 jaar;\nM1 = 1 month;\nM3 = 3 maand;\nM6 = 6 maand;\nM9 = 9 maand;",
+                        "description": "Renewal duration\nJ1 = 1 year;\nJ10 = 10 years;\nJ2 = 2 years;\nJ3 = 3 years;\nJ4 = 4 years;\nJ5 = 5 years;\nJ6 = 6 years;\nJ7 = 7 years;\nJ8 = 8 years;\nJ9 = 9 years;\nM1 = 1 month;\nM3 = 3 months;\nM6 = 6 months;\nM9 = 9 months;",
                         "format": ""
                       },
                       "LoId": {
@@ -7945,7 +7974,7 @@
                       },
                       "DiPt": {
                         "type": "boolean",
-                        "description": "Tijdsafhankelijke verbijzondering op basis van pro",
+                        "description": "Allocation via project",
                         "format": ""
                       },
                       "FileName": {

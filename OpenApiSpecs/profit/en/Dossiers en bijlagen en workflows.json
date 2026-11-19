@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "8.8.11",
+    "version": "9.9.12",
     "title": "AFAS Dossiers en bijlagen en workflows API",
     "description": "This API describes the endpoints related to Dossiers en bijlagen en workflows. Use this API with the functional description of the API."
   },
@@ -3483,7 +3483,7 @@
                           },
                           "Status": {
                             "type": "string",
-                            "description": "Codetabelwaarde"
+                            "description": "Code table value"
                           },
                           "Number": {
                             "type": "integer",
@@ -4283,7 +4283,7 @@
                           },
                           "Stat": {
                             "type": "string",
-                            "description": "Codetabelwaarde"
+                            "description": "Code table value"
                           },
                           "DoId": {
                             "type": "integer",
@@ -4471,7 +4471,7 @@
                           },
                           "Stat": {
                             "type": "string",
-                            "description": "Codetabelwaarde"
+                            "description": "Code table value"
                           },
                           "DoId": {
                             "type": "integer",
@@ -5604,6 +5604,11 @@
                                         "maxLength": 25,
                                         "description": "Role",
                                         "format": ""
+                                      },
+                                      "ObId": {
+                                        "type": "integer",
+                                        "description": "Object",
+                                        "format": ""
                                       }
                                     },
                                     "required": [
@@ -6195,6 +6200,11 @@
                                         "type": "string",
                                         "maxLength": 25,
                                         "description": "Role",
+                                        "format": ""
+                                      },
+                                      "ObId": {
+                                        "type": "integer",
+                                        "description": "Object",
                                         "format": ""
                                       }
                                     },

@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "8.8.11",
+    "version": "9.9.12",
     "title": "AFAS Werkgever API",
     "description": "Deze API beschrijft de endpoints gerelateerd aan Werkgever. Gebruik deze API met de functionele beschrijving van de API."
   },
@@ -4512,6 +4512,33 @@
                         "description": "Thuiswerken toegestaan",
                         "format": ""
                       },
+                      "NdSy": {
+                        "type": "boolean",
+                        "description": "Synchroniseren met Nedap Ons",
+                        "format": ""
+                      },
+                      "NdWk": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Weekkaartprofiel",
+                        "format": ""
+                      },
+                      "NdDk": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Deskundigheid",
+                        "format": ""
+                      },
+                      "NdSA": {
+                        "type": "boolean",
+                        "description": "Adresgegevens meesturen",
+                        "format": ""
+                      },
+                      "NdHw": {
+                        "type": "boolean",
+                        "description": "Uurloon verzenden",
+                        "format": ""
+                      },
                       "FcId": {
                         "type": "string",
                         "maxLength": 10,
@@ -4664,6 +4691,33 @@
                       "WhAl": {
                         "type": "boolean",
                         "description": "Thuiswerken toegestaan",
+                        "format": ""
+                      },
+                      "NdSy": {
+                        "type": "boolean",
+                        "description": "Synchroniseren met Nedap Ons",
+                        "format": ""
+                      },
+                      "NdWk": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Weekkaartprofiel",
+                        "format": ""
+                      },
+                      "NdDk": {
+                        "type": "string",
+                        "maxLength": 20,
+                        "description": "Deskundigheid",
+                        "format": ""
+                      },
+                      "NdSA": {
+                        "type": "boolean",
+                        "description": "Adresgegevens meesturen",
+                        "format": ""
+                      },
+                      "NdHw": {
+                        "type": "boolean",
+                        "description": "Uurloon verzenden",
                         "format": ""
                       },
                       "FcId": {

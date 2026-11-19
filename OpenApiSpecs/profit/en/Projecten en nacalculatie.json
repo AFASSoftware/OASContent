@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "8.8.11",
+    "version": "9.9.12",
     "title": "AFAS Projecten en nacalculatie API",
     "description": "This API describes the endpoints related to Projecten en nacalculatie. Use this API with the functional description of the API."
   },
@@ -10217,31 +10217,31 @@
                       "V1Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 1",
+                        "description": "Kostenplaats",
                         "format": ""
                       },
                       "V2Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 2",
+                        "description": "(not used)",
                         "format": ""
                       },
                       "V3Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 3",
+                        "description": "(not used)",
                         "format": ""
                       },
                       "V4Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 4",
+                        "description": "(not used)",
                         "format": ""
                       },
                       "V5Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 5",
+                        "description": "(not used)",
                         "format": ""
                       },
                       "Di01": {
@@ -10534,31 +10534,31 @@
                       "V1Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 1",
+                        "description": "Kostenplaats",
                         "format": ""
                       },
                       "V2Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 2",
+                        "description": "(not used)",
                         "format": ""
                       },
                       "V3Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 3",
+                        "description": "(not used)",
                         "format": ""
                       },
                       "V4Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 4",
+                        "description": "(not used)",
                         "format": ""
                       },
                       "V5Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 5",
+                        "description": "(not used)",
                         "format": ""
                       },
                       "PrId": {
@@ -10592,6 +10592,56 @@
                       "PaTi": {
                         "type": "string",
                         "description": "Break time",
+                        "format": "date-time"
+                      },
+                      "Ps1S": {
+                        "type": "string",
+                        "description": "Start time break 1",
+                        "format": "date-time"
+                      },
+                      "Ps1E": {
+                        "type": "string",
+                        "description": "End time of break 1",
+                        "format": "date-time"
+                      },
+                      "Ps2S": {
+                        "type": "string",
+                        "description": "Start time break 2",
+                        "format": "date-time"
+                      },
+                      "Ps2E": {
+                        "type": "string",
+                        "description": "End time of break 2",
+                        "format": "date-time"
+                      },
+                      "Ps3S": {
+                        "type": "string",
+                        "description": "Start time break 3",
+                        "format": "date-time"
+                      },
+                      "Ps3E": {
+                        "type": "string",
+                        "description": "Break 3 end time",
+                        "format": "date-time"
+                      },
+                      "Ps4S": {
+                        "type": "string",
+                        "description": "Start time break 4",
+                        "format": "date-time"
+                      },
+                      "Ps4E": {
+                        "type": "string",
+                        "description": "Break 4 end time",
+                        "format": "date-time"
+                      },
+                      "Ps5S": {
+                        "type": "string",
+                        "description": "Start time break 5",
+                        "format": "date-time"
+                      },
+                      "Ps5E": {
+                        "type": "string",
+                        "description": "End time of break 5",
                         "format": "date-time"
                       },
                       "Di01": {
@@ -10648,16 +10698,10 @@
                         "description": "Remark",
                         "format": ""
                       },
-                      "AxId": {
-                        "type": "string",
-                        "maxLength": 1,
-                        "description": "Project allocation axis",
-                        "format": ""
-                      },
                       "VbCo": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Allocation code",
+                        "description": "Verbijzonderingscode standaard as",
                         "format": ""
                       },
                       "UpFc": {
@@ -10772,6 +10816,25 @@
                         ],
                         "maxLength": 20,
                         "description": "Transport means for hour unraveling\n11 = Petrol vehicle;\n12 = Diesel vehicle;\n13 = Auto (Plug in) Hybrid;\n14 = 100% electric vehicle;\n15 = Other fuel car;\n21 = Motorbike petrol;\n22 = Electric motorcycle;\n29 = Motorbike diesel;\n31 = Petrol moped/scooter;\n32 = Moped/scooter 100% electric;\n38 = Moped/scooter diesel;\n39 = Speed-pedelec;\n41 = (Electric) bicycle;\n49 = By foot;\n51 = Public transport ;",
+                        "format": ""
+                      },
+                      "MoId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Monitoring code",
+                        "format": ""
+                      },
+                      "CoTy": {
+                        "type": "string",
+                        "enum": [
+                          "MA",
+                          "A",
+                          "ME",
+                          "OA",
+                          "O"
+                        ],
+                        "maxLength": 20,
+                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
                         "format": ""
                       },
                       "FileId": {
@@ -10919,31 +10982,31 @@
                       "V1Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 1",
+                        "description": "Kostenplaats",
                         "format": ""
                       },
                       "V2Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 2",
+                        "description": "(not used)",
                         "format": ""
                       },
                       "V3Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 3",
+                        "description": "(not used)",
                         "format": ""
                       },
                       "V4Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 4",
+                        "description": "(not used)",
                         "format": ""
                       },
                       "V5Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 5",
+                        "description": "(not used)",
                         "format": ""
                       },
                       "PrId": {
@@ -10977,6 +11040,56 @@
                       "PaTi": {
                         "type": "string",
                         "description": "Break time",
+                        "format": "date-time"
+                      },
+                      "Ps1S": {
+                        "type": "string",
+                        "description": "Start time break 1",
+                        "format": "date-time"
+                      },
+                      "Ps1E": {
+                        "type": "string",
+                        "description": "End time of break 1",
+                        "format": "date-time"
+                      },
+                      "Ps2S": {
+                        "type": "string",
+                        "description": "Start time break 2",
+                        "format": "date-time"
+                      },
+                      "Ps2E": {
+                        "type": "string",
+                        "description": "End time of break 2",
+                        "format": "date-time"
+                      },
+                      "Ps3S": {
+                        "type": "string",
+                        "description": "Start time break 3",
+                        "format": "date-time"
+                      },
+                      "Ps3E": {
+                        "type": "string",
+                        "description": "Break 3 end time",
+                        "format": "date-time"
+                      },
+                      "Ps4S": {
+                        "type": "string",
+                        "description": "Start time break 4",
+                        "format": "date-time"
+                      },
+                      "Ps4E": {
+                        "type": "string",
+                        "description": "Break 4 end time",
+                        "format": "date-time"
+                      },
+                      "Ps5S": {
+                        "type": "string",
+                        "description": "Start time break 5",
+                        "format": "date-time"
+                      },
+                      "Ps5E": {
+                        "type": "string",
+                        "description": "End time of break 5",
                         "format": "date-time"
                       },
                       "Di01": {
@@ -11033,16 +11146,10 @@
                         "description": "Remark",
                         "format": ""
                       },
-                      "AxId": {
-                        "type": "string",
-                        "maxLength": 1,
-                        "description": "Project allocation axis",
-                        "format": ""
-                      },
                       "VbCo": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Allocation code",
+                        "description": "Verbijzonderingscode standaard as",
                         "format": ""
                       },
                       "UpFc": {
@@ -11162,6 +11269,25 @@
                         "description": "Transport means for hour unraveling\n11 = Petrol vehicle;\n12 = Diesel vehicle;\n13 = Auto (Plug in) Hybrid;\n14 = 100% electric vehicle;\n15 = Other fuel car;\n21 = Motorbike petrol;\n22 = Electric motorcycle;\n29 = Motorbike diesel;\n31 = Petrol moped/scooter;\n32 = Moped/scooter 100% electric;\n38 = Moped/scooter diesel;\n39 = Speed-pedelec;\n41 = (Electric) bicycle;\n49 = By foot;\n51 = Public transport ;",
                         "format": ""
                       },
+                      "MoId": {
+                        "type": "string",
+                        "maxLength": 15,
+                        "description": "Monitoring code",
+                        "format": ""
+                      },
+                      "CoTy": {
+                        "type": "string",
+                        "enum": [
+                          "MA",
+                          "A",
+                          "ME",
+                          "OA",
+                          "O"
+                        ],
+                        "maxLength": 20,
+                        "description": "Type of project costs\nMA = Material;\nA = Labour;\nME = Equipment;\nOA = Subcontracting;\nO = Other costs;",
+                        "format": ""
+                      },
                       "FileId": {
                         "type": "string",
                         "maxLength": 32,
@@ -11239,6 +11365,16 @@
                         "type": "number",
                         "description": "Adjustment",
                         "format": "number"
+                      },
+                      "PrPg": {
+                        "type": "number",
+                        "description": "Provision forecast",
+                        "format": "number"
+                      },
+                      "Re": {
+                        "type": "string",
+                        "description": "Comment",
+                        "format": "byte"
                       }
                     },
                     "required": [
@@ -11297,6 +11433,17 @@
                         "multipleOf": 1E-10,
                         "description": "Adjustment",
                         "format": "float"
+                      },
+                      "PrPg": {
+                        "type": "number",
+                        "multipleOf": 1E-10,
+                        "description": "Provision forecast",
+                        "format": "float"
+                      },
+                      "Re": {
+                        "type": "string",
+                        "description": "Comment",
+                        "format": "byte"
                       }
                     },
                     "required": [
@@ -11340,7 +11487,7 @@
                       "VbCo": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Code verbijzondering",
+                        "description": "Allocation code",
                         "format": ""
                       },
                       "PrId": {
@@ -11393,7 +11540,7 @@
                       "VbCo": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Code verbijzondering",
+                        "description": "Allocation code",
                         "format": ""
                       },
                       "PrId": {
@@ -11986,7 +12133,37 @@
                       "VbCo": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Allocation code",
+                        "description": "Verbijzonderingscode standaard as",
+                        "format": ""
+                      },
+                      "V1Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Kostenplaats",
+                        "format": ""
+                      },
+                      "V2Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "(not used)",
+                        "format": ""
+                      },
+                      "V3Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "(not used)",
+                        "format": ""
+                      },
+                      "V4Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "(not used)",
+                        "format": ""
+                      },
+                      "V5Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "(not used)",
                         "format": ""
                       },
                       "VaCo": {
@@ -12240,6 +12417,8 @@
                         "enum": [
                           "0",
                           "1",
+                          "10",
+                          "11",
                           "2",
                           "3",
                           "4",
@@ -12249,7 +12428,7 @@
                           "8"
                         ],
                         "maxLength": 20,
-                        "description": "Financial integration method\n0 = No financial project integration;\n1 = Result based on a ready project (CC);\n2 = Result based on actual costing (NTF);\n3 = Result based on progress (POC);\n4 = Costs based on hourly wage, allowance and surcharge;\n5 = Revenue allocation based on actual costing;\n6 = Revenue allocation based on project time progress;\n7 = Revenue allocation based on hours of work progress;\n8 = Journalise project mutations without financial source;",
+                        "description": "Financial integration method\n0 = No financial project integration;\n1 = Result based on a ready project (CC);\n10 = WIP based on sales rate (time and material with drafts);\n11 = OHW based on sales rate (fixed price without concepts);\n2 = Result based on actual costing (NTF);\n3 = Result based on progress (POC);\n4 = Costs based on hourly wage, allowance and surcharge;\n5 = Revenue allocation based on actual costing;\n6 = Revenue allocation based on project time progress;\n7 = Revenue allocation based on hours of work progress;\n8 = Journalise project mutations without financial source;",
                         "format": ""
                       },
                       "RBMt": {
@@ -12368,6 +12547,16 @@
                       "RePr": {
                         "type": "boolean",
                         "description": "Invoice post-calculation via invoice proposal",
+                        "format": ""
+                      },
+                      "DfFv": {
+                        "type": "boolean",
+                        "description": "Invoice expense claims via invoice proposal",
+                        "format": ""
+                      },
+                      "CtDf": {
+                        "type": "integer",
+                        "description": "Contact for expense claim invoice proposals",
                         "format": ""
                       },
                       "StTm": {
@@ -13268,7 +13457,37 @@
                       "VbCo": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Allocation code",
+                        "description": "Verbijzonderingscode standaard as",
+                        "format": ""
+                      },
+                      "V1Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "Kostenplaats",
+                        "format": ""
+                      },
+                      "V2Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "(not used)",
+                        "format": ""
+                      },
+                      "V3Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "(not used)",
+                        "format": ""
+                      },
+                      "V4Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "(not used)",
+                        "format": ""
+                      },
+                      "V5Cd": {
+                        "type": "string",
+                        "maxLength": 16,
+                        "description": "(not used)",
                         "format": ""
                       },
                       "VaCo": {
@@ -13523,6 +13742,8 @@
                         "enum": [
                           "0",
                           "1",
+                          "10",
+                          "11",
                           "2",
                           "3",
                           "4",
@@ -13532,7 +13753,7 @@
                           "8"
                         ],
                         "maxLength": 20,
-                        "description": "Financial integration method\n0 = No financial project integration;\n1 = Result based on a ready project (CC);\n2 = Result based on actual costing (NTF);\n3 = Result based on progress (POC);\n4 = Costs based on hourly wage, allowance and surcharge;\n5 = Revenue allocation based on actual costing;\n6 = Revenue allocation based on project time progress;\n7 = Revenue allocation based on hours of work progress;\n8 = Journalise project mutations without financial source;",
+                        "description": "Financial integration method\n0 = No financial project integration;\n1 = Result based on a ready project (CC);\n10 = WIP based on sales rate (time and material with drafts);\n11 = OHW based on sales rate (fixed price without concepts);\n2 = Result based on actual costing (NTF);\n3 = Result based on progress (POC);\n4 = Costs based on hourly wage, allowance and surcharge;\n5 = Revenue allocation based on actual costing;\n6 = Revenue allocation based on project time progress;\n7 = Revenue allocation based on hours of work progress;\n8 = Journalise project mutations without financial source;",
                         "format": ""
                       },
                       "RBMt": {
@@ -13652,6 +13873,16 @@
                       "RePr": {
                         "type": "boolean",
                         "description": "Invoice post-calculation via invoice proposal",
+                        "format": ""
+                      },
+                      "DfFv": {
+                        "type": "boolean",
+                        "description": "Invoice expense claims via invoice proposal",
+                        "format": ""
+                      },
+                      "CtDf": {
+                        "type": "integer",
+                        "description": "Contact for expense claim invoice proposals",
                         "format": ""
                       },
                       "StTm": {
@@ -14970,31 +15201,31 @@
                       "V1Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 1",
+                        "description": "Kostenplaats",
                         "format": ""
                       },
                       "V2Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 2",
+                        "description": "(not used)",
                         "format": ""
                       },
                       "V3Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 3",
+                        "description": "(not used)",
                         "format": ""
                       },
                       "V4Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 4",
+                        "description": "(not used)",
                         "format": ""
                       },
                       "V5Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 5",
+                        "description": "(not used)",
                         "format": ""
                       },
                       "Di01": {
@@ -15585,31 +15816,31 @@
                       "V1Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 1",
+                        "description": "Kostenplaats",
                         "format": ""
                       },
                       "V2Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 2",
+                        "description": "(not used)",
                         "format": ""
                       },
                       "V3Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 3",
+                        "description": "(not used)",
                         "format": ""
                       },
                       "V4Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 4",
+                        "description": "(not used)",
                         "format": ""
                       },
                       "V5Cd": {
                         "type": "string",
                         "maxLength": 16,
-                        "description": "Exception axis code 5",
+                        "description": "(not used)",
                         "format": ""
                       },
                       "Di01": {

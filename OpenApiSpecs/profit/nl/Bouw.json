@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "8.8.11",
+    "version": "9.9.12",
     "title": "AFAS Bouw API",
     "description": "Deze API beschrijft de endpoints gerelateerd aan Bouw. Gebruik deze API met de functionele beschrijving van de API."
   },
@@ -3330,14 +3330,30 @@
                       },
                       "ViMg": {
                         "type": "string",
+                        "enum": [
+                          "1000",
+                          "2000",
+                          "3000"
+                        ],
                         "maxLength": 20,
-                        "description": "Hoofdgroep",
+                        "description": "Hoofdgroep\n1000 = Indelingswijzigingen;\n2000 = Electrische installatie;\n3000 = Verwarmingsinstallatie;",
                         "format": ""
                       },
                       "ViSg": {
                         "type": "string",
+                        "enum": [
+                          "1100",
+                          "1200",
+                          "1300",
+                          "2100",
+                          "2200",
+                          "2300",
+                          "2400",
+                          "3100",
+                          "3200"
+                        ],
                         "maxLength": 20,
-                        "description": "Subgroep",
+                        "description": "Subgroep\n1100 = Eerste verdieping;\n1200 = Tweede verdieping;\n1300 = Zolder;\n2100 = Wandcontactdozen;\n2200 = Wandcontactdozen op aparte groep;\n2300 = Loze leiding;\n2400 = Extra groep in de meterkast;\n3100 = Extra verwarmingselement;\n3200 = Vloerverwarming als bijverwarming;",
                         "format": ""
                       },
                       "CoFa": {
@@ -3946,14 +3962,30 @@
                       },
                       "ViMg": {
                         "type": "string",
+                        "enum": [
+                          "1000",
+                          "2000",
+                          "3000"
+                        ],
                         "maxLength": 20,
-                        "description": "Hoofdgroep",
+                        "description": "Hoofdgroep\n1000 = Indelingswijzigingen;\n2000 = Electrische installatie;\n3000 = Verwarmingsinstallatie;",
                         "format": ""
                       },
                       "ViSg": {
                         "type": "string",
+                        "enum": [
+                          "1100",
+                          "1200",
+                          "1300",
+                          "2100",
+                          "2200",
+                          "2300",
+                          "2400",
+                          "3100",
+                          "3200"
+                        ],
                         "maxLength": 20,
-                        "description": "Subgroep",
+                        "description": "Subgroep\n1100 = Eerste verdieping;\n1200 = Tweede verdieping;\n1300 = Zolder;\n2100 = Wandcontactdozen;\n2200 = Wandcontactdozen op aparte groep;\n2300 = Loze leiding;\n2400 = Extra groep in de meterkast;\n3100 = Extra verwarmingselement;\n3200 = Vloerverwarming als bijverwarming;",
                         "format": ""
                       },
                       "CoFa": {
@@ -4609,14 +4641,30 @@
                                       },
                                       "ViMg": {
                                         "type": "string",
+                                        "enum": [
+                                          "1000",
+                                          "2000",
+                                          "3000"
+                                        ],
                                         "maxLength": 20,
-                                        "description": "Hoofdgroep",
+                                        "description": "Hoofdgroep\n1000 = Indelingswijzigingen;\n2000 = Electrische installatie;\n3000 = Verwarmingsinstallatie;",
                                         "format": ""
                                       },
                                       "ViSg": {
                                         "type": "string",
+                                        "enum": [
+                                          "1100",
+                                          "1200",
+                                          "1300",
+                                          "2100",
+                                          "2200",
+                                          "2300",
+                                          "2400",
+                                          "3100",
+                                          "3200"
+                                        ],
                                         "maxLength": 20,
-                                        "description": "Subgroep",
+                                        "description": "Subgroep\n1100 = Eerste verdieping;\n1200 = Tweede verdieping;\n1300 = Zolder;\n2100 = Wandcontactdozen;\n2200 = Wandcontactdozen op aparte groep;\n2300 = Loze leiding;\n2400 = Extra groep in de meterkast;\n3100 = Extra verwarmingselement;\n3200 = Vloerverwarming als bijverwarming;",
                                         "format": ""
                                       },
                                       "CoFa": {
@@ -5257,14 +5305,30 @@
                                       },
                                       "ViMg": {
                                         "type": "string",
+                                        "enum": [
+                                          "1000",
+                                          "2000",
+                                          "3000"
+                                        ],
                                         "maxLength": 20,
-                                        "description": "Hoofdgroep",
+                                        "description": "Hoofdgroep\n1000 = Indelingswijzigingen;\n2000 = Electrische installatie;\n3000 = Verwarmingsinstallatie;",
                                         "format": ""
                                       },
                                       "ViSg": {
                                         "type": "string",
+                                        "enum": [
+                                          "1100",
+                                          "1200",
+                                          "1300",
+                                          "2100",
+                                          "2200",
+                                          "2300",
+                                          "2400",
+                                          "3100",
+                                          "3200"
+                                        ],
                                         "maxLength": 20,
-                                        "description": "Subgroep",
+                                        "description": "Subgroep\n1100 = Eerste verdieping;\n1200 = Tweede verdieping;\n1300 = Zolder;\n2100 = Wandcontactdozen;\n2200 = Wandcontactdozen op aparte groep;\n2300 = Loze leiding;\n2400 = Extra groep in de meterkast;\n3100 = Extra verwarmingselement;\n3200 = Vloerverwarming als bijverwarming;",
                                         "format": ""
                                       },
                                       "CoFa": {

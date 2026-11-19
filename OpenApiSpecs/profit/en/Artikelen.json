@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "8.8.11",
+    "version": "9.9.12",
     "title": "AFAS Artikelen API",
     "description": "This API describes the endpoints related to Artikelen. Use this API with the functional description of the API."
   },
@@ -4649,11 +4649,11 @@
                           },
                           "CreateDate": {
                             "type": "string",
-                            "description": "Dummy date field"
+                            "description": "Created on"
                           },
                           "DateModified": {
                             "type": "string",
-                            "description": "Dummy date field"
+                            "description": "Changed on"
                           }
                         }
                       }
@@ -5109,19 +5109,19 @@
                           },
                           "StockDimCode1": {
                             "type": "string",
-                            "description": "Article dimension code 1"
+                            "description": "Dummy text field"
                           },
                           "StockDimCode2": {
                             "type": "string",
-                            "description": "Article dimension code 2"
+                            "description": "Dummy text field"
                           },
                           "SerialNumber": {
                             "type": "string",
-                            "description": "Dummy text field"
+                            "description": "Serial number"
                           },
                           "BatchNumber": {
                             "type": "string",
-                            "description": "Dummy text field"
+                            "description": "Lot number"
                           },
                           "DebtorId": {
                             "type": "string",
@@ -6602,7 +6602,7 @@
                           "5"
                         ],
                         "maxLength": 20,
-                        "description": "Prediction model\n0 = Do not predict;\n1 = SMA: Simple Moving Average;\n2 = ARIMA: AutoRegressive Integrated Moving Average;\n3 = SARIMA: Seasonal ARIMA;\n4 = Exponential Smoothing: Recent periods have more weight than older data;\n5 = Holt Winters: Exponential Smoothing including trend and seasonal patterns;",
+                        "description": "Deviating prediction model\n0 = Do not predict;\n1 = SMA: Simple Moving Average;\n2 = ARIMA: AutoRegressive Integrated Moving Average;\n3 = SARIMA: Seasonal ARIMA;\n4 = Exponential Smoothing: Recent periods have more weight than older data;\n5 = Holt Winters: Exponential Smoothing including trend and seasonal patterns;",
                         "format": ""
                       },
                       "ABCXYZClass": {
@@ -7618,7 +7618,7 @@
                           "5"
                         ],
                         "maxLength": 20,
-                        "description": "Prediction model\n0 = Do not predict;\n1 = SMA: Simple Moving Average;\n2 = ARIMA: AutoRegressive Integrated Moving Average;\n3 = SARIMA: Seasonal ARIMA;\n4 = Exponential Smoothing: Recent periods have more weight than older data;\n5 = Holt Winters: Exponential Smoothing including trend and seasonal patterns;",
+                        "description": "Deviating prediction model\n0 = Do not predict;\n1 = SMA: Simple Moving Average;\n2 = ARIMA: AutoRegressive Integrated Moving Average;\n3 = SARIMA: Seasonal ARIMA;\n4 = Exponential Smoothing: Recent periods have more weight than older data;\n5 = Holt Winters: Exponential Smoothing including trend and seasonal patterns;",
                         "format": ""
                       },
                       "ABCXYZClass": {
@@ -8925,7 +8925,7 @@
                           "5"
                         ],
                         "maxLength": 20,
-                        "description": "Prediction model\n0 = Do not predict;\n1 = SMA: Simple Moving Average;\n2 = ARIMA: AutoRegressive Integrated Moving Average;\n3 = SARIMA: Seasonal ARIMA;\n4 = Exponential Smoothing: Recent periods have more weight than older data;\n5 = Holt Winters: Exponential Smoothing including trend and seasonal patterns;",
+                        "description": "Deviating prediction model\n0 = Do not predict;\n1 = SMA: Simple Moving Average;\n2 = ARIMA: AutoRegressive Integrated Moving Average;\n3 = SARIMA: Seasonal ARIMA;\n4 = Exponential Smoothing: Recent periods have more weight than older data;\n5 = Holt Winters: Exponential Smoothing including trend and seasonal patterns;",
                         "format": ""
                       },
                       "ABCXYZClass": {
@@ -9727,7 +9727,7 @@
                           "5"
                         ],
                         "maxLength": 20,
-                        "description": "Prediction model\n0 = Do not predict;\n1 = SMA: Simple Moving Average;\n2 = ARIMA: AutoRegressive Integrated Moving Average;\n3 = SARIMA: Seasonal ARIMA;\n4 = Exponential Smoothing: Recent periods have more weight than older data;\n5 = Holt Winters: Exponential Smoothing including trend and seasonal patterns;",
+                        "description": "Deviating prediction model\n0 = Do not predict;\n1 = SMA: Simple Moving Average;\n2 = ARIMA: AutoRegressive Integrated Moving Average;\n3 = SARIMA: Seasonal ARIMA;\n4 = Exponential Smoothing: Recent periods have more weight than older data;\n5 = Holt Winters: Exponential Smoothing including trend and seasonal patterns;",
                         "format": ""
                       },
                       "ABCXYZClass": {

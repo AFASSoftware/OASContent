@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "version": "8.8.11",
+    "version": "9.9.12",
     "title": "AFAS Mutaties API",
     "description": "This API describes the endpoints related to Mutaties. Use this API with the functional description of the API."
   },
@@ -7949,6 +7949,16 @@
                         "type": "boolean",
                         "description": "Confronteren in basisvaluta",
                         "format": ""
+                      },
+                      "EnNo": {
+                        "type": "integer",
+                        "description": "Bijbehorende journaalpostnummer",
+                        "format": ""
+                      },
+                      "SeNo": {
+                        "type": "integer",
+                        "description": "Bijbehorende journaalpostregel",
+                        "format": ""
                       }
                     },
                     "required": [
@@ -8023,16 +8033,6 @@
                                                         "type": "number",
                                                         "description": "Reconciliation discount percentage",
                                                         "format": "number"
-                                                      },
-                                                      "EnNo": {
-                                                        "type": "integer",
-                                                        "description": "Bijbehorende journaalpostnummer",
-                                                        "format": ""
-                                                      },
-                                                      "SeNo": {
-                                                        "type": "integer",
-                                                        "description": "Bijbehorende journaalpostregel",
-                                                        "format": ""
                                                       },
                                                       "FuCo": {
                                                         "type": "boolean",
