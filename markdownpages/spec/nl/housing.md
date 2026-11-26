@@ -1,6 +1,6 @@
 ---
 date: 2026-11-26
-title: Profit Woningcorporatie API`s
+title: Profit Woningcorporatie API's
 ---
 
 Deze collecties bevatten alle onderdelen die beschikbaar zijn voor Profit Woningcorporaties. In hoofdlijnen bevat dit het volgende:
