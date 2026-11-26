@@ -3616,5 +3616,141 @@
       "url": "Werving en selectie#delete-/connectors/HrVacancyJobalert/HrVacancyJobalert/@Id/-Id-",
       "descriptionEn": "Vacancy/Job alert"
     }
+  },
+  "KnEnergyPerformance": {
+    "post": {
+      "descriptionNl": "Energieprestatie object",
+      "url": "Woningcorporaties#post-/connectors/KnEnergyPerformance",
+      "descriptionEn": "Energy performance object"
+    },
+    "put": {
+      "descriptionNl": "Energieprestatie object",
+      "url": "Woningcorporaties#put-/connectors/KnEnergyPerformance",
+      "descriptionEn": "Energy performance object"
+    },
+    "delete": {
+      "descriptionNl": "Energieprestatie object",
+      "url": "Woningcorporaties#delete-/connectors/KnEnergyPerformance/KnEnergyPerformance/@ObId,@EPT,@BeDt/-ObId-,-EPT-,-BeDt-",
+      "descriptionEn": "Energy performance object"
+    }
+  },
+  "KnObject": {
+    "post": {
+      "descriptionNl": "Object",
+      "url": "Woningcorporaties#post-/connectors/KnObject",
+      "descriptionEn": "Object"
+    },
+    "put": {
+      "descriptionNl": "Object",
+      "url": "Woningcorporaties#put-/connectors/KnObject",
+      "descriptionEn": "Object"
+    },
+    "delete": {
+      "descriptionNl": "Object",
+      "url": "Woningcorporaties#delete-/connectors/KnObject/KnObject/@ObNr/-ObNr-",
+      "descriptionEn": "Object"
+    }
+  },
+  "KnRentalUnitInValCluster": {
+    "post": {
+      "descriptionNl": "Verhuurbare eenheid bij waarderingscluster",
+      "url": "Woningcorporaties#post-/connectors/KnRentalUnitInValCluster",
+      "descriptionEn": "Rental unit at valuation cluster"
+    },
+    "put": {
+      "descriptionNl": "Verhuurbare eenheid bij waarderingscluster",
+      "url": "Woningcorporaties#put-/connectors/KnRentalUnitInValCluster",
+      "descriptionEn": "Rental unit at valuation cluster"
+    },
+    "delete": {
+      "descriptionNl": "Verhuurbare eenheid bij waarderingscluster",
+      "url": "Woningcorporaties#delete-/connectors/KnRentalUnitInValCluster/KnRentalUnitInValCluster/@RvId/-RvId-",
+      "descriptionEn": "Rental unit at valuation cluster"
+    }
+  },
+  "KnValuationCluster": {
+    "post": {
+      "descriptionNl": "Waarderingscluster",
+      "url": "Woningcorporaties#post-/connectors/KnValuationCluster",
+      "descriptionEn": "Valuation cluster"
+    },
+    "put": {
+      "descriptionNl": "Waarderingscluster",
+      "url": "Woningcorporaties#put-/connectors/KnValuationCluster",
+      "descriptionEn": "Valuation cluster"
+    },
+    "delete": {
+      "descriptionNl": "Waarderingscluster",
+      "url": "Woningcorporaties#delete-/connectors/KnValuationCluster/KnValuationCluster/@Cd/-Cd-",
+      "descriptionEn": "Valuation cluster"
+    }
+  },
+  "KnWarranty": {
+    "post": {
+      "descriptionNl": "Garantie",
+      "url": "Woningcorporaties#post-/connectors/KnWarranty",
+      "descriptionEn": "Guarantee"
+    },
+    "put": {
+      "descriptionNl": "Garantie",
+      "url": "Woningcorporaties#put-/connectors/KnWarranty",
+      "descriptionEn": "Guarantee"
+    },
+    "delete": {
+      "descriptionNl": "Garantie",
+      "url": "Woningcorporaties#delete-/connectors/KnWarranty/KnWarranty/@GtId/-GtId-",
+      "descriptionEn": "Guarantee"
+    }
+  },
+  "BankIndex": {
+    "post": {
+      "descriptionNl": "Registratie bankkoppeling",
+      "url": "Financi\u00EBle Inrichting#post-/connectors/BankIndex",
+      "descriptionEn": "Banking link registration"
+    },
+    "put": {
+      "descriptionNl": "Registratie bankkoppeling",
+      "url": "Financi\u00EBle Inrichting#put-/connectors/BankIndex",
+      "descriptionEn": "Banking link registration"
+    },
+    "delete": {
+      "descriptionNl": "Registratie bankkoppeling",
+      "url": "Financi\u00EBle Inrichting#delete-/connectors/BankIndex/AfasKnBankIndex/@BankType/-BankType-",
+      "descriptionEn": "Banking link registration"
+    }
+  },
+  "KnDocSigning": {
+    "post": {
+      "descriptionNl": "AFAS Signing Service",
+      "url": "Financi\u00EBle Inrichting#post-/connectors/KnDocSigning",
+      "descriptionEn": "AFAS Signing Service"
+    },
+    "put": {
+      "descriptionNl": "AFAS Signing Service",
+      "url": "Financi\u00EBle Inrichting#put-/connectors/KnDocSigning",
+      "descriptionEn": "AFAS Signing Service"
+    },
+    "delete": {
+      "descriptionNl": "AFAS Signing Service",
+      "url": "Financi\u00EBle Inrichting#delete-/connectors/KnDocSigning/KnSignLog/@ClIp/-ClIp-",
+      "descriptionEn": "AFAS Signing Service"
+    }
+  },
+  "HrQuestionToHrInSite": {
+    "post": {
+      "descriptionNl": "Vraag aan HR InSite",
+      "url": "Medewerker en contract#post-/connectors/HrQuestionToHrInSite",
+      "descriptionEn": "Ask HR InSite"
+    },
+    "put": {
+      "descriptionNl": "Vraag aan HR InSite",
+      "url": "Medewerker en contract#put-/connectors/HrQuestionToHrInSite",
+      "descriptionEn": "Ask HR InSite"
+    },
+    "delete": {
+      "descriptionNl": "Vraag aan HR InSite",
+      "url": "Medewerker en contract#delete-/connectors/HrQuestionToHrInSite/HrQuestionToHrInSite/@EmId/-EmId-",
+      "descriptionEn": "Ask HR InSite"
+    }
   }
 }
