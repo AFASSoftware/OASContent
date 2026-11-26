@@ -1,4 +1,5 @@
 ---
+date: 2026-11-26
 title: Profit Woningcorporatie API`s
 ---
 
