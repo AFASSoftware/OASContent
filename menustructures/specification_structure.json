@@ -216,5 +216,35 @@
 				}
 			}
 		]
+	},
+	"bakeries": {
+		"title": {
+			"en": "Bakeries",
+			"nl": "Bakkerijen"
+		},
+		"items": [
+			{
+				"file": "Bakkerijen.json",
+				"name": {
+					"en": "Bakeries",
+					"nl": "Bakkerijen"
+				}
+			}
+		]
+	},
+	"housing": {
+		"title": {
+			"en": "Housing associations",
+			"nl": "Woningcorporaties"
+		},
+		"items": [
+			{
+				"file": "Woningcorporaties.json",
+				"name": {
+					"en": "Housing associations",
+					"nl": "Woningcorporaties"
+				}
+			}
+		]
 	}
 }
