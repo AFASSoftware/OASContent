@@ -4,6 +4,11 @@
 			"en": "CRM",
 			"nl": "CRM"
 		},
+		"label": {
+			"en": "CRM API",
+			"nl": "CRM API"
+		},
+		"related": ["inrichting"],
 		"items": [
 			{
 				"file": "Organisaties en personen.json",
@@ -17,6 +22,237 @@
 				"name": {
 					"en": "Files and attachments and workflows",
 					"nl": "Dossiers en bijlagen en workflows"
+				}
+			}
+		]
+	},
+	"employee": {
+		"title": {
+			"en": "Human Resources",
+			"nl": "Medewerker en werkgever"
+		},
+		"label": {
+			"en": "HR API",
+			"nl": "HRM API"
+		},
+		"related": ["crm", "inrichting"],
+		"items": [
+			{
+				"file": "Medewerker en contract.json",
+				"name": {
+					"en": "Employee and contract",
+					"nl": "Medewerker en contract"
+				}
+			},
+			{
+				"file": "Verlof en Ziekte.json",
+				"name": {
+					"en": "Leave and illness",
+					"nl": "Verlof en ziekte"
+				}
+			},
+			{
+				"file": "Loonadministratie.json",
+				"name": {
+					"en": "Payroll administration",
+					"nl": "Loonadministratie"
+				}
+			},
+			{
+				"file": "Werving en selectie.json",
+				"name": {
+					"en": "Recruitment and selection",
+					"nl": "Werving en selectie"
+				}
+			},
+			{
+				"file": "Werkgever.json",
+				"name": {
+					"en": "Employer settings",
+					"nl": "Werkgever instellingen"
+				}
+			},
+			{
+				"file": "Overige.json",
+				"name": {
+					"en": "Other",
+					"nl": "Overige"
+				}
+			}
+		]
+	},
+	"finance": {
+		"title": {
+			"en": "Finance",
+			"nl": "Financiën"
+		},
+		"label": {
+			"en": "Finance API",
+			"nl": "Financieel API"
+		},
+		"related": ["crm", "inrichting"],
+		"items": [
+			{
+				"file": "Mutaties.json",
+				"name": {
+					"en": "Financal mutations",
+					"nl": "Financiële mutaties"
+				}
+			},
+			{
+				"file": "Budgetten en activa.json",
+				"name": {
+					"en": "Budgets and assets",
+					"nl": "Budgetten en activa"
+				}
+			},
+			{
+				"file": "Financiële Inrichting.json",
+				"name": {
+					"en": "Financial setup",
+					"nl": "Financiële inrichting"
+				}
+			}
+		]
+	},
+	"projects": {
+		"title": {
+			"en": "Projects, Construction and Flex",
+			"nl": "Projecten, Bouw en Flex"
+		},
+		"label": {
+			"en": "Projects API",
+			"nl": "Projecten API"
+		},
+		"related": ["crm", "inrichting"],
+		"items": [
+			{
+				"file": "Projecten en nacalculatie.json",
+				"name": {
+					"en": "Projects and post-calculation",
+					"nl": "Projecten en nacalculatie"
+				}
+			},
+			{
+				"file": "Flex.json",
+				"name": {
+					"en": "Flex",
+					"nl": "Flex"
+				}
+			},
+			{
+				"file": "Bouw.json",
+				"name": {
+					"en": "Construction",
+					"nl": "Bouw"
+				}
+			}
+		]
+	},
+	"sales": {
+		"title": {
+			"en": "Sales, Purchasing and Warehouse",
+			"nl": "Verkoop, Inkoop en Magazijn"
+		},
+		"label": {
+			"en": "Sales and purchase API",
+			"nl": "Ordermanagement API"
+		},
+		"related": ["crm", "inrichting"],
+		"items": [
+			{
+				"file": "Verkoop en Orders.json",
+				"name": {
+					"en": "Sales and orders",
+					"nl": "Verkoop en orders"
+				}
+			},
+			{
+				"file": "Inkoop.json",
+				"name": {
+					"en": "Purchasing",
+					"nl": "Inkoop"
+				}
+			},
+			{
+				"file": "Artikelen.json",
+				"name": {
+					"en": "Articles",
+					"nl": "Artikelen"
+				}
+			},
+			{
+				"file": "Magazijn.json",
+				"name": {
+					"en": "Warehouse",
+					"nl": "Magazijn"
+				}
+			},
+			{
+				"file": "Cursusmanagement.json",
+				"name": {
+					"en": "Course management",
+					"nl": "Cursusmanagement"
+				}
+			}
+		]
+	},
+	"taxes": {
+		"title": {
+			"en": "Fiscal",
+			"nl": "Fiscaal"
+		},
+		"label": {
+			"en": "Taxes API",
+			"nl": "Fiscaal API"
+		},
+		"related": ["crm", "inrichting"],
+		"items": [
+			{
+				"file": "Fiscaal.json",
+				"name": {
+					"en": "Fiscal",
+					"nl": "Fiscaal"
+				}
+			}
+		]
+	},
+	"housing": {
+		"title": {
+			"en": "Housing associations",
+			"nl": "Woningcorporaties"
+		},
+		"label": {
+			"en": "Housing Association API",
+			"nl": "Woningcorporatie API"
+		},
+		"related": ["crm", "inrichting"],
+		"items": [
+			{
+				"file": "Woningcorporaties.json",
+				"name": {
+					"en": "Housing associations",
+					"nl": "Woningcorporaties"
+				}
+			}
+		]
+	},
+	"bakeries": {
+		"title": {
+			"en": "Bakeries",
+			"nl": "Bakkerijen"
+		},
+		"label": {
+			"en": "Bakeries API",
+			"nl": "Bakkerijen API"
+		},
+		"related": ["crm", "inrichting"],
+		"items": [
+			{
+				"file": "Bakkerijen.json",
+				"name": {
+					"en": "Bakeries",
+					"nl": "Bakkerijen"
 				}
 			}
 		]
@@ -71,122 +307,6 @@
 			}
 		]
 	},
-	"finance": {
-		"title": {
-			"en": "Finance",
-			"nl": "Financiën"
-		},
-		"items": [
-			{
-				"file": "Mutaties.json",
-				"name": {
-					"en": "Financal mutations",
-					"nl": "Financiële mutaties"
-				}
-			},
-			{
-				"file": "Budgetten en activa.json",
-				"name": {
-					"en": "Budgets and assets",
-					"nl": "Budgetten en activa"
-				}
-			},
-			{
-				"file": "Financiële Inrichting.json",
-				"name": {
-					"en": "Financial setup",
-					"nl": "Financiële inrichting"
-				}
-			}
-		]
-	},
-	"projects": {
-		"title": {
-			"en": "Projects, Construction and Flex",
-			"nl": "Projecten, Bouw en Flex"
-		},
-		"items": [
-			{
-				"file": "Projecten en nacalculatie.json",
-				"name": {
-					"en": "Projects and post-calculation",
-					"nl": "Projecten en nacalculatie"
-				}
-			},
-			{
-				"file": "Flex.json",
-				"name": {
-					"en": "Flex",
-					"nl": "Flex"
-				}
-			},
-			{
-				"file": "Bouw.json",
-				"name": {
-					"en": "Construction",
-					"nl": "Bouw"
-				}
-			}
-		]
-	},
-	"sales": {
-		"title": {
-			"en": "Sales, Purchasing and Warehouse",
-			"nl": "Verkoop, Inkoop en Magazijn"
-		},
-		"items": [
-			{
-				"file": "Verkoop en Orders.json",
-				"name": {
-					"en": "Sales and orders",
-					"nl": "Verkoop en orders"
-				}
-			},
-			{
-				"file": "Inkoop.json",
-				"name": {
-					"en": "Purchasing",
-					"nl": "Inkoop"
-				}
-			},
-			{
-				"file": "Artikelen.json",
-				"name": {
-					"en": "Articles",
-					"nl": "Artikelen"
-				}
-			},
-			{
-				"file": "Magazijn.json",
-				"name": {
-					"en": "Warehouse",
-					"nl": "Magazijn"
-				}
-			},
-			{
-				"file": "Cursusmanagement.json",
-				"name": {
-					"en": "Course management",
-					"nl": "Cursusmanagement"
-				}
-			}
-		]
-	},
-	"taxes": {
-		"title": {
-			"en": "Fiscal",
-			"nl": "Fiscaal"
-		},
-		"items": [
-			{
-				"file": "Fiscaal.json",
-				"name": {
-					"en": "Fiscal",
-					"nl": "Fiscaal"
-				}
-			}
-		]
-	},
 	"sb": {
 		"title": {
 			"en": "SB",
@@ -202,7 +322,7 @@
 			}
 		]
 	},
-    "inrichting": {
+	"inrichting": {
 		"title": {
 			"en": "Setup",
 			"nl": "Inrichting"
@@ -213,36 +333,6 @@
 				"name": {
 					"en": "Setup",
 					"nl": "Inrichting"
-				}
-			}
-		]
-	},
-	"bakeries": {
-		"title": {
-			"en": "Bakeries",
-			"nl": "Bakkerijen"
-		},
-		"items": [
-			{
-				"file": "Bakkerijen.json",
-				"name": {
-					"en": "Bakeries",
-					"nl": "Bakkerijen"
-				}
-			}
-		]
-	},
-	"housing": {
-		"title": {
-			"en": "Housing associations",
-			"nl": "Woningcorporaties"
-		},
-		"items": [
-			{
-				"file": "Woningcorporaties.json",
-				"name": {
-					"en": "Housing associations",
-					"nl": "Woningcorporaties"
 				}
 			}
 		]
